@@ -33,7 +33,10 @@ Tres modos, arriba y discretos: **Español** (todo en español), **Latín** (lat
 - **Modo claro:** papel blanco, tinta negra, pergamino `#f4eee4` para tarjetas, arco `#e7ddcc`, tinta de ilustración `#2a201a`. Nada de tonos pastel.
 - **Modo oscuro:** negro puro (`#000`) y superficies `#141312`. Las ilustraciones no se invierten.
 - **Ilustraciones:** grabado y mosaico antiguo, en línea, dentro de arcos de pergamino, sin imágenes pixeladas.
-- **Controles:** escondidos. Nada de barras inferiores: el índice se abre tocando el título de la hora y lo demás está en el menú «⋯».
+- **Controles:** escondidos. Nada de barras inferiores ni índice: todo está en el menú «⋯» (lectura, aspecto, canto).
+- **Modo claro por defecto;** el oscuro solo si la persona lo elige.
+- **Una sola versión de cada texto.** No hay selector de versiones.
+- **Lectura aireada:** amplio espacio entre las partes del oficio.
 
 ## Accesibilidad (guías de Apple)
 

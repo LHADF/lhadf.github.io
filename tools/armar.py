@@ -34,7 +34,7 @@ cuerpo = f'''<style>{leer('assets', 'signos.css')}
 <header class="top" id="top"><div class="wrap">
   <div class="top-in">
     <button class="iconbtn" id="atras" data-act="atras" aria-label="Volver a hoy" hidden>{ico('<path d="M15 5l-7 7 7 7"/>')}</button>
-    <h1 class="brand"><button id="brand" data-act="indice">Septies</button></h1>
+    <h1 class="brand" id="brand">Septies</h1>
     <button class="iconbtn" data-act="opciones" aria-label="Opciones">{ico('<circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/>')}</button>
   </div>
   <nav class="modos" id="modos" aria-label="Modo de rezo" hidden></nav>

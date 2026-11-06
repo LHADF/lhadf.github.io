@@ -4,10 +4,10 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ---------- Estado ---------- */
-const DEF={vista:'hoy', rito:'novus', modo:'la', ves:{novus:'es79',vetus:'es'}, salmos:'primer', trad:true,
+const DEF={vista:'hoy', rito:'novus', modo:'la', salmos:'primer', trad:true,
   lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false};
 let S=DEF;
-try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g,{ves:Object.assign({},DEF.ves,g.ves||{})}); if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
+try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
 if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
 S.antGreg=true;
@@ -22,7 +22,7 @@ function aplicarModo(kind){
 aplicarModo();
 function guardar(){ try{ const {lengua,canto,antGreg,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
 const R=()=>D.ritos[S.rito];
-const VES=()=>S.ves[S.rito];
+const VES=()=>Object.keys(R().versiones).find(k=>k!=='la'); // una sola versión en español por rito
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
 function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
 
@@ -31,9 +31,9 @@ function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.them
 function txt(o){
   if(!o) return {p:''};
   const es=VES();
-  const esTxt=o[es]!=null?o[es]:(es==='adf'&&o.es79!=null?o.es79:null);
+  const esTxt=o[es]!=null?o[es]:null;
   if(S.lengua==='la'){ if(o.la!=null) return {p:o.la}; return {p:esTxt||'', falta:'la'}; }
-  if(S.lengua==='es'){ if(esTxt!=null) return {p:esTxt, ves:o[es]==null&&es==='adf'}; return {p:o.la||'', falta:'es'}; }
+  if(S.lengua==='es'){ if(esTxt!=null) return {p:esTxt}; return {p:o.la||'', falta:'es'}; }
   // bilingüe
   if(o.la!=null) return {p:o.la, s:esTxt};
   return {p:esTxt||'', falta:'la'};
@@ -121,7 +121,7 @@ function versosHTML(versos, modo, cod, lang, desde, glosas){
 function salmoHTML(sal){
   const r=R(); const es=VES(); const t=txt(sal.titulo); const lema=sal.lema?txt(sal.lema):null;
   const L=langPrincipal();
-  const keyP = S.lengua==='es' ? (sal.versos[es]?es:(es==='adf'?'es79':es)) : 'la';
+  const keyP = S.lengua==='es' ? es : 'la';
   const keyS = S.lengua==='bi' ? (sal.versos[es]?es:'es79') : null;
   const vP=sal.versos[keyP]||sal.versos.la, gP=sal.grupos[keyP]||sal.grupos.la;
   const glP=(r.gloria[keyP]||r.gloria.la), glS=keyS?(r.gloria[keyS]):null;
@@ -130,7 +130,6 @@ function salmoHTML(sal){
   let h=`<div class="salmo-h"><span class="t">${esc(t.p)}</span>${sal.ref?`<span class="ref">${esc(sal.ref)}</span>`:''}${lema&&lema.p?`<span class="lema">${esc(lema.p)}</span>`:''}`;
   if(S.canto && modo!=='texto') h+=`<div><button class="tono-chip" data-act="tono" data-id="${sal.id}">${S.tonos[sal.id]?'Tono elegido':'Según la antífona'} · <b>${esc(SAL.etiquetaTono(cod))}</b> ▾</button></div>`;
   h+='</div>';
-  if(S.lengua==='es' && es==='adf') h+=`<p class="aviso">La traducción ADF de este salmo todavía no está cargada. Se muestra la edición española de 1979.</p>`;
   // partitura
   let todos=vP.concat(sal.gloria?glP:[]);
   if(S.canto && (modo==='primer'||modo==='todos')){
@@ -222,7 +221,7 @@ function marianaHTML(sec){
 function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
-  h+=`<h1>${S.modo==='es'?'Completas':'Ad Completorium'}</h1><p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}${S.modo!=='la'?' · '+esc((r.versiones[VES()]||{}).n||''):''}</p>`;
+  h+=`<h1>${S.modo==='es'?'Completas':'Ad Completorium'}</h1><p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}</p>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -284,8 +283,7 @@ function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
   $('#atras').hidden=!enHora;
-  $('#brand').innerHTML= enHora? `${S.modo==='es'?'Completas':'Completorium'} <span class="chev-i" aria-hidden="true">▾</span><small>${esc(D.fechaTxt)}</small>` : MARCA;
-  $('#brand').disabled=!enHora; $('#brand').setAttribute('aria-label', enHora?'Índice de la hora':'Septies');
+  $('#brand').innerHTML= enHora? `${S.modo==='es'?'Completas':'Completorium'}<small>${esc(D.fechaTxt)}</small>` : MARCA;
   $('#modos').hidden=!enHora;
   $('#modos').innerHTML=MODOS.map(([v,n])=>`<button data-act="modo" data-v="${v}" aria-pressed="${S.modo===v}">${n}</button>`).join('');
   $('#main').innerHTML= enHora? `<article class="hora" lang="${S.modo==='es'?'es':'la'}">${horaHTML()}</article>` : portadaHTML();
@@ -327,10 +325,6 @@ function hojaTono(id){
     <ul class="opts" style="margin:8px 0 14px"><li><button data-act="tonoSel" data-id="${id}" data-v="" aria-pressed="${!S.tonos[id]}"><span class="mk"></span><span><span class="tt">Según la antífona</span><span class="dd">${esc(SAL.etiquetaTono(a.modo))}</span></span></button></li></ul>
     <div class="tonos">${lista.map(t=>`<button data-act="tonoSel" data-id="${id}" data-v="${t.cod}" aria-pressed="${S.tonos[id]===t.cod}">${esc(t.et.replace('Tono ',''))}</button>`).join('')}</div>`);
 }
-function hojaIndice(){
-  const ss=R().secciones.filter(s=>s.k==='sec');
-  hoja('Índice',`<ul class="indice">${ss.map(s=>`<li><button data-act="ir" data-v="${s.id}">${esc(s.t)}</button></li>`).join('')}</ul>`);
-}
 let _toast, _undo=null;
 function toast(m, snap){
   clearTimeout(_toast); let t=$('#toast');
@@ -358,9 +352,7 @@ document.addEventListener('click',e=>{
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'rito': if(S.rito===v) break; S.rito=v; cambio(R().nombre); break;
     case 'modo': if(S.modo===v) break; S.modo=v; aplicarModo(); cambio({es:'Modo español',la:'Latín con traducción',canto:'Modo canto: salmos y lecturas en español'}[v]); break;
-    case 'ves': if(VES()===v) break; S.ves[S.rito]=v; cambio(R().versiones[v].pendiente?'ADF todavía no está cargada: se muestra la edición de 1979':'Versión: '+nV(v)); break;
     case 'opciones': hojaOpciones(); break;
-    case 'indice': hojaIndice(); break;
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'pautados',primer:'primer verso en partitura',todos:'todo en partitura'}[v]+(S.modo==='canto'?'':' (en el modo Canto)')); break;
     case 'tono': hojaTono(b.dataset.id); break;
@@ -372,7 +364,6 @@ document.addEventListener('click',e=>{
     case 'mas': S.lec=Math.min(2,Math.round((S.lec+.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
     case 'esc': if(S.esc===v) break; S.esc=v; cambio('Tamaño: '+{n:'normal',g:'grande',mg:'muy grande',max:'máximo'}[v]); break;
     case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); toast({light:'Modo claro',dark:'Modo oscuro'}[v], snap); break;
-    case 'ir': { const el=document.getElementById('s-'+v); cerrar(); if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),60); } break;
   }
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });

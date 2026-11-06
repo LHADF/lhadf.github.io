@@ -215,3 +215,22 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 
 /* Tamaño de la aplicación: cuatro opciones en dos columnas */
 .seg:has(> [data-act="esc"]){grid-template-columns:repeat(2,1fr)}
+
+/* ---------- Ritmo de lectura aireado: más espacio entre las partes del oficio ---------- */
+.hora{line-height:1.62}
+.hora .dia-h{margin:.4em 0 2.4em}
+.sec{margin:4em 0 1.4em}
+.hora p{margin:0 0 1em}
+.vr p{margin:0 0 .75em}
+.vr{margin-bottom:1.4em}
+.ant{margin:1em 0 1.6em}
+.ant-greg{margin:.8em 0 1.8em}
+.salmo-h{margin:2em 0 1.1em}
+.v{margin:0 0 .85em}
+.versos.inter .v{margin-bottom:1.2em}
+.versos{margin-bottom:1.4em}
+.himno .est{margin:0 0 1.5em}
+.partitura{margin:.6em 0 1.8em}
+.il .ilseg{margin-bottom:.75em}
+.opciones{margin:0 0 1.4em}
+.fin{margin-top:4em}

@@ -193,7 +193,6 @@ novus = {
  'versiones': {
    'la': {'n': 'Latín', 'd': 'Liturgia Horarum, editio typica altera (1985) · Nova Vulgata'},
    'es79': {'n': 'Español 1979', 'd': 'Edición española (Coeditores Litúrgicos, 1979)'},
-   'adf': {'n': 'Ad Fontes', 'd': 'Traducción ADF de salmos y cánticos', 'pendiente': True},
  },
  'secciones': [
   {'k': 'sec', 'id': 'inicio', 't': 'Invocación inicial'},

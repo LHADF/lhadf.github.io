@@ -2,7 +2,7 @@
 
 *Septies in die laudem dixi tibi* (Sal 118, 164).
 
-Liturgia de las Horas con varias versiones de texto y canto gregoriano: rito actual y Breviario Romano de 1960; español, latín con traducción interlineal y modo canto con antífonas en notación cuadrada y salmos pautados en cualquier tono.
+Liturgia de las Horas con canto gregoriano: rito actual y Breviario Romano de 1960; español, latín con traducción interlineal y modo canto con antífonas en notación cuadrada y salmos pautados en cualquier tono.
 
 **Estado:** prototipo. Solo está armada **Completas del jueves 5 de noviembre de 2026**, en los dos ritos.
 
