@@ -5,10 +5,11 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;',
 
 /* ---------- Estado ---------- */
 const DEF={vista:'hoy', rito:'novus', modo:'la', ves:{novus:'es79',vetus:'es'}, salmos:'primer', trad:true,
-  lec:1.2, esc:'n', theme:'auto', tonos:{}, himno:{}, mariana:{}, examen:false};
+  lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false};
 let S=DEF;
 try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g,{ves:Object.assign({},DEF.ves,g.ves||{})}); if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
+if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
 S.antGreg=true;
 /* Tres modos: español; latín con interlineal; canto (salmos y lecturas en español pautado, lo demás en latín) */
 const MODOS=[['es','Español'],['la','Latín'],['canto','Canto']];
@@ -23,7 +24,7 @@ function guardar(){ try{ const {lengua,canto,antGreg,...g}=S; localStorage.setIt
 const R=()=>D.ritos[S.rito];
 const VES=()=>S.ves[S.rito];
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
-function aplicarTema(){ const r=document.documentElement; if(S.theme==='auto') r.removeAttribute('data-theme'); else r.dataset.theme=S.theme; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
+function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
 
 /* ---------- Texto según lengua ---------- */
 // Devuelve {p: principal, s: secundario (solo en bilingüe), falta: aviso}
@@ -310,19 +311,14 @@ window.addEventListener('popstate',()=>{
 const seg=(act,vals,cur)=>`<div class="seg" role="group">${vals.map(([v,n])=>`<button data-act="${act}" data-v="${v}" aria-pressed="${cur===v}">${n}</button>`).join('')}</div>`;
 const sw=(act,on,t,d)=>`<div class="fila"><span><span class="tt">${t}</span>${d?`<span class="dd">${d}</span>`:''}</span><button class="sw" role="switch" data-act="${act}" aria-checked="${on}" aria-label="${t}"></button></div>`;
 function hojaOpciones(){
-  const r=R(); const vs=Object.entries(r.versiones).filter(([k])=>k!=='la'); const enHora=S.vista==='hora';
-  const ss=r.secciones.filter(x=>x.k==='sec');
   hoja('Opciones',`
-    ${enHora?`<div class="grupo"><h3>Ir a</h3><div class="ir">${ss.map(x=>`<button data-act="ir" data-v="${x.id}">${esc(x.t)}</button>`).join('')}</div></div>`:''}
-    <div class="grupo"><h3>Rito</h3>${seg('rito',[['novus','Liturgia de las Horas'],['vetus','Breviario 1960']],S.rito)}<p class="hint" style="margin-top:6px">${esc(r.sub)}</p></div>
-    <div class="grupo"><h3>Versión en español</h3><p class="hint">Para el modo Español y para los salmos y lecturas del modo Canto.</p><ul class="opts">${vs.map(([k,v])=>`<li><button data-act="ves" data-v="${k}" aria-pressed="${VES()===k}"><span class="mk"></span><span><span class="tt">${esc(v.n)}${v.pendiente?'<span class="pend">por cargar</span>':''}</span><span class="dd">${esc(v.d)}</span></span></button></li>`).join('')}</ul></div>
+    <div class="grupo"><h3>Lectura</h3><div class="tam"><button data-act="menos" aria-label="Achicar el texto">A−</button><span>Texto ${Math.round(S.lec/1.2*100)} %</span><button data-act="mas" aria-label="Agrandar el texto">A+</button></div>
+      <p class="hint" style="margin-top:12px">Tamaño de toda la aplicación</p>${seg('esc',[['n','Normal'],['g','Grande'],['mg','Muy grande'],['max','Máxima']],S.esc)}</div>
+    <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
     <div class="grupo"><h3>Canto</h3>
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}
       <p class="hint" style="margin-top:12px">Salmos</p>${seg('salmos',[['pautado','Pautados'],['primer','1.er verso en partitura'],['todos','Todo en partitura']],S.salmos)}
-      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. El tono sigue a la antífona; para cambiarlo, tocá la indicación sobre cada salmo.</small></div></div>
-    <div class="grupo"><h3>Lectura</h3><div class="tam"><button data-act="menos" aria-label="Achicar el texto">A−</button><span>Texto ${Math.round(S.lec/1.2*100)} %</span><button data-act="mas" aria-label="Agrandar el texto">A+</button></div>
-      <p class="hint" style="margin-top:12px">Tamaño de toda la aplicación</p>${seg('esc',[['n','Normal'],['g','Grande'],['mg','Muy grande'],['max','Máxima']],S.esc)}
-      <p class="hint" style="margin-top:12px">Aspecto</p>${seg('theme',[['auto','Sistema'],['light','Claro'],['dark','Oscuro']],S.theme)}</div>`);
+      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. El tono sigue a la antífona; para cambiarlo, tocá la indicación sobre cada salmo.</small></div></div>`);
 }
 function hojaTono(id){
   const sal=R().secciones.find(s=>s.id===id); const a=antDe(sal.ant); const actual=tonoDe(sal);
@@ -375,7 +371,7 @@ document.addEventListener('click',e=>{
     case 'menos': S.lec=Math.max(.9,Math.round((S.lec-.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
     case 'mas': S.lec=Math.min(2,Math.round((S.lec+.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
     case 'esc': if(S.esc===v) break; S.esc=v; cambio('Tamaño: '+{n:'normal',g:'grande',mg:'muy grande',max:'máximo'}[v]); break;
-    case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); toast({auto:'Aspecto del sistema',light:'Modo claro',dark:'Modo oscuro'}[v], snap); break;
+    case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); toast({light:'Modo claro',dark:'Modo oscuro'}[v], snap); break;
     case 'ir': { const el=document.getElementById('s-'+v); cerrar(); if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),60); } break;
   }
 });

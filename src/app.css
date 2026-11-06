@@ -11,10 +11,6 @@
   --f-titulo:1.75rem; --f-item:1.25rem; --f-ui:1rem; --f-dato:.875rem;
   --r-1:8px; --r-2:16px; --lec:1.2;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
-  --paper:#000000; --surface:#141312; --perg:#15130f; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
-  --ink:#ece7de; --ink2:#c9c2b8; --muted:#9c958c; --line:#2a2725; --line2:#403c38;
-  --rubric:#e2675c; --rubric-soft:#2a1412; --glosa:#5fb8af; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark } }
 :root[data-theme="dark"]{
   --paper:#000000; --surface:#141312; --perg:#15130f; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
   --ink:#ece7de; --ink2:#c9c2b8; --muted:#9c958c; --line:#2a2725; --line2:#403c38;
@@ -216,3 +212,6 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .hora{padding-bottom:64px}
 .toast{bottom:calc(24px + env(safe-area-inset-bottom,0px))}
 .hora .dia-h{line-height:1.45}
+
+/* Tamaño de la aplicación: cuatro opciones en dos columnas */
+.seg:has(> [data-act="esc"]){grid-template-columns:repeat(2,1fr)}
