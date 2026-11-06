@@ -1,11 +1,25 @@
-# Divinum Officium
+# Avisos de terceros
 
-Fuente: https://github.com/DivinumOfficium/divinum-officium
+## Divinum Officium
 
-Commit: `08edec53cc13f9bd109d2ebcae93529b504003bd`.
+Textos y partituras del Breviario Romano de 1960. Fuente: <https://github.com/DivinumOfficium/divinum-officium>. Licencia MIT; aviso íntegro en [public/licenses/divinum-officium-MIT.txt](public/licenses/divinum-officium-MIT.txt). Copyright (c) Divinum Officium.
 
-Los datos latinos de Completas para el 7 de julio de 2026 y el XHTML de referencia proceden de Divinum Officium. Su aviso MIT íntegro se conserva en [public/licenses/divinum-officium-MIT.txt](public/licenses/divinum-officium-MIT.txt) y se distribuye con la aplicación.
+## Exsurge
 
-Copyright (c) 2026 Divinum Officium.
+Motor de notación gregoriana, <https://github.com/frmatthew/exsurge>. Licencia MIT. Incluido en `src/vendor/exsurge.js`.
 
-La declaración expresa de licencia para código **y datos**, las fuentes latinas, las limitaciones de procedencia y la decisión de no incorporar traducciones españolas se documentan en [el informe de investigación](docs/breviarium-1960-fase-1.md). No se atribuye automáticamente esta licencia a todas las traducciones, documentos, partituras ni recursos de terceros del repositorio fuente.
+## jgabc
+
+Nova Vulgata y definiciones de tonos salmódicos, <https://github.com/bbloomf/jgabc>. Dominio público (Unlicense).
+
+## Fuentes tipográficas
+
+Source Serif 4 y Source Sans 3 (Adobe), SIL Open Font License, servidas por Google Fonts. «Cantoral Signos» deriva de Source Serif 4 (OFL) y es del Cantoral.
+
+## Textos con derechos
+
+La edición española de la Liturgia de las Horas (Coeditores Litúrgicos, 1979), tomada de <https://github.com/geronimoarteaga/sync>, y la *Liturgia Horarum* (Librería Editrice Vaticana) tienen derechos de autor. Ver [docs/fuentes.md](docs/fuentes.md).
+
+## Antiphonale 1983
+
+Melodías de «Caro mea» y «Salva nos» según <https://github.com/igneus/antiphonale83>. El repositorio no declara licencia; las melodías son tradicionales.

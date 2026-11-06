@@ -1,2 +1,0 @@
-# Preserve the exact upstream output, including its original trailing spaces.
-tests/fixtures/compline-1960-2026-07-07.html -whitespace

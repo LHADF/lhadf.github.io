@@ -1,52 +1,42 @@
 # Septies
 
-Interfaz para el Oficio Divino: Liturgia de las Horas actual y Breviario Romano de 1960. Aplicación en desarrollo con un prototipo latino de Completas de 1960 para una fecha fija; **no calcula todavía el oficio diario**.
+*Septies in die laudem dixi tibi* (Sal 118, 164).
 
-## Desarrollo
+Liturgia de las Horas con varias versiones de texto y canto gregoriano: rito actual y Breviario Romano de 1960; español, latín con traducción interlineal y modo canto con antífonas en notación cuadrada y salmos pautados en cualquier tono.
 
-Requiere Node.js 24 y npm. Desde la raíz del repositorio:
+**Estado:** prototipo. Solo está armada **Completas del jueves 5 de noviembre de 2026**, en los dos ritos.
+
+## Cómo funciona
+
+| Carpeta | Contenido |
+| --- | --- |
+| `src/app.js`, `src/app.css` | Interfaz: portada «Hoy», lectura de la hora, modos, menú de opciones. |
+| `src/salmodia.js` | Silabeo latino y español, acentos, tonos salmódicos 1–8 y peregrino, pautado y GABC de los salmos. |
+| `src/cantoral.js` | Funciones de dibujo de partituras compartidas con el Cantoral (espaciado, glosa bajo los neumas). |
+| `src/vendor/exsurge.js` | Exsurge, motor de notación gregoriana (MIT). |
+| `src/assets/` | Fuente «Cantoral Signos» (℣, ℟, cruz patada, asterisco) e ilustración de la portada. |
+| `src/datos/` | Los textos y partituras de cada hora, generados por `tools/datos.py`. |
+| `tools/datos.py` | Arma los datos a partir de las fuentes (ver [docs/fuentes.md](docs/fuentes.md)). |
+| `tools/armar.py` | Une todo en un solo `dist/index.html`. |
+| `tests/` | Pruebas del silabeo, el pautado y los datos. |
+
+La app es un único archivo HTML sin dependencias de compilación: solo Python 3 para armarla y Node.js para las pruebas.
 
 ```sh
-npm ci
-npm run dev
+node --test tests/*.test.mjs   # pruebas
+python3 tools/armar.py         # genera dist/index.html
 ```
 
-```sh
-npm test
-npm run build
-npm run preview
-```
+Para regenerar los datos hacen falta los clones de las fuentes en una carpeta hermana `../fuentes` (o en la que indique `SEPTIES_FUENTES`); los datos generados ya están en el repositorio.
 
-Vite sirve la aplicación bajo `/Septies/`, también en desarrollo. La compilación se genera en `dist/`.
+## Publicación
 
-## Funciones disponibles
+Cada cambio en `main` ejecuta las pruebas, arma la app y la publica en GitHub Pages (**Settings → Pages → Source → GitHub Actions**). Dirección: <https://lucasfelixjhs.github.io/Septies/>.
 
-- Selección de fecha civil, oficio, hora e idioma (latín, español y bilingüe).
-- Ocho accesos en el oficio actual; nueve en 1960, incluido el Invitatorio como acceso separado de Maitines. Prima solo aparece en 1960.
-- Interfaz responsive, controles accesibles y lector preparado para salmos, antífonas, himnos, lecturas y oraciones, con columnas bilingües.
-- Completas latinas del 7 de julio de 2026, contrastadas con Divinum Officium, con rúbricas y procedencia por sección.
-- Indicaciones explícitas de contenido pendiente; no se muestran textos ficticios.
+## Reglas
 
-## Arquitectura
+Las decisiones de diseño, ortotipografía y accesibilidad están en [docs/diseno.md](docs/diseno.md). Las de ortotipografía son innegociables.
 
-- `src/components`: lector compartido; `App.tsx`: interfaz y estado de selección.
-- `src/calendar`: fechas civiles. No calcula fiestas, tiempos ni precedencias.
-- `src/engines/modern.ts` y `roman1960.ts`: motores independientes, con catálogo de horas propio. El motor de 1960 selecciona una composición de Completas para una fecha fija; sus reglas generales siguen pendientes.
-- `src/composition`: estado pendiente compartido; `src/engines/roman1960/compline.ts` selecciona la composición latina documentada sin intervenir en el oficio actual.
-- `src/texts/library.json`: biblioteca genérica vacía intencionalmente; `src/texts/roman1960/` contiene el caso latino documentado. `types.ts` define fuente, derechos, verificación y variantes lingüísticas; `texts/index.ts` permite filtrar los registros verificados.
+## Historia
 
-Antes de integrar textos se deben documentar edición, fuente y derechos de reproducción para cada idioma. No debe marcarse como verificado un texto sin revisar estos datos. No se han incorporado traducciones modernas. La selección de idioma configura el lector; el prototipo contiene solo latín y señala expresamente la ausencia del español.
-
-Pendientes: calendario litúrgico completo, rúbricas de cada oficio, salterios, propios, comunes, composición general de las horas y revisión litúrgica independiente. Solo la composición fija documentada identifica su celebración; no se infieren celebraciones para otras fechas. Los avisos deben mantenerse hasta completar y validar estas funciones.
-
-## GitHub Pages
-
-El workflow `.github/workflows/deploy.yml` instala con el lockfile, ejecuta pruebas, compila y publica `dist/` al recibir cambios en `main`. En GitHub, seleccionar **Settings → Pages → Source → GitHub Actions**. La base configurada es `/Septies/`; la URL esperada es `https://lucasfelixjhs.github.io/Septies/`.
-
-Revisar e incorporar la rama de trabajo mediante un pull request antes de publicar. No se ha desplegado ni modificado `main` desde esta entrega. No se requiere un router de servidor ni secretos adicionales para Pages; el workflow utiliza los permisos estándar de GitHub.
-
-## Fase 1: Completas de 1960
-
-Ya está disponible un prototipo latino para **7 de julio de 2026**, en modo privado no clerical y calendario romano general. Usar «Abrir Completas · 7 de julio de 2026» para seleccionarlo. Las demás fechas y horas siguen pendientes. No se incorporan traducciones españolas por derechos aún sin verificar.
-
-El [informe de investigación](docs/breviarium-1960-fase-1.md) detalla fuentes, rúbricas, licencias, arquitectura, pruebas y cómo ampliar el sistema. El JSON de esta hora es un registro separado de la biblioteca genérica aún vacía; el resto de las limitaciones anteriores permanece vigente. Véanse también los [avisos de terceros](THIRD_PARTY_NOTICES.md).
+La primera versión (React + TypeScript, Completas de 1960 del 7 de julio de 2026 contrastadas con Divinum Officium) sigue en la rama `feat/1960-compline`.
