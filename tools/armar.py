@@ -20,9 +20,9 @@ def ico(d):
 ilustracion = base64.b64encode(open(os.path.join(SRC, 'assets', 'coro.png'), 'rb').read()).decode()
 datos = sorted(f for f in os.listdir(os.path.join(SRC, 'datos')) if f.endswith('.js'))
 
-cabeza = '''<title>Septies</title>
+cabeza = '''<title>LH ADF</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Septies · Liturgia de las Horas · prototipo de Completas">
+<meta name="description" content="LH ADF · Liturgia de las Horas · prototipo de Completas">
 <meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -13,11 +13,12 @@ if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se el
 S.antGreg=true;
 /* Una sola versión: Liturgia de las Horas en modo canto (salmos y lecturas en español pautado, lo demás en latín) */
 S.rito='novus'; S.modo='canto';
-function aplicarModo(kind){
+function aplicarModo(kind, sec){
   S.canto = S.modo==='canto';
   if(S.modo==='es') S.lengua='es';
   else if(S.modo==='la') S.lengua='bi';
-  else S.lengua = (kind==='salmo'||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
+  // salmos y lecturas en español; el cántico evangélico, todo en latín
+  else S.lengua = ((kind==='salmo'&&!(sec&&sec.cantico))||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
 }
 aplicarModo();
 function guardar(){ try{ const {lengua,canto,antGreg,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
@@ -87,7 +88,7 @@ function pintar(raiz){
 
 /* ---------- Salmos ---------- */
 function antDe(id){ return R().secciones.find(s=>s.k==='ant'&&s.id===id); }
-function tonoDe(sal){ const a=antDe(sal.ant); return S.tonos[sal.id]||(a&&a.modo)||'8G'; }
+function tonoDe(sal){ const a=antDe(sal.ant); return (a&&a.modo)||'8G'; } // el tono sigue siempre a la antífona
 // Devuelve las líneas (hemistiquios) de un verso, ya marcadas
 function lineasVerso(v, modo, cod, lang, intonar){
   v=v.replace(/✠\s*/g,'');
@@ -128,20 +129,21 @@ function salmoHTML(sal){
   const cod=tonoDe(sal);
   const modo=S.canto? S.salmos : 'texto';
   let h=`<div class="salmo-h"><span class="t">${esc(t.p)}</span>${sal.ref?`<span class="ref">${esc(sal.ref)}</span>`:''}${lema&&lema.p?`<span class="lema">${esc(lema.p)}</span>`:''}`;
-  if(S.canto && modo!=='texto') h+=`<div><button class="tono-chip" data-act="tono" data-id="${sal.id}">${S.tonos[sal.id]?'Tono elegido':'Según la antífona'} · <b>${esc(SAL.etiquetaTono(cod))}</b> ▾</button></div>`;
   h+='</div>';
   // partitura
   let todos=vP.concat(sal.gloria?glP:[]);
+  const inter = S.lengua==='bi' && sal.inter ? sal.inter : null;
+  const interTodos = inter ? inter.concat(sal.gloria?(r.gloriaInter||[]):[]) : null;
   if(S.canto && (modo==='primer'||modo==='todos')){
     const lista=modo==='todos'?todos:todos.slice(0,1);
     const g=SAL.gabcSalmo(lista,cod,L,true);
     h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false);
+    // traducción de los versos que van en partitura, debajo de ella
+    if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
     if(modo==='todos') return h;
   }
   const inicio=(S.canto&&modo==='primer')?1:0;
   const modoTxt=(S.canto&&modo!=='texto')?'pautado':'texto';
-  const inter = S.lengua==='bi' && sal.inter ? sal.inter : null;
-  const interTodos = inter ? inter.concat(sal.gloria?(r.gloriaInter||[]):[]) : null;
   const resto=todos.slice(inicio);
   h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null)}</div>`;
   return h;
@@ -150,7 +152,26 @@ function salmoHTML(sal){
 /* ---------- Secciones ---------- */
 // Interlineal por segmentos: cada grupo de palabras latinas con su traducción literal debajo
 const BI=()=>S.lengua==='bi';
-function interHTML(pares){ return pares.map(([a,b])=>`<span class="ilseg"><span class="sl">${marcas(a)}</span><span class="se">${marcas(b)}</span></span>`).join(' '); }
+function interHTML(pares){
+  const seg=(a,b)=>`<span class="ilseg"><span class="sl">${marcas(a)}</span><span class="se">${marcas(b)}</span></span>`;
+  return pares.map(([a,b])=>{ // ✠ o * al comienzo del latín: segmento propio, sin traducción, para centrarlo entre los textos
+    const m=/^([✠*])\s+(.*)$/.exec(a);
+    return m ? `<span class="ilseg signo" aria-hidden="true"><span class="sl">${m[1]}</span><span class="se"></span></span> `+seg(m[2],b.replace(/^[✠*]\s*/,'')) : seg(a,b);
+  }).join(' ');
+}
+// Centra cada signo en el hueco que queda entre el final del texto anterior y el comienzo del siguiente
+function anchoTexto(el){ const r=document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect(); }
+function centrarSignos(raiz){
+  (raiz||document).querySelectorAll('.ilseg.signo').forEach(s=>{
+    s.style.transform='';
+    const prev=s.previousElementSibling, next=s.nextElementSibling;
+    if(!prev||!next||!prev.classList.contains('ilseg')||!next.classList.contains('ilseg')) return;
+    const a=anchoTexto(prev.querySelector('.sl')), c=anchoTexto(next.querySelector('.sl')), b=anchoTexto(s.querySelector('.sl'));
+    const mismo=(x,y)=>Math.abs((x.top+x.bottom)/2-(y.top+y.bottom)/2)<b.height/2;
+    if(!mismo(a,b)||!mismo(c,b)) return; // signo al comienzo o al final del renglón
+    const centro=(a.right+c.left)/2; s.style.transform=`translateX(${centro-(b.left+b.width/2)}px)`;
+  });
+}
 function vrHTML(sec){
   if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, sec.glosa);
   if(BI() && sec.ilv) return `<div class="vr il"><p><span class="k">℣.</span> <span class="segs">${interHTML(sec.ilv)}</span></p><p><span class="k">℟.</span> <span class="segs">${interHTML(sec.ilr)}</span></p></div>`;
@@ -229,7 +250,7 @@ function horaHTML(){
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}</h2>`;
       return;
     }
-    aplicarModo(sec.k);
+    aplicarModo(sec.k, sec);
     if(sec.pleg && !S.examen) return;
     if(sec.k==='rub' && pleg && !S.examen) return;
     switch(sec.k){
@@ -280,7 +301,7 @@ function render(){
   $('#atras').hidden=!enHora;
   $('#brand').innerHTML= enHora? `Completorium<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="la">${horaHTML()}</article>` : portadaHTML();
-  if(enHora) pintar($('#main'));
+  if(enHora){ centrarSignos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>centrarSignos($('#main'))); pintar($('#main')); }
 }
 
 /* ---------- Hojas ---------- */
@@ -309,14 +330,7 @@ function hojaOpciones(){
     <div class="grupo"><h3>Canto</h3>
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}
       <p class="hint" style="margin-top:12px">Salmos</p>${seg('salmos',[['pautado','Pautados'],['primer','1.er verso en partitura'],['todos','Todo en partitura']],S.salmos)}
-      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. El tono sigue a la antífona; para cambiarlo, tocá la indicación sobre cada salmo.</small></div></div>`);
-}
-function hojaTono(id){
-  const sal=R().secciones.find(s=>s.id===id); const a=antDe(sal.ant); const actual=tonoDe(sal);
-  const lista=SAL.listaTonos();
-  hoja('Tono del salmo',`<p class="hint" style="margin-top:10px">${esc(txt(sal.titulo).p)} · antífona en ${esc(SAL.etiquetaTono(a.modo))}</p>
-    <ul class="opts" style="margin:8px 0 14px"><li><button data-act="tonoSel" data-id="${id}" data-v="" aria-pressed="${!S.tonos[id]}"><span class="mk"></span><span><span class="tt">Según la antífona</span><span class="dd">${esc(SAL.etiquetaTono(a.modo))}</span></span></button></li></ul>
-    <div class="tonos">${lista.map(t=>`<button data-act="tonoSel" data-id="${id}" data-v="${t.cod}" aria-pressed="${S.tonos[id]===t.cod}">${esc(t.et.replace('Tono ',''))}</button>`).join('')}</div>`);
+      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. El tono sigue a la antífona.</small></div></div>`);
 }
 let _toast, _undo=null;
 function toast(m, snap){
@@ -346,8 +360,6 @@ document.addEventListener('click',e=>{
     case 'opciones': hojaOpciones(); break;
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'pautados',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
-    case 'tono': hojaTono(b.dataset.id); break;
-    case 'tonoSel': if(v) S.tonos[b.dataset.id]=v; else delete S.tonos[b.dataset.id]; guardar(); cerrar(); refrescarHoja(); toast(v?SAL.etiquetaTono(v):'Tono según la antífona', snap); break;
     case 'himno': S.himno[b.dataset.k]=v; cambio('Himno cambiado'); break;
     case 'mariana': S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); break;
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
@@ -360,6 +372,6 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
 // Barras que se esconden al bajar y vuelven al subir
 let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const bajar=y>yAnt && y>120; if(S.vista==='hora'){ $('#top').classList.toggle('oculta',bajar); } yAnt=y; },{passive:true});
-let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora') pintar($('#main')); },250); });
+let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ centrarSignos($('#main')); pintar($('#main')); } },250); });
 
 render();
