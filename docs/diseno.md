@@ -25,6 +25,9 @@ Septies es app hermana del Cantoral: comparte su sistema visual y sus gestos. La
 
 Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una sola versión, que se va corrigiendo: salmos y lecturas en español, pautados para el canto; lo demás en latín con interlineal, con antífonas, himno, responsorio y antífona mariana en gregoriano. El cántico evangélico va todo en latín (antífona y cuerpo), pautado y con interlineal.
 
+- **Base:** la forma ordinaria, con cambios puntuales de la forma extraordinaria (ciertos himnos, antífonas y cánticos).
+- **Nombres de las horas y de sus partes:** los de la Liturgia de las Horas en español (Completas, Invocación inicial, Salmo 15, Cántico de Simeón, Antífona final de la Santísima Virgen…), aunque el texto vaya en latín.
+- **Título de la hora:** solo en la barra de arriba; no se repite en el cuerpo.
 - **Tono de salmos y cánticos:** sigue siempre a la antífona; no hay opción para cambiarlo. El Breviario de 1960 sigue en los datos, pero no se muestra.
 
 - **Cruz (✠):** solo en el texto latino; nunca en la traducción. La cruz y el asterisco quedan centrados entre los textos, con el mismo espacio a cada lado.

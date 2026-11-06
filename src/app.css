@@ -212,7 +212,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 
 /* ---------- Ritmo de lectura aireado: más espacio entre las partes del oficio ---------- */
 .hora{line-height:1.62}
-.hora .dia-h{margin:.4em 0 2.4em}
+.hora .dia-h{margin:1.6em 0 2.4em}
 .sec{margin:4em 0 1.4em}
 .hora p{margin:0 0 1em}
 .vr p{margin:0 0 .75em}

@@ -120,7 +120,10 @@ function versosHTML(versos, modo, cod, lang, desde, glosas){
   }).join('');
 }
 function salmoHTML(sal){
-  const r=R(); const es=VES(); const t=txt(sal.titulo); const lema=sal.lema?txt(sal.lema):null;
+  const r=R(); const es=VES();
+  // nombres de las partes como en la Liturgia de las Horas en español, aunque el texto vaya en latín
+  const nombre=o=>({p:o[es]!=null?o[es]:(o.es!=null?o.es:o.la)});
+  const t=nombre(sal.titulo); const lema=sal.lema?nombre(sal.lema):null;
   const L=langPrincipal();
   const keyP = S.lengua==='es' ? es : 'la';
   const keyS = S.lengua==='bi' ? (sal.versos[es]?es:'es79') : null;
@@ -242,7 +245,7 @@ function marianaHTML(sec){
 function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
-  h+=`<h1>Ad Completorium</h1><p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}</p>`;
+  h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}</p>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -299,7 +302,7 @@ function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
   $('#atras').hidden=!enHora;
-  $('#brand').innerHTML= enHora? `Completorium<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
+  $('#brand').innerHTML= enHora? `Completas<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="la">${horaHTML()}</article>` : portadaHTML();
   if(enHora){ centrarSignos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>centrarSignos($('#main'))); pintar($('#main')); }
 }

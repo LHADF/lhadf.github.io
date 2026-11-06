@@ -237,7 +237,7 @@ novus = {
   {'k': 'prosa', 't': {'es79': 'Señor, Dios nuestro, concédenos un descanso tranquilo que restaure nuestras fuerzas, desgastadas ahora por el trabajo del día; así, fortalecidos con tu ayuda, te serviremos siempre con todo nuestro cuerpo y nuestro espíritu. Por Cristo nuestro Señor.'}, 'amen': {'la': 'Amen.', 'es79': 'Amén.'}},
   {'k': 'sec', 'id': 'bendicion', 't': 'Bendición'},
   {'k': 'vr', 'v': {'la': 'Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens.', 'es79': 'El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.'}, 'r': {'la': 'Amen.', 'es79': 'Amén.'}},
-  {'k': 'sec', 'id': 'mariana', 't': 'Antífona a la Virgen'},
+  {'k': 'sec', 'id': 'mariana', 't': 'Antífona final de la Santísima Virgen'},
   {'k': 'mariana', 'opciones': [
      {'id': 'salve', 'n': 'Salve Regina', 'l': {'la': SALVE_LH_LA, 'es79': SALVE_ES79}, 'gabc': SALVE, 'glosa': GL_SALVE},
      {'id': 'alma', 'n': 'Alma Redemptoris Mater', 'l': {'es79': [l for e in madre_es for l in e]}},
