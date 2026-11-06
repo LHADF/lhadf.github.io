@@ -31,7 +31,7 @@ Para regenerar los datos hacen falta los clones de las fuentes en una carpeta he
 
 ## Publicación
 
-Cada cambio en `main` ejecuta las pruebas, arma la app y la publica en GitHub Pages (**Settings → Pages → Source → GitHub Actions**). Dirección: <https://lucasfelixjhs.github.io/Septies/>.
+Cada cambio en `main` ejecuta las pruebas, arma la app y la publica en GitHub Pages (**Settings → Pages → Source → GitHub Actions**). Dirección: <https://lhadf.github.io/>.
 
 ## Reglas
 
