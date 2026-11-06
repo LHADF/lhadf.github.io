@@ -196,7 +196,7 @@ novus = {
  },
  'secciones': [
   {'k': 'sec', 'id': 'inicio', 't': 'Invocación inicial'},
-  {'k': 'vr', 'v': {'la': 'Deus, ✠ in adiutórium meum inténde.', 'es79': 'Dios mío, ✠ ven en mi auxilio.'},
+  {'k': 'vr', 'v': {'la': 'Deus, ✠ in adiutórium meum inténde.', 'es79': 'Dios mío, ven en mi auxilio.'},
               'r': {'la': 'Dómine, ad adiuvándum me festína.', 'es79': 'Señor, date prisa en socorrerme.'}},
   {'k': 'doxo', 't': {'la': 'Glória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc et semper, et in sǽcula sæculórum. Amen. Allelúia.',
                      'es79': 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén. Aleluya.'}},
@@ -382,7 +382,7 @@ assert len(INTER_PS15) == len(ps15_la), (len(INTER_PS15), len(ps15_la))
 # ---------------- Traducción interlineal por segmentos (todo el latín) ----------------
 def IL(t): return [[a.strip(), b.strip()] for a, b in (x.split(' = ') for x in t.split(' | '))]
 GLORIA_IL = 'Glória Patri, = Gloria al Padre, | et Fílio, = y al Hijo, | et Spirítui Sancto. = y al Espíritu Santo. | Sicut erat = Como era | in princípio, = en el principio, | et nunc = y ahora | et semper, = y siempre, | et in sǽcula sæculórum. = y por los siglos de los siglos. | Amen. = Amén. | Allelúia. = Aleluya.'
-DEUS_IN = ('Deus, = Dios, | ✠ in adiutórium meum = ✠ en mi ayuda | inténde. = atiende.', 'Dómine, = Señor, | ad adiuvándum me = a ayudarme | festína. = apresúrate.')
+DEUS_IN = ('Deus, = Dios [mío], | ✠ in adiutórium meum inténde. = ven pronto en mi auxilio.', 'Dómine, = Señor, | ad adiuvándum me festína. = date prisa en socorrerme.')
 MISEREATUR = 'Misereátur nostri = Tenga misericordia de nosotros | omnípotens Deus = Dios todopoderoso | et, dimíssis peccátis nostris, = y, perdonados nuestros pecados, | perdúcat nos = nos lleve | ad vitam ætérnam. = a la vida eterna.'
 NOCTEM = 'Noctem quiétam = Una noche tranquila | et finem perféctum = y un fin perfecto | concédat nobis = nos conceda | Dóminus omnípotens. = el Señor todopoderoso.'
 SALVA_IL = 'Salva nos, = Sálvanos, | Dómine, = Señor, | vigilántes, = despiertos, | custódi nos = guárdanos | dormiéntes, = dormidos, | ut vigilémus = para que velemos | cum Christo, = con Cristo, | et requiescámus = y descansemos | in pace. = en paz.'
@@ -414,7 +414,7 @@ IL_VETUS = {
  ('prosa', 'Misereátur'): MISEREATUR + ' | ' + AMEN,
  ('prosa', 'Indulgéntiam'): 'Indulgéntiam, = El perdón, | ✠ absolutiónem et remissiónem = ✠ la absolución y la remisión | peccatórum nostrórum = de nuestros pecados | tríbuat nobis = nos conceda | omnípotens et miséricors Dóminus. = el Señor todopoderoso y misericordioso. | ' + AMEN,
  ('vr', 'Convérte'): ('Convérte nos = Conviértenos, | ✠ Deus, salutáris noster. = ✠ oh Dios, salvador nuestro.', 'Et avérte = Y aparta | iram tuam = tu ira | a nobis. = de nosotros.'),
- ('vr', 'Deus ✠'): ('Deus ✠ = Dios ✠ | in adiutórium meum = en mi ayuda | inténde. = atiende.', DEUS_IN[1]),
+ ('vr', 'Deus ✠'): ('Deus ✠ = Dios [mío], | in adiutórium meum inténde. = ven pronto en mi auxilio.', DEUS_IN[1]),
  ('doxo', ''): GLORIA_IL.replace('et nunc = y ahora', 'et nunc, = y ahora,'),
  ('ant', 'Adiútor'): 'Adiútor meus = Auxilio mío | et liberátor meus = y libertador mío | esto, Dómine. = sé, Señor.',
  ('lectura', 'Tu autem in nobis'): 'Tu autem = Pero tú | in nobis es, = estás en nosotros, | Dómine, = Señor, | et nomen sanctum tuum = y tu santo nombre | invocátum est = ha sido invocado | super nos: = sobre nosotros: | ne derelínquas nos, = no nos abandones, | Dómine, Deus noster. = Señor, Dios nuestro.',

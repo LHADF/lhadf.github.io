@@ -27,7 +27,6 @@ button{font:inherit;color:inherit;cursor:pointer}
 button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--rubric);outline-offset:2px;border-radius:6px}
 .wrap{max-width:680px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.marca{color:var(--rubric);font-style:italic;font-weight:600;letter-spacing:.01em}
 
 /* ---------- Barra superior ---------- */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line);transition:transform .25s ease}
@@ -38,6 +37,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .iconbtn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:0;background:none;border-radius:50%;color:var(--ink)}
 .iconbtn[hidden]{display:flex!important;visibility:hidden}
 .iconbtn:hover{background:var(--surface)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ---------- Portada «Hoy» ---------- */
 .portada{display:flex;flex-direction:column;gap:18px;padding-block:18px 40px}
@@ -50,9 +50,6 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .color::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--verde)}
 .arco{background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden;display:flex;align-items:flex-end}
 .ilu{display:block;width:100%;height:100%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center 72%/80% auto no-repeat;mask:var(--ilu) center 72%/80% auto no-repeat}
-.rito-sw{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-2);padding:3px;gap:3px}
-.rito-sw button{border:0;background:none;border-radius:12px;min-height:44px;padding:8px 10px;font-size:var(--f-ui);color:var(--muted);line-height:1.2}
-.rito-sw button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px var(--sombra);font-weight:600}
 .lbl{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 2px -6px}
 .horas{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .horas li{border-bottom:1px solid var(--line)}
@@ -198,15 +195,12 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .vr.il p>.k{flex:none;width:1.2em}
 .vr.il p .segs{flex:1}
 
-/* ---------- Cabecera: título que abre el índice y los tres modos ---------- */
+/* ---------- Cabecera ---------- */
 .brand button{font:inherit;border:0;background:none;color:inherit;min-height:44px;padding:2px 10px;border-radius:var(--r-1);line-height:1.1}
 .brand button:disabled{cursor:default}
 .brand button:not(:disabled):hover{background:var(--surface)}
 .brand .chev-i{font-size:.45em;color:var(--muted);vertical-align:.35em}
-.modos{display:grid;grid-template-columns:repeat(3,1fr);max-width:420px;margin:0 auto}
-.modos button{border:0;background:none;min-height:44px;font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;border-radius:0}
-.modos button[aria-pressed="true"]{color:var(--rubric);border-bottom-color:var(--rubric)}
-.top-in{padding-block:4px 0}
+.top-in{padding-block:4px}
 .ir{display:flex;flex-wrap:wrap;gap:6px}
 .ir button{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);min-height:44px;padding:6px 12px;font-family:var(--titulo);font-size:var(--f-ui)}
 .hora{padding-bottom:64px}

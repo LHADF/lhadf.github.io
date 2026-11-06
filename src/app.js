@@ -4,15 +4,15 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ---------- Estado ---------- */
-const DEF={vista:'hoy', rito:'novus', modo:'la', salmos:'primer', trad:true,
+const DEF={vista:'hoy', rito:'novus', modo:'canto', salmos:'primer', trad:true,
   lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false};
 let S=DEF;
 try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
 if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
 S.antGreg=true;
-/* Tres modos: español; latín con interlineal; canto (salmos y lecturas en español pautado, lo demás en latín) */
-const MODOS=[['es','Español'],['la','Latín'],['canto','Canto']];
+/* Una sola versión: Liturgia de las Horas en modo canto (salmos y lecturas en español pautado, lo demás en latín) */
+S.rito='novus'; S.modo='canto';
 function aplicarModo(kind){
   S.canto = S.modo==='canto';
   if(S.modo==='es') S.lengua='es';
@@ -221,7 +221,7 @@ function marianaHTML(sec){
 function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
-  h+=`<h1>${S.modo==='es'?'Completas':'Ad Completorium'}</h1><p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}</p>`;
+  h+=`<h1>Ad Completorium</h1><p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}</p>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -253,7 +253,6 @@ function horaHTML(){
 }
 
 /* ---------- Portada ---------- */
-const MARCA='<span class="marca">Septies</span>';
 function horaActual(){ const d=new Date(); const m=d.getHours()*60+d.getMinutes();
   if(m<5*60) return 'completas'; if(m<9*60) return 'laudes'; if(m<11*60) return 'tercia'; if(m<14*60) return 'sexta'; if(m<17*60) return 'nona'; if(m<21*60) return 'visperas'; return 'completas'; }
 function portadaHTML(){
@@ -266,15 +265,11 @@ function portadaHTML(){
       </div>
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>
-    <div class="rito-sw" role="group" aria-label="Rito">
-      <button data-act="rito" data-v="novus" aria-pressed="${S.rito==='novus'}">Liturgia de las Horas</button>
-      <button data-act="rito" data-v="vetus" aria-pressed="${S.rito==='vetus'}">Breviario 1960</button>
-    </div>
     <p class="lbl">Las horas de hoy</p>
     <ul class="horas">${D.horas.map(([id,n,hh])=>{
       const ok=id==='completas';
       return `<li class="${ok?'sel':''}"><button ${ok?'data-act="abrir"':'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?'':(id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}${ok?esc(hh):''}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
-    <p class="nota-proto">Prototipo: solo Completas de hoy está armada, en los dos ritos. Los textos latinos de la Liturgia de las Horas se tomaron de la Nova Vulgata y deben cotejarse con la edición típica.</p>
+    <p class="nota-proto">Prototipo: solo Completas de hoy está armada. Los textos latinos de la Liturgia de las Horas se tomaron de la Nova Vulgata y deben cotejarse con la edición típica.</p>
   </div>`;
 }
 
@@ -283,10 +278,8 @@ function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
   $('#atras').hidden=!enHora;
-  $('#brand').innerHTML= enHora? `${S.modo==='es'?'Completas':'Completorium'}<small>${esc(D.fechaTxt)}</small>` : MARCA;
-  $('#modos').hidden=!enHora;
-  $('#modos').innerHTML=MODOS.map(([v,n])=>`<button data-act="modo" data-v="${v}" aria-pressed="${S.modo===v}">${n}</button>`).join('');
-  $('#main').innerHTML= enHora? `<article class="hora" lang="${S.modo==='es'?'es':'la'}">${horaHTML()}</article>` : portadaHTML();
+  $('#brand').innerHTML= enHora? `Completorium<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
+  $('#main').innerHTML= enHora? `<article class="hora" lang="la">${horaHTML()}</article>` : portadaHTML();
   if(enHora) pintar($('#main'));
 }
 
@@ -350,11 +343,9 @@ document.addEventListener('click',e=>{
     case 'deshacer': if(_undo){ S=JSON.parse(_undo); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
     case 'abrir': S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); break;
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
-    case 'rito': if(S.rito===v) break; S.rito=v; cambio(R().nombre); break;
-    case 'modo': if(S.modo===v) break; S.modo=v; aplicarModo(); cambio({es:'Modo español',la:'Latín con traducción',canto:'Modo canto: salmos y lecturas en español'}[v]); break;
     case 'opciones': hojaOpciones(); break;
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
-    case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'pautados',primer:'primer verso en partitura',todos:'todo en partitura'}[v]+(S.modo==='canto'?'':' (en el modo Canto)')); break;
+    case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'pautados',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
     case 'tono': hojaTono(b.dataset.id); break;
     case 'tonoSel': if(v) S.tonos[b.dataset.id]=v; else delete S.tonos[b.dataset.id]; guardar(); cerrar(); refrescarHoja(); toast(v?SAL.etiquetaTono(v):'Tono según la antífona', snap); break;
     case 'himno': S.himno[b.dataset.k]=v; cambio('Himno cambiado'); break;

@@ -2,15 +2,15 @@
 
 *Septies in die laudem dixi tibi* (Sal 118, 164).
 
-Liturgia de las Horas con canto gregoriano: rito actual y Breviario Romano de 1960; español, latín con traducción interlineal y modo canto con antífonas en notación cuadrada y salmos pautados en cualquier tono.
+Liturgia de las Horas con canto gregoriano, en una sola versión: salmos y lecturas en español pautados en cualquier tono; lo demás en latín con traducción interlineal y antífonas en notación cuadrada.
 
-**Estado:** prototipo. Solo está armada **Completas del jueves 5 de noviembre de 2026**, en los dos ritos.
+**Estado:** prototipo. Solo está armada **Completas del jueves 5 de noviembre de 2026**. El Breviario de 1960 sigue en los datos, pero la app solo muestra la Liturgia de las Horas.
 
 ## Cómo funciona
 
 | Carpeta | Contenido |
 | --- | --- |
-| `src/app.js`, `src/app.css` | Interfaz: portada «Hoy», lectura de la hora, modos, menú de opciones. |
+| `src/app.js`, `src/app.css` | Interfaz: portada «Hoy», lectura de la hora, menú de opciones. |
 | `src/salmodia.js` | Silabeo latino y español, acentos, tonos salmódicos 1–8 y peregrino, pautado y GABC de los salmos. |
 | `src/cantoral.js` | Funciones de dibujo de partituras compartidas con el Cantoral (espaciado, glosa bajo los neumas). |
 | `src/vendor/exsurge.js` | Exsurge, motor de notación gregoriana (MIT). |
