@@ -20,6 +20,8 @@ jobs:
           node-version: 22
       - name: Pruebas
         run: node --test tests/*.test.mjs
+      - name: Revisar la base de textos
+        run: pip install pyyaml && python3 tools/verificar_base.py
       - name: Armar la app
         run: python3 tools/armar.py
       - uses: actions/configure-pages@v5

@@ -1,0 +1,54 @@
+# Completas del Triduo pascual y de la Octava de Pascua, día por día.
+# juego: salmos de qué día (sabado = después de I Vísperas; domingo = después de II Vísperas).
+# en_lugar_del_responsorio: antífona que reemplaza al responsorio breve.
+# El Domingo de Pascua y el II Domingo de Pascua usan el juego del domingo con la antífona «Éste es el día».
+Jueves Santo:
+  juego: domingo
+  en_lugar_del_responsorio: Cristo, por nosotros, se sometió incluso a la muerte.
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.
+  oracion: 'Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Cristo nuestro Señor.'
+Viernes Santo de la Pasión del Señor:
+  juego: domingo
+  en_lugar_del_responsorio: Cristo, por nosotros, se sometió incluso a la muerte, y una muerte de cruz.
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.
+  oracion: 'Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Cristo nuestro Señor.'
+Sábado Santo:
+  juego: domingo
+  en_lugar_del_responsorio: Cristo, por nosotros, se sometió incluso a la muerte, y una muerte de cruz; por eso Dios lo levantó sobre todo y le concedió el «Nombre-sobre-todo-nombre».
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.
+  oracion: Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Cristo nuestro Señor.
+Lunes de la Octava de Pascua:
+  juego: sabado
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, nos llene de gozo la celebración de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.
+Martes de la Octava de Pascua:
+  juego: domingo
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Cristo nuestro Señor.
+Miércoles de la Octava de Pascua:
+  juego: sabado
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, nos llene de gozo la celebración de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.
+Jueves de la Octava de Pascua:
+  juego: domingo
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Cristo nuestro Señor.
+Viernes de la Octava de Pascua:
+  juego: sabado
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, nos llene de gozo la celebración de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.
+Sábado de la Octava de Pascua:
+  juego: sabado
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, nos llene de gozo la celebración de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.
+II Domingo de Pascua (de la Divina Misericordia):
+  juego: domingo
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Cristo nuestro Señor.

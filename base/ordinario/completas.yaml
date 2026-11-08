@@ -1,0 +1,51 @@
+# Ordinario de Completas: partes que no cambian con el día de la semana.
+# oracion_solemnidad: se usa en las solemnidades, con los salmos del sábado (I Vísperas) o del domingo (II Vísperas).
+nombre: Completas
+aleluya_tras_gloria: siempre, salvo en Cuaresma (en la invocación inicial)
+subtitulo: Oración antes del descanso nocturno
+invocacion:
+- V: Dios mío, ven en mi auxilio.
+- R: Señor, date prisa en socorrerme.
+gloria: |-
+  Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.
+examen:
+- Hermanos, habiendo llegado al final de esta jornada que Dios nos ha concedido, reconozcamos sinceramente nuestros pecados.
+- |-
+  Yo confieso ante Dios todopoderoso
+  y ante vosotros, hermanos,
+  que he pecado mucho
+  de pensamiento, palabra, obra y omisión:
+  por mi culpa, por mi culpa, por mi gran culpa.
+- |-
+  Por eso ruego a santa María, siempre Virgen,
+  a los ángeles, a los santos y a vosotros, hermanos,
+  que intercedáis por mí ante Dios, nuestro Señor.
+- |-
+  V. El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna.
+  R. Amén.
+responsorio:
+  ordinario:
+  - V: En tus manos, Señor, encomiendo mi espíritu.
+  - R: En tus manos, Señor, encomiendo mi espíritu.
+  - V: Tú, el Dios leal, nos librarás.
+  - R: Te encomiendo mi espíritu.
+  - V: Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - R: En tus manos, Señor, encomiendo mi espíritu.
+  pascua:
+  - V: En tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.
+  - R: En tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.
+  - V: Tú, el Dios leal, nos librarás.
+  - R: Aleluya, aleluya.
+  - V: Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - R: En tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.
+cantico_evangelico:
+  titulo: Cántico de Simeón
+  ref: Lc 2, 29-32
+  antifona:
+    ordinario: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.
+    pascua: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+oracion_solemnidad: 'Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Cristo nuestro Señor.'
+bendicion:
+- V: El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.
+- R: Amén.
