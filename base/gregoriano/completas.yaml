@@ -36,36 +36,28 @@ cantico_evangelico:
     - et requiescámus = y descansemos
     - in pace. = en paz.
     - Allelúia. = Aleluya.
-  traduccion_cantico:
+  traduccion_cantico:   # primer versículo, en partitura
     - Nunc = Ahora
     - dimíttis = despides
     - servum tuum, = a tu siervo,
     - Dómine, = Señor,
     - secúndum verbum tuum = según tu palabra
     - in pace = en paz
-    - Quia = porque
-    - vidérunt = han visto
-    - óculi mei = mis ojos
-    - salutáre tuum, = tu salvación,
-    - Quod = la que
-    - parásti = preparaste
-    - ante fáciem = ante el rostro
-    - ómnium populórum, = de todos los pueblos,
-    - Lumen = luz
-    - ad revelatiónem = para revelación
-    - Géntium, = a las naciones,
-    - et glóriam = y gloria
-    - plebis tuæ = de tu pueblo
-    - Israël. = Israel.
-    - Glória Patri, = Gloria al Padre,
-    - et Fílio, = y al Hijo,
-    - et Spirítui Sancto. = y al Espíritu Santo.
-    - Sicut erat = Como era
-    - in princípio, = en el principio,
-    - et nunc, = y ahora
-    - et semper, = y siempre,
-    - et in sǽcula sæculórum. = y por los siglos de los siglos.
-    - Amen. = Amén.
+  # Del segundo versículo en adelante, pautados en latín en el tono del cántico, con su traducción
+  tono_cantico: 3a
+  versos:
+    - Quia vidérunt óculi mei * salutáre tuum,
+    - Quod parásti * ante fáciem ómnium populórum,
+    - Lumen ad revelatiónem Géntium, * et glóriam plebis tuæ Israël.
+    - Glória Patri, et Fílio, * et Spirítui Sancto.
+    - Sicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.
+  traduccion_versos:
+    - porque han visto mis ojos * tu salvación,
+    - la que preparaste * ante el rostro de todos los pueblos,
+    - luz para revelación a las naciones * y gloria de tu pueblo Israel.
+    - Gloria al Padre, y al Hijo, * y al Espíritu Santo.
+    - Como era en el principio, y ahora, y siempre, * y por los siglos de los siglos. Amén.
+
 conclusion:
   partitura: noctem-quietam.gabc
   traduccion:
@@ -84,3 +76,203 @@ tonos_salmos:
   jueves: 8G
   viernes: 8G
   sabado: 8G
+
+# Himno en gregoriano: primera opción todos los días (las demás, los himnos en español de la base)
+himno:
+  titulo: Te lucis ante términum
+  partitura: te-lucis-dominicis.gabc
+  traduccion:
+    - Te = A ti,
+    - lucis ante términum, = antes del fin de la luz,
+    - Rerum Creátor, = Creador de todo,
+    - póscimus, = pedimos
+    - Ut = que
+    - pro = por
+    - tua = tu
+    - cleméntia = clemencia
+    - Sis = seas
+    - præsul = guardián
+    - et = y
+    - custódia. = custodia.
+    - Procul = Lejos
+    - recédant = se vayan
+    - sómnia, = los sueños
+    - Et nóctium phantásmata; = y los fantasmas de la noche;
+    - Hostémque = y al enemigo
+    - nostrum = nuestro
+    - cómprime, = reprime,
+    - Ne = para que no
+    - polluántur = se manchen
+    - córpora. = los cuerpos.
+    - Præsta, = Concédelo,
+    - Pater = Padre
+    - piíssime, = piadosísimo,
+    - Patríque = y al Padre
+    - compar = igual,
+    - Únice, = Unigénito,
+    - Cum = con
+    - Spíritu = el Espíritu
+    - Paráclito = Paráclito
+    - Regnans = reinando
+    - per = por
+    - omne = todo
+    - sǽculum. = siglo.
+    - Amen. = Amén.
+
+# Respuesta a la lectura breve
+lectura_respuesta:
+  - Deo grátias. = Demos gracias a Dios.
+
+# Responsorio breve cantado (opción). Por ahora, el del Tiempo Ordinario (fuera de Pascua, Triduo y Octavas).
+responsorio:
+  ordinario:
+    partitura: in-manus-tuas.gabc
+    traduccion:
+      - In = En
+      - manus = manos
+      - tuas = tuyas,
+      - Dómine, = Señor,
+      - Comméndo = encomiendo
+      - spíritum = espíritu
+      - meum. = mío.
+      - In = En
+      - manus. = manos.
+      - Redemísti = Redimiste
+      - nos = nos,
+      - Dómine, = Señor,
+      - Deus = Dios
+      - veritátis. = de verdad.
+      - Comméndo. = Encomiendo.
+      - Glória = Gloria
+      - Patri, = al Padre,
+      - et = y
+      - Fílio, = al Hijo,
+      - et = y
+      - Spirítui = al Espíritu
+      - Sancto. = Santo.
+      - In = En
+      - manus. = manos.
+
+# Antífonas finales de la Virgen en gregoriano.
+# Tiempo Ordinario: domingos y solemnidades (y sus I Vísperas), Salve solemne; los demás días, Salve simple
+# (siempre seleccionada al abrir) y Sub tuum præsídium como opción. Asunción: Ave Regina cælórum, simple o solemne.
+marianas:
+  salve_simple:
+    titulo: Salve Regina
+    partitura: salve-regina-simple.gabc
+    traduccion: &salve
+      - Salve, = Salve,
+      - Regína, = Reina,
+      - mater = madre
+      - 'misericórdiæ: = de misericordia,'
+      - Vita, = vida,
+      - dulcédo, = dulzura
+      - et = y
+      - spes = esperanza
+      - nostra, = nuestra,
+      - salve. = salve.
+      - Ad = A
+      - te = ti
+      - clamámus, = clamamos,
+      - éxsules, = desterrados,
+      - fílii = hijos
+      - Hevæ. = de Eva.
+      - Ad = A
+      - te = ti
+      - suspirámus, = suspiramos,
+      - geméntes = gimiendo
+      - et = y
+      - flentes = llorando
+      - in = en
+      - hac = este
+      - lacrimárum valle. = valle de lágrimas.
+      - Eia = Ea,
+      - ergo, = pues,
+      - Advocáta = abogada
+      - nostra, = nuestra,
+      - illos = esos
+      - tuos = tus
+      - misericórdes = misericordiosos
+      - óculos = ojos
+      - ad = a
+      - nos = nosotros
+      - convérte. = vuelve.
+      - Et = Y
+      - Iesum, = a Jesús,
+      - benedíctum = bendito
+      - fructum = fruto
+      - ventris = del vientre
+      - tui, = tuyo,
+      - nobis = a nosotros
+      - post = después de
+      - hoc = este
+      - exsílium = destierro
+      - osténde. = muestra.
+      - O = Oh
+      - 'clemens: = clemente,'
+      - O = oh
+      - 'pia: = piadosa,'
+      - O = oh
+      - dulcis = dulce
+      - Virgo = Virgen
+      - María. = María.
+  salve_solemne:
+    titulo: Salve Regina
+    partitura: salve-regina-solemne.gabc
+    traduccion: *salve
+  sub_tuum:
+    titulo: Sub tuum præsídium
+    partitura: sub-tuum-praesidium.gabc
+    traduccion:
+      - Sub = Bajo
+      - tuum = tu
+      - præsídium = amparo
+      - confúgimus, = nos acogemos,
+      - sancta = santa
+      - 'Dei Génitrix: = Madre de Dios;'
+      - nostras = nuestras
+      - deprecatiónes = súplicas
+      - ne despícias = no desprecies
+      - 'in necessitátibus: = en las necesidades,'
+      - sed = sino
+      - a perículis = de los peligros
+      - cunctis = todos
+      - líbera = líbranos
+      - semper, = siempre,
+      - Virgo = Virgen
+      - gloriósa = gloriosa
+      - et = y
+      - benedícta. = bendita.
+  ave_simple:
+    titulo: Ave Regina cælórum (simple)
+    partitura: ave-regina-caelorum-simple.gabc
+    traduccion: &ave
+      - Ave, = Salve,
+      - Regína = Reina
+      - cælórum, = de los cielos,
+      - Ave, = salve,
+      - Dómina = Señora
+      - 'Angelórum: = de los ángeles;'
+      - Salve, = salve,
+      - radix, = raíz,
+      - salve, = salve,
+      - porta, = puerta,
+      - Ex qua = de la cual
+      - mundo = para el mundo
+      - lux = la luz
+      - 'est orta: = nació.'
+      - Gaude, = Alégrate,
+      - Virgo = Virgen
+      - gloriósa, = gloriosa,
+      - Super omnes = sobre todas
+      - 'speciósa: = hermosa;'
+      - Vale, = adiós,
+      - o valde = oh muy
+      - decóra, = bella,
+      - Et pro nobis = y por nosotros
+      - Christum = a Cristo
+      - exóra. = ruega.
+  ave_solemne:
+    titulo: Ave Regina cælórum (solemne)
+    partitura: ave-regina-caelorum-solemne.gabc
+    traduccion: *ave

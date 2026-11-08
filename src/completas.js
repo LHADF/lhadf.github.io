@@ -100,7 +100,7 @@ function armar(fecha, region){
 
   sec('himno','Himno');
   const pool = pascua?'pascua': cuaresma?'cuaresma': (hoy.t==='Adviento'||hoy.t==='Navidad')?'adviento_navidad':'ordinario';
-  S.push({k:'himno', es:true, opciones:C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''}))});
+  S.push({k:'himno', es:true, opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})))});
 
   sec('salmodia','Salmodia');
   const sal=pascua?J.salmodia_pascua:J.salmodia; let na=0;
@@ -116,19 +116,22 @@ function armar(fecha, region){
 
   sec('lectura','Lectura breve');
   S.push({k:'lectura', es:true, ref:{es:J.lectura.ref}, t:{es:J.lectura.texto}});
+  S.push({k:'deo', il:GR.lectura_respuesta});
 
   if(el.especial){
     sec('responsorio','En lugar del responsorio breve');
     S.push({k:'ant', id:'rb', es:true, n:'Ant.', t:{es:el.especial.en_lugar_del_responsorio}});
   } else {
     sec('responsorio','Responsorio breve');
-    S.push({k:'resp', es:true, l:{es:pares(O.responsorio[pascua?'pascua':'ordinario'])}});
+    const rg = pascua ? null : GR.responsorio.ordinario;   // cantado: por ahora, el del Tiempo Ordinario
+    S.push({k:'resp', es:true, l:{es:pares(O.responsorio[pascua?'pascua':'ordinario'])}, ...(rg?{opcional:true, gabc:rg.gabc, glosa:rg.traduccion}:{})});
   }
 
   sec('cantico','Cántico evangélico');
   const tp=pascua||!!(el.especial&&/Aleluya/.test(el.especial.antifona_cantico||''));
   S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), t:{la:'Salva nos, Dómine'}});
-  S.push({k:'greg', titulo:'Cántico de Simeón', ref:'Lc 2, 29-32', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion});
+  S.push({k:'cantico', titulo:'Cántico de Simeón', ref:'Lc 2, 29-32', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
+          tono:GR.cantico.tono, versos:GR.cantico.versos, inter:GR.cantico.traduccion_versos});
   S.push({k:'ant', rep:'ac'});
 
   sec('oracion','Oración');
@@ -140,8 +143,15 @@ function armar(fecha, region){
   S.push({k:'vr', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion});
 
   sec('mariana','Antífona final de la Santísima Virgen');
-  const mar=B.marianas[pascua?'pascua':'año'];
-  S.push({k:'mariana', es:true, opciones:mar.map((m,i)=>({id:(pascua?'p':'a')+i, n:oracionCase(m.titulo.replace(/[,;:.]$/,'')), l:{es:m.texto.flatMap(e=>e.split('\n'))}}))});
+  const GM=GR.marianas, op=(k,id)=>({id, n:GM[k].titulo, gabc:GM[k].gabc, glosa:GM[k].traduccion});
+  if(hoy.t==='Ordinario'){
+    if(/Asunción/.test((el.visperasDe||hoy).n)) S.push({k:'mariana', es:true, opciones:[op('ave_solemne','ave-sol'), op('ave_simple','ave-sim')]});
+    else if(el.solemne) S.push({k:'mariana', es:true, opciones:[op('salve_solemne','salve-sol')]});
+    else S.push({k:'mariana', es:true, efimera:true, opciones:[op('salve_simple','salve-sim'), op('sub_tuum','subtuum')]});   // siempre abre en la Salve simple
+  } else {
+    const mar=B.marianas[pascua?'pascua':'año'];
+    S.push({k:'mariana', es:true, opciones:mar.map((m,i)=>({id:(pascua?'p':'a')+i, n:oracionCase(m.titulo.replace(/[,;:.]$/,'')), l:{es:m.texto.flatMap(e=>e.split('\n'))}}))});
+  }
 
   const d=deIso(fecha);
   const salterio = hoy.sal ? `Semana ${ROMANO(hoy.sal)} del salterio` : '';

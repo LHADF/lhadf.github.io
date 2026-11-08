@@ -92,3 +92,45 @@ test('Completas: oración de solemnidad, Cuaresma sin aleluya, Pascua con aleluy
   const ant = f => secc(f, 'ant').find(s => s.id === 'ac').gabc;
   assert.ok(/Al\(g\)le/.test(ant('2027-04-15')) && !/Al\(g\)le/.test(ant('2026-11-05')));
 });
+
+// Latín de las partituras: tilde en las palabras de tres sílabas o más (salvo nombres con diéresis, como Israël)
+const palabrasGabc = g => {
+  const c = g.split('%%')[1].replace(/<alt>.*?<\/alt>|<eu>.*?<\/eu>/gs, '').replace(/<[^>]+>|\[[^\]]*\]|[{}]/g, '');
+  const out = []; let cur = '', n = 0;
+  for (const m of c.matchAll(/([^()]*)\(([^)]*)\)/g)) {
+    const t = m[1];
+    if (/^\s/.test(t) || !t.trim()) { if (cur) out.push([cur, n]); cur = ''; n = 0; }
+    if (/[A-Za-zÀ-ÿæœǽ]/.test(t)) { cur += t.trim(); n++; }
+  }
+  if (cur) out.push([cur, n]);
+  return out;
+};
+test('latín de las partituras: tildes en palabras de 3 sílabas o más', () => {
+  const G = B.completas.gregoriano;
+  const todas = [G.invocacion.solemne, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc, G.himno.gabc,
+    ...Object.values(G.responsorio).map(x => x.gabc), ...Object.values(G.marianas).map(x => x.gabc)];
+  const faltan = [];
+  for (const g of todas) for (const [w, n] of palabrasGabc(g))
+    if (n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́ë]/.test(w)) faltan.push(w);
+  assert.deepEqual(faltan, []);
+});
+
+test('Completas: antífona final de la Virgen según el día', () => {
+  const mar = f => { const m = secc(f, 'mariana')[0]; return m.opciones.map(o => o.id).join(' ') + (m.efimera ? ' (efímera)' : ''); };
+  assert.equal(mar('2026-11-05'), 'salve-sim subtuum (efímera)');     // feria del Tiempo Ordinario
+  assert.equal(mar('2026-11-08'), 'salve-sol');                        // domingo
+  assert.equal(mar('2026-11-07'), 'salve-sol');                        // I Vísperas del domingo
+  assert.equal(mar('2027-08-15'), 'ave-sol ave-sim');                  // Asunción
+  assert.match(mar('2026-12-02'), /^a0/);                              // Adviento: las de la base en español
+});
+
+test('Completas: invocación con cortes y doble barra; Nunc con un solo versículo en partitura; bendición sin acentos', () => {
+  const inv = secc('2026-11-05', 'vr')[0].gabc;
+  assert.match(inv, /na\.\([^)]*\) \(::\) \(Z\)\s*\nGló/);          // doble barra y renglón nuevo antes del Gloria
+  assert.match(inv, /\(Z\)\s*\n<sp>R\/<\/sp>/);                       // Dómine en renglón nuevo
+  const c = secc('2026-11-05', 'cantico')[0];
+  assert.equal((c.gabc.match(/\(::\)/g) || []).length, 1);
+  assert.ok(!/\d+\.\s*Nunc/.test(c.gabc));
+  assert.equal(c.versos.length, c.inter.length);
+  assert.ok(!/r1/.test(B.completas.gregoriano.conclusion.gabc));
+});

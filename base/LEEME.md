@@ -36,5 +36,14 @@ Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral
 - **Triduo y Octava de Pascua:** todo lo de `tiempo/completas-triduo-octava.yaml`, día por día. En la Octava se alternan los juegos del sábado y del domingo.
 - **Aleluya** después del Gloria de la invocación: siempre, salvo en Cuaresma y el Triduo.
 - **Octava de Navidad:** se alternan los juegos del sábado y del domingo, con la oración de las solemnidades.
+- **Himno:** primera opción, *Te lucis ante términum* en gregoriano; después, los himnos en español del tiempo.
+- **Lectura breve:** ℟. *Deo grátias*.
+- **Responsorio breve:** recitado en español o cantado (*In manus tuas*, fuera de Pascua). La elección se recuerda.
+- **Antífona final de la Virgen (Tiempo Ordinario):** domingos y solemnidades (y sus I Vísperas), Salve Regina solemne;
+  ferias, memorias y fiestas, Salve Regina simple, con *Sub tuum præsídium* como opción que no se recuerda (siempre abre en la Salve);
+  Asunción, *Ave Regina cælórum*, solemne o simple. En los demás tiempos, por ahora, las antífonas en español de la base.
+- **Cántico evangélico:** primer versículo del Nunc dimittis en partitura; el resto pautado en latín (tono 3 a), con traducción.
+- **GABC nuevos:** `python3 tools/normalizar_gabc.py ORIGEN.gabc destino.gabc` pasa el latín a i, æ y œ y avisa las palabras
+  de tres sílabas o más sin tilde (hay que agregarla a mano). Los cortes de renglón forzados se marcan con `(Z)`.
 - **Invocación en gregoriano:** tono solemne los domingos y solemnidades (y sus I Vísperas), el Triduo y las Octavas; tono festivo los demás días.
 - **Himnos:** Tiempo Ordinario, Adviento y Navidad, Cuaresma (y Triduo), Pascua: cada uno con su lista.

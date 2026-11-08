@@ -21,6 +21,13 @@ def gabc(nombre):
     return s.replace('<v>\\greheightstar</v>', '*')   # asterisco de Gregorio → asterisco común
 
 
+def primer_verso(g):
+    """Solo el primer versículo (hasta la primera doble barra), para cánticos que siguen pautados."""
+    cab, _, cuerpo = g.partition('%%')
+    i = cuerpo.index('(::)') + 4
+    return cab + '%%' + cuerpo[:i] + '\n'
+
+
 def main():
     G = leer(os.path.join(B, 'gregoriano', 'completas.yaml'))
     inv, ce, co = G['invocacion'], G['cantico_evangelico'], G['conclusion']
@@ -33,7 +40,12 @@ def main():
             'gregoriano': {
                 'invocacion': {'solemne': gabc(inv['solemne']), 'ferial': gabc(inv['ferial']), 'traduccion': pares(inv['traduccion'])},
                 'antifona': {'gabc': gabc(ce['antifona']), 'traduccion': pares(ce['traduccion_antifona'])},
-                'cantico': {'gabc': gabc(ce['cantico']), 'traduccion': pares(ce['traduccion_cantico'])},
+                'cantico': {'gabc': primer_verso(gabc(ce['cantico'])), 'traduccion': pares(ce['traduccion_cantico']),
+                            'tono': str(ce['tono_cantico']), 'versos': ce['versos'], 'traduccion_versos': ce['traduccion_versos']},
+                'himno': {'titulo': G['himno']['titulo'], 'gabc': gabc(G['himno']['partitura']), 'traduccion': pares(G['himno']['traduccion'])},
+                'lectura_respuesta': pares(G['lectura_respuesta']),
+                'responsorio': {k: {'gabc': gabc(v['partitura']), 'traduccion': pares(v['traduccion'])} for k, v in G['responsorio'].items()},
+                'marianas': {k: {'titulo': v['titulo'], 'gabc': gabc(v['partitura']), 'traduccion': pares(v['traduccion'])} for k, v in G['marianas'].items()},
                 'conclusion': {'gabc': gabc(co['partitura']), 'traduccion': pares(co['traduccion'])},
                 'tonos': G['tonos_salmos'],
             },

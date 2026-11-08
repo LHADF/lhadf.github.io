@@ -60,6 +60,16 @@ for t in ('ordinario', 'adviento_navidad', 'cuaresma', 'pascua'):
 M = leer(os.path.join(B, 'ordinario', 'antifonas-marianas.yaml'))
 falta(M.get('año') and M.get('pascua'), 'ordinario/antifonas-marianas.yaml: faltan antífonas')
 
+G = leer(os.path.join(B, 'gregoriano', 'completas.yaml'))
+def trad(x, donde):
+    if isinstance(x, dict):
+        for k, v in x.items(): trad(v, f'{donde}.{k}')
+    elif isinstance(x, list) and donde.split('.')[-1] == 'traduccion' or isinstance(x, list) and donde.split('.')[-1].startswith('traduccion_') and donde.split('.')[-1] != 'traduccion_versos':
+        for e in x: falta(isinstance(e, str) and ' = ' in e, f'gregoriano/completas.yaml · {donde}: «{e}» debe ser «latín = español» (entre comillas si tiene «: »)')
+    elif isinstance(x, str) and x.endswith('.gabc'):
+        falta(os.path.exists(os.path.join(B, 'gregoriano', x)), f'gregoriano/completas.yaml · {donde}: no existe base/gregoriano/{x}')
+trad(G, 'completas')
+
 if errores:
     print('La base tiene problemas:'); [print(' -', e) for e in errores]; sys.exit(1)
 print(f'Base correcta: {len(salmos)} salmos y cánticos, Completas completas.')

@@ -1,4 +1,4 @@
-const ESP_SILABA=5, ESP_PAUSA=2.5;
+const ESP_SILABA=5, ESP_PAUSA=2.5, ESP_PAUSA_CHICA=4.5; // pausas chicas: divisio minima (,) y virgula (`)
 let _fuentes=null;
 const ROMANO_MODO=['','i','ii','iii','iv','v','vi','vii','viii'];
 function contextoExsurge(){
@@ -46,9 +46,10 @@ function gabcParaExsurge(g){
 function gabcCuerpo(g){ const i=g.indexOf('%%'); return i>=0? g.slice(i+2).replace(/^\s*\n/,'') : g; }
 function espaciarSilabas(maps){
   const ns=[]; maps.forEach(m=>(m.notations||[]).forEach(n=>ns.push(n)));
-  const pausa=c=>c.intraNeumeSpacing*ESP_PAUSA;
+  const chica=n=>(exsurge.QuarterBar&&n instanceof exsurge.QuarterBar)||(exsurge.Virgula&&n instanceof exsurge.Virgula);
   ns.forEach((n,i)=>{
     if(!n.isDivider) return;
+    const f=chica(n)?ESP_PAUSA_CHICA:ESP_PAUSA, pausa=c=>c.intraNeumeSpacing*f;
     if(n.trailingSpace && n.trailingSpace.isDefault) n.trailingSpace=pausa;
     for(let k=i-1;k>=0;k--){ const a=ns[k]; if(a.isNeume||a.isDivider){ if(a.trailingSpace&&a.trailingSpace.isDefault) a.trailingSpace=pausa; break; } if(a.hasLyrics&&a.hasLyrics()) break; }
   });
