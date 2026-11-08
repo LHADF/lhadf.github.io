@@ -83,7 +83,7 @@ function svgDe(id, ancho){
         const w=parseFloat(svg.getAttribute('width')), h=parseFloat(svg.getAttribute('height'));
         if(!svg.getAttribute('viewBox')&&w&&h) svg.setAttribute('viewBox','0 0 '+w+' '+h);
         svg.removeAttribute('width'); svg.removeAttribute('height');
-        const html=svg.outerHTML; cacheSvg.set(clave,html); ok(html);
+        const html=svg.outerHTML.replace(/\u27E6/g,'[').replace(/\u27E7/g,']'); cacheSvg.set(clave,html); ok(html);
       }));
     }catch(e){ mal(e); }
   }));
@@ -151,14 +151,15 @@ function salmoHTML(sal){
   const interTodos = inter ? inter.concat(sal.gloria?(r.gloriaInter||[]):[]) : null;
   if(S.canto && (modo==='primer'||modo==='todos')){
     const lista=modo==='todos'?todos:todos.slice(0,1);
-    const g=SAL.gabcSalmo(lista,cod,L,true);
+    let g=SAL.gabcSalmo(lista,cod,L,true);
+    if(sal.es) g=g.replace(/<\/?[bi]>/g,''); // salmos en español: sin pautas también en la partitura
     h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false);
     // traducción de los versos que van en partitura, debajo de ella
     if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
     if(modo==='todos') return h;
   }
   const inicio=(S.canto&&modo==='primer')?1:0;
-  const modoTxt=(S.canto&&modo!=='texto')?'pautado':'texto';
+  const modoTxt=(S.canto&&modo!=='texto'&&!sal.es)?'pautado':'texto'; // salmos en español: sin pautas, con * y †
   const resto=todos.slice(inicio);
   h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null)}</div>`;
   return h;
@@ -198,7 +199,7 @@ function prosaHTML(o, amen, extra, il){
   if(BI() && il) return `<p class="il">${extra||''}${interHTML(il)}</p>`;
   const t=txt(o); let h='';
   if(t.falta==='la') h+=`<p class="aviso">Este texto todavía no tiene versión latina en el prototipo. Se muestra en español.</p>`;
-  h+=`<p>${extra||''}${marcas(t.p)}${amen?` <span class="amen"><span class="k">℟.</span> ${esc(txt(amen).p)}</span>`:''}</p>`;
+  h+=`<p>${extra||''}${marcas(t.p)}${amen?` <span class="amen"><span class="k">℟.</span> <b>${esc(txt(amen).p)}</b></span>`:''}</p>`;
   if(t.s) h+=`<p class="gl">${marcas(t.s)}${amen?' '+esc(txt(amen).s||''):''}</p>`;
   return h;
 }
@@ -235,6 +236,23 @@ function himnoHTML(sec){
     return `<p class="est">${numerar?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}${ult&&il===e.length-1&&amen?' '+esc(amen):''}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+'</div>';
   return h;
 }
+function examenHTML(sec){
+  const f=sec.formulas.find(x=>x.id===S.examenF)||sec.formulas[0];
+  const br=t=>esc(t).replace(/\n/g,'<br>');
+  const vr=(k,t)=>`<p><span class="k">${k==='V'?'℣':'℟'}.</span> ${k==='R'?`<b>${br(t)}</b>`:br(t)}</p>`;
+  let h=`<div class="opciones" role="group" aria-label="Fórmula">${sec.formulas.map(x=>`<button data-act="examenF" data-v="${x.id}" aria-pressed="${x===f}">${esc(x.titulo)}</button>`).join('')}</div>`;
+  h+=`<p>${br(sec.invitacion)}</p>`;
+  if(f.latin){ // Confíteor latino, con traducción literal debajo; lo dicen todos
+    h+=f.todos.map(p=>S.trad?`<p class="il todos">${interHTML(p)}</p>`:`<p class="todos">${esc(p.map(x=>x[0]).join(' '))}</p>`).join('');
+    h+=`<div class="vr${S.trad?' il':''}">`+f.absolucion.map(([k,p])=>S.trad
+      ? `<p><span class="k">${k==='V'?'℣':'℟'}.</span> <span class="segs${k==='R'?' todos':''}">${interHTML(p)}</span></p>`
+      : vr(k,p.map(x=>x[0]).join(' '))).join('')+'</div>';
+    return h;
+  }
+  if(f.todos) h+=f.todos.map(p=>`<p class="todos">${br(p)}</p>`).join('');
+  if(f.versos) h+=`<div class="vr">${f.versos.map(([k,t])=>vr(k,t)).join('')}</div>`;
+  return h+`<div class="vr">${sec.absolucion.map(([k,t])=>vr(k,t)).join('')}</div>`;
+}
 function respHTML(sec){
   if(sec.opcional){ // recitado en español o cantado en gregoriano
     const ops=`<div class="opciones" role="group" aria-label="Responsorio">${[['no','Recitado'],['si','Cantado']].map(([v,n])=>`<button data-act="resp" data-v="${v}" aria-pressed="${(S.respCanto?'si':'no')===v}">${n}</button>`).join('')}</div>`;
@@ -244,7 +262,7 @@ function respHTML(sec){
   if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, (S.lengua!=='la'||S.trad)?sec.glosa:null);
   const es=VES(); const la=sec.l.la, sp=sec.l[es]||sec.l.es79||sec.l.es;
   const P= S.lengua==='es'? sp : la; const Sx= S.lengua==='bi'? (sec.lit? sec.lit.map((x,i)=>[la[i][0],x]) : sp) : null;
-  return `<div class="vr">${P.map((x,i)=>`<p><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
+  return `<div class="vr">${P.map((x,i)=>`<p><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${x[0]==='R'?'<b>'+marcas(x[1])+'</b>':marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
 }
 function marianaHTML(sec){
   const ops=sec.opciones;
@@ -269,7 +287,7 @@ function horaHTML(){
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
       pleg=sec.plegable?sec.id:null;
-      h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}</h2>`;
+      h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(sec.ref)}</span>`:''}</h2>`;
       return;
     }
     aplicarModo(sec.k, sec);
@@ -282,13 +300,14 @@ function horaHTML(){
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
       case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+prosaHTML(sec.t, sec.amen, '', sec.il); break;
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
-      case 'lectura': { const t=txt(sec.t); const ref=txt(sec.ref).p; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(ref)}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p><span class="lec-ref">${esc(ref)}</span>${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
+      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(ref)}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p>${ref?`<span class="lec-ref">${esc(ref)}</span>`:''}${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
       case 'ant': h+=antHTML(sec); break;
       case 'salmo': h+=salmoHTML(sec); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;
-      case 'deo': h+= S.trad ? `<div class="vr il"><p><span class="k">℟.</span> <span class="segs">${interHTML(sec.il)}</span></p></div>` : `<div class="vr"><p><span class="k">℟.</span> ${esc(sec.il.map(p=>p[0]).join(' '))}</p></div>`; break;
+      case 'deo': h+=`<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b></p></div>`; break;
+      case 'examen': h+=examenHTML(sec); break;
       case 'cantico':
         h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span><span class="ref">${esc(sec.ref)}</span></div>`+partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
           +`<div class="versos${S.trad?' inter':''}">${versosHTML(sec.versos,'pautado',sec.tono,'la',1,S.trad?sec.inter:null)}</div>`; break;
@@ -367,8 +386,8 @@ function hojaOpciones(){
     <div class="grupo"><h3>Calendario</h3>${seg('region',Object.entries(CP.regiones),S.region)}<p class="hint" style="margin-top:8px">Calendario ADF. Paraguay cambia solo los días en que su calendario difiere.</p></div>
     <div class="grupo"><h3>Canto</h3>
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}
-      <p class="hint" style="margin-top:12px">Salmos</p>${seg('salmos',[['pautado','Pautados'],['primer','1.er verso en partitura'],['todos','Todo en partitura']],S.salmos)}
-      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. Tono provisorio de los salmos: 8 G.</small></div></div>`);
+      <p class="hint" style="margin-top:12px">Salmos</p>${seg('salmos',[['pautado','Sin partitura'],['primer','1.er verso en partitura'],['todos','Todo en partitura']],S.salmos)}
+      <div class="leyenda">Protégeme, Dios mío, que me refugio en ti <span class="sg">*</span><small><span class="sg">*</span> mediante · <span class="sg">†</span> flexa. Tono provisorio de los salmos: 8 G. En el Nunc dimittis pautado: negrita, acento; cursiva, preparación.</small></div></div>`);
 }
 let _toast, _undo=null;
 function toast(m, snap){
@@ -400,7 +419,8 @@ document.addEventListener('click',e=>{
     case 'hoy': S.fecha=fechaHoy(); cargarDia(); render(); break;
     case 'region': if(S.region===v) break; S.region=v; cargarDia(); cambio('Calendario de '+CP.regiones[v]); break;
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
-    case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'pautados',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
+    case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'sin partitura',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
+    case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
     case 'himno': S.himno[b.dataset.k]=v; cambio('Himno cambiado'); break;
     case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
     case 'resp': S.respCanto=v==='si'; cambio(S.respCanto?'Responsorio cantado':'Responsorio recitado'); break;

@@ -85,12 +85,14 @@ test('Completas: oración de solemnidad, Cuaresma sin aleluya, Pascua con aleluy
   assert.match(orac('2026-11-08'), /^Humildemente/);
   assert.match(orac('2026-11-05'), /^Señor, Dios nuestro, concédenos/);
   const inv = f => secc(f, 'vr')[0].gabc;
-  assert.ok(!/Al\(/.test(inv('2027-02-17')), 'Miércoles de Ceniza sin aleluya');
-  assert.ok(/Al\(/.test(inv('2026-11-05')));
+  const AL = /Al(<\/b>)?\(/;
+  assert.ok(!AL.test(inv('2027-02-17')), 'Cuaresma sin aleluya');
+  assert.ok(AL.test(inv('2026-11-05')));
   assert.ok(/deus|DE\(f\)us/i.test(inv('2026-11-08')) && /\(c4\)/.test(inv('2026-11-08')), 'domingo: tono solemne (clave de do en 4.ª)');
   assert.ok(/\(c3\)/.test(inv('2026-11-05')), 'feria: tono festivo (clave de do en 3.ª)');
   const ant = f => secc(f, 'ant').find(s => s.id === 'ac').gabc;
-  assert.ok(/Al\(g\)le/.test(ant('2027-04-15')) && !/Al\(g\)le/.test(ant('2026-11-05')));
+  const ALS = /Al(<\/b>)?\(g\)(<b>)?le/;
+  assert.ok(ALS.test(ant('2027-04-15')) && !ALS.test(ant('2026-11-05')));
 });
 
 // Latín de las partituras: tilde en las palabras de tres sílabas o más (salvo nombres con diéresis, como Israël)
@@ -121,16 +123,33 @@ test('Completas: antífona final de la Virgen según el día', () => {
   assert.equal(mar('2026-11-08'), 'salve-sol');                        // domingo
   assert.equal(mar('2026-11-07'), 'salve-sol');                        // I Vísperas del domingo
   assert.equal(mar('2027-08-15'), 'ave-sol ave-sim');                  // Asunción
-  assert.match(mar('2026-12-02'), /^a0/);                              // Adviento: las de la base en español
+  assert.equal(mar('2026-12-02'), 'alma-sim');                         // Adviento, feria
+  assert.equal(mar('2026-12-06'), 'alma-sol');                         // Adviento, domingo
+  assert.equal(mar('2027-01-20'), 'salve-sim subtuum (efímera)');     // Tiempo Ordinario antes de la Candelaria
+  assert.equal(mar('2027-02-04'), 'ave-sim');                          // después de la Candelaria (feria)
+  assert.equal(mar('2027-03-03'), 'ave-sim');                          // Cuaresma
+  assert.equal(mar('2027-04-15'), 'regina_caeli-sim');                 // Pascua, feria
+  assert.equal(mar('2027-04-18'), 'regina_caeli-sol');                 // Pascua, domingo
 });
 
 test('Completas: invocación con cortes y doble barra; Nunc con un solo versículo en partitura; bendición sin acentos', () => {
   const inv = secc('2026-11-05', 'vr')[0].gabc;
-  assert.match(inv, /na\.\([^)]*\) \(::\) \(Z\)\s*\nGló/);          // doble barra y renglón nuevo antes del Gloria
+  assert.match(inv, /na\.(<\/b>)?\([^)]*\) \(::\) \(Z\)\s*\n(<b>)?Gló/); // doble barra y renglón nuevo antes del Gloria
   assert.match(inv, /\(Z\)\s*\n<sp>R\/<\/sp>/);                       // Dómine en renglón nuevo
   const c = secc('2026-11-05', 'cantico')[0];
   assert.equal((c.gabc.match(/\(::\)/g) || []).length, 1);
   assert.ok(!/\d+\.\s*Nunc/.test(c.gabc));
   assert.equal(c.versos.length, c.inter.length);
   assert.ok(!/r1/.test(B.completas.gregoriano.conclusion.gabc));
+});
+
+test('Completas: lo que responde la asamblea va en negrita', () => {
+  const r = CP.armar('2026-11-05', 'ARG').secciones;
+  const inv = r.find(s => s.k === 'vr').gabc;
+  assert.match(inv, /<b>Dó<\/b>\(h\)<b>mi<\/b>/);                            // ℟. Dómine…
+  assert.ok(!/<b>DE<\/b>|<b>us<\/b>/.test(inv));                               // el «Deus» lo entona el que preside
+  const [a1, a2] = r.filter(s => s.id === 'ac' || s.id === 'ac2');
+  assert.match(a1.gabc, /nos,\(j\) \*\(\) <b>Dó<\/b>/);                     // Salva nos: desde el asterisco
+  assert.match(a2.gabc, /<b>SAl<\/b>/); assert.ok(!/\*\(/.test(a2.gabc));    // repetición: toda en negrita, sin asterisco
+  assert.equal(r.find(s => s.k === 'deo').t, 'Deo grátias.');
 });

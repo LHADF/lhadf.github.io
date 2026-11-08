@@ -153,7 +153,8 @@ responsorio:
       - In = En
       - manus. = manos.
 
-# Antífonas finales de la Virgen en gregoriano.
+# Antífonas finales de la Virgen en gregoriano. Solemne: domingos y solemnidades (y sus I Vísperas, Triduo y Octavas); simple: los demás días.
+# Adviento y Navidad: Alma Redemptóris; de la Candelaria al fin de Cuaresma: Ave Regína cælórum; Pascua: Regína cæli (sin versículo).
 # Tiempo Ordinario: domingos y solemnidades (y sus I Vísperas), Salve solemne; los demás días, Salve simple
 # (siempre seleccionada al abrir) y Sub tuum præsídium como opción. Asunción: Ave Regina cælórum, simple o solemne.
 marianas:
@@ -276,3 +277,80 @@ marianas:
     titulo: Ave Regina cælórum (solemne)
     partitura: ave-regina-caelorum-solemne.gabc
     traduccion: *ave
+  alma_simple:
+    titulo: Alma Redemptóris Mater
+    partitura: alma-redemptoris-simple.gabc
+    traduccion: &alma
+      - Alma = Santa
+      - Redemptóris Mater, = Madre del Redentor,
+      - quæ = que
+      - pérvia = abierta
+      - cæli porta = puerta del cielo
+      - manes, = permaneces,
+      - Et stella maris, = y estrella del mar,
+      - succúrre = socorre
+      - cadénti, = al que cae,
+      - súrgere = levantarse
+      - qui curat = que procura
+      - 'pópulo: = al pueblo;'
+      - Tu quæ = tú que
+      - genuísti, = engendraste,
+      - natúra = la naturaleza
+      - miránte, = admirándose,
+      - tuum sanctum = a tu santo
+      - 'Genitórem: = Creador;'
+      - Virgo = Virgen
+      - prius = antes
+      - ac postérius, = y después,
+      - Gabriélis = de Gabriel
+      - ab ore = de la boca
+      - sumens = recibiendo
+      - illud Ave, = aquel Ave,
+      - peccatórum = de los pecadores
+      - miserére. = ten piedad.
+  alma_solemne:
+    titulo: Alma Redemptóris Mater
+    partitura: alma-redemptoris-solemne.gabc
+    traduccion: *alma
+  regina_caeli_simple:
+    titulo: Regína cæli
+    partitura: regina-caeli-simple.gabc
+    traduccion:
+      - Regína = Reina
+      - cæli, = del cielo,
+      - lætáre, = alégrate,
+      - 'allelúia: = aleluya;'
+      - Quia = porque
+      - quem = el que
+      - meruísti = mereciste
+      - portáre, = llevar,
+      - 'allelúia: = aleluya;'
+      - Resurréxit, = resucitó,
+      - sicut = como
+      - dixit, = dijo,
+      - 'allelúia: = aleluya;'
+      - Ora = Ruega
+      - pro nobis = por nosotros
+      - Deum, = a Dios,
+      - allelúia. = aleluya.
+  regina_caeli_solemne:
+    titulo: Regína cæli
+    partitura: regina-caeli-solemne.gabc
+    traduccion:
+      - Regína = Reina
+      - cæli, = del cielo,
+      - lætáre, = alégrate,
+      - 'allelúia: = aleluya;'
+      - Quia = porque
+      - quem = el que
+      - meruísti = mereciste
+      - portáre, = llevar,
+      - 'allelúia: = aleluya;'
+      - Resurréxit, = resucitó,
+      - sicut = como
+      - dixit, = dijo,
+      - 'allelúia: = aleluya;'
+      - Ora = Ruega
+      - pro nobis = por nosotros
+      - Deum, = a Dios,
+      - alle = aleluya.

@@ -1,5 +1,7 @@
 # Ordinario de Completas: partes que no cambian con el día de la semana.
 # oracion_solemnidad: se usa en las solemnidades, con los salmos del sábado (I Vísperas) o del domingo (II Vísperas).
+# examen: invitación, fórmulas a elegir (todos: lo dicen todos, va en negrita) y absolución. El Confíteor latino lleva su
+# traducción literal en pares «latín = español».
 nombre: Completas
 aleluya_tras_gloria: siempre, salvo en Cuaresma (en la invocación inicial)
 subtitulo: Oración antes del descanso nocturno
@@ -10,20 +12,82 @@ gloria: |-
   Gloria al Padre, y al Hijo, y al Espíritu Santo.
   Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.
 examen:
-- Hermanos, habiendo llegado al final de esta jornada que Dios nos ha concedido, reconozcamos sinceramente nuestros pecados.
-- |-
-  Yo confieso ante Dios todopoderoso
-  y ante vosotros, hermanos,
-  que he pecado mucho
-  de pensamiento, palabra, obra y omisión:
-  por mi culpa, por mi culpa, por mi gran culpa.
-- |-
-  Por eso ruego a santa María, siempre Virgen,
-  a los ángeles, a los santos y a vosotros, hermanos,
-  que intercedáis por mí ante Dios, nuestro Señor.
-- |-
-  V. El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna.
-  R. Amén.
+  invitacion: Hermanos, habiendo llegado al final de esta jornada que Dios nos ha concedido, reconozcamos sinceramente nuestros pecados.
+  formulas:
+  - id: f1
+    titulo: 1.ª fórmula
+    todos:
+    - |-
+      Yo confieso ante Dios todopoderoso
+      y ante vosotros, hermanos,
+      que he pecado mucho
+      de pensamiento, palabra, obra y omisión:
+      por mi culpa, por mi culpa, por mi gran culpa.
+    - |-
+      Por eso ruego a santa María, siempre Virgen,
+      a los ángeles, a los santos y a vosotros, hermanos,
+      que intercedáis por mí ante Dios, nuestro Señor.
+  - id: f2
+    titulo: 2.ª fórmula
+    versos:
+    - V: Señor, ten misericordia de nosotros.
+    - R: Porque hemos pecado contra ti.
+    - V: Muéstranos, Señor, tu misericordia.
+    - R: Y danos tu salvación.
+  - id: f3
+    titulo: 3.ª fórmula
+    versos:
+    - V: |-
+        Tú que has sido enviado a sanar los corazones afligidos:
+        Señor, ten piedad.
+    - R: Señor, ten piedad.
+    - V: |-
+        Tú que has venido a llamar a los pecadores:
+        Cristo, ten piedad.
+    - R: Cristo, ten piedad.
+    - V: |-
+        Tú que estás sentado a la derecha del Padre para interceder por nosotros:
+        Señor, ten piedad.
+    - R: Señor, ten piedad.
+  - id: latin
+    titulo: Confíteor (latín)
+    latin: true
+    todos:
+    - - Confíteor = Confieso
+      - Deo omnipoténti, = a Dios todopoderoso,
+      - beátæ Maríæ semper Vírgini, = a la bienaventurada siempre Virgen María,
+      - beáto Michaéli Archángelo, = al bienaventurado arcángel Miguel,
+      - beáto Ioánni Baptístæ, = al bienaventurado Juan Bautista,
+      - sanctis Apóstolis Petro et Paulo, = a los santos apóstoles Pedro y Pablo,
+      - ómnibus Sanctis, = a todos los santos
+      - 'et vobis, fratres: = y a vosotros, hermanos,'
+      - quia peccávi nimis = que pequé mucho
+      - cogitatióne, = de pensamiento,
+      - verbo et ópere. = palabra y obra.
+    - - Mea culpa, = Por mi culpa,
+      - mea culpa, = por mi culpa,
+      - mea máxima culpa. = por mi grandísima culpa.
+    - - Ídeo precor = Por eso ruego
+      - beátam Maríam semper Vírginem, = a la bienaventurada siempre Virgen María,
+      - beátum Michaélem Archángelum, = al bienaventurado arcángel Miguel,
+      - beátum Ioánnem Baptístam, = al bienaventurado Juan Bautista,
+      - sanctos Apóstolos Petrum et Paulum, = a los santos apóstoles Pedro y Pablo,
+      - omnes Sanctos, = a todos los santos
+      - et vos, fratres, = y a vosotros, hermanos,
+      - oráre pro me = que oréis por mí
+      - ad Dóminum Deum nostrum. = ante el Señor Dios nuestro.
+    absolucion:
+    - V:
+      - Misereátur nostri = Tenga misericordia de nosotros
+      - omnípotens Deus = Dios todopoderoso
+      - et, dimíssis peccátis nostris, = y, perdonados nuestros pecados,
+      - perdúcat nos = nos lleve
+      - ad vitam ætérnam. = a la vida eterna.
+    - R:
+      - Amen. = Amén.
+  absolucion:
+  - V: El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna.
+  - R: Amén.
 responsorio:
   ordinario:
   - V: En tus manos, Señor, encomiendo mi espíritu.

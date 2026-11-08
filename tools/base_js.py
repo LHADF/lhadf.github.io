@@ -8,6 +8,9 @@ import glob, json, os, sys
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, 'tools', 'importar'))
 from yaml_base import leer
+import re
+sys.path.insert(0, os.path.join(RAIZ, 'tools'))
+from normalizar_gabc import negrita
 
 B = os.path.join(RAIZ, 'base')
 
@@ -19,6 +22,11 @@ def pares(lista):
 def gabc(nombre):
     s = open(os.path.join(B, 'gregoriano', nombre), encoding='utf-8').read()
     return s.replace('<v>\\greheightstar</v>', '*')   # asterisco de Gregorio → asterisco común
+
+
+def repeticion(g):
+    """Antífona repetida al final: la canta toda la asamblea (en negrita) y va sin asterisco."""
+    return negrita(re.sub(r'\s*\*+\s*\(([,;:]*)\)', lambda m: f' ({m.group(1)})' if m.group(1) else '', g))
 
 
 def primer_verso(g):
@@ -39,7 +47,7 @@ def main():
             'himnos': leer(os.path.join(B, 'himnos', 'completas.yaml')),
             'gregoriano': {
                 'invocacion': {'solemne': gabc(inv['solemne']), 'ferial': gabc(inv['ferial']), 'traduccion': pares(inv['traduccion'])},
-                'antifona': {'gabc': gabc(ce['antifona']), 'traduccion': pares(ce['traduccion_antifona'])},
+                'antifona': {'gabc': gabc(ce['antifona']), 'repeticion': repeticion(gabc(ce['antifona'])), 'traduccion': pares(ce['traduccion_antifona'])},
                 'cantico': {'gabc': primer_verso(gabc(ce['cantico'])), 'traduccion': pares(ce['traduccion_cantico']),
                             'tono': str(ce['tono_cantico']), 'versos': ce['versos'], 'traduccion_versos': ce['traduccion_versos']},
                 'himno': {'titulo': G['himno']['titulo'], 'gabc': gabc(G['himno']['partitura']), 'traduccion': pares(G['himno']['traduccion'])},

@@ -81,6 +81,9 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .hora .dia-h{text-align:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin:.2em 0 1em}
 .sec{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:2.2em 0 .7em;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.sec .sref{order:2;text-transform:none;letter-spacing:0;font-weight:400}
+.todos{font-weight:600}
+.todos .se{font-weight:400}
 .sec button{font:inherit;letter-spacing:.04em;color:var(--muted);border:0;background:none;min-height:44px;min-width:44px;padding:0 6px;text-transform:none;font-weight:500}
 .hora p{margin:0 0 .7em}
 .rub{color:var(--rubric);font-style:italic;font-size:.82em;line-height:1.4}
@@ -102,7 +105,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .opciones button{font-size:var(--f-dato);border:1px solid var(--line);background:none;border-radius:var(--r-1);min-height:44px;padding:5px 12px;color:var(--muted)}
 .opciones button[aria-pressed="true"]{border-color:var(--rubric);color:var(--rubric);background:var(--rubric-soft);font-weight:600}
 .himno .est{margin:0 0 1.2em;position:relative;padding-left:1.6em}
-.himno .est .num{position:absolute;left:0;top:0;color:var(--rubric)}
+.himno .est .num{position:absolute;left:0;top:0;color:var(--glosa)}
 .himno.sin-num .est{padding-left:0}
 .himno .est.estribillo{font-style:italic}
 .himno .ln{display:block}

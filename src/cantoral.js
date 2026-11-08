@@ -117,7 +117,7 @@ function insertarTraduccion(gabc, pares){
     if(w2) for(let k=p;k<pal.length;k++){ if(igual(pal[k],w)&&igual(pal[k+1],w2)){ q=k; break; } }
     if(q<0) for(let k=p;k<pal.length;k++){ if(igual(pal[k],w)){ q=k; break; } }
     if(q>=0){ ins.push([pal[q].fin,es]); p=q+Math.max(1,ws.length); } });
-  let out=cuerpo; ins.sort((a,b)=>b[0]-a[0]).forEach(([pos,t])=>{ if(!/\s/.test(t)) t+=" "; out=out.slice(0,pos)+"["+t.replace(/[\[\]]/g,"")+"]"+out.slice(pos); });
+  let out=cuerpo; ins.sort((a,b)=>b[0]-a[0]).forEach(([pos,t])=>{ if(!/\s/.test(t)) t+=" "; out=out.slice(0,pos)+"["+t.replace(/\[/g,"\u27E6").replace(/\]/g,"\u27E7")+"]"+out.slice(pos); });
   // reserva el renglón de traducción en todas las sílabas, para que el espacio sea parejo
   out=out.replace(/([^()]*)\(/g,(mm,t)=> (/[A-Za-zÀ-ÿæœǽ]/.test(t.replace(/<[^>]*>/g,"")) && !/\]\s*$/.test(t)) ? t+"[   ](" : mm);
   return cab+out;

@@ -39,9 +39,17 @@ Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral
 - **Himno:** primera opción, *Te lucis ante términum* en gregoriano; después, los himnos en español del tiempo.
 - **Lectura breve:** ℟. *Deo grátias*.
 - **Responsorio breve:** recitado en español o cantado (*In manus tuas*, fuera de Pascua). La elección se recuerda.
-- **Antífona final de la Virgen (Tiempo Ordinario):** domingos y solemnidades (y sus I Vísperas), Salve Regina solemne;
-  ferias, memorias y fiestas, Salve Regina simple, con *Sub tuum præsídium* como opción que no se recuerda (siempre abre en la Salve);
-  Asunción, *Ave Regina cælórum*, solemne o simple. En los demás tiempos, por ahora, las antífonas en español de la base.
+- **Antífona final de la Virgen:** solemne en domingos y solemnidades (y sus I Vísperas, Triduo y Octavas); simple los demás días.
+  Adviento y Navidad: *Alma Redemptóris*; de la Candelaria (2 de febrero) al fin de Cuaresma: *Ave Regína cælórum*;
+  Pascua: *Regína cæli* (sin versículo); Tiempo Ordinario: *Salve Regína*, con *Sub tuum præsídium* como opción en ferias, memorias
+  y fiestas (siempre abre en la Salve); Asunción: *Ave Regína cælórum*, solemne o simple.
+- **Lo que responde la asamblea va en negrita:** en las partituras (desde el ℟ de la invocación y de la bendición, desde el asterisco
+  en las antífonas, las repeticiones del responsorio), la repetición del Salva nos (toda, sin asterisco), *Deo grátias*, los Amén
+  que responden a una oración, el *Yo confieso* y el *Confíteor*. En los GABC se marca con `<b>…</b>` sílaba por sílaba;
+  `negrita()` de `tools/normalizar_gabc.py` lo hace.
+- **Examen de conciencia:** cuatro fórmulas a elegir (*Yo confieso*, otras dos de la Liturgia de las Horas y el *Confíteor* latino con su
+  traducción); la elección se recuerda.
+- **Salmos en español:** sin pautas (ni negritas ni cursivas), con * y †; el Nunc dimittis sí va pautado.
 - **Cántico evangélico:** primer versículo del Nunc dimittis en partitura; el resto pautado en latín (tono 3 a), con traducción.
 - **GABC nuevos:** `python3 tools/normalizar_gabc.py ORIGEN.gabc destino.gabc` pasa el latín a i, æ y œ y avisa las palabras
   de tres sílabas o más sin tilde (hay que agregarla a mano). Los cortes de renglón forzados se marcan con `(Z)`.
