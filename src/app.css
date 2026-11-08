@@ -81,12 +81,11 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .hora .dia-h{text-align:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin:.2em 0 1em}
 .sec{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:2.2em 0 .7em;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .sec::after{content:"";flex:1;height:1px;background:var(--line)}
-/* Texto negro: solo dos pesos, 400 y 700, también en las partituras */
-svg.Exsurge text{font-weight:400}
-svg.Exsurge tspan[style*="bold"]{font-weight:700!important}
-.hora b,.hora strong{font-weight:700}
+/* Texto negro: solo dos pesos, como en el Cantoral Laudibus: normal 400 y negrita 600 (también en las partituras) */
+svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
+.hora b,.hora strong,strong{font-weight:600}
 .sec .sref{order:2;text-transform:none;letter-spacing:0;font-weight:400}
-.todos{font-weight:700}
+.todos{font-weight:600}
 .todos .se{font-weight:400}
 .sec button{font:inherit;letter-spacing:.04em;color:var(--muted);border:0;background:none;min-height:44px;min-width:44px;padding:0 6px;text-transform:none;font-weight:500}
 .hora p{margin:0 0 .7em}
@@ -123,7 +122,7 @@ svg.Exsurge tspan[style*="bold"]{font-weight:700!important}
 .v .h1{display:block}
 .v .h2{display:block;padding-left:1.1em}
 .v .sg{color:var(--rubric);font-family:var(--serif);font-size:.95em}
-.v b{font-weight:700}
+.v b{font-weight:600}
 .v i{font-style:italic;color:var(--ink2)}
 .v u{text-decoration:underline dotted var(--rubric);text-underline-offset:.2em}
 .grupo-gl{color:var(--glosa);font-style:italic;font-size:.86em;margin:-.15em 0 .9em;border-left:2px solid color-mix(in srgb,var(--glosa) 35%,transparent);padding-left:.7em}
@@ -180,7 +179,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .sw[aria-checked="true"]{background:var(--rubric)}
 .sw[aria-checked="true"]::after{left:21px}
 .leyenda{font-family:var(--serif);font-size:1.02rem;background:var(--surface);border-radius:var(--r-1);padding:10px 12px;margin-top:10px;line-height:1.6}
-.leyenda b{font-weight:700}.leyenda i{color:var(--ink2)}.leyenda u{text-decoration:underline dotted var(--rubric);text-underline-offset:.2em}
+.leyenda b{font-weight:600}.leyenda i{color:var(--ink2)}.leyenda u{text-decoration:underline dotted var(--rubric);text-underline-offset:.2em}
 .leyenda .sg{color:var(--rubric)}
 .leyenda small{display:block;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted)}
 .indice{list-style:none;margin:0;padding:0}
