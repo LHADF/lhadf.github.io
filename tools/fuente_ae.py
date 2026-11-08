@@ -3,7 +3,8 @@
 
 Source Serif 4 no trae U+01FD/U+01FC: el navegador las toma de otra fuente y se ven más altas. Esta herramienta
 las arma con la «æ»/«Æ» y la tilde de la propia Source Serif 4, ubicadas con sus anclas (GPOS), en los pesos que usa
-la app, y las agrega a la familia «Cantoral Signos» (primera de la lista) solo para esos dos caracteres.
+la app, en una familia propia («Septies AE», después de «Cantoral Signos» en la lista) solo para esos dos caracteres.
+No usar el nombre «Cantoral Signos»: con pesos distintos, el navegador dejaría de usar esa fuente para ℟, * y ✠.
 
     pip install fonttools brotli
     npm pack @fontsource-variable/source-serif-4   (y descomprimir)
@@ -66,7 +67,7 @@ def instancia(origen, peso):
     tmp = io.BytesIO(); f.save(tmp); tmp.seek(0); f = TTFont(tmp)   # releer: tabla de glifos al día
     opt = subset.Options(); opt.layout_features = []; opt.name_IDs = []; opt.notdef_outline = True; opt.flavor = 'woff2'
     sub = subset.Subsetter(opt); sub.populate(unicodes=[0x1FD, 0x1FC]); sub.subset(f)
-    for r in f['name'].names: r.string = 'Cantoral Signos AE'
+    for r in f['name'].names: r.string = 'Septies AE'
     f.flavor = 'woff2'; b = io.BytesIO(); f.save(b)
     return b.getvalue()
 
@@ -78,10 +79,10 @@ def anclas_ok(f, base, marca):
 
 def main():
     if len(sys.argv) != 2: sys.exit(__doc__)
-    css = ['/* «ǽ» y «Ǽ» armadas con glifos de Source Serif 4 (© Adobe, SIL OFL 1.1). Generado por tools/fuente_ae.py. */']
+    css = ['/* «ǽ» y «Ǽ» armadas con glifos de Source Serif 4 (© Adobe, SIL OFL 1.1). Generado por tools/fuente_ae.py. Familia propia: si compartiera nombre con «Cantoral Signos», el navegador elegiría por peso y perdería ℟, * y ✠. */']
     for p in PESOS:
         d = base64.b64encode(instancia(sys.argv[1], p)).decode()
-        css.append(f"@font-face{{font-family:'Cantoral Signos';font-weight:{p};font-display:swap;unicode-range:U+01FC-01FD;"
+        css.append(f"@font-face{{font-family:'Septies AE';font-weight:{p};font-display:swap;unicode-range:U+01FC-01FD;"
                    f"src:url(data:font/woff2;base64,{d}) format('woff2')}}")
     destino = os.path.join(RAIZ, 'src', 'assets', 'ae.css')
     open(destino, 'w', encoding='utf-8').write('\n'.join(css) + '\n')

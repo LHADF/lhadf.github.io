@@ -255,7 +255,8 @@ function examenHTML(sec){
   let h=`<div class="opciones" role="group" aria-label="Fórmula">${sec.formulas.map(x=>`<button data-act="examenF" data-v="${x.id}" aria-pressed="${x===f}">${esc(x.titulo)}</button>`).join('')}</div>`;
   h+=`<p>${br(sec.invitacion)}</p>`;
   if(f.latin){ // Confíteor latino, con traducción literal debajo; lo dicen todos
-    h+=f.todos.map(p=>S.trad?`<p class="il todos">${interHTML(p)}</p>`:`<p class="todos">${esc(p.map(x=>x[0]).join(' '))}</p>`).join('');
+    const t=f.todos.flat();   // un solo párrafo, sin renglones vacíos
+    h+=S.trad?`<p class="il todos">${interHTML(t)}</p>`:`<p class="todos">${esc(t.map(x=>x[0]).join(' '))}</p>`;
     h+=`<div class="vr${S.trad?' il':''}">`+f.absolucion.map(([k,p])=>S.trad
       ? `<p><span class="k">${k==='V'?'℣':'℟'}.</span> <span class="segs${k==='R'?' todos':''}">${interHTML(p)}</span></p>`
       : vr(k,p.map(x=>x[0]).join(' '))).join('')+'</div>';

@@ -7,7 +7,7 @@ function contextoExsurge(){
   // Igual que Chant Tools: dibuja en el color del texto (currentColor), así el modo oscuro no requiere redibujar
   ctxt.textColor='currentColor'; ctxt.staffLineColor=ctxt.neumeLineColor=ctxt.dividerLineColor='currentColor';
   ctxt.negativeFillColor='var(--exsurge-negative-fill, #fff)';
-  ctxt.setFont("'Cantoral Signos', 'Source Serif 4', Georgia, serif", 20.5);
+  ctxt.setFont("'Cantoral Signos', 'Septies AE', 'Source Serif 4', Georgia, serif", 20.5);
   ctxt.spaceBetweenSystems=0; ctxt.textStyles.dropCap.size=64; ctxt.textStyles.annotation.size=12.8;
   ctxt.minLyricWordSpacing*=0.7; ctxt.interSyllabicMultiplier=ESP_SILABA; ctxt.accidentalSpaceMultiplier=1.5;
   ctxt.setRubricColor('var(--rubric, #981914)');
