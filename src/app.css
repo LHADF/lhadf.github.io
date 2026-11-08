@@ -81,11 +81,12 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .hora .dia-h{text-align:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin:.2em 0 1em}
 .sec{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:2.2em 0 .7em;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .sec::after{content:"";flex:1;height:1px;background:var(--line)}
-/* Letra de las partituras algo más liviana que el texto (la notación la hace parecer más pesada); negrita de la asamblea, 600 */
-svg.Exsurge text{font-weight:360}
-svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
+/* Texto negro: solo dos pesos, 400 y 700, también en las partituras */
+svg.Exsurge text{font-weight:400}
+svg.Exsurge tspan[style*="bold"]{font-weight:700!important}
+.hora b,.hora strong{font-weight:700}
 .sec .sref{order:2;text-transform:none;letter-spacing:0;font-weight:400}
-.todos{font-weight:600}
+.todos{font-weight:700}
 .todos .se{font-weight:400}
 .sec button{font:inherit;letter-spacing:.04em;color:var(--muted);border:0;background:none;min-height:44px;min-width:44px;padding:0 6px;text-transform:none;font-weight:500}
 .hora p{margin:0 0 .7em}
@@ -133,7 +134,7 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .partitura .cargando{color:var(--muted);font-style:italic;font-size:.8em;font-family:var(--sans)}
 svg.Exsurge{color:var(--ink);--exsurge-negative-fill:var(--paper)}
 svg.Exsurge .dropCap,svg.Exsurge .annotation{fill:var(--rubric)!important}
-svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!important;font-style:italic!important;font-size:.82em}
+svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!important;font-style:italic!important} /* tamaño: lo fija app.js (igual que la glosa) */
 :where(svg.Exsurge) use{fill:currentColor}
 .cruz{color:var(--rubric)}
 .fin{text-align:center;color:var(--rubric);margin:2.4em 0 0;font-size:1.4em}

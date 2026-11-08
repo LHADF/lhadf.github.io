@@ -20,7 +20,7 @@ from fontTools.varLib import instancer
 from fontTools import subset
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PESOS = (360, 400, 600, 700)   # letra de las partituras, texto, negrita de la asamblea, títulos
+PESOS = (400, 700)   # texto normal y negrita (los dos únicos pesos del texto negro)
 
 
 def anclas(f, base, marca):

@@ -68,15 +68,16 @@ function marcas(s){ // ℣ ℟ * † ✠ en rojo
 let _id=0; const GAB=new Map();
 function partituraHTML(gabc, glosa, drop=true){ const id='g'+(++_id); GAB.set(id,{gabc,glosa,drop}); return `<div class="partitura" data-g="${id}"><p class="cargando">Preparando la partitura…</p></div>`; }
 const cacheSvg=new Map();
-function svgDe(id, ancho){
+function svgDe(id, ancho, tam){ // tam: tamaño de la letra y de la traducción, en unidades de la partitura
   const it=GAB.get(id); if(!it) return Promise.reject();
   const conGlosa=S.trad && it.glosa && it.glosa.length;
-  const clave=(it.drop?'d':'n')+it.gabc.length+'|'+it.gabc.slice(-60)+'|'+ancho+'|'+(conGlosa?1:0)+'|'+it.gabc.slice(0,80);
+  const clave=(it.drop?'d':'n')+it.gabc.length+'|'+it.gabc.slice(-60)+'|'+ancho+'|'+(conGlosa?1:0)+'|'+(tam?tam.letra.toFixed(2)+'/'+tam.trad.toFixed(2):'')+'|'+it.gabc.slice(0,80);
   if(cacheSvg.has(clave)) return Promise.resolve(cacheSvg.get(clave));
   return fuentesListas().then(()=>new Promise((ok,mal)=>{
     try{
       let g=it.gabc; if(conGlosa) g=insertarTraduccion(g,it.glosa);
       const ctxt=contextoExsurge();
+      if(tam){ ctxt.textStyles.lyric.size=tam.letra; ctxt.textStyles.translation.size=tam.trad; }   // mismo tamaño que el texto en español
       const maps=exsurge.Gabc.createMappingsFromSource(ctxt, gabcParaExsurge(gabcCuerpo(g))); espaciarSilabas(maps);
       const score=new exsurge.ChantScore(ctxt, maps, it.drop && !/initial-style:\s*0/.test(g));
       const modo=gabcModo(g); if(modo) score.annotation=new exsurge.Annotations(ctxt,'%'+ROMANO_MODO[modo]+'%');
@@ -85,6 +86,9 @@ function svgDe(id, ancho){
         const w=parseFloat(svg.getAttribute('width')), h=parseFloat(svg.getAttribute('height'));
         if(!svg.getAttribute('viewBox')&&w&&h) svg.setAttribute('viewBox','0 0 '+w+' '+h);
         svg.removeAttribute('width'); svg.removeAttribute('height');
+        // Las reglas de estilo de Exsurge valen para toda la página: se limitan a esta partitura (y a su tamaño de letra)
+        const marca=tam?tam.letra.toFixed(2)+'-'+tam.trad.toFixed(2):'base'; svg.setAttribute('data-t',marca);
+        svg.querySelectorAll('style').forEach(st=>{ st.textContent=st.textContent.replace(/svg\.Exsurge(?=[ .{:])/g,`svg.Exsurge[data-t="${marca}"]`); });
         const html=svg.outerHTML.replace(/\u27E6/g,'[').replace(/\u27E7/g,']'); cacheSvg.set(clave,html); ok(html);
       }));
     }catch(e){ mal(e); }
@@ -95,7 +99,11 @@ function pintar(raiz){
   const zoom=S.lec/1.15;
   return els.reduce((p,el)=>p.then(()=>{
     const ancho=Math.max(260, Math.round((el.clientWidth||600)/zoom/10)*10); el.dataset.w=ancho;
-    return svgDe(el.dataset.g, ancho).then(html=>{ if(!el.isConnected) return; el.innerHTML=html; const svg=el.querySelector('svg'); uniformarRenglones(svg); if(S.trad) ajustarTraducciones(svg); })
+    // La partitura se dibuja con ancho «ancho» y se escala al ancho real: la letra se calcula para que, ya escalada,
+    // mida lo mismo que el texto en español (y la traducción, lo mismo que la glosa: .84 em)
+    const cuerpo=parseFloat(getComputedStyle(el).fontSize)||16, escala=(el.clientWidth||ancho)/ancho;
+    const tam={letra:cuerpo/escala, trad:cuerpo*.84/escala};
+    return svgDe(el.dataset.g, ancho, tam).then(html=>{ if(!el.isConnected) return; el.innerHTML=html; const svg=el.querySelector('svg'); uniformarRenglones(svg); if(S.trad) ajustarTraducciones(svg); })
       .catch(()=>{ if(el.isConnected) el.innerHTML='<p class="cargando">No se pudo dibujar la partitura.</p>'; });
   }), Promise.resolve());
 }

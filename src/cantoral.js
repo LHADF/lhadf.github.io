@@ -93,7 +93,7 @@ function ajustarTraducciones(svg){
         const propia=filasL.filter(f=>f<y).pop(), sigL=filasL.find(f=>f>y);
         if(pasada===0 && sigL!==undefined && propia!==undefined && xs.length>1 && r.left>cr.left+cr.width*0.55){ mover(ult,(cr.left+2-r.left)*k,(sigL-propia)*k); movida=true; }
         else { const base=xs[0].getBoundingClientRect().left, esc=Math.max(.72,(cr.right-base)/(r.right-base));
-          xs.forEach(t=>{ const tr=t.getBoundingClientRect(); t.style.fontSize=(esc*100)+"%"; mover(t,-(tr.left-base)*(1-esc)*k,0); }); }
+          xs.forEach(t=>{ const tr=t.getBoundingClientRect(); t.style.fontSize=(parseFloat(getComputedStyle(t).fontSize)*esc)+"px"; mover(t,-(tr.left-base)*(1-esc)*k,0); }); } // sobre su propio tamaño (un % tomaría el del texto general)
       }
     });
     if(!movida) break;

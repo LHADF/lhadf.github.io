@@ -35,6 +35,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 
 ## Diseño visual
 
+- **Texto negro: dos pesos.** Normal 400 y negrita 700, también en la letra de las partituras. La letra bajo los neumas mide lo mismo que el texto en español y la traducción, lo mismo que la glosa (app.js lo calcula al dibujar cada partitura); solo se achica la traducción de un renglón que no entra (hasta 72 %).
 - **Tipografías:** Source Serif 4 para textos, títulos y latín; Source Sans 3 para la interfaz y los datos. Etiquetas en mayúsculas con espaciado (no hay versalitas reales).
 - **Cuatro tamaños:** título, ítem, interfaz y dato. El mínimo es el dato (unos 14 px) y toda la interfaz se puede agrandar.
 - **Radios:** dos, de 8 px y 16 px.
