@@ -1,11 +1,12 @@
-/* ================== Septies — prototipo de Completas ================== */
-const D=window.DATA, SAL=window.Salmodia;
+/* ================== LH ADF — Completas ================== */
+const SAL=window.Salmodia, CP=window.Completas;
+let D=null; // Completas del día elegido (src/completas.js)
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ---------- Estado ---------- */
 const DEF={vista:'hoy', rito:'novus', modo:'canto', salmos:'primer', trad:true,
-  lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false};
+  lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, region:'ARG'};
 let S=DEF;
 try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
@@ -15,15 +16,25 @@ S.antGreg=true;
 S.rito='novus'; S.modo='canto';
 function aplicarModo(kind, sec){
   S.canto = S.modo==='canto';
+  if(sec && sec.es){ S.lengua='es'; return; } // textos de la base en español
   if(S.modo==='es') S.lengua='es';
   else if(S.modo==='la') S.lengua='bi';
   // salmos y lecturas en español; el cántico evangélico, todo en latín
   else S.lengua = ((kind==='salmo'&&!(sec&&sec.cantico))||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
 }
 aplicarModo();
-function guardar(){ try{ const {lengua,canto,antGreg,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
-const R=()=>D.ritos[S.rito];
-const VES=()=>Object.keys(R().versiones).find(k=>k!=='la'); // una sola versión en español por rito
+function guardar(){ try{ const {lengua,canto,antGreg,fecha,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
+const R=()=>D;
+const VES=()=>'es';
+// Día litúrgico de hoy: antes de las 5 de la mañana, todavía son las Completas de ayer
+function fechaHoy(){ const d=new Date(); if(d.getHours()<5) d.setDate(d.getDate()-1); return CP.iso(d); }
+S.fecha=fechaHoy();
+function cargarDia(){
+  if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
+  if(!CP.difiereRegion(S.fecha) && !['ARG','PGY'].includes(S.region)) S.region='ARG';
+  D=CP.armar(S.fecha, S.region);
+}
+cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
 function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
 
@@ -245,7 +256,7 @@ function marianaHTML(sec){
 function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
-  h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}<br>${esc(r.nombre)}</p>`;
+  h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${CP.difiereRegion(S.fecha)?`<br>Calendario de ${esc(CP.regiones[S.region])}`:''}</p>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -269,6 +280,7 @@ function horaHTML(){
       case 'salmo': h+=salmoHTML(sec); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;
+      case 'greg': h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span>${sec.ref?`<span class="ref">${esc(sec.ref)}</span>`:''}</div>`+partituraHTML(sec.gabc, sec.glosa, false); break;
     }
   });
   aplicarModo();
@@ -279,21 +291,31 @@ function horaHTML(){
 /* ---------- Portada ---------- */
 function horaActual(){ const d=new Date(); const m=d.getHours()*60+d.getMinutes();
   if(m<5*60) return 'completas'; if(m<9*60) return 'laudes'; if(m<11*60) return 'tercia'; if(m<14*60) return 'sexta'; if(m<17*60) return 'nona'; if(m<21*60) return 'visperas'; return 'completas'; }
+const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas'],['completas','Completas']];
+const COLORES={Verde:'var(--verde)',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#d9d2c3',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
 function portadaHTML(){
-  const r=R(); const ahora=horaActual();
+  const r=R(); const ahora=horaActual(); const esHoy=S.fecha===fechaHoy();
+  const reg=CP.difiereRegion(S.fecha) ? `<div class="region"><span>Este día el calendario difiere:</span>${seg('region',Object.entries(CP.regiones),S.region)}</div>` : '';
   return `<div class="portada">
+    <div class="navdia">
+      <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${'‹'}</button>
+      <span class="fecha">${esHoy?'Hoy, ':''}${esc(esHoy?r.fechaTxt.toLowerCase():r.fechaTxt)}</span>
+      <button class="iconbtn" data-act="dia" data-v="1" aria-label="Día siguiente">${'›'}</button>
+      ${esHoy?'':'<button class="hoybtn" data-act="hoy">Hoy</button>'}
+    </div>
     <div class="dia">
       <div class="txt">
-        <div><div class="hoy">Hoy, ${esc(D.fechaTxt.toLowerCase())}</div><h2>${esc(r.dia.titulo)}</h2></div>
-        <div class="meta"><span class="color">${esc(r.dia.tiempo)}</span><span>${esc(r.dia.salterio)}</span></div>
+        <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${esc(r.dia.titulo)}</h2></div>
+        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'var(--verde)'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}</div>
       </div>
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>
-    <p class="lbl">Las horas de hoy</p>
-    <ul class="horas">${D.horas.map(([id,n,hh])=>{
+    ${reg}
+    <p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>
+    <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=id==='completas';
-      return `<li class="${ok?'sel':''}"><button ${ok?'data-act="abrir"':'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?'':(id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}${ok?esc(hh):''}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
-    <p class="nota-proto">Prototipo: solo Completas de hoy está armada. Los textos latinos de la Liturgia de las Horas se tomaron de la Nova Vulgata y deben cotejarse con la edición típica.</p>
+      return `<li class="${ok?'sel':''}"><button ${ok?'data-act="abrir"':'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
+    <p class="nota-proto">Prototipo: por ahora solo Completas está armada, para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y bendición en gregoriano.</p>
   </div>`;
 }
 
@@ -303,7 +325,7 @@ function render(){
   const enHora=S.vista==='hora';
   $('#atras').hidden=!enHora;
   $('#brand').innerHTML= enHora? `Completas<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
-  $('#main').innerHTML= enHora? `<article class="hora" lang="la">${horaHTML()}</article>` : portadaHTML();
+  $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(enHora){ centrarSignos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>centrarSignos($('#main'))); pintar($('#main')); }
 }
 
@@ -330,10 +352,11 @@ function hojaOpciones(){
     <div class="grupo"><h3>Lectura</h3><div class="tam"><button data-act="menos" aria-label="Achicar el texto">A−</button><span>Texto ${Math.round(S.lec/1.2*100)} %</span><button data-act="mas" aria-label="Agrandar el texto">A+</button></div>
       <p class="hint" style="margin-top:12px">Tamaño de toda la aplicación</p>${seg('esc',[['n','Normal'],['g','Grande'],['mg','Muy grande'],['max','Máxima']],S.esc)}</div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
+    <div class="grupo"><h3>Calendario</h3>${seg('region',Object.entries(CP.regiones),S.region)}<p class="hint" style="margin-top:8px">Calendario ADF. Paraguay cambia solo los días en que su calendario difiere.</p></div>
     <div class="grupo"><h3>Canto</h3>
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}
       <p class="hint" style="margin-top:12px">Salmos</p>${seg('salmos',[['pautado','Pautados'],['primer','1.er verso en partitura'],['todos','Todo en partitura']],S.salmos)}
-      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. El tono sigue a la antífona.</small></div></div>`);
+      <div class="leyenda">Prot<b>é</b>geme, Dios mío, que me re<i>fu</i><b>gio</b> en ti <span class="sg">*</span><small>Negrita: acento · cursiva: preparación · <u>subrayado</u>: entonación · <span class="sg">*</span> mediante · <span class="sg">†</span> flexa. Tono provisorio de los salmos: 8 G.</small></div></div>`);
 }
 let _toast, _undo=null;
 function toast(m, snap){
@@ -357,10 +380,13 @@ document.addEventListener('click',e=>{
   const onOff=x=>x?'activado':'desactivado';
   switch(a){
     case 'cerrar': cerrar(); break;
-    case 'deshacer': if(_undo){ S=JSON.parse(_undo); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
+    case 'deshacer': if(_undo){ S=JSON.parse(_undo); cargarDia(); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
     case 'abrir': S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); break;
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
+    case 'dia': { const n=CP.masDias(S.fecha,+v); if(CP.enRango(n)){ S.fecha=n; cargarDia(); render(); } else toast('Fuera del calendario cargado'); break; }
+    case 'hoy': S.fecha=fechaHoy(); cargarDia(); render(); break;
+    case 'region': if(S.region===v) break; S.region=v; cargarDia(); cambio('Calendario de '+CP.regiones[v]); break;
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'pautados',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
     case 'himno': S.himno[b.dataset.k]=v; cambio('Himno cambiado'); break;

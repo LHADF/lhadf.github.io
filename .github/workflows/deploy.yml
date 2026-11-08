@@ -5,6 +5,8 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * 1'   # cada lunes: recalcula el calendario con lo último del Ordo ADF
 permissions:
   contents: read
 concurrency:
@@ -18,10 +20,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Pruebas
-        run: node --test tests/*.test.mjs
+      - name: Calendario ADF (motor y datos del Ordo)
+        run: |
+          git clone --depth 1 https://github.com/lucasfelixjhs/ordo-telegram ../ordo-telegram
+          python3 tools/calendario.py
       - name: Revisar la base de textos
         run: pip install pyyaml && python3 tools/verificar_base.py
+      - name: Armar los datos
+        run: python3 tools/base_js.py
+      - name: Pruebas
+        run: node --test tests/*.test.mjs
       - name: Armar la app
         run: python3 tools/armar.py
       - uses: actions/configure-pages@v5

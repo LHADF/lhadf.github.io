@@ -1,0 +1,86 @@
+# Partes en gregoriano de Completas (ADF) y su traducción literal bajo los neumas.
+# Las partituras son los archivos .gabc de esta carpeta (texto latino con i y æ, según docs/diseno.md).
+# Traducción: un renglón por par «latín = español», en el orden del texto; cada par se ubica bajo la primera palabra latina.
+
+invocacion:
+  # Tono solemne en domingos y solemnidades (también sus I Vísperas, el Triduo y las Octavas de Navidad y Pascua);
+  # tono festivo los demás días. En Cuaresma se omite el Aleluya.
+  solemne: deus-in-adiutorium-solemnis.gabc
+  ferial: deus-in-adiutorium-festivus.gabc
+  traduccion:
+    - Deus, = Dios [mío],
+    - in adiutórium meum inténde. = ven pronto en mi auxilio.
+    - Dómine, = Señor,
+    - ad adiuvándum me festína. = date prisa en socorrerme.
+    - Glória Patri, = Gloria al Padre,
+    - et Fílio, = y al Hijo,
+    - et Spirítui Sancto. = y al Espíritu Santo.
+    - Sicut erat = Como era
+    - in princípio, = en el principio,
+    - et nunc, = y ahora
+    - et semper, = y siempre,
+    - et in sǽcula sæculórum. = y por los siglos de los siglos.
+    - Amen. = Amén.
+    - Allelúia. = Aleluya.
+cantico_evangelico:
+  antifona: salva-nos.gabc
+  cantico: nunc-dimittis-3a.gabc
+  traduccion_antifona:
+    - Salva nos, = Sálvanos,
+    - Dómine, = Señor,
+    - vigilántes, = despiertos,
+    - custódi nos = guárdanos
+    - dormiéntes = dormidos,
+    - ut vigilémus = para que velemos
+    - cum Christo, = con Cristo,
+    - et requiescámus = y descansemos
+    - in pace. = en paz.
+    - Allelúia. = Aleluya.
+  traduccion_cantico:
+    - Nunc = Ahora
+    - dimíttis = despides
+    - servum tuum, = a tu siervo,
+    - Dómine, = Señor,
+    - secúndum verbum tuum = según tu palabra
+    - in pace = en paz
+    - Quia = porque
+    - vidérunt = han visto
+    - óculi mei = mis ojos
+    - salutáre tuum, = tu salvación,
+    - Quod = la que
+    - parásti = preparaste
+    - ante fáciem = ante el rostro
+    - ómnium populórum, = de todos los pueblos,
+    - Lumen = luz
+    - ad revelatiónem = para revelación
+    - Géntium, = a las naciones,
+    - et glóriam = y gloria
+    - plebis tuæ = de tu pueblo
+    - Israël. = Israel.
+    - Glória Patri, = Gloria al Padre,
+    - et Fílio, = y al Hijo,
+    - et Spirítui Sancto. = y al Espíritu Santo.
+    - Sicut erat = Como era
+    - in princípio, = en el principio,
+    - et nunc, = y ahora
+    - et semper, = y siempre,
+    - et in sǽcula sæculórum. = y por los siglos de los siglos.
+    - Amen. = Amén.
+conclusion:
+  partitura: noctem-quietam.gabc
+  traduccion:
+    - Noctem quiétam = Una noche tranquila
+    - et finem perféctum = y un fin perfecto
+    - concédat nobis = nos conceda
+    - Dóminus omnípotens. = el Señor todopoderoso.
+    - Amen. = Amén.
+# Tono de los salmos en español (las antífonas van en español, sin melodía).
+# Provisorio: 8 G para todos. Se cambia acá, por juego de Completas (códigos: 1D, 2D, 3a, 4E, 5a, 6F, 7a, 8G…).
+tonos_salmos:
+  domingo: 8G
+  lunes: 8G
+  martes: 8G
+  miercoles: 8G
+  jueves: 8G
+  viernes: 8G
+  sabado: 8G

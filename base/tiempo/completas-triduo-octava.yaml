@@ -17,6 +17,12 @@ Sábado Santo:
   en_lugar_del_responsorio: Cristo, por nosotros, se sometió incluso a la muerte, y una muerte de cruz; por eso Dios lo levantó sobre todo y le concedió el «Nombre-sobre-todo-nombre».
   antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.
   oracion: Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Cristo nuestro Señor.
+Domingo de Pascua de la Resurrección del Señor:
+  # Agregado a mano (sync casi nunca trae estas Completas): como los domingos de la Octava.
+  juego: domingo
+  en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'
+  antifona_cantico: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+  oracion: Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Cristo nuestro Señor.
 Lunes de la Octava de Pascua:
   juego: sabado
   en_lugar_del_responsorio: 'Éste es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.'

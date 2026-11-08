@@ -46,33 +46,49 @@ test('pautado español: aguda al final del verso', () => {
   assert.equal(ult.nota, 'hg');
 });
 
-// Datos: todo el latín sigue las normas (i, no j) y lleva traducción interlineal en el modo Latín
+// Datos: base y calendario; armado de Completas
 const ctx = { window: {} };
-for (const f of readdirSync(new URL('../src/datos/', import.meta.url)).filter(f => f.endsWith('.js')))
+for (const f of ['base.js', 'calendario.js'])
   vm.runInNewContext(readFileSync(new URL('../src/datos/' + f, import.meta.url), 'utf8'), ctx);
-const D = ctx.window.DATA;
+vm.runInNewContext(readFileSync(new URL('../src/completas.js', import.meta.url), 'utf8'), ctx);
+const B = ctx.window.BASE, CP = ctx.window.Completas;
+const letra = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>/g, '').replace(/\[[^\]]*\]/g, '');
 
-test('latín sin j', () => {
-  const malos = [];
-  const ver = (o, enLatin) => {
-    if (typeof o === 'string') { if (enLatin && /[jJ]/.test(o.replace(/\([^)]*\)/g, '').replace(/^[^%]*%%/s, ''))) malos.push(o.slice(0, 50)); return; }
-    if (Array.isArray(o)) return o.forEach(x => ver(x, enLatin));
-    if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) ver(v, enLatin || k === 'la');
-  };
-  ver(D, false);
-  assert.deepEqual(malos, []);
+test('latín de las partituras: i, no j', () => {
+  const G = B.completas.gregoriano;
+  for (const g of [G.invocacion.solemne, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc])
+    assert.ok(!/[jJ]/.test(letra(g)), letra(g).slice(0, 40));
 });
 
-test('interlineal en todos los textos latinos', () => {
-  const faltan = [];
-  for (const [nombre, rito] of Object.entries(D.ritos))
-    for (const s of rito.secciones) {
-      if (s.rep || !['vr', 'vr1', 'prosa', 'doxo', 'lectura', 'ant', 'oremos', 'salmo'].includes(s.k)) continue;
-      const tieneLatin = s.k === 'salmo' ? true : (s.v || s.t || {}).la != null;
-      if (!tieneLatin) continue;
-      const ok = s.k === 'salmo' ? Array.isArray(s.inter) && s.inter.length === s.versos.la.length
-        : s.k === 'vr' ? s.ilv && s.ilr : !!s.il;
-      if (!ok) faltan.push(`${nombre}: ${s.k} ${((s.v || s.t || {}).la || s.id || '').slice(0, 30)}`);
-    }
-  assert.deepEqual(faltan, []);
+test('toda partitura latina lleva traducción', () => {
+  for (const f of ['2026-11-05', '2026-11-08', '2027-03-28', '2027-12-25']) {
+    const r = CP.armar(f, 'ARG');
+    for (const s of r.secciones) if (s.gabc) assert.ok(Array.isArray(s.glosa) && s.glosa.length, f + ' ' + s.k);
+  }
+});
+
+const juego = (f, reg = 'ARG') => CP.armar(f, reg).juego;
+const secc = (f, k) => CP.armar(f, 'ARG').secciones.filter(s => s.k === k);
+test('Completas: juego de salmos según el día', () => {
+  assert.equal(juego('2026-11-05'), 'jueves');                  // feria
+  assert.equal(juego('2026-11-07'), 'sabado');                  // sábado: I Vísperas del domingo
+  assert.equal(juego('2026-11-08'), 'domingo');                 // domingo
+  assert.equal(juego('2026-12-07'), 'sabado');                  // víspera de la Inmaculada (solemnidad)
+  assert.equal(juego('2026-12-08'), 'domingo');                 // Inmaculada
+  assert.equal(juego('2027-03-29'), 'sabado');                  // lunes de la Octava de Pascua
+  assert.equal(juego('2027-03-30'), 'domingo');                 // martes de la Octava de Pascua
+});
+
+test('Completas: oración de solemnidad, Cuaresma sin aleluya, Pascua con aleluya', () => {
+  const orac = f => secc(f, 'prosa').at(-1).t.es;
+  assert.match(orac('2026-12-08'), /^Visita, Señor/);
+  assert.match(orac('2026-11-08'), /^Humildemente/);
+  assert.match(orac('2026-11-05'), /^Señor, Dios nuestro, concédenos/);
+  const inv = f => secc(f, 'vr')[0].gabc;
+  assert.ok(!/Al\(/.test(inv('2027-02-17')), 'Miércoles de Ceniza sin aleluya');
+  assert.ok(/Al\(/.test(inv('2026-11-05')));
+  assert.ok(/deus|DE\(f\)us/i.test(inv('2026-11-08')) && /\(c4\)/.test(inv('2026-11-08')), 'domingo: tono solemne (clave de do en 4.ª)');
+  assert.ok(/\(c3\)/.test(inv('2026-11-05')), 'feria: tono festivo (clave de do en 3.ª)');
+  const ant = f => secc(f, 'ant').find(s => s.id === 'ac').gabc;
+  assert.ok(/Al\(g\)le/.test(ant('2027-04-15')) && !/Al\(g\)le/.test(ant('2026-11-05')));
 });

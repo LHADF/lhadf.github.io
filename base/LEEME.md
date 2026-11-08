@@ -2,7 +2,8 @@
 
 Textos de la Liturgia de las Horas en español, ordenados como en los libros. Se cargaron una sola vez desde
 el repositorio `sync` (2015–2026) con `tools/importar/`; desde entonces **la base es la fuente**: las
-correcciones se hacen acá y la app no depende de `sync`.
+correcciones se hacen acá y la app no depende de `sync`. El importador no se vuelve a correr: pisaría las correcciones
+(por ejemplo, las Completas del Domingo de Pascua, agregadas a mano).
 
 Cada archivo es texto YAML y se puede editar directamente en GitHub. Reglas de escritura:
 
@@ -21,6 +22,7 @@ Cada archivo es texto YAML y se puede editar directamente en GitHub. Reglas de e
 | `tiempo/` | Propio del tiempo. Por ahora, Completas del Triduo pascual y de la Octava de Pascua |
 | `himnos/` | Himnos por hora y por tiempo; en cada tiempo se puede elegir cualquiera de la lista |
 | `salmos/` | Cada salmo y cántico una sola vez, por su clave (`salmo-30-2-6` = Salmo 30, 2-6) |
+| `gregoriano/` | Partituras GABC y cuándo va cada una (`completas.yaml`): invocación solemne/festiva, Salva nos y Nunc dimittis, Noctem quietam; traducción literal y tono de los salmos |
 | `informes/` | Lo que encontró la carga: versiones distintas de un mismo texto en `sync` y la verificación |
 
 Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral, comunes y lo propio de ADF.
@@ -32,5 +34,7 @@ Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral
 - **Oración:** la del juego; en las solemnidades, `oracion_solemnidad` («Visita, Señor, esta habitación…»).
 - **Tiempo pascual:** `salmodia_pascua`, responsorio y antífona del cántico con aleluya, antífona «Reina del cielo».
 - **Triduo y Octava de Pascua:** todo lo de `tiempo/completas-triduo-octava.yaml`, día por día. En la Octava se alternan los juegos del sábado y del domingo.
-- **Aleluya** después del Gloria de la invocación: siempre, salvo en Cuaresma.
+- **Aleluya** después del Gloria de la invocación: siempre, salvo en Cuaresma y el Triduo.
+- **Octava de Navidad:** se alternan los juegos del sábado y del domingo, con la oración de las solemnidades.
+- **Invocación en gregoriano:** tono solemne los domingos y solemnidades (y sus I Vísperas), el Triduo y las Octavas; tono festivo los demás días.
 - **Himnos:** Tiempo Ordinario, Adviento y Navidad, Cuaresma (y Triduo), Pascua: cada uno con su lista.

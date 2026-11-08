@@ -17,12 +17,15 @@ def leer(*partes):
 def ico(d):
     return f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{d}</svg>'
 
+import subprocess
+subprocess.run([sys.executable, os.path.join(RAIZ, 'tools', 'base_js.py')], check=True)
+
 ilustracion = base64.b64encode(open(os.path.join(SRC, 'assets', 'coro.png'), 'rb').read()).decode()
 datos = sorted(f for f in os.listdir(os.path.join(SRC, 'datos')) if f.endswith('.js'))
 
 cabeza = '''<title>LH ADF</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="LH ADF · Liturgia de las Horas · prototipo de Completas">
+<meta name="description" content="LH ADF · Liturgia de las Horas · Completas">
 <meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +47,7 @@ cuerpo = f'''<style>{leer('assets', 'signos.css')}
 <script>{leer('salmodia.js')}</script>
 <script>{''.join(leer('datos', f) for f in datos)}
 window.ILU="data:image/png;base64,{ilustracion}";</script>
+<script>{leer('completas.js')}</script>
 <script>{leer('app.js')}</script>
 '''
 

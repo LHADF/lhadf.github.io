@@ -47,7 +47,12 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .dia h2{font-family:var(--titulo);font-size:1.6rem;line-height:1.15;margin:4px 0 0;font-weight:600;text-wrap:balance}
 .dia .meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:var(--f-dato);color:var(--ink2)}
 .color{display:inline-flex;align-items:center;gap:6px}
-.color::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--verde)}
+.color::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--col,var(--verde));box-shadow:0 0 0 1px var(--line)}
+.navdia{display:flex;align-items:center;gap:6px;margin-bottom:-6px}
+.navdia .fecha{flex:1;text-align:center;font-family:var(--sans);font-size:var(--f-ui);color:var(--ink2)}
+.navdia .iconbtn{font-size:1.5rem;line-height:1}
+.hoybtn{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 14px;min-height:36px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric)}
+.region{display:flex;flex-direction:column;gap:8px;font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2)}
 .arco{background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden;display:flex;align-items:flex-end}
 .ilu{display:block;width:100%;height:100%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center 72%/80% auto no-repeat;mask:var(--ilu) center 72%/80% auto no-repeat}
 .lbl{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 2px -6px}
