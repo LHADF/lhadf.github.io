@@ -81,6 +81,9 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .hora .dia-h{text-align:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin:.2em 0 1em}
 .sec{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:2.2em 0 .7em;display:flex;align-items:center;gap:10px;scroll-margin-top:80px}
 .sec::after{content:"";flex:1;height:1px;background:var(--line)}
+/* Letra de las partituras algo más liviana que el texto (la notación la hace parecer más pesada); negrita de la asamblea, 600 */
+svg.Exsurge text{font-weight:360}
+svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .sec .sref{order:2;text-transform:none;letter-spacing:0;font-weight:400}
 .todos{font-weight:600}
 .todos .se{font-weight:400}
@@ -113,7 +116,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .salmo-h{margin:1em 0 .6em}
 .salmo-h .t{font-family:var(--titulo);font-weight:600;color:var(--rubric);font-size:.95em}
 .salmo-h .ref{font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin-left:.5em}
-.salmo-h .lema{display:block;font-style:italic;font-size:.8em;color:var(--ink2);margin-top:.15em}
+.salmo-h .lema{display:block;font-style:italic;font-size:.8em;color:var(--glosa);margin-top:.15em}
 .versos{margin:0 0 .4em}
 .v{margin:0 0 .55em}
 .v .h1{display:block}

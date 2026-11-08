@@ -43,14 +43,15 @@ cantico_evangelico:
     - Dómine, = Señor,
     - secúndum verbum tuum = según tu palabra
     - in pace = en paz
-  # Del segundo versículo en adelante, pautados en latín en el tono del cántico, con su traducción
+  # Del segundo versículo en adelante, pautados en latín, con su traducción
   tono_cantico: 3a
+  # Marcas escritas a mano, como en el libro de Completas ADF: **negrita** = acento, _cursiva_ = preparación.
   versos:
-    - Quia vidérunt óculi mei * salutáre tuum,
-    - Quod parásti * ante fáciem ómnium populórum,
-    - Lumen ad revelatiónem Géntium, * et glóriam plebis tuæ Israël.
-    - Glória Patri, et Fílio, * et Spirítui Sancto.
-    - Sicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.
+    - quia vidérunt óculi **me**i * salutá_re_ **tu**um,
+    - '**quod** pa**rás**ti * ante fáciem ómnium po_pu_**ló**rum,'
+    - Lumen ad revelatiónem **génti**um, * et glóriam plebis tu_æ_ **Ís**rael.
+    - Glória Patri, et **Fíli**o, * et Spíritu_i_ **Sanc**to.
+    - Sicut erat in princípio, et **nunc** et **sem**per, * et in sǽcula sæculó_rum_. **A**men.
   traduccion_versos:
     - porque han visto mis ojos * tu salvación,
     - la que preparaste * ante el rostro de todos los pueblos,
@@ -66,7 +67,7 @@ conclusion:
     - concédat nobis = nos conceda
     - Dóminus omnípotens. = el Señor todopoderoso.
     - Amen. = Amén.
-# Tono de los salmos en español (las antífonas van en español, sin melodía).
+# Tono de los salmos en español. Sin uso mientras los salmos van sin partitura ni pautas.
 # Provisorio: 8 G para todos. Se cambia acá, por juego de Completas (códigos: 1D, 2D, 3a, 4E, 5a, 6F, 7a, 8G…).
 tonos_salmos:
   domingo: 8G
