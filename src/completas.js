@@ -160,8 +160,11 @@ function armar(fecha, region){
   else if(hoy.t==='Cuaresma'||hoy.t==='Triduo'||(hoy.t==='Ordinario'&&(mes===2&&dia>=2||mes===3))) tipo='ave';
   else tipo='salve';
   const sol=el.solemne;
-  if(el.especial && el.especial.antifona_final) tipo=el.especial.antifona_final;   // Triduo: como en sync
-  if(tipo==='asuncion') S.push({k:'mariana', es:true, opciones:[op('ave_solemne','ave-sol'), op('ave_simple','ave-sim')]});
+  if(el.especial && el.especial.antifona_final){   // Triduo: Ave Regína cælórum, simple o solemne
+    const t=el.especial.antifona_final;
+    S.push({k:'mariana', es:true, opciones:[op(t+'_simple', t+'-sim'), op(t+'_solemne', t+'-sol')]});
+  }
+  else if(tipo==='asuncion') S.push({k:'mariana', es:true, opciones:[op('ave_solemne','ave-sol'), op('ave_simple','ave-sim')]});
   else if(tipo==='salve' && !sol) S.push({k:'mariana', es:true, efimera:true, opciones:[op('salve_simple','salve-sim'), op('sub_tuum','subtuum')]});   // siempre abre en la Salve simple
   else S.push({k:'mariana', es:true, opciones:[op(tipo+(sol?'_solemne':'_simple'), tipo+(sol?'-sol':'-sim'))]});
 

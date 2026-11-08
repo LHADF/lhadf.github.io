@@ -43,15 +43,15 @@ Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral
 - **Antífona final de la Virgen:** solemne en domingos y solemnidades (y sus I Vísperas, Triduo y Octavas); simple los demás días.
   Adviento y Navidad: *Alma Redemptóris*; de la Candelaria (2 de febrero) al fin de Cuaresma: *Ave Regína cælórum*;
   Pascua: *Regína cæli* (sin versículo); Tiempo Ordinario: *Salve Regína*, con *Sub tuum præsídium* como opción en ferias, memorias
-  y fiestas (siempre abre en la Salve); Asunción: *Ave Regína cælórum*, solemne o simple. Triduo, como en `sync`: Jueves Santo, *Alma*; Viernes Santo,
-  *Ave Regína*; Sábado Santo, *Salve* (`antifona_final` en `tiempo/completas-triduo-octava.yaml`).
+  y fiestas (siempre abre en la Salve); Asunción: *Ave Regína cælórum*, solemne o simple. Triduo: *Ave Regína cælórum*, simple o solemne
+  (`antifona_final` en `tiempo/completas-triduo-octava.yaml`; ahí están las fuentes). Desde el Domingo de Pascua, *Regína cæli*.
 - **Lo que responde la asamblea va en negrita:** en las partituras (desde el ℟ de la invocación y de la bendición, desde el asterisco
   en las antífonas, las repeticiones del responsorio), la repetición del Salva nos (toda, sin asterisco), *Deo grátias*, los Amén
   que responden a una oración, el *Yo confieso* y el *Confíteor*. En los GABC se marca con `<b>…</b>` sílaba por sílaba;
   `negrita()` de `tools/normalizar_gabc.py` lo hace.
 - **Examen de conciencia:** cuatro fórmulas a elegir (*Yo confieso*, otras dos de la Liturgia de las Horas y el *Confíteor* latino con su
   traducción); la elección se recuerda.
-- **Salmos en español:** sin partitura y sin pautas, con * y †.
+- **Salmos en español:** sin partitura y sin pautas, con * y †. Sus antífonas, en negrita (las dice toda la asamblea).
 - **Nunc dimittis:** desde el 2.º versículo, marcas escritas a mano como en el libro de Completas ADF (`**negrita**` acento, `_cursiva_` preparación).
 - **Cántico evangélico:** primer versículo del Nunc dimittis en partitura; el resto pautado en latín (tono 3 a), con traducción.
 - **GABC nuevos:** `python3 tools/normalizar_gabc.py ORIGEN.gabc destino.gabc` pasa el latín a i, æ y œ y avisa las palabras

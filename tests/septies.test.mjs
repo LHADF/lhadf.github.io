@@ -154,14 +154,18 @@ test('Completas: lo que responde la asamblea va en negrita', () => {
   assert.equal(r.find(s => s.k === 'deo').t, 'Deo grátias.');
 });
 
-test('Completas: Triduo como sync, himno según el día, Nunc con marcas a mano', () => {
+test('Completas: Triduo, himno según el día, Nunc con marcas a mano', () => {
   const mar = f => secc(f, 'mariana')[0].opciones.map(o => o.id).join(' ');
-  assert.equal(mar('2027-03-25'), 'alma-sol');     // Jueves Santo
-  assert.equal(mar('2027-03-26'), 'ave-sol');      // Viernes Santo
-  assert.equal(mar('2027-03-27'), 'salve-sol');    // Sábado Santo
+  for (const f of ['2027-03-25', '2027-03-26', '2027-03-27'])   // Triduo: Ave Regína cælórum, simple o solemne
+    assert.equal(mar(f), 'ave-sim ave-sol');
+  assert.equal(mar('2027-03-28'), 'regina_caeli-sol');            // Domingo de Pascua
   const h = f => secc(f, 'himno')[0];
   assert.equal(h('2026-11-08').def, 'telucis'); assert.ok(h('2026-11-08').efimera);   // domingo: siempre el Te lucis
   assert.equal(h('2026-11-05').def, 'ordinario-0'); assert.ok(!h('2026-11-05').efimera);
   const c = secc('2026-11-05', 'cantico')[0];
   assert.ok(c.versos.every(v => / \* /.test(v))); assert.match(c.versos[0], /\*\*me\*\*i/);
+});
+
+test('Completas: las antífonas de los salmos se marcan como de la asamblea', () => {
+  assert.ok(secc('2026-11-05', 'ant').filter(a => a.t && a.t.es).every(a => a.es));
 });

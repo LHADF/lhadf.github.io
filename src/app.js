@@ -11,6 +11,8 @@ let S=DEF;
 try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
 if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
+// Reinicio único (como en el Cantoral): todos vuelven a claro una vez; si después eligen oscuro, se respeta
+try{ if(!localStorage.getItem('temaClaro2026')){ S.theme='light'; localStorage.setItem('temaClaro2026','1'); guardar(); } }catch(e){}
 S.antGreg=true;
 /* Una sola versión: Liturgia de las Horas en modo canto (salmos y lecturas en español pautado, lo demás en latín) */
 S.rito='novus'; S.modo='canto';
@@ -37,7 +39,7 @@ function cargarDia(){
 }
 cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
-function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
+function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#1c1a17':'#ffffff'; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
 
 /* ---------- Texto según lengua ---------- */
 // Devuelve {p: principal, s: secundario (solo en bilingüe), falta: aviso}
@@ -217,7 +219,7 @@ function antHTML(sec){
   if(S.canto && S.antGreg && a.gabc) return `<div class="ant-greg">${partituraHTML(a.gabc, a.glosa)}</div>`;
   if(BI() && a.il) return `<div class="ant il"><p><span class="n">${esc(a.n||'Ant.')}</span> ${interHTML(a.il)}</p></div>`;
   const t=txt(a.t);
-  return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${marcas(t.p.replace(/ \* /,' '))}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
+  return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${a.es?'<b>':''}${marcas(t.p.replace(/ \* /,' '))}${a.es?'</b>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
 }
 function elegida(sec, clave, def){ const id=S[clave][sec.opciones[0].id]; return sec.opciones.find(o=>o.id===id)||def; }
 function himnoHTML(sec){

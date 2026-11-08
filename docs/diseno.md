@@ -52,3 +52,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 - «Deshacer» en lugar de pedir confirmación.
 - Aviso breve tras cada acción.
 - El botón o gesto de volver cierra capas sin salir de la app.
+
+## Modo oscuro
+
+Como en el Cantoral Laudibus: no sigue al dispositivo; solo se aplica si se elige en Opciones (`:root[data-theme="dark"]`). Fondo carbón cálido (`#1c1a17`, alrededor del 10 % de luminosidad), superficies, líneas y tintes aclarados en la misma proporción; textos, rojo y acentos sin cambios. En noviembre de 2026 todos volvieron a claro una vez (`temaClaro2026`).
