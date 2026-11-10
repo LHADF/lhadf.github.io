@@ -47,11 +47,12 @@ function versosDe(estrofas){
 const pares=l=>l.map(e=>{ const k=Object.keys(e)[0]; return [k==='texto'?'':k, e[k]]; });
 
 /* ---------- Gregoriano ---------- */
-// tono: 'solemne' | 'festivo' | 'ferial'. Sin aleluya (Cuaresma): se corta antes del «Allelúia» y la barra pasa a doble.
+// tono: 'solemne' | 'festivo' | 'ferial'. En Cuaresma, en lugar del «Allelúia», el «Laus tibi, Christe» del mismo tono.
 function invocacionGabc(tono, aleluya){
   const cuerpo=B.completas.gregoriano.invocacion[tono].split('%%')[1];
   const m=/(?:<b>)?Al(?:<\/b>)?\(/.exec(cuerpo);
-  const out = aleluya ? cuerpo.slice(0, cuerpo.indexOf('(::)', m.index)+4) : cuerpo.slice(0, m.index).replace(/\(;\)\s*$/, '(::)');
+  const laus=/(?:<b>)?Laus(?:<\/b>)?\(.*?\(::\)/s.exec(cuerpo)[0];
+  const out = aleluya ? cuerpo.slice(0, cuerpo.indexOf('(::)', m.index)+4) : cuerpo.slice(0, m.index).replace(/\s*$/,' ')+laus;
   return 'name:Deus in adiutorium;\n%%'+out+'\n';
 }
 // Versión recitada: el texto latino con su traducción, en renglones. spec: [[rol, primera palabra latina, lo dicen todos]]
@@ -104,7 +105,7 @@ function armar(fecha, region){
   sec('inicio','Invocación inicial');
   // Tono: solemne (domingos, solemnidades y sus I Vísperas, Triduo, Octavas), festivo (fiestas), ferial (ferias y memorias)
   const tonoInv = el.solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
-  const trInv=GR.invocacion.traduccion.filter(p=>cuaresma?!/^Allel/.test(p[0]):true);
+  const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
   S.push({k:'vr', tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv,
           rec:recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória',true]])});
 

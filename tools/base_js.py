@@ -46,7 +46,7 @@ def main():
             'tiempo': leer(os.path.join(B, 'tiempo', 'completas-triduo-octava.yaml')),
             'himnos': leer(os.path.join(B, 'himnos', 'completas.yaml')),
             'gregoriano': {
-                'invocacion': {'solemne': gabc(inv['solemne']), 'festivo': gabc(inv['festivo']), 'ferial': gabc(inv['ferial']), 'traduccion': pares(inv['traduccion'])},
+                'invocacion': {'solemne': gabc(inv['solemne']), 'festivo': gabc(inv['festivo']), 'ferial': gabc(inv['ferial']), 'traduccion': pares(inv['traduccion']), 'laus': pares(inv['laus'])},
                 'antifona': {'gabc': gabc(ce['antifona']), 'repeticion': repeticion(gabc(ce['antifona'])), 'traduccion': pares(ce['traduccion_antifona'])},
                 'cantico': {'gabc': primer_verso(gabc(ce['cantico'])), 'traduccion': pares(ce['traduccion_cantico']),
                             'tono': str(ce['tono_cantico']), 'versos': ce['versos'], 'traduccion_versos': [pares(v) for v in ce['traduccion_versos']],

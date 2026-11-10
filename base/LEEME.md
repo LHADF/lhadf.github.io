@@ -34,7 +34,7 @@ Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral
 - **Oración:** la del juego; en las solemnidades, `oracion_solemnidad` («Visita, Señor, esta habitación…»).
 - **Tiempo pascual:** `salmodia_pascua`, responsorio y antífona del cántico con aleluya, antífona «Reina del cielo».
 - **Triduo y Octava de Pascua:** todo lo de `tiempo/completas-triduo-octava.yaml`, día por día. En la Octava se alternan los juegos del sábado y del domingo.
-- **Aleluya** después del Gloria de la invocación: siempre, salvo en Cuaresma y el Triduo.
+- **Aleluya** después del Gloria de la invocación: siempre, salvo en Cuaresma y el Triduo, en que va «Laus tibi, Christe, Rex ætérnæ glóriæ» (texto ADF) con la melodía del tono del día.
 - **Octava de Navidad:** se alternan los juegos del sábado y del domingo, con la oración de las solemnidades.
 - **Himno:** primera opción, *Te lucis ante términum* en gregoriano; después, los himnos en español del tiempo. Domingos y
   solemnidades: siempre abre en el Te lucis. Los demás días: el primer himno en español del tiempo, o el último elegido.

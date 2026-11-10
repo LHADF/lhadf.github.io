@@ -189,6 +189,14 @@ test('Completas: cada pieza cantada tiene su versión recitada (latín con tradu
   assert.equal(JSON.stringify(inv.map(l => [l.rol, l.todos])), JSON.stringify([['V', false], ['R', true], ['', true]]));
   assert.equal(inv[0].pares[1][0], '✠ in');
   assert.ok(!secc('2027-02-17', 'vr')[0].rec.flatMap(l => l.pares).some(p => /^Allel/.test(p[0])));
+  // Cuaresma: «Laus tibi, Christe» en lugar del aleluya, en partitura y en el texto, con su traducción palabra por palabra
+  for (const f of ['2027-02-17', '2027-02-21', '2027-03-25']) {
+    const v = secc(f, 'vr')[0];
+    assert.match(v.gabc, /<b>Laus<\/b>\(h\) <b>ti<\/b>\(h\)<b>bi,<\/b>\(h\) <b>Chri<\/b>/); assert.ok(!/Dó<\/b>\(h\)<b>mi<\/b>\(h\)<b>ne<\/b>\(h'_\) <b>Rex/.test(v.gabc));
+    assert.ok(!/Allel|<alt>/.test(v.gabc)); assert.match(v.gabc, /\(::\)\s*$/);
+    assert.equal(v.glosa.map(p => p[0]).slice(-6).join(' '), 'Laus tibi, Christe, Rex ætérnæ glóriæ.');
+  }
+  assert.ok(!/Laus/.test(secc('2026-11-05', 'vr')[0].gabc));
 });
 
 // El interlineal es palabra por palabra: las palabras latinas de los pares, en orden, son exactamente las del texto

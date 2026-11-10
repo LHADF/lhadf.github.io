@@ -42,6 +42,14 @@ invocacion:
     - sæculórum. = de los siglos.
     - Amen. = Amén.
     - Allelúia. = Aleluya.
+  # En Cuaresma (y el Triduo), en lugar del Aleluya: «Laus tibi, Christe» (texto ADF), con la melodía de cada tono
+  laus:
+    - Laus = Alabanza
+    - tibi, = a ti,
+    - Christe, = Cristo,
+    - Rex = Rey
+    - ætérnæ = de eterna
+    - glóriæ. = gloria.
 cantico_evangelico:
   antifona: salva-nos.gabc
   cantico: nunc-dimittis-3a.gabc
