@@ -255,3 +255,14 @@ p.rec{margin:0 0 .8em}
 .preces .pa,.preces .pb{display:block}
 .preces .pb{padding-left:1.1em}
 .preces .sg{color:var(--rubric)}
+
+/* ℣ y ℟ van de a pares: la respuesta, pegada a su versículo; aire antes del versículo siguiente */
+.vr p{margin-bottom:.15em}
+.vr p.pv:not(:first-child){margin-top:1.5em}
+.vr.il p{margin-bottom:0}
+.vr.il .w{margin-bottom:.3em}
+/* Entre la antífona repetida de un salmo y la antífona del siguiente: el mismo aire que entre secciones */
+.ant + .ant{margin-top:4em}
+/* Signos (* †) siempre en peso normal y en rojo, también dentro de lo que dicen todos */
+.sg{font-weight:400;color:var(--rubric)}
+.il .nw .sg{vertical-align:top}

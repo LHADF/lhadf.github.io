@@ -193,21 +193,57 @@ benedictus:
       - Amen. = Amén.
 
 # Padre nuestro: en latín. Lo entona el que preside hasta el asterisco; desde ahí lo dicen todos (negrita).
-# Traducción: la habitual, por frases (no palabra por palabra).
+# Traducción literal, palabra por palabra.
 pater_noster:
-  - Pater noster, = Padre nuestro,
-  - '* qui es in cælis, = que estás en el cielo,'
-  - sanctificétur nomen tuum; = santificado sea tu Nombre;
-  - advéniat regnum tuum; = venga a nosotros tu reino;
-  - fiat volúntas tua, = hágase tu voluntad
-  - sicut in cælo, et in terra. = en la tierra como en el cielo.
-  - Panem nostrum cotidiánum = Danos hoy
-  - da nobis hódie; = nuestro pan de cada día;
-  - et dimítte nobis débita nostra, = perdona nuestras ofensas,
-  - sicut et nos dimíttimus = como también nosotros perdonamos
-  - debitóribus nostris; = a los que nos ofenden;
-  - et ne nos indúcas in tentatiónem; = no nos dejes caer en la tentación,
-  - sed líbera nos a malo. = y líbranos del mal.
+  - Pater = Padre
+  - noster, = nuestro,
+  - '* qui = que'
+  - es = estás
+  - in = en
+  - cælis, = los cielos,
+  - sanctificétur = santificado sea
+  - nomen = el nombre
+  - tuum; = tuyo;
+  - advéniat = venga
+  - regnum = el reino
+  - tuum; = tuyo;
+  - fiat = hágase
+  - volúntas = la voluntad
+  - tua, = tuya,
+  - sicut = como
+  - in = en
+  - cælo, = el cielo,
+  - et = también
+  - in = en
+  - terra. = la tierra.
+  - Panem = El pan
+  - nostrum = nuestro
+  - cotidiánum = de cada día
+  - da = da
+  - nobis = nos
+  - hódie; = hoy;
+  - et = y
+  - dimítte = perdona
+  - nobis = nos
+  - débita = las deudas
+  - nostra, = nuestras,
+  - sicut = como
+  - et = también
+  - nos = nosotros
+  - dimíttimus = perdonamos
+  - debitóribus = a los deudores
+  - nostris; = nuestros;
+  - et = y
+  - ne = no
+  - nos = nos
+  - indúcas = induzcas
+  - in = en
+  - tentatiónem; = tentación;
+  - sed = sino
+  - líbera = libra
+  - nos = nos
+  - a = del
+  - malo. = mal.
 # La monición antes del Padre nuestro (la propia del día, en la base) se dice solo en domingos, fiestas y solemnidades.
 
 # Conclusión (bendición): melodía del «Noctem quiétam» (dominus-nos-benedicat.gabc)
@@ -236,7 +272,7 @@ bendicion:
   solemne: benedicat-vos-b.gabc
   traduccion:
     - Dóminus = El Señor
-    - vobíscum. = con vosotros.
+    - 'vobíscum. = [esté] con vosotros.'
     - Et = Y
     - cum = con
     - spíritu = el espíritu

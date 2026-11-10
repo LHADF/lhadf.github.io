@@ -164,8 +164,11 @@ function versosMarcados(versos, glosas){
         if(resto===0 && k<pares.length){ const p=pares[k++]; resto=String(p[0]).trim().split(/\s+/).length; tr=p[1]; }
         if(resto>0) resto--;
         return `<span class="w">${m(w)}${tr?`<span class="tr">${marcas(tr)}</span>`:''}</span>`;
-      }).join(' ')+(hi<mitades.length-1?'&nbsp;<span class="sg">*</span>':''));
-    return `<p class="v${pares?' il':''}">${hs.map((h,n)=>`<span class="${n?'h2':'h1'}">${h}</span>`).join('')}</p>`;
+      }));
+    const hs2=hs.map((ws,hi)=>{ // el asterisco no baja solo de renglón: va pegado a la última palabra
+      if(hi<mitades.length-1 && ws.length){ const u=ws.pop(); ws.push(`<span class="nw">${u}&nbsp;<span class="sg">*</span></span>`); }
+      return ws.join(' '); });
+    return `<p class="v${pares?' il':''}">${hs2.map((h,n)=>`<span class="${n?'h2':'h1'}">${h}</span>`).join('')}</p>`;
   }).join('');
 }
 function salmoHTML(sal){
@@ -264,7 +267,7 @@ function recitadoHTML(rec, tipo){
   if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${
       (l.versos||[l.pares]).map(v=>`<span class="ln">${lineaRec({...l,pares:v})}</span>`).join('')}</p>`).join('')}</div>`;
   if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
-  return `<div class="vr rec${il}">${rec.map(l=>`<p>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
+  return `<div class="vr rec${il}">${rec.map(l=>`<p${l.rol==='V'?' class="pv"':''}>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
 // Citas bíblicas al modo «capítulo: versículos» (Dn 3: 26-27), más preciso que la coma
 function cita(t){ return String(t||'').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
@@ -343,7 +346,7 @@ function himnoHTML(sec){
 function examenHTML(sec){
   const f=sec.formulas.find(x=>x.id===S.examenF)||sec.formulas[0];
   const br=t=>esc(t).replace(/\n/g,'<br>');
-  const vr=(k,t)=>`<p><span class="k">${k==='V'?'℣':'℟'}.</span> ${k==='R'?`<b>${br(t)}</b>`:br(t)}</p>`;
+  const vr=(k,t)=>`<p${k==='V'?' class="pv"':''}><span class="k">${k==='V'?'℣':'℟'}.</span> ${k==='R'?`<b>${br(t)}</b>`:br(t)}</p>`;
   let h=`<div class="opciones desliza" role="group" aria-label="Fórmula">${sec.formulas.map(x=>`<button data-act="examenF" data-v="${x.id}" aria-pressed="${x===f}">${esc(x.titulo)}</button>`).join('')}</div>`;
   h+=`<p>${br(sec.invitacion)}</p>`;
   if(f.latin){ // Confíteor latino, con traducción literal debajo; lo dicen todos
@@ -363,7 +366,7 @@ function respHTML(sec){
   if(CANTA() && sec.gabc) return partituraHTML(sec.gabc, S.trad?sec.glosa:null);
   const es=VES(); const la=sec.l.la, sp=sec.l[es]||sec.l.es79||sec.l.es;
   const P= S.lengua==='es'? sp : la; const Sx= S.lengua==='bi'? (sec.lit? sec.lit.map((x,i)=>[la[i][0],x]) : sp) : null;
-  return `<div class="vr">${P.map((x,i)=>`<p><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${x[0]==='R'?'<b>'+marcas(x[1])+'</b>':marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
+  return `<div class="vr">${P.map((x,i)=>`<p${x[0]==='V'?' class="pv"':''}><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${x[0]==='R'?'<b>'+marcas(x[1])+'</b>':marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
 }
 function marianaHTML(sec){
   const ops=sec.opciones;
@@ -423,12 +426,12 @@ function horaHTML(){
         if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
         h+=`<p>${esc(sec.intro)}</p><p class="todos">${esc(sec.respuesta)}</p>`
           +`<div class="preces">${sec.preces.map(([a,b])=>`<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`
-          +`<p class="rub">Se pueden añadir algunas intenciones libres.</p>`; break; }
+; break; }
       case 'pater':
         { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita)
-          const k=sec.pares.findIndex(x=>/^\*/.test(x[0])), a=sec.pares.slice(0,k<0?0:k), b=sec.pares.slice(k<0?0:k);
+          const k=sec.pares.findIndex(x=>/^\*/.test(x[0])), a=sec.pares.slice(0,k<0?0:k), b=sec.pares.slice(k<0?0:k).map((x,i)=>i?x:[x[0].replace(/^\*\s*/,''),x[1]]);
           const lat=ps=>marcas(ps.map(x=>x[0]).join(' '));
-          h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il">${interHTML(a)} <span class="todos">${interHTML(b)}</span></p>`:`<p>${lat(a)} <b>${lat(b)}</b></p>`); break; }
+          h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il">${interHTML(a)} <span class="sg">*</span> <span class="todos">${interHTML(b)}</span></p>`:`<p>${lat(a)} <span class="sg">*</span> <b>${lat(b)}</b></p>`); break; }
       case 'conclusion': {
         const o=sec.opciones.find(x=>x.id===S.concl)||sec.opciones[0];
         h+=`<div class="opciones desliza" role="group" aria-label="Conclusión">${sec.opciones.map(x=>`<button data-act="concl" data-v="${x.id}" aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`+vrHTML(o)+(o.despues?recitadoHTML(o.despues):''); break; }

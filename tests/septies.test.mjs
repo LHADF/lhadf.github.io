@@ -257,7 +257,7 @@ test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
   const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
   c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
   const pn = secL('2026-11-10', 'pater')[0];
-  assert.equal(pn.pares[0][0], 'Pater noster,'); assert.match(pn.pares[1][0], /^\* qui es in cælis,/); assert.equal(pn.pares.at(-1)[1], 'y líbranos del mal.');
+  assert.equal(pn.pares[0][0], 'Pater'); assert.equal(pn.pares[2][0], '* qui'); assert.equal(pn.pares.at(-1)[1], 'mal.');
   assert.equal(pn.intro, ''); assert.ok(secL('2026-11-09', 'pater')[0].intro && secL('2026-11-08', 'pater')[0].intro);   // monición: solo domingos, fiestas y solemnidades
   assert.equal(LA.armar('2026-11-10', 'ARG').secciones.filter(x => x.k === 'vr').length, 2);                          // Dómine, lábia mea + Deus in adiutórium
   const co = secL('2026-11-10', 'conclusion')[0].opciones;
