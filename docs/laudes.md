@@ -25,6 +25,6 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - **Citas bíblicas** al modo «capítulo: versículos» (Dn 3: 26-27). La base guarda la coma; la app la convierte al mostrar (`cita()` en app.js).
 - **Cántico evangélico:** la referencia va al final del renglón del título de la sección, como en la lectura breve. Texto y versículos del Benedictus y del Magníficat: los PDF «NVG» de ADF (`base/gregoriano/laudes.yaml`, `magnificat.yaml`).
 - **Comienzo de Laudes:** siempre *Dómine, lábia mea apéries* y después el *Deus in adiutórium*; entre ambos, el invitatorio (antífona y Salmo 94) solo los domingos.
-- **Padre nuestro:** monición («Oremos confiadamente al Padre, como Cristo nos enseñó:») solo en fiestas y solemnidades. *Pater noster* con asterisco después de «noster»: hasta ahí, normal; desde ahí, negrita. Traducción: la habitual.
+- **Padre nuestro:** la monición (la propia del día) se dice solo en domingos, fiestas y solemnidades. *Pater noster* con asterisco después de «noster»: hasta ahí, normal; desde ahí, negrita. Traducción: la habitual.
 - **Preces:** † y * en rojo.
-- **Conclusión:** cruz después de «Dóminus». Opción «Con ministro ordenado»: *Dóminus vobíscum… Benedícat vos* (Graduale Romanum 1974, p. 817: tono A en ferias, memorias y fiestas; tono B en domingos y solemnidades; el libro no trae un tercer tono).
+- **Conclusión:** cruz después de «Dóminus». Opción «Con ministro ordenado»: *Dóminus vobíscum… Benedícat vos* (Graduale Romanum 1974, p. 817: tono A en ferias, memorias y fiestas; tono B en domingos y solemnidades; el libro no trae un tercer tono), seguido de *Ite in pace. ℟. Deo grátias.* (por ahora en texto: falta el GABC).

@@ -258,11 +258,11 @@ test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
   c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
   const pn = secL('2026-11-10', 'pater')[0];
   assert.equal(pn.pares[0][0], 'Pater noster,'); assert.match(pn.pares[1][0], /^\* qui es in cælis,/); assert.equal(pn.pares.at(-1)[1], 'y líbranos del mal.');
-  assert.equal(pn.intro, ''); assert.match(secL('2026-11-09', 'pater')[0].intro, /^Oremos confiadamente/);       // monición: solo fiestas y solemnidades
+  assert.equal(pn.intro, ''); assert.ok(secL('2026-11-09', 'pater')[0].intro && secL('2026-11-08', 'pater')[0].intro);   // monición: solo domingos, fiestas y solemnidades
   assert.equal(LA.armar('2026-11-10', 'ARG').secciones.filter(x => x.k === 'vr').length, 2);                          // Dómine, lábia mea + Deus in adiutórium
   const co = secL('2026-11-10', 'conclusion')[0].opciones;
   assert.match(co[0].gabc, /nus\(h\) ✠\(\) nos/); assert.match(co[1].gabc, /\(c3\)/); assert.match(secL('2026-11-08', 'conclusion')[0].opciones[1].gabc, /\(c4\)/);
-  assert.equal(co[1].rec.length, 4);
+  assert.equal(co[1].rec.length, 4); assert.equal(co[1].despues.map(l => l.pares.map(x => x[0]).join(' ')).join(' | '), 'Ite in pace. | Deo grátias.');
   const p = secL('2026-11-10', 'preces')[0]; assert.ok(p.respuesta && p.preces.every(x => x.length === 2));
   assert.ok(!/aleluya/i.test(JSON.stringify(LD)));
 });

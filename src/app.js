@@ -431,7 +431,7 @@ function horaHTML(){
           h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il">${interHTML(a)} <span class="todos">${interHTML(b)}</span></p>`:`<p>${lat(a)} <b>${lat(b)}</b></p>`); break; }
       case 'conclusion': {
         const o=sec.opciones.find(x=>x.id===S.concl)||sec.opciones[0];
-        h+=`<div class="opciones desliza" role="group" aria-label="Conclusión">${sec.opciones.map(x=>`<button data-act="concl" data-v="${x.id}" aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`+vrHTML(o); break; }
+        h+=`<div class="opciones desliza" role="group" aria-label="Conclusión">${sec.opciones.map(x=>`<button data-act="concl" data-v="${x.id}" aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`+vrHTML(o)+(o.despues?recitadoHTML(o.despues):''); break; }
       case 'greg': h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span>${sec.ref?`<span class="ref">${esc(sec.ref)}</span>`:''}</div>`+partituraHTML(sec.gabc, sec.glosa, false); break;
     }
   });
