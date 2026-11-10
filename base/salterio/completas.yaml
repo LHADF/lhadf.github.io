@@ -7,7 +7,7 @@ domingo:
     salmos:
     - salmo-90
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-90
   lectura:
@@ -21,7 +21,7 @@ lunes:
     salmos:
     - salmo-85
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-85
   lectura:
@@ -35,7 +35,7 @@ martes:
     salmos:
     - salmo-142-1-11
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-142-1-11
   lectura:
@@ -52,7 +52,7 @@ miercoles:
     salmos:
     - salmo-129
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-30-2-6
     - salmo-129
@@ -67,7 +67,7 @@ jueves:
     salmos:
     - salmo-15
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-15
   lectura:
@@ -81,7 +81,7 @@ viernes:
     salmos:
     - salmo-87
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-87
   lectura:
@@ -98,7 +98,7 @@ sabado:
     salmos:
     - salmo-133
   salmodia_pascua:
-  - ant: Aleluya, aleluya, aleluya.
+  - ant: Aleluia, aleluia, aleluia.
     salmos:
     - salmo-4
     - salmo-133

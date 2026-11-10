@@ -148,7 +148,7 @@ function armar(fecha, region){
   }
 
   sec('cantico','Cántico evangélico');
-  const tp=pascua||!!(el.especial&&/Aleluya/.test(el.especial.antifona_cantico||''));
+  const tp=pascua||!!(el.especial&&/Aleluia/i.test(el.especial.antifona_cantico||''));
   const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva',true]]);
   S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
   S.push({k:'cantico', titulo:'Cántico de Simeón', ref:'Lc 2, 29-32', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,

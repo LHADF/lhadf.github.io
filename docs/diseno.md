@@ -7,13 +7,15 @@ Septies es app hermana del Cantoral: comparte su sistema visual y sus gestos. La
 - **En rojo:** rúbricas (además en cursiva), la letra capital inicial del gregoriano y el número de modo, los números de estrofa de los himnos, ℣, ℟, asterisco y cruz.
 - **Glifos propios** (fuente «Cantoral Signos»): ℣ y ℟ con trazo diagonal, cruz patada (✠) y asterisco de cinco pétalos.
 - **Latín:** *i* en lugar de *j*; ligaduras æ/œ; tildes de acento. Source Serif 4 no trae «ǽ» ni «Ǽ»: van en `src/assets/ae.css` (familia propia «Septies AE», nunca «Cantoral Signos»), armadas con la «æ» y la tilde de la misma fuente (`tools/fuente_ae.py`), para que no se vean más altas.
+- **Español: «aleluia», nunca «aleluya»** (para que no se pronuncie «ya»), también en la traducción del latín. La base ya está así y la prueba lo verifica.
 - **Himnos:** estrofas numeradas «1.», «2.», con línea en blanco entre estrofas. En un himno con estrofas numeradas, el bloque sin número es el estribillo: cursiva y con ℟. Himno sin ninguna estrofa numerada: texto normal, sin cursiva y sin ℟.
 - **Polifonías:** una frase por línea, con traducción interlineal. Indicaciones entre corchetes en el original ([Coro]) y en rojo en la app.
 
 ## Traducción
 
 - **Siempre interlineal** y en **verde** (`--glosa`).
-- **Anclada por palabras** en la medida de lo posible; por frases solo cuando el orden no queda bien en español. Así no se desfasa del latín ni se superponen partes.
+- **Literal, palabra por palabra**, bajo cada palabra latina; por frases o con otro orden solo cuando ir una por una confundiría. Es una traducción propia, no el español de la Liturgia de las Horas.
+- **El latín no se toca:** corre con espacios regulares; la traducción se corre si es más larga.
 - Salmos: un hemistiquio latino y debajo su traducción. Prosa (lecturas, oraciones, versículos, antífonas): grupos de palabras con su traducción debajo, que bajan juntos al cortar el renglón.
 
 ## Partitura gregoriana
@@ -30,7 +32,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 - **Título de la hora:** solo en la barra de arriba; no se repite en el cuerpo.
 - **Tono de salmos y cánticos:** sigue siempre a la antífona; no hay opción para cambiarlo. El Breviario de 1960 sigue en los datos, pero no se muestra.
 
-- **Cruz (✠):** solo en el texto latino; nunca en la traducción. La cruz y el asterisco quedan centrados entre los textos, con el mismo espacio a cada lado.
+- **Cruz (✠):** solo en el texto latino; nunca en la traducción. Va pegada a la palabra que sigue, con un espacio común antes.
 - **Respuestas del pueblo** (℟. Amen.) en renglón propio.
 
 ## Diseño visual

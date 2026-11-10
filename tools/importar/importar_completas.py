@@ -102,7 +102,7 @@ def importar(todos):
         cp = 'pascua' if c == 'pascua' else ('ordinario' if c == 'ordinario' else None)
         # ordinario de la hora
         inv = [[a, b] for a, b in d.get('invocacion', [])]
-        if inv: inv[-1][1] = re.sub(r'\s*Aleluya\.?$', '', inv[-1][1])  # el aleluya se agrega fuera de Cuaresma
+        if inv: inv[-1][1] = re.sub(r'\s*Aleluy?i?a\.?$', '', inv[-1][1])  # el aleluya se agrega fuera de Cuaresma
         V('invocacion', inv, f)
         V('examen', d.get('examen'), f)
         V('bendicion', [[a, b] for a, b in d.get('bendicion', [])], f)

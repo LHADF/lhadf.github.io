@@ -3,7 +3,7 @@
 # examen: invitación, fórmulas a elegir (todos: lo dicen todos, va en negrita) y absolución. El Confíteor latino lleva su
 # traducción literal en pares «latín = español».
 nombre: Completas
-aleluya_tras_gloria: siempre, salvo en Cuaresma (en la invocación inicial)
+aleluia_tras_gloria: siempre, salvo en Cuaresma (en la invocación inicial)
 subtitulo: Oración antes del descanso nocturno
 invocacion:
 - V: Dios mío, ven en mi auxilio.
@@ -148,18 +148,18 @@ responsorio:
   - V: Gloria al Padre, y al Hijo, y al Espíritu Santo.
   - R: En tus manos, Señor, encomiendo mi espíritu.
   pascua:
-  - V: En tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.
-  - R: En tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.
+  - V: En tus manos, Señor, encomiendo mi espíritu. Aleluia, aleluia.
+  - R: En tus manos, Señor, encomiendo mi espíritu. Aleluia, aleluia.
   - V: Tú, el Dios leal, nos librarás.
-  - R: Aleluya, aleluya.
+  - R: Aleluia, aleluia.
   - V: Gloria al Padre, y al Hijo, y al Espíritu Santo.
-  - R: En tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.
+  - R: En tus manos, Señor, encomiendo mi espíritu. Aleluia, aleluia.
 cantico_evangelico:
   titulo: Cántico de Simeón
   ref: Lc 2, 29-32
   antifona:
     ordinario: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.
-    pascua: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluya.
+    pascua: Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz. Aleluia.
 oracion_solemnidad: 'Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Cristo nuestro Señor.'
 bendicion:
 - V: El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.

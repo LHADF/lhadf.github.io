@@ -6,7 +6,7 @@
 
 invocacion:
   # Tono solemne: domingos y solemnidades (también sus I Vísperas, el Triduo y las Octavas de Navidad y Pascua);
-  # festivo: fiestas; ferial: ferias, memorias y conmemoraciones. En Cuaresma se omite el Aleluya.
+  # festivo: fiestas; ferial: ferias, memorias y conmemoraciones. En Cuaresma se omite el Aleluia.
   solemne: deus-in-adiutorium-solemnis.gabc
   festivo: deus-in-adiutorium-festivus.gabc
   ferial: deus-in-adiutorium-ferialis.gabc
@@ -41,8 +41,8 @@ invocacion:
     - sǽcula = los siglos
     - sæculórum. = de los siglos.
     - Amen. = Amén.
-    - Allelúia. = Aleluya.
-  # En Cuaresma (y el Triduo), en lugar del Aleluya: «Laus tibi, Christe» (texto ADF), con la melodía de cada tono
+    - Allelúia. = Aleluia.
+  # En Cuaresma (y el Triduo), en lugar del Aleluia: «Laus tibi, Christe» (texto ADF), con la melodía de cada tono
   laus:
     - Laus = Alabanza
     - tibi, = a ti,
@@ -69,7 +69,7 @@ cantico_evangelico:
     - requiescámus = descansemos
     - in = en
     - pace. = paz.
-    - Allelúia. = Aleluya.
+    - Allelúia. = Aleluia.
   traduccion_cantico:   # primer versículo, en partitura
     - Nunc = Ahora
     - dimíttis = despides
@@ -428,21 +428,21 @@ marianas:
       - Regína = Reina
       - cæli, = del cielo,
       - lætáre, = alégrate,
-      - 'allelúia: = aleluya:'
+      - 'allelúia: = aleluia:'
       - Quia = porque
       - quem = al que
       - meruísti = mereciste
       - portáre, = llevar,
-      - 'allelúia: = aleluya:'
+      - 'allelúia: = aleluia:'
       - Resurréxit, = resucitó,
       - sicut = como
       - dixit, = dijo,
-      - 'allelúia: = aleluya:'
+      - 'allelúia: = aleluia:'
       - Ora = Ruega
       - pro = por
       - nobis = nosotros
       - Deum, = a Dios,
-      - allelúia. = aleluya.
+      - allelúia. = aleluia.
   regina_caeli_solemne:
     titulo: Regína cæli
     partitura: regina-caeli-solemne.gabc
@@ -450,18 +450,18 @@ marianas:
       - Regína = Reina
       - cæli, = del cielo,
       - lætáre, = alégrate,
-      - 'allelúia: = aleluya:'
+      - 'allelúia: = aleluia:'
       - Quia = porque
       - quem = al que
       - meruísti = mereciste
       - portáre, = llevar,
-      - 'allelúia: = aleluya:'
+      - 'allelúia: = aleluia:'
       - Resurréxit, = resucitó,
       - sicut = como
       - dixit, = dijo,
-      - 'allelúia: = aleluya:'
+      - 'allelúia: = aleluia:'
       - Ora = Ruega
       - pro = por
       - nobis = nosotros
       - Deum, = a Dios,
-      - alle = aleluya.
+      - alle = aleluia.

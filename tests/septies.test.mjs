@@ -217,3 +217,7 @@ test('interlineal: los pares cubren el texto latino palabra por palabra', () => 
   const todos = casos.flatMap(c => c[1]).concat(G.cantico.traduccion_versos.flat());
   assert.ok(todos.filter(p => /\s/.test(String(p[0]).trim())).length <= 3);
 });
+
+test('español: «aleluia», nunca «aleluya»', () => {
+  assert.ok(!/aleluya/i.test(JSON.stringify(B)));
+});
