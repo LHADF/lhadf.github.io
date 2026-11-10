@@ -208,8 +208,7 @@ pater_noster:
   - debitóribus nostris; = a los que nos ofenden;
   - et ne nos indúcas in tentatiónem; = no nos dejes caer en la tentación,
   - sed líbera nos a malo. = y líbranos del mal.
-# Monición antes del Padre nuestro: solo en fiestas y solemnidades
-pater_monicion: 'Oremos confiadamente al Padre, como Cristo nos enseñó:'
+# La monición antes del Padre nuestro (la propia del día, en la base) se dice solo en domingos, fiestas y solemnidades.
 
 # Conclusión (bendición): melodía del «Noctem quiétam» (dominus-nos-benedicat.gabc)
 conclusion:
@@ -253,3 +252,10 @@ bendicion:
     - Spíritus = Espíritu
     - Sanctus. = Santo.
     - Amen. = Amén.
+  # Despedida después de la bendición (por ahora sin partitura: falta el GABC)
+  despedida:
+    - Ite = Id
+    - in = en
+    - pace. = paz.
+    - Deo = A Dios
+    - grátias. = gracias.

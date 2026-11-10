@@ -97,7 +97,7 @@ function armar(fecha, region){
   S.push({k:'preces', es:true, ...P.preces});
 
   sec('padrenuestro','Padre nuestro');
-  S.push({k:'pater', intro: /^(Fiesta|Solemnidad)/.test(hoy.g) ? GL.pater_monicion : '', pares:GL.pater_noster});   // monición solo en fiestas y solemnidades
+  S.push({k:'pater', intro: (dia==='domingo' || /^(Fiesta|Solemnidad)/.test(hoy.g)) ? (P.padrenuestro_intro||'') : '', pares:GL.pater_noster});   // monición (la del día) solo en domingos, fiestas y solemnidades
 
   sec('oracion','Oración');
   S.push({k:'prosa', es:true, t:{es:P.oracion}, amen:{es:'Amén.'}});
@@ -108,7 +108,8 @@ function armar(fecha, region){
   S.push({k:'conclusion', opciones:[
     {id:'laico', n:'Sin ministro ordenado', gabc:GL.conclusion.gabc, glosa:GL.conclusion.traduccion, rec:X.recitado(cruz(GL.conclusion.traduccion,'nos'), [['V','Dóminus'],['R','Amen.',true]])},
     {id:'ministro', n:'Con ministro ordenado', gabc:GL.bendicion[solemne?'solemne':'simple'], glosa:TB,
-     rec:X.recitado(TB.map((p,i)=>i===iEt?['✠ '+p[0],p[1]]:p), [['V','Dóminus'],['R','Et',true],['V','Benedícat'],['R','Amen.',true]])}]});
+     rec:X.recitado(TB.map((p,i)=>i===iEt?['✠ '+p[0],p[1]]:p), [['V','Dóminus'],['R','Et',true],['V','Benedícat'],['R','Amen.',true]]),
+     despues:X.recitado(GL.bendicion.despedida, [['V','Ite'],['R','Deo',true]])}]});   // «Ite in pace»: sin partitura por ahora
 
   const d=CP.deIso(fecha);
   return {
