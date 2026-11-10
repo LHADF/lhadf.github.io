@@ -396,7 +396,7 @@ function portadaHTML(){
     <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=id==='completas';
       return `<li class="${ok?'sel':''}"><button ${ok?'data-act="abrir"':'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
-    <p class="nota-proto">Prototipo: por ahora solo Completas está armada, para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y bendición en gregoriano.</p>
+    <p class="nota-proto">Prototipo: por ahora solo Completas está armada, para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en gregoriano.</p>
   </div>`;
 }
 

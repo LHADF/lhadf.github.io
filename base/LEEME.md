@@ -17,7 +17,7 @@ Cada archivo es texto YAML y se puede editar directamente en GitHub. Reglas de e
 
 | Carpeta | Qué hay |
 |---|---|
-| `ordinario/` | Lo que no cambia con el día: invocación, examen, responsorio, cántico evangélico, bendición, antífonas finales de la Virgen |
+| `ordinario/` | Lo que no cambia con el día: invocación, examen, responsorio, cántico evangélico, conclusión, antífonas finales de la Virgen |
 | `salterio/` | El salterio de cada hora. Completas: un juego por día de la semana |
 | `tiempo/` | Propio del tiempo. Por ahora, Completas del Triduo pascual y de la Octava de Pascua |
 | `himnos/` | Himnos por hora y por tiempo; en cada tiempo se puede elegir cualquiera de la lista |
@@ -39,13 +39,13 @@ Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral
 - **Himno:** primera opción, *Te lucis ante términum* en gregoriano; después, los himnos en español del tiempo. Domingos y
   solemnidades: siempre abre en el Te lucis. Los demás días: el primer himno en español del tiempo, o el último elegido.
 - **Lectura breve:** ℟. *Deo grátias*.
-- **Cantado o recitado:** un solo botón al comienzo de la hora decide todas las piezas gregorianas (invocación, himno *Te lucis*, responsorio, cántico evangélico con su antífona, bendición y antífona final). Recitado: el mismo texto latino con su traducción literal debajo; el responsorio recitado va en español (cantado: *In manus tuas*, fuera de Pascua). La elección se recuerda.
+- **Cantado o recitado:** un solo botón al comienzo de la hora decide todas las piezas gregorianas (invocación, himno *Te lucis*, responsorio, cántico evangélico con su antífona, conclusión y antífona final). Recitado: el mismo texto latino con su traducción literal debajo; el responsorio recitado va en español (cantado: *In manus tuas*, fuera de Pascua). La elección se recuerda.
 - **Antífona final de la Virgen:** solemne en domingos y solemnidades (y sus I Vísperas, Triduo y Octavas); simple los demás días.
   Adviento y Navidad: *Alma Redemptóris*; de la Candelaria (2 de febrero) al fin de Cuaresma: *Ave Regína cælórum*;
   Pascua: *Regína cæli* (sin versículo); Tiempo Ordinario: *Salve Regína*, con *Sub tuum præsídium* como opción en ferias, memorias
   y fiestas (siempre abre en la Salve); Asunción: *Ave Regína cælórum*, solemne o simple. Triduo: *Ave Regína cælórum*, simple o solemne
   (`antifona_final` en `tiempo/completas-triduo-octava.yaml`; ahí están las fuentes). Desde el Domingo de Pascua, *Regína cæli*.
-- **Lo que responde la asamblea va en negrita:** en las partituras (desde el ℟ de la invocación y de la bendición, desde el asterisco
+- **Lo que responde la asamblea va en negrita:** en las partituras (desde el ℟ de la invocación y de la conclusión, desde el asterisco
   en las antífonas, las repeticiones del responsorio), la repetición del Salva nos (toda, sin asterisco), *Deo grátias*, los Amén
   que responden a una oración, el *Yo confieso* y el *Confíteor*. En los GABC se marca con `<b>…</b>` sílaba por sílaba;
   `negrita()` de `tools/normalizar_gabc.py` lo hace.

@@ -66,7 +66,8 @@ cantico_evangelico:
 conclusion:
   partitura: noctem-quietam.gabc
   traduccion:
-    - Noctem quiétam = Una noche tranquila
+    - Noctem = Una noche
+    - quiétam = tranquila
     - et finem perféctum = y un fin perfecto
     - concédat nobis = nos conceda
     - Dóminus omnípotens. = el Señor todopoderoso.

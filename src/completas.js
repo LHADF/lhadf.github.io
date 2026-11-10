@@ -156,8 +156,8 @@ function armar(fecha, region){
   const orac = el.especial ? el.especial.oracion : (el.oracion==='solemnidad' ? O.oracion_solemnidad : J.oracion);
   S.push({k:'prosa', es:true, t:{es:orac}, amen:{es:'Amén.'}});
 
-  sec('bendicion','Bendición');
-  S.push({k:'vr', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion, rec:recitado(GR.conclusion.traduccion, [['V','Noctem quiétam'],['R','Amen.',true]])});
+  sec('bendicion','Conclusión');
+  S.push({k:'vr', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion, rec:recitado(GR.conclusion.traduccion.map(p=>p[0]==='quiétam'?['✠ '+p[0],p[1]]:p), [['V','Noctem'],['R','Amen.',true]])});
 
   sec('mariana','Antífona final de la Santísima Virgen');
   // Domingos y solemnidades (y sus I Vísperas, Triduo y Octavas): versión solemne; los demás días, la simple.
