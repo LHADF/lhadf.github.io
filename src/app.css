@@ -266,3 +266,4 @@ p.rec{margin:0 0 .8em}
 /* Signos (* †) siempre en peso normal y en rojo, también dentro de lo que dicen todos */
 .sg{font-weight:400;color:var(--rubric)}
 .il .nw .sg{vertical-align:top}
+.confiteor .ln{display:block}

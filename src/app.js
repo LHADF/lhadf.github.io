@@ -267,7 +267,7 @@ function recitadoHTML(rec, tipo){
   if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${
       (l.versos||[l.pares]).map(v=>`<span class="ln">${lineaRec({...l,pares:v})}</span>`).join('')}</p>`).join('')}</div>`;
   if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
-  return `<div class="vr rec${il}">${rec.map(l=>`<p${l.rol==='V'?' class="pv"':''}>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
+  return `<div class="vr rec${il}">${rec.map(l=>`<p${l.rol!=='R'?' class="pv"':''}>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
 // Citas bíblicas al modo «capítulo: versículos» (Dn 3: 26-27), más preciso que la coma
 function cita(t){ return String(t||'').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
@@ -350,8 +350,8 @@ function examenHTML(sec){
   let h=`<div class="opciones desliza" role="group" aria-label="Fórmula">${sec.formulas.map(x=>`<button data-act="examenF" data-v="${x.id}" aria-pressed="${x===f}">${esc(x.titulo)}</button>`).join('')}</div>`;
   h+=`<p>${br(sec.invitacion)}</p>`;
   if(f.latin){ // Confíteor latino, con traducción literal debajo; lo dicen todos
-    const t=f.todos.flat();   // un solo párrafo, sin renglones vacíos
-    h+=S.trad?`<p class="il todos">${interHTML(t)}</p>`:`<p class="todos">${esc(t.map(x=>x[0]).join(' '))}</p>`;
+    // un renglón por grupo de la base (cortes de ADF), en un solo párrafo
+    h+=`<p class="todos confiteor${S.trad?' il':''}">${f.todos.map(g=>`<span class="ln">${S.trad?interHTML(g):esc(g.map(x=>x[0]).join(' '))}</span>`).join('')}</p>`;
     h+=`<div class="vr${S.trad?' il':''}">`+f.absolucion.map(([k,p])=>S.trad
       ? `<p><span class="k">${k==='V'?'℣':'℟'}.</span> <span class="segs${k==='R'?' todos':''}">${interHTML(p)}</span></p>`
       : vr(k,p.map(x=>x[0]).join(' '))).join('')+'</div>';
