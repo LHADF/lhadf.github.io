@@ -221,3 +221,42 @@ test('interlineal: los pares cubren el texto latino palabra por palabra', () => 
 test('español: «aleluia», nunca «aleluya»', () => {
   assert.ok(!/aleluya/i.test(JSON.stringify(B)));
 });
+
+// ---------- Laudes ----------
+for (const f of ['../src/carga/laudes.js', '../src/laudes.js']) vm.runInNewContext(readFileSync(new URL(f, import.meta.url), 'utf8'), ctx);
+const LA = ctx.window.Laudes, LD = ctx.window.LAUDES;
+const secL = (f, k) => LA.armar(f, 'ARG').secciones.filter(s => s.k === k);
+
+test('Laudes: se arman completas para todos los días del calendario', () => {
+  let f = ctx.window.CAL.desde; const mal = [];
+  while (f <= ctx.window.CAL.hasta) {
+    const r = LA.armar(f, 'ARG'), S = r.secciones;
+    const ok = S.filter(s => s.k === 'salmo').length >= 3 && S.find(s => s.k === 'himno').opciones[0].est.length && S.find(s => s.k === 'lectura').t.es
+      && S.find(s => s.k === 'preces') && S.find(s => s.id === 'ab').t.es && S.find(s => s.k === 'prosa').t.es;
+    if (!ok && !r.dia.nota) mal.push(f);
+    f = CP.masDias(f, 1);
+  }
+  assert.deepEqual(mal, []);
+});
+
+test('Laudes: invitatorio solo los domingos; tono de la invocación; ciclo dominical', () => {
+  const ids = f => LA.armar(f, 'ARG').secciones.filter(s => s.k === 'sec').map(s => s.id);
+  assert.equal(ids('2026-11-08')[0], 'invitatorio'); assert.equal(secL('2026-11-08', 'salmo')[0].id, 'salmo-94');
+  assert.equal(ids('2026-11-10')[0], 'inicio');
+  assert.equal(secL('2026-11-08', 'vr')[1].tono, 'solemne'); assert.equal(secL('2026-11-10', 'vr')[0].tono, 'ferial'); assert.equal(secL('2026-11-09', 'vr')[0].tono, 'festivo');
+  assert.equal(LA.ciclo('2026-11-08'), 'A'); assert.equal(LA.ciclo('2026-11-29'), 'B'); assert.equal(LA.ciclo('2025-06-01'), 'C');
+});
+
+test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
+  assert.equal(secL('2026-11-12', 'salmo')[0].id, LD.salterio.semana_4.jueves.salmodia[0].salmo);          // feria: salterio
+  assert.match(secL('2026-11-10', 'prosa')[0].t.es, /san León Magno/);                                       // memoria: oración propia
+  assert.equal(secL('2026-12-08', 'salmo')[0].id, 'salmo-62-2-9');                                           // solemnidad: salmos del domingo I
+  assert.ok(!secL('2026-12-08', 'salmo').find(s => s.id === 'cantico-dn-3-57-88-56').gloria);                // Daniel 3, 57-88: sin Gloria
+  const c = secL('2026-11-10', 'cantico')[0];
+  assert.equal(c.versos.length, 14); assert.equal(c.versos.length, c.inter.length);
+  const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
+  c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
+  assert.equal(secL('2026-11-10', 'pater')[0].pares.map(p => p[0]).slice(0, 6).join(' '), 'Pater noster, qui es in cælis,');
+  const p = secL('2026-11-10', 'preces')[0]; assert.ok(p.respuesta && p.preces.every(x => x.length === 2));
+  assert.ok(!/aleluya/i.test(JSON.stringify(LD)));
+});

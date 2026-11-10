@@ -249,3 +249,8 @@ p.rec{margin:0 0 .8em}
 .il .w{margin-bottom:.55em}
 .opciones{margin:0 0 1.4em}
 .fin{margin-top:4em}
+
+/* Preces: dos mitades por prece, con flexa y asterisco */
+.preces p{margin:0 0 .9em}
+.preces .pa,.preces .pb{display:block}
+.preces .pb{padding-left:1.1em}

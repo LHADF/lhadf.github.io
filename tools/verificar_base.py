@@ -96,6 +96,10 @@ for sem, dias in SL.items():
         parte_l(e, f'salterio/laudes.yaml · {sem}.{dia}')
 for n, e in TL.items(): parte_l(e, f'tiempo/laudes.yaml · {n}')
 for n, e in SaL.items(): parte_l(e, f'santoral/laudes.yaml · {n}')
+GLa = leer(os.path.join(B, 'gregoriano', 'laudes.yaml'))
+for k in ('invitatorio', 'conclusion'):
+    falta(os.path.exists(os.path.join(B, 'gregoriano', GLa[k]['partitura'])), f'gregoriano/laudes.yaml · {k}: no existe la partitura')
+falta(len(GLa['benedictus']['versos']) == len(GLa['benedictus']['traduccion_versos']), 'gregoriano/laudes.yaml · benedictus: cada versículo necesita su traducción')
 # cobertura: todos los días del calendario tienen Laudes completas (salterio + propio del tiempo)
 cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
 cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))

@@ -49,10 +49,16 @@ cuerpo = f'''<style>{leer('assets', 'signos.css')}
 <script>{''.join(leer('datos', f) for f in datos)}
 window.ILU="data:image/png;base64,{ilustracion}";</script>
 <script>{leer('completas.js')}</script>
+<script>{leer('laudes.js')}</script>
 <script>{leer('app.js')}</script>
 '''
 
 os.makedirs(DIST, exist_ok=True)
+# Laudes: los datos van en un archivo aparte, que la app carga al abrir la hora (con huella, para que no quede viejo en caché)
+import hashlib, shutil
+_l = open(os.path.join(SRC, 'carga', 'laudes.js'), 'rb').read()
+shutil.copyfile(os.path.join(SRC, 'carga', 'laudes.js'), os.path.join(DIST, 'laudes.js'))
+cuerpo = cuerpo.replace("<script>" + leer('app.js'), "<script>window.LAUDES_URL='laudes.js?v=" + hashlib.md5(_l).hexdigest()[:8] + "';" + leer('app.js'))
 if '--artifact' in sys.argv:
     destino, html = os.path.join(DIST, 'artifact.html'), cabeza + cuerpo
 else:

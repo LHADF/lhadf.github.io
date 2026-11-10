@@ -202,5 +202,6 @@ function armar(fecha, region){
   };
 }
 
-window.Completas={armar, diaCal, enRango, difiereRegion, iso, deIso, masDias, regiones:CAL.regiones};
+window.Completas={armar, diaCal, enRango, difiereRegion, iso, deIso, masDias, regiones:CAL.regiones,
+  _:{invocacionGabc, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

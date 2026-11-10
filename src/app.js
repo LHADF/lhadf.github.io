@@ -26,7 +26,15 @@ function aplicarModo(kind, sec){
 }
 aplicarModo();
 function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
-const R=()=>D;
+let DH=null; // la hora abierta cuando no es Completas (Laudes)
+const R=()=> (S.vista==='hora' && S.hora==='laudes' && DH) || D;
+// Los datos de Laudes van en un archivo aparte (laudes.js): se cargan recién al abrir la hora
+let _cargaL=null;
+function cargarLaudes(){
+  if(window.LAUDES) return Promise.resolve();
+  if(!_cargaL) _cargaL=new Promise((ok,mal)=>{ const sc=document.createElement('script'); sc.src=window.LAUDES_URL||'laudes.js'; sc.onload=ok; sc.onerror=()=>{ _cargaL=null; mal(); }; document.head.appendChild(sc); });
+  return _cargaL;
+}
 const VES=()=>'es';
 // Día litúrgico de hoy: antes de las 5 de la mañana, todavía son las Completas de ayer
 function fechaHoy(){ const d=new Date(); if(d.getHours()<5) d.setDate(d.getDate()-1); return CP.iso(d); }
@@ -35,6 +43,7 @@ function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
   if(!CP.difiereRegion(S.fecha) && !['ARG','PGY'].includes(S.region)) S.region='ARG';
   D=CP.armar(S.fecha, S.region);
+  DH = (S.hora==='laudes' && window.LAUDES) ? window.Laudes.armar(S.fecha, S.region) : null;
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
 cargarDia();
@@ -374,6 +383,7 @@ function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
   h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${CP.difiereRegion(S.fecha)?`<br>Calendario de ${esc(CP.regiones[S.region])}`:''}</p>`;
+  if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
   h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
@@ -402,9 +412,18 @@ function horaHTML(){
       case 'examen': h+=examenHTML(sec); break;
       case 'cantico':
         h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span><span class="ref">${esc(sec.ref)}</span></div>`
-          +(CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
+          +(!sec.gabc ? `<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`   // sin partitura (Benedictus): todo pautado
+            : CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
               +`<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`
             : `<div class="versos${S.trad?' inter':''}">${versosMarcados([sec.verso1,...sec.versos],S.trad?[sec.inter1,...sec.inter]:null)}</div>`); break;
+      case 'preces': {
+        // Cada prece: flexa (†) en el corte del medio y asterisco (*) al final; la respuesta la dicen todos
+        if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
+        h+=`<p>${esc(sec.intro)}</p><p class="todos">${esc(sec.respuesta)}</p>`
+          +`<div class="preces">${sec.preces.map(([a,b])=>`<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`
+          +`<p class="rub">Se pueden añadir algunas intenciones libres.</p>`; break; }
+      case 'pater':
+        h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il todos">${interHTML(sec.pares)}</p>`:`<p class="todos">${esc(sec.pares.map(x=>x[0]).join(' '))}</p>`); break;
       case 'greg': h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span>${sec.ref?`<span class="ref">${esc(sec.ref)}</span>`:''}</div>`+partituraHTML(sec.gabc, sec.glosa, false); break;
     }
   });
@@ -438,9 +457,9 @@ function portadaHTML(){
     ${reg}
     <p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>
     <ul class="horas">${HORAS.map(([id,n])=>{
-      const ok=id==='completas';
-      return `<li class="${ok?'sel':''}"><button ${ok?'data-act="abrir"':'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
-    <p class="nota-proto">Prototipo: por ahora solo Completas está armada, para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en gregoriano.</p>
+      const ok=id==='completas'||id==='laudes';
+      return `<li class="${ok?'sel':''}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
+    <p class="nota-proto">Prototipo: Laudes y Completas están armadas para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en latín. En Laudes, los himnos van por ahora solo en español y el santoral está en revisión.</p>
   </div>`;
 }
 
@@ -449,7 +468,7 @@ function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
   $('#atras').hidden=!enHora;
-  $('#brand').innerHTML= enHora? `Completas<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
+  $('#brand').innerHTML= enHora? `${esc(R().nombre==='Laudes'?'Laudes':'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>ajustarGlosas($('#main'))); pintar($('#main')); }
 }
@@ -505,7 +524,9 @@ document.addEventListener('click',e=>{
   switch(a){
     case 'cerrar': cerrar(); break;
     case 'deshacer': if(_undo){ S=JSON.parse(_undo); cargarDia(); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
-    case 'abrir': S._marDia={}; S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); break;
+    case 'abrir': { const abrir=()=>{ S._marDia={}; S.hora=v||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
+      if(v==='laudes' && !window.LAUDES){ toast('Cargando Laudes…'); cargarLaudes().then(abrir, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.')); } else abrir();
+      break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
     case 'dia': { const n=CP.masDias(S.fecha,+v); if(CP.enRango(n)){ S.fecha=n; cargarDia(); render(); } else toast('Fuera del calendario cargado'); break; }
@@ -530,4 +551,6 @@ let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const
 document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.classList.contains('desliza')) f.classList.toggle('mas', f.scrollLeft+f.clientWidth<f.scrollWidth-2); },true);
 let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
 
+// Si se recarga con Laudes abierta, primero se cargan sus datos
+if(S.vista==='hora' && S.hora==='laudes' && !window.LAUDES){ S.vista='hoy'; cargarLaudes().then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }
 render();
