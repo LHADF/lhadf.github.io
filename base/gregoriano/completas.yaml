@@ -3,10 +3,11 @@
 # Traducción: un renglón por par «latín = español», en el orden del texto; cada par se ubica bajo la primera palabra latina.
 
 invocacion:
-  # Tono solemne en domingos y solemnidades (también sus I Vísperas, el Triduo y las Octavas de Navidad y Pascua);
-  # tono festivo los demás días. En Cuaresma se omite el Aleluya.
+  # Tono solemne: domingos y solemnidades (también sus I Vísperas, el Triduo y las Octavas de Navidad y Pascua);
+  # festivo: fiestas; ferial: ferias, memorias y conmemoraciones. En Cuaresma se omite el Aleluya.
   solemne: deus-in-adiutorium-solemnis.gabc
-  ferial: deus-in-adiutorium-festivus.gabc
+  festivo: deus-in-adiutorium-festivus.gabc
+  ferial: deus-in-adiutorium-ferialis.gabc
   traduccion:
     - Deus, = Dios [mío],
     - in adiutórium meum inténde. = ven pronto en mi auxilio.
@@ -52,6 +53,9 @@ cantico_evangelico:
     - Lumen ad revelatiónem **génti**um, * et glóriam plebis tu_æ_ **Ís**rael.
     - Glória Patri, et **Fíli**o, * et Spíritu_i_ **Sanc**to.
     - Sicut erat in princípio, et **nunc** et **sem**per, * et in sǽcula sæculó_rum_. **A**men.
+  # Primer versículo, para Completas recitadas (cantadas, va en partitura)
+  primer_verso: 'Nunc dimíttis servum **tu**um, **Dómi**ne, * secúndum verbum tuum _in_ **pa**ce:'
+  traduccion_primer_verso: Ahora despides a tu siervo, Señor, * según tu palabra, en paz,
   traduccion_versos:
     - porque han visto mis ojos * tu salvación,
     - la que preparaste * ante el rostro de todos los pueblos,
@@ -239,7 +243,7 @@ marianas:
       - sed = sino
       - a perículis = de los peligros
       - cunctis = todos
-      - líbera = líbranos
+      - líbera nos = líbranos
       - semper, = siempre,
       - Virgo = Virgen
       - gloriósa = gloriosa

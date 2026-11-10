@@ -6,14 +6,14 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;',
 
 /* ---------- Estado ---------- */
 const DEF={vista:'hoy', rito:'novus', modo:'canto', salmos:'primer', trad:true,
-  lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, region:'ARG'};
+  lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, region:'ARG', cantado:true};
 let S=DEF;
 try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
 if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
 // Reinicio único (como en el Cantoral): todos vuelven a claro una vez; si después eligen oscuro, se respeta
 try{ if(!localStorage.getItem('temaClaro2026')){ S.theme='light'; localStorage.setItem('temaClaro2026','1'); guardar(); } }catch(e){}
-S.antGreg=true;
+S.antGreg=true; delete S.respCanto;
 /* Una sola versión: Liturgia de las Horas en modo canto (salmos y lecturas en español pautado, lo demás en latín) */
 S.rito='novus'; S.modo='canto';
 function aplicarModo(kind, sec){
@@ -207,7 +207,22 @@ function centrarSignos(raiz){
     const centro=(a.right+c.left)/2; s.style.transform=`translateX(${centro-(b.left+b.width/2)}px)`;
   });
 }
+/* Cantado o recitado: un solo botón al comienzo decide todas las piezas gregorianas.
+   Recitado: el texto latino de la pieza, con su traducción literal debajo (si está activa). */
+const CANTA=()=>S.cantado!==false;
+function lineaRec(l, extra){
+  const cuerpo = S.trad ? interHTML(l.pares) : marcas(l.pares.map(x=>x[0]).join(' '));
+  return `<span class="segs${l.todos?' todos':''}">${extra||''}${cuerpo}</span>`;
+}
+function recitadoHTML(rec, tipo){
+  const il=S.trad?' il':'';
+  if(tipo==='ant') return `<div class="ant rec${il}">${rec.map(l=>`<p><span class="n">Ant.</span> ${lineaRec(l)}</p>`).join('')}</div>`;
+  if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${lineaRec(l)}</p>`).join('')}</div>`;
+  if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
+  return `<div class="vr rec${il}">${rec.map(l=>`<p>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
+}
 function vrHTML(sec){
+  if(!CANTA() && sec.rec) return recitadoHTML(sec.rec);
   if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, sec.glosa);
   if(BI() && sec.ilv) return `<div class="vr il"><p><span class="k">℣.</span> <span class="segs">${interHTML(sec.ilv)}</span></p><p><span class="k">℟.</span> <span class="segs">${interHTML(sec.ilr)}</span></p></div>`;
   const v=txt(sec.v), r=txt(sec.r);
@@ -224,6 +239,7 @@ function prosaHTML(o, amen, extra, il){
 }
 function antHTML(sec){
   const a=sec.rep?antDe(sec.rep):sec; if(!a) return '';
+  if(!CANTA() && a.rec) return recitadoHTML(a.rec,'ant');
   if(S.canto && S.antGreg && a.gabc) return `<div class="ant-greg">${partituraHTML(a.gabc, a.glosa)}</div>`;
   if(BI() && a.il) return `<div class="ant il"><p><span class="n">${esc(a.n||'Ant.')}</span> ${interHTML(a.il)}</p></div>`;
   const t=txt(a.t);
@@ -237,6 +253,7 @@ function himnoHTML(sec){
   const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})['h:'+ops[0].id])||def) : elegida(sec,'himno',def);
   let h='';
   if(ops.length>1) h+=`<div class="opciones" role="group" aria-label="Himno">${ops.map(x=>`<button data-act="himno" data-k="${ops[0].id}" data-v="${x.id}"${sec.efimera?' data-e="1"':''} aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`;
+  if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'estrofas');
   if(S.canto && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
   // Traducción anclada: cada par se ubica en la línea donde aparece su primera palabra latina, en orden
   const glosaLineas=(est,pares)=>{
@@ -275,12 +292,8 @@ function examenHTML(sec){
   return h+`<div class="vr">${sec.absolucion.map(([k,t])=>vr(k,t)).join('')}</div>`;
 }
 function respHTML(sec){
-  if(sec.opcional){ // recitado en español o cantado en gregoriano
-    const ops=`<div class="opciones" role="group" aria-label="Responsorio">${[['no','Recitado'],['si','Cantado']].map(([v,n])=>`<button data-act="resp" data-v="${v}" aria-pressed="${(S.respCanto?'si':'no')===v}">${n}</button>`).join('')}</div>`;
-    if(S.respCanto) return ops+partituraHTML(sec.gabc, S.trad?sec.glosa:null);
-    return ops+respHTML({...sec, gabc:null, opcional:false});
-  }
-  if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, (S.lengua!=='la'||S.trad)?sec.glosa:null);
+  // Cantado: en gregoriano (si hay melodía para el tiempo); recitado: en español
+  if(CANTA() && sec.gabc) return partituraHTML(sec.gabc, S.trad?sec.glosa:null);
   const es=VES(); const la=sec.l.la, sp=sec.l[es]||sec.l.es79||sec.l.es;
   const P= S.lengua==='es'? sp : la; const Sx= S.lengua==='bi'? (sec.lit? sec.lit.map((x,i)=>[la[i][0],x]) : sp) : null;
   return `<div class="vr">${P.map((x,i)=>`<p><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${x[0]==='R'?'<b>'+marcas(x[1])+'</b>':marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
@@ -290,6 +303,7 @@ function marianaHTML(sec){
   // efímera: la elección vale solo mientras se mira ese día (al volver a abrir, la primera opción)
   const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})[ops[0].id])||ops[0]) : elegida(sec,'mariana',ops[0]);
   let h= ops.length>1 ? `<div class="opciones" role="group" aria-label="Antífona">${ops.map(x=>`<button data-act="mariana" data-k="${ops[0].id}" data-v="${x.id}"${sec.efimera?' data-e="1"':''} aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>` : '';
+  if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'prosa');
   if(S.canto && S.antGreg && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
   const es=VES(); const la=o.l.la, sp=o.l[es]||o.l.es79||o.l.es;
   let P=S.lengua==='es'?sp:(la||sp); const Sx=S.lengua==='bi'&&la?sp:null;
@@ -304,6 +318,7 @@ function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
   h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${CP.difiereRegion(S.fecha)?`<br>Calendario de ${esc(CP.regiones[S.region])}`:''}</p>`;
+  h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -330,8 +345,10 @@ function horaHTML(){
       case 'deo': h+=`<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b></p></div>`; break;
       case 'examen': h+=examenHTML(sec); break;
       case 'cantico':
-        h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span><span class="ref">${esc(sec.ref)}</span></div>`+partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
-          +`<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`; break;
+        h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span><span class="ref">${esc(sec.ref)}</span></div>`
+          +(CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
+              +`<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`
+            : `<div class="versos${S.trad?' inter':''}">${versosMarcados([sec.verso1,...sec.versos],S.trad?[sec.inter1,...sec.inter]:null)}</div>`); break;
       case 'greg': h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span>${sec.ref?`<span class="ref">${esc(sec.ref)}</span>`:''}</div>`+partituraHTML(sec.gabc, sec.glosa, false); break;
     }
   });
@@ -443,7 +460,7 @@ document.addEventListener('click',e=>{
     case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v; refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
     case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
-    case 'resp': S.respCanto=v==='si'; cambio(S.respCanto?'Responsorio cantado':'Responsorio recitado'); break;
+    case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; cambio(c?'Completas cantadas':'Completas recitadas'); break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
     case 'menos': S.lec=Math.max(.9,Math.round((S.lec-.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
     case 'mas': S.lec=Math.min(2,Math.round((S.lec+.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;

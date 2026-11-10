@@ -56,7 +56,7 @@ const letra = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>/g
 
 test('latín de las partituras: i, no j', () => {
   const G = B.completas.gregoriano;
-  for (const g of [G.invocacion.solemne, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc])
+  for (const g of [G.invocacion.solemne, G.invocacion.festivo, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc])
     assert.ok(!/[jJ]/.test(letra(g)), letra(g).slice(0, 40));
 });
 
@@ -89,7 +89,13 @@ test('Completas: oración de solemnidad, Cuaresma sin aleluya, Pascua con aleluy
   assert.ok(!AL.test(inv('2027-02-17')), 'Cuaresma sin aleluya');
   assert.ok(AL.test(inv('2026-11-05')));
   assert.ok(/deus|DE\(f\)us/i.test(inv('2026-11-08')) && /\(c4\)/.test(inv('2026-11-08')), 'domingo: tono solemne (clave de do en 4.ª)');
-  assert.ok(/\(c3\)/.test(inv('2026-11-05')), 'feria: tono festivo (clave de do en 3.ª)');
+  assert.ok(/\(c3\)/.test(inv('2026-11-05')), 'feria: tono ferial (clave de do en 3.ª)');
+  const tono = f => secc(f, 'vr')[0].tono;
+  assert.equal(tono('2026-11-05'), 'ferial');                    // feria
+  assert.equal(tono('2026-11-09'), 'festivo');                   // fiesta (Dedicación de Letrán)
+  assert.equal(tono('2026-11-08'), 'solemne');                   // domingo
+  assert.equal(tono('2026-12-08'), 'solemne');                   // solemnidad
+  assert.match(inv('2026-11-09'), /tó\(hi\)ri/); assert.match(inv('2026-11-05'), /tó\(i\)ri/);
   const ant = f => secc(f, 'ant').find(s => s.id === 'ac').gabc;
   const ALS = /Al(<\/b>)?\(g\)(<b>)?le/;
   assert.ok(ALS.test(ant('2027-04-15')) && !ALS.test(ant('2026-11-05')));
@@ -109,7 +115,7 @@ const palabrasGabc = g => {
 };
 test('latín de las partituras: tildes en palabras de 3 sílabas o más', () => {
   const G = B.completas.gregoriano;
-  const todas = [G.invocacion.solemne, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc, G.himno.gabc,
+  const todas = [G.invocacion.solemne, G.invocacion.festivo, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc, G.himno.gabc,
     ...Object.values(G.responsorio).map(x => x.gabc), ...Object.values(G.marianas).map(x => x.gabc)];
   const faltan = [];
   for (const g of todas) for (const [w, n] of palabrasGabc(g))
@@ -168,4 +174,19 @@ test('Completas: Triduo, himno según el día, Nunc con marcas a mano', () => {
 
 test('Completas: las antífonas de los salmos se marcan como de la asamblea', () => {
   assert.ok(secc('2026-11-05', 'ant').filter(a => a.t && a.t.es).every(a => a.es));
+});
+
+test('Completas: cada pieza cantada tiene su versión recitada (latín con traducción)', () => {
+  for (const f of ['2026-11-05', '2026-11-08', '2027-02-17', '2027-04-15', '2027-03-26']) {
+    const r = CP.armar(f, 'ARG').secciones;
+    const rec = [...r.filter(s => s.k === 'vr' || s.id === 'ac' || s.id === 'ac2').map(s => s.rec),
+      ...r.filter(s => s.k === 'mariana' || s.k === 'himno').flatMap(s => s.opciones.filter(o => o.gabc).map(o => o.rec))];
+    assert.ok(rec.length >= 6 && rec.every(x => x && x.length && x.every(l => l.pares.every(p => p[0] && p[1]))), f);
+    const c = r.find(s => s.k === 'cantico');
+    assert.ok(c.verso1 && c.inter1);
+  }
+  const inv = secc('2026-11-05', 'vr')[0].rec;
+  assert.equal(JSON.stringify(inv.map(l => [l.rol, l.todos])), JSON.stringify([['V', false], ['R', true], ['', true]]));
+  assert.match(inv[0].pares[1][0], /^✠ in adiutórium/);
+  assert.ok(!secc('2027-02-17', 'vr')[0].rec.flatMap(l => l.pares).some(p => /^Allel/.test(p[0])));
 });

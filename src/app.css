@@ -205,6 +205,12 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .vr.il p{padding-left:0;text-indent:0;display:flex;gap:.35em;align-items:flex-start}
 .vr.il p>.k{flex:none;width:1.2em}
 .vr.il p .segs{flex:1}
+/* Recitado (botón Cantado | Recitado): mismo interlineal que el resto del latín */
+.ant.rec.il p{display:flex;gap:.35em;align-items:flex-start}
+.ant.rec.il p>.n{flex:none;line-height:inherit}
+.ant.rec .segs,.vr.rec:not(.il) .segs{display:inline}
+p.rec{margin:0 0 .8em}
+.modo-canto{margin-bottom:1.2em}
 
 /* ---------- Cabecera ---------- */
 .brand button{font:inherit;border:0;background:none;color:inherit;min-height:44px;padding:2px 10px;border-radius:var(--r-1);line-height:1.1}

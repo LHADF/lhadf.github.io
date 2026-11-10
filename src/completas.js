@@ -47,14 +47,22 @@ function versosDe(estrofas){
 const pares=l=>l.map(e=>{ const k=Object.keys(e)[0]; return [k==='texto'?'':k, e[k]]; });
 
 /* ---------- Gregoriano ---------- */
-function invocacionGabc(solemne, aleluya){
-  const g=B.completas.gregoriano.invocacion[solemne?'solemne':'ferial'];
-  const [cab,cuerpo]=g.split('%%');
-  const ls=cuerpo.split('\n'); const ia=ls.findIndex(l=>/^(<b>)?Al(<\/b>)?\(/.test(l.trim()));
-  let out;
-  if(aleluya) out=ls.slice(0,ia+1).map(l=>l.replace(/\s*\(Z-\)\s*$/,''));
-  else { out=ls.slice(0,ia); out[out.length-1]=out[out.length-1].replace(/\(;\)\s*$/,'(::)'); }
-  return 'name:Deus in adiutorium;\n%%'+out.join('\n');
+// tono: 'solemne' | 'festivo' | 'ferial'. Sin aleluya (Cuaresma): se corta antes del «Allelúia» y la barra pasa a doble.
+function invocacionGabc(tono, aleluya){
+  const cuerpo=B.completas.gregoriano.invocacion[tono].split('%%')[1];
+  const m=/(?:<b>)?Al(?:<\/b>)?\(/.exec(cuerpo);
+  const out = aleluya ? cuerpo.slice(0, cuerpo.indexOf('(::)', m.index)+4) : cuerpo.slice(0, m.index).replace(/\(;\)\s*$/, '(::)');
+  return 'name:Deus in adiutorium;\n%%'+out+'\n';
+}
+// Versión recitada: el texto latino con su traducción, en renglones. spec: [[rol, primera palabra latina, lo dicen todos]]
+function recitado(pares, spec){
+  const out=[]; let k=0;
+  pares.forEach(p=>{
+    if(k<spec.length && p[0]===spec[k][1]){ out.push({rol:spec[k][0], todos:!!spec[k][2], pares:[]}); k++; }
+    if(!out.length) out.push({rol:'', todos:false, pares:[]});
+    out[out.length-1].pares.push(p);
+  });
+  return out;
 }
 function salvaNosGabc(pascua, repeticion){
   // repetición: la canta toda la asamblea (en negrita) y sin asterisco
@@ -90,7 +98,11 @@ function armar(fecha, region){
   const S=[]; const sec=(id,t,extra)=>S.push({k:'sec',id,t,...extra});
 
   sec('inicio','Invocación inicial');
-  S.push({k:'vr', gabc:invocacionGabc(el.solemne, !cuaresma), glosa:GR.invocacion.traduccion.filter(p=>cuaresma?!/^Allel/.test(p[0]):true)});
+  // Tono: solemne (domingos, solemnidades y sus I Vísperas, Triduo, Octavas), festivo (fiestas), ferial (ferias y memorias)
+  const tonoInv = el.solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
+  const trInv=GR.invocacion.traduccion.filter(p=>cuaresma?!/^Allel/.test(p[0]):true);
+  S.push({k:'vr', tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv,
+          rec:recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória Patri,',true]])});
 
   sec('examen','Examen de conciencia',{plegable:true});
   const pr=l=>l.map(x=>x.split(' = '));
@@ -103,7 +115,7 @@ function armar(fecha, region){
   sec('himno','Himno');
   const pool = pascua?'pascua': cuaresma?'cuaresma': (hoy.t==='Adviento'||hoy.t==='Navidad')?'adviento_navidad':'ordinario';
   // Domingos y solemnidades: siempre abre en el Te lucis; los demás días, el primer himno del tiempo (o el último elegido)
-  S.push({k:'himno', es:true, efimera:el.solemne, def: el.solemne?'telucis':pool+'-0', opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})))});
+  S.push({k:'himno', es:true, efimera:el.solemne, def: el.solemne?'telucis':pool+'-0', opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion, rec:recitado(GR.himno.traduccion, [['','Te'],['','Procul'],['','Præsta,']])}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})))});
 
   sec('salmodia','Salmodia');
   const sal=pascua?J.salmodia_pascua:J.salmodia; let na=0;
@@ -127,15 +139,17 @@ function armar(fecha, region){
   } else {
     sec('responsorio','Responsorio breve');
     const rg = pascua ? null : GR.responsorio.ordinario;   // cantado: por ahora, el del Tiempo Ordinario
-    S.push({k:'resp', es:true, l:{es:pares(O.responsorio[pascua?'pascua':'ordinario'])}, ...(rg?{opcional:true, gabc:rg.gabc, glosa:rg.traduccion}:{})});
+    S.push({k:'resp', es:true, l:{es:pares(O.responsorio[pascua?'pascua':'ordinario'])}, ...(rg?{gabc:rg.gabc, glosa:rg.traduccion}:{})});
   }
 
   sec('cantico','Cántico evangélico');
   const tp=pascua||!!(el.especial&&/Aleluya/.test(el.especial.antifona_cantico||''));
-  S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), t:{la:'Salva nos, Dómine'}});
+  const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva nos,',true]]);
+  S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
   S.push({k:'cantico', titulo:'Cántico de Simeón', ref:'Lc 2, 29-32', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
-          tono:GR.cantico.tono, versos:GR.cantico.versos, inter:GR.cantico.traduccion_versos});
-  S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), t:{la:'Salva nos, Dómine'}});
+          tono:GR.cantico.tono, versos:GR.cantico.versos, inter:GR.cantico.traduccion_versos,
+          verso1:GR.cantico.primer_verso, inter1:GR.cantico.traduccion_primer_verso});
+  S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
 
   sec('oracion','Oración');
   S.push({k:'oremos', es:true, t:{es:'Oremos.'}});
@@ -143,14 +157,15 @@ function armar(fecha, region){
   S.push({k:'prosa', es:true, t:{es:orac}, amen:{es:'Amén.'}});
 
   sec('bendicion','Bendición');
-  S.push({k:'vr', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion});
+  S.push({k:'vr', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion, rec:recitado(GR.conclusion.traduccion, [['V','Noctem quiétam'],['R','Amen.',true]])});
 
   sec('mariana','Antífona final de la Santísima Virgen');
   // Domingos y solemnidades (y sus I Vísperas, Triduo y Octavas): versión solemne; los demás días, la simple.
   // Adviento y Navidad: Alma Redemptóris; de la Candelaria (2 de febrero) al fin de Cuaresma: Ave Regína cælórum;
   // Pascua: Regína cæli; Tiempo Ordinario: Salve Regína (con Sub tuum como opción en ferias, memorias y fiestas);
   // Asunción: Ave Regína cælórum, solemne o simple.
-  const GM=GR.marianas, op=(k,id)=>({id, n:GM[k].titulo, gabc:GM[k].gabc, glosa:GM[k].traduccion});
+  const GM=GR.marianas, op=(k,id)=>{ const tr=(GM[k.replace('_solemne','_simple')]||GM[k]).traduccion;   // recitada: el texto completo (en la solemne del Regina cæli la melodía parte el último aleluya)
+    return {id, n:GM[k].titulo, gabc:GM[k].gabc, glosa:GM[k].traduccion, rec:recitado(tr, [['',tr[0][0],true]])}; };
   const f=deIso(fecha), mes=f.getMonth()+1, dia=f.getDate();
   const vis=el.visperasDe||hoy;
   let tipo;
