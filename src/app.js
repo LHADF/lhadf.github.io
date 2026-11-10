@@ -258,14 +258,15 @@ function ajustarGlosas(raiz){
    Recitado: el texto latino de la pieza, con su traducción literal debajo (si está activa). */
 const CANTA=()=>S.cantado!==false;
 function lineaRec(l, extra){
-  const cuerpo = S.trad ? interHTML(l.pares) : marcas(l.pares.map(x=>x[0]).join(' '));
+  const uno=ps=> S.trad ? interHTML(ps) : marcas(ps.map(x=>x[0]).join(' '));
+  const cuerpo = l.versos ? l.versos.map(v=>`<span class="ln">${uno(v)}</span>`).join('') : uno(l.pares);   // renglones con sentido (base)
   return `<span class="segs${l.todos?' todos':''}">${extra||''}${cuerpo}</span>`;
 }
 function recitadoHTML(rec, tipo){
   const il=S.trad?' il':'';
   if(tipo==='ant') return `<div class="ant rec${il}">${rec.map(l=>`<p><span class="n">Ant.</span> ${lineaRec(l)}</p>`).join('')}</div>`;
   if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${
-      (l.versos||[l.pares]).map(v=>`<span class="ln">${lineaRec({...l,pares:v})}</span>`).join('')}</p>`).join('')}</div>`;
+      (l.versos||[l.pares]).map(v=>`<span class="ln">${lineaRec({...l,pares:v,versos:null})}</span>`).join('')}</p>`).join('')}</div>`;
   if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
   return `<div class="vr rec${il}">${rec.map(l=>`<p${l.rol!=='R'?' class="pv"':''}>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
@@ -428,10 +429,14 @@ function horaHTML(){
           +`<div class="preces">${sec.preces.map(([a,b])=>`<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`
 ; break; }
       case 'pater':
-        { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita)
-          const k=sec.pares.findIndex(x=>/^\*/.test(x[0])), a=sec.pares.slice(0,k<0?0:k), b=sec.pares.slice(k<0?0:k).map((x,i)=>i?x:[x[0].replace(/^\*\s*/,''),x[1]]);
-          const lat=ps=>marcas(ps.map(x=>x[0]).join(' '));
-          h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il">${interHTML(a)} <span class="sg">*</span> <span class="todos">${interHTML(b)}</span></p>`:`<p>${lat(a)} <span class="sg">*</span> <b>${lat(b)}</b></p>`); break; }
+        { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita). Un renglón por frase.
+          const uno=ps=> S.trad ? interHTML(ps) : marcas(ps.map(x=>x[0]).join(' '));
+          const ls=(sec.lineas||[sec.pares]).map(l=>{
+            const k=l.findIndex(x=>/^\*/.test(x[0]));
+            if(k<0) return `<span class="ln todos">${uno(l)}</span>`;
+            const a=l.slice(0,k), b=l.slice(k).map((x,i)=>i?x:[x[0].replace(/^\*\s*/,''),x[1]]);
+            return `<span class="ln">${uno(a)} <span class="sg">*</span> <span class="todos">${uno(b)}</span></span>`; });
+          h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+`<p class="rec renglones${S.trad?' il':''}">${ls.join('')}</p>`; break; }
       case 'conclusion': {
         const o=sec.opciones.find(x=>x.id===S.concl)||sec.opciones[0];
         h+=`<div class="opciones desliza" role="group" aria-label="Conclusión">${sec.opciones.map(x=>`<button data-act="concl" data-v="${x.id}" aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`+vrHTML(o)+(o.despues?recitadoHTML(o.despues):''); break; }

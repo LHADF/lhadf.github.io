@@ -266,3 +266,15 @@ test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
   const p = secL('2026-11-10', 'preces')[0]; assert.ok(p.respuesta && p.preces.every(x => x.length === 2));
   assert.ok(!/aleluya/i.test(JSON.stringify(LD)));
 });
+
+test('texto recitado: renglones con sentido (Gloria, Salve, Pater noster)', () => {
+  const ln = vs => vs.map(v => v.map(p => p[0]).join(' '));
+  assert.equal(ln(secc('2026-11-05', 'vr')[0].rec[2].versos).join(' / '), 'Glória Patri, et Fílio, et Spirítui Sancto. / Sicut erat in princípio, et nunc, et semper, / et in sǽcula sæculórum. Amen. Allelúia.');
+  assert.equal(ln(secc('2027-02-17', 'vr')[0].rec[2].versos).at(-1), 'Laus tibi, Christe, Rex ætérnæ glóriæ.');
+  const salve = ln(secc('2026-11-05', 'mariana')[0].opciones[0].rec[0].versos);
+  assert.equal(salve.length, 10); assert.equal(salve[4], 'in hac lacrimárum valle.'); assert.equal(salve.at(-1), 'O clemens: O pia: O dulcis Virgo María.');
+  const pn = ln(secL('2026-11-10', 'pater')[0].lineas);
+  assert.equal(pn.length, 9); assert.equal(pn[0], 'Pater noster, * qui es in cælis,'); assert.equal(pn.at(-1), 'sed líbera nos a malo.');
+  for (const m of Object.values(B.completas.gregoriano.marianas))   // los cortes cubren todo el texto
+    assert.ok(Math.abs(m.cortes.reduce((a, b) => a + b, 0) - m.traduccion.flatMap(p => p[0].split(/\s+/)).length) <= 1);
+});

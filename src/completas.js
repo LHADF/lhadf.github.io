@@ -65,6 +65,11 @@ function recitado(pares, spec){
   });
   return out;
 }
+function recInvocacion(trInv){
+  const rec=recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória',true]]);
+  rec[2].versos=enLineas(rec[2].pares, B.completas.gregoriano.invocacion.cortes_gloria);
+  return rec;
+}
 function salvaNosGabc(pascua, repeticion){
   // repetición: la canta toda la asamblea (en negrita) y sin asterisco
   let g=B.completas.gregoriano.antifona[repeticion?'repeticion':'gabc'].replace(/\s*(<b>)?<eu>.*$/s,'');
@@ -91,6 +96,16 @@ function eleccion(hoy, man){
 function enVersos(rec, inicios){
   return rec.map(l=>({...l, versos:l.pares.reduce((vs,p)=>{ if(!vs.length||inicios.includes(p[0].split(' ')[0])) vs.push([]); vs[vs.length-1].push(p); return vs; },[])}));
 }
+// Parte los pares en renglones según la cantidad de palabras latinas de cada uno (cortes con sentido, de la base).
+// Lo que sobra: si es una sola palabra (Allelúia), sigue en el último renglón; si no, renglón propio.
+function enLineas(pares, cortes){
+  if(!cortes) return null;
+  const out=[]; let i=0;
+  for(const n of cortes){ const l=[]; let w=0; while(i<pares.length && w<n){ w+=pares[i][0].replace(/^[✠*†]\s+/,'').split(/\s+/).length; l.push(pares[i++]); } if(l.length) out.push(l); }
+  const resto=pares.slice(i);
+  if(resto.length){ if(resto.length===1 && out.length) out[out.length-1].push(resto[0]); else out.push(resto); }
+  return out;
+}
 /* ---------- Armado ---------- */
 function armar(fecha, region){
   const hoy=diaCal(fecha, region), man=diaCal(masDias(fecha,1), region);
@@ -106,8 +121,7 @@ function armar(fecha, region){
   // Tono: solemne (domingos, solemnidades y sus I Vísperas, Triduo, Octavas), festivo (fiestas), ferial (ferias y memorias)
   const tonoInv = el.solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
-  S.push({k:'vr', tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv,
-          rec:recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória',true]])});
+  S.push({k:'vr', tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv, rec:recInvocacion(trInv)});
 
   sec('examen','Examen de conciencia',{plegable:true});
   const pr=l=>l.map(x=>x.split(' = '));
@@ -170,7 +184,7 @@ function armar(fecha, region){
   // Pascua: Regína cæli; Tiempo Ordinario: Salve Regína (con Sub tuum como opción en ferias, memorias y fiestas);
   // Asunción: Ave Regína cælórum, solemne o simple.
   const GM=GR.marianas, op=(k,id)=>{ const tr=(GM[k.replace('_solemne','_simple')]||GM[k]).traduccion;   // recitada: el texto completo (en la solemne del Regina cæli la melodía parte el último aleluya)
-    return {id, n:GM[k].titulo, gabc:GM[k].gabc, glosa:GM[k].traduccion, rec:recitado(tr, [['',tr[0][0],true]])}; };
+    return {id, n:GM[k].titulo, gabc:GM[k].gabc, glosa:GM[k].traduccion, rec:[{rol:'', todos:true, pares:tr, versos:enLineas(tr, GM[k].cortes)}]}; };
   const f=deIso(fecha), mes=f.getMonth()+1, dia=f.getDate();
   const vis=el.visperasDe||hoy;
   let tipo;
@@ -203,5 +217,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, enRango, difiereRegion, iso, deIso, masDias, regiones:CAL.regiones,
-  _:{invocacionGabc, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

@@ -10,6 +10,7 @@ invocacion:
   solemne: deus-in-adiutorium-solemnis.gabc
   festivo: deus-in-adiutorium-festivus.gabc
   ferial: deus-in-adiutorium-ferialis.gabc
+  cortes_gloria: [7, 8, 5]   # renglones del Gloria Patri recitado (lo que sobra: si es una palabra, sigue en el último renglón)
   traduccion:
     - Deus, = Dios [mío],
     - in = en
@@ -249,6 +250,7 @@ marianas:
   salve_simple:
     titulo: Salve Regina
     partitura: salve-regina-simple.gabc
+    cortes: [4, 6, 6, 6, 4, 4, 7, 6, 5, 8]   # palabras latinas por renglón, cuando va recitada
     traduccion: &salve
       - Salve, = Salve,
       - Regína, = Reina,
@@ -309,10 +311,12 @@ marianas:
   salve_solemne:
     titulo: Salve Regina
     partitura: salve-regina-solemne.gabc
+    cortes: [4, 6, 6, 6, 4, 4, 7, 6, 5, 8]   # palabras latinas por renglón, cuando va recitada
     traduccion: *salve
   sub_tuum:
     titulo: Sub tuum præsídium
     partitura: sub-tuum-praesidium.gabc
+    cortes: [4, 3, 6, 7, 4]   # palabras latinas por renglón, cuando va recitada
     traduccion:
       - Sub = Bajo
       - tuum = tu
@@ -340,6 +344,7 @@ marianas:
   ave_simple:
     titulo: Ave Regina cælórum (simple)
     partitura: ave-regina-caelorum-simple.gabc
+    cortes: [3, 3, 4, 6, 3, 3, 4, 5]   # palabras latinas por renglón, cuando va recitada
     traduccion: &ave
       - Ave, = Salve,
       - Regína = Reina
@@ -375,10 +380,12 @@ marianas:
   ave_solemne:
     titulo: Ave Regina cælórum (solemne)
     partitura: ave-regina-caelorum-solemne.gabc
+    cortes: [3, 3, 4, 6, 3, 3, 4, 5]   # palabras latinas por renglón, cuando va recitada
     traduccion: *ave
   alma_simple:
     titulo: Alma Redemptóris Mater
     partitura: alma-redemptoris-simple.gabc
+    cortes: [3, 5, 3, 6, 5, 3, 4, 6, 2]   # palabras latinas por renglón, cuando va recitada
     traduccion: &alma
       - Alma = Santa
       - Redemptóris = del Redentor
@@ -420,10 +427,12 @@ marianas:
   alma_solemne:
     titulo: Alma Redemptóris Mater
     partitura: alma-redemptoris-solemne.gabc
+    cortes: [3, 5, 3, 6, 5, 3, 4, 6, 2]   # palabras latinas por renglón, cuando va recitada
     traduccion: *alma
   regina_caeli_simple:
     titulo: Regína cæli
     partitura: regina-caeli-simple.gabc
+    cortes: [4, 5, 4, 5]   # palabras latinas por renglón, cuando va recitada
     traduccion:
       - Regína = Reina
       - cæli, = del cielo,
@@ -446,6 +455,7 @@ marianas:
   regina_caeli_solemne:
     titulo: Regína cæli
     partitura: regina-caeli-solemne.gabc
+    cortes: [4, 5, 4, 5]   # palabras latinas por renglón, cuando va recitada
     traduccion:
       - Regína = Reina
       - cæli, = del cielo,

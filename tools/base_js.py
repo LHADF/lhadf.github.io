@@ -49,7 +49,7 @@ def main():
             'tiempo': leer(os.path.join(B, 'tiempo', 'completas-triduo-octava.yaml')),
             'himnos': leer(os.path.join(B, 'himnos', 'completas.yaml')),
             'gregoriano': {
-                'invocacion': {'solemne': gabc(inv['solemne']), 'festivo': gabc(inv['festivo']), 'ferial': gabc(inv['ferial']), 'traduccion': pares(inv['traduccion']), 'laus': pares(inv['laus'])},
+                'invocacion': {'solemne': gabc(inv['solemne']), 'festivo': gabc(inv['festivo']), 'ferial': gabc(inv['ferial']), 'cortes_gloria': inv['cortes_gloria'], 'traduccion': pares(inv['traduccion']), 'laus': pares(inv['laus'])},
                 'antifona': {'gabc': gabc(ce['antifona']), 'repeticion': repeticion(gabc(ce['antifona'])), 'traduccion': pares(ce['traduccion_antifona'])},
                 'cantico': {'gabc': primer_verso(gabc(ce['cantico'])), 'traduccion': pares(ce['traduccion_cantico']),
                             'tono': str(ce['tono_cantico']), 'versos': ce['versos'], 'traduccion_versos': [pares(v) for v in ce['traduccion_versos']],
@@ -57,7 +57,7 @@ def main():
                 'himno': {'titulo': G['himno']['titulo'], 'gabc': gabc(G['himno']['partitura']), 'traduccion': pares(G['himno']['traduccion'])},
                 'lectura_respuesta': pares(G['lectura_respuesta']),
                 'responsorio': {k: {'gabc': gabc(v['partitura']), 'traduccion': pares(v['traduccion'])} for k, v in G['responsorio'].items()},
-                'marianas': {k: {'titulo': v['titulo'], 'gabc': gabc(v['partitura']), 'traduccion': pares(v['traduccion'])} for k, v in G['marianas'].items()},
+                'marianas': {k: {'titulo': v['titulo'], 'gabc': gabc(v['partitura']), 'cortes': v.get('cortes'), 'traduccion': pares(v['traduccion'])} for k, v in G['marianas'].items()},
                 'conclusion': {'gabc': gabc(co['partitura']), 'traduccion': pares(co['traduccion'])},
                 'tonos': G['tonos_salmos'],
             },
@@ -134,7 +134,7 @@ def laudes():
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
             'benedictus': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
-            'pater_noster': pares(GL['pater_noster']),
+            'pater_noster': pares(GL['pater_noster']), 'pater_cortes': GL['pater_cortes'],
             'bendicion': {'simple': gabc(GL['bendicion']['simple']), 'solemne': gabc(GL['bendicion']['solemne']), 'traduccion': pares(GL['bendicion']['traduccion']), 'despedida': pares(GL['bendicion']['despedida'])},
             'conclusion': {'gabc': gabc(GL['conclusion']['partitura']), 'traduccion': pares(GL['conclusion']['traduccion'])},
         },

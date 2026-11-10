@@ -61,7 +61,7 @@ function armar(fecha, region){
   const tono = solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
   S.push({k:'vr', tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:trInv,
-          rec:X.recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória',true]])});
+          rec:X.recInvocacion(trInv)});
 
   sec('himno','Himno');
   const H=L.himnos[P.himno]||[];
@@ -97,7 +97,7 @@ function armar(fecha, region){
   S.push({k:'preces', es:true, ...P.preces});
 
   sec('padrenuestro','Padre nuestro');
-  S.push({k:'pater', intro: (dia==='domingo' || /^(Fiesta|Solemnidad)/.test(hoy.g)) ? (P.padrenuestro_intro||'') : '', pares:GL.pater_noster});   // monición (la del día) solo en domingos, fiestas y solemnidades
+  S.push({k:'pater', intro: (dia==='domingo' || /^(Fiesta|Solemnidad)/.test(hoy.g)) ? (P.padrenuestro_intro||'') : '', pares:GL.pater_noster, lineas:X.enLineas(GL.pater_noster, GL.pater_cortes)});   // monición (la del día) solo en domingos, fiestas y solemnidades
 
   sec('oracion','Oración');
   S.push({k:'prosa', es:true, t:{es:P.oracion}, amen:{es:'Amén.'}});

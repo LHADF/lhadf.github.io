@@ -194,6 +194,7 @@ benedictus:
 
 # Padre nuestro: en latín. Lo entona el que preside hasta el asterisco; desde ahí lo dicen todos (negrita).
 # Traducción literal, palabra por palabra.
+pater_cortes: [6, 3, 3, 9, 6, 5, 6, 6, 5]   # palabras latinas por renglón
 pater_noster:
   - Pater = Padre
   - noster, = nuestro,
