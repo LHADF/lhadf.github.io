@@ -19,3 +19,12 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - **Paso 2 hecho (10/11/2026):** `src/laudes.js` arma Laudes para cualquier fecha (salterio → tiempo → santoral). Los datos van en `dist/laudes.js` (aparte del HTML; la app los carga al abrir la hora). Partes en latín en `base/gregoriano/laudes.yaml`: invitatorio, Benedictus (Neovulgata, recitado, con interlineal), Pater noster y conclusión. Himnos: por ahora, los de sync en español.
 - **Santoral ↔ calendario ADF:** `tools/base_js.py` vincula cada celebración del calendario con su entrada del santoral por fecha y nombre (118 vinculadas). Quedan 44 celebraciones ADF sin propio en la base (lista en `LAUDES.sin_vincular`): esos días la app reza el oficio del día y lo avisa. Fiestas y solemnidades sin salmodia propia toman los salmos del domingo I.
 - **Himnos latinos:** texto base, el ePub de Universalis (Liturgia Horarum); cotejo palabra por palabra con GregoBase (Liber Hymnarius); las diferencias se revisan en el libro impreso. Falta el tomo de Pentecostés a Adviento.
+
+## Usos ADF (10/11/2026; valen también para las otras horas)
+
+- **Citas bíblicas** al modo «capítulo: versículos» (Dn 3: 26-27). La base guarda la coma; la app la convierte al mostrar (`cita()` en app.js).
+- **Cántico evangélico:** la referencia va al final del renglón del título de la sección, como en la lectura breve. Texto y versículos del Benedictus y del Magníficat: los PDF «NVG» de ADF (`base/gregoriano/laudes.yaml`, `magnificat.yaml`).
+- **Comienzo de Laudes:** siempre *Dómine, lábia mea apéries* y después el *Deus in adiutórium*; entre ambos, el invitatorio (antífona y Salmo 94) solo los domingos.
+- **Padre nuestro:** monición («Oremos confiadamente al Padre, como Cristo nos enseñó:») solo en fiestas y solemnidades. *Pater noster* con asterisco después de «noster»: hasta ahí, normal; desde ahí, negrita. Traducción: la habitual.
+- **Preces:** † y * en rojo.
+- **Conclusión:** cruz después de «Dóminus». Opción «Con ministro ordenado»: *Dóminus vobíscum… Benedícat vos* (Graduale Romanum 1974, p. 817: tono A en ferias, memorias y fiestas; tono B en domingos y solemnidades; el libro no trae un tercer tono).

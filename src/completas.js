@@ -147,11 +147,11 @@ function armar(fecha, region){
     S.push({k:'resp', es:true, l:{es:pares(O.responsorio[pascua?'pascua':'ordinario'])}, ...(rg?{gabc:rg.gabc, glosa:rg.traduccion}:{})});
   }
 
-  sec('cantico','Cántico evangélico');
+  sec('cantico','Cántico evangélico',{ref:'Lc 2, 29-32'});
   const tp=pascua||!!(el.especial&&/Aleluia/i.test(el.especial.antifona_cantico||''));
   const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva',true]]);
   S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
-  S.push({k:'cantico', titulo:'Cántico de Simeón', ref:'Lc 2, 29-32', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
+  S.push({k:'cantico', titulo:'Cántico de Simeón', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
           tono:GR.cantico.tono, versos:GR.cantico.versos, inter:GR.cantico.traduccion_versos,
           verso1:GR.cantico.primer_verso, inter1:GR.cantico.traduccion});
   S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});

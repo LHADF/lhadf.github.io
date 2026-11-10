@@ -134,7 +134,8 @@ def laudes():
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
             'benedictus': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
-            'pater_noster': pares(GL['pater_noster']),
+            'pater_noster': pares(GL['pater_noster']), 'pater_monicion': GL['pater_monicion'],
+            'bendicion': {'simple': gabc(GL['bendicion']['simple']), 'solemne': gabc(GL['bendicion']['solemne']), 'traduccion': pares(GL['bendicion']['traduccion'])},
             'conclusion': {'gabc': gabc(GL['conclusion']['partitura']), 'traduccion': pares(GL['conclusion']['traduccion'])},
         },
     }

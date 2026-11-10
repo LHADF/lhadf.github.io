@@ -45,9 +45,11 @@ function armar(fecha, region){
     return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!SIN_GLORIA.includes(sid)}; };
 
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.
+  // Todos los días se empieza con «Dómine, lábia mea apéries»; el invitatorio (antífona y Salmo 94), solo los domingos.
+  const labia={k:'vr', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])};
   if(dia==='domingo'){
     sec('invitatorio','Invitatorio');
-    S.push({k:'vr', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])});
+    S.push(labia);
     S.push({k:'ant', id:'ai', es:true, n:'Ant.', t:{es:P.inv_ant}});
     const s94=L.ordinario.invitatorio.salmo, v=X.versosDe(s94.texto);
     S.push({k:'salmo', es:true, id:'salmo-94', ant:'ai', titulo:{es:s94.titulo}, lema:{es:X.oracionCase(s94.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:true});
@@ -55,6 +57,7 @@ function armar(fecha, region){
   }
 
   sec('inicio','Invocación inicial');
+  if(dia!=='domingo') S.push(labia);
   const tono = solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
   S.push({k:'vr', tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:trInv,
@@ -84,23 +87,28 @@ function armar(fecha, region){
     S.push({k:'resp', es:true, l:{es:P.responsorio}});
   }
 
-  sec('cantico','Cántico evangélico');
+  sec('cantico','Cántico evangélico',{ref:GL.benedictus.ref});
   const BN=GL.benedictus;
   S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:P.ant_benedictus}});
-  S.push({k:'cantico', titulo:BN.titulo, ref:BN.ref, versos:BN.versos, inter:BN.traduccion_versos});
+  S.push({k:'cantico', titulo:BN.titulo, versos:BN.versos, inter:BN.traduccion_versos});
   S.push({k:'ant', rep:'ab', es:true});
 
   sec('preces','Preces');
   S.push({k:'preces', es:true, ...P.preces});
 
   sec('padrenuestro','Padre nuestro');
-  S.push({k:'pater', intro:P.padrenuestro_intro, pares:GL.pater_noster});
+  S.push({k:'pater', intro: /^(Fiesta|Solemnidad)/.test(hoy.g) ? GL.pater_monicion : '', pares:GL.pater_noster});   // monición solo en fiestas y solemnidades
 
   sec('oracion','Oración');
   S.push({k:'prosa', es:true, t:{es:P.oracion}, amen:{es:'Amén.'}});
 
   sec('bendicion','Conclusión');
-  S.push({k:'vr', gabc:GL.conclusion.gabc, glosa:GL.conclusion.traduccion, rec:X.recitado(GL.conclusion.traduccion, [['V','Dóminus'],['R','Amen.',true]])});
+  // Sin ministro ordenado: «Dóminus nos benedícat»; con ministro ordenado: «Dóminus vobíscum… Benedícat vos» (tono B en domingos y solemnidades)
+  const cruz=(tr,pal)=>tr.map(p=>p[0]===pal?['✠ '+p[0],p[1]]:p), TB=GL.bendicion.traduccion, iEt=TB.map(p=>p[0]).lastIndexOf('et');
+  S.push({k:'conclusion', opciones:[
+    {id:'laico', n:'Sin ministro ordenado', gabc:GL.conclusion.gabc, glosa:GL.conclusion.traduccion, rec:X.recitado(cruz(GL.conclusion.traduccion,'nos'), [['V','Dóminus'],['R','Amen.',true]])},
+    {id:'ministro', n:'Con ministro ordenado', gabc:GL.bendicion[solemne?'solemne':'simple'], glosa:TB,
+     rec:X.recitado(TB.map((p,i)=>i===iEt?['✠ '+p[0],p[1]]:p), [['V','Dóminus'],['R','Et',true],['V','Benedícat'],['R','Amen.',true]])}]});
 
   const d=CP.deIso(fecha);
   return {

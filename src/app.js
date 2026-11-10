@@ -180,7 +180,7 @@ function salmoHTML(sal){
   const glP=(r.gloria[keyP]||r.gloria.la), glS=keyS?(r.gloria[keyS]):null;
   const cod=tonoDe(sal);
   const modo=S.canto? S.salmos : 'texto';
-  let h=`<div class="salmo-h"><span class="t">${esc(t.p)}</span>${sal.ref?`<span class="ref">${esc(sal.ref)}</span>`:''}${lema&&lema.p?`<span class="lema">${esc(lema.p)}</span>`:''}`;
+  let h=`<div class="salmo-h"><span class="t">${esc(cita(t.p))}</span>${sal.ref?`<span class="ref">${esc(sal.ref)}</span>`:''}${lema&&lema.p?`<span class="lema">${esc(lema.p)}</span>`:''}`;
   h+='</div>';
   // partitura
   let todos=vP.concat(sal.gloria?glP:[]);
@@ -266,6 +266,8 @@ function recitadoHTML(rec, tipo){
   if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
   return `<div class="vr rec${il}">${rec.map(l=>`<p>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
+// Citas bíblicas al modo «capítulo: versículos» (Dn 3: 26-27), más preciso que la coma
+function cita(t){ return String(t||'').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
 function vrHTML(sec){
   if(!CANTA() && sec.rec) return recitadoHTML(sec.rec);
   if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, sec.glosa);
@@ -389,7 +391,7 @@ function horaHTML(){
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
       pleg=sec.plegable?sec.id:null;
-      h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(sec.ref)}</span>`:''}</h2>`;
+      h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
       return;
     }
     aplicarModo(sec.k, sec);
@@ -402,7 +404,7 @@ function horaHTML(){
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
       case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+prosaHTML(sec.t, sec.amen, '', sec.il); break;
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
-      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(ref)}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p>${ref?`<span class="lec-ref">${esc(ref)}</span>`:''}${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
+      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p>${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
       case 'ant': h+=antHTML(sec); break;
       case 'salmo': h+=salmoHTML(sec); break;
@@ -411,7 +413,7 @@ function horaHTML(){
       case 'deo': h+=`<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b></p></div>`; break;
       case 'examen': h+=examenHTML(sec); break;
       case 'cantico':
-        h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span><span class="ref">${esc(sec.ref)}</span></div>`
+        h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span></div>`
           +(!sec.gabc ? `<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`   // sin partitura (Benedictus): todo pautado
             : CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
               +`<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`
@@ -423,7 +425,13 @@ function horaHTML(){
           +`<div class="preces">${sec.preces.map(([a,b])=>`<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`
           +`<p class="rub">Se pueden añadir algunas intenciones libres.</p>`; break; }
       case 'pater':
-        h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il todos">${interHTML(sec.pares)}</p>`:`<p class="todos">${esc(sec.pares.map(x=>x[0]).join(' '))}</p>`); break;
+        { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita)
+          const k=sec.pares.findIndex(x=>/^\*/.test(x[0])), a=sec.pares.slice(0,k<0?0:k), b=sec.pares.slice(k<0?0:k);
+          const lat=ps=>marcas(ps.map(x=>x[0]).join(' '));
+          h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+(S.trad?`<p class="il">${interHTML(a)} <span class="todos">${interHTML(b)}</span></p>`:`<p>${lat(a)} <b>${lat(b)}</b></p>`); break; }
+      case 'conclusion': {
+        const o=sec.opciones.find(x=>x.id===S.concl)||sec.opciones[0];
+        h+=`<div class="opciones desliza" role="group" aria-label="Conclusión">${sec.opciones.map(x=>`<button data-act="concl" data-v="${x.id}" aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`+vrHTML(o); break; }
       case 'greg': h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span>${sec.ref?`<span class="ref">${esc(sec.ref)}</span>`:''}</div>`+partituraHTML(sec.gabc, sec.glosa, false); break;
     }
   });
@@ -537,6 +545,7 @@ document.addEventListener('click',e=>{
     case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v; refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
     case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
+    case 'concl': if(S.concl===v) break; S.concl=v; cambio('Conclusión: '+b.textContent.toLowerCase()); break;
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; cambio(c?'Completas cantadas':'Completas recitadas'); break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
     case 'menos': S.lec=Math.max(.9,Math.round((S.lec-.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;

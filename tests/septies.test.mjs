@@ -243,7 +243,7 @@ test('Laudes: invitatorio solo los domingos; tono de la invocación; ciclo domin
   const ids = f => LA.armar(f, 'ARG').secciones.filter(s => s.k === 'sec').map(s => s.id);
   assert.equal(ids('2026-11-08')[0], 'invitatorio'); assert.equal(secL('2026-11-08', 'salmo')[0].id, 'salmo-94');
   assert.equal(ids('2026-11-10')[0], 'inicio');
-  assert.equal(secL('2026-11-08', 'vr')[1].tono, 'solemne'); assert.equal(secL('2026-11-10', 'vr')[0].tono, 'ferial'); assert.equal(secL('2026-11-09', 'vr')[0].tono, 'festivo');
+  assert.equal(secL('2026-11-08', 'vr')[1].tono, 'solemne'); assert.equal(secL('2026-11-10', 'vr')[1].tono, 'ferial'); assert.equal(secL('2026-11-09', 'vr')[1].tono, 'festivo');
   assert.equal(LA.ciclo('2026-11-08'), 'A'); assert.equal(LA.ciclo('2026-11-29'), 'B'); assert.equal(LA.ciclo('2025-06-01'), 'C');
 });
 
@@ -256,7 +256,13 @@ test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
   assert.equal(c.versos.length, 14); assert.equal(c.versos.length, c.inter.length);
   const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
   c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
-  assert.equal(secL('2026-11-10', 'pater')[0].pares.map(p => p[0]).slice(0, 6).join(' '), 'Pater noster, qui es in cælis,');
+  const pn = secL('2026-11-10', 'pater')[0];
+  assert.equal(pn.pares[0][0], 'Pater noster,'); assert.match(pn.pares[1][0], /^\* qui es in cælis,/); assert.equal(pn.pares.at(-1)[1], 'y líbranos del mal.');
+  assert.equal(pn.intro, ''); assert.match(secL('2026-11-09', 'pater')[0].intro, /^Oremos confiadamente/);       // monición: solo fiestas y solemnidades
+  assert.equal(LA.armar('2026-11-10', 'ARG').secciones.filter(x => x.k === 'vr').length, 2);                          // Dómine, lábia mea + Deus in adiutórium
+  const co = secL('2026-11-10', 'conclusion')[0].opciones;
+  assert.match(co[0].gabc, /nus\(h\) ✠\(\) nos/); assert.match(co[1].gabc, /\(c3\)/); assert.match(secL('2026-11-08', 'conclusion')[0].opciones[1].gabc, /\(c4\)/);
+  assert.equal(co[1].rec.length, 4);
   const p = secL('2026-11-10', 'preces')[0]; assert.ok(p.respuesta && p.preces.every(x => x.length === 2));
   assert.ok(!/aleluya/i.test(JSON.stringify(LD)));
 });

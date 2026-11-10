@@ -254,3 +254,4 @@ p.rec{margin:0 0 .8em}
 .preces p{margin:0 0 .9em}
 .preces .pa,.preces .pb{display:block}
 .preces .pb{padding-left:1.1em}
+.preces .sg{color:var(--rubric)}
