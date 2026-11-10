@@ -86,6 +86,10 @@ function eleccion(hoy, man){
   return {juego: DIAS[deIso(hoy.fecha).getDay()], oracion:'juego', solemne:false};
 }
 
+// Himno recitado: cada estrofa se parte en sus versos (palabra latina con que empieza cada uno)
+function enVersos(rec, inicios){
+  return rec.map(l=>({...l, versos:l.pares.reduce((vs,p)=>{ if(!vs.length||inicios.includes(p[0].split(' ')[0])) vs.push([]); vs[vs.length-1].push(p); return vs; },[])}));
+}
 /* ---------- Armado ---------- */
 function armar(fecha, region){
   const hoy=diaCal(fecha, region), man=diaCal(masDias(fecha,1), region);
@@ -115,7 +119,7 @@ function armar(fecha, region){
   sec('himno','Himno');
   const pool = pascua?'pascua': cuaresma?'cuaresma': (hoy.t==='Adviento'||hoy.t==='Navidad')?'adviento_navidad':'ordinario';
   // Domingos y solemnidades: siempre abre en el Te lucis; los demás días, el primer himno del tiempo (o el último elegido)
-  S.push({k:'himno', es:true, efimera:el.solemne, def: el.solemne?'telucis':pool+'-0', opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion, rec:recitado(GR.himno.traduccion, [['','Te'],['','Procul'],['','Præsta,']])}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})))});
+  S.push({k:'himno', es:true, efimera:el.solemne, def: el.solemne?'telucis':pool+'-0', opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion, rec:enVersos(recitado(GR.himno.traduccion, [['','Te'],['','Procul'],['','Præsta,']]), ['Te','Rerum','Ut','Sis','Procul','Et','Hostémque','Ne','Præsta,','Patríque','Cum','Regnans'])}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})))});
 
   sec('salmodia','Salmodia');
   const sal=pascua?J.salmodia_pascua:J.salmodia; let na=0;

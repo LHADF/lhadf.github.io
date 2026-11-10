@@ -86,7 +86,7 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .hora b,.hora strong,strong{font-weight:600}
 .sec .sref{order:2;text-transform:none;letter-spacing:0;font-weight:400}
 .todos{font-weight:600}
-.todos .se{font-weight:400}
+.todos .tr{font-weight:400}
 .sec button{font:inherit;letter-spacing:.04em;color:var(--muted);border:0;background:none;min-height:44px;min-width:44px;padding:0 6px;text-transform:none;font-weight:500}
 .hora p{margin:0 0 .7em}
 .rub{color:var(--rubric);font-style:italic;font-size:.82em;line-height:1.4}
@@ -106,6 +106,10 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .ant-greg{margin:.2em 0 1em}
 .opciones{display:flex;gap:6px;flex-wrap:wrap;margin:-.2em 0 1em;font-family:var(--sans)}
 .opciones button{font-size:var(--f-dato);border:1px solid var(--line);background:none;border-radius:var(--r-1);min-height:44px;padding:5px 12px;color:var(--muted)}
+.opciones.desliza{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding-right:24px}
+.opciones.desliza::-webkit-scrollbar{display:none}
+.opciones.desliza button{white-space:nowrap;flex:none;scroll-snap-align:start}
+.opciones.desliza.mas{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}
 .opciones button[aria-pressed="true"]{border-color:var(--rubric);color:var(--rubric);background:var(--rubric-soft);font-weight:600}
 .himno .est{margin:0 0 1.2em;position:relative;padding-left:1.6em}
 .himno .est .num{position:absolute;left:0;top:0;color:var(--glosa)}
@@ -196,12 +200,12 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .gl-part{margin-top:-1em}
 
 /* Interlineal por segmentos: latín arriba, traducción literal debajo, en bloques que fluyen */
-.il .ilseg{display:inline-flex;flex-direction:column;vertical-align:top;max-width:100%;margin:0 .1em .5em 0}
-.il .ilseg .se{color:var(--glosa);font-style:italic;font-size:.8em;line-height:1.3}
+/* El latín fluye como texto; cada palabra reserva debajo el renglón de la traducción, que cuelga en posición absoluta */
+.il .w{display:inline-block;position:relative;line-height:1.4;padding-bottom:1.15em;margin-bottom:.35em;text-indent:0}
+.il .tr{position:absolute;left:0;bottom:0;white-space:nowrap;color:var(--glosa);font-style:italic;font-size:.8em;line-height:1.3;font-weight:400}
+.il .nw{white-space:nowrap}
 .il .k{vertical-align:top}
 /* Cruz y asterisco entre segmentos: sin traducción debajo; app.js los centra en el hueco entre los textos */
-.il .ilseg.signo{margin:0 .3em 0 .2em}
-.il .ilseg.signo .sl{color:var(--rubric)}
 .vr.il p{padding-left:0;text-indent:0;display:flex;gap:.35em;align-items:flex-start}
 .vr.il p>.k{flex:none;width:1.2em}
 .vr.il p .segs{flex:1}
@@ -242,6 +246,6 @@ p.rec{margin:0 0 .8em}
 .versos{margin-bottom:1.4em}
 .himno .est{margin:0 0 1.5em}
 .partitura{margin:.6em 0 1.8em}
-.il .ilseg{margin-bottom:.75em}
+.il .w{margin-bottom:.55em}
 .opciones{margin:0 0 1.4em}
 .fin{margin-top:4em}

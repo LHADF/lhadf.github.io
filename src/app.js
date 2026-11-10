@@ -185,39 +185,53 @@ function salmoHTML(sal){
 }
 
 /* ---------- Secciones ---------- */
-// Interlineal por segmentos: cada grupo de palabras latinas con su traducción literal debajo
+// Interlineal: el latín corre como texto común (espacios regulares, corta en cualquier palabra);
+// la traducción de cada grupo cuelga debajo de su primera palabra y es la que se acomoda (ajustarGlosas).
 const BI=()=>S.lengua==='bi';
 function interHTML(pares){
-  const seg=(a,b)=>`<span class="ilseg"><span class="sl">${marcas(a)}</span><span class="se">${marcas(b)}</span></span>`;
-  // ✠ o * al comienzo del latín: segmento propio, sin traducción, para centrarlo entre los textos.
-  // Sin espacios alrededor del signo: la separación la dan sus márgenes (más chica que un espacio de cada lado)
-  return pares.map(([a,b],i)=>{
-    const m=/^([✠*])\s+(.*)$/.exec(a);
-    return m ? `<span class="ilseg signo" aria-hidden="true"><span class="sl">${m[1]}</span><span class="se"></span></span>`+seg(m[2],b.replace(/^[✠*]\s*/,''))
-             : (i?' ':'')+seg(a,b);
-  }).join('');
+  return pares.map(([a,b])=>{
+    const m=/^([✠*†])\s+(.*)$/.exec(a); let sg='';
+    if(m){ sg=m[1]; a=m[2]; b=String(b||'').replace(/^[✠*†]\s*/,''); }
+    const ws=String(a).trim().split(/\s+/);
+    const pal=ws.map((w,i)=>`<span class="w">${marcas(w)}${i===0&&b?`<span class="tr">${marcas(b)}</span>`:''}</span>`);
+    if(sg) pal[0]=`<span class="nw">${marcas(sg)} ${pal[0]}</span>`;   // el signo no queda solo al final del renglón
+    return pal.join(' ');
+  }).join(' ');
 }
-// Centra cada signo en el hueco que queda entre el final del texto anterior y el comienzo del siguiente
-function anchoTexto(el){ const r=document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect(); }
-function centrarSignos(raiz){
-  (raiz||document).querySelectorAll('.ilseg.signo').forEach(s=>{
-    s.style.transform=''; s.style.marginLeft='';
-    const prev=s.previousElementSibling, next=s.nextElementSibling;
-    if(!prev||!next||!prev.classList.contains('ilseg')||!next.classList.contains('ilseg')) return;
-    const em=parseFloat(getComputedStyle(s).fontSize);
-    const mismo=(x,y)=>Math.abs((x.top+x.bottom)/2-(y.top+y.bottom)/2)<y.height/2;
-    let a=anchoTexto(prev.querySelector('.sl')), c=anchoTexto(next.querySelector('.sl')), b=anchoTexto(s.querySelector('.sl'));
-    if(!mismo(a,b)||!mismo(c,b)) return; // signo al comienzo o al final del renglón
-    // Si la traducción de antes es más ancha que su latín, el hueco latino queda grande: se acerca el signo
-    // (y lo que sigue) hasta dejar .3em de cada lado, sin que las traducciones se toquen.
-    const pse=prev.querySelector('.se'), ase=pse&&pse.textContent.trim()?anchoTexto(pse):null;
-    const quiero=Math.max(a.right+.6*em+b.width, ase?ase.right+.3*em:0);
-    const sobra=c.left-quiero;
-    if(sobra>1){ s.style.marginLeft=(parseFloat(getComputedStyle(s).marginLeft)-sobra)+'px';
-      a=anchoTexto(prev.querySelector('.sl')); c=anchoTexto(next.querySelector('.sl')); b=anchoTexto(s.querySelector('.sl'));
-      if(!mismo(a,b)||!mismo(c,b)) return; }
-    const centro=(a.right+c.left)/2; s.style.transform=`translateX(${centro-(b.left+b.width/2)}px)`;
-  });
+// Ubica las traducciones: cada una empieza bajo su palabra; si la anterior es más larga, se corre a la derecha;
+// si el renglón se pasa del margen, se recorren hacia la izquierda. Solo si aun así no entran, la última palabra
+// latina con traducción pasa al renglón siguiente (el latín nunca se estira ni se abre).
+function ajustarGlosas(raiz){
+  raiz=raiz||document;
+  raiz.querySelectorAll('br.ajuste').forEach(b=>b.remove());
+  for(let vuelta=0; vuelta<40; vuelta++){
+    const trs=[...raiz.querySelectorAll('.il .tr')];
+    trs.forEach(t=>{ t.style.left=''; });
+    const grupos=[]; let g=null;
+    trs.forEach(t=>{
+      let caja=t.parentElement.parentElement; while(caja.parentElement&&/^inline/.test(getComputedStyle(caja).display)) caja=caja.parentElement;   // la caja de bloque que lo contiene
+      const top=t.parentElement.getBoundingClientRect().top;
+      if(!g||g.caja!==caja||Math.abs(top-g.top)>2){ g={caja,top,it:[]}; grupos.push(g); }
+      g.it.push(t);
+    });
+    let quebrar=null;
+    for(const g of grupos){
+      const cs=getComputedStyle(g.caja), cr=g.caja.getBoundingClientRect();
+      const izq=cr.left+parseFloat(cs.paddingLeft), der=cr.right-parseFloat(cs.paddingRight);
+      const gap=.45*parseFloat(getComputedStyle(g.it[0]).fontSize);
+      const m=g.it.map(t=>{ const r=t.getBoundingClientRect(); return {t,base:r.left,w:r.width}; });
+      let x=-Infinity; m.forEach(o=>{ o.l=Math.max(o.base,x); x=o.l+o.w+gap; });
+      let lim=der; for(let k=m.length-1;k>=0;k--){ const o=m[k]; if(o.l+o.w>lim) o.l=lim-o.w; lim=o.l-gap; }
+      if(m[0].l<izq-1){
+        if(m.length>1){ quebrar=m[m.length-1].t.parentElement; break; }
+        m[0].l=m[0].base;   // una sola traducción más larga que el renglón: se deja correr
+      }
+      m.forEach(o=>{ if(Math.abs(o.l-o.base)>.5) o.t.style.left=(o.l-o.base)+'px'; });
+    }
+    if(!quebrar) return;
+    const w=quebrar.parentElement.classList.contains('nw')?quebrar.parentElement:quebrar;
+    const br=document.createElement('br'); br.className='ajuste'; w.parentNode.insertBefore(br,w);
+  }
 }
 /* Cantado o recitado: un solo botón al comienzo decide todas las piezas gregorianas.
    Recitado: el texto latino de la pieza, con su traducción literal debajo (si está activa). */
@@ -229,7 +243,8 @@ function lineaRec(l, extra){
 function recitadoHTML(rec, tipo){
   const il=S.trad?' il':'';
   if(tipo==='ant') return `<div class="ant rec${il}">${rec.map(l=>`<p><span class="n">Ant.</span> ${lineaRec(l)}</p>`).join('')}</div>`;
-  if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${lineaRec(l)}</p>`).join('')}</div>`;
+  if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${
+      (l.versos||[l.pares]).map(v=>`<span class="ln">${lineaRec({...l,pares:v})}</span>`).join('')}</p>`).join('')}</div>`;
   if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
   return `<div class="vr rec${il}">${rec.map(l=>`<p>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
@@ -257,6 +272,26 @@ function antHTML(sec){
   const t=txt(a.t);
   return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${a.es?'<b>':''}${marcas(t.p.replace(/ \* /,' '))}${a.es?'</b>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
 }
+// Título corto para los botones: hasta ~24 letras, sin cortar en un artículo o preposición; «(solemne)» se conserva
+function corto(n){
+  const m=/^(.*?)(\s*\([^)]*\))?$/.exec(n), base=m[1], par=m[2]||'';
+  if(base.length<=26) return n;
+  let out=''; for(const w of base.split(' ')){ if((out+' '+w).trim().length>24) break; out=(out+' '+w).trim(); }
+  out=out.replace(/(\s+(?:de|del|la|las|el|los|y|que|es|ya|en|a|mi|tu|su|con|por|para|nuestras?|nuestros?))+$/i,'').replace(/[,;:]$/,'');
+  return out+par;
+}
+function botonesHTML(act, k, ops, o, efimera, label){
+  return `<div class="opciones desliza" role="group" aria-label="${label}">${ops.map(x=>`<button data-act="${act}" data-k="${k}" data-v="${x.id}"${efimera?' data-e="1"':''} aria-pressed="${x===o}" title="${esc(x.n)}">${esc(corto(x.n))}</button>`).join('')}</div>`;
+}
+// En las filas deslizables, la opción elegida queda a la vista
+function deslizarElegidos(raiz){
+  (raiz||document).querySelectorAll('.opciones.desliza').forEach(f=>{
+    const b=f.querySelector('[aria-pressed="true"]'); if(!b) return;
+    const fr=f.getBoundingClientRect(), br=b.getBoundingClientRect();
+    if(br.left<fr.left||br.right>fr.right) f.scrollLeft+= br.left-fr.left-(fr.width-br.width)/2;
+    f.classList.toggle('mas', f.scrollWidth>f.clientWidth+1);
+  });
+}
 function elegida(sec, clave, def){ const id=S[clave][sec.opciones[0].id]; return sec.opciones.find(o=>o.id===id)||def; }
 function himnoHTML(sec){
   const ops=sec.opciones;
@@ -264,7 +299,7 @@ function himnoHTML(sec){
   // efímera (domingos y solemnidades): la elección vale solo mientras se mira ese día
   const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})['h:'+ops[0].id])||def) : elegida(sec,'himno',def);
   let h='';
-  if(ops.length>1) h+=`<div class="opciones" role="group" aria-label="Himno">${ops.map(x=>`<button data-act="himno" data-k="${ops[0].id}" data-v="${x.id}"${sec.efimera?' data-e="1"':''} aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>`;
+  if(ops.length>1) h+=botonesHTML('himno', ops[0].id, ops, o, sec.efimera, 'Himno');
   if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'estrofas');
   if(S.canto && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
   // Traducción anclada: cada par se ubica en la línea donde aparece su primera palabra latina, en orden
@@ -289,7 +324,7 @@ function examenHTML(sec){
   const f=sec.formulas.find(x=>x.id===S.examenF)||sec.formulas[0];
   const br=t=>esc(t).replace(/\n/g,'<br>');
   const vr=(k,t)=>`<p><span class="k">${k==='V'?'℣':'℟'}.</span> ${k==='R'?`<b>${br(t)}</b>`:br(t)}</p>`;
-  let h=`<div class="opciones" role="group" aria-label="Fórmula">${sec.formulas.map(x=>`<button data-act="examenF" data-v="${x.id}" aria-pressed="${x===f}">${esc(x.titulo)}</button>`).join('')}</div>`;
+  let h=`<div class="opciones desliza" role="group" aria-label="Fórmula">${sec.formulas.map(x=>`<button data-act="examenF" data-v="${x.id}" aria-pressed="${x===f}">${esc(x.titulo)}</button>`).join('')}</div>`;
   h+=`<p>${br(sec.invitacion)}</p>`;
   if(f.latin){ // Confíteor latino, con traducción literal debajo; lo dicen todos
     const t=f.todos.flat();   // un solo párrafo, sin renglones vacíos
@@ -314,7 +349,7 @@ function marianaHTML(sec){
   const ops=sec.opciones;
   // efímera: la elección vale solo mientras se mira ese día (al volver a abrir, la primera opción)
   const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})[ops[0].id])||ops[0]) : elegida(sec,'mariana',ops[0]);
-  let h= ops.length>1 ? `<div class="opciones" role="group" aria-label="Antífona">${ops.map(x=>`<button data-act="mariana" data-k="${ops[0].id}" data-v="${x.id}"${sec.efimera?' data-e="1"':''} aria-pressed="${x===o}">${esc(x.n)}</button>`).join('')}</div>` : '';
+  let h= ops.length>1 ? botonesHTML('mariana', ops[0].id, ops, o, sec.efimera, 'Antífona') : '';
   if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'prosa');
   if(S.canto && S.antGreg && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
   const es=VES(); const la=o.l.la, sp=o.l[es]||o.l.es79||o.l.es;
@@ -407,7 +442,7 @@ function render(){
   $('#atras').hidden=!enHora;
   $('#brand').innerHTML= enHora? `Completas<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
-  if(enHora){ centrarSignos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>centrarSignos($('#main'))); pintar($('#main')); }
+  if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>ajustarGlosas($('#main'))); pintar($('#main')); }
 }
 
 /* ---------- Hojas ---------- */
@@ -483,6 +518,7 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
 // Barras que se esconden al bajar y vuelven al subir
 let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const bajar=y>yAnt && y>120; if(S.vista==='hora'){ $('#top').classList.toggle('oculta',bajar); } yAnt=y; },{passive:true});
-let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ centrarSignos($('#main')); pintar($('#main')); } },250); });
+document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.classList.contains('desliza')) f.classList.toggle('mas', f.scrollLeft+f.clientWidth<f.scrollWidth-2); },true);
+let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
 
 render();
