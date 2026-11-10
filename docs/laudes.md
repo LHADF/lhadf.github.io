@@ -9,7 +9,7 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - **Cántico evangélico (Benedictus):** Neovulgata, en latín, con traducción interlineal.
 - **Preces:** flexa (†) en el corte del medio de cada prece (el que trae sync; si no hay, en la invocación clara) y asterisco de metro (*) al final de la prece.
 - **Padre nuestro:** *Pater noster* en latín.
-- **Conclusión:** *Dóminus nos benedícat*. No hay GABC de un libro: `base/gregoriano/dominus-nos-benedicat.gabc` es una **propuesta a confirmar**, con la melodía del *Noctem quiétam* (mediante sol–fa antes del acento en «deféndat»; final con el acento en la y caída al re en «ætérnam»; ℟ Amen la–la).
+- **Conclusión:** *Dóminus nos benedícat*. No hay GABC de un libro: `base/gregoriano/dominus-nos-benedicat.gabc` lleva la melodía del *Noctem quiétam* (mediante sol–fa antes del acento en «deféndat»; final con el acento en la y caída al re en «ætérnam»; ℟ Amen la–la). Aprobada el 10/11/2026.
 
 ## Estado
 
