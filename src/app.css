@@ -200,7 +200,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .il .ilseg .se{color:var(--glosa);font-style:italic;font-size:.8em;line-height:1.3}
 .il .k{vertical-align:top}
 /* Cruz y asterisco entre segmentos: sin traducción debajo; app.js los centra en el hueco entre los textos */
-.il .ilseg.signo{margin-right:.1em}
+.il .ilseg.signo{margin:0 .3em 0 .2em}
 .il .ilseg.signo .sl{color:var(--rubric)}
 .vr.il p{padding-left:0;text-indent:0;display:flex;gap:.35em;align-items:flex-start}
 .vr.il p>.k{flex:none;width:1.2em}

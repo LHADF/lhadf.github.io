@@ -189,21 +189,33 @@ function salmoHTML(sal){
 const BI=()=>S.lengua==='bi';
 function interHTML(pares){
   const seg=(a,b)=>`<span class="ilseg"><span class="sl">${marcas(a)}</span><span class="se">${marcas(b)}</span></span>`;
-  return pares.map(([a,b])=>{ // ✠ o * al comienzo del latín: segmento propio, sin traducción, para centrarlo entre los textos
+  // ✠ o * al comienzo del latín: segmento propio, sin traducción, para centrarlo entre los textos.
+  // Sin espacios alrededor del signo: la separación la dan sus márgenes (más chica que un espacio de cada lado)
+  return pares.map(([a,b],i)=>{
     const m=/^([✠*])\s+(.*)$/.exec(a);
-    return m ? `<span class="ilseg signo" aria-hidden="true"><span class="sl">${m[1]}</span><span class="se"></span></span> `+seg(m[2],b.replace(/^[✠*]\s*/,'')) : seg(a,b);
-  }).join(' ');
+    return m ? `<span class="ilseg signo" aria-hidden="true"><span class="sl">${m[1]}</span><span class="se"></span></span>`+seg(m[2],b.replace(/^[✠*]\s*/,''))
+             : (i?' ':'')+seg(a,b);
+  }).join('');
 }
 // Centra cada signo en el hueco que queda entre el final del texto anterior y el comienzo del siguiente
 function anchoTexto(el){ const r=document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect(); }
 function centrarSignos(raiz){
   (raiz||document).querySelectorAll('.ilseg.signo').forEach(s=>{
-    s.style.transform='';
+    s.style.transform=''; s.style.marginLeft='';
     const prev=s.previousElementSibling, next=s.nextElementSibling;
     if(!prev||!next||!prev.classList.contains('ilseg')||!next.classList.contains('ilseg')) return;
-    const a=anchoTexto(prev.querySelector('.sl')), c=anchoTexto(next.querySelector('.sl')), b=anchoTexto(s.querySelector('.sl'));
-    const mismo=(x,y)=>Math.abs((x.top+x.bottom)/2-(y.top+y.bottom)/2)<b.height/2;
+    const em=parseFloat(getComputedStyle(s).fontSize);
+    const mismo=(x,y)=>Math.abs((x.top+x.bottom)/2-(y.top+y.bottom)/2)<y.height/2;
+    let a=anchoTexto(prev.querySelector('.sl')), c=anchoTexto(next.querySelector('.sl')), b=anchoTexto(s.querySelector('.sl'));
     if(!mismo(a,b)||!mismo(c,b)) return; // signo al comienzo o al final del renglón
+    // Si la traducción de antes es más ancha que su latín, el hueco latino queda grande: se acerca el signo
+    // (y lo que sigue) hasta dejar .3em de cada lado, sin que las traducciones se toquen.
+    const pse=prev.querySelector('.se'), ase=pse&&pse.textContent.trim()?anchoTexto(pse):null;
+    const quiero=Math.max(a.right+.6*em+b.width, ase?ase.right+.3*em:0);
+    const sobra=c.left-quiero;
+    if(sobra>1){ s.style.marginLeft=(parseFloat(getComputedStyle(s).marginLeft)-sobra)+'px';
+      a=anchoTexto(prev.querySelector('.sl')); c=anchoTexto(next.querySelector('.sl')); b=anchoTexto(s.querySelector('.sl'));
+      if(!mismo(a,b)||!mismo(c,b)) return; }
     const centro=(a.right+c.left)/2; s.style.transform=`translateX(${centro-(b.left+b.width/2)}px)`;
   });
 }
