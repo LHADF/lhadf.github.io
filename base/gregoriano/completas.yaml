@@ -1,6 +1,8 @@
 # Partes en gregoriano de Completas (ADF) y su traducción literal bajo los neumas.
 # Las partituras son los archivos .gabc de esta carpeta (texto latino con i y æ, según docs/diseno.md).
-# Traducción: un renglón por par «latín = español», en el orden del texto; cada par se ubica bajo la primera palabra latina.
+# Traducción interlineal: literal, propia (no es el texto español del sync), palabra por palabra: un par «latín = español»
+# por palabra latina, en el orden del texto. Solo se agrupan palabras cuando ir una por una confundiría (p. ej. «Dei Génitrix»).
+# La prueba verifica que las palabras de los pares sean exactamente las del texto latino.
 
 invocacion:
   # Tono solemne: domingos y solemnidades (también sus I Vísperas, el Triduo y las Octavas de Navidad y Pascua);
@@ -10,40 +12,67 @@ invocacion:
   ferial: deus-in-adiutorium-ferialis.gabc
   traduccion:
     - Deus, = Dios [mío],
-    - in adiutórium meum inténde. = ven pronto en mi auxilio.
+    - in = en
+    - adiutórium = auxilio
+    - meum = mío
+    - inténde. = atiende.
     - Dómine, = Señor,
-    - ad adiuvándum me festína. = date prisa en socorrerme.
-    - Glória Patri, = Gloria al Padre,
-    - et Fílio, = y al Hijo,
-    - et Spirítui Sancto. = y al Espíritu Santo.
-    - Sicut erat = Como era
-    - in princípio, = en el principio,
-    - et nunc, = y ahora
-    - et semper, = y siempre,
-    - et in sǽcula sæculórum. = y por los siglos de los siglos.
+    - ad = para
+    - adiuvándum = ayudar
+    - me = me
+    - festína. = apresúrate.
+    - Glória = Gloria
+    - Patri, = al Padre,
+    - et = y
+    - Fílio, = al Hijo,
+    - et = y
+    - Spirítui = al Espíritu
+    - Sancto. = Santo.
+    - Sicut = Como
+    - erat = era
+    - in = en
+    - princípio, = el principio,
+    - et = y
+    - nunc, = ahora,
+    - et = y
+    - semper, = siempre,
+    - et = y
+    - in = por
+    - sǽcula = los siglos
+    - sæculórum. = de los siglos.
     - Amen. = Amén.
     - Allelúia. = Aleluya.
 cantico_evangelico:
   antifona: salva-nos.gabc
   cantico: nunc-dimittis-3a.gabc
   traduccion_antifona:
-    - Salva nos, = Sálvanos,
+    - Salva = Salva
+    - nos, = nos,
     - Dómine, = Señor,
     - vigilántes, = despiertos,
-    - custódi nos = guárdanos
-    - dormiéntes = dormidos,
-    - ut vigilémus = para que velemos
-    - cum Christo, = con Cristo,
-    - et requiescámus = y descansemos
-    - in pace. = en paz.
+    - custódi = guarda
+    - nos = nos
+    - dormiéntes, = dormidos,
+    - ut = para que
+    - vigilémus = velemos
+    - cum = con
+    - Christo, = Cristo,
+    - et = y
+    - requiescámus = descansemos
+    - in = en
+    - pace. = paz.
     - Allelúia. = Aleluya.
   traduccion_cantico:   # primer versículo, en partitura
     - Nunc = Ahora
     - dimíttis = despides
-    - servum tuum, = a tu siervo,
+    - servum = al siervo
+    - tuum, = tuyo,
     - Dómine, = Señor,
-    - secúndum verbum tuum = según tu palabra
-    - in pace = en paz
+    - secúndum = según
+    - verbum = la palabra
+    - tuum = tuya
+    - in = en
+    - 'pace: = paz:'
   # Del segundo versículo en adelante, pautados en latín, con su traducción
   tono_cantico: 3a
   # Marcas escritas a mano, como en el libro de Completas ADF: **negrita** = acento, _cursiva_ = preparación.
@@ -55,22 +84,62 @@ cantico_evangelico:
     - Sicut erat in princípio, et **nunc** et **sem**per, * et in sǽcula sæculó_rum_. **A**men.
   # Primer versículo, para Completas recitadas (cantadas, va en partitura)
   primer_verso: 'Nunc dimíttis servum **tu**um, **Dómi**ne, * secúndum verbum tuum _in_ **pa**ce:'
-  traduccion_primer_verso: Ahora despides a tu siervo, Señor, * según tu palabra, en paz,
+  # Traducción palabra por palabra de cada versículo (del segundo en adelante), en el orden del texto; el * no lleva par
   traduccion_versos:
-    - porque han visto mis ojos * tu salvación,
-    - la que preparaste * ante el rostro de todos los pueblos,
-    - luz para revelación a las naciones * y gloria de tu pueblo Israel.
-    - Gloria al Padre, y al Hijo, * y al Espíritu Santo.
-    - Como era en el principio, y ahora, y siempre, * y por los siglos de los siglos. Amén.
+    - - quia = porque
+      - vidérunt = vieron
+      - óculi = los ojos
+      - mei = míos
+      - salutáre = la salvación
+      - tuum, = tuya,
+    - - quod = que
+      - parásti = preparaste
+      - ante = ante
+      - fáciem = el rostro
+      - ómnium = de todos
+      - populórum, = los pueblos,
+    - - Lumen = Luz
+      - ad = para
+      - revelatiónem = revelación
+      - géntium, = de las naciones,
+      - et = y
+      - glóriam = gloria
+      - plebis = del pueblo
+      - tuæ = tuyo
+      - Israel. = Israel.
+    - - Glória = Gloria
+      - Patri, = al Padre,
+      - et = y
+      - Fílio, = al Hijo,
+      - et = y
+      - Spirítui = al Espíritu
+      - Sancto. = Santo.
+    - - Sicut = Como
+      - erat = era
+      - in = en
+      - princípio, = el principio,
+      - et = y
+      - nunc = ahora
+      - et = y
+      - semper, = siempre,
+      - et = y
+      - in = por
+      - sǽcula = los siglos
+      - sæculórum. = de los siglos.
+      - Amen. = Amén.
 
 conclusion:
   partitura: noctem-quietam.gabc
   traduccion:
     - Noctem = Una noche
     - quiétam = tranquila
-    - et finem perféctum = y un fin perfecto
-    - concédat nobis = nos conceda
-    - Dóminus omnípotens. = el Señor todopoderoso.
+    - et = y
+    - finem = un fin
+    - perféctum = perfecto
+    - concédat = conceda
+    - nobis = a nosotros
+    - Dóminus = el Señor
+    - omnípotens. = todopoderoso.
     - Amen. = Amén.
 # Tono de los salmos en español. Sin uso mientras los salmos van sin partitura ni pautas.
 # Provisorio: 8 G para todos. Se cambia acá, por juego de Completas (códigos: 1D, 2D, 3a, 4E, 5a, 6F, 7a, 8G…).
@@ -89,28 +158,33 @@ himno:
   partitura: te-lucis-dominicis.gabc
   traduccion:
     - Te = A ti,
-    - lucis ante términum, = antes del fin de la luz,
-    - Rerum Creátor, = Creador de todo,
-    - póscimus, = pedimos
+    - lucis = de la luz
+    - ante = antes del
+    - términum, = término,
+    - Rerum = de las cosas
+    - Creátor, = Creador,
+    - póscimus, = pedimos,
     - Ut = que
     - pro = por
     - tua = tu
     - cleméntia = clemencia
     - Sis = seas
-    - præsul = guardián
+    - præsul = protector
     - et = y
     - custódia. = custodia.
     - Procul = Lejos
     - recédant = se vayan
-    - sómnia, = los sueños
-    - Et nóctium phantásmata; = y los fantasmas de la noche;
+    - sómnia, = los sueños,
+    - Et = y
+    - nóctium = de las noches
+    - phantásmata; = los fantasmas;
     - Hostémque = y al enemigo
     - nostrum = nuestro
     - cómprime, = reprime,
     - Ne = para que no
     - polluántur = se manchen
     - córpora. = los cuerpos.
-    - Præsta, = Concédelo,
+    - Præsta, = Concede,
     - Pater = Padre
     - piíssime, = piadosísimo,
     - Patríque = y al Padre
@@ -136,18 +210,18 @@ responsorio:
     traduccion:
       - In = En
       - manus = manos
-      - tuas = tuyas,
+      - tuas, = tuyas,
       - Dómine, = Señor,
       - Comméndo = encomiendo
-      - spíritum = espíritu
+      - spíritum = el espíritu
       - meum. = mío.
       - In = En
       - manus. = manos.
       - Redemísti = Redimiste
-      - nos = nos,
+      - nos, = nos,
       - Dómine, = Señor,
       - Deus = Dios
-      - veritátis. = de verdad.
+      - veritátis. = de la verdad.
       - Comméndo. = Encomiendo.
       - Glória = Gloria
       - Patri, = al Padre,
@@ -171,9 +245,9 @@ marianas:
       - Salve, = Salve,
       - Regína, = Reina,
       - mater = madre
-      - 'misericórdiæ: = de misericordia,'
+      - 'misericórdiæ: = de misericordia:'
       - Vita, = vida,
-      - dulcédo, = dulzura
+      - dulcédo, = dulzura,
       - et = y
       - spes = esperanza
       - nostra, = nuestra,
@@ -192,13 +266,14 @@ marianas:
       - flentes = llorando
       - in = en
       - hac = este
-      - lacrimárum valle. = valle de lágrimas.
+      - lacrimárum = de lágrimas
+      - valle. = valle.
       - Eia = Ea,
       - ergo, = pues,
       - Advocáta = abogada
       - nostra, = nuestra,
       - illos = esos
-      - tuos = tus
+      - tuos = tuyos
       - misericórdes = misericordiosos
       - óculos = ojos
       - ad = a
@@ -216,9 +291,9 @@ marianas:
       - exsílium = destierro
       - osténde. = muestra.
       - O = Oh
-      - 'clemens: = clemente,'
+      - 'clemens: = clemente:'
       - O = oh
-      - 'pia: = piadosa,'
+      - 'pia: = piadosa:'
       - O = oh
       - dulcis = dulce
       - Virgo = Virgen
@@ -234,17 +309,21 @@ marianas:
       - Sub = Bajo
       - tuum = tu
       - præsídium = amparo
-      - confúgimus, = nos acogemos,
+      - confúgimus, = nos refugiamos,
       - sancta = santa
-      - 'Dei Génitrix: = Madre de Dios;'
+      - 'Dei Génitrix: = Madre de Dios:'
       - nostras = nuestras
       - deprecatiónes = súplicas
-      - ne despícias = no desprecies
-      - 'in necessitátibus: = en las necesidades,'
+      - ne = no
+      - despícias = desprecies
+      - in = en
+      - 'necessitátibus: = las necesidades:'
       - sed = sino
-      - a perículis = de los peligros
+      - a = de
+      - perículis = los peligros
       - cunctis = todos
-      - líbera nos = líbranos
+      - líbera = libra
+      - nos = nos
       - semper, = siempre,
       - Virgo = Virgen
       - gloriósa = gloriosa
@@ -259,24 +338,30 @@ marianas:
       - cælórum, = de los cielos,
       - Ave, = salve,
       - Dómina = Señora
-      - 'Angelórum: = de los ángeles;'
+      - 'Angelórum: = de los ángeles:'
       - Salve, = salve,
       - radix, = raíz,
       - salve, = salve,
       - porta, = puerta,
-      - Ex qua = de la cual
-      - mundo = para el mundo
+      - Ex = de
+      - qua = la cual
+      - mundo = al mundo
       - lux = la luz
-      - 'est orta: = nació.'
+      - est = ha
+      - 'orta: = surgido:'
       - Gaude, = Alégrate,
       - Virgo = Virgen
       - gloriósa, = gloriosa,
-      - Super omnes = sobre todas
-      - 'speciósa: = hermosa;'
-      - Vale, = adiós,
-      - o valde = oh muy
+      - Super = sobre
+      - omnes = todas
+      - 'speciósa: = hermosa:'
+      - Vale, = Adiós,
+      - o = oh
+      - valde = muy
       - decóra, = bella,
-      - Et pro nobis = y por nosotros
+      - Et = y
+      - pro = por
+      - nobis = nosotros
       - Christum = a Cristo
       - exóra. = ruega.
   ave_solemne:
@@ -288,30 +373,40 @@ marianas:
     partitura: alma-redemptoris-simple.gabc
     traduccion: &alma
       - Alma = Santa
-      - Redemptóris Mater, = Madre del Redentor,
+      - Redemptóris = del Redentor
+      - Mater, = Madre,
       - quæ = que
-      - pérvia = abierta
-      - cæli porta = puerta del cielo
+      - pérvia = accesible
+      - cæli = del cielo
+      - porta = puerta
       - manes, = permaneces,
-      - Et stella maris, = y estrella del mar,
+      - Et = y
+      - stella = estrella
+      - maris, = del mar,
       - succúrre = socorre
-      - cadénti, = al que cae,
+      - cadénti, = que cae,
       - súrgere = levantarse
-      - qui curat = que procura
-      - 'pópulo: = al pueblo;'
-      - Tu quæ = tú que
+      - qui = que
+      - curat = procura,
+      - 'pópulo: = al pueblo:'
+      - Tu = Tú
+      - quæ = que
       - genuísti, = engendraste,
       - natúra = la naturaleza
       - miránte, = admirándose,
-      - tuum sanctum = a tu santo
-      - 'Genitórem: = Creador;'
+      - tuum = a tu
+      - sanctum = santo
+      - 'Genitórem: = Creador:'
       - Virgo = Virgen
       - prius = antes
-      - ac postérius, = y después,
+      - ac = y
+      - postérius, = después,
       - Gabriélis = de Gabriel
-      - ab ore = de la boca
+      - ab = de
+      - ore = la boca
       - sumens = recibiendo
-      - illud Ave, = aquel Ave,
+      - illud = aquel
+      - Ave, = Ave,
       - peccatórum = de los pecadores
       - miserére. = ten piedad.
   alma_solemne:
@@ -325,18 +420,19 @@ marianas:
       - Regína = Reina
       - cæli, = del cielo,
       - lætáre, = alégrate,
-      - 'allelúia: = aleluya;'
+      - 'allelúia: = aleluya:'
       - Quia = porque
-      - quem = el que
+      - quem = al que
       - meruísti = mereciste
       - portáre, = llevar,
-      - 'allelúia: = aleluya;'
+      - 'allelúia: = aleluya:'
       - Resurréxit, = resucitó,
       - sicut = como
       - dixit, = dijo,
-      - 'allelúia: = aleluya;'
+      - 'allelúia: = aleluya:'
       - Ora = Ruega
-      - pro nobis = por nosotros
+      - pro = por
+      - nobis = nosotros
       - Deum, = a Dios,
       - allelúia. = aleluya.
   regina_caeli_solemne:
@@ -346,17 +442,18 @@ marianas:
       - Regína = Reina
       - cæli, = del cielo,
       - lætáre, = alégrate,
-      - 'allelúia: = aleluya;'
+      - 'allelúia: = aleluya:'
       - Quia = porque
-      - quem = el que
+      - quem = al que
       - meruísti = mereciste
       - portáre, = llevar,
-      - 'allelúia: = aleluya;'
+      - 'allelúia: = aleluya:'
       - Resurréxit, = resucitó,
       - sicut = como
       - dixit, = dijo,
-      - 'allelúia: = aleluya;'
+      - 'allelúia: = aleluya:'
       - Ora = Ruega
-      - pro nobis = por nosotros
+      - pro = por
+      - nobis = nosotros
       - Deum, = a Dios,
       - alle = aleluya.

@@ -22,7 +22,7 @@ Cada archivo es texto YAML y se puede editar directamente en GitHub. Reglas de e
 | `tiempo/` | Propio del tiempo. Por ahora, Completas del Triduo pascual y de la Octava de Pascua |
 | `himnos/` | Himnos por hora y por tiempo; en cada tiempo se puede elegir cualquiera de la lista |
 | `salmos/` | Cada salmo y cántico una sola vez, por su clave (`salmo-30-2-6` = Salmo 30, 2-6) |
-| `gregoriano/` | Partituras GABC y cuándo va cada una (`completas.yaml`): invocación solemne/festiva/ferial, Salva nos y Nunc dimittis, Noctem quietam; traducción literal y tono de los salmos |
+| `gregoriano/` | Partituras GABC y cuándo va cada una (`completas.yaml`): invocación solemne/festiva/ferial, Salva nos y Nunc dimittis, Noctem quietam; traducción interlineal propia, literal y palabra por palabra (no la del sync, que sirve solo para lo que se canta en español); tono de los salmos |
 | `informes/` | Lo que encontró la carga: versiones distintas de un mismo texto en `sync` y la verificación |
 
 Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral, comunes y lo propio de ADF.

@@ -106,7 +106,7 @@ function armar(fecha, region){
   const tonoInv = el.solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=GR.invocacion.traduccion.filter(p=>cuaresma?!/^Allel/.test(p[0]):true);
   S.push({k:'vr', tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv,
-          rec:recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória Patri,',true]])});
+          rec:recitado(trInv.map((p,i)=>i===1?['✠ '+p[0],p[1]]:p), [['V','Deus,'],['R','Dómine,',true],['','Glória',true]])});
 
   sec('examen','Examen de conciencia',{plegable:true});
   const pr=l=>l.map(x=>x.split(' = '));
@@ -148,11 +148,11 @@ function armar(fecha, region){
 
   sec('cantico','Cántico evangélico');
   const tp=pascua||!!(el.especial&&/Aleluya/.test(el.especial.antifona_cantico||''));
-  const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva nos,',true]]);
+  const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva',true]]);
   S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
   S.push({k:'cantico', titulo:'Cántico de Simeón', ref:'Lc 2, 29-32', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
           tono:GR.cantico.tono, versos:GR.cantico.versos, inter:GR.cantico.traduccion_versos,
-          verso1:GR.cantico.primer_verso, inter1:GR.cantico.traduccion_primer_verso});
+          verso1:GR.cantico.primer_verso, inter1:GR.cantico.traduccion});
   S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
 
   sec('oracion','Oración');

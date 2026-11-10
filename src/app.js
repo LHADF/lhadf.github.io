@@ -141,13 +141,22 @@ function versosHTML(versos, modo, cod, lang, desde, glosas){
     return `<p class="v">${ls.map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>${gs&&gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
   }).join('');
 }
-// Versos con marcas escritas a mano: **negrita** (acento) y _cursiva_ (preparación); * mediante, † flexa
+// Versos con marcas escritas a mano: **negrita** (acento) y _cursiva_ (preparación); * mediante, † flexa.
+// glosas: por versículo, pares «latín → español» palabra por palabra, en el orden del texto (el * y la † no llevan par)
 function versosMarcados(versos, glosas){
-  const m=t=>esc(t.trim()).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/_(.+?)_/g,'<i>$1</i>');
+  const m=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/_(.+?)_/g,'<i>$1</i>');
   return versos.map((v,i)=>{
-    const [a,b]=v.split(/ \* /), [ga,gb]=String(glosas&&glosas[i]||'').split(/ \* /);
-    const ls=b!=null?[m(a)+'&nbsp;<span class="sg">*</span>', m(b)]:[m(a)], gs=glosas?(b!=null?[ga,gb]:[glosas[i]]):[];
-    return `<p class="v">${ls.map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>${gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
+    const pares=glosas&&glosas[i]||null; let k=0, resto=0;
+    const mitades=v.split(/ \* /);
+    const hs=mitades.map((h,hi)=>h.trim().split(/\s+/).map(w=>{
+        if(w==='†') return `<span class="sg">†</span>`;
+        if(!pares) return m(w);
+        let tr='';
+        if(resto===0 && k<pares.length){ const p=pares[k++]; resto=String(p[0]).trim().split(/\s+/).length; tr=p[1]; }
+        if(resto>0) resto--;
+        return `<span class="w">${m(w)}${tr?`<span class="tr">${marcas(tr)}</span>`:''}</span>`;
+      }).join(' ')+(hi<mitades.length-1?'&nbsp;<span class="sg">*</span>':''));
+    return `<p class="v${pares?' il':''}">${hs.map((h,n)=>`<span class="${n?'h2':'h1'}">${h}</span>`).join('')}</p>`;
   }).join('');
 }
 function salmoHTML(sal){

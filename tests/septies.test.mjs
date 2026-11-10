@@ -187,6 +187,25 @@ test('Completas: cada pieza cantada tiene su versión recitada (latín con tradu
   }
   const inv = secc('2026-11-05', 'vr')[0].rec;
   assert.equal(JSON.stringify(inv.map(l => [l.rol, l.todos])), JSON.stringify([['V', false], ['R', true], ['', true]]));
-  assert.match(inv[0].pares[1][0], /^✠ in adiutórium/);
+  assert.equal(inv[0].pares[1][0], '✠ in');
   assert.ok(!secc('2027-02-17', 'vr')[0].rec.flatMap(l => l.pares).some(p => /^Allel/.test(p[0])));
+});
+
+// El interlineal es palabra por palabra: las palabras latinas de los pares, en orden, son exactamente las del texto
+test('interlineal: los pares cubren el texto latino palabra por palabra', () => {
+  const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
+  const palGabc = g => g.split('%%')[1].replace(/<alt>.*$/s, '').replace(/<eu>.*?<\/eu>/gs, '').replace(/<sp>[^<]*<\/sp>|<i>T\. ?P\.<\/i>|T\. P\./g, '')
+    .replace(/\([^)]*\)/g, '').replace(/<[^>]+>|\[[^\]]*\]|[{}]/g, '').split(/\s+/).map(norm).filter(Boolean).join(' ').replace(/alle luia$/, 'alle');
+  const palPares = ps => ps.flatMap(p => String(p[0]).split(/\s+/)).map(norm).filter(Boolean).join(' ');
+  const G = B.completas.gregoriano;
+  const casos = [[G.invocacion.solemne, G.invocacion.traduccion], [G.invocacion.festivo, G.invocacion.traduccion], [G.invocacion.ferial, G.invocacion.traduccion],
+    [G.antifona.gabc, G.antifona.traduccion], [G.cantico.gabc, G.cantico.traduccion], [G.conclusion.gabc, G.conclusion.traduccion], [G.himno.gabc, G.himno.traduccion],
+    ...Object.values(G.responsorio).map(x => [x.gabc, x.traduccion]), ...Object.values(G.marianas).map(x => [x.gabc, x.traduccion])];
+  for (const [g, ps] of casos) assert.equal(palPares(ps), palGabc(g), g.split('\n')[0]);
+  const plano = v => v.replace(/\*\*|_/g, '').split(/\s+/).filter(w => w !== '*' && w !== '†').map(norm).filter(Boolean).join(' ');
+  G.cantico.versos.forEach((v, i) => assert.equal(palPares(G.cantico.traduccion_versos[i]), plano(v)));
+  assert.equal(palPares(G.cantico.traduccion), plano(G.cantico.primer_verso));
+  // los pares van palabra por palabra salvo pocas frases hechas
+  const todos = casos.flatMap(c => c[1]).concat(G.cantico.traduccion_versos.flat());
+  assert.ok(todos.filter(p => /\s/.test(String(p[0]).trim())).length <= 3);
 });
