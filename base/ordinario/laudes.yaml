@@ -1,0 +1,81 @@
+# Ordinario de Laudes: invitatorio (solo los domingos), Benedictus en español (referencia; se reza en latín, Neovulgata) y conclusión.
+nombre: Laudes
+subtitulo: Oración de la mañana
+invitatorio:
+  V: Señor, abre mis labios.
+  R: Y mi boca proclamará tu alabanza.
+  salmo:
+    titulo: Salmo 94
+    subtitulo: INVITACIÓN A LA ALABANZA DIVINA
+    texto:
+    - |-
+      Venid, aclamemos al Señor,
+      demos vítores a la Roca que nos salva;
+      entremos a su presencia dándole gracias,
+      aclamándolo con cantos.
+    - |-
+      Porque el Señor es un Dios grande,
+      soberano de todos los dioses:
+      tiene en su mano las simas de la tierra,
+      son suyas las cumbres de los montes;
+      suyo es el mar, porque él lo hizo,
+      la tierra firme que modelaron sus manos.
+    - |-
+      Venid, postrémonos por tierra,
+      bendiciendo al Señor, creador nuestro.
+      Porque él es nuestro Dios,
+      y nosotros su pueblo,
+      el rebaño que él guía.
+    - |-
+      Ojalá escuchéis hoy su voz:
+      «No endurezcáis el corazón como en Meribá,
+      como el día de Masá en el desierto;
+      cuando vuestros padres me pusieron a prueba
+      y dudaron de mí, aunque habían visto mis obras.
+    - |-
+      Durante cuarenta años
+      aquella generación me repugnó, y dije:
+      Es un pueblo de corazón extraviado,
+      que no reconoce mi camino;
+      por eso he jurado en mi cólera
+      que no entrarán en mi descanso»
+cantico_evangelico:
+  titulo: Cántico de Zacarías
+  subtitulo: EL MESÍAS Y SU PRECURSOR
+  ref: Lc 1, 68-79
+  texto:
+  - |-
+    Bendito sea el Señor, Dios de Israel,
+    porque ha visitado y redimido a su pueblo.
+    suscitándonos una fuerza de salvación
+    en la casa de David, su siervo,
+    según lo había predicho desde antiguo
+    por boca de sus santos profetas:
+  - |-
+    Es la salvación que nos libra de nuestros enemigos
+    y de la mano de todos los que nos odian;
+    ha realizado así la misericordia que tuvo con nuestros padres,
+    recordando su santa alianza
+    y el juramento que juró a nuestro padre Abraham.
+  - |-
+    Para concedernos que, libres de temor,
+    arrancados de la mano de los enemigos,
+    le sirvamos con santidad y justicia,
+    en su presencia, todos nuestros días.
+  - |-
+    Y a ti, niño, te llamarán Profeta del Altísimo,
+    porque irás delante del Señor
+    a preparar sus caminos,
+    anunciando a su pueblo la salvación,
+    el perdón de sus pecados.
+  - |-
+    Por la entrañable misericordia de nuestro Dios,
+    nos visitará el sol que nace de lo alto,
+    para iluminar a los que viven en tiniebla
+    y en sombra de muerte,
+    para guiar nuestros pasos
+    por el camino de la paz.
+conclusion:
+- V: El Señor nos bendiga, nos guarde de todo mal y nos lleve a la vida eterna.
+- R: Amén.
+- texto: Of La Tr Sx Nn Vs Cm

@@ -18,14 +18,15 @@ Cada archivo es texto YAML y se puede editar directamente en GitHub. Reglas de e
 | Carpeta | Qué hay |
 |---|---|
 | `ordinario/` | Lo que no cambia con el día: invocación, examen, responsorio, cántico evangélico, conclusión, antífonas finales de la Virgen |
-| `salterio/` | El salterio de cada hora. Completas: un juego por día de la semana |
-| `tiempo/` | Propio del tiempo. Por ahora, Completas del Triduo pascual y de la Octava de Pascua |
+| `salterio/` | El salterio de cada hora. Completas: un juego por día de la semana. Laudes: las cuatro semanas (`semana_1`…`semana_4`, de domingo a sábado) |
+| `tiempo/` | Propio del tiempo. Completas: Triduo pascual y Octava de Pascua. Laudes: por feria, con el nombre del Ordo (en los domingos, `(A)`, `(B)` o `(C)` cuando cambia con el ciclo); solo lo que cambia respecto del salterio |
+| `santoral/` | Laudes de las celebraciones, por nombre (calendario de `sync`, a revisar con el ADF): solo lo que cambia respecto del salterio y del tiempo; `fecha: variable` = movible |
 | `himnos/` | Himnos por hora y por tiempo; en cada tiempo se puede elegir cualquiera de la lista |
 | `salmos/` | Cada salmo y cántico una sola vez, por su clave (`salmo-30-2-6` = Salmo 30, 2-6) |
 | `gregoriano/` | Partituras GABC y cuándo va cada una (`completas.yaml`): invocación solemne/festiva/ferial, Salva nos y Nunc dimittis, Noctem quietam; traducción interlineal propia, literal y palabra por palabra (no la del sync, que sirve solo para lo que se canta en español); tono de los salmos |
 | `informes/` | Lo que encontró la carga: versiones distintas de un mismo texto en `sync` y la verificación |
 
-Faltan todavía: Laudes, Vísperas, Oficio de lectura, hora intermedia, santoral, comunes y lo propio de ADF.
+Laudes: base cargada (11/2026); falta armarlas en la app y revisar los propios ADF (ver `docs/laudes.md`). Faltan todavía: Vísperas, Oficio de lectura, hora intermedia y lo propio de ADF.
 
 ## Reglas de Completas (las aplica la app)
 

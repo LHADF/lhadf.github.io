@@ -1,0 +1,1146 @@
+# Salterio de Laudes: cuatro semanas (Tiempo Ordinario). Los salmos se citan por su clave (base/salmos/).
+# En los domingos, la antífona del Benedictus y la oración son propias (base/tiempo/laudes.yaml).
+semana_1:
+  domingo:
+    inv_ant: Venid, aclamemos al Señor, demos vítores a la Roca que nos salva. Aleluia.
+    himno: Es verdad que las luces del alba
+    salmodia:
+    - ant: Por ti madrugo, Dios mío, para contemplar tu fuerza y tu gloria. Aleluia.
+      salmo: salmo-62-2-9
+    - ant: 'En medio de las llamas, los tres jóvenes, unánimes, cantaban: «Bendito sea el Señor.» Aleluia.'
+      salmo: cantico-dn-3-57-88-56
+    - ant: Que el pueblo de Dios se alegre por su Rey. Aleluia.
+      salmo: salmo-149
+    lectura:
+      ref: Ap 7, 10. 12
+      texto: ¡La salvación es de nuestro Dios, que está sentado en el trono, y del Cordero! La bendición, y la gloria, y la sabiduría, y la acción de gracias, y el honor, y el poder, y la fuerza son de nuestro Dios por los siglos de los siglos. Amén.
+    responsorio:
+    - - V
+      - Cristo, Hijo de Dios vivo, ten piedad de nosotros.
+    - - R
+      - Cristo, Hijo de Dios vivo, ten piedad de nosotros.
+    - - V
+      - Tú que estás sentado a la derecha del Padre.
+    - - R
+      - Ten piedad de nosotros.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Cristo, Hijo de Dios vivo, ten piedad de nosotros.
+    preces:
+      intro: 'Glorifiquemos al Señor Jesús, luz que alumbra a todo hombre y sol de justicia que no conoce el ocaso, y digámosle:'
+      preces:
+      - - Creador de la luz, de cuya bondad recibimos, con acción de gracias, las primicias de este día;
+        - te pedimos que el recuerdo de tu santa resurrección sea nuestro gozo durante este domingo.
+      - - Que tu Espíritu Santo nos enseñe a cumplir tu voluntad,
+        - y que tu sabiduría dirija hoy todas nuestras acciones.
+      - - Que al celebrar la eucaristía de este domingo tu palabra nos llene de gozo,
+        - y que la participación en el banquete de tu amor haga crecer nuestra esperanza.
+      - - Que sepamos contemplar las maravillas que tu generosidad nos concede,
+        - y vivamos durante todo el día en acción de gracias.
+      respuesta: Tú que eres nuestra vida y nuestra salvación, Señor, ten piedad.
+    padrenuestro_intro: 'Digamos ahora todos juntos la oración que Cristo nos enseñó:'
+  lunes:
+    inv_ant: Entremos a la presencia del Señor dándole gracias.
+    himno: Dejado ya el descanso de la noche
+    salmodia:
+    - ant: A ti te suplico, Señor; por la mañana escucharás mi voz.
+      salmo: salmo-5-2-10-12-13
+    - ant: Alabamos, Dios nuestro, tu nombre glorioso.
+      salmo: cantico-1cro-29-10-13
+    - ant: Postraos ante el Señor en el atrio sagrado.
+      salmo: salmo-28
+    lectura:
+      ref: 2Ts 3, 10b-13
+      texto: Si alguno no quiere trabajar, que tampoco coma. Porque nos hemos enterado que hay entre vosotros algunos que viven desconcertados, sin trabajar nada, pero metiéndose en todo. A éstos les mandamos y les exhortamos en el Señor Jesucristo a que trabajen con sosiego para comer su propio pan. Vosotros, hermanos, no os canséis de hacer el bien.
+    responsorio:
+    - - V
+      - Bendito el Señor ahora y por siempre.
+    - - R
+      - Bendito el Señor ahora y por siempre.
+    - - V
+      - Solo él hizo maravillas.
+    - - R
+      - Ahora y por siempre.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Bendito el Señor ahora y por siempre.
+    ant_benedictus: Bendito sea el Señor, Dios nuestro.
+    preces:
+      intro: 'Proclamemos la grandeza de Cristo, lleno de gracia y del Espíritu Santo, y acudamos a él diciendo:'
+      preces:
+      - - Concédenos, Señor, un día lleno de paz, de alegría y de inocencia
+        - para que, al llegar a la noche, podamos alabarte con gozo y limpios de pecado.
+      - - Que baje hoy a nosotros tu bondad
+        - y haga prósperas las obras de nuestras manos.
+      - - Muéstranos tu rostro propicio y danos tu paz
+        - para que durante todo el día sintamos cómo tu mano nos protege.
+      - - Mira con bondad a cuantos se han encomendado a nuestras oraciones
+        - y enriquécelos con toda clase de bienes.
+      respuesta: Concédenos, Señor, tu Espíritu.
+    padrenuestro_intro: 'Terminemos nuestra oración con la plegaria que Cristo nos enseñó:'
+    oracion: Tu gracia, Señor, inspire nuestras obras, las sostenga y acompañe; para que todo nuestro trabajo brote de ti, como de su fuente, y tienda a ti, como a su fin. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  martes:
+    inv_ant: Al Señor, al gran Rey, venid, adorémosle.
+    himno: Al canto de los gallos
+    salmodia:
+    - ant: El hombre de manos inocentes y puro corazón subirá al monte del Señor.
+      salmo: salmo-23
+    - ant: Ensalzad con vuestras obras al rey de los siglos.
+      salmo: cantico-tb-13-1-10
+    - ant: El Señor merece la alabanza de los buenos.
+      salmo: salmo-32
+    lectura:
+      ref: Rm 13, 11b. 12-13a
+      texto: Ya es hora que despertéis del sueño. La noche va pasando, el día está encima; desnudémonos, pues, de las obras de las tinieblas y vistámonos de las armas de la luz. Andemos como en pleno día, con dignidad.
+    responsorio:
+    - - V
+      - Dios mío, mi escudo y peña en que me amparo.
+    - - R
+      - Dios mío, mi escudo y peña en que me amparo.
+    - - V
+      - Mi alcázar, mi libertador.
+    - - R
+      - En que me amparo.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Dios mío, mi escudo y peña en que me amparo.
+    ant_benedictus: Nos ha suscitado el Señor una fuerza de salvación, según lo había predicho por boca de sus santos profetas.
+    preces:
+      intro: 'Ya que hemos sido llamados a participar de una vocación celestial, bendigamos por ello a Jesús, el pontífice de nuestra fe, y supliquémosle diciendo:'
+      preces:
+      - - Señor Jesús, que por el bautismo has hecho de nosotros un sacerdocio real,
+        - haz que nuestra vida sea un continuo sacrificio de alabanza.
+      - - Ayúdanos, Señor, a guardar tus mandatos
+        - para que por la fuerza del Espíritu Santo nosotros permanezcamos en ti y tú en nosotros.
+      - - Danos tu sabiduría eterna
+        - para que permanezca con nosotros y con nosotros trabaje.
+      - - Concédenos ser la alegría de cuantos nos rodean
+        - y fuente de esperanza para los decaídos.
+      respuesta: Escúchanos, Señor.
+    padrenuestro_intro: 'Como hijos que somos de Dios, dirijámonos a nuestro Padre con la oración que Cristo nos enseñó:'
+    oracion: 'Escucha, Señor, nuestra oración matutina y con la luz de tu misericordia alumbra la oscuridad de nuestro corazón: para que, habiendo sido iluminados por tu claridad, no andemos nunca tras las obras de las tinieblas. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.'
+  miercoles:
+    inv_ant: Adoremos a Dios, porque él nos ha creado.
+    himno: Sentencia de Dios al hombre
+    salmodia:
+    - ant: Tu luz, Señor, nos hace ver la luz.
+      salmo: salmo-35
+    - ant: Señor, tú eres grande, tu fuerza es invencible.
+      salmo: cantico-jdt-16-2-3-15-19
+    - ant: Aclamad a Dios con gritos de júbilo.
+      salmo: salmo-46
+    lectura:
+      ref: Tb 4, 16-17. 19-20
+      texto: No hagas a nadie lo que no quieras que te hagan. Da de tu pan al hambriento y da tus vestidos al desnudo. Busca el consejo de los prudentes. Bendice al Señor en toda circunstancia, pídele que sean rectos todos tus caminos y que lleguen a buen fin todas tus sendas y proyectos.
+    responsorio:
+    - - V
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - R
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - V
+      - Dame vida con tu palabra.
+    - - R
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Inclina, Señor, mi corazón a tus preceptos.
+    ant_benedictus: Realiza, Señor, con nosotros la misericordia y recuerda tu santa alianza.
+    preces:
+      intro: 'Demos gracias a Cristo y alabémoslo porque ha querido santificarnos y llamarnos hermanos suyos; digámosle, pues, confiados:'
+      preces:
+      - - Concédenos, Señor, consagrar el principio de este día en honor de tu resurrección
+        - y haz que todos los trabajos que realicemos durante esta jornada te sean agradables.
+      - - Haz que sepamos descubrirte a ti en todos nuestros hermanos,
+        - sobre todo en los tristes, en los más pobres y en los que son menos útiles a los ojos del mundo.
+      - - Tú que para aumentar nuestra alegría y afianzar nuestra salvación nos das el nuevo día, signo de tu amor,
+        - renuévanos hoy y siempre para gloria de tu nombre.
+      - - Haz que durante este día estemos en paz con todo el mundo
+        - y que a nadie devolvamos mal por mal.
+      respuesta: Santifica, Señor, a tus hermanos.
+    padrenuestro_intro: 'Tal como Cristo nos enseñó, terminemos nuestra oración diciendo:'
+    oracion: 'Señor Dios, salvador nuestro, danos tu ayuda para que siempre deseemos las obras de la luz y realicemos la verdad: así, los que de ti hemos nacido en el bautismo, seremos tus testigos ante los hombres. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.'
+  jueves:
+    inv_ant: Venid, adoremos al Señor, porque él es nuestro Dios.
+    himno: Crece la luz bajo tu hermosa mano
+    salmodia:
+    - ant: Despertad, cítara y arpa; despertaré a la aurora.
+      salmo: salmo-56
+    - ant: «Mi pueblo se saciará de mis bienes», dice el Señor.
+      salmo: cantico-jr-31-10-14
+    - ant: Grande es el Señor y muy digno de alabanza en la ciudad de nuestro Dios.
+      salmo: salmo-47
+    lectura:
+      ref: Is 66,1-2
+      texto: 'Así dice el Señor: «El cielo es mi trono y la tierra el estrado de mis pies: ¿Qué templo podréis construirme?; ¿o qué lugar para mi descanso? Todo esto lo hicieron mis manos, todo es mío —oráculo del Señor—. En ése pondré mis ojos: en el humilde y el abatido que se estremece ante mis palabras.»'
+    responsorio:
+    - - V
+      - Te invoco de todo corazón, respóndeme, Señor.
+    - - R
+      - Te invoco de todo corazón, respóndeme, Señor.
+    - - V
+      - Guardaré tus leyes.
+    - - R
+      - Respóndeme, Señor.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te invoco de todo corazón, respóndeme, Señor.
+    ant_benedictus: Sirvamos al Señor con santidad y nos librará de la mano de nuestros enemigos.
+    preces:
+      intro: 'Demos gracias a Cristo que nos ha dado la luz del día y supliquémosle diciendo:'
+      preces:
+      - - Tú que te entregaste como víctima por nuestros pecados,
+        - acepta los deseos y las acciones de este día.
+      - - Tú que nos alegras con la claridad del nuevo día,
+        - sé tú mismo el lucero brillante de nuestros corazones.
+      - - Haz que seamos bondadosos y comprensivos con los que nos rodean
+        - para que logremos así ser imágenes de tu bondad.
+      - - En la mañana haznos escuchar tu gracia
+        - y que tu gozo sea hoy nuestra fortaleza.
+      respuesta: Bendícenos y santifícanos, Señor.
+    padrenuestro_intro: 'Fieles a la recomendación del salvador, digamos llenos de confianza filial:'
+    oracion: Dios todopoderoso y eterno, humildemente acudimos a ti, al empezar el día, a media jornada y al atardecer, para pedirte que, alejando de nosotros las tinieblas del pecado, nos hagas alcanzar la luz verdadera que es Cristo. Él, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  viernes:
+    inv_ant: Dad gracias al Señor, porque es eterna su misericordia.
+    himno: Edificaste una torre
+    salmodia:
+    - ant: Aceptarás los sacrificios, ofrendas y holocaustos, sobre tu altar, Señor.
+      salmo: salmo-50
+    - ant: Con el Señor triunfará y se gloriará la estirpe de Israel.
+      salmo: cantico-is-45-15-25
+    - ant: Entrad en la presencia del Señor con aclamaciones.
+      salmo: salmo-99
+    lectura:
+      ref: Ef 4, 29-32
+      texto: No salga de vuestra boca palabra desedificante, sino la que sirva para la necesaria edificación, comunicando la gracia a los oyentes. Y no provoquéis más al santo Espíritu de Dios, con el cual fuisteis marcados para el día de la redención. Desterrad de entre vosotros todo exacerbamiento, animosidad, ira, pendencia, insulto y toda clase de maldad. Sed, por el contrario, bondadosos y compasivos unos con otros, y perdonaos mutuamente como también Dios os ha perdonado en Cristo.
+    responsorio:
+    - - V
+      - En la mañana hazme escuchar tu gracia.
+    - - R
+      - En la mañana hazme escuchar tu gracia.
+    - - V
+      - Indícame el camino que he de seguir.
+    - - R
+      - Hazme escuchar tu gracia.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - En la mañana hazme escuchar tu gracia.
+    ant_benedictus: El Señor ha visitado y redimido a su pueblo.
+    preces:
+      intro: 'Adoremos a Cristo, que salvó al mundo con su cruz, y supliquémosle diciendo:'
+      preces:
+      - - Señor Jesucristo, cuya claridad es nuestro sol y nuestro día,
+        - haz que, desde el amanecer, desaparezca de nosotros todo sentimiento malo.
+      - - Vela, Señor, sobre nuestros pensamientos, palabras y obras,
+        - a fin de que nuestro día sea agradable ante tus ojos.
+      - - Aparta de nuestros pecados tu vista,
+        - y borra en nosotros toda culpa.
+      - - Por tu cruz y tu resurrección,
+        - llénanos del gozo del Espíritu Santo.
+      respuesta: Señor, ten misericordia de nosotros.
+    padrenuestro_intro: 'Ya que somos hijos de Dios, oremos a nuestro Padre como Cristo nos enseñó:'
+    oracion: 'Dios misericordioso, que has iluminado las tinieblas de nuestra ignorancia con la luz de tu palabra: acrecienta en nosotros la fe que tú mismo nos has dado; que ninguna tentación pueda nunca destruir el ardor de la fe y de la caridad que tu gracia ha encendido en nuestro Espíritu. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.'
+  sabado:
+    inv_ant: Del Señor es la tierra y cuanto la llena; venid, adorémosle.
+    himno: En el nombre del Padre, del Hijo y del Espíritu
+    salmodia:
+    - ant: Me adelanto a la aurora pidiendo auxilio.
+      salmo: salmo-118-145-152
+    - ant: Mi fuerza y mi poder es el Señor, él fue mi salvación.
+      salmo: cantico-ex-15-1-4-8-13-17-18
+    - ant: Alabad al Señor, todas las naciones.
+      salmo: salmo-116
+    lectura:
+      ref: 2Pe 1, 10-11
+      texto: Hermanos, poned más empeño todavía en consolidar vuestra vocación y elección. Si hacéis así, nunca jamás tropezaréis; de este modo se os concederá generosamente la entrada en el reino eterno de nuestro Señor y salvador Jesucristo.
+    responsorio:
+    - - V
+      - A ti grito, Señor, tú eres mi refugio.
+    - - R
+      - A ti grito, Señor, tú eres mi refugio.
+    - - V
+      - Mi heredad en el país de la vida.
+    - - R
+      - Tú eres mi refugio.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - A ti grito, Señor, tú eres mi refugio.
+    ant_benedictus: Ilumina, Señor, a los que viven en tiniebla y en sombra de muerte.
+    preces:
+      intro: 'Bendigamos a Cristo que para ser ante Dios el pontífice misericordioso y fiel de los hombres se hizo en todo semejante a nosotros, y supliquémosle diciendo:'
+      preces:
+      - - Señor, sol de justicia, que nos iluminaste en el bautismo,
+        - te consagramos este nuevo día.
+      - - Que sepamos bendecirte en cada uno de los momentos de nuestra jornada
+        - y glorifiquemos tu nombre con cada una de nuestras acciones.
+      - - Tú que tuviste por madre a María, siempre dócil a tu palabra,
+        - encamina hoy nuestros pasos para que obremos también como ella según tu voluntad.
+      - - Haz que mientras vivimos aún en este mundo que pasa anhelemos la vida eterna
+        - y por la fe, la esperanza y el amor vivamos ya contigo en tu reino.
+      respuesta: Muéstranos, Señor, los tesoros de tu amor.
+    padrenuestro_intro: 'Con la misma confianza que tienen los hijos con su padre, acudamos nosotros a nuestro Dios, diciéndole:'
+    oracion: Te pedimos, Señor, que la claridad de la resurrección de tu Hijo ilumine las dificultades de nuestra vida; que no temamos ante la oscuridad de la muerte y podamos llegar un día a la luz que no tiene fin. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+semana_2:
+  domingo:
+    inv_ant: Pueblo del Señor, rebaño que él guía, bendice a tu Dios. Aleluia.
+    himno: Cristo, el Señor
+    salmodia:
+    - ant: Bendito el que viene en nombre del Señor. Aleluia.
+      salmo: salmo-117
+    - ant: Cantemos un himno al Señor nuestro Dios. Aleluia.
+      salmo: cantico-dn-3-52-57
+    - ant: Alabad al Señor por su inmensa grandeza. Aleluia.
+      salmo: salmo-150
+    lectura:
+      ref: Ez 36, 25-27
+      texto: 'Derramaré sobre vosotros un agua pura que os purificará: de todas vuestras inmundicias e idolatrías os he de purificar; y os daré un corazón nuevo, y os infundiré un espíritu nuevo; arrancaré de vuestra carne el corazón de piedra, y os daré un corazón de carne. Os infundiré mi espíritu, y haré que caminéis según mis preceptos, y que guardéis y cumpláis mis mandatos.'
+    responsorio:
+    - - V
+      - Te damos gracias, ¡oh Dios!, invocando tu nombre.
+    - - R
+      - Te damos gracias, ¡oh Dios!, invocando tu nombre.
+    - - V
+      - Pregonando tus maravillas.
+    - - R
+      - Invocando tu nombre.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te damos gracias, ¡oh Dios!, invocando tu nombre.
+    preces:
+      intro: 'Invoquemos, hermanos, a nuestro Salvador, que ha venido al mundo para ser «Dios-con-nosotros», y digámosle confiadamente:'
+      preces:
+      - - Señor Jesús, sol que nace de lo alto y primicia de la humanidad resucitada,
+        - haz que siguiéndote a ti no caminemos nunca en sombras de muerte, sino que tengamos siempre la luz de la vida.
+      - - Que sepamos descubrir, Señor, cómo todas las creaturas están llenas de tus perfecciones,
+        - para que así, en todas ellas, sepamos contemplarte a ti.
+      - - No permitas, Señor, que hoy nos dejemos vencer por el mal,
+        - antes danos tu fuerza para que venzamos al mal a fuerza del bien.
+      - - Tú que, bautizado por Juan en el Jordán, fuiste ungido con el Espíritu Santo,
+        - asístenos durante este día para que actuemos movidos por este mismo Espíritu.
+      respuesta: Señor Jesús, rey de la gloria, sé tú nuestra luz y nuestro gozo.
+    padrenuestro_intro: 'Por Jesús nos llamamos y somos hijos de Dios; por ello nos atrevemos a decir:'
+  lunes:
+    inv_ant: Demos vítores al Señor, aclamándolo con cantos.
+    himno: Alfarero del hombre, mano trabajadora
+    salmodia:
+    - ant: ¿Cuándo entraré a ver el rostro de Dios?
+      salmo: salmo-41
+    - ant: Muéstranos, Señor, tu gloria y tu compasión.
+      salmo: cantico-sir-36-1-7-13-16
+    - ant: Bendito eres, Señor, en la bóveda del cielo.
+      salmo: salmo-18-a
+    lectura:
+      ref: Jr 15, 16
+      texto: Cuando encontraba palabras tuyas las devoraba; tus palabras eran mi gozo y la alegría de mi corazón, porque tu nombre fue pronunciado sobre mí, ¡Señor, Dios de los ejércitos!
+    responsorio:
+    - - V
+      - Aclamad, justos, al Señor, que merece la alabanza de los buenos.
+    - - R
+      - Aclamad, justos, al Señor, que merece la alabanza de los buenos.
+    - - V
+      - Cantadle un cántico nuevo.
+    - - R
+      - Que merece la alabanza de los buenos.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Aclamad, justos, al Señor, que merece la alabanza de los buenos.
+    ant_benedictus: Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo.
+    preces:
+      intro: 'Demos gracias a nuestro salvador que ha hecho de nosotros un pueblo de reyes y sacerdotes, y digámosle:'
+      preces:
+      - - 'Señor Jesús, sacerdote eterno, que has querido que tu pueblo participara de tu sacerdocio:'
+        - haz que ofrezcamos siempre sacrificios espirituales, agradables al Padre.
+      - - 'Danos, Señor, la abundancia de los frutos del Espíritu Santo:'
+        - comprensión, bondad, amabilidad.
+      - - Que la luz de la fe ilumine este nuevo día
+        - y que durante el mismo caminemos por las sendas del amor.
+      - - Haz que busquemos siempre el bien de nuestros hermanos
+        - y les ayudemos a progresar en su salvación.
+      respuesta: Consérvanos, Señor, en tu servicio.
+    padrenuestro_intro: 'Con el gozo que nos da el sabernos hijos de Dios, digamos confiadamente:'
+    oracion: 'Señor, Dios todopoderoso, que nos has hecho llegar al comienzo de este día: danos tu ayuda para que no caigamos hoy en pecado, sino que nuestras palabras, pensamientos y acciones sigan el camino de tus mandatos. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.'
+  martes:
+    inv_ant: Al Señor, al Dios grande, venid, adorémosle.
+    himno: Te damos gracias, Señor
+    salmodia:
+    - ant: Envíame, Señor, tu luz y tu verdad.
+      salmo: salmo-42
+    - ant: Protégenos, Señor, todos los días de nuestra vida.
+      salmo: cantico-is-38-10-14-17-20
+    - ant: ¡Oh Dios!, tu mereces un himno en Sión.
+      salmo: salmo-64
+    lectura:
+      ref: 1Ts 5, 4-5
+      texto: No viváis, hermanos, en tinieblas para que el día del Señor no os sorprenda como ladrón; porque todos sois hijos de la luz e hijos del día. No somos de la noche ni de las tinieblas.
+    responsorio:
+    - - V
+      - Escucha mi voz, Señor; espero en tu palabra.
+    - - R
+      - Escucha mi voz, Señor; espero en tu palabra.
+    - - V
+      - Me adelanto a la aurora pidiendo auxilio.
+    - - R
+      - Espero en tu palabra.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Escucha mi voz, Señor; espero en tu palabra.
+    ant_benedictus: De la mano de nuestros enemigos, líbranos, Señor.
+    preces:
+      intro: 'Bendigamos a nuestro Salvador, que con su resurrección ha iluminado el mundo, y digámosle suplicantes:'
+      preces:
+      - - Señor Jesús, al consagrar nuestra oración matinal en memoria de tu santa resurrección,
+        - te pedimos que la esperanza de participar de tu gloria ilumine todo nuestro día.
+      - - 'Te ofrecemos, Señor, los deseos y proyectos de nuestra jornada:'
+        - dígnate aceptarlos y bendecirlos como primicia de nuestro día.
+      - - Concédenos crecer hoy en tu amor,
+        - a fin de que todo concurra para nuestro bien y el de nuestros hermanos.
+      - - Haz, Señor, que el ejemplo de nuestra vida resplandezca como una luz ante los hombres,
+        - para que todos den gloria al Padre que está en los cielos.
+      respuesta: Haz, Señor, que caminemos por tu senda.
+    padrenuestro_intro: 'Porque deseamos que la luz de Cristo ilumine a todos los hombres, pidamos al Padre que su reino llegue a nosotros:'
+    oracion: 'Señor Jesucristo, luz verdadera que alumbras a todo hombre y le muestras el camino de la salvación: concédenos la abundancia de tu gracia para que preparemos, delante de ti, sendas de justicia y de paz. Tú que vives y reinas con el Padre, en la unidad del Espíritu Santo y eres Dios, por los siglos de los siglos.'
+  miercoles:
+    inv_ant: Aclama al Señor, tierra entera, servid al Señor con alegría.
+    himno: Nacidos de la luz, hijos del día
+    salmodia:
+    - ant: 'Dios mío, tus caminos son santos: ¿qué dios es grande como nuestro Dios?'
+      salmo: salmo-76
+    - ant: Mi corazón se regocija por el Señor, que humilla y enaltece.
+      salmo: cantico-1s-2-1-10
+    - ant: El Señor reina, la tierra goza.
+      salmo: salmo-96
+    lectura:
+      ref: Rm 8, 35. 37
+      texto: ¿Quién podrá apartarnos del amor de Cristo? ¿La aflicción? ¿La angustia? ¿La persecución? ¿El hambre? ¿La desnudez? ¿El peligro? ¿La espada? En todo esto vencemos fácilmente por aquel que nos ha amado.
+    responsorio:
+    - - V
+      - Bendigo al Señor en todo momento.
+    - - R
+      - Bendigo al Señor en todo momento.
+    - - V
+      - Su alabanza está siempre en mi boca.
+    - - R
+      - En todo momento.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Bendigo al Señor en todo momento.
+    ant_benedictus: Sirvamos al Señor con santidad todos nuestros días.
+    preces:
+      intro: 'Oremos a nuestro Señor Jesucristo, que prometió estar con nosotros todos los días hasta el fin del mundo, y digámosle confiados:'
+      preces:
+      - - 'Quédate con nosotros, Señor, durante todo el día:'
+        - que la luz de tu gracia no conozca nunca el anochecer en nuestras vidas.
+      - - Que el trabajo de este día sea como una oblación sin defecto,
+        - y que sea agradable a tus ojos.
+      - - Que en todas nuestras palabras y acciones seamos hoy luz del mundo
+        - y sal de la tierra para cuantos nos traten.
+      - - Que la gracia del Espíritu Santo habite en nuestros corazones y resplandezca en nuestras obras
+        - para que así permanezcamos en tu amor y en tu alabanza.
+      respuesta: Escúchanos, Señor.
+    padrenuestro_intro: 'Terminemos nuestra oración diciendo juntos las palabras del Señor y pidiendo al Padre que nos libre de todo mal:'
+    oracion: Envía, Señor, a nuestros corazones la abundancia de tu luz, para que, avanzando siempre por el camino de tus mandatos, nos veamos libres de todo error. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  jueves:
+    inv_ant: Entrad en la presencia del Señor con aclamaciones.
+    himno: Señor, tú me llamaste
+    salmodia:
+    - ant: Despierta tu poder, Señor, y ven a salvarnos.
+      salmo: salmo-79
+    - ant: Anunciad a toda la tierra que el señor hizo proezas.
+      salmo: cantico-is-12-1-6
+    - ant: Aclamad a Dios, nuestra fuerza.
+      salmo: salmo-80
+    lectura:
+      ref: Rm 14, 17-19
+      texto: El reino de Dios no es comida ni bebida, sino justicia y paz y gozo en el Espíritu Santo, pues el que en esto sirve a Cristo es grato a Dios y acepto a los hombres. Por tanto, trabajemos por la paz y por nuestra mutua edificación.
+    responsorio:
+    - - V
+      - Velando medito en ti, Señor.
+    - - R
+      - Velando medito en ti, Señor.
+    - - V
+      - Porque fuiste mi auxilio.
+    - - R
+      - Medito en ti, Señor.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Velando medito en ti, Señor.
+    ant_benedictus: Anuncia, Señor, la salvación a tu pueblo y perdónanos nuestros pecados.
+    preces:
+      intro: 'Bendigamos a Dios, nuestro Padre, que mira siempre con amor a sus hijos y nunca desatiende sus súplicas, y digámosle con humildad:'
+      preces:
+      - - Te damos gracias, Señor, porque nos has iluminado con la luz de Jesucristo;
+        - que esta claridad ilumine hoy todos nuestros actos.
+      - - Que tu sabiduría nos dirija en nuestra jornada;
+        - así andaremos por sendas de vida nueva.
+      - - Ayúdanos a superar con fortaleza las adversidades
+        - y haz que te sirvamos con generosidad de espíritu.
+      - - Dirige y santifica los pensamientos, palabras y obras de nuestro día
+        - y danos un espíritu dócil a tus inspiraciones.
+      respuesta: Ilumínanos, Señor.
+    padrenuestro_intro: 'Dirijamos ahora, todos juntos, nuestra oración al Padre y digámosle:'
+    oracion: A ti, Señor, que eres la luz verdadera y la fuente misma de toda luz, te pedimos humildemente que meditando fielmente tu palabra vivamos siempre en la claridad de tu luz. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  viernes:
+    inv_ant: El Señor es bueno, bendecid su nombre.
+    himno: Te doy gracias, Señor
+    salmodia:
+    - ant: Un corazón quebrantado y humillado, tú no lo desprecias, Señor.
+      salmo: salmo-50
+    - ant: En tu juicio, Señor, acuérdate de la misericordia.
+      salmo: cantico-ha-3-2-4-13a-15-19
+    - ant: Glorifica al Señor, Jerusalén.
+      salmo: salmo-147
+    lectura:
+      ref: Ef 2,13-16
+      texto: 'Ahora estáis en Cristo Jesús. Ahora, por la sangre de Cristo, estáis cerca los que antes estabais lejos. Él es nuestra paz. Él ha hecho de los dos pueblos, judíos y gentiles, una sola cosa, derribando con su cuerpo el muro que los separaba: el odio. Él ha abolido la ley con sus mandamientos y reglas, haciendo las paces, para crear en él un solo hombre nuevo. Reconcilió con Dios a los dos pueblos, uniéndolos en un solo cuerpo mediante la cruz, dando muerte en él al odio.'
+    responsorio:
+    - - V
+      - Invoco al Dios Altísimo, al Dios que hace tanto por mí.
+    - - R
+      - Invoco al Dios Altísimo, al Dios que hace tanto por mí.
+    - - V
+      - Desde el cielo me enviará la salvación.
+    - - R
+      - El Dios que hace tanto por mí.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo
+    - - R
+      - Invoco al Dios Altísimo, al Dios que hace tanto por mí.
+    ant_benedictus: Por la entrañable misericordia de nuestro Dios, nos visitará el sol que nace de lo alto.
+    preces:
+      intro: 'Adoremos a Cristo, que se ofreció a Dios como sacrificio sin mancha para purificar nuestras conciencias de las obras muertas, y digámosle con fe:'
+      preces:
+      - - Tú que nos has dado la luz del nuevo día,
+        - concédenos también caminar durante sus horas por sendas de vida nueva.
+      - - Tú que todo lo has creado con tu poder y con tu providencia lo conservas,
+        - ayúdanos a descubrirte presente en todas tus creaturas.
+      - - Tú que has sellado con tu sangre una alianza nueva y eterna,
+        - haz que, obedeciendo siempre tus mandatos, permanezcamos fieles a esa alianza.
+      - - Tú que colgado en la cruz quisiste que de tu costado manara sangre y agua,
+        - purifica con esta agua nuestros pecados y alegra con este manantial a la ciudad de Dios.
+      respuesta: En tu voluntad, Señor, encontramos nuestra paz.
+    padrenuestro_intro: 'Ya que Dios nos ha adoptado como hijos, oremos al Padre como nos enseñó Jesucristo:'
+    oracion: Señor, Dios todopoderoso, te pedimos nos concedas que del mismo modo que hemos cantado tus alabanzas en esta celebración matutina así también las podamos cantar plenamente en la asamblea de tus santos por toda la eternidad. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  sabado:
+    inv_ant: Escuchemos la voz del Señor y entremos en su descanso.
+    himno: Señor, yo sé que, en la mañana pura
+    salmodia:
+    - ant: Por la mañana proclamamos, Señor, tu misericordia y de noche tu fidelidad.
+      salmo: salmo-91
+    - ant: Dad gloria a nuestro Dios.
+      salmo: cantico-dt-32-1-12
+    - ant: ¡Qué admirable es tu nombre, Señor, en toda la tierra!
+      salmo: salmo-8
+    lectura:
+      ref: Rm 12, 14-16a
+      texto: Bendecid a los que os persiguen, no maldigáis. Alegraos con los que se alegran; llorad con los que lloran. Tened un mismo sentir entre vosotros, sin apetecer grandezas; atraídos más bien por lo humilde.
+    responsorio:
+    - - V
+      - Te aclamarán mis labios, Señor, cuando salmodie para ti.
+    - - R
+      - Te aclamarán mis labios, Señor, cuando salmodie para ti.
+    - - V
+      - Mi lengua recitará tu auxilio.
+    - - R
+      - Cuando salmodie para ti.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te aclamarán mis labios, Señor, cuando salmodie para ti.
+    ant_benedictus: Guía nuestros pasos, Dios de Israel, por el camino de la paz.
+    preces:
+      intro: 'Celebremos la sabiduría y la bondad de Cristo, que ha querido ser amado y servido en los hermanos, especialmente en los que sufren, y supliquémosle insistentemente diciendo:'
+      preces:
+      - - Al recordar esta mañana tu santa resurrección,
+        - te pedimos, Señor, que extiendas los beneficios de tu redención a todos los hombres.
+      - - Que todo el día de hoy sepamos dar buen testimonio del nombre cristiano
+        - y ofrezcamos nuestra jornada como un culto espiritual agradable al Padre.
+      - - Enséñanos, Señor, a descubrir tu imagen en todos los hombres
+        - y a saberte servir a ti en cada uno de ellos.
+      - - Cristo, Señor nuestro, vid verdadera de la que nosotros somos sarmientos,
+        - haz que permanezcamos en ti y demos fruto abundante para que con ello sea glorificado nuestro Padre que está en el cielo.
+      respuesta: Señor, acrecienta nuestro amor.
+    padrenuestro_intro: 'Con la confianza que nos da nuestra fe, acudamos ahora al Padre, diciendo como Cristo nos enseñó:'
+    oracion: Que nuestra voz, Señor, nuestro espíritu y toda nuestra vida sean una continua alabanza en tu honor, y ya que toda nuestra existencia es un don gratuito de tu liberalidad, haz que también cada una de nuestras acciones te esté plenamente dedicada. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+semana_3:
+  domingo:
+    inv_ant: Venid, aclamemos al Señor, demos vítores a la Roca que nos salva. Aleluia.
+    himno: Las sombras oscuras huyen
+    salmodia:
+    - ant: El Señor es admirable en el cielo. Aleluia.
+      salmo: salmo-92
+    - ant: Tú, Señor, eres alabado y ensalzado por los siglos. Aleluia.
+      salmo: cantico-dn-3-57-88-56
+    - ant: Alabad al Señor en el cielo. Aleluia.
+      salmo: salmo-148
+    lectura:
+      ref: Ez 37, 12b-14
+      texto: 'Así dice el Señor. «Yo mismo abriré vuestros sepulcros, y os haré salir de vuestros sepulcros, pueblo mío, y os traeré a la tierra de Israel. Y cuando abra vuestros sepulcros y os saque de vuestros sepulcros, pueblo mío, sabréis que yo soy el Señor: os infundiré mi espíritu y viviréis, os colocaré en vuestra tierra y sabréis que yo el Señor lo digo y lo hago.» Oráculo del Señor.'
+    responsorio:
+    - - V
+      - Cristo, Hijo de Dios vivo, ten piedad de nosotros.
+    - - R
+      - Cristo, Hijo de Dios vivo, ten piedad de nosotros.
+    - - V
+      - Tú que estás sentado a la derecha del Padre.
+    - - R
+      - Ten piedad de nosotros.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Cristo, Hijo de Dios vivo, ten piedad de nosotros.
+    preces:
+      intro: 'Invoquemos a Dios Padre que envió al Espíritu Santo, para que con su luz santísima penetrara las almas de sus fieles, y digámosle:'
+      preces:
+      - - Te bendecimos, Señor, luz nuestra,
+        - porque a gloria de tu nombre nos has hecho llegar a este nuevo día.
+      - - Tú que por la resurrección de tu Hijo quisiste iluminar el mundo,
+        - haz que tu Iglesia difunda entre todos los hombres la alegría pascual.
+      - - Tú que por el Espíritu de la verdad adoctrinaste a los discípulos de tu Hijo,
+        - envía este mismo Espíritu a tu Iglesia para que permanezca siempre fiel a ti.
+      - - Tú que eres luz para todos los hombres, acuérdate de los que viven aún en las tinieblas
+        - y abre los ojos de su mente para que te reconozcan a ti, único Dios verdadero.
+      respuesta: Ilumina, Señor, a tu pueblo.
+    padrenuestro_intro: 'Por Jesús hemos sido hechos hijos de Dios; por esto nos atrevemos a decir:'
+  lunes:
+    inv_ant: Entremos a la presencia del Señor dándole gracias.
+    himno: Eres la luz y siembras claridades
+    salmodia:
+    - ant: Dichosos los que viven en tu casa, Señor.
+      salmo: salmo-83
+    - ant: Venid, subamos al monte del Señor.
+      salmo: cantico-is-2-2-5
+    - ant: Cantad al Señor, bendecid su nombre.
+      salmo: salmo-95
+    lectura:
+      ref: St 2, 12-13
+      texto: Hablad y actuad como quienes han de ser juzgados por una ley de libertad. Pues habrá un juicio sin misericordia para quien no practicó misericordia; pero la misericordia triunfa sobre el juicio.
+    responsorio:
+    - - V
+      - Bendito el Señor ahora y por siempre.
+    - - R
+      - Bendito el Señor ahora y por siempre.
+    - - V
+      - Solo él hizo maravillas.
+    - - R
+      - Ahora y por siempre.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Bendito el Señor ahora y por siempre.
+    ant_benedictus: Bendito sea el Señor, Dios nuestro.
+    preces:
+      intro: 'Invoquemos a Dios, que puso en el mundo a los hombres para que trabajasen concordes para su gloria, y digámosle:'
+      preces:
+      - - Te bendecimos, Señor, creador del universo, porque has conservado nuestra vida hasta el día de hoy;
+        - Haz que en toda nuestra jornada te alabemos y te bendigamos.
+      - - Míranos benigno, Señor, ahora que vamos a comenzar nuestra labor cotidiana;
+        - haz que, obrando conforme a tu voluntad, cooperemos en tu obra.
+      - - Que nuestro trabajo de hoy sea provechoso para nuestros hermanos,
+        - y así todos juntos edifiquemos un mundo grato a tus ojos.
+      - - A nosotros y a todos los que hoy entrarán en contacto con nosotros,
+        - concédenos el gozo y la paz.
+      respuesta: Haz, Señor, que te glorifiquemos.
+    padrenuestro_intro: 'Llenos de alegría por nuestra condición de hijos de Dios, digamos confiadamente:'
+    oracion: Señor Dios, rey de cielos y tierra, dirige y santifica en este día nuestros cuerpos y nuestros corazones, nuestros sentidos, palabras y acciones, según tu ley y tus mandatos; para que, con tu auxilio, podamos ofrecerte hoy en todas nuestras actividades un sacrificio de alabanza grato a tus ojos. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  martes:
+    inv_ant: Al Señor, al gran Rey, venid, adorémosle.
+    himno: Gracias, Señor, por el día
+    salmodia:
+    - ant: Señor, has sido bueno con tu tierra, has perdonado la culpa de tu pueblo.
+      salmo: salmo-84
+    - ant: Mi alma te ansía de noche, Señor; mi espíritu madruga por ti.
+      salmo: cantico-is-26-1-4-7-9-12
+    - ant: Ilumina, Señor, tu rostro sobre nosotros.
+      salmo: salmo-66
+    lectura:
+      ref: 1Jn 4, 14-15
+      texto: Nosotros hemos visto y damos testimonio de que el Padre envió a su Hijo para ser Salvador del mundo. Quien confiese que Jesús es el Hijo de Dios, Dios permanece en él y él en Dios.
+    responsorio:
+    - - V
+      - Dios mío, mi escudo y peña en que me amparo.
+    - - R
+      - Dios mío, mi escudo y peña en que me amparo.
+    - - V
+      - Mi alcázar, mi libertador.
+    - - R
+      - En que me amparo.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Dios mío, mi escudo y peña en que me amparo.
+    ant_benedictus: Nos ha suscitado el Señor una fuerza de salvación, según lo había predicho por boca de sus santos profetas.
+    preces:
+      intro: 'Adoremos a Cristo, que con su sangre ha adquirido el pueblo de la nueva alianza, y digámosle suplicantes:'
+      preces:
+      - - Rey y redentor nuestro, escucha la alabanza que te dirige tu Iglesia en el comienzo de este día,
+        - y haz que no deje nunca de glorificarte.
+      - - Que nunca, Señor, quedemos confundidos
+        - los que en ti ponemos nuestra fe y nuestra esperanza.
+      - - Mira compasivo nuestra debilidad y ven en ayuda nuestra,
+        - ya que sin ti nada podemos hacer.
+      - - Acuérdate de los pobres y desvalidos;
+        - que este día que comienza les traiga solaz y alegría.
+      respuesta: Acuérdate, Señor, de tu pueblo.
+    padrenuestro_intro: 'Ya que deseamos que la luz de Cristo ilumine a todos los hombres, pidamos al Padre que a todos llegue el reino de su Hijo:'
+    oracion: Dios todopoderoso, de quien dimana la bondad y hermosura de todo lo creado; haz que comencemos este día con ánimo alegre, y que realicemos nuestras obras movidos por el amor a ti y a los hermanos. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  miercoles:
+    inv_ant: Adoremos a Dios, porque él nos ha creado.
+    himno: ¡Detente, aurora de este nuevo día
+    salmodia:
+    - ant: Alegra el alma de tu siervo, pues levanto mi alma hacia ti, Señor.
+      salmo: salmo-85
+    - ant: Dichoso el hombre que procede con justicia y habla con rectitud.
+      salmo: cantico-is-33-13-16
+    - ant: Aclamad al Rey y Señor.
+      salmo: salmo-97
+    lectura:
+      ref: Jb 1, 21; 2, 10b
+      texto: Desnudo salí del vientre de mi madre y desnudo volveré a él. El Señor me lo dio, el Señor me lo quitó, bendito sea el nombre del Señor. Si aceptamos de Dios los bienes, ¿no vamos a aceptar los males?
+    responsorio:
+    - - V
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - R
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - V
+      - Dame vida con tu palabra.
+    - - R
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Inclina, Señor, mi corazón a tus preceptos.
+    ant_benedictus: Realiza, Señor, con nosotros la misericordia y recuerda tu santa alianza.
+    preces:
+      intro: 'Invoquemos a Cristo, que se entregó a sí mismo por la Iglesia, y le da alimento y calor, diciendo:'
+      preces:
+      - - Bendito seas, Señor, Pastor de la Iglesia, que nos vuelves a dar hoy la luz y la vida;
+        - haz que sepamos agradecerte este magnífico don.
+      - - Mira con amor a tu grey, que has congregado en tu nombre;
+        - haz que no se pierda ni uno solo de los que el Padre te ha dado.
+      - - Guía a tu Iglesia por el camino de tus mandatos,
+        - y haz que el Espíritu Santo la conserve en la fidelidad.
+      - - Que tus fieles, Señor, cobren nueva vida participando en la mesa de tu pan y de tu palabra,
+        - para que, con la fuerza de este alimento, te sigan con alegría.
+      respuesta: Acuérdate, Señor, de tu Iglesia.
+    padrenuestro_intro: 'Concluyamos nuestra oración diciendo juntos las palabras de Jesús, nuestro Maestro:'
+    oracion: Señor Dios, que nos has creado con tu sabiduría y nos gobiernas con tu providencia, infunde en nuestras almas la claridad de tu luz, y haz que nuestra vida y nuestras acciones estén del todo consagradas a ti. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  jueves:
+    inv_ant: Venid, adoremos al Señor, porque él es nuestro Dios.
+    himno: Señor, cuando florece un nuevo día
+    salmodia:
+    - ant: ¡Qué pregón tan glorioso para ti, ciudad de Dios!
+      salmo: salmo-86
+    - ant: El Señor llega con poder, y su recompensa lo precede.
+      salmo: cantico-is-40-10-17
+    - ant: Ensalzad al Señor, Dios nuestro, postraos ante el estrado de sus pies.
+      salmo: salmo-98
+    lectura:
+      ref: 1Pe 4, 10-11
+      texto: Que cada uno, con el don que ha recibido, se ponga al servicio de los demás, como buenos administradores de la multiforme gracia de Dios. El que toma la palabra que hable palabra de Dios. El que se dedica al servicio que lo haga en virtud del encargo recibido de Dios. Así, Dios será glorificado en todo, por medio de Jesucristo, Señor nuestro, cuya es la gloria y el imperio por los siglos de los siglos. Amén.
+    responsorio:
+    - - V
+      - Te invoco de todo corazón, respóndeme, Señor.
+    - - R
+      - Te invoco de todo corazón, respóndeme, Señor.
+    - - V
+      - Guardaré tus leyes.
+    - - R
+      - Respóndeme, Señor.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te invoco de todo corazón, respóndeme, Señor.
+    ant_benedictus: Sirvamos al Señor con santidad y nos librará de la mano de nuestros enemigos.
+    preces:
+      intro: 'Demos gracias al Señor, que guía y alimenta con amor a su pueblo, y digámosle:'
+      preces:
+      - - Señor, rey del universo, te alabamos por el amor que nos tienes,
+        - porque de manera admirable nos creaste y más admirablemente aún nos redimiste.
+      - - Al comenzar este nuevo día, pon en nuestros corazones el anhelo de servirte,
+        - para que te glorifiquemos en todos nuestros pensamientos y acciones.
+      - - Purifica nuestros corazones de todo mal deseo,
+        - y haz que estemos siempre atentos a tu voluntad.
+      - - Danos un corazón abierto a las necesidades de nuestros hermanos,
+        - para que a nadie falte la ayuda de nuestro amor.
+      respuesta: Te glorificamos por siempre, Señor.
+    padrenuestro_intro: 'Acudamos ahora a nuestro Padre celestial, diciendo:'
+    oracion: 'Dios todopoderoso y eterno: a los pueblos que viven en tiniebla y en sombra de muerte, ilumínalos con tu luz, ya que con ella nos ha visitado el sol que nace de lo alto, Jesucristo, nuestro Señor. Él, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.'
+  viernes:
+    inv_ant: Dad gracias al Señor, porque es eterna su misericordia.
+    himno: Creador sempiterno de las cosas
+    salmodia:
+    - ant: Contra ti, contra ti solo pequé, Señor; ten misericordia de mí.
+      salmo: salmo-50
+    - ant: Reconocemos, Señor, nuestra impiedad; hemos pecado contra ti.
+      salmo: cantico-jr-14-17-21
+    - ant: El Señor es Dios y nosotros somos su pueblo y ovejas de su rebaño.
+      salmo: salmo-99
+    lectura:
+      ref: 2Co 12, 9b-10
+      texto: Muy a gusto presumo de mis debilidades, porque así residirá en mí la fuerza de Cristo. Por eso vivo contento en medio de mis debilidades, de los insultos, las privaciones, las persecuciones y las dificultades sufridas por Cristo. Porque cuando soy débil, entonces soy fuerte.
+    responsorio:
+    - - V
+      - En la mañana hazme escuchar tu gracia.
+    - - R
+      - En la mañana hazme escuchar tu gracia.
+    - - V
+      - Indícame el camino que he de seguir.
+    - - R
+      - Hazme escuchar tu gracia.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - En la mañana hazme escuchar tu gracia.
+    ant_benedictus: El Señor ha visitado y redimido a su pueblo.
+    preces:
+      intro: 'Invoquemos a Cristo, que nació, murió y resucitó por su pueblo, diciendo:'
+      preces:
+      - - 'Te bendecimos, Señor, a ti que por nosotros aceptaste el suplicio de la cruz:'
+        - mira con bondad a tu familia santa, redimida con tu sangre.
+      - - Tú que prometiste a los que en ti creyeran que manarían de su interior torrentes de agua viva,
+        - derrama tu Espíritu sobre todos los hombres.
+      - - Tú que enviaste a los discípulos a predicar el Evangelio,
+        - haz que los cristianos anuncien tu palabra con fidelidad.
+      - - A los enfermos y a todos los que has asociado a los sufrimientos de tu pasión,
+        - concédeles fortaleza y paciencia.
+      respuesta: Salva, Señor, al pueblo que redimiste con tu sangre.
+    padrenuestro_intro: 'Llenos del Espíritu de Jesucristo, acudamos a nuestro Padre común, diciendo:'
+    oracion: Ilumina, Señor, nuestros corazones y fortalece nuestras voluntades, para que sigamos siempre el camino de tus mandatos, reconociéndote como nuestro guía y maestro. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  sabado:
+    inv_ant: Del Señor es la tierra y cuanto la llena; venid, adorémosle.
+    himno: Cantemos al Señor con indecible gozo
+    salmodia:
+    - ant: Tú, Señor, estás cerca, y todos tus mandatos son estables.
+      salmo: salmo-118-145-152
+    - ant: Mándame tu sabiduría, Señor, para que me asista en mis trabajos.
+      salmo: cantico-sb-9-1-6-9-11
+    - ant: La fidelidad del Señor dura por siempre.
+      salmo: salmo-116
+    lectura:
+      ref: Flp 2, 14-15
+      texto: Hacedlo todo sin murmuraciones ni discusiones, a fin de que seáis irreprensibles y sencillos, hijos de Dios sin mancha, en medio de esta generación mala y perversa, entre la cual aparecéis como antorchas en el mundo.
+    responsorio:
+    - - V
+      - A ti grito, Señor, tú eres mi refugio.
+    - - R
+      - A ti grito, Señor, tú eres mi refugio.
+    - - V
+      - Mi heredad en el país de la vida.
+    - - R
+      - Tú eres mi refugio.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - A ti grito, Señor, tú eres mi refugio.
+    ant_benedictus: Ilumina, Señor, a los que viven en tiniebla y en sombra de muerte.
+    preces:
+      intro: 'Invoquemos a Dios por intercesión de María, a quien el Señor colocó por encima de todas las creaturas celestiales y terrenas, diciendo:'
+      preces:
+      - - Padre de misericordia, te damos gracias porque nos has dado a María como madre y ejemplo;
+        - santifícanos por su intercesión.
+      - - Tú que hiciste que María meditara tus palabras, guardándolas en su corazón, y fuera siempre fidelísima hija tuya,
+        - por su intercesión haz que también nosotros seamos de verdad hijos tuyos y discípulos de tu Hijo.
+      - - Tú que quisiste que María concibiera por obra del Espíritu Santo,
+        - por intercesión de María otórganos los frutos de este mismo Espíritu.
+      - - Tú que diste fuerza a María para permanecer junto a la cruz y la llenaste de alegría con la resurrección de tu Hijo,
+        - por intercesión de María confórtanos en la tribulación y reanima nuestra esperanza.
+      respuesta: Contempla, Señor, a la Madre de tu Hijo y escúchanos.
+    padrenuestro_intro: 'Concluyamos nuestras súplicas con la oración que el mismo Cristo nos enseñó:'
+    oracion: Dios misericordioso, fuente y origen de nuestra salvación, haz que, mientras dure nuestra vida aquí en la tierra, te alabemos constantemente y podamos así participar un día en la alabanza eterna del cielo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+semana_4:
+  domingo:
+    inv_ant: Pueblo del Señor, rebaño que él guía, bendice a tu Dios. Aleluia.
+    himno: Es la Pascua real, no ya la sombra
+    salmodia:
+    - ant: Dad gracias al Señor porque es eterna su misericordia. Aleluia.
+      salmo: salmo-117
+    - ant: Aleluia. Creaturas todas del Señor, bendecid al Señor. Aleluia.
+      salmo: cantico-dn-3-52-57
+    - ant: Todo ser que alienta, alabe al Señor. Aleluia.
+      salmo: salmo-150
+    lectura:
+      ref: 2Tm 2, 8. 11-13
+      texto: 'Acuérdate de Cristo Jesús, del linaje de David, que vive resucitado de entre los muertos. Verdadera es la sentencia que dice: Si hemos muerto con él, viviremos también con él. Si tenemos constancia en el sufrir, reinaremos también con él; si rehusamos reconocerle, también él nos rechazará; si le somos infieles, él permanece fiel; no puede él desmentirse a sí mismo.'
+    responsorio:
+    - - V
+      - Te damos gracias, ¡oh Dios!, invocando tu nombre.
+    - - R
+      - Te damos gracias, ¡oh Dios!, invocando tu nombre.
+    - - V
+      - Pregonando tus maravillas.
+    - - R
+      - Invocando tu nombre.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te damos gracias, ¡oh Dios!, invocando tu nombre.
+    preces:
+      intro: 'Dios nos ama y sabe lo que nos hace falta; invoquémosle, pues, diciendo:'
+      preces:
+      - - Te alabamos, Dios todopoderoso, Rey del universo, porque a nosotros, injustos y pecadores, nos has llamado al conocimiento de la verdad;
+        - haz que te sirvamos con santidad y justicia.
+      - - Vuélvete hacia nosotros, Señor, tú que has querido abrirnos la puerta de tu misericordia,
+        - y haz que nunca nos apartemos del camino que lleva a la vida.
+      - - Ya que hoy celebramos la resurrección del Hijo de tu amor,
+        - haz que este día transcurra lleno de gozo espiritual.
+      - - Da, Señor, a tus fieles el espíritu de oración y de alabanza,
+        - para que en toda ocasión te demos gracias.
+      respuesta: Te bendecimos y en ti confiamos, Señor.
+    padrenuestro_intro: 'Movidos ahora todos por el mismo Espíritu que nos da Cristo resucitado acudamos a Dios, de quien somos verdaderos hijos, diciendo:'
+  lunes:
+    inv_ant: Demos vítores al Señor, aclamándolo con cantos.
+    himno: Señor, cómo quisiera
+    salmodia:
+    - ant: Por la mañana, sácianos de tu misericordia, Señor.
+      salmo: salmo-89
+    - ant: Llegue la alabanza del Señor hasta el confín de la tierra.
+      salmo: cantico-is-42-10-16
+    - ant: Alabad el nombre del Señor, los que estáis en la casa del Señor.
+      salmo: salmo-134-1-12
+    lectura:
+      ref: Jdt 8, 21b-23
+      texto: Recordad que Dios ha querido probarnos como a nuestros padres. Recordad lo que hizo con Abraham, las pruebas por que hizo pasar a Isaac, lo que aconteció a Jacob. Como les puso a ellos en el crisol para sondear sus corazones, así el Señor nos hiere a nosotros, los que nos acercamos a él, no para castigarnos, sino para amonestarnos.
+    responsorio:
+    - - V
+      - Aclamad, justos, al Señor, que merece la alabanza de los buenos.
+    - - R
+      - Aclamad, justos, al Señor, que merece la alabanza de los buenos.
+    - - V
+      - Cantadle un cántico nuevo.
+    - - R
+      - Que merece la alabanza de los buenos.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Aclamad, justos, al Señor, que merece la alabanza de los buenos.
+    ant_benedictus: Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo.
+    preces:
+      intro: 'Ya que Cristo escucha y salva a cuantos en él se refugian, acudamos a él diciendo:'
+      preces:
+      - - Te damos gracias, Señor, por el gran amor con que nos amaste;
+        - continúa mostrándote con nosotros rico en misericordia.
+      - - Tú que con el Padre sigues actuando siempre en el mundo,
+        - renueva todas las cosas con la fuerza de tu Espíritu.
+      - - Abre nuestros ojos y los de nuestros hermanos
+        - para que podamos contemplar hoy tus maravillas.
+      - - Ya que nos llamas hoy a tu servicio,
+        - haz que seamos buenos administradores de tu multiforme gracia en favor de nuestros hermanos.
+      respuesta: Escúchanos, Señor.
+    padrenuestro_intro: 'Acudamos a Dios Padre, tal como nos enseñó Jesucristo:'
+    oracion: Señor Dios, que encomendaste al hombre la guarda y el cultivo de la tierra, y creaste la luz del sol en su servicio, concédenos hoy que, con tu ayuda, trabajemos sin desfallecer para tu gloria y para el bien de nuestro prójimo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  martes:
+    inv_ant: Al Señor, al Dios grande, venid, adorémosle.
+    himno: Estáte, Señor, conmigo
+    salmodia:
+    - ant: Para ti es mi música, Señor; voy a explicar el camino perfecto.
+      salmo: salmo-100
+    - ant: No nos desampares, Señor, para siempre.
+      salmo: cantico-dn-3-26-27-29-34-41
+    - ant: Te cantaré, Dios mío, un cántico nuevo.
+      salmo: salmo-143-1-10
+    lectura:
+      ref: Is 55, 1
+      texto: 'Oíd, sedientos todos, acudid por agua, también los que no tenéis dinero: venid, comprad trigo, comed sin pagar: vino y leche de balde.'
+    responsorio:
+    - - V
+      - Escucha mi voz, Señor; espero en tu palabra.
+    - - R
+      - Escucha mi voz, Señor; espero en tu palabra.
+    - - V
+      - Me adelanto a la aurora pidiendo auxilio.
+    - - R
+      - Espero en tu palabra.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Escucha mi voz, Señor; espero en tu palabra.
+    ant_benedictus: De la mano de nuestros enemigos, líbranos, Señor.
+    preces:
+      intro: 'Dios nos otorga el gozo de poder alabarlo en este comienzo del día, reavivando con ello nuestra esperanza. Invoquémosle, pues, diciendo:'
+      preces:
+      - - Dios y Padre de nuestro Salvador Jesucristo,
+        - te damos gracias porque, por mediación de tu Hijo, nos has dado el conocimiento y la inmortalidad.
+      - - Danos, Señor, un corazón humilde
+        - para que vivamos sujetos unos a otros en el temor de Cristo.
+      - - Infunde tu Espíritu en nosotros, tus siervos,
+        - para que nuestro amor fraterno sea sin fingimiento.
+      - - Tú que has dispuesto que el hombre dominara el mundo con su esfuerzo,
+        - haz que nuestro trabajo te glorifique y santifique a nuestros hermanos.
+      respuesta: Por el honor de tu nombre, escúchanos, Señor.
+    padrenuestro_intro: 'Ya que Dios nos muestra siempre su amor de Padre, velando amorosamente por nosotros, nos atrevemos a decir:'
+    oracion: Aumenta, Señor, nuestra fe, para que esta alabanza que brota de nuestro corazón vaya siempre acompañada de frutos de vida eterna. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  miercoles:
+    inv_ant: Aclama al Señor, tierra entera, servid al Señor con alegría.
+    himno: Al retornar este día
+    salmodia:
+    - ant: Mi corazón está firme, Dios mío, mi corazón está firme.
+      salmo: salmo-107
+    - ant: El Señor me ha revestido de justicia y santidad.
+      salmo: cantico-is-61-10-62-5
+    - ant: Alabaré al Señor mientras viva.
+      salmo: salmo-145
+    lectura:
+      ref: Dt 4, 39-40a
+      texto: Has de reconocer hoy y recordar que el Señor es Dios, en lo alto del cielo y abajo en la tierra, y que no hay otro. Guarda los mandatos y preceptos que te voy a dar hoy.
+    responsorio:
+    - - V
+      - Bendigo al Señor en todo momento.
+    - - R
+      - Bendigo al Señor en todo momento.
+    - - V
+      - Su alabanza está siempre en mi boca.
+    - - R
+      - En todo momento.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Bendigo al Señor en todo momento.
+    ant_benedictus: Sirvamos al Señor con santidad todos nuestros días.
+    preces:
+      intro: 'Cristo, reflejo de la gloria del Padre, nos ilumina con su palabra; acudamos pues a él diciendo:'
+      preces:
+      - - Te bendecimos, Señor, autor y consumador de nuestra fe,
+        - porque de las tinieblas nos has trasladado a tu luz admirable.
+      - - Tú que abriste los ojos de los ciegos y diste oído a los sordos,
+        - aumenta nuestra fe.
+      - - Haz, Señor, que permanezcamos siempre en tu amor,
+        - y que este amor nos guarde fraternalmente unidos.
+      - - Ayúdanos para que resistamos a la tentación, aguantemos en la tribulación
+        - y te demos gracias en la prosperidad.
+      respuesta: Rey de la gloria, escúchanos.
+    padrenuestro_intro: 'Dejemos que el espíritu de Dios, que ha sido derramado en nuestros corazones, se una a nuestro espíritu, para clamar:'
+    oracion: Recuerda, Señor, tu santa alianza consagrada con el nuevo sacramento de la sangre del Cordero, para que tu pueblo obtenga el perdón de sus pecados, y un aumento constante de salvación. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  jueves:
+    inv_ant: Entrad en la presencia del Señor con aclamaciones.
+    himno: Oh Dios, autor de la luz
+    salmodia:
+    - ant: En la mañana, Señor, hazme escuchar tu gracia.
+      salmo: salmo-142-1-11
+    - ant: El Señor hará derivar hacia Jerusalén como un río la paz.
+      salmo: cantico-is-66-10-14a
+    - ant: Nuestro Dios merece una alabanza armoniosa.
+      salmo: salmo-146
+    lectura:
+      ref: Rm 8, 18-21
+      texto: Los padecimientos de esta vida presente tengo por cierto que no son nada en comparación con la gloria futura que se ha de revelar en nosotros. La creación entera está en expectación, suspirando por esa manifestación gloriosa de los hijos de Dios; porque las creaturas todas quedaron sometidas al desorden, no porque a ello tendiesen de suyo, sino por culpa del hombre que las sometió. Y abrigan la esperanza de quedar ellas, a su vez, libres de la esclavitud de la corrupción, para tomar parte en la libertad gloriosa que han de recibir los hijos de Dios.
+    responsorio:
+    - - V
+      - Velando medito en ti, Señor.
+    - - R
+      - Velando medito en ti, Señor.
+    - - V
+      - Porque fuiste mi auxilio.
+    - - R
+      - Medito en ti, Señor.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Velando medito en ti, Señor.
+    ant_benedictus: Anuncia, Señor, la salvación a tu pueblo y perdónanos nuestros pecados.
+    preces:
+      intro: 'Invoquemos a Dios, de quien viene la salvación para su pueblo, diciendo:'
+      preces:
+      - - Bendito seas, Dios, Padre de nuestro Señor Jesucristo, porque en tu gran misericordia nos has hecho nacer de nuevo para una esperanza viva,
+        - por la resurrección de Jesucristo de entre los muertos.
+      - - Tú que, en Cristo, renovaste al hombre, creado a imagen tuya,
+        - haz que reproduzcamos la imagen de tu Hijo.
+      - - Derrama en nuestros corazones, lastimados por el odio y la envidia,
+        - tu Espíritu de amor.
+      - - Concede hoy trabajo a quienes lo buscan, pan a los hambrientos, alegría a los tristes,
+        - a todos la gracia y la salvación.
+      respuesta: Tú, que eres nuestra vida, escúchanos, Señor.
+    padrenuestro_intro: 'Por Jesús hemos sido hechos hijos de Dios; por esto nos atrevemos a decir:'
+    oracion: Concédenos, Señor, acoger siempre el anuncio de la salvación para que, libres de temor, arrancados de la mano de los enemigos te sirvamos, con santidad y justicia, todos nuestros días. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  viernes:
+    inv_ant: El Señor es bueno, bendecid su nombre.
+    himno: Por el dolor creyente que brota del pecado
+    salmodia:
+    - ant: Oh Dios, crea en mí un corazón puro, renuévame por dentro con Espíritu firme.
+      salmo: salmo-50
+    - ant: Alégrate, Jerusalén, porque en ti serán congregados todos los pueblos.
+      salmo: cantico-tb-13-10-15-17-19
+    - ant: Sión, alaba a tu Dios, que envía su mensaje a la tierra.
+      salmo: salmo-147
+    lectura:
+      ref: Ga 2, 19b-20
+      texto: Estoy crucificado con Cristo; vivo yo, pero no soy yo, es Cristo quien vive en mi. Y, mientras vivo en esta carne, vivo de la fe en el Hijo de Dios, que me amó hasta entregarse por mí.
+    responsorio:
+    - - V
+      - Invoco al Dios Altísimo, al Dios que hace tanto por mí.
+    - - R
+      - Invoco al Dios Altísimo, al Dios que hace tanto por mí.
+    - - V
+      - Desde el cielo me enviará la salvación.
+    - - R
+      - El Dios que hace tanto por mí.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo
+    - - R
+      - Invoco al Dios Altísimo, al Dios que hace tanto por mí.
+    ant_benedictus: Por la entrañable misericordia de nuestro Dios, nos visitará el sol que nace de lo alto.
+    preces:
+      intro: 'Confiados en Dios, que cuida con solicitud de todos los que ha creado y redimido con la sangre de su Hijo, invoquémosle diciendo:'
+      preces:
+      - - Dios misericordioso, asegura nuestros pasos en el camino de la verdadera santidad,
+        - y haz que busquemos siempre cuanto hay de verdadero, noble y justo.
+      - - No nos abandones para siempre, por amor de tu nombre
+        - no olvides tu alianza con nosotros.
+      - - Con alma contrita y espíritu humillado te seamos aceptos,
+        - porque no hay confusión para los que en ti confían.
+      - - Tú que has querido que participáramos en la misión profética de Cristo,
+        - haz que proclamemos ante el mundo tus maravillas.
+      respuesta: Escucha, Señor, y ten piedad.
+    padrenuestro_intro: 'Dirijámonos al Padre, con las mismas palabras que Cristo nos enseñó:'
+    oracion: Te pedimos, Señor, tu gracia abundante, para que nos ayude a seguir el camino de tus mandatos, y así gocemos de tu consuelo en esta vida y alcancemos la felicidad eterna. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+  sabado:
+    inv_ant: Escuchemos la voz del Señor y entremos en su descanso.
+    himno: Dador de luz espléndido
+    salmodia:
+    - ant: Es bueno tocar para tu nombre, oh altísimo, y proclamar por la mañana tu misericordia.
+      salmo: salmo-91
+    - ant: Os daré un corazón nuevo y os infundiré un espíritu nuevo.
+      salmo: cantico-ez-36-24-28
+    - ant: De la boca de los niños de pecho, Señor, has sacado una alabanza.
+      salmo: salmo-8
+    lectura:
+      ref: 2 Pe 3, 13-15a
+      texto: Nosotros conforme a la promesa del Señor esperamos cielos nuevos y tierra nueva, en los que tiene su morada la santidad. Por eso, carísimos, mientras esperáis estos acontecimientos, procurad con toda diligencia que él os encuentre en paz, sin mancha e irreprensibles. Considerad esta paciente espera de nuestro Señor como una oportunidad para alcanzar la salud.
+    responsorio:
+    - - V
+      - Te aclamarán mis labios, Señor, cuando salmodie para ti.
+    - - R
+      - Te aclamarán mis labios, Señor, cuando salmodie para ti.
+    - - V
+      - Mi lengua recitará tu auxilio.
+    - - R
+      - Cuando salmodie para ti.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te aclamarán mis labios, Señor, cuando salmodie para ti.
+    ant_benedictus: Guía nuestros pasos, Dios de Israel, por el camino de la paz.
+    preces:
+      intro: 'Adoremos a Dios, que por su Hijo ha dado vida y esperanza al mundo, y supliquémosle diciendo:'
+      preces:
+      - - Señor, Padre de todos, tú que nos has hecho llegar al comienzo de este día,
+        - haz que toda nuestra vida unida a la de Cristo sea alabanza de tu gloria.
+      - - Que vivamos siempre arraigados en la fe, esperanza y caridad,
+        - que tú mismo has infundido en nuestras almas.
+      - - Haz que nuestros ojos estén siempre levantados hacia ti,
+        - para que respondamos con presteza a tus llamadas.
+      - - Defiéndenos de los engaños y seducciones del mal,
+        - y presérvanos de todo pecado.
+      respuesta: Escúchanos, Señor.
+    padrenuestro_intro: 'Contentos por sabernos hijos de Dios, digamos a nuestro padre:'
+    oracion: Dios todopoderoso y eterno, luz esplendente y día sin ocaso, al volver a comenzar un nuevo día te pedimos que nos visites con el esplendor de tu luz y disipes así las tinieblas de nuestros pecados. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.

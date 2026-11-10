@@ -70,6 +70,55 @@ def trad(x, donde):
         falta(os.path.exists(os.path.join(B, 'gregoriano', x)), f'gregoriano/completas.yaml · {donde}: no existe base/gregoriano/{x}')
 trad(G, 'completas')
 
+# ---------- Laudes ----------
+import json, re
+from datetime import date, timedelta
+CAMPOS_L = ['inv_ant', 'himno', 'salmodia', 'lectura', 'responsorio', 'ant_benedictus', 'preces', 'padrenuestro_intro', 'oracion']
+SL = leer(os.path.join(B, 'salterio', 'laudes.yaml'))
+TL = leer(os.path.join(B, 'tiempo', 'laudes.yaml'))
+SaL = leer(os.path.join(B, 'santoral', 'laudes.yaml'))
+HL = leer(os.path.join(B, 'himnos', 'laudes.yaml'))
+OL = leer(os.path.join(B, 'ordinario', 'laudes.yaml'))
+falta((OL.get('invitatorio') or {}).get('salmo', {}).get('texto'), 'ordinario/laudes.yaml: falta el Salmo 94 del invitatorio')
+falta((OL.get('cantico_evangelico') or {}).get('texto'), 'ordinario/laudes.yaml: falta el Benedictus')
+def parte_l(e, donde):
+    for g in e.get('salmodia') or []:
+        falta(g.get('ant'), f'{donde}: antífona vacía')
+        falta(g.get('salmo') in salmos, f'{donde}: no existe base/salmos/{g.get("salmo")}.yaml')
+    if e.get('himno'): falta(e['himno'] in HL, f'{donde}: el himno «{e["himno"]}» no está en himnos/laudes.yaml')
+    if e.get('salmodia') is not None: falta(len(e['salmodia']) == 3, f'{donde}: la salmodia debe tener tres salmos')
+    if e.get('preces'): falta(e['preces'].get('preces') or e['preces'].get('renglones'), f'{donde}: preces vacías')
+for sem, dias in SL.items():
+    for dia, e in dias.items():
+        for c in CAMPOS_L:
+            if dia == 'domingo' and c in ('ant_benedictus', 'oracion'): continue   # propios de cada domingo (tiempo/laudes.yaml)
+            falta(e.get(c), f'salterio/laudes.yaml · {sem}.{dia}: falta «{c}»')
+        parte_l(e, f'salterio/laudes.yaml · {sem}.{dia}')
+for n, e in TL.items(): parte_l(e, f'tiempo/laudes.yaml · {n}')
+for n, e in SaL.items(): parte_l(e, f'santoral/laudes.yaml · {n}')
+# cobertura: todos los días del calendario tienen Laudes completas (salterio + propio del tiempo)
+cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
+cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
+tab, ix = cal['tabla'], {c: i for i, c in enumerate(cal['campos'])}
+DIAS_L = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+def adviento(y):
+    n = date(y, 12, 25); return n - timedelta(days=(n.weekday() + 1) % 7 or 7) - timedelta(weeks=3)
+sin_propio, pendientes = set(), set()
+d0 = date.fromisoformat(cal['desde'])
+for k, r in enumerate(cal['ARG']):
+    f = d0 + timedelta(days=k); t, fer, sal = tab[r[ix['t']]], tab[r[ix['fer']]], r[ix['sal']]
+    dia = DIAS_L[f.weekday()]
+    y = f.year if f >= adviento(f.year) else f.year - 1
+    claves = [fer] + ([f"{fer} ({'ABC'[(y - 2016) % 3]})"] if dia == 'domingo' else [])
+    propio = {}
+    for c in claves: propio.update(TL.get(c) or {})
+    if t == 'Ordinario' and dia != 'domingo': continue
+    if tab[r[ix['g']]] in ('Solemnidad', 'Fiesta'): continue   # propio del santoral (o celebración del Señor)
+    if propio.get('pendiente'): pendientes.add(f'{fer}: {propio["pendiente"]}'); continue
+    if not propio.get('oracion') and t not in ('Triduo',): sin_propio.add(fer)
+falta(not sin_propio, f'tiempo/laudes.yaml: {len(sin_propio)} días del calendario sin oración propia: {sorted(sin_propio)}')
+
+for x in sorted(pendientes): print('Pendiente (Laudes):', x)
 if errores:
     print('La base tiene problemas:'); [print(' -', e) for e in errores]; sys.exit(1)
-print(f'Base correcta: {len(salmos)} salmos y cánticos, Completas completas.')
+print(f'Base correcta: {len(salmos)} salmos y cánticos, Completas completas; Laudes: salterio de 4 semanas, {len(TL)} días con propio del tiempo, {len(SaL)} celebraciones.')

@@ -39,6 +39,9 @@ def primer_verso(g):
 def main():
     G = leer(os.path.join(B, 'gregoriano', 'completas.yaml'))
     inv, ce, co = G['invocacion'], G['cantico_evangelico'], G['conclusion']
+    # por ahora la app arma solo Completas: se exportan los salmos que usa (Laudes se cargará aparte)
+    SC = leer(os.path.join(B, 'salterio', 'completas.yaml'))
+    USADOS = {x for j in SC.values() for k in ('salmodia', 'salmodia_pascua') for g in (j.get(k) or []) for x in g['salmos']} | {'cantico-simeon'}
     base = {
         'completas': {
             'ordinario': leer(os.path.join(B, 'ordinario', 'completas.yaml')),
@@ -60,7 +63,7 @@ def main():
             },
         },
         'marianas': leer(os.path.join(B, 'ordinario', 'antifonas-marianas.yaml')),
-        'salmos': {os.path.basename(f)[:-5]: leer(f) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))},
+        'salmos': {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in USADOS},
     }
     destino = os.path.join(RAIZ, 'src', 'datos', 'base.js')
     with open(destino, 'w', encoding='utf-8') as f:
