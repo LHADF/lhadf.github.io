@@ -35,3 +35,11 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - `base/comunes/laudes.yaml` y `visperas.yaml`: comunes **provisorios**, deducidos del santoral de sync (`tools/importar/comunes.py`): de cada parte, el texto que más celebraciones de ese común comparten. Hay que cotejarlos con el libro.
 - Del común se toman himno, lectura, responsorio, antífona del cántico evangélico y preces; en fiestas y solemnidades, también los salmos si el común los trae. La oración queda la del día (falta la propia) y la app lo avisa.
 - Lista de diferencias entre el calendario ADF y el general: `docs/calendario-adf-diferencias.json` (la genera `tools/adf_santoral.py`).
+
+## Calendarios, oraciones e invitatorio gregoriano (11/11/2026)
+
+- **Calendarios.** La app sigue el calendario ADF. Cuando un día tiene variantes, el inicio muestra las siglas en lugar de «Las horas de hoy»: en gris, lo que se está celebrando; encendidas, las otras opciones. Tocar la sigla de otro calendario (ARG, PGY, BUE…) cambia a ese calendario y se recuerda; tocar una memoria libre vale solo para ese día. Si la celebración tiene nota, aparece el signo (!) que la abre.
+- Los calendarios locales se cargan en `base/calendario/locales.yaml` (sigla, fecha, celebración, grado y nota); el motor del Ordo recalcula precedencias y I Vísperas. Las siglas y sus nombres están en ese mismo archivo.
+- Las memorias libres que la base no trae toman el común que indica el Ordo (`base/santoral/adf.yaml`), con la oración del día.
+- **Oraciones antes y después del oficio:** `base/ordinario/oraciones-oficio.yaml` (texto y traducción de ADF, renglón por renglón). Botón discreto al pie del inicio; la preparatoria se ofrece además antes de las I Vísperas del domingo.
+- **Invitatorio gregoriano** (domingos del Tiempo Ordinario): antífona «Veníte, exsultémus Dómino» y Salmo 94 (`venite-exsultemus-*.gabc`, clave `invitatorio_per_annum` de `gregoriano/laudes.yaml`). Si se canta, va en gregoriano salvo que se elija «En español»; recitado, va en español.

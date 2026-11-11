@@ -24,6 +24,27 @@ def gabc(nombre):
     return s.replace('<v>\\greheightstar</v>', '*')   # asterisco de Gregorio → asterisco común
 
 
+def invitatorio_gregoriano(I):
+    """Invitatorio cantado: la antífona (sin el arranque «Ps.» del salmo, que va entero) y el Salmo 94 partido en estrofas."""
+    ant = gabc(I['antifona']); cab, cuerpo = ant.split('%%', 1)
+    cuerpo = re.split(r'<c><i>Ps\.', cuerpo)[0].replace('(Z)', '').rstrip()
+    sal = gabc(I['salmo']).split('%%', 1)[1]
+    trozos = [t.strip() for t in re.split(r'\(::Z?\)', sal) if t.strip()]
+    assert len(trozos) == len(I['estrofas']), 'invitatorio: una traducción por estrofa'
+    minus = lambda t: re.sub(r'^(\(f3\)\s*)VE\(', r'\1Ve(', t)   # «VEníte»: la capitular ya agranda la primera letra
+    cuerpo, trozos = minus(cuerpo.lstrip()), [minus(t) for t in trozos]
+    estrofas = [{'gabc': 'name:Psalmus 94;\n%%\n' + ('' if t.startswith('(f3)') else '(f3) ') + t + ' (::)', 'traduccion': pares(e['traduccion'])} for t, e in zip(trozos, I['estrofas'])]
+    return {'ant': {'gabc': cab + '%%' + cuerpo, 'traduccion': pares(I['traduccion'])}, 'estrofas': estrofas}
+
+
+def oraciones_oficio():
+    O = leer(os.path.join(B, 'ordinario', 'oraciones-oficio.yaml'))
+    for k in ('preparatoria', 'conclusiva'):
+        for c, v in O[k].items():
+            if isinstance(v, list): O[k][c] = pares(v)
+    return O
+
+
 def repeticion(g):
     """Antífona repetida al final: la canta toda la asamblea (en negrita) y va sin asterisco."""
     return negrita(re.sub(r'\s*\*+\s*\(([,;:]*)\)', lambda m: f' ({m.group(1)})' if m.group(1) else '', g))
@@ -63,6 +84,7 @@ def main():
             },
         },
         'marianas': leer(os.path.join(B, 'ordinario', 'antifonas-marianas.yaml')),
+        'oraciones': oraciones_oficio(),
         'salmos': {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in USADOS},
     }
     destino = os.path.join(RAIZ, 'src', 'datos', 'base.js')
@@ -101,7 +123,7 @@ def vincular_santoral(santoral_todo):
     cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
     cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
     tab, ix, d0 = cal['tabla'], {c: i for i, c in enumerate(cal['campos'])}, date.fromisoformat(cal['desde'])
-    filas = [(d0 + timedelta(days=k), r) for k, r in enumerate(cal['ARG'])] + [(date.fromisoformat(f), r) for f, r in cal['PGY'].items()]
+    filas = [(d0 + timedelta(days=k), r) for k, r in enumerate(cal['dias'])] + [(date.fromisoformat(f), v[2]) for f, vs in cal['var'].items() for v in vs]
     mapa, sin = {}, {}
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) if os.path.exists(os.path.join(B, 'santoral', 'adf.yaml')) else {}
     for f, r in filas:
@@ -140,6 +162,7 @@ def laudes():
         'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('laudes', SaL)[0], 'comunes': adf_y_comunes('laudes', SaL)[1],
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
+            'invitatorio_to': invitatorio_gregoriano(GL['invitatorio_per_annum']),
             'cantico': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
             **comunes_latin(GL),
             'conclusion': {'gabc': gabc(GL['conclusion']['partitura']), 'traduccion': pares(GL['conclusion']['traduccion'])},

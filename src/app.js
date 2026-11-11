@@ -6,9 +6,10 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;',
 
 /* ---------- Estado ---------- */
 const DEF={vista:'hoy', rito:'novus', modo:'canto', salmos:'primer', trad:true,
-  zoom:1, theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, region:'ARG', cantado:true};
+  zoom:1, theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, cal:'', cantado:true};
 let S=DEF;
 try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la');
+  if(g.cal==null) S.cal=g.region==='PGY'?'PGY':''; delete S.region;   // antes se elegía país en Opciones; ahora, calendario en el inicio
   if(g.zoom==null) S.zoom=(g.lec||1.2)/1.2*({g:1.15,mg:1.3,max:1.5}[g.esc]||1);   // antes había dos controles (texto y aplicación): se unifican
   S.zoom=Math.min(2,Math.max(.8,Math.round(S.zoom*10)/10)); delete S.lec; delete S.esc; } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
@@ -27,7 +28,7 @@ function aplicarModo(kind, sec){
   else S.lengua = ((kind==='salmo'&&!(sec&&sec.cantico))||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
 }
 aplicarModo();
-function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
+function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
 let DH=null; // la hora abierta cuando no es Completas (Laudes o Vísperas)
 const MAYORES={laudes:'Laudes', visperas:'Visperas'};
 const R=()=> (S.vista==='hora' && MAYORES[S.hora] && DH) || D;
@@ -42,11 +43,22 @@ const VES=()=>'es';
 // Día litúrgico de hoy: antes de las 5 de la mañana, todavía son las Completas de ayer
 function fechaHoy(){ const d=new Date(); if(d.getHours()<5) d.setDate(d.getDate()-1); return CP.iso(d); }
 S.fecha=fechaHoy();
+// Qué calendario se sigue (S.cal, se recuerda) y qué celebración optativa se eligió a mano cada día (S._varDia, no se guarda)
+function SEL(){ return {cal:S.cal||'', dia:S._varDia||(S._varDia={})}; }
+const linaje=c=>{ const l=[]; for(;c;c=window.CAL.padres[c]) l.push(c); return l; };
+// Fichas de calendario del día: la del calendario ADF, una por cada calendario que difiere y una por cada memoria libre
+function fichasCal(){
+  const ops=CP.opcionesDia(S.fecha, SEL()), mio=linaje(S.cal), out=[];
+  ops.forEach((o,i)=>{
+    if(o.tipo==='r') o.siglas.forEach(sg=>out.push({i, sg, txt:sg, on:o.actual&&(mio.includes(sg)||!o.siglas.some(x=>mio.includes(x))), o}));
+    else out.push({i, sg:'', txt:o.siglas.join(' · '), on:o.actual, o});
+  });
+  return out;
+}
 function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
-  if(!CP.difiereRegion(S.fecha) && !['ARG','PGY'].includes(S.region)) S.region='ARG';
-  D=CP.armar(S.fecha, S.region);
-  DH = (MAYORES[S.hora] && window[S.hora.toUpperCase()]) ? window[MAYORES[S.hora]].armar(S.fecha, S.region) : null;
+  D=CP.armar(S.fecha, SEL());
+  DH = (MAYORES[S.hora] && window[S.hora.toUpperCase()]) ? window[MAYORES[S.hora]].armar(S.fecha, SEL()) : null;
   // Uso ADF: Vísperas y Completas juntas. Después de la oración de Vísperas se omite su conclusión y siguen, de Completas:
   // examen de conciencia, cántico evangélico, oración, conclusión y antífona de la Virgen.
   if(DH && S.hora==='visperas' && S.unirCompletas && D){
@@ -59,7 +71,7 @@ function cargarDia(){
 }
 cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
-function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#1c1a17':'#ffffff'; r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
+function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#252525':'#ffffff'; r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
 // Un solo tamaño (S.zoom, de 80 % a 200 % de a 10 %): el texto de la hora crece todo eso; botones y títulos, la mitad (hasta 150 %).
 function ESC(){ return S.zoom<=1 ? 1 : Math.min(1.5, 1+(S.zoom-1)/2); }
 function LEC(){ return 1.2*S.zoom/ESC(); }
@@ -360,6 +372,17 @@ function himnoHTML(sec){
     return `<p class="est">${numerar?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
   return h;
 }
+// Invitatorio de los domingos del Tiempo Ordinario: gregoriano si se canta (salvo que se elija en español)
+const INV=()=>(CANTA() && S.invit!=='es') ? 'greg' : 'es';
+// Oraciones antes y después del oficio (base/ordinario/oraciones-oficio.yaml): latín y, debajo de cada renglón, la traducción de ADF
+function oracionOficioHTML(k){
+  const O=window.BASE.oraciones[k];
+  const ln=(ps,pre)=>`<p class="orof">${ps.map(([a,b])=>`<span class="ln">${pre||''}${esc(a)}${S.trad?`<span class="gl">${esc(b)}</span>`:''}</span>`).join('')}</p>`;
+  let h=`<p class="rub">${esc(O.rubrica)}</p>`+ln(O.texto);
+  if(O.pausa) h+=`<p class="rub">${esc(O.pausa)}</p>`+ln(O.final);
+  if(O.respuesta) h+=ln(O.respuesta,'<span class="k">℟.</span> ')+ln(O.versiculo,'<span class="k">℣.</span> ')+ln(O.respuesta_versiculo,'<span class="k">℟.</span> ')+ln(O.despues);
+  return h;
+}
 function examenHTML(sec){
   const f=sec.formulas.find(x=>x.id===S.examenF)||sec.formulas[0];
   const br=t=>esc(t).replace(/\n/g,'<br>');
@@ -404,9 +427,12 @@ function marianaHTML(sec){
 function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
-  h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${CP.difiereRegion(S.fecha)?`<br>Calendario de ${esc(CP.regiones[S.region])}`:''}</p>`;
+  h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
   h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
+  // I Vísperas del domingo: en ADF, antes de empezar, la oración preparatoria (introduce el oficio de toda la semana)
+  if(r.hora==='visperas' && r.primeras && CP.deIso(S.fecha).getDay()===6)
+    h+=`<div class="opciones prep"><button data-act="prep" aria-expanded="${!!S._prep}">Oración preparatoria</button></div>`+(S._prep?`<div class="orof-b">${oracionOficioHTML('preparatoria')}</div>`:'');
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -416,6 +442,7 @@ function horaHTML(){
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
       return;
     }
+    if(sec.inv && sec.inv!==INV()) return;   // invitatorio: gregoriano o en español, según se eligió
     aplicarModo(sec.k, sec);
     if(sec.pleg && !S.examen) return;
     if(sec.k==='rub' && pleg && !S.examen) return;
@@ -428,6 +455,9 @@ function horaHTML(){
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
       case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p>${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
+      case 'invop': if(CANTA()) h+=`<div class="opciones" role="group" aria-label="Invitatorio">${[['greg','Gregoriano'],['es','En español']].map(([v,n])=>`<button data-act="invit" data-v="${v}" aria-pressed="${INV()===v}">${n}</button>`).join('')}</div>`; break;
+      case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`
+        +sec.estrofas.map(e=>partituraHTML(e.gabc, S.trad?e.glosa:null, false)).join(''); break;
       case 'ant': h+=antHTML(sec); break;
       case 'salmo': h+=salmoHTML(sec)+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
       case 'resp': h+=respHTML(sec); break;
@@ -473,7 +503,9 @@ const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Terci
 const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#fff',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
 function portadaHTML(){
   const r=R(); const ahora=horaActual(); const esHoy=S.fecha===fechaHoy();
-  const reg=CP.difiereRegion(S.fecha) ? `<div class="region"><span>Este día el calendario difiere:</span>${seg('region',Object.entries(CP.regiones),S.region)}</div>` : '';
+  // Calendarios: solo cuando el día tiene variantes o nota. La ficha gris es lo que se está celebrando; las encendidas, las otras opciones.
+  const fc=fichasCal(), nota=(CP.diaCal(S.fecha, SEL())||{}).nota;
+  const cals=(fc.length>1||nota) ? `<div class="cals" role="group" aria-label="Calendarios de este día">${fc.map(c=>`<button class="cal" data-act="cal" data-v="${c.i}" data-s="${c.sg}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.o.f.n+' ('+c.o.f.g+')')}">${esc(c.txt)}</button>`).join('')}${nota?'<button class="cal nota" data-act="nota" aria-label="Ver la nota de este día">!</button>':''}</div>` : '';
   return `<div class="portada">
     <div class="navdia">
       <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${'‹'}</button>
@@ -488,11 +520,11 @@ function portadaHTML(){
       </div>
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>
-    ${reg}
-    <p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>
+    ${cals || `<p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>`}
     <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=id==='completas'||id==='laudes'||id==='visperas';
       return `<li class="${ok?'sel':''}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
+    <button class="discreto" data-act="oraciones">Oraciones antes y después del oficio</button>
     <p class="nota-proto">Prototipo: Laudes, Vísperas y Completas están armadas para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en latín. En Laudes y Vísperas, los himnos van por ahora solo en español y el santoral está en revisión.</p>
   </div>`;
 }
@@ -529,7 +561,6 @@ function hojaOpciones(){
   hoja('Opciones',`
     <div class="grupo"><h3>Tamaño</h3><div class="tam"><button data-act="menos" aria-label="Achicar" ${S.zoom<=.8?'disabled':''}>A−</button><span>${Math.round(S.zoom*100)} %</span><button data-act="mas" aria-label="Agrandar" ${S.zoom>=2?'disabled':''}>A+</button></div></div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
-    <div class="grupo"><h3>Calendario</h3>${seg('region',Object.entries(CP.regiones),S.region)}<p class="hint" style="margin-top:8px">Calendario ADF. Paraguay cambia solo los días en que su calendario difiere.</p></div>
     <div class="grupo"><h3>Canto</h3>
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>`);
 }
@@ -563,13 +594,23 @@ document.addEventListener('click',e=>{
     case 'opciones': hojaOpciones(); break;
     case 'dia': { const n=CP.masDias(S.fecha,+v); if(CP.enRango(n)){ S.fecha=n; cargarDia(); render(); } else toast('Fuera del calendario cargado'); break; }
     case 'hoy': S.fecha=fechaHoy(); cargarDia(); render(); break;
-    case 'region': if(S.region===v) break; S.region=v; cargarDia(); cambio('Calendario de '+CP.regiones[v]); break;
+    case 'cal': { const c=fichasCal().find(x=>String(x.i)===v && x.sg===(b.dataset.s||'')); if(!c||c.on) break;
+      const d=SEL().dia;
+      if(c.o.tipo==='r'){ S.cal=c.sg; delete d[S.fecha]; }                      // otro calendario: se recuerda
+      else if(c.o.tipo==='l'){ d[S.fecha]=c.o.f.n; }                             // memoria libre: solo ese día
+      else { if(fichasCal().some(x=>x.on&&x.o.tipo==='r')) S.cal=''; delete d[S.fecha]; }   // volver al calendario ADF
+      cargarDia(); cambio(c.o.f.n+' ('+c.txt+')'); break; }
+    case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal(), sg=[...new Set(fc.flatMap(c=>c.o.siglas))];
+      hoja('Nota', `<p class="nota-dia">${esc(f.nota)}</p><dl class="siglas">${sg.map(x=>`<div><dt>${esc(x)}</dt><dd>${esc(CP.calendarios[x]||'')}</dd></div>`).join('')}</dl>`); break; }
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'sin partitura',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
     case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v; refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
     case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
     case 'concl': if(S.concl===v) break; S.concl=v; cambio('Conclusión: '+b.textContent.toLowerCase()); break;
+    case 'invit': if(INV()===v) break; S.invit=v; cambio('Invitatorio: '+(v==='greg'?'gregoriano':'en español')); break;
+    case 'prep': S._prep=!S._prep; refrescarHoja(); break;
+    case 'oraciones': { const O=window.BASE.oraciones; hoja(O.titulo, `<div class="orof-b">${['preparatoria','conclusiva'].map(k=>`<h3>${esc(O[k].titulo)}</h3>${oracionOficioHTML(k)}`).join('')}</div>`); break; }
     case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(S.unirCompletas?'Vísperas con Completas':'Vísperas solas'); break;
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;

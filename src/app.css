@@ -4,7 +4,7 @@
   --paper:#ffffff; --surface:#f8f6f2; --perg:#f4eee4; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
   --ink:#000; --ink2:#3b3632; --muted:#6f6862; --line:#e7e2da; --line2:#cfc8bd;
   --rubric:#981914; --rubric-soft:#f7ece9; --glosa:#016666; --gold:#8a6d2f;
-  --verde:#3f6b3a; --sombra:rgba(40,20,10,.18);
+  --verde:#3f6b3a; --sombra:rgba(40,20,10,.18); --rubric-fondo:#981914;
   --serif:"Cantoral Signos","Septies AE","Source Serif 4",Georgia,serif;
   --titulo:"Source Serif 4",Georgia,serif;
   --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -12,9 +12,10 @@
   --r-1:8px; --r-2:16px; --lec:1.2;
 }
 :root[data-theme="dark"]{
-  --paper:#1c1a17; --surface:#262320; --perg:#22201c; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
-  --ink:#ece7de; --ink2:#c9c2b8; --muted:#9c958c; --line:#35312c; --line2:#4b4640;
-  --rubric:#e2675c; --rubric-soft:#36201c; --glosa:#5fb8af; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark }
+  /* Gris neutro (no negro ni marrón); lo que está más arriba, más claro; texto blanco roto; acentos aclarados (contraste ≥ 4,5:1) */
+  --paper:#252525; --surface:#2f2f2f; --perg:#2a2a2a; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
+  --ink:#e6e6e6; --ink2:#c4c4c4; --muted:#a3a3a3; --line:#3a3a3a; --line2:#444444;
+  --rubric:#ee6d6a; --rubric-soft:#3b2a2a; --rubric-fondo:#c23538; --glosa:#66bdb4; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark }
 
 *{box-sizing:border-box}
 html,body{background:var(--paper);color:var(--ink)}
@@ -55,6 +56,13 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .region{display:flex;flex-direction:column;gap:8px;font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2)}
 .arco{background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden;display:flex;align-items:flex-end}
 .ilu{display:block;width:100%;height:100%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center 72%/80% auto no-repeat;mask:var(--ilu) center 72%/80% auto no-repeat}
+.cals{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 -8px}
+.cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--rubric);background:var(--rubric-soft);color:var(--rubric)}
+.cal[aria-pressed="true"]{border-color:var(--line2);background:none;color:var(--muted);cursor:default}
+.cal.nota{border-radius:50%;padding:0;background:none;font-size:var(--f-ui);margin-left:auto}
+.nota-dia{font-family:var(--serif);font-size:var(--f-item);line-height:1.45;margin:0 0 18px}
+.siglas{margin:0;display:grid;gap:6px;font-size:var(--f-dato);color:var(--ink2)}
+.siglas div{display:flex;gap:10px}.siglas dt{font-weight:600;letter-spacing:.08em;min-width:3.2em;color:var(--muted)}.siglas dd{margin:0}
 .lbl{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 2px -6px}
 .horas{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .horas li{border-bottom:1px solid var(--line)}
@@ -69,7 +77,14 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .horas li.sel .n{color:var(--rubric);font-weight:600}
 .cta{display:flex;justify-content:flex-start}
 .btn{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);padding:10px 18px;font-weight:600}
-.btn.primary{background:var(--rubric);border-color:var(--rubric);color:#fff}
+.btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
+.discreto{align-self:center;border:0;background:none;min-height:44px;padding:8px 12px;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
+.orof-b{font-family:var(--serif);font-size:calc(var(--lec)*1rem);line-height:1.5}
+.orof-b h3{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:1.6em 0 .7em}
+.orof-b h3:first-child{margin-top:0}
+.orof{margin:.5em 0 .9em}.orof .ln{display:block;margin-bottom:.35em}
+.orof .gl{display:block;color:var(--glosa);font-style:italic;font-size:.84em;line-height:1.35}
+.hora .orof-b{margin:0 0 1.6em;padding:14px 16px;background:var(--surface);border-radius:var(--r-1)}
 .nota-proto{font-size:var(--f-dato);color:var(--muted);line-height:1.45;border-left:2px solid var(--line2);padding-left:10px}
 
 /* ---------- Lectura de la hora ---------- */

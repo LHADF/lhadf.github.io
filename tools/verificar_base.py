@@ -128,6 +128,20 @@ for n, a in ADF.items():
 for nom, C, H in (('laudes', CL, HL), ('visperas', CV, HV)):
     for k, e in C.items():
         if e.get('himno'): falta(e['himno'] in H, f'comunes/{nom}.yaml · {k}: el himno no está en himnos/{nom}.yaml')
+# ---------- Calendarios locales, oraciones del oficio e invitatorio gregoriano ----------
+LOC = leer(os.path.join(B, 'calendario', 'locales.yaml'))
+for c in LOC['cambios']:
+    falta(c['calendario'] in LOC['calendarios'] and c['calendario'] in LOC['padres'], f"calendario/locales.yaml · {c.get('celebracion')}: la sigla necesita nombre (calendarios) y país (padres)")
+    falta(c.get('grado') in ('Solemnidad', 'Fiesta', 'Memoria obligatoria') and re.fullmatch(r'\d\d-\d\d', str(c.get('fecha'))), f"calendario/locales.yaml · {c.get('celebracion')}: fecha MM-DD y grado")
+OO = leer(os.path.join(B, 'ordinario', 'oraciones-oficio.yaml'))
+for k in ('preparatoria', 'conclusiva'):
+    for c, v in OO[k].items():
+        if isinstance(v, list):
+            for e in v: falta(' = ' in e, f'ordinario/oraciones-oficio.yaml · {k}.{c}: «{e}» debe ser «latín = español»')
+IP = GLa['invitatorio_per_annum']
+for f in (IP['antifona'], IP['salmo']): falta(os.path.exists(os.path.join(B, 'gregoriano', f)), f'gregoriano/laudes.yaml · invitatorio_per_annum: no existe {f}')
+for e in [IP] + IP['estrofas']:
+    for x in e['traduccion']: falta(' = ' in x, f'gregoriano/laudes.yaml · invitatorio_per_annum: «{x}» debe ser «latín = español»')
 # cobertura: todos los días del calendario tienen Laudes completas (salterio + propio del tiempo)
 cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
 cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
@@ -137,7 +151,7 @@ def adviento(y):
     n = date(y, 12, 25); return n - timedelta(days=(n.weekday() + 1) % 7 or 7) - timedelta(weeks=3)
 sin_propio, pendientes = set(), set()
 d0 = date.fromisoformat(cal['desde'])
-for k, r in enumerate(cal['ARG']):
+for k, r in enumerate(cal['dias']):
     f = d0 + timedelta(days=k); t, fer, sal = tab[r[ix['t']]], tab[r[ix['fer']]], r[ix['sal']]
     dia = DIAS_L[f.weekday()]
     y = f.year if f >= adviento(f.year) else f.year - 1

@@ -1,0 +1,25 @@
+# Calendarios locales: lo que cambia en una diócesis respecto del calendario de su país.
+# Lo lee tools/calendario.py, que aplica el cambio al motor del Ordo (precedencias, I Vísperas y traslados salen de ahí).
+#   calendario: sigla (debe estar en «calendarios», abajo)      fecha: MM-DD      celebracion: comienzo del nombre en el Ordo
+#   grado: Solemnidad | Fiesta | Memoria obligatoria             nota: se muestra con el signo (!) en el inicio
+calendarios:
+  CRG: Calendario romano general
+  ADF: Uso del Movimiento Cultural de Renovación Ad Fontes
+  ARG: Calendario de Argentina
+  PGY: Calendario del Paraguay
+  BRS: Calendario del Brasil
+  CHL: Calendario de Chile
+  ESP: Calendario de España
+  FRC: Calendario de Francia
+  CDE: Calendario de la Diócesis de Ciudad del Este
+  BUE: Calendario de la Arquidiócesis de Buenos Aires
+# De qué calendario nacional parte cada calendario local
+padres:
+  BUE: ARG
+  CDE: PGY
+cambios:
+- calendario: BUE
+  fecha: 11-11
+  celebracion: San Martín de Tours
+  grado: Solemnidad
+  nota: Patrono principal de la Ciudad de Buenos Aires. Se celebra con el grado de Solemnidad.

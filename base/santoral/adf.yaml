@@ -55,9 +55,9 @@ San Josemaría Escrivá de Balaguer, presbítero:
 Bienaventurada Virgen María del Monte Carmelo:
   es: NUESTRA SEÑORA DEL CARMEN
 Dedicación de la Basílica de Santa María la Mayor:
-  como: LA DEDICACIÓN DE LA BASÍLICA DE SAN JUAN DE LETRÁN
+  comun: virgen-maria
 Santa Teresa de Calcuta, religiosa:
-  comun: virgenes
+  comun: santas-mujeres
 Santísimo Nombre de la bienaventurada Virgen María:
   comun: virgen-maria
 Bienaventurada Virgen María Corredentora:
@@ -91,6 +91,178 @@ San Clemente I, papa y mártir:
 Nuestra Señora del Buen Consejo:
   comun: virgen-maria
 Beata María Felicia de Jesús Sacramentado (Chiquitunga), religiosa:
-  comun: virgenes
+  comun: santas-mujeres
 Divino Niño Jesús:
   pendiente: 'Oficio propio: faltan todos los textos.'
+San Raimundo de Peñafort, presbítero:
+  comun: pastores
+Santos Fabián, papa, y Sebastián, mártires:
+  comun: varios-martires
+Santa Ángela de Médici, virgen:
+  comun: virgenes
+San Jerónimo Emiliano, presbítero:
+  comun: pastores
+San Claudio de la Colombière, presbítero:
+  comun: pastores
+Siete Santos Fundadores de la Orden de los Siervos de la Virgen María, religiosos:
+  comun: santos-varones
+San Francisco y santa Jacinta Marto, videntes:
+  comun: santos-varones
+San Pedro Damián, obispo y doctor de la Iglesia:
+  comun: pastores
+Beata Ludovica de Ángeles, virgen:
+  comun: virgenes
+San Casimiro, príncipe:
+  comun: santos-varones
+San Juan de Ávila, presbítero y doctor de la Iglesia:
+  comun: pastores
+San Bernardino de Siena, presbítero:
+  comun: pastores
+San Cristóbal Magallanes, presbítero, y compañeros, mártires:
+  comun: varios-martires
+Santa Rita de Cascia, religiosa:
+  comun: santas-mujeres
+Beata Crescencia Pérez, religiosa:
+  comun: santas-mujeres
+San Agustín de Canterbury, obispo:
+  comun: pastores
+San Marcelino y Pedro, mártires:
+  comun: varios-martires
+San Norberto, obispo:
+  comun: pastores
+San Pelayo, mártir:
+  comun: un-martir
+San Cirilo de Alejandría, obispo y doctor de la Iglesia:
+  comun: pastores
+Santos Protomártires de la Iglesia romana:
+  comun: varios-martires
+Santa Isabel de Portugal, reina:
+  comun: santas-mujeres
+San Antonio María Zaccaría, presbítero:
+  comun: pastores
+Santa Nazaria Ignacia March Mesa, religiosa:
+  comun: santas-mujeres
+Santos Agustín Zhao Rong, presbítero, y compañeros, mártires:
+  comun: varios-martires
+Santos Luis Martín y María Celia Guérin, esposos:
+  comun: santos-varones
+San Camilo de Lelis, presbítero:
+  comun: pastores
+San Enrique de Alemania, emperador:
+  comun: santos-varones
+San Apolinar, obispo y mártir:
+  comun: un-martir
+San Lorenzo de Brindisi, presbítero y doctor de la Iglesia:
+  comun: pastores
+Santa Brígida, religiosa:
+  comun: santas-mujeres
+San Pedro Crisólogo, obispo y doctor de la Iglesia:
+  comun: pastores
+San Pedro Julián Eymard, presbítero:
+  comun: pastores
+San Cayetano, presbítero:
+  comun: pastores
+Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir:
+  comun: un-martir
+Santa Juana Francisca Frémiot de Chantal, religiosa:
+  comun: santas-mujeres
+Santos Ponciano, papa, e Hipólito, mártires:
+  comun: varios-martires
+San Roque, penitente:
+  comun: santos-varones
+Santa Helena, emperatriz:
+  comun: santas-mujeres
+San Juan Eudes, presbítero:
+  comun: pastores
+San Luis de Francia, rey:
+  comun: santos-varones
+San José de Calasanz, presbítero:
+  comun: pastores
+Beato Ceferino Namuncurá, laico:
+  comun: santos-varones
+San Junípero Serra, religioso:
+  comun: santos-varones
+San Pedro Claver, presbítero:
+  comun: pastores
+San Roberto Belarmino, presbítero y doctor de la Iglesia:
+  comun: pastores
+San Jenaro, obispo y mártir:
+  comun: un-martir
+Santos Cosme y Damián, mártires:
+  comun: varios-martires
+San Bruno, presbítero:
+  comun: pastores
+San Héctor Valdivielso Sáez, mártir:
+  comun: un-martir
+San Juan XXIII, papa:
+  comun: pastores
+San Eduardo de Inglaterra, rey:
+  comun: santos-varones
+San Calixto I, papa y mártir:
+  comun: un-martir
+San Juan Pablo II, papa:
+  comun: pastores
+San Juan Capistrano, presbítero:
+  comun: pastores
+San Antonio María Claret, obispo:
+  comun: pastores
+San Leandro de Sevilla, obispo:
+  comun: pastores
+San Artémides Zatti, religioso:
+  comun: santos-varones
+San Alberto Magno, obispo y doctor de la Iglesia:
+  comun: pastores
+Santa Catalina de Alejandría, virgen y mártir:
+  comun: un-martir
+San Columbano, abad:
+  comun: santos-varones
+San Juan Damasceno, presbítero y doctor de la Iglesia:
+  comun: pastores
+San Nicolás, obispo:
+  comun: pastores
+San Juan Diego Cuauhtlatoatzin, religioso:
+  comun: santos-varones
+San Dámaso I, papa:
+  comun: pastores
+Beata Laura Vicuña, virgen:
+  comun: virgenes
+San Hermenegildo, mártir:
+  comun: un-martir
+San Anselmo, obispo y doctor de la Iglesia:
+  comun: pastores
+San Jorge, mártir:
+  comun: un-martir
+San Fidel de Sigmaringen, presbítero y mártir:
+  comun: un-martir
+San Juan I, papa y mártir:
+  comun: un-martir
+San Pablo VI, papa:
+  comun: pastores
+San Efrén, diácono y doctor de la Iglesia:
+  comun: pastores
+San Romualdo, abad:
+  comun: santos-varones
+Santos Juan Fisher, obispo, y Tomás Moro, mártires:
+  comun: varios-martires
+Santa María Goretti, virgen y mártir:
+  comun: un-martir
+Santa Teresa de los Andes, religiosa:
+  comun: santas-mujeres
+San Charbel Maklüf, presbítero:
+  comun: pastores
+San Eusebio de Vercelli, presbítero:
+  comun: pastores
+San Luis Alberto Miguel Hurtado, presbítero:
+  comun: pastores
+Santos José de Arimatea y Nicodemo, discípulos del Señor:
+  comun: santos-varones
+San Wenceslao, mártir:
+  comun: un-martir
+Santa Faustina Kowalska, virgen:
+  comun: virgenes
+Bienaventurada Virgen María de Aparecida:
+  comun: virgen-maria
+San Pablo de la Cruz, presbítero:
+  comun: pastores
+San Beda el Venerable, abad y doctor de la Iglesia:
+  comun: pastores

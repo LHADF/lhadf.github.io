@@ -16,6 +16,25 @@ leer = lambda *p: yaml.safe_load(open(os.path.join(B, *p), encoding='utf-8'))
 GRADO = {'Solemnidad': 'Solemnidad', 'Fiesta': 'Fiesta', 'Memoria': 'Memoria', 'Memoria obligatoria': 'Memoria', 'Memoria libre': 'Memoria libre'}
 
 
+# Común que indica el propio Ordo (columna «comun» del santoral), si el Ordo está a mano
+ORDO = os.environ.get('ORDO') or next((p for p in (os.path.join(RAIZ, '..', 'ordo-telegram'), os.path.join(RAIZ, '..', 'lucasfelixjhs', 'ordo-telegram')) if os.path.isdir(p)), None)
+COMUN_ORDO = {}
+if ORDO:
+    import csv
+    for r in csv.DictReader(open(os.path.join(ORDO, 'data', 'santoral.csv'), encoding='utf-8')):
+        COMUN_ORDO[r['nombre'].strip() + (', ' + r['titulo'].strip() if r['titulo'].strip() else '')] = r['comun']
+
+
+def comun_por_ordo(n):
+    c = COMUN_ORDO.get(n, '').lower()
+    mujer = re.match(r'(santa|beata|santas)\b', n.lower())
+    for clave, k in (('virgen maría', 'virgen-maria'), ('apóstoles', 'apostoles'), ('varios mártires', 'varios-martires'), ('un mártir', 'un-martir'),
+                     ('virgen y mártir', 'un-martir'), ('pastores', 'pastores'), ('doctores', 'doctores'), ('vírgenes', 'virgenes'),
+                     ('santas mujeres', 'santas-mujeres'), ('santos varones', 'santos-varones'), ('religiosos', 'santas-mujeres' if mujer else 'santos-varones')):
+        if 'común de' in c and clave in c: return {'comun': k}
+    return None
+
+
 def comun_por_nombre(n):
     m = n.lower()
     if 'arcángel' in m: return {'como': 'SANTOS ARCÁNGELES MIGUEL GABRIEL Y RAFAEL'}
@@ -38,7 +57,8 @@ def main():
     cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
     tab, ix, d0 = cal['tabla'], {c: i for i, c in enumerate(cal['campos'])}, date.fromisoformat(cal['desde'])
     adf = collections.OrderedDict()      # nombre → {grado, fechas, region}
-    for reg, filas in (('', [(d0 + timedelta(days=k), r) for k, r in enumerate(cal['ARG'])]), ('Paraguay', [(date.fromisoformat(f), r) for f, r in cal['PGY'].items()])):
+    grupos = [('', [(d0 + timedelta(days=k), r) for k, r in enumerate(cal['dias'])])] + [(v[1].replace(' ', ', '), [(date.fromisoformat(f), v[2])]) for f, vs in cal['var'].items() for v in vs]
+    for reg, filas in grupos:
         for f, r in filas:
             n, g, fer = tab[r[ix['n']]], tab[r[ix['g']]], tab[r[ix['fer']]]
             if n == fer: continue
@@ -54,10 +74,10 @@ def main():
         fe = e['fechas'].most_common(); fecha = fe[0][0] if len(fe) == 1 or fe[0][1] > sum(c for _, c in fe) * .6 else 'movible'
         kL, kV = mapaL.get(n), mapaV.get(n)
         ref = SaL.get(kL) or SaV.get(kV) or {}
-        if not kL and not kV and n not in A: A[n] = comun_por_nombre(n)
+        if not kL and not kV and n not in A: A[n] = comun_por_ordo(n) or comun_por_nombre(n)
         gA, gS = GRADO.get(e['grado'], e['grado']), GRADO.get(ref.get('grado'), ref.get('grado'))
         tipo = []
-        if not kL and not kV: tipo.append('Propia de ADF (no está en el calendario general de la base)')
+        if not kL and not kV: tipo.append('Memoria libre sin textos en la base' if e['grado'] == 'Memoria libre' else 'Propia de ADF (no está en el calendario general de la base)')
         else:
             if gS and gA != gS and not (gA == 'Memoria' and gS == 'Memoria libre'): tipo.append(f'Cambia de grado: {gS} → {gA}')
             if ref.get('fecha') not in (fecha, 'variable') and fecha != 'movible': tipo.append(f'Cambia de fecha: {ref.get("fecha")} → {fecha}')
@@ -77,7 +97,7 @@ def main():
             if gA in ('Solemnidad', 'Fiesta'): f.append('antífonas de los salmos')
             if hora == 'visperas' and gA == 'Solemnidad': f.append('I Vísperas')
             return '; '.join(f)
-        filas.append({'fecha': fecha, 'celebracion': n, 'grado_adf': e['grado'], 'region': e['region'] or 'Argentina y Paraguay', 'general': kL or kV or '—', 'grado_general': ref.get('grado') or '—',
+        filas.append({'fecha': fecha, 'celebracion': n, 'grado_adf': e['grado'], 'region': e['region'] or 'ADF', 'general': kL or kV or '—', 'grado_general': ref.get('grado') or '—',
                       'diferencia': '; '.join(tipo), 'comun': (a.get('comun') and base_js_nombre(a['comun'])) or (a.get('como') and 'Como: ' + a['como']) or (a.get('pendiente') and 'Sin común: oficio propio') or '—',
                       'falta_laudes': falta(SaL, kL, 'laudes'), 'falta_visperas': falta(SaV, kV, 'visperas')})
     # del calendario general (base) que ADF no celebra

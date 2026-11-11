@@ -23,6 +23,7 @@ jobs:
       - name: Calendario ADF (motor y datos del Ordo)
         run: |
           git clone --depth 1 https://github.com/lucasfelixjhs/ordo-telegram ../ordo-telegram
+          pip install pyyaml
           python3 tools/calendario.py
       - name: Revisar la base de textos
         run: pip install pyyaml && python3 tools/verificar_base.py

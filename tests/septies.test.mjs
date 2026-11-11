@@ -322,3 +322,32 @@ test('cántico de Daniel 3, 57-88: «No se dice Gloria al Padre» va como rúbri
   assert.equal(s.gloria, false);
   assert.ok(!s.versos.es.some(v => /No se dice/.test(v)));
 });
+
+test('calendarios: la base es ADF; otros calendarios y memorias libres son variantes del día', () => {
+  const nombres = (f, sel) => CP.opcionesDia(f, sel).map(o => o.siglas.join(' ') + (o.actual ? '*' : ''));
+  assert.deepEqual(JSON.stringify(nombres('2026-11-11', '')), JSON.stringify(['CRG ADF*', 'BUE']));       // San Martín: memoria; solemnidad en Buenos Aires
+  assert.equal(CP.diaCal('2026-11-11', '').g, 'Memoria obligatoria');
+  const bue = CP.diaCal('2026-11-11', 'BUE');
+  assert.equal(bue.g, 'Solemnidad'); assert.match(bue.nota, /Patrono principal de la Ciudad de Buenos Aires/);
+  assert.ok(VI.armar('2026-11-10', 'BUE').primeras && !VI.armar('2026-11-10', '').primeras);                // con sus I Vísperas
+  assert.equal(CP.diaCal('2027-05-08', 'BUE').n, 'Bienaventurada Virgen María de Luján');                  // lo de Argentina vale para Buenos Aires
+  assert.equal(CP.diaCal('2027-05-08', '').g, 'Feria');
+  // 13 de noviembre: feria, con dos memorias libres para elegir ese día
+  assert.equal(JSON.stringify(nombres('2026-11-13', '')), JSON.stringify(['ADF*', 'ESP ADF', 'ARG']));
+  const sel = {cal: '', dia: {'2026-11-13': 'San Artémides Zatti, religioso'}};
+  assert.equal(CP.diaCal('2026-11-13', sel).n, 'San Artémides Zatti, religioso');
+  assert.match(LA.armar('2026-11-13', sel).dia.nota, /Común de santos varones/);
+  for (const sg of Object.keys(ctx.window.CAL.var).flatMap(k => ctx.window.CAL.var[k].flatMap(v => v[1].split(' ')))) assert.ok(ctx.window.CAL.calendarios[sg], sg);
+});
+
+test('invitatorio gregoriano de los domingos del Tiempo Ordinario, con traducción palabra por palabra', () => {
+  const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
+  const pal = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>|[{}]/g, '').split(/\s+/).map(norm).filter(Boolean).join(' ');
+  const pp = ps => ps.flatMap(p => String(p[0]).split(/\s+/)).map(norm).filter(Boolean).join(' ');
+  const S = LA.armar('2026-11-15', '').secciones, g = S.find(s => s.k === 'invgreg');
+  assert.ok(g && S.some(s => s.k === 'invop') && S.some(s => s.k === 'salmo' && s.inv === 'es'));
+  assert.equal(g.estrofas.length, 6);
+  for (const x of [g.ant, ...g.estrofas]) { assert.equal(pp(x.glosa), pal(x.gabc)); assert.ok(!/[jJ]/.test(x.gabc.split('%%')[1].replace(/\([^)]*\)/g, ''))); }
+  assert.ok(!LA.armar('2026-12-06', '').secciones.some(s => s.k === 'invgreg'));   // Adviento: todavía no
+  assert.ok(B.oraciones.preparatoria.texto.length === 6 && B.oraciones.conclusiva.texto.length === 7);
+});

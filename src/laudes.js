@@ -42,7 +42,7 @@ function propio(hora, fecha, region){
       const C=L.comunes[adf.comun], mayor=/^(Fiesta|Solemnidad)/.test(ref.g);
       for(const c of ['himno','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro']) if(C[c]!=null) P[c]=C[c];
       if(mayor && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }
-      nota=`Celebración propia de ADF: textos del ${C.nombre} (provisorio). Falta la oración propia: va la del día.`;
+      nota=`Textos del ${C.nombre} (provisorio). Falta la oración propia: va la del día.`;
     } else if(ref.n!==ref.fer){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
     // Fiestas y solemnidades sin salmodia propia: salmos y antífonas del domingo de la I semana
@@ -78,10 +78,14 @@ function armar(hora, fecha, region){
   if(LAU && CP.deIso(fecha).getDay()===0){
     sec('invitatorio','Invitatorio');
     S.push(labia);
-    S.push({k:'ant', id:'ai', es:true, n:'Ant.', t:{es:P.inv_ant}});
+    // Domingos del Tiempo Ordinario: se puede cantar en gregoriano («Veníte, exsultémus Dómino» y Salmo 94). inv: 'greg' o 'es', según se elija.
+    const IG=hoy.t==='Ordinario' && hoy.dom && !hoy.sol && GL.invitatorio_to, inv=IG?{inv:'es'}:{};
+    if(IG){ S.push({k:'invop'});
+      S.push({k:'invgreg', inv:'greg', ant:{gabc:IG.ant.gabc, glosa:IG.ant.traduccion}, estrofas:IG.estrofas.map(e=>({gabc:e.gabc, glosa:e.traduccion}))}); }
+    S.push({k:'ant', id:'ai', es:true, n:'Ant.', t:{es:P.inv_ant}, ...inv});
     const s94=L.ordinario.invitatorio.salmo, v=X.versosDe(s94.texto);
-    S.push({k:'salmo', es:true, id:'salmo-94', ant:'ai', titulo:{es:s94.titulo}, lema:{es:X.oracionCase(s94.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:true});
-    S.push({k:'ant', rep:'ai', es:true});
+    S.push({k:'salmo', es:true, id:'salmo-94', ant:'ai', titulo:{es:s94.titulo}, lema:{es:X.oracionCase(s94.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:true, ...inv});
+    S.push({k:'ant', rep:'ai', es:true, ...inv});
   }
 
   sec('inicio','Invocación inicial');

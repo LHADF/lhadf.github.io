@@ -14,16 +14,30 @@ const deIso=s=>{ const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d
 const masDias=(s,n)=>{ const d=deIso(s); d.setDate(d.getDate()+n); return iso(d); };
 
 /* ---------- Calendario ---------- */
-function diaCal(fecha, region){
-  const T=CAL.tabla, C=CAL.campos;
-  const i=Math.round((deIso(fecha)-deIso(CAL.desde))/864e5);
-  const fila=(region==='PGY'&&CAL.PGY[fecha]) || CAL.ARG[i];
-  if(!fila) return null;
-  const o={fecha}; C.forEach((c,k)=>{ o[c]=['t','n','g','c','fer','oct'].includes(c)?T[fila[k]]:fila[k]; });
-  return o;
+// La base es el calendario ADF. «sel» dice qué se eligió: {cal: sigla del calendario preferido (ARG, PGY, BUE…),
+// dia: {fecha: nombre de la celebración elegida a mano ese día, o '' para la del calendario ADF}}. También vale la sigla sola.
+const TXT=['t','n','g','c','fer','oct','cal','nota'];
+function fichaDe(fila, fecha){ const T=CAL.tabla, o={fecha}; CAL.campos.forEach((c,k)=>{ o[c]=TXT.includes(c)?T[fila[k]]:fila[k]; }); return o; }
+function fichaBase(fecha){ const fila=CAL.dias[Math.round((deIso(fecha)-deIso(CAL.desde))/864e5)]; return fila?fichaDe(fila,fecha):null; }
+// Variantes del día: 'r', otro calendario lo celebra distinto; 'l', memoria libre (optativa)
+const variantesDe=fecha=>(CAL.var[fecha]||[]).map(([tipo,sig,fila])=>({tipo, siglas:sig.split(' '), f:fichaDe(fila,fecha)}));
+function diaCal(fecha, sel){
+  sel=(sel&&typeof sel==='object')?sel:{cal:sel||''};
+  const base=fichaBase(fecha); if(!base) return null;
+  const vs=variantesDe(fecha), el=sel.dia?sel.dia[fecha]:null;
+  if(el===''||el===base.n) return base;
+  if(el!=null){ const v=vs.find(v=>v.f.n===el); if(v) return v.f; }
+  for(let c=sel.cal; c; c=CAL.padres[c]){ const v=vs.find(v=>v.tipo==='r'&&v.siglas.includes(c)); if(v) return v.f; }   // el calendario preferido o el de su país
+  return base;
+}
+// Para el inicio: todas las celebraciones posibles del día (la primera, la del calendario ADF) y cuál está elegida
+function opcionesDia(fecha, sel){
+  const base=fichaBase(fecha); if(!base) return [];
+  const act=diaCal(fecha, sel);
+  const sig=f=>f.cal?f.cal.split(/,\s*/):['ADF'];
+  return [{tipo:'b', siglas:sig(base), f:base}, ...variantesDe(fecha)].map(o=>({...o, actual:o.f.n===act.n&&o.f.g===act.g}));
 }
 const enRango=f=>f>=CAL.desde && f<=CAL.hasta;
-const difiereRegion=f=>!!CAL.PGY[f];
 
 /* ---------- Utilidades de texto ---------- */
 const MAYUS=['Dios','Señor','Cristo','Jesús','Jesucristo','Israel','Padre','Hijo','Espíritu','Santo','María','Jerusalén','Sión','Iglesia','Omnipotente','Altísimo','Mesías','Redentor','Reina','Virgen','Madre'];
@@ -216,6 +230,6 @@ function armar(fecha, region){
   };
 }
 
-window.Completas={armar, diaCal, enRango, difiereRegion, iso, deIso, masDias, regiones:CAL.regiones,
+window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
   _:{invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
