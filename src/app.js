@@ -351,11 +351,13 @@ function himnoHTML(sec){
   };
   const bi=S.lengua==='bi' && o.lang==='la';
   const usarTrad=S.lengua==='es' && o.lang==='la' && o.trad;
-  const est=usarTrad?o.trad.es:o.est, amen=usarTrad?(o.trad.amen||'Amén.'):(o.amen||'');
+  let est=usarTrad?o.trad.es:o.est, amen=usarTrad?(o.trad.amen||'Amén.'):(o.amen||'');
+  // El Amén final va fuera de la última estrofa y en negrita (lo dicen todos). Si viene pegado al último verso, se separa.
+  if(!amen && est.length){ const u=est[est.length-1], l=u[u.length-1]||'', m=/^(.*?)\s*((?:am[eé]n[,.]?\s*)+)$/i.exec(l);
+    if(m){ amen='Amén.'; const resto=m[1].trim(); est=est.slice(0,-1).concat([resto?u.slice(0,-1).concat([resto]):u.slice(0,-1)]).filter(e=>e.length); } }
   const numerar=est.length>1; const GL=(bi&&!usarTrad)?glosaLineas(est,o.glosa):null;
   h+=`<div class="himno${numerar?'':' sin-num'}">`+est.map((e,ie)=>{
-    const ult=ie===est.length-1;
-    return `<p class="est">${numerar?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}${ult&&il===e.length-1&&amen?' '+esc(amen):''}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+'</div>';
+    return `<p class="est">${numerar?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
   return h;
 }
 function examenHTML(sec){
