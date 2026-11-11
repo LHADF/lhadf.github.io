@@ -5691,18 +5691,38 @@ Domingo de Pentecostés:
   lectura:
     ref: Ef 4,3-6
     texto: Esforzaos por mantener la unidad del Espíritu, con el vínculo de la paz. Un solo cuerpo y un solo Espíritu, como una sola es la meta de la esperanza en la vocación a la que habéis sido convocados. Un Señor, una fe, un bautismo. Un Dios, Padre de todo, que lo trasciende todo, y lo penetra todo, y lo invade todo.
+IX Domingo del Tiempo Ordinario (A) · I Vísperas:
+  ant_magnificat: 'No todo el que me dice: «¡Señor, Señor!» entrará en el reino de los cielos, sino el que cumpla la voluntad de mi Padre celestial.'
+IX Domingo del Tiempo Ordinario (B) · I Vísperas:
+  ant_magnificat: 'Jesús, apenado por la dureza de corazón de los fariseos, les dijo: «El sábado se ha hecho para el hombre, no el hombre para el sábado.»'
+IX Domingo del Tiempo Ordinario (C) · I Vísperas:
+  ant_magnificat: Jesús, a petición de los ancianos, se fue a casa del centurión para curar a su criado.
+IX Domingo del Tiempo Ordinario · I Vísperas:
+  oracion: Señor, nos acogemos confiadamente a tu providencia, que nunca se equivoca, y te suplicamos que apartes de nosotros todo mal y nos concedas aquellos beneficios que pueden ayudarnos para la vida presente y la futura. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+IX Domingo del Tiempo Ordinario:
+  oracion: Señor, nos acogemos confiadamente a tu providencia, que nunca se equivoca, y te suplicamos que apartes de nosotros todo mal y nos concedas aquellos beneficios que pueden ayudarnos para la vida presente y la futura. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+IX Domingo del Tiempo Ordinario (A):
+  ant_magnificat: Todo el que escucha estas mis palabras y las pone por obra será como el varón inteligente, que construyó su casa sobre roca.
+IX Domingo del Tiempo Ordinario (B):
+  ant_magnificat: 'Jesús dice: «El Hijo del hombre es dueño también del sábado.»'
+IX Domingo del Tiempo Ordinario (C):
+  ant_magnificat: «Ni siquiera en Israel he encontrado una fe tan grande», dice el Señor.
+X Domingo del Tiempo Ordinario (A) · I Vísperas:
+  ant_magnificat: Jesús, al pasar, llamó a Mateo, el publicano; él se levantó y siguió al Señor.
 X Domingo del Tiempo Ordinario (B) · I Vísperas:
   ant_magnificat: «Si en una familia anida la discordia, no puede durar mucho tiempo», dice el Señor.
-  oracion: Dios nuestro, de quien todo bien procede, concédenos seguir siempre tus inspiraciones, para que tratemos de hacer continuamente lo que es recto y, con tu ayuda, lo llevemos siempre a cabo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
 X Domingo del Tiempo Ordinario (C) · I Vísperas:
   ant_magnificat: 'A la entrada de la ciudad de Naím, Jesús confortó a una madre viuda, diciéndole: «Mujer, no llores.»'
+X Domingo del Tiempo Ordinario · I Vísperas:
   oracion: Dios nuestro, de quien todo bien procede, concédenos seguir siempre tus inspiraciones, para que tratemos de hacer continuamente lo que es recto y, con tu ayuda, lo llevemos siempre a cabo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+X Domingo del Tiempo Ordinario:
+  oracion: Dios nuestro, de quien todo bien procede, concédenos seguir siempre tus inspiraciones, para que tratemos de hacer continuamente lo que es recto y, con tu ayuda, lo llevemos siempre a cabo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+X Domingo del Tiempo Ordinario (A):
+  ant_magnificat: Yo quiero misericordia y no sacrificios, pues no he venido a llamar a los justos, sino a los pecadores.
 X Domingo del Tiempo Ordinario (B):
   ant_magnificat: El que hace la voluntad de Dios es mi hermano y mi hermana y mi madre.
-  oracion: Dios nuestro, de quien todo bien procede, concédenos seguir siempre tus inspiraciones, para que tratemos de hacer continuamente lo que es recto y, con tu ayuda, lo llevemos siempre a cabo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
 X Domingo del Tiempo Ordinario (C):
   ant_magnificat: 'Un gran profeta ha surgido entre nosotros: Dios ha visitado a su pueblo.'
-  oracion: Dios nuestro, de quien todo bien procede, concédenos seguir siempre tus inspiraciones, para que tratemos de hacer continuamente lo que es recto y, con tu ayuda, lo llevemos siempre a cabo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
 XI Domingo del Tiempo Ordinario (A) · I Vísperas:
   ant_magnificat: A la vista de las multitudes, Jesús se movió a compasión, porque estaban extenuados y abatidos, como ovejas sin pastor.
 XI Domingo del Tiempo Ordinario (B) · I Vísperas:

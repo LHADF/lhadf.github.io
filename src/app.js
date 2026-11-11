@@ -45,6 +45,14 @@ function cargarDia(){
   if(!CP.difiereRegion(S.fecha) && !['ARG','PGY'].includes(S.region)) S.region='ARG';
   D=CP.armar(S.fecha, S.region);
   DH = (MAYORES[S.hora] && window[S.hora.toUpperCase()]) ? window[MAYORES[S.hora]].armar(S.fecha, S.region) : null;
+  // Uso ADF: Vísperas y Completas juntas. Después de la oración de Vísperas se omite su conclusión y siguen, de Completas:
+  // examen de conciencia, cántico evangélico, oración, conclusión y antífona de la Virgen.
+  if(DH && S.hora==='visperas' && S.unirCompletas && D){
+    const V=DH.secciones, corte=V.findIndex(s=>s.k==='sec'&&s.id==='bendicion');
+    const C=[]; let toma=false;
+    for(const s of D.secciones){ if(s.k==='sec') toma=['examen','cantico','oracion','bendicion','mariana'].includes(s.id); if(toma) C.push(s.k==='sec'?{...s,id:'c-'+s.id,plegable:false}:{...s,pleg:false}); }
+    DH={...DH, unidas:true, secciones:[...V.slice(0,corte), ...C]};
+  }
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
 cargarDia();
@@ -395,6 +403,8 @@ function horaHTML(){
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
+      // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
+      if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Seguir con Completas</button></div>`;
       pleg=sec.plegable?sec.id:null;
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
       return;
@@ -453,7 +463,7 @@ function horaHTML(){
 function horaActual(){ const d=new Date(); const m=d.getHours()*60+d.getMinutes();
   if(m<5*60) return 'completas'; if(m<9*60) return 'laudes'; if(m<11*60) return 'tercia'; if(m<14*60) return 'sexta'; if(m<17*60) return 'nona'; if(m<21*60) return 'visperas'; return 'completas'; }
 const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas'],['completas','Completas']];
-const COLORES={Verde:'var(--verde)',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#d9d2c3',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
+const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#d9d2c3',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
 function portadaHTML(){
   const r=R(); const ahora=horaActual(); const esHoy=S.fecha===fechaHoy();
   const reg=CP.difiereRegion(S.fecha) ? `<div class="region"><span>Este día el calendario difiere:</span>${seg('region',Object.entries(CP.regiones),S.region)}</div>` : '';
@@ -467,7 +477,7 @@ function portadaHTML(){
     <div class="dia">
       <div class="txt">
         <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${esc(r.dia.titulo)}</h2></div>
-        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'var(--verde)'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}</div>
+        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}</div>
       </div>
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>
@@ -555,7 +565,8 @@ document.addEventListener('click',e=>{
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v; refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
     case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
     case 'concl': if(S.concl===v) break; S.concl=v; cambio('Conclusión: '+b.textContent.toLowerCase()); break;
-    case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; cambio(c?'Completas cantadas':'Completas recitadas'); break; }
+    case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(S.unirCompletas?'Vísperas con Completas':'Vísperas solas'); break;
+    case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
     case 'menos': S.lec=Math.max(.9,Math.round((S.lec-.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
     case 'mas': S.lec=Math.min(2,Math.round((S.lec+.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;

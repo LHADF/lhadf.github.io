@@ -5299,6 +5299,14 @@ Domingo de Pentecostés:
     ref: Hch 5, 30-32
     texto: El Dios de nuestros padres resucitó a Jesús, a quien vosotros matasteis colgándole de un madero. La diestra de Dios lo exaltó haciéndolo jefe y salvador, para otorgar a Israel la conversión, el perdón de los pecados. Testigos de esto somos nosotros y el Espíritu Santo, que Dios da a los que le obedecen.
   ant_benedictus: Recibid el Espíritu Santo; quedan perdonados los pecados a quienes los perdonéis. Aleluia.
+IX Domingo del Tiempo Ordinario:
+  oracion: Señor, nos acogemos confiadamente a tu providencia, que nunca se equivoca, y te suplicamos que apartes de nosotros todo mal y nos concedas aquellos beneficios que pueden ayudarnos para la vida presente y la futura. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+IX Domingo del Tiempo Ordinario (A):
+  ant_benedictus: «El que, después de haber escuchado estas palabras que acabo de decir, no las pone por obra —dice el Señor— será como el necio, que construyó su casa sobre arena.»
+IX Domingo del Tiempo Ordinario (B):
+  ant_benedictus: ¿No es más apropiado para un sábado hacer el bien y salvar una vida?
+IX Domingo del Tiempo Ordinario (C):
+  ant_benedictus: Señor, yo no soy digno de que entres en mi casa; pero basta que digas una palabra y mi criado quedará sano.
 X Domingo del Tiempo Ordinario:
   oracion: Dios nuestro, de quien todo bien procede, concédenos seguir siempre tus inspiraciones, para que tratemos de hacer continuamente lo que es recto y, con tu ayuda, lo llevemos siempre a cabo. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
 X Domingo del Tiempo Ordinario (A):
@@ -5504,5 +5512,3 @@ XXXIII Domingo del Tiempo Ordinario (B):
   ant_benedictus: Los justos brillarán como el fulgor del firmamento por toda la eternidad.
 XXXIII Domingo del Tiempo Ordinario (C):
   ant_benedictus: 'Por mi causa os perseguirán; eso os dará ocasión de profesar vuestra fe: yo os daré palabras y sabiduría a las que no podrá hacer frente ningún adversario vuestro.'
-IX Domingo del Tiempo Ordinario:
-  pendiente: 'Falta en sync: antífona del Benedictus (ciclos A, B y C) y oración. Cae el 30/5/2027.'

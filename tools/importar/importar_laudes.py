@@ -141,7 +141,7 @@ def clave_tiempo(d):
 
 
 ALIAS = {}
-PENDIENTES = {'IX Domingo del Tiempo Ordinario': 'Falta en sync: antífona del Benedictus (ciclos A, B y C) y oración. Cae el 30/5/2027.'}
+PENDIENTES = {}   # el IX Domingo del T. O. se completó a mano (11/2026) con el libro
 
 
 def alias_salmos(todos):
