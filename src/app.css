@@ -57,10 +57,13 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .arco{background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden;display:flex;align-items:flex-end}
 .ilu{display:block;width:100%;height:100%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center 72%/80% auto no-repeat;mask:var(--ilu) center 72%/80% auto no-repeat}
 .cals{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 -8px}
-.cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--rubric);background:var(--rubric-soft);color:var(--rubric)}
-.cal[aria-pressed="true"]{border-color:var(--line2);background:none;color:var(--muted);cursor:default}
-.cal.nota{border-radius:50%;padding:0;background:none;font-size:var(--f-ui);margin-left:auto}
-.nota-dia{font-family:var(--serif);font-size:var(--f-item);line-height:1.45;margin:0 0 18px}
+.cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--line2);background:none;color:var(--muted)}
+.cal[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft);color:var(--rubric);cursor:default}
+.cal.nota{border-radius:50%;padding:0;border-color:var(--rubric);color:var(--rubric);font-size:var(--f-ui);margin-left:auto}
+.prep{display:flex;justify-content:center;margin:-.6em 0 .4em}
+.nota-dia{font-family:var(--serif);font-size:1.0625rem;line-height:1.5;margin:0 0 14px}
+.nota-dia .sig{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;color:var(--rubric);margin-right:.6em}
+.siglas{margin-top:22px !important;padding-top:14px;border-top:1px solid var(--line)}
 .siglas{margin:0;display:grid;gap:6px;font-size:var(--f-dato);color:var(--ink2)}
 .siglas div{display:flex;gap:10px}.siglas dt{font-weight:600;letter-spacing:.08em;min-width:3.2em;color:var(--muted)}.siglas dd{margin:0}
 .lbl{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 2px -6px}

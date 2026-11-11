@@ -1,0 +1,334 @@
+# Notas del Calendario litúrgico ADF, por celebración: «MM-DD Nombre, título» como en el Ordo («movible» para las del Propio del tiempo).
+# Cada nota lleva la sigla del calendario al que se refiere. Se muestran con el signo (!) en el inicio.
+# Importadas una vez del PDF (tools/importar/notas_calendario.py); se corrigen acá.
+01-01 Santa María, Madre de Dios:
+- calendario: CRG
+  texto: Jornada mundial de la paz. Día de precepto.
+01-03 Santísimo Nombre de Jesús:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria.
+01-14 San Hilario de Poitiers, obispo y doctor de la Iglesia:
+- calendario: ADF
+  texto: En razón de la concurrencia ocasional con el Bautismo del Señor, es trasladada del 13 al 14, de acuerdo al Calendario de la Forma extraordinaria. Y es elevada de la categoría de Memoria obligatoria en razón de la importancia del modelo de vida comunitaria y pastoral del clero diocesano que ofreció san Hilario de Poitiers.
+01-15 Santos Mauro y Plácido, religiosos:
+- calendario: ADF
+  texto: Agregada al Calendario en razón de su relación al grupo fundacional de san Benito de Nursia, patrono secundario de ADF.
+01-19 Beata Laura Vicuña, virgen:
+- calendario: ARG
+  texto: Trasladada del 22 de enero para dar lugar a la Memoria obligatoria de san Vicente.
+01-20 Santos Fabián, papa, y Sebastián, mártires:
+- calendario: ADF
+  texto: Las Memorias libres de los santos Fabián y Sebastián se unen en una sola celebración de acuerdo al uso de la Forma extraordinaria y es elevada a la categoría de Memoria obligatoria por la difusión de la devoción de estos mártires.
+01-22 San Vicente, diácono y mártir:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria.
+01-24 Bienaventurada Virgen María, Reina de la Paz:
+- calendario: ADF
+  texto: Elevada de Memoria libre o Feria por S.E.R. Mons. Rogelio Livieres con ocasión de su declaración como Co-Patrona principal de la Diócesis de Ciudad del Este, para invocar la protección de María frente a los ataques de los enemigos de la Iglesia, y adoptada como tal por ADF en todas sus comunidades.
+01-28 Santo Tomás de Aquino, presbítero y doctor de la Iglesia:
+- calendario: ADF
+  texto: Patrono de los estudios superiores de Filosofía y Teología de ADF. Elevada de la categoría de Memoria obligatoria.
+01-29 San Francisco de Sales, obispo y doctor de la Iglesia:
+- calendario: ADF
+  texto: Trasladada del 24 de enero para dar lugar a la Solemnidad de María, Reina de la Paz, y elevada de la categoría de Memoria libre o Feria en razón de la importancia de los escritos espirituales del Santo.
+02-02 Presentación del Señor en el Templo y Purificación de la Virgen María:
+- calendario: CRG
+  texto: 'Jornada de la vida consagrada (mundial y pontificia): liturgia del día, alusión en la mon. de entrada y en la hom., intención en la orac. univ. En Argentina se celebra el 8 de septiembre. Las candelas pueden ser bendecidas con procesión o entrada solemne. Se encienden las candelas desde el principio, mientras se canta la antífona «Nuestro Señor llega con poder». Al entrar en la iglesia o en el presbiterio se canta la antífona de entrada de la Misa, sigue el Gloria y la oración colecta. En la procesión el sacerdote puede usar capa pluvial o casulla.'
+02-03 San Blas, obispo y mártir:
+- calendario: CDE
+  texto: Patrono principal de la Diócesis de CDE, elevada a la categoría de Solemnidad.
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria a Memoria obligatoria.
+02-08 San Jerónimo Emiliano, presbítero:
+- calendario: CRG
+  texto: Jornada de oración y reflexión contra la trata de personas (ARG).
+02-09 Beata Ana Catalina Emmerick, virgen:
+- calendario: ADF
+  texto: Incorporada al Calendario y elevada a la categoría de Memoria obligatoria por la importancia singular del saber bíblico de sus visiones para la Iglesia de nuestro tiempo.
+02-11 Bienaventurada Virgen María de Lourdes:
+- calendario: CRG
+  texto: 'Jornada mundial del enfermo (pontificia): liturgia del día (aunque por utilidad pastoral, a juicio del rector de la iglesia o del sacerdote celebrante, se puede usar el formulario «Por los enfermos», cf. Ordenación General del Misal Romano 376), alusión en la mon. de entrada y en la hom., intención en la orac. univ.'
+02-15 San Claudio de la Colombière, presbítero:
+- calendario: ADF
+  texto: Agregada al Calendario por el valor de su obra espiritual de la escuela francesa.
+02-18 Beato Juan de Fiésole (Fra Angelico), religioso:
+- calendario: ADF
+  texto: Patrono de los artistas. Agregada al Calendario y elevada a la categoría de Memoria obligatoria.
+02-23 San Policarpo, obispo y mártir:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en razón de que el Santo perteneció a la generación de los discípulos que aprendieron la fe directamente del Apóstol san Juan. También fue discípulo de san Papías.
+02-24 San Papías, obispo:
+- calendario: ADF
+  texto: Agregada al Calendario como Memoria obligatoria en razón de que fue de la primera generación de discípulos de san Juan Evangelista.
+03-19 San José, esposo de la bienaventurada Virgen María:
+- calendario: CRG
+  texto: Patrono de la Iglesia.
+03-21 Tránsito de san Benito, abad:
+- calendario: ADF
+  texto: Patrono secundario de ADF, razón de su agregación al Calendario y elevación a la categoría de Fiesta. Se recuerda hoy la filiación espiritual de ADF con la Abadía de Fontgombault.
+03-24 San Gabriel Arcángel:
+- calendario: ADF
+  texto: Siguiendo el uso de la Forma extraordinaria, las celebraciones de cada uno de los tres Arcángeles Miguel, Gabriel y Rafael tienen lugar en sus fechas tradicionales, por separado.
+04-04 San Isidoro de Sevilla, obispo y doctor de la Iglesia:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en razón de la importancia de las enseñanzas de este Santo del mundo hispano.
+04-13 San Hermenegildo, mártir:
+- calendario: ADF
+  texto: Agregada al Calendario en razón de la importancia en el mundo hispano de este Santo, mártir de la Eucaristía.
+04-27 Santo Toribio de Mogrovejo, obispo:
+- calendario: ARG
+  texto: Patrono del Episcopado Latinoamericano. En el Calendario universal se celebra como conmemoración el 23 de marzo.
+04-28 San Luis María Grignon de Montfort, presbítero:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria por la importancia de la consagración a María predicada por el Santo. En este día se renueva anualmente la Consagración de ADF al Sagrado Corazón, al Inmaculado Corazón de María y al Patriarca san José.
+05-01 San José, obrero:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria en razón de la importancia de san José en la vida de la Iglesia.
+05-03 Exaltación de la Santa Cruz, Kurusu ára:
+- calendario: PGY
+  texto: Fecha tradicional de esta celebración que se mantiene en el PGY y que en el Calendario romano general se celebra el 14 de septiembre, en las vísperas de Nuestra Señora de los Dolores. La Fiesta de san Felipe y Santiago el Menor, apóstoles, se traslada en PGY al 11 de mayo.
+05-05 San Pío V, papa:
+- calendario: ADF
+  texto: Memoria trasladada del 30 de abril y elevada a Memoria en razón de que los miembros fundadores de ADF reciben en esta fecha, al concluir un triduo de oración para pedir el discernimiento de la voluntad de Dios, la señal providencial de que debían iniciar el proceso de fundación de las Comunidades Sacerdotales de San Juan. La fecha de conclusión del Triduo fue elegida por ser el aniversario del acuerdo firmado el 5 de mayo de 1988 (san Pío V, en el Calendario de la Forma extraordinaria) por el entonces Cardenal Joseph Ratzinger y el Arzobispo Marcel Lefèbvre para regularizar la situación canónica de la Fraternidad San Pío X en la Iglesia.
+05-06 San Juan ante la Puerta Latina:
+- calendario: ADF
+  texto: Aniversario de los inicios de la libre asociación de las CSI (1997), cuando los miembros fundadores de ADF salen de Saint Thomas Aquinas Seminary en Winona, Minnesota.
+05-08 Bienaventurada Virgen María de Luján:
+- calendario: ARG
+  texto: Patrona de la República Argentina.
+05-10 San Juan de Ávila, presbítero y doctor de la Iglesia:
+- calendario: ADF
+  texto: Agregada al Calendario en razón de la importancia de la doctrina espiritual de este Santo español.
+05-11 Santos Felipe y Santiago el Menor, apóstoles:
+- calendario: PGY
+  texto: Trasladada del 3 de mayo para dar lugar a la Fiesta de la Santa Cruz (ver nota del día correspondiente).
+05-12 San Pancracio, mártir:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria.
+05-15 San Isidro, labrador:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en ARG y PGY por la importancia tradicional de este santo español.
+05-23 Beata Crescencia Pérez, religiosa:
+- calendario: ARG
+  texto: Trasladada del 20 de mayo.
+05-24 María, Auxilio de los Cristianos:
+- calendario: ADF
+  texto: Aniversario de la fundación de las CSI como Asociación Pública Clerical de Fieles en Scranton, Pensilvania, 1998. Solemnidad en la Diócesis de Ciudad del Este y Fiesta en la República Argentina.
+05-28 Santa Juana de Arco, virgen y mártir:
+- calendario: ADF
+  texto: Agregada al Calendario, trasladada del 30 de mayo para dar lugar a la Memoria de san Fernando y elevada a la categoría de Memoria obligatoria en razón de la importancia histórica de esta santa francesa.
+05-30 San Fernando de Castilla, rey:
+- calendario: ADF
+  texto: Agregada al Calendario y elevada a la categoría de Memoria obligatoria en razón de la importancia del Santo.
+06-23 San Pelayo, mártir:
+- calendario: ADF
+  texto: Trasladada del 26 de junio para dar lugar a la Memoria de san Josemaría Escrivá de Balaguer.
+06-25 San Cirilo de Alejandría, obispo y doctor de la Iglesia:
+- calendario: ADF
+  texto: Trasladada del 27 de junio para dar lugar a la Fiesta de Nuestra Señora del Perpetuo Socorro.
+06-26 San Josemaría Escrivá de Balaguer, presbítero:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria por los favores recibidos por intercesión de san Josemaría en la historia de las CSI; en particular, el rol cumplido por S.E.R. Mons. Rogelio Livieres, Obispo de Ciudad del Este, miembro de la Prelatura del Opus Dei, en el proceso fundacional diocesano.
+06-28 San Ireneo de Lyon, obispo y mártir:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria obligatoria por ser patrono de la Casa de Estudios de las CSI en Ciudad del Este.
+07-10 Santos Agustín Zhao Rong, presbítero, y compañeros, mártires:
+- calendario: ARG
+  texto: Trasladada del 9 de julio en ARG para dar lugar a la Fiesta de Nuestra Señora de Itatí.
+07-11 San Benito de Nursia, abad:
+- calendario: ADF
+  texto: Patrono secundario de ADF. Las CSI fueron agregadas espiritualmente a la Abadía de Nuestra Señora de Fontgombault (Francia), comprometiéndose a celebrar la Misa por las intenciones de dicha Abadía el 21 de marzo y el 11 de julio. Recíprocamente, la Abadía se comprometió a celebrar la Misa por las intenciones de las CSI el 27 de diciembre.
+07-12 Santos Luis Martín y María Celia Guérin, esposos:
+- calendario: ADF
+  texto: Agregada al Calendario después de la canonización por el Papa Francisco el 18 de octubre de 2015.
+07-13 Santa Teresa de los Andes, religiosa:
+- calendario: ADF
+  texto: Canonizada por el Papa Juan Pablo II el 21 de marzo de 1993 y agregada al Calendario en razón de la importancia de esta santa chilena. La Memoria de san Enrique queda trasladada al 17 de julio.
+07-16 Bienaventurada Virgen María del Monte Carmelo:
+- calendario: ADF
+  texto: Tomada del Calendario tradicional y de algunos Calendarios litúrgicos nacionales.
+07-17 San Enrique de Alemania, emperador:
+- calendario: ADF
+  texto: Trasladada del 13 de julio para dar lugar a la Memoria de santa Teresa de los Andes.
+07-19 San Apolinar, obispo y mártir:
+- calendario: ADF
+  texto: Trasladada del 20 de julio para dar lugar a la Solemnidad del Divino Niño.
+07-20 Divino Niño Jesús:
+- calendario: ADF
+  texto: Agregada al Calendario por la importancia de esta devoción y los favores recibidos en la historia de ADF y elevada de la categoría de Memoria libre o Feria de ciertas fiestas del Divino Niño en países como Colombia o Filipinas.
+07-23 Santa Brígida, religiosa:
+- calendario: CRG
+  texto: Patrona de Europa.
+07-24 San Francisco Solano, presbítero:
+- calendario: ADF
+  texto: Agregada al Calendario en razón del rol misionero de este santo en Latinoamérica. Memoria obligatoria en ARG.
+07-25 Santiago, apóstol:
+- calendario: CRG
+  texto: Patrono de España.
+07-27 San Charbel Maklüf, presbítero:
+- calendario: ADF
+  texto: Agregada al Calendario en razón de la importancia de este santo del rito maronita. Trasladada del 24 de julio en el Calendario de ARG para dar lugar a la Memoria de san Francisco Solano.
+08-03 San Eusebio de Vercelli, presbítero:
+- calendario: ADF
+  texto: Trasladada del día anterior para dar lugar a la Memoria libre de San Pedro Julián Eymard.
+08-09 Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir:
+- calendario: CRG
+  texto: Patrona de Europa.
+08-15 Asunción de la Virgen María:
+- calendario: CRG
+  texto: Patrona principal del PGY.
+08-16 San Roque, penitente:
+- calendario: ADF
+  texto: Agregada al Calendario por la popularidad de este santo en el PGY y ARG.
+08-17 San Luis Alberto Miguel Hurtado, presbítero:
+- calendario: ADF
+  texto: Agregada al Calendario después de su canonización por el Papa Benedicto XVI el 23 de octubre de 2005 y anticipada a este día para dar lugar a la Memoria libre o Feria de santa Elena el 18 de agosto.
+08-18 Santa Helena, emperatriz:
+- calendario: ADF
+  texto: Agregada al Calendario por su importancia en la conversión del Imperio Romano y el descubrimiento de la Santa Cruz en Jerusalén.
+08-21 San Pío X, papa:
+- calendario: ADF
+  texto: Patrono de la dedicación a la fuente de la Catequesis, o Doctrina de la Fe. Elevada de la categoría de Memoria obligatoria.
+08-23 Beata María Tránsito de Jesús Sacramentado, religiosa:
+- calendario: ARG
+  texto: Trasladada del 25 de agosto para dar lugar a la Memoria de san Luis.
+08-23 Santa Rosa de Lima, virgen:
+- calendario: CRG
+  texto: En América Latina se celebra en la fecha tradicional (30 de agosto).
+08-25 San Luis de Francia, rey:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en razón de la importancia histórica de este Santo, rey de Francia.
+08-26 San José de Calasanz, presbítero:
+- calendario: ADF
+  texto: Trasladada del 25 de agosto para dar lugar a la Memoria de san Luis de Francia.
+08-29 Pasión de san Juan Bautista:
+- calendario: CRG
+  texto: Se le da en este Calendario el nombre tradicional en vez de denominarlo «martirio», como en el Calendario romano general actual. San Juan Bautista tiene su «Natividad» y su «Pasión», imitando los dos Ciclos principales de los misterios del Señor, de quien fue el Precesor.
+08-30 Santa Rosa de Lima, virgen:
+- calendario: PGY
+  texto: Patrona de América Latina.
+08-31 Santos José de Arimatea y Nicodemo, discípulos del Señor:
+- calendario: ADF
+  texto: Agregada al Calendario por el culto que valientemente demostraron al Cuerpo de Jesús durante su Misterio Pascual y, por lo tanto, pueden servir de aliento al cultivo de las Fuentes en nuestra época.
+09-01 San Junípero Serra, religioso:
+- calendario: ADF
+  texto: Trasladada del 28 de agosto para dar lugar a la Memoria de san Agustín y agregada al Calendario por la importancia de este Santo para el catolicismo en América.
+09-03 San Gregorio Magno, papa y doctor de la Iglesia:
+- calendario: ADF
+  texto: Patrono de la dedicación a la fuente de la Liturgia. Elevada de la categoría de Memoria obligatoria.
+09-08 Natividad de la bienaventurada Virgen María:
+- calendario: CRG
+  texto: En Argentina, Jornada nacional de la vida consagrada.
+09-12 Santísimo Nombre de la bienaventurada Virgen María:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en razón de la importancia de las Fiestas marianas según el Calendario de la Forma extraordinaria.
+09-15 Bienaventurada Virgen María Corredentora:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria obligatoria en razón de la relación que tiene con san Juan Evangelista al pie de la Cruz, a quien asumió como hijo; y en anticipación de la proclamación del dogma de la Corredención de María, título principal de todas las glorias de María Santísima. Patrona principal de las Hermanas de María, Madre de los apóstoles.
+09-18 Santa Hildegarda de Bingen, virgen y doctora de la Iglesia:
+- calendario: ADF
+  texto: Agregada al Calendario y elevada a la categoría de Memoria obligatoria en razón de la importancia de las enseñanzas de esta santa para la Iglesia.
+09-19 Nuestra Señora de la Salette:
+- calendario: ADF
+  texto: Agregada en razón de la importancia de estas apariciones para nuestro tiempo. La Memoria de san Jenaro queda trasladada al 22 de septiembre.
+09-22 San Jenaro, obispo y mártir:
+- calendario: ADF
+  texto: Trasladada del 19 de septiembre para dar lugar a la Fiesta de Nuestra Señora de La Salette.
+09-24 Bienaventurada Virgen María de la Merced:
+- calendario: ADF
+  texto: Agregada al Calendario por la importancia de esta advocación española.
+09-27 San Vicente de Paúl, presbítero:
+- calendario: CRG
+  texto: Jornada mundial del turismo.
+09-29 San Miguel Arcángel:
+- calendario: ADF
+  texto: Protector de la Iglesia. Elevada de la categoría de Fiesta y separada según el uso tradicional de la celebración de los Arcángeles san Gabriel y de san Rafael, por la singular importancia de estos tres Arcángeles en la historia de la salvación.
+09-30 San Jerónimo, presbítero y doctor de la Iglesia:
+- calendario: ADF
+  texto: Patrono de la dedicación a la fuente de las Sagradas Escrituras. Elevada de la categoría de Memoria obligatoria.
+10-08 San Dionisio, obispo, y compañeros, mártires:
+- calendario: ADF
+  texto: La Memoria libre de san Dionisio y compañeros que se celebra en el CRG el día 9 es elevada a la categoría de Memoria obligatoria y anticipada en este Calendario al día 8 para permitir la celebración de la Memoria libre de san Juan Enrique Newman, de mucho significado para la vida inteectual católica y la renovación ad fontes. Por lo cual es también elevada a la categoría de Memoria obligatoria.
+10-12 Bienaventurada Virgen María de Aparecida:
+- calendario: BRS
+  texto: Agregada al Calendario en aquellas comunidades en las que hay un importante número de miembros brasileños, para honrar a la patrona principal de ese país latinoamericano. Es decir, no se sigue aquí un criterio territorial, sino personal.
+10-12 Bienaventurada Virgen María del Pilar:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en razón de la importancia de esta devoción en el mundo hispano y del uso del Calendario de la Forma extraordinaria.
+10-13 San Eduardo de Inglaterra, rey:
+- calendario: ADF
+  texto: Agregado al Calendario en razón de su intensa devoción al apóstol san Juan.
+10-16 Santa Margarita María de Alacoque, virgen:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria en razón de la importancia de la devoción al Sagrado Corazón en la espiritualidad de ADF.
+10-24 San Rafael Arcángel:
+- calendario: ADF
+  texto: Agregado al Calendario de acuerdo al uso de la Forma extraordinaria por la importancia que los tres Arcángeles tienen, singularmente, en la historia de la salvación. La Memoria de san Antonio María Claret se traslada al 25 de octubre.
+10-25 San Antonio María Claret, obispo:
+- calendario: ADF
+  texto: Trasladada del 24 de octubre para dar lugar a la celebración de la Fiesta de san Rafael Arcángel.
+11-01 Todos los Santos:
+- calendario: CRG
+  texto: A los fieles que visiten devotamente el cementerio u oren sólo mentalmente por los difuntos se les concede la indulgencia plenaria (aplicable solamente a las almas del purgatorio) en cada uno de los días del 1 al 8 de noviembre, e indulgencia parcial en los demás días del año. En el día de la Conmemoración de los fieles difuntos (o, con el consentimiento del Ordinario, en el domingo anterior o posterior, o en la Solemnidad de Todos los Santos), en todas las iglesias y oratorios se puede lucrar de indulgencia plenaria. En Argentina, Jornada nacional de oración por la santificación del pueblo argentino y la glorificación de sus siervos de Dios.
+11-02 Todos los Fieles Difuntos:
+- calendario: CRG
+  texto: Todos los sacerdotes pueden celebrar tres Misas; pero sólo se puede recibir un estipendio; la segunda se debe aplicar por el sufragio de todos los fieles difuntos y la tercera por las intenciones del Sumo Pontífice. Los fieles que hayan recibido la comunión en una Misa pueden recibirla otra vez, solamente dentro de la celebración eucarística en la que participe (c. 917).
+11-07 Bienaventurada Virgen María, Madre y Medianera de la Gracia:
+- calendario: ADF
+  texto: Tomada del Calendario de ARG.
+11-11 San Martín de Tours, obispo:
+- calendario: BUE
+  texto: Patrono principal de la Ciudad de Buenos Aires. Se celebra con el grado de Solemnidad.
+- calendario: ADF
+  texto: Patrono secundario de ADF por ser modelo de vida en común del clero diocesano.
+11-15 Santos Roque González de Santa Cruz, Alfonso Rodríguez y Juan del Castillo, presbíteros y mártires:
+- calendario: ADF
+  texto: Agregada al Calendario y elevada a la categoría de Memoria obligatoria en razón de la importancia de estos primeros santos mártires de la región guaranítica. En el PGY se celebra con la categoría de Fiesta. La Memoria de san Alberto Magno se traslada al 17 de noviembre.
+11-16 Santa Gertrudis, virgen:
+- calendario: ADF
+  texto: Elevada de la categoría de Memoria libre o Feria por su intensa devoción al apóstol san Juan.
+11-17 San Alberto Magno, obispo y doctor de la Iglesia:
+- calendario: ADF
+  texto: Trasladada del 15 de noviembre para dar lugar a la Memoria de los santos Roque González de Santa Cruz y compañeros.
+11-22 Santa Cecilia, virgen y mártir:
+- calendario: CRG
+  texto: Patrona de la música.
+11-23 San Clemente I, papa y mártir:
+- calendario: ADF
+  texto: Aniversario de la erección canónica de las CSI como Sociedad de Vida Apostólica Clerical de derecho diocesano, en Éfeso, en la capilla de la Casa de la Virgen, 2008, por S.E.R. Mons. Rogelio Livieres Plano.
+11-26 San Columbano, abad:
+- calendario: ADF
+  texto: Trasladada del 23 de noviembre para dar lugar a la Fiesta de san Clemente.
+11-27 Nuestra Señora de la Medalla Milagrosa:
+- calendario: ADF
+  texto: Incorporada al Calendario en razón de la importancia de esta advocación entre los fieles cristianos.
+12-03 San Francisco Javier, presbítero:
+- calendario: CRG
+  texto: Patrono universal de las misiones.
+12-08 Inmaculada Concepción de la Santísima Virgen María:
+- calendario: CRG
+  texto: Día de precepto.
+12-10 Bienaventurada Virgen María de Loreto:
+- calendario: ADF
+  texto: Patrona de los templos e inmuebles de ADF. Agregada al Calendario en razón de su mediación en la adquisición y mantenimiento de la primera propiedad en Shohola, EE.UU., donde el oratorio fue dedicado como Iglesia Traspontina de Santa María de Loreto en el Misterio de la Encarnación del Señor. El papa Francisco la agregó al Calendario universal como Memoria libre o Feria el 25 de marzo de 2019.
+12-12 Bienaventurada Virgen María de Guadalupe:
+- calendario: ADF
+  texto: Patrona de América.
+12-17 San Lázaro, amigo de Jesús:
+- calendario: ADF
+  texto: Las Ferias del 17 al 24 de diciembre, inclusive, tienen la finalidad de preparar más directamente la Navidad (Normas universales sobre el Año litúrgico y el Calendario, 42). A partir de hoy el belén es expuesto a la veneración de los fieles, salvo la figura del Niño Jesús. Los árboles de Navidad son iluminados con luces blancas, pero sin otra decoración.
+12-27 San Juan, apóstol y evangelista:
+- calendario: ADF
+  texto: Patrono principal de ADF. Elevada de la categoría de Fiesta. Prefacio propio (véase tesis doctoral del Pbro. Dominic Carey).
+movible Bautismo del Señor:
+- calendario: CRG
+  texto: Con esta fiesta concluye el Ciclo de la Encarnación y el Tiempo de Navidad-Epifanía. Se celebra el domingo siguiente a la Epifanía del Señor; o, según el uso de la Forma extraordinaria, el 13 de enero como conclusión de la antigua Octava de la Epifanía. La ornamentación del Tiempo de Navidad es retirada antes del comienzo del Oficio del Bautismo del Señor. Si ha de bendecirse el baptisterio o la nueva pila bautismal, se escogerá un domingo, principalmente del tiempo pascual, o la fiesta del Bautismo del Señor (cf. Bendicional, nn. 933 y ss.).
+movible Epifanía del Señor:
+- calendario: CRG
+  texto: 'Colecta del catequista nativo (pontificia: Congregación para la Evangelización de los Pueblos): Liturgia del día, mon. justificativa de la colecta y colecta. Después del Evangelio se anuncian las fiestas movibles del año en curso: de acuerdo a los usos del lugar y tras el canto del Evangelio, un diácono u otro ministro subirá al ambón y desde allí anunciará al pueblo la relación de fiestas móviles del año en curso: «Queridos hermanos: la gloria del Señor se ha manifestado y se continuará manifestando entre nosotros, hasta el día de su retorno glorioso. En la sucesión de las diversas fiestas y solemnidades del tiempo, recordamos y vivimos los misterios de la salvación. Cada domingo, Pascua semanal, la santa Iglesia hará presente este mismo acontecimiento, en el cual Cristo ha vencido al pecado y la muerte. También en las fiestas de la Virgen María, Madre de Dios, de los apóstoles, de los santos y en la conmemoración de todos los fieles difuntos, la Iglesia, peregrina en la tierra,
+    proclama la Pascua de su Señor. A Él, el Cristo glorioso, el que es, el que era y ha de venir, al que es Señor del tiempo y de la historia, el honor y la gloria por los siglos de los siglos».'
+movible Natividad del Señor:
+- calendario: CRG
+  texto: 'Día de precepto. Todos los sacerdotes pueden celebrar o concelebrar tres Misas, con tal que se celebren a su tiempo: medianoche, aurora y día. Los que celebran solo una Misa, dicen la que corresponda a la hora del día. El sacerdote que hoy celebra tres Misas puede percibir tres estipendios (c. 951, 1). La bendición del belén colocado en la iglesia puede hacerse al final de las Vísperas o al final de la Misa de la Noche (cf. Bendicional, nn. 1245 y ss.). Al iniciarse las fiestas de Navidad, puede bendecirse el árbol adornado para este tiempo (cf. Bendicional, nn. 1272 y ss.). Los árboles de Navidad son decorados por completo después del Oficio de Nona, antes de la celebración de las I Vísperas de la Natividad del Señor. Lo mismo se aplica a toda otra decoración acostumbrada. Conviene celebrar antes de la Misa de Medianoche una Vigilia solemne con el Oficio de Lectura. Tras el saludo inicial de la Misa de Medianoche, si no se hizo ya durante la Vigilia de los Villancicos, el celebrante
+    u otro ministro puede proclamar el anuncio del nacimiento del Salvador, o Kalendas de la Navidad: «Pasados innumerables siglos desde la creación del mundo, cuando en el principio Dios creó el cielo y la tierra y formó al hombre a su imagen; después también de muchos siglos, desde que el Altísimo pusiera su arco en las nubes tras el diluvio como signo de alianza y de paz; veintiún siglos después de la emigración de Abrahán, nuestro padre en la fe, de Ur de Caldea; trece siglos después de la salida del pueblo de Israel de Egipto bajo la guía de Moisés; cerca de mil años después de que David fuera ungido como rey; en la semana sesenta y cinco según la profecía de Daniel; en la Olimpíada ciento noventa y cuatro, el año setecientos cincuenta y dos de la fundación de la Urbe, el año cuarenta y dos del imperio de César Octavio Augusto; estando todo el orbe en paz, Jesucristo, Dios eterno e Hijo del eterno Padre, queriendo consagrar el mundo con su piadosísima venida, concebido del Espíritu
+    Santo, nueve meses después de su concepción, nace en Belén de Judea, hecho hombre, de María Virgen: la Natividad de nuestro Señor Jesucristo según la carne». No celebran Completas los que participan en la Vigilia. La adecuación de las Horas del Oficio con el tiempo real impide la celebración de Laudes inmediatamente después de la Misa de Medianoche. La figura del Niño Jesús es ubicada en el belén como conclusión del Oficio de Villancicos, antes de la Misa de Medianoche. A partir de hoy, en todas las Misas de la Octava de la Navidad, y en la Epifanía del Señor, la bendición final se hace con el Niño Jesús, que después es presentado a la veneración de los fieles. Los fieles que hubiesen comulgado en la Misa de Medianoche pueden volver a hacerlo en la Misa del Día.'

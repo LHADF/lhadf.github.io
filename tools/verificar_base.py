@@ -131,7 +131,11 @@ for nom, C, H in (('laudes', CL, HL), ('visperas', CV, HV)):
 # ---------- Calendarios locales, oraciones del oficio e invitatorio gregoriano ----------
 LOC = leer(os.path.join(B, 'calendario', 'locales.yaml'))
 for c in LOC['cambios']:
-    falta(c['calendario'] in LOC['calendarios'] and c['calendario'] in LOC['padres'], f"calendario/locales.yaml · {c.get('celebracion')}: la sigla necesita nombre (calendarios) y país (padres)")
+    falta(c['calendario'] in LOC['calendarios'] and (c['calendario'] in LOC['padres'] or c['calendario'] in ('ARG', 'PGY', 'BRS')), f"calendario/locales.yaml · {c.get('celebracion')}: la sigla necesita nombre (calendarios) y, si es local, país (padres)")
+NC = leer(os.path.join(B, 'calendario', 'notas.yaml')) or {}
+for k, v in NC.items():
+    falta(re.match(r'^(\d\d-\d\d|movible) \S', k), f'calendario/notas.yaml · «{k}»: la clave es «MM-DD Nombre» o «movible Nombre»')
+    for n in v: falta(n.get('calendario') in LOC['calendarios'] and n.get('texto'), f'calendario/notas.yaml · {k}: cada nota lleva calendario (sigla conocida) y texto')
     falta(c.get('grado') in ('Solemnidad', 'Fiesta', 'Memoria obligatoria') and re.fullmatch(r'\d\d-\d\d', str(c.get('fecha'))), f"calendario/locales.yaml · {c.get('celebracion')}: fecha MM-DD y grado")
 OO = leer(os.path.join(B, 'ordinario', 'oraciones-oficio.yaml'))
 for k in ('preparatoria', 'conclusiva'):

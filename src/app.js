@@ -429,15 +429,15 @@ function horaHTML(){
   const r=R(); let h='';
   h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
-  h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
   // I Vísperas del domingo: en ADF, antes de empezar, la oración preparatoria (introduce el oficio de toda la semana)
   if(r.hora==='visperas' && r.primeras && CP.deIso(S.fecha).getDay()===6)
-    h+=`<div class="opciones prep"><button data-act="prep" aria-expanded="${!!S._prep}">Oración preparatoria</button></div>`+(S._prep?`<div class="orof-b">${oracionOficioHTML('preparatoria')}</div>`:'');
+    h+=`<div class="prep"><button class="discreto" data-act="prep" aria-expanded="${!!S._prep}">Oración preparatoria</button></div>`+(S._prep?`<div class="orof-b">${oracionOficioHTML('preparatoria')}</div>`:'');
+  h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
       // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
-      if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Seguir con Completas</button></div>`;
+      if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
       pleg=sec.plegable?sec.id:null;
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
       return;
@@ -600,8 +600,12 @@ document.addEventListener('click',e=>{
       else if(c.o.tipo==='l'){ d[S.fecha]=c.o.f.n; }                             // memoria libre: solo ese día
       else { if(fichasCal().some(x=>x.on&&x.o.tipo==='r')) S.cal=''; delete d[S.fecha]; }   // volver al calendario ADF
       cargarDia(); cambio(c.o.f.n+' ('+c.txt+')'); break; }
-    case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal(), sg=[...new Set(fc.flatMap(c=>c.o.siglas))];
-      hoja('Nota', `<p class="nota-dia">${esc(f.nota)}</p><dl class="siglas">${sg.map(x=>`<div><dt>${esc(x)}</dt><dd>${esc(CP.calendarios[x]||'')}</dd></div>`).join('')}</dl>`); break; }
+    case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal();
+      // notas del Calendario litúrgico ADF, una por renglón: «SIGLA<tab>texto»
+      const ns=String(f.nota||'').split('\n').filter(Boolean).map(l=>{ const i=l.indexOf('\t'); return i<0?['',l]:[l.slice(0,i),l.slice(i+1)]; });
+      const sg=[...new Set(fc.flatMap(c=>c.o.siglas).concat(ns.map(n=>n[0])).filter(Boolean))];
+      hoja(f.n, ns.map(([x,t])=>`<p class="nota-dia">${x?`<span class="sig">${esc(x)}</span>`:''}${esc(t)}</p>`).join('')
+        +`<dl class="siglas">${sg.map(x=>`<div><dt>${esc(x)}</dt><dd>${esc(CP.calendarios[x]||'')}</dd></div>`).join('')}</dl>`); break; }
     case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'sin partitura',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
     case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;

@@ -23,7 +23,7 @@ from ordo.calendario import Ordo
 import csv, re, yaml
 LOC = yaml.safe_load(open(os.path.join(RAIZ, 'base', 'calendario', 'locales.yaml'), encoding='utf-8'))
 NACIONALES = ['ARG', 'PGY', 'BRS']                 # los que el Ordo distingue con su columna «regiones»
-LOCALES = sorted({c['calendario'] for c in LOC['cambios']})
+LOCALES = sorted({c['calendario'] for c in LOC['cambios']} - set(NACIONALES))
 PREC = {'Solemnidad': 4, 'Fiesta': 8, 'Memoria obligatoria': 11}   # propias, en la Tabla de los días litúrgicos
 # calendarios que traen cada celebración del santoral (columna «calendarios» del Ordo)
 SIGLAS = {(r['fecha'], r['nombre'].strip()): ', '.join(x.strip() for x in r['calendarios'].split(',') if x.strip())
@@ -39,13 +39,29 @@ def motor(cal):
     pais = LOC['padres'].get(cal, cal)
     cfg.setdefault('calendario', {})['regiones'] = [pais] if pais else []
     o = Ordo(ORDO, cfg)
+    linaje = [cal] + ([pais] if pais != cal else [])     # un calendario local hereda los cambios de su país
     for c in LOC['cambios']:
-        if c['calendario'] != cal: continue
+        if c['calendario'] not in linaje: continue
         fila = next((x for x in o.santoral.get(c['fecha'], []) if x.nombre.startswith(c['celebracion'])), None)
         if not fila: sys.exit(f"locales.yaml: no encuentro «{c['celebracion']}» el {c['fecha']} en el Ordo")
         fila.grado, fila.precedencia, fila.nota = c['grado'], PREC[c['grado']], c.get('nota', fila.nota)
-        MOD.add((cal, c['fecha'], fila.nombre))
+        MOD.add((c['calendario'], c['fecha'], fila.nombre))
     return o
+
+
+# Notas del Calendario litúrgico ADF (base/calendario/notas.yaml): «MM-DD Nombre, título» o «movible Nombre»
+NOTAS = yaml.safe_load(open(os.path.join(RAIZ, 'base', 'calendario', 'notas.yaml'), encoding='utf-8')) or {}
+NOTA_LOCAL = {(c['calendario'], c['fecha'], c['celebracion']): c['nota'] for c in LOC['cambios'] if c.get('nota')}
+
+
+def notas_de(p, origen, cal):
+    """Notas de una celebración, una por renglón: «SIGLA<tab>texto»."""
+    nombre = p.nombre + (f', {p.titulo}' if p.titulo else '')
+    ns = NOTAS.get(f'{origen} {nombre}') or NOTAS.get(f'movible {nombre}') or []
+    out = [f"{n['calendario']}\t{sin_html(n['texto'])}" for n in ns]
+    for (c, f, ini), t in NOTA_LOCAL.items():
+        if c == cal and f == origen and p.nombre.startswith(ini) and not any(t in x for x in out): out.insert(0, f'{c}\t{t}')
+    return '\n'.join(out)
 
 
 def sin_html(s):
@@ -69,9 +85,12 @@ def ficha(dl, p=None, libre=False, cal=''):
         'fer': dl.feria.nombre,
         'pv': 0 if libre else (1 if dl.primeras_visperas else 0),
         'oct': octava,
-        'cal': (cal if (cal, p.clave, p.nombre) in MOD else '') or ('' if p.temporal else SIGLAS.get((p.clave, p.nombre), SIGLAS.get((origen, p.nombre), ''))),
-        'nota': sin_html(p.nota),
+        'cal': next((x for x in (cal, LOC['padres'].get(cal)) if x and (x, p.clave, p.nombre) in MOD), '') or ('' if p.temporal else SIGLAS.get((p.clave, p.nombre), SIGLAS.get((origen, p.nombre), ''))),
+        'nota': notas_de(p, origen, cal) or (f'CRG\t{sin_html(p.nota)}' if p.nota else ''),
     }
+
+
+sin_sigla = lambda f: {k: v for k, v in f.items() if k != 'cal'}
 
 
 def main():
@@ -90,7 +109,7 @@ def main():
         vs = []
         # variantes por calendario: cada uno se anota solo donde difiere del calendario del que parte
         for c in CALS[1:]:
-            if F[c] == F[padre(c)]: continue
+            if sin_sigla(F[c]) == sin_sigla(F[padre(c)]): continue   # solo cambia la sigla: no es una variante
             igual = next((v for v in vs if v[0] == 'r' and v[2] == F[c]), None)
             if igual: igual[1].append(c)
             else: vs.append(['r', [c], F[c]])

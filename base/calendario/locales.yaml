@@ -1,7 +1,8 @@
 # Calendarios locales: lo que cambia en una diócesis respecto del calendario de su país.
 # Lo lee tools/calendario.py, que aplica el cambio al motor del Ordo (precedencias, I Vísperas y traslados salen de ahí).
 #   calendario: sigla (debe estar en «calendarios», abajo)      fecha: MM-DD      celebracion: comienzo del nombre en el Ordo
-#   grado: Solemnidad | Fiesta | Memoria obligatoria             nota: se muestra con el signo (!) en el inicio
+#   grado: Solemnidad | Fiesta | Memoria obligatoria             nota: opcional (las notas del calendario van en notas.yaml)
+# Vale también para un calendario nacional del Ordo (ARG, PGY) cuando el Calendario ADF indica un grado distinto.
 calendarios:
   CRG: Calendario romano general
   ADF: Uso del Movimiento Cultural de Renovación Ad Fontes
@@ -22,4 +23,11 @@ cambios:
   fecha: 11-11
   celebracion: San Martín de Tours
   grado: Solemnidad
-  nota: Patrono principal de la Ciudad de Buenos Aires. Se celebra con el grado de Solemnidad.
+- calendario: CDE
+  fecha: 02-03
+  celebracion: San Blas
+  grado: Solemnidad
+- calendario: PGY
+  fecha: 11-15
+  celebracion: Santos Roque González
+  grado: Fiesta

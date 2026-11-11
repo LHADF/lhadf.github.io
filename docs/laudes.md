@@ -43,3 +43,9 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - Las memorias libres que la base no trae toman el común que indica el Ordo (`base/santoral/adf.yaml`), con la oración del día.
 - **Oraciones antes y después del oficio:** `base/ordinario/oraciones-oficio.yaml` (texto y traducción de ADF, renglón por renglón). Botón discreto al pie del inicio; la preparatoria se ofrece además antes de las I Vísperas del domingo.
 - **Invitatorio gregoriano** (domingos del Tiempo Ordinario): antífona «Veníte, exsultémus Dómino» y Salmo 94 (`venite-exsultemus-*.gabc`, clave `invitatorio_per_annum` de `gregoriano/laudes.yaml`). Si se canta, va en gregoriano salvo que se elija «En español»; recitado, va en español.
+
+### Notas y variaciones del Calendario litúrgico ADF (PDF 2026)
+
+- `base/calendario/notas.yaml`: las notas al pie del calendario, unidas a cada celebración del Ordo y con la sigla del calendario al que se refieren (la de san Martín sobre Buenos Aires va como BUE). Se importaron una vez con `tools/importar/notas_calendario.py`; se corrigen ahí. Se omitieron los aniversarios de ordenación de personas y se corrigieron erratas evidentes.
+- Grados y fechas del santoral: el Ordo coincide con el PDF en las 258 celebraciones con grado. Lo que el PDF dice solo en notas va en `base/calendario/locales.yaml`: san Martín, Solemnidad en BUE; Roque González y compañeros, Fiesta en PGY. Un calendario local hereda los cambios de su país (CDE de PGY). Si un calendario solo cambia la sigla, no se muestra como variante.
+- En el inicio la sigla encendida (roja) es la que se está celebrando.

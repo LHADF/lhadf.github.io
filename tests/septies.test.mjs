@@ -351,3 +351,14 @@ test('invitatorio gregoriano de los domingos del Tiempo Ordinario, con traducci�
   assert.ok(!LA.armar('2026-12-06', '').secciones.some(s => s.k === 'invgreg'));   // Adviento: todavía no
   assert.ok(B.oraciones.preparatoria.texto.length === 6 && B.oraciones.conclusiva.texto.length === 7);
 });
+
+test('notas del Calendario ADF y calendarios locales que heredan de su país', () => {
+  const sm = CP.diaCal('2026-11-11', '');
+  assert.match(sm.nota, /^BUE\tPatrono principal de la Ciudad de Buenos Aires/m);
+  assert.match(sm.nota, /^ADF\tPatrono secundario de ADF/m);
+  assert.equal(CP.diaCal('2027-11-15', 'PGY').g, 'Fiesta');           // Roque González: Fiesta en Paraguay
+  assert.equal(CP.diaCal('2027-11-15', 'CDE').g, 'Fiesta');           // Ciudad del Este hereda lo de Paraguay
+  assert.equal(CP.diaCal('2027-11-15', '').g, 'Memoria obligatoria');
+  assert.equal(CP.opcionesDia('2027-02-03', '').length, 1);           // San Blas: CDE no cambia nada, no hay sigla de más
+  for (const f of ctx.window.CAL.dias) { const n = ctx.window.CAL.tabla[f[12]]; if (n) for (const l of n.split('\n')) assert.match(l, /^[A-Z]{3}\t\S/); }
+});
