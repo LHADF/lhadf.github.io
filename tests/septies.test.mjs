@@ -306,3 +306,11 @@ test('Vísperas: Magníficat en latín con interlineal palabra por palabra', () 
   c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
   assert.ok(!/aleluya/i.test(JSON.stringify(VD)));
 });
+
+test('celebraciones propias de ADF: toman del común (o de otra celebración) hasta tener textos propios', () => {
+  const r = LA.armar('2027-02-03', 'ARG');                                       // San Blas (solemnidad ADF): común de un mártir
+  assert.match(r.dia.nota, /Común de un mártir/);
+  assert.equal(r.secciones.find(s => s.k === 'himno').opciones[0].n, LD.comunes['un-martir'].himno);
+  assert.equal(r.secciones.find(s => s.id === 'ab').t.es, LD.comunes['un-martir'].ant_benedictus);
+  for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || a.pendiente, n);
+});

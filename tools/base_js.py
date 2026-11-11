@@ -132,7 +132,7 @@ def laudes():
     bn = GL['benedictus']
     datos = {
         'salterio': SL, 'tiempo': TL, 'santoral': SaL, 'himnos': HL, 'ordinario': OL, 'salmos': salmos,
-        'mapa': mapa, 'sin_vincular': sin,
+        'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('laudes', SaL)[0], 'comunes': adf_y_comunes('laudes', SaL)[1],
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
             'cantico': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
@@ -145,6 +145,13 @@ def laudes():
     with open(destino, 'w', encoding='utf-8') as f:
         f.write('window.LAUDES=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
     print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB · santoral vinculado: {len(mapa)} · sin propio en la base: {len(sin)}')
+
+
+def adf_y_comunes(hora, santoral):
+    """Celebraciones propias de ADF (base/santoral/adf.yaml) y los comunes que usan."""
+    A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
+    C = leer(os.path.join(B, 'comunes', hora + '.yaml')) or {}
+    return {n: a for n, a in A.items() if not a.get('como') or a['como'] in santoral}, C
 
 
 def comunes_latin(GL):
@@ -164,7 +171,7 @@ def visperas():
     usados = {g['salmo'] for capa in ([e for w in SV.values() for e in w.values()], TV.values(), SaV.values()) for e in capa for g in (e.get('salmodia') or [])}
     salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
     mapa, sin = vincular_santoral(SaV)
-    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin,
+    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'comunes': adf_y_comunes('visperas', SaV)[1],
              'gregoriano': {**comunes_latin(GL),
                             'cantico': {'titulo': MG['titulo'], 'ref': MG['ref'], 'versos': MG['versos'], 'traduccion_versos': [pares(v) for v in MG['traduccion_versos']]}}}
     destino = os.path.join(RAIZ, 'src', 'carga', 'visperas.js')

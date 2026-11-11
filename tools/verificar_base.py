@@ -117,6 +117,16 @@ for n, e in TV.items(): parte_v(e, f'tiempo/visperas.yaml · {n}')
 for n, e in SaV.items(): parte_v(e, f'santoral/visperas.yaml · {n}')
 MGv = leer(os.path.join(B, 'gregoriano', 'magnificat.yaml'))
 falta(len(MGv['versos']) == len(MGv['traduccion_versos']), 'gregoriano/magnificat.yaml: cada versículo necesita su traducción')
+# ---------- Celebraciones propias de ADF y comunes ----------
+ADF = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
+CL, CV = leer(os.path.join(B, 'comunes', 'laudes.yaml')), leer(os.path.join(B, 'comunes', 'visperas.yaml'))
+for n, a in ADF.items():
+    falta(a.get('comun') or a.get('como') or a.get('pendiente'), f'santoral/adf.yaml · {n}: falta comun, como o pendiente')
+    if a.get('comun'): falta(a['comun'] in CL and a['comun'] in CV, f'santoral/adf.yaml · {n}: no existe el común «{a["comun"]}»')
+    if a.get('como'): falta(a['como'] in SaL and a['como'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["como"]}»')
+for nom, C, H in (('laudes', CL, HL), ('visperas', CV, HV)):
+    for k, e in C.items():
+        if e.get('himno'): falta(e['himno'] in H, f'comunes/{nom}.yaml · {k}: el himno no está en himnos/{nom}.yaml')
 # cobertura: todos los días del calendario tienen Laudes completas (salterio + propio del tiempo)
 cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
 cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))

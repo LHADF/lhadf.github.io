@@ -28,3 +28,10 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - **Padre nuestro:** la monición (la propia del día) se dice solo en domingos, fiestas y solemnidades. *Pater noster* con asterisco después de «noster»: hasta ahí, normal; desde ahí, negrita. Traducción: literal, palabra por palabra.
 - **Preces:** † y * en rojo.
 - **Conclusión:** cruz después de «Dóminus» (en la bendición del ministro, después de «Pater,»; «[esté] con vosotros» con corchetes). Opción «Con ministro ordenado»: *Dóminus vobíscum… Benedícat vos* (Graduale Romanum 1974, p. 817: tono A en ferias, memorias y fiestas; tono B en domingos y solemnidades; el libro no trae un tercer tono), seguido de *Ite in pace. ℟. Deo grátias.* (por ahora en texto: falta el GABC).
+
+## Celebraciones propias de ADF (11/11/2026)
+
+- `base/santoral/adf.yaml`: para cada celebración del calendario ADF que la base no trae, de dónde toma los textos hasta tener los propios: `comun` (de `base/comunes/`), `como` (otra celebración de la base) o `pendiente` (oficio propio sin textos). La asignación inicial es automática, por el nombre (`tools/adf_santoral.py`); se corrige a mano en ese archivo.
+- `base/comunes/laudes.yaml` y `visperas.yaml`: comunes **provisorios**, deducidos del santoral de sync (`tools/importar/comunes.py`): de cada parte, el texto que más celebraciones de ese común comparten. Hay que cotejarlos con el libro.
+- Del común se toman himno, lectura, responsorio, antífona del cántico evangélico y preces; en fiestas y solemnidades, también los salmos si el común los trae. La oración queda la del día (falta la propia) y la app lo avisa.
+- Lista de diferencias entre el calendario ADF y el general: `docs/calendario-adf-diferencias.json` (la genera `tools/adf_santoral.py`).

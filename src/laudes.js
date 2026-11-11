@@ -32,9 +32,17 @@ function propio(hora, fecha, region){
     capa(T1); capa(T2);   // (con ciclo: los domingos y las solemnidades que alguna vez cayeron en domingo)
     const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia));
     let santo=null, nota='';
-    const k=L.mapa[ref.n];
+    const adf=(L.adf||{})[ref.n]||{};
+    const k=L.mapa[ref.n] || adf.como;   // «como»: celebración propia de ADF que toma todo de otra de la base
     if(k){ santo=L.santoral[k+I]||(primeras?null:L.santoral[k]); if(santo){ delete P.pendiente; capa(santo); }
            else if(primeras){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
+           if(adf.como) nota='Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
+    } else if(adf.comun && L.comunes[adf.comun]){
+      // Propia de ADF sin textos: del común (himno, lectura, responsorio, antífona del cántico y preces); la oración queda la del día
+      const C=L.comunes[adf.comun], mayor=/^(Fiesta|Solemnidad)/.test(ref.g);
+      for(const c of ['himno','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro']) if(C[c]!=null) P[c]=C[c];
+      if(mayor && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }
+      nota=`Celebración propia de ADF: textos del ${C.nombre} (provisorio). Falta la oración propia: va la del día.`;
     } else if(ref.n!==ref.fer){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
     // Fiestas y solemnidades sin salmodia propia: salmos y antífonas del domingo de la I semana

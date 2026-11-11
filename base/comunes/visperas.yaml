@@ -1,0 +1,270 @@
+# Comunes de Visperas, deducidos del santoral (tools/importar/comunes.py): de cada parte, el texto que más celebraciones
+# de ese común comparten. PROVISORIO, a cotejar con el libro. Se usan para las celebraciones propias de ADF sin textos propios
+# (base/santoral/adf.yaml).
+virgen-maria:
+  nombre: Común de la Santísima Virgen María
+  celebraciones: 13
+  himno: Salve, del mar Estrella
+  lectura:
+    ref: Ga 4, 4-5
+    texto: Cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción.
+  responsorio:
+  - - V
+    - Alégrate, María, llena de gracia, el Señor está contigo.
+  - - R
+    - Alégrate, María, llena de gracia, el Señor está contigo.
+  - - V
+    - Bendita tú entre las mujeres y bendito el fruto de tu vientre.
+  - - R
+    - El Señor está contigo.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Alégrate, María, llena de gracia, el Señor está contigo.
+  preces:
+    intro: 'Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:'
+    preces:
+    - - Señor, Dios nuestro, admirable siempre en tus obras, que has querido que la inmaculada Virgen María participara en cuerpo y alma de la gloria de Jesucristo,
+      - haz que todos tus hijos deseen y caminen hacia esta misma gloria.
+    - - Tú que nos diste a María por madre, concede por su mediación salud a los enfermos, consuelo a los tristes, perdón a los pecadores
+      - y a todos abundancia de salud y de paz.
+    - - Tú que hiciste de María la llena de gracia,
+      - concede la abundancia de tu gracia a todos los hombres.
+    - - Haz, Señor, que tu Iglesia tenga un solo corazón y una sola alma por el amor,
+      - y que todos los fieles perseveren unánimes en la oración con María, la madre de Jesús.
+    respuesta: Que la llena de gracia interceda por nosotros.
+  padrenuestro_intro: 'Tú que coronaste a María como reina del cielo, haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino. Confiando en el Señor que hizo obras grandes en María, pidamos al Padre que colme también de bienes al mundo hambriento:'
+apostoles:
+  nombre: Común de apóstoles
+  celebraciones: 9
+  himno: ¡Columnas de la Iglesia, piedras vivas!
+  lectura:
+    ref: Ef 4, 11-13
+    texto: Cristo ha constituido a unos, apóstoles; a otros, profetas; a otros, evangelistas; a otros, pastores y doctores, para el perfeccionamiento de los fieles, en función de su ministerio, y para la edificación del cuerpo de Cristo; hasta que lleguemos todos a la unidad en la fe y en el conocimiento del Hijo de Dios, al hombre perfecto, a la medida de Cristo en su plenitud.
+  responsorio:
+  - - V
+    - Contad a los pueblos la gloria del Señor.
+  - - R
+    - Contad a los pueblos la gloria del Señor.
+  - - V
+    - Sus maravillas a todas las naciones.
+  - - R
+    - Contad a los pueblos la gloria del Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Contad a los pueblos la gloria del Señor.
+  preces:
+    intro: 'Hermanos: Edificados sobre el cimiento de los apóstoles, oremos al Padre por su pueblo santo, diciendo:'
+    preces:
+    - - Padre santo, que quisiste que tu Hijo resucitado de entre los muertos se manifestara en primer lugar a los apóstoles,
+      - haz que también nosotros seamos testigos de Cristo hasta los confines del mundo.
+    - - Padre santo, tú que enviaste a tu Hijo al mundo para dar la Buena Noticia a los pobres,
+      - haz que el Evangelio sea proclamado a toda la creación.
+    - - Tú que enviaste a tu Hijo a sembrar la semilla de la palabra,
+      - haz que, sembrando también tu palabra con nuestro esfuerzo, recojamos sus frutos con alegría.
+    - - Tú que enviaste a tu Hijo para que reconciliara el mundo contigo,
+      - haz que también nosotros cooperemos a la reconciliación de los hombres.
+    respuesta: Acuérdate, Señor, de tu Iglesia.
+  padrenuestro_intro: 'Tú que quisiste que tu Hijo resucitara el primero de entre los muertos, concede a todos los que son de Cristo resucitar con él, el día de su venida. Oremos ahora al Padre, como Jesús enseñó a los apóstoles:'
+  salmodia:
+  - ant: Vosotros sois los que habéis perseverado conmigo en mis pruebas.
+    salmo: salmo-115
+  - ant: Yo estoy en medio de vosotros como el que sirve.
+    salmo: salmo-125
+  - ant: Ya no os llamo siervos, a vosotros os llamo amigos, porque todo lo que he oído a mi Padre os lo he dado a conocer.
+    salmo: cantico-ef-1-3-10
+varios-martires:
+  nombre: Común de varios mártires
+  celebraciones: 6
+  himno: Espíritus sublimes
+  lectura:
+    ref: 1Pe 4, 13-14
+    texto: 'Queridos hermanos: Estad alegres cuando compartís los padecimientos de Cristo, para que, cuando se manifieste su gloria, reboséis de gozo. Si os ultrajan por el nombre de Cristo, dichosos vosotros: porque el Espíritu de la gloria, el Espíritu de Dios, reposa sobre vosotros.'
+  responsorio:
+  - - V
+    - Alegraos, justos, y gozad con el Señor.
+  - - R
+    - Alegraos, justos, y gozad con el Señor.
+  - - V
+    - Aclamadlo, los rectos de corazón.
+  - - R
+    - Y gozad con el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Alegraos, justos, y gozad con el Señor.
+  ant_magnificat: Se alegran en el cielo los santos que siguieron las huellas de Cristo; y, porque lo amaron hasta derramar su sangre, reinan con el Señor eternamente.
+  preces:
+    intro: 'En esta hora en la que el Señor, cenando con sus discípulos, presentó al Padre su propia vida que luego entregó en la cruz, aclamemos al Rey de los mártires, diciendo:'
+    preces:
+    - - Te damos gracias, Señor, principio, ejemplo y rey de los mártires, porque nos amaste hasta el extremo.
+      - Te damos gracias, Señor, porque no cesas de llamar a los pecadores arrepentidos y les das parte en los premios de tu reino.
+    - - Te damos gracias, Señor, porque hoy hemos ofrecido, como sacrificio para el perdón de los pecados, la sangre de la alianza nueva y eterna.
+      - Te damos gracias, Señor, porque con tu gracia nos has dado perseverar en la fe durante el día que ahora termina.
+    respuesta: Te glorificamos, Señor.
+  padrenuestro_intro: 'Te damos gracias, Señor, porque has asociado a nuestros hermanos difuntos a tu muerte. Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
+un-martir:
+  nombre: Común de un mártir
+  celebraciones: 12
+  himno: Oh Dios, que eres el premio, la corona
+  lectura:
+    ref: 1Pe 4, 13-14
+    texto: 'Queridos hermanos: Estad alegres cuando compartís los padecimientos de Cristo, para que, cuando se manifieste su gloria, reboséis de gozo. Si os ultrajan por el nombre de Cristo, dichosos vosotros: porque el Espíritu de la gloria, el Espíritu de Dios, reposa sobre vosotros.'
+  responsorio:
+  - - V
+    - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
+  - - R
+    - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
+  - - V
+    - Nos refinaste como refinan la plata.
+  - - R
+    - Pero nos has dado respiro.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
+  ant_magnificat: Los santos tienen su morada en el reino de Dios, y allí han encontrado descanso eterno.
+  preces:
+    intro: 'En esta hora en la que el Señor, cenando con sus discípulos, presentó al Padre su propia vida que luego entregó en la cruz, aclamemos al Rey de los mártires, diciendo:'
+    preces:
+    - - Te damos gracias, Señor, principio, ejemplo y rey de los mártires,
+      - porque nos amaste hasta el extremo.
+    - - Te damos gracias, Señor, porque no cesas de llamar a los pecadores arrepentidos
+      - y les das parte en los premios de tu reino.
+    - - Te damos gracias, Señor, porque hoy hemos ofrecido, como sacrificio para el perdón de los pecados,
+      - la sangre de la alianza nueva y eterna.
+    - - Te damos gracias, Señor,
+      - porque con tu gracia nos has dado perseverar en la fe durante el día que ahora termina.
+    respuesta: Te glorificamos, Señor.
+  padrenuestro_intro: 'Te damos gracias, Señor, porque has asociado a nuestros hermanos difuntos a tu muerte. Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
+doctores:
+  nombre: Común de doctores de la Iglesia
+  celebraciones: 3
+  himno: Verbo de Dios, eterna luz divina
+  lectura:
+    ref: St 3, 17-18
+    texto: La sabiduría que viene de arriba ante todo es pura y, además, es amante de la paz, comprensiva, dócil, llena de misericordia y buenas obras, constante, sincera. Los que procuran la paz están sembrando la paz; y su fruto es la justicia.
+  responsorio:
+  - - V
+    - En la asamblea le da la palabra.
+  - - R
+    - En la asamblea le da la palabra.
+  - - V
+    - Lo llena de espíritu, sabiduría e inteligencia.
+  - - R
+    - Le da la palabra.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - En la asamblea le da la palabra.
+  preces:
+    intro: 'Glorifiquemos a Cristo, constituido pontífice en favor de los hombres en lo que se refiere a Dios, y supliquémosle humildemente diciendo:'
+    preces:
+    - - Tú que por medio de pastores santos y eximios has glorificado a tu Iglesia,
+      - haz que todos los cristianos resplandezcan por su virtud.
+    - - Tú que por la oración de los santos pastores, que a semejanza de Moisés oraban por el pueblo, perdonaste los pecados de tus fieles,
+      - purifica y santifica también ahora a la santa Iglesia por la intercesión de los santos.
+    - - Tú que de entre los fieles elegiste a los santos pastores y, por tu Espíritu, los consagraste como ministros en bien de sus hermanos,
+      - llena también de tu Espíritu a todos los pastores del pueblo de Dios.
+    - - Tú que fuiste la heredad de los santos pastores,
+      - no permitas que ninguno de los que fueron adquiridos por tu sangre viva alejado de ti.
+    respuesta: Salva a tu pueblo, Señor.
+  padrenuestro_intro: 'Tú que por medio de los pastores de la Iglesia das la vida eterna a tus ovejas para que nadie las arrebate de tu mano, salva a los difuntos, por quienes entregaste tu vida. Digamos juntos la oración que Cristo nos enseñó como modelo de toda oración:'
+pastores:
+  nombre: Común de pastores
+  celebraciones: 22
+  himno: Cantemos al Señor con alegría
+  lectura:
+    ref: 1Pe 5, 1-4
+    texto: 'A los presbíteros en esa comunidad, yo, presbítero como ellos, testigo de los sufrimientos de Cristo y partícipe de la gloria que va a descubrirse, os exhorto: Sed pastores del rebaño de Dios a vuestro cargo, gobernándolo, no a la fuerza, sino de buena gana, como Dios quiere, no por sórdida ganancia, sino con generosidad, no como dominadores sobre la heredad de Dios, sino convirtiéndoos en modelos del rebaño. Y, cuando aparezca el supremo Pastor, recibiréis la corona de gloria que no se marchita.'
+  responsorio:
+  - - V
+    - Éste es el que ama a sus hermanos, el que ora mucho por su pueblo.
+  - - R
+    - Éste es el que ama a sus hermanos, el que ora mucho por su pueblo.
+  - - V
+    - El que entregó su vida por sus hermanos.
+  - - R
+    - El que ora mucho por su pueblo.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Éste es el que ama a sus hermanos, el que ora mucho por su pueblo.
+  ant_magnificat: Éste es el administrador fiel y prudente, a quien su señor ha puesto al frente de su servidumbre para que les reparta la ración a sus horas.
+  preces:
+    intro: 'Glorifiquemos a Cristo, constituido pontífice en favor de los hombres en lo que se refiere a Dios, y supliquémosle humildemente diciendo:'
+    preces:
+    - - Tú que por medio de pastores santos y eximios has glorificado a tu Iglesia,
+      - haz que todos los cristianos resplandezcan por su virtud.
+    - - Tú que por la oración de los santos pastores, que a semejanza de Moisés oraban por el pueblo, perdonaste los pecados de tus fieles,
+      - purifica y santifica también ahora a la santa Iglesia por la intercesión de los santos.
+    - - Tú que de entre los fieles elegiste a los santos pastores y, por tu Espíritu, los consagraste como ministros en bien de sus hermanos,
+      - llena también de tu Espíritu a todos los pastores del pueblo de Dios.
+    - - Tú que fuiste la heredad de los santos pastores,
+      - no permitas que ninguno de los que fueron adquiridos por tu sangre viva alejado de ti.
+    respuesta: Salva a tu pueblo, Señor.
+  padrenuestro_intro: 'Tú que por medio de los pastores de la Iglesia das la vida eterna a tus ovejas para que nadie las arrebate de tu mano, salva a los difuntos, por quienes entregaste tu vida. Digamos juntos la oración que Cristo nos enseñó como modelo de toda oración:'
+virgenes:
+  nombre: Común de vírgenes
+  celebraciones: 7
+  himno: Dichosa tú, que, entre todas
+  lectura:
+    ref: 1Co 7, 32. 34
+    texto: El célibe se preocupa de los asuntos del Señor, buscando contentar al Señor; lo mismo, la mujer sin marido y la soltera se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
+  responsorio:
+  - - V
+    - Llevan ante el Rey al séquito de vírgenes, las traen entre alegría.
+  - - R
+    - Llevan ante el Rey al séquito de vírgenes, las traen entre alegría.
+  - - V
+    - Van entrando en el palacio real.
+  - - R
+    - Las traen entre alegría.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Llevan ante el Rey al séquito de vírgenes, las traen entre alegría.
+  ant_magnificat: Ven, esposa de Cristo, recibe la corona eterna que el Señor te trae preparada.
+  padrenuestro_intro: 'Tú que recibiste en el banquete de tus bodas a las vírgenes santas, admite también a nuestros hermanos difuntos en el convite festivo de tu reino. Oremos con Jesús, diciendo a nuestro Padre:'
+santos-varones:
+  nombre: Común de santos varones
+  celebraciones: 12
+  himno: Feliz quien ha escuchado la llamada
+  lectura:
+    ref: Rm 8, 28-30
+    texto: 'Sabemos que a los que aman a Dios todo les sirve para el bien: a los que ha llamado conforme a su designio. A los que había escogido, Dios los predestinó a ser imagen de su Hijo, para que él fuera el primogénito de muchos hermanos. A los que predestinó, los llamó; a los que llamó, los justificó; a los que justificó, los glorificó.'
+  responsorio:
+  - - V
+    - El Señor es justo y ama la justicia.
+  - - R
+    - El Señor es justo y ama la justicia.
+  - - V
+    - Los buenos verán su rostro.
+  - - R
+    - El Señor es justo y ama la justicia.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - El Señor es justo y ama la justicia.
+  ant_magnificat: Vosotros, los que lo habéis dejado todo y me habéis seguido, recibiréis cien veces más y heredaréis la vida eterna.
+  preces:
+    intro: 'Pidamos a Dios Padre, fuente de toda santidad, que con la intercesión y el ejemplo de los santos nos ayude, y digamos:'
+    preces:
+    - - Padre santo, que has querido que nos llamemos y seamos hijos tuyos,
+      - haz que la Iglesia santa, extendida por los confines de la tierra, cante tus grandezas.
+    - - Padre santo, que deseas que vivamos de una manera digna, buscando siempre tu beneplácito,
+      - ayúdanos a dar fruto de buenas obras.
+    - - Padre santo, que nos reconciliaste contigo por medio de Cristo,
+      - guárdanos en tu nombre para que todos seamos uno.
+    - - Padre santo, que nos convocas al banquete de tu reino,
+      - haz que comiendo el pan que ha bajado del cielo alcancemos la perfección del amor.
+    respuesta: Haz que seamos santos, porque tú, Señor, eres santo.
+  padrenuestro_intro: 'Padre santo, perdona a los pecadores sus delitos y admite a los difuntos en tu reino para que puedan contemplar tu rostro. Porque nos llamamos y somos hijos de Dios, nos atrevemos a decir:'
+santas-mujeres:
+  nombre: Común de santas mujeres
+  celebraciones: 3
+  himno: Un amor casto y puro
+  lectura:
+    ref: Rm 8, 28-30
+    texto: 'Sabemos que a los que aman a Dios todo les sirve para el bien: a los que ha llamado conforme a su designio. A los que había escogido, Dios los predestinó a ser imagen de su Hijo, para que él fuera el primogénito de muchos hermanos. A los que predestinó, los llamó; a los que llamó, los justificó; a los que justificó, los glorificó.'

@@ -1,0 +1,93 @@
+# Celebraciones propias del calendario ADF sin textos en la base. Para cada una, hasta tener sus textos propios:
+#   comun: clave de base/comunes/ (himno, lectura, responsorio, antífona del cántico evangélico y preces del común)
+#   como: nombre de otra celebración del santoral de la base, de la que toma todo
+#   pendiente: oficio propio del que no hay nada
+# La asignación inicial es automática, por el nombre (tools/adf_santoral.py): corregir a mano acá.
+Santísimo Nombre de Jesús:
+  pendiente: 'Oficio propio: faltan todos los textos.'
+San Hilario de Poitiers, obispo y doctor de la Iglesia:
+  comun: pastores
+Santos Mauro y Plácido, religiosos:
+  comun: santos-varones
+San Vicente, diácono y mártir:
+  comun: un-martir
+San Ildefonso, obispo:
+  comun: pastores
+San Blas, obispo y mártir:
+  comun: un-martir
+Santa Ágata, virgen y mártir:
+  comun: un-martir
+Bienaventurada Virgen María de Lourdes:
+  comun: virgen-maria
+Beato Juan de Fiésole (Fra Angelico), religioso:
+  comun: santos-varones
+San Papías, obispo:
+  comun: pastores
+Tránsito de san Benito, abad:
+  como: SAN BENITO ABAD, patrono de Europa
+San Gabriel Arcángel:
+  como: SANTOS ARCÁNGELES MIGUEL GABRIEL Y RAFAEL
+San Luis María Grignon de Montfort, presbítero:
+  comun: pastores
+San Pío V, papa:
+  comun: pastores
+San Juan ante la Puerta Latina:
+  comun: apostoles
+San Pancracio, mártir:
+  comun: un-martir
+Bienaventurada Virgen María de Fátima:
+  comun: virgen-maria
+San Isidro, labrador:
+  comun: santos-varones
+San Luis Orione, presbítero:
+  comun: pastores
+María, Auxilio de los Cristianos:
+  comun: virgen-maria
+Santa Juana de Arco, virgen y mártir:
+  comun: un-martir
+San Fernando de Castilla, rey:
+  comun: santos-varones
+Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:
+  pendiente: 'Oficio propio: faltan todos los textos.'
+San Josemaría Escrivá de Balaguer, presbítero:
+  comun: pastores
+Bienaventurada Virgen María del Monte Carmelo:
+  comun: virgen-maria
+Dedicación de la Basílica de Santa María la Mayor:
+  como: LA DEDICACIÓN DE LA BASÍLICA DE SAN JUAN DE LETRÁN
+Santa Teresa de Calcuta, religiosa:
+  comun: virgenes
+Santísimo Nombre de la bienaventurada Virgen María:
+  comun: virgen-maria
+Bienaventurada Virgen María Corredentora:
+  comun: virgen-maria
+Santa Hildegarda de Bingen, virgen y doctora de la Iglesia:
+  comun: virgenes
+Nuestra Señora de la Salette:
+  comun: virgen-maria
+San Dionisio, obispo, y compañeros, mártires:
+  comun: varios-martires
+San Juan Enrique Newman, presbítero:
+  comun: pastores
+Santa Margarita María de Alacoque, virgen:
+  comun: virgenes
+San Rafael Arcángel:
+  como: SANTOS ARCÁNGELES MIGUEL GABRIEL Y RAFAEL
+Todos los Fieles Difuntos:
+  pendiente: 'Oficio propio: faltan todos los textos.'
+Nuestra Señora de la Medalla Milagrosa:
+  comun: virgen-maria
+Bienaventurada Virgen María de Loreto:
+  comun: virgen-maria
+Beata Ana Catalina Emmerick, virgen:
+  comun: virgenes
+Nuestra Señora del Perpetuo Socorro:
+  comun: virgen-maria
+Santa Gertrudis, virgen:
+  comun: virgenes
+San Clemente I, papa y mártir:
+  comun: un-martir
+Nuestra Señora del Buen Consejo:
+  comun: virgen-maria
+Beata María Felicia de Jesús Sacramentado (Chiquitunga), religiosa:
+  comun: virgenes
