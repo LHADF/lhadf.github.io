@@ -223,7 +223,7 @@ test('español: «aleluia», nunca «aleluya»', () => {
 });
 
 // ---------- Laudes ----------
-for (const f of ['../src/carga/laudes.js', '../src/laudes.js']) vm.runInNewContext(readFileSync(new URL(f, import.meta.url), 'utf8'), ctx);
+for (const f of ['../src/carga/laudes.js', '../src/carga/visperas.js', '../src/laudes.js']) vm.runInNewContext(readFileSync(new URL(f, import.meta.url), 'utf8'), ctx);
 const LA = ctx.window.Laudes, LD = ctx.window.LAUDES;
 const secL = (f, k) => LA.armar(f, 'ARG').secciones.filter(s => s.k === k);
 
@@ -277,4 +277,32 @@ test('texto recitado: renglones con sentido (Gloria, Salve, Pater noster)', () =
   assert.equal(pn.length, 9); assert.equal(pn[0], 'Pater noster, * qui es in cælis,'); assert.equal(pn.at(-1), 'sed líbera nos a malo.');
   for (const m of Object.values(B.completas.gregoriano.marianas))   // los cortes cubren todo el texto
     assert.ok(Math.abs(m.cortes.reduce((a, b) => a + b, 0) - m.traduccion.flatMap(p => p[0].split(/\s+/)).length) <= 1);
+});
+
+// ---------- Vísperas ----------
+const VI = ctx.window.Visperas, VD = ctx.window.VISPERAS;
+test('Vísperas: se arman para todos los días; I Vísperas la tarde anterior a domingos y solemnidades', () => {
+  let f = ctx.window.CAL.desde; const mal = [];
+  while (f <= ctx.window.CAL.hasta) {
+    const r = VI.armar(f, 'ARG'), S = r.secciones;
+    const ok = S.filter(s => s.k === 'salmo').length === 3 && S.find(s => s.k === 'himno').opciones[0].est.length && S.find(s => s.k === 'lectura').t.es && S.find(s => s.k === 'preces');
+    if (!ok) mal.push(f);
+    f = CP.masDias(f, 1);
+  }
+  assert.deepEqual(mal, []);
+  const sab = VI.armar('2026-11-14', 'ARG');                                   // sábado: I Vísperas del domingo
+  assert.ok(sab.primeras); assert.match(sab.dia.titulo, /Domingo.*I Vísperas$/);
+  assert.equal(sab.secciones.find(s => s.k === 'salmo').id, VD.salterio['semana_' + CP.diaCal('2026-11-15', 'ARG').sal].domingo_1.salmodia[0].salmo);
+  assert.ok(VI.armar('2026-12-07', 'ARG').primeras);                             // víspera de la Inmaculada
+  assert.ok(!VI.armar('2026-11-11', 'ARG').primeras);
+  assert.ok(!VI.armar('2027-03-27', 'ARG').primeras);                            // Sábado Santo: vísperas propias
+  assert.equal(VI.armar('2026-11-11', 'ARG').secciones[0].id, 'inicio');         // sin «Dómine, lábia mea»
+});
+
+test('Vísperas: Magníficat en latín con interlineal palabra por palabra', () => {
+  const c = VI.armar('2026-11-11', 'ARG').secciones.find(s => s.k === 'cantico');
+  assert.equal(c.versos.length, 12); assert.match(c.versos[0], /^Magníficat \* ánima mea Dóminum\./);
+  const norm = w => w.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
+  c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
+  assert.ok(!/aleluya/i.test(JSON.stringify(VD)));
 });

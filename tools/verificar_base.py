@@ -100,6 +100,23 @@ GLa = leer(os.path.join(B, 'gregoriano', 'laudes.yaml'))
 for k in ('invitatorio', 'conclusion'):
     falta(os.path.exists(os.path.join(B, 'gregoriano', GLa[k]['partitura'])), f'gregoriano/laudes.yaml · {k}: no existe la partitura')
 falta(len(GLa['benedictus']['versos']) == len(GLa['benedictus']['traduccion_versos']), 'gregoriano/laudes.yaml · benedictus: cada versículo necesita su traducción')
+# ---------- Vísperas ----------
+SV = leer(os.path.join(B, 'salterio', 'visperas.yaml')); TV = leer(os.path.join(B, 'tiempo', 'visperas.yaml'))
+SaV = leer(os.path.join(B, 'santoral', 'visperas.yaml')); HV = leer(os.path.join(B, 'himnos', 'visperas.yaml'))
+def parte_v(e, donde):
+    for g in e.get('salmodia') or []:
+        falta(g.get('ant'), f'{donde}: antífona vacía'); falta(g.get('salmo') in salmos, f'{donde}: no existe base/salmos/{g.get("salmo")}.yaml')
+    if e.get('himno'): falta(e['himno'] in HV, f'{donde}: el himno «{e["himno"]}» no está en himnos/visperas.yaml')
+    if e.get('salmodia') is not None: falta(len(e['salmodia']) == 3, f'{donde}: la salmodia debe tener tres piezas')
+for sem, dias in SV.items():
+    falta(set(dias) == {'domingo_1', 'domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes'}, f'salterio/visperas.yaml · {sem}: faltan días')
+    for dia, e in dias.items():
+        for c in ('himno', 'salmodia', 'lectura', 'responsorio', 'preces'): falta(e.get(c), f'salterio/visperas.yaml · {sem}.{dia}: falta «{c}»')
+        parte_v(e, f'salterio/visperas.yaml · {sem}.{dia}')
+for n, e in TV.items(): parte_v(e, f'tiempo/visperas.yaml · {n}')
+for n, e in SaV.items(): parte_v(e, f'santoral/visperas.yaml · {n}')
+MGv = leer(os.path.join(B, 'gregoriano', 'magnificat.yaml'))
+falta(len(MGv['versos']) == len(MGv['traduccion_versos']), 'gregoriano/magnificat.yaml: cada versículo necesita su traducción')
 # cobertura: todos los días del calendario tienen Laudes completas (salterio + propio del tiempo)
 cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
 cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
@@ -125,4 +142,4 @@ falta(not sin_propio, f'tiempo/laudes.yaml: {len(sin_propio)} días del calendar
 for x in sorted(pendientes): print('Pendiente (Laudes):', x)
 if errores:
     print('La base tiene problemas:'); [print(' -', e) for e in errores]; sys.exit(1)
-print(f'Base correcta: {len(salmos)} salmos y cánticos, Completas completas; Laudes: salterio de 4 semanas, {len(TL)} días con propio del tiempo, {len(SaL)} celebraciones.')
+print(f'Base correcta: {len(salmos)} salmos y cánticos, Completas completas; Laudes: salterio de 4 semanas, {len(TL)} días con propio del tiempo, {len(SaL)} celebraciones; Vísperas: {len(TV)} días con propio, {len(SaV)} celebraciones.')

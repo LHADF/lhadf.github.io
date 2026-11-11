@@ -56,9 +56,13 @@ window.ILU="data:image/png;base64,{ilustracion}";</script>
 os.makedirs(DIST, exist_ok=True)
 # Laudes: los datos van en un archivo aparte, que la app carga al abrir la hora (con huella, para que no quede viejo en caché)
 import hashlib, shutil
-_l = open(os.path.join(SRC, 'carga', 'laudes.js'), 'rb').read()
-shutil.copyfile(os.path.join(SRC, 'carga', 'laudes.js'), os.path.join(DIST, 'laudes.js'))
-cuerpo = cuerpo.replace("<script>" + leer('app.js'), "<script>window.LAUDES_URL='laudes.js?v=" + hashlib.md5(_l).hexdigest()[:8] + "';" + leer('app.js'))
+_urls = {}
+for _h in ('laudes', 'visperas'):
+    _l = open(os.path.join(SRC, 'carga', _h + '.js'), 'rb').read()
+    shutil.copyfile(os.path.join(SRC, 'carga', _h + '.js'), os.path.join(DIST, _h + '.js'))
+    _urls[_h] = _h + '.js?v=' + hashlib.md5(_l).hexdigest()[:8]
+import json as _json
+cuerpo = cuerpo.replace("<script>" + leer('app.js'), "<script>window.HORAS_URL=" + _json.dumps(_urls) + ";" + leer('app.js'))
 if '--artifact' in sys.argv:
     destino, html = os.path.join(DIST, 'artifact.html'), cabeza + cuerpo
 else:

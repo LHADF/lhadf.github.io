@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.tsbuildinfo
 src/carga/
+__pycache__/

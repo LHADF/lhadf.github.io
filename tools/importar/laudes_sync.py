@@ -49,7 +49,7 @@ def estructura(ruta):
             modo = 'salmodia'
             for pre, t in R:
                 if ant(pre): d['salmodia'].append({'ant': t, 'salmo': None, 'texto': [], 'ant_fin': None})
-        elif modo == 'salmodia' and not H.startswith(('LECTURA', 'RESPONSORIO', 'CANTICO EVANGELICO', 'PRECES', 'ORACION')) and 'ZACARIAS' not in H:
+        elif modo == 'salmodia' and not H.startswith(('LECTURA', 'RESPONSORIO', 'CANTICO EVANGELICO', 'PRECES', 'ORACION')) and 'ZACARIAS' not in H and 'CANTICO DE MARIA' not in H:
             g = d['salmodia'][-1] if d['salmodia'] else None
             if g is None or g['salmo'] is not None:
                 g = {'ant': None, 'salmo': None, 'texto': [], 'ant_fin': None}; d['salmodia'].append(g)
@@ -76,7 +76,7 @@ def estructura(ruta):
             modo = 'ce'
             for pre, t in R:
                 if ant(pre): d['ant_benedictus'] = t
-        elif 'ZACARIAS' in H:
+        elif 'ZACARIAS' in H or 'CANTICO DE MARIA' in H:
             modo = 'zac'
             d['benedictus_texto'] = []
             for b in bloques(ls):
@@ -98,7 +98,9 @@ def estructura(ruta):
         elif modo == 'inv' and (H.startswith('(SI LAUDES') or H.startswith('SE SIGUE')):
             for pre, t in R:
                 if ant(pre): d['inv_ant'] = t
-        elif H.startswith('SE PUEDEN') or H.startswith('PADRE NUESTRO') or H in ('LAUDES', '(ORACION DE LA MAÑANA)') or H.startswith('(SI LAUDES') or H.startswith('SE SIGUE'):
+        elif re.match(r'^(I|II)? ?VISPERAS\b', H) and 'visperas' not in d:
+            d['visperas'] = H.split()[0] if H.split()[0] in ('I', 'II') else ''
+        elif H.startswith('SE PUEDEN') or H.startswith('PADRE NUESTRO') or H in ('LAUDES', '(ORACION DE LA MAÑANA)', '(ORACION DE LA TARDE)', 'INVOCACION INICIAL') or H.startswith('(SI LAUDES') or H.startswith('SE SIGUE'):
             if R and modo == 'preces': d['padrenuestro_intro'] = ' '.join(t for _, t in R)
         else:
             if R or h: d.setdefault('_otros', []).append((h, [t for _, t in R]))

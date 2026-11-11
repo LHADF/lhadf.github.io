@@ -26,14 +26,15 @@ function aplicarModo(kind, sec){
 }
 aplicarModo();
 function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
-let DH=null; // la hora abierta cuando no es Completas (Laudes)
-const R=()=> (S.vista==='hora' && S.hora==='laudes' && DH) || D;
-// Los datos de Laudes van en un archivo aparte (laudes.js): se cargan recién al abrir la hora
-let _cargaL=null;
-function cargarLaudes(){
-  if(window.LAUDES) return Promise.resolve();
-  if(!_cargaL) _cargaL=new Promise((ok,mal)=>{ const sc=document.createElement('script'); sc.src=window.LAUDES_URL||'laudes.js'; sc.onload=ok; sc.onerror=()=>{ _cargaL=null; mal(); }; document.head.appendChild(sc); });
-  return _cargaL;
+let DH=null; // la hora abierta cuando no es Completas (Laudes o Vísperas)
+const MAYORES={laudes:'Laudes', visperas:'Visperas'};
+const R=()=> (S.vista==='hora' && MAYORES[S.hora] && DH) || D;
+// Los datos de Laudes y de Vísperas van en archivos aparte: se cargan recién al abrir la hora
+const _carga={};
+function cargarHora(h){
+  if(window[h.toUpperCase()]) return Promise.resolve();
+  if(!_carga[h]) _carga[h]=new Promise((ok,mal)=>{ const sc=document.createElement('script'); sc.src=(window.HORAS_URL||{})[h]||h+'.js'; sc.onload=ok; sc.onerror=()=>{ _carga[h]=null; mal(); }; document.head.appendChild(sc); });
+  return _carga[h];
 }
 const VES=()=>'es';
 // Día litúrgico de hoy: antes de las 5 de la mañana, todavía son las Completas de ayer
@@ -43,7 +44,7 @@ function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
   if(!CP.difiereRegion(S.fecha) && !['ARG','PGY'].includes(S.region)) S.region='ARG';
   D=CP.armar(S.fecha, S.region);
-  DH = (S.hora==='laudes' && window.LAUDES) ? window.Laudes.armar(S.fecha, S.region) : null;
+  DH = (MAYORES[S.hora] && window[S.hora.toUpperCase()]) ? window[MAYORES[S.hora]].armar(S.fecha, S.region) : null;
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
 cargarDia();
@@ -473,9 +474,9 @@ function portadaHTML(){
     ${reg}
     <p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>
     <ul class="horas">${HORAS.map(([id,n])=>{
-      const ok=id==='completas'||id==='laudes';
+      const ok=id==='completas'||id==='laudes'||id==='visperas';
       return `<li class="${ok?'sel':''}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
-    <p class="nota-proto">Prototipo: Laudes y Completas están armadas para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en latín. En Laudes, los himnos van por ahora solo en español y el santoral está en revisión.</p>
+    <p class="nota-proto">Prototipo: Laudes, Vísperas y Completas están armadas para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en latín. En Laudes y Vísperas, los himnos van por ahora solo en español y el santoral está en revisión.</p>
   </div>`;
 }
 
@@ -484,7 +485,7 @@ function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
   $('#atras').hidden=!enHora;
-  $('#brand').innerHTML= enHora? `${esc(R().nombre==='Laudes'?'Laudes':'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
+  $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>ajustarGlosas($('#main'))); pintar($('#main')); }
 }
@@ -541,7 +542,7 @@ document.addEventListener('click',e=>{
     case 'cerrar': cerrar(); break;
     case 'deshacer': if(_undo){ S=JSON.parse(_undo); cargarDia(); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
     case 'abrir': { const abrir=()=>{ S._marDia={}; S.hora=v||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
-      if(v==='laudes' && !window.LAUDES){ toast('Cargando Laudes…'); cargarLaudes().then(abrir, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.')); } else abrir();
+      if(MAYORES[v] && !window[v.toUpperCase()]){ toast('Cargando…'); cargarHora(v).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.')); } else abrir();
       break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
@@ -569,5 +570,5 @@ document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.clas
 let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
 
 // Si se recarga con Laudes abierta, primero se cargan sus datos
-if(S.vista==='hora' && S.hora==='laudes' && !window.LAUDES){ S.vista='hoy'; cargarLaudes().then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }
+if(S.vista==='hora' && MAYORES[S.hora] && !window[S.hora.toUpperCase()]){ S.vista='hoy'; cargarHora(S.hora).then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }
 render();

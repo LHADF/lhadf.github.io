@@ -4,7 +4,7 @@
    Decisiones ADF en docs/laudes.md. */
 (function(){
 const CP=window.Completas, X=CP._;
-const CAMPOS=['inv_ant','himno','salmodia','lectura','responsorio','ant_benedictus','preces','padrenuestro_intro','oracion','en_lugar_del_responsorio','pendiente'];
+const CAMPOS=['inv_ant','himno','salmodia','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','oracion','en_lugar_del_responsorio','pendiente'];
 const SIN_GLORIA=['cantico-dn-3-57-88-56'];   // el cántico de Daniel 3, 57-88 no lleva Gloria
 
 // Ciclo dominical del año litúrgico (empieza el I Domingo de Adviento)
@@ -15,29 +15,49 @@ function ciclo(fecha){
   return 'ABC'[(((y-2016)%3)+3)%3];
 }
 
-// Las partes del día, capa sobre capa
-function propio(hoy, fecha){
-  const L=window.LAUDES, d=CP.deIso(fecha), dia=X.DIAS[d.getDay()];
-  const P={}, capa=o=>{ if(o) for(const k of CAMPOS) if(o[k]!=null) P[k]=o[k]; };
-  capa(L.salterio['semana_'+(hoy.sal||1)][dia]);
-  capa(L.tiempo[hoy.fer]);
-  if(dia==='domingo') capa(L.tiempo[`${hoy.fer} (${ciclo(fecha)})`]);
-  let santo=null, nota='';
-  const k=L.mapa[hoy.n];
-  if(k){ santo=L.santoral[k]; delete P.pendiente; capa(santo); }
-  else if(hoy.n!==hoy.fer){
-    nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
-  // Fiestas y solemnidades sin salmodia propia: salmos y antífonas del domingo de la I semana
-  if(/^(Fiesta|Solemnidad)/.test(hoy.g) && !(santo&&santo.salmodia)) P.salmodia=L.salterio.semana_1.domingo.salmodia;
-  if(P.pendiente) nota='Faltan textos propios de este día (antífona del Benedictus u oración): están marcados para completar.';
-  return {P, dia, nota};
+// Las partes del día, capa sobre capa. hora: 'laudes' | 'visperas'.
+// Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
+function propio(hora, fecha, region){
+  const L=window[hora.toUpperCase()], hoyC=CP.diaCal(fecha, region), CE=hora==='laudes'?'ant_benedictus':'ant_magnificat';
+  const fm=CP.masDias(fecha,1), man=(hora==='visperas' && CP.enRango(fm)) ? CP.diaCal(fm, region) : null;
+  const calc=primeras=>{
+    const ref=primeras?man:hoyC, fRef=primeras?fm:fecha;
+    const d=CP.deIso(fRef), dom=d.getDay()===0, dia=X.DIAS[d.getDay()];
+    const P={}, capa=o=>{ if(o) for(const k of CAMPOS) if(o[k]!=null) P[k]=o[k]; };
+    const I=primeras?' · I Vísperas':'';
+    const semana=L.salterio['semana_'+(ref.sal||1)];
+    // (Vísperas no tiene «sábado» en el salterio: esa tarde es del domingo; una solemnidad en sábado toma lo del domingo I)
+    capa(primeras ? (dom ? semana.domingo_1 : L.salterio.semana_1.domingo_1) : (semana[dia] || L.salterio.semana_1.domingo));
+    const T1=L.tiempo[ref.fer+I], T2=L.tiempo[`${ref.fer} (${ciclo(fRef)})${I}`];
+    capa(T1); capa(T2);   // (con ciclo: los domingos y las solemnidades que alguna vez cayeron en domingo)
+    const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia));
+    let santo=null, nota='';
+    const k=L.mapa[ref.n];
+    if(k){ santo=L.santoral[k+I]||(primeras?null:L.santoral[k]); if(santo){ delete P.pendiente; capa(santo); }
+           else if(primeras){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
+    } else if(ref.n!==ref.fer){
+      nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
+    // Fiestas y solemnidades sin salmodia propia: salmos y antífonas del domingo de la I semana
+    if(/^(Fiesta|Solemnidad)/.test(ref.g) && !(santo&&santo.salmodia) && !salmodiaPropia && !(dom && !k)) P.salmodia=L.salterio.semana_1[primeras?'domingo_1':'domingo'].salmodia;
+    if(!P.salmodia) P.salmodia=(semana[dia]||L.salterio.semana_1.domingo).salmodia;
+    return {P, dia, nota, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
+  };
+  // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
+  const quiere = !!(man && man.pv && !(hoyC.sol && !man.sol) && hoyC.t!=='Triduo');
+  let r=calc(quiere);
+  if(!r.completo && man && hoyC.t!=='Triduo'){   // sin textos para lo elegido: la otra posibilidad (hoy, o las I Vísperas de mañana si es domingo o solemnidad)
+    const otra = quiere ? calc(false) : ((man.dom||man.sol) ? calc(true) : null);
+    if(otra && otra.completo){ if(quiere) otra.nota='Las I Vísperas de mañana todavía no tienen propio en la base: se rezan las del día.'; r=otra; }
+  }
+  if(!r.completo) r.nota='Faltan textos propios de este día (antífona del cántico evangélico u oración): están marcados para completar.';
+  return r;
 }
 
-function armar(fecha, region){
-  const L=window.LAUDES; if(!L) return null;
-  const hoy=CP.diaCal(fecha, region); if(!hoy) return null;
-  const B=window.BASE, GR=B.completas.gregoriano, GL=L.gregoriano;
-  const {P, dia, nota}=propio(hoy, fecha);
+function armar(hora, fecha, region){
+  const L=window[hora.toUpperCase()]; if(!L) return null;
+  if(!CP.diaCal(fecha, region)) return null;
+  const B=window.BASE, GR=B.completas.gregoriano, GL=L.gregoriano, LAU=hora==='laudes';
+  const {P, dia, nota, hoy, fRef, primeras}=propio(hora, fecha, region);
   const cuaresma=hoy.t==='Cuaresma'||hoy.t==='Triduo';
   const solemne=!!(hoy.sol||hoy.dom||hoy.t==='Triduo'||hoy.oct);
   const S=[]; const sec=(id,t,extra)=>S.push({k:'sec',id,t,...extra});
@@ -46,8 +66,8 @@ function armar(fecha, region){
 
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.
   // Todos los días se empieza con «Dómine, lábia mea apéries»; el invitatorio (antífona y Salmo 94), solo los domingos.
-  const labia={k:'vr', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])};
-  if(dia==='domingo'){
+  const labia=LAU && {k:'vr', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])};
+  if(LAU && CP.deIso(fecha).getDay()===0){
     sec('invitatorio','Invitatorio');
     S.push(labia);
     S.push({k:'ant', id:'ai', es:true, n:'Ant.', t:{es:P.inv_ant}});
@@ -57,7 +77,7 @@ function armar(fecha, region){
   }
 
   sec('inicio','Invocación inicial');
-  if(dia!=='domingo') S.push(labia);
+  if(LAU && CP.deIso(fecha).getDay()!==0) S.push(labia);
   const tono = solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
   S.push({k:'vr', tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:trInv,
@@ -65,7 +85,7 @@ function armar(fecha, region){
 
   sec('himno','Himno');
   const H=L.himnos[P.himno]||[];
-  S.push({k:'himno', es:true, opciones:[{id:'laudes', n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}]});
+  S.push({k:'himno', es:true, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}]});
 
   sec('salmodia','Salmodia');
   (P.salmodia||[]).forEach((g,gi)=>{
@@ -87,9 +107,9 @@ function armar(fecha, region){
     S.push({k:'resp', es:true, l:{es:P.responsorio}});
   }
 
-  sec('cantico','Cántico evangélico',{ref:GL.benedictus.ref});
-  const BN=GL.benedictus;
-  S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:P.ant_benedictus}});
+  sec('cantico','Cántico evangélico',{ref:GL.cantico.ref});
+  const BN=GL.cantico;
+  S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}});
   S.push({k:'cantico', titulo:BN.titulo, versos:BN.versos, inter:BN.traduccion_versos});
   S.push({k:'ant', rep:'ab', es:true});
 
@@ -97,10 +117,10 @@ function armar(fecha, region){
   S.push({k:'preces', es:true, ...P.preces});
 
   sec('padrenuestro','Padre nuestro');
-  S.push({k:'pater', intro: (dia==='domingo' || /^(Fiesta|Solemnidad)/.test(hoy.g)) ? (P.padrenuestro_intro||'') : '', pares:GL.pater_noster, lineas:X.enLineas(GL.pater_noster, GL.pater_cortes)});   // monición (la del día) solo en domingos, fiestas y solemnidades
+  S.push({k:'pater', intro: (dia==='domingo' || /^(Fiesta|Solemnidad)/.test(hoy.g) || primeras) ? (P.padrenuestro_intro||'') : '', pares:GL.pater_noster, lineas:X.enLineas(GL.pater_noster, GL.pater_cortes)});   // monición (la del día) solo en domingos, fiestas y solemnidades
 
   sec('oracion','Oración');
-  S.push({k:'prosa', es:true, t:{es:P.oracion}, amen:{es:'Amén.'}});
+  S.push({k:'prosa', es:true, t:{es:P.oracion||'[falta la oración]'}, amen:{es:'Amén.'}});
 
   sec('bendicion','Conclusión');
   // Sin ministro ordenado: «Dóminus nos benedícat»; con ministro ordenado: «Dóminus vobíscum… Benedícat vos» (tono B en domingos y solemnidades)
@@ -113,14 +133,15 @@ function armar(fecha, region){
 
   const d=CP.deIso(fecha);
   return {
-    hora:'laudes', nombre:'Laudes',
+    hora, nombre:LAU?'Laudes':'Vísperas', primeras,
     versiones:{es:{n:'Liturgia de las Horas'}},
     gloria:{es:['Gloria al Padre, y al Hijo, * y al Espíritu Santo.','Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.']},
-    dia:{titulo:hoy.n, tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
+    dia:{titulo:hoy.n+(primeras?' · I Vísperas':''), tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
     fechaTxt:`${X.DIAS_TXT[d.getDay()]} ${d.getDate()} de ${X.MESES[d.getMonth()]}`,
     secciones:S,
   };
 }
 
-window.Laudes={armar, ciclo, propio};
+window.Laudes={armar:(f,r)=>armar('laudes',f,r), ciclo, propio};
+window.Visperas={armar:(f,r)=>armar('visperas',f,r), propio};
 })();

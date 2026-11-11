@@ -73,7 +73,7 @@ def id_salmo(h):
         ident = 'salmo-' + '-'.join(re.findall(r'\d+[ab]?|\b[AB]\b', num + ' ' + vv)).lower()
         return ident, nombre, (m.group(4) or '').strip(' -.')
     # cántico: referencia bíblica al final (libro con o sin punto; versículos que pasan de capítulo)
-    m = re.search(r'([1-3]?\s?[A-ZÁÉÍÓÚ][a-záéíóú]{0,4})\.?\s+(\d+)\s*,\s*(\d[\d\s\-.,ab]*)$', h)
+    m = re.search(r'([1-3]?\s?[A-ZÁÉÍÓÚ][a-záéíóú]{0,4})\.?\s+(\d+)\s*,\s*(\d[\d\s\-.,;ab]*)$', h)
     if m:
         libro = m.group(1).replace(' ', ''); cap = m.group(2)
         vv = re.sub(r'\s*-\s*', '-', re.sub(r'\s*\.\s*', '. ', re.sub(r'\s*,\s*', ', ', m.group(3)))).strip(' .,')

@@ -70,6 +70,7 @@ def main():
         f.write('window.BASE=' + json.dumps(base, ensure_ascii=False, separators=(',', ':')) + ';\n')
     print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB')
     laudes()
+    visperas()
 
 
 # ---------- Laudes: archivo aparte (src/carga/laudes.js), la app lo carga recién al abrir Laudes ----------
@@ -93,9 +94,10 @@ def _sim(a, b):
     c = len(a & b); return (c, c / min(len(a), len(b)), c / len(a | b))
 
 
-def vincular_santoral(santoral):
+def vincular_santoral(santoral_todo):
     """Celebraciones del calendario ADF (src/datos/calendario.js) → entrada del santoral de Laudes (de sync).
     Primero por fecha y nombre; las movibles, solo por nombre. Devuelve (mapa, sin_vincular)."""
+    santoral = {k: v for k, v in santoral_todo.items() if not k.endswith(' · I Vísperas')}
     cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
     cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
     tab, ix, d0 = cal['tabla'], {c: i for i, c in enumerate(cal['campos'])}, date.fromisoformat(cal['desde'])
@@ -133,9 +135,8 @@ def laudes():
         'mapa': mapa, 'sin_vincular': sin,
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
-            'benedictus': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
-            'pater_noster': pares(GL['pater_noster']), 'pater_cortes': GL['pater_cortes'],
-            'bendicion': {'simple': gabc(GL['bendicion']['simple']), 'solemne': gabc(GL['bendicion']['solemne']), 'traduccion': pares(GL['bendicion']['traduccion']), 'despedida': pares(GL['bendicion']['despedida'])},
+            'cantico': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
+            **comunes_latin(GL),
             'conclusion': {'gabc': gabc(GL['conclusion']['partitura']), 'traduccion': pares(GL['conclusion']['traduccion'])},
         },
     }
@@ -143,6 +144,32 @@ def laudes():
     os.makedirs(os.path.dirname(destino), exist_ok=True)
     with open(destino, 'w', encoding='utf-8') as f:
         f.write('window.LAUDES=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB · santoral vinculado: {len(mapa)} · sin propio en la base: {len(sin)}')
+
+
+def comunes_latin(GL):
+    """Partes en latín compartidas por Laudes y Vísperas."""
+    return {'pater_noster': pares(GL['pater_noster']), 'pater_cortes': GL['pater_cortes'],
+            'bendicion': {'simple': gabc(GL['bendicion']['simple']), 'solemne': gabc(GL['bendicion']['solemne']), 'traduccion': pares(GL['bendicion']['traduccion']), 'despedida': pares(GL['bendicion']['despedida'])},
+            'conclusion': {'gabc': gabc(GL['conclusion']['partitura']), 'traduccion': pares(GL['conclusion']['traduccion'])}}
+
+
+def visperas():
+    GL = leer(os.path.join(B, 'gregoriano', 'laudes.yaml'))
+    MG = leer(os.path.join(B, 'gregoriano', 'magnificat.yaml'))
+    SV = leer(os.path.join(B, 'salterio', 'visperas.yaml'))
+    TV = leer(os.path.join(B, 'tiempo', 'visperas.yaml'))
+    SaV = leer(os.path.join(B, 'santoral', 'visperas.yaml'))
+    HV = leer(os.path.join(B, 'himnos', 'visperas.yaml'))
+    usados = {g['salmo'] for capa in ([e for w in SV.values() for e in w.values()], TV.values(), SaV.values()) for e in capa for g in (e.get('salmodia') or [])}
+    salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
+    mapa, sin = vincular_santoral(SaV)
+    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin,
+             'gregoriano': {**comunes_latin(GL),
+                            'cantico': {'titulo': MG['titulo'], 'ref': MG['ref'], 'versos': MG['versos'], 'traduccion_versos': [pares(v) for v in MG['traduccion_versos']]}}}
+    destino = os.path.join(RAIZ, 'src', 'carga', 'visperas.js')
+    with open(destino, 'w', encoding='utf-8') as f:
+        f.write('window.VISPERAS=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
     print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB · santoral vinculado: {len(mapa)} · sin propio en la base: {len(sin)}')
 
 

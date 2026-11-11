@@ -26,7 +26,7 @@ Cada archivo es texto YAML y se puede editar directamente en GitHub. Reglas de e
 | `gregoriano/` | Partituras GABC y cuándo va cada una (`completas.yaml`): invocación solemne/festiva/ferial, Salva nos y Nunc dimittis, Noctem quietam; traducción interlineal propia, literal y palabra por palabra (no la del sync, que sirve solo para lo que se canta en español); tono de los salmos |
 | `informes/` | Lo que encontró la carga: versiones distintas de un mismo texto en `sync` y la verificación |
 
-Laudes: base cargada (11/2026); falta armarlas en la app y revisar los propios ADF (ver `docs/laudes.md`). Faltan todavía: Vísperas, Oficio de lectura, hora intermedia y lo propio de ADF.
+Laudes y Vísperas: cargadas y armadas en la app (11/2026); falta revisar los propios ADF (ver `docs/laudes.md` y `docs/visperas.md`). Faltan todavía: Oficio de lectura, hora intermedia y lo propio de ADF.
 
 ## Reglas de Completas (las aplica la app)
 
