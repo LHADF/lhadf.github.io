@@ -353,7 +353,8 @@ test('invitatorio gregoriano de los domingos del Tiempo Ordinario, con traducci�
   assert.equal(g.estrofas.length, 6);
   for (const x of [g.ant, ...g.estrofas]) { assert.equal(pp(x.glosa), pal(x.gabc)); assert.ok(!/[jJ]/.test(x.gabc.split('%%')[1].replace(/\([^)]*\)/g, ''))); }
   assert.ok(!LA.armar('2026-12-06', '').secciones.some(s => s.k === 'invgreg'));   // Adviento: todavía no
-  assert.ok(B.oraciones.preparatoria.texto.length === 6 && B.oraciones.conclusiva.texto.length === 7);
+  assert.ok(B.oraciones.preparatoria.texto.length > 6 && B.oraciones.conclusiva.texto.length > 7);
+  for (const k of ['preparatoria', 'conclusiva']) for (const [la] of B.oraciones[k].texto) assert.ok(la.length <= 52, la);   // renglones cortos
 });
 
 test('notas del Calendario ADF y calendarios locales que heredan de su país', () => {
@@ -365,4 +366,12 @@ test('notas del Calendario ADF y calendarios locales que heredan de su país', (
   assert.equal(CP.diaCal('2027-11-15', '').g, 'Memoria obligatoria');
   assert.equal(CP.opcionesDia('2027-02-03', '').length, 1);           // San Blas: CDE no cambia nada, no hay sigla de más
   for (const f of ctx.window.CAL.dias) { const n = ctx.window.CAL.tabla[f[12]]; if (n) for (const l of n.split('\n')) assert.match(l, /^[A-Z]{3}\t\S/); }
+});
+
+test('inicio: Santa María en sábado como opción, biografías y nombre de las Vísperas', () => {
+  const o = CP.opcionesDia('2026-11-14', '');
+  assert.equal(o.length, 2); assert.equal(o[1].f.n, 'Santa María en sábado'); assert.ok(o[0].actual);
+  assert.match(LA.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Santa María en sábado'}}).dia.nota, /Común de la Santísima Virgen María/);
+  assert.ok(CP.diaCal('2026-11-11', '').bio.length > 100);
+  assert.ok(VI.armar('2026-11-14', '').primeras);
 });

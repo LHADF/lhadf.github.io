@@ -46,6 +46,10 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .dia .txt{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;padding:4px 2px 2px 6px}
 .dia .hoy{font-size:var(--f-dato);color:var(--ink2)}
 .dia h2{font-family:var(--titulo);font-size:1.6rem;line-height:1.15;margin:4px 0 0;font-weight:600;text-wrap:balance}
+.dia h2.largo{font-size:1.3rem}.dia h2.muy-largo{font-size:1.1rem;line-height:1.2}
+.dia .bio{align-self:flex-start;border:0;background:none;padding:6px 0;min-height:32px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
+
+.portada{padding-top:max(10px,env(safe-area-inset-top,0px)) !important}
 .dia .meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:var(--f-dato);color:var(--ink2)}
 .color{display:inline-flex;align-items:center;gap:6px}
 .color::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--col,var(--verde));box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 30%,transparent)}
@@ -76,8 +80,10 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .horas button:disabled{cursor:default}
 .horas button:disabled .n{color:var(--muted)}
 .horas .pronto{font-size:var(--f-dato);color:var(--muted);font-style:italic}
-.horas li.sel button{background:var(--rubric-soft);border-radius:var(--r-1);padding-inline:12px}
-.horas li.sel .n{color:var(--rubric);font-weight:600}
+.horas li.disp .n{color:var(--ink)}
+.horas li.ahora button{background:var(--rubric-soft);border-radius:var(--r-1);padding-inline:12px}
+.horas li.ahora .n{color:var(--rubric);font-weight:600}
+.horas li.ahora .chev{color:var(--rubric)}
 .cta{display:flex;justify-content:flex-start}
 .btn{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);padding:10px 18px;font-weight:600}
 .btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
@@ -288,3 +294,8 @@ p.rec{margin:0 0 .8em}
 .rec .ln{display:block}
 .opciones.unir{margin-top:3em}
 .opciones.unir + .sec{margin-top:1.6em}
+/* Inicio sin barra: los tres puntos van en la fila de la fecha, que no se parte */
+.portada .navdia{gap:2px}.portada .navdia .iconbtn{width:38px;min-width:38px}
+.portada .navdia .fecha{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:440px){.portada .navdia .fecha{font-size:.875rem}.portada .hoybtn{padding-inline:10px}}
+@media (max-width:384px){.portada .navdia .fecha{font-size:.78rem}.portada .hoybtn{padding-inline:8px}.portada .navdia .iconbtn{width:34px;min-width:34px}}

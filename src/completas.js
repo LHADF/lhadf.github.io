@@ -16,7 +16,7 @@ const masDias=(s,n)=>{ const d=deIso(s); d.setDate(d.getDate()+n); return iso(d)
 /* ---------- Calendario ---------- */
 // La base es el calendario ADF. «sel» dice qué se eligió: {cal: sigla del calendario preferido (ARG, PGY, BUE…),
 // dia: {fecha: nombre de la celebración elegida a mano ese día, o '' para la del calendario ADF}}. También vale la sigla sola.
-const TXT=['t','n','g','c','fer','oct','cal','nota'];
+const TXT=['t','n','g','c','fer','oct','cal','nota','bio'];
 function fichaDe(fila, fecha){ const T=CAL.tabla, o={fecha}; CAL.campos.forEach((c,k)=>{ o[c]=TXT.includes(c)?T[fila[k]]:fila[k]; }); return o; }
 function fichaBase(fecha){ const fila=CAL.dias[Math.round((deIso(fecha)-deIso(CAL.desde))/864e5)]; return fila?fichaDe(fila,fecha):null; }
 // Variantes del día: 'r', otro calendario lo celebra distinto; 'l', memoria libre (optativa)

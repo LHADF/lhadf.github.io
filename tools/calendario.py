@@ -86,10 +86,12 @@ def ficha(dl, p=None, libre=False, cal=''):
         'pv': 0 if libre else (1 if dl.primeras_visperas else 0),
         'oct': octava,
         'cal': next((x for x in (cal, LOC['padres'].get(cal)) if x and (x, p.clave, p.nombre) in MOD), '') or ('' if p.temporal else SIGLAS.get((p.clave, p.nombre), SIGLAS.get((origen, p.nombre), ''))),
+        'bio': (getattr(p, 'biografia', '') or '').strip(),
         'nota': notas_de(p, origen, cal) or (f'CRG\t{sin_html(p.nota)}' if p.nota else ''),
     }
 
 
+SABADO = 'Santa María en sábado'
 sin_sigla = lambda f: {k: v for k, v in f.items() if k != 'cal'}
 
 
@@ -131,6 +133,9 @@ def main():
                 if f['n'] in vistos: continue
                 vistos.add(f['n'])
                 vs.append(['l', [x.strip() for x in f['cal'].split(',') if x.strip()] or ['CRG'], f])
+        # Sábado del Tiempo Ordinario sin memoria: se puede celebrar Santa María en sábado (memoria libre, optativa)
+        if d.weekday() == 5 and F['']['t'] == 'Ordinario' and F['']['g'] == 'Feria':
+            vs.append(['l', ['CRG'], dict(F[''], n=SABADO, g='Memoria libre', c='Blanco', cal='CRG', nota='', bio='', pv=0)])
         if vs: var[k] = vs
         d += timedelta(days=1)
     # tabla de textos repetidos para achicar el archivo
@@ -139,11 +144,11 @@ def main():
         if s not in idx: idx[s] = len(tabla); tabla.append(s)
         return idx[s]
     def comp(f):
-        return [i(f['t']), f['sem'] or 0, f['sal'] or 0, i(f['n']), i(f['g']), i(f['c']), f['sol'], f['dom'], i(f['fer']), f['pv'], i(f['oct']), i(f['cal']), i(f['nota'])]
+        return [i(f['t']), f['sem'] or 0, f['sal'] or 0, i(f['n']), i(f['g']), i(f['c']), f['sol'], f['dom'], i(f['fer']), f['pv'], i(f['oct']), i(f['cal']), i(f['nota']), i(f['bio'])]
     out = {
         'desde': ini.isoformat(), 'hasta': fin.isoformat(),
         'calendarios': LOC['calendarios'], 'padres': LOC['padres'],
-        'campos': ['t', 'sem', 'sal', 'n', 'g', 'c', 'sol', 'dom', 'fer', 'pv', 'oct', 'cal', 'nota'],
+        'campos': ['t', 'sem', 'sal', 'n', 'g', 'c', 'sol', 'dom', 'fer', 'pv', 'oct', 'cal', 'nota', 'bio'],
         'tabla': tabla,
         'dias': [comp(dias[k]) for k in sorted(dias)],                                   # calendario ADF (sin país)
         'var': {k: [[t, ' '.join(s), comp(f)] for t, s, f in v] for k, v in sorted(var.items())},   # 'r': otro calendario; 'l': memoria libre

@@ -51,7 +51,7 @@ function fichasCal(){
   const ops=CP.opcionesDia(S.fecha, SEL()), mio=linaje(S.cal), out=[];
   ops.forEach((o,i)=>{
     if(o.tipo==='r') o.siglas.forEach(sg=>out.push({i, sg, txt:sg, on:o.actual&&(mio.includes(sg)||!o.siglas.some(x=>mio.includes(x))), o}));
-    else out.push({i, sg:'', txt:o.siglas.join(' · '), on:o.actual, o});
+    else out.push({i, sg:'', txt:o.f.n==='Santa María en sábado'?'Santa María':o.siglas.join(' · '), on:o.actual, o});
   });
   return out;
 }
@@ -377,7 +377,7 @@ const INV=()=>(CANTA() && S.invit!=='es') ? 'greg' : 'es';
 // Oraciones antes y después del oficio (base/ordinario/oraciones-oficio.yaml): latín y, debajo de cada renglón, la traducción de ADF
 function oracionOficioHTML(k){
   const O=window.BASE.oraciones[k];
-  const ln=(ps,pre)=>`<p class="orof">${ps.map(([a,b])=>`<span class="ln">${pre||''}${esc(a)}${S.trad?`<span class="gl">${esc(b)}</span>`:''}</span>`).join('')}</p>`;
+  const ln=(ps,pre)=>`<p class="orof">${ps.map(([a,b],k)=>`<span class="ln">${k?'':(pre||'')}${esc(a)}${S.trad?`<span class="gl">${esc(b)}</span>`:''}</span>`).join('')}</p>`;
   let h=`<p class="rub">${esc(O.rubrica)}</p>`+ln(O.texto);
   if(O.pausa) h+=`<p class="rub">${esc(O.pausa)}</p>`+ln(O.final);
   if(O.respuesta) h+=ln(O.respuesta,'<span class="k">℟.</span> ')+ln(O.versiculo,'<span class="k">℣.</span> ')+ln(O.respuesta_versiculo,'<span class="k">℟.</span> ')+ln(O.despues);
@@ -427,7 +427,8 @@ function marianaHTML(sec){
 function horaHTML(){
   _id=0; GAB.clear();
   const r=R(); let h='';
-  h+=`<p class="dia-h">${esc(r.dia.titulo)} · ${esc(r.dia.tiempo)}${r.dia.visperas?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
+  const sinNombre=S.hora==='completas' || r.primeras;   // Completas y I Vísperas: sin el nombre de la celebración
+  h+=`<p class="dia-h">${sinNombre?(r.primeras?'I Vísperas · ':''):esc(r.dia.titulo)+' · '}${esc(r.dia.tiempo)}${r.dia.visperas&&!sinNombre?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
   // I Vísperas del domingo: en ADF, antes de empezar, la oración preparatoria (introduce el oficio de toda la semana)
   if(r.hora==='visperas' && r.primeras && CP.deIso(S.fecha).getDay()===6)
@@ -497,33 +498,45 @@ function horaHTML(){
 }
 
 /* ---------- Portada ---------- */
-function horaActual(){ const d=new Date(); const m=d.getHours()*60+d.getMinutes();
-  if(m<5*60) return 'completas'; if(m<9*60) return 'laudes'; if(m<11*60) return 'tercia'; if(m<14*60) return 'sexta'; if(m<17*60) return 'nona'; if(m<21*60) return 'visperas'; return 'completas'; }
+// La hora que toca según el reloj: hasta 1:30 antes y después de su hora (Laudes 6, Tercia 9, Sexta 12, Nona 15, Vísperas 18, Completas 21).
+// El Oficio de lectura se marca junto con Laudes.
+function horasAhora(){ const d=new Date(), m=d.getHours()*60+d.getMinutes();
+  const h=[['laudes',6],['tercia',9],['sexta',12],['nona',15],['visperas',18],['completas',21]].find(([,x])=>Math.abs(m-x*60)<=90);
+  return !h ? [] : h[0]==='laudes' ? ['oficio','laudes'] : [h[0]]; }
 const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas'],['completas','Completas']];
 const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#fff',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
+// Vísperas del día: I Vísperas (sábados y vísperas de solemnidad), II Vísperas (domingos y solemnidades) o Vísperas
+function nombreVisperas(){
+  const hoy=CP.diaCal(S.fecha, SEL()), fm=CP.masDias(S.fecha,1), man=CP.enRango(fm)?CP.diaCal(fm, SEL()):null;
+  if(!hoy) return 'Vísperas';
+  if(man && man.pv && !(hoy.sol && !man.sol) && hoy.t!=='Triduo') return 'I Vísperas';
+  return (hoy.dom || hoy.sol) ? 'II Vísperas' : 'Vísperas';
+}
 function portadaHTML(){
-  const r=R(); const ahora=horaActual(); const esHoy=S.fecha===fechaHoy();
+  const r=R(); const esHoy=S.fecha===fechaHoy(), ahora=esHoy?horasAhora():[];
   // Calendarios: solo cuando el día tiene variantes o nota. La ficha gris es lo que se está celebrando; las encendidas, las otras opciones.
   const fc=fichasCal(), nota=(CP.diaCal(S.fecha, SEL())||{}).nota;
   const cals=(fc.length>1||nota) ? `<div class="cals" role="group" aria-label="Calendarios de este día">${fc.map(c=>`<button class="cal" data-act="cal" data-v="${c.i}" data-s="${c.sg}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.o.f.n+' ('+c.o.f.g+')')}">${esc(c.txt)}</button>`).join('')}${nota?'<button class="cal nota" data-act="nota" aria-label="Ver la nota de este día">!</button>':''}</div>` : '';
-  return `<div class="portada">
+  return `<div class="portada"><h1 class="vh">Liturgia de las Horas</h1>
     <div class="navdia">
       <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${'‹'}</button>
       <span class="fecha">${esHoy?'Hoy, ':''}${esc(esHoy?r.fechaTxt.toLowerCase():r.fechaTxt)}</span>
       <button class="iconbtn" data-act="dia" data-v="1" aria-label="Día siguiente">${'›'}</button>
       ${esHoy?'':'<button class="hoybtn" data-act="hoy">Hoy</button>'}
+      <button class="iconbtn mas" data-act="opciones" aria-label="Opciones"><svg class="ico" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></button>
     </div>
     <div class="dia">
       <div class="txt">
-        <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${esc(r.dia.titulo)}</h2></div>
-        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}</div>
+        <div><div class="hoy">${esc(r.dia.grado)}</div><h2 class="${r.dia.titulo.length>80?'muy-largo':r.dia.titulo.length>48?'largo':''}">${esc(r.dia.titulo)}</h2></div>
+        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Biografía</button>':''}</div>
       </div>
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>
     ${cals || `<p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>`}
     <ul class="horas">${HORAS.map(([id,n])=>{
-      const ok=id==='completas'||id==='laudes'||id==='visperas';
-      return `<li class="${ok?'sel':''}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):(esHoy&&id===ahora?'<span class="pronto">ahora · </span>':'')+'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
+      const ok=id==='completas'||id==='laudes'||id==='visperas', ya=ahora.includes(id);
+      if(id==='visperas') n=nombreVisperas();
+      return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
     <button class="discreto" data-act="oraciones">Oraciones antes y después del oficio</button>
     <p class="nota-proto">Prototipo: Laudes, Vísperas y Completas están armadas para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en latín. En Laudes y Vísperas, los himnos van por ahora solo en español y el santoral está en revisión.</p>
   </div>`;
@@ -533,7 +546,7 @@ function portadaHTML(){
 function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
-  $('#atras').hidden=!enHora;
+  $('#atras').hidden=!enHora; $('#top').hidden=!enHora;   // en el inicio no hay barra: los tres puntos van junto a la fecha
   $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>ajustarGlosas($('#main'))); pintar($('#main')); }
@@ -600,6 +613,7 @@ document.addEventListener('click',e=>{
       else if(c.o.tipo==='l'){ d[S.fecha]=c.o.f.n; }                             // memoria libre: solo ese día
       else { if(fichasCal().some(x=>x.on&&x.o.tipo==='r')) S.cal=''; delete d[S.fecha]; }   // volver al calendario ADF
       cargarDia(); cambio(c.o.f.n+' ('+c.txt+')'); break; }
+    case 'bio': { const f=CP.diaCal(S.fecha, SEL()); hoja(f.n, f.bio.split(/\n+/).map(p=>`<p class="nota-dia">${esc(p)}</p>`).join('')); break; }
     case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal();
       // notas del Calendario litúrgico ADF, una por renglón: «SIGLA<tab>texto»
       const ns=String(f.nota||'').split('\n').filter(Boolean).map(l=>{ const i=l.indexOf('\t'); return i<0?['',l]:[l.slice(0,i),l.slice(i+1)]; });

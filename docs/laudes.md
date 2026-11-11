@@ -49,3 +49,12 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - `base/calendario/notas.yaml`: las notas al pie del calendario, unidas a cada celebración del Ordo y con la sigla del calendario al que se refieren (la de san Martín sobre Buenos Aires va como BUE). Se importaron una vez con `tools/importar/notas_calendario.py`; se corrigen ahí. Se omitieron los aniversarios de ordenación de personas y se corrigieron erratas evidentes.
 - Grados y fechas del santoral: el Ordo coincide con el PDF en las 258 celebraciones con grado. Lo que el PDF dice solo en notas va en `base/calendario/locales.yaml`: san Martín, Solemnidad en BUE; Roque González y compañeros, Fiesta en PGY. Un calendario local hereda los cambios de su país (CDE de PGY). Si un calendario solo cambia la sigla, no se muestra como variante.
 - En el inicio la sigla encendida (roja) es la que se está celebrando.
+
+### Inicio y calendario (11/11/2026, tarde)
+
+- En día ferial con memoria libre, ADF celebra la memoria libre (la del calendario más propio: local, país, ADF, general). Ya no se ofrece la feria.
+- Sábados del Tiempo Ordinario sin memoria: opción «Santa María» (Santa María en sábado, común de la Virgen; falta la oración propia).
+- Biografías: las del Ordo (columna «biografia» del santoral), con el enlace «Biografía» en la tarjeta del día.
+- Lista de horas: la que toca según el reloj (1:30 antes y después de su hora; el Oficio de lectura con Laudes) va resaltada en rojo. Vísperas se llama «I Vísperas» o «II Vísperas» cuando corresponde.
+- El inicio no tiene barra superior: los tres puntos van en la fila de la fecha.
+- En Completas y en las I Vísperas, la línea del día no repite el nombre de la celebración.

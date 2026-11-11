@@ -8,30 +8,41 @@ preparatoria:
   texto:
     - Áperi, Dómine, os meum = Abre, Señor, mis labios
     - 'ad benedicéndum nomen sanctum tuum: = para bendecir tu santo Nombre:'
-    - munda cor meum ab ómnibus vanis, pervérsis et aliénis cogitatiónibus; = purifica también mi corazón de todo pensamiento vano, perverso y distraído;
-    - intelléctum illúmina, afféctum inflámma, = ilumina mi entendimiento y enciende mi sentimiento
-    - ut digne, atténte ac devóte hoc Offícium recitáre váleam, = para que pueda recitar dignamente este Oficio, con atención y devoción,
-    - et exaudíri mérear ante conspéctum divínæ maiestátis tuæ. = y merezca ser escuchado en la presencia de tu divina majestad.
+    - munda cor meum = purifica también mi corazón
+    - ab ómnibus vanis, = de todo pensamiento vano,
+    - pervérsis et aliénis cogitatiónibus; = perverso y distraído;
+    - intelléctum illúmina, = ilumina mi entendimiento
+    - afféctum inflámma, = y enciende mi sentimiento,
+    - ut digne, atténte ac devóte = para que dignamente, con atención y devoción,
+    - hoc Offícium recitáre váleam, = pueda recitar este Oficio,
+    - et exaudíri mérear = y merezca ser escuchado
+    - ante conspéctum divínæ maiestátis tuæ. = en la presencia de tu divina majestad.
   pausa: 'Después de una breve pausa:'
   final:
-    - Per Christum Dóminum nostrum. Amen. = Por Cristo, nuestro Señor. Amén.
+    - Per Christum Dóminum nostrum. = Por Cristo, nuestro Señor.
+    - Amen. = Amén.
 conclusiva:
   titulo: Oración conclusiva
   rubrica: 'El Papa León X concedió indulgencia por los defectos y culpas incurridos por la fragilidad humana durante la recitación del Oficio si se recita la siguiente oración con devoción, que debe decirse de rodillas:'
   texto:
     - Sacrosánctæ et indivíduæ Trinitáti, = A la sacrosanta e indivisa Trinidad,
     - crucifíxi Dómini nostri Iesu Christi humanitáti, = a la humanidad crucificada de nuestro Señor Jesucristo,
-    - beatíssimæ et gloriosíssimæ sempérque Vírginis Maríæ fœcúndæ integritáti, = a la fecunda virginidad de la bienaventurada y gloriosísima siempre Virgen María
+    - beatíssimæ et gloriosíssimæ = de la bienaventurada y gloriosísima
+    - sempérque Vírginis Maríæ = siempre Virgen María
+    - fœcúndæ integritáti, = a la fecunda virginidad,
     - et ómnium Sanctórum universitáti = y a toda la asamblea de los santos
-    - sit sempitérna laus, honor, virtus et glória ab omni creatúra, = sea siempre la alabanza, el honor, el poder y la gloria por toda creatura,
+    - sit sempitérna laus, honor, virtus et glória = sea siempre la alabanza, el honor, el poder y la gloria
+    - ab omni creatúra, = por toda creatura,
     - nobísque remíssio ómnium peccatórum, = y a nosotros se nos conceda la remisión de todos nuestros pecados,
     - per infiníta sǽcula sæculórum. = por los siglos de los siglos.
   respuesta:
     - Amen. = Amén.
   versiculo:
-    - Beáta víscera Maríæ Vírginis, quæ portavérunt ætérni Patris Fílium. = Bienaventurado el seno de María Virgen que llevó al Hijo del eterno Padre.
+    - Beáta víscera Maríæ Vírginis, = Bienaventurado el seno de María Virgen,
+    - quæ portavérunt ætérni Patris Fílium. = que llevó al Hijo del eterno Padre.
   respuesta_versiculo:
-    - Et beáta úbera, quæ lactavérunt Christum Dóminum. = Y bienaventurados los pechos que amamantaron a Cristo, el Señor.
+    - Et beáta úbera, = Y bienaventurados los pechos
+    - quæ lactavérunt Christum Dóminum. = que amamantaron a Cristo, el Señor.
   despues:
     - Pater noster… = Padre nuestro…
     - Ave, María… = Dios te salve, María…
