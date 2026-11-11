@@ -93,6 +93,8 @@ def main():
     print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB')
     laudes()
     visperas()
+    oficio()
+    intermedia()
 
 
 # ---------- Laudes: archivo aparte (src/carga/laudes.js), la app lo carga recién al abrir Laudes ----------
@@ -205,6 +207,57 @@ def visperas():
     destino = os.path.join(RAIZ, 'src', 'carga', 'visperas.js')
     with open(destino, 'w', encoding='utf-8') as f:
         f.write('window.VISPERAS=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB · santoral vinculado: {len(mapa)} · sin propio en la base: {len(sin)}')
+
+
+def _salmos(usados):
+    return {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
+
+
+def _usados(*capas):
+    u = set()
+    for c in capas:
+        for e in c:
+            for g in (e.get('salmodia') or []): u.add(g['salmo'])
+            for x in (e.get('salmos') or []): u.add(x)
+    return u
+
+
+def oficio():
+    """Oficio de lectura → src/carga/oficio.js (se carga al abrir la hora)."""
+    SO, TO, SaO = (leer(os.path.join(B, c, 'oficio.yaml')) for c in ('salterio', 'tiempo', 'santoral'))
+    HO, OO, GH = leer(os.path.join(B, 'himnos', 'oficio.yaml')), leer(os.path.join(B, 'ordinario', 'oficio.yaml')), leer(os.path.join(B, 'gregoriano', 'horas.yaml'))
+    mapa, sin = vincular_santoral(SaO)
+    A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
+    datos = {'salterio': SO, 'tiempo': TO, 'santoral': SaO, 'himnos': HO, 'ordinario': OO,
+             'salmos': _salmos(_usados([e for w in SO.values() for e in w.values()], TO.values(), SaO.values())),
+             'mapa': mapa, 'adf': {n: a for n, a in A.items() if a.get('como') in SaO},
+             'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
+    _escribir_carga('oficio', 'OFICIO', datos, mapa, sin)
+
+
+def intermedia():
+    """Tercia, Sexta y Nona → src/carga/intermedia.js: una salmodia del día y, por hora, himno, antífona, lectura, versículo y oración."""
+    SI, TI, SaI = (leer(os.path.join(B, c, 'intermedia.yaml')) for c in ('salterio', 'tiempo', 'santoral'))
+    OI, GH = leer(os.path.join(B, 'ordinario', 'intermedia.yaml')), leer(os.path.join(B, 'gregoriano', 'horas.yaml'))
+    horas, todos = {}, dict(SaI)
+    for h in ('tercia', 'sexta', 'nona'):
+        horas[h] = {c: leer(os.path.join(B, c, f'{h}.yaml')) for c in ('salterio', 'tiempo', 'santoral', 'himnos')}
+        for n, e in horas[h]['santoral'].items(): todos.setdefault(n, e)
+    mapa, sin = vincular_santoral(todos)
+    A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
+    comp = [g for c in OI['complementaria'].values() for g in c]
+    datos = {'salterio': SI, 'tiempo': TI, 'santoral': SaI, 'horas': horas, 'complementaria': OI['complementaria'],
+             'salmos': _salmos(_usados([e for w in SI.values() for e in w.values()], TI.values(), SaI.values(), [{'salmodia': comp}])),
+             'mapa': mapa, 'adf': {n: a for n, a in A.items() if a.get('como') in todos},
+             'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
+    _escribir_carga('intermedia', 'INTERMEDIA', datos, mapa, sin)
+
+
+def _escribir_carga(nombre, var, datos, mapa, sin):
+    destino = os.path.join(RAIZ, 'src', 'carga', nombre + '.js')
+    with open(destino, 'w', encoding='utf-8') as f:
+        f.write(f'window.{var}=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
     print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB · santoral vinculado: {len(mapa)} · sin propio en la base: {len(sin)}')
 
 

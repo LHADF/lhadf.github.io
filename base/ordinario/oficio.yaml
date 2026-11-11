@@ -1,0 +1,77 @@
+# Ordinario del Oficio de lectura: Te Deum en español (domingos fuera de Cuaresma, solemnidades, fiestas y octavas) y conclusión.
+nombre: Oficio de lectura
+te_deum:
+  titulo: Te Deum
+  texto:
+  - |-
+    Señor, Dios eterno, alegres te cantamos,
+    a ti nuestra alabanza,
+    a ti, Padre del cielo, te aclama la creación.
+  - |-
+    Postrados ante ti, los ángeles te adoran
+    y cantan sin cesar:
+  - |-
+    Santo, santo, santo es el Señor,
+    Dios del universo;
+    llenos están el cielo y la tierra de tu gloria.
+  - |-
+    A ti, Señor, te alaba el coro celestial de los apóstoles,
+    la multitud de los profetas te enaltece,
+    y el ejército glorioso de los mártires te aclama.
+  - |-
+    A ti la Iglesia santa,
+    por todos los confines extendida,
+    con júbilo te adora y canta tu grandeza:
+  - |-
+    Padre, infinitamente santo,
+    Hijo eterno, unigénito de Dios,
+    santo Espíritu de amor y de consuelo.
+  - |-
+    Oh Cristo, tú eres el Rey de la gloria,
+    tú el Hijo y Palabra del Padre,
+    tú el Rey de toda la creación.
+  - |-
+    Tú, para salvar al hombre,
+    tomaste la condición de esclavo
+    en el seno de una virgen.
+  - |-
+    Tú destruiste la muerte
+    y abriste a los creyentes las puertas de la gloria.
+  - |-
+    Tú vives ahora,
+    inmortal y glorioso, en el reino del Padre.
+  - |-
+    Tú vendrás algún día,
+    como juez universal.
+  - |-
+    Muéstrate, pues, amigo y defensor
+    de los hombres que salvaste.
+  - |-
+    Y recíbelos por siempre allá en tu reino,
+    con tus santos y elegidos.
+  rubrica_final: La parte que sigue puede omitirse, si se cree oportuno.
+  final:
+  - |-
+    Salva a tu pueblo, Señor,
+    y bendice a tu heredad.
+  - |-
+    Sé su pastor,
+    y guíalos por siempre.
+  - |-
+    Día tras día te bendeciremos
+    y alabaremos tu nombre por siempre jamás.
+  - |-
+    Dígnate, Señor,
+    guardarnos de pecado en este día.
+  - |-
+    Ten piedad de nosotros, Señor,
+    ten piedad de nosotros.
+  - |-
+    Que tu misericordia, Señor, venga sobre nosotros,
+    como lo esperamos de ti.
+  - |-
+    A ti, Señor, me acojo,
+    no quede yo nunca defraudado.
+conclusion:
+- V: Bendigamos al Señor.
+- R: Demos gracias a Dios.

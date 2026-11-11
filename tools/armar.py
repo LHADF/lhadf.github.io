@@ -50,6 +50,7 @@ cuerpo = f'''<style>{leer('assets', 'signos.css')}
 window.ILU="data:image/png;base64,{ilustracion}";</script>
 <script>{leer('completas.js')}</script>
 <script>{leer('laudes.js')}</script>
+<script>{leer('horas.js')}</script>
 <script>{leer('app.js')}</script>
 '''
 
@@ -57,7 +58,7 @@ os.makedirs(DIST, exist_ok=True)
 # Laudes: los datos van en un archivo aparte, que la app carga al abrir la hora (con huella, para que no quede viejo en caché)
 import hashlib, shutil
 _urls = {}
-for _h in ('laudes', 'visperas'):
+for _h in ('laudes', 'visperas', 'oficio', 'intermedia'):
     _l = open(os.path.join(SRC, 'carga', _h + '.js'), 'rb').read()
     shutil.copyfile(os.path.join(SRC, 'carga', _h + '.js'), os.path.join(DIST, _h + '.js'))
     _urls[_h] = _h + '.js?v=' + hashlib.md5(_l).hexdigest()[:8]

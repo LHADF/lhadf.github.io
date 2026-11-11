@@ -1,0 +1,313 @@
+# Salterio de Tercia: cuatro semanas (Tiempo Ordinario).
+semana_1:
+  domingo:
+    himno: Ven del seno de Dios, oh Santo Espíritu
+    lectura:
+      ref: 1Jn 4, 16
+      texto: Nosotros hemos conocido el amor que Dios nos tiene y hemos creído en él. Dios es amor y quien permanece en el amor permanece en Dios, y Dios en él.
+    versiculo:
+    - - V
+      - Inclina, Señor, mi corazón a tus preceptos.
+    - - R
+      - Dame vida con tu palabra.
+    oracion: Dios nuestro, que quisiste hacernos hijos de la luz por la adopción de la gracia, concédenos que no seamos envueltos por las tinieblas del error, sino que permanezcamos siempre en el esplendor de la verdad. Por Cristo nuestro Señor.
+  lunes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Rm 13, 8. 10
+      texto: No tengáis deuda con nadie, a no ser en amaros los unos a los otros. Porque quien ama al prójimo ya ha cumplido la ley. La caridad no hace nada malo al prójimo. Así que amar es cumplir la ley entera.
+    versiculo:
+    - - V
+      - No rechaces a tu siervo, que tú eres mi auxilio.
+    - - R
+      - No me abandones, Dios de mi salvación.
+    oracion: Padre óptimo, Dios nuestro, tú has querido que los hombres trabajemos de tal modo, que, cooperando unos con otros, alcancemos éxitos cada vez mejor logrados; ayúdanos, pues, a vivir en medio de nuestros trabajos, sintiéndonos siempre hijos tuyos y hermanos de todos los hombres. Por Cristo nuestro Señor.
+  martes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Jr 17, 7-8
+      texto: 'Bendito quien confía en el Señor, y pone en el Señor su confianza: será un árbol plantado junto al agua, que junto a la corriente echa raíces; cuando llegue el estío no lo sentirá, su hoja estará verde; en año de sequía no se inquieta, no deja de dar fruto.'
+    versiculo:
+    - - V
+      - El Señor no niega sus bienes a los de conducta intachable.
+    - - R
+      - Señor de los ejércitos, dichoso el hombre que confía en ti.
+    oracion: Dios todopoderoso y eterno, que a la hora de tercia enviaste tu Espíritu Paráclito a los apóstoles, derrama también sobre nosotros ese Espíritu de amor para que demos siempre fiel testimonio ante los hombres de aquel amor que es el distintivo de los discípulos de tu Hijo. Él, que vive y reina por los siglos de los siglos.
+  miercoles:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1Pe 1, 13-14
+      texto: Con ánimo dispuesto y vigilante poned toda vuestra esperanza en la gracia que os llegará cuando Jesucristo se manifieste. Como hijos obedientes no os amoldéis a las pasiones que teníais cuando estabais en vuestra ignorancia.
+    versiculo:
+    - - V
+      - Enséñame, Señor, tus caminos.
+    - - R
+      - Instrúyeme en tus sendas.
+    oracion: 'Señor, Padre santo, Dios fiel, tú que enviaste el Espíritu Santo prometido para que congregara a los hombres que el pecado había disgregado: ayúdanos a ser, en medio de nuestros hermanos, fermento de unidad y de paz. Por Cristo nuestro Señor.'
+  jueves:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Am 4, 13
+      texto: El Señor formó las montañas, creó el viento, descubre al hombre su pensamiento, hace la aurora y la oscuridad, camina sobre el dorso de la tierra. Su nombre es el Señor de los ejércitos.
+    versiculo:
+    - - V
+      - Creaturas todas del Señor, bendecid al Señor.
+    - - R
+      - Ensalzadlo con himnos por los siglos.
+    oracion: Señor Dios, que a la hora de tercia enviaste al Espíritu Santo sobre los apóstoles reunidos en oración, concédenos también a nosotros participar de los dones de ese mismo Espíritu. Por Cristo nuestro Señor.
+  viernes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Flp 2, 2b-4
+      texto: Manteneos unánimes y concordes con un mismo amor y un mismo sentir. No obréis por envidia ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+    versiculo:
+    - - V
+      - Las sendas del Señor son misericordia y lealtad.
+    - - R
+      - Para los que guardan su alianza y sus mandatos.
+    oracion: Señor Jesucristo, tú que en la hora de tercia fuiste llevado al suplicio de la cruz por la salvación del mundo; ayúdanos a llorar nuestros pecados y a evitar las faltas en lo porvenir. Tú que vives y reinas por los siglos de los siglos.
+  sabado:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1R 8, 60-61
+      texto: Sepan todos los pueblos de la tierra que el Señor es Dios y no hay otro. Que vuestro corazón sea todo para el Señor, nuestro Dios, como lo es hoy, para seguir sus leyes y guardar sus mandamientos.
+    versiculo:
+    - - V
+      - Señor, enséñame tus caminos.
+    - - R
+      - Instrúyeme en tus sendas.
+    oracion: Señor Dios, Padre todopoderoso, infúndenos la luz del Espíritu Santo para que, libres de toda adversidad, podamos alegrarnos siempre en tu alabanza. Por Cristo nuestro Señor.
+semana_2:
+  domingo:
+    himno: Ven del seno de Dios, oh Santo Espíritu
+    lectura:
+      ref: Rm 5, 1-2. 5
+      texto: 'Ya que hemos recibido la justificación por la fe, estamos en paz con Dios, por medio de nuestro Señor Jesucristo. Por él hemos obtenido con la fe el acceso a esta gracia en que estamos: y nos gloriamos apoyados en la esperanza de la gloria de los hijos de Dios; y la esperanza no defrauda, porque el amor de Dios ha sido derramado en nuestros corazones con el Espíritu Santo que se nos ha dado.'
+    versiculo:
+    - - V
+      - Cantaré eternamente las misericordias del Señor.
+    - - R
+      - Anunciaré tu fidelidad por todas las edades.
+    oracion: Oh Dios, que por medio de la humillación de tu Hijo levantaste a la humanidad caída, conserva a tus fieles en continua alegría y concede los gozos del cielo a quienes has librado de la muerte eterna. Por Cristo nuestro Señor.
+  lunes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Jr 31, 33
+      texto: 'Así será la alianza que haré con la casa de Israel, después de aquellos días —oráculo del Señor—: Pondré mi ley en su pecho, la escribiré en sus corazones; yo seré su Dios, y ellos serán mi pueblo.'
+    versiculo:
+    - - V
+      - Oh Dios, crea en mí un corazón puro.
+    - - R
+      - No me arrojes lejos de tu rostro.
+    oracion: Padre óptimo, Dios nuestro, tú has querido que los hombres trabajemos de tal modo, que, cooperando unos con otros, alcancemos éxitos cada vez mejor logrados; ayúdanos, pues, a vivir en medio de nuestros trabajos, sintiéndonos siempre hijos tuyos y hermanos de todos los hombres. Por Cristo nuestro Señor.
+  martes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1Co 12, 4-6
+      texto: Hay diversidad de dones, pero un mismo Espíritu; hay diversidad de servicios, pero un mismo Señor; y hay diversidad de funciones, pero un mismo Dios que obra todo en todos.
+    versiculo:
+    - - V
+      - La salvación está cerca de los fieles.
+    - - R
+      - Y la gloria habitará en nuestra tierra.
+    oracion: Dios todopoderoso y eterno, que a la hora de tercia enviaste tu Espíritu Paráclito a los apóstoles, derrama también sobre nosotros ese Espíritu de amor para que demos siempre fiel testimonio ante los hombres de aquel amor que es el distintivo de los discípulos de tu Hijo. Él, que vive y reina por los siglos de los siglos.
+  miercoles:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Dt 1, 16-17a
+      texto: 'Yo di a vuestros jefes estas normas: «Vosotros escucharéis los pleitos de vuestros hermanos y juzgaréis con justicia las causas que surjan entre un hombre con su hermano o un extranjero. No seáis parciales en la sentencia, oíd por igual al pequeño y al grande; no os dejéis amedrentar por nadie, que la sentencia es de Dios.»'
+    versiculo:
+    - - V
+      - El Señor es justo y ama la justicia.
+    - - R
+      - Los buenos verán su rostro.
+    oracion: 'Señor, Padre santo, Dios fiel, tú que enviaste el Espíritu Santo prometido para que congregara a los hombres que el pecado había disgregado: ayúdanos a ser, en medio de nuestros hermanos, fermento de unidad y de paz. Por Cristo nuestro Señor.'
+  jueves:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Ga 5, 13-14
+      texto: 'Hermanos, vuestra vocación es la libertad: no una libertad para que se aproveche el egoísmo; al contrario, sed esclavos unos de otros por amor. Pues toda la ley se concentra en esta frase: amarás al prójimo como a ti mismo.'
+    versiculo:
+    - - V
+      - Correré, Señor, por el camino de tus mandatos.
+    - - R
+      - Cuando me ensanches el corazón.
+    oracion: Señor Dios, que a la hora de tercia enviaste al Espíritu Santo sobre los apóstoles reunidos en oración, concédenos también a nosotros participar de los dones de ese mismo Espíritu. Por Cristo nuestro Señor.
+  viernes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Dt 1, 31b
+      texto: Tu Dios te ha llevado, como un hombre lleva a su hijo, mientras ha durado tu camino.
+    versiculo:
+    - - V
+      - Sostenme, Señor, con tu promesa y viviré.
+    - - R
+      - Que no quede frustrada mi esperanza.
+    oracion: Señor Jesucristo, tú que en la hora de tercia fuiste llevado al suplicio de la cruz por la salvación del mundo; ayúdanos a llorar nuestros pecados y a evitar las faltas en lo porvenir. Tú que vives y reinas por los siglos de los siglos.
+  sabado:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Dt 8, 5b-6
+      texto: El Señor, tu Dios, te ha educado como un padre educa a su hijo; para que guardes los preceptos del Señor, tu Dios, sigas sus caminos y lo temas.
+    versiculo:
+    - - V
+      - La voluntad del Señor es pura y eternamente estable.
+    - - R
+      - Los mandamientos del Señor son verdaderos y enteramente justos.
+    oracion: Señor Dios, Padre todopoderoso, infúndenos la luz del Espíritu Santo para que, libres de toda adversidad, podamos alegrarnos siempre en tu alabanza. Por Cristo nuestro Señor.
+semana_3:
+  domingo:
+    himno: Ven del seno de Dios, oh Santo Espíritu
+    lectura:
+      ref: Rm 8, 15-16
+      texto: 'No habéis recibido espíritu de esclavitud, para recaer otra vez en el temor, sino que habéis recibido espíritu de adopción filial, por el que clamamos: «¡Padre!». Este mismo Espíritu se une a nosotros para testificar que somos hijos de Dios.'
+    versiculo:
+    - - V
+      - En ti, Señor, está la fuente viva.
+    - - R
+      - Y tu luz nos hace ver la luz.
+    oracion: Señor Dios, que muestras la luz de tu verdad a los que andan extraviados, para que puedan volver al camino recto, concede a todos los cristianos que se aparten de todo lo que sea indigno de ese nombre que llevan, y que cumplan lo que ese nombre significa. Por Cristo nuestro Señor.
+  lunes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 2Co 13, 11
+      texto: Hermanos, alegraos, trabajad por vuestra perfección, alentaos unos a otros, tened un mismo sentir y vivid en paz; y el Dios del amor y de la paz estará con vosotros.
+    versiculo:
+    - - V
+      - Los ojos del Señor miran a los justos.
+    - - R
+      - Sus oídos escuchan sus gritos.
+    oracion: Padre óptimo, Dios nuestro, tú has querido que los hombres trabajemos de tal modo, que, cooperando unos con otros, alcancemos éxitos cada vez mejor logrados; ayúdanos, pues, a vivir en medio de nuestros trabajos, sintiéndonos siempre hijos tuyos y hermanos de todos los hombres. Por Cristo nuestro Señor.
+  martes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Jr 22, 3
+      texto: Haced justicia y derecho, librad al oprimido de la mano del opresor; no abuséis del forastero, del huérfano y de la viuda; no derraméis sangre inocente en este lugar.
+    versiculo:
+    - - V
+      - El Señor juzgará el orbe con justicia.
+    - - R
+      - Y regirá las naciones con rectitud.
+    oracion: Dios todopoderoso y eterno, que a la hora de tercia enviaste tu Espíritu Paráclito a los apóstoles, derrama también sobre nosotros ese Espíritu de amor para que demos siempre fiel testimonio ante los hombres de aquel amor que es el distintivo de los discípulos de tu Hijo. Él, que vive y reina por los siglos de los siglos.
+  miercoles:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1Co 13, 4-7
+      texto: El amor es comprensivo, el amor es servicial y no tiene envidia; el amor no presume ni se engríe; no es mal educado ni egoísta; no se irrita, no lleva cuentas del mal; no se alegra de la injusticia, sino que goza con la verdad. Disculpa sin límites, cree sin límites, espera sin límites, aguanta sin límites.
+    versiculo:
+    - - V
+      - Alégrense y gocen contigo todos los que te buscan.
+    - - R
+      - 'Y digan: «Grande es el Señor» los que desean tu salvación.'
+    oracion: 'Señor, Padre santo, Dios fiel, tú que enviaste el Espíritu Santo prometido para que congregara a los hombres que el pecado había disgregado: ayúdanos a ser, en medio de nuestros hermanos, fermento de unidad y de paz. Por Cristo nuestro Señor.'
+  jueves:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Sb 19, 20b
+      texto: En verdad, Señor, que en todo engrandeciste a tu pueblo y lo glorificaste, y no te desdeñaste de asistirlo en todo tiempo y en todo lugar.
+    versiculo:
+    - - V
+      - Tú, oh Dios, haciendo maravillas.
+    - - R
+      - Mostraste tu poder a los pueblos.
+    oracion: Señor Dios, que a la hora de tercia enviaste al Espíritu Santo sobre los apóstoles reunidos en oración, concédenos también a nosotros participar de los dones de ese mismo Espíritu. Por Cristo nuestro Señor.
+  viernes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Rm 1, 16b-17
+      texto: 'El Evangelio es poder de Dios para salvación de todo el que crea. Pues la justicia de Dios se revela en él de fe a fe, según está escrito: «El justo vivirá de la fe.»'
+    versiculo:
+    - - V
+      - Con Dios se alegra nuestro corazón.
+    - - R
+      - En su santo nombre confiamos.
+    oracion: Señor Jesucristo, tú que en la hora de tercia fuiste llevado al suplicio de la cruz por la salvación del mundo; ayúdanos a llorar nuestros pecados y a evitar las faltas en lo porvenir. Tú que vives y reinas por los siglos de los siglos.
+  sabado:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1S 15, 22
+      texto: ¿Acaso se complace el Señor en los holocaustos y sacrificios, como en la obediencia a la palabra del Señor? Mejor es obedecer que sacrificar, mejor la docilidad que la grasa de los carneros.
+    versiculo:
+    - - V
+      - El que me ofrece acción de gracias, ése me honra.
+    - - R
+      - Al que sigue buen camino le haré ver la salvación de Dios.
+    oracion: Señor Dios, Padre todopoderoso, infúndenos la luz del Espíritu Santo para que, libres de toda adversidad, podamos alegrarnos siempre en tu alabanza. Por Cristo nuestro Señor.
+semana_4:
+  domingo:
+    himno: Ven del seno de Dios, oh Santo Espíritu
+    lectura:
+      ref: 1Co 6, 19-20
+      texto: ¿No sabéis que vuestro cuerpo es templo del Espíritu Santo? Él habita en vosotros. Lo habéis recibido de Dios, y por lo tanto no os pertenecéis a vosotros mismos. Habéis sido comprados a precio. En verdad glorificad a Dios con vuestro cuerpo.
+    versiculo:
+    - - V
+      - Mi alma se consume y anhela los atrios del Señor.
+    - - R
+      - Mi corazón y mi carne se alegran con el Dios vivo.
+    oracion: Mira con misericordia a estos tus hijos, Señor, y multiplica tu gracia sobre nosotros, para que, fervorosos en la fe, la esperanza y el amor, perseveremos en el fiel cumplimiento de tus mandamientos. Por Cristo nuestro Señor.
+  lunes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Lv 20, 26
+      texto: Sed para mí santos, porque yo, el Señor, soy santo, y os he separado de entre los pueblos para que seáis míos.
+    versiculo:
+    - - V
+      - Dichosa la nación cuyo Dios es el Señor.
+    - - R
+      - El pueblo que él se escogió como heredad.
+    oracion: Padre óptimo, Dios nuestro, tú has querido que los hombres trabajemos de tal modo, que, cooperando unos con otros, alcancemos éxitos cada vez mejor logrados; ayúdanos, pues, a vivir en medio de nuestros trabajos, sintiéndonos siempre hijos tuyos y hermanos de todos los hombres. Por Cristo nuestro Señor.
+  martes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1Jn 3, 17-18
+      texto: Si un rico en bienes de fortuna ve a su hermano pasar necesidad y, hombre sin entrañas, le niega su socorro, ¿cómo es posible que more en él el amor de Dios? Hijitos míos, no amemos con palabras ni con la lengua, sino con las obras y de verdad.
+    versiculo:
+    - - V
+      - Dichoso el que se apiada y presta.
+    - - R
+      - El recuerdo del justo será perpetuo.
+    oracion: Dios todopoderoso y eterno, que a la hora de tercia enviaste tu Espíritu Paráclito a los apóstoles, derrama también sobre nosotros ese Espíritu de amor para que demos siempre fiel testimonio ante los hombres de aquel amor que es el distintivo de los discípulos de tu Hijo. Él, que vive y reina por los siglos de los siglos.
+  miercoles:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1Co 10, 24. 31
+      texto: Ninguno procure lo propio, sino lo del otro. Tanto si coméis como si bebéis o hacéis cualquier cosa, hacedlo a gloria de Dios.
+    versiculo:
+    - - V
+      - Es bueno dar gracias al Señor.
+    - - R
+      - Y tañer para tu nombre, oh Altísimo.
+    oracion: 'Señor, Padre santo, Dios fiel, tú que enviaste el Espíritu Santo prometido para que congregara a los hombres que el pecado había disgregado: ayúdanos a ser, en medio de nuestros hermanos, fermento de unidad y de paz. Por Cristo nuestro Señor.'
+  jueves:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: 1Jn 3, 23-24
+      texto: 'Éste es el mandamiento de Dios: Que creamos en el nombre de su Hijo Jesucristo, y que nos amemos mutuamente conforme al mandamiento que nos dio. Quien guarda sus mandamientos permanece en Dios y Dios en él. Y conocemos que permanece en nosotros por el Espíritu que nos ha dado.'
+    versiculo:
+    - - V
+      - Tú, Señor, apoyas al inocente.
+    - - R
+      - Tú, el Dios justo, sondeas el corazón y las entrañas.
+    oracion: Señor Dios, que a la hora de tercia enviaste al Espíritu Santo sobre los apóstoles reunidos en oración, concédenos también a nosotros participar de los dones de ese mismo Espíritu. Por Cristo nuestro Señor.
+  viernes:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Rm 12, 17a. 19b-20a. 21
+      texto: 'No devolváis a nadie mal por mal. Dice la Escritura: «Es mía la venganza; mía la recompensa; palabra del Señor.» Pero también dice: «Si tu enemigo tiene hambre, dale de comer; si tiene sed, dale de beber.» No te dejes vencer del mal, sino vence el mal con el bien.'
+    versiculo:
+    - - V
+      - La misericordia del Señor dura siempre.
+    - - R
+      - Su justicia para los que guardan su alianza.
+    oracion: Señor Jesucristo, tú que en la hora de tercia fuiste llevado al suplicio de la cruz por la salvación del mundo; ayúdanos a llorar nuestros pecados y a evitar las faltas en lo porvenir. Tú que vives y reinas por los siglos de los siglos.
+  sabado:
+    himno: El trabajo, Señor, de cada día
+    lectura:
+      ref: Dn 6, 26b-27
+      texto: 'Teman y tiemblen ante Dios: Él es el Dios vivo que subsiste por siempre, su reino no será destruido y su imperio durará hasta el fin. El que salva y libera obra señales y milagros.'
+    versiculo:
+    - - V
+      - Rendíos, reconoced que yo soy Dios.
+    - - R
+      - Más alto que los pueblos, más alto que la tierra.
+    oracion: Señor Dios, Padre todopoderoso, infúndenos la luz del Espíritu Santo para que, libres de toda adversidad, podamos alegrarnos siempre en tu alabanza. Por Cristo nuestro Señor.

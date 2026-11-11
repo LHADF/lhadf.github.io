@@ -1,0 +1,8 @@
+# Partes en latín del Oficio de lectura y de la Hora intermedia (sin partitura por ahora).
+# Conclusión: «Benedicámus Dómino. ℟. Deo grátias.», con traducción literal palabra por palabra.
+benedicamus:
+  traduccion:
+    - Benedicámus = Bendigamos
+    - Dómino. = al Señor.
+    - Deo = [Demos] a Dios
+    - grátias. = gracias.

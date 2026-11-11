@@ -299,3 +299,7 @@ p.rec{margin:0 0 .8em}
 .portada .navdia .fecha{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:440px){.portada .navdia .fecha{font-size:.875rem}.portada .hoybtn{padding-inline:10px}}
 @media (max-width:384px){.portada .navdia .fecha{font-size:.78rem}.portada .hoybtn{padding-inline:8px}.portada .navdia .iconbtn{width:34px;min-width:34px}}
+/* Lecturas del Oficio de lectura */
+.lec-larga .lec-obra{font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2);margin:0 0 .4em}
+.lec-larga .lec-tit{font-variant:small-caps;letter-spacing:.03em;color:var(--rubric);margin:.8em 0 .9em}
+.lec-larga p{margin:0 0 .8em}

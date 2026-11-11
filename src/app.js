@@ -30,14 +30,18 @@ function aplicarModo(kind, sec){
 aplicarModo();
 function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
 let DH=null; // la hora abierta cuando no es Completas (Laudes o Vísperas)
-const MAYORES={laudes:'Laudes', visperas:'Visperas'};
+const MAYORES={laudes:'Laudes', visperas:'Visperas', oficio:'Oficio', tercia:'Tercia', sexta:'Sexta', nona:'Nona'};
+// Archivo de datos de cada hora (Tercia, Sexta y Nona comparten el de la Hora intermedia)
+const ARCHIVO={laudes:'laudes', visperas:'visperas', oficio:'oficio', tercia:'intermedia', sexta:'intermedia', nona:'intermedia'};
+const cargada=h=>!!window[(ARCHIVO[h]||h).toUpperCase()];
 const R=()=> (S.vista==='hora' && MAYORES[S.hora] && DH) || D;
 // Los datos de Laudes y de Vísperas van en archivos aparte: se cargan recién al abrir la hora
 const _carga={};
 function cargarHora(h){
-  if(window[h.toUpperCase()]) return Promise.resolve();
-  if(!_carga[h]) _carga[h]=new Promise((ok,mal)=>{ const sc=document.createElement('script'); sc.src=(window.HORAS_URL||{})[h]||h+'.js'; sc.onload=ok; sc.onerror=()=>{ _carga[h]=null; mal(); }; document.head.appendChild(sc); });
-  return _carga[h];
+  const a=ARCHIVO[h]||h;
+  if(window[a.toUpperCase()]) return Promise.resolve();
+  if(!_carga[a]) _carga[a]=new Promise((ok,mal)=>{ const sc=document.createElement('script'); sc.src=(window.HORAS_URL||{})[a]||a+'.js'; sc.onload=ok; sc.onerror=()=>{ _carga[a]=null; mal(); }; document.head.appendChild(sc); });
+  return _carga[a];
 }
 const VES=()=>'es';
 // Día litúrgico de hoy: antes de las 5 de la mañana, todavía son las Completas de ayer
@@ -58,7 +62,16 @@ function fichasCal(){
 function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
   D=CP.armar(S.fecha, SEL());
-  DH = (MAYORES[S.hora] && window[S.hora.toUpperCase()]) ? window[MAYORES[S.hora]].armar(S.fecha, SEL()) : null;
+  DH = (MAYORES[S.hora] && cargada(S.hora)) ? window[MAYORES[S.hora]].armar(S.fecha, SEL(), {complementaria:!!S.compl}) : null;
+  // Oficio de lectura unido a Laudes: después de las lecturas (y del Te Deum) siguen las Laudes desde la salmodia,
+  // sin su invocación inicial ni su himno; el Oficio no tiene oración ni conclusión propias.
+  if(DH && S.hora==='oficio' && S.unirLaudes && window.LAUDES){
+    const O=DH.secciones, corte=O.findIndex(s=>s.k==='sec'&&s.id==='oracion'), Lh=window.Laudes.armar(S.fecha, SEL());
+    if(Lh){ const i=Lh.secciones.findIndex(s=>s.k==='sec'&&s.id==='salmodia');
+      // El Oficio pasa a ser la primera hora del día: empieza como Laudes (Dómine, lábia mea e invitatorio), no con «Deus in adiutórium»
+      const iniL=Lh.secciones.slice(0, Lh.secciones.findIndex(s=>s.k==='sec'&&s.id==='himno')), iniO=O.findIndex(s=>s.k==='sec'&&s.id==='himno');
+      DH={...DH, unidas:true, secciones:[...iniL, ...O.slice(iniO,corte), {k:'sec', id:'l-laudes', t:'Laudes', titulo:true}, ...Lh.secciones.slice(i).map(s=>s.k==='sec'?{...s,id:'l-'+s.id}:s)]}; }
+  }
   // Uso ADF: Vísperas y Completas juntas. Después de la oración de Vísperas se omite su conclusión y siguen, de Completas:
   // examen de conciencia, cántico evangélico, oración, conclusión y antífona de la Virgen.
   if(DH && S.hora==='visperas' && S.unirCompletas && D){
@@ -299,7 +312,7 @@ function recitadoHTML(rec, tipo){
 // Citas bíblicas al modo «capítulo: versículos» (Dn 3: 26-27), más preciso que la coma
 function cita(t){ return String(t||'').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
 function vrHTML(sec){
-  if(!CANTA() && sec.rec) return recitadoHTML(sec.rec);
+  if((!CANTA() || !sec.gabc) && sec.rec) return recitadoHTML(sec.rec);   // sin partitura: siempre recitado
   if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, sec.glosa);
   if(BI() && sec.ilv) return `<div class="vr il"><p><span class="k">℣.</span> <span class="segs">${interHTML(sec.ilv)}</span></p><p><span class="k">℟.</span> <span class="segs">${interHTML(sec.ilr)}</span></p></div>`;
   const v=txt(sec.v), r=txt(sec.r);
@@ -383,6 +396,12 @@ function oracionOficioHTML(k){
   if(O.respuesta) h+=ln(O.respuesta,'<span class="k">℟.</span> ')+ln(O.versiculo,'<span class="k">℣.</span> ')+ln(O.respuesta_versiculo,'<span class="k">℟.</span> ')+ln(O.despues);
   return h;
 }
+// Lecturas del Oficio: referencia u obra («Del libro…», «De las Catequesis…»), título y texto en párrafos
+function lecturaLargaHTML(sec){
+  const ps=String(sec.t).split(/\n+/).filter(Boolean);
+  return `<div class="lec-larga">${sec.ref?`<p class="lec-obra">${esc(sec.ref)}</p>`:''}${sec.autor?`<p class="lec-obra">${esc(sec.autor).replace(/\n/g,'<br>')}</p>`:''}`
+    +(sec.titulo?`<p class="lec-tit">${esc(CP._.oracionCase(sec.titulo))}</p>`:'')+ps.map(p=>`<p>${marcas(p)}</p>`).join('')+`</div>`;
+}
 function examenHTML(sec){
   const f=sec.formulas.find(x=>x.id===S.examenF)||sec.formulas[0];
   const br=t=>esc(t).replace(/\n/g,'<br>');
@@ -439,6 +458,7 @@ function horaHTML(){
     if(sec.k==='sec'){
       // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
       if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
+      if(r.hora==='oficio' && (sec.id==='oracion'||sec.id==='l-laudes')) h+=`<div class="opciones unir"><button data-act="unirl" aria-pressed="${!!r.unidas}">Seguir con Laudes</button></div>`;
       pleg=sec.plegable?sec.id:null;
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
       return;
@@ -449,6 +469,9 @@ function horaHTML(){
     if(sec.k==='rub' && pleg && !S.examen) return;
     switch(sec.k){
       case 'rub': h+=`<p class="rub">${esc(sec.t)}</p>`; break;
+      case 'aviso': h+=`<p class="aviso">${esc(sec.t)}</p>`; break;
+      case 'lectura_larga': h+=lecturaLargaHTML(sec); break;
+      case 'salop': h+=`<div class="opciones" role="group" aria-label="Salmodia">${[['dia','Salmodia del día'],['comp','Complementaria']].map(([v,n])=>`<button data-act="salop" data-v="${v}" aria-pressed="${(v==='comp')===sec.comp}">${n}</button>`).join('')}</div>`; break;
       case 'vr': h+=vrHTML(sec); break;
       case 'vr1': { if(BI()&&sec.il){ h+=`<div class="vr il"><p><span class="k">${/^R\./.test(sec.t.la)?'℟':'℣'}.</span> <span class="segs">${interHTML(sec.il)}</span></p></div>`; break; } const t=txt(sec.t); h+=`<div class="vr"><p><span class="k">℣.</span> ${marcas(t.p.replace(/^R\. /,''))}${t.s?`<span class="gl">${marcas(t.s.replace(/^R\. /,''))}</span>`:''}</p></div>`; break; }
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
@@ -534,7 +557,7 @@ function portadaHTML(){
     </div>
     ${cals || `<p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>`}
     <ul class="horas">${HORAS.map(([id,n])=>{
-      const ok=id==='completas'||id==='laudes'||id==='visperas', ya=ahora.includes(id);
+      const ok=true, ya=ahora.includes(id);
       if(id==='visperas') n=nombreVisperas();
       return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
     <button class="discreto" data-act="oraciones">Oraciones antes y después del oficio</button>
@@ -601,7 +624,8 @@ document.addEventListener('click',e=>{
     case 'cerrar': cerrar(); break;
     case 'deshacer': if(_undo){ S=JSON.parse(_undo); cargarDia(); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
     case 'abrir': { const abrir=()=>{ S._marDia={}; S.hora=v||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
-      if(MAYORES[v] && !window[v.toUpperCase()]){ toast('Cargando…'); cargarHora(v).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.')); } else abrir();
+      const faltan=[v, ...(v==='oficio'&&S.unirLaudes?['laudes']:[])].filter(h=>MAYORES[h]&&!cargada(h));   // Oficio unido a Laudes: también Laudes
+      if(faltan.length){ toast('Cargando…'); Promise.all(faltan.map(cargarHora)).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.')); } else abrir();
       break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
@@ -629,6 +653,9 @@ document.addEventListener('click',e=>{
     case 'invit': if(INV()===v) break; S.invit=v; cambio('Invitatorio: '+(v==='greg'?'gregoriano':'en español')); break;
     case 'prep': S._prep=!S._prep; refrescarHoja(); break;
     case 'oraciones': { const O=window.BASE.oraciones; hoja(O.titulo, `<div class="orof-b">${['preparatoria','conclusiva'].map(k=>`<h3>${esc(O[k].titulo)}</h3>${oracionOficioHTML(k)}`).join('')}</div>`); break; }
+    case 'unirl': { const sigue=()=>{ S.unirLaudes=!S.unirLaudes; cargarDia(); cambio(S.unirLaudes?'Oficio con Laudes':'Oficio solo'); };
+      if(!S.unirLaudes && !window.LAUDES){ toast('Cargando…'); cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.')); } else sigue(); break; }
+    case 'salop': { const c=v==='comp'; if(!!S.compl===c) break; S.compl=c; cargarDia(); cambio(c?'Salmodia complementaria':'Salmodia del día'); break; }
     case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(S.unirCompletas?'Vísperas con Completas':'Vísperas solas'); break;
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
@@ -643,5 +670,5 @@ document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.clas
 let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
 
 // Si se recarga con Laudes abierta, primero se cargan sus datos
-if(S.vista==='hora' && MAYORES[S.hora] && !window[S.hora.toUpperCase()]){ S.vista='hoy'; cargarHora(S.hora).then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }
+if(S.vista==='hora' && MAYORES[S.hora] && !cargada(S.hora)){ S.vista='hoy'; Promise.all([S.hora, ...(S.hora==='oficio'&&S.unirLaudes?['laudes']:[])].map(cargarHora)).then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }
 render();

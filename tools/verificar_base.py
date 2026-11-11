@@ -146,6 +146,21 @@ IP = GLa['invitatorio_per_annum']
 for f in (IP['antifona'], IP['salmo']): falta(os.path.exists(os.path.join(B, 'gregoriano', f)), f'gregoriano/laudes.yaml · invitatorio_per_annum: no existe {f}')
 for e in [IP] + IP['estrofas']:
     for x in e['traduccion']: falta(' = ' in x, f'gregoriano/laudes.yaml · invitatorio_per_annum: «{x}» debe ser «latín = español»')
+# ---------- Oficio de lectura y Hora intermedia ----------
+SAL = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(B, 'salmos', '*.yaml'))}
+def salmos_de(e):
+    return [g['salmo'] for g in (e.get('salmodia') or [])] + list(e.get('salmos') or [])
+for h in ('oficio', 'intermedia'):
+    So, To, Sa = (leer(os.path.join(B, c, f'{h}.yaml')) or {} for c in ('salterio', 'tiempo', 'santoral'))
+    falta(all(f'semana_{n}' in So and len(So[f'semana_{n}']) == 7 for n in range(1, 5)), f'salterio/{h}.yaml: faltan semanas o días')
+    for capa, E in (('salterio', [e for w in So.values() for e in w.values()]), ('tiempo', To.values()), ('santoral', Sa.values())):
+        for e in E:
+            for x in salmos_de(e): falta(x in SAL, f'{capa}/{h}.yaml: el salmo «{x}» no está en base/salmos')
+OI = leer(os.path.join(B, 'ordinario', 'intermedia.yaml'))
+for hh in ('tercia', 'sexta', 'nona'):
+    falta(len(OI['complementaria'][hh]) == 3, f'ordinario/intermedia.yaml: la salmodia complementaria de {hh} lleva tres salmos')
+    for g in OI['complementaria'][hh]: falta(g['salmo'] in SAL, f'ordinario/intermedia.yaml: el salmo «{g["salmo"]}» no está en base/salmos')
+falta(leer(os.path.join(B, 'ordinario', 'oficio.yaml')).get('te_deum'), 'ordinario/oficio.yaml: falta el Te Deum')
 # cobertura: todos los días del calendario tienen Laudes completas (salterio + propio del tiempo)
 cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
 cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))

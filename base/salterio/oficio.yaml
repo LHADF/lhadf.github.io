@@ -1,0 +1,426 @@
+# Salterio de Oficio de lectura: cuatro semanas (Tiempo Ordinario). Los salmos se citan por su clave (base/salmos/).
+# Las lecturas, sus responsorios y la oración van en base/tiempo/oficio.yaml.
+semana_1:
+  domingo:
+    himno: Primicias son del sol de su Palabra
+    salmodia:
+    - ant: El árbol de la vida es tu cruz, oh Señor.
+      salmo: salmo-1
+    - ant: Yo mismo he establecido a mi Rey en Sión, mi monte santo.
+      salmo: salmo-2
+    - ant: Tú, Señor, eres mi escudo y mantienes alta mi cabeza.
+      salmo: salmo-3
+    versiculo:
+    - - V
+      - La palabra de Cristo habite con toda riqueza en vosotros.
+    - - R
+      - Exhortándoos mutuamente con toda sabiduría.
+    te_deum: true
+  lunes:
+    himno: Dios de la tierra y del cielo
+    salmodia:
+    - ant: Sálvame, Señor, por tu misericordia.
+      salmo: salmo-6
+    - ant: El Señor es el refugio del oprimido en los momentos de peligro.
+      salmo: salmo-9-a-i
+    - ant: Narraré tus hazañas en las puertas de Sión.
+      salmo: salmo-9-a-ii
+    versiculo:
+    - - V
+      - Enséñame a cumplir tu voluntad.
+    - - R
+      - Y a guardarla de todo corazón.
+    te_deum: false
+  martes:
+    himno: Alabemos a Dios que, en su Palabra
+    salmodia:
+    - ant: El Señor hará justicia a los pobres.
+      salmo: salmo-9-b-i
+    - ant: Tú, Señor, ves las penas y los trabajos.
+      salmo: salmo-9-b-ii
+    - ant: Las palabras del Señor son palabras sinceras, como plata refinada siete veces.
+      salmo: salmo-11
+    versiculo:
+    - - V
+      - El Señor hace caminar a los humildes con rectitud.
+    - - R
+      - Enseña su camino a los humildes.
+    te_deum: false
+  miercoles:
+    himno: Con entrega, Señor, a ti venimos
+    salmodia:
+    - ant: Yo te amo, Señor; tú eres mi fortaleza.
+      salmo: salmo-17-2-30-i
+    - ant: El Señor me libró porque me amaba.
+      salmo: salmo-17-ii
+    - ant: Señor, tú eres mi lámpara, tú alumbras mis tinieblas.
+      salmo: salmo-17-iii
+    versiculo:
+    - - V
+      - Todos quedaban maravillados.
+    - - R
+      - De las palabras que salían de la boca de Dios.
+    te_deum: false
+  jueves:
+    himno: Con gozo el corazón cante la vida
+    salmodia:
+    - ant: La promesa del Señor es escudo para los que a ella se acogen.
+      salmo: salmo-17-31-51-iv
+    - ant: Tu diestra, Señor, me sostuvo.
+      salmo: salmo-17-v
+    - ant: Viva el Señor, sea ensalzado mi Dios y Salvador.
+      salmo: salmo-17-vi
+    versiculo:
+    - - V
+      - Ábreme, Señor, los ojos.
+    - - R
+      - Y contemplaré las maravillas de tu voluntad.
+    te_deum: false
+  viernes:
+    himno: Delante de tus ojos
+    salmodia:
+    - ant: Levántate, Señor, y ven en mi auxilio.
+      salmo: salmo-34-1-2-3-9-19-22-24a-27-28-i
+    - ant: Juzga, Señor, y defiende mi causa, tú que eres poderoso.
+      salmo: salmo-34-ii
+    - ant: Mi lengua anunciará tu justicia, todos los días te alabaré, Señor.
+      salmo: salmo-34-iii
+    versiculo:
+    - - V
+      - Hijo mío, conserva mis palabras.
+    - - R
+      - Conserva mis mandatos y vivirás.
+    te_deum: false
+  sabado:
+    himno: Señor, tú que llamaste
+    salmodia:
+    - ant: Quien se haga pequeño como un niño, ése es el más grande en el reino de los cielos.
+      salmo: salmo-130
+    - ant: Dios mío, con alegre y sincero corazón te lo he entregado todo.
+      salmo: salmo-131-i
+    - ant: 'El Señor ha jurado a David una promesa: «Tu reino permanecerá eternamente.»'
+      salmo: salmo-131-ii
+    versiculo:
+    - - V
+      - Venid a ver las obras del Señor.
+    - - R
+      - Las maravillas que hace en la tierra.
+    te_deum: false
+semana_2:
+  domingo:
+    himno: Que doblen las campanas jubilosas
+    salmodia:
+    - ant: Señor, Dios mío, te vistes de belleza y majestad, la luz te envuelve como un manto. Aleluia.
+      salmo: salmo-103-i
+    - ant: El Señor saca pan de los campos y vino para alegrar el corazón del hombre. Aleluia.
+      salmo: salmo-103-ii
+    - ant: Vio Dios todo lo que había hecho, y era muy bueno. Aleluia.
+      salmo: salmo-103-iii
+    versiculo:
+    - - V
+      - Dichosos vuestros ojos porque ven.
+    - - R
+      - Y vuestros oídos porque oyen.
+    te_deum: true
+  lunes:
+    himno: En el principio, tu Palabra
+    salmodia:
+    - ant: Inclina, Señor, tu oído hacia mí; ven a librarme.
+      salmo: salmo-30-2-17-20-25
+    - ant: Haz brillar, Señor, tu rostro sobre tu siervo.
+      salmo: salmo-30-ii
+    - ant: Bendito sea el Señor, que ha hecho por mí prodigios de misericordia.
+      salmo: salmo-30-iii
+    versiculo:
+    - - V
+      - Enséñame, Señor, a caminar con lealtad.
+    - - R
+      - Porque tú eres mi Dios y Salvador.
+    te_deum: false
+  martes:
+    himno: ¡Espada de dos filos
+    salmodia:
+    - ant: Encomienda tu camino al Señor, y él actuará.
+      salmo: salmo-36-i
+    - ant: Apártate del mal y haz el bien; al honrado lo sostiene el Señor.
+      salmo: salmo-36-ii
+    - ant: Confía en el Señor y sigue su camino.
+      salmo: salmo-36-iii
+    versiculo:
+    - - V
+      - Enséñame Señor, a gustar y a comprender.
+    - - R
+      - Porque me fío de tus mandatos.
+    te_deum: false
+  miercoles:
+    himno: Pues busco, debo encontrar
+    salmodia:
+    - ant: También nosotros gemimos en nuestro interior, aguardando la redención de nuestro cuerpo.
+      salmo: salmo-38-i
+    - ant: 'Escucha, Señor, mi oración: no seas sordo a mi llanto.'
+      salmo: salmo-38-ii
+    - ant: Yo confío en la misericordia del Señor por siempre jamás.
+      salmo: salmo-51
+    versiculo:
+    - - V
+      - Mi alma espera en el Señor.
+    - - R
+      - Espera en su palabra.
+    te_deum: false
+  jueves:
+    himno: Señor, ¿a quién iremos
+    salmodia:
+    - ant: Nos diste, Señor, la victoria sobre el enemigo; por eso damos gracias a tu nombre.
+      salmo: salmo-43
+    - ant: Perdónanos, Señor, y no entregues tu heredad al oprobio.
+      salmo: salmo-43-ii
+    - ant: Levántate, Señor, y redímenos por tu misericordia.
+      salmo: salmo-43-iii
+    versiculo:
+    - - V
+      - Señor, ¿a quién vamos a ir?
+    - - R
+      - Tú tienes palabras de vida eterna.
+    te_deum: false
+  viernes:
+    himno: ¡Qué hermosos son los pies
+    salmodia:
+    - ant: Señor, no me castigues con cólera.
+      salmo: salmo-37-i
+    - ant: Señor, todas mis ansias están en tu presencia.
+      salmo: salmo-37-ii
+    - ant: Yo te confieso mi culpa, no me abandones, Señor, Dios mío.
+      salmo: salmo-37-iii
+    versiculo:
+    - - V
+      - Mis ojos se consumen aguardando tu salvación.
+    - - R
+      - Y tu promesa de justicia.
+    te_deum: false
+  sabado:
+    himno: A caminar sin ti, Señor, no atino
+    salmodia:
+    - ant: 'Sólo el Señor hizo grandes maravillas: es eterna su misericordia.'
+      salmo: salmo-135-i
+    - ant: Con mano poderosa, con brazo extendido, sacó a Israel de Egipto.
+      salmo: salmo-135-ii
+    - ant: 'Dad gracias al Dios del cielo: él nos libró de nuestros opresores.'
+      salmo: salmo-135-iii
+    versiculo:
+    - - V
+      - Señor, enséñame tus caminos.
+    - - R
+      - Instrúyeme en tus sendas.
+    te_deum: false
+semana_3:
+  domingo:
+    himno: Primicias son del sol de su Palabra
+    salmodia:
+    - ant: Día tras día te bendeciré, Señor. Aleluia.
+      salmo: salmo-144-i
+    - ant: Tu reinado, Señor, es un reinado perpetuo. Aleluia.
+      salmo: salmo-144-ii
+    - ant: El Señor es fiel a sus palabras, bondadoso en todas sus acciones. Aleluia.
+      salmo: salmo-144-iii
+    versiculo:
+    - - V
+      - Hijo mío, haz caso a mis palabras.
+    - - R
+      - presta oído a mis consejos.
+    te_deum: true
+  lunes:
+    himno: Dios de la tierra y del cielo
+    salmodia:
+    - ant: Vendrá el Señor y no callará.
+      salmo: salmo-49-i
+    - ant: Ofrece a Dios un sacrificio de alabanza.
+      salmo: salmo-49-ii
+    - ant: Quiero misericordia y no sacrificios, conocimiento de Dios más que holocaustos.
+      salmo: salmo-49-iii
+    versiculo:
+    - - V
+      - Escucha, pueblo mío, que voy a hablarte.
+    - - R
+      - Yo, el Señor, tu Dios.
+    te_deum: false
+  martes:
+    himno: Alabemos a Dios que, en su Palabra
+    salmodia:
+    - ant: Se levanta Dios y huyen de su presencia los que lo odian.
+      salmo: salmo-67-i
+    - ant: Nuestro Dios es un Dios que salva, el Señor Dios nos hace escapar de la muerte.
+      salmo: salmo-67-ii
+    - ant: Reyes de la tierra, cantad a Dios, tocad para el Señor.
+      salmo: salmo-67-iii
+    versiculo:
+    - - V
+      - Voy a escuchar lo que dice el Señor.
+    - - R
+      - Dios anuncia la paz a su pueblo.
+    te_deum: false
+  miercoles:
+    himno: Con entrega, Señor, a ti venimos
+    salmodia:
+    - ant: La misericordia y la fidelidad te preceden, Señor.
+      salmo: salmo-88-2-38-i
+    - ant: El Hijo de Dios nació según la carne de la estirpe de David.
+      salmo: salmo-88-2-38-ii
+    - ant: 'Juré una vez a David, mi siervo: «Tu linaje será perpetuo.»'
+      salmo: salmo-88-2-38-iii
+    versiculo:
+    - - V
+      - La explicación de tus palabras ilumina.
+    - - R
+      - Da inteligencia a los ignorantes.
+    te_deum: false
+  jueves:
+    himno: Con gozo el corazón cante la vida
+    salmodia:
+    - ant: Mira, Señor, y contempla nuestro oprobio.
+      salmo: salmo-88-39-53-iv
+    - ant: Yo soy el renuevo y el vástago de David, la estrella luciente de la mañana.
+      salmo: salmo-88-39-53-v
+    - ant: Nuestros años se acaban como la hierba, pero tú, Señor, permaneces desde siempre y por siempre.
+      salmo: salmo-89
+    versiculo:
+    - - V
+      - En ti, Señor, está la fuente viva.
+    - - R
+      - Y tu luz nos hace ver la luz.
+    te_deum: false
+  viernes:
+    himno: Delante de tus ojos
+    salmodia:
+    - ant: Estoy agotado de gritar y de tanto aguardar a mi Dios.
+      salmo: salmo-68-2-22-30-37-i
+    - ant: En mi comida me echaron hiel, para mi sed me dieron vinagre.
+      salmo: salmo-68-2-22-30-37-ii
+    - ant: Buscad al Señor, y revivirá vuestro corazón.
+      salmo: salmo-68-2-22-30-37-iii
+    versiculo:
+    - - V
+      - El Señor nos instruirá en sus caminos.
+    - - R
+      - Y marcharemos por sus sendas.
+    te_deum: false
+  sabado:
+    himno: Señor, tú que llamaste
+    salmodia:
+    - ant: Dad gracias al Señor por su misericordia, por las maravillas que hace con los hombres.
+      salmo: salmo-106-i
+    - ant: Contemplaron las obras de Dios y sus maravillas.
+      salmo: salmo-106-ii
+    - ant: Los rectos lo ven y se alegran y comprenden la misericordia del Señor.
+      salmo: salmo-106-iii
+    versiculo:
+    - - V
+      - Tu fidelidad, Señor, llega hasta las nubes.
+    - - R
+      - Tus sentencias son como el océano inmenso.
+    te_deum: false
+semana_4:
+  domingo:
+    himno: Que doblen las campanas jubilosas
+    salmodia:
+    - ant: ¿Quién puede subir al monte del Señor? ¿Quién puede estar en el recinto sacro?
+      salmo: salmo-23
+    - ant: Bendecid, pueblos, a nuestro Dios, porque él nos ha devuelto la vida. Aleluia.
+      salmo: salmo-65-i
+    - ant: Fieles de Dios, venid a escuchar lo que el Señor ha hecho conmigo. Aleluia.
+      salmo: salmo-65-ii
+    versiculo:
+    - - V
+      - La palabra de Dios es viva y eficaz.
+    - - R
+      - Más penetrante que espada de doble filo.
+    te_deum: true
+  lunes:
+    himno: En el principio, tu Palabra
+    salmodia:
+    - ant: Que bueno es el Dios de Israel para los justos.
+      salmo: salmo-72-i
+    - ant: Su risa se convertirá en llanto, y su alegría en tristeza.
+      salmo: salmo-72-ii
+    - ant: Para mí lo bueno es estar junto a Dios, pues los que se alejan de ti se pierden.
+      salmo: salmo-72-iii
+    versiculo:
+    - - V
+      - Qué dulce al paladar tu promesa, Señor.
+    - - R
+      - Más que miel en la boca.
+    te_deum: false
+  martes:
+    himno: ¡Espada de dos filos
+    salmodia:
+    - ant: Mi grito, Señor, llegue hasta ti; no me escondas tu rostro.
+      salmo: salmo-101-i
+    - ant: Escucha, Señor, las súplicas de los indefensos.
+      salmo: salmo-101-ii
+    - ant: Tú, Señor, cimentaste la tierra, y el cielo es obra de tus manos.
+      salmo: salmo-101-iii
+    versiculo:
+    - - V
+      - Escucha, pueblo mío, mi enseñanza.
+    - - R
+      - Inclina el oído a las palabras de mi boca.
+    te_deum: false
+  miercoles:
+    himno: Pues busco, debo encontrar
+    salmodia:
+    - ant: Bendice, alma mía, al Señor, y no olvides sus beneficios.
+      salmo: salmo-102-i
+    - ant: Como un padre siente ternura por sus hijos, siente el Señor ternura por sus fieles.
+      salmo: salmo-102-ii
+    - ant: Bendecid al Señor, todas sus obras.
+      salmo: salmo-102-iii
+    versiculo:
+    - - V
+      - Ábreme, Señor, los ojos.
+    - - R
+      - Y contemplaré las maravillas de tu voluntad.
+    te_deum: false
+  jueves:
+    himno: Señor, ¿a quién iremos
+    salmodia:
+    - ant: No fue su brazo el que les dio la victoria, sino tu diestra y la luz de tu rostro.
+      salmo: salmo-43
+    - ant: No apartará el Señor su rostro de vosotros, si os convertís a él.
+      salmo: salmo-43-ii
+    - ant: Levántate, Señor, no nos rechaces más.
+      salmo: salmo-43-iii
+    versiculo:
+    - - V
+      - Haz brillar tu rostro, Señor, sobre tu siervo.
+    - - R
+      - Enséñame tus leyes.
+    te_deum: false
+  viernes:
+    himno: ¡Qué hermosos son los pies
+    salmodia:
+    - ant: Dios mío, no te cierres a mi súplica, pues me turba la voz del enemigo.
+      salmo: salmo-54-2-15-17-24-i
+    - ant: El Señor nos librará del poder de nuestro enemigo y adversario.
+      salmo: salmo-54-2-15-17-24-ii
+    - ant: Encomienda a Dios tus afanes, que él te sustentará.
+      salmo: salmo-54-2-15-17-24-iii
+    versiculo:
+    - - V
+      - Hijo mío, haz caso de mi sabiduría.
+    - - R
+      - Presta oído a mi inteligencia.
+    te_deum: false
+  sabado:
+    himno: A caminar sin ti, Señor, no atino
+    salmodia:
+    - ant: El Señor convoca cielo y tierra, para juzgar a su pueblo.
+      salmo: salmo-49-i
+    - ant: Invócame el día del peligro y yo te libraré.
+      salmo: salmo-49-ii
+    - ant: El sacrificio de acción de gracias me honra.
+      salmo: salmo-49-iii
+    versiculo:
+    - - V
+      - No dejamos de orar y pedir por vosotros.
+    - - R
+      - Que lleguéis al pleno conocimiento de la voluntad de Dios.
+    te_deum: false

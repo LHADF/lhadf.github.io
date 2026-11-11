@@ -1,0 +1,64 @@
+# Santoral de Hora intermedia (salmodia del día) (calendario de sync): por celebración; solo lo que cambia.
+SANTA MARÍA, MADRE DE DIOS:
+  grado: Solemnidad
+  fecha: 01-01
+  salmos:
+  - salmo-117-i
+  - salmo-117-ii
+  - salmo-117-iii
+SANTOS BASILIO MAGNO Y GREGORIO NACIANZO, obispos y doctores de la Iglesia:
+  grado: Memoria
+  fecha: 01-02
+  salmos:
+  - salmo-118-33-40
+  - salmo-33-i
+  - salmo-33-ii
+EL BAUTISMO DEL SEÑOR:
+  grado: Fiesta
+  fecha: 01-10
+  salmos:
+  - salmo-117-i
+  - salmo-117-ii
+  - salmo-117-iii
+EL SANTÍSIMO CUERPO Y SANGRE DE CRISTO:
+  grado: Solemnidad
+  fecha: 06-07
+  salmos:
+  - salmo-117-i
+  - salmo-117-ii
+  - salmo-117-iii
+NUESTRO SEÑOR JESUCRISTO, REY UNIVERSAL:
+  grado: Solemnidad
+  fecha: 11-22
+  salmos:
+  - salmo-117-i
+  - salmo-117-ii
+  - salmo-117-iii
+SAN ESTEBAN, protomártir:
+  grado: Fiesta
+  fecha: 12-26
+  salmos:
+  - salmo-118-169-176
+  - salmo-44-i
+  - salmo-44-ii
+SAN JUAN, apóstol y evangelista:
+  grado: Fiesta
+  fecha: 12-27
+  salmos:
+  - salmo-118-1-8
+  - salmo-12
+  - salmo-13
+LOS SANTOS INOCENTES, mártires:
+  grado: Fiesta
+  fecha: 12-28
+  salmos:
+  - salmo-118-153-160
+  - salmo-127
+  - salmo-128
+LA SAGRADA FAMILIA DE JESÚS MARÍA Y JOSÉ:
+  grado: Fiesta
+  fecha: 12-30
+  salmos:
+  - salmo-117-i
+  - salmo-117-ii
+  - salmo-117-iii

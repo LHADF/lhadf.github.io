@@ -375,3 +375,19 @@ test('inicio: Santa María en sábado como opción, biografías y nombre de las 
   assert.ok(CP.diaCal('2026-11-11', '').bio.length > 100);
   assert.ok(VI.armar('2026-11-14', '').primeras);
 });
+
+test('Oficio de lectura y Hora intermedia', () => {
+  for (const f of ['carga/oficio.js', 'carga/intermedia.js', 'horas.js']) vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), ctx);
+  const W = ctx.window, ids = r => r.secciones.filter(s => s.k === 'sec').map(s => s.id);
+  const dom = W.Oficio.armar('2026-11-15', ''), fer = W.Oficio.armar('2026-11-12', '');
+  assert.ok(ids(dom).includes('tedeum') && !ids(fer).includes('tedeum'));                   // Te Deum: domingo sí, feria no
+  for (const r of [dom, fer]) { assert.equal(r.secciones.filter(s => s.k === 'lectura_larga').length, 2); assert.ok(!JSON.stringify(r).includes('[falta')); }
+  const t = W.Tercia.armar('2026-11-12', '');
+  assert.equal(t.secciones.filter(s => s.k === 'salmo').length, 3);
+  assert.ok(t.secciones.some(s => s.k === 'salop'));                                        // se puede elegir la complementaria
+  const c = W.Tercia.armar('2026-11-12', '', {complementaria: true}).secciones.filter(s => s.k === 'salmo').map(s => s.id);
+  assert.notEqual(c.join(), t.secciones.filter(s => s.k === 'salmo').map(s => s.id).join());
+  const sol = W.Sexta.armar('2026-12-08', '');                                              // solemnidad entre semana: complementaria, sin elegir
+  assert.ok(!sol.secciones.some(s => s.k === 'salop'));
+  for (const h of ['Tercia', 'Sexta', 'Nona']) assert.ok(W[h].armar('2026-11-12', '').secciones.some(s => s.k === 'lectura'));
+});

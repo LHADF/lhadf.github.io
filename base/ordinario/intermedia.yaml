@@ -1,0 +1,28 @@
+# Ordinario de la Hora intermedia: salmodia complementaria de cada hora (salmos graduales, con sus antífonas del Tiempo Ordinario)
+# y conclusión. La complementaria se usa al rezar más de una hora, y en las solemnidades que no caen en domingo.
+nombre: Hora intermedia
+complementaria:
+  tercia:
+  - ant: Llamé, y él me respondió.
+    salmo: salmo-119
+  - ant: El Señor guarda tus entradas y salidas.
+    salmo: salmo-120
+  - ant: Me he alegrado por lo que me dijeron.
+    salmo: salmo-121
+  sexta:
+  - ant: Tú que habitas en el cielo, ten misericordia de nosotros.
+    salmo: salmo-122
+  - ant: Nuestro auxilio es el nombre del Señor.
+    salmo: salmo-123
+  - ant: El Señor rodea a su pueblo ahora y por siempre.
+    salmo: salmo-124
+  nona:
+  - ant: El Señor ha estado grande con nosotros, y estamos alegres.
+    salmo: salmo-125
+  - ant: El Señor nos construya la casa y nos guarde la ciudad.
+    salmo: salmo-126
+  - ant: Dichoso el que teme al Señor.
+    salmo: salmo-127
+conclusion:
+- V: Bendigamos al Señor.
+- R: Demos gracias a Dios.

@@ -1,0 +1,229 @@
+# Salterio de Hora intermedia (salmodia del día): cuatro semanas (Tiempo Ordinario). Una sola salmodia para Tercia, Sexta y Nona; las antífonas por salmo valen fuera de los tiempos con antífona propia de cada hora.
+semana_1:
+  domingo:
+    salmodia:
+    - ant: Es bueno refugiarse en el Señor, porque es eterna su misericordia. Aleluia.
+      salmo: salmo-117-i
+    - ant: El Señor es mi fuerza y mi energía. Aleluia.
+      salmo: salmo-117-ii
+    - ant: Te doy gracias, Señor, porque me escuchaste. Aleluia.
+      salmo: salmo-117-iii
+  lunes:
+    salmodia:
+    - ant: La ley del Señor alegra el corazón y da luz a los ojos.
+      salmo: salmo-18-b
+    - ant: Se levantará el Señor para regir a los pueblos con justicia.
+      salmo: salmo-7-i
+    - ant: Dios, juez justo, salva a los rectos de corazón.
+      salmo: salmo-7-ii
+  martes:
+    salmodia:
+    - ant: Dichoso el que anda por los senderos del Señor.
+      salmo: salmo-118-1-8
+    - ant: Se alegra mi corazón con tu auxilio.
+      salmo: salmo-12
+    - ant: Dios lo incluyó todo bajo el dominio del pecado para poder compadecerse de todos.
+      salmo: salmo-13
+  miercoles:
+    salmodia:
+    - ant: Bendito eres, Señor, enséñame tus leyes.
+      salmo: salmo-118-9-16
+    - ant: Mis pies estuvieron firmes en tus caminos, Señor.
+      salmo: salmo-16-i
+    - ant: Levántate, Señor, y líbrame.
+      salmo: salmo-16-ii
+  jueves:
+    salmodia:
+    - ant: Ábreme los ojos, Señor, y contemplaré las maravillas de tu voluntad.
+      salmo: salmo-118-17-24
+    - ant: Haz, Señor, que camine con lealtad.
+      salmo: salmo-24-i
+    - ant: Mírame, ¡oh Dios!, y sácame de mis tribulaciones, que estoy solo y afligido.
+      salmo: salmo-24-ii
+  viernes:
+    salmodia:
+    - ant: Correré por el camino de tus mandatos cuando me ensanches el corazón.
+      salmo: salmo-118-25-32
+    - ant: Confiando en el Señor no me he desviado.
+      salmo: salmo-25
+    - ant: En el Señor confía mi corazón, él me socorrió.
+      salmo: salmo-27-1-3-6-9
+  sabado:
+    salmodia:
+    - ant: Guíame, Señor, por la senda de tus mandatos.
+      salmo: salmo-118-33-40
+    - ant: Los que buscan al Señor no carecen de nada.
+      salmo: salmo-33-i
+    - ant: Busca la paz y corre tras ella.
+      salmo: salmo-33-ii
+semana_2:
+  domingo:
+    salmodia:
+    - ant: En verdes praderas me hace recostar el Señor. Aleluia.
+      salmo: salmo-22
+    - ant: Grande es en Israel la fama del Señor. Aleluia.
+      salmo: salmo-75-i
+    - ant: La tierra teme sobrecogida, cuando Dios se pone en pie para juzgar. Aleluia.
+      salmo: salmo-75-ii
+  lunes:
+    salmodia:
+    - ant: ¡Dichosos los que escuchan la palabra de Dios y la cumplen!
+      salmo: salmo-118-41-48
+    - ant: Mi alimento es hacer la voluntad del Padre.
+      salmo: salmo-39-2-14-17-18-i
+    - ant: Yo soy pobre, pero el Señor cuida de mí.
+      salmo: salmo-39-ii
+  martes:
+    salmodia:
+    - ant: En tierra extranjera guardé tus decretos.
+      salmo: salmo-118-49-56
+    - ant: El Señor cambiará la suerte de su pueblo y gozará Israel.
+      salmo: salmo-52
+    - ant: Dios es mi auxilio, el Señor sostiene mi vida.
+      salmo: salmo-53-3-6-8-9
+  miercoles:
+    salmodia:
+    - ant: He examinado mi camino, para enderezar mis pies a tus preceptos.
+      salmo: salmo-118-57-64
+    - ant: 'Me asalta el temor y el terror: hazme caso y respóndeme, Señor.'
+      salmo: salmo-54-2-15-17-24-i
+    - ant: Yo invoco a Dios, y el Señor me salva.
+      salmo: salmo-54-2-15-17-24-ii
+  jueves:
+    salmodia:
+    - ant: Más estimo yo los preceptos de tu boca que miles de monedas de oro y plata.
+      salmo: salmo-118-65-72
+    - ant: En Dios confío y no temo lo que pueda hacerme un mortal.
+      salmo: salmo-55-2-7b-9-14
+    - ant: Tu bondad, Señor, es más grande que los cielos.
+      salmo: salmo-56
+  viernes:
+    salmodia:
+    - ant: Que tu bondad me consuele según tu promesa.
+      salmo: salmo-118-73-80
+    - ant: Protégeme de mis enemigos, Dios mío.
+      salmo: salmo-58-2-6a-10-11-17-18
+    - ant: Dichoso el hombre a quien corrige Dios, porque él hiere y venda la herida.
+      salmo: salmo-59
+  sabado:
+    salmodia:
+    - ant: «El cielo y la tierra pasarán, mis palabras no pasarán», dice el Señor.
+      salmo: salmo-118-81-88
+    - ant: Tú eres, Señor, mi refugio y mi bastión contra el enemigo.
+      salmo: salmo-60
+    - ant: Protege mi vida, Señor, del terrible enemigo.
+      salmo: salmo-63
+semana_3:
+  domingo:
+    salmodia:
+    - ant: En el peligro grité al Señor, y me escuchó. Aleluia.
+      salmo: salmo-117-i
+    - ant: La diestra del Señor es poderosa, la diestra del Señor es excelsa. Aleluia.
+      salmo: salmo-117-ii
+    - ant: El Señor es Dios, él nos ilumina. Aleluia.
+      salmo: salmo-117-iii
+  lunes:
+    salmodia:
+    - ant: Yo consulto, Señor, tus leyes, porque con ellas me diste vida.
+      salmo: salmo-118-89-96
+    - ant: Tú, Señor, fuiste mi esperanza desde mi juventud.
+      salmo: salmo-70-i
+    - ant: En la vejez y en las canas, no me abandones, Dios mío.
+      salmo: salmo-70-ii
+  martes:
+    salmodia:
+    - ant: Amar es cumplir la ley entera.
+      salmo: salmo-118-97-104
+    - ant: Acuérdate, Señor, de la comunidad que adquiriste desde antiguo.
+      salmo: salmo-73-i
+    - ant: Levántate, Señor, defiende tu causa.
+      salmo: salmo-73-ii
+  miercoles:
+    salmodia:
+    - ant: «El que me sigue no camina en tinieblas, sino que tendrá la luz de la vida», dice el Señor.
+      salmo: salmo-118-105-112
+    - ant: 'Yo soy pobre y desdichado: Dios mío, socórreme.'
+      salmo: salmo-69
+    - ant: No juzgará por apariencias, sino con justicia y equidad.
+      salmo: salmo-74
+  jueves:
+    salmodia:
+    - ant: Sostenme, Señor, con tu promesa y viviré.
+      salmo: salmo-118-113-120
+    - ant: Socórrenos, Dios salvador nuestro, y perdona nuestros pecados.
+      salmo: salmo-78-1-5-8-11-13
+    - ant: Dios de los ejércitos, mira desde el cielo y ven a visitar tu viña.
+      salmo: salmo-79
+  viernes:
+    salmodia:
+    - ant: Lo vimos sin aspecto atrayente, como un hombre de dolores, acostumbrado a sufrimientos.
+      salmo: salmo-21-i
+    - ant: Se repartieron la ropa de Jesús, echándola a suerte.
+      salmo: salmo-21-ii
+    - ant: En su presencia se postrarán las familias de los pueblos.
+      salmo: salmo-21-iii
+  sabado:
+    salmodia:
+    - ant: Da fianza, Señor, en favor de tu siervo.
+      salmo: salmo-118-121-128
+    - ant: Contemplad al Señor y quedaréis radiantes.
+      salmo: salmo-33-i
+    - ant: El Señor está cerca de los atribulados.
+      salmo: salmo-33-ii
+semana_4:
+  domingo:
+    salmodia:
+    - ant: El que come este pan vivirá para siempre. Aleluia.
+      salmo: salmo-22
+    - ant: Vendrá el Señor y será glorificado y enaltecido en la asamblea de sus santos. Aleluia.
+      salmo: salmo-75-i
+    - ant: Haced votos y traed tributos al Señor, vuestro Dios. Aleluia.
+      salmo: salmo-75-ii
+  lunes:
+    salmodia:
+    - ant: Asegura, Señor, mis pasos con tu promesa.
+      salmo: salmo-118-129-136
+    - ant: Uno solo es el legislador y juez; tú, ¿quién eres para juzgar al prójimo?
+      salmo: salmo-81
+    - ant: Llamé al Señor, y él me respondió.
+      salmo: salmo-119
+  martes:
+    salmodia:
+    - ant: Puesto que sabéis esto, dichosos vosotros si lo ponéis en práctica.
+      salmo: salmo-118-137-144
+    - ant: Llegue, Señor, hasta ti mi súplica.
+      salmo: salmo-87-i
+    - ant: Todo el día te estoy invocando, Señor, no me escondas tu rostro.
+      salmo: salmo-87-ii
+  miercoles:
+    salmodia:
+    - ant: A ti grito, Señor; espero tus palabras.
+      salmo: salmo-118-145-152
+    - ant: El Señor sabe que los pensamientos del hombre son insustanciales.
+      salmo: salmo-93-i
+    - ant: El Señor será mi alcázar y mi roca de refugio.
+      salmo: salmo-93-ii
+  jueves:
+    salmodia:
+    - ant: «Si me amáis, guardaréis mis mandatos», dice el Señor.
+      salmo: salmo-118-153-160
+    - ant: Que el Señor te bendiga y veas la paz todos los días de tu vida.
+      salmo: salmo-127
+    - ant: El Señor peleará a tu favor.
+      salmo: salmo-128
+  viernes:
+    salmodia:
+    - ant: Mucha paz tienen, Señor, los que aman tus leyes.
+      salmo: salmo-118-161-168
+    - ant: El grupo de los creyentes tenía un solo corazón y una sola alma.
+      salmo: salmo-132
+    - ant: Defiéndeme de la mano perversa, Señor Dios, mi fuerte salvador.
+      salmo: salmo-139-1-9-13-14
+  sabado:
+    salmodia:
+    - ant: Que tu mano, Señor, me auxilie, ya que prefiero tus decretos.
+      salmo: salmo-118-169-176
+    - ant: Tu trono, ¡oh Dios!, permanece para siempre.
+      salmo: salmo-44-i
+    - ant: Vi la nueva Jerusalén, arreglada como una novia que se adorna para su esposo.
+      salmo: salmo-44-ii

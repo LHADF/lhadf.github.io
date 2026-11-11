@@ -1,0 +1,667 @@
+# Santoral de Tercia (calendario de sync): por celebración; solo lo que cambia.
+SANTA MARÍA, MADRE DE DIOS:
+  grado: Solemnidad
+  fecha: 01-01
+  himno: El trabajo, Señor, de cada día
+  ant: José y María, la madre de Jesús, estaban maravillados de lo que se decía de él.
+  lectura:
+    ref: So 3, 14. 15b
+    texto: Regocíjate, hija de Sión; grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.
+  versiculo:
+  - - V
+    - Se acordó el Señor de su misericordia. Aleluia.
+  - - R
+    - Y de su fidelidad en favor de la casa de Israel. Aleluia.
+  oracion: Señor Dios, que por la maternidad virginal de María has dado a los hombres los tesoros de la salvación, haz que sintamos la intercesión de la Virgen Madre, de quien hemos recibido al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro. Él, que vive y reina por los siglos de los siglos.
+SANTOS BASILIO MAGNO Y GREGORIO NACIANZO, obispos y doctores de la Iglesia:
+  grado: Memoria
+  fecha: 01-02
+  lectura:
+    ref: 1Tm 1, 15
+    texto: 'Sentencia verdadera y digna de universal adhesión es ésta: Cristo Jesús vino al mundo para salvar a los pecadores.'
+  oracion: Concede, Señor, una fe inquebrantable a tu pueblo, que confiesa y proclama que tu Hijo único, eterno y glorioso como tú, nació de la Virgen María, tomando un cuerpo humano como el nuestro; haz que, por ese misterio inefable, nos veamos libres de las adversidades de esta vida y merezcamos ir después a disfrutar del gozo que no tiene fin. Por Cristo nuestro Señor.
+EL BAUTISMO DEL SEÑOR:
+  grado: Fiesta
+  fecha: 01-10
+  himno: Oh Santo Espíritu, que con el Padre
+  ant: 'Juan se resistía y decía a Jesús: «Soy yo quien debe ser bautizado por ti, y ¿eres tú quien viene a mí?»'
+  lectura:
+    ref: Is 11, 1-3a
+    texto: 'Saldrá un renuevo del tronco de Jesé, y de su raíz brotará un vástago. Sobre él se posará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza, espíritu de ciencia y de temor del Señor.'
+  versiculo:
+  - - V
+    - Es preciso que él crezca.
+  - - R
+    - Y que yo disminuya.
+  oracion: Dios todopoderoso y eterno, que proclamaste solemnemente a Cristo como tu Hijo amado, cuando era bautizado en el Jordán y descendía el Espíritu Santo sobre él, concede a tus hijos de adopción, renacidos del agua y del Espíritu Santo, que se conserven siempre dignos de tu complacencia. Por Cristo nuestro Señor.
+LA CONVERSIÓN DE SAN PABLO:
+  grado: Fiesta
+  fecha: 01-25
+  ant: 'Saulo, hermano: Jesús el Señor, que se te apareció en el camino, me envía para que recobres la vista y quedes lleno del Espíritu Santo.'
+  lectura:
+    ref: 1Tm 1, 12-13
+    texto: Doy gracias a Cristo Jesús, nuestro Señor, que me hizo capaz, se fió de mí y me confió este ministerio. Yo primero fui blasfemo y perseguidor, e inferí ultrajes; pero fui acogido con toda misericordia, porque obré por ignorancia, en el tiempo de mi incredulidad.
+  versiculo:
+  - - V
+    - Estad alegres, dice el Señor.
+  - - R
+    - Porque vuestros nombres están inscritos en el cielo.
+  oracion: Señor Dios, que has iluminado al mundo entero con la palabra del apóstol san Pablo, haz que quienes recordamos hoy su conversión, imitando sus ejemplos, anunciemos el Evangelio al mundo y seamos así testigos de tu verdad. Por Cristo nuestro Señor.
+LA PRESENTACIÓN DEL SEÑOR:
+  grado: Fiesta
+  fecha: 02-02
+  lectura:
+    ref: Is 8, 14
+    texto: El Señor será piedra de tropiezo y roca de precipicio para las dos casas de Israel, será lazo y trampa para los habitantes de Jerusalén.
+  versiculo:
+  - - V
+    - Se acordó el Señor de su misericordia.
+  - - R
+    - Y de su fidelidad en favor de la casa de Israel.
+  oracion: Dios todopoderoso y eterno, en este día en que tu Hijo único fue presentado en el templo con un cuerpo como el nuestro, te pedimos nos concedas a nosotros poder ser presentados ante ti, plenamente renovados en nuestro espíritu. Por Cristo nuestro Señor.
+SAN FELIPE DE JESÚS, protomártir mexicano:
+  grado: Fiesta
+  fecha: 02-05
+  ant: El Señor le dio la victoria en la dura batalla, para que supiera que la sabiduría es más fuerte que nada.
+  lectura:
+    ref: 1Pe 5, 10-11
+    texto: Tras un breve padecer, el Dios de toda gracia, que os ha llamado a su eterna gloria en Cristo Jesús, él mismo os restablecerá, os afianzará, os robustecerá. A él la gloria y el poder, por los siglos de los siglos. Amén.
+  versiculo:
+  - - V
+    - El Señor lo revistió con un manto de gloria.
+  - - R
+    - Y puso sobre su cabeza la corona de vencedor.
+  oracion: Dios nuestro, que te dignaste aceptar la sangre de san Felipe de Jesús como una primicia de la fe de nuestro pueblo, concédenos, por su intercesión, madurar en esa misma fe, para que demos testimonio de ella no sólo con las palabras, sino sobre todo con los actos de nuestra vida diaria. Por Cristo nuestro Señor.
+LA CÁTEDRA DE SAN PEDRO, APÓSTOL:
+  grado: Fiesta
+  fecha: 02-22
+  lectura:
+    ref: Is 22, 22
+    texto: 'Pondré en su hombro la llave del palacio de David: lo que él abra nadie lo cerrará, lo que él cierre nadie lo abrirá.'
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: No permitas, Señor, que ninguna desorientación llegue a perturbar nunca la fe de la Iglesia, que tú quisiste estuviera cimentada sobre la roca sólida de la confesión del apóstol san Pedro. Por Cristo nuestro Señor.
+SAN JOSÉ, ESPOSO DE LA BIENAVENTURADA VIRGEN MARÍA:
+  grado: Solemnidad
+  fecha: 03-19
+  himno: Amigo de los hombres, Jesucristo
+  ant: Los padres de Jesús solían ir todos los años a Jerusalén para la fiesta de la Pascua.
+  lectura:
+    ref: Pr 2, 7-8
+    texto: Dios reserva su auxilio para los rectos, es un escudo para los que proceden con honradez, cuida a los justos y guarda el sendero de sus amigos.
+  versiculo:
+  - - V
+    - Lo nombró administrador de toda su casa.
+  - - R
+    - Señor de todas sus posesiones.
+  oracion: Dios todopoderoso, que, en los albores del nuevo Testamento, encomendaste a san José los misterios de nuestra salvación, haz que ahora tu Iglesia, sostenida por la intercesión del esposo de María, lleve a su pleno cumplimiento la obra de la salvación de los hombres. Por Cristo nuestro Señor.
+SAN JOSE, ESPOSO DE LA BIENAVENTURADA VIRGEN MARÍA:
+  grado: Solemnidad
+  fecha: 03-19
+  himno: Amigo de los hombres, Jesucristo
+  ant: Los padres de Jesús solían ir todos los años a Jerusalén para la fiesta de la Pascua.
+  lectura:
+    ref: Pr 2, 7-8
+    texto: Dios reserva su auxilio para los rectos, es un escudo para los que proceden con honradez, cuida de los justos y guarda el sendero de sus amigos.
+  versiculo:
+  - - V
+    - Lo nombró administrador de su casa.
+  - - R
+    - Señor de todas sus posesiones.
+  oracion: Dios todopoderoso, que, en los albores del nuevo Testamento, encomendaste a san José los misterios de nuestra salvación, haz que ahora tu Iglesia, sostenida por la intercesión del esposo de María, lleve a su pleno cumplimiento la obra de la salvación de los hombres. Por Cristo nuestro Señor.
+LA ANUNCIACIÓN DEL SEÑOR:
+  grado: Solemnidad
+  fecha: 03-25
+  himno: Amigo de los hombres, Jesucristo
+  ant: Del tronco de Jesé brotó la Virgen María, y en su tálamo penetró el Espíritu de Dios.
+  lectura:
+    ref: Ef 1, 9b-10
+    texto: 'Éste es el plan que Dios había proyectado realizar por Cristo cuando llegase el momento culminante: hacer que todas las cosas tuviesen a Cristo por cabeza, las del cielo y las de la tierra.'
+  versiculo:
+  - - V
+    - El ángel del Señor anunció a María.
+  - - R
+    - Y concibió por obra del Espíritu Santo.
+  oracion: Señor Dios nuestro, que quisiste que tu Verbo se hiciera hombre en el seno de la Virgen María, concede a quienes proclamamos que nuestro Redentor es realmente Dios y hombre que lleguemos a ser partícipes de su naturaleza divina. Por Cristo nuestro Señor.
+SAN JUAN BAUTISTA DE LA SALLE, presbítero:
+  grado: Memoria
+  fecha: 04-07
+  himno: Al Señor confesamos, ¡aleluia!
+SAN ESTANISLAO, Obispo y mártir:
+  grado: Memoria
+  fecha: 04-11
+  himno: Al Señor confesamos, ¡aleluia!
+SAN MARCOS, Evangelista:
+  grado: Fiesta
+  fecha: 04-25
+  himno: Al Señor confesamos, ¡aleluia!
+  lectura:
+    ref: Rm 1, 16-17
+    texto: 'No me avergüenzo del Evangelio; es, en verdad, poder de Dios para salvación de todo el que crea, primero de los judíos y luego de los gentiles. Pues la justicia de Dios se revela en él de fe a fe, según está escrito: «El justo vivirá por la fe.»'
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón. Aleluia.
+  - - R
+    - Y hasta los límites del orbe su lenguaje. Aleluia.
+  oracion: Señor, tú que diste a san Marcos el carisma de anunciar el Evangelio, haz que sepamos aprovecharnos de sus escritos y por ellos aprendamos a seguir fielmente a Jesucristo. Él, que vive y reina por los siglos de los siglos.
+SAN TORIBIO DE MOGROVEJO, obispo:
+  grado: Fiesta
+  fecha: 04-27
+  lectura:
+    ref: 1Tm 4, 16
+    texto: Vigílate a ti mismo y a tu enseñanza; sé constante en ello; obrando así, te salvarás a ti mismo y a los que te escuchan.
+  versiculo:
+  - - V
+    - Escogió el Señor a su siervo. Aleluia.
+  - - R
+    - Para pastorear a Jacob, su heredad. Aleluia.
+  oracion: Señor, tú has querido fortalecer a tu Iglesia en América mediante los trabajos apostólicos y el celo por la verdad de tu obispo santo Toribio, concede al pueblo a ti consagrado crecer constantemente en fe y dar auténticos frutos de santidad. Por Cristo nuestro Señor.
+SANTO TORIBIO DE MOGROVEJO, obispo:
+  grado: Fiesta
+  fecha: 04-27
+  himno: Al Señor confesamos, ¡aleluia!
+  lectura:
+    ref: 1Tm 4, 16
+    texto: Vigílate a ti mismo y a tu enseñanza; sé constante en ello; obrando así, te salvarás a ti mismo y a los que te escuchan.
+  versiculo:
+  - - V
+    - Escogió el Señor a su siervo. Aleluia.
+  - - R
+    - Para pastorear a Jacob, su heredad. Aleluia.
+  oracion: Señor, tú que quisiste dilatar la Iglesia por medio de la actividad apostólica de santo Toribio de Mogrovejo y por su gran amor a la verdad, suscita también hoy en el pueblo cristiano aquellas mismas virtudes que resplandecen en este santo obispo, para que así la Iglesia crezca constantemente en la fe y se renueve por la santidad. Por Cristo nuestro Señor.
+SANTOS FELIPE Y SANTIAGO, apóstoles:
+  grado: Fiesta
+  fecha: 05-04
+  himno: Al Señor confesamos, ¡aleluia!
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón. Aleluia.
+  - - R
+    - Y hasta los límites del orbe su lenguaje. Aleluia.
+  oracion: Señor, tú que nos alegras todos los años con esta fiesta de los santos apóstoles Felipe y Santiago, concédenos, por su intercesión, que, viviendo ahora íntimamente unidos a la muerte y resurrección de tu Hijo, podamos, en la eternidad, contemplar la gloria de tu rostro. Por Cristo nuestro Señor.
+NUESTRA SEÑORA DE LUJÁN, Patrona de la República Argentina:
+  grado: Solemnidad
+  fecha: 05-08
+  himno: Espíritu de Dios, la tierra llenas
+  ant: Todos se dedicaban a la oración en común, con María la madre de Jesús. Aleluia.
+  lectura:
+    ref: Cfr. Sir 24, 25. 30b-31
+    texto: En mí está la gracia para encontrar el camino y la verdad; en mí toda esperanza de vida y de fuerza. Los que se dejen conducir por mí no pecarán, y los que me hagan conocer poseerán la vida eterna.
+  versiculo:
+  - - V
+    - Ave María Purísima. Aleluia.
+  - - R
+    - Sin pecado concebida. Aleluia.
+  oracion: Señor, mira con bondad la fidelidad de tu Pueblo y concédenos que, por los méritos e intercesión de la santísima Virgen María, obtengamos los dones de tu gracia en la vida presente y la salvación eterna en el cielo. Por Cristo nuestro Señor.
+SAN MATÍAS, apóstol:
+  grado: Fiesta
+  fecha: 05-14
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón. Aleluia.
+  - - R
+    - Y hasta los límites del orbe su lenguaje. Aleluia.
+  oracion: Señor Dios, tú que, para completar el número de los doce apóstoles, elegiste a san Matías, concédenos, por la intercesión de este apóstol, a nosotros, que hemos recibido el don de tu amistad, poder ser contados un día entre tus elegidos. Por Cristo nuestro Señor.
+LA SANTÍSIMA TRINIDAD:
+  grado: Solemnidad
+  fecha: 05-22
+  ant: Te invocamos, te alabamos, te adoramos, oh santísima Trinidad.
+  lectura:
+    ref: 2Co 1, 21-22
+    texto: Dios es quien nos confirma en Cristo a nosotros junto con vosotros. Él nos ha ungido, él nos ha sellado, y ha puesto en nuestros corazones, como prenda suya, el Espíritu.
+  versiculo:
+  - - V
+    - Entrad por sus puertas con acción de gracias.
+  - - R
+    - 'Dad gloria a Dios: al Padre, al Hijo y al Espíritu Santo.'
+  oracion: Dios Padre, que has enviado al mundo la Palabra de verdad y el Espíritu de santificación para revelar a los hombres tu misterio admirable, concédenos que, al profesar la fe verdadera, reconozcamos la gloria de la eterna Trinidad y adoremos la Unidad de tu majestad omnipotente. Por Cristo nuestro Señor.
+LA VISITACIÓN DE LA SANTÍSIMA VIRGEN MARÍA:
+  grado: Fiesta
+  fecha: 05-31
+  lectura:
+    ref: Jdt 13, 18-19
+    texto: Que el Altísimo te bendiga, hija, más que a todas las mujeres de la tierra. Bendito el Señor, creador del cielo y tierra, que enderezó tu golpe contra la cabeza del general enemigo. los que recuerdan esta hazaña de Dios jamás perderán la confianza que tú inspiras.
+  versiculo:
+  - - V
+    - Dichosos los que escuchan la palabra de Dios.
+  - - R
+    - Y la cumplen.
+  oracion: Dios todopoderoso y eterno, tú que, cuando María llevaba en su seno a tu Hijo, le inspiraste que visitara a su prima santa Isabel, haz que nosotros seamos siempre dóciles a las inspiraciones de tu Espíritu, para que, con María, podamos proclamar eternamente tu grandeza. Por Cristo nuestro Señor.
+EL SANTÍSIMO CUERPO Y SANGRE DE CRISTO:
+  grado: Solemnidad
+  fecha: 06-07
+  ant: He deseado con ansia comer esta Pascua con vosotros antes de padecer. Aleluia.
+  lectura:
+    ref: Sb 16, 20
+    texto: Alimentaste a tu pueblo con manjar de ángeles, les enviaste desde el cielo un pan ya preparado, que podía brindar todas las delicias y satisfacer todos los gustos.
+  versiculo:
+  - - V
+    - Me acercaré al altar de Dios. Aleluia.
+  - - R
+    - Recibiré a Cristo, que es mi alegría. Aleluia.
+  oracion: Señor nuestro Jesucristo, que en este sacramento admirable nos dejaste el memorial de tu pasión, concédenos venerar de tal modo los sagrados misterios de tu cuerpo y de tu sangre, que experimentemos constantemente en nosotros el fruto de tu redención. Tú que vives y reinas por los siglos de los siglos.
+SAN BERNABÉ, apóstol:
+  grado: Memoria
+  fecha: 06-11
+  lectura:
+    ref: Rm 1, 16,17
+    texto: 'No me avergüenzo del Evangelio; es, en verdad, poder de Dios para salvación de todo el que crea, primero de los judíos y luego de los gentiles. Pues la justicia de Dios se revela en él de fe a fe, según está escrito: «El justo vivirá por la fe.»'
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios nuestro, que, después de haber infundido en abundancia la fe y el Espíritu Santo en San Bernabé, lo destinaste para que anunciara a los pueblos paganos el mensaje de salvación, haz que el Evangelio de Cristo, que él predicó valerosamente, sea proclamado con fidelidad por nuestras palabras y nuestras obras. Por Cristo nuestro Señor.
+EL SAGRADO CORAZÓN DE JESÚS:
+  grado: Solemnidad
+  fecha: 06-12
+  himno: Ven, Espíritu Santo, luz y gozo
+  ant: Pueblo mío, ¿qué te he hecho o en qué te he contristado? Respóndeme.
+  lectura:
+    ref: Jr 31, 2-4a
+    texto: 'Así dice el Señor: «Halló gracia en el desierto el pueblo escapado de la espada; camina a su descanso, el Señor se le apareció de lejos. Con amor eterno te amé, por eso prolongué mi misericordia. Volveré a construirte y serás reconstruido.»'
+  versiculo:
+  - - V
+    - Sacaréis aguas con gozo.
+  - - R
+    - De las fuentes del Salvador.
+  oracion: Te pedimos, Dios todopoderoso y eterno, que, al celebrar la grandeza del amor que resplandece en el corazón de tu Hijo, recibamos de esta fuente divina gracias cada vez más abundantes. Por Cristo nuestro Señor.
+EL NACIMIENTO DE SAN JUAN BAUTISTA:
+  grado: Solemnidad
+  fecha: 06-24
+  himno: Ven, Espíritu Santo, luz y gozo
+  ant: Será grande a los ojos del Señor y estará lleno del Espíritu Santo ya desde el seno de su madre.
+  lectura:
+    ref: Is 49, 1
+    texto: 'Escuchadme, islas; atended, pueblos lejanos: el Señor me llamó desde el vientre de mi madre, cuando aún estaba yo en el seno materno pronunció mi nombre.'
+  versiculo:
+  - - V
+    - Ví al Espíritu Santo descender y posarse sobre él.
+  - - R
+    - Él es quien bautiza con Espíritu Santo.
+  oracion: Dios todopoderoso, que suscitaste a san Juan Bautista, para que le preparara a Cristo un pueblo bien dispuesto, concede a tu pueblo el don de la alegría espiritual y guíanos por el camino de la salvación y de la paz. Por Cristo nuestro Señor.
+SANTOS PEDRO Y PABLO, APÓSTOLES:
+  grado: Solemnidad
+  fecha: 06-29
+  himno: Ven, Espíritu Santo, luz y gozo
+  ant: Todavía estaba Pedro hablando, cuando descendió el Espíritu Santo sobre todos cuantos estaban escuchando su discurso, y se pusieron a hablar en varias lenguas, glorificando a Dios.
+  lectura:
+    ref: Hch 15, 7b-9
+    texto: Dios determinó que por mi boca escuchasen los gentiles la doctrina del Evangelio y llegasen a la fe. Dios, que conoce los corazones, se ha declarado en favor de ellos, al darles el Espíritu Santo, igual que a nosotros; y no ha establecido diferencia alguna entre ellos y nosotros, pues ha purificado sus corazones por la fe.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios nuestro, que nos llenas de santa alegría con la solemnidad de los santos apóstoles Pedro y Pablo, haz que tu Iglesia se mantenga siempre fiel a las enseñanzas de estos apóstoles, de quienes recibió el primer anuncio de la fe. Por Cristo nuestro Señor.
+SANTO TOMÁS, apóstol:
+  grado: Fiesta
+  fecha: 07-03
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Concédenos, Señor, celebrar con alegría la fiesta de santo Tomás; que la intercesión de este apóstol, que reconoció y confesó a Cristo como a su Señor y su Dios, nos haga crecer en la fe, para que así, creyendo en Jesús, el Mesías, tengamos vida en su nombre. Por Cristo nuestro Señor.
+NUESTRA SEÑORA DEL ROSARIO DE CHIQUINQUIRÁ, patrona de Colombia:
+  grado: Fiesta
+  fecha: 07-09
+  ant: Todos se dedicaban a la oración en común, con María la madre de Jesús.
+  lectura:
+    ref: So 3, 14. 15b
+    texto: Regocíjate, hija de Sión; salta y grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.
+  versiculo:
+  - - V
+    - Dichosos los que escuchan la palabra de Dios.
+  - - R
+    - Y la cumplen.
+  oracion: Padre nuestro, en tu amorosa solicitud has querido favorecer a nuestra Patria dándonos en Chiquinquirá un signo de tu presencia; por la intercesión poderosa de la Virgen María, cuyo patrocinio hoy celebramos, concédenos crecer en la fe y lograr la prosperidad por caminos de paz y de justicia. Por Cristo nuestro Señor.
+SANTIAGO, apóstol:
+  grado: Fiesta
+  fecha: 07-25
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios todopoderoso y eterno, que quisiste que Santiago fuera el primero de entre los apóstoles en derramar su sangre por la predicación del Evangelio, fortalece a tu Iglesia con el testimonio de su martirio y confórtala con su valiosa protección. Por Cristo nuestro Señor.
+LA TRANSFIGURACIÓN DEL SEÑOR:
+  grado: Fiesta
+  fecha: 08-06
+  ant: 'El Señor apareció transfigurado entre Moisés y Elías: así recibió el testimonio de la ley y de los profetas.'
+  lectura:
+    ref: Ex 19, 9
+    texto: 'El Señor dijo a Moisés: «Voy a acercarme a ti en una densa nube, para que el pueblo pueda escuchar lo que te digo y te crea en adelante.»'
+  versiculo:
+  - - V
+    - Eres el más bello de los hombres.
+  - - R
+    - En tus labios se derrama la gracia.
+  oracion: Señor Dios, que en la gloriosa transfiguración de Jesucristo confirmaste los misterios de la fe con el testimonio de Moisés y de Elías, y nos hiciste entrever en la gloria de tu Hijo la grandeza de nuestra definitiva adopción filial, haz que escuchemos siempre la voz de tu Hijo amado y lleguemos a ser un día sus coherederos en la gloria. Por Cristo nuestro Señor.
+SAN LORENZO, diácono y mártir:
+  grado: Fiesta
+  fecha: 08-10
+  lectura:
+    ref: 1Pe 5, 10-11
+    texto: Tras un breve padecer, el Dios de toda gracia, que os ha llamado a su eterna gloria en Cristo Jesús, él mismo os restablecerá, os afianzará, os robustecerá. A él la gloria y el poder, por los siglos de los siglos. Amén.
+  versiculo:
+  - - V
+    - El Señor lo revistió con un manto de gloria.
+  - - R
+    - Y puso sobre su cabeza la corona de vencedor.
+  oracion: Dios nuestro, que inflamaste con el fuego de tu amor a san Lorenzo, para que brillara por la fidelidad a su servicio diaconal y por la gloria de un heroico martirio, haz que nosotros te amemos siempre como él te amó y practiquemos lo que él enseñó. Por Cristo nuestro Señor.
+LA ASUNCIÓN DE LA SANTÍSIMA VIRGEN MARÍA:
+  grado: Solemnidad
+  fecha: 08-15
+  himno: Ven del seno de Dios, oh Santo Espíritu
+  ant: Creciste como cedro del Líbano y como ciprés del monte Hermón, santa Madre de Dios.
+  lectura:
+    ref: Jdt 13, 22. 23b
+    texto: El Señor te ha bendecido con su poder, pues por tu medio ha aniquilado a nuestros enemigos. El Señor te ha bendecido más que a todas las mujeres de la tierra.
+  versiculo:
+  - - V
+    - María ha sido elevada al cielo, los ángeles se alegran.
+  - - R
+    - Y, llenos de gozo, alaban al Señor.
+  oracion: Dios todopoderoso y eterno, que has elevado en cuerpo y alma a los cielos a la inmaculada Virgen María, madre de tu Hijo, haz que nosotros, ya desde este mundo, tengamos todo nuestro ser totalmente orientado hacia el cielo, para que podamos llegar a participar de su misma gloria. Por Cristo nuestro Señor.
+SANTA ROSA DE LIMA, virgen, Patrona de América Latina:
+  grado: Fiesta
+  fecha: 08-23
+  ant: Para mi lo bueno es estar junto a Dios, y hacer del Señor mi refugio.
+  lectura:
+    ref: Sb 8, 21
+    texto: Comprendí que no podía poseer la sabiduría si Dios no me la daba, y ya era un fruto de la prudencia saber de quién procedía esta gracia.
+  versiculo:
+  - - V
+    - Ésta es la virgen sensata.
+  - - R
+    - Que el Señor encontró velando.
+  oracion: Dios nuestro, que impulsaste a santa Rosa de Lima a apartarse de la vida del mundo por amor tuyo y a consagrarse solo a ti, en la austeridad y en la penitencia, concédenos, por su intercesión, que sepamos seguir, en este mundo, el camino que conduce a la verdadera vida, para que lleguemos a gozar del torrente de tus delicias allá en el cielo. Por Cristo nuestro Señor.
+SAN BARTOLOMÉ, apóstol:
+  grado: Fiesta
+  fecha: 08-24
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Fortalece, Señor, nuestra fe, para que nos adhiramos a Cristo, tu Hijo, con la misma sinceridad con que lo hizo el apóstol san Bartolomé, y haz que, por la intercesión de este santo, sea siempre tu Iglesia sacramento de salvación universal para todos los hombres. Por Cristo nuestro Señor.
+LA NATIVIDAD DE LA SANTÍSIMA VIRGEN MARÍA:
+  grado: Fiesta
+  fecha: 09-08
+  ant: Hoy es el nacimiento de santa María Virgen, cuya existencia gloriosa ilumina a toda la Iglesia.
+  lectura:
+    ref: Ct 6, 9
+    texto: ¿Quién es esa que surge como el alba, hermosa como la luna y límpida como el sol, imponente como escuadrón a banderas desplegadas?
+  versiculo:
+  - - V
+    - Dichosos los que escuchan la palabra de Dios.
+  - - R
+    - Y la cumplen.
+  oracion: Concede a tus siervos, Señor, el don de tu gracia, para que, a quienes recibimos las primicias de la salvación por la maternidad de la Virgen María, la fiesta anual de su nacimiento nos traiga aumento de paz. Por Cristo nuestro Señor.
+EXALTACIÓN DE LA SANTA CRUZ:
+  grado: Fiesta
+  fecha: 09-14
+  ant: Oh Cristo, Salvador nuestro, sálvanos por la fuerza de la cruz; tú que salvaste a Pedro en el mar, ten piedad de nosotros.
+  lectura:
+    ref: Hb 5, 7-9
+    texto: Cristo, en los días de su vida mortal, habiendo elevado oraciones y súplicas con poderoso clamor y lágrimas hacia aquel que tenía poder para salvarlo de la muerte, fue escuchado en atención a su actitud reverente y filial; con todo, aunque era Hijo, aprendió por experiencia, en sus padecimientos, la obediencia, y, habiendo así llegado hasta la plena consumación, se convirtió en causa de salvación para todos los que lo obedecen.
+  versiculo:
+  - - V
+    - Te adoramos, oh Cristo, y te bendecimos.
+  - - R
+    - Porque con tu santa cruz redimiste al mundo.
+  oracion: Señor, Dios nuestro, que has querido salvar a los hombres por medio de tu Hijo muerto en la cruz, te pedimos, ya que nos has dado a conocer en la tierra la fuerza misteriosa de la cruz de Cristo, que podamos alcanzar en el cielo los frutos de la redención. Por Cristo nuestro Señor.
+SAN MATEO, apóstol y evangelista:
+  grado: Fiesta
+  fecha: 09-21
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios nuestro, que, en tu inefable misericordia, elegiste a san Mateo, para transformarlo de recaudador de impuestos en un apóstol, haz que también nosotros, imitando su ejemplo y apoyados por su intercesión, te sigamos con fidelidad, cualesquiera que sean las circunstancias de nuestra vida. Por Cristo nuestro Señor.
+SANTOS ARCÁNGELES MIGUEL GABRIEL Y RAFAEL:
+  grado: Fiesta
+  fecha: 09-29
+  ant: Miguel, uno de los primeros príncipes, ha venido en mi ayuda.
+  lectura:
+    ref: Dn 12, 1
+    texto: 'En aquel tiempo, surgirá Miguel, el gran príncipe que defiende a los hijos de tu pueblo. Será aquel un tiempo de angustia como no habrá habido hasta entonces otro, desde que existen las naciones. En aquel tiempo, se salvará tu pueblo: todos aquellos que se encuentren inscritos en el libro.'
+  versiculo:
+  - - V
+    - Enviará el Señor a sus ángeles, para que a la voz de poderosas trompetas.
+  - - R
+    - Reúnan a sus elegidos de los cuatro puntos cardinales.
+  oracion: Señor Dios todopoderoso, que, con una providencia admirable, llamas a los ángeles y a los hombres para que cooperen a tu plan de salvación, haz que, durante nuestro peregrinar en la tierra, nos sintamos siempre protegidos por los ángeles, que en el cielo están en tu presencia para servirte y gozan ya contemplando tu rostro. Por Cristo nuestro Señor.
+LOS SANTOS ÁNGELES CUSTODIOS:
+  grado: Memoria
+  fecha: 10-02
+  lectura:
+    ref: Hch 5, 17-20
+    texto: 'El sumo sacerdote y los de su partido —la secta de los saduceos—, llenos de coraje, mandaron prender a los apóstoles y meterlos en la cárcel común. Pero por la noche el ángel del Señor les abrió las puertas y los sacó fuera, diciéndoles: «Id al templo y explicadle allí al pueblo este modo de vida.»'
+  versiculo:
+  - - V
+    - Delante de los ángeles tañeré para ti, Dios mío.
+  - - R
+    - Me postraré hacia tu santuario, daré gracias a tu nombre.
+  oracion: Dios, Padre misericordioso, que, en tu providencia inefable, te has dignado enviar, para nuestra guarda, a tus santos ángeles, concede a quienes te suplican ser siempre defendidos por su protección y gozar eternamente de su compañía. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+NUESTRA SEÑORA DEL PILAR:
+  grado: Fiesta
+  fecha: 10-12
+  lectura:
+    ref: So 3, 14. 15b
+    texto: Regocíjate, hija de Sión; salta y grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.
+  versiculo:
+  - - V
+    - Dichosos los que escuchan la palabra de Dios.
+  - - R
+    - Y la cumplen.
+  oracion: Dios todopoderoso y eterno, que en la gloriosa Madre de tu Hijo has concedido un amparo celestial a cuantos la invocan con la secular advocación del Pilar, concédenos, por su intercesión, fortaleza en la fe, seguridad en la esperanza y constancia en el amor. Por Cristo nuestro Señor.
+SAN LUCAS, evangelista:
+  grado: Fiesta
+  fecha: 10-18
+  lectura:
+    ref: Rm 1, 16-17
+    texto: 'No me avergüenzo del Evangelio; es, en verdad, poder de Dios para salvación de todo el que crea, primero de los judíos y luego de los gentiles. Pues la justicia de Dios se revela en él de fe a fe, según está escrito: «El justo vivirá por la fe.»'
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Señor Dios, que elegiste a san Lucas para que, con su predicación y sus escritos, revelara al mundo tu amor hacia los pobres, concede a quienes nos gloriamos de ser cristianos vivir unidos con un solo corazón y una sola alma y haz que todos los pueblos lleguen a contemplar a tu Salvador. Él, que vive y reina por los siglos de los siglos.
+SANTOS SIMÓN Y JUDAS, apóstoles:
+  grado: Fiesta
+  fecha: 10-28
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios nuestro, que quisiste que te conociéramos por la predicación de los apóstoles, concédenos, por la intercesión de los santos Simón y Judas, que tu Iglesia siga creciendo en el mundo, acogiendo continuamente en su seno a nuevos pueblos que vengan a la fe en ti. Por Cristo nuestro Señor.
+TODOS LOS SANTOS:
+  grado: Solemnidad
+  fecha: 11-01
+  himno: Ven del seno de Dios, oh Santo Espíritu
+  ant: El Señor consuela a Sión; allí habrá gozo y alegría, con acción de gracias al son de instrumentos.
+  lectura:
+    ref: Is 65, 18-19
+    texto: 'Habrá gozo y alegría perpetua por lo que voy a crear: mirad, voy a transformar a Jerusalén en alegría y a su pueblo en gozo; me alegraré de Jerusalén y me gozaré de mi pueblo, y ya no se oirán en ella gemidos ni llantos.'
+  versiculo:
+  - - V
+    - Alegraos y regocijaos, todos los santos.
+  - - R
+    - Porque vuestra recompensa será grande en los cielos.
+  oracion: Dios todopoderoso y eterno, que nos concedes celebrar los méritos de todos los santos en una misma solemnidad, te rogamos que, por las súplicas de tan numerosos intercesores, nos concedas en abundancia los dones que te pedimos. Por Cristo nuestro Señor.
+LA DEDICACIÓN DE LA BASÍLICA DE SAN JUAN DE LETRÁN:
+  grado: Fiesta
+  fecha: 11-09
+  lectura:
+    ref: 1Co 3, 16-17
+    texto: '¿No sabéis que sois templo de Dios y que el Espíritu de Dios habita en vosotros? Si alguno destruye el templo de Dios, Dios lo destruirá a él; porque el templo de Dios es santo: ese templo sois vosotros.'
+  versiculo:
+  - - V
+    - Señor, yo amo la belleza de tu casa.
+  - - R
+    - El lugar donde reside tu gloria.
+  oracion: 'Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo como cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por Cristo nuestro Señor.'
+SANTA MARÍA VIRGEN, MADRE DE LA DIVINA PROVIDENCIA:
+  grado: Solemnidad
+  fecha: 11-19
+  himno: Ven del seno de Dios, oh Santo Espíritu
+  ant: Todos se dedicaban a la oración en común, con María la madre de Jesús.
+  lectura:
+    ref: So 3, 14. 15b
+    texto: Regocíjate, hija de Sión; salta y grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.
+  versiculo:
+  - - V
+    - Dichosos los que escuchan la palabra de Dios.
+  - - R
+    - Y la cumplen.
+  oracion: Atiende propicio, Señor, a tu pueblo que con júbilo festivo celebra la solemnidad de la Virgen María, Madre de la Divina Providencia, y concédele que, bajo el glorioso patrocinio de tan excelsa madre, con su caridad fraterna promueva una sociedad más humana y a la vez sea edificador y testigo de tu verdad. Por Cristo nuestro Señor.
+NUESTRO SEÑOR JESUCRISTO, REY UNIVERSAL:
+  grado: Solemnidad
+  fecha: 11-22
+  ant: 'El Señor es nuestro juez y legislador, el Señor es nuestro rey: él nos salvará.'
+  lectura:
+    ref: Col 1, 12-13
+    texto: Damos gracias a Dios Padre, que nos ha hecho capaces de compartir la herencia del pueblo santo en la luz. Él nos ha sacado del dominio de las tinieblas, y nos ha trasladado al reino de su Hijo querido.
+  versiculo:
+  - - V
+    - El Señor se sienta como rey eterno.
+  - - R
+    - El Señor bendice a su pueblo con la paz.
+  oracion: Dios todopoderoso y eterno, que quisiste fundar todas las cosas en tu Hijo muy amado, rey del universo, haz que toda creatura, libertada de toda esclavitud, sirva a tu majestad y te alabe eternamente. Por Cristo nuestro Señor.
+SAN ANDRÉS APÓSTOL:
+  grado: Fiesta
+  fecha: 11-30
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios todopoderoso y eterno, escucha la oración de tu pueblo y concédenos que, así como el apóstol san Andrés fue en la tierra predicador del Evangelio y pastor de tu Iglesia, así ahora en el cielo sea nuestro poderoso abogado ante ti. Por Cristo nuestro Señor.
+INMACULADA CONCEPCIÓN DE LA SANTÍSIMA VIRGEN MARIA:
+  grado: Solemnidad
+  fecha: 12-08
+  himno: Oh Santo Espíritu, que con el Padre
+  ant: Vive el Señor, que ha realizado conmigo su misericordia.
+  lectura:
+    ref: Ef 1, 4
+    texto: Dios nos eligió en la persona de Cristo, antes de crear el mundo, para que fuésemos consagrados e irreprochables ante él por el amor.
+  versiculo:
+  - - V
+    - Hoy es la fiesta de la Inmaculada Concepción de la Virgen María.
+  - - R
+    - Que aplastó con su pie virginal la cabeza de la serpiente.
+  oracion: Dios todopoderoso, que, por la inmaculada concepción de la Virgen María, preparaste una digna morada para tu Hijo y, en previsión de la muerte de Jesucristo, preservaste a su madre de toda mancha de pecado, concédenos también a nosotros, por intercesión de esta madre inmaculada, que lleguemos a ti limpios de toda culpa. Por Cristo nuestro Señor.
+LA INMACULADA CONCEPCIÓN DE LA SANTÍSIMA VIRGEN MARIA:
+  grado: Solemnidad
+  fecha: 12-08
+  himno: Oh Santo Espíritu, que con el Padre
+  ant: Vive el Señor, que ha realizado conmigo su misericordia.
+  lectura:
+    ref: Ef 1, 4
+    texto: Dios nos eligió en la persona de Cristo, antes de crear el mundo, para que fuésemos consagrados e irreprochables ante él por el amor.
+  versiculo:
+  - - V
+    - Hoy es la fiesta de la Inmaculada Concepción de la Virgen María.
+  - - R
+    - Que aplastó con su pie virginal la cabeza de la serpiente.
+  oracion: Dios todopoderoso, que, por la inmaculada concepción de la Virgen María, preparaste una digna morada para tu Hijo y, en previsión de la muerte de Jesucristo, preservaste a su madre de toda mancha de pecado, concédenos también a nosotros, por intercesión de esta madre inmaculada, que lleguemos a ti limpios de toda culpa. Por Cristo nuestro Señor.
+NUESTRA SEÑORA DE GUADALUPE:
+  grado: Fiesta
+  fecha: 12-12
+  ant: Brotan flores en los campos, y el arrullo de la tórtola se ha escuchado en nuestra tierra.
+  lectura:
+    ref: Os 11, 4
+    texto: Era yo para ellos como quien levanta a un niño contra su mejilla, me inclinaba hacia ellos para darles de comer.
+  versiculo:
+  - - V
+    - No ha hecho cosa semejante con ninguna otra nación.
+  - - R
+    - Nos ha robado el corazón con una sola de sus miradas.
+  oracion: Señor, Dios nuestro, que has concedido a tu pueblo la protección maternal de la siempre Virgen María, Madre de tu Hijo, concédenos, por su intercesión, permanecer siempre firmes en la fe y servir con sincero amor a nuestros hermanos. Por Cristo nuestro Señor.
+SAN ESTEBAN, protomártir:
+  grado: Fiesta
+  fecha: 12-26
+  himno: El trabajo, Señor, de cada día
+  ant: José y María, la madre de Jesús, estaban maravillados de lo que se decía de él.
+  lectura:
+    ref: 1Pe 5, 10-11
+    texto: Tras un breve padecer, el Dios de toda gracia, que os ha llamado a su eterna gloria en Cristo Jesús, él mismo os restablecerá, os afianzará, os robustecerá. A él la gloria y el poder, por los siglos de los siglos. Amén.
+  versiculo:
+  - - V
+    - El Señor lo revistió con un manto de gloria.
+  - - R
+    - Y puso sobre su cabeza la corona de vencedor.
+  oracion: Concédenos, Señor, imitar las virtudes de san Esteban, cuya entrada en la gloria celebramos; y, así como él supo rogar por sus mismos perseguidores, sepamos nosotros amar a nuestros enemigos. Por Cristo nuestro Señor.
+SAN JUAN, apóstol y evangelista:
+  grado: Fiesta
+  fecha: 12-27
+  himno: El trabajo, Señor, de cada día
+  ant: José y María, la madre de Jesús, estaban maravillados de lo que se decía de él.
+  lectura:
+    ref: 2Co 5, 19b-20
+    texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+  versiculo:
+  - - V
+    - A toda la tierra alcanza su pregón.
+  - - R
+    - Y hasta los límites del orbe su lenguaje.
+  oracion: Dios nuestro, que nos descubriste los arcanos de tu Verbo por medio del apóstol san Juan, concédenos alcanzar una debida comprensión de todo aquello que él ha hecho llegar a nuestros oídos. Por Cristo nuestro Señor.
+LOS SANTOS INOCENTES, mártires:
+  grado: Fiesta
+  fecha: 12-28
+  himno: El trabajo, Señor, de cada día
+  ant: José y María, la madre de Jesús, estaban maravillados de lo que se decía de él.
+  lectura:
+    ref: Lm 1, 16
+    texto: 'Ha prevalido mi enemigo, he perdido a mis hijos: por eso estoy llorando y mis ojos se derriten en lágrimas.'
+  versiculo:
+  - - V
+    - El Señor los revistió con un manto de gloria.
+  - - R
+    - y puso sobre su cabeza la corona de vencedor.
+  oracion: Señor Dios, cuya gloria pregonaron en este día los Inocentes mártires, no con palabras, sino dando su vida por ti, haz que nuestra conducta testifique con hechos la fe que proclamamos con los labios. Por Cristo nuestro Señor.
+LA SAGRADA FAMILIA DE JESÚS MARÍA Y JOSÉ:
+  grado: Fiesta
+  fecha: 12-30
+  himno: Oh Santo Espíritu, que con el Padre
+  ant: José y María, la madre de Jesús, estaban maravillados de lo que se decía de él.
+  lectura:
+    ref: Col 3, 12-13
+    texto: 'Como pueblo elegido de Dios, pueblo sacro y amado, sea vuestro uniforme: la misericordia entrañable, la bondad, la humildad, la dulzura, la comprensión. Sobrellevaos mutuamente y perdonaos, cuando alguno tenga quejas contra otro. El Señor os ha perdonado: haced vosotros lo mismo.'
+  versiculo:
+  - - V
+    - El Señor nos instruirá en sus caminos.
+  - - R
+    - Y marcharemos por sus sendas.
+  oracion: Dios nuestro, que has querido darnos en la Sagrada Familia ejemplos preclaros de virtudes domésticas, concédenos saber imitar su vida y su amor recíproco, para que un día podamos ir a disfrutar con ella de la alegría eterna de tu morada. Por Cristo nuestro Señor.
