@@ -312,5 +312,6 @@ test('celebraciones propias de ADF: toman del común (o de otra celebración) ha
   assert.match(r.dia.nota, /Común de un mártir/);
   assert.equal(r.secciones.find(s => s.k === 'himno').opciones[0].n, LD.comunes['un-martir'].himno);
   assert.equal(r.secciones.find(s => s.id === 'ab').t.es, LD.comunes['un-martir'].ant_benedictus);
-  for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || a.pendiente, n);
+  assert.equal(LD.mapa['Divino Niño Jesús'], undefined);                         // no se confunde con santa Teresa del Niño Jesús
+  for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || (a.es && LD.mapa[n] === a.es) || a.pendiente, n);
 });

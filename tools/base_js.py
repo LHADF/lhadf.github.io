@@ -103,9 +103,14 @@ def vincular_santoral(santoral_todo):
     tab, ix, d0 = cal['tabla'], {c: i for i, c in enumerate(cal['campos'])}, date.fromisoformat(cal['desde'])
     filas = [(d0 + timedelta(days=k), r) for k, r in enumerate(cal['ARG'])] + [(date.fromisoformat(f), r) for f, r in cal['PGY'].items()]
     mapa, sin = {}, {}
+    A = leer(os.path.join(B, 'santoral', 'adf.yaml')) if os.path.exists(os.path.join(B, 'santoral', 'adf.yaml')) else {}
     for f, r in filas:
         n, g, fer = tab[r[ix['n']]], tab[r[ix['g']]], tab[r[ix['fer']]]
         if n in mapa or n in sin: continue
+        if n in (A or {}):                       # lo escrito a mano en santoral/adf.yaml manda sobre el parecido de nombres
+            if A[n].get('es') in santoral: mapa[n] = A[n]['es']
+            else: sin[n] = g
+            continue
         md = f.strftime('%m-%d')
         mismo_dia = [(k, _sim(n, k)) for k, v in santoral.items() if v.get('fecha') == md]
         mejor = max(mismo_dia, key=lambda x: x[1][1:], default=(None, (0, 0, 0)))

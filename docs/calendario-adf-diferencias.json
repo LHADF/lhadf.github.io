@@ -492,18 +492,6 @@
   "falta_visperas": "antífonas de los salmos (toma las del domingo I)"
  },
  {
-  "fecha": "07-09",
-  "celebracion": "—",
-  "grado_adf": "—",
-  "region": "—",
-  "general": "NUESTRA SEÑORA DEL ROSARIO DE CHIQUINQUIRÁ, patrona de Colombia",
-  "grado_general": "Fiesta",
-  "diferencia": "Está en la base (calendario general o argentino) y no en el calendario ADF",
-  "comun": "—",
-  "falta_laudes": "—",
-  "falta_visperas": "—"
- },
- {
   "fecha": "07-11",
   "celebracion": "San Benito de Nursia, abad",
   "grado_adf": "Solemnidad",
@@ -520,36 +508,24 @@
   "celebracion": "Bienaventurada Virgen María del Monte Carmelo",
   "grado_adf": "Fiesta",
   "region": "Argentina y Paraguay",
-  "general": "—",
-  "grado_general": "—",
-  "diferencia": "Propia de ADF (no está en el calendario general de la base)",
-  "comun": "Común de la Santísima Virgen María",
-  "falta_laudes": "oración propia; antífonas de los salmos",
-  "falta_visperas": "oración propia; antífona del Magníficat; antífonas de los salmos"
- },
- {
-  "fecha": "07-16",
-  "celebracion": "—",
-  "grado_adf": "—",
-  "region": "—",
   "general": "NUESTRA SEÑORA DEL CARMEN",
   "grado_general": "Memoria",
-  "diferencia": "Está en la base (calendario general o argentino) y no en el calendario ADF",
+  "diferencia": "Cambia de grado: Memoria → Fiesta",
   "comun": "—",
-  "falta_laudes": "—",
-  "falta_visperas": "—"
+  "falta_laudes": "antífonas de los salmos (toma las del domingo I)",
+  "falta_visperas": "antífonas de los salmos (toma las del domingo I)"
  },
  {
   "fecha": "07-20",
   "celebracion": "Divino Niño Jesús",
   "grado_adf": "Solemnidad",
   "region": "Argentina y Paraguay",
-  "general": "SANTA TERESA DEL NIÑO JESÚS",
-  "grado_general": "Memoria",
-  "diferencia": "Cambia de grado: Memoria → Solemnidad; Cambia de fecha: 10-01 → 07-20",
-  "comun": "—",
-  "falta_laudes": "antífonas de los salmos (toma las del domingo I)",
-  "falta_visperas": "antífonas de los salmos (toma las del domingo I); I Vísperas"
+  "general": "—",
+  "grado_general": "—",
+  "diferencia": "Propia de ADF (no está en el calendario general de la base)",
+  "comun": "Sin común: oficio propio",
+  "falta_laudes": "todo el oficio",
+  "falta_visperas": "todo el oficio"
  },
  {
   "fecha": "07-22",
@@ -886,18 +862,6 @@
   "comun": "Común de la Santísima Virgen María",
   "falta_laudes": "oración propia; antífonas de los salmos",
   "falta_visperas": "oración propia; antífona del Magníficat; antífonas de los salmos"
- },
- {
-  "fecha": "12-08",
-  "celebracion": "—",
-  "grado_adf": "—",
-  "region": "—",
-  "general": "LA INMACULADA CONCEPCIÓN DE LA SANTÍSIMA VIRGEN MARIA",
-  "grado_general": "Solemnidad",
-  "diferencia": "Está en la base (calendario general o argentino) y no en el calendario ADF",
-  "comun": "—",
-  "falta_laudes": "—",
-  "falta_visperas": "—"
  },
  {
   "fecha": "12-10",

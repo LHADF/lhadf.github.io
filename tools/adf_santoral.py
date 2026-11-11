@@ -83,12 +83,13 @@ def main():
     # del calendario general (base) que ADF no celebra
     usados = set(mapaL.values()) | set(mapaV.values())
     for k, v in SaL.items():
-        if k not in usados and v.get('fecha') != 'variable':
+        if k not in usados and v.get('fecha') != 'variable' and not any(u != k and (u in k or k in u) for u in usados):
             filas.append({'fecha': v['fecha'], 'celebracion': '—', 'grado_adf': '—', 'region': '—', 'general': k, 'grado_general': v.get('grado'), 'diferencia': 'Está en la base (calendario general o argentino) y no en el calendario ADF', 'comun': '—', 'falta_laudes': '—', 'falta_visperas': '—'})
     filas.sort(key=lambda r: (r['fecha'] == 'movible', r['fecha']))
     escribir(ruta, dict(A), 'Celebraciones propias del calendario ADF sin textos en la base. Para cada una, hasta tener sus textos propios:\n'
              '  comun: clave de base/comunes/ (himno, lectura, responsorio, antífona del cántico evangélico y preces del común)\n'
              '  como: nombre de otra celebración del santoral de la base, de la que toma todo\n'
+             '  es: la misma celebración con otro nombre en la base (usa sus textos, sin aviso)\n'
              '  pendiente: oficio propio del que no hay nada\n'
              'La asignación inicial es automática, por el nombre (tools/adf_santoral.py): corregir a mano acá.')
     json.dump(filas, open(os.path.join(RAIZ, 'docs', 'calendario-adf-diferencias.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

@@ -1,6 +1,7 @@
 # Celebraciones propias del calendario ADF sin textos en la base. Para cada una, hasta tener sus textos propios:
 #   comun: clave de base/comunes/ (himno, lectura, responsorio, antífona del cántico evangélico y preces del común)
 #   como: nombre de otra celebración del santoral de la base, de la que toma todo
+#   es: la misma celebración con otro nombre en la base (usa sus textos, sin aviso)
 #   pendiente: oficio propio del que no hay nada
 # La asignación inicial es automática, por el nombre (tools/adf_santoral.py): corregir a mano acá.
 Santísimo Nombre de Jesús:
@@ -52,7 +53,7 @@ Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:
 San Josemaría Escrivá de Balaguer, presbítero:
   comun: pastores
 Bienaventurada Virgen María del Monte Carmelo:
-  comun: virgen-maria
+  es: NUESTRA SEÑORA DEL CARMEN
 Dedicación de la Basílica de Santa María la Mayor:
   como: LA DEDICACIÓN DE LA BASÍLICA DE SAN JUAN DE LETRÁN
 Santa Teresa de Calcuta, religiosa:
@@ -91,3 +92,5 @@ Nuestra Señora del Buen Consejo:
   comun: virgen-maria
 Beata María Felicia de Jesús Sacramentado (Chiquitunga), religiosa:
   comun: virgenes
+Divino Niño Jesús:
+  pendiente: 'Oficio propio: faltan todos los textos.'

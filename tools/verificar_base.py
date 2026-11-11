@@ -121,7 +121,8 @@ falta(len(MGv['versos']) == len(MGv['traduccion_versos']), 'gregoriano/magnifica
 ADF = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
 CL, CV = leer(os.path.join(B, 'comunes', 'laudes.yaml')), leer(os.path.join(B, 'comunes', 'visperas.yaml'))
 for n, a in ADF.items():
-    falta(a.get('comun') or a.get('como') or a.get('pendiente'), f'santoral/adf.yaml · {n}: falta comun, como o pendiente')
+    falta(a.get('comun') or a.get('como') or a.get('es') or a.get('pendiente'), f'santoral/adf.yaml · {n}: falta comun, como, es o pendiente')
+    if a.get('es'): falta(a['es'] in SaL and a['es'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["es"]}»')
     if a.get('comun'): falta(a['comun'] in CL and a['comun'] in CV, f'santoral/adf.yaml · {n}: no existe el común «{a["comun"]}»')
     if a.get('como'): falta(a['como'] in SaL and a['como'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["como"]}»')
 for nom, C, H in (('laudes', CL, HL), ('visperas', CV, HV)):
