@@ -332,11 +332,15 @@ test('calendarios: la base es ADF; otros calendarios y memorias libres son varia
   assert.ok(VI.armar('2026-11-10', 'BUE').primeras && !VI.armar('2026-11-10', '').primeras);                // con sus I Vísperas
   assert.equal(CP.diaCal('2027-05-08', 'BUE').n, 'Bienaventurada Virgen María de Luján');                  // lo de Argentina vale para Buenos Aires
   assert.equal(CP.diaCal('2027-05-08', '').g, 'Feria');
-  // 13 de noviembre: feria, con dos memorias libres para elegir ese día
-  assert.equal(JSON.stringify(nombres('2026-11-13', '')), JSON.stringify(['ADF*', 'ESP ADF', 'ARG']));
-  const sel = {cal: '', dia: {'2026-11-13': 'San Artémides Zatti, religioso'}};
-  assert.equal(CP.diaCal('2026-11-13', sel).n, 'San Artémides Zatti, religioso');
-  assert.match(LA.armar('2026-11-13', sel).dia.nota, /Común de santos varones/);
+  // Día ferial con memoria libre: se celebra la memoria (no la feria). 13 de noviembre: san Leandro en ADF, san Artémides en ARG
+  assert.equal(JSON.stringify(nombres('2026-11-13', '')), JSON.stringify(['ESP ADF*', 'ARG']));
+  assert.equal(CP.diaCal('2026-11-13', '').n, 'San Leandro de Sevilla, obispo');
+  assert.equal(CP.diaCal('2026-11-13', 'ARG').n, 'San Artémides Zatti, religioso');
+  assert.equal(CP.diaCal('2026-11-13', 'BUE').n, 'San Artémides Zatti, religioso');
+  assert.match(LA.armar('2026-11-13', 'ARG').dia.nota, /Común de santos varones/);
+  assert.equal(CP.diaCal('2026-11-25', '').n, 'Santa Catalina de Alejandría, virgen y mártir');
+  assert.equal(CP.opcionesDia('2026-11-25', '').length, 1);
+  assert.equal(CP.opcionesDia('2026-11-15', '').length, 1);        // Roque González (Fiesta en PGY) no le gana al domingo
   for (const sg of Object.keys(ctx.window.CAL.var).flatMap(k => ctx.window.CAL.var[k].flatMap(v => v[1].split(' ')))) assert.ok(ctx.window.CAL.calendarios[sg], sg);
 });
 

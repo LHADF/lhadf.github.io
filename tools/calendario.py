@@ -24,7 +24,7 @@ import csv, re, yaml
 LOC = yaml.safe_load(open(os.path.join(RAIZ, 'base', 'calendario', 'locales.yaml'), encoding='utf-8'))
 NACIONALES = ['ARG', 'PGY', 'BRS']                 # los que el Ordo distingue con su columna «regiones»
 LOCALES = sorted({c['calendario'] for c in LOC['cambios']} - set(NACIONALES))
-PREC = {'Solemnidad': 4, 'Fiesta': 8, 'Memoria obligatoria': 11}   # propias, en la Tabla de los días litúrgicos
+PREC = {'Solemnidad': 8, 'Fiesta': 13, 'Memoria obligatoria': 16}   # propias, en la escala del Ordo (1 a 18; el domingo del T. O. es 10)
 # calendarios que traen cada celebración del santoral (columna «calendarios» del Ordo)
 SIGLAS = {(r['fecha'], r['nombre'].strip()): ', '.join(x.strip() for x in r['calendarios'].split(',') if x.strip())
           for r in csv.DictReader(open(os.path.join(ORDO, 'data', 'santoral.csv'), encoding='utf-8'))}
@@ -104,7 +104,17 @@ def main():
     while d <= fin + timedelta(days=1):
         k = d.isoformat()
         D = {c: M[c].dia(d) for c in CALS}
-        F = {c: ficha(D[c], cal=c) for c in CALS}
+        # En un día ferial con memorias libres, ADF celebra la memoria libre (no la feria): la del calendario más
+        # propio (el local, su país), si no la de ADF, si no la del calendario general.
+        def libre_de(c):
+            ls = D[c].libres
+            if not ls: return None
+            sig = lambda m: SIGLAS.get((m.clave, m.nombre), '')
+            for x in [c, LOC['padres'].get(c, ''), 'ADF', 'CRG']:
+                m = next((m for m in ls if x and x in sig(m).replace(' ', '').split(',')), None)
+                if m: return m
+            return ls[0]
+        F = {c: ficha(D[c], libre_de(c), cal=c) for c in CALS}
         dias[k] = F['']
         vs = []
         # variantes por calendario: cada uno se anota solo donde difiere del calendario del que parte
@@ -114,12 +124,12 @@ def main():
             if igual: igual[1].append(c)
             else: vs.append(['r', [c], F[c]])
         # memorias libres (optativas) de cualquiera de los calendarios
-        vistos = set()
+        vistos = {F[''].get('n')} | {v[2]['n'] for v in vs}
         for c in CALS:
             for m in D[c].libres:
-                if m.nombre in vistos: continue
-                vistos.add(m.nombre)
                 f = ficha(D[c], m, libre=True)
+                if f['n'] in vistos: continue
+                vistos.add(f['n'])
                 vs.append(['l', [x.strip() for x in f['cal'].split(',') if x.strip()] or ['CRG'], f])
         if vs: var[k] = vs
         d += timedelta(days=1)
