@@ -315,3 +315,10 @@ test('celebraciones propias de ADF: toman del común (o de otra celebración) ha
   assert.equal(LD.mapa['Divino Niño Jesús'], undefined);                         // no se confunde con santa Teresa del Niño Jesús
   for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || (a.es && LD.mapa[n] === a.es) || a.pendiente, n);
 });
+
+test('cántico de Daniel 3, 57-88: «No se dice Gloria al Padre» va como rúbrica, no como verso', () => {
+  const s = LA.armar('2026-11-15', 'ARG').secciones.find(x => x.k === 'salmo' && x.id === 'cantico-dn-3-57-88-56');
+  assert.equal(s.rubrica, 'No se dice Gloria al Padre.');
+  assert.equal(s.gloria, false);
+  assert.ok(!s.versos.es.some(v => /No se dice/.test(v)));
+});

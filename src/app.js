@@ -6,9 +6,11 @@ const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;',
 
 /* ---------- Estado ---------- */
 const DEF={vista:'hoy', rito:'novus', modo:'canto', salmos:'primer', trad:true,
-  lec:1.2, esc:'n', theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, region:'ARG', cantado:true};
+  zoom:1, theme:'light', tonos:{}, himno:{}, mariana:{}, examen:false, region:'ARG', cantado:true};
 let S=DEF;
-try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la'); } }catch(e){}
+try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Object.assign({},DEF,g); delete S.ves; if(!g.modo) S.modo=g.canto?'canto':(g.lengua==='es'?'es':'la');
+  if(g.zoom==null) S.zoom=(g.lec||1.2)/1.2*({g:1.15,mg:1.3,max:1.5}[g.esc]||1);   // antes había dos controles (texto y aplicación): se unifican
+  S.zoom=Math.min(2,Math.max(.8,Math.round(S.zoom*10)/10)); delete S.lec; delete S.esc; } }catch(e){}
 if(S.salmos==='texto') S.salmos='primer';
 if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
 // Reinicio único (como en el Cantoral): todos vuelven a claro una vez; si después eligen oscuro, se respeta
@@ -57,7 +59,10 @@ function cargarDia(){
 }
 cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
-function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#1c1a17':'#ffffff'; r.style.setProperty('--lec',S.lec); if(S.esc==='n') delete r.dataset.esc; else r.dataset.esc=S.esc; }
+function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#1c1a17':'#ffffff'; r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
+// Un solo tamaño (S.zoom, de 80 % a 200 % de a 10 %): el texto de la hora crece todo eso; botones y títulos, la mitad (hasta 150 %).
+function ESC(){ return S.zoom<=1 ? 1 : Math.min(1.5, 1+(S.zoom-1)/2); }
+function LEC(){ return 1.2*S.zoom/ESC(); }
 
 /* ---------- Texto según lengua ---------- */
 // Devuelve {p: principal, s: secundario (solo en bilingüe), falta: aviso}
@@ -114,7 +119,7 @@ function svgDe(id, ancho, tam){ // tam: tamaño de la letra y de la traducción,
 }
 function pintar(raiz){
   const els=[...(raiz||document).querySelectorAll('.partitura[data-g]')];
-  const zoom=S.lec/1.15;
+  const zoom=LEC()/1.15;
   return els.reduce((p,el)=>p.then(()=>{
     const ancho=Math.max(260, Math.round((el.clientWidth||600)/zoom/10)*10); el.dataset.w=ancho;
     // La partitura se dibuja con ancho «ancho» y se escala al ancho real: la letra se calcula para que, ya escalada,
@@ -422,7 +427,7 @@ function horaHTML(){
       case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p>${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
       case 'ant': h+=antHTML(sec); break;
-      case 'salmo': h+=salmoHTML(sec); break;
+      case 'salmo': h+=salmoHTML(sec)+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;
       case 'deo': h+=`<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b></p></div>`; break;
@@ -463,7 +468,7 @@ function horaHTML(){
 function horaActual(){ const d=new Date(); const m=d.getHours()*60+d.getMinutes();
   if(m<5*60) return 'completas'; if(m<9*60) return 'laudes'; if(m<11*60) return 'tercia'; if(m<14*60) return 'sexta'; if(m<17*60) return 'nona'; if(m<21*60) return 'visperas'; return 'completas'; }
 const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas'],['completas','Completas']];
-const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#d9d2c3',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
+const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#fff',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
 function portadaHTML(){
   const r=R(); const ahora=horaActual(); const esHoy=S.fecha===fechaHoy();
   const reg=CP.difiereRegion(S.fecha) ? `<div class="region"><span>Este día el calendario difiere:</span>${seg('region',Object.entries(CP.regiones),S.region)}</div>` : '';
@@ -520,13 +525,11 @@ const seg=(act,vals,cur)=>`<div class="seg" role="group">${vals.map(([v,n])=>`<b
 const sw=(act,on,t,d)=>`<div class="fila"><span><span class="tt">${t}</span>${d?`<span class="dd">${d}</span>`:''}</span><button class="sw" role="switch" data-act="${act}" aria-checked="${on}" aria-label="${t}"></button></div>`;
 function hojaOpciones(){
   hoja('Opciones',`
-    <div class="grupo"><h3>Lectura</h3><div class="tam"><button data-act="menos" aria-label="Achicar el texto">A−</button><span>Texto ${Math.round(S.lec/1.2*100)} %</span><button data-act="mas" aria-label="Agrandar el texto">A+</button></div>
-      <p class="hint" style="margin-top:12px">Tamaño de toda la aplicación</p>${seg('esc',[['n','Normal'],['g','Grande'],['mg','Muy grande'],['max','Máxima']],S.esc)}</div>
+    <div class="grupo"><h3>Tamaño</h3><div class="tam"><button data-act="menos" aria-label="Achicar" ${S.zoom<=.8?'disabled':''}>A−</button><span>${Math.round(S.zoom*100)} %</span><button data-act="mas" aria-label="Agrandar" ${S.zoom>=2?'disabled':''}>A+</button></div></div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
     <div class="grupo"><h3>Calendario</h3>${seg('region',Object.entries(CP.regiones),S.region)}<p class="hint" style="margin-top:8px">Calendario ADF. Paraguay cambia solo los días en que su calendario difiere.</p></div>
     <div class="grupo"><h3>Canto</h3>
-      ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}
-      <div class="leyenda">quia vidérunt óculi <b>me</b>i <span class="sg">*</span> salutá<i>re</i> <b>tu</b>um<small><span class="sg">*</span> mediante · <span class="sg">†</span> flexa. En el Nunc dimittis: negrita, acento; cursiva, preparación.</small></div></div>`);
+      ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>`);
 }
 let _toast, _undo=null;
 function toast(m, snap){
@@ -568,9 +571,7 @@ document.addEventListener('click',e=>{
     case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(S.unirCompletas?'Vísperas con Completas':'Vísperas solas'); break;
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
-    case 'menos': S.lec=Math.max(.9,Math.round((S.lec-.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
-    case 'mas': S.lec=Math.min(2,Math.round((S.lec+.1)*10)/10); cambio('Texto al '+Math.round(S.lec/1.2*100)+' %',false); break;
-    case 'esc': if(S.esc===v) break; S.esc=v; cambio('Tamaño: '+{n:'normal',g:'grande',mg:'muy grande',max:'máximo'}[v]); break;
+    case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio('Tamaño: '+Math.round(z*100)+' %',false); break; }
     case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); toast({light:'Modo claro',dark:'Modo oscuro'}[v], snap); break;
   }
 });
