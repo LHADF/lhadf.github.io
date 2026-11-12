@@ -59,3 +59,9 @@ Laudes y Vísperas: cargadas y armadas en la app (11/2026); falta revisar los pr
   de tres sílabas o más sin tilde (hay que agregarla a mano). Los cortes de renglón forzados se marcan con `(Z)`.
 - **Invocación en gregoriano:** tono solemne los domingos y solemnidades (y sus I Vísperas), el Triduo y las Octavas; tono festivo en las fiestas; tono ferial en ferias y memorias.
 - **Himnos:** Tiempo Ordinario, Adviento y Navidad, Cuaresma (y Triduo), Pascua: cada uno con su lista.
+
+## Comunes y propio del libro
+
+- `comunes/`: los comunes de Laudes, Vísperas, Oficio de lectura y Hora intermedia, del libro (tomo III), más Santa María en sábado.
+- `santoral/libro.yaml`: propio del libro para las celebraciones que sync no traía (clave: el nombre en el Ordo).
+- `santoral/adf.yaml`: qué común (o qué otra celebración) usa cada una. Se corrige a mano.

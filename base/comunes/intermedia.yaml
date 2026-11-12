@@ -1,0 +1,292 @@
+# Comunes de intermedia, del libro (Liturgia de las Horas, tomo III; tools/importar/comunes_libro.py).
+# Se usan para las celebraciones sin textos propios en la base (base/santoral/adf.yaml) y para lo que les falte.
+# «oraciones»: las que el libro da «en su defecto», con N. en lugar del nombre; «para» dice a quién corresponde cada una.
+# El común de doctores trae solo algunas partes: el resto se copió del de pastores. Se corrigen acá.
+dedicacion:
+  nombre: Común de la dedicación de una iglesia
+  tercia:
+    lectura:
+      ref: 1 Co 3, 16-17
+      texto: '¿No sabéis que sois templo de Dios y que el Espíritu de Dios habita en vosotros? Si alguno destruye el templo de Dios, Dios lo destruirá a él; porque el templo de Dios es santo: ese templo sois vosotros.'
+    ant: El templo del Señor es santo, es campo de Dios, es edificación de Dios.
+    versiculo:
+    - - V
+      - Señor, yo amo la belleza de tu casa.
+    - - R
+      - El lugar donde reside tu gloria.
+  sexta:
+    lectura:
+      ref: 2 Co 6, 10
+      texto: 'Nosotros somos templo del Dios vivo, como dijo Dios: «Habitaré en medio de ellos y andaré entre ellos; yo seré su Dios, y ellos serán mi pueblo.»'
+    ant: La santidad es el adorno de tu casa, Señor, por días sin término.
+    versiculo:
+    - - V
+      - Desead la paz a Jerusalén.
+    - - R
+      - Vivan seguros los que te aman.
+  nona:
+    lectura:
+      ref: Jr 7, 2b. 4-5a. 7a
+      texto: '¡Escucha, Judá, la palabra del Señor, los que entráis por estas puertas para adorar al Señor! No os creáis seguros con palabras engañosas, repitiendo: «Es el templo del Señor, el templo del Señor, el templo del Señor.» Si enmendáis vuestra conducta y vuestras acciones, entonces habitaré con vosotros en este lugar.'
+    ant: Ésta es la casa del Señor, construida sólidamente sobre roca firme.
+    versiculo:
+    - - V
+      - Entrad por las puertas del Señor con acción de gracias.
+    - - R
+      - Por sus atrios con himnos.
+virgen-maria:
+  nombre: Común de la Santísima Virgen María
+  tercia:
+    lectura:
+      ref: So 3, 14. 15b
+      texto: Regocíjate, hija de Sión; grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.
+    ant: Todos se dedicaban a la oración en común, con María la madre de Jesús. En la salmodia complementaria, en lugar del salmo 121, que se dice en las II Vísperas, puede tomarse el salmo 128.
+    versiculo:
+    - - V
+      - Dichosos los que escuchan la palabra de Dios.
+    - - R
+      - Y la cumplen.
+  sexta:
+    lectura:
+      ref: Za 9, 9a
+      texto: Alégrate, hija de Sión; canta, hija de Jerusalén. Mira a tu Rey que viene a ti, justo y victorioso.
+    ant: 'Dijo la madre de Jesús: «Haced lo que él diga.»'
+    versiculo:
+    - - V
+      - Dichoso el seno de santa María Virgen.
+    - - R
+      - Que llevó al Hijo del eterno Padre.
+  nona:
+    lectura:
+      ref: Jdt 13, 18-19
+      texto: Que el Altísimo te bendiga, hija, más que a todas las mujeres de la tierra. Bendito el Señor, creador del cielo y tierra, que enderezó tu golpe contra la cabeza del general enemigo. Los que recuerden esta hazaña de Dios jamás perderán la confianza que tú inspiras.
+    ant: 'Dijo el Señor a su madre: «Mujer, ahí tienes a tu hijo.» Luego dijo al discípulo: «Ahí tienes a tu madre.»'
+    versiculo:
+    - - V
+      - Bendita tú entre las mujeres.
+    - - R
+      - Y bendito el fruto de tu vientre.
+apostoles:
+  nombre: Común de apóstoles
+  tercia:
+    lectura:
+      ref: 2 Co 5, 19b-20
+      texto: Dios nos ha confiado el mensaje de la reconciliación. Por eso nosotros actuamos como enviados de Cristo, y es como si Dios mismo os exhortara por medio nuestro. En nombre de Cristo os pedimos que os reconciliéis con Dios.
+    ant: 'Id y proclamad el Evangelio del Señor: gratis habéis recibido, dad gratis.'
+    versiculo:
+    - - V
+      - A toda la tierra alcanza su pregón.
+    - - R
+      - Y hasta los límites del orbe su lenguaje.
+  sexta:
+    lectura:
+      ref: Hch 5, 12a. 14
+      texto: Los apóstoles hacían muchos signos y prodigios en medio del pueblo, y crecía el número de los creyentes, hombres y mujeres, que se adherían al Señor.
+    ant: Yo estoy con vosotros todos los días, hasta el fin del mundo.
+    versiculo:
+    - - V
+      - Guardaron los preceptos del Señor.
+    - - R
+      - Las normas y mandatos que les ordenó.
+  nona:
+    lectura:
+      ref: Hch 5, 41-42
+      texto: Los apóstoles salieron del Consejo contentos de haber merecido aquel ultraje por el nombre de Jesús. Ningún día dejaban de enseñar, en el templo y por las casas, anunciando el Evangelio de Jesucristo.
+    ant: Con vuestra perseverancia, salvaréis vuestras almas.
+    versiculo:
+    - - V
+      - Estad alegres, dice el Señor.
+    - - R
+      - Porque vuestros nombres están inscritos en el cielo.
+varios-martires:
+  nombre: 'Común de mártires: para varios mártires'
+  tercia:
+    lectura:
+      ref: 1 Pe 5, 10-11
+      texto: Tras un breve padecer, el Dios de toda gracia, que os ha llamado a su eterna gloria en Cristo Jesús, él mismo os restablecerá, os afianzará, os robustecerá. A él la gloria y el poder, por los siglos de los siglos. Amén.
+    ant: El Señor les dio la victoria en la dura batalla, para que supieran que la sabiduría es más fuerte que nada.
+    versiculo:
+    - - V
+      - Los santos que esperan en el Señor.
+    - - R
+      - Serán fuertes y no fallarán.
+  sexta:
+    lectura:
+      ref: Cf. Hb 11, 33
+      texto: Los santos, por la fe, subyugaron reinos, ejercieron la justicia, alcanzaron lo prometido, por su fe en Cristo nuestro Señor.
+    ant: El Señor los coronó con una diadema de justicia, y les dio un nombre santo y glorioso.
+    versiculo:
+    - - V
+      - Vuestra tristeza.
+    - - R
+      - Se convertirá en alegría.
+  nona:
+    lectura:
+      ref: Sb 3, 1-2a. 3b
+      texto: Las almas de los justos están en las manos de Dios y no los alcanzará tormento alguno. Creyeron los insensatos que habían muerto; pero ellos están en la paz.
+    ant: Al ir, iban llorando, llevando la semilla.
+    versiculo:
+    - - V
+      - Al volver, vuelven cantando.
+    - - R
+      - Trayendo sus gavillas.
+un-martir:
+  nombre: 'Común de mártires: para un mártir'
+  tercia:
+    lectura:
+      ref: 1 Pe 5, 10-11
+      texto: Tras un breve padecer, el Dios de toda gracia, que os ha llamado a su eterna gloria en Cristo Jesús, él mismo os restablecerá, os afianzará, os robustecerá. A él la gloria y el poder, por los siglos de los siglos. Amén.
+    ant: El Señor le dio la victoria en la dura batalla, para que supiera que la sabiduría es más fuerte que nada.
+    versiculo:
+    - - V
+      - El Señor lo (la) revistió con un manto de gloria.”
+    - - R
+      - Y puso sobre su cabeza la corona de vencedor.
+  sexta:
+    lectura:
+      ref: Cf. St 1, 12
+      texto: Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida que el Señor ha prometido a los que lo aman.
+    ant: El Señor lo (la) coronó con una diadema de justicia, y le dio un nombre santo y glorioso.
+    versiculo:
+    - - V
+      - En Dios confío y no temo.
+    - - R
+      - ¿Qué podrá hacerme un mortal?
+  nona:
+    lectura:
+      ref: Sb 3, 1-2a. 3b
+      texto: Las almas de los justos están en las manos de Dios y no los alcanzará tormento alguno. Creyeron los insensatos que habían muerto; pero ellos están en la paz.
+    ant: Al ir, iban llorando, llevando la semilla.
+    versiculo:
+    - - V
+      - Al volver, vuelven cantando.
+    - - R
+      - Trayendo sus gavillas.
+pastores:
+  nombre: Común de pastores
+  tercia:
+    lectura:
+      ref: 1 Tm 4, 16
+      texto: Vigílate a ti mismo y a tu enseñanza; sé constante en ello; obrando así, te salvarás a ti mismo y a los que te escuchan.
+    ant: Padre, como tú me enviaste al mundo, así también los envío yo al mundo.
+    versiculo:
+    - - V
+      - Escogió el Señor a su siervo.
+    - - R
+      - Para pastorear a Jacob, su heredad.
+  sexta:
+    lectura:
+      ref: 1 Tm 1, 12
+      texto: Doy gracias a Cristo Jesús, nuestro Señor, que me hizo capaz, se fió de mí y me confió este ministerio.
+    ant: El que os recibe a vosotros me recibe a mí, y el que me recibe a mí recibe al que me ha enviado.
+    versiculo:
+    - - V
+      - No me avergüenzo del Evangelio.
+    - - R
+      - Que es una fuerza de Dios para la salvación.
+  nona:
+    lectura:
+      ref: 1 Tm 3, 13
+      texto: Los que ejercen bien el diaconado alcanzan un puesto honroso y grande entereza en la fe de Cristo Jesús.
+    ant: Somos colaboradores de Dios, y vosotros campo de Dios, edificación de Dios.
+    versiculo:
+    - - V
+      - Si el Señor no construye la casa.
+    - - R
+      - En vano se cansan los albañiles.
+virgenes:
+  nombre: Común de vírgenes
+  tercia:
+    lectura:
+      ref: Sb 8, 21
+      texto: Comprendí que no podría poseer la sabiduría si Dios no me la daba, y ya era un fruto de la prudencia saber de quién procedía esta gracia.
+    ant: Para mí lo bueno es estar junto a Dios, y hacer del Señor mi refugio.
+    versiculo:
+    - - V
+      - Ésta es la virgen sensata.
+    - - R
+      - Que el Señor encontró velando.
+  sexta:
+    lectura:
+      ref: 1 Co 7, 25
+      texto: Respecto al celibato no tengo órdenes del Señor, sino que doy mi parecer como hombre de fiar que soy, por la misericordia del Señor.
+    ant: Sostenme, Señor, con tu promesa y viviré, que no quede frustrada mi esperanza.
+    versiculo:
+    - - V
+      - Ésta es la virgen sensata.
+    - - R
+      - Una del número de las prudentes.
+  nona:
+    lectura:
+      ref: Ap 19, 6. 7
+      texto: Reina el Señor, nuestro Dios, dueño de todo; alegrémonos y gocemos y démosle gracias, porque llegó la boda del Cordero, y su esposa se ha embellecido.
+    ant: Qué hermosa y resplandeciente es la generación casta.
+    versiculo:
+    - - V
+      - Encontré al amor de mi alma.
+    - - R
+      - Lo abracé y ya no lo soltaré.
+santos-varones:
+  nombre: Común de santos varones
+  tercia:
+    lectura:
+      ref: Ga 6, 8
+      texto: Lo que uno siembre, eso cosechará. El que siembre en su carne, de la carne cosechará corrupción; el que siembre en el Espíritu, del Espíritu cosechará vida eterna.
+    ant: Quien guarda la palabra de Cristo ha llegado ciertamente a la plenitud del amor.
+    versiculo:
+    - - V
+      - El Señor enseña su camino a los humildes.
+    - - R
+      - Hace caminar a los humildes con rectitud.
+  sexta:
+    lectura:
+      ref: 1 Co 9, 26. 27a
+      texto: Yo corro, no como a la ventura; y ejerzo el pugilato, no como dando golpes en el vacío, sino que golpeo mi cuerpo y lo esclavizo.
+    ant: El que cumple la voluntad de mi Padre que está en el cielo, éste entrará en el reino de los cielos.
+    versiculo:
+    - - V
+      - Dichoso el hombre a quien tú educas, Señor.
+    - - R
+      - Al que enseñas tu ley.
+  nona:
+    lectura:
+      ref: Flp 4, 8, 9b
+      texto: Todo lo que es verdadero, noble, justo, puro, amable, laudable, todo lo que es virtud o mérito, tenedlo en cuenta, hermanos. Y el Dios de la paz estará con vosotros.
+    ant: Nadie vio, Señor, fuera de ti, lo que has preparado para los que te aman.
+    versiculo:
+    - - V
+      - Que se alegren los que se acogen a ti.
+    - - R
+      - Que se llenen de gozo los que aman tu nombre.
+santas-mujeres:
+  nombre: Común de santas mujeres
+  tercia:
+    lectura:
+      ref: Ga 6, 8
+      texto: Lo que uno siembre, eso cosechará. El que siembre en su carne, de la carne cosechará corrupción; el que siembre en el Espíritu, del Espíritu cosechará vida eterna.
+    ant: Sobre mis siervos y siervas derramaré mi Espíritu.
+    versiculo:
+    - - V
+      - Dichosos los que con vida intachable.
+    - - R
+      - Caminan en la voluntad del Señor.
+  sexta:
+    lectura:
+      ref: 1 Co 9, 26. 27a
+      texto: Yo corro, no como a la ventura; y ejerzo el pugilato, no como dando golpes en el vacío, sino que golpeo mi cuerpo y lo esclavizo.
+    ant: Mi corazón y mi carne se alegran por el Dios vivo.
+    versiculo:
+    - - V
+      - Encontré al amor de mi alma.
+    - - R
+      - Lo abracé y ya no lo soltaré.
+  nona:
+    lectura:
+      ref: Flp 4, 8, 9b
+      texto: Todo lo que es verdadero, noble, justo, puro, amable, laudable, todo lo que es virtud o mérito, tenedlo en cuenta, hermanos. Y el Dios de la paz estará con vosotros.
+    ant: Mi amado es para mí y yo para él.
+    versiculo:
+    - - V
+      - Para ti es mi música, Señor.
+    - - R
+      - Voy a explicar el camino perfecto.

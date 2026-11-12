@@ -1,0 +1,730 @@
+# Comunes de oficio, del libro (Liturgia de las Horas, tomo III; tools/importar/comunes_libro.py).
+# Se usan para las celebraciones sin textos propios en la base (base/santoral/adf.yaml) y para lo que les falte.
+# «oraciones»: las que el libro da «en su defecto», con N. en lugar del nombre; «para» dice a quién corresponde cada una.
+# El común de doctores trae solo algunas partes: el resto se copió del de pastores. Se corrigen acá.
+dedicacion:
+  nombre: Común de la dedicación de una iglesia
+  himno: No rechazaremos
+  salmodia:
+  - ant: ¡Portones!, alzad los dinteles, levantaos, puertas antiguas. Cuando el salmo 23 se ha dicho en el Invitatorio, aquí se dice el salmo 94.
+    salmo: salmo-23
+  - ant: ¡Qué deseables son tus moradas, Señor de los ejércitos! †
+    salmo: salmo-83
+  - ant: ¡Qué pregón tan glorioso para ti, ciudad de Dios!
+    salmo: salmo-86
+  versiculo:
+  - - V
+    - Me postraré hacia tu santuario.
+  - - R
+    - Daré gracias a tu nombre, Señor.
+  lectura1:
+    titulo: COMO PIEDRAS VIVAS, ENTRÁIS EN LA CONSTRUCIÓN DEL TEMPLO DEL ESPÍRITU
+    texto: |-
+      Hermanos: Después de haberos despojado de oda maldad y de toda falsedad, de las hipocresías y envidias, y de toda clase de murmuración, apeteced, como niños recién nacidos, la leche pura espiritual. Con ella podréis crecer hasta alcanzar la salvación, si es que realmente habéis saboreado lo bueno que es el Señor.
+
+      Acercándoos al Señor, la piedra viva, rechazada por los hombres, pero escogida y apreciada por Dios, también vosotros, como piedras vivas, entráis en la construcción del templo del Espíritu, formando un sacerdocio sagrado, para ofrecer sacrificios espirituales que Dios acepta por Jesucristo. Por eso se lee en la Escritura: «Ved que pongo en Sión una piedra angular escogida y preciosa. Y quien tenga fe en ella no será defraudado.»
+
+      Por consiguiente, a vosotros, que tenéis fe, os corresponde el honor; mas, para los que no tienen fe, «la piedra que desecharon los arquitectos es ahora la piedra angular, y ha venido a ser piedra de tropiezo y roca de escándalo». Y tropiezan en ella porque no tienen fe en la palabra de Cristo, para la cual estaban destinados.
+
+      Vosotros, en cambio, sois «linaje escogido, sacerdocio regio, nación santa, pueblo adquirido por Dios, para proclamar las hazañas del que os llamó a salir de la tiniebla y a entrar en su luz maravillosa». Vosotros, que en otro tiempo «njo erais pueblo», sois ahora «pueblo de Dios»; vosotros, que estabais «excluidos de la misericordia», sois ahora «objeto de la misericordia de Dios».
+
+      Hermanos, os exhorto a que, como forasteros y peregrinos que sois, os abstengáis de las pasiones terrenas que hacen guerra al alma. Observad entre los gentiles una conducta ejemplar. Así, por aquello mismo en que os calumnian como a malhechores, darán gloria a
+
+      Dios, cuando vean y consideren vuestras buenas obras, el día en que él venga a «visitarlos» con su gracia.
+
+      Sed sumisos a toda humana autoridad a causa del Señor: ya sea al soberano, en cuanto que tiene el mando; o bien a los gobernadores, como delegados suyos que son para castigar a los malhechores y para alabanza de los hombres de bien. Porque ésta es la voluntad de Dios: que, obrando el bien, hagáis callar a la ignorancia de los hombres insensatos. Portaos en esto como hombres libres, no como quienes se sirven de la libertad sólo para ocultar su maldad, sino como conviene a los que son siervos de Dios. Sed deferentes con todos, amad a vuestros hermanos, temed a Dios y honrad al soberano.
+    ref: De la primera carta del apóstol san Pedro 2, 1-17
+  resp1:
+    ref: Tb 13, 21; Ap 21, 19-21
+    vr:
+    - - R
+      - Las murallas de Jerusalén serán adornadas con piedras preciosas. * Y sus torres serán batidas con oro.
+    - - V
+      - Las puertas de Jerusalén serán rehechas con zafiros y esmeraldas, y con piedras preciosas sus murallas.
+    - - R
+      - Y sus torres serán batidas con oro.
+  lectura2:
+    titulo: SOMOS EDIFICADOS A MANERA DE PIEDRAS VIVAS COMO CASA Y ALTAR DE DIOS
+    texto: |-
+      Todos los que creemos en Cristo Jesús somos llamados piedras vivas, de acuerdo con lo que afirma la Escritura: Vosotros, como piedras vivas, entráis en la construcción del templo del Espíritu, formando un sacerdocio sagrado, para ofrecer sacrificios espirituales que Dios acepta por Jesucristo.
+
+      Cuando se trata de piedras materiales, sabemos que se tiene cuidado de colocar en los cimientos las piedras más sólidas y resistentes con el fin de que todo el peso del edificio pueda descansar con seguridad sobre ellas. Hay que entender que esto se aplica también a las piedras vivas, de las cuales algunas son como cimiento del edificio espiritual. ¿Cuáles son estas piedras que se colocan como cimiento? Los apóstoles y profetas. Así lo afirma Pablo cuando nos dice: Estáis edificados sobre el cimiento de los apóstoles y profetas, y el mismo Cristo Jesús es la piedra angular.
+
+      Para que te prepares con mayor interés, tú que me escuchas, a la construcción de este edificio, para que seas una de las piedras próximas a los cimientos, debes saber que es Cristo mismo el cimiento de este edificio que estamos describiendo. Así lo afirma el apóstol Pablo: Nadie puede poner otro cimiento fuera del ya puesto, que es Jesucristo. ¡Bienaventurados, pues, aquellos que construyen edificios espirituales sobre cimiento tan noble!
+
+      Pero en este edificio de la Iglesia conviene también que haya un altar. Ahora bien, yo creo que son capaces de llegar a serlo todos aquellos que, entre vosotros, piedras vivas, están dispuestos a dedicarse a la oración, para ofrecer a Dios día y noche sus intercesiones, y a inmolarle las víctimas de sus súplicas; ésos son, en efecto, aquellos con los que Jesús edifica su altar.
+
+      Considera, pues, qué alabanza se tributa a las piedras del altar. La Escritura afirma que se construyó, según está escrito en el libro de la ley de Moisés, un altar de piedras sin labrar, a las que no había tocado el hierro. ¿Cuáles, piensas tú, que son estas piedras sin labrar? Quizá estas piedras sin labrar y sin mancha sean los santos apóstoles, quienes, por su unanimidad y su concordia, formaron como un único altar. Pues se nos dice, en efecto, que todos ellos perseveraban unánimes en la oración, y que abriendo sus labios decían:
+
+      Señor, tú penetras el corazón de todos. Ellos, por tanto, que oraban concordes con una misma voz y un mismo espíritu, son dignos de formar un único altar sobre el que Jesús ofrezca su sacrificio al Padre.
+
+      Pero nosotros también, por nuestra parte, debemos esforzarnos por tener todos un mismo pensar y un mismo sentir, no obrando por envidia ni por ostentación, sino permaneciendo en el mismo espíritu y en los mismos sentimientos, con el fin de que también nosotros podamos llegar a ser piedras aptas para la construcción del altar.
+    autor: |-
+      De las Homilías de Orígenes, presbítero, sobre el libro de Josué
+      (Homilía 9, 1-2: SC 71, 244-246)
+  resp2:
+    ref: Cf. Is 2, 2. 3; Sal 125, 6
+    vr:
+    - - R
+      - 'La casa del Señor está firme en la cima de los montes, encumbrada sobre todas las montañas. * Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
+    - - V
+      - Al volver, vuelven cantando, trayendo sus gavillas.
+    - - R
+      - 'Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
+virgen-maria:
+  nombre: Común de la Santísima Virgen María
+  himno: María, pureza en vuelo
+  salmodia:
+  - ant: María ha recibido la bendición del Señor y la misericordia de Dios, su salvador. Cuando el salmo 23 se ha dicho en el Invitatorio, aquí se dice el salmo 94.
+    salmo: salmo-23
+  - ant: El Altísimo consagra su morada.
+    salmo: salmo-45
+  - ant: ¡Qué pregón tan glorioso para ti, Virgen María!
+    salmo: salmo-86
+  versiculo:
+  - - V
+    - María conservaba todas estas cosas.
+  - - R
+    - Meditándolas en su corazón.
+  lectura1:
+    titulo: EL EMMANUEL REY PACÍFICO
+    texto: |-
+      En aquellos días, habló el Señor a Ajaz, diciendo: «Pide una señal al Señor, tu Dios: en lo hondo del abismo o en lo alto del cielo.»
+
+      Respondió Ajaz: «No la pido, no quiero tentar al Señor.»
+
+      Entonces dijo Isaías: «Escucha, heredero de David: ¿No os basta cansar a los hombres, que cansáis incluso a mi Dios? Pues el Señor, por su cuenta, os dará él mismo una señal. Mirad: la joven ha concebido y dará a luz un hijo, y le pondrá por nombre Emmanuel, porque tenemos a Dios-con-nosotros.
+
+      Saldrá un renuevo del tronco de Jesé, y de su raíz brotará un vástago. Sobre él se posará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza, espíritu de ciencia y de temor del Señor.
+
+      No juzgará por apariencias ni sentenciará sólo de oídas; juzgará a los pobres con justicia, con rectitud a los desamparados. Herirá al violento con la vara de su boca, y al
+
+      malvado con el aliento de sus labios. La justicia será el ceñidor de su cintura, y la lealtad el cinturón de sus caderas.
+
+      Habitará el lobo con el cordero, y la pantera se echará con el cabrito, el novillo y el león pacerán juntos: y un niño pequeño los conducirá. La vaca pastará con el oso, sus crías yacerán juntas; el león comerá paja con el buey. El niño jugará junto al agujero del áspid, la criatura meterá la mano en el escondrijo de la serpiente. Nadie hará daño ni estrago por todo mi Monte Santo: porque estará lleno el país de ciencia del Señor, como las aguas colman el mar.»
+    ref: Del libro del profeta Isaías 7, 10-14; 8, 10; 11, 1-9
+  resp1:
+    ref: Cf. Is 7, 14; cf. 9, 6. 7
+    vr:
+    - - R
+      - 'Mirad: la joven ha concebido y dará a luz un hijo, * y tendrá por nombre «Consejero admirable» y «Dios poderoso».'
+    - - V
+      - Se sentará sobre el trono de David y reinará para siempre.
+    - - R
+      - Y tendrá por nombre «Consejero admirable» y «Dios poderoso».
+  lectura2:
+    titulo: LA BENDICIÓN DEL PADRE HA BRILLADO PARA LOS HOMBRES POR MEDIO DE MARÍA
+    texto: |-
+      Alégrate, llena de gracia, el Señor está contigo. ¿Y qué puede ser más sublime que este gozo, oh Virgen Madre? ¿O qué cosa puede ser más excelente que esta gracia, que, viniendo de Dios, sólo tú has obtenido? ¿Acaso se puede imaginar una gracia más agradable o más espléndida? Todas las demás no se pueden comparar a las maravillas que se realizan en ti; todas las demás son inferiores a tu gracia; todas, incluso las más excelsas, son secundarias y gozan de una claridad muy inferior.
+
+      El Señor está contigo. ¿Y quién es el que puede competir contigo? Dios proviene de ti; ¿quién no te cederá el paso, quién habrá que no te conceda con gozo la primacía y la precedencia? Por todo ello, contemplando tus excelsas prerrogativas, que destacan sobre las de todas las criaturas, te aclamo con el máximo entusiasmo: Alégrate, llena de gracia, el Señor está contigo. Pues tú eres la fuente del gozo no sólo para los hombres, sino también para los ángeles del cielo.
+
+      Verdaderamente, bendita tú entre las mujeres, pues has cambiado la maldición de Eva en bendición; pues has hecho que Adán, que yacía postrado por una maldición, fuera bendecido por medio de ti.
+
+      Verdaderamente, bendita tú entre las mujeres, pues por medio de ti la bendición del Padre ha brillado para los hombres y los ha liberado de la antigua maldición.
+
+      Verdaderamente, bendita tú entre las mujeres, pues por medio de ti encuentran la salvación tus progenitores; pues tú has engendrado al Salvador que les concederá la salvación eterna.
+
+      Verdaderamente, bendita tú entre las mujeres, pues sin concurso de varón has dado a luz aquel fruto que es bendición para todo el mundo, al que ha redimido de la maldición que no producía sino espinas.
+
+      Verdaderamente, bendita tú entre las mujeres, pues a pesar de ser una mujer, criatura de Dios como todas las demás, has llegado a ser, de verdad, Madre de Dios. Pues lo que nacerá de ti es, con toda verdad, el Dios hecho hombre, y, por lo tanto, con toda justicia y con toda razón, te llamas Madre de Dios, pues de verdad das a luz a Dios.
+
+      Tú tienes en tu seno al mismo Dios, hecho hombre en tus entrañas, quien, como un esposo, saldrá de ti para conceder a todos los hombres el gozo y la luz divina.
+
+      Dios ha puesto en ti, oh Virgen, su tienda como en un cielo puro y resplandeciente. Saldrá de ti como el esposo de su alcoba e, imitando el recorrido del sol, recorrerá en su vida el camino de la futura salvación para todos los vivientes, y, extendiéndose de un extremo a otro del cielo, llenará con calor divino y vivificante todas las cosas.
+    autor: |-
+      De los sermones de san Sofronio, obispo
+      (Sermón 2, en la Anunciación de la Santísima Virgen, 21-22. 26: PG 87, 3, 3242. 3250)
+  resp2:
+    ref: S. Sofronio, Disertación 2
+    vr:
+    - - R
+      - Verdaderamente, bendita tú eres entre todas las mujeres, ya que has cambiado en bendición la maldición de Eva. * Por ti la bendición del Padre ha brillado sobre los hombres.
+    - - V
+      - Por ti alcanzan la salvación tus progenitores.
+    - - R
+      - Por ti la bendición del Padre ha brillado sobre los hombres.
+santa-maria-sabado:
+  nombre: Memoria de santa María en sábado
+  himno: Rosa entre rosas
+  oraciones:
+  - para: ''
+    texto: Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Perdona, Señor, las culpas de tus fieles y haz que, quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.
+  - para: ''
+    texto: Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
+  lectura2:
+    titulo: LA BENDICIÓN DEL PADRE HA BRILLADO PARA LOS HOMBRES POR MEDIO DE MARÍA
+    texto: |-
+      Alégrate, llena de gracia, el Señor está contigo. ¿Y qué puede ser más sublime que este gozo, oh Virgen Madre? ¿O qué cosa puede ser más excelente que esta gracia, que, viniendo de Dios, sólo tú has obtenido? ¿Acaso se puede imaginar una gracia más agradable o más espléndida? Todas las demás no se pueden comparar a las maravillas que se realizan en ti; todas las demás son inferiores a tu gracia; todas, incluso las más excelsas, son secundarias y gozan de una claridad muy inferior.
+
+      El Señor está contigo. ¿Y quién es el que puede competir contigo? Dios proviene de ti; ¿quién no te cederá el paso, quién habrá que no te conceda con gozo la primacía y la precedencia? Por todo ello, contemplando tus excelsas prerrogativas, que destacan sobre las de todas las criaturas, te aclamo con el máximo entusiasmo: Alégrate, llena de gracia, el Señor está contigo. Pues tú eres la fuente del gozo no sólo para los hombres, sino también para los ángeles del cielo.
+
+      Verdaderamente, bendita tú entre las mujeres, pues has cambiado la maldición de Eva en bendición; pues has hecho que Adán, que yacía postrado por una maldición, fuera bendecido por medio de ti.
+
+      Verdaderamente, bendita tú entre las mujeres, pues por medio de ti la bendición del Padre ha brillado para los hombres y los ha liberado de la antigua maldición.
+
+      Verdaderamente, bendita tú entre las mujeres, pues por medio de ti encuentran la salvación tus progenitores; pues tú has engendrado al Salvador que les concederá la salvación eterna.
+
+      Verdaderamente, bendita tú entre las mujeres, pues sin concurso de varón has dado a luz aquel fruto que es bendición para todo el mundo, al que ha redimido de la maldición que no producía sino espinas.
+
+      Verdaderamente, bendita tú entre las mujeres, pues a pesar de ser una mujer, criatura de Dios como todas las demás, has llegado a ser, de verdad, Madre de Dios. Pues lo que nacerá de ti es, con toda verdad, el Dios hecho hombre, y, por lo tanto, con toda justicia y con toda razón, te llamas Madre de Dios, pues de verdad das a luz a Dios.
+
+      Tú tienes en tu seno al mismo Dios, hecho hombre en tus entrañas, quien, como un esposo, saldrá de ti para conceder a todos los hombres el gozo y la luz divina.
+
+      Dios ha puesto en ti, oh Virgen, su tienda como en un cielo puro y resplandeciente. Saldrá de ti como el esposo de su alcoba e, imitando el recorrido del sol, recorrerá en su vida el camino de la futura salvación para todos los vivientes, y, extendiéndose de un extremo a otro del cielo, llenará con calor divino y vivificante todas las cosas.
+    autor: |-
+      De los sermones de san Sofronio, obispo
+      (Sermón 2, en la Anunciación de la Santísima Virgen, 21-22. 26: PG 87, 3, 3242. 3250)
+  resp2:
+    ref: S. Sofronio, Disertación 2
+    vr:
+    - - R
+      - Verdaderamente, bendita tú eres entre todas las mujeres, ya que has cambiado en bendición la maldición de Eva. * Por ti la bendición del Padre ha brillado sobre los hombres.
+    - - V
+      - Por ti alcanzan la salvación tus progenitores.
+    - - R
+      - Por ti la bendición del Padre ha brillado sobre los hombres.
+apostoles:
+  nombre: Común de apóstoles
+  himno: ¡Guardadnos en la fe y en la unidad
+  salmodia:
+  - ant: A toda la tierra alcanza su pregón y hasta los límites del orbe su lenguaje.
+    salmo: salmo-18-a
+  - ant: Proclamaron la obra de Dios y meditaron sus acciones.
+    salmo: salmo-63
+  - ant: Pregonaron su justicia y todos los pueblos contemplaron su gloria.
+    salmo: salmo-96
+  versiculo:
+  - - V
+    - Contaron las alabanzas del Señor y su poder.
+  - - R
+    - Y las maravillas que realizó.
+  lectura1:
+    titulo: SIGAMOS EL EJEMPLO DEL APÓSTOL, COMO ÉL SUGUIÓ EL DE CRISTO
+    texto: |-
+      Hermanos: Que la gente sólo vea en nosotros servidores de Cristo y administradores de los misterios de Dios. Ahora, en un administrador lo que se busca es que sea fiel. Por lo que a mí se refiere, me importa muy poco ser juzgado por vosotros o por cualquier tribunal humano. Ni siquiera yo mismo juzgo mi actuación. Cierto que mi conciencia nada me reprocha, mas no por eso me creo justificado. Mi juez será el Señor. No juzguéis antes de tiempo; dejad que venga el Señor. Él sacará a la luz lo que está oculto en las tinieblas y pondrá al descubierto las intenciones del corazón. Entonces vendrá a cada uno su alabanza de parte de Dios.
+
+      Estas verdades, hermanos, las he expuesto por vuestro provecho, aplicándolas a mi persona y a Apolo. Así, por esta aplicación, aprenderéis aquello de: «No más de lo que está escrito», a fin de que nadie se enorgullezca de un apóstol y desprecie a otro. Porque, ¿quién es el que te distingue? ¿Qué tienes que no hayas recibido? Y, si lo recibiste, ¿por qué te glorías como si no lo hubieras recibido? ¡Ya estáis satisfechos! ¡Os habéis hecho ya ricos! ¡Habéis ganado un reino sin ayuda nuestra! ¡Ya lo podíais haber ganado! ¡Así tendríamos nosotros parte en vuestro reino!
+
+      Por lo que veo, Dios nos ha asignado a los apóstoles el último lugar, como a condenados a muerte; porque hemos venido a ser el espectáculo del mundo, de los ángeles y de los hombres. Nosotros somos insensatos por Cristo, vosotros sensatos en Cristo; nosotros débiles, vosotros fuertes; vosotros estimados, nosotros despreciados. Todavía ahora pasamos hambre, sed y desnudez. Somos maltratados y arrojados de una parte a otra, y nos fatigamos trabajando con nuestras manos. Cuando nos maldicen, bendecimos; cuando nos persiguen, soportamos; cuando nos injurian, respondemos con dulzura. Hemos venido a ser hasta ahora como basura del mundo, como el desecho de la humanidad.
+
+      No os escribo esto para confundiros, sino para amonestaros como a hijos míos carísimos. Aunque tengáis, en efecto, diez mil maestros que os lleven a Cristo, de hecho sólo tenéis un padre. Yo os engendré para Cristo por la predicación del evangelio.
+
+      Os exhorto, pues, a que seáis mis imitadores, como yo ¡mito a Cristo.
+    ref: De la primera carta del apóstol san Pablo a los Corintios 4, 1-16
+  resp1:
+    ref: Jn 15, 15; Mt 13, 11. 16
+    vr:
+    - - R
+      - Ya no os llamaré siervos; os he llamado amigos, * porque todo cuanto me ha comunicado el Padre os lo he dado a conocer.
+    - - V
+      - A vosotros ha concedido Dios conocer los misterios del reino de los cielos; dichosos vuestros ojos porque ven, y vuestros oídos porque oyen.
+    - - R
+      - Porque todo cuanto me ha comunicado el Padre os lo he dado a conocer. La segunda lectura es del Propio de los santos. En las solemnidades y fiestas, después del segundo responsorio se dice el himno Te Deum. La oración como en el Propio de los santos.
+varios-martires:
+  nombre: 'Común de mártires: para varios mártires'
+  himno: Pléyade santa y noble de mártires insignes
+  salmodia:
+  - ant: Los mártires derramaron su sangre por Cristo y consiguieron así el premio eterno.
+    salmo: salmo-2
+  - ant: Los justos viven eternamente y han recibido de Dios su recompensa.
+    salmo: salmo-32-i
+  - ant: Vosotros, mis santos, que luchasteis en el mundo, recibiréis la recompensa de vuestro esfuerzo.
+    salmo: salmo-32-ii
+  versiculo:
+  - - V
+    - Nosotros esperamos en el Señor.
+  - - R
+    - Él es nuestro auxilio y escudo.
+  lectura1:
+    titulo: NADA PUEDE APARTARNOS DEL AMOR DE DIOS MANIFESTADO EN CRISTO JESÚS
+    texto: |-
+      Hermanos: Los padecimientos de esta vida presente tengo por cierto que no son nada en comparación con la gloria futura que se ha de revelar en nosotros. La creación entera está en expectación suspirando por esa manifestación gloriosa de los hijos de Dios; porque las creaturas todas quedaron sometidas al desorden, no porque a ello tendiesen de suyo, sino por culpa del hombre que las sometió. Y abrigan la esperanza de quedar ellas, a su vez, libres de la esclavitud de la corrupción, para tomar parte en la libertad gloriosa que han de recibir los hijos de Dios.
+
+      La creación entera, como bien lo sabemos, va suspirando y gimiendo toda ella, hasta el momento presente, como con dolores de parto. Y no es ella sola, también nosotros, que poseemos las primicias del Espíritu, suspiramos en nuestro interior, anhelando la redención de nuestro cuerpo. Sólo en esperanza poseemos esta salvación; ahora bien, una esperanza, cuyo objeto estuviese ya a la vista, no sería ya esperanza. Pues, ¿cómo es posible esperar una cosa que está ya a la vista? Pero, si estamos esperando lo que no vemos, lo esperamos con anhelo y constancia.
+
+      De la misma manera, el Espíritu acude en ayuda de nuestra debilidad, pues no sabemos pedir como conviene; y el Espíritu mismo aboga por nosotros con gemidos que no pueden ser expresados en palabras. Y aquel que escudriña los corazones sabe cuáles son los deseos del Espíritu y que su intercesión en favor de los fieles es según el querer de Dios.
+
+      Sabemos que a los que aman a Dios todo les sirve para el bien: a los que ha llamado conforme a su designio. A los que había escogido, Dios los predestinó a ser imagen de su Hijo, para que él fuera el primogénito de muchos hermanos. A los que predestinó, los llamó; a los que llamó, los justificó; a los que justificó, los glorificó.
+
+      ¿Qué decir a todo esto? Si Dios está con nosotros, ¿quién estará contra nosotros? El que no perdonó a su propio Hijo, sino que lo entregó a la muerte por todos nosotros, ¿cómo no nos dará con él todo lo demás? ¿Quién se atreverá a acusar a los elegidos de Dios? Siendo Dios quien justifica, ¿quién podrá condenar? ¿Acaso Cristo Jesús, el que murió por nosotros? Más aún, ¿el que fue resucitado y está a la diestra de Dios intercediendo por nosotros? ¿Quién podrá apartarnos del amor de Cristo? ¿La aflicción? ¿La angustia? ¿La persecución? ¿El hambre? ¿La desnudez? ¿El peligro? ¿La espada? (Como dice la Escritura: «Por tu causa nos llevan a la muerte uno y otro día; nos tratan como a ovejas que van al matadero.») Pero en todo esto vencemos fácilmente por aquel que nos ha amado.
+
+      Pues estoy convencido de que ni muerte, ni vida, ni ángeles, ni principados, ni presente, ni futuro, ni potencias, ni altura, ni profundidad, ni creatura alguna, podrá apartarnos del amor de Dios manifestado en Cristo Jesús, Señor nuestro.
+    ref: De la carta del apóstol san Pablo a los Romanos 8, 18-39
+  resp1:
+    ref: Mt 5, 44-45. 48
+    vr:
+    - - R
+      - Amad a vuestros enemigos, haced bien a los que os odian y rogad por los que os persiguen. * Así seréis hijos de vuestro Padre celestial.
+    - - V
+      - Sed perfectos como vuestro Padre celestial es perfecto.
+    - - R
+      - Así seréis hijos de vuestro Padre celestial.
+  lectura2:
+    titulo: LOS QUE DESEAMOS ALCANZAR LAS PROMESAS DEL SEÑOR DEBEMOS IMITARLE EN TODO
+    texto: |-
+      Os saludo, queridos hermanos, y desearía gozar de vuestra presencia, pero la dificultad de entrar en vuestra cárcel no me lo permite. Pues, ¿qué otra cosa más deseada y gozosa pudiera ocurrirme que no fuera unirme a vosotros, para que me abrazarais con aquellas manos que, conservándose puras, inocentes y fieles a la fe del Señor, han rechazado los sacrificios sacrílegos?
+
+      ¿Qué cosa más agradable y más excelsa que poder besar ahora vuestros labios, que han confesado de manera solemne al Señor, y qué desearía yo con más ardor sino estar en medio de vosotros para ser contemplado con los mismos ojos, que, habiendo despreciado al mundo, han sido dignos de contemplar a Dios?
+
+      Pero como no tengo la posibilidad de participar con mi presencia en esta alegría, os envío esta carta, como representación mía, para que vosotros la leáis y la escuchéis. En ella os felicito, y al mismo tiempo os exhorto a que perseveréis con constancia y fortaleza en la confesión de la gloria del cielo; y, ya que habéis comenzado a recorrer el camino que recorrió el Señor, continuad por vuestra fortaleza espiritual hasta recibir la corona, teniendo como protector y guía al mismo Señor que dijo: Sabed que ya estoy con vosotros todos los días, hasta el fin del mundo.
+
+      ¡Feliz cárcel, dignificada por vuestra presencia! ¡Feliz cárcel, que traslada al cielo a los hombres de Dios! ¡Oh tinieblas más resplandecientes que el mismo sol y más; brillantes que la luz de este mundo, donde han sido edificados los templos de Dios y santificados vuestros miembros por la confesión del nombre del Señor!
+
+      Que ahora ninguna otra cosa ocupe vuestro corazón y vuestro espíritu sino los preceptos divinos y los mandamientos celestes, con los que el Espíritu Santo siempre os animaba a soportar los sufrimientos del martirio. Nadie se preocupe ahora de la muerte sino de la inmortalidad, ni del sufrimiento temporal sino de la gloria eterna, ya que está escrito: Mucho le place al Señor la muerte de sus fieles. Y en otro lugar: El sacrificio que agrada a Dios es un espíritu quebrantado; un corazón quebrantado y humillado, tú no lo desprecias.
+
+      Y también, cuando la sagrada Escritura habla de los tormentos que consagran a los mártires de Dios y los santifican en la prueba, afirma: La gente pensaba que cumplían una pena, pero ellos esperaban de lleno la inmortalidad. Gobernarán naciones, someterán pueblos, y el Señor reinará sobre ellos eternamente.
+
+      Por tanto, si pensáis que habéis de juzgar y reinar con Cristo Jesús, necesariamente debéis de regocijaros y superar las pruebas de la hora presente en vista del gozo de los bienes futuros. Pues, como sabéis, desde el comienzo del mundo las cosas han sido dispuestas de tal forma que la justicia sufre aquí una lucha con el siglo. Ya desde el mismo comienzo, el justo Abel fue asesinado, y a partir de él siguen el mismo camino los justos, los profetas y los apóstoles.
+
+      El mismo Señor ha sido en sí mismo el ejemplar para todos ellos, enseñando que ninguno puede llegar a su reino sino aquellos que sigan su mismo camino: El que se ama a si mismo se pierde, y el que se aborrece a sí mismo en este mundo se guardará para la vida eterna. Y en otro lugar: No tengáis miedo a los que matan el cuerpo, pero no pueden matar el alma. No, temed al que puede destruir con el fuego alma y cuerpo.
+
+      También el apóstol Pablo nos dice que todos los que deseamos alcanzar las promesas del Señor debemos imitarle en todo: Somos hijos de Dios -dice- y, si somos hijos, también herederos; herederos de Dios y coherederos con Cristo, ya que sufrimos con él para ser también con él glorificados.
+    autor: |-
+      De las cartas de san Cipriano, obispo y mártir
+      (Carta 6,1-2: CSEL 3, 480-482)
+  resp2:
+    ref: San Cipriano, Carta 58
+    vr:
+    - - R
+      - Dios nos contempla, Cristo y sus ángeles nos miran, mientras luchamos por la fe. * Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo.
+    - - V
+      - Revistámonos de fuerza y preparémonos para la lucha con un espíritu indoblegable, con una fe sincera, con una total entrega.
+    - - R
+      - Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo. En las solemnidades y fiestas, después del segundo responsorio se dice el himno Te Deum. La oración como en las Laudes.
+un-martir:
+  nombre: 'Común de mártires: para un mártir'
+  himno: Pléyade santa y noble de mártires insignes
+  salmodia:
+  - ant: Todos os odiarán por mi nombre; pero el que persevere hasta el fin se salvará.
+    salmo: salmo-2
+  - ant: Los trabajos de ahora no pesan lo que la gloria que un día se nos descubrirá.
+    salmo: salmo-10
+  - ant: El Señor probó a los elegidos como oro en el crisol y los recibió como sacrificio de holocausto para siempre.
+    salmo: salmo-16
+  versiculo:
+  - - V
+    - Me asaltaban angustias y aprietos.
+  - - R
+    - Tus mandatos son mi delicia.
+  lectura1:
+    titulo: EN LA TRIBULACIÓN SE MANIFIESTA EL PODER DE CRISTO
+    texto: |-
+      Hermanos: Llevamos el tesoro de nuestro ministerio en vasos de barro para que aparezca evidente que la extraordinaria grandeza del poder es de Dios, y que no proviene de nosotros. Nos aprietan por todos lados pero no nos aplastan; nos ponen en aprietos, mas no desesperamos de encontrar salida; somos acosados, mas no aniquilados; derribados, pero no perdidos; llevamos siempre en nosotros por todas partes los sufrimientos mortales de Jesús, para que también la vida de Jesús se manifieste en nosotros. Aun viviendo, estamos continuamente entregados a la muerte por Jesús, para que también la vida de Jesús se manifieste en esta nuestra vida mortal. Así pues, en nosotros va trabajando la muerte y en vosotros va actuando la vida.
+
+      Pero como somos impulsados por el mismo poder de la fe -del que dice la Escritura: «Creí, por eso hablé»-, también nosotros creemos, y por eso hablamos. Y sabemos que aquel que resucitó a Jesús nos resucitará también a nosotros con Jesús, y nos hará aparecer en su presencia juntamente con vosotros. Porque todo esto es por vosotros, para que la gracia de Dios, difundida en el mayor número de fieles, multiplique las acciones de gracias para gloria de Dios.
+
+      Por eso no perdemos el ánimo. Aunque nuestra condición física se vaya deshaciendo, nuestro interior se renueva día a día. Y una tribulación pasajera y liviana produce un inmenso e incalculable tesoro de gloria. No nos fijamos en lo que se ve, sino en lo que no se ve. Lo que se ve es transitorio; lo que no se ve es eterno.
+
+      Aunque se desmorone la morada terrestre en que acampamos, sabemos que Dios nos dará una casa eterna en el cielo, no construida por hombres. Y así gemimos en este estado, deseando ardientemente ser revestidos de nuestra habitación celeste, si es que nos encontramos vestidos, y no desnudos. ¡Sí!, los que estamos en esta tienda gemimos oprimidos. No es que queramos ser desvestidos, sino más bien sobrevestidos, para que lo mortal sea absorbido por la vida. Y el que nos ha destinado a eso es Dios, el cual nos ha dado en arras el Espíritu.
+
+      Así pues, siempre tenemos confianza, aunque sabemos que mientras vivimos estamos desterrados lejos del Señor. Caminamos sin verlo, guiados por la fe. Y es tal nuestra confianza, que preferimos desterrarnos del cuerpo y vivir junto al Señor.
+    ref: De la segunda carta del apóstol san Pablo a los Corintios 4, 7-5, 8
+  resp1:
+    ref: Mt 5, 11-12a. 10
+    vr:
+    - - R
+      - Dichosos vosotros, cuando os insulten y persigan y propalen contra vosotros toda clase de calumnias por mi causa; * alegraos y regocijaos, porque vuestra recompensa será grande en los cielos.
+    - - V
+      - Dichosos los que padecen persecución por razón del bien y de la virtud, porque de ellos es el reino de los cielos.
+    - - R
+      - Alegraos y regocijaos, porque vuestra recompensa será grande en los cielos.
+  lectura2:
+    titulo: PRECIOSA ES LA MUERTE DE LOS MÁRTIRES, COMPRADA CON EL PRECIO DE LA MUERTE DE CRISTO
+    texto: |-
+      Por los hechos tan excelsos de los santos mártires, en los que florece la Iglesia por todas partes, comprobamos con nuestros propios ojos cuán verdad sea aquello que hemos cantado: Mucho le place al Señor la muerte de sus fieles, pues nos place a nosotros y a aquel en cuyo honor ha sido ofrecida.
+
+      Pero el precio de todas estas muertes es la muerte de uno solo. ¿Cuántas muertes no habrá comprado la muerte única de aquel sin cuya muerte no se hubieran multiplicado los granos de trigo? Habéis escuchado sus palabras cuando se acercaba al momento de nuestra redención: Si el grano de trigo no cae en tierra y muere, queda infecundo; pero si muere, da mucho fruto.
+
+      En la cruz se realizó un excelso trueque: allí se liquidó toda nuestra deuda, cuando del costado de Cristo, traspasado por la lanza del soldado, manó la sangre, que fue el precio de todo el mundo.
+
+      Fueron comprados los fieles y los mártires: pero la fe de los mártires ha sido ya comprobada; su sangre es testimonio de ello. Lo que se les confió, lo han devuelto, y han realizado así aquello que afirma Juan: Cristo dio su vida por nosotros; también nosotros debemos dar nuestra vida por los hermanos.
+
+      Y también, en otro lugar, se afirma: Has sido invitado a un gran banquete: considera atentamente qué manjares te ofrecen, pues también tú debes preparar lo que a ti te han ofrecido. Es realmente sublime el banquete donde se sirve, como alimento, el mismo Señor que invita al banquete. Nadie, en efecto, alimenta de sí mismo a los que invita, pero el Señor Jesucristo ha hecho precisamente esto: él, que es quien invita, se da a sí mismo como comida y bebida. Y los mártires, entendiendo bien lo que habían comido y bebido, devolvieron al Señor lo mismo que de él habían recibido.
+
+      Pero, ¿cómo podrían devolver tales dones si no fuera por concesión de aquel que fue el primero en concedérselos? Esto es lo que nos enseña el salmo que hemos cantado: Mucho le place al Señor la muerte de sus fieles.
+
+      En este salmo el autor consideró cuán grandes cosas había recibido del Señor; contempló la grandeza de los dones del Todopoderoso, que lo había creado, que cuando se había perdido lo buscó, que una vez encontrado le dio su perdón, que lo ayudó, cuando luchaba, en su debilidad, que no se apartó en el momento de las pruebas, que lo coronó en la victoria y se le dio a sí mismo como premio; consideró todas estas cosas y exclamó: ¿Cómo pagaré al Señor todo el bien que me ha hecho? Alzaré la copa de la salvación.
+
+      ¿De qué copa se trata? Sin duda de la copa de la pasión, copa amarga y saludable, copa que debe beber primero el médico para quitar las aprensiones del enfermo. Es ésta la copa: la reconocemos por las palabras de Cristo, cuando dice: Padre, si es posible, que se aleje de mí ese cáliz.
+
+      De este mismo cáliz, afirmaron, pues, los mártires: Alzaré la copa de la salvación, invocando su nombre. «¿Tienes miedo de no poder resistir?, «No», dice el mártir. «Por qué?» «Porque he invocado el nombre del Señor.» ¿Cómo podrían haber triunfado los mártires si en ellos no hubiera vencido aquel que afirmó: Tened valor: yo he vencido al mundo? El que reina en el cielo regía la mente y la lengua de sus mártires, y por medio de ellos, en la tierra, vencía al diablo y, en el cielo, coronaba a sus mártires. ¡Dichosos los que así bebieron este cáliz! Se acabaron los dolores y han recibido el honor.
+
+      Por tanto, queridos hermanos, concebid en vuestra mente y en vuestro espíritu lo que no podéis ver con vuestros ojos, y sabed que mucho le place al Señor la muerte de sus fieles.
+    autor: |-
+      De los Sermones de san Agustín, obispo
+      (Sermón 329, en el natalicio de los mártires, 1-2: PL 38,1454-1456)
+  resp2:
+    ref: '2 Tm 4, 7-8: Flp 3, 8. 10'
+    vr:
+    - - R
+      - He combatido bien mi combate, he corrido hasta la meta, he mantenido la fe. * Ahora me aguarda la corona merecida.
+    - - V
+      - Lo perdí todo a fin de tener una íntima experiencia de Cristo y de la comunión con sus padecimientos, muriendo su misma muerte.
+    - - R
+      - Ahora me aguarda la corona merecida. En las solemnidades y fiestas, después del segundo responsorio se dice el himno Te Deum. La oración como en las Laudes.
+pastores:
+  nombre: Común de pastores
+  himno: Puerta de Dios en el redil humano
+  salmodia:
+  - ant: Quien quiera ser el primero que sea el ultimo de todos y el servidor de todos.
+    salmo: salmo-20-2-8-14
+  - ant: Cuando aparezca el supremo Pastor, recibiréis la corona de gloria que no se marchita.
+    salmo: salmo-91-i
+  - ant: Siervo bueno y fiel, pasa al banquete de tu Señor.
+    salmo: salmo-91-ii
+  versiculo:
+  - - V
+    - Escucharás de mi boca una palabra.
+  - - R
+    - Y les darás la alarma de mi parte.
+  lectura1:
+    titulo: RECOMENDACIONES DE PABLO SOBRE LAS CUALIDADES Y LOS DEBERES DE LOS OBISPOS
+    texto: |-
+      Querido hermano: Es preciso que el obispo sea irreprochable, como administrador que es de la casa de Dios: que no sea soberbio ni iracundo, ni dado al vino ni pendenciero, ni codicioso de torpes ganancias. Más bien, debe ser hospitalario, amigo de todo lo bueno, discreto, recto, religioso, dueño de sí y muy adicto al auténtico mensaje de la verdad transmitida. Así podrá exhortar y animar con sana instrucción y rebatir a los contradictores.
+
+      Hay, en verdad, muchos insubordinados, charlatanes y embaucadores, sobre todo de entre los partidarios de la circuncisión. Es necesario irles tapando la boca, porque van revolviendo familias enteras, enseñando lo que no se debe, con la mira puesta en vergonzosas ganancias. Pero tú enseña lo que es conforme a la sana doctrina.
+
+      Los ancianos, que sean moderados, dignos, discretos, íntegros y vigorosos en la fe, en la caridad, en la constancia. Las ancianas, de igual modo, que observen un porte religioso, como conviene a una profesión santa; que no se den a la murmuración ni al mucho vino; que sean maestras de buenas costumbres, para poder inspirar sentimientos de modestia a las más jóvenes. Así les enseñarán a ser buenas esposas y buenas madres de familia, a ser discretas, honestas, hacendosas, bondadosas, dóciles a sus maridos. Así no darán motivo para que se hable mal del Evangelio de Dios.
+
+      Asimismo, a los jóvenes, anímalos a vivir con moderación en todas las cosas. Y tú sé modelo por tus buenas obras, con desinterés e integridad en la enseñanza, con gravedad, con genuina e incensurable doctrina, para que nuestros adversarios se vean confundidos, al no tener nada malo que decir contra nosotros.
+    ref: 'Para un santo papa u obispo: De la carta del apóstol san Pablo a Tito 1, 7-11; 2, 18'
+  resp1:
+    ref: Hch 20, 28; 1 Co 4, 2
+    vr:
+    - - R
+      - Tened cuidado del rebaño que el Espíritu Santo os ha encargado guardar, * como pastores de la Iglesia de Dios, que él adquirió con la sangre de su Hijo.
+    - - V
+      - En un administrador lo que se busca es que sea fiel.
+    - - R
+      - 'Como pastores de la Iglesia de Dios, que él adquirió con la sangre de su Hijo. Para un santo presbítero: De la primera carta del apóstol san Pedro 5, 1-11 DEBERES DE LOS PRESBÍTEROS Y DE LOS FIELES A los presbíteros en esa comunidad, yo, presbítero como ellos, testigo de los sufrimientos de Cristo y partícipe de la gloria que va a descubrirse, os exhorto: Sed pastores del rebaño de Dios a vuestro cargo, gobernándolo, no a la fuerza sino de buena gana, como Dios quiere, no por sórdida ganancia, sino con generosidad, no como dominadores sobre la heredad de Dios, sino convirtiéndoos en modelos del rebaño. Y, cuando aparezca el supremo Pastor, recibiréis la corona de gloria que no se marchita. Asimismo vosotros, jóvenes, sed sumisos a los presbíteros, y sed humildes unos con otros, porque Dios resiste a los soberbios, pero da su gracia a los humildes. Inclinaos bajo la poderosa mano de Dios, para que a su tiempo os eleve. Descargad en él todas vuestras preocupaciones, porque él se interesa
+        por vosotros. Sed sobrios, estad despiertos: vuestro enemigo, el diablo, como león rugiente, ronda buscando a quien devorar; resistidle, firmes en la fe. Y sabed que la misma clase de padecimientos están sufriendo vuestros hermanos, dispersos por el mundo. Tras un breve padecer, el Dios de toda gracia, que os ha llamado a su eterna gloria en Cristo Jesús, él mismo os restablecerá, os afianzará, os robustecerá. A él la gloria y el poder, por los siglos de los siglos. Amén. Responsorio 1 Co 4, 1-2; Pr 20, 6'
+    - - R
+      - Que la gente sólo vea en nosotros servidores de Cristo y administradores de los misterios de Dios. * Ahora, en un administrador lo que se busca es que sea fiel.
+    - - V
+      - Muchos hombres se dicen piadosos, pero un hombre fiel, ¿quién lo encontrará?
+    - - R
+      - Ahora, en un administrador lo que se busca es que sea fiel.
+  lectura2:
+    titulo: EN PEDRO PERMANECE LO QUE CRISTO INSTITUYÓ
+    texto: |-
+      Aunque nosotros, queridos hermanos, nos vemos débiles y agobiados cuando pensamos en las obligaciones de nuestro ministerio, hasta tal punto que, al querer actuar con entrega y energía, nos sentimos condicionados por nuestra fragilidad, sin embargo, contando con la constante protección del Sacerdote eterno y todopoderoso, semejante a nosotros, pero también igual al Padre, de aquel que quiso humillarse en su divinidad hasta tal punto que la unió a nuestra humanidad para elevar nuestra naturaleza a la dignidad divina, digna y piadosamente nos gozamos de su especial providencia, pues, aunque delegó en muchos pastores el cuidado de sus ovejas, sin embargo, continúa él mismo velando sobre su amada grey.
+
+      También nosotros recibimos alivio en nuestro ministerio apostólico de su especial y constante protección, y nunca nos vemos desprovistos de su ayuda. Es tal, en efecto, la solidez de los cimientos sobre los que se levanta el edificio de la Iglesia que, por muy grande que sea la mole del edificio que sostienen, no se resquebrajan.
+
+      La firmeza de aquella fe del príncipe de los apóstoles, que mereció ser alabada por el Señor, es eterna. Y así como persiste lo que Pedro afirmó de Cristo, así permanece también lo que Cristo edificó sobre Pedro. Permanece, pues, lo que la Verdad dispuso, y el bienaventurado Pedro, firme en aquella solidez de piedra que le fue otorgada, no ha abandonado el timón de la Iglesia que el Señor le encomendara.
+
+      Pedro ha sido colocado por encima de todo, de tal forma que en los mismos nombres que tiene podemos conocer hasta qué punto estaba unido a Cristo: él, en efecto, es llamado: piedra, fundamento, portero del reino de los cielos, árbitro de lo que hay que atar y desatar; por ello, hay que acatar en los cielos el fallo de las sentencias que él da en la tierra.
+
+      Pedro sigue ahora cumpliendo con mayor plenitud y eficacia la misión que le fue encomendada, y, glorificado en Cristo y con Cristo, continúa ejerciendo los servicios que le fueron confiados.
+
+      Si, pues, hacemos algo rectamente y lo ejecutamos con prudencia, si algo alcanzamos de la misericordia divina con nuestra oración cotidiana, es en virtud y por los méritos de aquel cuyo poder pervive en esta sede y cuya autoridad brilla en la misma.
+
+      Todo ello es fruto, amados hermanos, de aquella confesión que, inspirada por el Padre en el corazón de Pedro, supera todas las incertidumbres de las opiniones humanas y alcanza la firmeza de la roca que no será nunca cuarteada por ninguna violencia.
+
+      En toda la Iglesia, Pedro confiesa diariamente: Tú eres el Mesías, el Hijo de Dios vivo, y toda lengua que confiesa al Señor está guiada por el magisterio de esta confesión.
+    autor: |-
+      De los sermones de san León Magno, papa
+      (Sermón 3 en el aniversario de su consagración episcopal, 2-3: PL 54,145-146)
+  resp2:
+    ref: Mt 16, 18; Sal 47, 9
+    vr:
+    - - R
+      - 'Dijo Jesús a Simón: «Yo te digo: Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia, * y los poderes del infierno no la derrotarán.»'
+    - - V
+      - Dios la ha fundado para siempre.
+    - - R
+      - 'Y los poderes del infierno no la derrotarán. Para un santo fundador de una iglesia: Del tratado de san Hilario, obispo, sobre el salmo ciento veintiséis (Núms. 7-10: PL 9, 696-697) DIOS EDIFICA Y GUARDA SU CIUDAD Si el Señor no construye la casa, en vano se cansan los albañiles. Sois templo de Dios y el Espíritu de Dios habita en vosotros. Este es, pues, el templo de Dios, lleno de su doctrina y de su poder, capaz de contener al Señor en el santuario del corazón. Sobre esto ha hablado el profeta en el salmo: Santo es tu templo, admirable por su justicia. La santidad, la justicia y la continencia humana son un templo para Dios. Dios debe, pues, construir su casa. Construida por manos de hombres, no se sostendría; apoyada en doctrinas del mundo, no se mantendría en pie; protegida por nuestros ineficaces desvelos y trabajos, no se vería segura. Esta casa debe ser construida y custodiada de manera muy diferente: no sobre la tierra ni sobre la movediza y deslizante arena, sino sobre
+        sus propios fundamentos, los profetas y los apóstoles. Esta casa debe construirse con piedras vivas, debe encontrar su trabazón en Cristo, la piedra angular, debe crecer por la unión mutua de sus elementos hasta que llegue a ser el varón perfecto y consiga la medida de la plenitud del cuerpo de Cristo; debe, en fin, adornarse con la belleza de las gracias espirituales y resplandecer con su hermosura. Edificada por Dios, es decir, por su palabra, no se derrumbará. Esta casa irá creciendo en cada uno de nosotros con diversas construcciones, según las diferencias de los fieles, para dar ornato y amplitud a la ciudad dichosa. El Señor es desde antiguo el atento guardián de esta ciudad: cuando protegió a Abrahán peregrino y eligió a Isaac para el sacrificio; cuando enriqueció a su siervo Jacob y, en Egipto, ennobleció a José, vendido por sus hermanos; cuando fortaleció a Moisés contra el Faraón y eligió a Josué como jefe del ejército; cuando liberó a David de todos los peligros y concedió
+        a Salomón el don de la sabiduría; cuando asistió a los profetas, arrebató a Elías y eligió a Eliseo; cuando protegió a Daniel y, en el horno, refrigeró con una brisa suave a los niños, juntándose con ellos como uno más; cuando, por medio del ángel, anunció a José que la Virgen había concebido por la fuerza divina, y confirmó a María; cuando envió como precursor a Juan y eligió a los apóstoles, y cuando rogó al Padre, diciendo: Padre santo, guárdalos en tu nombre a los que me has dado; yo guardaba en tu nombre a los que me diste; finalmente, cuando él mismo, después de su pasión, nos promete que velará siempre sobre nosotros: Yo estoy con vosotros todos los días, hasta el fin del mundo. Ésta es la protección eterna de aquella bienaventurada y santa ciudad, que, compuesta de muchos, pero formando una sola, es en cada uno de nosotros la ciudad de Dios. Esta ciudad, por tanto, debe ser edificada por Dios para que crezca hasta su completo acabamiento. Comenzar una edificación no significa
+        su perfección; pero mediante la edificación se va preparando la perfección final. Responsorio 1 Pe 2, 4-5; Sal 117, 22'
+    - - R
+      - Acercándoos al Señor, la piedra viva, * también vosotros, como piedras vivas, entráis en la construcción del templo del Espíritu, formando un sacerdocio sagrado, para ofrecer sacrificios espirituales que Dios acepta por Jesucristo.
+    - - V
+      - Él es ahora la piedra angular.
+    - - R
+      - También vosotros, como piedras vivas, entráis en la construcción del templo del Espíritu, formando un sacerdocio sagrado, para ofrecer sacrificios espirituales que Dios acepta por Jesucristo.
+doctores:
+  himno: Vosotros sois la luz del mundo
+  salmodia:
+  - ant: Quien quiera ser el primero que sea el ultimo de todos y el servidor de todos.
+    salmo: salmo-20-2-8-14
+  - ant: Cuando aparezca el supremo Pastor, recibiréis la corona de gloria que no se marchita.
+    salmo: salmo-91-i
+  - ant: Siervo bueno y fiel, pasa al banquete de tu Señor.
+    salmo: salmo-91-ii
+  versiculo:
+  - - V
+    - Escucharás de mi boca una palabra.
+  - - R
+    - Y les darás la alarma de mi parte.
+  lectura1:
+    titulo: EL HOMBRE SABIO, CONOCEDOR DE LAS ESCRITURAS
+    texto: |-
+      El que se entrega de lleno a meditar la ley del Altísimo indaga la sabiduría de sus predecesores y estudia las profecías, examina las explicaciones de autores famosos y penetra por parábolas intrincadas, indaga el misterio de proverbios y da vueltas a enigmas.
+
+      Presta servicio ante los poderosos y se presenta ante los jefes; viaja por países extranjeros, probando el bien y el mal de los hombres; madruga por el Señor, su creador, y reza delante del Altísimo; abre la boca para suplicar, pidiendo perdón de sus pecados.
+
+      Si el Señor lo quiere, él se llenará de espíritu de inteligencia; Dios le hará derramar sabias palabras, y él confesará al Señor en su oración. Dios guiará sus consejos prudentes,
+
+      y él meditará sus misterios; Dios le comunicará su doctrina y enseñanza, y él se gloriará de la ley del Altísimo.
+
+      Muchos alabarán su inteligencia, que no perecerá jamás; nunca faltará su recuerdo, y su fama vivirá por generaciones. Los pueblos contarán su sabiduría y la asamblea anunciará su alabanza.
+    ref: Del libro de Ben Sirá 39, 1-14
+  resp1:
+    ref: Sir 15, 5-6
+    vr:
+    - - R
+      - En la asamblea le da la palabra, * y el Señor lo llena de espíritu, sabiduría e inteligencia.
+    - - V
+      - Alcanzará gozo y alegría.
+    - - R
+      - Y el Señor lo llena de espíritu, sabiduría e inteligencia.
+  lectura2:
+    titulo: (PL 180, 384) DEBEMOS BUSCAR LA INTELIGENCIA DE LA FE EN EL ESPÍRITU SANTO
+    texto: |-
+      Oh alma fiel, cuando tu fe se vea rodeada de incertidumbre y tu débil razón no comprenda los misterios demasiado elevados, di sin miedo, no por deseo de oponerte, sino por anhelo de profundizar: «¿Cómo será eso?».
+
+      Que tu pregunta se convierta en oración, que sea amor, piedad, deseo humilde. Que tu pregunta no pretenda escrutar con suficiencia la majestad divina, sino que busque la salvación en aquellos mismos medios de salvación que Dios nos ha dado. Entonces te responderá el Consejero admirable: Cuando venga el Defensor, Que enviará el Padre en mi nombre, él os enseñará todo y os guiará hasta la verdad plena. Pues nadie conoce lo íntimo del hombre, sino el espíritu del hombre, que está en él; y, del mismo modo, lo íntimo de Dios lo conoce sólo el Espíritu de Dios.
+
+      Apresúrate, pues, a participar del Espíritu Santo: cuando se le invoca, ya está presente; es más, si no hubiera estado presente no se le habría podido invocar. Cuando se le llama, viene, y llega con la abundancia de las bendiciones divinas. El es aquella impetuosa corriente que alegra la ciudad de Dios.
+
+      Si al venir te encuentra humilde, sin inquietud, lleno de temor ante la palabra divina, se posará sobre ti y te revelará lo que Dios esconde a los sabios y entendidos de este mundo. Y, poco a poco, se irán esclareciendo ante tus ojos todos aquellos misterios que la Sabiduría reveló a sus discípulos cuando convivía con ellos en el mundo, pero que ellos no pudieron comprender antes de la venida del Espíritu de verdad, que debía llevarlos hasta la verdad plena.
+
+      En vano se espera recibir o aprender de labios humanos aquella verdad que sólo puede enseñar el que es la misma verdad. Pues es la misma verdad quien afirma: Dios es espíritu, y así como aquellos que quieren adorarle deben hacerlo en espíritu y verdad, del mismo modo los que desean conocerlo deben buscar en el Espíritu Santo la inteligencia de la fe y la significación de la verdad pura y sin mezclas.
+
+      En medio de las tinieblas y de las ignorancias de esta vida, el Espíritu Santo es, para los pobres de espíritu, luz que ilumina, caridad que atrae, dulzura que seduce, amor que ama, camino que conduce a Dios, devoción que se entrega, piedad intensa.
+
+      El Espíritu Santo, al hacernos crecer en la fe, revela a los creyentes la justicia de Dios, da gracia tras gracia y, por la fe que nace del mensaje, hace que los hombres alcancen la plena iluminación.
+    autor: Del Espejo de la fe, de Guillermo, abad del monasterio de san Teodorico
+  resp2:
+    ref: Mt 13, 52; Pr 14, 33
+    vr:
+    - - R
+      - Un letrado que entiende del reino de los cielos * es como un padre de familia que va sacando del arca lo nuevo y lo antiguo.
+    - - V
+      - En corazón sensato habita la sabiduría, aun en medio de necios se da a conocer.
+    - - R
+      - Es como un padre de familia que va sacando del arca lo nuevo y lo antiguo.
+  nombre: Común de doctores de la Iglesia
+virgenes:
+  nombre: Común de vírgenes
+  himno: Esta mujer no quiso
+  salmodia:
+  - ant: Virgen ilustre, sensata, prudente en tu decisión, tienes como esposo del alma al Verbo inmaculado.
+    salmo: salmo-18-a
+  - ant: Por amor a mi Señor Jesucristo, tuve en nada los bienes de este mundo y del tiempo presente.
+    salmo: salmo-44-i
+  - ant: Prendado está el rey de tu belleza, porque él es tu Señor y tu Dios.
+    salmo: salmo-44-ii
+  versiculo:
+  - - V
+    - Me enseñarás el sendero de la vida.
+  - - R
+    - Me saciarás de gozo en tu presencia.
+  lectura1:
+    titulo: LA VIRGINIDAD CRISTIANA
+    texto: |-
+      Hermanos: Respecto al celibato no tengo órdenes del Señor, sino que doy mi parecer como hombre de fiar que soy, por la misericordia del Señor. Estimo que es un bien, por la necesidad actual: quiero decir que es un bien vivir así.
+
+      ¿Estás unido a una mujer? No busques la separación. ¿Estás libre? No busques mujer; aunque si te casas, no haces mal; y si una soltera se casa, tampoco hace mal. Pero estos tales sufrirán la tribulación de la carne respeto vuestras razones.
+
+      Os digo esto, hermanos: el momento es apremiante. Queda como solución: que los que tienen mujer vivan como si no la tuvieran; los que lloran, como si no lloraran; los que están alegres, como si no lo estuvieran; los que compran, como si no poseyeran; los que negocian en el mundo, como si no disfrutaran de él: porque la presentación de este mundo se termina.
+
+      Quiero que os ahorréis preocupaciones: el célibe se preocupa de los asuntos del Señor, buscando contentar al Señor; en cambio, el casado se preocupa de los asuntos del mundo, buscando contentar a su mujer, y anda dividido. Lo mismo, la mujer sin marido y la soltera se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma; en cambio, la casada se preocupa de los asuntos del mundo, buscando contentar a su marido. Os digo todo esto para vuestro bien, no para poneros una trampa, sino para induciros a una cosa noble y al trato con el Señor sin preocupaciones.
+
+      Si, a pesar de todo, alguien cree faltar a la conveniencia respecto de su doncella, por estar en la flor de su edad, y conviene proceder así, haga lo que quiera, no hace mal; cásense. Mas el que permanece firme en su corazón, y sin presión alguna y en pleno uso de su libertad está resuelto en su interior a guardar a su doncella, hará bien. Así pues, el que casa a su doncella obra bien. Y el que no la casa obra mejor.
+
+      La mujer está ligada a su marido mientras él viva; mas una vez muerto el marido, queda libre para casarse con quien quiera, pero en el Señor. Sin embargo, será más feliz si permanece así según mi consejo; que yo también creo tener el Espíritu de Dios.
+    ref: De la primera carta del apóstol san Pablo a los Corintios 7, 25-40
+  resp1:
+    ref: ''
+    vr:
+    - - R
+      - Prendado está el rey de tu belleza, obra de sus manos; él es tu Dios y tu rey. * Tu rey es al mismo tiempo tu esposo.
+    - - V
+      - Has tomado por esposo al rey y Dios; él te ha dotado, él te ha engalanado, te ha redimido, te ha santificado.
+    - - R
+      - Tu rey es al mismo tiempo tu esposo.
+  lectura2:
+    titulo: EL CORO NUMEROSO DE LAS VÍRGENES ACRECIENTA EL GOZO DE LA MADRE IGLESIA
+    texto: |-
+      Me dirijo ahora a las vírgenes con tanto mayor interés cuanta mayor es su dignidad. La virginidad es como la flor del árbol de la Iglesia, la hermosura y el adorno de los dones del Espíritu, alegría, objeto de honra y alabanza, obra íntegra e incorrupta, imagen de Dios, reflejo de la santidad del Señor, porción la más ilustre del rebaño de Cristo. La madre Iglesia se alegra en las vírgenes, y por ellas florece su admirable fecundidad, y, cuanto más abundante es el número de las vírgenes, tanto más crece el gozo de la madre. A las vírgenes nos dirigimos, a ellas exhortamos, movidos más por el afecto que por la
+
+      autoridad, y, conscientes de nuestra humildad y bajeza, no pretendemos reprochar sus faltas, sino velar por ellas por miedo de que el enemigo las manche.
+
+      Porque no es inútil este cuidado, ni vano el temor que sirve de ayuda en el camino de la salvación, velando por la observancia de aquellos preceptos de vida que nos dio el Señor; así, las que se consagraron a Cristo renunciando a los placeres de la carne podrán vivir entregadas al Señor en cuerpo y alma y, llevando a feliz término su propósito, obtendrán el premio prometido, no por medio de los adornos del cuerpo, sino agradando únicamente a su Señor, de quien esperan la recompensa de su virginidad.
+
+      Conservad, pues, vírgenes, conservad lo que habéis empezado a ser, conservad lo que seréis: una magnífica recompensa os está reservada; vuestro esfuerzo está destinado a un gran premio, vuestra castidad a una gran corona. Lo que nosotros seremos, vosotras habéis comenzado ya a serlo. Vosotras participáis, ya en este mundo, de la gloria de la resurrección; camináis por el mundo sin contagiaros de él: siendo castas y vírgenes, sois iguales a los ángeles de Dios. Pero con la condición de que vuestra virginidad permanezca inquebrantable e incorrupta, para que lo que habéis comenzado con decisión lo mantengáis con constancia, no buscando los adornos de las joyas ni vestidos, sino el atavío de las virtudes.
+
+      Escuchad la voz del Apóstol a quien el Señor llamó vaso de elección y a quien envió a proclamar los mandatos del reino: El primer hombre -dice-, hecho de tierra, era terreno; el segundo hombre es del cielo. Pues igual que el terreno son los hombres terrenos; igual que el celestial son los hombres celestiales. Nosotros, que somos imagen del hombre terreno, seremos también imagen del hombre celestial. Ésta es la imagen de la virginidad, de la integridad, de la santidad y la verdad.
+    autor: |-
+      Del tratado de san Cipriano, obispo y mártir, sobre el comportamiento de las vírgenes.
+      (Núms. 3-4. 22. 23: CSEL 3,189-190. 202-204)
+  resp2:
+    ref: 1 Cor 7, 34; Sal 72, 26
+    vr:
+    - - R
+      - La mujer sin marido y la soltera * se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
+    - - V
+      - Se consume mi corazón por Dios, mi herencia eterna.
+    - - R
+      - Se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
+santos-varones:
+  nombre: Común de santos varones
+  himno: Desde que mi voluntad
+  salmodia:
+  - ant: Te pidió vida y se la has concedido, Señor; lo has vestido de honor y majestad.
+    salmo: salmo-20-2-8-14
+  - ant: La senda del justo brilla como la aurora, se va esclareciendo hasta que es de día.
+    salmo: salmo-91-i
+  - ant: El justo crecerá como palmera, se alzará como cedro del Líbano.
+    salmo: salmo-91-ii
+  versiculo:
+  - - V
+    - El Señor condujo al justo por sendas llanas.
+  - - R
+    - Le mostró el reino de Dios.
+  lectura1:
+    titulo: VUESTRA VIDA ESTÁ OCULTA CON CRISTO EN DIOS
+    texto: |-
+      Hermanos: Si habéis sido resucitados con Cristo, buscad las cosas de arriba, donde Cristo está sentado a la diestra de Dios. Poned vuestro corazón en las cosas del cielo, no en las de la tierra. Porque habéis muerto y vuestra vida está oculta con Cristo en Dios; cuando se manifieste Cristo, que es vuestra vida, os manifestaréis también vosotros con él, revestidos de gloria.
+
+      Mortificad las pasiones de vuestro hombre terrenal: la fornicación, la impureza, la concupiscencia, los malos deseos y la avaricia, que es una idolatría. Por ellas se desata la cólera de Dios.
+
+      En todo eso anduvisteis también vosotros, cuando vivíais entregados a ellas. Pero ahora dejad también vosotros a un lado todo eso: la ira, la indignación, la malignidad, la maledicencia y el torpe lenguaje. No os engañéis unos a otros.
+
+      Despojaos del hombre viejo con sus malas pasiones y revestíos del hombre nuevo, que se va renovando hasta alcanzar un conocimiento pleno de Dios y se va configurando con la imagen del que lo creó. Así, ya no hay griego ni judío, ni circunciso ni incircunciso, ni bárbaro ni escita, ni esclavo ni libre. Sólo Cristo todo y en todos.
+
+      Por lo tanto, como pueblo elegido de Dios, pueblo sacro y amado, sea vuestro uniforme: la misericordia entrañable, la bondad, la humildad, la dulzura, la comprensión. Sobrellevaos mutuamente y perdonaos, cuando alguno tenga quejas contra otro. El Señor os ha perdonado: haced vosotros lo mismo.
+
+      Por encima de todo, procurad el amor, que es el ceñidor de la unidad consumada. Que la paz de Cristo actúe de árbitro en vuestro corazón: a ella habéis sido convocados, en un solo cuerpo. Y vivid siempre agradecidos. Que la palabra de Cristo habite entre vosotros en toda su riqueza; enseñaos unos a otros con toda sabiduría; exhortaos mutuamente. Cantad a Dios, dadle gracias de todo corazón, con salmos, himnos y cánticos inspirados.
+
+      Todo lo que de palabra o de obra realicéis, sea todo en nombre de Jesús, ofreciendo la Acción de Gracias a Dios Padre por medio de él.
+    ref: De la carta del apóstol san Pablo a los Colosenses 3, 1-17
+  resp1:
+    ref: Ga 3, 27. 28; cf. Ef 4, 24
+    vr:
+    - - R
+      - 'Todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay distinción entre judío y gentil: * todos sois uno en Cristo Jesús.'
+    - - V
+      - 'Vestíos de la nueva condición humana, creada a imagen de Dios: justicia y santidad verdaderas.'
+    - - R
+      - Todos sois uno en Cristo Jesús.
+  lectura2:
+    titulo: NO PUEDE OCULTARSE LA LUZ DE LOS CRISTIANOS
+    texto: |-
+      Nada hay más frío que un cristiano que no se preocupe de la salvación de los demás. No puedes excusarte con la pobreza, pues aquella viuda que echó dos monedas de cobre te acusará. Y Pedro decía: No tengo plata ni oro. El mismo Pablo era tan pobre que frecuentemente pasaba hambre y carecía del alimento necesario.
+
+      No puedes aducir tu baja condición, pues aquéllos eran también humildes, nacidos de baja condición. Tampoco vale el afirmar que no tienes conocimientos, pues tampoco, ellos los tenían. Ni te escudes detrás de tu debilidad física, pues también Timoteo era débil y sufría frecuentemente de enfermedades.
+
+      Todos pueden ayudar al prójimo con tal que cumplan con lo que les corresponde. ¿No veis los árboles infructuosos, cómo son con frecuencia sólidos, hermosos, altos, grandiosos y esbeltos? Pero, si tuviéramos un huerto, preferiríamos tener granados y olivos fructíferos antes que esos árboles; esos árboles pueden causar placer, pero no son
+
+      útiles, e incluso, si tienen alguna utilidad, es muy pequeña. Semejantes son aquellos que sólo se preocupan de sí mismos; más aún, ni siquiera son semejantes a esos árboles, porque sólo son aptos para el castigo. Pues aquellos árboles son aptos para la construcción y para darnos cobijo. Semejantes eran aquellas vírgenes de la parábola, castas, sobrias, engalanadas, pero, como eran inútiles para los demás, por ello fueron castigadas. Semejantes son los que no alimentan con su ejemplo el cuerpo de Cristo.
+
+      Fíjate que ninguno es acusado de sus pecados, ni que sea un fornicador, ni que sea un perjuro, a no ser que no haya ayudado a los demás. Así era aquel que enterró su talento, mostrando una vida intachable, pero inútil para los demás.
+
+      ¿Cómo, me pregunto, puede ser cristiano el que obra de esta forma? Si el fermento mezclado con la harina no transforma toda la masa, ¿acaso se trata de un fermento genuino? Y, también, si acercando un perfume no esparce olor, ¿acaso llamaríamos a esto perfume?
+
+      No digas: "No puedo influir en los demás", pues si eres cristiano de verdad es imposible que no lo puedas hacer. Las propiedades de las cosas naturales no se pueden negar: lo mismo sucede con esto que afirmamos, pues está en la naturaleza del cristiano obrar de esta forma.
+
+      No ofendas a Dios con una contumelia. Si dijeras que el sol no puede lucir, infliges una contumelia a Dios y lo haces mentiroso. Es más fácil que el sol no luzca ni caliente que no que deje de dar luz un cristiano; más fácil que esto sería que la luz fuese tinieblas.
+
+      No digas que es una cosa imposible; lo contrario es imposible. No inflijas una contumelia a Dios. Si ordenamos bien nuestra conducta, todo lo demás seguirá como consecuencia natural. No puede ocultarse la luz de los cristianos, no puede ocultarse una lámpara tan brillante.
+    autor: |-
+      De las homilías de san Juan Crisóstomo, obispo, sobre el libro de los Hechos de los
+      apóstoles
+      (Homilía 20, 4: PG 60,162-164)
+  resp2:
+    ref: Ef 5, 8-9; Mt 5, 14. 16
+    vr:
+    - - R
+      - Sois luz en el Señor. Caminad como hijos de la luz. * Toda bondad, justicia y verdad son fruto de la luz.
+    - - V
+      - Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres.
+    - - R
+      - Toda bondad, justicia y verdad son fruto de la luz.
+santas-mujeres:
+  nombre: Común de santas mujeres
+  himno: La mujer fuerte
+  salmodia:
+  - ant: Abre la boca con sabiduría y su lengua enseña con bondad.
+    salmo: salmo-18-a
+  - ant: Las santas mujeres vivieron esperando en Dios y cantando en su corazón.
+    salmo: salmo-44-i
+  - ant: Las llevan ante el Señor con alegría y algazara.
+    salmo: salmo-44-ii
+  versiculo:
+  - - V
+    - Que llegue a tu presencia el meditar de mi corazón.
+  - - R
+    - Señor, roca mía y redentor mío.
+  lectura1:
+    titulo: VUESTRA VIDA ESTÁ OCULTA CON CRISTO EN DIOS
+    texto: |-
+      Hermanos: Si habéis sido resucitados con Cristo, buscad las cosas de arriba, donde Cristo está sentado a la diestra de Dios. Poned vuestro corazón en las cosas del cielo, no en las de la tierra. Porque habéis muerto y vuestra vida está oculta con Cristo en Dios; cuando se manifieste Cristo, que es vuestra vida, os manifestaréis también vosotros con él, revestidos de gloria.
+
+      Mortificad las pasiones de vuestro hombre terrenal: la fornicación, la impureza, la concupiscencia, los malos deseos y la avaricia, que es una idolatría. Por ellas se desata la cólera de Dios.
+
+      En todo eso anduvisteis también vosotros, cuando vivíais entregados a ellas. Pero ahora dejad también vosotros a un lado todo eso: la ira, la indignación, la malignidad, la maledicencia y el torpe lenguaje. No os engañéis unos a otros.
+
+      Despojaos del hombre viejo con sus malas pasiones y revestíos del hombre nuevo, que se va renovando hasta alcanzar un conocimiento pleno de Dios y se va configurando con la imagen del que lo creó. Así, ya no hay griego ni judío, ni circunciso ni incircunciso, ni bárbaro ni escita, ni esclavo ni libre. Sólo Cristo todo y en todos.
+
+      Por lo tanto, como pueblo elegido de Dios, pueblo sacro y amado, sea vuestro uniforme: la misericordia entrañable, la bondad, la humildad, la dulzura, la comprensión. Sobrellevaos mutuamente y perdonaos, cuando alguno tenga quejas contra otro. El Señor os ha perdonado: haced vosotros lo mismo.
+
+      Por encima de todo, procurad el amor, que es el ceñidor de la unidad consumada. Que la paz de Cristo actúe de árbitro en vuestro corazón: a ella habéis sido convocados, en un solo cuerpo. Y vivid siempre agradecidos. Que la palabra de Cristo habite entre vosotros
+
+      en toda su riqueza; enseñaos unos a otros con toda sabiduría; exhortaos mutuamente. Cantad a Dios, dadle gracias de todo corazón, con salmos, himnos y cánticos inspirados.
+
+      Todo lo que de palabra o de obra realicéis, sea todo en nombre de Jesús, ofreciendo la Acción de Gracias a Dios Padre por medio de él.
+    ref: De la carta del apóstol san Pablo a los Colosenses 3, 1-17
+  resp1:
+    ref: Ga 3, 27. 28; cf. Ef 4, 24
+    vr:
+    - - R
+      - 'Todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay distinción entre judío y gentil: * todos sois uno en Cristo Jesús.'
+    - - V
+      - 'Vestíos de la nueva condición humana, creada a imagen de Dios: justicia y santidad verdaderas.'
+    - - R
+      - Todos sois uno en Cristo Jesús.
+  lectura2:
+    titulo: NO PUEDE OCULTARSE LA LUZ DE LOS CRISTIANOS
+    texto: |-
+      Nada hay más frío que un cristiano que no se preocupe de la salvación de los demás. No puedes excusarte con la pobreza, pues aquella viuda que echó dos monedas de cobre te acusará. Y Pedro decía: No tengo plata ni oro. El mismo Pablo era tan pobre que frecuentemente pasaba hambre y carecía del alimento necesario.
+
+      No puedes aducir tu baja condición, pues aquéllos eran también humildes, nacidos de baja condición. Tampoco vale el afirmar que no tienes conocimientos, pues tampoco, ellos los tenían. Ni te escudes detrás de tu debilidad física, pues también Timoteo era débil y sufría frecuentemente de enfermedades.
+
+      Todos pueden ayudar al prójimo con tal que cumplan con lo que les corresponde. ¿No veis los árboles infructuosos, cómo son con frecuencia sólidos, hermosos, altos, grandiosos y esbeltos? Pero, si tuviéramos un huerto, preferiríamos tener granados y olivos fructíferos antes que esos árboles; esos árboles pueden causar placer, pero no son útiles, e incluso, si tienen alguna utilidad, es muy pequeña. Semejantes son aquellos que sólo se preocupan de sí mismos; más aún, ni siquiera son semejantes a esos árboles, porque sólo son aptos para el castigo. Pues aquellos árboles son aptos para la construcción y para darnos cobijo. Semejantes eran aquellas vírgenes de la parábola,
+
+      castas, sobrias, engalanadas, pero, como eran inútiles para los demás, por ello fueron castigadas. Semejantes son los que no alimentan con su ejemplo el cuerpo de Cristo.
+
+      Fíjate que ninguno es acusado de sus pecados, ni que sea un fornicador, ni que sea un perjuro, a no ser que no haya ayudado a los demás. Así era aquel que enterró su talento, mostrando una vida intachable, pero inútil para los demás.
+
+      ¿Cómo, me pregunto, puede ser cristiano el que obra de esta forma? Si el fermento mezclado con la harina no transforma toda la masa, ¿acaso se trata de un fermento genuino? Y, también, si acercando un perfume no esparce olor, ¿acaso llamaríamos a esto perfume?
+
+      No digas: "No puedo influir en los demás", pues si eres cristiano de verdad es imposible que no lo puedas hacer. Las propiedades de las cosas naturales no se pueden negar: lo mismo sucede con esto que afirmamos, pues está en la naturaleza del cristiano obrar de esta forma.
+
+      No ofendas a Dios con una contumelia. Si dijeras que el sol no puede lucir, infliges una contumelia a Dios y lo haces mentiroso. Es más fácil que el sol no luzca ni caliente que no que deje de dar luz un cristiano; más fácil que esto sería que la luz fuese tinieblas.
+
+      No digas que es una cosa imposible; lo contrario es imposible. No inflijas una contumelia a Dios. Si ordenamos bien nuestra conducta, todo lo demás seguirá como consecuencia natural. No puede ocultarse la luz de los cristianos, no puede ocultarse una lámpara tan brillante.
+    autor: |-
+      De las homilías de san Juan Crisóstomo, obispo, sobre el libro de los Hechos de los
+      apóstoles
+      (Homilía 20, 4: PG 60,162-164)
+  resp2:
+    ref: Ef 5, 8-9; Mt 5, 14. 16
+    vr:
+    - - R
+      - Sois luz en el Señor. Caminad como hijos de la luz. * Toda bondad, justicia y verdad son fruto de la luz.
+    - - V
+      - Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres.
+    - - R
+      - Toda bondad, justicia y verdad son fruto de la luz.

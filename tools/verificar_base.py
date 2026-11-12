@@ -123,11 +123,12 @@ CL, CV = leer(os.path.join(B, 'comunes', 'laudes.yaml')), leer(os.path.join(B, '
 for n, a in ADF.items():
     falta(a.get('comun') or a.get('como') or a.get('es') or a.get('pendiente'), f'santoral/adf.yaml · {n}: falta comun, como, es o pendiente')
     if a.get('es'): falta(a['es'] in SaL and a['es'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["es"]}»')
-    if a.get('comun'): falta(a['comun'] in CL and a['comun'] in CV, f'santoral/adf.yaml · {n}: no existe el común «{a["comun"]}»')
+    if a.get('comun'): falta(a['comun'] in CL, f'santoral/adf.yaml · {n}: no existe el común «{a["comun"]}»')
     if a.get('como'): falta(a['como'] in SaL and a['como'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["como"]}»')
 for nom, C, H in (('laudes', CL, HL), ('visperas', CV, HV)):
     for k, e in C.items():
         if e.get('himno'): falta(e['himno'] in H, f'comunes/{nom}.yaml · {k}: el himno no está en himnos/{nom}.yaml')
+SAL0 = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(B, 'salmos', '*.yaml'))}
 # ---------- Calendarios locales, oraciones del oficio e invitatorio gregoriano ----------
 LOC = leer(os.path.join(B, 'calendario', 'locales.yaml'))
 for c in LOC['cambios']:
@@ -146,6 +147,18 @@ IP = GLa['invitatorio_per_annum']
 for f in (IP['antifona'], IP['salmo']): falta(os.path.exists(os.path.join(B, 'gregoriano', f)), f'gregoriano/laudes.yaml · invitatorio_per_annum: no existe {f}')
 for e in [IP] + IP['estrofas']:
     for x in e['traduccion']: falta(' = ' in x, f'gregoriano/laudes.yaml · invitatorio_per_annum: «{x}» debe ser «latín = español»')
+# ---------- Comunes y propio del libro ----------
+for h in ('laudes', 'visperas', 'oficio', 'intermedia'):
+    for k, c in (leer(os.path.join(B, 'comunes', f'{h}.yaml')) or {}).items():
+        for parte in (c, c.get('primeras') or {}, *[c.get(x) or {} for x in ('tercia', 'sexta', 'nona')]):
+            for g in parte.get('salmodia') or []: falta(g['salmo'] in SAL0, f'comunes/{h}.yaml · {k}: el salmo «{g["salmo"]}» no está en base/salmos')
+LIB = leer(os.path.join(B, 'santoral', 'libro.yaml')) or {}
+for n, d in LIB.items():
+    falta(n in ADF, f'santoral/libro.yaml · {n}: no está en santoral/adf.yaml')
+    for h, parte in d.items():
+        if isinstance(parte, dict):
+            for g in parte.get('salmodia') or []: falta(g['salmo'] in SAL0, f'santoral/libro.yaml · {n} · {h}: el salmo «{g["salmo"]}» no está en base/salmos')
+
 # ---------- Oficio de lectura y Hora intermedia ----------
 SAL = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(B, 'salmos', '*.yaml'))}
 def salmos_de(e):

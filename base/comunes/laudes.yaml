@@ -1,10 +1,63 @@
-# Comunes de Laudes, deducidos del santoral (tools/importar/comunes.py): de cada parte, el texto que más celebraciones
-# de ese común comparten. PROVISORIO, a cotejar con el libro. Se usan para las celebraciones propias de ADF sin textos propios
-# (base/santoral/adf.yaml).
+# Comunes de laudes, del libro (Liturgia de las Horas, tomo III; tools/importar/comunes_libro.py).
+# Se usan para las celebraciones sin textos propios en la base (base/santoral/adf.yaml) y para lo que les falte.
+# «oraciones»: las que el libro da «en su defecto», con N. en lugar del nombre; «para» dice a quién corresponde cada una.
+# El común de doctores trae solo algunas partes: el resto se copió del de pastores. Se corrigen acá.
+dedicacion:
+  nombre: Común de la dedicación de una iglesia
+  himno: Piedra angular y fundamento es Cristo
+  salmodia:
+  - ant: Mi casa se llama casa de oración.
+    salmo: salmo-62-2-9
+  - ant: Bendito eres, Señor, en el templo de tu santa gloria.
+    salmo: cantico-dn-3-57-88-56
+  - ant: Cantad al Señor en la asamblea de los fieles.
+    salmo: salmo-149
+  lectura:
+    ref: Is 56, 7
+    texto: Los traeré a mi monte santo, los alegraré en mi casa de oración; aceptaré sobre mi altar sus holocaustos y sacrificios; porque mi casa es casa de oración y así la llamarán todos los pueblos.
+  responsorio:
+  - - V
+    - Grande es el Señor y muy digno de alabanza.
+  - - R
+    - Grande es el Señor y muy digno de alabanza.
+  - - V
+    - En la ciudad de nuestro Dios, en su monte santo.
+  - - R
+    - Muy digno de alabanza.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Grande es el Señor y muy digno de alabanza.
+  ant_benedictus: «Zaqueo, baja en seguida, porque hoy tenlo que alojarme en tu casa.» Él bajó en seguida, y lo recibió muy contento. «Hoy Dios ha dado la salvación a esta casa.» Aleluia.
+  preces:
+    intro: 'Como piedras vivas, edificadas sobre Cristo, la piedra escogida, oremos al Padre todopoderoso por su Iglesia amada, y confesemos nuestra fe en ella diciendo:'
+    respuesta: Ésta es la casa de Dios y la puerta del cielo.
+    preces:
+    - - Padre del cielo, tú que eres el labrador de la vid,
+      - guarda, purifica y acrecienta tu viña, haciendo que sus sarmientos llenen toda la tierra.
+    - - Pastor eterno, protege y acrecienta tu rebaño,
+      - y haz que todas las ovejas se reúnan en un solo rebaño bajo el cayado del único pastor, Jesucristo, tu Hijo.
+    - - Sembrador todopoderoso, siembra la Palabra en tu campo,
+      - y haz que dé frutos del ciento por uno para la vida eterna.
+    - - Arquitecto prudente, santifica tu familia, que es la Iglesia,
+      - haz que aparezca ante el mundo como ciudad celestial, esposa sin tacha y Jerusalén del cielo.
+  padrenuestro_intro: 'Terminemos nuestra oración con las palabras que Cristo nos enseñó:'
+  oraciones:
+  - para: ''
+    texto: 'Cuando el Oficio se celebra en la misma iglesia dedicada: Señor, tú que nos haces revivir cada año el día de la consagración de esta iglesia: escucha las súplicas de tu pueblo y concédenos que, en este lugar, sepamos ofrecerte siempre un servicio digno y obtengamos de ti una redención cada vez más plena. Por nuestro Señor Jesucristo. Cuando el Oficio se celebra fuera de la iglesia dedicada: Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo corno cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por nuestro Señor Jesucristo.'
+  - para: ''
+    texto: 'Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.'
+  inv_ant: Congregados en la casa de Dios, adoremos a Cristo, esposo de la Iglesia.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
-  celebraciones: 17
-  himno: Eres tú la mujer llena de gloria
+  himno: Quién podrá tanto alabarte
+  salmodia:
+  - ant: Dichosa eres, María, porque de ti vino la salvación del mundo; tú que ahora vives ya en la gloria del Señor, intercede por nosotros ante tu Hijo.
+    salmo: salmo-62-2-9
+  - ant: Tú eres la gloria de Jerusalén; tú, la alegría de Israel; tú, el orgullo de nuestra raza.
+    salmo: cantico-dn-3-57-88-56
+  - ant: ¡Alégrate, Virgen María! Tú llevaste en el seno a Cristo, el Salvador.
+    salmo: salmo-149
   lectura:
     ref: Is 61, 10
     texto: 'Desbordo de gozo en el Señor, y me alegro con mi Dios: porque me ha vestido un traje de gala y me ha envuelto en un manto de triunfo, como a una novia que se adorna con sus joyas.'
@@ -24,6 +77,7 @@ virgen-maria:
   ant_benedictus: Por Eva se cerraron a los hombres las puertas del paraíso, y por María Virgen han sido abiertas de nuevo.
   preces:
     intro: 'Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:'
+    respuesta: Que tu santa Madre, Señor, interceda por nosotros.
     preces:
     - - Sol de justicia, a quien María Virgen precedía cual aurora luciente,
       - haz que vivamos siempre iluminados por la claridad de tu presencia.
@@ -33,12 +87,78 @@ virgen-maria:
       - por su intercesión concédenos compartir con alegría tus padecimientos.
     - - Señor Jesús, que colgado en la cruz entregaste María a Juan como madre,
       - haz que nosotros vivamos también como hijos suyos.
-    respuesta: Que tu santa Madre, Señor, interceda por nosotros.
   padrenuestro_intro: 'Según el mandato del Señor, digamos confiadamente:'
+  oraciones:
+  - para: ''
+    texto: Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Perdona, Señor, las culpas de tus fieles y haz que quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.
+  - para: ''
+    texto: Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos a Cristo, Hijo de María Virgen.
+santa-maria-sabado:
+  nombre: Memoria de santa María en sábado
+  himno: Salve, Madre, en la tierra de mis amores
+  lectura:
+    ref: Ga 4, 4-5
+    texto: Cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción.
+  responsorio:
+  - - V
+    - Después del parto, ¡oh Virgen!, has permanecido intacta.
+  - - R
+    - Después del parto, ¡oh Virgen!, has permanecido intacta.
+  - - V
+    - Madre de Dios, intercede por nosotros.
+  - - R
+    - ¡Oh Virgen!, has permanecido intacta.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Después del parto, ¡oh Virgen!, has permanecido intacta.
+  ant_benedictus: Celebremos con todo nuestro afecto la conmemoración de la santísima Virgen María, para que ella interceda por nosotros ante nuestro Señor Jesucristo.
+  preces:
+    intro: 'Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:'
+    respuesta: Que tu santa Madre, Señor, interceda por nosotros.
+    preces:
+    - - Sol de justicia, a quien María Virgen precedía cual aurora luciente,
+      - haz que vivamos siempre iluminados por la claridad de tu presencia.
+    - - Palabra eterna del Padre, tú que elegiste a María como arca de tu morada,
+      - líbranos de toda ocasión de pecado.
+    - - ''
+      - por su intercesión concédenos compartir con alegría tus padecimientos.
+    - - Señor Jesús, que colgado en la cruz entregaste María a Juan como madre,
+      - haz que nosotros vivamos también como hijos suyos.
+  padrenuestro_intro: 'Según el mandato del Señor, digamos confiadamente:'
+  oraciones:
+  - para: ''
+    texto: Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Perdona, Señor, las culpas de tus fieles y haz que, quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.
+  - para: ''
+    texto: Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos a Cristo, Hijo de María Virgen.
 apostoles:
   nombre: Común de apóstoles
-  celebraciones: 9
   himno: Vosotros, que escuchasteis la llamada
+  salmodia:
+  - ant: 'Éste es mi mandamiento: que os améis unos a otros como yo os he amado.'
+    salmo: salmo-62-2-9
+  - ant: Nadie tiene amor más grande que el que da la vida por sus amigos.
+    salmo: cantico-dn-3-57-88-56
+  - ant: Vosotros sois mis amigos si hacéis lo que yo os mando.
+    salmo: salmo-149
   lectura:
     ref: Ef 2, 19-22
     texto: Ya no sois extranjeros ni forasteros, sino que sois ciudadanos del pueblo de Dios y miembros de la familia de Dios. Estáis edificados sobre el cimiento de los apóstoles y profetas, y el mismo Cristo Jesús es la piedra angular. Por él todo el edificio queda ensamblado, y se va levantando hasta formar un templo consagrado al Señor. Por él también vosotros os vais integrando en la construcción, para ser morada de Dios por el Espíritu.
@@ -55,33 +175,33 @@ apostoles:
     - Gloria al Padre, y al Hijo, y al Espíritu Santo.
   - - R
     - Los nombrarás príncipes sobre toda la tierra.
+  ant_benedictus: 'El muro de la ciudad tenía doce cimientos que llevaban doce nombres: los nombres de los apóstoles del Cordero: y su lámpara es el Cordero.'
   preces:
     intro: 'Demos gracias a nuestro Padre que está en los cielos, porque por medio de los apóstoles nos ha dado parte en la herencia de los elegidos, y aclamémosle diciendo:'
-    preces:
-    - - 'Te alabamos, Señor, porque por medio de los apóstoles nos has dado la mesa de tu cuerpo y de tu sangre:'
-      - en ella encontramos nuestra fuerza y nuestra vida.
-    - - 'Te alabamos, Señor, porque por medio de los apóstoles nos has preparado la mesa de tu palabra:'
-      - por ella crecemos en el conocimiento de la verdad y se acrecienta nuestro gozo.
-    - - 'Te alabamos, Señor, porque por medio de los apóstoles has fundado tu Iglesia:'
-      - por ella nos edificas en la unidad de tu pueblo.
-    - - 'Te alabamos, Señor, porque por medio de los apóstoles nos has dado el bautismo y la penitencia:'
-      - por ellos nos purificas de todas nuestras culpas.
     respuesta: El coro de los apóstoles te alaba, Señor.
-  padrenuestro_intro: 'Concluyamos nuestra oración con la plegaria que Jesús enseñó a los apóstoles:'
-  salmodia:
-  - ant: 'Éste es mi mandamiento: que os améis unos a otros como yo os he amado.'
-    salmo: salmo-62-2-9
-  - ant: Nadie tiene amor más grande que el que da la vida por sus amigos.
-    salmo: cantico-dn-3-57-88-56
-  - ant: Vosotros sois mis amigos si hacéis lo que yo os mando.
-    salmo: salmo-149
+    preces:
+    - - Te alabamos, Señor, porque por medio de los apóstoles nos has dado la mesa de tu cuerpo y de tu sangre,
+      - en ella encontramos nuestra fuerza y nuestra vida.
+    - - Te alabamos, Señor, porque por medio de los apóstoles nos has preparado la mesa de tu palabra,
+      - por ella crecemos en el conocimiento de la verdad y se acrecienta nuestro gozo.
+    - - Te alabamos, Señor, porque por medio de los apóstoles has fundado tu Iglesia,
+      - por ella nos edificas en la unidad de tu pueblo.
+    - - Te alabamos, Señor, porque por medio de los apóstoles nos has dado el bautismo y la penitencia,
+      - 'por ellos nos purificas de todas nuestras culpas. Concluyamos nuestra oración con la plegaria que Jesús enseñó a los apóstoles: Padre nuestro. La oración conclusiva como en el Propio de los santos.'
+  inv_ant: Venid, adoremos al Señor, rey de los apóstoles.
 varios-martires:
-  nombre: Común de varios mártires
-  celebraciones: 7
-  himno: Testigos de la sangre
+  nombre: 'Común de mártires: para varios mártires'
+  himno: Éstos que van vestidos
+  salmodia:
+  - ant: 'En medio de sus tormentos, los mártires de Cristo contemplaban su gloria y decían: «Ayúdanos, Señor.»'
+    salmo: salmo-62-2-9
+  - ant: Almas y espíritus justos, cantad un himno a Dios. Aleluia.
+    salmo: cantico-dn-3-57-88-56
+  - ant: Mártires del Señor, alabad al Señor en el cielo.
+    salmo: salmo-149
   lectura:
-    ref: 2Co 1, 3-5
-    texto: Bendito sea Dios, Padre de nuestro Señor Jesucristo, Padre de misericordia y Dios de todo consuelo; él nos consuela en todas nuestras luchas, para poder nosotros consolar a los que están en toda tribulación, mediante el consuelo con que nosotros somos consolados por Dios. Porque si es cierto que los sufrimientos de Cristo rebosan sobre nosotros, también por Cristo rebosa nuestro consuelo.
+    ref: 2 Co 1, 3-5
+    texto: Bendito sea Dios, Padre de nuestro Señor Jesucristo Padre de misericordia y Dios de todo consuelo; él nos consuela en todas nuestras luchas, para poder nosotros consolar a los que están en toda tribulación, mediante el consuelo con que nosotros somos consolados por Dios. Porque si es cierto que los sufrimientos de Cristo rebosan sobre nosotros, también por Cristo rebosa nuestro consuelo.
   responsorio:
   - - V
     - Los justos viven eternamente.
@@ -98,6 +218,7 @@ varios-martires:
   ant_benedictus: Dichosos los perseguidos por causa de la justicia, pues de ellos es el reino de los cielos.
   preces:
     intro: 'Celebremos, amados hermanos, a Jesús, el testigo fiel, y al recordar hoy a los santos mártires sacrificados a causa de la palabra de Dios, aclamémosle diciendo:'
+    respuesta: Nos has comprado, Señor, con tu sangre.
     preces:
     - - Por la intercesión de los santos mártires que entregaron libremente su vida como testimonio de la fe,
       - concédenos, Señor, la verdadera libertad de espíritu.
@@ -107,20 +228,35 @@ varios-martires:
       - concédenos, Señor, soportar con generosidad las contrariedades de la vida.
     - - Por la intercesión de los santos mártires que blanquearon su manto en la sangre del Cordero,
       - concédenos, Señor, vencer las obras del mundo y de la carne.
-    respuesta: Nos has comprado, Señor, con tu sangre.
   padrenuestro_intro: 'Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
+  oraciones:
+  - para: varios mártires
+    texto: 'Dios todopoderoso y eterno, que diste a los santos mártires N. y N. la valentía de aceptar la muerte por el nombre de Cristo: concede también tu fuerza a nuestra debilidad para que, a ejemplo de aquellos que no dudaron en morir por ti, nosotros sepamos también ser fuertes, confesando tu nombre con nuestras vidas. Por nuestro Señor Jesucristo.'
+  - para: varios mártires
+    texto: Que la poderosa intercesión de los santos mártires N. y N. sea nuestra ayuda, Señor, y que su oración nos haga fuertes en la confesión intrépida de tu verdad. Por nuestro Señor Jesucristo.
+  - para: las mártires vírgenes
+    texto: Tú, Señor, que nos alegras hoy con la fiesta anual de las santas N. y N., concédenos la ayuda de sus méritos, ya que has querido iluminarnos con el ejemplo de su virginidad y de su fortaleza. Por nuestro Señor Jesucristo.
+  - para: las santas mujeres
+    texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de las santas mártires N. y N. que obtengamos la fortaleza de vencer nuestras dificultades como ellas vencieron los tormentos del martirio. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos al Señor, rey de los mártires.
 un-martir:
-  nombre: Común de un mártir
-  celebraciones: 12
-  himno: Palabra del Señor ya rubricada
+  nombre: 'Común de mártires: para un mártir'
+  himno: Quien entrega su vida por amor
+  salmodia:
+  - ant: Te alabarán mis labios, Señor, porque tu gracia vale más que la vida.
+    salmo: salmo-62-2-9
+  - ant: Mártires del Señor, bendecid al Señor por los siglos.
+    salmo: cantico-dn-3-57-88-56
+  - ant: «Al vencedor lo pondré de columna en mi santuario», dice el Señor.
+    salmo: salmo-149
   lectura:
-    ref: 2Co 1, 3-5
-    texto: Bendito sea Dios, Padre de nuestro Señor Jesucristo, Padre de misericordia y Dios de todo consuelo; él nos consuela en todas nuestras luchas, para poder nosotros consolar a los que están en toda tribulación, mediante el consuelo con que nosotros somos consolados por Dios. Porque si es cierto que los sufrimientos de Cristo rebosan sobre nosotros, también por Cristo rebosa nuestro consuelo.
+    ref: 2 Co 1, 3-5
+    texto: Bendito sea Dios, Padre de nuestro Señor Jesucristo Padre de misericordia y Dios de todo consuelo; él nos consuela en todas nuestras luchas, para poder nosotros consolar a los que están en toda tribulación, mediante el consuelo con que nosotros somos consolados por Dios. Porque si es cierto que los sufrimientos de Cristo rebosan sobre nosotros, también por Cristo rebosa nuestro consuelo.
   responsorio:
   - - V
-    - El Señor es mi fuerza y mi energía.
+    - El Señor es mi fuerza y m¡ energía.
   - - R
-    - El Señor es mi fuerza y mi energía.
+    - El Señor es mi fuerza y m¡ energía.
   - - V
     - Él es mi salvación.
   - - R
@@ -132,6 +268,7 @@ un-martir:
   ant_benedictus: El que se aborrece a sí mismo en este mundo se guardará para la vida eterna.
   preces:
     intro: 'Celebremos, amados hermanos, a Jesús, el testigo fiel, y al recordar hoy a los santos mártires sacrificados a causa de la palabra de Dios, aclamémosle diciendo:'
+    respuesta: Nos has comprado, Señor, con tu sangre.
     preces:
     - - Por la intercesión de los santos mártires que entregaron libremente su vida como testimonio de la fe,
       - concédenos, Señor, la verdadera libertad de espíritu.
@@ -141,49 +278,83 @@ un-martir:
       - concédenos, Señor, soportar con generosidad las contrariedades de la vida.
     - - Por la intercesión de los santos mártires que blanquearon su manto en la sangre del Cordero,
       - concédenos, Señor, vencer las obras del mundo y de la carne.
-    respuesta: Nos has comprado, Señor, con tu sangre.
   padrenuestro_intro: 'Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
-doctores:
-  nombre: Común de doctores de la Iglesia
-  celebraciones: 3
-  himno: Para vosotros, el misterio del Padre
-  lectura:
-    ref: Sb 7, 13-14
-    texto: 'Aprendí la sabiduría sin malicia, reparto sin envidia, y no me guardo sus riquezas. Porque es un tesoro inagotable para los hombres: los que lo adquieren se atraen la amistad de Dios, porque el don de su enseñanza los recomienda.'
-  responsorio:
-  - - V
-    - El pueblo cuenta su sabiduría.
-  - - R
-    - El pueblo cuenta su sabiduría.
-  - - V
-    - La asamblea pregona su alabanza.
-  - - R
-    - Cuenta su sabiduría.
-  - - V
-    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
-  - - R
-    - El pueblo cuenta su sabiduría.
-  ant_benedictus: Los sabios brillarán con esplendor de cielo, y los que enseñan la justicia a las multitudes serán como estrellas por toda la eternidad.
-  preces:
-    intro: 'Demos gracias a Cristo, el buen pastor que entregó la vida por sus ovejas, y supliquémosle diciendo:'
-    preces:
-    - - Señor Jesucristo, tú que en los santos pastores nos has revelado tu misericordia y tu amor,
-      - haz que, por ellos, continúe llegando a nosotros tu acción misericordiosa.
-    - - Señor Jesucristo, tú que a través de los santos pastores sigues siendo el único pastor de tu pueblo,
-      - no dejes de guiarnos siempre por medio de ellos.
-    - - Señor Jesucristo, tú que por medio de los santos pastores eres el médico de los cuerpos y de las almas,
-      - haz que nunca falten en tu Iglesia los ministros que nos guíen por las sendas de una vida santa.
-    - - Señor Jesucristo, tú que has adoctrinado a la Iglesia con la prudencia y el amor de los santos,
-      - haz que, guiados por nuestros pastores, progresemos en la santidad.
-    respuesta: Apacienta a tu pueblo, Señor.
-  padrenuestro_intro: 'Oremos confiadamente al Padre, como Cristo nos enseñó:'
+  oraciones:
+  - para: ''
+    texto: Dios de poder y misericordia, que diste tu fuerza al mártir san N. para que pudiera resistir el dolor de su martirio, concédenos que quienes celebramos hoy el día de su victoria, con tu protección, vivamos libres de las asechanzas del enemigo. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Dios todopoderoso y eterno, que concediste a san N. luchar por la fe hasta derramar su sangre, haz que, ayudados por su intercesión, soportemos por tu amor nuestras dificultades y con valentía caminemos hacia ti que eres la fuente de toda vida. Por nuestro Señor Jesucristo.
+  - para: una mártir virgen
+    texto: Tú, Señor, que nos alegras hoy con la fiesta anual de santa N., concédenos la ayuda de sus méritos, ya que has querido iluminarnos con el ejemplo de su virginidad y de su fortaleza. Por nuestro Señor Jesucristo.
+  - para: una mujer mártir
+    texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de la santa mártir N. que obtengamos la fortaleza de vencer nuestras dificultades como ella venció los tormentos del martirio. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos al Señor, rey de los mártires.
 pastores:
   nombre: Común de pastores
-  celebraciones: 22
-  himno: Para vosotros, el misterio del Padre
+  himno: Cristo, Cabeza, Rey de los pastores
+  salmodia:
+  - ant: Vosotros sois la luz del mundo. No se puede ocultar una ciudad puesta en lo alto de un monte.
+    salmo: salmo-62-2-9
+  - ant: Alumbre así vuestra luz a los hombres, para que vean vuestras buenas obras y den gloria a vuestro Padre.
+    salmo: cantico-dn-3-57-88-56
+  - ant: La palabra de Dios es viva y eficaz, más tajante que espada de doble filo.
+    salmo: salmo-149
   lectura:
-    ref: Sb 7, 13-14
-    texto: 'Aprendí la sabiduría sin malicia, reparto sin envidia, y no me guardo sus riquezas. Porque es un tesoro inagotable para los hombres: los que lo adquieren se atraen la amistad de Dios, porque el don de su enseñanza los recomienda.'
+    ref: Hb 13, 7-9a
+    texto: Acordaos de vuestros dirigentes, que os anunciaron la palabra de Dios; fijaos en el desenlace de su vida e ¡mitad su fe. Jesucristo es el mismo ayer y hoy y siempre. No os dejéis arrastrar por doctrinas complicadas y extrañas.
+  responsorio:
+  - - V
+    - Sobre tus murallas, Jerusalén, he colocado centinelas.
+  - - R
+    - Sobre tus murallas, Jerusalén, he colocado centinelas.
+  - - V
+    - Ni de día ni de noche dejarán de anunciar el nombre del Señor.
+  - - R
+    - He colocado centinelas.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre tus murallas, Jerusalén, he colocado centinelas.
+  ant_benedictus: No seréis vosotros los que habléis, el Espíritu de vuestro Padre hablará por vosotros.
+  preces:
+    intro: 'Demos gracias a Cristo, el buen pastor que entregó la vida por sus ovejas, y supliquémosle diciendo:'
+    respuesta: Apacienta a tu pueblo, Señor.
+    preces:
+    - - Señor Jesucristo, tú que en los santos pastores has revelado tu misericordia y tu amor,
+      - haz que, por ellos, continúe llegando a nosotros tu acción misericordiosa.
+    - - Señor Jesucristo, tú que a través de los santos pastores sigues siendo el único pastor de tu pueblo,
+      - no dejes de guiarnos siempre por medio de ellos.
+    - - Señor Jesucristo, tú que por medio de los santos pastores eres el médico de los cuerpos y de las almas,
+      - haz que nunca falten en tu Iglesia los ministros que nos guíen por las sendas de una vida santa.
+    - - Señor Jesucristo, tú que has adoctrinado a la Iglesia con la prudencia y el amor de los santos,
+      - haz que, guiados por nuestros pastores, progresemos en la santidad.
+  padrenuestro_intro: 'Oremos confiadamente al Padre, como Cristo nos enseñó:'
+  oraciones:
+  - para: un santo papa
+    texto: Dios todopoderoso y eterno, que quisiste que san N., papa, presidiera a todo tu pueblo y lo iluminara con su ejemplo y sus palabras, por su intercesión protege a los pastores de la Iglesia y a sus rebaños y hazlos progresar por el camino de la salvación eterna. Por nuestro Señor Jesucristo.
+  - para: un santo obispo
+    texto: Señor, tú que colocaste a san N. en el número de los santos pastores y lo hiciste brillar por el ardor de la caridad y de aquella fe que vence al mundo, haz que también nosotros, por su intercesión, perseveremos firmes en la fe y arraigados en el amor merezcamos así participar de su gloria. Por nuestro Señor Jesucristo.
+  - para: un santo fundador de una Iglesia
+    texto: Señor, tú que por la predicación de san N. (obispo) llamaste a nuestros padres a la luz admirable del Evangelio, te pedimos que, por su intercesión, nosotros crezcamos también en tu gracia y en el conocimiento de nuestro Señor Jesucristo. Que vive y reina contigo.
+  - para: un santo pastor
+    texto: Señor, luz de los fieles y pastor de las almas, tú que elegiste a san N. (obispo) para que, en la Iglesia apacentara tus ovejas con su palabra y las iluminara con su ejemplo, te pedimos que, por su intercesión, nos concedas perseverar en la fe que él nos enseñó con su palabra y seguir el camino que nos mostró con su ejemplo. Por nuestro Señor Jesucristo.
+  - para: un santo pastor
+    texto: Señor, tú que diste a san N. la abundancia del espíritu de verdad y de amor para que fuera un buen pastor de tu pueblo, concede a cuantos celebramos hoy su fiesta adelantar en la virtud, imitando sus ejemplos, y sentirnos protegidos con su valiosa intercesión. Por nuestro Señor Jesucristo.
+  - para: un santo misionero
+    texto: Dios y Señor nuestro, que con tu amor hacia los hombres quisiste que san N. anunciara a los pueblos la riqueza insondable que es Cristo, concédenos, por su intercesión, crecer en el conocimiento del misterio de Cristo y vivir siempre según las enseñanzas del Evangelio, fructificando con toda clase de buenas obras. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos a Cristo, Pastor supremo.
+doctores:
+  himno: Experiencia de Dios fue vuestra ciencia
+  salmodia:
+  - ant: Vosotros sois la luz del mundo. No se puede ocultar una ciudad puesta en lo alto de un monte.
+    salmo: salmo-62-2-9
+  - ant: Alumbre así vuestra luz a los hombres, para que vean vuestras buenas obras y den gloria a vuestro Padre.
+    salmo: cantico-dn-3-57-88-56
+  - ant: La palabra de Dios es viva y eficaz, más tajante que espada de doble filo.
+    salmo: salmo-149
+  lectura:
+    ref: ''
+    texto: 'Para santos pastores: Sb 7, 13-14 Aprendí sin malicia, reparto sin envidia, y no me guardo sus riquezas. Porque es un tesoro inagotable para los hombres: los que lo adquieren se atraen la amistad de Dios, porque el don de su enseñanza los recomienda.'
   responsorio:
   - - V
     - El pueblo cuenta su sabiduría.
@@ -200,8 +371,9 @@ pastores:
   ant_benedictus: Los sabios brillarán con esplendor de cielo, y los que enseñan la justicia a las multitudes serán como estrellas por toda la eternidad.
   preces:
     intro: 'Demos gracias a Cristo, el buen pastor que entregó la vida por sus ovejas, y supliquémosle diciendo:'
+    respuesta: Apacienta a tu pueblo, Señor.
     preces:
-    - - Señor Jesucristo, tú que en los santos pastores nos has revelado tu misericordia y tu amor,
+    - - Señor Jesucristo, tú que en los santos pastores has revelado tu misericordia y tu amor,
       - haz que, por ellos, continúe llegando a nosotros tu acción misericordiosa.
     - - Señor Jesucristo, tú que a través de los santos pastores sigues siendo el único pastor de tu pueblo,
       - no dejes de guiarnos siempre por medio de ellos.
@@ -209,12 +381,22 @@ pastores:
       - haz que nunca falten en tu Iglesia los ministros que nos guíen por las sendas de una vida santa.
     - - Señor Jesucristo, tú que has adoctrinado a la Iglesia con la prudencia y el amor de los santos,
       - haz que, guiados por nuestros pastores, progresemos en la santidad.
-    respuesta: Apacienta a tu pueblo, Señor.
   padrenuestro_intro: 'Oremos confiadamente al Padre, como Cristo nos enseñó:'
+  oraciones:
+  - para: ''
+    texto: Tú, Señor, que concediste a san N. un conocimiento profundo de la sabiduría divina, concédenos, por su intercesión, ser siempre fieles a tu palabra y llevarla a la práctica en nuestra vida. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos al Señor, fuente de la sabiduría.
+  nombre: Común de doctores de la Iglesia
 virgenes:
   nombre: Común de vírgenes
-  celebraciones: 9
   himno: Nos apremia el amor, vírgenes santas
+  salmodia:
+  - ant: Libremente confieso a Cristo; de Cristo está sedienta mi alma; deseo estar por siempre con Cristo.
+    salmo: salmo-62-2-9
+  - ant: Vírgenes del Señor, bendecid al Señor; el que sembró en vosotras el deseo de la virginidad ha coronado ya su obra.
+    salmo: cantico-dn-3-57-88-56
+  - ant: Que los santos se alegren en la gloria, pues han conseguido una brillante victoria sobre la carne y la sangre.
+    salmo: salmo-149
   lectura:
     ref: Ct 8, 7
     texto: Las aguas torrenciales no podrían apagar el amor, ni anegarlo los ríos. Si alguien quisiera comprar el amor con todas las riquezas de su casa, se haría despreciable.
@@ -231,28 +413,42 @@ virgenes:
     - Gloria al Padre, y al Hijo, y al Espíritu Santo.
   - - R
     - 'Oigo en mi corazón: buscad mi rostro.'
-  ant_benedictus: Ésta es la virgen prudente que, unida a Cristo, resplandece como el sol en el reino celestial.
+  ant_benedictus: 'Para una santa virgen y mártir: Dichosa la virgen que, negándose a sí misma y cargando con su cruz, imitó al Señor, esposo de las vírgenes y rey de los mártires. Para una santa virgen: Ésta es la virgen prudente que, unida a Cristo, resplandece como el sol en el reino celestial. Para varias santas vírgenes: Vírgenes del Señor, bendecid al Señor eternamente.'
   preces:
-    intro: 'Glorifiquemos a Cristo, esposo y corona de las vírgenes, y supliquémosle, diciendo:'
+    intro: 'Glorifiquemos a Cristo, esposo y corona de las vírgenes, y supliquémosle diciendo:'
+    respuesta: Jesús, corona de las vírgenes, escúchanos.
     preces:
     - - Señor Jesucristo, a quien las vírgenes amaron como a su único esposo,
       - concédenos que nada nos aparte de tu amor.
-    - - Tú que coronaste a María como reina de las vírgenes,
-      - por su intercesión concédenos recibirte siempre con pureza de corazón.
+    - - Tú que coronaste a María como reina de las vírgenes por su intercesión,
+      - concédenos recibirte siempre con pureza de corazón.
     - - Por intercesión de las santas vírgenes que te sirvieron siempre con fidelidad, consagradas a ti en cuerpo y alma,
       - ayúdanos, Señor, a que los bienes de este mundo que pasa no nos separen de tu amor eterno.
     - - Señor Jesús, esposo que has de venir y a quien las vírgenes prudentes esperaban,
       - concédenos que aguardemos tu retorno glorioso con una esperanza activa.
-    - - Por intercesión de santa Clara, que fue virgen sensata y una de las prudentes,
+    - - Por intercesión de santa N., que fue virgen sensata y una de las prudentes,
       - concédenos, Señor, la verdadera sabiduría y la pureza de costumbres.
-    respuesta: Jesús, corona de las vírgenes, escúchanos.
   padrenuestro_intro: 'Con sencillez y humildad digamos la oración que Jesús nos enseñó:'
+  oraciones:
+  - para: ''
+    texto: Tú, Señor, que te complaces en habitar en los limpios y sinceros de corazón, por intercesión de santa N., virgen, concédenos vivir de tal manera que merezcamos tenerte siempre entre nosotros. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Escucha, Señor, nuestras plegarias y concede a los que celebramos la virtud de santa N., virgen, crecer siempre en tu amor y perseverar en él hasta el fin. Que vive y reina contigo.
+  - para: varias santas vírgenes
+    texto: Te pedimos, Señor, que manifiestes la grandeza de tu amor hacia nosotros, para que así como hoy podemos alegrarnos al celebrar la fiesta de las santas vírgenes N. y N., así podamos también disfrutar un día de su compañía en la felicidad de tu reino. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos al Señor, rey de las vírgenes.
 santos-varones:
   nombre: Común de santos varones
-  celebraciones: 12
-  himno: Vosotros sois luz del mundo
+  himno: Cantemos nuestra fe y, al confesarla
+  salmodia:
+  - ant: El Señor les concedió una gloria eterna y su nombre no será nunca olvidado.
+    salmo: salmo-62-2-9
+  - ant: Siervos del Señor, bendecid al Señor eternamente.
+    salmo: cantico-dn-3-57-88-56
+  - ant: Que los santos festejen su gloria y canten jubilosos en filas.
+    salmo: salmo-149
   lectura:
-    ref: Rm 12, 1-2
+    ref: Rom 12, 1-2
     texto: Os exhorto, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
   responsorio:
   - - V
@@ -266,10 +462,23 @@ santos-varones:
   - - V
     - Gloria al Padre, y al Hijo, y al Espíritu Santo.
   - - R
-    - Lleva en el corazón la ley de su Dios.
-  ant_benedictus: «El que cumple la voluntad de Dios, ése es mi hermano y mi hermana y mi madre», dice el Señor.
+    - 'Lleva en el corazón la ley de su Dios. Para varios santos:'
+  - - V
+    - Los justos gozan en la presencia de Dios.
+  - - R
+    - Los justos gozan en la presencia de Dios.
+  - - V
+    - Rebosando de alegría.
+  - - R
+    - En la presencia de Dios.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Los justos gozan en la presencia de Dios.
+  ant_benedictus: 'Para un santo: El que obra la verdad va a la luz, para que quede de manifiesto que sus obras están hechas según Dios. Para varios santos: Dichosos los que trabajan por la paz, dichosos los limpios de corazón, porque ellos verán a Dios.'
   preces:
     intro: 'Adoremos, hermanos, a Cristo, el Dios santo, y, pidiéndole que nos enseñe a servirle con santidad y justicia en su presencia todos nuestros días, aclamémosle diciendo:'
+    respuesta: Tú solo eres santo, Señor.
     preces:
     - - Señor Jesús, probado en todo exactamente como nosotros, menos en el pecado,
       - compadécete de nuestras debilidades.
@@ -281,15 +490,36 @@ santos-varones:
       - haz que sepamos servir con humildad a ti y a nuestros hermanos.
     - - Señor Jesús, reflejo de la gloria del Padre e impronta de su ser,
       - haz que un día podamos contemplar la claridad de tu gloria.
-    respuesta: Tú solo eres santo, Señor.
   padrenuestro_intro: 'Oremos ahora al Padre, como nos enseñó el mismo Jesús:'
+  oraciones:
+  - para: ''
+    texto: Confesamos, Señor, que sólo tú eres santo y que sin ti nadie es bueno, y humildemente te pedimos que la intercesión de san N. venga en nuestra ayuda para que de tal forma vivamos en el mundo que merezcamos llegar a la contemplación de tu gloria. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Concédenos, Señor todopoderoso, que el ejemplo de san N. nos estimule a una vida más perfecta y que cuantos celebramos su fiesta sepamos también imitar sus ejemplos. Por nuestro Señor Jesucristo.
+  - para: varios santos
+    texto: Dios todopoderoso y eterno, que al premiar a los santos nos ofreces una prueba de tu gran amor hacia los hombres, te pedimos que la intercesión y el ejemplo de los santos nos sirva siempre de ayuda para seguir más fielmente a Jesucristo, tu Hijo. Él que vive y reina contigo.
+  - para: un santo religioso
+    texto: Tú, Señor, que concediste a san N. el don de imitar con fidelidad a Cristo pobre y humilde, concédenos también a nosotros, por intercesión de este santo, la gracia de que, viviendo fielmente nuestra vocación, tendamos hacia la perfección que nos propones en la persona de tu Hijo. Él que vive y reina contigo.
+  - para: un santo abad
+    texto: Tú, Señor, que nos has dado un modelo de perfección evangélica en la vida ejemplar de san N., abad, concédenos en medio de los acontecimientos de este mundo, que sepamos adherirnos, con todo nuestro corazón, a los bienes de tu reino eterno. Él que vive y reina contigo.
+  - para: un santo que se consagrado a una actividad caritativa
+    texto: Señor Dios todopoderoso, que nos has revelado que el amor a Dios y al prójimo es el compendio de toda tu ley, haz que, imitando la caridad de san N., seamos contados un día entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
+  - para: un santo educador
+    texto: Señor Dios todopoderoso, que de entre tus fieles elegiste a san N. para que manifestara a sus hermanos el camino que conduce a ti, concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro maestro, para que logremos así alcanzar un día, junto con nuestros hermanos, la gloria de tu reino eterno. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos al Señor, aclamemos al Dios admirable en sus santos.
 santas-mujeres:
   nombre: Común de santas mujeres
-  celebraciones: 4
-  himno: Finísimo fue el lino con que ella
+  himno: Dichosas sois vosotras que guardasteis
+  salmodia:
+  - ant: Mi alma está unida a ti y tu diestra me sostiene.
+    salmo: salmo-62-2-9
+  - ant: El Señor te ha dado su fuerza; por ello serás bendita para siempre.
+    salmo: cantico-dn-3-57-88-56
+  - ant: Tu misericordia, Señor, es mi gozo y mi alegría.
+    salmo: salmo-149
   lectura:
-    ref: Rm 12, 1-2
-    texto: Os exhorto, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
+    ref: Rom 12, 1-2
+    texto: Os exhorto, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que le agrada, lo perfecto.
   responsorio:
   - - V
     - Dios la socorre al despuntar la aurora.
@@ -302,11 +532,25 @@ santas-mujeres:
   - - V
     - Gloria al Padre, y al Hijo, y al Espíritu Santo.
   - - R
-    - Dios la socorre al despuntar la aurora.
+    - 'Dios la socorre al despuntar la aurora. Para varias santas:'
+  - - V
+    - Los justos gozan en la presencia de Dios.
+  - - R
+    - Los justos gozan en la presencia de Dios.
+  - - V
+    - Rebosando de alegría.
+  - - R
+    - En la presencia de Dios.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Los justos gozan en la presencia de Dios.
+  ant_benedictus: El reino de los cielos se parece a un comerciante en perlas finas que, al encontrar una de gran valor, se va a vender todo lo que tiene y la compra.
   preces:
     intro: 'Unidos, hermanos, a las mujeres santas, aclamemos a Jesús, nuestro Salvador, y supliquémosle diciendo:'
+    respuesta: Ven, Señor Jesús.
     preces:
-    - - Señor Jesús, que perdonaste a la mujer pecadora sus muchos pecados porque tenía mucho amor,
+    - - ''
       - perdónanos también a nosotros porque hemos pecado mucho.
     - - Señor Jesús, que fuiste asistido en tu misión evangélica por mujeres piadosas,
       - haz que también nosotros seamos fieles en nuestra misión apostólica.
@@ -314,5 +558,18 @@ santas-mujeres:
       - concédenos servirte siempre con fe y amor.
     - - Señor Jesús, que llamaste hermano, hermana y madre a todos los que cumplen tu voluntad,
       - haz que todos nosotros la cumplamos siempre de palabra y de obra.
-    respuesta: Ven, Señor Jesús.
   padrenuestro_intro: 'Fieles a la recomendación del Salvador, digamos al Padre común:'
+  oraciones:
+  - para: ''
+    texto: Tú, Señor, que todos los años nos alegras con la fiesta de santa N., concede a los que estamos celebrando su memoria imitar también los ejemplos de su vida santa. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Concédenos, Señor, un conocimiento profundo y un amor intenso a tu santo nombre, semejantes a los que diste a santa N., para que así, sirviéndote con sinceridad y lealtad, a ejemplo suyo también nosotros te agrademos con nuestra fe y con nuestras obras. Por nuestro Señor Jesucristo.
+  - para: varias santas mujeres
+    texto: Señor todopoderoso y eterno, que nos has dado como ejemplo para imitar la vida de las santas N. y N., concédenos también que su valiosa intercesión venga siempre en nuestra ayuda. Por nuestro Señor Jesucristo.
+  - para: una santa religiosa
+    texto: Tú, Señor, que concediste a santa N. el don de imitar con fidelidad a Cristo pobre y humilde, concédenos también a nosotros, por intercesión de esta santa, la gracia de que, viviendo fielmente nuestra vocación, tendamos hacia la perfección que nos propones en la persona de tu Hijo. Que vive y reina contigo.
+  - para: una santa que se ha consagrado a una actividad caritativa
+    texto: Señor Dios todopoderoso, que nos has revelado que el amor a Dios y al prójimo es el compendio de toda tu ley, haz que, imitando la caridad de santa N., seamos contados un día entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
+  - para: una santa educadora
+    texto: Señor Dios todopoderoso, que de entre tus fieles elegiste a santa N. para que manifestara a sus hermanos el camino que conduce a ti, concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro maestro, para que logremos así alcanzar un día, junto con nuestros hermanos, la gloria de tu reino eterno. Por nuestro Señor Jesucristo.
+  inv_ant: Venid, adoremos al Señor, aclamemos al Dios admirable en sus santas.

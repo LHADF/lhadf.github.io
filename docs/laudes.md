@@ -58,3 +58,12 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - Lista de horas: la que toca según el reloj (1:30 antes y después de su hora; el Oficio de lectura con Laudes) va resaltada en rojo. Vísperas se llama «I Vísperas» o «II Vísperas» cuando corresponde.
 - El inicio no tiene barra superior: los tres puntos van en la fila de la fecha.
 - En Completas y en las I Vísperas, la línea del día no repite el nombre de la celebración.
+
+## Comunes y propio del libro (11/11/2026, noche)
+
+- **Comunes** (`base/comunes/laudes|visperas|oficio|intermedia.yaml`): tomados del libro (Liturgia de las Horas, tomo III) con `tools/importar/comunes_libro.py` (lector: `libro_lh.py`). Reemplazan a los provisorios deducidos de sync. Incluyen invitatorio, I Vísperas (`primeras`), Tercia/Sexta/Nona y las oraciones «en su defecto», con N. en lugar del nombre y una indicación de a quién corresponde cada una (un obispo, varios mártires, una virgen…). El común de doctores trae pocas partes: el resto se copió del de pastores.
+- La app elige la oración del común según el título de la celebración (papa, obispo, presbítero, virgen, mártir, religioso…, y si es santo o santa, uno o varios) y pone el nombre: «San Blas, obispo y mártir» → «san Blas».
+- **Propio del libro** (`base/santoral/libro.yaml`, con `tools/importar/propio_libro.py`): para 77 de las celebraciones que la base no traía, la oración propia y lo que el libro tenga de propio (casi siempre la segunda lectura del Oficio; a veces antífonas, himnos o el oficio entero, como Jesucristo, Sumo y Eterno Sacerdote). Lo propio va encima del común.
+- Memorias sin propio: salmos de la feria y lo demás del común. Fiestas y solemnidades: también la salmodia del común (en Laudes, salmos del domingo I con las antífonas del común) y sus I Vísperas.
+- **Santa María en sábado**: sus elementos propios del libro (invitatorio, himnos, lectura breve, responsorio, antífona del Benedictus, preces, seis oraciones; en el Oficio, himno y segunda lectura); lo demás, de la feria.
+- Tres comunes corregidos según el libro: san Camilo de Lelis y san Jerónimo Emiliani (santos varones), san Efrén (doctores).

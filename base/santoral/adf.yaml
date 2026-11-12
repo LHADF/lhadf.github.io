@@ -101,7 +101,7 @@ Santos Fabián, papa, y Sebastián, mártires:
 Santa Ángela de Médici, virgen:
   comun: virgenes
 San Jerónimo Emiliano, presbítero:
-  comun: pastores
+  comun: santos-varones
 San Claudio de la Colombière, presbítero:
   comun: pastores
 Siete Santos Fundadores de la Orden de los Siervos de la Virgen María, religiosos:
@@ -147,7 +147,7 @@ Santos Agustín Zhao Rong, presbítero, y compañeros, mártires:
 Santos Luis Martín y María Celia Guérin, esposos:
   comun: santos-varones
 San Camilo de Lelis, presbítero:
-  comun: pastores
+  comun: santos-varones
 San Enrique de Alemania, emperador:
   comun: santos-varones
 San Apolinar, obispo y mártir:
@@ -239,7 +239,7 @@ San Juan I, papa y mártir:
 San Pablo VI, papa:
   comun: pastores
 San Efrén, diácono y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 San Romualdo, abad:
   comun: santos-varones
 Santos Juan Fisher, obispo, y Tomás Moro, mártires:
@@ -267,4 +267,4 @@ San Pablo de la Cruz, presbítero:
 San Beda el Venerable, abad y doctor de la Iglesia:
   comun: pastores
 Santa María en sábado:
-  comun: virgen-maria
+  comun: santa-maria-sabado

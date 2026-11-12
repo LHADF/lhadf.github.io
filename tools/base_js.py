@@ -155,7 +155,7 @@ def laudes():
     HL = leer(os.path.join(B, 'himnos', 'laudes.yaml'))
     OL = leer(os.path.join(B, 'ordinario', 'laudes.yaml'))
     usados = {g['salmo'] for capa in ([e for w in SL.values() for e in w.values()], TL.values(), SaL.values()) for e in capa for g in (e.get('salmodia') or [])}
-    usados |= {'salmo-94'}
+    usados |= {'salmo-94'} | salmos_comunes('laudes')
     salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
     mapa, sin = vincular_santoral(SaL)
     bn = GL['benedictus']
@@ -178,10 +178,38 @@ def laudes():
 
 
 def adf_y_comunes(hora, santoral):
-    """Celebraciones propias de ADF (base/santoral/adf.yaml) y los comunes que usan."""
+    """Celebraciones sin propio en la base (base/santoral/adf.yaml) y los comunes que usan (del libro). El Oficio y la Hora
+    intermedia no traen oraciones en el común («como en Laudes»): se les pasan las de Laudes."""
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
     C = leer(os.path.join(B, 'comunes', hora + '.yaml')) or {}
-    return {n: a for n, a in A.items() if not a.get('como') or a['como'] in santoral}, C
+    CL = leer(os.path.join(B, 'comunes', 'laudes.yaml')) or {}
+    for k, c in C.items():
+        if not c.get('oraciones') and CL.get(k, {}).get('oraciones'): c['oraciones'] = CL[k]['oraciones']
+    # Propio del libro (base/santoral/libro.yaml): la oración y lo que la celebración tenga de propio en esta hora
+    LIB = leer(os.path.join(B, 'santoral', 'libro.yaml')) or {}
+    claves = {'laudes': ['laudes'], 'visperas': ['visperas'], 'oficio': ['oficio'], 'intermedia': ['tercia', 'sexta', 'nona']}[hora]
+    out = {}
+    for n, a in A.items():
+        if a.get('como') and a['como'] not in santoral: continue
+        a = dict(a)
+        if n in LIB:
+            pr = {'oracion': LIB[n].get('oracion')} if LIB[n].get('oracion') else {}
+            for k in claves:
+                if LIB[n].get(k): pr.update(LIB[n][k]) if hora != 'intermedia' else pr.update({k: LIB[n][k]})
+            if hora == 'laudes' and LIB[n].get('invitatorio', {}).get('inv_ant'): pr['inv_ant'] = LIB[n]['invitatorio']['inv_ant']
+            if hora == 'visperas' and LIB[n].get('visperas1'): pr['primeras'] = LIB[n]['visperas1']
+            if pr: a['propio'] = pr
+        out[n] = a
+    return out, C
+
+
+def salmos_comunes(hora):
+    """Salmos de los comunes y del propio del libro (base/santoral/libro.yaml) de esta hora."""
+    C = leer(os.path.join(B, 'comunes', hora + '.yaml')) or {}
+    LIB = leer(os.path.join(B, 'santoral', 'libro.yaml')) or {}
+    claves = {'laudes': ['laudes'], 'visperas': ['visperas', 'visperas1'], 'oficio': ['oficio'], 'intermedia': ['tercia', 'sexta', 'nona']}[hora]
+    partes = [p for c in C.values() for p in (c, c.get('primeras') or {})] + [e[k] for e in LIB.values() for k in claves if e.get(k)]
+    return {g['salmo'] for p in partes for g in (p.get('salmodia') or [])}
 
 
 def comunes_latin(GL):
@@ -198,7 +226,7 @@ def visperas():
     TV = leer(os.path.join(B, 'tiempo', 'visperas.yaml'))
     SaV = leer(os.path.join(B, 'santoral', 'visperas.yaml'))
     HV = leer(os.path.join(B, 'himnos', 'visperas.yaml'))
-    usados = {g['salmo'] for capa in ([e for w in SV.values() for e in w.values()], TV.values(), SaV.values()) for e in capa for g in (e.get('salmodia') or [])}
+    usados = {g['salmo'] for capa in ([e for w in SV.values() for e in w.values()], TV.values(), SaV.values()) for e in capa for g in (e.get('salmodia') or [])} | salmos_comunes('visperas')
     salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
     mapa, sin = vincular_santoral(SaV)
     datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'comunes': adf_y_comunes('visperas', SaV)[1],
@@ -230,8 +258,8 @@ def oficio():
     mapa, sin = vincular_santoral(SaO)
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
     datos = {'salterio': SO, 'tiempo': TO, 'santoral': SaO, 'himnos': HO, 'ordinario': OO,
-             'salmos': _salmos(_usados([e for w in SO.values() for e in w.values()], TO.values(), SaO.values())),
-             'mapa': mapa, 'adf': {n: a for n, a in A.items() if a.get('como') in SaO},
+             'salmos': _salmos(_usados([e for w in SO.values() for e in w.values()], TO.values(), SaO.values()) | salmos_comunes('oficio')),
+             'mapa': mapa, 'adf': adf_y_comunes('oficio', SaO)[0], 'comunes': adf_y_comunes('oficio', SaO)[1],
              'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
     _escribir_carga('oficio', 'OFICIO', datos, mapa, sin)
 
@@ -248,8 +276,8 @@ def intermedia():
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
     comp = [g for c in OI['complementaria'].values() for g in c]
     datos = {'salterio': SI, 'tiempo': TI, 'santoral': SaI, 'horas': horas, 'complementaria': OI['complementaria'],
-             'salmos': _salmos(_usados([e for w in SI.values() for e in w.values()], TI.values(), SaI.values(), [{'salmodia': comp}])),
-             'mapa': mapa, 'adf': {n: a for n, a in A.items() if a.get('como') in todos},
+             'salmos': _salmos(_usados([e for w in SI.values() for e in w.values()], TI.values(), SaI.values(), [{'salmodia': comp}]) | salmos_comunes('intermedia')),
+             'mapa': mapa, 'adf': adf_y_comunes('intermedia', todos)[0], 'comunes': adf_y_comunes('intermedia', todos)[1],
              'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
     _escribir_carga('intermedia', 'INTERMEDIA', datos, mapa, sin)
 

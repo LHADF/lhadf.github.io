@@ -18,6 +18,10 @@
 
 ## Pendiente
 
-- Comunes para las celebraciones propias de ADF (como en Laudes y Vísperas): hoy toman el oficio del día.
 - Faltan en la base: el Oficio del IX Domingo del T. O. (lecturas; la oración ya está) y la segunda lectura del jueves de la semana XXXIII.
 - Himnos latinos de las horas menores y Te Deum en gregoriano.
+
+## Comunes y propio del libro
+
+- Oficio de lectura: en las memorias sin propio, el himno y la segunda lectura del común (la primera lectura, de la feria); en fiestas y solemnidades, todo el común. Lo propio del libro (`base/santoral/libro.yaml`) va encima.
+- Hora intermedia: en las memorias no se hace nada de la memoria (todo de la feria, sin aviso). En fiestas y solemnidades sin propio, antífona, lectura y versículo del común, y la oración de Laudes.

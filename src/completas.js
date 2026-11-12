@@ -39,6 +39,29 @@ function opcionesDia(fecha, sel){
 }
 const enRango=f=>f>=CAL.desde && f<=CAL.hasta;
 
+/* ---------- Oración del común, con el nombre de la celebración ----------
+   Los comunes traen varias oraciones «para» distintos casos (un santo obispo, varios mártires, una virgen…), con N. en
+   lugar del nombre. Se elige la que mejor cuadra con el título y se pone el nombre: «San Blas, obispo y mártir» → «Blas». */
+const PALABRAS=['papa','obispo','presbítero','sacerdote','abad','religios','virgen','mártir','misioner','fundador','doctor','rey','reina','educador','caridad','pastor','monje','abadesa','madre','viuda'];
+function oracionComun(oraciones, nombre){
+  if(!oraciones || !oraciones.length) return null;
+  const n=String(nombre||''), tit=n.toLowerCase(), plural=/^(santos|santas|beatos|beatas)\b|y compañer/i.test(n);
+  const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(n);
+  const pts=o=>{ const p=o.para.toLowerCase(); let x=0;
+    const t=tit+(/presbítero|sacerdote/.test(tit)?' pastor':'');   // un presbítero: «un santo pastor»
+    for(const w of PALABRAS) if(p.includes(w)) x+= t.includes(w) ? 2 : (/papa|obispo|abad|misioner|fundador|religios|educador|caridad|virgen/.test(w) ? -3 : 0);
+    if(/varios|varias|las |los /.test(p)) x+=plural?3:-3; else if(plural && p) x-=1;
+    // que no le toque a un santo la oración de una santa, ni al revés
+    const pf=/\b(una|las|santa|santas|mujer|mujeres|virgen|vírgenes|religiosa|educadora)\b/.test(p), pm=/\b(un|los|santo|santos|varios)\b/.test(p);
+    if(fem ? (pm && !pf) : pf) x-=10;
+    if(fem ? /\bsan N\./.test(o.texto) : /\bsanta N\./.test(o.texto)) x-=5;
+    return x; };
+  const o=oraciones.reduce((m,o)=>pts(o)>pts(m)?o:m, oraciones[0]);
+  const nucleo=n.split(',')[0].replace(/^(San|Santa|Santo|Santos|Santas|Beato|Beata|Beatos|Beatas)\s+/,'').trim()
+    + (/y compañer/i.test(n) && !/y compañer/i.test(n.split(',')[0]) ? ' y compañeros' : '');
+  return o.texto.replace(/\bN\.(\s*y\s*N\.)?/g, nucleo).replace(/\s*\((obispo|presbítero|papa|abad|abadesa)\)/g, '');
+}
+
 /* ---------- Utilidades de texto ---------- */
 const MAYUS=['Dios','Señor','Cristo','Jesús','Jesucristo','Israel','Padre','Hijo','Espíritu','Santo','María','Jerusalén','Sión','Iglesia','Omnipotente','Altísimo','Mesías','Redentor','Reina','Virgen','Madre'];
 function oracionCase(s){ // «ACCIÓN DE GRACIAS» → «Acción de gracias», respetando nombres divinos
@@ -231,5 +254,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{oracionComun, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

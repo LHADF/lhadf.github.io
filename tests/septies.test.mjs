@@ -309,7 +309,7 @@ test('Vísperas: Magníficat en latín con interlineal palabra por palabra', () 
 
 test('celebraciones propias de ADF: toman del común (o de otra celebración) hasta tener textos propios', () => {
   const r = LA.armar('2027-02-03', 'ARG');                                       // San Blas (solemnidad ADF): común de un mártir
-  assert.match(r.dia.nota, /Común de un mártir/);
+  assert.match(r.dia.nota, /para un mártir/); assert.match(r.secciones.find(s => s.k === 'prosa').t.es, /Blas/);   // oración del común, con el nombre
   assert.equal(r.secciones.find(s => s.k === 'himno').opciones[0].n, LD.comunes['un-martir'].himno);
   assert.equal(r.secciones.find(s => s.id === 'ab').t.es, LD.comunes['un-martir'].ant_benedictus);
   assert.equal(LD.mapa['Divino Niño Jesús'], undefined);                         // no se confunde con santa Teresa del Niño Jesús
@@ -371,7 +371,10 @@ test('notas del Calendario ADF y calendarios locales que heredan de su país', (
 test('inicio: Santa María en sábado como opción, biografías y nombre de las Vísperas', () => {
   const o = CP.opcionesDia('2026-11-14', '');
   assert.equal(o.length, 2); assert.equal(o[1].f.n, 'Santa María en sábado'); assert.ok(o[0].actual);
-  assert.match(LA.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Santa María en sábado'}}).dia.nota, /Común de la Santísima Virgen María/);
+  const sms = LA.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Santa María en sábado'}});
+  assert.equal(sms.secciones.find(s => s.k === 'himno').opciones[0].n, 'Salve, Madre, en la tierra de mis amores');   // sus elementos propios
+  assert.match(sms.secciones.find(s => s.id === 'ab').t.es, /Virgen María/);
+  assert.match(sms.secciones.find(s => s.k === 'prosa').t.es, /intercesión de santa María/);
   assert.ok(CP.diaCal('2026-11-11', '').bio.length > 100);
   assert.ok(VI.armar('2026-11-14', '').primeras);
 });
@@ -390,4 +393,21 @@ test('Oficio de lectura y Hora intermedia', () => {
   const sol = W.Sexta.armar('2026-12-08', '');                                              // solemnidad entre semana: complementaria, sin elegir
   assert.ok(!sol.secciones.some(s => s.k === 'salop'));
   for (const h of ['Tercia', 'Sexta', 'Nona']) assert.ok(W[h].armar('2026-11-12', '').secciones.some(s => s.k === 'lectura'));
+});
+
+test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
+  const W = ctx.window;
+  const blas = LA.armar('2027-02-03', '');
+  assert.match(blas.secciones.filter(s => s.k === 'prosa').pop().t.es, /^Escucha, Señor, las súplicas de tu pueblo/);   // oración propia
+  assert.match(blas.dia.nota, /Oración propia/);
+  assert.match(W.Oficio.armar('2027-02-03', '').secciones.find(s => s.k === 'lectura_larga' && s.autor).autor, /san Agustín/);
+  // Jesucristo, Sumo y Eterno Sacerdote: oficio propio entero
+  const ses = W.Oficio.armar('2026-05-28', '');
+  assert.match(ses.dia.titulo, /Sumo y Eterno Sacerdote/); assert.equal(ses.secciones.filter(s => s.k === 'salmo').length, 3);
+  // oración del común con el nombre, sin «N.»
+  const agata = LA.armar('2027-02-05', ''), o = agata.secciones.filter(s => s.k === 'prosa').pop().t.es;   // sin propio en el libro
+  assert.match(o, /santa Ágata/); assert.ok(!/\bN\./.test(o));
+  // Santa María en sábado: Oficio con su himno y su segunda lectura
+  const smo = W.Oficio.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Santa María en sábado'}});
+  assert.equal(smo.secciones.find(s => s.k === 'himno').opciones[0].n, 'Rosa entre rosas');
 });

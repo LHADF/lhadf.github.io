@@ -37,12 +37,22 @@ function propio(hora, fecha, region){
     if(k){ santo=L.santoral[k+I]||(primeras?null:L.santoral[k]); if(santo){ delete P.pendiente; capa(santo); }
            else if(primeras){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
            if(adf.como) nota='Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
-    } else if(adf.comun && L.comunes[adf.comun]){
-      // Propia de ADF sin textos: del común (himno, lectura, responsorio, antífona del cántico y preces); la oración queda la del día
-      const C=L.comunes[adf.comun], mayor=/^(Fiesta|Solemnidad)/.test(ref.g);
-      for(const c of ['himno','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro']) if(C[c]!=null) P[c]=C[c];
+    } else if((adf.comun && L.comunes[adf.comun]) || adf.propio){
+      // Sin textos propios en la base: lo propio del libro (base/santoral/libro.yaml) y el resto del común (libro).
+      // Memorias: salmos de la feria; fiestas y solemnidades, también los del común. En las I Vísperas, lo de las I Vísperas.
+      // Oración: la propia; si no hay, la del común «en su defecto», con el nombre.
+      const C0=L.comunes[adf.comun]||{nombre:''}, C=(primeras&&C0.primeras)?{...C0,...C0.primeras}:C0, mayor=/^(Fiesta|Solemnidad)/.test(ref.g);
+      const PR0=adf.propio||{}, PR=(primeras&&PR0.primeras)?{...PR0,...PR0.primeras}:PR0;
+      const CAMPOS=['himno','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'];
+      for(const c of CAMPOS) if(C[c]!=null) P[c]=C[c];
       if(mayor && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }
-      nota=`Textos del ${C.nombre} (provisorio). Falta la oración propia: va la del día.`;
+      for(const c of CAMPOS) if(PR[c]!=null) P[c]=PR[c];
+      if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
+      const o=PR.oracion || X.oracionComun(C.oraciones||C0.oraciones, ref.n);
+      if(o) P.oracion=o;
+      nota = adf.comun==='santa-maria-sabado' ? ''
+        : PR.oracion ? (C0.nombre ? `Oración propia; lo demás, del ${C0.nombre}.` : '')
+        : `Textos del ${C0.nombre}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
     } else if(ref.n!==ref.fer){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
     // Fiestas y solemnidades sin salmodia propia: salmos y antífonas del domingo de la I semana
