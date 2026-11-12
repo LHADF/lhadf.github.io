@@ -12,9 +12,9 @@
   --r-1:8px; --r-2:16px; --lec:1.2;
 }
 :root[data-theme="dark"]{
-  /* Gris neutro (no negro ni marrón); lo que está más arriba, más claro; texto blanco roto; acentos aclarados (contraste ≥ 4,5:1) */
-  --paper:#252525; --surface:#2f2f2f; --perg:#2a2a2a; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
-  --ink:#e6e6e6; --ink2:#c4c4c4; --muted:#a3a3a3; --line:#3a3a3a; --line2:#444444;
+  /* Fondo negro puro; lo que está más arriba, gris neutro más claro; texto blanco roto; acentos aclarados (contraste ≥ 4,5:1) */
+  --paper:#000; --surface:#161616; --perg:#111; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
+  --ink:#e6e6e6; --ink2:#c4c4c4; --muted:#a3a3a3; --line:#2a2a2a; --line2:#363636;
   --rubric:#ee6d6a; --rubric-soft:#3b2a2a; --rubric-fondo:#c23538; --glosa:#66bdb4; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark }
 
 *{box-sizing:border-box}

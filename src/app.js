@@ -84,7 +84,7 @@ function cargarDia(){
 }
 cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
-function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#252525':'#ffffff'; r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
+function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#000000':'#ffffff'; r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
 // Un solo tamaño (S.zoom, de 80 % a 200 % de a 10 %): el texto de la hora crece todo eso; botones y títulos, la mitad (hasta 150 %).
 function ESC(){ return S.zoom<=1 ? 1 : Math.min(1.5, 1+(S.zoom-1)/2); }
 function LEC(){ return 1.2*S.zoom/ESC(); }
@@ -524,7 +524,7 @@ function horaHTML(){
 // La hora que toca según el reloj: hasta 1:30 antes y después de su hora (Laudes 6, Tercia 9, Sexta 12, Nona 15, Vísperas 18, Completas 21).
 // El Oficio de lectura se marca junto con Laudes.
 function horasAhora(){ const d=new Date(), m=d.getHours()*60+d.getMinutes();
-  const h=[['laudes',6],['tercia',9],['sexta',12],['nona',15],['visperas',18],['completas',21]].find(([,x])=>Math.abs(m-x*60)<=90);
+  const h=[['laudes',6],['tercia',9],['sexta',12],['nona',15],['visperas',18],['completas',21]].find(([id,x])=>id==='visperas' ? (m>=16*60+30 && m<=20*60+30) : Math.abs(m-x*60)<=90);
   return !h ? [] : h[0]==='laudes' ? ['oficio','laudes'] : [h[0]]; }
 const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas'],['completas','Completas']];
 const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#fff',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
@@ -551,7 +551,7 @@ function portadaHTML(){
     <div class="dia">
       <div class="txt">
         <div><div class="hoy">${esc(r.dia.grado)}</div><h2 class="${r.dia.titulo.length>80?'muy-largo':r.dia.titulo.length>48?'largo':''}">${esc(r.dia.titulo)}</h2></div>
-        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Biografía</button>':''}</div>
+        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
       </div>
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>

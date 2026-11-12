@@ -42,7 +42,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 - **Cuatro tamaños:** título, ítem, interfaz y dato. El mínimo es el dato (unos 14 px) y toda la interfaz se puede agrandar.
 - **Radios:** dos, de 8 px y 16 px.
 - **Modo claro:** papel blanco, tinta negra, pergamino `#f4eee4` para tarjetas, arco `#e7ddcc`, tinta de ilustración `#2a201a`. Nada de tonos pastel.
-- **Modo oscuro:** negro puro (`#000`) y superficies `#141312`. Las ilustraciones no se invierten.
+- **Modo oscuro:** fondo negro puro (`#000`) y superficies en gris neutro (`#161616`, `#111`). Las ilustraciones no se invierten.
 - **Ilustraciones:** grabado y mosaico antiguo, en línea, dentro de arcos de pergamino, sin imágenes pixeladas.
 - **Controles:** escondidos. Nada de barras inferiores ni índice: todo está en el menú «⋯» (lectura, aspecto, canto).
 - **Modo claro por defecto;** el oscuro solo si la persona lo elige.
@@ -58,4 +58,4 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 
 ## Modo oscuro
 
-Como en el Cantoral Laudibus: no sigue al dispositivo; solo se aplica si se elige en Opciones (`:root[data-theme="dark"]`). Fondo carbón cálido (`#1c1a17`, alrededor del 10 % de luminosidad), superficies, líneas y tintes aclarados en la misma proporción; textos, rojo y acentos sin cambios. En noviembre de 2026 todos volvieron a claro una vez (`temaClaro2026`).
+Como en el Cantoral Laudibus: no sigue al dispositivo; solo se aplica si se elige en Opciones (`:root[data-theme="dark"]`). Fondo negro puro (`#000`, pedido en noviembre de 2026); superficies y líneas en gris neutro algo más claro; texto blanco roto y acentos aclarados (contraste ≥ 4,5:1). En noviembre de 2026 todos volvieron a claro una vez (`temaClaro2026`).

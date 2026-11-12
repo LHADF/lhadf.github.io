@@ -278,8 +278,26 @@ def intermedia():
     datos = {'salterio': SI, 'tiempo': TI, 'santoral': SaI, 'horas': horas, 'complementaria': OI['complementaria'],
              'salmos': _salmos(_usados([e for w in SI.values() for e in w.values()], TI.values(), SaI.values(), [{'salmodia': comp}]) | salmos_comunes('intermedia')),
              'mapa': mapa, 'adf': adf_y_comunes('intermedia', todos)[0], 'comunes': adf_y_comunes('intermedia', todos)[1],
-             'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
+             'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}, 'mayores': mayores_sin_intermedia(mapa)}
     _escribir_carga('intermedia', 'INTERMEDIA', datos, mapa, sin)
+
+
+def mayores_sin_intermedia(mapa_inter):
+    """Celebraciones que en algún calendario son fiesta o solemnidad, con propio en el santoral de Laudes pero no en el de
+    la Hora intermedia (p. ej. san Martín, solemnidad en Buenos Aires): su común (texto del santoral) y su oración."""
+    SaL = leer(os.path.join(B, 'santoral', 'laudes.yaml'))
+    mapaL, _ = vincular_santoral(SaL)
+    cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
+    cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
+    tab, ix = cal['tabla'], {c: i for i, c in enumerate(cal['campos'])}
+    filas = list(cal['dias']) + [v[2] for vs in cal['var'].values() for v in vs]
+    out = {}
+    for r in filas:
+        n, g = tab[r[ix['n']]], tab[r[ix['g']]]
+        if not re.match(r'(Fiesta|Solemnidad)', g) or n in mapa_inter or n not in mapaL: continue
+        e = SaL[mapaL[n]]
+        if e.get('comun') or e.get('oracion'): out[n] = {'comun': e.get('comun', ''), 'oracion': e.get('oracion', '')}
+    return out
 
 
 def _escribir_carga(nombre, var, datos, mapa, sin):

@@ -43,6 +43,15 @@ const enRango=f=>f>=CAL.desde && f<=CAL.hasta;
    Los comunes traen varias oraciones «para» distintos casos (un santo obispo, varios mártires, una virgen…), con N. en
    lugar del nombre. Se elige la que mejor cuadra con el título y se pone el nombre: «San Blas, obispo y mártir» → «Blas». */
 const PALABRAS=['papa','obispo','presbítero','sacerdote','abad','religios','virgen','mártir','misioner','fundador','doctor','rey','reina','educador','caridad','pastor','monje','abadesa','madre','viuda'];
+// El común que indica el santoral de la base («Del Común de pastores: para un santo obispo.») → su clave en base/comunes/.
+// Si nombra dos («de pastores… y del de doctores»), el primero.
+const COMUN_DE=[[/dedicaci/,'dedicacion'],[/virgen mar/,'virgen-maria'],[/ap[óo]stol/,'apostoles'],[/para un m[áa]rt|un m[áa]rt/,'un-martir'],
+  [/varios m[áa]rt/,'varios-martires'],[/pastores/,'pastores'],[/doctores/,'doctores'],[/v[íi]rgenes/,'virgenes'],[/santos varones/,'santos-varones'],[/santas mujeres/,'santas-mujeres']];
+function comunDe(texto){
+  const t=String(texto||'').toLowerCase(); let mejor=null, pos=1e9;
+  for(const [re,id] of COMUN_DE){ const m=t.match(re); if(m && m.index<pos){ pos=m.index; mejor=id; } }
+  return mejor;
+}
 function oracionComun(oraciones, nombre){
   if(!oraciones || !oraciones.length) return null;
   const n=String(nombre||''), tit=n.toLowerCase(), plural=/^(santos|santas|beatos|beatas)\b|y compañer/i.test(n);
@@ -254,5 +263,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{oracionComun, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{oracionComun, comunDe, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

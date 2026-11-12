@@ -55,8 +55,12 @@ function propio(hora, fecha, region){
         : `Textos del ${C0.nombre}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
     } else if(ref.n!==ref.fer){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
-    // Fiestas y solemnidades sin salmodia propia: salmos y antífonas del domingo de la I semana
-    if(/^(Fiesta|Solemnidad)/.test(ref.g) && !(santo&&santo.salmodia) && !salmodiaPropia && !(dom && !k)) P.salmodia=L.salterio.semana_1[primeras?'domingo_1':'domingo'].salmodia;
+    // Fiestas y solemnidades sin salmodia propia: la del común que indica el santoral (en las I Vísperas, la de sus I Vísperas);
+    // si no hay común, salmos y antífonas del domingo de la I semana
+    if(/^(Fiesta|Solemnidad)/.test(ref.g) && !(santo&&santo.salmodia) && !salmodiaPropia && !(dom && !k)){
+      const CS=k && L.comunes && L.comunes[X.comunDe((L.santoral[k]||{}).comun)], SC=CS && (primeras ? (CS.primeras||{}).salmodia : CS.salmodia);
+      P.salmodia=SC || L.salterio.semana_1[primeras?'domingo_1':'domingo'].salmodia;
+    }
     if(!P.salmodia) P.salmodia=(semana[dia]||L.salterio.semana_1.domingo).salmodia;
     return {P, dia, nota, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
   };
