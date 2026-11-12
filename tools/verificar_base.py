@@ -132,7 +132,7 @@ SAL0 = {os.path.basename(f)[:-5] for f in glob.glob(os.path.join(B, 'salmos', '*
 # ---------- Calendarios locales, oraciones del oficio e invitatorio gregoriano ----------
 LOC = leer(os.path.join(B, 'calendario', 'locales.yaml'))
 for c in LOC['cambios']:
-    falta(c['calendario'] in LOC['calendarios'] and (c['calendario'] in LOC['padres'] or c['calendario'] in ('ARG', 'PGY', 'BRS')), f"calendario/locales.yaml · {c.get('celebracion')}: la sigla necesita nombre (calendarios) y, si es local, país (padres)")
+    falta(c['calendario'] == '*' or c['calendario'] in LOC['calendarios'] and (c['calendario'] in LOC['padres'] or c['calendario'] in ('ARG', 'PGY', 'BRS')), f"calendario/locales.yaml · {c.get('celebracion')}: la sigla necesita nombre (calendarios) y, si es local, país (padres)")
 NC = leer(os.path.join(B, 'calendario', 'notas.yaml')) or {}
 for k, v in NC.items():
     falta(re.match(r'^(\d\d-\d\d|movible) \S', k), f'calendario/notas.yaml · «{k}»: la clave es «MM-DD Nombre» o «movible Nombre»')

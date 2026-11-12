@@ -40,7 +40,9 @@ dedicacion:
     - - Señor Jesús, que estás en medio de los que se reúnen en tu nombre,
       - a tiende la oración unánime de tu Iglesia congregada.
     - - Señor Jesús, que con el Padre haces morada en los que te aman,
-      - perfecciona a tu Iglesia por la caridad. Señor Jesús, que no echas fuera a ninguno de los que vienen a ti, — acoge a todos los difuntos en la mansión del Padre.
+      - perfecciona a tu Iglesia por la caridad.
+    - - Señor Jesús, que no echas fuera a ninguno de los que vienen a ti,
+      - acoge a todos los difuntos en la mansión del Padre.
   padrenuestro_intro: 'Terminemos nuestra oración con las palabras que Cristo nos enseñó:'
   oraciones:
   - para: ''
@@ -83,7 +85,9 @@ dedicacion:
       - - Señor Jesús, que estás en medio de los que se reúnen en tu nombre,
         - atiende la oración unánime de tu Iglesia congregada.
       - - Señor Jesús, que con el Padre haces morada en los que te aman,
-        - perfecciona a tu Iglesia por la caridad. Señor Jesús, que no echas fuera a ninguno de los que vienen a ti, — acoge a todos los difuntos en la mansión del Padre.
+        - perfecciona a tu Iglesia por la caridad.
+      - - Señor Jesús, que no echas fuera a ninguno de los que vienen a ti,
+        - acoge a todos los difuntos en la mansión del Padre.
     padrenuestro_intro: 'Terminemos nuestra oración con las palabras que Cristo nos enseñó:'
     oraciones:
     - para: ''
@@ -128,7 +132,9 @@ virgen-maria:
     - - Tú que hiciste de María la llena de gracia,
       - concede la abundancia de tu gracia a todos los hombres.
     - - Haz, Señor, que tu Iglesia tenga un solo corazón y una sola alma por el amor,
-      - y que todos los fieles perseveren unánimes en la oración con María, la madre de Jesús. Tú que coronaste a María como reina del cielo, — haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
+      - y que todos los fieles perseveren unánimes en la oración con María, la madre de Jesús.
+    - - Tú que coronaste a María como reina del cielo,
+      - haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
   padrenuestro_intro: 'Confiando en el Señor, que hizo obras grandes en María, pidamos al Padre que colme también de bienes al mundo hambriento:'
   oraciones:
   - para: ''
@@ -179,7 +185,9 @@ virgen-maria:
       - - Tú que hiciste a María la llena de gracia,
         - concede la abundancia de tu gracia a todos los hombres.
       - - Haz, Señor, que tu Iglesia tenga un solo corazón y una sola alma por el amor,
-        - y que todos los fieles perseveren unánimes en oración con María, la madre de Jesús. Tú que coronaste a María como reina del cielo, — haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
+        - y que todos los fieles perseveren unánimes en oración con María, la madre de Jesús.
+      - - Tú que coronaste a María como reina del cielo,
+        - haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
     padrenuestro_intro: 'Confiando en el Señor, que hizo obras grandes en María, pidamos al Padre que colme también de bienes al mundo hambriento:'
     oraciones:
     - para: ''
@@ -272,7 +280,9 @@ apostoles:
       - - Tú que enviaste a tu Hijo a sembrar la semilla de la palabra,
         - haz que, sembrando también tu palabra con nuestro esfuerzo, recojamos sus frutos con alegría.
       - - Tú que enviaste a tu Hijo para que reconciliara al mundo contigo,
-        - haz que también nosotros cooperemos a la reconciliación de los hombres. Tú que quisiste que tu Hijo resucitara el primero de entre los muertos, — concede a todos los que son de Cristo resucitar con él, el día de su venida.
+        - haz que también nosotros cooperemos a la reconciliación de los hombres.
+      - - Tú que quisiste que tu Hijo resucitara el primero de entre los muertos,
+        - concede a todos los que son de Cristo resucitar con él, el día de su venida.
     padrenuestro_intro: 'Oremos ahora al Padre, como Jesús enseñó a los apóstoles:'
 varios-martires:
   nombre: 'Común de mártires: para varios mártires'
@@ -312,7 +322,9 @@ varios-martires:
     - - Te damos gracias, Señor, porque has dado a la Iglesia, como sacrificio para el perdón de los pecados,
       - la sangre de la alianza nueva y eterna.
     - - Te damos gracias, Señor, porque con tu gracia nos has dado perseverar en la fe,
-      - durante el día que ahora termina. Te damos gracias, Señor, — porque has asociado a nuestros hermanos difuntos a tu muerte.
+      - durante el día que ahora termina.
+    - - Te damos gracias, Señor,
+      - porque has asociado a nuestros hermanos difuntos a tu muerte.
   padrenuestro_intro: 'Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
   oraciones:
   - para: varios mártires
@@ -359,7 +371,9 @@ varios-martires:
       - - Te damos gracias, Señor, porque has dado a la Iglesia, como sacrificio para el perdón de los pecados,
         - la sangre de la alianza nueva y eterna.
       - - Te damos gracias, Señor, porque con tu gracia nos has dado perseverar en la fe,
-        - durante el día que ahora termina. Te damos gracias, Señor, — porque has asociado a nuestros hermanos difuntos a tu muerte.
+        - durante el día que ahora termina.
+      - - Te damos gracias, Señor,
+        - porque has asociado a nuestros hermanos difuntos a tu muerte.
     padrenuestro_intro: 'Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
     oraciones:
     - para: ''
@@ -408,7 +422,9 @@ un-martir:
     - - Te damos gracias, Señor, porque has dado a la Iglesia, como sacrificio para el perdón de los pecados,
       - la sangre de la alianza nueva y eterna.
     - - Te damos gracias, Señor, porque con tu gracia nos has dado perseverar en la fe,
-      - durante el día que ahora termina. Te damos gracias, Señor, — porque has asociado a nuestros hermanos difuntos a tu muerte.
+      - durante el día que ahora termina.
+    - - Te damos gracias, Señor,
+      - porque has asociado a nuestros hermanos difuntos a tu muerte.
   padrenuestro_intro: 'Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
   oraciones:
   - para: ''
@@ -467,7 +483,9 @@ un-martir:
       - - Te damos gracias, Señor, porque has dado a la Iglesia, como sacrificio para el perdón de los pecados,
         - la sangre de la alianza nueva y eterna.
       - - Te damos gracias, Señor, porque con tu gracia nos has dado perseverar en la fe,
-        - durante el día que ahora termina. Te damos gracias, Señor, — porque has asociado a nuestros hermanos difuntos a tu muerte.
+        - durante el día que ahora termina.
+      - - Te damos gracias, Señor,
+        - porque has asociado a nuestros hermanos difuntos a tu muerte.
     padrenuestro_intro: 'Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo:'
     oraciones:
     - para: ''
@@ -516,7 +534,9 @@ pastores:
     - - Tú que de entre los fieles elegiste a los santos pastores y, por tu Espíritu, los consagraste como ministros en bien de sus hermanos,
       - llena también de tu Espíritu a todos los pastores del pueblo de Dios.
     - - Tú que fuiste la heredad de los santos pastores,
-      - no permitas que ninguno de los que fueron adquiridos por tu sangre viva alejado de ti. Tú que por medio de los pastores de la Iglesia das la vida eterna a tus ovejas para que nadie las arrebate de tu mano, — salva a los difuntos, por quienes entregaste tu vida.
+      - no permitas que ninguno de los que fueron adquiridos por tu sangre viva alejado de ti.
+    - - Tú que por medio de los pastores de la Iglesia das la vida eterna a tus ovejas para que nadie las arrebate de tu mano,
+      - salva a los difuntos, por quienes entregaste tu vida.
   padrenuestro_intro: 'Digamos juntos la oración que Cristo nos enseñó como modelo de toda oración:'
   oraciones:
   - para: un santo papa
@@ -621,7 +641,9 @@ doctores:
     - - Tú que de entre los fieles elegiste a los santos pastores y, por tu Espíritu, los consagraste como ministros en bien de sus hermanos,
       - llena también de tu Espíritu a todos los pastores del pueblo de Dios.
     - - Tú que fuiste la heredad de los santos pastores,
-      - no permitas que ninguno de los que fueron adquiridos por tu sangre viva alejado de ti. Tú que por medio de los pastores de la Iglesia das la vida eterna a tus ovejas para que nadie las arrebate de tu mano, — salva a los difuntos, por quienes entregaste tu vida.
+      - no permitas que ninguno de los que fueron adquiridos por tu sangre viva alejado de ti.
+    - - Tú que por medio de los pastores de la Iglesia das la vida eterna a tus ovejas para que nadie las arrebate de tu mano,
+      - salva a los difuntos, por quienes entregaste tu vida.
   padrenuestro_intro: 'Digamos juntos la oración que Cristo nos enseñó como modelo de toda oración:'
   oraciones:
   - para: ''
@@ -708,7 +730,9 @@ virgenes:
     - - Señor Jesucristo, a quien la Iglesia virgen guardó siempre fidelidad intacta,
       - concede a todos los cristianos la integridad y la pureza de la fe.
     - - Tú que concedes hoy a tu pueblo alegrarse por la fiesta de santa N., virgen,
-      - concédele también gozar siempre de su valiosa intercesión. Tú que recibiste en el banquete de tus bodas a las vírgenes santas, — admite también a nuestros hermanos difuntos en el convite festivo de tu reino.
+      - concédele también gozar siempre de su valiosa intercesión.
+    - - Tú que recibiste en el banquete de tus bodas a las vírgenes santas,
+      - admite también a nuestros hermanos difuntos en el convite festivo de tu reino.
   padrenuestro_intro: 'Oremos con Jesús, diciendo a nuestro Padre:'
   oraciones:
   - para: ''
@@ -802,7 +826,9 @@ santos-varones:
     - - Padre santo, que nos reconciliaste contigo por medio de Cristo,
       - guárdanos en tu nombre para que todos seamos uno.
     - - Padre santo, que nos convocas al banquete de tu reino,
-      - haz que comiendo el pan que ha bajado del cielo alcancemos la perfección del amor. Padre santo, perdona a los pecadores sus delitos, — y admite a los difuntos en tu reino para que puedan contemplar tu rostro.
+      - haz que comiendo el pan que ha bajado del cielo alcancemos la perfección del amor.
+    - - Padre santo, perdona a los pecadores sus delitos,
+      - y admite a los difuntos en tu reino para que puedan contemplar tu rostro.
   padrenuestro_intro: 'Porque nos llamamos y somos hijos de Dios, nos atrevemos a decir:'
   oraciones:
   - para: ''
@@ -855,7 +881,9 @@ santos-varones:
       - - Padre santo, que nos reconciliaste contigo por medio de Cristo,
         - guárdanos en tu nombre para que todos seamos uno.
       - - Padre santo, que nos convocas al banquete de tu reino,
-        - haz que comiendo el pan que ha bajado del cielo alcancemos la perfección del amor. Padre santo, perdona a los pecadores sus delitos, — y admite a los difuntos en tu reino para que puedan contemplar tu rostro.
+        - haz que comiendo el pan que ha bajado del cielo alcancemos la perfección del amor.
+      - - Padre santo, perdona a los pecadores sus delitos,
+        - y admite a los difuntos en tu reino para que puedan contemplar tu rostro.
     padrenuestro_intro: 'Porque nos llamamos y somos hijos de Dios, nos atrevemos a decir:'
     oraciones:
     - para: ''
@@ -910,7 +938,9 @@ santas-mujeres:
     - - Por intercesión de las santas viudas, que por la hospitalidad y la oración superaron la soledad,
       - concede, Señor, a tu Iglesia ser para el mundo signo manifiesto de tu amor a los hombres.
     - - Por intercesión de las santas madres, que engendraron sus hijos no sólo para la vida del mundo, sino también para la salvación eterna,
-      - concede, Señor, a tu Iglesia engendrar para tu reino a todos los pueblos. Por intercesión de todas las mujeres santas, que han sido ya admitidas a contemplar la belleza de tu rostro, — concede, Señor, a los difuntos de la Iglesia gozar también de la luz eterna de tu presencia.
+      - concede, Señor, a tu Iglesia engendrar para tu reino a todos los pueblos.
+    - - Por intercesión de todas las mujeres santas, que han sido ya admitidas a contemplar la belleza de tu rostro,
+      - concede, Señor, a los difuntos de la Iglesia gozar también de la luz eterna de tu presencia.
   padrenuestro_intro: 'Fieles a la recomendación del Salvador, digamos al Padre común:'
   oraciones:
   - para: ''
@@ -961,7 +991,9 @@ santas-mujeres:
       - - Por intercesión de las santas viudas, que por la hospitalidad y la oración superaron la soledad,
         - concede, Señor, a tu Iglesia ser para el mundo signo manifiesto de tu amor a los hombres.
       - - Por intercesión de las santas madres, que engendraron sus hijos no sólo para la vida del mundo, sino también para la salvación eterna,
-        - concede, Señor, a tu Iglesia engendrar para tu reino a todos los pueblos. Por intercesión de todas las mujeres santas, que han sido ya admitidas a contemplar la belleza de tu rostro, — concede, Señor, a los difuntos de la Iglesia gozar también de la luz eterna de tu presencia.
+        - concede, Señor, a tu Iglesia engendrar para tu reino a todos los pueblos.
+      - - Por intercesión de todas las mujeres santas, que han sido ya admitidas a contemplar la belleza de tu rostro,
+        - concede, Señor, a los difuntos de la Iglesia gozar también de la luz eterna de tu presencia.
     padrenuestro_intro: 'Fieles a la recomendación del Salvador, digamos al Padre común:'
     oraciones:
     - para: ''

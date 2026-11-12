@@ -58,7 +58,7 @@ function propio(hora, fecha, region){
     // Fiestas y solemnidades sin salmodia propia: la del común que indica el santoral (en las I Vísperas, la de sus I Vísperas);
     // si no hay común, salmos y antífonas del domingo de la I semana
     if(/^(Fiesta|Solemnidad)/.test(ref.g) && !(santo&&santo.salmodia) && !salmodiaPropia && !(dom && !k)){
-      const CS=k && L.comunes && L.comunes[X.comunDe((L.santoral[k]||{}).comun)], SC=CS && (primeras ? (CS.primeras||{}).salmodia : CS.salmodia);
+      const CS=k && L.comunes && L.comunes[X.comunDe((L.santoral[k]||{}).comun) || adf.comun], SC=CS && (primeras ? (CS.primeras||{}).salmodia : CS.salmodia);
       P.salmodia=SC || L.salterio.semana_1[primeras?'domingo_1':'domingo'].salmodia;
     }
     if(!P.salmodia) P.salmodia=(semana[dia]||L.salterio.semana_1.domingo).salmodia;

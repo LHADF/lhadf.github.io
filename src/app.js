@@ -55,7 +55,7 @@ function fichasCal(){
   const ops=CP.opcionesDia(S.fecha, SEL()), mio=linaje(S.cal), out=[];
   ops.forEach((o,i)=>{
     if(o.tipo==='r') o.siglas.forEach(sg=>out.push({i, sg, txt:sg, on:o.actual&&(mio.includes(sg)||!o.siglas.some(x=>mio.includes(x))), o}));
-    else out.push({i, sg:'', txt:o.f.n==='Santa María en sábado'?'Santa María':o.siglas.join(' · '), on:o.actual, o});
+    else out.push({i, sg:'', txt:o.f.n==='Sancta María in sábbato'?'Sancta María in sábbato':o.siglas.join(' · '), on:o.actual, o});
   });
   return out;
 }
@@ -498,7 +498,8 @@ function horaHTML(){
         // Cada prece: flexa (†) en el corte del medio y asterisco (*) al final; la respuesta la dicen todos
         if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
         h+=`<p>${esc(sec.intro)}</p><p class="todos">${esc(sec.respuesta)}</p>`
-          +`<div class="preces">${sec.preces.map(([a,b])=>`<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`
+          +`<div class="preces">${sec.preces.map(([a,b])=>b ? `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`
+              : `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`   // prece sin corte
 ; break; }
       case 'pater':
         { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita). Un renglón por frase.
@@ -561,7 +562,7 @@ function portadaHTML(){
       if(id==='visperas') n=nombreVisperas();
       return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
     <button class="discreto" data-act="oraciones">Oraciones antes y después del oficio</button>
-    <p class="nota-proto">Prototipo: Laudes, Vísperas y Completas están armadas para cualquier día, con el calendario ADF. Textos de la Liturgia de las Horas en español; invocación, cántico evangélico y conclusión en latín. En Laudes y Vísperas, los himnos van por ahora solo en español y el santoral está en revisión.</p>
+    <p class="nota-proto">Versión de prueba: todas las horas, con el calendario ADF. Los textos y el santoral están en revisión; puede haber errores.</p>
   </div>`;
 }
 
@@ -600,13 +601,16 @@ function hojaOpciones(){
     <div class="grupo"><h3>Canto</h3>
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>`);
 }
-let _toast, _undo=null;
+let _toast, _toastFin, _undo=null;
+// Aviso breve: aparece y se desvanece (clases «entra» y «sale» de app.css)
 function toast(m, snap){
-  clearTimeout(_toast); let t=$('#toast');
+  clearTimeout(_toast); clearTimeout(_toastFin); let t=$('#toast');
   if(!t){ t=document.createElement('div'); t.id='toast'; t.className='toast'; t.setAttribute('role','status'); t.setAttribute('aria-live','polite'); document.body.appendChild(t); }
   _undo=snap||null;
-  t.innerHTML=`<span>${esc(m)}</span>${snap?'<button data-act="deshacer">Deshacer</button>':''}`; t.hidden=false;
-  _toast=setTimeout(()=>{ t.hidden=true; _undo=null; },snap?4500:2200);
+  t.innerHTML=`<span>${esc(m)}</span>${snap?'<button data-act="deshacer">Deshacer</button>':''}`;
+  if(t.hidden){ t.classList.add('entra'); t.hidden=false; void t.offsetWidth; }
+  t.classList.remove('entra','sale');
+  _toast=setTimeout(()=>{ t.classList.add('sale'); _undo=null; _toastFin=setTimeout(()=>{ t.hidden=true; t.classList.remove('sale'); },500); },snap?4500:2200);
 }
 
 /* ---------- Acciones ---------- */
@@ -641,10 +645,10 @@ document.addEventListener('click',e=>{
     case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal();
       // notas del Calendario litúrgico ADF, una por renglón: «SIGLA<tab>texto»
       const ns=String(f.nota||'').split('\n').filter(Boolean).map(l=>{ const i=l.indexOf('\t'); return i<0?['',l]:[l.slice(0,i),l.slice(i+1)]; });
-      const sg=[...new Set(fc.flatMap(c=>c.o.siglas).concat(ns.map(n=>n[0])).filter(Boolean))];
+      const sg=[...new Set(fc.flatMap(c=>c.o.siglas).concat(ns.map(n=>n[0])).filter(x=>x&&CP.calendarios[x]))];
       hoja(f.n, ns.map(([x,t])=>`<p class="nota-dia">${x?`<span class="sig">${esc(x)}</span>`:''}${esc(t)}</p>`).join('')
         +`<dl class="siglas">${sg.map(x=>`<div><dt>${esc(x)}</dt><dd>${esc(CP.calendarios[x]||'')}</dd></div>`).join('')}</dl>`); break; }
-    case 'trad': S.trad=!S.trad; cambio('Traducción del latín: '+(S.trad?'sí':'no')); break;
+    case 'trad': S.trad=!S.trad; guardar(); refrescarHoja(reabrir); break;   // el cambio se ve al instante: sin aviso
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'sin partitura',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
     case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v; refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
@@ -660,7 +664,7 @@ document.addEventListener('click',e=>{
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
     case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio('Tamaño: '+Math.round(z*100)+' %',false); break; }
-    case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); toast({light:'Modo claro',dark:'Modo oscuro'}[v], snap); break;
+    case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); break;   // sin aviso
   }
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });

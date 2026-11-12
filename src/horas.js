@@ -25,7 +25,7 @@ function capas(L, fecha, sel, campos){
   // Fiesta o solemnidad con propio en la base pero sin todas sus partes (p. ej. una memoria que un calendario eleva):
   // lo que falte, del común que indica el santoral. M: datos de Laudes para la Hora intermedia.
   const M=mayor(ref) ? (L.mayores||{})[ref.n] : null;
-  const CS=(mayor(ref) && (k||M) && L.comunes) ? L.comunes[X.comunDe((santo&&santo.comun) || (M&&M.comun))]||null : null;
+  const CS=(mayor(ref) && (k||M) && L.comunes) ? L.comunes[X.comunDe((santo&&santo.comun) || (M&&M.comun)) || adf.comun]||null : null;
   return {P, ref, dia, dom:d.getDay()===0, santo, k, C, PR, CS, M, tiempo:!!(T1||T2)};
 }
 function aviso(ref, k, L, C, hora, PR){
@@ -91,8 +91,8 @@ function armarOficio(fecha, sel){
     const o=X.oracionComun(C.oraciones, ref.n); if(o) P.oracion=o;
   }
   if(PR) for(const c of [...CAMPOS_O]) if(PR[c]!=null) P[c]=PR[c];   // lo propio del libro: segunda lectura, oración…
-  // Fiestas y solemnidades sin salmodia propia (ni en el tiempo ni en el santoral): la del domingo de la I semana
-  const propia=[L.tiempo[ref.fer], L.tiempo[`${ref.fer} (${window.Laudes.ciclo(fecha)})`], k&&L.santoral[k], C&&mayor(ref)&&C, CS].some(x=>x&&x.salmodia);
+  // Fiestas y solemnidades sin salmodia propia (ni en el tiempo, ni en el santoral, ni en el propio del libro, ni en el común): la del domingo de la I semana
+  const propia=[L.tiempo[ref.fer], L.tiempo[`${ref.fer} (${window.Laudes.ciclo(fecha)})`], k&&L.santoral[k], C&&mayor(ref)&&C, CS, PR].some(x=>x&&x.salmodia);
   if(/^(Fiesta|Solemnidad)/.test(ref.g) && !dom && !propia) P.salmodia=L.salterio.semana_1.domingo.salmodia;
   // Te Deum: domingos fuera de Cuaresma, solemnidades, fiestas y octavas de Navidad y de Pascua
   const teDeum = (dom && ref.t!=='Cuaresma' && ref.t!=='Triduo') || ref.sol || /^Fiesta/.test(ref.g) || !!ref.oct;
@@ -102,9 +102,11 @@ function armarOficio(fecha, sel){
   salmodia(S, L, P.salmodia||[]);
   if(P.versiculo) S.push({k:'resp', es:true, l:{es:P.versiculo}});
   const lect=(id, t, x, r)=>{
-    S.push({k:'sec', id, t, ref:x&&x.ref&&!/^De /.test(x.ref)?x.ref:''});
+    // La cita bíblica va junto al título de la sección (una sola vez); la obra («De los Sermones…»), arriba del texto
+    const enTitulo=!!(x && x.ref && !/^De /.test(x.ref));
+    S.push({k:'sec', id, t, ref:enTitulo?x.ref:''});
     if(!x){ S.push({k:'aviso', t:'Falta esta lectura en la base.'}); return; }
-    S.push({k:'lectura_larga', ref:x.ref||'', autor:x.autor||'', titulo:x.titulo||'', t:x.texto||''});
+    S.push({k:'lectura_larga', ref:enTitulo?'':(x.ref||''), autor:x.autor||'', titulo:x.titulo||'', t:x.texto||''});
     if(r){ S.push({k:'sec', id:id+'-r', t:'Responsorio', ref:r.ref||'', menor:true}); S.push({k:'resp', es:true, l:{es:r.vr}}); }
   };
   lect('lectura1', 'Primera lectura', P.lectura1, P.resp1);

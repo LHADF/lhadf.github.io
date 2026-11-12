@@ -2,6 +2,7 @@
 # Lo lee tools/calendario.py, que aplica el cambio al motor del Ordo (precedencias, I Vísperas y traslados salen de ahí).
 #   calendario: sigla (debe estar en «calendarios», abajo)      fecha: MM-DD      celebracion: comienzo del nombre en el Ordo
 #   grado: Solemnidad | Fiesta | Memoria obligatoria             nota: opcional (las notas del calendario van en notas.yaml)
+#   calendario: '*' = todos (va primero; un calendario local lo puede cambiar después). siglas: opcional, quién la celebra así.
 # Vale también para un calendario nacional del Ordo (ARG, PGY) cuando el Calendario ADF indica un grado distinto.
 calendarios:
   CRG: Calendario romano general
@@ -19,6 +20,13 @@ padres:
   BUE: ARG
   CDE: PGY
 cambios:
+# San Blas: el Ordo la trae como solemnidad (CDE, ADF). Calendario ADF, notas 2 y 3: solemnidad solo en CDE (patrono de
+# la diócesis); en ADF, memoria obligatoria.
+- calendario: '*'
+  fecha: 02-03
+  celebracion: San Blas
+  grado: Memoria obligatoria
+  siglas: ADF
 - calendario: BUE
   fecha: 11-11
   celebracion: San Martín de Tours

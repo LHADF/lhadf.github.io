@@ -10,12 +10,14 @@
   --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-titulo:1.75rem; --f-item:1.25rem; --f-ui:1rem; --f-dato:.875rem;
   --r-1:8px; --r-2:16px; --lec:1.2;
+  --velo:rgba(20,12,8,.42); --aviso-fondo:#f4eee4; --aviso-linea:#e7ddcc;
 }
 :root[data-theme="dark"]{
   /* Fondo negro puro; lo que está más arriba, gris neutro más claro; texto blanco roto; acentos aclarados (contraste ≥ 4,5:1) */
   --paper:#000; --surface:#161616; --perg:#111; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
   --ink:#e6e6e6; --ink2:#c4c4c4; --muted:#a3a3a3; --line:#2a2a2a; --line2:#363636;
-  --rubric:#ee6d6a; --rubric-soft:#3b2a2a; --rubric-fondo:#c23538; --glosa:#66bdb4; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark }
+  --rubric:#ee6d6a; --rubric-soft:#3b2a2a; --rubric-fondo:#c23538; --glosa:#66bdb4; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark;
+  --velo:rgba(62,62,62,.72); --aviso-fondo:#1c1c1c; --aviso-linea:#333 }
 
 *{box-sizing:border-box}
 html,body{background:var(--paper);color:var(--ink)}
@@ -116,7 +118,8 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .rub{color:var(--rubric);font-style:italic;font-size:.82em;line-height:1.4}
 .k{color:var(--rubric);font-family:var(--serif)}
 .vr p{margin:0 0 .35em;padding-left:1.4em;text-indent:-1.4em}
-.vr p .k{display:inline-block;width:1.4em;text-indent:0}
+.vr p>.k{display:inline-block;width:1.4em;text-indent:0}
+b .k,.todos .k{font-weight:400}
 .gl{display:block;color:var(--glosa);font-style:italic;font-size:.84em;line-height:1.35;margin:.1em 0 .5em}
 .vr p .gl{text-indent:0}
 .lec-ref{float:right;color:var(--rubric);font-size:var(--f-dato);font-family:var(--sans);margin-left:12px}
@@ -126,7 +129,8 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .ant{margin:.4em 0 .9em}
 .ant .n{color:var(--rubric);font-size:.85em;margin-right:.3em}
 .toast[hidden]{display:none}
-.toast button{border:0;background:none;color:inherit;font-weight:600;text-decoration:underline;min-height:44px;padding:0 10px}
+.toast button{border:0;background:none;color:var(--rubric);font-family:var(--sans);font-size:inherit;font-weight:600;min-height:44px;padding:0 10px}
+.toast.entra,.toast.sale{opacity:0;transform:translate(-50%,8px)}
 .ant-greg{margin:.2em 0 1em}
 .opciones{display:flex;gap:6px;flex-wrap:wrap;margin:-.2em 0 1em;font-family:var(--sans)}
 .opciones button{font-size:var(--f-dato);border:1px solid var(--line);background:none;border-radius:var(--r-1);min-height:44px;padding:5px 12px;color:var(--muted)}
@@ -176,11 +180,12 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .barra button[aria-pressed="true"] svg{stroke:var(--rubric)}
 
 /* ---------- Hojas ---------- */
-.capa{position:fixed;inset:0;z-index:50;background:rgba(20,12,8,.42);display:flex;align-items:flex-end;justify-content:center}
+.capa{position:fixed;inset:0;z-index:50;background:var(--velo);animation:velo .2s ease-out;display:flex;align-items:flex-end;justify-content:center}
 .sheet{background:var(--paper);width:100%;max-width:640px;max-height:88vh;max-height:88dvh;border-radius:var(--r-2) var(--r-2) 0 0;display:flex;flex-direction:column;overflow:hidden;animation:up .22s ease-out;padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (min-width:720px){.capa{align-items:center}.sheet{border-radius:var(--r-2)}}
+@keyframes velo{from{opacity:0}to{opacity:1}}
 @keyframes up{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
-@media (prefers-reduced-motion:reduce){.sheet{animation:none}.top,.barra{transition:none}}
+@media (prefers-reduced-motion:reduce){.sheet,.capa{animation:none}.toast{transition:none}.top,.barra{transition:none}}
 .sheet-h{display:flex;align-items:center;gap:8px;padding:14px max(16px,env(safe-area-inset-left,0px)) 10px;border-bottom:1px solid var(--line)}
 .sheet-h h2{flex:1;margin:0;font-family:var(--titulo);font-size:1.3rem;font-weight:600}
 .sheet-b{overflow:auto;padding:6px max(16px,env(safe-area-inset-right,0px)) 22px max(16px,env(safe-area-inset-left,0px))}
@@ -215,7 +220,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .tam{display:flex;align-items:center;gap:10px}
 .tam button{width:48px;height:44px;border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);font-family:var(--titulo)}
 .tam span{flex:1;text-align:center;font-family:var(--titulo);font-variant-numeric:tabular-nums}
-.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:6px 6px 6px 16px;border-radius:var(--r-1);font-size:var(--f-ui);display:flex;align-items:center;gap:8px;width:max-content;z-index:60;max-width:calc(100% - 32px);text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--aviso-fondo);color:var(--ink2);border:1px solid var(--aviso-linea);box-shadow:0 6px 20px var(--sombra);font-family:var(--sans);opacity:1;transition:opacity .45s ease,transform .45s ease;padding:6px 6px 6px 16px;border-radius:var(--r-1);font-size:var(--f-ui);display:flex;align-items:center;gap:8px;width:max-content;z-index:60;max-width:calc(100% - 32px);text-align:center}
 
 /* Salmos con traducción interlineal: cada hemistiquio latino lleva debajo su traducción */
 .versos.inter .v{margin-bottom:.8em}

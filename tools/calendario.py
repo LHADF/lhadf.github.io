@@ -31,6 +31,7 @@ SIGLAS = {(r['fecha'], r['nombre'].strip()): ', '.join(x.strip() for x in r['cal
 
 
 MOD = set()   # (calendario local, fecha, nombre) de lo que locales.yaml cambió
+SIG_TODOS = {}   # (fecha, nombre) → siglas, de lo que locales.yaml cambió para todos los calendarios ('*')
 
 
 def motor(cal):
@@ -41,11 +42,12 @@ def motor(cal):
     o = Ordo(ORDO, cfg)
     linaje = [cal] + ([pais] if pais != cal else [])     # un calendario local hereda los cambios de su país
     for c in LOC['cambios']:
-        if c['calendario'] not in linaje: continue
+        if c['calendario'] != '*' and c['calendario'] not in linaje: continue
         fila = next((x for x in o.santoral.get(c['fecha'], []) if x.nombre.startswith(c['celebracion'])), None)
         if not fila: sys.exit(f"locales.yaml: no encuentro «{c['celebracion']}» el {c['fecha']} en el Ordo")
         fila.grado, fila.precedencia, fila.nota = c['grado'], PREC[c['grado']], c.get('nota', fila.nota)
-        MOD.add((c['calendario'], c['fecha'], fila.nombre))
+        if c['calendario'] == '*': SIG_TODOS[(c['fecha'], fila.nombre)] = c.get('siglas', '')
+        else: MOD.add((c['calendario'], c['fecha'], fila.nombre))
     return o
 
 
@@ -85,13 +87,15 @@ def ficha(dl, p=None, libre=False, cal=''):
         'fer': dl.feria.nombre,
         'pv': 0 if libre else (1 if dl.primeras_visperas else 0),
         'oct': octava,
-        'cal': next((x for x in (cal, LOC['padres'].get(cal)) if x and (x, p.clave, p.nombre) in MOD), '') or ('' if p.temporal else SIGLAS.get((p.clave, p.nombre), SIGLAS.get((origen, p.nombre), ''))),
+        'cal': next((x for x in (cal, LOC['padres'].get(cal)) if x and (x, p.clave, p.nombre) in MOD), '') or ('' if p.temporal else SIG_TODOS.get((origen, p.nombre)) or SIGLAS.get((p.clave, p.nombre), SIGLAS.get((origen, p.nombre), ''))),
         'bio': (getattr(p, 'biografia', '') or '').strip(),
         'nota': notas_de(p, origen, cal) or (f'CRG\t{sin_html(p.nota)}' if p.nota else ''),
     }
 
 
-SABADO = 'Santa María en sábado'
+SABADO = 'Sancta María in sábbato'
+NOTA_SABADO = ('CRG\tMemoria de Santa María en sábado. En los sábados feriales del Tiempo Ordinario en que no cae una solemnidad, fiesta o '
+               'memoria obligatoria, puede celebrarse libremente la memoria de Santa María in sabbato, según una antigua tradición de dedicar el sábado a la Virgen.')
 sin_sigla = lambda f: {k: v for k, v in f.items() if k != 'cal'}
 
 
@@ -133,9 +137,14 @@ def main():
                 if f['n'] in vistos: continue
                 vistos.add(f['n'])
                 vs.append(['l', [x.strip() for x in f['cal'].split(',') if x.strip()] or ['CRG'], f])
-        # Sábado del Tiempo Ordinario sin memoria: se puede celebrar Santa María en sábado (memoria libre, optativa)
-        if d.weekday() == 5 and F['']['t'] == 'Ordinario' and F['']['g'] == 'Feria':
-            vs.append(['l', ['CRG'], dict(F[''], n=SABADO, g='Memoria libre', c='Blanco', cal='CRG', nota='', bio='', pv=0)])
+        # Día con memoria libre: también se puede celebrar la feria (opción «Feria»)
+        if any(F[c]['g'] == 'Memoria libre' for c in CALS):
+            fe = ficha(D[''], D[''].principal, libre=True)
+            if fe['g'] == 'Feria' and fe['n'] not in vistos:
+                vistos.add(fe['n']); vs.append(['l', ['Feria'], dict(fe, cal='')])
+        # Sábado del Tiempo Ordinario sin memoria (o con una memoria libre): se puede celebrar Sancta María in sábbato (memoria libre, optativa)
+        if d.weekday() == 5 and F['']['t'] == 'Ordinario' and F['']['g'] in ('Feria', 'Memoria libre'):
+            vs.append(['l', ['CRG'], dict(F[''], n=SABADO, g='Memoria libre', c='Blanco', cal='CRG', nota=NOTA_SABADO, bio='', pv=0)])
         if vs: var[k] = vs
         d += timedelta(days=1)
     # tabla de textos repetidos para achicar el archivo

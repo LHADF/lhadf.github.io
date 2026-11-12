@@ -53,7 +53,7 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 ### Inicio y calendario (11/11/2026, tarde)
 
 - En día ferial con memoria libre, ADF celebra la memoria libre (la del calendario más propio: local, país, ADF, general). Ya no se ofrece la feria.
-- Sábados del Tiempo Ordinario sin memoria: opción «Santa María» (Santa María en sábado, común de la Virgen; falta la oración propia).
+- Sábados del Tiempo Ordinario sin memoria: opción «Sancta María in sábbato» (memoria de santa María en sábado, común de la Virgen; falta la oración propia).
 - Biografías: las del Ordo (columna «biografia» del santoral), con el enlace «Síntesis biográfica» en la tarjeta del día.
 - Lista de horas: la que toca según el reloj (1:30 antes y después de su hora; Vísperas, de 16:30 a 20:30, y Completas desde ahí; el Oficio de lectura con Laudes) va resaltada en rojo. Vísperas se llama «I Vísperas» o «II Vísperas» cuando corresponde.
 - El inicio no tiene barra superior: los tres puntos van en la fila de la fecha.
@@ -65,6 +65,6 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - La app elige la oración del común según el título de la celebración (papa, obispo, presbítero, virgen, mártir, religioso…, y si es santo o santa, uno o varios) y pone el nombre: «San Blas, obispo y mártir» → «san Blas».
 - **Propio del libro** (`base/santoral/libro.yaml`, con `tools/importar/propio_libro.py`): para 77 de las celebraciones que la base no traía, la oración propia y lo que el libro tenga de propio (casi siempre la segunda lectura del Oficio; a veces antífonas, himnos o el oficio entero, como Jesucristo, Sumo y Eterno Sacerdote). Lo propio va encima del común.
 - Memorias sin propio: salmos de la feria y lo demás del común. Fiestas y solemnidades: también la salmodia del común (en Laudes, salmos del domingo I con las antífonas del común) y sus I Vísperas.
-- **Santa María en sábado**: sus elementos propios del libro (invitatorio, himnos, lectura breve, responsorio, antífona del Benedictus, preces, seis oraciones; en el Oficio, himno y segunda lectura); lo demás, de la feria.
+- **Sancta María in sábbato**: sus elementos propios del libro (invitatorio, himnos, lectura breve, responsorio, antífona del Benedictus, preces, seis oraciones; en el Oficio, himno y segunda lectura); lo demás, de la feria.
 - Tres comunes corregidos según el libro: san Camilo de Lelis y san Jerónimo Emiliani (santos varones), san Efrén (doctores).
 - Fiestas y solemnidades con propio en la base pero sin salmodia (p. ej. san Martín, solemnidad en Buenos Aires): salmos y antífonas del común que indica el santoral (en las I Vísperas, los de sus I Vísperas), no los del domingo. Lo mismo en el Oficio de lectura (salmodia, versículo y primera lectura del común) y en la Hora intermedia (antífona, lectura y versículo del común; la oración, la de Laudes).

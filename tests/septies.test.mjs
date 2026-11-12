@@ -333,15 +333,15 @@ test('calendarios: la base es ADF; otros calendarios y memorias libres son varia
   assert.equal(CP.diaCal('2027-05-08', 'BUE').n, 'Bienaventurada Virgen María de Luján');                  // lo de Argentina vale para Buenos Aires
   assert.equal(CP.diaCal('2027-05-08', '').g, 'Feria');
   // Día ferial con memoria libre: se celebra la memoria (no la feria). 13 de noviembre: san Leandro en ADF, san Artémides en ARG
-  assert.equal(JSON.stringify(nombres('2026-11-13', '')), JSON.stringify(['ESP ADF*', 'ARG']));
+  assert.equal(JSON.stringify(nombres('2026-11-13', '')), JSON.stringify(['ESP ADF*', 'ARG', 'Feria']));   // con memoria libre, también la feria
   assert.equal(CP.diaCal('2026-11-13', '').n, 'San Leandro de Sevilla, obispo');
   assert.equal(CP.diaCal('2026-11-13', 'ARG').n, 'San Artémides Zatti, religioso');
   assert.equal(CP.diaCal('2026-11-13', 'BUE').n, 'San Artémides Zatti, religioso');
   assert.match(LA.armar('2026-11-13', 'ARG').dia.nota, /Común de santos varones/);
   assert.equal(CP.diaCal('2026-11-25', '').n, 'Santa Catalina de Alejandría, virgen y mártir');
-  assert.equal(CP.opcionesDia('2026-11-25', '').length, 1);
+  assert.equal(CP.opcionesDia('2026-11-25', '').length, 2);       // santa Catalina (memoria libre) o la feria
   assert.equal(CP.opcionesDia('2026-11-15', '').length, 1);        // Roque González (Fiesta en PGY) no le gana al domingo
-  for (const sg of Object.keys(ctx.window.CAL.var).flatMap(k => ctx.window.CAL.var[k].flatMap(v => v[1].split(' ')))) assert.ok(ctx.window.CAL.calendarios[sg], sg);
+  for (const sg of Object.keys(ctx.window.CAL.var).flatMap(k => ctx.window.CAL.var[k].flatMap(v => v[1].split(' ')))) assert.ok(sg === 'Feria' || ctx.window.CAL.calendarios[sg], sg);   // «Feria»: la opción de la feria
 });
 
 test('invitatorio gregoriano de los domingos del Tiempo Ordinario, con traducción palabra por palabra', () => {
@@ -364,14 +364,19 @@ test('notas del Calendario ADF y calendarios locales que heredan de su país', (
   assert.equal(CP.diaCal('2027-11-15', 'PGY').g, 'Fiesta');           // Roque González: Fiesta en Paraguay
   assert.equal(CP.diaCal('2027-11-15', 'CDE').g, 'Fiesta');           // Ciudad del Este hereda lo de Paraguay
   assert.equal(CP.diaCal('2027-11-15', '').g, 'Memoria obligatoria');
-  assert.equal(CP.opcionesDia('2027-02-03', '').length, 1);           // San Blas: CDE no cambia nada, no hay sigla de más
+  // San Blas: memoria obligatoria en ADF (notas 2 y 3 del Calendario ADF), solemnidad solo en Ciudad del Este
+  assert.equal(CP.diaCal('2027-02-03', '').g, 'Memoria obligatoria'); assert.equal(CP.diaCal('2027-02-03', 'PGY').g, 'Memoria obligatoria');
+  assert.equal(CP.diaCal('2027-02-03', 'CDE').g, 'Solemnidad'); assert.equal(CP.diaCal('2027-02-03', '').cal, 'ADF');
+  // Feria como opción cuando se celebra una memoria libre; Sancta María in sábbato con su nota
+  assert.ok(CP.opcionesDia('2026-11-17', '').some(o => o.f.g === 'Feria' && o.siglas[0] === 'Feria'));
+  assert.match(CP.diaCal('2026-11-14', {cal: '', dia: {'2026-11-14': 'Sancta María in sábbato'}}).nota, /^CRG\tMemoria de Santa María en sábado\. En los sábados feriales/);
   for (const f of ctx.window.CAL.dias) { const n = ctx.window.CAL.tabla[f[12]]; if (n) for (const l of n.split('\n')) assert.match(l, /^[A-Z]{3}\t\S/); }
 });
 
-test('inicio: Santa María en sábado como opción, biografías y nombre de las Vísperas', () => {
+test('inicio: Sancta María in sábbato como opción, biografías y nombre de las Vísperas', () => {
   const o = CP.opcionesDia('2026-11-14', '');
-  assert.equal(o.length, 2); assert.equal(o[1].f.n, 'Santa María en sábado'); assert.ok(o[0].actual);
-  const sms = LA.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Santa María en sábado'}});
+  assert.equal(o.length, 2); assert.equal(o[1].f.n, 'Sancta María in sábbato'); assert.ok(o[0].actual);
+  const sms = LA.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Sancta María in sábbato'}});
   assert.equal(sms.secciones.find(s => s.k === 'himno').opciones[0].n, 'Salve, Madre, en la tierra de mis amores');   // sus elementos propios
   assert.match(sms.secciones.find(s => s.id === 'ab').t.es, /Virgen María/);
   assert.match(sms.secciones.find(s => s.k === 'prosa').t.es, /intercesión de santa María/);
@@ -408,6 +413,6 @@ test('comunes y propio del libro: oración propia, segunda lectura y oficio ente
   const agata = LA.armar('2027-02-05', ''), o = agata.secciones.filter(s => s.k === 'prosa').pop().t.es;   // sin propio en el libro
   assert.match(o, /santa Ágata/); assert.ok(!/\bN\./.test(o));
   // Santa María en sábado: Oficio con su himno y su segunda lectura
-  const smo = W.Oficio.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Santa María en sábado'}});
+  const smo = W.Oficio.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Sancta María in sábbato'}});
   assert.equal(smo.secciones.find(s => s.k === 'himno').opciones[0].n, 'Rosa entre rosas');
 });
