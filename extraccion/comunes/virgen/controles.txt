@@ -1,0 +1,150 @@
+Controles — Común de la Santísima Virgen María (tomos I–IV) — hay controles que no pasan
+Piezas marcadas para revisar: 18 · diferencias entre tomos: 88
+
+[OK ] Cobertura: 5747/5747 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 851: 100 %
+      tomo 1 · pdf 852: 100 %
+      tomo 1 · pdf 853: 100 %
+      tomo 1 · pdf 854: 100 %
+      tomo 1 · pdf 855: 100 %
+      tomo 1 · pdf 856: 100 %
+      tomo 1 · pdf 857: 100 %
+      tomo 1 · pdf 858: 100 %
+      tomo 1 · pdf 859: 100 %
+      tomo 1 · pdf 860: 100 %
+      tomo 1 · pdf 861: 100 %
+      tomo 1 · pdf 862: 100 %
+      tomo 1 · pdf 863: 100 %
+      tomo 1 · pdf 864: 100 %
+      tomo 1 · pdf 865: 100 %
+      tomo 1 · pdf 866: 100 %
+      tomo 1 · pdf 867: 100 %
+      tomo 1 · pdf 868: 100 %
+      tomo 1 · pdf 869: 100 %
+      tomo 2 · pdf 2459: 100 %
+      tomo 2 · pdf 2460: 100 %
+      tomo 2 · pdf 2461: 100 %
+      tomo 2 · pdf 2462: 100 %
+      tomo 2 · pdf 2463: 100 %
+      tomo 2 · pdf 2464: 100 %
+      tomo 2 · pdf 2465: 100 %
+      tomo 2 · pdf 2466: 100 %
+      tomo 2 · pdf 2467: 100 %
+      tomo 2 · pdf 2468: 100 %
+      tomo 2 · pdf 2469: 100 %
+      tomo 2 · pdf 2470: 100 %
+      tomo 2 · pdf 2471: 100 %
+      tomo 2 · pdf 2472: 100 %
+      tomo 2 · pdf 2473: 100 %
+      tomo 2 · pdf 2474: 100 %
+      tomo 2 · pdf 2475: 100 %
+      tomo 2 · pdf 2476: 100 %
+      tomo 2 · pdf 2477: 100 %
+      tomo 2 · pdf 2478: 100 %
+      tomo 2 · pdf 2479: 100 %
+      tomo 2 · pdf 2480: 100 %
+      tomo 2 · pdf 2481: 100 %
+      tomo 3 · pdf 4104: 100 %
+      tomo 3 · pdf 4105: 100 %
+      tomo 3 · pdf 4106: 100 %
+      tomo 3 · pdf 4107: 100 %
+      tomo 3 · pdf 4108: 100 %
+      tomo 3 · pdf 4109: 100 %
+      tomo 3 · pdf 4110: 100 %
+      tomo 3 · pdf 4111: 100 %
+      tomo 3 · pdf 4112: 100 %
+      tomo 3 · pdf 4113: 100 %
+      tomo 3 · pdf 4114: 100 %
+      tomo 3 · pdf 4115: 100 %
+      tomo 3 · pdf 4116: 100 %
+      tomo 3 · pdf 4117: 100 %
+      tomo 3 · pdf 4118: 100 %
+      tomo 3 · pdf 4119: 100 %
+      tomo 3 · pdf 4120: 100 %
+      tomo 3 · pdf 4121: 100 %
+      tomo 3 · pdf 4122: 100 %
+      tomo 3 · pdf 4123: 100 %
+      tomo 3 · pdf 4124: 100 %
+      tomo 3 · pdf 4125: 100 %
+      tomo 3 · pdf 4126: 100 %
+      tomo 3 · pdf 4127: 100 %
+      tomo 3 · pdf 4128: 100 %
+      tomo 3 · pdf 4129: 100 %
+      tomo 3 · pdf 4130: 100 %
+      tomo 3 · pdf 4131: 100 %
+      tomo 3 · pdf 4132: 100 %
+      tomo 3 · pdf 4133: 100 %
+      tomo 3 · pdf 4134: 100 %
+      tomo 3 · pdf 4135: 100 %
+      tomo 3 · pdf 4136: 100 %
+      tomo 3 · pdf 4137: 100 %
+      tomo 3 · pdf 4138: 100 %
+      tomo 3 · pdf 4139: 100 %
+      tomo 3 · pdf 4140: 100 %
+      tomo 3 · pdf 4141: 100 %
+      tomo 4 · pdf 5968: 100 %
+      tomo 4 · pdf 5969: 100 %
+      tomo 4 · pdf 5970: 100 %
+      tomo 4 · pdf 5971: 100 %
+      tomo 4 · pdf 5972: 100 %
+      tomo 4 · pdf 5973: 100 %
+      tomo 4 · pdf 5974: 100 %
+      tomo 4 · pdf 5975: 100 %
+      tomo 4 · pdf 5976: 100 %
+      tomo 4 · pdf 5977: 100 %
+      tomo 4 · pdf 5978: 100 %
+      tomo 4 · pdf 5979: 100 %
+      tomo 4 · pdf 5980: 100 %
+      tomo 4 · pdf 5981: 100 %
+      tomo 4 · pdf 5982: 100 %
+      tomo 4 · pdf 5983: 100 %
+      tomo 4 · pdf 5984: 100 %
+      tomo 4 · pdf 5985: 100 %
+      tomo 4 · pdf 5986: 100 %
+      tomo 4 · pdf 5987: 100 %
+      tomo 4 · pdf 5988: 100 %
+      tomo 4 · pdf 5989: 100 %
+      tomo 4 · pdf 5990: 100 %
+      tomo 4 · pdf 5991: 100 %
+      tomo 4 · pdf 5992: 100 %
+      tomo 4 · pdf 5993: 100 %
+      tomo 4 · pdf 5994: 100 %
+      tomo 4 · pdf 5995: 100 %
+      tomo 4 · pdf 5996: 100 %
+      tomo 4 · pdf 5997: 100 %
+      tomo 4 · pdf 5998: 100 %
+      tomo 4 · pdf 5999: 100 %
+      tomo 4 · pdf 6000: 100 %
+      tomo 4 · pdf 6001: 100 %
+      tomo 4 · pdf 6002: 100 %
+      tomo 4 · pdf 6003: 100 %
+[OK ] Sin rojo en el texto: 0 casos
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 1: 20 etiquetas rojas → 20 variantes, tomo 2: 37 etiquetas rojas → 37 variantes, tomo 3: 66 etiquetas rojas → 66 variantes, tomo 4: 61 etiquetas rojas → 61 variantes
+[OK ] Remisiones: 0 rotas; 18 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: ordinario/benedictus
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmo
+      pendiente: ordinario/magnificat
+      pendiente: ordinario/te-deum
+      pendiente: propio-del-tiempo/santa-maria-sabado
+      pendiente: salmos/salmo-128
+      pendiente: salmos/salmo-130
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/sabado-correspondiente/laudes
+      pendiente: salterio/sabado-correspondiente/oficio
+      pendiente: salterio/salmodia-complementaria
+      pendiente: salterio/semana-1/domingo/laudes/salmodia
+[OK ] Salmos: 8 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: cantico-ef-1-3-10, salmo-45, salmo-86 (ver diferencias.csv)
+[OK ] Ida y vuelta: 533/533 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 1
+      tomo 2 pdf 2472: Los salmos y el cántico, del domingo de la I seman {'0433ff'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 0

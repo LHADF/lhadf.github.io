@@ -1,0 +1,5860 @@
+{
+ "seccion": "comunes",
+ "comunes": [
+  {
+   "id": "virgen",
+   "titulo": "COMÚN DE LA SANTÍSIMA VIRGEN MARÍA",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 851,
+     "impresa": "851"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2459,
+     "impresa": "1331"
+    },
+    {
+     "tomo": 3,
+     "pdf": 4104,
+     "impresa": "1290"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5968,
+     "impresa": "1498"
+    }
+   ],
+   "rubricas": [
+    {
+     "tipo": "rubrica",
+     "variantes": [
+      {
+       "texto": "Los himnos latinos del Común de santa María Virgen se hallan en el Apéndice IV.",
+       "remite": "apendices/himnos-latinos",
+       "fuentes": [
+        {
+         "tomo": 2,
+         "pdf": 2459,
+         "impresa": "1331"
+        },
+        {
+         "tomo": 3,
+         "pdf": 4104,
+         "impresa": "1290"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "rubrica",
+     "variantes": [
+      {
+       "texto": "El Oficio de Santa María en sábado se encuentra en el Propio del tiempo.",
+       "remite": "propio-del-tiempo/santa-maria-sabado",
+       "fuentes": [
+        {
+         "tomo": 4,
+         "pdf": 5991,
+         "impresa": "1521"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "horas": {
+    "visperas1": [
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "HIMNO, como en las II Vísperas",
+          "remite": "virgen/visperas2/himno",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 851,
+            "impresa": "851"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2459,
+            "impresa": "1331"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4104,
+            "impresa": "1290"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5968,
+            "impresa": "1498"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 1,
+          "texto": "Dichosa eres, Virgen María que llevaste en tu seno al Creador del mundo.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 851,
+            "impresa": "851"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2459,
+            "impresa": "1331"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4104,
+            "impresa": "1290"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5968,
+            "impresa": "1498"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-112",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 851,
+            "impresa": "851"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2459,
+            "impresa": "1331"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4104,
+            "impresa": "1290"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5968,
+            "impresa": "1498"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 2,
+          "texto": "Engendraste al que te creó y permanecerás virgen para siempre.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 851,
+            "impresa": "851"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2459,
+            "impresa": "1331"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4104,
+            "impresa": "1290"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5968,
+            "impresa": "1498"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-147",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 851,
+            "impresa": "851"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2459,
+            "impresa": "1331"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4104,
+            "impresa": "1290"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5968,
+            "impresa": "1498"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 3,
+          "texto": "Tú eres la mujer a quien Dios ha bendecido, y por ti hemos recibido el fruto de la vida.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 852,
+            "impresa": "852"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2460,
+            "impresa": "1332"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4105,
+            "impresa": "1291"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5969,
+            "impresa": "1499"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-ef-1-3-10",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 852,
+            "impresa": "852"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2460,
+            "impresa": "1332"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4105,
+            "impresa": "1291"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5969,
+            "impresa": "1499"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Ga 4, 4-5",
+          "texto": "Cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la Ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 853,
+            "impresa": "853"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2461,
+            "impresa": "1333"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4105,
+            "impresa": "1291",
+            "pdf_fin": 4106,
+            "impresa_fin": "1292"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5970,
+            "impresa": "1500"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "En tiempo de cuaresma:"
+           }
+          ],
+          "v1": "Después del parto, ¡oh Virgen!, has permanecido intacta.",
+          "r1": "Después del parto, ¡oh Virgen!, has permanecido intacta.",
+          "v2": "Madre de Dios, intercede por nosotros",
+          "r2": "¡Oh Virgen!, has permanecido intacta.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 853,
+            "impresa": "853"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2461,
+            "impresa": "1333"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4106,
+            "impresa": "1292"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5970,
+            "impresa": "1500"
+           }
+          ]
+         },
+         {
+          "etiqueta": "En tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "Después del parto, ¡oh Virgen!, has permanecido intacta. Aleluya, aleluya.",
+          "r1": "Después del parto, ¡oh Virgen!, has permanecido intacta. Aleluya, aleluya.",
+          "v2": "Madre de Dios, intercede por nosotros.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2461,
+            "impresa": "1333"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "El Señor ha mirado mi humillación y el Poderoso ha hecho obras grandes por mí.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 853,
+            "impresa": "853"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2461,
+            "impresa": "1333"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4106,
+            "impresa": "1292"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5970,
+            "impresa": "1500"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Me felicitarán todas las generaciones, porque Dios ha mirado la humillación de su esclava.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 853,
+            "impresa": "853"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2461,
+            "impresa": "1333"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4106,
+            "impresa": "1292"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5970,
+            "impresa": "1500"
+           }
+          ]
+         }
+        ],
+        "remite": "ordinario/magnificat"
+       }
+      ]
+     },
+     {
+      "parte": "preces",
+      "piezas": [
+       {
+        "tipo": "preces",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "introduccion": "Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la Madre de su Hijo, y supliquémosle diciendo:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que la llena de gracia interceda por nosotros."
+           },
+           {
+            "etiqueta": "O bien:",
+            "texto": "Mira a la llena de gracia y escúchanos."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Señor, Dios nuestro, admirable siempre en tus obras, que has querido que la inmaculada Virgen María participara en cuerpo y alma de la gloria de Jesucristo,",
+            "segunda": "haz que todos tus hijos deseen y caminen hacia esta misma gloria."
+           },
+           {
+            "primera": "Tú que nos diste a María por madre, concede por su mediación salud a los enfermos, consuelo a los tristes, perdón a los pecadores,",
+            "segunda": "y a todos abundancia de salud y de paz."
+           },
+           {
+            "primera": "Tú que hiciste a María la llena de gracia,",
+            "segunda": "concede la abundancia de tu gracia a todos los hombres."
+           },
+           {
+            "primera": "Haz, Señor, que tu Iglesia tenga un solo corazón y una sola alma por el amor,",
+            "segunda": "y que todos los fieles perseveren unánimes en oración con María, la madre de Jesús."
+           },
+           {
+            "primera": "Tú que coronaste a María como reina del cielo,",
+            "segunda": "haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Confiando en el Señor, que hizo obras grandes en María, pidamos al Padre que colme también de bienes al mundo hambriento: Padre nuestro.",
+          "revisar": true,
+          "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 853,
+            "impresa": "853",
+            "pdf_fin": 854,
+            "impresa_fin": "854"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2461,
+            "impresa": "1333",
+            "pdf_fin": 2462,
+            "impresa_fin": "1334"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4106,
+            "impresa": "1292"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5970,
+            "impresa": "1500",
+            "pdf_fin": 5971,
+            "impresa_fin": "1501"
+           }
+          ]
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "O bien estas otras:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "O bien:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "O bien:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "O bien:"
+           }
+          ],
+          "etiqueta": "O bien estas otras:",
+          "cuando": {
+           "opcion": 2
+          },
+          "introduccion": "Proclamemos la grandeza de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la Madre de su Hijo, y supliquémosle diciendo:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que la llena de gracia interceda por nosotros."
+           },
+           {
+            "etiqueta": "O bien:",
+            "texto": "Mira a la llena de gracia y escúchanos."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Tú que hiciste de María la madre de misericordia,",
+            "segunda": "haz que los que viven en peligro o están tentados sientan su protección maternal."
+           },
+           {
+            "primera": "Tú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de José,",
+            "segunda": "haz que por su intercesión todas las madres fomenten en sus hogares el amor y la santidad."
+           },
+           {
+            "primera": "Tú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la resurrección de su Hijo,",
+            "segunda": "levanta y robustece la esperanza de los decaídos."
+           },
+           {
+            "primera": "Tú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,",
+            "segunda": "por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo."
+           },
+           {
+            "primera": "Tú que coronaste a María como reina del cielo,",
+            "segunda": "haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 854,
+            "impresa": "854"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2462,
+            "impresa": "1334"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4107,
+            "impresa": "1293"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5971,
+            "impresa": "1501"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Se dice la oración propia del día o, en su defecto, una de las siguientes:",
+          "otras_redacciones": [
+           {
+            "tomo": 1,
+            "texto": "Oración propia del día o, en su defecto, una de las siguientes:"
+           },
+           {
+            "tomo": 2,
+            "texto": "Se dice la oración propia del día o, en su defecto, las siguientes:"
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 854,
+            "impresa": "854"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4107,
+            "impresa": "1293"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "etiqueta": "Tiempo de Adviento:",
+          "cuando": {
+           "tiempo": "adviento"
+          },
+          "texto": "Dios nuestro, cuyo Verbo inefable fue recibido por la Virgen Inmaculada cuando aceptó tu designio, manifestado por el anuncio del ángel, e, inundada por la luz del Espíritu Santo, fue convertida en mansión de la divinidad, concédenos que también nosotros, a imitación suya, aceptemos siempre sincera y humildemente tu voluntad. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 854,
+            "impresa": "854"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo de Navidad:",
+          "cuando": {
+           "tiempo": "navidad"
+          },
+          "texto": "Señor Dios, que por la maternidad virginal de María has dado a los hombres los tesoros de la salvación, haz que sintamos la intercesión de la Virgen Madre, de quien hemos recibido al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro. Que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 854,
+            "impresa": "854"
+           }
+          ]
+         },
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4107,
+            "impresa": "1293"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Perdona, Señor, las culpas de tus fieles y haz que quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4107,
+            "impresa": "1293"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "texto": "Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294",
+            "pdf_fin": 4107,
+            "impresa_fin": "1293"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "texto": "Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 5
+          },
+          "texto": "Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 6
+          },
+          "texto": "Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "invitatorio": [
+     {
+      "parte": "antifona",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Venid, adoremos a Cristo, Hijo de María Virgen.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Aclamemos al Señor en esta fiesta de María Virgen.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmo",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
+          "remite": [
+           "ordinario/invitatorio/salmo",
+           "salmos/salmo-94",
+           "salmos/salmo-99",
+           "salmos/salmo-66",
+           "salmos/salmo-23"
+          ],
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "El salmo invitatorio como en el Ordinario, Salmo 94; salmo 99; salmo 66; salmo 23."
+           },
+           {
+            "tomo": 3,
+            "texto": "El salmo invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+           },
+           {
+            "tomo": 4,
+            "texto": "El salmo del Invitatorio como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "oficio": [
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "himno": "maria-pureza-en-vuelo",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2463,
+            "impresa": "1335",
+            "pdf_fin": 2464,
+            "impresa_fin": "1336"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5972,
+            "impresa": "1502",
+            "pdf_fin": 5973,
+            "impresa_fin": "1503"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "himno": "lucero-de-la-manana",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2464,
+            "impresa": "1336"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4108,
+            "impresa": "1294",
+            "pdf_fin": 4109,
+            "impresa_fin": "1295"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5973,
+            "impresa": "1503"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 1,
+          "texto": "María ha recibido la bendición del Señor y la misericordia de Dios, su salvador.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2464,
+            "impresa": "1336"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4109,
+            "impresa": "1295"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5973,
+            "impresa": "1503"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Cuando el salmo 23 se ha dicho en el Invitatorio, aquí se dice el salmo 94.",
+          "remite": "salmos/salmo-94",
+          "otras_redacciones": [
+           {
+            "tomo": 1,
+            "texto": "Cuando el salmo 23 se ha dicho en el Invitatorio, aquí se dice el Salmo 94."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2464,
+            "impresa": "1336"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4109,
+            "impresa": "1295"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5973,
+            "impresa": "1503"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-23",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 855,
+            "impresa": "855"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2464,
+            "impresa": "1336"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4109,
+            "impresa": "1295"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5973,
+            "impresa": "1503"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 2,
+          "texto": "El Altísimo consagra su morada.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 856,
+            "impresa": "856"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2465,
+            "impresa": "1337"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4110,
+            "impresa": "1296"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5974,
+            "impresa": "1504"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-45",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 856,
+            "impresa": "856"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2465,
+            "impresa": "1337"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4110,
+            "impresa": "1296"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5974,
+            "impresa": "1504"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 3,
+          "texto": "¡Qué pregón tan glorioso para ti, Virgen María!",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 857,
+            "impresa": "857"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2466,
+            "impresa": "1338"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4111,
+            "impresa": "1297"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5975,
+            "impresa": "1505"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-86",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 857,
+            "impresa": "857"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2466,
+            "impresa": "1338"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4111,
+            "impresa": "1297"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5975,
+            "impresa": "1505"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "versiculo",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "v": "Dichosos los que escuchan la palabra de Dios.",
+          "r": "Y la cumplen.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 857,
+            "impresa": "857"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "cuando": {
+           "opcion": 2
+          },
+          "v": "María conservaba todas estas cosas.",
+          "r": "Meditándolas en su corazón.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2466,
+            "impresa": "1338"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4111,
+            "impresa": "1297"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5976,
+            "impresa": "1506"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "primera_lectura",
+      "piezas": [
+       {
+        "tipo": "lectura",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "orden": 1,
+          "cita": "17, 1-15",
+          "encabezado": "Del primer libro de las Crónicas",
+          "titulo": "ORÁCULO DEL PROFETA NATÁN",
+          "parrafos": [
+           "En aquellos días, morando ya David en su casa, dijo a Natán, profeta:",
+           "«Mira, yo habito en una casa de cedro, mientras el arca de la alianza del Señor está bajo pieles.»",
+           "Respondió Natán a David:",
+           "«Haz todo cuanto tienes en tu corazón, porque Dios está contigo.»",
+           "Pero aquella misma noche vino la palabra de Dios a Natán en estos términos:",
+           "«Vete y di a mi siervo David: Así dice el Señor: No serás tú quien me edifique Casa para que habite yo en ella. Pues no he habitado en casa alguna desde el día en que hice subir a los israelitas hasta el día de hoy; sino que he andado de tienda en tienda y de morada en morada. En todo el tiempo que he ido de un lado para otro con todo Israel, ¿he dicho acaso a alguno de los Jueces de Israel, a los que mandé me apacentaran a mi pueblo: Por qué no me edificáis una Casa de cedro?",
+           "Di, pues, ahora esto a mi siervo David:",
+           "Así habla el Señor de los ejércitos: Yo te he tomado del pastizal, de detrás del rebaño, para que seas caudillo de mi pueblo Israel. He estado contigo donde quiera que has ido, he eliminado a todos tus enemigos de delante de ti y voy a hacerte un nombre grande como el nombre de los grandes de la tierra. Fijaré un lugar a mi pueblo Israel, y lo plantaré allí para que more en él; no será ya perturbado, y los malhechores no seguirán oprimiéndole como al principio, y como en los días en que instituí Jueces sobre mi pueblo Israel. Someteré a todos tus enemigos. El Señor te anuncia que te edificará una casa.",
+           "Cuando se cumplan tus días para ir con tus padres, afirmaré después de ti la descendencia que saldrá de tus entrañas y consolidaré su reino. Él me edificará una casa y yo afirmaré su trono para siempre. Yo seré para él un padre, y él será para mí un hijo, y no apartaré de él mi amor, como le aparté de aquel que fue antes de ti. Yo le estableceré en mi casa y en mi reino para siempre, y su trono estará firme eternamente.»",
+           "Conforme a todas estas palabras, y conforme a toda esta visión, habló Natán a David."
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 857,
+            "impresa": "857",
+            "pdf_fin": 858,
+            "impresa_fin": "858"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "etiqueta": "En tiempo de cuaresma:",
+          "cuando": {
+           "tiempo": "cuaresma"
+          },
+          "orden": 1,
+          "cita": "17, 1-15",
+          "encabezado": "Del primer libro de las Crónicas",
+          "titulo": "PROFECÍA DEL HIJO DE DAVID",
+          "parrafos": [
+           "En aquellos días, cuando David se estableció en su casa, dijo al profeta Natán: \"Mira, yo habito en una casa de cedro, mientras el Arca de la Alianza del Señor está bajo una tienda de campaña\". Natán respondió a David: \"Puedes hacer todo lo que tienes pensado, porque el Señor está contigo\".",
+           "Pero aquella misma noche, la palabra del Señor llegó a Natán en estos términos: \"Ve a decirle a mi servidor David: Así habla el Señor: No eres tú el que me edificará la casa para que yo la habite. Porque desde el día en que hice subir a Israel hasta el día de hoy, nunca habité en una casa, sino que anduve de carpa en carpa y de morada en morada. Y mientras iba caminando entre todo Israel, ¿acaso dije a uno solo de sus Jueces, a los que mandé apacentar a mi pueblo: 'Por qué no me han edificado una casa de cedro'?",
+           "Ahora, esto es lo que le dirás a mi servidor David: Así habla el Señor de los ejércitos: Yo te saqué del campo de pastoreo, de detrás del rebaño, para que fueras el jefe de mi pueblo Israel. Estuve contigo dondequiera que fuiste y exterminé a todos tus enemigos delante de ti. Yo haré que tu nombre sea tan grande como el de los grandes de la tierra. Fijaré un lugar para mi pueblo Israel y lo plantaré para que tenga allí su morada. Ya no será perturbado, y los malhechores no seguirán devorándolo como antes. Desde el día en que constituí jueces sobre mi pueblo Israel, yo he sometido a todos tus enemigos.",
+           "Y ahora te anuncio que el Señor te edificará una casa. Sí, cuando llegues al término de tus días y te vayas con tus padres, yo elevaré después de ti a uno de tus descendientes, a uno de entre tus hijos, y afianzaré su realeza. Él me edificará una Casa y yo afianzaré su trono para siempre. Yo seré un padre para él, y él será para mí un hijo. Y jamás retiraré de él mi fidelidad, como se la retiré a aquel que te precedió. Lo estableceré en mi Casa y en mi reino para siempre, y su trono será estable eternamente\".",
+           "Natán comunicó a David todas estas palabras y toda esta visión."
+          ],
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2466,
+            "impresa": "1338",
+            "pdf_fin": 2467,
+            "impresa_fin": "1339"
+           }
+          ]
+         },
+         {
+          "etiqueta": "En tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "orden": 1,
+          "cita": "11, 19—12, 17",
+          "encabezado": "Del Apocalipsis del apóstol san Juan",
+          "titulo": "EL GRAN SIGNO DE UNA MUJER APARECIÓ EN EL CIELO",
+          "parrafos": [
+           "En aquellos días, se abrió el Templo de Dios que está en el cielo y quedó a la vista el Arca de su Alianza, y hubo rayos, voces, truenos y un temblor de tierra, y cayó una fuerte granizada.",
+           "Apareció una figura portentosa en el cielo: Una mujer vestida de sol, la luna por pedestal, coronada con doce estrellas. Estaba encinta, y gritaba entre los espasmos del parto, y por el tormento de dar a luz. Y apareció otra señal en el cielo: Un enorme dragón rojo, con siete cabezas y diez cuernos y siete diademas en las cabezas. Su cola arrastraba una tercera parte de las estrellas del cielo, y las precipitó sobre la tierra. El Dragón se puso delante de la mujer que iba a dar a luz, para devorar a su hijo en cuanto naciera. La mujer tuvo un hijo varón que debía regir a todas las naciones con un cetro de hierro. Pero el hijo fue elevado hasta Dios y hasta su trono, y la mujer huyó al desierto, donde Dios le había preparado un refugio para que allí fuera alimentada durante mil doscientos sesenta días.",
+           "Entonces se trabó una batalla en el cielo: Miguel y sus Ángeles combatieron contra el Dragón, y este contraatacó con sus ángeles, pero fueron vencidos y expulsados del cielo. Y así fue precipitado el enorme Dragón, la antigua Serpiente, llamada Diablo o Satanás, y el seductor del mundo entero fue arrojado sobre la tierra con todos sus ángeles.",
+           "Se oyó una gran voz en el cielo: «Ahora se estableció la salud y el poderío, y el reinado de nuestro Dios, y la potestad de su Cristo; porque fue precipitado el acusador de nuestros hermanos, el que los acusaba ante nuestro Dios día y noche. Ellos lo vencieron en virtud de la sangre del Cordero y por la palabra del testimonio que dieron, y no amaron tanto su vida que temieran la muerte. Por esto, estad alegres, cielos, y los que moráis en sus tiendas., pero ay de vosotros, tierra y mar, porque el Diablo ha descendido hasta vosotros con todo su furor, sabiendo que le queda poco tiempo!.»",
+           "El Dragón, al verse precipitado sobre la tierra, se lanzó en persecución de la mujer que había dado a luz al hijo varón. Pero la Mujer recibió las dos alas de la gran águila para volar hasta su refugio en el desierto, donde debía ser alimentada durante tres años y medio, lejos de la serpiente. La serpiente vomitó detrás de la mujer como un río de agua, para que la arrastrara. Pero la tierra vino en ayuda de la Mujer: abrió su boca y se tragó el río que el Dragón había vomitado. Despechado el dragón por causa de la mujer, se marchó a hacer la guerra al resto de su descendencia, a los que guardan los mandamientos de Dios y mantienen el testimonio de Jesús."
+          ],
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2467,
+            "impresa": "1339",
+            "pdf_fin": 2468,
+            "impresa_fin": "1340"
+           }
+          ]
+         },
+         {
+          "cuando": {
+           "opcion": 2
+          },
+          "orden": 1,
+          "cita": "7, 10-14; 8, 10; 11, 1-9",
+          "encabezado": "Del libro del profeta Isaías",
+          "titulo": "EL EMMANUEL REY PACÍFICO",
+          "parrafos": [
+           "En aquellos días, habló el Señor a Ajaz, diciendo:",
+           "«Pide una señal al Señor, tu Dios: en lo hondo del abismo o en lo alto del cielo.»",
+           "Respondió Ajaz:",
+           "«No la pido, no quiero tentar al Señor.»",
+           "Entonces dijo Isaías:",
+           "«Escucha, heredero de David: ¿No os basta cansar a los hombres, que cansáis incluso a mi Dios? Pues el Señor, por su cuenta, os dará él mismo una señal. Mirad: la joven ha concebido y dará a luz un hijo, y le pondrá por nombre Emmanuel, porque tenemos a Dios-con-nosotros.",
+           "Saldrá un renuevo del tronco de Jesé, y de su raíz brotará un vástago. Sobre él se posará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza, espíritu de ciencia y de temor del Señor.",
+           "No juzgará por apariencias ni sentenciará sólo de oídas; juzgará a los pobres con justicia, con rectitud a los desamparados. Herirá al violento con la vara de su boca, y al malvado con el aliento de sus labios. La justicia será el ceñidor de su cintura, y la lealtad el cinturón de sus caderas.",
+           "Habitará el lobo con el cordero, y la pantera se echará con el cabrito, el novillo y el león pacerán juntos: y un niño pequeño los conducirá. La vaca pastará con el oso, sus crías yacerán juntas; el león comerá paja con el buey. El niño jugará junto al agujero del áspid, la criatura meterá la mano en el escondrijo de la serpiente. Nadie hará daño ni estrago por todo mi Monte Santo: porque estará lleno el país de ciencia del Señor, como las aguas colman el mar.»"
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4111,
+            "impresa": "1297",
+            "pdf_fin": 4112,
+            "impresa_fin": "1298"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5976,
+            "impresa": "1506"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 3
+          },
+          "orden": 1,
+          "cita": "3, 22-4, 7",
+          "encabezado": "De la carta del apóstol san Pablo a los Gálatas",
+          "titulo": "POR LA FE, SOMOS HIJOS Y HEREDEROS DE DIOS",
+          "parrafos": [
+           "Hermanos: La Escritura ha declarado que todos los hombres son culpables de pecado, para que así la pro-mesa se concediese a los creyentes, por su fe en Jesucristo.",
+           "Antes de venir la economía de la fe, estábamos enterrados bajo la custodia de la ley, en espera de la fe que había de revelarse. De este modo la ley fue nuestro ayo para llevarnos a Cristo, a fin de ser justificados por la fe. Pero, una vez llegada la era de la fe, no estamos más bajo la potestad del ayo, pues ya sois todos hijos de Dios por la fe en Cristo Jesús.",
+           "En efecto, todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay distinción entre judío y gentil, ni entre libre y esclavo, ni entre hombre y mujer: todos sois uno en Cristo Jesús. Y si sois de Cristo sois por lo mismo descendencia de Abraham, herederos según la promesa.",
+           "Pongo también otra comparación: El heredero, mientras es menor de edad, con ser dueño de todo, no se distingue en nada del esclavo: está bajo tutores y administradores hasta el tiempo prefijado por su padre. De igual modo: Nosotros, cuando éramos menores de edad, vivíamos esclavizados por los «elementos del mundo».",
+           "Pero, cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción. Y la prueba de que sois hijos es que Dios ha enviado a vuestros corazones el Espíritu de su Hijo, que clama: «¡Padre!» Por consiguiente, ya no eres esclavo, sino hijo; y, si eres hijo, también eres heredero por voluntad de Dios."
+          ],
+          "revisar": true,
+          "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4112,
+            "impresa": "1298"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5976,
+            "impresa": "1506",
+            "pdf_fin": 5977,
+            "impresa_fin": "1507"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "responsorio",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "cita": null,
+          "r": [
+           "Bienaventurada eres, Virgen María, por haber llevado al Señor, creador del mundo.",
+           "Engendraste al que te hizo, y permaneces virgen para siempre."
+          ],
+          "v": "Alégrate, María, llena de gracia; el Señor está contigo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 858,
+            "impresa": "858"
+           }
+          ],
+          "de": "virgen/oficio/primera_lectura/lectura#1",
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "etiqueta": "En tiempo de cuaresma:",
+          "cuando": {
+           "tiempo": "cuaresma"
+          },
+          "cita": null,
+          "r": [
+           "Dichosa eres, Virgen María que llevaste en tu seno al Creador del mundo.",
+           "Engendraste al que te creó y permanecerás virgen para siempre."
+          ],
+          "v": "Alégrate, María, llena de gracia, el Señor está contigo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2467,
+            "impresa": "1339"
+           }
+          ],
+          "de": "virgen/oficio/primera_lectura/lectura#2"
+         },
+         {
+          "etiqueta": "En tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "cita": "1 Cor 15, 54. 57; Ap 12, 1",
+          "r": [
+           "Cuando esto corruptible se vista de incorrupción y esto mortal se vista de inmortalidad, entonces se cumplirá la palabra escrita: «La muerte ha sido absorbida en la victoria.",
+           "¡Demos gracias a Dios, que nos da la victoria por nuestro Señor Jesucristo! Aleluya."
+          ],
+          "v": "Apareció una figura portentosa en el cielo: Una mujer vestida de sol, la luna por pedestal, coronada con doce estrellas.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2468,
+            "impresa": "1340"
+           }
+          ],
+          "de": "virgen/oficio/primera_lectura/lectura#3"
+         },
+         {
+          "cuando": {
+           "opcion": 2
+          },
+          "cita": "Cf. Is 7, 14; cf. 9, 6. 7",
+          "r": [
+           "Mirad: la joven ha concebido y dará a luz un hijo,",
+           "y tendrá por nombre «Consejero admirable» y «Dios poderoso»."
+          ],
+          "v": "Se sentará sobre el trono de David y reinará para siempre.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4112,
+            "impresa": "1298"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5976,
+            "impresa": "1506"
+           }
+          ],
+          "de": "virgen/oficio/primera_lectura/lectura#4",
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 3
+          },
+          "cita": "Cf. Ga 4. 4-5; Ef 2, 4; Rm 8, 3",
+          "r": [
+           "Mirad que ya se cumplió el tiempo, y ha enviado Dios a su Hijo a la tierra, nacido de una Virgen, nacido bajo la ley,",
+           "para rescatar a los que estaban bajo la ley."
+          ],
+          "v": "Por el gran amor con que nos amó, envió a su propio Hijo, sometido a una existencia semejante a la de la carne de pecado,",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4112,
+            "impresa": "1298"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5977,
+            "impresa": "1507"
+           }
+          ],
+          "de": "virgen/oficio/primera_lectura/lectura#5"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "segunda_lectura",
+      "piezas": [
+       {
+        "tipo": "lectura",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "orden": 2,
+          "encabezado": "De los sermones de san Sofronio, obispo",
+          "fuente": "(Sermón 2, en la Anunciación de la Santísima Virgen, 21-22. 26: PG 87, 3, 3242. 3250)",
+          "titulo": "LA BENDICIÓN DEL PADRE HA BRILLADO PARA LOS HOMBRES POR MEDIO DE MARÍA",
+          "parrafos": [
+           "Alégrate, llena de gracia, el Señor está contigo. ¿Y qué puede ser más sublime que este gozo, oh Virgen Madre? ¿O qué cosa puede ser más excelente que esta gracia, que, viniendo de Dios, sólo tú has obtenido? ¿Acaso se puede imaginar una gracia más agradable o más espléndida? Todas las demás no se pueden comparar a las maravillas que se realizan en ti; todas las demás son inferiores a tu gracia; todas, incluso las más excelsas, son secundarias y gozan de una claridad muy inferior.",
+           "El Señor está contigo. ¿Y quién es el que puede competir contigo? Dios proviene de ti; ¿quién no te cederá el paso, quién habrá que no te conceda con gozo la primacía y la precedencia? Por todo ello, contemplando tus excelsas prerrogativas, que destacan sobre las de todas las criaturas, te aclamo con el máximo entusiasmo: Alégrate, llena de gracia, el Señor está contigo. Pues tú eres la fuente del gozo no sólo para los hombres, sino también para los ángeles del cielo.",
+           "Verdaderamente, bendita tú entre las mujeres, pues has cambiado la maldición de Eva en bendición; pues has hecho que Adán, que yacía postrado por una maldición, fuera bendecido por medio de ti.",
+           "Verdaderamente, bendita tú entre las mujeres, pues por medio de ti la bendición del Padre ha brillado para los hombres y los ha liberado de la antigua maldición.",
+           "Verdaderamente, bendita tú entre las mujeres, pues por medio de ti encuentran la salvación tus progenitores; pues tú has engendrado al Salvador que les concederá la salvación eterna.",
+           "Verdaderamente, bendita tú entre las mujeres, pues sin concurso de varón has dado a luz aquel fruto que es bendición para todo el mundo, al que ha redimido de la maldición que no producía sino espinas.",
+           "Verdaderamente, bendita tú entre las mujeres, pues a pesar de ser una mujer, criatura de Dios como todas las demás, has llegado a ser, de verdad, Madre de Dios. Pues lo que nacerá de ti es, con toda verdad, el Dios hecho hombre, y, por lo tanto, con toda justicia y con toda razón, te llamas Madre de Dios, pues de verdad das a luz a Dios.",
+           "Tú tienes en tu seno al mismo Dios, hecho hombre en tus entrañas, quien, como un esposo, saldrá de ti para conceder a todos los hombres el gozo y la luz divina.",
+           "Dios ha puesto en ti, oh Virgen, su tienda como en un cielo puro y resplandeciente. Saldrá de ti como el esposo de su alcoba e, imitando el recorrido del sol, recorrerá en su vida el camino de la futura salvación para todos los vivientes, y, extendiéndose de un extremo a otro del cielo, llenará con calor divino y vivificante todas las cosas."
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 858,
+            "impresa": "858",
+            "pdf_fin": 859,
+            "impresa_fin": "859"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2468,
+            "impresa": "1340",
+            "pdf_fin": 2469,
+            "impresa_fin": "1341"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4113,
+            "impresa": "1299"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5977,
+            "impresa": "1507",
+            "pdf_fin": 5978,
+            "impresa_fin": "1508"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 2
+          },
+          "orden": 2,
+          "encabezado": "De los sermones del beato Elredo, abad",
+          "fuente": "(Sermón 20, en la Natividad de santa María: PL 195, 322-324)",
+          "titulo": "MARÍA, MADRE NUESTRA",
+          "parrafos": [
+           "Acudamos a la esposa del Señor, acudamos a su madre, acudamos a su más perfecta esclava. Pues todo esto es María.",
+           "¿Y qué es lo que le ofrecemos? ¿Con qué dones le obsequiaremos? ¡Ojalá pudiéramos presentarle lo que en justicia le debemos! Le debemos honor, porque es la madre de nuestro Señor. Pues quien no honra a la madre sin duda que deshonra al hijo. La Escritura, en efecto, afirma: Honra a tu padre y a tu madre.",
+           "¿Qué es lo que diremos, hermanos? ¿Acaso no es nuestra madre? En verdad, hermanos, ella es nuestra madre. Por ella hemos nacido no al mundo, sino a Dios.",
+           "Como sabéis y creéis, nos encontrábamos todos en el reino de la muerte, en el dominio de la caducidad, en las tinieblas, en la miseria. En el reino de la muerte, porque habíamos perdido al Señor; en el dominio de la caducidad, porque vivíamos en la corrupción; en las tinieblas, porque habíamos perdido la luz de la sabiduría, y, como consecuencia de todo esto, habíamos perecido completamente. Pero por medio de María hemos nacido de una forma mucho más excelsa que por medio de Eva, ya que por María ha nacido Cristo. En vez de la antigua caducidad, hemos recuperado la novedad de vida; en vez de la corrupción, la incorrupción; en vez de las tinieblas, la luz.",
+           "María es nuestra madre, la madre de nuestra vida, la madre de nuestra incorrupción, la madre de nuestra luz. El Apóstol afirma de nuestro Señor: Dios lo ha hecho para nosotros sabiduría, justicia, santificación y redención.",
+           "Ella, pues, que es madre de Cristo, es también madre de nuestra sabiduría, madre de nuestra justicia, madre de nuestra santificación, madre de nuestra redención. Por lo tanto, es para nosotros madre en un sentido mucho más profundo aún que nuestra propia madre según la carne. Porque nuestro nacimiento de María es mucho mejor, pues de ella viene nuestra santidad, nuestra sabiduría, nuestra justicia, nuestra santificación, nuestra redención.",
+           "Afirma la Escritura: Alabad al Señor en sus santos. Si nuestro Señor debe ser alabado en sus santos, en los que hizo maravillas y prodigios, cuánto más debe ser alabado en María, en la que hizo la mayor de las maravillas, pues él mismo quiso nacer de ella."
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 859,
+            "impresa": "859",
+            "pdf_fin": 860,
+            "impresa_fin": "860"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2469,
+            "impresa": "1341",
+            "pdf_fin": 2470,
+            "impresa_fin": "1342"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4114,
+            "impresa": "1300"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5978,
+            "impresa": "1508",
+            "pdf_fin": 5979,
+            "impresa_fin": "1509"
+           }
+          ]
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "O bien esta otra:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "O bien esta otra:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "O bien esta Otra:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "O bien esta Otra:"
+           }
+          ],
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 3
+          },
+          "orden": 2,
+          "encabezado": "De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo",
+          "fuente": "(Núms. 61-62)",
+          "titulo": "LA MATERNIDAD DE MARÍA EN LA ECONOMÍA DE LA GRACIA",
+          "parrafos": [
+           "La Santísima Virgen, desde toda la eternidad, fue predestinada como Madre de Dios, al mismo tiempo que la encarnación del Verbo, y por disposición de la divina providencia fue en la tierra la madre excelsa del divino Redentor y, de forma singular, la generosa colaboradora entre todas las criaturas y la humilde esclava del Señor. Concibiendo a Cristo, engendrándolo, alimentándolo, presentándolo al Padre en el templo, padeciendo con su Hijo cuando él moría en la cruz, cooperó de forma única a la obra del Salvador, por su obediencia, su fe, su esperanza y su ardiente caridad, para restaurar la vida sobrenatural de las almas. Por todo ello es nuestra madre en el orden de la gracia.",
+           "Ya desde el consentimiento que prestó fielmente en la anunciación y que mantuvo sin vacilar al pie de la cruz, hasta el momento de la consumación final de todos los elegidos, pervive sin cesar en la economía de la gracia esta maternidad de María.",
+           "Porque, después de su asunción a los cielos, no ha abandonado esta misión salvadora, sino que con su constante intercesión continúa consiguiéndonos los dones de la salvación eterna.",
+           "Con su amor materno, vela sobre los hermanos de su Hijo que todavía peregrinan y que se encuentran en peligro y angustia, hasta que sean conducidos a la patria del cielo. Por todo ello, la bienaventurada Virgen es invocada en la Iglesia con los títulos de abogada, auxiliadora, socorro, mediadora. Sin embargo, estos títulos hay que entenderlos de tal forma que no disminuyan ni añadan nada a la dignidad y eficacia de Cristo, único mediador.",
+           "Ninguna criatura podrá nunca compararse con el Verbo encarnado, Redentor nuestro. Pero así como el sacerdocio de Cristo se participa de diversas formas, tanto por los ministros sagrados como por el pueblo fiel, y así como la única bondad divina se difunde realmente de formas diversas en las criaturas, igualmente la única mediación del Redentor no excluye, sino que suscita en las criaturas diversas clases de cooperación, participada de la única fuente.",
+           "La Iglesia no duda en confesar esta función subordinada de María, la experimenta continuamente y la recomienda a la piedad de los fieles, para que, apoyados en esta protección maternal, se unan con mayor intimidad al Mediador y Salvador."
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 860,
+            "impresa": "860",
+            "pdf_fin": 861,
+            "impresa_fin": "861"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2470,
+            "impresa": "1342",
+            "pdf_fin": 2471,
+            "impresa_fin": "1343"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4114,
+            "impresa": "1300",
+            "pdf_fin": 4115,
+            "impresa_fin": "1301"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5979,
+            "impresa": "1509",
+            "pdf_fin": 5980,
+            "impresa_fin": "1510"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "responsorio",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "cita": "S. Sofronio, Disertación 2",
+          "r": [
+           "Verdaderamente, bendita tú eres entre todas las mujeres, ya que has cambiado en bendición la maldición de Eva.",
+           "Por ti la bendición del Padre ha brillado sobre los hombres."
+          ],
+          "v": "Por ti alcanzan la salvación tus progenitores.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 859,
+            "impresa": "859"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2469,
+            "impresa": "1341"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4113,
+            "impresa": "1299"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5978,
+            "impresa": "1508"
+           }
+          ],
+          "de": "virgen/oficio/segunda_lectura/lectura#1"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 2
+          },
+          "cita": null,
+          "r": [
+           "Dichosa eres, santa Virgen María, y digna de toda alabanza.",
+           "De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos."
+          ],
+          "v": "Celebremos con gozo esta fiesta de santa María Virgen.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 860,
+            "impresa": "860"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2470,
+            "impresa": "1342"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4114,
+            "impresa": "1300"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5979,
+            "impresa": "1509"
+           }
+          ],
+          "de": "virgen/oficio/segunda_lectura/lectura#2"
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "O bien esta otra:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "O bien esta otra:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "O bien esta Otra:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "O bien esta Otra:"
+           }
+          ],
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 3
+          },
+          "cita": null,
+          "r": [
+           "No hay alabanza digna de ti, virginidad inmaculada y santa.",
+           "Porque en tu seno has llevado al que ni el cielo puede contener."
+          ],
+          "v": "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 861,
+            "impresa": "861"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2471,
+            "impresa": "1343"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4115,
+            "impresa": "1301"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5980,
+            "impresa": "1510"
+           }
+          ],
+          "de": "virgen/oficio/segunda_lectura/lectura#3"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "vigilia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si se hace una celebración más extensa de la vigilia de la fiesta.",
+          "remite": "apendices/vigilias/santa-maria-virgen",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5980,
+            "impresa": "1510"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "te_deum",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "En las solemnidades y fiestas, después del segundo responsorio se dice el himno Te Deum.",
+          "remite": "ordinario/te-deum",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "HIMNO Te Deum."
+           },
+           {
+            "tomo": 4,
+            "texto": "HIMNO Te Deum."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 861,
+            "impresa": "861"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2471,
+            "impresa": "1343"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4115,
+            "impresa": "1301"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5980,
+            "impresa": "1510"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Oración como en las Laudes.",
+          "remite": "virgen/laudes/oracion",
+          "otras_redacciones": [
+           {
+            "tomo": 3,
+            "texto": "La oración como en las Laudes."
+           },
+           {
+            "tomo": 4,
+            "texto": "La oración como en Laudes."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 861,
+            "impresa": "861"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2471,
+            "impresa": "1343"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4115,
+            "impresa": "1301"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5980,
+            "impresa": "1510"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "laudes": [
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "etiqueta": "I",
+          "cuando": {
+           "opcion": 1
+          },
+          "himno": "quien-podra-tanto-alabarte",
+          "revisar": true,
+          "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · otro texto bajo la misma etiqueta «I» en otro tomo",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 861,
+            "impresa": "861"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4115,
+            "impresa": "1301",
+            "pdf_fin": 4116,
+            "impresa_fin": "1302"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5980,
+            "impresa": "1510",
+            "pdf_fin": 5981,
+            "impresa_fin": "1511"
+           }
+          ]
+         },
+         {
+          "etiqueta": "II",
+          "cuando": {
+           "opcion": 2
+          },
+          "himno": "lucero-del-alba",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2472,
+            "impresa": "1344"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4116,
+            "impresa": "1302"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5981,
+            "impresa": "1511",
+            "pdf_fin": 5982,
+            "impresa_fin": "1512"
+           }
+          ]
+         },
+         {
+          "etiqueta": "I",
+          "cuando": {
+           "opcion": 3
+          },
+          "himno": "quien-podra-tanto-alabarte-2",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2471,
+            "impresa": "1343",
+            "pdf_fin": 2472,
+            "impresa_fin": "1344"
+           }
+          ],
+          "revisar": true,
+          "nota": "otro texto bajo la misma etiqueta «I» en otro tomo"
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "himno": "eres-tu-la-mujer-llena-de-gloria",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2472,
+            "impresa": "1344"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4116,
+            "impresa": "1302",
+            "pdf_fin": 4117,
+            "impresa_fin": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 1,
+          "texto": "Dichosa eres, María, porque de ti vino la salvación del mundo; tú que ahora vives ya en la gloria del Señor, intercede por nosotros ante tu Hijo.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2472,
+            "impresa": "1344"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Los salmos y el cántico, del domingo de la I semana del salterio",
+          "remite": "salterio/semana-1/domingo/laudes/salmodia",
+          "otras_redacciones": [
+           {
+            "tomo": 1,
+            "texto": "Los salmos y el cántico, del domingo de la I semana del Salterio"
+           },
+           {
+            "tomo": 4,
+            "texto": "Los salmos y el cántico se toman del domingo de la I semana del salterio."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2472,
+            "impresa": "1344"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 2,
+          "texto": "Tú eres la gloria de Jerusalén; tú, la alegría de Israel; tú, el orgullo de nuestra raza.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 3,
+          "texto": "¡Alégrate, Virgen María! Tú llevaste en el seno a Cristo, el Salvador.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Is 61, 10",
+          "texto": "Desbordo de gozo en el Señor, y me alegro con mi Dios: porque me ha vestido un traje de gala y me ha envuelto en un manto de triunfo, como a una novia que se adorna con sus joyas.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "En tiempo de cuaresma:"
+           }
+          ],
+          "v1": "El Señor la eligió y la predestinó.",
+          "r1": "El Señor la eligió y la predestinó.",
+          "v2": "La hizo morar en su templo santo.",
+          "r2": "Y la predestinó.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         },
+         {
+          "etiqueta": "En tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "El Señor la eligió y la predestinó. Aleluya, aleluya.",
+          "r1": "El Señor la eligió y la predestinó. Aleluya, aleluya.",
+          "v2": "La hizo morar en su templo santo.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Por Eva se cerraron a los hombres las puertas del paraíso, y por María Virgen han sido abiertas de nuevo.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5982,
+            "impresa": "1512"
+           }
+          ]
+         }
+        ],
+        "remite": "ordinario/benedictus"
+       }
+      ]
+     },
+     {
+      "parte": "preces",
+      "piezas": [
+       {
+        "tipo": "preces",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "introduccion": "Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que tu santa Madre, Señor, interceda por nosotros."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Sol de justicia, a quien María Virgen precedía cual aurora luciente,",
+            "segunda": "haz que vivamos siempre iluminados por la claridad de tu presencia."
+           },
+           {
+            "primera": "Palabra eterna del Padre, tú que elegiste a María como arca de tu morada,",
+            "segunda": "líbranos de toda ocasión de pecado."
+           },
+           {
+            "primera": "Salvador del mundo, que quisiste que tu Madre estuviera junto a tu cruz,",
+            "segunda": "por su intercesión concédenos compartir con alegría tus padecimientos."
+           },
+           {
+            "primera": "Señor Jesús, que colgado en la cruz entregaste María a Juan como madre,",
+            "segunda": "haz que nosotros vivamos también como hijos suyos."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 862,
+            "impresa": "862",
+            "pdf_fin": 863,
+            "impresa_fin": "863"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2473,
+            "impresa": "1345"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4117,
+            "impresa": "1303",
+            "pdf_fin": 4118,
+            "impresa_fin": "1304"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "introduccion": "Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que tu santa Madre, Señor, interceda por nosotros."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Salvador del mundo, tú que con la eficacia de tu redención preservaste a tu Madre de toda mancha de pecado,",
+            "segunda": "líbranos también a nosotros de toda culpa."
+           },
+           {
+            "primera": "Redentor nuestro, tú que hiciste de la inmaculada Virgen María tabernáculo purísimo de tu presencia y sagrario del Espíritu Santo,",
+            "segunda": "haz también de nosotros templos de tu Espíritu."
+           },
+           {
+            "primera": "Palabra eterna del Padre, que enseñaste a María a escoger la parte mejor,",
+            "segunda": "ayúdanos a imitarla y a buscar el alimento que perdura hasta la vida eterna."
+           },
+           {
+            "primera": "Rey de reyes, que elevaste contigo a tu Madre en cuerpo y alma al cielo,",
+            "segunda": "haz que aspiremos siempre a los bienes celestiales."
+           },
+           {
+            "primera": "Señor del cielo y de la tierra, que has colocado a tu derecha a María reina,",
+            "segunda": "danos el gozo de tener parte en su gloria."
+           }
+          ],
+          "libres_despues_de": 5,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 863,
+            "impresa": "863"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2474,
+            "impresa": "1346"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4118,
+            "impresa": "1304"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5983,
+            "impresa": "1513",
+            "pdf_fin": 5984,
+            "impresa_fin": "1514"
+           }
+          ]
+         },
+         {
+          "cuando": {
+           "opcion": 3
+          },
+          "introduccion": "Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que tu Madre, Señor, interceda por nosotros."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Oh Sol de justicia, a quien la Virgen inmaculada precedía cual aurora luciente,",
+            "segunda": "haz que vivamos siempre iluminados por la claridad de tu presencia."
+           },
+           {
+            "primera": "Verbo eterno del Padre, que elegiste a María como arca incorruptible de tu morada,",
+            "segunda": "líbranos de la corrupción del pecado."
+           },
+           {
+            "primera": "Salvador nuestro, que quisiste que tu madre estuviera junto a tu cruz,",
+            "segunda": "por su intercesión, concédenos compartir con alegría tus padecimientos y acudir diligentes a remediar los sufrimientos de nuestros hermanos."
+           },
+           {
+            "primera": "Jesús, que, colgado en la cruz, diste María a Juan como madre,",
+            "segunda": "haz que nosotros vivamos también como hijos suyos."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5983,
+            "impresa": "1513"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Se dice la oración propia del día o, en su defecto, una de las siguientes:",
+          "otras_redacciones": [
+           {
+            "tomo": 1,
+            "texto": "Oración propia del día o, en su defecto, una de las siguientes:"
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 863,
+            "impresa": "863"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2474,
+            "impresa": "1346"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4118,
+            "impresa": "1304"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "etiqueta": "Tiempo de Adviento:",
+          "cuando": {
+           "tiempo": "adviento"
+          },
+          "texto": "Dios nuestro, cuyo Verbo inefable fue recibido por la Virgen Inmaculada cuando aceptó tu designio, manifestado por el anuncio del ángel, e, inundada por la luz del Espíritu Santo, fue convertida en mansión de la divinidad, concédenos que también nosotros, a imitación suya, aceptemos siempre sincera y humildemente tu voluntad. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 863,
+            "impresa": "863"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo de Navidad:",
+          "cuando": {
+           "tiempo": "navidad"
+          },
+          "texto": "Señor Dios, que por la maternidad virginal de María has dado a los hombres los tesoros de la salvación, haz que sintamos la intercesión de la Virgen Madre, de quien hemos recibido al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           }
+          ]
+         },
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2474,
+            "impresa": "1346"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4118,
+            "impresa": "1304"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Perdona, Señor, las culpas de tus fieles y haz que quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2474,
+            "impresa": "1346"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305",
+            "pdf_fin": 4118,
+            "impresa_fin": "1304"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "texto": "Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2474,
+            "impresa": "1346"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "texto": "Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347",
+            "pdf_fin": 2474,
+            "impresa_fin": "1346"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 5
+          },
+          "texto": "Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 6
+          },
+          "texto": "Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "intermedia": [
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Cuando se celebra como solemnidad, los salmos se toman de la salmodia complementaria. En las demás celebraciones, incluso en las fiestas, los salmos se toman del Oficio correspondiente, para una de las horas; si se rezan las otras horas, los salmos se toman de la salmodia complementaria.",
+          "remite": "salterio/salmodia-complementaria",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Oración como en las Laudes.",
+          "remite": "virgen/laudes/oracion",
+          "otras_redacciones": [
+           {
+            "tomo": 3,
+            "texto": "La oración como en las Laudes."
+           },
+           {
+            "tomo": 4,
+            "texto": "La oración como en Laudes"
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2476,
+            "impresa": "1348"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4120,
+            "impresa": "1306"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "tercia": [
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Todos se dedicaban a la oración en común, con María la madre de Jesús.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Cuando se usa la salmodia complementaria, en lugar del salmo 121, que se dice en las II Vísperas, puede tomarse el salmo 128.",
+          "remite": [
+           "salterio/salmodia-complementaria",
+           "salmos/salmo-128"
+          ],
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "Cuando se usa la salmodia complementaria, en lugar del salmo 121, que se dice en las II vísperas, puede tomarse el salmo 128."
+           },
+           {
+            "tomo": 3,
+            "texto": "En la salmodia complementaria, en lugar del salmo 121, que se dice en las II Vísperas, puede tomarse el salmo 128."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "So 3, 14. 15b",
+          "texto": "Regocíjate, hija de Sión; grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5984,
+            "impresa": "1514",
+            "pdf_fin": 5985,
+            "impresa_fin": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "versiculo",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dichosos los que escuchan la palabra de Dios.",
+          "r": "Y la cumplen.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "sexta": [
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Dijo la madre de Jesús: «Haced lo que él diga.»",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Za 9, 9a",
+          "texto": "Alégrate, hija de Sión; canta, hija de Jerusalén. Mira a tu Rey que viene a ti, justo y victorioso.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "versiculo",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dichoso el seno de santa María Virgen.",
+          "r": "Que llevó al Hijo del eterno Padre.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "nona": [
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Dijo el Señor a su madre: «Mujer, ahí tienes a tu hijo.» Luego dijo al discípulo: «Ahí tienes a tu madre.»",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4119,
+            "impresa": "1305"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Cuando se usa la salmodia complementaria, en lugar del salmo 126, que se dice en las II Vísperas, puede tomarse el salmo 130.",
+          "remite": [
+           "salterio/salmodia-complementaria",
+           "salmos/salmo-130"
+          ],
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "Cuando se usa la salmodia complementaria, en lugar del salmo 126, que se dice en las II vísperas, puede tomarse el salmo 130."
+           },
+           {
+            "tomo": 3,
+            "texto": "En la salmodia complementaria, en lugar del salmo 126, que se dice en las II Vísperas, puede tomarse el salmo 130."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4120,
+            "impresa": "1306"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Jdt 13, 18-19",
+          "texto": "Que el Altísimo te bendiga, hija, más que a todas las mujeres de la tierra. Bendito el Señor, creador del cielo y tierra, que enderezó tu golpe contra la cabeza del general enemigo. Los que recuerden esta hazaña de Dios jamás perderán la confianza que tú inspiras.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2475,
+            "impresa": "1347",
+            "pdf_fin": 2476,
+            "impresa_fin": "1348"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4120,
+            "impresa": "1306"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "versiculo",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Bendita tú entre las mujeres.",
+          "r": "Y bendito el fruto de tu vientre.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 864,
+            "impresa": "864"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2476,
+            "impresa": "1348"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4120,
+            "impresa": "1306"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "visperas2": [
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "himno": "todos-te-deben-servir",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 865,
+            "impresa": "865"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2476,
+            "impresa": "1348"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4120,
+            "impresa": "1306"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5985,
+            "impresa": "1515",
+            "pdf_fin": 5986,
+            "impresa_fin": "1516"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "himno": "salve-del-mar-estrella",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 865,
+            "impresa": "865",
+            "pdf_fin": 866,
+            "impresa_fin": "866"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2476,
+            "impresa": "1348",
+            "pdf_fin": 2477,
+            "impresa_fin": "1349"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4120,
+            "impresa": "1306",
+            "pdf_fin": 4121,
+            "impresa_fin": "1307"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5986,
+            "impresa": "1516"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 1,
+          "texto": "Alégrate, María, llena de gracia, el Señor está contigo.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 866,
+            "impresa": "866"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2477,
+            "impresa": "1349"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4121,
+            "impresa": "1307"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5987,
+            "impresa": "1517"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-121",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 866,
+            "impresa": "866"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2477,
+            "impresa": "1349"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4121,
+            "impresa": "1307"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5987,
+            "impresa": "1517"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 2,
+          "texto": "Aquí está la esclava del Señor, hágase en mí según tu palabra.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 866,
+            "impresa": "866"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2478,
+            "impresa": "1350"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4122,
+            "impresa": "1308"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5987,
+            "impresa": "1517"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-126",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 866,
+            "impresa": "866"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2478,
+            "impresa": "1350"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4122,
+            "impresa": "1308"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5987,
+            "impresa": "1517"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 3,
+          "texto": "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 867,
+            "impresa": "867"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2478,
+            "impresa": "1350"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4122,
+            "impresa": "1308"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5988,
+            "impresa": "1518"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-ef-1-3-10",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 867,
+            "impresa": "867"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2478,
+            "impresa": "1350"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4122,
+            "impresa": "1308"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5988,
+            "impresa": "1518"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Ga 4, 4-5",
+          "texto": "Cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 868,
+            "impresa": "868"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2479,
+            "impresa": "1351"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4123,
+            "impresa": "1309"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5988,
+            "impresa": "1518"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "v1": "Alégrate, María, llena de gracia, el Señor está contigo.",
+          "r1": "Alégrate, María, llena de gracia, el Señor está contigo.",
+          "v2": "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+          "r2": "El Señor está contigo.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 868,
+            "impresa": "868"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4123,
+            "impresa": "1309"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5988,
+            "impresa": "1518",
+            "pdf_fin": 5989,
+            "impresa_fin": "1519"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "cuando": {
+           "opcion": 2
+          },
+          "v1": "Alégrate, María, llena de gracia, el Señor está contigo. Aleluya, aleluya.",
+          "r1": "Alégrate, María, llena de gracia, el Señor está contigo. Aleluya, aleluya.",
+          "v2": "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2479,
+            "impresa": "1351"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Dichosa tú, María, que has creído; porque lo que te ha dicho el Señor se cumplirá.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 868,
+            "impresa": "868"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2479,
+            "impresa": "1351"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4123,
+            "impresa": "1309"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5989,
+            "impresa": "1519"
+           }
+          ]
+         }
+        ],
+        "remite": "ordinario/magnificat"
+       }
+      ]
+     },
+     {
+      "parte": "preces",
+      "piezas": [
+       {
+        "tipo": "preces",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "introduccion": "Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que la llena de gracia interceda por nosotros."
+           },
+           {
+            "etiqueta": "O bien:",
+            "texto": "Mira a la llena de gracia y escúchanos."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Señor, Dios nuestro, admirable siempre en tus obras, que has querido que la inmaculada Virgen María participara en cuerpo y alma de la gloria de Jesucristo,",
+            "segunda": "haz que todos tus hijos deseen y caminen hacia esta misma gloria."
+           },
+           {
+            "primera": "Tú que nos diste a María por madre, concede por su mediación salud a los enfermos, consuelo a los tristes, perdón a los pecadores,",
+            "segunda": "y a todos abundancia de salud y de paz."
+           },
+           {
+            "primera": "Tú que hiciste de María la llena de gracia,",
+            "segunda": "concede la abundancia de tu gracia a todos los hombres."
+           },
+           {
+            "primera": "Haz, Señor, que tu Iglesia tenga un solo corazón y una sola alma por el amor,",
+            "segunda": "y que todos los fieles perseveren unánimes en la oración con María, la madre de Jesús."
+           },
+           {
+            "primera": "Tú que coronaste a María como reina del cielo,",
+            "segunda": "haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Confiando en el Señor, que hizo obras grandes en María, pidamos al Padre que colme también de bienes al mundo hambriento: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 868,
+            "impresa": "868",
+            "pdf_fin": 869,
+            "impresa_fin": "869"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2479,
+            "impresa": "1351",
+            "pdf_fin": 2480,
+            "impresa_fin": "1352"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4123,
+            "impresa": "1309",
+            "pdf_fin": 4124,
+            "impresa_fin": "1310"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5989,
+            "impresa": "1519"
+           }
+          ]
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "O bien estas otras:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "O bien:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "O bien:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "O bien:"
+           }
+          ],
+          "etiqueta": "O bien estas otras:",
+          "cuando": {
+           "opcion": 2
+          },
+          "introduccion": "Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que la llena de gracia interceda por nosotros."
+           },
+           {
+            "etiqueta": "O bien:",
+            "texto": "Mira a la llena de gracia y escúchanos."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Tú que hiciste de María la madre de misericordia,",
+            "segunda": "haz que los que viven en peligro o están tentados sientan su protección maternal."
+           },
+           {
+            "primera": "Tú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de José,",
+            "segunda": "haz que por su intercesión todas las madres fomenten en sus hogares el amor y la santidad."
+           },
+           {
+            "primera": "Tú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la resurrección de su Hijo,",
+            "segunda": "levanta y robustece la esperanza de los decaídos."
+           },
+           {
+            "primera": "Tú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,",
+            "segunda": "por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo."
+           },
+           {
+            "primera": "Tú que coronaste a María como reina del cielo,",
+            "segunda": "haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 869,
+            "impresa": "869"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2480,
+            "impresa": "1352"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4124,
+            "impresa": "1310"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5989,
+            "impresa": "1519",
+            "pdf_fin": 5990,
+            "impresa_fin": "1520"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Se dice la oración propia del día o, en su defecto, una de las siguientes:",
+          "otras_redacciones": [
+           {
+            "tomo": 1,
+            "texto": "Oración propia del día o, en su defecto, una de las siguientes:"
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 869,
+            "impresa": "869"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2480,
+            "impresa": "1352"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4124,
+            "impresa": "1310"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5990,
+            "impresa": "1520"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "etiqueta": "Tiempo de Adviento:",
+          "cuando": {
+           "tiempo": "adviento"
+          },
+          "texto": "Dios nuestro, cuyo Verbo inefable fue recibido por la Virgen Inmaculada cuando aceptó tu designio, manifestado por el anuncio del ángel, e, inundada por la luz del Espíritu Santo, fue convertida en mansión de la divinidad, concédenos que también nosotros, a imitación suya, aceptemos siempre sincera y humildemente tu voluntad. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 869,
+            "impresa": "869"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo de Navidad:",
+          "cuando": {
+           "tiempo": "navidad"
+          },
+          "texto": "Señor Dios, que por la maternidad virginal de María has dado a los hombres los tesoros de la salvación, haz que sintamos la intercesión de la Virgen Madre, de quien hemos recibido al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 869,
+            "impresa": "869"
+           }
+          ]
+         },
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2481,
+            "impresa": "1353"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4124,
+            "impresa": "1310",
+            "pdf_fin": 4125,
+            "impresa_fin": "1311"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5990,
+            "impresa": "1520"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Perdona, Señor, las culpas de tus fieles y haz que, quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2481,
+            "impresa": "1353"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4125,
+            "impresa": "1311"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5990,
+            "impresa": "1520"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "texto": "Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2481,
+            "impresa": "1353"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4125,
+            "impresa": "1311"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5990,
+            "impresa": "1520"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "texto": "Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2481,
+            "impresa": "1353"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4125,
+            "impresa": "1311"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5990,
+            "impresa": "1520"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 5
+          },
+          "texto": "Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2481,
+            "impresa": "1353"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4125,
+            "impresa": "1311"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5991,
+            "impresa": "1521"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 6
+          },
+          "texto": "Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2481,
+            "impresa": "1353"
+           },
+           {
+            "tomo": 3,
+            "pdf": 4125,
+            "impresa": "1311"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5991,
+            "impresa": "1521"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "santa-maria-sabado",
+   "titulo": "MEMORIA DE SANTA MARÍA EN SÁBADO",
+   "fuentes": [
+    {
+     "tomo": 3,
+     "pdf": 4126,
+     "impresa": "1312"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5992,
+     "impresa": "1522"
+    }
+   ],
+   "rubricas": [
+    {
+     "tipo": "rubrica",
+     "variantes": [
+      {
+       "texto": "En los sábados del tiempo ordinario, cuando se permite la celebración de una memoria libre, se puede celebrar, con el mismo rito, la memoria de santa María.",
+       "fuentes": [
+        {
+         "tomo": 3,
+         "pdf": 4126,
+         "impresa": "1312"
+        },
+        {
+         "tomo": 4,
+         "pdf": 5992,
+         "impresa": "1522"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "rubrica",
+     "variantes": [
+      {
+       "texto": "Los himnos latinos de la memoria de santa María en sábado se hallan en el Apéndice IV.",
+       "remite": "apendices/himnos-latinos",
+       "fuentes": [
+        {
+         "tomo": 3,
+         "pdf": 4126,
+         "impresa": "1312"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "horas": {
+    "invitatorio": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Señor, abre mis labios.",
+          "r": "Y mi boca proclamará tu alabanza.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5992,
+            "impresa": "1522"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Venid, adoremos a Cristo, Hijo de María Virgen.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4126,
+            "impresa": "1312"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5992,
+            "impresa": "1522"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Aclamemos al Señor en esta conmemoración de María Virgen.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4126,
+            "impresa": "1312"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5992,
+            "impresa": "1522"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmo",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "El salmo invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23",
+          "remite": [
+           "ordinario/invitatorio/salmo",
+           "salmos/salmo-94",
+           "salmos/salmo-99",
+           "salmos/salmo-66",
+           "salmos/salmo-23"
+          ],
+          "otras_redacciones": [
+           {
+            "tomo": 4,
+            "texto": "El salmo del Invitatorio como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4126,
+            "impresa": "1312"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5992,
+            "impresa": "1522"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "oficio": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5992,
+            "impresa": "1522"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "etiqueta": "I",
+          "cuando": {
+           "opcion": 1
+          },
+          "himno": "rosa-entre-rosas",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4126,
+            "impresa": "1312",
+            "pdf_fin": 4127,
+            "impresa_fin": "1313"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5992,
+            "impresa": "1522"
+           }
+          ]
+         },
+         {
+          "etiqueta": "II",
+          "cuando": {
+           "opcion": 2
+          },
+          "himno": "ruega-por-nosotros",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4127,
+            "impresa": "1313"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5993,
+            "impresa": "1523"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "himno": "llena-de-rosas-mi-herida",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4127,
+            "impresa": "1313"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5993,
+            "impresa": "1523"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Las antífonas, los salmos, el versículo y la primera lectura con su responsorio se toman del sábado correspondiente.",
+          "remite": "salterio/sabado-correspondiente/oficio",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4127,
+            "impresa": "1313"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5993,
+            "impresa": "1523"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "segunda_lectura",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Como segunda lectura puede tomarse una cualquiera del Común de santa María Virgen, o bien la del sábado correspondiente, con sus respectivos responsorios.",
+          "remite": [
+           "salterio/sabado-correspondiente/oficio",
+           "virgen/oficio/segunda_lectura"
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4127,
+            "impresa": "1313"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5993,
+            "impresa": "1523"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "También puede tomarse cualquiera de las siguientes lecturas:",
+          "otras_redacciones": [
+           {
+            "tomo": 4,
+            "texto": "También puede tomarse cualquiera de las siguientes lecturas: Sermones de san Proclo, Sermón 1 del beato Guerrico, De las homilías de san Juan Crisóstomo, De Lumen Gentium 63-65."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4127,
+            "impresa": "1313"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5993,
+            "impresa": "1523"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "lectura",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "orden": 2,
+          "encabezado": "De los sermones de san Sofronio, obispo",
+          "fuente": "(Sermón 2, en la Anunciación de la Santísima Virgen, 21-22. 26: PG 87, 3, 3242. 3250)",
+          "titulo": "LA BENDICIÓN DEL PADRE HA BRILLADO PARA LOS HOMBRES POR MEDIO DE MARÍA",
+          "parrafos": [
+           "Alégrate, llena de gracia, el Señor está contigo. ¿Y qué puede ser más sublime que este gozo, oh Virgen Madre? ¿O qué cosa puede ser más excelente que esta gracia, que, viniendo de Dios, sólo tú has obtenido? ¿Acaso se puede imaginar una gracia más agradable o más espléndida? Todas las demás no se pueden comparar a las maravillas que se realizan en ti; todas las demás son inferiores a tu gracia; todas, incluso las más excelsas, son secundarias y gozan de una claridad muy inferior.",
+           "El Señor está contigo. ¿Y quién es el que puede competir contigo? Dios proviene de ti; ¿quién no te cederá el paso, quién habrá que no te conceda con gozo la primacía y la precedencia? Por todo ello, contemplando tus excelsas prerrogativas, que destacan sobre las de todas las criaturas, te aclamo con el máximo entusiasmo: Alégrate, llena de gracia, el Señor está contigo. Pues tú eres la fuente del gozo no sólo para los hombres, sino también para los ángeles del cielo.",
+           "Verdaderamente, bendita tú entre las mujeres, pues has cambiado la maldición de Eva en bendición; pues has hecho que Adán, que yacía postrado por una maldición, fuera bendecido por medio de ti.",
+           "Verdaderamente, bendita tú entre las mujeres, pues por medio de ti la bendición del Padre ha brillado para los hombres y los ha liberado de la antigua maldición.",
+           "Verdaderamente, bendita tú entre las mujeres, pues por medio de ti encuentran la salvación tus progenitores; pues tú has engendrado al Salvador que les concederá la salvación eterna.",
+           "Verdaderamente, bendita tú entre las mujeres, pues sin concurso de varón has dado a luz aquel fruto que es bendición para todo el mundo, al que ha redimido de la maldición que no producía sino espinas.",
+           "Verdaderamente, bendita tú entre las mujeres, pues a pesar de ser una mujer, criatura de Dios como todas las demás, has llegado a ser, de verdad, Madre de Dios. Pues lo que nacerá de ti es, con toda verdad, el Dios hecho hombre, y, por lo tanto, con toda justicia y con toda razón, te llamas Madre de Dios, pues de verdad das a luz a Dios.",
+           "Tú tienes en tu seno al mismo Dios, hecho hombre en tus entrañas, quien, como un esposo, saldrá de ti para conceder a todos los hombres el gozo y la luz divina.",
+           "Dios ha puesto en ti, oh Virgen, su tienda como en un cielo puro y resplandeciente. Saldrá de ti como el esposo de su alcoba e, imitando el recorrido del sol, recorrerá en su vida el camino de la futura salvación para todos los vivientes, y, extendiéndose de un extremo a otro del cielo, llenará con calor divino y vivificante todas las cosas."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4127,
+            "impresa": "1313",
+            "pdf_fin": 4128,
+            "impresa_fin": "1314"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 2
+          },
+          "orden": 2,
+          "encabezado": "De los sermones del beato Elredo, abad",
+          "fuente": "(Sermón 20, en la Natividad de santa María: PL 195, 322-324)",
+          "titulo": "MARÍA, MADRE NUESTRA",
+          "parrafos": [
+           "Acudamos a la esposa del Señor, acudamos a su madre, acudamos a su más perfecta esclava. Pues todo esto es María.",
+           "¿Y qué es lo que le ofrecemos? ¿Con qué dones le obsequiaremos? ¡Ojalá pudiéramos presentarle lo que en justicia le debemos! Le debemos honor, porque es la madre de nuestro Señor. Pues quien no honra a la madre sin duda que deshonra al hijo. La Escritura, en efecto, afirma: Honra a tu padre y a tu madre.",
+           "¿Qué es lo que diremos, hermanos? ¿Acaso no es nuestra madre? En verdad, hermanos, ella es nuestra madre. Por ella hemos nacido no al mundo, sino a Dios.",
+           "Como sabéis y creéis, nos encontrábamos todos en el reino de la muerte, en el dominio de la caducidad, en las tinieblas, en la miseria. En el reino de la muerte, porque habíamos perdido al Señor; en el dominio de la caducidad, porque vivíamos en la corrupción; en las tinieblas, porque habíamos perdido la luz de la sabiduría, y, como consecuencia de todo esto, habíamos perecido completamente. Pero por medio de María hemos nacido de una forma mucho más excelsa que por medio de Eva, ya que por María ha nacido Cristo. En vez de la antigua caducidad, hemos recuperado la novedad de vida; en vez de la corrupción, la incorrupción; en vez de las tinieblas, la luz.",
+           "María es nuestra madre, la madre de nuestra vida, la madre de nuestra incorrupción, la madre de nuestra luz. El Apóstol afirma de nuestro Señor: Dios lo ha hecho para nosotros sabiduría, justicia, santificación y redención.",
+           "Ella, pues, que es madre de Cristo, es también madre de nuestra sabiduría, madre de nuestra justicia, madre de nuestra santificación, madre de nuestra redención. Por lo tanto, es para nosotros madre en un sentido mucho más profundo aún que nuestra propia madre según la carne. Porque nuestro nacimiento de María es mucho mejor, pues de ella viene nuestra santidad, nuestra sabiduría, nuestra justicia, nuestra santificación, nuestra redención.",
+           "Afirma la Escritura: Alabad al Señor en sus santos. Si nuestro Señor debe ser alabado en sus santos, en los que hizo maravillas y prodigios, cuánto más debe ser alabado en María, en la que hizo la mayor de las maravillas, pues él mismo quiso nacer de ella."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4128,
+            "impresa": "1314",
+            "pdf_fin": 4129,
+            "impresa_fin": "1315"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 3
+          },
+          "orden": 2,
+          "encabezado": "De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo",
+          "fuente": "(Núms. 61-62)",
+          "titulo": "LA MATERNIDAD DE MARÍA EN LA ECONOMÍA DE LA GRACIA",
+          "parrafos": [
+           "La Santísima Virgen, desde toda la eternidad, fue predestinada como Madre de Dios, al mismo tiempo que la encarnación del Verbo, y por disposición de la divina providencia fue en la tierra la madre excelsa del divino Redentor y, de forma singular, la generosa colaboradora entre todas las criaturas y la humilde esclava del Señor. Concibiendo a Cristo, engendrándolo, alimentándolo, presentándolo al Padre en el templo, padeciendo con su Hijo cuando él moría en la cruz, cooperó de forma única a la obra del Salvador, por su obediencia, su fe, su esperanza y su ardiente caridad, para restaurar la vida sobrenatural de las almas. Por todo ello es nuestra madre en el orden de la gracia.",
+           "Ya desde el consentimiento que prestó fielmente en la anunciación y que mantuvo sin vacilar al pie de la cruz, hasta el momento de la consumación final de todos los elegidos, pervive sin cesar en la economía de la gracia esta maternidad de María.",
+           "Porque, después de su asunción a los cielos, no ha abandonado esta misión salvadora, sino que con su constante intercesión continúa consiguiéndonos los dones de la salvación eterna.",
+           "Con su amor materno, vela sobre los hermanos de su Hijo que todavía peregrinan y que se encuentran en peligro y angustia, hasta que sean conducidos a la patria del cielo. Por todo ello, la bienaventurada Virgen es invocada en la Iglesia con los títulos de abogada, auxiliadora, socorro, mediadora. Sin embargo, estos títulos hay que entenderlos de tal forma que no disminuyan ni añadan nada a la dignidad y eficacia de Cristo, único mediador.",
+           "Ninguna criatura podrá nunca compararse con el Verbo encarnado, Redentor nuestro. Pero así como el sacerdocio de Cristo se participa de diversas formas, tanto por los ministros sagrados como por el pueblo fiel, y así como la única bondad divina se difunde realmente de formas diversas en las criaturas, igualmente la única mediación del Redentor no excluye, sino que suscita en las criaturas diversas clases de cooperación, participada de la única fuente.",
+           "La Iglesia no duda en confesar esta función subordinada de María, la experimenta continuamente y la recomienda a la piedad de los fieles, para que, apoyados en esta protección maternal, se unan con mayor intimidad al Mediador y Salvador."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4129,
+            "impresa": "1315",
+            "pdf_fin": 4130,
+            "impresa_fin": "1316"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta Otra:",
+          "cuando": {
+           "opcion": 4
+          },
+          "orden": 2,
+          "encabezado": "De los sermones de san León Magno, papa",
+          "fuente": "(Sermón 1 en la Natividad del Señor, 2. 3: PL 54,191-192)",
+          "titulo": "MARÍA, ANTES DE CONCEBIR CORPORALMENTE, CONCIBIÓ EN SU ESPÍRITU",
+          "parrafos": [
+           "Dios elige a una virgen de la descendencia real de David; y esta virgen, destinada a llevar en su seno el fruto de una sagrada fecundación, antes de concebir corporalmente a su prole, divina y humana a la vez, la concibió en su espíritu. Y, para que no se espantara, ignorando los designios divinos, al observar en su cuerpo unos cambios inesperados, conoce, por la conversación con el ángel, lo que el Espíritu Santo ha de operar en ella. Y la que ha de ser Madre de Dios confía en que su virginidad ha de permanecer sin detrimento. ¿Por qué había de dudar de este nuevo género de concepción, si se le promete que el Altísimo pondrá en juego su poder? Su fe y su confianza quedan, además, confirmadas cuando el ángel le da una prueba de la eficacia maravillosa de este poder divino, haciéndole saber que Isabel ha obtenido también una inesperada fecundidad: el que es capaz de hacer concebir a una mujer estéril puede hacer lo mismo con una mujer virgen.",
+           "Así, pues, el Verbo de Dios, que es Dios, el Hijo de",
+           "Dios, que en el principio estaba junto a Dios, por medio del cual se hizo todo, y sin el cual no se hizo nada, se hace hombre para librar al hombre de la muerte eterna; se abaja hasta asumir nuestra pequeñez, sin menguar por ello su majestad, de tal modo que, permaneciendo lo que era y asumiendo lo que no era, une la auténtica condición de esclavo a su condición divina, por la que es igual al Padre; la unión que establece entre ambas naturalezas es tan admirable, que ni la gloria de la divinidad absorbe la humanidad, ni la humanidad disminuye en nada la divinidad.",
+           "Quedando, pues, a salvo el carácter propio de cada una de las naturalezas, y unidas ambas en una sola persona, la majestad asume la humildad, el poder la debilidad, la eternidad la mortalidad; y, para saldar la deuda contraída por nuestra condición pecadora, la naturaleza invulnerable se une a la naturaleza pasible, Dios verdadero y hombre verdadero se conjugan armoniosamente en la única persona del Señor; de este modo, tal como convenía para nuestro remedio, el único y mismo mediador entre Dios y los hombres pudo a la vez morir y resucitar, por la conjunción en él de esta doble condición. Con razón, pues, este nacimiento salvador había de dejar intacta la virginidad de la madre, ya que fue a la vez salvaguarda del pudor y alumbramiento de la verdad.",
+           "Tal era, amadísimos, la clase de nacimiento que convenía a Cristo, fuerza y sabiduría de Dios; con él se mostró igual a nosotros por su humanidad, superior a nosotros por su divinidad. Si no hubiera sido Dios verdadero, no hubiera podido remediar nuestra situación; si no hubiera sido hombre verdadero, no hubiera podido darnos ejemplo.",
+           "Por eso, al nacer el Señor, los ángeles cantan llenos de gozo: Gloria a Dios en el cielo, y proclaman: y en la tierra paz a los hombres que ama el Señor. Ellos ven, en efecto, que la Jerusalén celestial se va edificando por medio de todas las naciones del orbe. ¿Cómo, pues, no habría de alegrarse la pequeñez humana ante esta obra inenarrable de la misericordia divina, cuando incluso los coros sublimes de los ángeles encontraban en ella un gozo tan intenso?"
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4130,
+            "impresa": "1316",
+            "pdf_fin": 4131,
+            "impresa_fin": "1317"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta Otra:",
+          "cuando": {
+           "opcion": 5
+          },
+          "orden": 2,
+          "encabezado": "De la homilía de san Cirilo de Alejandría, obispo, pronunciada en el Concilio de Éfeso",
+          "fuente": "(Homilía 4: PG 77, 991. 995-996)",
+          "titulo": "ALABANZAS DE LA MADRE DE DIOS",
+          "parrafos": [
+           "Tengo ante mis ojos la asamblea de los santos padres que, llenos de gozo y fervor, han acudido aquí, respondiendo con prontitud a la invitación de la santa Madre de Dios, la siempre Virgen María. Este espectáculo ha trocado en gozo la gran tristeza que antes me oprimía. Vemos realizadas en esta reunión aquellas hermosas palabras de David, el salmista: Ved qué dulzura, qué delicia; convivir los hermanos unidos.",
+           "Te saludamos, santa y misteriosa Trinidad, que nos has convocado a todos nosotros en esta iglesia de santa María, Madre de Dios.",
+           "Te saludamos, María, Madre de Dios, tesoro digno de ser venerado por todo el orbe, lámpara inextinguible, corona de la virginidad, trono de la recta doctrina, templo indestructible, lugar propio de aquel que no puede ser contenido en lugar alguno, madre y virgen, por quien es llamado bendito, en los santos evangelios, el que viene en nombre del Señor.",
+           "Te saludamos, a ti, que encerraste en tu seno virginal a aquel que es inmenso e inabarcable; a ti, por quien la santa Trinidad es adorada y glorificada; por quien la cruz preciosa es celebrada y adorada en todo el orbe; por quien exulta el cielo; por quien se alegran los ángeles y arcángeles; por quien son puestos en fuga los demonios; por quien el diablo tentador cayó del cielo; por quien la criatura, caída en el pecado, es elevada al cielo; por quien la creación, sujeta a la insensatez de la idolatría, llega al conocimiento de la verdad; por quien los creyentes obtienen la gracia del bautismo y el aceite de la alegría; por quien han sido fundamentadas las Iglesias en el orbe de la tierra; por quien todos los hombres son llamados a la conversión.",
+           "Y ¿qué más diré? Por ti, el Hijo unigénito de Dios ha iluminado a los que vivían en tinieblas y en sombra de muerte; por ti, los profetas anunciaron las cosas futuras; por ti, los apóstoles predicaron la salvación a los gentiles; por ti, los muertos resucitan; por ti, reinan los reyes, por la santísima Trinidad.",
+           "¿Quién habrá que sea capaz de cantar como es debido las alabanzas de María? Ella es madre y virgen a la vez; ¡qué cosa tan admirable! Es una maravilla que me llena de estupor. ¿Quién ha oído jamás decir que le esté prohibido al constructor habitar en el mismo templo que él ha construido? ¿Quién podrá tachar de ignominia el hecho de que la sirviente sea adoptada como madre?",
+           "Mirad: hoy todo el mundo se alegra; quiera Dios que todos nosotros reverenciemos y adoremos la unidad, que rindamos un culto impregnado de santo temor a la Trinidad indivisa, al celebrar, con nuestras alabanzas, a María siempre Virgen, el templo santo de Dios, y a su Hijo y esposo inmaculado: porque a él pertenece la gloria por los siglos de los siglos. Amén."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4131,
+            "impresa": "1317",
+            "pdf_fin": 4132,
+            "impresa_fin": "1318"
+           }
+          ]
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 3,
+            "etiqueta": "O bien esta Otra:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": null
+           }
+          ],
+          "etiqueta": "O bien esta Otra:",
+          "cuando": {
+           "opcion": 6
+          },
+          "orden": 2,
+          "encabezado": "De los sermones de san Proclo de Constantinopla, obispo",
+          "fuente": "(Sobre la Natividad del Señor, 1-2: PG 65, 843-846)",
+          "titulo": "EL AMIGO DE LOS HOMBRES SE HA HECHO HOMBRE, NACIENDO DE LA VIRGEN",
+          "parrafos": [
+           "Alégrense los cielos, y las nubes destilen la justicia, porque el Señor se ha apiadado de su pueblo. Alégrense los cielos, porque, al ser creados en el principio, también Adán fue formado de la tierra virgen por el Creador, mostrándose como amigo y familiar de Dios. Alégrense los cielos, porque ahora, de acuerdo con el plan divino, la tierra ha sido santificada por la encarnación de nuestro Señor, y el género humano ha sido liberado del culto idolátrico. Las nubes destilen la justicia, porque hoy el antiguo extravío de Eva ha sido reparado y destruido por la pureza de la Virgen María y por el que de ella ha nacido Dios y hombre juntamente. Hoy el hombre, cancelada la antigua condena, ha sido liberado de la horrenda noche que sobre él pesaba.",
+           "Cristo ha nacido de la Virgen, ya que de ella ha tomado carne, según la libre disposición del plan divino: La Palabra se hizo carne y acampó entre nosotros; por esto, la Virgen ha venido a ser madre de Dios. Y es virgen y madre al mismo tiempo, porque ha dado a luz a la Palabra encarnada, sin concurso de varón; y, así, ha conservado su virginidad por la acción milagrosa de aquel que de este modo quiso nacer. Ella es madre, con toda verdad, de la naturaleza humana de aquel que es la Palabra divina, ya que en ella se encarnó, de ella salió a la luz del mundo identificado con nuestra naturaleza, según su sabiduría y voluntad, con las que obra semejantes prodigios. De ellos, según la carne, nació el Mesías, como dice san Pablo.",
+           "En efecto, él fue, es y será siempre el mismo; mas por nosotros se hizo hombre; el Amigo de los hombres se hizo hombre, sin sufrir por eso menoscabo alguno en su divinidad. Por mí se hizo semejante a mí, se hizo lo que no era, aunque conservando lo que era. Finalmente, se hizo hombre, para cargar sobre sí el castigo por nosotros merecido y hacernos, de esta manera, capaces de la adopción filial y otorgarnos aquel reino, del cual pedimos que nos haga dignos la gracia y misericordia del Señor Jesucristo, al cual, junto con el Padre y el Espíritu Santo, pertenece la gloria, el honor y el poder, ahora y siempre y por los siglos de los siglos. Amén."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4132,
+            "impresa": "1318",
+            "pdf_fin": 4133,
+            "impresa_fin": "1319"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5993,
+            "impresa": "1523",
+            "pdf_fin": 5994,
+            "impresa_fin": "1524"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 7
+          },
+          "orden": 2,
+          "encabezado": "De los sermones del beato Guerrico, abad",
+          "fuente": "(Sermón 1 en la Asunción de santa María: PL 185,187-189)",
+          "titulo": "MARÍA, MADRE DE CRISTO Y MADRE DE LOS CRISTIANOS",
+          "parrafos": [
+           "Un solo hijo dio a luz María, el cual, así como es Hijo único del Padre celestial, así también es el hijo único de su madre terrena. Y esta única virgen y madre, que tiene la gloria de haber dado a luz al Hijo único del Padre, abarca, en su único hijo, a todos los que son miembros del mismo; y no se avergüenza de llamarse madre de todos aquellos en los que ve formado o sabe que se va formando Cristo, su hijo.",
+           "La antigua Eva, más que madre madrastra, ya que dio a gustar a sus hijos la muerte antes que la luz del día, aunque fue llamada madre de todos los que viven, no justificó este apelativo; María, en cambio, realizó plenamente su significado, ya que ella, como la Iglesia de la que es figura, es madre de todos los que renacen a la vida. Es, en efecto, madre de aquella Vida por la que todos viven, pues, al dar a luz esta Vida, regeneró, en cierto modo, a todos los que habían de vivir por ella.",
+           "Esta santa madre de Cristo, como sabe que, en virtud de este misterio, es madre de los cristianos, se comporta con ellos con solicitud y afecto maternal, y en modo alguno trata con dureza a sus hijos, como si no fuesen suyos, ya que sus entrañas, una sola vez fecundadas, aunque nunca agotadas, no cesan de dar a luz el fruto de piedad.",
+           "Si el Apóstol de Cristo no deja de dar a luz a sus hijos, con su solicitud y deseo piadoso, hasta que Cristo tome forma en ellos, ¿cuánto más la madre de Cristo? Y Pablo los engendró con la predicación de la palabra de verdad con que fueron regenerados; pero María de un modo mucho más santo y divino, al engendrar al que es la Palabra en persona. Es, ciertamente, digno de alabanza el ministerio de la predicación de Pablo; pero es más admirable y digno de veneración el misterio de la generación de María.",
+           "Por eso, vemos cómo sus hijos la reconocen por madre, y así, llevados por un natural impulso de piedad y de fe, cuando se hallan en alguna necesidad o peligro, lo primero que hacen es invocar su nombre y buscar refugio en ella, como el niño que se acoge al regazo de su madre. Por esto, creo que no es un desatino el aplicar a estos hijos lo que el profeta había prometido: Tus hijos habitarán en ti; salvando, claro está, el sentido originario que la Iglesia da a esta profecía.",
+           "Y, si ahora habitamos al amparo de la madre del Altísimo, vivamos a su sombra, como quien está bajo sus alas, y así después reposaremos en su regazo, hechos partícipes de su gloria. Entonces resonará unánime la voz de los que se alegran y se congratulan con su madre: Y cantarán mientras danzan: «Todas mis fuentes están en ti, santa Madre de Dios»"
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4133,
+            "impresa": "1319"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5994,
+            "impresa": "1524",
+            "pdf_fin": 5995,
+            "impresa_fin": "1525"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 8
+          },
+          "orden": 2,
+          "encabezado": "De las homilías de san Juan Crisóstomo, obispo",
+          "fuente": "(Sobre el cementerio y la cruz, 2: PG 49, 396)",
+          "titulo": "ADÁN Y CRISTO, EVA Y MARÍA",
+          "parrafos": [
+           "¿Te das cuenta, qué victoria tan admirable? ¿Te das cuenta de cuán esclarecidas son las obras de la cruz? ¿Puedo decirte algo más maravilloso todavía? Entérate cómo ha sido conseguida esta victoria, y te admirarás más aún. Pues, Cristo venció al diablo valiéndose de aquello mismo con que el diablo había vencido antes, y lo derrotó con las mismas armas que él había antes utilizado. Escucha de qué modo.",
+           "Una virgen, un madero y la muerte fueron el signo de nuestra derrota. Eva era virgen, porque aún no había conocido varón; el madero era un árbol; la muerte, el castigo de Adán. Mas he aquí que, de nuevo, una Virgen, un madero y la muerte, antes signo de derrota, se convierten ahora en signo de victoria. En lugar de Eva está María en lugar del árbol de la ciencia del bien y del mal, el árbol de la cruz; en lugar de la muerte de Adán, la muerte de Cristo.",
+           "¿Te das cuenta de cómo el diablo es vencido en aquello mismo en que antes había triunfado? En un árbol el diablo hizo caer a Adán; en un árbol derrotó Cristo al diablo. Aquel árbol hacía descender a la región de los muertos; éste, en cambio, hace volver de este lugar a los que a él habían descendido. Otro árbol ocultó la desnudez del hombre, después de su caída; éste, en cambio, mostró a todos, elevado en alto, al vencedor, también desnudo. Aquella primera muerte condenó a todos los que habían de nacer después de ella; esta segunda muerte resucitó incluso a los nacidos anteriormente a ella. ¿Quién podrá contar las hazañas de Dios? Una muerte se ha convertido en causa de nuestra inmortalidad: éstas son las obras esclarecidas de la cruz.",
+           "¿Has entendido el modo y significado de esta victoria? Entérate ahora cómo esta victoria fue lograda sin esfuerzo ni sudor por nuestra parte. Nosotros no tuvimos que ensangrentar nuestras armas, ni resistir en la batalla, recibir heridas, ni tan siquiera vimos la batalla, y, con todo, obtuvimos la victoria; fue el Señor quien luchó y nosotros quienes hemos sido coronados. Por tanto, ya que la victoria es nuestra, imitando a los soldados, canten hoy, llenos de alegría, las alabanzas de esta victoria, alabemos al Señor, diciendo: La muerte ha sido absorbida en la victoria. ¿Dónde está, muerte, tu victoria? ¿Dónde está, muerte, tu aguijón?",
+           "Éstos son los admirables beneficios de la cruz en favor nuestro: la cruz es el trofeo erigido contra los demonios, la espada contra el pecado, la espada con la que Cristo atravesó a la serpiente; la cruz es la voluntad del Padre, la gloria de su Hijo único, el júbilo del Espíritu Santo, el ornato de los ángeles, la seguridad de la Iglesia, el motivo de gloriarse de Pablo, la protección de los santos, la luz de todo el orbe."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4134,
+            "impresa": "1320"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5995,
+            "impresa": "1525",
+            "pdf_fin": 5996,
+            "impresa_fin": "1526"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 9
+          },
+          "orden": 2,
+          "encabezado": "De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo",
+          "fuente": "(Núms. 63-65)",
+          "titulo": "MARÍA, TIPO DE LA IGLESIA",
+          "parrafos": [
+           "La bienaventurada Virgen, por el don y la prerrogativa de la maternidad divina, con la que está unida al Hijo redentor, y por sus singulares gracias y dones, está unida también íntimamente a la Iglesia. La Madre de Dios es tipo de la Iglesia, como ya enseñaba san Ambrosio, a saber: en el orden de la fe, de la caridad y de la perfecta unión con Cristo.",
+           "Porque en el misterio de la Iglesia, que con razón también es llamada madre y virgen, la bienaventurada Virgen María la precedió, mostrando, en forma eminente y singular, el modelo de la virgen y de la madre, pues, creyendo y obedeciendo, engendró en la tierra al mismo Hijo del Padre, y esto sin conocer varón, cubierta con la sombra del Espíritu Santo, como nueva Eva, prestando fe, no adulterada por duda alguna, no a la antigua serpiente, sino al mensaje de Dios. Dio a luz al Hijo, a quien Dios constituyó como primogénito de muchos hermanos, a saber: los fieles a cuya generación y educación coopera con materno amor.",
+           "Ahora bien, la Iglesia, contemplando su arcana santidad e imitando su caridad, y cumpliendo fielmente la voluntad del Padre, también ella es hecha madre, por la palabra de Dios fielmente recibida; en efecto, por la predicación y el bautismo, engendra para la vida nueva e inmortal a los hijos concebidos por el Espíritu Santo y nacidos de Dios. Y también ella es virgen que custodia pura e íntegramente la fe prometida al Esposo e, imitando a la madre de su Señor, por la virtud del Espíritu Santo, conserva virginalmente la fe íntegra, la sólida esperanza, la sincera caridad.",
+           "Mientras que la Iglesia en la Santísima Virgen ya llegó a la perfección, por la que se presenta sin mancha ni arruga, los fieles, en cambio, aún se esfuerzan en crecer en la santidad venciendo al pecado; y, por eso, levantan sus ojos hacia María, que brilla ante toda la comunidad de los elegidos como modelo de virtudes. La Iglesia, reflexionando piadosamente sobre ella y contemplándola en la luz de la Palabra hecha hombre, llena de veneración, entra más profundamente en el sumo misterio de la encarnación y se asemeja más y más a su Esposo.",
+           "Porque María, que, habiendo entrado íntimamente en la historia de la salvación, en cierta manera une y refleja en sí las más grandes exigencias de la fe, mientras es predicada y honrada, atrae a los creyentes hacia su Hijo y su sacrificio y hacia el amor del Padre. La Iglesia, a su vez, buscando la gloria de Cristo, se hace más semejante a su excelso modelo, progresando continuamente en la fe, la esperanza y la caridad, buscando y obedeciendo en todas las cosas la divina voluntad.",
+           "Por lo cual, también en su obra apostólica, con razón la Iglesia mira hacia aquella que engendró a Cristo, concebido por el Espíritu Santo y nacido de la Virgen, precisamente para que, por la Iglesia, nazca y crezca también en los corazones de los fieles. La Virgen en su vida fue ejemplo de aquel afecto materno que debe animar también a los que, en la misión apostólica de la Iglesia, cooperan para regenerar a los hombres."
+          ],
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4134,
+            "impresa": "1320",
+            "pdf_fin": 4135,
+            "impresa_fin": "1321"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5996,
+            "impresa": "1526",
+            "pdf_fin": 5997,
+            "impresa_fin": "1527"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "responsorio",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "cita": "S. Sofronio, Disertación 2",
+          "r": [
+           "Verdaderamente, bendita tú eres entre todas las mujeres, ya que has cambiado en bendición la maldición de Eva.",
+           "Por ti la bendición del Padre ha brillado sobre los hombres."
+          ],
+          "v": "Por ti alcanzan la salvación tus progenitores.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4128,
+            "impresa": "1314"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#1"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 2
+          },
+          "cita": null,
+          "r": [
+           "Dichosa eres, santa Virgen María, y digna de toda alabanza.",
+           "De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos."
+          ],
+          "v": "Celebremos con gozo esta fiesta de santa María Virgen.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4129,
+            "impresa": "1315"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#2"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 3
+          },
+          "cita": null,
+          "r": [
+           "No hay alabanza digna de ti, virginidad inmaculada y santa.",
+           "Porque en tu seno has llevado al que ni el cielo puede contener."
+          ],
+          "v": "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4130,
+            "impresa": "1316"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#3"
+         },
+         {
+          "etiqueta": "O bien esta Otra:",
+          "cuando": {
+           "opcion": 4
+          },
+          "cita": null,
+          "r": [
+           "Celebremos la festividad de la gloriosa Virgen María, en cuya humildad puso el Señor sus ojos;",
+           "ella concibió al Salvador del mundo, como el ángel lo anunció."
+          ],
+          "v": "Cantemos alabanzas a Cristo en este día, al celebrar las glorias de la admirable Madre de Dios.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4131,
+            "impresa": "1317"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#4"
+         },
+         {
+          "etiqueta": "O bien esta Otra:",
+          "cuando": {
+           "opcion": 5
+          },
+          "cita": null,
+          "r": [
+           "Felicitadme, todos los que amáis al Señor; porque, siendo pequeña, agradé al Altísimo,",
+           "y de mis entrañas engendré al Dios-Hombre."
+          ],
+          "v": "Me felicitarán todas las generaciones, porque Dios puso sus ojos en su humilde esclava.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4132,
+            "impresa": "1318"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#5"
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 3,
+            "etiqueta": "O bien esta Otra:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": null
+           }
+          ],
+          "etiqueta": "O bien esta Otra:",
+          "cuando": {
+           "opcion": 6
+          },
+          "cita": "Sal 71, 6. 19; Ap 21, 3",
+          "r": [
+           "Que baje como lluvia sobre el césped.",
+           "Que la gloria de Dios llene la tierra."
+          ],
+          "v": "Ésta es la morada de Dios con los hombres, y acampará entre ellos; ellos serán su pueblo y Dios estará con ellos.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4133,
+            "impresa": "1319"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5994,
+            "impresa": "1524"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#6"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 7
+          },
+          "cita": "Mt 1, 20. 21; Mi 5, 4-5a",
+          "r": [
+           "Lo concebido en María es obra del Espíritu Santo; dará a luz un Hijo.",
+           "Él salvará a su pueblo de los pecados."
+          ],
+          "v": "Se mostrará él grande hasta los confines de la tierra, y él será nuestra paz.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4133,
+            "impresa": "1319",
+            "pdf_fin": 4134,
+            "impresa_fin": "1320"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5995,
+            "impresa": "1525"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#7"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 8
+          },
+          "cita": null,
+          "r": [
+           "Por voluntad del Señor, que quiso restablecer nuestra dignidad,",
+           "Eva engendró a María, como una espina a una rosa."
+          ],
+          "v": "Para que la virtud cubriera el pecado, y la gracia remediara la culpa.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4134,
+            "impresa": "1320"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5996,
+            "impresa": "1526"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#8"
+         },
+         {
+          "etiqueta": "O bien esta otra:",
+          "cuando": {
+           "opcion": 9
+          },
+          "cita": null,
+          "r": [
+           "Por la Virgen María se manifestó a los creyentes la salvación del mundo.",
+           "Su vida ínclita embellece a toda la Iglesia."
+          ],
+          "v": "Celebremos con todo nuestro afecto la conmemoración de la santísima Virgen María.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4135,
+            "impresa": "1321"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5997,
+            "impresa": "1527",
+            "pdf_fin": 5998,
+            "impresa_fin": "1528"
+           }
+          ],
+          "de": "santa-maria-sabado/oficio/segunda_lectura/lectura#9"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Se dice una de las siguientes oraciones:",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Perdona, Señor, las culpas de tus fieles y haz que, quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "texto": "Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "texto": "Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 5
+          },
+          "texto": "Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 6
+          },
+          "texto": "Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "conclusion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva, por lo menos en la celebración comunitaria, se añade:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Bendigamos al Señor.",
+          "r": "Demos gracias a Dios.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "laudes": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "etiqueta": "I",
+          "cuando": {
+           "opcion": 1
+          },
+          "himno": "salve-madre-en-la-tierra-de-mis-amores",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4136,
+            "impresa": "1322",
+            "pdf_fin": 4137,
+            "impresa_fin": "1323"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5998,
+            "impresa": "1528",
+            "pdf_fin": 5999,
+            "impresa_fin": "1529"
+           }
+          ]
+         },
+         {
+          "etiqueta": "II",
+          "cuando": {
+           "opcion": 2
+          },
+          "himno": "quiero-seguirte-a-ti-flor-de-las-flores",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4137,
+            "impresa": "1323"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5999,
+            "impresa": "1529"
+           }
+          ]
+         },
+         {
+          "etiqueta": "III",
+          "cuando": {
+           "opcion": 3
+          },
+          "himno": "tu-eres-toda-hermosa",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4137,
+            "impresa": "1323"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5999,
+            "impresa": "1529",
+            "pdf_fin": 6000,
+            "impresa_fin": "1530"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "himno": "maria-pureza-en-vuelo-2",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4137,
+            "impresa": "1323",
+            "pdf_fin": 4138,
+            "impresa_fin": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6000,
+            "impresa": "1530"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Las antífonas y los salmos se toman del sábado correspondiente.",
+          "remite": "salterio/sabado-correspondiente/laudes",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4138,
+            "impresa": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6000,
+            "impresa": "1530"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La lectura breve y el responsorio breve se puede escoger de entre los siguientes: 1 - 2 - 3",
+          "remite": "santa-maria-sabado/laudes/lectura_breve",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 6000,
+            "impresa": "1530"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "cita": "Ga 4, 4-5",
+          "texto": "Cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4138,
+            "impresa": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6000,
+            "impresa": "1530"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "cita": "Is 61, 10",
+          "texto": "Desbordo de gozo en el Señor, y me alegro con mi Dios: porque me ha vestido un traje de gala y me ha envuelto en un manto de triunfo, como a una novia que se adorna con sus joyas.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4138,
+            "impresa": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531",
+            "pdf_fin": 6000,
+            "impresa_fin": "1530"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "cita": "Ap 12, 1",
+          "texto": "Una gran señal apareció en el cielo. una Mujer, vestida del sol, con la luna bajo sus pies, y una corona de doce estrellas sobre su cabeza.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4138,
+            "impresa": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "v1": "Después del parto, ¡oh Virgen!, has permanecido intacta.",
+          "r1": "Después del parto, ¡oh Virgen!, has permanecido intacta.",
+          "v2": "Madre de Dios, intercede por nosotros.",
+          "r2": "¡Oh Virgen!, has permanecido intacta.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4138,
+            "impresa": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6000,
+            "impresa": "1530"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "v1": "El Señor la eligió y la predestinó.",
+          "r1": "El Señor la eligió y la predestinó.",
+          "v2": "La hizo morar en su templo santo.",
+          "r2": "Y la predestinó.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4138,
+            "impresa": "1324"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "v1": "Alégrate, María, llena de gracia, el Señor está contigo.",
+          "r1": "Alégrate, María, llena de gracia, el Señor está contigo.",
+          "v2": "Bendita tú entre las mujeres y bendito el fruto de tu vientre.",
+          "r2": "El Señor está contigo.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Para el cántico del Benedictus se toma una de las siguientes antífonas:",
+          "remite": "ordinario/benedictus",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Celebremos con todo nuestro afecto la conmemoración de la santísima Virgen María, para que ella interceda por nosotros ante nuestro Señor Jesucristo.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "El Señor te ha bendecido, santa Virgen María, más que a todas las mujeres de la tierra.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "texto": "Tú has engendrado, Virgen inmaculada, al que ha venido del cielo y has dado un Salvador al mundo; así nos ha sido devuelta la vida que habíamos perdido.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "texto": "Alégrate, María, llena de gracia, el Señor está contigo, bendita tú entre las mujeres. Aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 5
+          },
+          "texto": "Virgen inmaculada y santa, ninguna alabanza es digna de ti, pues por ti hemos recibido a nuestro Redentor, Jesucristo nuestro Señor.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6001,
+            "impresa": "1531"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 6
+          },
+          "texto": "Tú eres la gloria de Jerusalén; tú, la alegría de Israel; tú, el orgullo de nuestra raza.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6002,
+            "impresa": "1532"
+           }
+          ]
+         }
+        ],
+        "remite": "ordinario/benedictus"
+       }
+      ]
+     },
+     {
+      "parte": "preces",
+      "piezas": [
+       {
+        "tipo": "preces",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "introduccion": "Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que tu santa Madre, Señor, interceda por nosotros."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Sol de justicia, a quien María Virgen precedía cual aurora luciente,",
+            "segunda": "haz que vivamos siempre iluminados por la claridad de tu presencia."
+           },
+           {
+            "primera": "Palabra eterna del Padre, tú que elegiste a María como arca de tu morada,",
+            "segunda": "líbranos de toda ocasión de pecado."
+           },
+           {
+            "primera": "Salvador del mundo, que quisiste que tu Madre estuviera junto a tu cruz,",
+            "segunda": "por su intercesión concédenos compartir con alegría tus padecimientos."
+           },
+           {
+            "primera": "Señor Jesús, que colgado en la cruz entregaste María a Juan como madre,",
+            "segunda": "haz que nosotros vivamos también como hijos suyos."
+           }
+          ],
+          "libres_despues_de": 4,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4139,
+            "impresa": "1325",
+            "pdf_fin": 4140,
+            "impresa_fin": "1326"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6002,
+            "impresa": "1532"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "introduccion": "Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:",
+          "respuesta": [
+           {
+            "etiqueta": null,
+            "texto": "Que tu santa Madre, Señor, interceda por nosotros."
+           }
+          ],
+          "intenciones": [
+           {
+            "primera": "Salvador del mundo, tú que con la eficacia de tu redención preservaste a tu Madre de toda mancha de pecado,",
+            "segunda": "líbranos también a nosotros de toda culpa."
+           },
+           {
+            "primera": "Redentor nuestro, tú que hiciste de la inmaculada Virgen María tabernáculo purísimo de tu presencia y sagrario del Espíritu Santo,",
+            "segunda": "haz también de nosotros templos de tu Espíritu."
+           },
+           {
+            "primera": "Palabra eterna del Padre, que enseñaste a María escoger la parte mejor,",
+            "segunda": "ayúdanos a imitarla y a buscar el alimento que perdura hasta la vida eterna."
+           },
+           {
+            "primera": "Rey de reyes, que elevaste contigo a tu Madre en cuerpo y alma al cielo,",
+            "segunda": "haz que aspiremos siempre a los bienes celestiales."
+           },
+           {
+            "primera": "Señor del cielo y de la tierra, que has colocado a tu derecha a María reina,",
+            "segunda": "danos el gozo de tener parte en la gloria."
+           }
+          ],
+          "libres_despues_de": 5,
+          "final": "Según el mandato del Señor, digamos confiadamente: Padre nuestro.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4140,
+            "impresa": "1326"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6002,
+            "impresa": "1532",
+            "pdf_fin": 6003,
+            "impresa_fin": "1533"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Se dice una de las siguientes oraciones:",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4140,
+            "impresa": "1326"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "cuando": {
+           "opcion": 1
+          },
+          "texto": "Señor Dios todopoderoso, haz que, por la intercesión de santa María, la Virgen, nosotros, tus hijos, gocemos de plena salud de alma y cuerpo, vivamos alegres en medio de las dificultades del mundo y alcancemos la felicidad de tu reino eterno. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4140,
+            "impresa": "1326"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 2
+          },
+          "texto": "Perdona, Señor, las culpas de tus fieles y haz que, quienes no logramos agradarte con nuestros actos seamos salvados por la intercesión de la Madre de tu Hijo, nuestro Señor Jesucristo. Él que vive y reina contigo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4140,
+            "impresa": "1326"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 3
+          },
+          "texto": "Ven en ayuda de nuestra debilidad, Dios de misericordia, y haz que, al recordar hoy a la Madre de tu Hijo, por su intercesión nos veamos libres de nuestras culpas. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4141,
+            "impresa": "1327",
+            "pdf_fin": 4140,
+            "impresa_fin": "1326"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 4
+          },
+          "texto": "Que venga en nuestra ayuda, Señor, la poderosa intercesión de la Virgen María; así nos veremos libres de todo peligro y gozaremos de tu paz. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4141,
+            "impresa": "1327"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 5
+          },
+          "texto": "Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4141,
+            "impresa": "1327"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         },
+         {
+          "etiqueta": "O bien:",
+          "cuando": {
+           "opcion": 6
+          },
+          "texto": "Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 4141,
+            "impresa": "1327"
+           },
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "conclusion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Cuando preside la celebración el obispo, un presbítero o un diácono la conclusión se hace como se indica en elOrdinario; en los otros casos se dice:",
+          "remite": "ordinario/conclusion",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor nos bendiga, nos guarde de todo mal y nos lleve a la vida eterna.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 6003,
+            "impresa": "1533"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
