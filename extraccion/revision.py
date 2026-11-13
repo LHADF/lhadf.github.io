@@ -12,7 +12,7 @@ ROMANOS = {1: 'I', 2: 'II', 3: 'III', 4: 'IV'}
 NOMBRE_HORA = {
     'visperas1': 'I Vísperas', 'visperas2': 'II Vísperas', 'invitatorio': 'Invitatorio',
     'oficio': 'Oficio de lectura', 'laudes': 'Laudes', 'intermedia': 'Hora intermedia',
-    'tercia': 'Tercia', 'sexta': 'Sexta', 'nona': 'Nona',
+    'tercia': 'Tercia', 'sexta': 'Sexta', 'nona': 'Nona', 'visperas': 'Vísperas', 'completas': 'Completas',
 }
 NOMBRE_TIPO = {
     'antifona': 'antífona', 'salmo': 'salmo', 'himno': 'himno', 'lectura_breve': 'lectura breve',
@@ -165,6 +165,7 @@ h1{font:600 18px 'Source Sans 3',sans-serif;margin:0 0 4px}
 nav{display:flex;gap:4px;flex-wrap:wrap}
 nav a{font:600 13px 'Source Sans 3',sans-serif;text-decoration:none;color:var(--suave);padding:8px 12px;border-radius:8px 8px 0 0}
 nav a.on{color:var(--tinta);background:var(--fondo);box-shadow:inset 0 -2px var(--rojo)}
+nav a.otra{margin-left:auto;color:var(--azul)}
 main{max-width:1500px;margin:0 auto;padding:16px 20px 80px}
 .vista{display:none}.vista.on{display:block}
 .pag{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:24px;align-items:start;padding:18px 0;border-bottom:1px solid var(--linea)}
@@ -217,16 +218,29 @@ function irA(ev,n){ev.preventDefault();var el=document.getElementById('p'+n);if(
 """
 
 
+def paginas_de(x):
+    """(a, b), (a, b, desde, hasta) o una lista de rangos → páginas del PDF."""
+    xs = [x] if isinstance(x, tuple) else list(x)
+    return [n for r in xs for n in range(r[0], r[1] + 1)]
+
+
+def etiqueta_indice(c):
+    if c.get('semana'):          # Salterio: «S1 · Domingo»
+        return f'S{c["semana"]} · {c["dia"].capitalize().replace("Miercoles", "Miércoles").replace("Sabado", "Sábado")}'
+    return c['titulo'].capitalize()
+
+
 def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html='', uni=None,
-            nombre='Común de la Santísima Virgen María', por_tira=10, dpi=72):
+            nombre='Común de la Santísima Virgen María', por_tira=10, dpi=72, archivo='index.html', enlaces=None):
     carpeta = Path(carpeta)
     (carpeta / 'img').mkdir(parents=True, exist_ok=True)
     pares = getattr(uni, '_pares', {}) if uni else {}
     salmos_d = salmos if isinstance(salmos, dict) else {s['id']: s for s in salmos}
     vistas = []
     for p in parsers:
-        a, b = tomos[p.tomo]
-        por_pag = {n: [] for n in range(a, b + 1)}
+        paginas = paginas_de(tomos[p.tomo])
+        a, b = paginas[0], paginas[-1]
+        por_pag = {n: [] for n in paginas}
         vistos = set()
         hora = ''
         parte = ''
@@ -264,7 +278,6 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
             por_pag[r.pdf].append(tarjeta(d, u, ctx, salmos_d, himnos))
         bloques = []
         # imágenes en tiras verticales de varias páginas (pocas imágenes para publicar)
-        paginas = list(range(a, b + 1))
         tiras = [paginas[i:i + por_tira] for i in range(0, len(paginas), por_tira)]
         ubic = {}
         for k, tira in enumerate(tiras):
@@ -282,7 +295,7 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
                 ubic[n] = (nombre_img, j, len(tira), w, h)
         indice = []
         for c in p.comunes:
-            indice.append(f'<a href="#p{c["_pdf"]}" onclick="irA(event,{c["_pdf"]})">{e(c["titulo"].capitalize())}</a>')
+            indice.append(f'<a href="#p{c["_pdf"]}" onclick="irA(event,{c["_pdf"]})">{e(etiqueta_indice(c))}</a>')
         for n in paginas:
             img, j, cnt, w, h = ubic[n]
             pos = 0 if cnt == 1 else j * 100 / (cnt - 1)
@@ -295,6 +308,8 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
         idx = f'<div class="indice">{"".join(indice)}</div>' if len(indice) > 1 else ''
         vistas.append((f'tomo-{p.tomo}', f'Tomo {ROMANOS[p.tomo]} · {a}–{b}', idx + ''.join(bloques)))
     nav = '<a href="#resumen">Resumen</a>' + ''.join(f'<a href="#{i}">{e(t)}</a>' for i, t, _ in vistas)
+    if enlaces:                  # otras páginas de la misma revisión (Salterio ↔ Completas)
+        nav += ''.join(f'<a class="otra" href="{e(h)}">{e(t)} →</a>' for t, h in enlaces)
     leyenda = ('<div class="leyenda"><span><span class="chip cond">condición</span> variante con condición u opción</span>'
                '<span><span class="chip revisar">revisar</span> marcada para revisión</span>'
                '<span class="r">rojo = rúbrica, etiqueta o rótulo</span><span class="ref">azul = remisión</span></div>')
@@ -309,5 +324,5 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
 <header><h1>Revisión de la extracción · {e(nombre)}</h1>
 <p class="lead">LH ADF · prueba de extracción por tipografía, cuatro tomos. A la izquierda la página del libro; a la derecha las piezas que empiezan en ella.</p>
 <nav>{nav}</nav></header><main>{cuerpo_html}</main><script>{JS}</script></body></html>"""
-    (carpeta / 'index.html').write_text(page, encoding='utf-8')
-    return carpeta / 'index.html'
+    (carpeta / archivo).write_text(page, encoding='utf-8')
+    return carpeta / archivo

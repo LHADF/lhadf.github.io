@@ -1,0 +1,800 @@
+[
+ {
+  "id": "el-sueno-hermano-de-la-muerte",
+  "primer_verso": "El sueño, hermano de la muerte,",
+  "estrofas": [
+   [
+    {
+     "texto": "El sueño, hermano de la muerte,",
+     "sangria": 2
+    },
+    {
+     "texto": "a su descanso nos convida;",
+     "sangria": 2
+    },
+    {
+     "texto": "guárdanos tú, Señor, de suerte",
+     "sangria": 2
+    },
+    {
+     "texto": "que despertemos a la vida.",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Tu amor nos guía y nos reprende",
+     "sangria": 0
+    },
+    {
+     "texto": "y por nosotros se desvela,",
+     "sangria": 0
+    },
+    {
+     "texto": "del enemigo nos defiende",
+     "sangria": 0
+    },
+    {
+     "texto": "y, mientras dormimos, nos vela.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te ofrecemos, humildemente,",
+     "sangria": 0
+    },
+    {
+     "texto": "dolor, trabajo y alegría;",
+     "sangria": 0
+    },
+    {
+     "texto": "nuestra plegaria balbuciente:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"Gracias, Señor, por este día\".",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Recibe, Padre, la alabanza",
+     "sangria": 0
+    },
+    {
+     "texto": "del corazón que en ti confía",
+     "sangria": 0
+    },
+    {
+     "texto": "y alimenta nuestra esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "de amanecer a tu gran día.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria a Dios Padre, que nos hizo,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria a Dios Hijo Salvador,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu divino:",
+     "sangria": 0
+    },
+    {
+     "texto": "tres Personas y un solo Dios.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3799,
+    "impresa": "985"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5543,
+    "impresa": "1073"
+   }
+  ]
+ },
+ {
+  "id": "gracias-porque-al-fin-del-dia",
+  "primer_verso": "Gracias, porque al fin del día",
+  "estrofas": [
+   [
+    {
+     "texto": "Gracias, porque al fin del día",
+     "sangria": 0
+    },
+    {
+     "texto": "podemos agradecerte",
+     "sangria": 0
+    },
+    {
+     "texto": "los méritos de tu muerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el pan de la Eucaristía,",
+     "sangria": 0
+    },
+    {
+     "texto": "la plenitud de alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "de haber vivido tu alianza,",
+     "sangria": 0
+    },
+    {
+     "texto": "la fe, el amor, la esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "y esta bondad de tu empeño",
+     "sangria": 0
+    },
+    {
+     "texto": "de convertir nuestro sueño",
+     "sangria": 0
+    },
+    {
+     "texto": "en una humilde alabanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, gloria al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu Santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "por los siglos de los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3802,
+    "impresa": "988"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5547,
+    "impresa": "1077"
+   }
+  ]
+ },
+ {
+  "id": "nos-cubren-las-tinieblas",
+  "primer_verso": "Nos cubren las tinieblas",
+  "estrofas": [
+   [
+    {
+     "texto": "Nos cubren las tinieblas",
+     "sangria": 0
+    },
+    {
+     "texto": "con su intangible velo;",
+     "sangria": 0
+    },
+    {
+     "texto": "nos acosa la noche con sus ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y reza el pensamiento.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los astros en tus bóvedas,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor del universo,",
+     "sangria": 0
+    },
+    {
+     "texto": "vigilarán lo oscuro,",
+     "sangria": 0
+    },
+    {
+     "texto": "vigilarán el sueño.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Nosotros dormiremos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3802,
+    "impresa": "988"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5547,
+    "impresa": "1077"
+   }
+  ]
+ },
+ {
+  "id": "de-la-vida-en-la-arena",
+  "primer_verso": "De la vida en la arena",
+  "estrofas": [
+   [
+    {
+     "texto": "De la vida en la arena",
+     "sangria": 0
+    },
+    {
+     "texto": "me llevas de la mano",
+     "sangria": 0
+    },
+    {
+     "texto": "al puerto más cercano,",
+     "sangria": 0
+    },
+    {
+     "texto": "al agua más serena.",
+     "sangria": 0
+    },
+    {
+     "texto": "El corazón se llena,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, de tu ternura;",
+     "sangria": 0
+    },
+    {
+     "texto": "y es la noche más pura",
+     "sangria": 0
+    },
+    {
+     "texto": "y la ruta más bella",
+     "sangria": 0
+    },
+    {
+     "texto": "porque tú estás en ella,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea clara u oscura.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La noche misteriosa",
+     "sangria": 0
+    },
+    {
+     "texto": "acerca a lo escondido;",
+     "sangria": 0
+    },
+    {
+     "texto": "el sueño es el olvido",
+     "sangria": 0
+    },
+    {
+     "texto": "donde la paz se posa.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y esa paz es la rosa",
+     "sangria": 0
+    },
+    {
+     "texto": "de los vientos. Velero,",
+     "sangria": 0
+    },
+    {
+     "texto": "inquieto marinero,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya mi timón preparo",
+     "sangria": 0
+    },
+    {
+     "texto": "-tú el mar y cielo claro-",
+     "sangria": 0
+    },
+    {
+     "texto": "hacia el alba que espero.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, y al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Espíritu Santo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3805,
+    "impresa": "991"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5551,
+    "impresa": "1081"
+   }
+  ]
+ },
+ {
+  "id": "tiembla-el-frio-de-los-astros",
+  "primer_verso": "Tiembla el frío de los astros,",
+  "estrofas": [
+   [
+    {
+     "texto": "Tiembla el frío de los astros,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el silencio de los montes",
+     "sangria": 0
+    },
+    {
+     "texto": "duerme sin fin. (Sólo el agua",
+     "sangria": 0
+    },
+    {
+     "texto": "de mi corazón se oye).",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Su dulce latir, ¡tan dentro!,",
+     "sangria": 0
+    },
+    {
+     "texto": "calladamente responde",
+     "sangria": 0
+    },
+    {
+     "texto": "a la soledad inmensa",
+     "sangria": 0
+    },
+    {
+     "texto": "de algo que late en la noche.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Somos tuyos, tuyos, tuyos;",
+     "sangria": 0
+    },
+    {
+     "texto": "somos, Señor, ese insomne",
+     "sangria": 0
+    },
+    {
+     "texto": "temblor del agua nocturna,",
+     "sangria": 0
+    },
+    {
+     "texto": "más limpia después que corre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Agua en reposo viviente,",
+     "sangria": 0
+    },
+    {
+     "texto": "que vuelve a ser pura y joven",
+     "sangria": 0
+    },
+    {
+     "texto": "con una esperanza! (Sólo",
+     "sangria": 0
+    },
+    {
+     "texto": "en mi alma sonar se oye).",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, gloria al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu Santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "por los siglos de los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3808,
+    "impresa": "994"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5555,
+    "impresa": "1085"
+   }
+  ]
+ },
+ {
+  "id": "tras-las-cimas-mas-altas",
+  "primer_verso": "Tras las cimas más altas,",
+  "estrofas": [
+   [
+    {
+     "texto": "Tras las cimas más altas,",
+     "sangria": 0
+    },
+    {
+     "texto": "todas las noches",
+     "sangria": 0
+    },
+    {
+     "texto": "mi corazón te sueña,",
+     "sangria": 0
+    },
+    {
+     "texto": "no te conoce.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Entre qué manos, dime,",
+     "sangria": 0
+    },
+    {
+     "texto": "duerme la noche,",
+     "sangria": 0
+    },
+    {
+     "texto": "la música en la brisa,",
+     "sangria": 0
+    },
+    {
+     "texto": "mi amor en dónde?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿La infancia de mis ojos",
+     "sangria": 0
+    },
+    {
+     "texto": "y el leve roce",
+     "sangria": 0
+    },
+    {
+     "texto": "de la sangre en mis venas,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, en dónde?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Lo mismo que las nubes,",
+     "sangria": 0
+    },
+    {
+     "texto": "y más veloces,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿las horas de mi infancia,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, en dónde?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tras las cimas más altas,",
+     "sangria": 0
+    },
+    {
+     "texto": "todas las noches,",
+     "sangria": 0
+    },
+    {
+     "texto": "mi corazón te sueña,",
+     "sangria": 0
+    },
+    {
+     "texto": "no te conoce.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, y al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Espíritu Santo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3810,
+    "impresa": "996",
+    "pdf_fin": 3811,
+    "impresa_fin": "997"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5558,
+    "impresa": "1088",
+    "pdf_fin": 5559,
+    "impresa_fin": "1089"
+   }
+  ]
+ },
+ {
+  "id": "como-el-nino-que-no-sabe-dormirse",
+  "primer_verso": "Como el niño que no sabe dormirse",
+  "estrofas": [
+   [
+    {
+     "texto": "Como el niño que no sabe dormirse",
+     "sangria": 0
+    },
+    {
+     "texto": "Sin cogerse de la mano de su madre,",
+     "sangria": 0
+    },
+    {
+     "texto": "Así mi corazón viene a ponerse",
+     "sangria": 0
+    },
+    {
+     "texto": "Sobre tus manos al caer la tarde",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Como el niño que no sabe que alguien vela",
+     "sangria": 0
+    },
+    {
+     "texto": "Su sueño de inocencia y de esperanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "Así descansará mi alma segura,",
+     "sangria": 0
+    },
+    {
+     "texto": "Sabiendo que eres tú quien nos aguarda.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú endulzarás mi última amargura,",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú aliviarás el último cansancio,",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú cuidarás los sueños de la noche,",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú borrarás las huellas de mi llanto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú nos darás mañana nuevamente",
+     "sangria": 0
+    },
+    {
+     "texto": "La antorcha de la luz y la alegría,",
+     "sangria": 0
+    },
+    {
+     "texto": "Y, por las horas que te traigo muertas,",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú me darás una mañana viva.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3813,
+    "impresa": "999"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5562,
+    "impresa": "1092",
+    "pdf_fin": 5563,
+    "impresa_fin": "1093"
+   }
+  ]
+ },
+ {
+  "id": "antes-de-cerrar-los-ojos",
+  "primer_verso": "Antes de cerrar los ojos,",
+  "estrofas": [
+   [
+    {
+     "texto": "Antes de cerrar los ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "los labios y el corazón,",
+     "sangria": 0
+    },
+    {
+     "texto": "al final de la jornada,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡buenas noches!, Padre Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gracias por todas las gracias",
+     "sangria": 0
+    },
+    {
+     "texto": "que nos ha dado tu amor;",
+     "sangria": 0
+    },
+    {
+     "texto": "si muchas son nuestras deudas,",
+     "sangria": 0
+    },
+    {
+     "texto": "infinito es tu perdón.",
+     "sangria": 0
+    },
+    {
+     "texto": "Mañana te serviremos,",
+     "sangria": 0
+    },
+    {
+     "texto": "en tu presencia, mejor.",
+     "sangria": 0
+    },
+    {
+     "texto": "A la sombra de tus alas,",
+     "sangria": 0
+    },
+    {
+     "texto": "Padre nuestro, abríganos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Quédate junto a nosotros",
+     "sangria": 0
+    },
+    {
+     "texto": "y danos tu bendición.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Antes de cerrar los ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "los labios y el corazón,",
+     "sangria": 0
+    },
+    {
+     "texto": "al final de la jornada,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡buenas noches!, Padre Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre omnipotente,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Hijo Redentor,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu Santo:",
+     "sangria": 0
+    },
+    {
+     "texto": "tres Personas, sólo un Dios.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 3815,
+    "impresa": "1001",
+    "pdf_fin": 3816,
+    "impresa_fin": "1002"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5565,
+    "impresa": "1095",
+    "pdf_fin": 5566,
+    "impresa_fin": "1096"
+   }
+  ]
+ }
+]

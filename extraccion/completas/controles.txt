@@ -1,0 +1,100 @@
+Controles — Completas (tomos I–IV) — hay controles que no pasan
+Piezas marcadas para revisar: 16 · diferencias entre tomos: 99
+
+[OK ] Cobertura: 4180/4180 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 732: 100 %
+      tomo 1 · pdf 733: 100 %
+      tomo 1 · pdf 734: 100 %
+      tomo 1 · pdf 735: 100 %
+      tomo 1 · pdf 736: 100 %
+      tomo 1 · pdf 737: 100 %
+      tomo 1 · pdf 738: 100 %
+      tomo 1 · pdf 739: 100 %
+      tomo 1 · pdf 740: 100 %
+      tomo 1 · pdf 741: 100 %
+      tomo 1 · pdf 742: 100 %
+      tomo 1 · pdf 743: 100 %
+      tomo 1 · pdf 744: 100 %
+      tomo 1 · pdf 745: 100 %
+      tomo 1 · pdf 746: 100 %
+      tomo 2 · pdf 2214: 100 %
+      tomo 2 · pdf 2215: 100 %
+      tomo 2 · pdf 2216: 100 %
+      tomo 2 · pdf 2217: 100 %
+      tomo 2 · pdf 2218: 100 %
+      tomo 2 · pdf 2219: 100 %
+      tomo 2 · pdf 2220: 100 %
+      tomo 2 · pdf 2221: 100 %
+      tomo 2 · pdf 2222: 100 %
+      tomo 2 · pdf 2223: 100 %
+      tomo 2 · pdf 2224: 100 %
+      tomo 2 · pdf 2225: 100 %
+      tomo 2 · pdf 2226: 100 %
+      tomo 2 · pdf 2227: 100 %
+      tomo 2 · pdf 2228: 100 %
+      tomo 2 · pdf 2229: 100 %
+      tomo 2 · pdf 2230: 100 %
+      tomo 2 · pdf 2231: 100 %
+      tomo 3 · pdf 3799: 100 %
+      tomo 3 · pdf 3800: 100 %
+      tomo 3 · pdf 3801: 100 %
+      tomo 3 · pdf 3802: 100 %
+      tomo 3 · pdf 3803: 100 %
+      tomo 3 · pdf 3804: 100 %
+      tomo 3 · pdf 3805: 100 %
+      tomo 3 · pdf 3806: 100 %
+      tomo 3 · pdf 3807: 100 %
+      tomo 3 · pdf 3808: 100 %
+      tomo 3 · pdf 3809: 100 %
+      tomo 3 · pdf 3810: 100 %
+      tomo 3 · pdf 3811: 100 %
+      tomo 3 · pdf 3812: 100 %
+      tomo 3 · pdf 3813: 100 %
+      tomo 3 · pdf 3814: 100 %
+      tomo 3 · pdf 3815: 100 %
+      tomo 3 · pdf 3816: 100 %
+      tomo 3 · pdf 3817: 100 %
+      tomo 3 · pdf 3818: 100 %
+      tomo 4 · pdf 5542: 100 %
+      tomo 4 · pdf 5543: 100 %
+      tomo 4 · pdf 5544: 100 %
+      tomo 4 · pdf 5545: 100 %
+      tomo 4 · pdf 5546: 100 %
+      tomo 4 · pdf 5547: 100 %
+      tomo 4 · pdf 5548: 100 %
+      tomo 4 · pdf 5549: 100 %
+      tomo 4 · pdf 5550: 100 %
+      tomo 4 · pdf 5551: 100 %
+      tomo 4 · pdf 5552: 100 %
+      tomo 4 · pdf 5553: 100 %
+      tomo 4 · pdf 5554: 100 %
+      tomo 4 · pdf 5555: 100 %
+      tomo 4 · pdf 5556: 100 %
+      tomo 4 · pdf 5557: 100 %
+      tomo 4 · pdf 5558: 100 %
+      tomo 4 · pdf 5559: 100 %
+      tomo 4 · pdf 5560: 100 %
+      tomo 4 · pdf 5561: 100 %
+      tomo 4 · pdf 5562: 100 %
+      tomo 4 · pdf 5563: 100 %
+      tomo 4 · pdf 5564: 100 %
+      tomo 4 · pdf 5565: 100 %
+      tomo 4 · pdf 5566: 100 %
+      tomo 4 · pdf 5567: 100 %
+      tomo 4 · pdf 5568: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 0 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 1: 4 etiquetas rojas → 4 variantes, tomo 2: 44 etiquetas rojas → 44 variantes, tomo 3: 6 etiquetas rojas → 6 variantes, tomo 4: 27 etiquetas rojas → 27 variantes
+[OK ] Remisiones: 0 rotas; 4 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: ordinario/completas
+      pendiente: ordinario/conclusion
+      pendiente: texto-azul/tras-las-cimas-mas-altas
+[OK ] Salmos: 10 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: salmo-90 (ver diferencias.csv)
+[OK ] Ida y vuelta: 499/499 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 1
+      tomo 3 pdf 3815: Latinoamérica: Tras las cimas más altas {'0433ff'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 0

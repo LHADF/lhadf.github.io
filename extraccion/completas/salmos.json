@@ -1,0 +1,1465 @@
+[
+ {
+  "id": "salmo-4",
+  "cita": "Salmo 4",
+  "titulo": "ACCIÓN DE GRACIAS",
+  "sentencia": {
+   "texto": "El Señor hizo maravillas al resucitar a Jesucristo de entre los muertos",
+   "cita": "S. Agustín"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Escúchame cuando te invoco, Dios, defensor mío;",
+       "sangria": 0
+      },
+      {
+       "texto": "tú que en el aprieto me diste anchura,",
+       "sangria": 1
+      },
+      {
+       "texto": "ten piedad de mí y escucha mi oración.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Y vosotros, ¿hasta cuándo ultrajaréis mi honor,",
+       "sangria": 0
+      },
+      {
+       "texto": "amaréis la falsedad y buscaréis el engaño?",
+       "sangria": 1
+      },
+      {
+       "texto": "Sabedlo: el Señor hizo milagros en mi favor,",
+       "sangria": 1
+      },
+      {
+       "texto": "y el Señor me escuchará cuando lo invoque.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Temblad y no pequéis,",
+       "sangria": 0
+      },
+      {
+       "texto": "reflexionad en el silencio de vuestro lecho;",
+       "sangria": 1
+      },
+      {
+       "texto": "ofreced sacrificios legítimos",
+       "sangria": 1
+      },
+      {
+       "texto": "y confiad en el Señor.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Hay muchos que dicen: \"¿Quién nos hará ver la dicha,",
+       "sangria": 0
+      },
+      {
+       "texto": "si la luz de tu rostro ha huido de nosotros?\"",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Pero tú, Señor, has puesto en mi corazón más alegría",
+       "sangria": 0
+      },
+      {
+       "texto": "que si abundara en trigo y en vino.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "En paz me acuesto y en seguida me duermo,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque tú sólo, Señor, me haces vivir tranquilo.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 732,
+    "impresa": "732"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2214,
+    "impresa": "1086"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3799,
+    "impresa": "985"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5544,
+    "impresa": "1074"
+   }
+  ]
+ },
+ {
+  "id": "salmo-133",
+  "cita": "Salmo 133",
+  "titulo": "ORACIÓN VESPERTINA EN EL TEMPLO",
+  "sentencia": {
+   "texto": "Alabad al Señor, sus siervos todos, los que le teméis, pequeños y grandes",
+   "cita": "Ap 19, 5"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Y ahora bendecid al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "los siervos del Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "los que pasáis la noche",
+       "sangria": 1
+      },
+      {
+       "texto": "en la casa del Señor.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Levantad las manos hacia el santuario",
+       "sangria": 0
+      },
+      {
+       "texto": "y bendecid al Señor.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El Señor te bendiga desde Sión,",
+       "sangria": 0
+      },
+      {
+       "texto": "el que hizo cielo y tierra.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 733,
+    "impresa": "733"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2215,
+    "impresa": "1087"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3800,
+    "impresa": "986"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5544,
+    "impresa": "1074"
+   }
+  ]
+ },
+ {
+  "id": "cantico-lc-2-29-32",
+  "cita": "Cántico de Simeón Lc 2, 29-32",
+  "titulo": "CRISTO, LUZ DE LAS NACIONES Y GLORIA DE ISRAEL",
+  "sentencia": null,
+  "gloria": true,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Ahora, Señor, según tu promesa,",
+       "signo_cruz": true,
+       "sangria": 0
+      },
+      {
+       "texto": "puedes dejar a tu siervo irse en paz,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque mis ojos han visto a tu Salvador,",
+       "sangria": 0
+      },
+      {
+       "texto": "a quien has presentado ante todos los pueblos:",
+       "sangria": 0
+      },
+      {
+       "texto": "luz para alumbrar a las naciones",
+       "sangria": 0
+      },
+      {
+       "texto": "y gloria de tu pueblo Israel.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 733,
+    "impresa": "733"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2216,
+    "impresa": "1088"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3801,
+    "impresa": "987"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5545,
+    "impresa": "1075"
+   }
+  ]
+ },
+ {
+  "id": "salmo-90",
+  "cita": "Salmo 90",
+  "titulo": "A LA SOMBRA DEL OMNIPOTENTE",
+  "sentencia": {
+   "texto": "Os he dado potestad para pisotear serpientes y escorpiones",
+   "cita": "Lc 10, 19"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Tú que habitas al amparo del Altísimo,",
+       "sangria": 0
+      },
+      {
+       "texto": "que vives a la sombra del Omnipotente,",
+       "sangria": 1
+      },
+      {
+       "texto": "di al Señor: \"Refugio mío, alcázar mío,",
+       "sangria": 1
+      },
+      {
+       "texto": "Dios mío, confío en Ti\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él te librará de la red del cazador,",
+       "sangria": 0
+      },
+      {
+       "texto": "de la peste funesta.",
+       "sangria": 1
+      },
+      {
+       "texto": "Te cubrirá con sus plumas,",
+       "sangria": 1
+      },
+      {
+       "texto": "bajo sus alas te refugiarás:",
+       "sangria": 1
+      },
+      {
+       "texto": "Su brazo es escudo y armadura.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "No temerás el espanto nocturno,",
+       "sangria": 0
+      },
+      {
+       "texto": "ni la flecha que vuela de día,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni la peste que se desliza en las tinieblas,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni la epidemia que devasta a mediodía.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Caerán a tu izquierda mil,",
+       "sangria": 0
+      },
+      {
+       "texto": "diez mil a tu derecha;",
+       "sangria": 1
+      },
+      {
+       "texto": "a ti no te alcanzará.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Nada más mirar con tus ojos,",
+       "sangria": 0
+      },
+      {
+       "texto": "verás la paga de los malvados,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque hiciste del Señor tu refugio,",
+       "sangria": 1
+      },
+      {
+       "texto": "tomaste al Altísimo por defensa.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "No se te acercará la desgracia,",
+       "sangria": 0
+      },
+      {
+       "texto": "ni la plaga llegará hasta tu tienda,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque a sus ángeles ha dado órdenes",
+       "sangria": 1
+      },
+      {
+       "texto": "para que te guarden en tus caminos;",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "te llevarán en sus palmas,",
+       "sangria": 0
+      },
+      {
+       "texto": "para que tu pie no tropiece en la piedra;",
+       "sangria": 1
+      },
+      {
+       "texto": "caminarás sobre áspides y víboras,",
+       "sangria": 1
+      },
+      {
+       "texto": "pisotearás leones y dragones.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "\"Se puso junto a mí: lo libraré;",
+       "sangria": 0
+      },
+      {
+       "texto": "lo protegeré porque conoce mi nombre,",
+       "sangria": 1
+      },
+      {
+       "texto": "me invocará y lo escucharé.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Con él estaré en la tribulación,",
+       "sangria": 0
+      },
+      {
+       "texto": "lo defenderé, lo glorificaré,",
+       "sangria": 1
+      },
+      {
+       "texto": "lo saciaré de largos días",
+       "sangria": 1
+      },
+      {
+       "texto": "y le haré ver mi salvación\".",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 734,
+    "impresa": "734"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2216,
+    "impresa": "1088"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3802,
+    "impresa": "988"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5548,
+    "impresa": "1078"
+   }
+  ],
+  "revisar": true,
+  "nota": "el texto no coincide en todos los tomos (ver diferencias.csv)"
+ },
+ {
+  "id": "salmo-85",
+  "cita": "Salmo 85",
+  "titulo": "ORACIÓN DEL POBRE ANTE LOS PROBLEMAS",
+  "sentencia": {
+   "texto": "Bendito sea Dios, que nos alienta en nuestras luchas",
+   "cita": "2 Cor 1, 3. 4"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Inclina tu oído, Señor, escúchame,",
+       "sangria": 0
+      },
+      {
+       "texto": "que soy un pobre desamparado;",
+       "sangria": 1
+      },
+      {
+       "texto": "protege mi vida, que soy un fiel tuyo;",
+       "sangria": 1
+      },
+      {
+       "texto": "salva a tu siervo, que confía en ti.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Tú eres mi Dios, piedad de mí, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "que a ti te estoy llamando todo el día;",
+       "sangria": 1
+      },
+      {
+       "texto": "alegra el alma de tu siervo,",
+       "sangria": 1
+      },
+      {
+       "texto": "pues levanto mi alma hacia ti;",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "porque tú, Señor, eres bueno y clemente,",
+       "sangria": 0
+      },
+      {
+       "texto": "rico en misericordia",
+       "sangria": 1
+      },
+      {
+       "texto": "con los que te invocan.",
+       "sangria": 1
+      },
+      {
+       "texto": "Señor, escucha mi oración,",
+       "sangria": 1
+      },
+      {
+       "texto": "atiende a la voz de mi súplica.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "En el día del peligro te llamo,",
+       "sangria": 0
+      },
+      {
+       "texto": "y tú me escuchas.",
+       "sangria": 1
+      },
+      {
+       "texto": "No tienes igual entre los dioses, Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni hay obras como las tuyas.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Todos los pueblos vendrán",
+       "sangria": 0
+      },
+      {
+       "texto": "a postrarse en tu presencia, Señor;",
+       "sangria": 1
+      },
+      {
+       "texto": "bendecirán tu nombre:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"Grande eres tú, y haces maravillas;",
+       "sangria": 1
+      },
+      {
+       "texto": "tú eres el único Dios\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Enséñame, Señor, tu camino,",
+       "sangria": 0
+      },
+      {
+       "texto": "para que siga tu verdad;",
+       "sangria": 1
+      },
+      {
+       "texto": "mantén mi corazón entero",
+       "sangria": 1
+      },
+      {
+       "texto": "en el temor de tu nombre.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Te alabaré de todo corazón, Dios mío;",
+       "sangria": 0
+      },
+      {
+       "texto": "daré gloria a tu nombre por siempre,",
+       "sangria": 1
+      },
+      {
+       "texto": "por tu gran piedad para conmigo,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque me salvaste",
+       "sangria": 1
+      },
+      {
+       "texto": "del abismo profundo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dios mío, unos soberbios",
+       "sangria": 0
+      },
+      {
+       "texto": "se levantan contra mí,",
+       "sangria": 1
+      },
+      {
+       "texto": "una banda de insolentes",
+       "sangria": 1
+      },
+      {
+       "texto": "atenta contra mi vida,",
+       "sangria": 1
+      },
+      {
+       "texto": "sin tenerte en cuenta a ti.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Pero tú, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "Dios clemente y misericordioso,",
+       "sangria": 1
+      },
+      {
+       "texto": "lento a la cólera, rico en piedad y leal,",
+       "sangria": 1
+      },
+      {
+       "texto": "mírame, ten compasión de mí.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Da fuerza a tu siervo,",
+       "sangria": 0
+      },
+      {
+       "texto": "salva al hijo de tu esclava;",
+       "sangria": 1
+      },
+      {
+       "texto": "dame una señal propicia,",
+       "sangria": 1
+      },
+      {
+       "texto": "que la vean mis adversarios",
+       "sangria": 1
+      },
+      {
+       "texto": "y se avergüencen,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque tú, Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "me ayudas y consuelas.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 736,
+    "impresa": "736"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2219,
+    "impresa": "1091"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3805,
+    "impresa": "991"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5551,
+    "impresa": "1081"
+   }
+  ]
+ },
+ {
+  "id": "salmo-142-1-11",
+  "cita": "Salmo 142, 1-11",
+  "titulo": "LAMENTACIÓN Y SÚPLICA ANTE LA ANGUSTIA",
+  "sentencia": {
+   "texto": "El hombre no se justifica por cumplir la ley; sino por creer en Cristo Jesús",
+   "cita": "Ga 2, 16"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Señor, escucha mi oración;",
+       "sangria": 0
+      },
+      {
+       "texto": "tú, que eres fiel, atiende a mi súplica;",
+       "sangria": 1
+      },
+      {
+       "texto": "tú, que eres justo, escúchame.",
+       "sangria": 1
+      },
+      {
+       "texto": "No llames a juicio a tu siervo,",
+       "sangria": 1
+      },
+      {
+       "texto": "pues ningún hombre vivo es inocente frente a ti.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El enemigo me persigue a muerte,",
+       "sangria": 0
+      },
+      {
+       "texto": "empuja mi vida al sepulcro,",
+       "sangria": 1
+      },
+      {
+       "texto": "me confina a las tinieblas",
+       "sangria": 1
+      },
+      {
+       "texto": "como a los muertos ya olvidados.",
+       "sangria": 1
+      },
+      {
+       "texto": "Mi aliento desfallece,",
+       "sangria": 1
+      },
+      {
+       "texto": "mi corazón dentro de mí está yerto.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Recuerdo los tiempos antiguos,",
+       "sangria": 0
+      },
+      {
+       "texto": "medito todas tus acciones,",
+       "sangria": 1
+      },
+      {
+       "texto": "considero las obras de tus manos",
+       "sangria": 1
+      },
+      {
+       "texto": "y extiendo mis brazos hacia ti:",
+       "sangria": 1
+      },
+      {
+       "texto": "tengo sed de ti como tierra reseca.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Escúchame en seguida, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "que me falta el aliento.",
+       "sangria": 1
+      },
+      {
+       "texto": "No me escondas tu rostro,",
+       "sangria": 1
+      },
+      {
+       "texto": "igual que a los que bajan a la fosa.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "En la mañana hazme escuchar tu gracia,",
+       "sangria": 0
+      },
+      {
+       "texto": "ya que confío en ti.",
+       "sangria": 1
+      },
+      {
+       "texto": "Indícame el camino que he de seguir,",
+       "sangria": 1
+      },
+      {
+       "texto": "pues levanto mi alma a ti.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Líbrame del enemigo, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "que me refugio en ti.",
+       "sangria": 1
+      },
+      {
+       "texto": "Enséñame a cumplir tu voluntad,",
+       "sangria": 1
+      },
+      {
+       "texto": "ya que tú eres mi Dios.",
+       "sangria": 1
+      },
+      {
+       "texto": "Tu espíritu, que es bueno,",
+       "sangria": 1
+      },
+      {
+       "texto": "me guíe por tierra llana.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Por tu nombre, Señor, consérvame vivo;",
+       "sangria": 0
+      },
+      {
+       "texto": "por tu clemencia, sácame de la angustia.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 738,
+    "impresa": "738"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2222,
+    "impresa": "1094"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3808,
+    "impresa": "994"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5555,
+    "impresa": "1085"
+   }
+  ]
+ },
+ {
+  "id": "salmo-30-2-6",
+  "cita": "Salmo 30, 2-6",
+  "titulo": "SÚPLICA CONFIADA Y ACCIÓN DE GRACIAS",
+  "sentencia": {
+   "texto": "Padre en tus manos encomiendo mi espíritu",
+   "cita": "Lc 23, 46"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "A ti, Señor, me acojo:",
+       "sangria": 0
+      },
+      {
+       "texto": "no quede yo nunca defraudado;",
+       "sangria": 1
+      },
+      {
+       "texto": "tú, que eres justo, ponme a salvo,",
+       "sangria": 1
+      },
+      {
+       "texto": "inclina tu oído hacia mí;",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "ven aprisa a librarme,",
+       "sangria": 0
+      },
+      {
+       "texto": "sé la roca de mi refugio,",
+       "sangria": 1
+      },
+      {
+       "texto": "un baluarte donde me salve,",
+       "sangria": 1
+      },
+      {
+       "texto": "tú que eres mi roca y mi baluarte;",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "por tu nombre dirígeme y guíame:",
+       "sangria": 0
+      },
+      {
+       "texto": "sácame de la red que me han tendido,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque tú eres mi amparo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "A tus manos encomiendo mi espíritu:",
+       "sangria": 0
+      },
+      {
+       "texto": "Tú, el Dios leal, me librarás",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 740,
+    "impresa": "740"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2224,
+    "impresa": "1096"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3811,
+    "impresa": "997"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5559,
+    "impresa": "1089"
+   }
+  ]
+ },
+ {
+  "id": "salmo-129",
+  "cita": "Salmo 129",
+  "titulo": "DESDE LO HONDO A TI GRITO, SEÑOR",
+  "sentencia": {
+   "texto": "Él salvará a su pueblo de los pecados",
+   "cita": "Mt 1, 21"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Desde lo hondo a ti grito, Señor;",
+       "sangria": 0
+      },
+      {
+       "texto": "Señor, escucha mi voz;",
+       "cruz": true,
+       "sangria": 1
+      },
+      {
+       "texto": "estén tus oídos atentos",
+       "sangria": 1
+      },
+      {
+       "texto": "a la voz de mi súplica.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Si llevas cuenta de los delitos, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "¿quién podrá resistir?",
+       "sangria": 1
+      },
+      {
+       "texto": "Pero de ti procede el perdón,",
+       "sangria": 1
+      },
+      {
+       "texto": "y así infundes respeto.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Mi alma espera en el Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "espera en su palabra;",
+       "sangria": 1
+      },
+      {
+       "texto": "mi alma aguarda al Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "más que el centinela la aurora.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Aguarde Israel al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "como el centinela la aurora;",
+       "sangria": 1
+      },
+      {
+       "texto": "porque del Señor viene la misericordia,",
+       "sangria": 1
+      },
+      {
+       "texto": "la redención copiosa;",
+       "sangria": 1
+      },
+      {
+       "texto": "y él redimirá a Israel",
+       "sangria": 1
+      },
+      {
+       "texto": "de todos sus delitos.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 741,
+    "impresa": "741"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2224,
+    "impresa": "1096"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3811,
+    "impresa": "997"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5559,
+    "impresa": "1089"
+   }
+  ]
+ },
+ {
+  "id": "salmo-15",
+  "cita": "Salmo 15",
+  "titulo": "EL SEÑOR ES EL LOTE DE MI HEREDAD",
+  "sentencia": {
+   "texto": "Dios resucitó a Jesús rompiendo las ataduras de la muerte",
+   "cita": "Hech 2, 24"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Protégeme, Dios mío, que me refugio en ti;",
+       "sangria": 0
+      },
+      {
+       "texto": "yo digo al Señor: \"Tú eres mi bien\".",
+       "sangria": 1
+      },
+      {
+       "texto": "Los dioses y señores de la tierra",
+       "sangria": 1
+      },
+      {
+       "texto": "no me satisfacen.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Multiplican las estatuas",
+       "sangria": 0
+      },
+      {
+       "texto": "de dioses extraños;",
+       "sangria": 1
+      },
+      {
+       "texto": "no derramaré sus libaciones con mis manos,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni tomaré sus nombres en mis labios.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El Señor es el lote de mi heredad y mi copa;",
+       "sangria": 0
+      },
+      {
+       "texto": "mi suerte está en tu mano:",
+       "sangria": 1
+      },
+      {
+       "texto": "me ha tocado un lote hermoso,",
+       "sangria": 1
+      },
+      {
+       "texto": "me encanta mi heredad.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Bendeciré al Señor, que me aconseja,",
+       "sangria": 0
+      },
+      {
+       "texto": "hasta de noche me instruye internamente.",
+       "sangria": 1
+      },
+      {
+       "texto": "Tengo siempre presente al Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "con él a mi derecha no vacilaré.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Por eso se me alegra el corazón,",
+       "sangria": 0
+      },
+      {
+       "texto": "se gozan mis entrañas,",
+       "sangria": 1
+      },
+      {
+       "texto": "y mi carne descansa serena.",
+       "sangria": 1
+      },
+      {
+       "texto": "Porque no me entregarás a la muerte,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni dejarás a tu fiel conocer la corrupción.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Me enseñarás el sendero de la vida,",
+       "sangria": 0
+      },
+      {
+       "texto": "me saciarás de gozo en tu presencia,",
+       "sangria": 1
+      },
+      {
+       "texto": "de alegría perpetua a tu derecha.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 742,
+    "impresa": "742"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2226,
+    "impresa": "1098"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3814,
+    "impresa": "1000"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5563,
+    "impresa": "1093"
+   }
+  ]
+ },
+ {
+  "id": "salmo-87",
+  "cita": "Salmo 87",
+  "titulo": "ORACIÓN DE UN HOMBRE GRAVEMENTE ENFERMO",
+  "sentencia": {
+   "texto": "Ésta es vuestra hora: la del poder de las tinieblas",
+   "cita": "Lc 22, 53"
+  },
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Señor, Dios mío, de día te pido auxilio,",
+       "sangria": 0
+      },
+      {
+       "texto": "de noche grito en tu presencia;",
+       "sangria": 1
+      },
+      {
+       "texto": "llegue hasta ti mi súplica,",
+       "cruz": true,
+       "sangria": 1
+      },
+      {
+       "texto": "inclina tu oído a mi clamor.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Porque mi alma está colmada de desdichas,",
+       "sangria": 0
+      },
+      {
+       "texto": "y mi vida está al borde del abismo;",
+       "sangria": 1
+      },
+      {
+       "texto": "ya me cuentan con los que bajan a la fosa,",
+       "sangria": 1
+      },
+      {
+       "texto": "soy como un inválido.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Tengo mi cama entre los muertos,",
+       "sangria": 0
+      },
+      {
+       "texto": "como los caídos que yacen en el sepulcro,",
+       "sangria": 1
+      },
+      {
+       "texto": "de los cuales ya no guardas memoria,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque fueron arrancados de tu mano.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Me has colocado en lo hondo de la fosa,",
+       "sangria": 0
+      },
+      {
+       "texto": "en las tinieblas del fondo;",
+       "sangria": 1
+      },
+      {
+       "texto": "tu cólera pesa sobre mí,",
+       "sangria": 1
+      },
+      {
+       "texto": "me echas encima todas tus olas.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Has alejado de mí a mis conocidos,",
+       "sangria": 0
+      },
+      {
+       "texto": "me has hecho repugnante para ellos:",
+       "sangria": 1
+      },
+      {
+       "texto": "encerrado, no puedo salir,",
+       "sangria": 1
+      },
+      {
+       "texto": "y los ojos se me nublan de pesar.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Todo el día te estoy invocando,",
+       "sangria": 0
+      },
+      {
+       "texto": "tendiendo las manos hacia ti.",
+       "sangria": 1
+      },
+      {
+       "texto": "¿Harás tú maravillas por los muertos?",
+       "sangria": 1
+      },
+      {
+       "texto": "¿Se alzarán las sombras para darte gracias?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¿Se anuncia en el sepulcro tu misericordia,",
+       "sangria": 0
+      },
+      {
+       "texto": "o tu fidelidad en el reino de la muerte?",
+       "sangria": 1
+      },
+      {
+       "texto": "¿Se conocen tus maravillas en la tiniebla,",
+       "sangria": 1
+      },
+      {
+       "texto": "o tu justicia en el país del olvido?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Pero yo te pido auxilio,",
+       "sangria": 0
+      },
+      {
+       "texto": "por la mañana irá a tu encuentro mi súplica.",
+       "sangria": 1
+      },
+      {
+       "texto": "¿Por qué, Señor, me rechazas,",
+       "sangria": 1
+      },
+      {
+       "texto": "y me escondes tu rostro?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Desde niño fui desgraciado y enfermo,",
+       "sangria": 0
+      },
+      {
+       "texto": "me doblo bajo el peso de tus terrores,",
+       "sangria": 1
+      },
+      {
+       "texto": "pasó sobre mí tu incendio,",
+       "sangria": 1
+      },
+      {
+       "texto": "tus espantos me han consumido:",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "me rodean como las aguas todo el día,",
+       "sangria": 0
+      },
+      {
+       "texto": "me envuelven todos a una;",
+       "sangria": 1
+      },
+      {
+       "texto": "alejaste de mí amigos y compañeros:",
+       "sangria": 1
+      },
+      {
+       "texto": "mi compañía son las tinieblas.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 744,
+    "impresa": "744"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2229,
+    "impresa": "1101"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3816,
+    "impresa": "1002"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5566,
+    "impresa": "1096"
+   }
+  ]
+ }
+]

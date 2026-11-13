@@ -1,0 +1,6088 @@
+{
+ "seccion": "completas",
+ "titulo": "ORACIÓN PARA ANTES DEL DESCANSO NOCTURNO COMPLETAS",
+ "fuentes": [
+  {
+   "tomo": 1,
+   "pdf": 732,
+   "impresa": "732"
+  },
+  {
+   "tomo": 2,
+   "pdf": 2214,
+   "impresa": "1086"
+  },
+  {
+   "tomo": 3,
+   "pdf": 3799,
+   "impresa": "985"
+  },
+  {
+   "tomo": 4,
+   "pdf": 5542,
+   "impresa": "1072"
+  }
+ ],
+ "rubricas": [
+  {
+   "tipo": "rubrica",
+   "variantes": [
+    {
+     "texto": "Para la oración de Completas puede tomarse o bien el formulario que corresponde al día de la semana o bien, si se prefiere, uno de los dos formularios indicados para el domingo, diciendo, en este caso, la segunda oración conclusiva.",
+     "otras_redacciones": [
+      {
+       "tomo": 3,
+       "texto": "Para la oración de Completas puede tomarse o bien el formato que corresponde al día de la semana o bien, si se prefiere, uno de los formularios indicados para el domingo, diciendo, en este caso, la segunda oración conclusiva."
+      }
+     ],
+     "fuentes": [
+      {
+       "tomo": 1,
+       "pdf": 732,
+       "impresa": "732"
+      },
+      {
+       "tomo": 2,
+       "pdf": 2214,
+       "impresa": "1086"
+      },
+      {
+       "tomo": 3,
+       "pdf": 3799,
+       "impresa": "985"
+      },
+      {
+       "tomo": 4,
+       "pdf": 5542,
+       "impresa": "1072"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "rubrica",
+   "variantes": [
+    {
+     "texto": "Los himnos latinos de Completas se hallan en el Apéndice IV.",
+     "remite": "apendices/himnos-latinos",
+     "fuentes": [
+      {
+       "tomo": 3,
+       "pdf": 3799,
+       "impresa": "985"
+      },
+      {
+       "tomo": 4,
+       "pdf": 5542,
+       "impresa": "1072"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "formularios": [
+  {
+   "id": "domingo-visperas1",
+   "titulo": "DESPUÉS DE LAS PRIMERAS VÍSPERAS DEL DOMINGO Y SOLEMNIDADES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 732,
+     "impresa": "732"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2214,
+     "impresa": "1086"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3799,
+     "impresa": "985"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5542,
+     "impresa": "1072"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5542,
+            "impresa": "1072"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5542,
+            "impresa": "1072"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5542,
+            "impresa": "1072"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5542,
+            "impresa": "1072"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5542,
+            "impresa": "1072"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5542,
+            "impresa": "1072"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5543,
+            "impresa": "1073"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5543,
+            "impresa": "1073"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5543,
+            "impresa": "1073"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5543,
+            "impresa": "1073"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 732,
+            "impresa": "732"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2214,
+            "impresa": "1086"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3799,
+            "impresa": "985"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "himno": "el-sueno-hermano-de-la-muerte",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3799,
+            "impresa": "985"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5543,
+            "impresa": "1073"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3799,
+            "impresa": "985"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5543,
+            "impresa": "1073"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "numero": 1,
+          "texto": "Ten piedad de mí, Señor, y escucha mi oración.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 732,
+            "impresa": "732"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2214,
+            "impresa": "1086"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3799,
+            "impresa": "985"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5544,
+            "impresa": "1074"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2214,
+            "impresa": "1086"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-4",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 732,
+            "impresa": "732"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2214,
+            "impresa": "1086"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3799,
+            "impresa": "985"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5544,
+            "impresa": "1074"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "numero": 2,
+          "texto": "Durante la noche, bendecid al Señor.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 733,
+            "impresa": "733"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3800,
+            "impresa": "986"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5544,
+            "impresa": "1074"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-133",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 733,
+            "impresa": "733"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3800,
+            "impresa": "986"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5544,
+            "impresa": "1074"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Dt 6, 4-7",
+          "texto": "Escucha, Israel: El Señor, nuestro Dios, es solamente uno. Amarás al Señor, tu Dios, con todo el corazón, con toda el alma, con todas las fuerzas. Las palabras que hoy te digo quedarán en tu memoria, se las repetirás a tus hijos y hablarás de ellas estando en casa y yendo de camino, acostado y levantado.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 733,
+            "impresa": "733"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3800,
+            "impresa": "986",
+            "pdf_fin": 3801,
+            "impresa_fin": "987"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5545,
+            "impresa": "1075"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 733,
+            "impresa": "733"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3801,
+            "impresa": "987"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5545,
+            "impresa": "1075"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2215,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 733,
+            "impresa": "733"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3801,
+            "impresa": "987"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5545,
+            "impresa": "1075"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 733,
+            "impresa": "733"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3801,
+            "impresa": "987"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5545,
+            "impresa": "1075"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "Después de las I Vísperas del domingo:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "Después de las Primeras Vísperas del domingo:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "Después de las Primeras Vísperas del domingo:"
+           }
+          ],
+          "etiqueta": "Después de las I Vísperas del domingo:",
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 734,
+            "impresa": "734"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3801,
+            "impresa": "987"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5545,
+            "impresa": "1075"
+           }
+          ]
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "Después de las I Vísperas de las solemnidades que no coinciden en domingo:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:"
+           }
+          ],
+          "etiqueta": "Después de las I Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas1-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 734,
+            "impresa": "734"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3801,
+            "impresa": "987"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5545,
+            "impresa": "1075"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario:"
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 734,
+            "impresa": "734"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "domingo-visperas2",
+   "titulo": "DESPUÉS DE LAS SEGUNDAS VÍSPERAS DEL DOMINGO Y SOLEMNIDADES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 734,
+     "impresa": "734"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2216,
+     "impresa": "1088"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3802,
+     "impresa": "988"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5546,
+     "impresa": "1076"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5546,
+            "impresa": "1076"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 734,
+            "impresa": "734"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "etiqueta": "I",
+          "cuando": {
+           "opcion": 1
+          },
+          "himno": "gracias-porque-al-fin-del-dia",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         },
+         {
+          "etiqueta": "II",
+          "cuando": {
+           "opcion": 2
+          },
+          "himno": "nos-cubren-las-tinieblas",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "En Latinoamérica: Cuando la luz del sol es ya poniente",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "texto": "Al amparo del Altísimo no temo el espanto nocturno.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 734,
+            "impresa": "734"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5547,
+            "impresa": "1077"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-90",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 734,
+            "impresa": "734"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2216,
+            "impresa": "1088"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3802,
+            "impresa": "988"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5548,
+            "impresa": "1078"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Ap 22, 4-5",
+          "texto": "Verán al Señor cara a cara y llevarán su nombre en la frente. Ya no habrá más noche, ni necesitarán luz de lámpara o del sol, porque el Señor Dios irradiará luz sobre ellos, y reinarán por los siglos de los siglos.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 735,
+            "impresa": "735"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2217,
+            "impresa": "1089",
+            "pdf_fin": 2218,
+            "impresa_fin": "1090"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3803,
+            "impresa": "989"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5549,
+            "impresa": "1079"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 735,
+            "impresa": "735"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2218,
+            "impresa": "1090"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5549,
+            "impresa": "1079"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2218,
+            "impresa": "1090"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2218,
+            "impresa": "1090"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2218,
+            "impresa": "1090"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 735,
+            "impresa": "735"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2218,
+            "impresa": "1090"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5549,
+            "impresa": "1079"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 735,
+            "impresa": "735"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2218,
+            "impresa": "1090"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5549,
+            "impresa": "1079"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "Después de las II Vísperas del domingo:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "Después de las Segundas Vísperas del domingo:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "Después de las Segundas Vísperas del domingo:"
+           }
+          ],
+          "etiqueta": "Después de las II Vísperas del domingo:",
+          "cuando": {
+           "despues_de": "visperas2-domingo"
+          },
+          "texto": "Humildemente te pedimos, Señor, que después de haber celebrado en este día los misterios de la resurrección de tu Hijo, sin temor alguno, descansemos en tu paz, y mañana nos levantemos alegres para cantar nuevamente tus alabanzas. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 736,
+            "impresa": "736"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5549,
+            "impresa": "1079"
+           }
+          ]
+         },
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 1,
+            "etiqueta": "Después de las II Vísperas de las solemnidades que no coinciden en domingo:"
+           },
+           {
+            "tomo": 2,
+            "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:"
+           },
+           {
+            "tomo": 3,
+            "etiqueta": "Después de las Segundas Vísperas de las solemnidades que no coinciden en domingo:"
+           },
+           {
+            "tomo": 4,
+            "etiqueta": "Después de las Segundas Vísperas de las solemnidades que no coinciden en domingo:"
+           }
+          ],
+          "etiqueta": "Después de las II Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas2-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 736,
+            "impresa": "736"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5549,
+            "impresa": "1079"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:",
+          "revisar": true,
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "nota": "«Después de las Primeras Vísperas del domingo y durante la octava de Pascua:»: la octava de Pascua no está en el vocabulario; pendiente de decisión de CRU",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091",
+            "pdf_fin": 2218,
+            "impresa_fin": "1090"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 736,
+            "impresa": "736"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3804,
+            "impresa": "990"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "lunes",
+   "titulo": "COMPLETAS DEL LUNES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 736,
+     "impresa": "736"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2219,
+     "impresa": "1091"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3805,
+     "impresa": "991"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5550,
+     "impresa": "1080"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5550,
+            "impresa": "1080"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 736,
+            "impresa": "736"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3805,
+            "impresa": "991"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "himno": "de-la-vida-en-la-arena",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3805,
+            "impresa": "991"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "En Latinoamérica: Gracias porque al fin del día",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3805,
+            "impresa": "991"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3805,
+            "impresa": "991"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "texto": "Tú, Señor, eres clemente y rico en misericordia.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 736,
+            "impresa": "736"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3805,
+            "impresa": "991"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-85",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 736,
+            "impresa": "736"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2219,
+            "impresa": "1091"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3805,
+            "impresa": "991"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5551,
+            "impresa": "1081"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "1 Ts 5, 9-10",
+          "texto": "Dios nos ha destinado a obtener la salvación por medio de nuestro Señor Jesucristo; él murió por nosotros, para que, despiertos o dormidos, vivamos con él.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 737,
+            "impresa": "737",
+            "pdf_fin": 738,
+            "impresa_fin": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2220,
+            "impresa": "1092"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3806,
+            "impresa": "992",
+            "pdf_fin": 3807,
+            "impresa_fin": "993"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5553,
+            "impresa": "1083"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2220,
+            "impresa": "1092"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3807,
+            "impresa": "993"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5553,
+            "impresa": "1083"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2220,
+            "impresa": "1092"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3807,
+            "impresa": "993"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5553,
+            "impresa": "1083"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3807,
+            "impresa": "993"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5553,
+            "impresa": "1083"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "texto": "Concede, Señor, a nuestros cuerpos fatigados el descanso necesario, y haz que la simiente del reino que con nuestro trabajo hemos sembrado hoy crezca y germine para la cosecha de la vida eterna. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3807,
+            "impresa": "993"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5553,
+            "impresa": "1083"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:",
+          "revisar": true,
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "nota": "«Después de las Primeras Vísperas del domingo y durante la octava de Pascua:»: la octava de Pascua no está en el vocabulario; pendiente de decisión de CRU",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas1-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3807,
+            "impresa": "993"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3807,
+            "impresa": "993"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "martes",
+   "titulo": "COMPLETAS DEL MARTES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 738,
+     "impresa": "738"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2221,
+     "impresa": "1093"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3807,
+     "impresa": "993"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5554,
+     "impresa": "1084"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5554,
+            "impresa": "1084"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2221,
+            "impresa": "1093"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3808,
+            "impresa": "994"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "himno": "tiembla-el-frio-de-los-astros",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3808,
+            "impresa": "994"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "En Latinoamérica: Nos cubren las tinieblas",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3808,
+            "impresa": "994"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3808,
+            "impresa": "994"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "texto": "No me escondas tu rostro, ya que confío en ti.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2222,
+            "impresa": "1094"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3808,
+            "impresa": "994"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2222,
+            "impresa": "1094"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-142-1-11",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 738,
+            "impresa": "738"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2222,
+            "impresa": "1094"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3808,
+            "impresa": "994"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5555,
+            "impresa": "1085"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "1 Pe 5, 8-9",
+          "texto": "Sed sobrios, estad alerta, que vuestro enemigo, el diablo, como león rugiente, ronda buscando a quien devorar; resistidle firmes en la fe.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 739,
+            "impresa": "739"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3809,
+            "impresa": "995"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5556,
+            "impresa": "1086"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 739,
+            "impresa": "739",
+            "pdf_fin": 740,
+            "impresa_fin": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3809,
+            "impresa": "995"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5556,
+            "impresa": "1086",
+            "pdf_fin": 5557,
+            "impresa_fin": "1087"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3809,
+            "impresa": "995"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2223,
+            "impresa": "1095"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3809,
+            "impresa": "995"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "texto": "Ilumina, Señor, nuestra noche y concédenos un descanso tranquilo; que mañana nos levantemos en tu nombre y podamos contemplar, con salud y gozo, el clarear del nuevo día. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3810,
+            "impresa": "996"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:",
+          "revisar": true,
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "nota": "«Después de las Primeras Vísperas del domingo y durante la octava de Pascua:»: la octava de Pascua no está en el vocabulario; pendiente de decisión de CRU",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096",
+            "pdf_fin": 2223,
+            "impresa_fin": "1095"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas1-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3810,
+            "impresa": "996"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3810,
+            "impresa": "996"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "miercoles",
+   "titulo": "COMPLETAS DEL MIÉRCOLES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 740,
+     "impresa": "740"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2224,
+     "impresa": "1096"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3810,
+     "impresa": "996"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5557,
+     "impresa": "1087"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5557,
+            "impresa": "1087"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3810,
+            "impresa": "996"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "himno": "tras-las-cimas-mas-altas",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3810,
+            "impresa": "996",
+            "pdf_fin": 3811,
+            "impresa_fin": "997"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5558,
+            "impresa": "1088",
+            "pdf_fin": 5559,
+            "impresa_fin": "1089"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "En Latinoamérica: De la vida en la arena",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3811,
+            "impresa": "997"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5559,
+            "impresa": "1089"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3811,
+            "impresa": "997"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "numero": 1,
+          "texto": "Sé tú, Señor, la roca de mi refugio, un baluarte donde me salve.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3811,
+            "impresa": "997"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5559,
+            "impresa": "1089"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "texto": "Desde lo hondo a ti grito, Señor.",
+          "tp_aleluya": false,
+          "cruz": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 741,
+            "impresa": "741"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3811,
+            "impresa": "997"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5559,
+            "impresa": "1089"
+           }
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2225,
+            "impresa": "1097"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-129",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 741,
+            "impresa": "741"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3811,
+            "impresa": "997"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5559,
+            "impresa": "1089"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-30-2-6",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 740,
+            "impresa": "740"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2224,
+            "impresa": "1096"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3811,
+            "impresa": "997"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5559,
+            "impresa": "1089"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Ef 4, 26-27",
+          "texto": "No lleguéis a pecar; que la puesta del sol no os sorprenda en vuestro enojo. No dejéis resquicio al diablo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 741,
+            "impresa": "741"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2225,
+            "impresa": "1097"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3812,
+            "impresa": "998"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5560,
+            "impresa": "1090"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2225,
+            "impresa": "1097"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3812,
+            "impresa": "998"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5560,
+            "impresa": "1090"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2225,
+            "impresa": "1097"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2225,
+            "impresa": "1097"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2225,
+            "impresa": "1097"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3812,
+            "impresa": "998"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5560,
+            "impresa": "1090"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3812,
+            "impresa": "998"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5560,
+            "impresa": "1090"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "texto": "Señor Jesucristo, que eres manso y humilde de corazón y ofreces a los que vienen a ti un yugo llevadero y una carga ligera; dígnate, pues, aceptar los deseos y las acciones del día que hemos terminado: que podamos descansar durante la noche para que así, renovado nuestro cuerpo y nuestro espíritu, perseveremos constantes en tu servicio. Tú que vives y reinas por los siglos de los siglos.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:",
+          "revisar": true,
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "nota": "«Después de las Primeras Vísperas del domingo y durante la octava de Pascua:»: la octava de Pascua no está en el vocabulario; pendiente de decisión de CRU",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas1-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "jueves",
+   "titulo": "COMPLETAS DEL JUEVES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 742,
+     "impresa": "742"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2226,
+     "impresa": "1098"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3813,
+     "impresa": "999"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5561,
+     "impresa": "1091"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5561,
+            "impresa": "1091"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5562,
+            "impresa": "1092"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5562,
+            "impresa": "1092"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5562,
+            "impresa": "1092"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5562,
+            "impresa": "1092"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5562,
+            "impresa": "1092"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "himno": "como-el-nino-que-no-sabe-dormirse",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5562,
+            "impresa": "1092",
+            "pdf_fin": 5563,
+            "impresa_fin": "1093"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Latinoamérica: Tiembla el frío de los astros",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5563,
+            "impresa": "1093"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3813,
+            "impresa": "999"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "texto": "Mi carne descansa serena.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3814,
+            "impresa": "1000"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5563,
+            "impresa": "1093"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-15",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 742,
+            "impresa": "742"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2226,
+            "impresa": "1098"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3814,
+            "impresa": "1000"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5563,
+            "impresa": "1093"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "1 Ts 5, 23",
+          "texto": "Que el mismo Dios de la paz os consagre totalmente, y que todo vuestro espíritu, alma y cuerpo, sea custodiado sin reproche hasta la venida de nuestro Señor Jesucristo.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 743,
+            "impresa": "743"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2227,
+            "impresa": "1099"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3814,
+            "impresa": "1000"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5563,
+            "impresa": "1093"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 743,
+            "impresa": "743"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2227,
+            "impresa": "1099"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3814,
+            "impresa": "1000",
+            "pdf_fin": 3815,
+            "impresa_fin": "1001"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2227,
+            "impresa": "1099"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 743,
+            "impresa": "743"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 743,
+            "impresa": "743"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "texto": "Señor Dios nuestro, concédenos un descanso tranquilo que restaure nuestras fuerzas, desgastadas ahora por el trabajo del día; así, fortalecidos con tu ayuda, te serviremos siempre con todo nuestro cuerpo y nuestro espíritu. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 744,
+            "impresa": "744"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:",
+          "revisar": true,
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "nota": "«Después de las Primeras Vísperas del domingo y durante la octava de Pascua:»: la octava de Pascua no está en el vocabulario; pendiente de decisión de CRU",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas1-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 744,
+            "impresa": "744"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "viernes",
+   "titulo": "COMPLETAS DEL VIERNES",
+   "fuentes": [
+    {
+     "tomo": 1,
+     "pdf": 744,
+     "impresa": "744"
+    },
+    {
+     "tomo": 2,
+     "pdf": 2228,
+     "impresa": "1100"
+    },
+    {
+     "tomo": 3,
+     "pdf": 3815,
+     "impresa": "1001"
+    },
+    {
+     "tomo": 4,
+     "pdf": 5564,
+     "impresa": "1094"
+    }
+   ],
+   "rubricas": [],
+   "horas": {
+    "completas": [
+     {
+      "parte": "introduccion",
+      "piezas": [
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "Dios mío, ven en mi auxilio.",
+          "r": "Señor, date prisa en socorrerme.",
+          "gloria": true,
+          "despues_gloria": "Aleluya.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5564,
+            "impresa": "1094",
+            "pdf_fin": 5565,
+            "impresa_fin": "1095"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "examen_de_conciencia",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Es muy de alabar que, después de la invocación inicial, se haga el examen de conciencia, el cual en la celebración comunitaria puede concluirse con un acto penitencial, de la siguiente forma:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "parrafos": [
+           "Hermanos, llegados al final de esta jornada que Dios nos ha concedido, reconozcamos humildemente nuestros pecados."
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todos examinan en silencio su conciencia. Terminado el examen se añade una de las siguientes fórmulas penitenciales:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "texto",
+        "variantes": [
+         {
+          "etiqueta": "Primera fórmula",
+          "estrofas": [
+           [
+            {
+             "texto": "Yo confieso ante Dios todopoderoso",
+             "sangria": 2
+            },
+            {
+             "texto": "y ante vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que he pecado mucho",
+             "sangria": 0
+            },
+            {
+             "texto": "de pensamiento, palabra, obra y omisión:",
+             "sangria": 0
+            },
+            {
+             "texto": "por mi culpa, por mi culpa, por mi gran culpa.",
+             "sangria": 0
+            }
+           ],
+           [
+            {
+             "texto": "Por eso ruego a santa María, siempre Virgen,",
+             "sangria": 2
+            },
+            {
+             "texto": "a los ángeles, a los santos y a vosotros, hermanos,",
+             "sangria": 0
+            },
+            {
+             "texto": "que intercedáis por mí ante Dios, nuestro Señor.",
+             "sangria": 0
+            }
+           ]
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "etiqueta": "Segunda fórmula",
+          "cuando": {
+           "opcion": 1
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Señor, ten misericordia de nosotros."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Porque hemos pecado contra ti."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Muéstranos, Señor, tu misericordia."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Y danos tu salvación."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tercera fórmula",
+          "cuando": {
+           "opcion": 2
+          },
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has sido enviado a sanar los corazones afligidos, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que has venido a llamar a los pecadores, Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Cristo, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "V.",
+            "texto": "Tú que estás sentado a la derecha del Padre para interceder por nosotros, Señor, ten piedad [de nosotros]."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Señor, ten piedad [de nosotros]."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse otras invocaciones penitenciales.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Si preside la celebración un ministro, él solo dice la absolución siguiente; en caso contrario, la dicen todos:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "secuencia": [
+           {
+            "rotulo": "V.",
+            "texto": "El Señor todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna."
+           },
+           {
+            "rotulo": "R.",
+            "texto": "Amén."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "rubrica",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Todo como en el Ordinario, excepto lo siguiente:",
+          "remite": "ordinario/completas",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 744,
+            "impresa": "744"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2228,
+            "impresa": "1100"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "himno",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Latinoamérica: Tras las cimas más altas",
+          "remite": [
+           "texto-azul/tras-las-cimas-mas-altas"
+          ],
+          "nota": "remisión azul sin destino normalizado: Tras las cimas más altas",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5566,
+            "impresa": "1096"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "himno",
+        "variantes": [
+         {
+          "himno": "antes-de-cerrar-los-ojos",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3815,
+            "impresa": "1001",
+            "pdf_fin": 3816,
+            "impresa_fin": "1002"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5565,
+            "impresa": "1095",
+            "pdf_fin": 5566,
+            "impresa_fin": "1096"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Pueden usarse también, sobre todo en las celebraciones con el pueblo, otros cantos oportunos y debidamente aprobados.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3816,
+            "impresa": "1002"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "salmodia",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "texto": "Señor, Dios mío, de día te pido auxilio, de noche grito en tu presencia.",
+          "tp_aleluya": false,
+          "cruz": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 744,
+            "impresa": "744"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2229,
+            "impresa": "1101"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3816,
+            "impresa": "1002"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5566,
+            "impresa": "1096"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "texto": "Aleluya, aleluya, aleluya.",
+          "tp_aleluya": false,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2229,
+            "impresa": "1101"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "salmo-87",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 744,
+            "impresa": "744"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2229,
+            "impresa": "1101"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3816,
+            "impresa": "1002"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5566,
+            "impresa": "1096"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "lectura_breve",
+      "piezas": [
+       {
+        "tipo": "lectura_breve",
+        "variantes": [
+         {
+          "cita": "Jr 14, 9",
+          "texto": "Tú estás en medio de nosotros, Señor; tu nombre ha sido invocado sobre nosotros: no nos abandones, Señor, Dios nuestro.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 745,
+            "impresa": "745"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3817,
+            "impresa": "1003"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5567,
+            "impresa": "1097"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "responsorio_breve",
+      "piezas": [
+       {
+        "tipo": "responsorio_breve",
+        "variantes": [
+         {
+          "etiquetas_en_tomos": [
+           {
+            "tomo": 2,
+            "etiqueta": "Tiempo de Cuaresma:"
+           }
+          ],
+          "v1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Encomiendo mi espíritu.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 745,
+            "impresa": "745"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3817,
+            "impresa": "1003"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5567,
+            "impresa": "1097"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "v1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "r1": "A tus manos, Señor, encomiendo mi espíritu. Aleluya, aleluya.",
+          "v2": "Tú, el Dios leal, nos librarás.",
+          "r2": "Aleluya, aleluya.",
+          "gloria": true,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Este es el día en que actuó el Señor: sea él nuestra alegría y nuestro gozo. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "condición escrita en la rúbrica anterior, no en una etiqueta: «Durante la octava de Pascua, en lugar del responsorio breve se dice la antífona propia del Tiempo:»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "cantico_evangelico",
+      "piezas": [
+       {
+        "tipo": "antifona",
+        "variantes": [
+         {
+          "texto": "Sálvanos, Señor, despiertos, protégenos mientras dormimos, para que velemos con Cristo y descansemos en paz.",
+          "tp_aleluya": true,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 746,
+            "impresa": "746"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3817,
+            "impresa": "1003"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5568,
+            "impresa": "1098"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-lc-2-29-32",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 746,
+            "impresa": "746"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2230,
+            "impresa": "1102"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3818,
+            "impresa": "1004"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5568,
+            "impresa": "1098"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "oracion",
+      "piezas": [
+       {
+        "tipo": "oracion",
+        "variantes": [
+         {
+          "texto": "Señor, Dios todopoderoso: ya que con nuestro descanso vamos a imitar a tu Hijo que reposó en el sepulcro, te pedimos que, al levantarnos mañana, le imitemos también resucitando a una vida nueva. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 746,
+            "impresa": "746"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3818,
+            "impresa": "1004"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5568,
+            "impresa": "1098"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas del domingo y durante la octava de Pascua:",
+          "revisar": true,
+          "cuando": {
+           "despues_de": "visperas1-domingo"
+          },
+          "texto": "Guárdanos, Señor, durante esta noche y haz que mañana, ya al clarear el nuevo día, la celebración del domingo nos llene con la alegría de la resurrección de tu Hijo. Que vive y reina por los siglos de los siglos.",
+          "nota": "«Después de las Primeras Vísperas del domingo y durante la octava de Pascua:»: la octava de Pascua no está en el vocabulario; pendiente de decisión de CRU",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2231,
+            "impresa": "1103"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Después de las Primeras Vísperas de las solemnidades que no coinciden en domingo:",
+          "cuando": {
+           "despues_de": "visperas1-solemnidad"
+          },
+          "texto": "Visita, Señor, esta habitación: aleja de ella las insidias del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz y que tu bendición permanezca siempre con nosotros. Por Jesucristo nuestro Señor.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2231,
+            "impresa": "1103"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "bendicion",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "Después de la oración conclusiva se dice la siguiente bendición, incluso cuando el Oficio lo reza una sola persona:",
+          "fuentes": [
+           {
+            "tomo": 4,
+            "pdf": 5568,
+            "impresa": "1098"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "versiculo",
+        "variantes": [
+         {
+          "v": "El Señor todopoderoso nos conceda una noche tranquila y una santa muerte.",
+          "r": "Amén.",
+          "fuentes": [
+           {
+            "tomo": 3,
+            "pdf": 3818,
+            "impresa": "1004"
+           },
+           {
+            "tomo": 4,
+            "pdf": 5568,
+            "impresa": "1098"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "parte": "antifona_final",
+      "piezas": [
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "La conclusión de la Hora y la antífona final a la Santísima Virgen como en el Ordinario.",
+          "remite": "ordinario/conclusion",
+          "otras_redacciones": [
+           {
+            "tomo": 2,
+            "texto": "La conclusión de las Horas y la antífona final como en el Ordinario."
+           },
+           {
+            "tomo": 3,
+            "texto": "La conclusión de la Hora y la antífona de la Santísima Virgen como en el Ordinario."
+           }
+          ],
+          "fuentes": [
+           {
+            "tomo": 1,
+            "pdf": 746,
+            "impresa": "746"
+           },
+           {
+            "tomo": 2,
+            "pdf": 2231,
+            "impresa": "1103"
+           },
+           {
+            "tomo": 3,
+            "pdf": 3818,
+            "impresa": "1004"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
