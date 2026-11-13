@@ -162,7 +162,8 @@ main{max-width:1500px;margin:0 auto;padding:16px 20px 80px}
 .vista{display:none}.vista.on{display:block}
 .pag{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:24px;align-items:start;padding:18px 0;border-bottom:1px solid var(--linea)}
 .img{position:sticky;top:110px}
-.img img{width:100%;border:1px solid var(--linea);border-radius:8px;background:#fff}
+.img img,.hoja{width:100%;border:1px solid var(--linea);border-radius:8px;background:#fff no-repeat}
+.indice{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}.indice a{font:600 12px 'Source Sans 3',sans-serif;color:var(--tinta);background:#fff;border:1px solid var(--linea);border-radius:99px;padding:3px 10px;text-decoration:none}
 .img .num{font:600 12px 'Source Sans 3',sans-serif;color:var(--suave);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
 .piezas{display:flex;flex-direction:column;gap:10px}
 .hora{font:600 13px 'Source Sans 3',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta);margin:8px 0 0;padding-top:6px;border-top:2px solid var(--tinta)}
@@ -203,10 +204,14 @@ function ver(id){document.querySelectorAll('.vista').forEach(v=>v.classList.togg
 document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));window.scrollTo(0,0)}
 function ruta(){var h=(location.hash||'#resumen').slice(1);if(!document.getElementById(h))h='resumen';ver(h)}
 window.addEventListener('hashchange',ruta);ruta();
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var d=x.target;d.style.backgroundImage='url('+d.dataset.bg+')';io.unobserve(d)}})},{rootMargin:'800px'});
+document.querySelectorAll('.hoja').forEach(function(d){io.observe(d)});
+function irA(ev,n){ev.preventDefault();var el=document.getElementById('p'+n);if(el)el.scrollIntoView();}
 """
 
 
-def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html='', uni=None):
+def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html='', uni=None,
+            nombre='Común de la Santísima Virgen María', por_tira=10, dpi=72):
     carpeta = Path(carpeta)
     (carpeta / 'img').mkdir(parents=True, exist_ok=True)
     pares = getattr(uni, '_pares', {}) if uni else {}
@@ -251,17 +256,37 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
             ctx = NOMBRE_HORA.get(hora, hora)
             por_pag[r.pdf].append(tarjeta(d, u, ctx, salmos_d, himnos))
         bloques = []
-        for n in range(a, b + 1):
-            ruta = carpeta / 'img' / f'{n}.jpg'
+        # imágenes en tiras verticales de varias páginas (pocas imágenes para publicar)
+        paginas = list(range(a, b + 1))
+        tiras = [paginas[i:i + por_tira] for i in range(0, len(paginas), por_tira)]
+        ubic = {}
+        for k, tira in enumerate(tiras):
+            nombre_img = f'img/t{p.tomo}-{tira[0]}.jpg'
+            ruta = carpeta / nombre_img
+            pixs = [doc[n - 1].get_pixmap(dpi=dpi) for n in tira]
+            w, h = pixs[0].width, pixs[0].height
             if not ruta.exists():
-                pix = doc[n - 1].get_pixmap(dpi=110)
-                ruta.write_bytes(pix.tobytes('jpg', jpg_quality=72))
+                from PIL import Image
+                hoja = Image.new('RGB', (w, h * len(tira)), 'white')
+                for j, px in enumerate(pixs):
+                    hoja.paste(Image.frombytes('RGB', (px.width, px.height), px.samples), (0, j * h))
+                hoja.save(ruta, 'JPEG', quality=58, optimize=True)
+            for j, n in enumerate(tira):
+                ubic[n] = (nombre_img, j, len(tira), w, h)
+        indice = []
+        for c in p.comunes:
+            indice.append(f'<a href="#p{c["_pdf"]}" onclick="irA(event,{c["_pdf"]})">{e(c["titulo"].capitalize())}</a>')
+        for n in paginas:
+            img, j, cnt, w, h = ubic[n]
+            pos = 0 if cnt == 1 else j * 100 / (cnt - 1)
             impresa = next((r.impresa for r in p.R if r.pdf == n), '')
             bloques.append(
                 f'<section class="pag" id="p{n}"><div class="img"><div class="num">PDF {n} · pág. impresa {e(str(impresa))}</div>'
-                f'<img loading="lazy" src="img/{n}.jpg" alt="Página {n} del PDF"></div>'
+                f'<div class="hoja" role="img" aria-label="Página {n} del PDF" data-bg="{img}" '
+                f'style="aspect-ratio:{w}/{h};background-size:100% {cnt * 100}%;background-position:0 {pos:.4f}%"></div></div>'
                 f'<div class="piezas">{"".join(por_pag[n]) or "<p class=muted>Sin piezas que empiecen en esta página.</p>"}</div></section>')
-        vistas.append((f'tomo-{p.tomo}', f'Tomo {ROMANOS[p.tomo]} · {a}–{b}', ''.join(bloques)))
+        idx = f'<div class="indice">{"".join(indice)}</div>' if len(indice) > 1 else ''
+        vistas.append((f'tomo-{p.tomo}', f'Tomo {ROMANOS[p.tomo]} · {a}–{b}', idx + ''.join(bloques)))
     nav = '<a href="#resumen">Resumen</a>' + ''.join(f'<a href="#{i}">{e(t)}</a>' for i, t, _ in vistas)
     leyenda = ('<div class="leyenda"><span><span class="chip cond">condición</span> variante con condición u opción</span>'
                '<span><span class="chip revisar">revisar</span> marcada para revisión</span>'
@@ -270,11 +295,11 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
                    ''.join(f'<section class="vista" id="{i}">{leyenda}{h}</section>' for i, _, h in vistas))
     page = f"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Revisión · Común de la Santísima Virgen María</title>
+<title>Revisión · {e(nombre)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body>
-<header><h1>Revisión de la extracción · Común de la Santísima Virgen María</h1>
+<header><h1>Revisión de la extracción · {e(nombre)}</h1>
 <p class="lead">LH ADF · prueba de extracción por tipografía, cuatro tomos. A la izquierda la página del libro; a la derecha las piezas que empiezan en ella.</p>
 <nav>{nav}</nav></header><main>{cuerpo_html}</main><script>{JS}</script></body></html>"""
     (carpeta / 'index.html').write_text(page, encoding='utf-8')

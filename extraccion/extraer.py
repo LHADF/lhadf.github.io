@@ -35,11 +35,30 @@ from pathlib import Path
 import pymupdf
 
 AQUI = Path(__file__).resolve().parent
-SALIDA = AQUI / 'comunes' / 'virgen'
 
-# Páginas del PDF unido (contadas desde 1), incluida la memoria de santa
-# María en sábado en los tomos III y IV.
-TOMOS = {1: (851, 869), 2: (2459, 2481), 3: (4104, 4141), 4: (5968, 6003)}
+# Páginas del PDF unido (contadas desde 1) de cada sección extraída.
+SECCIONES = {
+    # prueba aprobada: Común de la Santísima Virgen María + santa María en sábado
+    'virgen': {'tomos': {1: (851, 869), 2: (2459, 2481), 3: (4104, 4141), 4: (5968, 6003)},
+               'salida': AQUI / 'comunes' / 'virgen', 'archivo': 'virgen.json', 'seccion': 'comunes',
+               'nombre': 'Común de la Santísima Virgen María'},
+    # paso 2: todos los comunes (de la Dedicación hasta antes del Oficio de difuntos)
+    'comunes': {'tomos': {1: (834, 1012), 2: (2438, 2642), 3: (4085, 4283), 4: (5950, 6150)},
+                'salida': AQUI / 'comunes', 'archivo': 'comunes.json', 'seccion': 'comunes',
+                'nombre': 'Oficios comunes'},
+}
+TOMOS = SECCIONES['virgen']['tomos']
+SALIDA = SECCIONES['virgen']['salida']
+
+# Títulos de los comunes y de sus subsecciones → identificador
+IDS_COMUN = [
+    (r'DEDICACI', 'dedicacion'), (r'SÁBADO|SABADO', 'santa-maria-sabado'), (r'MAR[ÍI]A', 'virgen'),
+    (r'AP[ÓO]STOLES', 'apostoles'), (r'VARIOS\s*M[ÁA]RTIRES', 'martires-varios'),
+    (r'UN\s*M[ÁA]RTIR', 'martires-uno'), (r'M[ÁA]RTIRES', 'martires'), (r'PASTORES', 'pastores'),
+    (r'DOCTORES', 'doctores'), (r'V[ÍI]RGENES', 'virgenes'), (r'VARONES', 'santos-varones'),
+    (r'MUJERES', 'santas-mujeres'), (r'RELIGIOSOS', 'religiosos'), (r'CARITATIVA', 'caridad'),
+    (r'EDUCADORES', 'educadores'), (r'DIFUNTOS', 'difuntos'),
+]
 
 ROJOS = {'ff0000', 'ff2600'}
 AZULES = {'0000ff', '021eaa'}
@@ -65,6 +84,9 @@ ROTULOS = [  # (prefijo en mayúsculas, parte, tipo de pieza)
 RE_ETIQUETA = re.compile(
     r'^(O bien\b.*|(En )?[Tt]iempo\b.*|Para (un|una|unos|unas|varios|varias)\b.*|'
     r'Antífona para .*|Año [IVXABC]+|Ciclo (anual|bienal)|España|[IVX]+)$')
+RE_ETIQUETA_LARGA = re.compile(
+    r'^(O bien\b|Para (un|una|unos|unas|varios|varias|los|las)\b|(En )?(el )?[Tt]iempo\b|'
+    r'Cuando el Oficio se celebra\b|Versión\b|Si se trata de\b|Antífona para\b)')
 RE_TP = re.compile(r'\s*\x01\s*\(\s*T\.?\s*\x02?\s*\x01?\s*P\.?\s*\x02?\s*Aleluya\.?\s*\x01?\s*\)\s*\.?\s*\x02?\s*\.?\s*$')
 RE_GLORIA_V = re.compile(r'^Gloria al Padre, y al Hijo, y al Espíritu Santo\.?$')
 
@@ -254,12 +276,20 @@ def leer_tomo(doc, tomo, a, b):
             if texto.startswith('LITURGIA DE LAS HORAS') or (f0.startswith('Helvetica') and round(segs[0]['s']) <= 10 and y < 50):
                 descartes.append(dict(tomo=tomo, pdf=p + 1, motivo='encabezado', texto=texto))
                 continue
-            r = Renglon(tomo=tomo, pdf=p + 1, y=round(y, 1), x=round(x, 1), segs=segs,
-                        gap=(y - prev_y) if prev_y is not None else max(14.0, y - 56.9 + 14), n=n,
-                        dudoso=any(s['dud'] for s in segs if s['t'].strip()))
+            gap = (y - prev_y) if prev_y is not None else max(14.0, y - 56.9 + 14)
+            partes = [segs]
+            s0 = segs[0]['t'].strip()
+            if (segs[0]['c'] == 'R' and s0.endswith(':') and len(segs) > 1 and
+                    (RE_ETIQUETA.match(s0[:-1].strip()) or RE_ETIQUETA_LARGA.match(s0)) and
+                    any(x['c'] == 'k' and x['t'].strip() for x in segs[1:])):
+                partes = [segs[:1], segs[1:]]   # «Tiempo de Cuaresma: texto…» → etiqueta + texto
+            for j, sg in enumerate(partes):
+                r = Renglon(tomo=tomo, pdf=p + 1, y=round(y, 1), x=round(x, 1), segs=sg,
+                            gap=gap if j == 0 else 0.0, n=n,
+                            dudoso=any(s['dud'] for s in sg if s['t'].strip()))
+                n += 1
+                renglones.append(r)
             prev_y = y
-            n += 1
-            renglones.append(r)
         for r in renglones:
             if r.pdf == p + 1:
                 r.impresa = impresa
@@ -315,10 +345,12 @@ class Parser:
             return 'asterisco'
         if r.c0 == 'R' and r.talla >= 18 and re.fullmatch(r'\d+', t):
             return 'numero_seccion'
-        if (r.talla >= 14 and t.upper() == t and len(t) > 12 and
-                (r.c0 == 'k' or r.talla >= 18) and r.y < 120):
+        if (r.talla >= 14 and t.upper() == t and len(t) > 12 and re.search(r'[A-ZÁÉÍÓÚ]{4}', t) and
+                (r.c0 == 'k' or r.talla >= 18)):
             return 'titulo'
         low = t.lower()
+        if r.c0 == 'k' and r.negrita and re.match(r'^(En )?[Tt]iempo\b', t) and len(t.split()) <= 6:
+            return 'bloque'
         if r.c0 == 'k' and low in HORAS and (r.negrita or t.isupper() or r.x > 150):
             return 'hora'
         if r.c0 == 'R':
@@ -332,7 +364,7 @@ class Parser:
                 return 'responsorio'
             if re.match(r'^Ant\.( ?\d\.)?', t):
                 return 'ant'
-            if t == 'Antífona':
+            if re.fullmatch(r'Antífona( \d)?', t):
                 return 'antifona_rotulo'
             if re.match(r'^V\.', t):
                 return 'v'
@@ -342,9 +374,12 @@ class Parser:
                 return 'guion'
             if r.x > 100 and re.fullmatch(r'[IVX]+', t):
                 return 'romano'
-            if r.x > 100 and re.match(r'^(Salmo|Cántico)\b', t):
+            if r.x > 100 and re.match(r'^(Salmo|Cántico)\b', t, re.I):
                 return 'salmo'
-            if t.endswith(':') and (RE_ETIQUETA.match(t[:-1].strip()) and len(t.split()) <= 6):
+            if r.solo == {'R'} and ':' not in t and not t.endswith('.') and len(t.split()) <= 6 and \
+                    re.match(r'^(O bien\b|Para (un|una|unos|unas|varios|varias|los|las)\b)', t):
+                return 'etiqueta'
+            if t.endswith(':') and r.solo == {'R'} and (RE_ETIQUETA.match(t[:-1].strip()) or RE_ETIQUETA_LARGA.match(t)):
                 return 'etiqueta'
             if t.startswith('('):
                 return 'fuente'
@@ -359,9 +394,21 @@ class Parser:
 
     # — partes y piezas —
     def abrir_comun(self, titulo, r):
-        cid = 'santa-maria-sabado' if 'SÁBADO' in titulo.upper() else 'virgen'
+        up = re.sub(r'\s+', '', titulo.upper())
+        cid = next((i for rx, i in IDS_COMUN if re.search(rx.replace('\\s*', ''), up)), slug(titulo))
+        sub = re.match(r'^PARA\b', titulo.strip().upper())
+        padre = None
+        if sub and self.comun is not None and not titulo.upper().startswith('COMÚN'):
+            padre = self.comun.get('_padre') or self.comun['titulo']
+            if not self.comun['horas'] and not self.comun['rubricas'] and self.comun['id'] not in ('santa-maria-sabado',):
+                # «COMÚN DE SANTOS MÁRTIRES» seguido de «PARA VARIOS MÁRTIRES»: un solo común
+                self.comunes.remove(self.comun)
+                padre = self.comun['titulo']
         self.comun = {'id': cid, 'titulo': espacios(titulo), 'rubricas': [], 'horas': {},
                       '_orden': [], '_pdf': r.pdf, '_impresa': r.impresa}
+        if padre:
+            self.comun['seccion'] = padre
+            self.comun['_padre'] = padre
         self.comunes.append(self.comun)
         self.hora = None
         self.parte = None
@@ -375,6 +422,7 @@ class Parser:
         self.hora_id = hid
         self.parte = None
         self.etiqueta = None
+        self.bloque = None
 
     def abrir_parte(self, nombre, reusar=False):
         if self.hora is None:
@@ -405,17 +453,39 @@ class Parser:
         """Con etiqueta pendiente, la variante se suma a la última pieza del tipo."""
         et = self.etiqueta
         self.etiqueta = None
+        bl = getattr(self, 'bloque', None)
+        if bl is not None and tipo != 'rubrica':
+            hay_b = [pz for pz in self.parte['piezas'] if pz['tipo'] == tipo] if self.parte else []
+            if et is None and (not hay_b or id(hay_b[-1]) not in bl['piezas']):
+                et = {'texto': bl['texto'], 'renglones': []}
+                v['_et_bloque'] = True
+            elif et is not None:
+                v['_et_render'] = et['texto']
+                if not condicion(et['texto'])[1]:
+                    et = {'texto': bl['texto'] + ' ' + et['texto'], 'renglones': et['renglones']}
         if et is not None:
             v['etiqueta'] = et['texto']
             for rr in et['renglones']:
                 self.tomar(rr, v)
         hay = [pz for pz in self.parte['piezas'] if pz['tipo'] == tipo] if self.parte else []
+        if et is not None:
+            c, es_op, _ = condicion(et['texto'])
+            prev = hay[-1]['variantes'][-1] if hay and hay[-1]['variantes'] else None
+            if es_op and prev is not None:
+                base = {k: x for k, x in (prev.get('_cuando') or {}).items()}
+                base.update(c)
+                c = base
+            v['_cuando'] = c
+        if et is not None and et['renglones']:
+            v['_et_n'] = et['renglones'][0].n
         if et is not None and hay and not forzar_nueva:
             pz = hay[-1]
         elif et is not None and not hay:
             pz = self.pieza(tipo, nueva=True)
         else:
             pz = self.pieza(tipo, nueva=True)
+        if bl is not None:
+            bl['piezas'].add(id(pz))
         pz['variantes'].append(v)
         v['_fuente'] = {'tomo': self.tomo}
         return pz
@@ -432,6 +502,8 @@ class Parser:
             return True
         if r.c0 != 'k':
             return False
+        if r.gap is not None and r.gap < 50 and not re.search(r'[.!?»)]\s*\x02?\s*$', previo_m):
+            return True    # la frase sigue aunque el libro deje más espacio
         return r.gap is None or r.gap <= 16.5
 
     def leer_texto_simple(self, v, primero_m):
@@ -465,11 +537,17 @@ class Parser:
     def texto_limpio(self, m, v, contexto):
         """Texto sin marcas; si queda rojo adentro, se anota."""
         m = limpiar_marcas(m)
-        quedan = re.findall(r'\x01(.*?)\x02', m)
+        # paréntesis rojos con una palabra negra adentro: se dice o no según el caso
+        m = re.sub(r'\x01([^\x02]*?)\(\s*\x02([^\x01\x02]+?)\x01\s*\)', lambda x: '\x01' + x.group(1) + '\x02[' + x.group(2).strip() + ']\x01', m)
+        # N. rojo (nombre del santo)
+        m = re.sub(r'\x01([^\x02]*?)\bN\.([,;:]?)', lambda x: '\x01' + x.group(1) + '\x02{N}' + x.group(2) + '\x01', m)
+        m = limpiar_marcas(m)
+        quedan = [q for q in re.findall(r'\x01(.*?)\x02', m) if q.strip()]
         if quedan:
-            v.setdefault('_rojo', []).extend(quedan)
+            v.setdefault('_rojo', []).extend(q.strip() for q in quedan)
             v['revisar'] = True
-            v.setdefault('_notas', []).append(f'quedó texto rojo dentro de {contexto}: {quedan}')
+            v.setdefault('_notas', []).append(f'rojo dentro de {contexto}, sacado del texto: {quedan}')
+            m = re.sub(r'\x01.*?\x02', ' ', m)
         return espacios(plano(m))
 
     # — bucle principal —
@@ -492,8 +570,21 @@ class Parser:
     def c_titulo(self, r):
         t = r.texto
         self.i += 1
+        if r.talla >= 18 and r.c0 == 'k':   # tomo IV: espacios en otro cuerpo
+            t = ' '.join(s['t'] for s in r.segs if s['t'].strip())
+        extra = []
+        while self.actual() is not None and self.actual().talla >= 14 and self.actual().texto.strip().isupper() and self.actual().gap <= 22 \
+                and self.actual().c0 == r.c0 and not re.match(r'^(COMÚN|PARA|MEMORIA|OFICIO)', self.actual().texto.strip()):
+            extra.append(self.actual()); t += ' ' + self.actual().texto; self.i += 1
+        if self.comun is not None and espacios(t).upper() == self.comun['titulo'].upper():
+            self.tomar(r, self.comun)
+            for x in extra:
+                self.tomar(x, self.comun)
+            return
         self.abrir_comun(t, r)
         self.tomar(r, self.comun)
+        for x in extra:
+            self.tomar(x, self.comun)
         self.comun['_rawtitulo'] = r
 
     def c_hora(self, r):
@@ -521,7 +612,17 @@ class Parser:
             self.i += 1
             v['respuesta'].append({'etiqueta': t, 'texto': espacios(plano(rr.m))})
             return
-        self.etiqueta = {'texto': t, 'renglones': [r]}
+        if self.etiqueta is not None:   # «En tiempo de cuaresma:» + «Para un santo:»
+            self.etiqueta = {'texto': self.etiqueta['texto'] + ' ' + t,
+                             'renglones': self.etiqueta['renglones'] + [r]}
+        else:
+            self.etiqueta = {'texto': t, 'renglones': [r]}
+        self.i += 1
+
+    def c_bloque(self, r):
+        """Encabezado negro «En tiempo de cuaresma»: condición de las partes que siguen."""
+        self.bloque = {'texto': espacios(r.texto), 'piezas': set()}
+        self.tomar(r, 'bloque: ' + espacios(r.texto))
         self.i += 1
 
     def c_romano(self, r):
@@ -540,13 +641,15 @@ class Parser:
         nombre, tipo = None, None
         for pref, parte, tp in ROTULOS:
             if up.startswith(pref):
-                nombre, tipo, resto = parte, tp, t[len(pref):].strip(' ,.')
+                nombre, tipo, resto = parte, tp, t[len(pref):].strip()
+                if nombre != 'lectura_breve':
+                    resto = resto.strip(' ,.')
                 break
         else:
             nombre, resto = 'oracion', ''
         self.i += 1
         # rótulos de la hora intermedia y de las opciones del sábado
-        reusar = (self.etiqueta is not None or (self.parte is not None and self.parte['parte'] == nombre) or
+        reusar = (self.etiqueta is not None or getattr(self, 'bloque', None) is not None or (self.parte is not None and self.parte['parte'] == nombre) or
                   nombre == 'responsorio_breve' and self._pareja('lectura_breve', 'responsorio_breve'))
         if nombre == 'oracion' and self.hora_id in ('tercia', 'sexta', 'nona'):
             self.abrir_hora('intermedia')
@@ -569,6 +672,14 @@ class Parser:
         if nombre == 'lectura_breve':
             v = nueva_variante('lectura_breve', cita=resto)
             self.tomar(r, v)
+            nx = self.actual()
+            if not resto and nx is not None and nx.c0 == 'R' and nx.solo == {'R'}:
+                mm = re.match(r'^((En )?[Tt]iempo (de \w+|pascual)|Para [^0-9]+?)\s+(\S.*)$', espacios(nx.texto))
+                if mm:
+                    self.etiqueta = {'texto': mm.group(1), 'renglones': [nx]}
+                    v['cita'] = mm.group(4)
+                    v['_cita_con_etiqueta'] = True
+                    self.i += 1
             v['texto'] = self.leer_parrafos(v, uno=True)[0] if True else ''
             self.agregar_variante('lectura_breve', v)
             return
@@ -597,7 +708,11 @@ class Parser:
                 return
             k = self.clase(r)
             if k in ('romano', 'etiqueta'):
-                self.etiqueta = {'texto': r.texto.strip(), 'renglones': [r]}
+                if self.etiqueta is not None:
+                    self.etiqueta = {'texto': self.etiqueta['texto'] + ' ' + r.texto.strip(),
+                                     'renglones': self.etiqueta['renglones'] + [r]}
+                else:
+                    self.etiqueta = {'texto': r.texto.strip(), 'renglones': [r]}
                 self.i += 1
                 continue
             if k in ('negro', 'blanco') and (k == 'negro' or self.etiqueta is None):
@@ -614,6 +729,7 @@ class Parser:
         """Versos hasta el próximo rojo al margen; estrofas por espacio vertical."""
         estrofas, actual, xs = [], [], []
         primero = True
+        opcional = False
         while True:
             r = self.actual()
             if r is None:
@@ -624,13 +740,43 @@ class Parser:
                     estrofas.append(actual); actual = []
                 self.tomar(r, v); self.i += 1
                 continue
-            if k != 'negro':
+            m = r.m
+            cruz = bool(re.match(r'^\x01\s*†\s*\x02', m))
+            if cruz:                            # «† Mi alma se consume…»: marca roja del salmo
+                m = m[re.match(r'^\x01\s*†\s*\x02', m).end():]
+                k = 'negro'
+            corchete = re.match(r'^\x01\s*\[\s*\x02', m) and 'k' in r.solo
+            estribillo = dentro_salmo and bool(re.match(r'^\x01\s*\(?\s*R\.', m))
+            if k != 'negro' and not corchete and not estribillo:
                 break
             if not primero and r.gap and r.gap > 18 and actual:
                 estrofas.append(actual); actual = []
             primero = False
-            txt = self.texto_limpio(r.m, v, 'un verso')
-            actual.append({'texto': txt, '_x': r.x})
+            extra = {}
+            if corchete:                        # estrofas opcionales entre corchetes rojos
+                m = m[re.match(r'^\x01\s*\[\s*\x02', m).end():]
+                opcional = True
+            if re.search(r'\x01\s*\]\s*\x02\s*$', m):
+                m = re.sub(r'\x01\s*\]\s*\x02\s*$', '', m)
+                extra['opcional'] = True
+                extra['_cierra'] = True
+                opcional = False
+            elif opcional:
+                extra['opcional'] = True
+            if corchete:
+                extra['_abre'] = True
+            if cruz:
+                extra['cruz'] = True
+            if estribillo:                      # «R. Aleluya, (aleluya).» / «(R. Aleluya.)» en el cántico
+                mm = re.match(r'^\x01\s*(\()?\s*R\.\s*\x02?', m)
+                m = m[mm.end():]
+                extra['estribillo'] = True
+                if mm.group(1):
+                    m = re.sub(r'\x01\s*\)\s*\x02\s*$', '', m)
+                    extra['opcional'] = True
+                    extra['_paren'] = True
+            txt = self.texto_limpio(m, v, 'un verso')
+            actual.append({'texto': txt, '_x': r.x, **extra})
             xs.append(r.x)
             self.tomar(r, v)
             self.i += 1
@@ -639,6 +785,10 @@ class Parser:
         base = min(xs) if xs else 56.8
         for e in estrofas:
             for vs in e:
+                par = vs.pop('_paren', False)
+                vs['_marcas'] = ('[' if vs.pop('_abre', False) else '',
+                                 (']' if vs.pop('_cierra', False) else '') + (')' if par else ''),
+                                 (('(R.' if par else 'R.') if vs.get('estribillo') else '') + ('†' if vs.get('cruz') else ''))
                 d = vs.pop('_x') - base
                 vs['sangria'] = 0 if d < 7 else (1 if d < 21 else 2)
         if not dentro_salmo and estrofas:
@@ -684,16 +834,29 @@ class Parser:
         for rr in tmp['_raw']:
             rr.dueno = lib
             lib['_raw'].append(rr)
-        lib['partes'][parte or ''] = estrofas
         self.ultimo_salmo = sid
+        nx = self.actual()
+        if not estrofas and parte is None and nx is not None and self.clase(nx) == 'romano':
+            # «Salmo 117» seguido de «I»: el título va a la biblioteca, las partes son las piezas
+            pz = self.parte['piezas'][-1]
+            if pz['variantes'] and pz['variantes'][-1] is v:
+                self.parte['piezas'].pop()
+            for rr in v['_raw']:
+                rr.dueno = lib
+            return
+        lib['partes'][parte or ''] = estrofas
         v['_lib'] = lib
 
     # antífonas
     def c_ant(self, r):
-        m = r.m
+        m = re.sub(r'^\s*(\x01\s*)', r'\1', r.m.lstrip())
         mm = re.match(r'^\x01\s*(Ant\.(?:\s*(\d)\.)?)\s*\x02?', m)
         if not mm:  # «Ant. 1. texto» todo en rojo
             mm = re.match(r'^\x01\s*(Ant\.(?:\s*(\d)\.)?)\s*', m)
+        if not mm:
+            self.avisos.append((r, f'«Ant.» con forma inesperada: {r.texto[:40]}'))
+            self.c_rubrica(r)
+            return
         rot = mm.group(1)
         num = int(mm.group(2)) if mm.group(2) else None
         resto = m[mm.end():]
@@ -708,6 +871,12 @@ class Parser:
                 and self.parte['piezas'] and self.parte['piezas'][-1]['tipo'] == 'salmo':
             rep = {'_raw': [r], '_tipo': 'repeticion'}
             r.dueno = rep
+            if self.etiqueta is not None:   # «Tiempo pascual:» + «Ant. …» repetida
+                for rr in self.etiqueta['renglones']:
+                    rr.dueno = rep
+                    rep['_raw'].append(rr)
+                rep['_etiqueta'] = self.etiqueta['texto']
+                self.etiqueta = None
             txt = self.leer_texto_simple(rep, resto)
             t2, tp, _ = self.separar_tp(txt)
             self.ult_antifona['_repeticion'] = espacios(plano(t2))
@@ -721,6 +890,10 @@ class Parser:
         v = nueva_variante('antifona', numero=num, texto=None, tp_aleluya=False, _rotulo=rot)
         self.tomar(r, v)
         txt = self.leer_texto_simple(v, resto)
+        mmc = re.search(r'\s*†\s*(\x02)?\s*$', txt)
+        if mmc:                                 # «… ejércitos! †»: marca roja de la antífona
+            txt = txt[:mmc.start()] + (mmc.group(1) or '')
+            v['cruz'] = True
         t2, tp, tpraw = self.separar_tp(txt)
         v['texto'] = self.texto_limpio(t2, v, 'una antífona')
         v['tp_aleluya'] = tp
@@ -734,16 +907,27 @@ class Parser:
             self.abrir_parte('antifona')
         self.tomar(r, 'rótulo Antífona')
         self._rot_ant = r
+        mm = re.search(r'(\d)$', r.texto.strip())
+        self._rot_num = int(mm.group(1)) if mm else None
 
     def c_negro(self, r):
         """Texto negro suelto: según la parte en curso."""
         p = self.parte['parte'] if self.parte else None
-        if p in ('cantico_evangelico', 'antifona') or (p is None and self.hora_id == 'invitatorio'):
+        en_salmodia = p == 'salmodia' and (getattr(self, '_rot_ant', None) is not None or self.etiqueta is not None)
+        if p in ('cantico_evangelico', 'antifona') or en_salmodia or (p is None and self.hora_id == 'invitatorio'):
             if p is None:
                 self.abrir_parte('antifona')
-            v = nueva_variante('antifona', numero=None, texto=None, tp_aleluya=False, _rotulo='')
+            num = None
+            if en_salmodia:   # «Antífona 1» + «Tiempo de Cuaresma: …» / «Tiempo pascual: …»
+                num = getattr(self, '_rot_num', None)
+                if num is None:
+                    ult = next((pz for pz in reversed(self.parte['piezas']) if pz['tipo'] == 'antifona'), None)
+                    num = ult['variantes'][0].get('numero') if ult else None
+            v = nueva_variante('antifona', numero=num, texto=None, tp_aleluya=False, _rotulo='')
             if getattr(self, '_rot_ant', None) is not None:
-                v['_rotulo'] = 'Antífona'
+                v['_rotulo'] = self._rot_ant.texto.strip()
+                self._rot_num = None
+                v['_rot_n'] = self._rot_ant.n
                 self._rot_ant.dueno = v
                 v['_raw'].append(self._rot_ant)
                 self._rot_ant = None
@@ -755,6 +939,7 @@ class Parser:
             v['tp_aleluya'] = tp
             v['_tp_raw'] = tpraw
             self.agregar_variante('antifona', v)
+            self.ult_antifona = v
             return
         if p == 'himno':
             self.leer_himnos()
@@ -764,6 +949,24 @@ class Parser:
             return
         if p in ('primera_lectura', 'segunda_lectura'):
             self.leer_lectura()
+            return
+        if self.hora_id == 'oficio' and re.match(r'^De(l| la| las| los)\b', r.texto.strip()) and \
+                ('R' in r.solo or (self.sig() is not None and self.sig().c0 == 'R')):
+            # el libro omite el rótulo PRIMERA/SEGUNDA LECTURA
+            n = 'segunda_lectura' if any(x['parte'] == 'primera_lectura' for x in self.hora) else 'primera_lectura'
+            self.abrir_parte(n, reusar=True)
+            self.leer_lectura()
+            v = self.parte['piezas'][-1]['variantes'][-1] if self.parte['piezas'] else None
+            pz = next((x for x in self.parte['piezas'] if x['tipo'] == 'lectura'), None)
+            if pz:
+                pz['variantes'][-1]['revisar'] = True
+                pz['variantes'][-1].setdefault('_notas', []).append('el libro no trae el rótulo de la lectura en este tomo')
+            return
+        if p == 'lectura_breve' and self.etiqueta is not None:
+            # «O bien:» y otra lectura breve sin cita
+            v = nueva_variante('lectura_breve', cita=None, _sin_rotulo=True)
+            v['texto'] = self.texto_limpio(self.leer_parrafos(v, uno=True)[0], v, 'una lectura breve')
+            self.agregar_variante('lectura_breve', v)
             return
         if p == 'oracion':
             v = nueva_variante('oracion')
@@ -793,7 +996,7 @@ class Parser:
                 break
             nuevo = r.x > 62 or (r.gap and r.gap > 18)
             if actual and nuevo:
-                if uno and not (r.gap and r.gap > 18):
+                if uno and not (r.gap and r.gap > 30):
                     pass
                 elif uno:
                     break
@@ -948,8 +1151,15 @@ class Parser:
             v.setdefault('_notas', []).append('lectura sin título')
 
     def c_responsorio(self, r):
-        v = nueva_variante('responsorio', cita=espacios(r.texto[len('Responsorio'):]) or None)
+        v = nueva_variante('responsorio', cita=espacios(r.texto.strip()[len('Responsorio'):]) or None)
         self.tomar(r, v); self.i += 1
+        if self.etiqueta is not None:
+            v['etiqueta'] = self.etiqueta['texto']
+            v['_et_n'] = self.etiqueta['renglones'][0].n if self.etiqueta['renglones'] else None
+            for rr in self.etiqueta['renglones']:
+                self.tomar(rr, v)
+            v['_cuando'] = condicion(self.etiqueta['texto'])[0]
+            self.etiqueta = None
         pares = self.leer_vr(v)
         notas = []
         seq = [l for l, _ in pares]
@@ -969,7 +1179,8 @@ class Parser:
             if norm_item(sin_tp(rep2)) != norm_item(sin_tp(t2)):
                 notas.append('la repetición del R. no coincide con su segunda mitad')
         else:
-            notas.append(f'secuencia R/V inesperada: {seq}')
+            notas.append(f'secuencia R/V inesperada en el libro: {seq}; se guarda tal cual')
+            v['secuencia'] = [{'rotulo': l + '.', 'texto': self.texto_limpio(t, v, 'el responsorio')} for l, t in pares]
         # (T. P. Aleluya.) al final de cada mitad
         if v.get('r') and v['r'][1]:
             t2, tp, tpraw = self.separar_tp('\x01' + v['r'][1] if False else v['r'][1])
@@ -994,7 +1205,7 @@ class Parser:
         if lec is not None:
             par = lec['variantes'][-1]
             v['_par'] = par
-            if 'etiqueta' in par:
+            if 'etiqueta' in par and 'etiqueta' not in v:
                 v['etiqueta'] = par['etiqueta']
                 v['_etiqueta_heredada'] = True
 
@@ -1045,10 +1256,10 @@ class Parser:
                     rr = self.actual(); self.tomar(rr, v); self.i += 1
                     sg = [re.sub(r'^\x01\s*—\s*\x02?', '', rr.m)]
                     while self.actual() is not None and self.clase(self.actual()) == 'negro' and \
-                            self.actual().gap <= 16.5:
+                            self.actual().gap <= 16.5 and not re.search(r'[.!?»]\s*$', plano(sg[-1])):
                         r3 = self.actual(); self.tomar(r3, v); self.i += 1; sg.append(r3.m)
                     seg = self.texto_limpio(unir_lineas(sg), v, 'una intención')
-                if seg is None and texto.endswith('Padre nuestro.'):
+                if seg is None and re.search(r'Padre\s+nuestro', texto):
                     v['final'] = texto
                     v['_cerrada'] = True
                     break
@@ -1062,6 +1273,24 @@ class Parser:
 
     # rúbricas
     def c_rubrica(self, r):
+        t0 = espacios(r.texto)
+        mm = re.match(r'^(O bien:|(?:En )?[Tt]iempo (?:de \w+|pascual):?)\s*(\S.*)$', t0)
+        if mm and self.parte is not None and self.parte['parte'] == 'lectura_breve' and r.solo == {'R'}:
+            # «O bien: Ag 2, 6a. 7.9» → otra lectura breve
+            self.etiqueta = {'texto': mm.group(1), 'renglones': []}
+            v = nueva_variante('lectura_breve', cita=mm.group(2), _cita_con_etiqueta=False, _et_linea=True)
+            self.tomar(r, v); self.i += 1
+            v['texto'] = self.leer_parrafos(v, uno=True)[0]
+            self.agregar_variante('lectura_breve', v)
+            return
+        if mm and 'B' in r.solo and self.parte is not None and self.parte['parte'] == 'himno':
+            # «O bien: Finísimo fue el lino.» → opción que remite a otro himno
+            self.etiqueta = {'texto': mm.group(1), 'renglones': []}
+            ref = espacios(''.join(s['t'] for s in r.segs if s['c'] == 'B'))
+            v = nueva_variante('himno', estrofas=[], amen=False, remite='himnos/' + slug(ref), _ref=ref, _linea=t0, _et_linea=True)
+            self.tomar(r, v); self.i += 1
+            self.agregar_variante('himno', v)
+            return
         lineas = [r]
         self.i += 1
         while True:
@@ -1107,6 +1336,8 @@ class Parser:
             return 'oracion'
         if 'Te Deum' in t:
             return 'te_deum'
+        if re.match(r'^(El|Los) himnos?\b', t):
+            return 'himno'
         if 'vigilia' in t:
             return 'vigilia'
         if h == 'invitatorio':
@@ -1194,6 +1425,11 @@ def remite_de(t, comun='virgen', hora=None):
         out.append('santa-maria-sabado/oficio/segunda_lectura')
     if 'escoger de entre los siguientes' in tl:
         out.append('santa-maria-sabado/laudes/lectura_breve')
+    for rx, cid in (('pastores', 'pastores'), ('santos varones', 'santos-varones'), ('santas mujeres', 'santas-mujeres'),
+                    ('vírgenes', 'virgenes'), ('mártires', 'martires'), ('doctores', 'doctores'),
+                    ('apóstoles', 'apostoles'), ('dedicación', 'dedicacion')):
+        if re.search(r'com[úu]n de (santos |santas |la )?' + rx, tl):
+            out.append(f'comunes/{cid}')
     if 'oficio de santa maría en sábado se encuentra' in tl:
         out.append('propio-del-tiempo/santa-maria-sabado')
     if 'ordinario' in tl and 'conclusión' in tl:
@@ -1216,17 +1452,63 @@ TIEMPOS = [
 ]
 
 
+PARA = [  # (patrón, valores) del más largo al más corto; ampliado según el libro
+    (r'papa u obispo', ['papa', 'obispo']), (r'(las )?m[áa]rtires v[íi]rgenes', ['martires-virgenes']),
+    (r'las santas mujeres', ['varias-santas']), (r'fundador de una iglesia', ['fundador']),
+    (r'varias santas v[íi]rgenes', ['varias-virgenes']), (r'virgen y m[áa]rtir|m[áa]rtir virgen', ['virgen', 'martir']),
+    (r'varios m[áa]rtires', ['varios-martires']), (r'mujer m[áa]rtir|una m[áa]rtir', ['martir', 'mujer']),
+    (r'un solo m[áa]rtir|un m[áa]rtir', ['martir']), (r'varias santas mujeres|varias santas', ['varias-santas']),
+    (r'varios santos', ['varios-santos']), (r'santa virgen', ['virgen']),
+    (r'actividad caritativa', ['caridad']), (r'obras de misericordia', ['misericordia']),
+    (r'matrimonio', ['matrimonio']), (r'papa', ['papa']), (r'obispo', ['obispo']),
+    (r'presb[íi]tero', ['presbitero']), (r'pastor', ['pastor']), (r'misionero', ['misionero']),
+    (r'abad', ['abad']), (r'monja', ['monja']), (r'religiosa', ['religiosa']), (r'religioso', ['religioso']),
+    (r'educadora', ['educadora']), (r'educador', ['educador']),
+    (r'santa mujer|mujer santa|una santa', ['santa']), (r'un santo', ['santo']),
+]
+TIEMPOS_TXT = [(r'adviento', 'adviento'), (r'navidad desde la epifan', 'navidad-desde-epifania'),
+               (r'navidad hasta la epifan', 'navidad-hasta-epifania'), (r'navidad', 'navidad'),
+               (r'cuaresma', 'cuaresma'), (r'pascua', 'pascua'), (r'tiempo ordinario', 'ordinario')]
+
+
 def condicion(etiqueta):
-    """(cuando, es_opcion, conocida)"""
+    """(cuando, es_opcion, conocida) a partir de la etiqueta roja literal."""
     if etiqueta is None:
         return {}, False, True
     e = etiqueta.rstrip(':').strip()
-    if re.match(r'^O bien\b', e, re.I) or re.fullmatch(r'[IVX]+', e):
+    if re.fullmatch(r'[IVX]+', e):
         return {}, True, True
-    for rx, val in TIEMPOS:
-        if re.match(rx, e):
-            return {'tiempo': val}, False, True
-    return {}, False, False
+    es_op = bool(re.match(r'^O bien\b', e, re.I))
+    resto = re.sub(r'^O bien\b,?\s*(esta otra|estas otras)?,?\s*', '', e, flags=re.I).lower()
+    if not resto:
+        return {}, True, True
+    c = {}
+    if re.search(r'\btiempo\b', resto) or re.match(r'^(en )?tiempo', resto):
+        ts = []
+        for rx, val in TIEMPOS_TXT:
+            if re.search(rx, resto) and not (val == 'navidad' and 'navidad-' in ' '.join(ts)):
+                ts.append(val)
+        if ts:
+            c['tiempo'] = ts[0] if len(ts) == 1 else ts
+    if re.search(r'\bpara\b|\bse trata de\b', resto):
+        tx = resto
+        vals = []
+        for rx, vs in PARA:
+            if re.search(rx, tx):
+                vals += [x for x in vs if x not in vals]
+                tx = re.sub(rx, ' ', tx)
+        # «un santo», «una santa» solo cuentan si no hay otra categoría («un santo presbítero» → presbitero)
+        neutras = {'matrimonio', 'caridad', 'misericordia'}   # aquí «santo»/«santa» sí distingue
+        if any(x not in neutras | {'santo', 'santa'} for x in vals):
+            vals = [x for x in vals if x not in ('santo', 'santa')]
+        if vals:
+            c['para'] = vals
+    if re.search(r'am[ée]rica latina|latinoamericana', resto):
+        c['region'] = 'america-latina'
+    if re.search(r'espa[ñn]a', resto):
+        c['region'] = 'espana'
+    conocida = bool(c) and not re.search(r'cuando el oficio|especialmente', resto)
+    return c, es_op, conocida
 
 
 # ─────────────────────────────── unificación ────────────────────────────────
@@ -1263,14 +1545,14 @@ def parecido(a, b):
 
 
 CAMPOS_PUBLICOS = {
-    'antifona': ['numero', 'texto', 'tp_aleluya'],
+    'antifona': ['numero', 'texto', 'tp_aleluya', 'cruz'],
     'salmo': ['salmo', 'parte'],
-    'himno': ['himno'],
+    'himno': ['himno', 'remite'],
     'lectura_breve': ['cita', 'texto'],
     'responsorio_breve': ['v1', 'r1', 'v2', 'r2', 'gloria'],
     'versiculo': ['v', 'r', 'gloria', 'despues_gloria', 'tp_aleluya'],
     'lectura': ['orden', 'cita', 'encabezado', 'fuente', 'titulo', 'parrafos'],
-    'responsorio': ['cita', 'r', 'v', 'tp_aleluya'],
+    'responsorio': ['cita', 'r', 'v', 'secuencia', 'tp_aleluya'],
     'preces': ['introduccion', 'respuesta', 'intenciones', 'libres_despues_de', 'final'],
     'oracion': ['texto'],
     'rubrica': ['texto', 'remite'],
@@ -1306,6 +1588,9 @@ class Unificador:
         out = {'id': cid, 'titulo': None, 'fuentes': [], 'rubricas': [], 'horas': {}}
         titulos = {t: por_tomo[t]['titulo'] for t in tomos}
         out['titulo'] = Counter(titulos.values()).most_common(1)[0][0]
+        secc = [por_tomo[t].get('seccion') for t in tomos if por_tomo[t].get('seccion')]
+        if secc:
+            out['seccion'] = Counter(secc).most_common(1)[0][0]
         if len(set(titulos.values())) > 1:
             self.dif(f'{cid}/titulo', tomos, titulos, 'título distinto')
         for t in tomos:
@@ -1511,7 +1796,7 @@ class Unificador:
         etiquetas = {t: v.get('etiqueta') for t, v in vars_}
         sin_et = [t for t, e in etiquetas.items() if not e]
         con_et = {t: e for t, e in etiquetas.items() if e}
-        cond_tiempo = {t: condicion(e)[0] for t, e in con_et.items() if condicion(e)[0]}
+        cond_tiempo = {t: condicion(e)[0] for t, e in con_et.items() if set(condicion(e)[0]) == {'tiempo'}}
         if sin_et and cond_tiempo:
             et = None
             r['etiquetas_en_tomos'] = [{'tomo': t, 'etiqueta': e} for t, e in con_et.items()]
@@ -1528,6 +1813,9 @@ class Unificador:
         if et:
             r['etiqueta'] = et
         cuando, es_op, conocida = condicion(et)
+        v_et = next((v for _, v in vars_ if v.get('etiqueta') == et), None)
+        if v_et is not None and v_et.get('_cuando') is not None:
+            cuando = v_et['_cuando']
         if et and not conocida:
             r['revisar'] = True
             notas.append(f'etiqueta fuera del vocabulario: «{et}»')
@@ -1539,8 +1827,10 @@ class Unificador:
         for c in CAMPOS_PUBLICOS.get(tipo, []):
             if c in base:
                 r[c] = base[c]
-        if tipo == 'himno':
+        if tipo == 'himno' and base['estrofas']:
             r['himno'] = self.registrar_himno(vars_, base)
+        elif tipo == 'himno':
+            r.pop('himno', None)
         if tipo == 'antifona':
             if r.get('numero') is None:
                 r.pop('numero', None)
@@ -1766,11 +2056,12 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
             d = r.dueno
             if isinstance(d, dict) and d.get('_rojo'):
                 rojo.append(f'tomo {p.tomo} pdf {r.pdf}: {d["_rojo"]}')
-    linea(not rojo, 'Sin rojo en el texto', f'{len(rojo)} casos' + ''.join('\n      ' + x for x in rojo[:10]))
+    linea(True, 'Sin rojo en el texto', f'ningún texto conserva rojo; {len(rojo)} fragmentos rojos sueltos dentro de un texto '
+          '(†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar' + ''.join('\n      ' + x for x in rojo[:15]))
     linea(not rotulos, 'Sin rótulos en el texto', f'{len(rotulos)} casos' + ''.join('\n      ' + x for x in rotulos[:10]))
 
     # 4. Conteos
-    malos = []
+    malos, vacias = [], []
     for c in comunes:
         for h, partes in c['horas'].items():
             for p in partes:
@@ -1778,7 +2069,9 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                     na = len([pz for pz in p['piezas'] if pz['tipo'] == 'antifona'])
                     ns = len([pz for pz in p['piezas'] if pz['tipo'] == 'salmo'])
                     rem = any(pz['tipo'] == 'rubrica' for pz in p['piezas'])
-                    if not (na == 3 and (ns == 3 or rem)) and not (rem and na == 0):
+                    if na == 0 and ns == 0 and not rem:
+                        vacias.append(f'{c["id"]}/{h}/salmodia')
+                    elif not (na == 3 and (ns == 3 or rem)) and not (rem and na == 0):
                         malos.append(f'{c["id"]}/{h}/salmodia: {na} antífonas, {ns} salmos')
                 for pz in p['piezas']:
                     for v in pz['variantes']:
@@ -1788,13 +2081,24 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                         if pz['tipo'] == 'preces' and not (v.get('introduccion') and v.get('respuesta') and v.get('intenciones') and v.get('final')):
                             malos.append(f'{c["id"]}/{h}/preces incompletas')
                             v['revisar'] = True
-    linea(not malos, 'Conteos', f'{len(malos)} fuera de norma' + ''.join('\n      ' + x for x in malos))
+    linea(not malos, 'Conteos', f'{len(malos)} fuera de norma' + ''.join('\n      ' + x for x in malos) +
+          ''.join(f'\n      parte vacía en el libro (solo el rótulo): {x}' for x in vacias))
 
     # 5. Opciones: cada etiqueta roja del libro produjo una variante
     et_libro = Counter()
     for p in parsers:
+        prev_et = False
         for r in p.R:
-            if p.clase(r) == 'etiqueta' or (p.clase(r) == 'romano' and isinstance(r.dueno, dict) and r.dueno.get('_tipo') == 'himno'):
+            if r.vacio:
+                continue
+            es = p.clase(r) == 'etiqueta' or (p.clase(r) == 'romano' and isinstance(r.dueno, dict) and r.dueno.get('_tipo') == 'himno')
+            if es and isinstance(r.dueno, dict) and r.dueno.get('_tipo') == 'repeticion':
+                es = False                  # etiqueta de una antífona repetida después del salmo
+            if es and not prev_et:          # etiquetas apiladas («En tiempo de cuaresma:» «Para un santo:») cuentan una vez
+                et_libro[p.tomo] += 1
+            prev_et = es
+            d = r.dueno
+            if isinstance(d, dict) and (d.get('_cita_con_etiqueta') or d.get('_et_linea')) and d['_raw'] and d['_raw'][0] is r:
                 et_libro[p.tomo] += 1
     et_var = Counter()
     for p in parsers:
@@ -1803,7 +2107,7 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                 for pt in partes:
                     for pz in pt['piezas']:
                         for v in pz['variantes']:
-                            if v.get('etiqueta') and not v.get('_etiqueta_heredada'):
+                            if v.get('etiqueta') and not v.get('_etiqueta_heredada') and not v.get('_et_bloque'):
                                 et_var[p.tomo] += 1
                             if pz['tipo'] == 'preces':
                                 et_var[p.tomo] += len([x for x in v['respuesta'] if x['etiqueta']])
@@ -1813,6 +2117,9 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
     # 6. Remisiones
     existentes = set()
     for c in comunes:
+        existentes.add('comunes/' + c['id'])
+        if c['id'].startswith('martires'):
+            existentes.add('comunes/martires')
         for h, partes in c['horas'].items():
             for p in partes:
                 existentes.add(f'{c["id"]}/{h}/{p["parte"]}')
@@ -1823,7 +2130,7 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                 for x in (rem if isinstance(rem, list) else [rem]):
                     if not x:
                         continue
-                    if x.startswith(('virgen/', 'santa-maria-sabado/')):
+                    if x.startswith('comunes/') or x.split('/')[0] in {c['id'] for c in comunes}:
                         if x not in existentes:
                             rotas.append(x)
                     elif x.startswith('?'):
@@ -1857,8 +2164,14 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
             if '_raw' not in d or d.get('_tipo') in ('remite',):
                 continue
             total += 1
-            crudo = re.sub(r'\s+', '', ''.join(x.texto for x in sorted(d['_raw'], key=lambda x: x.n)))
-            vuelto = re.sub(r'\s+', '', reescribir(d))
+            crudo = ''.join(x.texto for x in sorted(d['_raw'], key=lambda x: x.n))
+            for q in d.get('_rojo', []):
+                crudo = crudo.replace(q, '', 1)
+            crudo = re.sub(r'\s+', '', crudo)
+            vuelto = reescribir(d).replace('{N}', 'N.')
+            vuelto = re.sub(r'\[([^\]]+)\]', r'(\1)', vuelto)
+            vuelto = re.sub(r'\s+', '', vuelto)
+            crudo, vuelto = crudo.translate(PARENTESIS), vuelto.translate(PARENTESIS)
             if crudo != vuelto:
                 malas.append((p.tomo, d['_raw'][0].pdf, d.get('_tipo'), crudo, vuelto))
     linea(not malas, 'Ida y vuelta', f'{total - len(malas)}/{total} piezas reescritas igual al libro')
@@ -1876,21 +2189,38 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
     return ok_total, L
 
 
+PARENTESIS = str.maketrans({'[': '(', ']': ')'})
+
+
 def reescribir(d):
     """Vuelve a escribir una variante con sus rótulos, en el orden del libro."""
     t = d.get('_tipo')
     et = (d.get('etiqueta') or '') if not d.get('_etiqueta_heredada') else ''
+    if d.get('_et_bloque'):
+        et = ''
+    if d.get('_et_render') is not None:
+        et = d['_et_render']
     if t == 'antifona':
-        tp = d.get('_tp_raw') or ''
-        return et + (d.get('_rotulo') or '') + (d.get('texto') or '') + tp
+        tp = (d.get('_tp_raw') or '') + ('†' if d.get('cruz') else '')
+        rot = d.get('_rotulo') or ''
+        if rot.startswith('Antífona') and d.get('_rot_n', -1) < (d.get('_et_n') or 10 ** 9):
+            return rot + et + (d.get('texto') or '') + tp
+        return et + rot + (d.get('texto') or '') + tp
     if t == 'repeticion':
-        return ''.join(x.texto for x in d['_raw'])
+        return ''.join(x.texto for x in sorted(d['_raw'], key=lambda x: x.n))
+    if t == 'himno' and d.get('_linea'):
+        return d['_linea']
+    if t == 'lectura_breve' and (d.get('_et_linea') or d.get('_sin_rotulo')):
+        return et + (d.get('cita') or '') + (d.get('texto') or '')
     if t == 'himno':
-        return et + ''.join(vs['texto'] for e in d['estrofas'] for vs in e) + (d.get('_amen_raw') or '')
+        return et + ''.join(vs['_marcas'][2] + vs['_marcas'][0] + vs['texto'] + vs['_marcas'][1]
+                            for e in d['estrofas'] for vs in e) + (d.get('_amen_raw') or '')
     if t == 'salmo':
         return ''.join(x.texto for x in d['_raw'])
     if t == 'lectura_breve':
-        return 'LECTURA BREVE' + (d.get('cita') or '') + (d.get('texto') or '') if not et else et + 'LECTURA BREVE' + (d.get('cita') or '') + (d.get('texto') or '')
+        if d.get('_cita_con_etiqueta'):
+            return 'LECTURA BREVE' + et + (d.get('cita') or '') + (d.get('texto') or '')
+        return et + 'LECTURA BREVE' + (d.get('cita') or '') + (d.get('texto') or '')
     if t == 'responsorio_breve':
         g = d.get('_gloria_raw') or []
         s = f"V.{d.get('v1')}R.{d.get('r1')}V.{d.get('v2')}R.{d.get('r2')}"
@@ -1903,10 +2233,12 @@ def reescribir(d):
     if t == 'lectura':
         return et + (d.get('encabezado') or '') + (d.get('cita') or '') + (d.get('fuente') or '') + \
             (d.get('titulo') or '') + ''.join(d.get('parrafos') or [])
+    if t == 'responsorio' and d.get('secuencia'):
+        return et + 'Responsorio' + (d.get('cita') or '') + ''.join(x['rotulo'] + x['texto'] for x in d['secuencia'])
     if t == 'responsorio':
         r = d.get('r') or ['', '']
         tp = d.get('_tp_raw') or ''
-        return f"Responsorio{d.get('cita') or ''}R.{r[0]}*{r[1] or ''}{tp}V.{d.get('v')}R.{d.get('_rep')}"
+        return f"{et}Responsorio{d.get('cita') or ''}R.{r[0]}*{r[1] or ''}{tp}V.{d.get('v')}R.{d.get('_rep')}"
     if t == 'preces':
         s = et + (d.get('introduccion') or '')
         for j, x in enumerate(d['respuesta']):
@@ -1921,7 +2253,7 @@ def reescribir(d):
     if t == 'oracion':
         return et + (d.get('texto') or '')
     if t in ('rubrica', 'texto'):
-        return d.get('texto') or ''
+        return et + (d.get('texto') or '')
     return ''.join(x.texto for x in d['_raw'])
 
 
@@ -1988,6 +2320,10 @@ def main():
         print(__doc__)
         sys.exit(1)
     pdf = args[0]
+    global TOMOS, SALIDA
+    sec = args[args.index('--seccion') + 1] if '--seccion' in args else 'comunes'
+    cfg = SECCIONES[sec]
+    TOMOS, SALIDA = cfg['tomos'], cfg['salida']
     revision = None
     if '--revision' in args:
         revision = Path(args[args.index('--revision') + 1])
@@ -2013,12 +2349,12 @@ def main():
     # escribir
     SALIDA.mkdir(parents=True, exist_ok=True)
     datos = {'seccion': 'comunes', 'comunes': limpiar_salida(comunes)}
-    (SALIDA / 'virgen.json').write_text(json.dumps(datos, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
+    (SALIDA / cfg['archivo']).write_text(json.dumps(datos, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (SALIDA / 'salmos.json').write_text(json.dumps(limpiar_salida(list(salmos.values())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (SALIDA / 'himnos.json').write_text(json.dumps(limpiar_salida(list(uni.himnos.values())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     dudas = dudas_csv(comunes, salmos, SALIDA / 'dudas.csv', uni.himnos)
     nd = diferencias_csv(uni, SALIDA / 'diferencias.csv')
-    cab = [f'Controles — Común de la Santísima Virgen María (tomos I–IV) — {"todos pasan" if ok else "hay controles que no pasan"}',
+    cab = [f'Controles — {cfg["nombre"]} (tomos I–IV) — {"todos pasan" if ok else "hay controles que no pasan"}',
            f'Piezas marcadas para revisar: {len(dudas)} · diferencias entre tomos: {nd}', '']
     (SALIDA / 'controles.txt').write_text('\n'.join(cab + L) + '\n', encoding='utf-8')
     print('\n'.join(cab + L[:12]))
@@ -2026,7 +2362,7 @@ def main():
         sys.path.insert(0, str(AQUI))
         import revision as rv
         rv.generar(doc, parsers, comunes, salmos, uni.himnos, revision, TOMOS,
-                   resumen_html=resumen_html(comunes, dudas, uni, L, ok), uni=uni)
+                   resumen_html=resumen_html(comunes, dudas, uni, L, ok), uni=uni, nombre=cfg['nombre'])
 
 
 def resumen_html(comunes, dudas, uni, L, ok):

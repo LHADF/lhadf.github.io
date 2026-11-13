@@ -1,0 +1,7146 @@
+[
+ {
+  "id": "damos-gracias-a-dios-padre",
+  "primer_verso": "Damos gracias a Dios Padre,",
+  "estrofas": [
+   [
+    {
+     "texto": "Damos gracias a Dios Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "que nos ha hecho capaces de compartir",
+     "sangria": 1
+    },
+    {
+     "texto": "la herencia del pueblo santo en la luz.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Él nos ha sacado del dominio de las tinieblas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y nos ha trasladado al reino de su Hijo querido,",
+     "sangria": 1
+    },
+    {
+     "texto": "por cuya sangre hemos recibido la redención,",
+     "sangria": 1
+    },
+    {
+     "texto": "el perdón de los pecados.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Él es imagen de Dios invisible,",
+     "sangria": 0
+    },
+    {
+     "texto": "primogénito de toda criatura;",
+     "sangria": 1
+    },
+    {
+     "texto": "pues por medio de él fueron creadas todas las cosas:",
+     "sangria": 1
+    },
+    {
+     "texto": "celestes y terrestres, visibles e invisibles,",
+     "sangria": 1
+    },
+    {
+     "texto": "Tronos, Dominaciones, Principados, Potestades;",
+     "sangria": 1
+    },
+    {
+     "texto": "todo fue creado por él y para él.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Él es anterior a todo, y todo se mantiene en él.",
+     "sangria": 0
+    },
+    {
+     "texto": "Él es también la cabeza del cuerpo de la Iglesia.",
+     "sangria": 1
+    },
+    {
+     "texto": "Él es el principio, el primogénito de entre los muertos,",
+     "sangria": 1
+    },
+    {
+     "texto": "y así es el primero en todo.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Porque en él quiso Dios que residiera toda plenitud.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y por él quiso reconciliar consigo todas las cosas:",
+     "sangria": 1
+    },
+    {
+     "texto": "haciendo la paz por la sangre de su cruz",
+     "sangria": 1
+    },
+    {
+     "texto": "con todos los seres, así del cielo como de la tierra.",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2439,
+    "impresa": "1311",
+    "pdf_fin": 2440,
+    "impresa_fin": "1312"
+   }
+  ]
+ },
+ {
+  "id": "no-rechazaremos",
+  "primer_verso": "No rechazaremos",
+  "estrofas": [
+   [
+    {
+     "texto": "No rechazaremos",
+     "sangria": 2
+    },
+    {
+     "texto": "la piedra angular.",
+     "sangria": 2
+    },
+    {
+     "texto": "Sobre el cimiento de tu cuerpo",
+     "sangria": 2
+    },
+    {
+     "texto": "levantaremos la ciudad.",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Una ciudad para todos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Un gran techo común.",
+     "sangria": 0
+    },
+    {
+     "texto": "Una mesa redonda como el mundo.",
+     "sangria": 0
+    },
+    {
+     "texto": "Un pan de multitud.",
+     "sangria": 0
+    },
+    {
+     "texto": "Un lenguaje de corazón abierto.",
+     "sangria": 0
+    },
+    {
+     "texto": "Una esperanza: \"Ven, Señor Jesús\".",
+     "sangria": 0
+    },
+    {
+     "texto": "Suben las tribus del mundo,",
+     "sangria": 0
+    },
+    {
+     "texto": "suben a la ciudad.",
+     "sangria": 0
+    },
+    {
+     "texto": "Los que hablaban en lenguas diferentes",
+     "sangria": 0
+    },
+    {
+     "texto": "proclaman la unidad.",
+     "sangria": 0
+    },
+    {
+     "texto": "Nadie grita: \"¿Quién eres?\", O: \"¿De dónde?\"",
+     "sangria": 0
+    },
+    {
+     "texto": "Todos se llaman hijos de la paz.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 837,
+    "impresa": "837",
+    "pdf_fin": 838,
+    "impresa_fin": "838"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2442,
+    "impresa": "1314",
+    "pdf_fin": 2443,
+    "impresa_fin": "1315"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4088,
+    "impresa": "1274",
+    "pdf_fin": 4089,
+    "impresa_fin": "1275"
+   }
+  ]
+ },
+ {
+  "id": "jerusalen-ciudad-dichosa",
+  "primer_verso": "¡Jerusalén, ciudad dichosa!",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Jerusalén, ciudad dichosa!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Jerusalén, visión de paz!",
+     "sangria": 0
+    },
+    {
+     "texto": "Sobre los cielos te levantas,",
+     "sangria": 0
+    },
+    {
+     "texto": "alta ciudad de piedras vivas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y ángeles puros te coronan",
+     "sangria": 0
+    },
+    {
+     "texto": "como una joven desposada.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Jerusalén, ciudad dichosa!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Desciendes virgen de los cielos",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "y entras al tálamo de bodas",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "para ser cuerpo del Esposo;",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "tus azoteas y tus muros",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "son construcción de oro purísimo.",
+     "opcional": true,
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Relampaguea jubilosa",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "la pedrería de tus puertas;",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "abres tus ámbitos sagrados",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "y, por la palma de sus méritos,",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "penetra en ellos el que sufre",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "pasión por Cristo en este mundo.",
+     "opcional": true,
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh hermosas piedras bien labradas,",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "prueba tras prueba, golpe a golpe!",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "¡Como se ajustan en sus puestos",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "bajo la mano del artífice,",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "y permanecen duraderas",
+     "opcional": true,
+     "sangria": 0
+    },
+    {
+     "texto": "en los sagrados edificios!",
+     "opcional": true,
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria y honor al Dios altísimo,",
+     "sangria": 0
+    },
+    {
+     "texto": "al Padre, al Hijo y al Paráclito.",
+     "sangria": 0
+    },
+    {
+     "texto": "Suyo el poder y la alabanza;",
+     "sangria": 0
+    },
+    {
+     "texto": "suyo el reinado por los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 838,
+    "impresa": "838"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2443,
+    "impresa": "1315",
+    "pdf_fin": 2444,
+    "impresa_fin": "1316"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4089,
+    "impresa": "1275"
+   }
+  ]
+ },
+ {
+  "id": "nueva-jerusalen-y-ciudad-santa",
+  "primer_verso": "Nueva Jerusalén y ciudad santa,",
+  "estrofas": [
+   [
+    {
+     "texto": "Nueva Jerusalén y ciudad santa,",
+     "sangria": 0
+    },
+    {
+     "texto": "nuevo Israel, nueva morada",
+     "sangria": 0
+    },
+    {
+     "texto": "de la comunidad de Dios en Cristo edificada,",
+     "sangria": 0
+    },
+    {
+     "texto": "Iglesia santa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Esposa engalanada, con Cristo desposada",
+     "sangria": 0
+    },
+    {
+     "texto": "por obra del Espíritu en sólida alianza,",
+     "sangria": 0
+    },
+    {
+     "texto": "divino hogar, fuego de Dios que al mundo inflama,",
+     "sangria": 0
+    },
+    {
+     "texto": "Iglesia santa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Edén de Dios y nuevo paraíso,",
+     "sangria": 0
+    },
+    {
+     "texto": "donde el nuevo Adán recrea a sus hermanos,",
+     "sangria": 0
+    },
+    {
+     "texto": "donde el «no» del pecador, por pura gracia,",
+     "sangria": 0
+    },
+    {
+     "texto": "el «sí» eterno de amor de Dios alcanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "Iglesia santa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Adoremos a Dios omnipotente y a su Espíritu,",
+     "sangria": 0
+    },
+    {
+     "texto": "que en el Hijo Jesús, Señor constituido,",
+     "sangria": 0
+    },
+    {
+     "texto": "del hombre que ha caído raza de Dios levanta,",
+     "sangria": 0
+    },
+    {
+     "texto": "Iglesia santa.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2444,
+    "impresa": "1316"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4089,
+    "impresa": "1275",
+    "pdf_fin": 4090,
+    "impresa_fin": "1276"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5953,
+    "impresa": "1483",
+    "pdf_fin": 5954,
+    "impresa_fin": "1484"
+   },
+   {
+    "tomo": 1,
+    "pdf": 847,
+    "impresa": "847"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2453,
+    "impresa": "1325",
+    "pdf_fin": 2454,
+    "impresa_fin": "1326"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4098,
+    "impresa": "1284",
+    "pdf_fin": 4099,
+    "impresa_fin": "1285"
+   }
+  ]
+ },
+ {
+  "id": "piedra-angular-y-fundamento-es-cristo",
+  "primer_verso": "Piedra angular y fundamento es Cristo",
+  "estrofas": [
+   [
+    {
+     "texto": "Piedra angular y fundamento es Cristo",
+     "sangria": 0
+    },
+    {
+     "texto": "del templo espiritual que al Padre alaba,",
+     "sangria": 0
+    },
+    {
+     "texto": "en comunión de amor con el Espíritu",
+     "sangria": 0
+    },
+    {
+     "texto": "viviente, en lo más íntimo del alma.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Piedras vivas son todos los cristianos,",
+     "sangria": 0
+    },
+    {
+     "texto": "ciudad, reino de Dios edificándose,",
+     "sangria": 0
+    },
+    {
+     "texto": "entre sonoros cánticos de júbilo,",
+     "sangria": 0
+    },
+    {
+     "texto": "al Rey del universo, templo santo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El cosmos de alegría se estremece",
+     "sangria": 0
+    },
+    {
+     "texto": "en latido vital de nueva savia,",
+     "sangria": 0
+    },
+    {
+     "texto": "al pregustar el gozo y la alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "de un cielo y una tierra renovados.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cantad, hijos de Dios, adelantados",
+     "sangria": 0
+    },
+    {
+     "texto": "del Cristo total, humanidad salvada,",
+     "sangria": 0
+    },
+    {
+     "texto": "en la que Dios en todos será todo,",
+     "sangria": 0
+    },
+    {
+     "texto": "comunión viva en plenitud colmada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias al Padre, que nos llama",
+     "sangria": 0
+    },
+    {
+     "texto": "a ser sus hijos en el Hijo amado,",
+     "sangria": 0
+    },
+    {
+     "texto": "abramos nuestro espíritu al Espíritu,",
+     "sangria": 0
+    },
+    {
+     "texto": "adoremos a Dios que a todos nos salva.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 844,
+    "impresa": "844"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2450,
+    "impresa": "1322",
+    "pdf_fin": 2451,
+    "impresa_fin": "1323"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4095,
+    "impresa": "1281"
+   }
+  ]
+ },
+ {
+  "id": "el-cielo-y-la-tierra",
+  "primer_verso": "El cielo y la tierra",
+  "estrofas": [
+   [
+    {
+     "texto": "El cielo y la tierra",
+     "sangria": 0
+    },
+    {
+     "texto": "celebren, aplaudan",
+     "sangria": 0
+    },
+    {
+     "texto": "a la Iglesia, esposa",
+     "sangria": 0
+    },
+    {
+     "texto": "sin arruga y mancha.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Descienda a nosotros",
+     "sangria": 0
+    },
+    {
+     "texto": "la ciudad sagrada,",
+     "sangria": 0
+    },
+    {
+     "texto": "en que todo es nuevo",
+     "sangria": 0
+    },
+    {
+     "texto": "y de rica gala.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En piedras preciosas",
+     "sangria": 0
+    },
+    {
+     "texto": "está cimentada,",
+     "sangria": 0
+    },
+    {
+     "texto": "y bien construida",
+     "sangria": 0
+    },
+    {
+     "texto": "en brillos de gracia.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Las piedras preciosas",
+     "sangria": 0
+    },
+    {
+     "texto": "que están a su entrada",
+     "sangria": 0
+    },
+    {
+     "texto": "muestran la hermosura",
+     "sangria": 0
+    },
+    {
+     "texto": "de esta casa santa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Descienda a nosotros",
+     "sangria": 0
+    },
+    {
+     "texto": "esta santa casa,",
+     "sangria": 0
+    },
+    {
+     "texto": "que hizo el Rey eterno",
+     "sangria": 0
+    },
+    {
+     "texto": "para su morada.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4095,
+    "impresa": "1281",
+    "pdf_fin": 4096,
+    "impresa_fin": "1282"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5960,
+    "impresa": "1490"
+   }
+  ]
+ },
+ {
+  "id": "alta-ciudad-de-piedras-vivas",
+  "primer_verso": "Alta ciudad de piedras vivas,",
+  "estrofas": [
+   [
+    {
+     "texto": "Alta ciudad de piedras vivas,",
+     "sangria": 0
+    },
+    {
+     "texto": "Jerusalén;",
+     "sangria": 0
+    },
+    {
+     "texto": "visión de paz y cielos nuevos,",
+     "sangria": 0
+    },
+    {
+     "texto": "ciudad del Rey.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tus puertas se abren jubilosas,",
+     "sangria": 0
+    },
+    {
+     "texto": "visión de paz,",
+     "sangria": 0
+    },
+    {
+     "texto": "y penetran los ríos de tus santos",
+     "sangria": 0
+    },
+    {
+     "texto": "hasta el altar.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Baluartes y murallas de oro,",
+     "sangria": 0
+    },
+    {
+     "texto": "Jerusalén;",
+     "sangria": 0
+    },
+    {
+     "texto": "tus calles, gemas y zafiros,",
+     "sangria": 0
+    },
+    {
+     "texto": "ciudad del Rey.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Jerusalén, Iglesia viva",
+     "sangria": 0
+    },
+    {
+     "texto": "de eternidad:",
+     "sangria": 0
+    },
+    {
+     "texto": "hacia ti caminan los hombres,",
+     "sangria": 0
+    },
+    {
+     "texto": "sin descansar.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Alta ciudad del Cristo vivo,",
+     "sangria": 0
+    },
+    {
+     "texto": "que es nuestro hogar,",
+     "sangria": 0
+    },
+    {
+     "texto": "al que volveremos, ya cansados",
+     "sangria": 0
+    },
+    {
+     "texto": "de caminar.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cielos nuevos y tierra nueva,",
+     "sangria": 0
+    },
+    {
+     "texto": "Jerusalén;",
+     "sangria": 0
+    },
+    {
+     "texto": "morada de Dios Trino y Uno.",
+     "sangria": 0
+    },
+    {
+     "texto": "Amén, amén.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2454,
+    "impresa": "1326"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4099,
+    "impresa": "1285"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5963,
+    "impresa": "1493"
+   }
+  ]
+ },
+ {
+  "id": "maria-pureza-en-vuelo",
+  "primer_verso": "María, pureza en vuelo,",
+  "estrofas": [
+   [
+    {
+     "texto": "María, pureza en vuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "Virgen de vírgenes, danos",
+     "sangria": 0
+    },
+    {
+     "texto": "la gracia de ser humanos",
+     "sangria": 0
+    },
+    {
+     "texto": "sin olvidarnos del cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Enséñanos a vivir;",
+     "sangria": 0
+    },
+    {
+     "texto": "ayúdenos tu oración;",
+     "sangria": 0
+    },
+    {
+     "texto": "danos en la tentación",
+     "sangria": 0
+    },
+    {
+     "texto": "la gracia de resistir.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Honor a la Trinidad",
+     "sangria": 0
+    },
+    {
+     "texto": "por esta limpia victoria.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y gloria por esta gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "que alegra la cristiandad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 855,
+    "impresa": "855"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2463,
+    "impresa": "1335",
+    "pdf_fin": 2464,
+    "impresa_fin": "1336"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4108,
+    "impresa": "1294"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5972,
+    "impresa": "1502",
+    "pdf_fin": 5973,
+    "impresa_fin": "1503"
+   }
+  ]
+ },
+ {
+  "id": "lucero-de-la-manana",
+  "primer_verso": "Lucero de la mañana,",
+  "estrofas": [
+   [
+    {
+     "texto": "Lucero de la mañana,",
+     "sangria": 0
+    },
+    {
+     "texto": "norte que muestra el camino,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando turba de continuo",
+     "sangria": 0
+    },
+    {
+     "texto": "nuestro mar la tramontana.",
+     "sangria": 0
+    },
+    {
+     "texto": "Quien tanta grandeza explica",
+     "sangria": 0
+    },
+    {
+     "texto": "sin alas puede volar,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque no podrá alabar",
+     "sangria": 0
+    },
+    {
+     "texto": "a la que es más santa y rica.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Sois pastora de tal suerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "que aseguráis los rebaños",
+     "sangria": 0
+    },
+    {
+     "texto": "de mortandades y daños,",
+     "sangria": 0
+    },
+    {
+     "texto": "dando al lobo cruda muerte.",
+     "sangria": 0
+    },
+    {
+     "texto": "Dais vida a quien se os aplica,",
+     "sangria": 0
+    },
+    {
+     "texto": "y en los cielos y en la tierra",
+     "sangria": 0
+    },
+    {
+     "texto": "libráis las almas de guerra,",
+     "sangria": 0
+    },
+    {
+     "texto": "como poderosa y rica.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Si vuestro ejemplo tomasen",
+     "sangria": 0
+    },
+    {
+     "texto": "las pastoras y pastores,",
+     "sangria": 0
+    },
+    {
+     "texto": "yo fío que de dolores",
+     "sangria": 0
+    },
+    {
+     "texto": "para siempre se librasen.",
+     "sangria": 0
+    },
+    {
+     "texto": "Tanto Dios se os comunica,",
+     "sangria": 0
+    },
+    {
+     "texto": "que sin fin os alabamos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y más cuando os contemplamos",
+     "sangria": 0
+    },
+    {
+     "texto": "en el mundo la más rica.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2464,
+    "impresa": "1336"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4108,
+    "impresa": "1294",
+    "pdf_fin": 4109,
+    "impresa_fin": "1295"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5973,
+    "impresa": "1503"
+   }
+  ]
+ },
+ {
+  "id": "quien-podra-tanto-alabarte",
+  "primer_verso": "Quién podrá tanto alabarte",
+  "estrofas": [
+   [
+    {
+     "texto": "Quién podrá tanto alabarte",
+     "sangria": 0
+    },
+    {
+     "texto": "según es tu merecer;",
+     "sangria": 0
+    },
+    {
+     "texto": "quién sabrá también loarte",
+     "sangria": 0
+    },
+    {
+     "texto": "que no le falte saber;",
+     "sangria": 0
+    },
+    {
+     "texto": "pues que para nos valer",
+     "sangria": 0
+    },
+    {
+     "texto": "tanto vales,",
+     "sangria": 1
+    },
+    {
+     "texto": "da remedio a nuestros males.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh Madre de Dios y hombre!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Oh concierto de concordia!",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú que tienes por renombre",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre de misericordia;",
+     "sangria": 0
+    },
+    {
+     "texto": "pues para quitar discordia",
+     "sangria": 0
+    },
+    {
+     "texto": "tanto vales,",
+     "sangria": 1
+    },
+    {
+     "texto": "da remedio a nuestros males.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú que estabas ya criada",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando el mundo se crió;",
+     "sangria": 0
+    },
+    {
+     "texto": "tú que estabas muy guardada",
+     "sangria": 0
+    },
+    {
+     "texto": "para quien de tí nació;",
+     "sangria": 0
+    },
+    {
+     "texto": "pues por tí nos conoció,",
+     "sangria": 0
+    },
+    {
+     "texto": "si nos vales,",
+     "sangria": 1
+    },
+    {
+     "texto": "fenecerán nuestros males.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú que eres flor de las flores,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú que del cielo eres puerta,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú que eres olor de olores,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú que das gloria muy cierta;",
+     "sangria": 0
+    },
+    {
+     "texto": "si de la muerte muy muerta",
+     "sangria": 0
+    },
+    {
+     "texto": "no nos vales,",
+     "sangria": 1
+    },
+    {
+     "texto": "no hay remedio a nuestros males.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 861,
+    "impresa": "861"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4115,
+    "impresa": "1301",
+    "pdf_fin": 4116,
+    "impresa_fin": "1302"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5980,
+    "impresa": "1510",
+    "pdf_fin": 5981,
+    "impresa_fin": "1511"
+   }
+  ]
+ },
+ {
+  "id": "lucero-del-alba",
+  "primer_verso": "Lucero del alba,",
+  "estrofas": [
+   [
+    {
+     "texto": "Lucero del alba,",
+     "sangria": 0
+    },
+    {
+     "texto": "luz de mi alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Virgen y Madre,",
+     "sangria": 0
+    },
+    {
+     "texto": "hija del Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Flor del Espíritu,",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre del Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Amor maternal",
+     "sangria": 0
+    },
+    {
+     "texto": "del Cristo total,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 862,
+    "impresa": "862"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2472,
+    "impresa": "1344"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4116,
+    "impresa": "1302"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5981,
+    "impresa": "1511",
+    "pdf_fin": 5982,
+    "impresa_fin": "1512"
+   }
+  ]
+ },
+ {
+  "id": "quien-podra-tanto-alabarte-2",
+  "primer_verso": "¿Quién podrá tanto alabarte",
+  "estrofas": [
+   [
+    {
+     "texto": "¿Quién podrá tanto alabarte",
+     "sangria": 0
+    },
+    {
+     "texto": "según es tu merecer?",
+     "sangria": 0
+    },
+    {
+     "texto": "¿Quién sabrá tan bien loarte",
+     "sangria": 0
+    },
+    {
+     "texto": "que no le falte saber?;",
+     "sangria": 0
+    },
+    {
+     "texto": "pues que para nos valer",
+     "sangria": 0
+    },
+    {
+     "texto": "tanto vales,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡da remedio a nuestros males!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡O, Madre de Dios y Hombre!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡O concierto de concordia!",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú, que tienes por renombre",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre de misericordia,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues para quitar discordia",
+     "sangria": 0
+    },
+    {
+     "texto": "tanto vales,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡da remedio a nuestros males!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú, que por gran humildad",
+     "sangria": 0
+    },
+    {
+     "texto": "fueste tan alto ensalçada",
+     "sangria": 0
+    },
+    {
+     "texto": "que a par de la Trinidad",
+     "sangria": 0
+    },
+    {
+     "texto": "tú sola estás assentada.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y pues tú, Reyna Sagrada,",
+     "sangria": 0
+    },
+    {
+     "texto": "tanto vales,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡da remedio a nuestros males!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú, que estavas ya criada",
+     "sangria": 0
+    },
+    {
+     "texto": "quando el mundo se crio;",
+     "sangria": 0
+    },
+    {
+     "texto": "tú, que estavas muy guardada",
+     "sangria": 0
+    },
+    {
+     "texto": "para quien de ti nació,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues por ti nos conoció,",
+     "sangria": 0
+    },
+    {
+     "texto": "si nos vales",
+     "sangria": 0
+    },
+    {
+     "texto": "fenecerán nuestros males.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2471,
+    "impresa": "1343",
+    "pdf_fin": 2472,
+    "impresa_fin": "1344"
+   }
+  ]
+ },
+ {
+  "id": "eres-tu-la-mujer-llena-de-gloria",
+  "primer_verso": "Eres tú la mujer llena de gloria,",
+  "estrofas": [
+   [
+    {
+     "texto": "Eres tú la mujer llena de gloria,",
+     "sangria": 0
+    },
+    {
+     "texto": "alzada por encima de los astros;",
+     "sangria": 0
+    },
+    {
+     "texto": "con tu sagrado pecho das la leche",
+     "sangria": 0
+    },
+    {
+     "texto": "al que en su providencia te ha creado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Lo que Eva nos perdió tan tristemente,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú lo devuelves por tu fruto santo;",
+     "sangria": 0
+    },
+    {
+     "texto": "para que al cielo ingresen los que lloran,",
+     "sangria": 0
+    },
+    {
+     "texto": "eres tú la ventana del costado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú eres la puerta altísima del Rey",
+     "sangria": 0
+    },
+    {
+     "texto": "y la entrada fulgente de la luz;",
+     "sangria": 0
+    },
+    {
+     "texto": "la vida que esta Virgen nos devuelve",
+     "sangria": 0
+    },
+    {
+     "texto": "aplauda el pueblo que alcanzó salud.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Sea la gloria a ti, Señor Jesús,",
+     "sangria": 0
+    },
+    {
+     "texto": "que de María Virgen has nacido,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria contigo al Padre y al Paráclito,",
+     "sangria": 0
+    },
+    {
+     "texto": "por sempiternos y gozosos siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2472,
+    "impresa": "1344"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4116,
+    "impresa": "1302",
+    "pdf_fin": 4117,
+    "impresa_fin": "1303"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5982,
+    "impresa": "1512"
+   }
+  ]
+ },
+ {
+  "id": "todos-te-deben-servir",
+  "primer_verso": "Todos te deben servir,",
+  "estrofas": [
+   [
+    {
+     "texto": "Todos te deben servir,",
+     "sangria": 0
+    },
+    {
+     "texto": "Virgen y Madre de Dios,",
+     "sangria": 0
+    },
+    {
+     "texto": "que siempre ruegas por nos",
+     "sangria": 0
+    },
+    {
+     "texto": "y tú nos haces vivir.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tanta fue tu perfección",
+     "sangria": 0
+    },
+    {
+     "texto": "y de tanto merecer,",
+     "sangria": 0
+    },
+    {
+     "texto": "que de ti quiso nacer",
+     "sangria": 0
+    },
+    {
+     "texto": "quien fue nuestra redención.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El tesoro divinal",
+     "sangria": 0
+    },
+    {
+     "texto": "en tu vientre se encerró,",
+     "sangria": 0
+    },
+    {
+     "texto": "tan precioso, que libró",
+     "sangria": 0
+    },
+    {
+     "texto": "todo el linaje humanal.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú sellaste nuestra fe",
+     "sangria": 0
+    },
+    {
+     "texto": "con el sello de la cruz,",
+     "sangria": 0
+    },
+    {
+     "texto": "tu pariste nuestra luz,",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios de ti nacido fue.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh clara virginidad,",
+     "sangria": 0
+    },
+    {
+     "texto": "fuente de toda virtud!",
+     "sangria": 0
+    },
+    {
+     "texto": "No ceses de dar salud",
+     "sangria": 0
+    },
+    {
+     "texto": "a toda la cristiandad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 865,
+    "impresa": "865"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2476,
+    "impresa": "1348"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4120,
+    "impresa": "1306"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5985,
+    "impresa": "1515",
+    "pdf_fin": 5986,
+    "impresa_fin": "1516"
+   }
+  ]
+ },
+ {
+  "id": "salve-del-mar-estrella",
+  "primer_verso": "Salve, del mar Estrella,",
+  "estrofas": [
+   [
+    {
+     "texto": "Salve, del mar Estrella,",
+     "sangria": 0
+    },
+    {
+     "texto": "salve, Madre sagrada",
+     "sangria": 0
+    },
+    {
+     "texto": "de Dios y siempre virgen,",
+     "sangria": 0
+    },
+    {
+     "texto": "puerta del cielo santa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tomando de Gabriel",
+     "sangria": 0
+    },
+    {
+     "texto": "el «Ave», Virgen alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "mudando el nombre de Eva,",
+     "sangria": 0
+    },
+    {
+     "texto": "paces divinas trata.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La vista restituye,",
+     "sangria": 0
+    },
+    {
+     "texto": "las cadenas desata,",
+     "sangria": 0
+    },
+    {
+     "texto": "todos los males quita,",
+     "sangria": 0
+    },
+    {
+     "texto": "todos los bienes causa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Muéstrate madre, y llegue",
+     "sangria": 0
+    },
+    {
+     "texto": "por ti nuestra esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "a quien, por darnos vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "nació de tus entrañas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Entre todas piadosa,",
+     "sangria": 0
+    },
+    {
+     "texto": "Virgen, en nuestras almas,",
+     "sangria": 0
+    },
+    {
+     "texto": "libres de culpa, infunde",
+     "sangria": 0
+    },
+    {
+     "texto": "virtud humilde y casta.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vida nos presta pura,",
+     "sangria": 0
+    },
+    {
+     "texto": "camino firme allana,",
+     "sangria": 0
+    },
+    {
+     "texto": "que quien a Jesús llega",
+     "sangria": 0
+    },
+    {
+     "texto": "eterno gozo alcanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al Padre, al Hijo, al Santo",
+     "sangria": 0
+    },
+    {
+     "texto": "Espíritu alabanzas;",
+     "sangria": 0
+    },
+    {
+     "texto": "una a los tres le demos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y siempre eternas gracias.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 865,
+    "impresa": "865",
+    "pdf_fin": 866,
+    "impresa_fin": "866"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2476,
+    "impresa": "1348",
+    "pdf_fin": 2477,
+    "impresa_fin": "1349"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4120,
+    "impresa": "1306",
+    "pdf_fin": 4121,
+    "impresa_fin": "1307"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5986,
+    "impresa": "1516"
+   }
+  ]
+ },
+ {
+  "id": "guardadnos-en-la-fe-y-en-la-unidad",
+  "primer_verso": "¡Guardadnos en la fe y en la unidad,",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Guardadnos en la fe y en la unidad,",
+     "sangria": 2
+    },
+    {
+     "texto": "vosotros, que ya estáis desde el principio",
+     "sangria": 2
+    },
+    {
+     "texto": "en comunión con Cristo y con el Padre!",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "¿A quién acudiremos",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando la fe va herida",
+     "sangria": 0
+    },
+    {
+     "texto": "sino a vosotros, testigos vigilantes,",
+     "sangria": 0
+    },
+    {
+     "texto": "que anunciáis con palabra poderosa",
+     "sangria": 0
+    },
+    {
+     "texto": "lo que era en el principio,",
+     "sangria": 0
+    },
+    {
+     "texto": "lo que vieron de cerca vuestros ojos",
+     "sangria": 0
+    },
+    {
+     "texto": "y lo que vuestras manos",
+     "sangria": 0
+    },
+    {
+     "texto": "tocaron y palparon del Verbo de la vida?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Guardadnos en la fe y en la unidad,",
+     "sangria": 2
+    },
+    {
+     "texto": "vosotros, que ya estáis desde el principio",
+     "sangria": 2
+    },
+    {
+     "texto": "en comunión con Cristo y con el Padre!",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "¿En quién descansaremos",
+     "sangria": 0
+    },
+    {
+     "texto": "la duda y la esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "sino en vosotros, cimientos de la Iglesia,",
+     "sangria": 0
+    },
+    {
+     "texto": "que habéis visto al Señor resucitado,",
+     "sangria": 0
+    },
+    {
+     "texto": "y oísteis al Espíritu",
+     "sangria": 0
+    },
+    {
+     "texto": "revelar por el fuego y la palabra",
+     "sangria": 0
+    },
+    {
+     "texto": "el misterio de Cristo",
+     "sangria": 0
+    },
+    {
+     "texto": "que estaba oculto en Dios desde los siglos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Guardadnos en la fe y en la unidad,",
+     "sangria": 2
+    },
+    {
+     "texto": "vosotros, que ya estáis desde el principio",
+     "sangria": 2
+    },
+    {
+     "texto": "en comunión con Cristo y con el Padre!",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+     "sangria": 0
+    },
+    {
+     "texto": "Por los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 872,
+    "impresa": "872",
+    "pdf_fin": 873,
+    "impresa_fin": "873"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2485,
+    "impresa": "1357"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4144,
+    "impresa": "1330",
+    "pdf_fin": 4145,
+    "impresa_fin": "1331"
+   }
+  ]
+ },
+ {
+  "id": "mensajeros-de-dios",
+  "primer_verso": "Mensajeros de Dios",
+  "estrofas": [
+   [
+    {
+     "texto": "Mensajeros de Dios",
+     "sangria": 0
+    },
+    {
+     "texto": "dadnos la Nueva;",
+     "sangria": 0
+    },
+    {
+     "texto": "mensajeros de paz,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea paz nuestra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mensajeros de luz,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea luz nuestra;",
+     "sangria": 0
+    },
+    {
+     "texto": "mensajeros de fe,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea fe nuestra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mensajeros del Rey,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea rey nuestro;",
+     "sangria": 0
+    },
+    {
+     "texto": "mensajeros de amor,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea amor nuestro.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 873,
+    "impresa": "873"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2486,
+    "impresa": "1358"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4145,
+    "impresa": "1331",
+    "pdf_fin": 4146,
+    "impresa_fin": "1332"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6007,
+    "impresa": "1537"
+   }
+  ]
+ },
+ {
+  "id": "voceros-de-dios",
+  "primer_verso": "Voceros de Dios,",
+  "estrofas": [
+   [
+    {
+     "texto": "Voceros de Dios,",
+     "sangria": 0
+    },
+    {
+     "texto": "heraldos de amor,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Locura de cruz,",
+     "sangria": 0
+    },
+    {
+     "texto": "de Dios es la luz,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mensaje del Rey,",
+     "sangria": 0
+    },
+    {
+     "texto": "de amor es la ley,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De Cristo solaz",
+     "sangria": 0
+    },
+    {
+     "texto": "sois cristos de paz,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Sois piedra frontal",
+     "sangria": 0
+    },
+    {
+     "texto": "del reino final",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2485,
+    "impresa": "1357",
+    "pdf_fin": 2486,
+    "impresa_fin": "1358"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4145,
+    "impresa": "1331"
+   }
+  ]
+ },
+ {
+  "id": "voceros-de-dios-2",
+  "primer_verso": "Voceros de Dios,",
+  "estrofas": [
+   [
+    {
+     "texto": "Voceros de Dios,",
+     "sangria": 0
+    },
+    {
+     "texto": "heraldos de amor,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Locura de cruz,",
+     "sangria": 0
+    },
+    {
+     "texto": "de Dios es la luz,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mensaje del Rey,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De Cristo solaz,",
+     "sangria": 0
+    },
+    {
+     "texto": "sois cristos de paz,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Sois piedra frontal",
+     "sangria": 0
+    },
+    {
+     "texto": "del reino final,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles santos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 873,
+    "impresa": "873",
+    "pdf_fin": 874,
+    "impresa_fin": "874"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «voceros-de-dios»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "vosotros-que-escuchasteis-la-llamada",
+  "primer_verso": "Vosotros, que escuchasteis la llamada",
+  "estrofas": [
+   [
+    {
+     "texto": "Vosotros, que escuchasteis la llamada",
+     "sangria": 0
+    },
+    {
+     "texto": "de viva voz que Cristo os dirigía,",
+     "sangria": 0
+    },
+    {
+     "texto": "abrid nuestro vivir y nuestra alma",
+     "sangria": 0
+    },
+    {
+     "texto": "al mensaje de amor que él nos envía.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros, que invitados al banquete",
+     "sangria": 0
+    },
+    {
+     "texto": "gustasteis el sabor del nuevo vino,",
+     "sangria": 0
+    },
+    {
+     "texto": "llenad el vaso, del amor que ofrece,",
+     "sangria": 0
+    },
+    {
+     "texto": "al sediento de Dios en su camino.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros, que tuvisteis tan gran suerte",
+     "sangria": 0
+    },
+    {
+     "texto": "de verle dar a muertos nueva vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "no dejéis que el pecado y que la muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "nos priven de la vida recibida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros, que lo visteis ya glorioso,",
+     "sangria": 0
+    },
+    {
+     "texto": "hecho Señor de gloria sempiterna,",
+     "sangria": 0
+    },
+    {
+     "texto": "haced que nuestro amor conozca el gozo",
+     "sangria": 0
+    },
+    {
+     "texto": "de vivir junto a él la vida eterna.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 877,
+    "impresa": "877"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2490,
+    "impresa": "1362"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4149,
+    "impresa": "1335"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6010,
+    "impresa": "1540"
+   }
+  ]
+ },
+ {
+  "id": "benditos-son-los-pies-de-los-que-llegan",
+  "primer_verso": "Benditos son los pies de los que llegan",
+  "estrofas": [
+   [
+    {
+     "texto": "Benditos son los pies de los que llegan",
+     "sangria": 0
+    },
+    {
+     "texto": "para anunciar la paz que el mundo espera,",
+     "sangria": 0
+    },
+    {
+     "texto": "apóstoles de Dios que Cristo envía,",
+     "sangria": 0
+    },
+    {
+     "texto": "voceros de su voz, grito del Verbo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De pie en la encrucijada del camino",
+     "sangria": 0
+    },
+    {
+     "texto": "del hombre peregrino y de los pueblos,",
+     "sangria": 0
+    },
+    {
+     "texto": "es el fuego de Dios el que los lleva",
+     "sangria": 0
+    },
+    {
+     "texto": "como cristos vivientes a su encuentro.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Abrid, pueblos, la puerta a su llamada,",
+     "sangria": 0
+    },
+    {
+     "texto": "la verdad y el amor son dos que llevan;",
+     "sangria": 0
+    },
+    {
+     "texto": "no temáis, pecadores, acogedlos,",
+     "sangria": 0
+    },
+    {
+     "texto": "el perdón y la paz serán su gesto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gracias, Señor, que el pan de tu palabra",
+     "sangria": 0
+    },
+    {
+     "texto": "nos llega por tu amor, pan verdadero,",
+     "sangria": 0
+    },
+    {
+     "texto": "gracias, Señor, que el pan de vida nueva",
+     "sangria": 0
+    },
+    {
+     "texto": "nos llega por tu amor, partido y tierno.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 880,
+    "impresa": "880"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2493,
+    "impresa": "1365"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4151,
+    "impresa": "1337"
+   }
+  ]
+ },
+ {
+  "id": "columnas-de-la-iglesia-piedras-vivas",
+  "primer_verso": "¡Columnas de la Iglesia, piedras vivas!",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Columnas de la Iglesia, piedras vivas!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Apóstoles de Dios, grito del Verbo!",
+     "sangria": 0
+    },
+    {
+     "texto": "Benditos vuestros pies, porque han llegado",
+     "sangria": 0
+    },
+    {
+     "texto": "para anunciar la paz al mundo entero.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De pie en la encrucijada de la vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "del hombre peregrino y de los pueblos,",
+     "sangria": 0
+    },
+    {
+     "texto": "lleváis agua de Dios a los cansados,",
+     "sangria": 0
+    },
+    {
+     "texto": "hambre de Dios lleváis a los hambrientos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De puerta en puerta va vuestro mensaje,",
+     "sangria": 0
+    },
+    {
+     "texto": "que es verdad y es amor y es Evangelio.",
+     "sangria": 0
+    },
+    {
+     "texto": "No temáis, pecadores, que sus manos",
+     "sangria": 0
+    },
+    {
+     "texto": "son caricias de paz y de consuelo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gracias, Señor, que el pan de tu palabra",
+     "sangria": 0
+    },
+    {
+     "texto": "nos llega por tu amor, pan verdadero;",
+     "sangria": 0
+    },
+    {
+     "texto": "gracias, Señor, que el pan de vida nueva",
+     "sangria": 0
+    },
+    {
+     "texto": "nos llega por tu amor, partido y tierno.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 880,
+    "impresa": "880"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2493,
+    "impresa": "1365"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4151,
+    "impresa": "1337",
+    "pdf_fin": 4152,
+    "impresa_fin": "1338"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6013,
+    "impresa": "1543"
+   }
+  ]
+ },
+ {
+  "id": "pleyade-santa-y-noble-de-martires-insignes",
+  "primer_verso": "Pléyade santa y noble de mártires insignes,",
+  "estrofas": [
+   [
+    {
+     "texto": "Pléyade santa y noble de mártires insignes,",
+     "sangria": 0
+    },
+    {
+     "texto": "testigos inmortales del Cristo victimado;",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, pues sufristeis la cruz de vuestro Amado",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, que a su dolor vuestro dolor ha unido.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bebisteis por su amor el cáliz de la sangre,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos cirineos, camino del Calvario,",
+     "sangria": 0
+    },
+    {
+     "texto": "seguisteis, no dejasteis a Jesús solitario,",
+     "sangria": 0
+    },
+    {
+     "texto": "llevasteis vuestra cruz junto a su cruz unida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Rebosa ya el rosal de rosas escarlatas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y la luz del sol tiñe de rojo el alto cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "la muerte estupefacta contempla vuestro vuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "enjambre de profetas y justos perseguidos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vuestro valor intrépido deshaga cobardías",
+     "sangria": 0
+    },
+    {
+     "texto": "de cuantos en la vida persigue la injusticia;",
+     "sangria": 0
+    },
+    {
+     "texto": "siguiendo vuestras huellas, hagamos la milicia,",
+     "sangria": 0
+    },
+    {
+     "texto": "sirviendo con amor la paz de Jesucristo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 888,
+    "impresa": "888"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2502,
+    "impresa": "1374",
+    "pdf_fin": 2503,
+    "impresa_fin": "1375"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4160,
+    "impresa": "1346"
+   }
+  ]
+ },
+ {
+  "id": "testigos-de-amor",
+  "primer_verso": "Testigos de amor",
+  "estrofas": [
+   [
+    {
+     "texto": "Testigos de amor",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo Señor,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Rosales en flor",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo el olor,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Palabras en luz",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo Jesús,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Corona inmortal",
+     "sangria": 0
+    },
+    {
+     "texto": "del Cristo total,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2503,
+    "impresa": "1375"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4160,
+    "impresa": "1346"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6022,
+    "impresa": "1552"
+   },
+   {
+    "tomo": 1,
+    "pdf": 893,
+    "impresa": "893"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2509,
+    "impresa": "1381"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4165,
+    "impresa": "1351",
+    "pdf_fin": 4166,
+    "impresa_fin": "1352"
+   }
+  ]
+ },
+ {
+  "id": "estos-que-van-vestidos",
+  "primer_verso": "Estos que van vestidos",
+  "estrofas": [
+   [
+    {
+     "texto": "Estos que van vestidos",
+     "sangria": 0
+    },
+    {
+     "texto": "de blancas vestiduras,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quiénes son, y de dónde han venido?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Todos estos que ciñen llameantes laureles",
+     "sangria": 0
+    },
+    {
+     "texto": "han venido del fondo de la tribulación.",
+     "sangria": 0
+    },
+    {
+     "texto": "Todos estos lavaron sus vestidos de boda",
+     "sangria": 0
+    },
+    {
+     "texto": "en los ríos de sangre del Cordero de Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Estos que van vestidos",
+     "sangria": 0
+    },
+    {
+     "texto": "de blancas vestiduras,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quiénes son, y de dónde han venido?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Son las gentes con hambre que jamás tendrán hambre,",
+     "sangria": 0
+    },
+    {
+     "texto": "los sedientos que nunca sentirán ya la sed.",
+     "sangria": 0
+    },
+    {
+     "texto": "Los abreva el Cordero con el agua de vida;",
+     "sangria": 0
+    },
+    {
+     "texto": "los asume en su muerte; resucitan con él.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Estos que van vestidos",
+     "sangria": 0
+    },
+    {
+     "texto": "de blancas vestiduras,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quiénes son, y de dónde han venido?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Han venido del llanto para ser consolados;",
+     "sangria": 0
+    },
+    {
+     "texto": "han salido del fuego y han buscado el frescor.",
+     "sangria": 0
+    },
+    {
+     "texto": "El Señor les enjuga con sus manos las lágrimas,",
+     "sangria": 0
+    },
+    {
+     "texto": "con sus manos les guarda contra el fuego del sol.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+     "sangria": 0
+    },
+    {
+     "texto": "Por los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 892,
+    "impresa": "892",
+    "pdf_fin": 893,
+    "impresa_fin": "893"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2508,
+    "impresa": "1380",
+    "pdf_fin": 2509,
+    "impresa_fin": "1381"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4165,
+    "impresa": "1351"
+   }
+  ]
+ },
+ {
+  "id": "testigos-de-la-sangre",
+  "primer_verso": "Testigos de la sangre",
+  "estrofas": [
+   [
+    {
+     "texto": "Testigos de la sangre",
+     "sangria": 0
+    },
+    {
+     "texto": "con sangre rubricada,",
+     "sangria": 0
+    },
+    {
+     "texto": "frutos de amor cortados",
+     "sangria": 0
+    },
+    {
+     "texto": "al golpe de la espada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Testigos del amor",
+     "sangria": 0
+    },
+    {
+     "texto": "en sumisión callada;",
+     "sangria": 0
+    },
+    {
+     "texto": "canto y cielo en los labios",
+     "sangria": 0
+    },
+    {
+     "texto": "al golpe de la espada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Testigos del dolor",
+     "sangria": 0
+    },
+    {
+     "texto": "de vida enamorada;",
+     "sangria": 0
+    },
+    {
+     "texto": "diario placer de muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "al golpe de la espada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Testigos del cansancio",
+     "sangria": 0
+    },
+    {
+     "texto": "de una vida inmolada",
+     "sangria": 0
+    },
+    {
+     "texto": "a golpe de Evangelio",
+     "sangria": 0
+    },
+    {
+     "texto": "y al golpe de la espada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias al Padre",
+     "sangria": 0
+    },
+    {
+     "texto": "por la sangre sagrada;",
+     "sangria": 0
+    },
+    {
+     "texto": "pidamos ser sus mártires,",
+     "sangria": 0
+    },
+    {
+     "texto": "y a cada madrugada",
+     "sangria": 0
+    },
+    {
+     "texto": "poder morir la vida",
+     "sangria": 0
+    },
+    {
+     "texto": "al golpe de la espada.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 893,
+    "impresa": "893",
+    "pdf_fin": 894,
+    "impresa_fin": "894"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2509,
+    "impresa": "1381"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4166,
+    "impresa": "1352"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6027,
+    "impresa": "1557",
+    "pdf_fin": 6028,
+    "impresa_fin": "1558"
+   }
+  ]
+ },
+ {
+  "id": "espiritus-sublimes-oh-martires-gloriosos",
+  "primer_verso": "Espíritus sublimes, ¡oh mártires gloriosos!,",
+  "estrofas": [
+   [
+    {
+     "texto": "Espíritus sublimes, ¡oh mártires gloriosos!,",
+     "sangria": 0
+    },
+    {
+     "texto": "felices moradores de la inmortal Sión,",
+     "sangria": 0
+    },
+    {
+     "texto": "rogad por los que luchan en las batallas recias,",
+     "sangria": 0
+    },
+    {
+     "texto": "que alcancen la victoria y eterno galardón.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh mártires gloriosos de rojas vestiduras,",
+     "sangria": 0
+    },
+    {
+     "texto": "que brillan con eternos fulgores ante Dios!",
+     "sangria": 0
+    },
+    {
+     "texto": "Con vuestro riego crezca de Cristo la semilla,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el campo de las mieses se cubra ya en sazón.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 896,
+    "impresa": "896",
+    "pdf_fin": 897,
+    "impresa_fin": "897"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2513,
+    "impresa": "1385"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4169,
+    "impresa": "1355"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6030,
+    "impresa": "1560",
+    "pdf_fin": 6031,
+    "impresa_fin": "1561"
+   }
+  ]
+ },
+ {
+  "id": "eres-digno-senor-dios-nuestro-de-recibir-la-gloria",
+  "primer_verso": "Eres digno, Señor Dios nuestro, de recibir la gloria,",
+  "estrofas": [
+   [
+    {
+     "texto": "Eres digno, Señor Dios nuestro, de recibir la gloria,",
+     "sangria": 0
+    },
+    {
+     "texto": "el honor y el poder,",
+     "sangria": 1
+    },
+    {
+     "texto": "porque tú has creado el universo;",
+     "sangria": 1
+    },
+    {
+     "texto": "porque por tu voluntad lo que no existía fue creado.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Eres digno de tomar el libro y abrir sus sellos,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque fuiste degollado",
+     "sangria": 1
+    },
+    {
+     "texto": "y por tu sangre compraste para Dios",
+     "sangria": 1
+    },
+    {
+     "texto": "hombres de toda raza, lengua, pueblo y nación;",
+     "sangria": 1
+    },
+    {
+     "texto": "y has hecho de ellos para nuestro Dios",
+     "sangria": 1
+    },
+    {
+     "texto": "un reino de sacerdotes",
+     "sangria": 1
+    },
+    {
+     "texto": "y reinan sobre la tierra.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Digno es el Cordero degollado",
+     "sangria": 0
+    },
+    {
+     "texto": "de recibir el poder, la riqueza y la sabiduría,",
+     "sangria": 1
+    },
+    {
+     "texto": "la fuerza y el honor, la gloria y la alabanza.",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2515,
+    "impresa": "1387"
+   }
+  ]
+ },
+ {
+  "id": "pleyade-santa-y-noble-de-martires-insignes-2",
+  "primer_verso": "Pléyade santa y noble de mártires insignes,",
+  "estrofas": [
+   [
+    {
+     "texto": "Pléyade santa y noble de mártires insignes,",
+     "sangria": 0
+    },
+    {
+     "texto": "testigos inmortales del Cristo victimado;",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, pues sufristeis la cruz de vuestro Amado",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, que a su dolor vuestro dolor ha unido.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bebisteis por su amor el cáliz de la sangre,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos cirineos, camino del Calvario,",
+     "sangria": 0
+    },
+    {
+     "texto": "seguisteis, no dejasteis a Jesús solitario,",
+     "sangria": 0
+    },
+    {
+     "texto": "llevasteis vuestra cruz junto a su cruz unida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Rebosa ya el rosal de rosas escarlatas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y la luz del sol tiñe de rojo el alto cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "la muerte estupefacta contempla vuestro vuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "enjambre de profetas y justos perseguidores.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vuestro valor intrépido deshaga cobardías",
+     "sangria": 0
+    },
+    {
+     "texto": "de cuantos en la vida persigue la injusticia;",
+     "sangria": 0
+    },
+    {
+     "texto": "siguiendo vuestras huellas, hagamos la milicia,",
+     "sangria": 0
+    },
+    {
+     "texto": "sirviendo con amor la paz de Jesucristo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 905,
+    "impresa": "905"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2525,
+    "impresa": "1397"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4177,
+    "impresa": "1363"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6039,
+    "impresa": "1569",
+    "pdf_fin": 6040,
+    "impresa_fin": "1570"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «pleyade-santa-y-noble-de-martires-insignes»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "testigos-de-amor-2",
+  "primer_verso": "Testigos de amor",
+  "estrofas": [
+   [
+    {
+     "texto": "Testigos de amor",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo Señor,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Rosales en flor",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo el olor,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Palabras en luz",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo Jesús,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Corona inmortal",
+     "sangria": 0
+    },
+    {
+     "texto": "de Cristo total,",
+     "sangria": 0
+    },
+    {
+     "texto": "mártires santos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 905,
+    "impresa": "905",
+    "pdf_fin": 906,
+    "impresa_fin": "906"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2525,
+    "impresa": "1397"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4177,
+    "impresa": "1363",
+    "pdf_fin": 4178,
+    "impresa_fin": "1364"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6040,
+    "impresa": "1570"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «testigos-de-amor»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "quien-entrega-su-vida-por-amor",
+  "primer_verso": "\"Quien entrega su vida por amor,",
+  "estrofas": [
+   [
+    {
+     "texto": "\"Quien entrega su vida por amor,",
+     "sangria": 1
+    },
+    {
+     "texto": "la gana para siempre\",",
+     "sangria": 1
+    },
+    {
+     "texto": "dice el Señor.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Aquí el bautismo proclama",
+     "sangria": 0
+    },
+    {
+     "texto": "su voz de gloria y de muerte.",
+     "sangria": 0
+    },
+    {
+     "texto": "Aquí la unción se hace fuerte",
+     "sangria": 0
+    },
+    {
+     "texto": "contra el cuchillo y la llama.",
+     "sangria": 0
+    },
+    {
+     "texto": "Mirad cómo se derrama",
+     "sangria": 0
+    },
+    {
+     "texto": "mi sangre por cada herida.",
+     "sangria": 0
+    },
+    {
+     "texto": "Si Cristo fue mi comida,",
+     "sangria": 0
+    },
+    {
+     "texto": "dejadme ser pan y vino",
+     "sangria": 0
+    },
+    {
+     "texto": "en el lagar y en el molino",
+     "sangria": 0
+    },
+    {
+     "texto": "donde me arrancan la vida.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 910,
+    "impresa": "910"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2530,
+    "impresa": "1402",
+    "pdf_fin": 2531,
+    "impresa_fin": "1403"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4182,
+    "impresa": "1368",
+    "pdf_fin": 4183,
+    "impresa_fin": "1369"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6045,
+    "impresa": "1575"
+   }
+  ]
+ },
+ {
+  "id": "palabra-del-senor-ya-rubricada",
+  "primer_verso": "Palabra del Señor ya rubricada",
+  "estrofas": [
+   [
+    {
+     "texto": "Palabra del Señor ya rubricada",
+     "sangria": 0
+    },
+    {
+     "texto": "es la vida del mártir, ofrecida",
+     "sangria": 0
+    },
+    {
+     "texto": "como prueba fiel de que la espada",
+     "sangria": 0
+    },
+    {
+     "texto": "no puede ya truncar la fe vivida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Fuente de fe y de luz es su memoria,",
+     "sangria": 0
+    },
+    {
+     "texto": "coraje para el justo en la batalla",
+     "sangria": 0
+    },
+    {
+     "texto": "del bien, de la verdad, siempre victoria",
+     "sangria": 0
+    },
+    {
+     "texto": "que, en vida y muerte, el justo en Cristo halla.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Martirio es el dolor de cada día,",
+     "sangria": 0
+    },
+    {
+     "texto": "si en Cristo y con amor es aceptado,",
+     "sangria": 0
+    },
+    {
+     "texto": "fuego lento de amor que en la alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "de servir al Señor es consumado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Concédenos, oh Padre, sin medida,",
+     "sangria": 0
+    },
+    {
+     "texto": "y tú, Señor Jesús crucificado,",
+     "sangria": 0
+    },
+    {
+     "texto": "el fuego del Espíritu de vida",
+     "sangria": 0
+    },
+    {
+     "texto": "para vivir el don que nos has dado.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 2531,
+    "impresa": "1403"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4183,
+    "impresa": "1369"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6045,
+    "impresa": "1575",
+    "pdf_fin": 6046,
+    "impresa_fin": "1576"
+   },
+   {
+    "tomo": 1,
+    "pdf": 913,
+    "impresa": "913"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2535,
+    "impresa": "1407"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4185,
+    "impresa": "1371",
+    "pdf_fin": 4186,
+    "impresa_fin": "1372"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6048,
+    "impresa": "1578",
+    "pdf_fin": 6049,
+    "impresa_fin": "1579"
+   }
+  ]
+ },
+ {
+  "id": "oh-dios-que-eres-el-premio-la-corona",
+  "primer_verso": "Oh Dios, que eres el premio, la corona",
+  "estrofas": [
+   [
+    {
+     "texto": "Oh Dios, que eres el premio, la corona",
+     "sangria": 0
+    },
+    {
+     "texto": "y la suerte de todos tus soldados,",
+     "sangria": 0
+    },
+    {
+     "texto": "líbranos de los lazos de las culpas",
+     "sangria": 0
+    },
+    {
+     "texto": "por este mártir a quien hoy cantamos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Él conoció la hiel que está escondida",
+     "sangria": 0
+    },
+    {
+     "texto": "en la miel de los goces de este suelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, por no haber cedido a sus encantos,",
+     "sangria": 0
+    },
+    {
+     "texto": "está gozando los del cielo eterno.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Él afrontó con ánimo seguro",
+     "sangria": 0
+    },
+    {
+     "texto": "lo que sufrió con varonil coraje,",
+     "sangria": 0
+    },
+    {
+     "texto": "y consiguió los celestiales dones",
+     "sangria": 0
+    },
+    {
+     "texto": "al derramar por ti su noble sangre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Oh piadosísimo Señor de todo,",
+     "sangria": 0
+    },
+    {
+     "texto": "te suplicamos con humilde ruego",
+     "sangria": 0
+    },
+    {
+     "texto": "que, en el día del triunfo de este mártir,",
+     "sangria": 0
+    },
+    {
+     "texto": "perdones los pecados de tus siervos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria eterna al divino Jesucristo,",
+     "sangria": 0
+    },
+    {
+     "texto": "que nació de una Virgen impecable,",
+     "sangria": 0
+    },
+    {
+     "texto": "y gloria eterna al Santo Paracleto,",
+     "sangria": 0
+    },
+    {
+     "texto": "y gloria eterna al sempiterno Padre.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 913,
+    "impresa": "913",
+    "pdf_fin": 914,
+    "impresa_fin": "914"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2535,
+    "impresa": "1407",
+    "pdf_fin": 2536,
+    "impresa_fin": "1408"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4186,
+    "impresa": "1372"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6049,
+    "impresa": "1579"
+   }
+  ]
+ },
+ {
+  "id": "puerta-de-dios-en-el-redil-humano",
+  "primer_verso": "Puerta de Dios en el redil humano",
+  "estrofas": [
+   [
+    {
+     "texto": "Puerta de Dios en el redil humano",
+     "sangria": 0
+    },
+    {
+     "texto": "fue Cristo, el buen Pastor que al mundo vino,",
+     "sangria": 0
+    },
+    {
+     "texto": "glorioso va delante del rebaño,",
+     "sangria": 0
+    },
+    {
+     "texto": "guiando su marchar por buen camino.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Madero de la cruz es su cayado,",
+     "sangria": 0
+    },
+    {
+     "texto": "su voz es la verdad que a todos llama,",
+     "sangria": 0
+    },
+    {
+     "texto": "su amor es el del Padre, que le ha dado",
+     "sangria": 0
+    },
+    {
+     "texto": "Espíritu de Dios, que a todos ama.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pastores del Señor son sus ungidos,",
+     "sangria": 0
+    },
+    {
+     "texto": "nuevos cristos de Dios, son enviados",
+     "sangria": 0
+    },
+    {
+     "texto": "a los pueblos del mundo redimidos;",
+     "sangria": 0
+    },
+    {
+     "texto": "del único Pastor siervos amados.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La cruz de su Señor es su cayado,",
+     "sangria": 0
+    },
+    {
+     "texto": "la voz de la verdad es su llamada,",
+     "sangria": 0
+    },
+    {
+     "texto": "los pastos de su amor, fecundo prado,",
+     "sangria": 0
+    },
+    {
+     "texto": "son vida del Señor que nos es dada.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 922,
+    "impresa": "922"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2545,
+    "impresa": "1417"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4194,
+    "impresa": "1380"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6057,
+    "impresa": "1587"
+   }
+  ]
+ },
+ {
+  "id": "cristo-cabeza-rey-de-los-pastores",
+  "primer_verso": "Cristo, Cabeza, Rey de los pastores,",
+  "estrofas": [
+   [
+    {
+     "texto": "Cristo, Cabeza, Rey de los pastores,",
+     "sangria": 0
+    },
+    {
+     "texto": "el pueblo entero, madrugando a fiesta,",
+     "sangria": 0
+    },
+    {
+     "texto": "canta a la gloria de tu sacerdote",
+     "sangria": 0
+    },
+    {
+     "texto": "himnos sagrados.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Con abundancia de sagrado crisma,",
+     "sangria": 0
+    },
+    {
+     "texto": "la unción profunda de tu Santo Espíritu",
+     "sangria": 0
+    },
+    {
+     "texto": "lo armó guerrero y lo nombró en la Iglesia",
+     "sangria": 0
+    },
+    {
+     "texto": "jefe del pueblo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Él fue pastor y forma del rebaño,",
+     "sangria": 0
+    },
+    {
+     "texto": "luz para el ciego, báculo del pobre,",
+     "sangria": 0
+    },
+    {
+     "texto": "padre común, presencia providente,",
+     "sangria": 0
+    },
+    {
+     "texto": "todo de todos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú que coronas sus merecimientos,",
+     "sangria": 0
+    },
+    {
+     "texto": "danos la gracia de imitar su vida",
+     "sangria": 0
+    },
+    {
+     "texto": "y al fin, sumisos a su magisterio,",
+     "sangria": 0
+    },
+    {
+     "texto": "danos su gloria.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 930,
+    "impresa": "930"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2554,
+    "impresa": "1426"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4202,
+    "impresa": "1388"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6066,
+    "impresa": "1596"
+   }
+  ]
+ },
+ {
+  "id": "cantemos-al-senor-con-alegria",
+  "primer_verso": "Cantemos al Señor con alegría,",
+  "estrofas": [
+   [
+    {
+     "texto": "Cantemos al Señor con alegría,",
+     "sangria": 0
+    },
+    {
+     "texto": "unidos a la voz del Pastor santo;",
+     "sangria": 0
+    },
+    {
+     "texto": "demos gracias a Dios, que es luz y guía,",
+     "sangria": 0
+    },
+    {
+     "texto": "solícito pastor de su rebaño.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Es su voz y su amor el que nos llama",
+     "sangria": 0
+    },
+    {
+     "texto": "en la voz del pastor que él ha elegido,",
+     "sangria": 0
+    },
+    {
+     "texto": "es su amor infinito el que nos ama",
+     "sangria": 0
+    },
+    {
+     "texto": "en la entrega y amor de este otro cristo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Conociendo en la fe su fiel presencia,",
+     "sangria": 0
+    },
+    {
+     "texto": "hambrientos de verdad y luz divina,",
+     "sangria": 0
+    },
+    {
+     "texto": "sigamos al pastor que es providencia",
+     "sangria": 0
+    },
+    {
+     "texto": "de pastos abundantes que son vida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Apacienta, Señor, guarda a tus hijos,",
+     "sangria": 0
+    },
+    {
+     "texto": "manda siempre a tu mies trabajadores;",
+     "sangria": 0
+    },
+    {
+     "texto": "cada aurora, a la puerta del aprisco,",
+     "sangria": 0
+    },
+    {
+     "texto": "nos aguarde el amor de tus pastores.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 933,
+    "impresa": "933"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2557,
+    "impresa": "1429",
+    "pdf_fin": 2558,
+    "impresa_fin": "1430"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4204,
+    "impresa": "1390",
+    "pdf_fin": 4205,
+    "impresa_fin": "1391"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6069,
+    "impresa": "1599",
+    "pdf_fin": 6070,
+    "impresa_fin": "1600"
+   }
+  ]
+ },
+ {
+  "id": "vosotros-sois-luz-del-mundo",
+  "primer_verso": "Vosotros sois luz del mundo",
+  "estrofas": [
+   [
+    {
+     "texto": "Vosotros sois luz del mundo",
+     "sangria": 0
+    },
+    {
+     "texto": "y ardiente sal de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ciudad esbelta en el monte,",
+     "sangria": 0
+    },
+    {
+     "texto": "fermento en la masa nueva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros sois los sarmientos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y yo la Vid verdadera.",
+     "sangria": 0
+    },
+    {
+     "texto": "Si el Padre poda las ramas,",
+     "sangria": 0
+    },
+    {
+     "texto": "más fruto llevan las cepas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros sois la abundancia",
+     "sangria": 0
+    },
+    {
+     "texto": "del reino que ya está cerca;",
+     "sangria": 0
+    },
+    {
+     "texto": "los doce mil señalados",
+     "sangria": 0
+    },
+    {
+     "texto": "que no caerán en la siega.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Dichosos porque sois limpios",
+     "sangria": 0
+    },
+    {
+     "texto": "y ricos en la pobreza,",
+     "sangria": 0
+    },
+    {
+     "texto": "y es vuestro el reino que sólo",
+     "sangria": 0
+    },
+    {
+     "texto": "se gana con la violencia!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 938,
+    "impresa": "938",
+    "pdf_fin": 939,
+    "impresa_fin": "939"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2563,
+    "impresa": "1435"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4209,
+    "impresa": "1395",
+    "pdf_fin": 4210,
+    "impresa_fin": "1396"
+   }
+  ]
+ },
+ {
+  "id": "hondo-saber-de-dios-fue-vuestra-ciencia",
+  "primer_verso": "Hondo saber de Dios fue vuestra ciencia,",
+  "estrofas": [
+   [
+    {
+     "texto": "Hondo saber de Dios fue vuestra ciencia,",
+     "sangria": 0
+    },
+    {
+     "texto": "su espíritu de verdad os dio a beberla",
+     "sangria": 0
+    },
+    {
+     "texto": "en la Revelación, que es su presencia",
+     "sangria": 0
+    },
+    {
+     "texto": "en velos de palabra siempre nueva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Abristeis el camino para hallarla",
+     "sangria": 0
+    },
+    {
+     "texto": "a todo el que de Dios hambre tenía,",
+     "sangria": 0
+    },
+    {
+     "texto": "palabra del Señor que, al contemplarla,",
+     "sangria": 0
+    },
+    {
+     "texto": "enciende nuestras luces que iluminan.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Saber de Dios en vida convertido",
+     "sangria": 0
+    },
+    {
+     "texto": "es la virtud del justo, que, a su tiempo,",
+     "sangria": 0
+    },
+    {
+     "texto": "si Dios le dio la luz, fue lo debido",
+     "sangria": 0
+    },
+    {
+     "texto": "que fuera su verdad, su pensamiento.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias a Dios humildemente,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Hijo, su Verdad que a todos guía,",
+     "sangria": 0
+    },
+    {
+     "texto": "dejemos que su Luz, faro esplendente,",
+     "sangria": 0
+    },
+    {
+     "texto": "nos guíe por el mar de nuestra vida.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 939,
+    "impresa": "939"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2563,
+    "impresa": "1435"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4210,
+    "impresa": "1396"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6075,
+    "impresa": "1605"
+   }
+  ]
+ },
+ {
+  "id": "experiencia-de-dios-fue-vuestra-ciencia",
+  "primer_verso": "Experiencia de Dios fue vuestra ciencia,",
+  "estrofas": [
+   [
+    {
+     "texto": "Experiencia de Dios fue vuestra ciencia,",
+     "sangria": 0
+    },
+    {
+     "texto": "su Espíritu veraz os dio a beberla",
+     "sangria": 0
+    },
+    {
+     "texto": "en la revelación, que es su presencia",
+     "sangria": 0
+    },
+    {
+     "texto": "en velos de palabra siempre nueva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Abristeis el camino para hallarla",
+     "sangria": 0
+    },
+    {
+     "texto": "a todo el que de Dios hambre tenía,",
+     "sangria": 0
+    },
+    {
+     "texto": "palabra del Señor que, al contemplarla,",
+     "sangria": 0
+    },
+    {
+     "texto": "enciende nuestras luces que iluminan.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Saber de Dios en vida convertido",
+     "sangria": 0
+    },
+    {
+     "texto": "es la virtud del justo, que, a su tiempo,",
+     "sangria": 0
+    },
+    {
+     "texto": "si Dios le dió la luz, fue lo debido",
+     "sangria": 0
+    },
+    {
+     "texto": "que fuera su verdad, su pensamiento.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En nuestro corazón de criaturas,",
+     "sangria": 0
+    },
+    {
+     "texto": "nos encendió la luz para esconderla,",
+     "sangria": 0
+    },
+    {
+     "texto": "qué poco puede andar quien anda a oscuras",
+     "sangria": 0
+    },
+    {
+     "texto": "por sendas de verdad sin poder verla.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias a Dios humildemente",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Hijo, su Verdad, que a todos guía,",
+     "sangria": 0
+    },
+    {
+     "texto": "dejemos que su Luz, faro esplendente,",
+     "sangria": 0
+    },
+    {
+     "texto": "nos guíe por el mar de nuestra vida.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 942,
+    "impresa": "942"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2567,
+    "impresa": "1439"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4213,
+    "impresa": "1399"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «hondo-saber-de-dios-fue-vuestra-ciencia»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "para-vosotros-el-misterio-del-padre",
+  "primer_verso": "Para vosotros, el misterio del Padre;",
+  "estrofas": [
+   [
+    {
+     "texto": "Para vosotros, el misterio del Padre;",
+     "sangria": 0
+    },
+    {
+     "texto": "con vosotros, la luz del Verbo;",
+     "sangria": 0
+    },
+    {
+     "texto": "en vosotros, la llama del Amor",
+     "sangria": 0
+    },
+    {
+     "texto": "que es fuego.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Hontanares de Dios!,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡hombres del Evangelio!,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡humildes inteligencias luminosas!,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡grandes hombres de barro tierno!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El mundo tiene hambre de infinito",
+     "sangria": 0
+    },
+    {
+     "texto": "y sed de cielo;",
+     "sangria": 0
+    },
+    {
+     "texto": "las criaturas nos atan a lo efímero",
+     "sangria": 0
+    },
+    {
+     "texto": "y nos vamos perdiendo en el tiempo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Para nosotros,",
+     "sangria": 0
+    },
+    {
+     "texto": "el misterio que aprendisteis del Padre;",
+     "sangria": 0
+    },
+    {
+     "texto": "con nosotros, la luz que os dio el Verbo;",
+     "sangria": 0
+    },
+    {
+     "texto": "en nosotros, el Amor ingénito.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Hombres de Cristo, maestros de la Iglesia!,",
+     "sangria": 0
+    },
+    {
+     "texto": "dadnos una vida y un anhelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "la angustia por la verdad,",
+     "sangria": 0
+    },
+    {
+     "texto": "por el error el miedo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dadnos una vida de rodillas",
+     "sangria": 0
+    },
+    {
+     "texto": "ante el misterio,",
+     "sangria": 0
+    },
+    {
+     "texto": "una visión de este mundo de muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "y una esperanza de cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Padre, te pedimos para la Iglesia",
+     "sangria": 0
+    },
+    {
+     "texto": "la ciencia de estos maestros.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 942,
+    "impresa": "942",
+    "pdf_fin": 943,
+    "impresa_fin": "943"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2567,
+    "impresa": "1439",
+    "pdf_fin": 2568,
+    "impresa_fin": "1440"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4213,
+    "impresa": "1399",
+    "pdf_fin": 4214,
+    "impresa_fin": "1400"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6078,
+    "impresa": "1608"
+   }
+  ]
+ },
+ {
+  "id": "verbo-de-dios-eterna-luz-divina",
+  "primer_verso": "Verbo de Dios, eterna luz divina,",
+  "estrofas": [
+   [
+    {
+     "texto": "Verbo de Dios, eterna luz divina,",
+     "sangria": 0
+    },
+    {
+     "texto": "fuente eternal de toda verdad pura,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria de Dios, que el cosmos ilumina,",
+     "sangria": 0
+    },
+    {
+     "texto": "antorcha toda luz en noche oscura.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Palabra eternamente pronunciada",
+     "sangria": 0
+    },
+    {
+     "texto": "en la mente del Padre, ¡oh regocijo!,",
+     "sangria": 0
+    },
+    {
+     "texto": "que en el tiempo a los hombres nos fue dada",
+     "sangria": 0
+    },
+    {
+     "texto": "en el seno de Virgen, hecha Hijo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Las tinieblas de muerte y de pecado,",
+     "sangria": 0
+    },
+    {
+     "texto": "en que yacía el hombre, así vencido,",
+     "sangria": 0
+    },
+    {
+     "texto": "su verdad y su luz han disipado,",
+     "sangria": 0
+    },
+    {
+     "texto": "con su vida y su muerte ha redimido.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Con destellos de luz que Dios envía,",
+     "sangria": 0
+    },
+    {
+     "texto": "no dejéis de brillar, faros divinos;",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hombres y pueblos sed su guía,",
+     "sangria": 0
+    },
+    {
+     "texto": "proclamad la verdad en los caminos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 944,
+    "impresa": "944"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2569,
+    "impresa": "1441"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4214,
+    "impresa": "1400",
+    "pdf_fin": 4215,
+    "impresa_fin": "1401"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6079,
+    "impresa": "1609"
+   }
+  ]
+ },
+ {
+  "id": "esta-mujer-no-quiso",
+  "primer_verso": "Esta mujer no quiso",
+  "estrofas": [
+   [
+    {
+     "texto": "Esta mujer no quiso",
+     "sangria": 0
+    },
+    {
+     "texto": "tomar varón ni darle su ternura,",
+     "sangria": 0
+    },
+    {
+     "texto": "selló su compromiso",
+     "sangria": 0
+    },
+    {
+     "texto": "con otro amor que dura",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre el amor de toda criatura.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y tanto se apresura",
+     "sangria": 0
+    },
+    {
+     "texto": "a zaga de la huella del Amado,",
+     "sangria": 0
+    },
+    {
+     "texto": "que en él se transfigura,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el cuerpo anonadado",
+     "sangria": 0
+    },
+    {
+     "texto": "ya está por el amor resucitado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aquí la Iglesia canta",
+     "sangria": 0
+    },
+    {
+     "texto": "la condición futura de la historia,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el cuerpo se adelanta",
+     "sangria": 0
+    },
+    {
+     "texto": "en esta humilde gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "a la consumación de su victoria.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mirad los regocijos",
+     "sangria": 0
+    },
+    {
+     "texto": "de la que por estéril sollozaba",
+     "sangria": 0
+    },
+    {
+     "texto": "y se llenó de hijos,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque el Señor miraba",
+     "sangria": 0
+    },
+    {
+     "texto": "la pequeñez humilde de su esclava.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 949,
+    "impresa": "949",
+    "pdf_fin": 950,
+    "impresa_fin": "950"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2574,
+    "impresa": "1446",
+    "pdf_fin": 2575,
+    "impresa_fin": "1447"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4219,
+    "impresa": "1405",
+    "pdf_fin": 4220,
+    "impresa_fin": "1406"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6084,
+    "impresa": "1614",
+    "pdf_fin": 6085,
+    "impresa_fin": "1615"
+   }
+  ]
+ },
+ {
+  "id": "nos-apremia-el-amor-virgenes-santas",
+  "primer_verso": "Nos apremia el amor, vírgenes santas,",
+  "estrofas": [
+   [
+    {
+     "texto": "Nos apremia el amor, vírgenes santas,",
+     "sangria": 0
+    },
+    {
+     "texto": "vosotras, que seguisteis su camino,",
+     "sangria": 0
+    },
+    {
+     "texto": "guiadnos por las sendas de las almas",
+     "sangria": 0
+    },
+    {
+     "texto": "que hicieron de su amor amar divino.",
+     "sangria": 0
+    },
+    {
+     "texto": "Esperasteis en vela a vuestro Esposo",
+     "sangria": 0
+    },
+    {
+     "texto": "en la noche fugaz de vuestra vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando llamó a la puerta, vuestro gozo",
+     "sangria": 0
+    },
+    {
+     "texto": "fue contemplar su gloria sin medida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vuestra fe y vuestro amor, un fuego ardiente",
+     "sangria": 0
+    },
+    {
+     "texto": "que mantuvo la llama en la tardanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "vuestra antorcha encendida ansiosamente",
+     "sangria": 0
+    },
+    {
+     "texto": "ha colmado de luz vuestra esperanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pues gozáis ya las nupcias que el Cordero",
+     "sangria": 0
+    },
+    {
+     "texto": "con la Iglesia de Dios ha celebrado,",
+     "sangria": 0
+    },
+    {
+     "texto": "no dejéis que se apague nuestro fuego",
+     "sangria": 0
+    },
+    {
+     "texto": "en la pereza y el sueño del pecado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias a Dios y, humildemente,",
+     "sangria": 0
+    },
+    {
+     "texto": "pidamos al Señor que su llamada",
+     "sangria": 0
+    },
+    {
+     "texto": "nos encuentre en vigilia permanente,",
+     "sangria": 0
+    },
+    {
+     "texto": "despiertos en la fe y en veste blanca.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 954,
+    "impresa": "954",
+    "pdf_fin": 955,
+    "impresa_fin": "955"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2580,
+    "impresa": "1452"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4224,
+    "impresa": "1410",
+    "pdf_fin": 4225,
+    "impresa_fin": "1411"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6090,
+    "impresa": "1620",
+    "pdf_fin": 6091,
+    "impresa_fin": "1621"
+   }
+  ]
+ },
+ {
+  "id": "dichosa-tu-que-entre-todas",
+  "primer_verso": "Dichosa tú, que, entre todas,",
+  "estrofas": [
+   [
+    {
+     "texto": "Dichosa tú, que, entre todas,",
+     "sangria": 0
+    },
+    {
+     "texto": "fuiste por Dios sorprendida",
+     "sangria": 0
+    },
+    {
+     "texto": "con tu lámpara encendida",
+     "sangria": 0
+    },
+    {
+     "texto": "para el banquete de bodas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Con el abrazo inocente",
+     "sangria": 0
+    },
+    {
+     "texto": "de un hondo pacto amoroso,",
+     "sangria": 0
+    },
+    {
+     "texto": "vienes a unirte al Esposo",
+     "sangria": 0
+    },
+    {
+     "texto": "por virgen y por prudente.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Enséñanos a vivir,",
+     "sangria": 0
+    },
+    {
+     "texto": "ayúdenos tu oración,",
+     "sangria": 0
+    },
+    {
+     "texto": "danos en la tentación",
+     "sangria": 0
+    },
+    {
+     "texto": "la gracia de resistir.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Honor a la Trinidad",
+     "sangria": 0
+    },
+    {
+     "texto": "por esta limpia victoria,",
+     "sangria": 0
+    },
+    {
+     "texto": "y gloria por esta gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "que alegra a la humanidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 957,
+    "impresa": "957",
+    "pdf_fin": 958,
+    "impresa_fin": "958"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2583,
+    "impresa": "1455"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4227,
+    "impresa": "1413",
+    "pdf_fin": 4228,
+    "impresa_fin": "1414"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6093,
+    "impresa": "1623",
+    "pdf_fin": 6094,
+    "impresa_fin": "1624"
+   }
+  ]
+ },
+ {
+  "id": "la-gracia-de-mujer-es-toda-gracia",
+  "primer_verso": "La gracia de mujer es toda Gracia,",
+  "estrofas": [
+   [
+    {
+     "texto": "La gracia de mujer es toda Gracia,",
+     "sangria": 0
+    },
+    {
+     "texto": "lirios de Dios de eterna primavera,",
+     "sangria": 0
+    },
+    {
+     "texto": "vosotras sois mujeres sin falacia",
+     "sangria": 0
+    },
+    {
+     "texto": "de encantos de virtud perecedera.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bella es la creación que dio a estas flores",
+     "sangria": 0
+    },
+    {
+     "texto": "su cáliz virginal y el dulce encanto",
+     "sangria": 0
+    },
+    {
+     "texto": "del amor del Señor de sus amores,",
+     "sangria": 0
+    },
+    {
+     "texto": "eterna melodía de su canto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Llamó el divino amor a vuestra puerta,",
+     "sangria": 0
+    },
+    {
+     "texto": "de par en par el corazón abristeis;",
+     "sangria": 0
+    },
+    {
+     "texto": "si grande fue la siembra en vuestra huerta,",
+     "sangria": 0
+    },
+    {
+     "texto": "frondosa es la cosecha que le disteis.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias a Dios por las estrellas",
+     "sangria": 0
+    },
+    {
+     "texto": "que brillan en la noche de la vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "es la luz de la fe que fulge en ellas",
+     "sangria": 0
+    },
+    {
+     "texto": "con amor y esperanza sin medida.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 958,
+    "impresa": "958"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2583,
+    "impresa": "1455",
+    "pdf_fin": 2584,
+    "impresa_fin": "1456"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4228,
+    "impresa": "1414"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6094,
+    "impresa": "1624"
+   }
+  ]
+ },
+ {
+  "id": "desde-que-mi-voluntad",
+  "primer_verso": "Desde que mi voluntad",
+  "estrofas": [
+   [
+    {
+     "texto": "Desde que mi voluntad",
+     "sangria": 0
+    },
+    {
+     "texto": "está a la vuestra rendida,",
+     "sangria": 0
+    },
+    {
+     "texto": "conozco yo la medida",
+     "sangria": 0
+    },
+    {
+     "texto": "de la mejor libertad.",
+     "sangria": 0
+    },
+    {
+     "texto": "Venid, Señor, y tomad",
+     "sangria": 0
+    },
+    {
+     "texto": "las riendas de mi albedrío;",
+     "sangria": 0
+    },
+    {
+     "texto": "de vuestra mano me fío",
+     "sangria": 0
+    },
+    {
+     "texto": "y a vuestra mano me entrego,",
+     "sangria": 0
+    },
+    {
+     "texto": "que es poco lo que me niego",
+     "sangria": 0
+    },
+    {
+     "texto": "si yo soy vuestro y vos mío.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "A fuerza de amor humano",
+     "sangria": 0
+    },
+    {
+     "texto": "me abraso en amor divino.",
+     "sangria": 0
+    },
+    {
+     "texto": "La santidad es camino",
+     "sangria": 0
+    },
+    {
+     "texto": "que va de mí hacia mi hermano.",
+     "sangria": 0
+    },
+    {
+     "texto": "Me dí sin tender la mano",
+     "sangria": 0
+    },
+    {
+     "texto": "para cobrar el favor;",
+     "sangria": 0
+    },
+    {
+     "texto": "me dí en salud y en dolor",
+     "sangria": 0
+    },
+    {
+     "texto": "a todos, y de tal suerte",
+     "sangria": 0
+    },
+    {
+     "texto": "que me ha encontrado la muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "sin nada más que el amor.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 966,
+    "impresa": "966"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2592,
+    "impresa": "1464"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4236,
+    "impresa": "1422"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6102,
+    "impresa": "1632"
+   }
+  ]
+ },
+ {
+  "id": "dichosos-los-que-oyendo-la-llamada",
+  "primer_verso": "Dichosos los que, oyendo la llamada",
+  "estrofas": [
+   [
+    {
+     "texto": "Dichosos los que, oyendo la llamada",
+     "sangria": 0
+    },
+    {
+     "texto": "de la fe y del amor en vuestra vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "creísteis que la vida os era dada",
+     "sangria": 0
+    },
+    {
+     "texto": "para darla en amor y con fe viva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos, si abrazasteis la pobreza",
+     "sangria": 0
+    },
+    {
+     "texto": "para llenar de Dios vuestras alforjas,",
+     "sangria": 0
+    },
+    {
+     "texto": "para servirle a él con fortaleza,",
+     "sangria": 0
+    },
+    {
+     "texto": "con gozo y con amor a todas horas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos mensajeros de verdades,",
+     "sangria": 0
+    },
+    {
+     "texto": "que fuisteis por caminos de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "predicando bondad contra maldades,",
+     "sangria": 0
+    },
+    {
+     "texto": "pregonando la paz contra las guerras.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos, del amor dispensadores,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, de los tristes el consuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, de los hombres servidores,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, herederos de los cielos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 966,
+    "impresa": "966"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2592,
+    "impresa": "1464",
+    "pdf_fin": 2593,
+    "impresa_fin": "1465"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4236,
+    "impresa": "1422"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6102,
+    "impresa": "1632",
+    "pdf_fin": 6103,
+    "impresa_fin": "1633"
+   },
+   {
+    "tomo": 1,
+    "pdf": 1002,
+    "impresa": "1002",
+    "pdf_fin": 1003,
+    "impresa_fin": "1003"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2632,
+    "impresa": "1504",
+    "pdf_fin": 2633,
+    "impresa_fin": "1505"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4272,
+    "impresa": "1458",
+    "pdf_fin": 4273,
+    "impresa_fin": "1459"
+   }
+  ]
+ },
+ {
+  "id": "cantemos-nuestra-fe-y-al-confesarla",
+  "primer_verso": "Cantemos nuestra fe y, al confesarla,",
+  "estrofas": [
+   [
+    {
+     "texto": "Cantemos nuestra fe y, al confesarla,",
+     "sangria": 0
+    },
+    {
+     "texto": "unidas nuestras voces de creyentes,",
+     "sangria": 0
+    },
+    {
+     "texto": "pidamos al Señor que, al proclamarla,",
+     "sangria": 0
+    },
+    {
+     "texto": "inunde con su luz a nuestras mentes.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El gozo de crecer sea alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "de servir al Señor, y su Palabra",
+     "sangria": 0
+    },
+    {
+     "texto": "simiente en crecimiento día a día,",
+     "sangria": 0
+    },
+    {
+     "texto": "que al don de su verdad el mundo abra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Clara es la fe y oscuro su camino",
+     "sangria": 0
+    },
+    {
+     "texto": "de gracia y libertad en puro encuentro,",
+     "sangria": 0
+    },
+    {
+     "texto": "si crees que Jesús es Dios que vino,",
+     "sangria": 0
+    },
+    {
+     "texto": "no está lejos de ti, sino muy dentro.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Legión es la asamblea de los santos,",
+     "sangria": 0
+    },
+    {
+     "texto": "que en el Señor Jesús puso confianza,",
+     "sangria": 0
+    },
+    {
+     "texto": "sus frutos de justicia fueron tantos",
+     "sangria": 0
+    },
+    {
+     "texto": "que vieron ya colmada su esperanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Demos gracias a Dios, que es nuestra roca,",
+     "sangria": 0
+    },
+    {
+     "texto": "sigamos a Jesús con entereza,",
+     "sangria": 0
+    },
+    {
+     "texto": "si nuestra fe vacila, si ella es poca,",
+     "sangria": 0
+    },
+    {
+     "texto": "su Espíritu de amor nos dará fuerza.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 972,
+    "impresa": "972"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2599,
+    "impresa": "1471",
+    "pdf_fin": 2600,
+    "impresa_fin": "1472"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4242,
+    "impresa": "1428",
+    "pdf_fin": 4243,
+    "impresa_fin": "1429"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6109,
+    "impresa": "1639",
+    "pdf_fin": 6110,
+    "impresa_fin": "1640"
+   }
+  ]
+ },
+ {
+  "id": "vosotros-sois-luz-del-mundo-2",
+  "primer_verso": "Vosotros sois luz del mundo",
+  "estrofas": [
+   [
+    {
+     "texto": "Vosotros sois luz del mundo",
+     "sangria": 0
+    },
+    {
+     "texto": "y ardiente sal de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ciudad esbelta en el monte,",
+     "sangria": 0
+    },
+    {
+     "texto": "fermento en la masa nueva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros sois los sarmientos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y yo la Vid verdadera;",
+     "sangria": 0
+    },
+    {
+     "texto": "si el Padre poda las ramas,",
+     "sangria": 0
+    },
+    {
+     "texto": "más fruto llevan las cepas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vosotros sois la abundancia",
+     "sangria": 0
+    },
+    {
+     "texto": "del reino que ya está cerca,",
+     "sangria": 0
+    },
+    {
+     "texto": "los doce mil señalados",
+     "sangria": 0
+    },
+    {
+     "texto": "que no caerán en la siega.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos, porque sois limpios",
+     "sangria": 0
+    },
+    {
+     "texto": "y ricos en la pobreza,",
+     "sangria": 0
+    },
+    {
+     "texto": "y es vuestro el reino que sólo",
+     "sangria": 0
+    },
+    {
+     "texto": "se gana con la violencia.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 972,
+    "impresa": "972",
+    "pdf_fin": 973,
+    "impresa_fin": "973"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2600,
+    "impresa": "1472"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4243,
+    "impresa": "1429"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6110,
+    "impresa": "1640"
+   },
+   {
+    "tomo": 1,
+    "pdf": 1005,
+    "impresa": "1005"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2635,
+    "impresa": "1507"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4275,
+    "impresa": "1461"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «vosotros-sois-luz-del-mundo»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "cuando-senor-el-dia-ya-declina",
+  "primer_verso": "Cuando, Señor, el día ya declina,",
+  "estrofas": [
+   [
+    {
+     "texto": "Cuando, Señor, el día ya declina,",
+     "sangria": 0
+    },
+    {
+     "texto": "quedaos con el hombre, que, en la noche",
+     "sangria": 0
+    },
+    {
+     "texto": "del tiempo y de la lucha en que camina,",
+     "sangria": 0
+    },
+    {
+     "texto": "turba su corazón con su reproche.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Disipad nuestras dudas, hombres santos,",
+     "sangria": 0
+    },
+    {
+     "texto": "que en el alto glorioso del camino",
+     "sangria": 0
+    },
+    {
+     "texto": "ya dejasteis atrás temores tantos",
+     "sangria": 0
+    },
+    {
+     "texto": "de perder vuestra fe en el don divino.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Perdonad nuestros miedos, seguidores",
+     "sangria": 0
+    },
+    {
+     "texto": "del camino en la fe que os fue ofrecido,",
+     "sangria": 0
+    },
+    {
+     "texto": "hacednos con vosotros confesores",
+     "sangria": 0
+    },
+    {
+     "texto": "de la fe y del amor que habéis vivido.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Que tu amor, Padre santo, haga fuerte",
+     "sangria": 0
+    },
+    {
+     "texto": "nuestro amor, nuestra fe en tu Hijo amado;",
+     "sangria": 0
+    },
+    {
+     "texto": "que la hora suprema de la muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "sea encuentro en la luz, don consumado.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 976,
+    "impresa": "976"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2603,
+    "impresa": "1475",
+    "pdf_fin": 2604,
+    "impresa_fin": "1476"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4246,
+    "impresa": "1432"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6113,
+    "impresa": "1643",
+    "pdf_fin": 6114,
+    "impresa_fin": "1644"
+   }
+  ]
+ },
+ {
+  "id": "dichosos-los-que-oisteis-la-llamada",
+  "primer_verso": "Dichosos los que oísteis la llamada",
+  "estrofas": [
+   [
+    {
+     "texto": "Dichosos los que oísteis la llamada",
+     "sangria": 0
+    },
+    {
+     "texto": "al pleno seguimiento del Maestro,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos cuando puso su mirada",
+     "sangria": 0
+    },
+    {
+     "texto": "y os quiso para amigo y compañero.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos si abrazasteis la pobreza",
+     "sangria": 0
+    },
+    {
+     "texto": "para llenar de Dios vuestras alforjas,",
+     "sangria": 0
+    },
+    {
+     "texto": "para servirle a él con fortaleza,",
+     "sangria": 0
+    },
+    {
+     "texto": "con gozo y con amor a todas horas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos mensajeros de verdades,",
+     "sangria": 0
+    },
+    {
+     "texto": "marchando por caminos de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "predicando bondad contra maldades,",
+     "sangria": 0
+    },
+    {
+     "texto": "pregonando la paz contra las guerras.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosos, del perdón dispensadores,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, de los tristes el consuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, de los hombres servidores,",
+     "sangria": 0
+    },
+    {
+     "texto": "dichosos, herederos de los cielos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 976,
+    "impresa": "976",
+    "pdf_fin": 977,
+    "impresa_fin": "977"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2604,
+    "impresa": "1476"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6114,
+    "impresa": "1644"
+   }
+  ]
+ },
+ {
+  "id": "la-mujer-fuerte",
+  "primer_verso": "La mujer fuerte",
+  "estrofas": [
+   [
+    {
+     "texto": "La mujer fuerte",
+     "sangria": 2
+    },
+    {
+     "texto": "puso en Dios su esperanza:",
+     "sangria": 2
+    },
+    {
+     "texto": "Dios la sostiene.",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Hizo del templo su casa;",
+     "sangria": 0
+    },
+    {
+     "texto": "mantuvo ardiendo su lámpara.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En la mesa de los hijos",
+     "sangria": 0
+    },
+    {
+     "texto": "hizo a los pobres un sitio.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Guardó memoria a sus muertos;",
+     "sangria": 0
+    },
+    {
+     "texto": "gastó en los vivos su tiempo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Sirvió, consoló, dio fuerzas;",
+     "sangria": 0
+    },
+    {
+     "texto": "guardó para sí sus penas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vistió el dolor de plegaria;",
+     "sangria": 0
+    },
+    {
+     "texto": "la soledad, de esperanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y Dios la cubrió de gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "como de un velo de bodas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La mujer fuerte",
+     "sangria": 0
+    },
+    {
+     "texto": "puso en Dios su esperanza:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios la sostiene.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 984,
+    "impresa": "984",
+    "pdf_fin": 985,
+    "impresa_fin": "985"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2613,
+    "impresa": "1485"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4254,
+    "impresa": "1440",
+    "pdf_fin": 4255,
+    "impresa_fin": "1441"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6122,
+    "impresa": "1652"
+   }
+  ]
+ },
+ {
+  "id": "dichosa-la-mujer-que-ha-conservado",
+  "primer_verso": "Dichosa la mujer que ha conservado,",
+  "estrofas": [
+   [
+    {
+     "texto": "Dichosa la mujer que ha conservado,",
+     "sangria": 0
+    },
+    {
+     "texto": "en su regazo, con amor materno,",
+     "sangria": 0
+    },
+    {
+     "texto": "la palabra del Hijo que ha engendrado",
+     "sangria": 0
+    },
+    {
+     "texto": "en la vida de fe y de amor pleno.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosas sois vosotras, que en la vida",
+     "sangria": 0
+    },
+    {
+     "texto": "hicisteis de la fe vuestra entereza,",
+     "sangria": 0
+    },
+    {
+     "texto": "vuestra gracia en la Gracia fue asumida,",
+     "sangria": 0
+    },
+    {
+     "texto": "maravilla de Dios y de belleza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosas sois vosotras, que supisteis",
+     "sangria": 0
+    },
+    {
+     "texto": "ser hijas del amor que Dios os daba,",
+     "sangria": 0
+    },
+    {
+     "texto": "y así, en la fe, madres de muchos fuisteis,",
+     "sangria": 0
+    },
+    {
+     "texto": "fecunda plenitud que nunca acaba.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No dejéis de ser madres, en la gloria,",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hombres que luchan con anhelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "ante Dios vuestro amor haga memoria",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hijos que esperan ir al cielo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 985,
+    "impresa": "985"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2613,
+    "impresa": "1485",
+    "pdf_fin": 2614,
+    "impresa_fin": "1486"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4255,
+    "impresa": "1441"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6122,
+    "impresa": "1652",
+    "pdf_fin": 6123,
+    "impresa_fin": "1653"
+   }
+  ]
+ },
+ {
+  "id": "dichosas-sois-vosotras-que-guardasteis",
+  "primer_verso": "Dichosas sois vosotras que guardásteis",
+  "estrofas": [
+   [
+    {
+     "texto": "Dichosas sois vosotras que guardásteis",
+     "sangria": 0
+    },
+    {
+     "texto": "con amor maternal en vuestro seno",
+     "sangria": 0
+    },
+    {
+     "texto": "la Palabra del Hijo que engendrasteis",
+     "sangria": 0
+    },
+    {
+     "texto": "en la vida de fe y de amor pleno.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosas sois vosotras que en la vida",
+     "sangria": 0
+    },
+    {
+     "texto": "vuestra gracia en la Gracia fue asumida,",
+     "sangria": 0
+    },
+    {
+     "texto": "maravilla de Dios y de belleza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosas sois vosotras que supisteis",
+     "sangria": 0
+    },
+    {
+     "texto": "ser hijas del amor que Dios os daba,",
+     "sangria": 0
+    },
+    {
+     "texto": "y así, en la fe, que muchas madres fuisteis,",
+     "sangria": 0
+    },
+    {
+     "texto": "fecunda plenitud que nunca acaba.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No dejéis de ser madres en la gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hombres que luchan con anhelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hijos que esperan ir al cielo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 993,
+    "impresa": "993"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2622,
+    "impresa": "1494"
+   }
+  ]
+ },
+ {
+  "id": "finisimo-fue-el-lino-con-que-ella",
+  "primer_verso": "Finísimo fue el lino con que ella",
+  "estrofas": [
+   [
+    {
+     "texto": "Finísimo fue el lino con que ella",
+     "sangria": 0
+    },
+    {
+     "texto": "fue tejiendo, a lo largo de su vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "esa historia de amor que la hace bella",
+     "sangria": 0
+    },
+    {
+     "texto": "a los ojos de Dios y bendecida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Supo trenzar con tino los amores",
+     "sangria": 0
+    },
+    {
+     "texto": "del cielo y de la tierra, y santamente",
+     "sangria": 0
+    },
+    {
+     "texto": "hizo altar del telar de sus labores,",
+     "sangria": 0
+    },
+    {
+     "texto": "oración desgranada lentamente.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Flor virgen, florecida en amor santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "llenó el hogar de paz y joven vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "su dulce fortaleza fue su encanto,",
+     "sangria": 0
+    },
+    {
+     "texto": "la fuerza de su amor, la fe vivida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Una escuela de fe fue su regazo,",
+     "sangria": 0
+    },
+    {
+     "texto": "todos fueron dichosos a su vera,",
+     "sangria": 0
+    },
+    {
+     "texto": "su muerte en el Señor fue un tierno abrazo,",
+     "sangria": 0
+    },
+    {
+     "texto": "su vida será eterna primavera.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 993,
+    "impresa": "993"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2622,
+    "impresa": "1494",
+    "pdf_fin": 2623,
+    "impresa_fin": "1495"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4263,
+    "impresa": "1449",
+    "pdf_fin": 4264,
+    "impresa_fin": "1450"
+   }
+  ]
+ },
+ {
+  "id": "dichosas-sois-vosotras-que-guardasteis-2",
+  "primer_verso": "Dichosas sois vosotras que guardasteis",
+  "estrofas": [
+   [
+    {
+     "texto": "Dichosas sois vosotras que guardasteis",
+     "sangria": 0
+    },
+    {
+     "texto": "con amor maternal en vuestro seno",
+     "sangria": 0
+    },
+    {
+     "texto": "la palabra del Hijo que engendrasteis",
+     "sangria": 0
+    },
+    {
+     "texto": "en la vida de fe y de amor pleno.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosas sois vosotras que en la vida",
+     "sangria": 0
+    },
+    {
+     "texto": "hicisteis de la fe vuestra entereza,",
+     "sangria": 0
+    },
+    {
+     "texto": "vuestra gracia en la Gracia fue asumida,",
+     "sangria": 0
+    },
+    {
+     "texto": "maravilla de Dios y de belleza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dichosas sois vosotras que supisteis",
+     "sangria": 0
+    },
+    {
+     "texto": "ser hijas del amor que Dios os daba,",
+     "sangria": 0
+    },
+    {
+     "texto": "y así, en la fe, de muchos madres fuisteis,",
+     "sangria": 0
+    },
+    {
+     "texto": "fecunda plenitud que nunca acaba.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No dejéis de ser madres en la gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hombres que luchan con anhelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "ante Dios vuestro amor haga memoria",
+     "sangria": 0
+    },
+    {
+     "texto": "de los hijos que esperan ir al cielo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4263,
+    "impresa": "1449"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6129,
+    "impresa": "1659"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «dichosas-sois-vosotras-que-guardasteis»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "finisimo-fue-el-lino-con-que-ella-2",
+  "primer_verso": "Finísimo fue el lino con que ella",
+  "estrofas": [
+   [
+    {
+     "texto": "Finísimo fue el lino con que ella",
+     "sangria": 0
+    },
+    {
+     "texto": "fue tejiendo, a lo largo de su vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "esa historia de amor que la hace bella",
+     "sangria": 0
+    },
+    {
+     "texto": "a los ojos de Dios y bendecida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Supo trenzar con tino los amores",
+     "sangria": 0
+    },
+    {
+     "texto": "del cielo y de la tierra, y santamente",
+     "sangria": 0
+    },
+    {
+     "texto": "hizo altar del telar de sus labores,",
+     "sangria": 0
+    },
+    {
+     "texto": "oración desgranada lentamente.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Flor virgen, florecida en amor santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "llenó el hogar de paz y joven vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "su dulce fortaleza fue su encanto,",
+     "sangria": 0
+    },
+    {
+     "texto": "la fuerza de su amor la fe vivida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Una escuela de fe fue su regazo.",
+     "sangria": 0
+    },
+    {
+     "texto": "Todos fueron dichosos a su vera,",
+     "sangria": 0
+    },
+    {
+     "texto": "su muerte en el Señor fue un tierno abrazo,",
+     "sangria": 0
+    },
+    {
+     "texto": "su vida será eterna primavera.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 996,
+    "impresa": "996"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2626,
+    "impresa": "1498"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4266,
+    "impresa": "1452",
+    "pdf_fin": 4267,
+    "impresa_fin": "1453"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6132,
+    "impresa": "1662",
+    "pdf_fin": 6133,
+    "impresa_fin": "1663"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «finisimo-fue-el-lino-con-que-ella»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "un-amor-casto-y-puro",
+  "primer_verso": "Un amor casto y puro",
+  "estrofas": [
+   [
+    {
+     "texto": "Un amor casto y puro",
+     "sangria": 0
+    },
+    {
+     "texto": "calladamente:",
+     "sangria": 0
+    },
+    {
+     "texto": "más grande que la vida",
+     "sangria": 0
+    },
+    {
+     "texto": "y que la muerte.",
+     "sangria": 0
+    },
+    {
+     "texto": "Dulce su casa,",
+     "sangria": 0
+    },
+    {
+     "texto": "y su marido en ella",
+     "sangria": 0
+    },
+    {
+     "texto": "se contemplaba.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Era su amor de madre",
+     "sangria": 0
+    },
+    {
+     "texto": "como una rosa:",
+     "sangria": 0
+    },
+    {
+     "texto": "pétalos de fragancia",
+     "sangria": 0
+    },
+    {
+     "texto": "y espinas rojas.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y era su seno",
+     "sangria": 0
+    },
+    {
+     "texto": "un arrullo de lirios",
+     "sangria": 0
+    },
+    {
+     "texto": "y de silencios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Olor a roja viña",
+     "sangria": 0
+    },
+    {
+     "texto": "y a tierna hogaza:",
+     "sangria": 0
+    },
+    {
+     "texto": "y su mano prudente",
+     "sangria": 0
+    },
+    {
+     "texto": "acariciaba.",
+     "sangria": 0
+    },
+    {
+     "texto": "Sus dedos limpios",
+     "sangria": 0
+    },
+    {
+     "texto": "iban tejiendo lana",
+     "sangria": 0
+    },
+    {
+     "texto": "para sus hijos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y Dios desde su cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "se sonreía,",
+     "sangria": 0
+    },
+    {
+     "texto": "por la casta frescura",
+     "sangria": 0
+    },
+    {
+     "texto": "de fuente limpia.",
+     "sangria": 0
+    },
+    {
+     "texto": "Amor callado",
+     "sangria": 0
+    },
+    {
+     "texto": "que vestía al Cordero",
+     "sangria": 0
+    },
+    {
+     "texto": "de rojo y blanco.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 997,
+    "impresa": "997"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2626,
+    "impresa": "1498",
+    "pdf_fin": 2627,
+    "impresa_fin": "1499"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4267,
+    "impresa": "1453"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6133,
+    "impresa": "1663"
+   }
+  ]
+ },
+ {
+  "id": "feliz-quien-ha-escuchado-la-llamada",
+  "primer_verso": "Feliz quien ha escuchado la llamada",
+  "estrofas": [
+   [
+    {
+     "texto": "Feliz quien ha escuchado la llamada",
+     "sangria": 0
+    },
+    {
+     "texto": "al pleno seguimiento del Maestro,",
+     "sangria": 0
+    },
+    {
+     "texto": "feliz porque él, con su mirada,",
+     "sangria": 0
+    },
+    {
+     "texto": "lo eligió como amigo y compañero.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Feliz el que ha abrazado la pobreza",
+     "sangria": 0
+    },
+    {
+     "texto": "para llenar de Dios su vida toda,",
+     "sangria": 0
+    },
+    {
+     "texto": "para servirlo a él con fortaleza,",
+     "sangria": 0
+    },
+    {
+     "texto": "con gozo y con amor a todas horas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Feliz el mensajero de verdades",
+     "sangria": 0
+    },
+    {
+     "texto": "que marcha por caminos de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "predicando bondad contra maldades,",
+     "sangria": 0
+    },
+    {
+     "texto": "pregonando la paz contra las guerras.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1006,
+    "impresa": "1006"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2636,
+    "impresa": "1508"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4276,
+    "impresa": "1462"
+   }
+  ]
+ },
+ {
+  "id": "rosa-entre-rosas",
+  "primer_verso": "Rosa entre rosas",
+  "estrofas": [
+   [
+    {
+     "texto": "Rosa entre rosas",
+     "sangria": 2
+    },
+    {
+     "texto": "flor de las flores,",
+     "sangria": 2
+    },
+    {
+     "texto": "Virgen de vírgenes",
+     "sangria": 2
+    },
+    {
+     "texto": "y Amor de amores.",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Rosa en que el Señor",
+     "sangria": 0
+    },
+    {
+     "texto": "puso su querer,",
+     "sangria": 0
+    },
+    {
+     "texto": "flor la mas hermosa",
+     "sangria": 0
+    },
+    {
+     "texto": "que se vio nacer,",
+     "sangria": 0
+    },
+    {
+     "texto": "Virgen que hace dulce",
+     "sangria": 0
+    },
+    {
+     "texto": "nuestro padecer,",
+     "sangria": 0
+    },
+    {
+     "texto": "Amor que hace nuestros",
+     "sangria": 0
+    },
+    {
+     "texto": "sus santos amores.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Rosa entre rosas",
+     "sangria": 2
+    },
+    {
+     "texto": "flor de las flores,",
+     "sangria": 2
+    },
+    {
+     "texto": "Virgen de vírgenes",
+     "sangria": 2
+    },
+    {
+     "texto": "y Amor de amores.",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Gloria a Dios Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria a Dios Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "igual por siempre,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4126,
+    "impresa": "1312",
+    "pdf_fin": 4127,
+    "impresa_fin": "1313"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5992,
+    "impresa": "1522"
+   }
+  ]
+ },
+ {
+  "id": "ruega-por-nosotros",
+  "primer_verso": "Ruega por nosotros,",
+  "estrofas": [
+   [
+    {
+     "texto": "Ruega por nosotros,",
+     "sangria": 0
+    },
+    {
+     "texto": "amorosa Madre,",
+     "sangria": 0
+    },
+    {
+     "texto": "para que tu Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "no nos desampare.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De tus ojos penden",
+     "sangria": 0
+    },
+    {
+     "texto": "las felicidades;",
+     "sangria": 0
+    },
+    {
+     "texto": "míranos, Señora,",
+     "sangria": 0
+    },
+    {
+     "texto": "no nos desampares.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bien veo, Señora,",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre de mi alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "que por mis pecados",
+     "sangria": 0
+    },
+    {
+     "texto": "lagrimas derramas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria a Dios Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria a Dios Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "igual por siempre,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4127,
+    "impresa": "1313"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5993,
+    "impresa": "1523"
+   }
+  ]
+ },
+ {
+  "id": "llena-de-rosas-mi-herida",
+  "primer_verso": "Llena de rosas mi herida,",
+  "estrofas": [
+   [
+    {
+     "texto": "Llena de rosas mi herida,",
+     "sangria": 0
+    },
+    {
+     "texto": "llena de estrellas mis ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "llena de paz mis abrojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "llena de gracia mi vida",
+     "sangria": 0
+    },
+    {
+     "texto": "y, de esplendor revestida,",
+     "sangria": 0
+    },
+    {
+     "texto": "ven a mí en la última hora,",
+     "sangria": 0
+    },
+    {
+     "texto": "a cerrar, Consoladora,",
+     "sangria": 0
+    },
+    {
+     "texto": "mis ojos fijos en ti",
+     "sangria": 0
+    },
+    {
+     "texto": "y, vaciándome de mí,",
+     "sangria": 0
+    },
+    {
+     "texto": "lléname de ti, Señora.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4127,
+    "impresa": "1313"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5993,
+    "impresa": "1523"
+   }
+  ]
+ },
+ {
+  "id": "salve-madre-en-la-tierra-de-mis-amores",
+  "primer_verso": "Salve, Madre, en la tierra de mis amores",
+  "estrofas": [
+   [
+    {
+     "texto": "Salve, Madre, en la tierra de mis amores",
+     "sangria": 0
+    },
+    {
+     "texto": "te saludan los cantos que alza el amor.",
+     "sangria": 0
+    },
+    {
+     "texto": "Reina de nuestras almas, flor de las flores,",
+     "sangria": 0
+    },
+    {
+     "texto": "muestra aquí de tu gloria los resplandores,",
+     "sangria": 0
+    },
+    {
+     "texto": "que en el cielo tan sólo te aman mejor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Virgen Santa, Virgen pura,",
+     "sangria": 0
+    },
+    {
+     "texto": "vida, esperanza y dulzura",
+     "sangria": 0
+    },
+    {
+     "texto": "del alma que en Ti confía,",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre de Dios, Madre mía.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mientras mi vida alentare",
+     "sangria": 0
+    },
+    {
+     "texto": "todo mi amor para Ti,",
+     "sangria": 0
+    },
+    {
+     "texto": "mas si mi amor te olvidare,",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre mía, Madre mía,",
+     "sangria": 0
+    },
+    {
+     "texto": "aunque mi amor te olvidare,",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú no te olvides de mí.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, gloria al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu Santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "por los siglos de los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4136,
+    "impresa": "1322",
+    "pdf_fin": 4137,
+    "impresa_fin": "1323"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5998,
+    "impresa": "1528",
+    "pdf_fin": 5999,
+    "impresa_fin": "1529"
+   }
+  ]
+ },
+ {
+  "id": "quiero-seguirte-a-ti-flor-de-las-flores",
+  "primer_verso": "Quiero seguirte a ti, flor de las flores,",
+  "estrofas": [
+   [
+    {
+     "texto": "Quiero seguirte a ti, flor de las flores,",
+     "sangria": 0
+    },
+    {
+     "texto": "siempre decir cantar de tus loores;",
+     "sangria": 0
+    },
+    {
+     "texto": "non me partir de te servir,",
+     "sangria": 0
+    },
+    {
+     "texto": "mejor de las mejores.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gran confianza tengo yo en ti, Señora,",
+     "sangria": 0
+    },
+    {
+     "texto": "mi esperanza está en ti, hora tras hora;",
+     "sangria": 0
+    },
+    {
+     "texto": "de tribulanza, sin tardanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "venme a librar ahora.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Estrella de la mar, puerto de belleza",
+     "sangria": 0
+    },
+    {
+     "texto": "de todo mi dolor y mi tristeza,",
+     "sangria": 0
+    },
+    {
+     "texto": "venme librar y confortar,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señora del alteza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, y al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Espíritu Santo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4137,
+    "impresa": "1323"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5999,
+    "impresa": "1529"
+   }
+  ]
+ },
+ {
+  "id": "tu-eres-toda-hermosa",
+  "primer_verso": "Tú eres toda hermosa,",
+  "estrofas": [
+   [
+    {
+     "texto": "Tú eres toda hermosa,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡oh Madre del Señor!;",
+     "sangria": 0
+    },
+    {
+     "texto": "tú eres de Dios gloria,",
+     "sangria": 0
+    },
+    {
+     "texto": "la obra de su amor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh rosa sin espinas,",
+     "sangria": 0
+    },
+    {
+     "texto": "oh vaso de elección!,",
+     "sangria": 0
+    },
+    {
+     "texto": "de ti nació la vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "por ti nos vino Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Sellada fuente pura",
+     "sangria": 0
+    },
+    {
+     "texto": "de gracia y de piedad,",
+     "sangria": 0
+    },
+    {
+     "texto": "bendita cual ninguna,",
+     "sangria": 0
+    },
+    {
+     "texto": "sin culpa original.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Infunde en nuestro pecho",
+     "sangria": 0
+    },
+    {
+     "texto": "la fuerza de tu amor,",
+     "sangria": 0
+    },
+    {
+     "texto": "feliz Madre del Verbo,",
+     "sangria": 0
+    },
+    {
+     "texto": "custodia del Señor.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4137,
+    "impresa": "1323"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5999,
+    "impresa": "1529",
+    "pdf_fin": 6000,
+    "impresa_fin": "1530"
+   }
+  ]
+ },
+ {
+  "id": "maria-pureza-en-vuelo-2",
+  "primer_verso": "María, pureza en vuelo,",
+  "estrofas": [
+   [
+    {
+     "texto": "María, pureza en vuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "Virgen de vírgenes, danos",
+     "sangria": 0
+    },
+    {
+     "texto": "la gracia de ser humanos",
+     "sangria": 0
+    },
+    {
+     "texto": "sin olvidarnos del cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Enséñanos a vivir,",
+     "sangria": 0
+    },
+    {
+     "texto": "ayúdenos tu oración,",
+     "sangria": 0
+    },
+    {
+     "texto": "danos en la tentación",
+     "sangria": 0
+    },
+    {
+     "texto": "la gracia de resistir.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Honor a la Trinidad",
+     "sangria": 0
+    },
+    {
+     "texto": "por esta limpia victoria,",
+     "sangria": 0
+    },
+    {
+     "texto": "y gloria por esta gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "que alegra a la humanidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4137,
+    "impresa": "1323",
+    "pdf_fin": 4138,
+    "impresa_fin": "1324"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6000,
+    "impresa": "1530"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «maria-pureza-en-vuelo»: ¿es el mismo himno con otra redacción?"
+ }
+]
