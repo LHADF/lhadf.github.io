@@ -97,7 +97,7 @@ Piezas marcadas para revisar: 10 · diferencias entre tomos: 1
 [MAL] Conteos: 1 fuera de norma
       viernes-santo-de-la-muerte-del-senor/visperas/preces incompletas
 [OK ] Opciones: tomo 2: 15 etiquetas rojas → 15 variantes
-[OK ] Remisiones: 0 rotas; 19 pendientes (fuera de esta sección)
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 19 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: apendices/vigilias/santa-maria-virgen
       pendiente: ordinario/invitatorio/salmodia

@@ -82,6 +82,12 @@ SECCIONES = {
     'tiempo-ordinario': {'tomos': {3: (2880, 3313), 4: (4487, 5072)}, 'salida': AQUI / 'tiempo/ordinario',
                          'archivo': 'tiempo-ordinario.json', 'seccion': 'tiempo-ordinario',
                          'nombre': 'Propio del tiempo · Tiempo ordinario', 'modo': 'tiempo'},
+    # paso 6: Propio de los santos; cada tomo trae solo los meses que caen en su tiempo, así que
+    # se unifica por fecha y nombre, no por posición
+    'santoral': {'tomos': {1: (752, 833, None, 'OFICIOS COMUNES'), 2: (2237, 2437, None, 'OFICIOS COMUNES'),
+                           3: (3825, 4084, None, 'OFICIOS COMUNES'), 4: (5576, 5949, None, 'OFICIOS COMUNES')},
+                 'salida': AQUI / 'santoral', 'archivo': 'santoral.json', 'seccion': 'santoral',
+                 'nombre': 'Propio de los santos', 'modo': 'santoral'},
 }
 TOMOS = SECCIONES['virgen']['tomos']
 SALIDA = SECCIONES['virgen']['salida']
@@ -105,6 +111,10 @@ def salterio():
 
 def tiempo():
     return MODO == 'tiempo'
+
+
+def santoral():
+    return MODO == 'santoral'
 
 
 # Salterio y Completas: etiquetas de día, de tiempo y de formulario que el vocabulario general no reconoce
@@ -143,6 +153,12 @@ RE_ET_TIEMPO = re.compile(
     r'S[óo]lo para (?:los s[áa]bados|Tercia|Sexta|Nona)|Antes de la Ascensi[óo]n|'
     r'TERCIA|SEXTA|NONA|Ciclo (?:anual|bienal)|En (?:Espa[ñn]a|Latinoam[ée]rica|Am[ée]rica Latina)|'
     r'Latinoam[ée]rica)\s*[:.]\s*$|^\s*(Antes|Despu[ée]s) de la Ascensi[óo]n\s*[:.]?\s*$')
+MESES_RX = ('enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|'
+            'diciembre')
+# Propio de los santos: renglón de fecha (negro centrado, en renglón propio) y rótulo de grado
+RE_FECHA_SANT = re.compile(r'^\(?\s*(?:El mismo d[íi]a\s*)?(\d{1,2})\s*(?:de\s+)?(' + MESES_RX + r')\s*\)?$', re.I)
+RE_GRADO = re.compile(r'^(Solemnidad|Fiesta|Memoria(?: libre)?|Conmemoraci[óo]n)\s*\.?$')
+RE_GRADO_DENTRO = re.compile(r'\b(Solemnidad|Fiesta|Memoria(?: libre)?|Conmemoraci[óo]n)\b')
 ROTULOS_SAL = {'VERSÍCULO', 'LECTURAS', 'CONCLUSIÓN', 'EXAMEN DE CONCIENCIA', 'Bendición', 'BENDICIÓN',
                'ANTÍFONA FINAL', 'Antífona final', 'LECTURA BREVE', 'RESPONSORIO BREVE', 'CÁNTICO EVANGÉLICO'}
 
@@ -380,8 +396,14 @@ def leer_tomo(doc, tomo, a, b, n0=0, desde=None, hasta=None):
                     if s['text'] == '':
                         continue
                     c, dud = clase_color(s['color'])
+                    verde = c == 'G' and santoral()
+                    if verde:
+                        # Propio de los santos: el tomo III imprime en verde media sección (biografías,
+                        # cuerpos de lecturas, oraciones): el verde se lee como texto y la biografía se
+                        # reconoce por su lugar. Qué significa el color queda para CRU.
+                        c = 'k'
                     segs.append({'t': s['text'], 'c': c, 'f': s['font'], 's': s['size'],
-                                 'hex': hexcolor(s['color']), 'dud': dud})
+                                 'hex': hexcolor(s['color']), 'dud': dud, 'verde': verde})
                 if segs:
                     crudos.append([l['bbox'][1], l['bbox'][0], segs])
         crudos.sort(key=lambda t: (round(t[0], 0), t[1]))
@@ -392,7 +414,7 @@ def leer_tomo(doc, tomo, a, b, n0=0, desde=None, hasta=None):
                 lineas[-1][2].extend(segs)
             else:
                 lineas.append([y, x, segs])
-        if MODO == 'tiempo':
+        if MODO in ('tiempo', 'santoral'):
             # el libro deja a veces el «R.» del renglón siguiente al final del anterior: se devuelve a su sitio
             for i in range(len(lineas) - 1):
                 sg = lineas[i][2]
@@ -508,6 +530,8 @@ class Parser:
             return self._clase_salterio(r, k)
         if self.modo == 'tiempo':
             return self._clase_tiempo(r, k)
+        if self.modo == 'santoral':
+            return self._clase_santoral(r, k)
         if self.modo != 'ordinario' or k in ('blanco', 'titulo', 'hora', 'separador'):
             return k
         t = r.texto.strip()
@@ -556,6 +580,177 @@ class Parser:
                     not re.search(r'[.:]\s*$', prev.texto) and t[:1].islower():
                 return 'rubrica'     # rúbrica partida en dos renglones, el segundo termina en «:»
         return k
+
+    def _clase_santoral(self, r, k):
+        """Propio de los santos: meses, renglones de fecha, títulos de celebración y rótulos de grado."""
+        if k in ('blanco', 'separador', 'numero_seccion', 'hora'):
+            return k
+        t = espacios(r.texto)
+        tu = t.upper()
+        if r.talla >= 20 and tu.startswith('PROPIO DE LOS SANTOS'):
+            return 'seccion_santoral'
+        if r.c0 == 'R' and r.solo <= {'R'} and r.talla >= 15 and \
+                re.fullmatch(r'\d{0,2}\s*(' + MESES_RX.upper() + r')\s*\d{0,2}', tu):
+            return 'mes'
+        if r.c0 == 'R' and r.solo <= {'R'} and r.x > 150 and RE_GRADO.match(t):
+            return 'grado'
+        if r.c0 == 'k' and r.x < 70 and re.match(r'^Ant\.\s*\d?\s*\.?\s+\S', t) and \
+                self.parte is not None and self.parte['parte'] in ('salmodia', 'cantico_evangelico', 'antifona'):
+            return 'ant'              # el libro imprime el rótulo en negro (errata)
+        if r.c0 == 'k' and r.solo <= {'k'} and r.x > 100 and r.talla <= 12 and self.es_fecha(r):
+            return 'fecha'
+        if r.talla >= 14 and r.c0 == 'k' and t == tu and re.search(r'[A-ZÁÉÍÓÚ]{3}', t):
+            return 'celebracion'
+        if getattr(self, '_fecha_pend', None) is not None and r.c0 == 'k' and r.x > 100 and \
+                (r.talla >= 14 or r.negrita or t == tu):
+            # el título que sigue a la fecha, aunque el libro lo imprima en cuerpo 11 o 12
+            return 'celebracion'
+        return k
+
+    def es_fecha(self, r):
+        """¿El renglón es el de la fecha que abre una celebración?"""
+        t = espacios(r.texto)
+        if RE_FECHA_SANT.match(t) or re.fullmatch(r'El mismo d[íi]a\s*', t):
+            return True
+        # «Jueves después de Pentecostés», «(El día 6 cuando el 5 cae en domingo)», «Sábado anterior
+        # al segundo domingo de mayo,»: renglón centrado en cuerpo chico, seguido del título
+        if len(t) > 90 or t.endswith(('.', ':')) or not t:
+            return False
+        j = r.n + 1
+        while j < len(self.R) and self.R[j].vacio:
+            j += 1
+        if j >= len(self.R):
+            return False
+        x = self.R[j]
+        if x.talla >= 14 and x.c0 == 'k' and x.texto.strip().isupper():
+            return True
+        return bool(x.c0 == 'k' and x.x > 100 and x.talla <= 12 and RE_FECHA_SANT.match(espacios(x.texto)))
+
+    def c_seccion_santoral(self, r):
+        t, lineas = self.titulo_largo(r)
+        if not getattr(self, 'titulo_santoral', None):
+            self.titulo_santoral = t
+        for x in lineas:
+            self.tomar(x, 'sección: ' + t)
+
+    def c_mes(self, r):
+        t = espacios(r.texto)
+        nombre = re.search(MESES_RX, t, re.I).group(0).lower()
+        if not hasattr(self, 'meses'):
+            self.meses = []
+        self.mes_actual = {'numero': MESES['septiembre' if nombre == 'setiembre' else nombre],
+                           'nombre': nombre, 'titulo': t, 'pdf': r.pdf, 'impresa': r.impresa}
+        self.meses.append(self.mes_actual)
+        self.tomar(r, 'mes: ' + t)
+        self.i += 1
+
+    def c_fecha(self, r):
+        t = espacios(r.texto)
+        lineas = [r]
+        self.i += 1
+        while True:
+            x = self.actual()
+            if x is None:
+                break
+            if x.vacio:
+                nx = self.sig()
+                if nx is None or self.clase(nx) != 'fecha':
+                    break
+                self.tomar(x, 'blanco'); self.i += 1
+                continue
+            if self.clase(x) != 'fecha':
+                break
+            lineas.append(x); t += ' ' + espacios(x.texto); self.i += 1
+        f = None
+        mm = RE_FECHA_SANT.match(espacios(lineas[0].texto)) or RE_FECHA_SANT.search(t)
+        if mm:
+            nombre = mm.group(2).lower()
+            f = {'dia': int(mm.group(1)), 'mes': MESES['septiembre' if nombre == 'setiembre' else nombre]}
+        elif re.match(r'^El mismo d[íi]a', t) and getattr(self, '_fecha_ult', None):
+            f = dict(self._fecha_ult)
+        self._fecha_pend = {'literal': t, 'fecha': f, 'renglones': lineas}
+
+    def c_celebracion_santoral(self, r):
+        t, lineas = self.titulo_largo(r)
+        fp = getattr(self, '_fecha_pend', None)
+        extra = {}
+        if fp is not None:
+            extra['fecha_literal'] = fp['literal']
+            if fp['fecha']:
+                extra['fecha'] = fp['fecha']
+                self._fecha_ult = fp['fecha']
+        else:
+            self.avisos.append((r, 'celebración sin renglón de fecha'))
+        eid = slug(t)
+        if any(c['id'] == eid for c in self.comunes):
+            n = 2
+            while any(c['id'] == f'{eid}-{n}' for c in self.comunes):
+                n += 1
+            self.avisos.append((r, f'dos celebraciones con el mismo título: la segunda es «{eid}-{n}»'))
+            eid = f'{eid}-{n}'
+        mes = getattr(self, 'mes_actual', None)
+        if extra.get('fecha'):
+            self._dia_ord = extra['fecha']['dia']
+        self.abrir_entrada(eid, t, r, _mes=mes['numero'] if mes else None, _pos=len(self.comunes),
+                           _dia_ord=getattr(self, '_dia_ord', 0), _tomo=self.tomo, **extra)
+        if fp is not None:
+            for x in fp['renglones']:
+                self.tomar(x, self.comun)
+            self._fecha_pend = None
+        for x in lineas:
+            self.tomar(x, self.comun)
+        self.leer_grado()
+        self.leer_biografia()
+
+    def _es_grado(self, r):
+        t = espacios(r.texto)
+        if r.c0 == 'R' and r.solo <= {'R'} and r.x > 150 and RE_GRADO.match(t):
+            return True
+        # «Ciudad de Valencia: Solemnidad. Reino de Valencia: Fiesta.»: el grado depende del lugar
+        return bool({'R', 'k'} <= r.solo and RE_GRADO_DENTRO.search(t) and len(t) < 220 and
+                    not re.search(r'\b(Com[úu]n|como en|[Ss]e dice|[Ss]e toma)\b', t))
+
+    def leer_grado(self):
+        """Rótulo de grado de la celebración: «Memoria» rojo centrado, o el grado por lugar."""
+        lineas, textos = [], []
+        while True:
+            r = self.actual()
+            if r is None:
+                break
+            if r.vacio:
+                nx = self.sig()
+                if lineas or nx is None or not self._es_grado(nx):
+                    break
+                self.tomar(r, 'blanco'); self.i += 1
+                continue
+            if not self._es_grado(r):
+                break
+            lineas.append(r); textos.append(espacios(plano(r.m)))
+            self.tomar(r, self.comun); self.i += 1
+        if not lineas:
+            return
+        lit = espacios(' '.join(textos))
+        self.comun['tipo_literal'] = lit
+        mm = RE_GRADO.match(lit)
+        if mm:
+            self.comun['tipo'] = slug(mm.group(1))
+        else:
+            # grado por lugar: queda el literal; la clave «lugar» está pendiente de decisión de CRU
+            self.avisos.append((lineas[0], f'el grado depende del lugar: «{lit[:60]}»'))
+
+    def leer_biografia(self):
+        """Nota biográfica: los párrafos entre el título (o el grado) y el primer rojo."""
+        v = {'_tipo': 'biografia', '_raw': [], '_fuente': {'tomo': self.tomo}}
+        guarda = self.i
+        pars = [x for x in self.leer_parrafos(v) if x]
+        if not pars:
+            for x in v['_raw']:
+                x.dueno = None
+            self.i = guarda
+            return
+        v['parrafos'] = pars
+        self.comun['biografia'] = pars
+        self.comun['_biografia'] = v
 
     def _clase_salterio(self, r, k):
         """Salterio y Completas: semanas, días, formularios de Completas, rótulos y etiquetas propias."""
@@ -619,7 +814,7 @@ class Parser:
                     return 'rotulo'
             if t == 'Oración' or t == 'Oración.':
                 return 'rotulo'
-            if re.match(r'^Responsorio\b', t):
+            if re.match(r'^Responsorio\b', t) or (santoral() and re.match(r'^RESPONSORIO\b', t)):
                 return 'responsorio'
             if re.match(r'^Ant\.( ?\d\.)?', t) or (salterio() and re.match(r'^ANT\.', t)) or \
                     (tiempo() and re.match(r'^Ant\s*,\s*\d?\s*\.', t)):   # tomo IV: «ANT. 3.»; errata: «Ant, 2.»
@@ -630,6 +825,10 @@ class Parser:
                 return 'v'
             if re.match(r'^R\.', t):
                 return 'r'
+            if santoral() and len(r.segs) > 1 and 'k' in r.solo:
+                prim = r.primer()['t'].strip()
+                if prim in ('V', 'V.', 'R', 'R.'):      # «V» sin punto, o con el punto en negro
+                    return 'v' if prim[0] == 'V' else 'r'
             if t.startswith('—'):
                 return 'guion'
             if r.x > 100 and re.fullmatch(r'[IVX]+', t):
@@ -684,7 +883,7 @@ class Parser:
         self.hora_id = hid
         self.parte = None
         self.etiqueta = None
-        self.bloque = getattr(self, 'bloque_persistente', None) if self.modo == 'tiempo' else None
+        self.bloque = getattr(self, 'bloque_persistente', None) if self.modo in ('tiempo', 'santoral') else None
 
     def abrir_parte(self, nombre, reusar=False):
         if self.hora is None:
@@ -812,7 +1011,7 @@ class Parser:
         if mm:
             return m[:mm.start()], True, plano(mm.group(0)).strip()
         mm = re.search(r'\s*\(T\.\s*P\.\s*Aleluya\.?\)\.?\s*$', plano(m))
-        if mm and '\x01' in m:
+        if mm and ('\x01' in m or santoral()):
             return plano(m)[:mm.start()], True, mm.group(0).strip()
         return m, False, None
 
@@ -913,8 +1112,9 @@ class Parser:
         self.i += 1
         while True:
             x = self.actual()
+            limite = (2.6 if self.modo == 'santoral' else 1.45) * r.talla
             if x is None or x.vacio or x.c0 != r.c0 or abs(x.talla - r.talla) > 0.6 or \
-                    x.gap > 1.45 * r.talla or not x.texto.strip().isupper():
+                    x.gap > limite or not x.texto.strip().isupper():
                 break
             t += ' ' + (' '.join(z['t'] for z in x.segs if z['t'].strip()) if x.talla >= 16 else x.texto)
             lineas.append(x)
@@ -981,6 +1181,8 @@ class Parser:
         return out
 
     def c_celebracion(self, r):
+        if self.modo == 'santoral':
+            return self.c_celebracion_santoral(r)
         t, lineas = self.titulo_largo(r)
         bl = getattr(self, 'bloque_t', None)
         campos = self.campos_celebracion(t)
@@ -998,6 +1200,10 @@ class Parser:
         self.abrir_entrada(eid, t, r, _bloque=bl['id'] if bl else None, **campos)
         for x in lineas:
             self.tomar(x, self.comun)
+
+    def c_grado(self, r):
+        self.avisos.append((r, f'rótulo de grado fuera del comienzo de una celebración: «{espacios(r.texto)}»'))
+        self.c_rubrica(r)
 
     def c_serie(self, r):
         """Salmodia complementaria: «Serie I (Tercia)» abre la hora."""
@@ -1100,6 +1306,19 @@ class Parser:
         else:
             self.etiqueta = {'texto': t, 'renglones': [r]}
         self.i += 1
+        if self.modo == 'santoral':
+            # «En el tiempo de Cuaresma: Para la conmemoración sólo lo siguiente:» antes de una hora:
+            # la condición vale para todo el resto de la celebración
+            j = self.i
+            while j < len(self.R) and self.R[j].vacio:
+                j += 1
+            if j < len(self.R) and self.clase(self.R[j]) == 'hora':
+                self.bloque = {'texto': self.etiqueta['texto'], 'piezas': set()}
+                self.bloque_persistente = self.bloque
+                for rr in self.etiqueta['renglones']:
+                    self.tomar(rr, 'bloque: ' + self.etiqueta['texto'])
+                self.etiqueta = None
+                return
         if self.modo == 'tiempo' and 'region' in condicion(self.etiqueta['texto'])[0]:
             # «En América Latina:» antes de una hora o de un rótulo: vale para todo lo que sigue
             j = self.i
@@ -1549,6 +1768,10 @@ class Parser:
         mm = re.match(r'^\x01\s*(' + ant_rx + r')\s*\x02?', m, fl)
         if not mm:  # «Ant. 1. texto» todo en rojo
             mm = re.match(r'^\x01\s*(' + ant_rx + r')\s*', m, fl)
+        if not mm and santoral() and r.c0 == 'k':
+            mm = re.match(r'^(' + ant_rx + r')\s*', m, fl)      # rótulo impreso en negro
+            if mm:
+                self.avisos.append((r, f'el libro imprime el rótulo «{mm.group(1)}» en negro'))
         if not mm:
             self.avisos.append((r, f'«Ant.» con forma inesperada: {r.texto[:40]}'))
             self.c_rubrica(r)
@@ -1904,7 +2127,7 @@ class Parser:
             self.agregar_variante('versiculo', v)
             return
         self.avisos.append((r, 'R. suelto'))
-        if self.modo == 'tiempo':
+        if self.modo in ('tiempo', 'santoral'):
             # «R.» sin su V. (la despedida del tiempo pascual): se guarda con su rótulo aparte
             if self.parte is None:
                 self.abrir_parte('versiculo')
@@ -1932,6 +2155,10 @@ class Parser:
                 # «R» rojo y el punto en negro (errata de imprenta)
                 txt = self.leer_texto_simple(v, re.sub(r'^\x01\s*[VR]\s*\x02\s*\.\s*', '', r.m))
                 v.setdefault('_marcas_vr', []).append(len(out))
+            elif santoral():
+                mm = re.match(r'^\x01\s*([VR])\s*(\.?)\s*(?:\x02\s*(\.?)\s*)?', r.m)
+                v.setdefault('_rot_vr', []).append((letra + (mm.group(2) or mm.group(3) or '')) if mm else letra + '.')
+                txt = self.leer_texto_simple(v, r.m[mm.end():] if mm else r.m)
             else:
                 txt = self.leer_texto_simple(v, re.sub(r'^\x01\s*[VR]\.\s*\x02?', '', r.m))
             out.append((letra, txt))
@@ -1947,9 +2174,11 @@ class Parser:
             v['v1'], v['r1'], v['v2'], v['r2'] = [self.texto_limpio(t, v, 'el responsorio breve') for t in tx[:4]]
         else:
             notas.append(f'secuencia V/R inesperada: {seq}')
+            v['secuencia'] = [{'rotulo': l + '.', 'texto': self.texto_limpio(t, v, 'el responsorio breve')}
+                              for l, t in pares]
         v['gloria'] = False
-        gloria_libre = (self.modo in ('salterio', 'completas', 'tiempo') and len(tx) >= 6 and
-                        re.fullmatch(r'gloria al ?padre (y )?al hijo (y )?al espíritu santo',
+        gloria_libre = (self.modo in ('salterio', 'completas', 'tiempo', 'santoral') and len(tx) >= 6 and
+                        re.fullmatch(r'gloria al ?padre( (y )?al hijo( (y )?al espíritu santo)?)?',
                                      re.sub(r'[,.\s]+', ' ', plano(tx[4])).strip().lower()))
         if len(tx) >= 6 and (RE_GLORIA_V.match(plano(tx[4]).strip()) or gloria_libre):
             v['gloria'] = True
@@ -2023,6 +2252,7 @@ class Parser:
 
     def c_responsorio(self, r):
         v = nueva_variante('responsorio', cita=espacios(r.texto.strip()[len('Responsorio'):]) or None)
+        v['_rot'] = r.texto.strip()[:len('Responsorio')]
         self.tomar(r, v); self.i += 1
         if self.etiqueta is not None:
             v['etiqueta'] = self.etiqueta['texto']
@@ -2096,9 +2326,13 @@ class Parser:
                 break
         v['introduccion'] = self.texto_limpio(unir_lineas(intro), v, 'la introducción de las preces')
         r = self.actual()
-        if r is not None and self.clase(r) == 'negro':
+        if r is not None and self.clase(r) in ('negro', 'r'):
+            con_rotulo = self.clase(r) == 'r'
             self.tomar(r, v); self.i += 1
-            v['respuesta'].append({'etiqueta': None, 'texto': espacios(plano(r.m))})
+            m = re.sub(r'^\x01\s*R\.\s*\x02?', '', r.m) if con_rotulo else r.m
+            v['respuesta'].append({'etiqueta': None, 'texto': espacios(plano(m))})
+            if con_rotulo:
+                v['_resp_rotulo'] = 'R.'
         if self.modo == 'tiempo' and not v['respuesta'] and v['introduccion']:
             # «… y digámosle: ilumínanos, Señor…»: el libro pone la respuesta en el mismo renglón
             mm = re.match(r'^(.*:)\s+(\S.*)$', v['introduccion'])
@@ -2118,6 +2352,14 @@ class Parser:
             if k == 'blanco':
                 self.tomar(r, v); self.i += 1
                 continue
+            if k == 'r' and v['respuesta']:
+                # letanía: el libro repite la respuesta, con su «R.», después de cada intención
+                rt = espacios(plano(re.sub(r'^\x01\s*R\.\s*\x02?', '', r.m)))
+                if norm_item(rt) == norm_item(v['respuesta'][0]['texto']):
+                    self.tomar(r, v); self.i += 1
+                    v.setdefault('_rep_respuesta', []).append(len(v['intenciones']))
+                    continue
+                break
             if k == 'rubrica' and re.match(r"^Se puede[n]?\s+a?\s*añadir", plano(r.texto), re.I):
                 self.tomar(r, v); self.i += 1
                 v['libres_despues_de'] = len(v['intenciones'])
@@ -2138,12 +2380,12 @@ class Parser:
                             self.actual().gap <= 16.5 and not re.search(r'[.!?»]\s*$', plano(sg[-1])):
                         r3 = self.actual(); self.tomar(r3, v); self.i += 1; sg.append(r3.m)
                     seg = self.texto_limpio(unir_lineas(sg), v, 'una intención')
-                if seg is None and re.search(r'Padre\s+nuestro', texto):
+                if seg is None and re.search(r'Padre\s+[Nn]uestro', texto):
                     v['final'] = texto
                     v['_cerrada'] = True
                     break
                 v['intenciones'].append({'primera': texto, 'segunda': seg})
-                if seg is None:
+                if seg is None and not v.get('_rep_respuesta'):
                     v['revisar'] = True
                     v.setdefault('_notas', []).append(f'intención sin segunda mitad: «{texto[:50]}»')
                 continue
@@ -2154,6 +2396,10 @@ class Parser:
     def c_rubrica(self, r):
         if self.modo == 'tiempo' and self.comun is None:
             self.entrada_introduccion(r)
+        if self.modo == 'santoral' and self.comun is None:
+            mes = getattr(self, 'mes_actual', None)
+            self.abrir_entrada('introduccion', getattr(self, 'titulo_santoral', None) or '', r,
+                               _mes=mes['numero'] if mes else None, _pos=0)
         t0 = espacios(r.texto)
         mm = re.match(r'^(O bien:|(?:En )?[Tt]iempo (?:de \w+|pascual):?)\s*(\S.*)$', t0)
         if mm is None and self.modo in ('salterio', 'completas'):
@@ -2362,6 +2608,14 @@ def remite_de(t, comun='virgen', hora=None):
                     ('apóstoles', 'apostoles'), ('dedicación', 'dedicacion')):
         if re.search(r'com[úu]n de (santos |santas |la )?' + rx, tl):
             out.append(f'comunes/{cid}')
+    if santoral() and re.search(r'com[úu]n(es)? de', tl):
+        # «Del Común de un mártir o de pastores», «Del Común de doctores de la Iglesia»: el libro
+        # nombra uno o varios comunes en la misma rúbrica (el nombre va en azul)
+        resto = tl
+        for rx, cid in COMUNES_SANT:
+            if re.search(rx, resto):
+                out.append(f'comunes/{cid}')
+                resto = re.sub(rx, ' ', resto)
     if 'oficio de santa maría en sábado se encuentra' in tl:
         out.append('propio-del-tiempo/santa-maria-sabado')
     if 'ordinario' in tl and 'conclusión' in tl:
@@ -2392,6 +2646,18 @@ def remite_de(t, comun='virgen', hora=None):
     out = [alias.get(x, x) for x in out]
     out = list(dict.fromkeys(out))
     return out[0] if len(out) == 1 else out
+
+
+# Propio de los santos: comunes nombrados en las rúbricas, del nombre más largo al más corto
+COMUNES_SANT = [
+    (r'santa mar[íi]a (virgen|en s[áa]bado)', 'virgen'), (r'varios m[áa]rtires', 'martires-varios'),
+    (r'una? (sola )?m[áa]rtir', 'martires-uno'), (r'm[áa]rtires', 'martires'),
+    (r'ap[óo]stoles', 'apostoles'), (r'pastores', 'pastores'),
+    (r'doctores( de la iglesia)?', 'doctores'), (r'v[íi]rgenes', 'virgenes'),
+    (r'santos varones', 'santos-varones'), (r'santas mujeres', 'santas-mujeres'),
+    (r'religiosos', 'religiosos'), (r'educadores', 'educadores'),
+    (r'(los que practicaron la )?actividad caritativa', 'caridad'), (r'dedicaci[óo]n', 'dedicacion'),
+]
 
 
 # ─────────────────────────── condiciones (cuando) ───────────────────────────
@@ -2602,7 +2868,7 @@ CAMPOS_PUBLICOS = {
     'salmo': ['salmo', 'parte'],
     'himno': ['himno', 'remite'],
     'lectura_breve': ['cita', 'texto'],
-    'responsorio_breve': ['v1', 'r1', 'v2', 'r2', 'gloria'],
+    'responsorio_breve': ['v1', 'r1', 'v2', 'r2', 'gloria', 'secuencia'],
     'versiculo': ['v', 'r', 'gloria', 'despues_gloria', 'tp_aleluya', 'signo_cruz', 'secuencia'],
     'lectura': ['orden', 'cita', 'encabezado', 'fuente', 'titulo', 'parrafos'],
     'responsorio': ['cita', 'r', 'v', 'secuencia', 'tp_aleluya'],
@@ -2644,6 +2910,28 @@ class Unificador:
             t0 = next(t for t in tomos if por_tomo[t].get('semana'))
             out = {'id': cid, 'semana': por_tomo[t0]['semana'], 'dia': por_tomo[t0].get('dia'), 'titulo': None,
                    'fuentes': [], 'rubricas': [], 'horas': {}}
+        if santoral():
+            meta = {}
+            for t in tomos:
+                for k in ('fecha', 'fecha_literal', 'tipo', 'tipo_literal', 'biografia',
+                          '_mes', '_pos', '_dia_ord', '_tomo'):
+                    if por_tomo[t].get(k) is not None and k not in meta:
+                        meta[k] = por_tomo[t][k]
+            out = {'id': cid, **{k: v for k, v in meta.items() if not k.startswith('_')},
+                   'titulo': None, 'fuentes': [], 'rubricas': [], 'horas': {},
+                   **{k: v for k, v in meta.items() if k.startswith('_')}}
+            for k, tipo_dif in (('biografia', 'nota biográfica distinta'), ('tipo_literal', 'grado distinto')):
+                vals = {t: por_tomo[t].get(k) for t in tomos}
+                hay = {t: v for t, v in vals.items() if v}
+                if len(hay) > 1 and len({norm_lista(v) if isinstance(v, list) else norm_item(v)
+                                         for v in hay.values()}) > 1:
+                    self.dif(f'{cid}/{k}', sorted(hay),
+                             {str(t): (' ¶ '.join(v) if isinstance(v, list) else v) for t, v in hay.items()},
+                             'errata probable' if k == 'biografia' else tipo_dif, f'{tipo_dif} entre tomos')
+                elif hay and len(hay) < len(tomos) and len(tomos) > 1:
+                    self.dif(f'{cid}/{k}', [t for t in tomos if not vals.get(t)],
+                             {str(t): (' ¶ '.join(v) if isinstance(v, list) else v) if v else '—'
+                              for t, v in vals.items()}, 'omisión', f'{k} solo en algunos tomos')
         if tiempo():
             meta = {}
             for t in tomos:
@@ -3142,6 +3430,8 @@ def resumen(v):
         return ' ¶ '.join(v.get('parrafos') or [])
     if t == 'responsorio':
         return f"R. {' * '.join(x or '' for x in v.get('r') or [])} V. {v.get('v')}"
+    if t == 'responsorio_breve' and v.get('secuencia'):
+        return ' '.join(x['rotulo'] + ' ' + x['texto'] for x in v['secuencia'])
     if t == 'responsorio_breve':
         return f"V. {v.get('v1')} R. {v.get('r1')} V. {v.get('v2')} R. {v.get('r2')}"
     if t == 'versiculo' and v.get('secuencia'):
@@ -3239,7 +3529,7 @@ FRASES_LECTURA = re.compile(r'como en (las?|el) (I|II|Laudes|Vísperas|Común|Or
 FRASES_PROHIBIDAS = re.compile(r'Se dice|Se pueden|como en (las?|el) (I|II|Laudes|Vísperas|Común|Ordinario|Propio|Oficio)|T\. ?P\.')
 
 
-def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
+def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo, renombradas=()):
     L = []
     ok_total = True
 
@@ -3303,6 +3593,8 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                     rem = any(pz['tipo'] == 'rubrica' for pz in p['piezas'])
                     if na == 0 and ns == 0 and not rem:
                         vacias.append(f'{c["id"]}/{h}/salmodia')
+                    elif santoral() and ns == 0:
+                        pass        # el libro da las antífonas propias y remite los salmos al Común
                     elif not (na == 3 and (ns == 3 or rem)) and not (rem and na == 0):
                         malos.append(f'{c["id"]}/{h}/salmodia: {na} antífonas, {ns} salmos')
                 for pz in p['piezas']:
@@ -3366,16 +3658,25 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                     existentes.add(f'{MODO}/{c["id"]}/{h}')
         if salterio():
             existentes.add(f'{MODO}/{c["id"]}')
-    pendientes, rotas = set(), []
+    pendientes, rotas, sin_destino = set(), [], []
     for c in comunes:
         for h, parte, pz, v in recorrer(c):
             for rem in [pz.get('remite'), v.get('remite')]:
                 for x in (rem if isinstance(rem, list) else [rem]):
                     if not x:
                         continue
-                    if x.startswith('comunes/') or x.split('/')[0] in {c['id'] for c in comunes} or \
+                    if (x.startswith('comunes/') and MODO == 'comunes') or \
+                            (not x.startswith('comunes/') and x.split('/')[0] in {c['id'] for c in comunes}) or \
                             (salterio() and x.startswith(MODO + '/')):
-                        if x not in existentes:
+                        if x in existentes:
+                            pass
+                        elif santoral() and x.split('/')[0] == c['id']:
+                            # el libro remite a una parte que él mismo no imprime en esta celebración
+                            sin_destino.append(f'{c["id"]}/{h}/{parte} → {x}')
+                            v['revisar'] = True
+                            v['nota'] = ' · '.join(filter(None, [v.get('nota'),
+                                                   f'el libro remite a «{x}», que no imprime en esta celebración']))
+                        else:
                             rotas.append(x)
                     elif x.startswith('?'):
                         rotas.append(x)
@@ -3383,8 +3684,11 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
                         pendientes.add(x)
                     else:
                         pendientes.add(x)
-    linea(not rotas, 'Remisiones', f'{len(rotas)} rotas; {len(pendientes)} pendientes (fuera de esta sección)' +
-          ''.join('\n      rota: ' + x for x in rotas) + ''.join('\n      pendiente: ' + x for x in sorted(pendientes)))
+    linea(not rotas, 'Remisiones', f'{len(rotas)} rotas; {len(sin_destino)} sin destino en el libro; '
+          f'{len(pendientes)} pendientes (fuera de esta sección)' +
+          ''.join('\n      rota: ' + x for x in rotas) +
+          ''.join('\n      sin destino en el libro (marcada para revisar): ' + x for x in sin_destino) +
+          ''.join('\n      pendiente: ' + x for x in sorted(pendientes)))
 
     # 7. Salmos
     nombrados = set()
@@ -3436,6 +3740,31 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
         sm = difflib.SequenceMatcher(None, a, b)
         dif = [(op, a[i1:i2], b[j1:j2]) for op, i1, i2, j1, j2 in sm.get_opcodes() if op != 'equal']
         L.append(f'      tomo {t} pdf {pdf} {tp}: {dif[:4]}')
+    if santoral():
+        cels = [c for c in comunes if c['id'] != 'introduccion']
+        sin_lit = [c['id'] for c in cels if not c.get('fecha_literal')]
+        sin_f = [c['id'] for c in cels if not c.get('fecha')]
+        linea(not sin_lit, 'Fechas',
+              f'{len(cels)} celebraciones; {len(sin_f)} con fecha móvil (sin día y mes, con su renglón literal); '
+              f'{len(sin_lit)} sin renglón de fecha' + ''.join('\n      sin fecha normalizada: ' + x for x in sin_f) +
+              ''.join('\n      SIN RENGLÓN DE FECHA: ' + x for x in sin_lit))
+        en_tomos = Counter(len(c['fuentes']) for c in cels)
+        L.append('[INF] Celebraciones por número de tomos: ' +
+                 ', '.join(f'{k} tomo(s): {n}' for k, n in sorted(en_tomos.items())))
+        L.append(f'[INF] Celebraciones unificadas por fecha y nombre entre tomos: {len(renombradas)}' +
+                 ''.join(f'\n      tomo {ROMANOS_T[t]}: «{a}» → «{b}»' for t, a, b, _ in renombradas))
+        con_bio = [c for c in cels if c.get('biografia')]
+        L.append(f'[INF] Notas biográficas: {len(con_bio)} de {len(cels)} celebraciones')
+        verdes = Counter()
+        for p in parsers:
+            for r in p.R:
+                n = len([x for x in r.segs if x.get('verde') and x['t'].strip()])
+                if n:
+                    verdes[p.tomo] += n
+        L.append('[INF] Fragmentos impresos en verde (023300), leídos como texto: ' +
+                 (', '.join(f'tomo {ROMANOS_T[t]}: {n}' for t, n in sorted(verdes.items())) or 'ninguno') +
+                 '\n      el tomo III imprime en verde biografías y cuerpos de texto; qué significa el color '
+                 'queda pendiente de decisión de CRU')
     # rojos y azules dudosos
     dud = [(p.tomo, r.pdf, r.texto[:50], {s["hex"] for s in r.segs if s['dud']}) for p in parsers for r in p.R if r.dudoso]
     L.append(f'[INF] Colores dudosos clasificados por tono: {len(dud)}' + ''.join(f'\n      tomo {a} pdf {b}: {c} {d}' for a, b, c, d in dud[:20]))
@@ -3447,6 +3776,12 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo):
 
 
 PARENTESIS = str.maketrans({'[': '(', ']': ')'})
+
+
+def lab(d, i, pred):
+    """Rótulo V./R. tal como lo imprime el libro («V» sin punto, el punto en negro…)."""
+    rs = d.get('_rot_vr') or []
+    return rs[i] if i < len(rs) else pred
 
 
 def reescribir(d):
@@ -3478,40 +3813,51 @@ def reescribir(d):
         if d.get('_cita_con_etiqueta'):
             return 'LECTURA BREVE' + et + (d.get('cita') or '') + (d.get('texto') or '')
         return et + 'LECTURA BREVE' + (d.get('cita') or '') + (d.get('texto') or '')
+    if t == 'responsorio_breve' and d.get('secuencia'):
+        return et + ''.join(lab(d, j, x['rotulo']) + x['texto'] for j, x in enumerate(d['secuencia']))
     if t == 'responsorio_breve':
         g = d.get('_gloria_raw') or []
-        s = f"V.{d.get('v1')}R.{d.get('r1')}V.{d.get('v2')}R.{d.get('r2')}"
+        s = (f"{lab(d, 0, 'V.')}{d.get('v1')}{lab(d, 1, 'R.')}{d.get('r1')}"
+             f"{lab(d, 2, 'V.')}{d.get('v2')}{lab(d, 3, 'R.')}{d.get('r2')}")
         if g:
-            s += f'V.{g[0]}R.{g[1]}'
+            s += f"{lab(d, 4, 'V.')}{g[0]}{lab(d, 5, 'R.')}{g[1]}"
         return et + s
     if t == 'versiculo' and d.get('secuencia'):
-        return et + ''.join(x['rotulo'] + x['texto'] for x in d['secuencia'])
+        return et + ''.join(lab(d, j, x['rotulo']) + x['texto'] for j, x in enumerate(d['secuencia']))
     if t == 'versiculo':
         tp = d.get('_tp_raw') or {}
         if salterio() and d.get('r') is None:     # tomo I: «V. Dios mío, ven en mi auxilio. Gloria al Padre…» sin R.
-            return f"{et}V.{d.get('v')}{d.get('_gloria_raw') or ''}{d.get('despues_gloria') or ''}{tp.get('v', '')}"
-        return f"{et}V.{d.get('v')}{tp.get('v', '')}R.{d.get('r')}{d.get('_gloria_raw') or ''}{d.get('despues_gloria') or ''}{tp.get('r', '')}"
+            return f"{et}{lab(d, 0, 'V.')}{d.get('v')}{d.get('_gloria_raw') or ''}{d.get('despues_gloria') or ''}{tp.get('v', '')}"
+        return f"{et}{lab(d, 0, 'V.')}{d.get('v')}{tp.get('v', '')}{lab(d, 1, 'R.')}{d.get('r')}" \
+               f"{d.get('_gloria_raw') or ''}{d.get('despues_gloria') or ''}{tp.get('r', '')}"
     if t == 'lectura':
         return et + (d.get('encabezado') or '') + (d.get('cita') or '') + (d.get('fuente') or '') + \
             (d.get('titulo') or '') + ''.join(d.get('parrafos') or [])
     if t == 'responsorio' and d.get('secuencia'):
-        return et + 'Responsorio' + (d.get('cita') or '') + ''.join(x['rotulo'] + x['texto'] for x in d['secuencia'])
+        return et + d.get('_rot', 'Responsorio') + (d.get('cita') or '') + \
+            ''.join(lab(d, j, x['rotulo']) + x['texto'] for j, x in enumerate(d['secuencia']))
     if t == 'responsorio':
         r = d.get('r') or ['', '']
         tp = d.get('_tp_raw') or ''
-        return f"{et}Responsorio{d.get('cita') or ''}R.{r[0]}{'*' + r[1] if r[1] is not None else ''}{tp}" \
-               f"V.{d.get('v')}R.{d.get('_rep')}"
+        return f"{et}{d.get('_rot', 'Responsorio')}{d.get('cita') or ''}{lab(d, 0, 'R.')}{r[0]}" \
+               f"{'*' + r[1] if r[1] is not None else ''}{tp}" \
+               f"{lab(d, 1, 'V.')}{d.get('v')}{lab(d, 2, 'R.')}{d.get('_rep')}"
     if t == 'preces':
         s = et + (d.get('introduccion') or '')
         for j, x in enumerate(d['respuesta']):
-            s += (x['etiqueta'] or '') + x['texto']
+            s += (x['etiqueta'] or '') + (d.get('_resp_rotulo', '') if j == 0 else '') + x['texto']
+        reps = d.get('_rep_respuesta') or []
         for n, i in enumerate(d['intenciones']):
             if d.get('libres_despues_de') == n:
                 s += d.get('_libres_raw', '')
+            s += reps.count(n) * ('R.' + d['respuesta'][0]['texto'])
             s += i['primera'] + ('—' + i['segunda'] if i['segunda'] else '')
+        s += reps.count(len(d['intenciones'])) * ('R.' + d['respuesta'][0]['texto'])
         if d.get('libres_despues_de') == len(d['intenciones']):
             s += d.get('_libres_raw', '')
         return s + (d.get('final') or '')
+    if t == 'biografia':
+        return ''.join(d.get('parrafos') or [])
     if t == 'oracion':
         return et + (d.get('texto') or '')
     if t == 'texto' and d.get('estrofas'):
@@ -3693,6 +4039,76 @@ def unificar_citas(parsers):
     return salida
 
 
+def unificar_santoral(parsers):
+    """Propio de los santos: cada tomo trae solo los meses que caen en su tiempo, pero una misma
+    celebración puede estar en dos tomos. Se empareja por fecha y nombre (no por posición) y las dos
+    quedan con un solo identificador."""
+    grupos = defaultdict(list)
+    for p in parsers:
+        for c in p.comunes:
+            if c['id'] == 'introduccion':
+                continue
+            f = c.get('fecha')
+            grupos[(f['mes'], f['dia']) if f else None].append((p, c))
+    cambios = []
+    for clave, ent in grupos.items():
+        umbral = 0.8 if clave is not None else 0.92     # sin fecha (fiesta móvil): solo por el nombre
+        grupillos = []
+        for p, c in sorted(ent, key=lambda x: (x[0].tomo, x[1].get('_pos', 0))):
+            destino = None
+            for g in grupillos:
+                if p.tomo in g['tomos']:
+                    continue
+                if max(parecido(norm_item(c['titulo']), norm_item(t)) for t in g['titulos']) >= umbral:
+                    destino = g
+                    break
+            if destino is None:
+                grupillos.append({'id': c['id'], 'tomos': {p.tomo}, 'titulos': [c['titulo']]})
+                continue
+            destino['tomos'].add(p.tomo)
+            destino['titulos'].append(c['titulo'])
+            if c['id'] == destino['id']:
+                continue
+            if any(c2 is not c and c2['id'] == destino['id'] for c2 in p.comunes):
+                p.avisos.append((c['_biografia']['_raw'][0] if c.get('_biografia') else p.R[0],
+                                 f'«{c["id"]}» parece la misma celebración que «{destino["id"]}», pero ese '
+                                 f'identificador ya está usado en este tomo: no se unifican'))
+                continue
+            cambios.append((p.tomo, c['id'], destino['id'], c['titulo']))
+            c['id'] = destino['id']
+    return cambios
+
+
+def salida_santoral(seccion, entradas, parsers):
+    """santoral.json: el título, las rúbricas generales y los meses, con sus celebraciones por fecha."""
+    meses = {}
+    for p in parsers:
+        for m in getattr(p, 'meses', []):
+            e = meses.setdefault(m['numero'], {'numero': m['numero'], 'nombre': m['nombre'],
+                                               'titulo': m['titulo'], 'fuentes': [], 'celebraciones': []})
+            f = {'tomo': p.tomo, 'pdf': m['pdf'], 'impresa': m['impresa']}
+            if f not in e['fuentes']:
+                e['fuentes'].append(f)
+    titulo = next((getattr(p, 'titulo_santoral', None) for p in parsers
+                   if getattr(p, 'titulo_santoral', None)), None)
+    datos = {'seccion': seccion, 'titulo': titulo, 'rubricas': []}
+    sueltas = []
+    for e in entradas:
+        mes = e.pop('_mes', None)
+        orden = (e.pop('_dia_ord', 0), e.pop('_tomo', 0), e.pop('_pos', 0))
+        if e['id'] == 'introduccion':
+            datos['rubricas'] += e['rubricas']
+            continue
+        e['_orden'] = orden
+        (meses[mes]['celebraciones'] if mes in meses else sueltas).append(e)
+    for m in meses.values():
+        m['celebraciones'].sort(key=lambda e: e['_orden'])
+    datos['meses'] = [meses[k] for k in sorted(meses)]
+    if sueltas:
+        datos['celebraciones'] = sueltas     # celebraciones antes del primer encabezado de mes
+    return datos
+
+
 def salida_salterio(seccion, entradas):
     """salterio.json: portada (rúbricas), semanas → días, y la salmodia complementaria.
     completas.json: rúbricas generales y los formularios (domingo tras las I y II Vísperas, lunes… viernes)."""
@@ -3778,11 +4194,14 @@ def main():
             R += R2
             descartes += D
         parsers.append(Parser(t, R, modo=cfg.get('modo', 'comunes')).run())
+    renombradas = []
     if MODO in ('salterio', 'completas'):
         identificar_sin_titulo(parsers)
         citas_distintas = unificar_citas(parsers)
     else:
         citas_distintas = []
+    if MODO == 'santoral':
+        renombradas = unificar_santoral(parsers)
     # unificación
     uni = Unificador()
     uni.modo = cfg.get('modo', 'comunes')
@@ -3802,7 +4221,8 @@ def main():
             uni.dif(f'salmos/{canon}', sorted({t for t, _, _ in otros}),
                     {str(t): f'{c} ({sid})' for t, sid, c in otros}, 'cita distinta',
                     f'el mismo texto con otra cita: se unificó en {canon} ({salmos[canon]["cita"]})')
-    ok, L = controles(parsers, descartes, comunes, salmos, uni.himnos, uni, textos_salmo)
+    ok, L = controles(parsers, descartes, comunes, salmos, uni.himnos, uni, textos_salmo,
+                      renombradas=renombradas)
     # escribir
     SALIDA.mkdir(parents=True, exist_ok=True)
     if cfg['seccion'] == 'comunes':
@@ -3811,13 +4231,15 @@ def main():
         datos = salida_salterio(cfg['seccion'], limpiar_salida(comunes))
     elif MODO == 'tiempo':
         datos = limpiar_salida(salida_tiempo(cfg['seccion'], comunes, parsers))
+    elif MODO == 'santoral':
+        datos = limpiar_salida(salida_santoral(cfg['seccion'], comunes, parsers))
     else:
         datos = {'seccion': cfg['seccion'], cfg['seccion']: limpiar_salida(comunes[0] if len(comunes) == 1 else comunes)}
     (SALIDA / cfg['archivo']).write_text(json.dumps(datos, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (SALIDA / 'salmos.json').write_text(json.dumps(limpiar_salida(list(salmos.values())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (SALIDA / 'himnos.json').write_text(json.dumps(limpiar_salida(list(uni.himnos.values())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     dudas = dudas_csv(comunes, salmos, SALIDA / 'dudas.csv', uni.himnos,
-                      seccion=cfg['seccion'] if MODO in ('salterio', 'completas', 'tiempo') else 'comunes')
+                      seccion=cfg['seccion'] if MODO in ('salterio', 'completas', 'tiempo', 'santoral') else 'comunes')
     nd = diferencias_csv(uni, SALIDA / 'diferencias.csv')
     ts = sorted(TOMOS)
     tomos_txt = 'tomos I–IV' if ts == [1, 2, 3, 4] else \
@@ -3831,6 +4253,9 @@ def main():
         import revision as rv
         rv.generar(doc, parsers, comunes, salmos, uni.himnos, revision, TOMOS,
                    resumen_html=resumen_html(comunes, dudas, uni, L, ok), uni=uni, nombre=cfg['nombre'],
+                   # el santoral son 917 páginas: tiras más largas y algo menos de resolución, para que
+                   # la página de revisión entre en un artifact
+                   **({'por_tira': 40, 'dpi': 58, 'calidad': 50} if MODO == 'santoral' else {}),
                    **({'archivo': archivo_rev, 'enlaces': enlaces_rev} if enlaces_rev else {}))
 
 
@@ -3851,6 +4276,30 @@ def resumen_html(comunes, dudas, uni, L, ok):
                     if any('opcion' in (v.get('cuando') or {}) for v in pz['variantes']):
                         piezas_op += 1
     s = ''
+    if santoral():
+        cels = [c for c in comunes if c['id'] != 'introduccion']
+        dos = len([c for c in cels if len(c['fuentes']) > 1])
+        moviles = [c for c in cels if not c.get('fecha')]
+        lugar = [c for c in cels if c.get('tipo_literal') and not c.get('tipo')]
+        s += ('<h2>Lo propio de esta etapa</h2>'
+              f'<p>{len(cels)} celebraciones. Cada tomo trae solo los meses que caen en su tiempo, así que el '
+              f'santoral se unifica <b>por fecha y nombre</b>, no por posición: {dos} celebraciones están en dos '
+              'tomos y quedan en una sola entrada, con sus fuentes; las diferencias de texto van a '
+              '<code>diferencias.csv</code>.</p>'
+              '<p>Cada celebración lleva <code>fecha</code> (día y mes) y <code>fecha_literal</code>, el renglón tal '
+              f'como lo imprime el libro. {len(moviles)} celebraciones tienen fecha móvil («Jueves después de '
+              'Pentecostés», «Domingo antes de la Solemnidad de Todos los Santos»): se guarda el renglón literal y '
+              f'<code>fecha</code> queda vacía. El grado va en <code>tipo</code> («Solemnidad», «Fiesta», «Memoria») '
+              f'y en <code>tipo_literal</code>; en {len(lugar)} celebraciones el grado depende del lugar («Ciudad de '
+              'Valencia: Solemnidad. Reino de Valencia: Fiesta»): queda solo el literal, a la espera de la clave '
+              '<code>lugar</code> que CRU tiene pendiente.</p>'
+              '<p>La nota biográfica se reconoce por su lugar (entre el título o el grado y el primer rojo), no por '
+              'el color: el tomo I y el IV la imprimen en cursiva, el II en negro corriente y el III en verde. El '
+              'tomo III además imprime en verde cuerpos de lecturas y oraciones enteras: el verde se lee como texto '
+              'y qué significa el color queda pendiente de decisión de CRU.</p>'
+              '<p>Claves nuevas de <code>cuando</code>: ninguna. Las etiquetas de tiempo fuerte («En el tiempo de '
+              'Cuaresma: Para la conmemoración sólo lo siguiente:») valen para toda la celebración que sigue, con su '
+              'etiqueta literal y su condición normalizada.</p>')
     if salterio():
         s += ('<h2>Claves nuevas de esta etapa</h2><p><code>dia</code>: días con nombre propio en las etiquetas '
               '(«Domingo I de Adviento:» → <code>{tiempo: adviento, dia: [domingo-1]}</code>; «Lunes santo:» → '

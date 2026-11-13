@@ -239,7 +239,8 @@ def etiqueta_indice(c):
 
 
 def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html='', uni=None,
-            nombre='Común de la Santísima Virgen María', por_tira=10, dpi=72, archivo='index.html', enlaces=None):
+            nombre='Común de la Santísima Virgen María', por_tira=10, dpi=72, calidad=58,
+            archivo='index.html', enlaces=None):
     carpeta = Path(carpeta)
     (carpeta / 'img').mkdir(parents=True, exist_ok=True)
     pares = getattr(uni, '_pares', {}) if uni else {}
@@ -298,7 +299,7 @@ def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html=
                 hoja = Image.new('RGB', (w, h * len(tira)), 'white')
                 for j, px in enumerate(pixs):
                     hoja.paste(Image.frombytes('RGB', (px.width, px.height), px.samples), (0, j * h))
-                hoja.save(ruta, 'JPEG', quality=58, optimize=True)
+                hoja.save(ruta, 'JPEG', quality=calidad, optimize=True)
             for j, n in enumerate(tira):
                 ubic[n] = (nombre_img, j, len(tira), w, h)
         indice = []

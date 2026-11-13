@@ -1,0 +1,1176 @@
+Controles — Propio de los santos (tomos I–IV) — hay controles que no pasan
+Piezas marcadas para revisar: 317 · diferencias entre tomos: 230
+
+[OK ] Cobertura: 45599/45599 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 752: 100 %
+      tomo 1 · pdf 753: 100 %
+      tomo 1 · pdf 754: 100 %
+      tomo 1 · pdf 755: 100 %
+      tomo 1 · pdf 756: 100 %
+      tomo 1 · pdf 757: 100 %
+      tomo 1 · pdf 758: 100 %
+      tomo 1 · pdf 759: 100 %
+      tomo 1 · pdf 760: 100 %
+      tomo 1 · pdf 761: 100 %
+      tomo 1 · pdf 762: 100 %
+      tomo 1 · pdf 763: 100 %
+      tomo 1 · pdf 764: 100 %
+      tomo 1 · pdf 765: 100 %
+      tomo 1 · pdf 766: 100 %
+      tomo 1 · pdf 767: 100 %
+      tomo 1 · pdf 768: 100 %
+      tomo 1 · pdf 769: 100 %
+      tomo 1 · pdf 770: 100 %
+      tomo 1 · pdf 771: 100 %
+      tomo 1 · pdf 772: 100 %
+      tomo 1 · pdf 773: 100 %
+      tomo 1 · pdf 774: 100 %
+      tomo 1 · pdf 775: 100 %
+      tomo 1 · pdf 776: 100 %
+      tomo 1 · pdf 777: 100 %
+      tomo 1 · pdf 778: 100 %
+      tomo 1 · pdf 779: 100 %
+      tomo 1 · pdf 780: 100 %
+      tomo 1 · pdf 781: 100 %
+      tomo 1 · pdf 782: 100 %
+      tomo 1 · pdf 783: 100 %
+      tomo 1 · pdf 784: 100 %
+      tomo 1 · pdf 785: 100 %
+      tomo 1 · pdf 786: 100 %
+      tomo 1 · pdf 787: 100 %
+      tomo 1 · pdf 788: 100 %
+      tomo 1 · pdf 789: 100 %
+      tomo 1 · pdf 790: 100 %
+      tomo 1 · pdf 791: 100 %
+      tomo 1 · pdf 792: 100 %
+      tomo 1 · pdf 793: 100 %
+      tomo 1 · pdf 794: 100 %
+      tomo 1 · pdf 795: 100 %
+      tomo 1 · pdf 796: 100 %
+      tomo 1 · pdf 797: 100 %
+      tomo 1 · pdf 798: 100 %
+      tomo 1 · pdf 799: 100 %
+      tomo 1 · pdf 800: 100 %
+      tomo 1 · pdf 801: 100 %
+      tomo 1 · pdf 802: 100 %
+      tomo 1 · pdf 803: 100 %
+      tomo 1 · pdf 804: 100 %
+      tomo 1 · pdf 805: 100 %
+      tomo 1 · pdf 806: 100 %
+      tomo 1 · pdf 807: 100 %
+      tomo 1 · pdf 808: 100 %
+      tomo 1 · pdf 809: 100 %
+      tomo 1 · pdf 810: 100 %
+      tomo 1 · pdf 811: 100 %
+      tomo 1 · pdf 812: 100 %
+      tomo 1 · pdf 813: 100 %
+      tomo 1 · pdf 814: 100 %
+      tomo 1 · pdf 815: 100 %
+      tomo 1 · pdf 816: 100 %
+      tomo 1 · pdf 817: 100 %
+      tomo 1 · pdf 818: 100 %
+      tomo 1 · pdf 819: 100 %
+      tomo 1 · pdf 820: 100 %
+      tomo 1 · pdf 821: 100 %
+      tomo 1 · pdf 822: 100 %
+      tomo 1 · pdf 823: 100 %
+      tomo 1 · pdf 824: 100 %
+      tomo 1 · pdf 825: 100 %
+      tomo 1 · pdf 826: 100 %
+      tomo 1 · pdf 827: 100 %
+      tomo 1 · pdf 828: 100 %
+      tomo 1 · pdf 829: 100 %
+      tomo 1 · pdf 830: 100 %
+      tomo 1 · pdf 831: 100 %
+      tomo 1 · pdf 832: 100 %
+      tomo 1 · pdf 833: 100 %
+      tomo 2 · pdf 2237: 100 %
+      tomo 2 · pdf 2238: 100 %
+      tomo 2 · pdf 2239: 100 %
+      tomo 2 · pdf 2240: 100 %
+      tomo 2 · pdf 2241: 100 %
+      tomo 2 · pdf 2242: 100 %
+      tomo 2 · pdf 2243: 100 %
+      tomo 2 · pdf 2244: 100 %
+      tomo 2 · pdf 2245: 100 %
+      tomo 2 · pdf 2246: 100 %
+      tomo 2 · pdf 2247: 100 %
+      tomo 2 · pdf 2248: 100 %
+      tomo 2 · pdf 2249: 100 %
+      tomo 2 · pdf 2250: 100 %
+      tomo 2 · pdf 2251: 100 %
+      tomo 2 · pdf 2252: 100 %
+      tomo 2 · pdf 2253: 100 %
+      tomo 2 · pdf 2254: 100 %
+      tomo 2 · pdf 2255: 100 %
+      tomo 2 · pdf 2256: 100 %
+      tomo 2 · pdf 2257: 100 %
+      tomo 2 · pdf 2258: 100 %
+      tomo 2 · pdf 2259: 100 %
+      tomo 2 · pdf 2260: 100 %
+      tomo 2 · pdf 2261: 100 %
+      tomo 2 · pdf 2262: 100 %
+      tomo 2 · pdf 2263: 100 %
+      tomo 2 · pdf 2264: 100 %
+      tomo 2 · pdf 2265: 100 %
+      tomo 2 · pdf 2266: 100 %
+      tomo 2 · pdf 2267: 100 %
+      tomo 2 · pdf 2268: 100 %
+      tomo 2 · pdf 2269: 100 %
+      tomo 2 · pdf 2270: 100 %
+      tomo 2 · pdf 2271: 100 %
+      tomo 2 · pdf 2272: 100 %
+      tomo 2 · pdf 2273: 100 %
+      tomo 2 · pdf 2274: 100 %
+      tomo 2 · pdf 2275: 100 %
+      tomo 2 · pdf 2276: 100 %
+      tomo 2 · pdf 2277: 100 %
+      tomo 2 · pdf 2278: 100 %
+      tomo 2 · pdf 2279: 100 %
+      tomo 2 · pdf 2280: 100 %
+      tomo 2 · pdf 2281: 100 %
+      tomo 2 · pdf 2282: 100 %
+      tomo 2 · pdf 2283: 100 %
+      tomo 2 · pdf 2284: 100 %
+      tomo 2 · pdf 2285: 100 %
+      tomo 2 · pdf 2286: 100 %
+      tomo 2 · pdf 2287: 100 %
+      tomo 2 · pdf 2288: 100 %
+      tomo 2 · pdf 2289: 100 %
+      tomo 2 · pdf 2290: 100 %
+      tomo 2 · pdf 2291: 100 %
+      tomo 2 · pdf 2292: 100 %
+      tomo 2 · pdf 2293: 100 %
+      tomo 2 · pdf 2294: 100 %
+      tomo 2 · pdf 2295: 100 %
+      tomo 2 · pdf 2296: 100 %
+      tomo 2 · pdf 2297: 100 %
+      tomo 2 · pdf 2298: 100 %
+      tomo 2 · pdf 2299: 100 %
+      tomo 2 · pdf 2300: 100 %
+      tomo 2 · pdf 2301: 100 %
+      tomo 2 · pdf 2302: 100 %
+      tomo 2 · pdf 2303: 100 %
+      tomo 2 · pdf 2304: 100 %
+      tomo 2 · pdf 2305: 100 %
+      tomo 2 · pdf 2306: 100 %
+      tomo 2 · pdf 2307: 100 %
+      tomo 2 · pdf 2308: 100 %
+      tomo 2 · pdf 2309: 100 %
+      tomo 2 · pdf 2310: 100 %
+      tomo 2 · pdf 2311: 100 %
+      tomo 2 · pdf 2312: 100 %
+      tomo 2 · pdf 2313: 100 %
+      tomo 2 · pdf 2314: 100 %
+      tomo 2 · pdf 2315: 100 %
+      tomo 2 · pdf 2316: 100 %
+      tomo 2 · pdf 2317: 100 %
+      tomo 2 · pdf 2318: 100 %
+      tomo 2 · pdf 2319: 100 %
+      tomo 2 · pdf 2320: 100 %
+      tomo 2 · pdf 2321: 100 %
+      tomo 2 · pdf 2322: 100 %
+      tomo 2 · pdf 2323: 100 %
+      tomo 2 · pdf 2324: 100 %
+      tomo 2 · pdf 2325: 100 %
+      tomo 2 · pdf 2326: 100 %
+      tomo 2 · pdf 2327: 100 %
+      tomo 2 · pdf 2328: 100 %
+      tomo 2 · pdf 2329: 100 %
+      tomo 2 · pdf 2330: 100 %
+      tomo 2 · pdf 2331: 100 %
+      tomo 2 · pdf 2332: 100 %
+      tomo 2 · pdf 2333: 100 %
+      tomo 2 · pdf 2334: 100 %
+      tomo 2 · pdf 2335: 100 %
+      tomo 2 · pdf 2336: 100 %
+      tomo 2 · pdf 2337: 100 %
+      tomo 2 · pdf 2338: 100 %
+      tomo 2 · pdf 2339: 100 %
+      tomo 2 · pdf 2340: 100 %
+      tomo 2 · pdf 2341: 100 %
+      tomo 2 · pdf 2342: 100 %
+      tomo 2 · pdf 2343: 100 %
+      tomo 2 · pdf 2344: 100 %
+      tomo 2 · pdf 2345: 100 %
+      tomo 2 · pdf 2346: 100 %
+      tomo 2 · pdf 2347: 100 %
+      tomo 2 · pdf 2348: 100 %
+      tomo 2 · pdf 2349: 100 %
+      tomo 2 · pdf 2350: 100 %
+      tomo 2 · pdf 2351: 100 %
+      tomo 2 · pdf 2352: 100 %
+      tomo 2 · pdf 2353: 100 %
+      tomo 2 · pdf 2354: 100 %
+      tomo 2 · pdf 2355: 100 %
+      tomo 2 · pdf 2356: 100 %
+      tomo 2 · pdf 2357: 100 %
+      tomo 2 · pdf 2358: 100 %
+      tomo 2 · pdf 2359: 100 %
+      tomo 2 · pdf 2360: 100 %
+      tomo 2 · pdf 2361: 100 %
+      tomo 2 · pdf 2362: 100 %
+      tomo 2 · pdf 2363: 100 %
+      tomo 2 · pdf 2364: 100 %
+      tomo 2 · pdf 2365: 100 %
+      tomo 2 · pdf 2366: 100 %
+      tomo 2 · pdf 2367: 100 %
+      tomo 2 · pdf 2368: 100 %
+      tomo 2 · pdf 2369: 100 %
+      tomo 2 · pdf 2370: 100 %
+      tomo 2 · pdf 2371: 100 %
+      tomo 2 · pdf 2372: 100 %
+      tomo 2 · pdf 2373: 100 %
+      tomo 2 · pdf 2374: 100 %
+      tomo 2 · pdf 2375: 100 %
+      tomo 2 · pdf 2376: 100 %
+      tomo 2 · pdf 2377: 100 %
+      tomo 2 · pdf 2378: 100 %
+      tomo 2 · pdf 2379: 100 %
+      tomo 2 · pdf 2380: 100 %
+      tomo 2 · pdf 2381: 100 %
+      tomo 2 · pdf 2382: 100 %
+      tomo 2 · pdf 2383: 100 %
+      tomo 2 · pdf 2384: 100 %
+      tomo 2 · pdf 2385: 100 %
+      tomo 2 · pdf 2386: 100 %
+      tomo 2 · pdf 2387: 100 %
+      tomo 2 · pdf 2388: 100 %
+      tomo 2 · pdf 2389: 100 %
+      tomo 2 · pdf 2390: 100 %
+      tomo 2 · pdf 2391: 100 %
+      tomo 2 · pdf 2392: 100 %
+      tomo 2 · pdf 2393: 100 %
+      tomo 2 · pdf 2394: 100 %
+      tomo 2 · pdf 2395: 100 %
+      tomo 2 · pdf 2396: 100 %
+      tomo 2 · pdf 2397: 100 %
+      tomo 2 · pdf 2398: 100 %
+      tomo 2 · pdf 2399: 100 %
+      tomo 2 · pdf 2400: 100 %
+      tomo 2 · pdf 2401: 100 %
+      tomo 2 · pdf 2402: 100 %
+      tomo 2 · pdf 2403: 100 %
+      tomo 2 · pdf 2404: 100 %
+      tomo 2 · pdf 2405: 100 %
+      tomo 2 · pdf 2406: 100 %
+      tomo 2 · pdf 2407: 100 %
+      tomo 2 · pdf 2408: 100 %
+      tomo 2 · pdf 2409: 100 %
+      tomo 2 · pdf 2410: 100 %
+      tomo 2 · pdf 2411: 100 %
+      tomo 2 · pdf 2412: 100 %
+      tomo 2 · pdf 2413: 100 %
+      tomo 2 · pdf 2414: 100 %
+      tomo 2 · pdf 2415: 100 %
+      tomo 2 · pdf 2416: 100 %
+      tomo 2 · pdf 2417: 100 %
+      tomo 2 · pdf 2418: 100 %
+      tomo 2 · pdf 2419: 100 %
+      tomo 2 · pdf 2420: 100 %
+      tomo 2 · pdf 2421: 100 %
+      tomo 2 · pdf 2422: 100 %
+      tomo 2 · pdf 2423: 100 %
+      tomo 2 · pdf 2424: 100 %
+      tomo 2 · pdf 2425: 100 %
+      tomo 2 · pdf 2426: 100 %
+      tomo 2 · pdf 2427: 100 %
+      tomo 2 · pdf 2428: 100 %
+      tomo 2 · pdf 2429: 100 %
+      tomo 2 · pdf 2430: 100 %
+      tomo 2 · pdf 2431: 100 %
+      tomo 2 · pdf 2432: 100 %
+      tomo 2 · pdf 2433: 100 %
+      tomo 2 · pdf 2434: 100 %
+      tomo 2 · pdf 2435: 100 %
+      tomo 2 · pdf 2436: 100 %
+      tomo 2 · pdf 2437: 100 %
+      tomo 3 · pdf 3825: 100 %
+      tomo 3 · pdf 3826: 100 %
+      tomo 3 · pdf 3827: 100 %
+      tomo 3 · pdf 3828: 100 %
+      tomo 3 · pdf 3829: 100 %
+      tomo 3 · pdf 3830: 100 %
+      tomo 3 · pdf 3831: 100 %
+      tomo 3 · pdf 3832: 100 %
+      tomo 3 · pdf 3833: 100 %
+      tomo 3 · pdf 3834: 100 %
+      tomo 3 · pdf 3835: 100 %
+      tomo 3 · pdf 3836: 100 %
+      tomo 3 · pdf 3837: 100 %
+      tomo 3 · pdf 3838: 100 %
+      tomo 3 · pdf 3839: 100 %
+      tomo 3 · pdf 3840: 100 %
+      tomo 3 · pdf 3841: 100 %
+      tomo 3 · pdf 3842: 100 %
+      tomo 3 · pdf 3843: 100 %
+      tomo 3 · pdf 3844: 100 %
+      tomo 3 · pdf 3845: 100 %
+      tomo 3 · pdf 3846: 100 %
+      tomo 3 · pdf 3847: 100 %
+      tomo 3 · pdf 3848: 100 %
+      tomo 3 · pdf 3849: 100 %
+      tomo 3 · pdf 3850: 100 %
+      tomo 3 · pdf 3851: 100 %
+      tomo 3 · pdf 3852: 100 %
+      tomo 3 · pdf 3853: 100 %
+      tomo 3 · pdf 3854: 100 %
+      tomo 3 · pdf 3855: 100 %
+      tomo 3 · pdf 3856: 100 %
+      tomo 3 · pdf 3857: 100 %
+      tomo 3 · pdf 3858: 100 %
+      tomo 3 · pdf 3859: 100 %
+      tomo 3 · pdf 3860: 100 %
+      tomo 3 · pdf 3861: 100 %
+      tomo 3 · pdf 3862: 100 %
+      tomo 3 · pdf 3863: 100 %
+      tomo 3 · pdf 3864: 100 %
+      tomo 3 · pdf 3865: 100 %
+      tomo 3 · pdf 3866: 100 %
+      tomo 3 · pdf 3867: 100 %
+      tomo 3 · pdf 3868: 100 %
+      tomo 3 · pdf 3869: 100 %
+      tomo 3 · pdf 3870: 100 %
+      tomo 3 · pdf 3871: 100 %
+      tomo 3 · pdf 3872: 100 %
+      tomo 3 · pdf 3873: 100 %
+      tomo 3 · pdf 3874: 100 %
+      tomo 3 · pdf 3875: 100 %
+      tomo 3 · pdf 3876: 100 %
+      tomo 3 · pdf 3877: 100 %
+      tomo 3 · pdf 3878: 100 %
+      tomo 3 · pdf 3879: 100 %
+      tomo 3 · pdf 3880: 100 %
+      tomo 3 · pdf 3881: 100 %
+      tomo 3 · pdf 3882: 100 %
+      tomo 3 · pdf 3883: 100 %
+      tomo 3 · pdf 3884: 100 %
+      tomo 3 · pdf 3885: 100 %
+      tomo 3 · pdf 3886: 100 %
+      tomo 3 · pdf 3887: 100 %
+      tomo 3 · pdf 3888: 100 %
+      tomo 3 · pdf 3889: 100 %
+      tomo 3 · pdf 3890: 100 %
+      tomo 3 · pdf 3891: 100 %
+      tomo 3 · pdf 3892: 100 %
+      tomo 3 · pdf 3893: 100 %
+      tomo 3 · pdf 3894: 100 %
+      tomo 3 · pdf 3895: 100 %
+      tomo 3 · pdf 3896: 100 %
+      tomo 3 · pdf 3897: 100 %
+      tomo 3 · pdf 3898: 100 %
+      tomo 3 · pdf 3899: 100 %
+      tomo 3 · pdf 3900: 100 %
+      tomo 3 · pdf 3901: 100 %
+      tomo 3 · pdf 3902: 100 %
+      tomo 3 · pdf 3903: 100 %
+      tomo 3 · pdf 3904: 100 %
+      tomo 3 · pdf 3905: 100 %
+      tomo 3 · pdf 3906: 100 %
+      tomo 3 · pdf 3907: 100 %
+      tomo 3 · pdf 3908: 100 %
+      tomo 3 · pdf 3909: 100 %
+      tomo 3 · pdf 3910: 100 %
+      tomo 3 · pdf 3911: 100 %
+      tomo 3 · pdf 3912: 100 %
+      tomo 3 · pdf 3913: 100 %
+      tomo 3 · pdf 3914: 100 %
+      tomo 3 · pdf 3915: 100 %
+      tomo 3 · pdf 3916: 100 %
+      tomo 3 · pdf 3917: 100 %
+      tomo 3 · pdf 3918: 100 %
+      tomo 3 · pdf 3919: 100 %
+      tomo 3 · pdf 3920: 100 %
+      tomo 3 · pdf 3921: 100 %
+      tomo 3 · pdf 3922: 100 %
+      tomo 3 · pdf 3923: 100 %
+      tomo 3 · pdf 3924: 100 %
+      tomo 3 · pdf 3925: 100 %
+      tomo 3 · pdf 3926: 100 %
+      tomo 3 · pdf 3927: 100 %
+      tomo 3 · pdf 3928: 100 %
+      tomo 3 · pdf 3929: 100 %
+      tomo 3 · pdf 3930: 100 %
+      tomo 3 · pdf 3931: 100 %
+      tomo 3 · pdf 3932: 100 %
+      tomo 3 · pdf 3933: 100 %
+      tomo 3 · pdf 3934: 100 %
+      tomo 3 · pdf 3935: 100 %
+      tomo 3 · pdf 3936: 100 %
+      tomo 3 · pdf 3937: 100 %
+      tomo 3 · pdf 3938: 100 %
+      tomo 3 · pdf 3939: 100 %
+      tomo 3 · pdf 3940: 100 %
+      tomo 3 · pdf 3941: 100 %
+      tomo 3 · pdf 3942: 100 %
+      tomo 3 · pdf 3943: 100 %
+      tomo 3 · pdf 3944: 100 %
+      tomo 3 · pdf 3945: 100 %
+      tomo 3 · pdf 3946: 100 %
+      tomo 3 · pdf 3947: 100 %
+      tomo 3 · pdf 3948: 100 %
+      tomo 3 · pdf 3949: 100 %
+      tomo 3 · pdf 3950: 100 %
+      tomo 3 · pdf 3951: 100 %
+      tomo 3 · pdf 3952: 100 %
+      tomo 3 · pdf 3953: 100 %
+      tomo 3 · pdf 3954: 100 %
+      tomo 3 · pdf 3955: 100 %
+      tomo 3 · pdf 3956: 100 %
+      tomo 3 · pdf 3957: 100 %
+      tomo 3 · pdf 3958: 100 %
+      tomo 3 · pdf 3959: 100 %
+      tomo 3 · pdf 3960: 100 %
+      tomo 3 · pdf 3961: 100 %
+      tomo 3 · pdf 3962: 100 %
+      tomo 3 · pdf 3963: 100 %
+      tomo 3 · pdf 3964: 100 %
+      tomo 3 · pdf 3965: 100 %
+      tomo 3 · pdf 3966: 100 %
+      tomo 3 · pdf 3967: 100 %
+      tomo 3 · pdf 3968: 100 %
+      tomo 3 · pdf 3969: 100 %
+      tomo 3 · pdf 3970: 100 %
+      tomo 3 · pdf 3971: 100 %
+      tomo 3 · pdf 3972: 100 %
+      tomo 3 · pdf 3973: 100 %
+      tomo 3 · pdf 3974: 100 %
+      tomo 3 · pdf 3975: 100 %
+      tomo 3 · pdf 3976: 100 %
+      tomo 3 · pdf 3977: 100 %
+      tomo 3 · pdf 3978: 100 %
+      tomo 3 · pdf 3979: 100 %
+      tomo 3 · pdf 3980: 100 %
+      tomo 3 · pdf 3981: 100 %
+      tomo 3 · pdf 3982: 100 %
+      tomo 3 · pdf 3983: 100 %
+      tomo 3 · pdf 3984: 100 %
+      tomo 3 · pdf 3985: 100 %
+      tomo 3 · pdf 3986: 100 %
+      tomo 3 · pdf 3987: 100 %
+      tomo 3 · pdf 3988: 100 %
+      tomo 3 · pdf 3989: 100 %
+      tomo 3 · pdf 3990: 100 %
+      tomo 3 · pdf 3991: 100 %
+      tomo 3 · pdf 3992: 100 %
+      tomo 3 · pdf 3993: 100 %
+      tomo 3 · pdf 3994: 100 %
+      tomo 3 · pdf 3995: 100 %
+      tomo 3 · pdf 3996: 100 %
+      tomo 3 · pdf 3997: 100 %
+      tomo 3 · pdf 3998: 100 %
+      tomo 3 · pdf 3999: 100 %
+      tomo 3 · pdf 4000: 100 %
+      tomo 3 · pdf 4001: 100 %
+      tomo 3 · pdf 4002: 100 %
+      tomo 3 · pdf 4003: 100 %
+      tomo 3 · pdf 4004: 100 %
+      tomo 3 · pdf 4005: 100 %
+      tomo 3 · pdf 4006: 100 %
+      tomo 3 · pdf 4007: 100 %
+      tomo 3 · pdf 4008: 100 %
+      tomo 3 · pdf 4009: 100 %
+      tomo 3 · pdf 4010: 100 %
+      tomo 3 · pdf 4011: 100 %
+      tomo 3 · pdf 4012: 100 %
+      tomo 3 · pdf 4013: 100 %
+      tomo 3 · pdf 4014: 100 %
+      tomo 3 · pdf 4015: 100 %
+      tomo 3 · pdf 4016: 100 %
+      tomo 3 · pdf 4017: 100 %
+      tomo 3 · pdf 4018: 100 %
+      tomo 3 · pdf 4019: 100 %
+      tomo 3 · pdf 4020: 100 %
+      tomo 3 · pdf 4021: 100 %
+      tomo 3 · pdf 4022: 100 %
+      tomo 3 · pdf 4023: 100 %
+      tomo 3 · pdf 4024: 100 %
+      tomo 3 · pdf 4025: 100 %
+      tomo 3 · pdf 4026: 100 %
+      tomo 3 · pdf 4027: 100 %
+      tomo 3 · pdf 4028: 100 %
+      tomo 3 · pdf 4029: 100 %
+      tomo 3 · pdf 4030: 100 %
+      tomo 3 · pdf 4031: 100 %
+      tomo 3 · pdf 4032: 100 %
+      tomo 3 · pdf 4033: 100 %
+      tomo 3 · pdf 4034: 100 %
+      tomo 3 · pdf 4035: 100 %
+      tomo 3 · pdf 4036: 100 %
+      tomo 3 · pdf 4037: 100 %
+      tomo 3 · pdf 4038: 100 %
+      tomo 3 · pdf 4039: 100 %
+      tomo 3 · pdf 4040: 100 %
+      tomo 3 · pdf 4041: 100 %
+      tomo 3 · pdf 4042: 100 %
+      tomo 3 · pdf 4043: 100 %
+      tomo 3 · pdf 4044: 100 %
+      tomo 3 · pdf 4045: 100 %
+      tomo 3 · pdf 4046: 100 %
+      tomo 3 · pdf 4047: 100 %
+      tomo 3 · pdf 4048: 100 %
+      tomo 3 · pdf 4049: 100 %
+      tomo 3 · pdf 4050: 100 %
+      tomo 3 · pdf 4051: 100 %
+      tomo 3 · pdf 4052: 100 %
+      tomo 3 · pdf 4053: 100 %
+      tomo 3 · pdf 4054: 100 %
+      tomo 3 · pdf 4055: 100 %
+      tomo 3 · pdf 4056: 100 %
+      tomo 3 · pdf 4057: 100 %
+      tomo 3 · pdf 4058: 100 %
+      tomo 3 · pdf 4059: 100 %
+      tomo 3 · pdf 4060: 100 %
+      tomo 3 · pdf 4061: 100 %
+      tomo 3 · pdf 4062: 100 %
+      tomo 3 · pdf 4063: 100 %
+      tomo 3 · pdf 4064: 100 %
+      tomo 3 · pdf 4065: 100 %
+      tomo 3 · pdf 4066: 100 %
+      tomo 3 · pdf 4067: 100 %
+      tomo 3 · pdf 4068: 100 %
+      tomo 3 · pdf 4069: 100 %
+      tomo 3 · pdf 4070: 100 %
+      tomo 3 · pdf 4071: 100 %
+      tomo 3 · pdf 4072: 100 %
+      tomo 3 · pdf 4073: 100 %
+      tomo 3 · pdf 4074: 100 %
+      tomo 3 · pdf 4075: 100 %
+      tomo 3 · pdf 4076: 100 %
+      tomo 3 · pdf 4077: 100 %
+      tomo 3 · pdf 4078: 100 %
+      tomo 3 · pdf 4079: 100 %
+      tomo 3 · pdf 4080: 100 %
+      tomo 3 · pdf 4081: 100 %
+      tomo 3 · pdf 4082: 100 %
+      tomo 3 · pdf 4083: 100 %
+      tomo 3 · pdf 4084: 100 %
+      tomo 4 · pdf 5576: 100 %
+      tomo 4 · pdf 5577: 100 %
+      tomo 4 · pdf 5578: 100 %
+      tomo 4 · pdf 5579: 100 %
+      tomo 4 · pdf 5580: 100 %
+      tomo 4 · pdf 5581: 100 %
+      tomo 4 · pdf 5582: 100 %
+      tomo 4 · pdf 5583: 100 %
+      tomo 4 · pdf 5584: 100 %
+      tomo 4 · pdf 5585: 100 %
+      tomo 4 · pdf 5586: 100 %
+      tomo 4 · pdf 5587: 100 %
+      tomo 4 · pdf 5588: 100 %
+      tomo 4 · pdf 5589: 100 %
+      tomo 4 · pdf 5590: 100 %
+      tomo 4 · pdf 5591: 100 %
+      tomo 4 · pdf 5592: 100 %
+      tomo 4 · pdf 5593: 100 %
+      tomo 4 · pdf 5594: 100 %
+      tomo 4 · pdf 5595: 100 %
+      tomo 4 · pdf 5596: 100 %
+      tomo 4 · pdf 5597: 100 %
+      tomo 4 · pdf 5598: 100 %
+      tomo 4 · pdf 5599: 100 %
+      tomo 4 · pdf 5600: 100 %
+      tomo 4 · pdf 5601: 100 %
+      tomo 4 · pdf 5602: 100 %
+      tomo 4 · pdf 5603: 100 %
+      tomo 4 · pdf 5604: 100 %
+      tomo 4 · pdf 5605: 100 %
+      tomo 4 · pdf 5606: 100 %
+      tomo 4 · pdf 5607: 100 %
+      tomo 4 · pdf 5608: 100 %
+      tomo 4 · pdf 5609: 100 %
+      tomo 4 · pdf 5610: 100 %
+      tomo 4 · pdf 5611: 100 %
+      tomo 4 · pdf 5612: 100 %
+      tomo 4 · pdf 5613: 100 %
+      tomo 4 · pdf 5614: 100 %
+      tomo 4 · pdf 5615: 100 %
+      tomo 4 · pdf 5616: 100 %
+      tomo 4 · pdf 5617: 100 %
+      tomo 4 · pdf 5618: 100 %
+      tomo 4 · pdf 5619: 100 %
+      tomo 4 · pdf 5620: 100 %
+      tomo 4 · pdf 5621: 100 %
+      tomo 4 · pdf 5622: 100 %
+      tomo 4 · pdf 5623: 100 %
+      tomo 4 · pdf 5624: 100 %
+      tomo 4 · pdf 5625: 100 %
+      tomo 4 · pdf 5626: 100 %
+      tomo 4 · pdf 5627: 100 %
+      tomo 4 · pdf 5628: 100 %
+      tomo 4 · pdf 5629: 100 %
+      tomo 4 · pdf 5630: 100 %
+      tomo 4 · pdf 5631: 100 %
+      tomo 4 · pdf 5632: 100 %
+      tomo 4 · pdf 5633: 100 %
+      tomo 4 · pdf 5634: 100 %
+      tomo 4 · pdf 5635: 100 %
+      tomo 4 · pdf 5636: 100 %
+      tomo 4 · pdf 5637: 100 %
+      tomo 4 · pdf 5638: 100 %
+      tomo 4 · pdf 5639: 100 %
+      tomo 4 · pdf 5640: 100 %
+      tomo 4 · pdf 5641: 100 %
+      tomo 4 · pdf 5642: 100 %
+      tomo 4 · pdf 5643: 100 %
+      tomo 4 · pdf 5644: 100 %
+      tomo 4 · pdf 5645: 100 %
+      tomo 4 · pdf 5646: 100 %
+      tomo 4 · pdf 5647: 100 %
+      tomo 4 · pdf 5648: 100 %
+      tomo 4 · pdf 5649: 100 %
+      tomo 4 · pdf 5650: 100 %
+      tomo 4 · pdf 5651: 100 %
+      tomo 4 · pdf 5652: 100 %
+      tomo 4 · pdf 5653: 100 %
+      tomo 4 · pdf 5654: 100 %
+      tomo 4 · pdf 5655: 100 %
+      tomo 4 · pdf 5656: 100 %
+      tomo 4 · pdf 5657: 100 %
+      tomo 4 · pdf 5658: 100 %
+      tomo 4 · pdf 5659: 100 %
+      tomo 4 · pdf 5660: 100 %
+      tomo 4 · pdf 5661: 100 %
+      tomo 4 · pdf 5662: 100 %
+      tomo 4 · pdf 5663: 100 %
+      tomo 4 · pdf 5664: 100 %
+      tomo 4 · pdf 5665: 100 %
+      tomo 4 · pdf 5666: 100 %
+      tomo 4 · pdf 5667: 100 %
+      tomo 4 · pdf 5668: 100 %
+      tomo 4 · pdf 5669: 100 %
+      tomo 4 · pdf 5670: 100 %
+      tomo 4 · pdf 5671: 100 %
+      tomo 4 · pdf 5672: 100 %
+      tomo 4 · pdf 5673: 100 %
+      tomo 4 · pdf 5674: 100 %
+      tomo 4 · pdf 5675: 100 %
+      tomo 4 · pdf 5676: 100 %
+      tomo 4 · pdf 5677: 100 %
+      tomo 4 · pdf 5678: 100 %
+      tomo 4 · pdf 5679: 100 %
+      tomo 4 · pdf 5680: 100 %
+      tomo 4 · pdf 5681: 100 %
+      tomo 4 · pdf 5682: 100 %
+      tomo 4 · pdf 5683: 100 %
+      tomo 4 · pdf 5684: 100 %
+      tomo 4 · pdf 5685: 100 %
+      tomo 4 · pdf 5686: 100 %
+      tomo 4 · pdf 5687: 100 %
+      tomo 4 · pdf 5688: 100 %
+      tomo 4 · pdf 5689: 100 %
+      tomo 4 · pdf 5690: 100 %
+      tomo 4 · pdf 5691: 100 %
+      tomo 4 · pdf 5692: 100 %
+      tomo 4 · pdf 5693: 100 %
+      tomo 4 · pdf 5694: 100 %
+      tomo 4 · pdf 5695: 100 %
+      tomo 4 · pdf 5696: 100 %
+      tomo 4 · pdf 5697: 100 %
+      tomo 4 · pdf 5698: 100 %
+      tomo 4 · pdf 5699: 100 %
+      tomo 4 · pdf 5700: 100 %
+      tomo 4 · pdf 5701: 100 %
+      tomo 4 · pdf 5702: 100 %
+      tomo 4 · pdf 5703: 100 %
+      tomo 4 · pdf 5704: 100 %
+      tomo 4 · pdf 5705: 100 %
+      tomo 4 · pdf 5706: 100 %
+      tomo 4 · pdf 5707: 100 %
+      tomo 4 · pdf 5708: 100 %
+      tomo 4 · pdf 5709: 100 %
+      tomo 4 · pdf 5710: 100 %
+      tomo 4 · pdf 5711: 100 %
+      tomo 4 · pdf 5712: 100 %
+      tomo 4 · pdf 5713: 100 %
+      tomo 4 · pdf 5714: 100 %
+      tomo 4 · pdf 5715: 100 %
+      tomo 4 · pdf 5716: 100 %
+      tomo 4 · pdf 5717: 100 %
+      tomo 4 · pdf 5718: 100 %
+      tomo 4 · pdf 5719: 100 %
+      tomo 4 · pdf 5720: 100 %
+      tomo 4 · pdf 5721: 100 %
+      tomo 4 · pdf 5722: 100 %
+      tomo 4 · pdf 5723: 100 %
+      tomo 4 · pdf 5724: 100 %
+      tomo 4 · pdf 5725: 100 %
+      tomo 4 · pdf 5726: 100 %
+      tomo 4 · pdf 5727: 100 %
+      tomo 4 · pdf 5728: 100 %
+      tomo 4 · pdf 5729: 100 %
+      tomo 4 · pdf 5730: 100 %
+      tomo 4 · pdf 5731: 100 %
+      tomo 4 · pdf 5732: 100 %
+      tomo 4 · pdf 5733: 100 %
+      tomo 4 · pdf 5734: 100 %
+      tomo 4 · pdf 5735: 100 %
+      tomo 4 · pdf 5736: 100 %
+      tomo 4 · pdf 5737: 100 %
+      tomo 4 · pdf 5738: 100 %
+      tomo 4 · pdf 5739: 100 %
+      tomo 4 · pdf 5740: 100 %
+      tomo 4 · pdf 5741: 100 %
+      tomo 4 · pdf 5742: 100 %
+      tomo 4 · pdf 5743: 100 %
+      tomo 4 · pdf 5744: 100 %
+      tomo 4 · pdf 5745: 100 %
+      tomo 4 · pdf 5746: 100 %
+      tomo 4 · pdf 5747: 100 %
+      tomo 4 · pdf 5748: 100 %
+      tomo 4 · pdf 5749: 100 %
+      tomo 4 · pdf 5750: 100 %
+      tomo 4 · pdf 5751: 100 %
+      tomo 4 · pdf 5752: 100 %
+      tomo 4 · pdf 5753: 100 %
+      tomo 4 · pdf 5754: 100 %
+      tomo 4 · pdf 5755: 100 %
+      tomo 4 · pdf 5756: 100 %
+      tomo 4 · pdf 5757: 100 %
+      tomo 4 · pdf 5758: 100 %
+      tomo 4 · pdf 5759: 100 %
+      tomo 4 · pdf 5760: 100 %
+      tomo 4 · pdf 5761: 100 %
+      tomo 4 · pdf 5762: 100 %
+      tomo 4 · pdf 5763: 100 %
+      tomo 4 · pdf 5764: 100 %
+      tomo 4 · pdf 5765: 100 %
+      tomo 4 · pdf 5766: 100 %
+      tomo 4 · pdf 5767: 100 %
+      tomo 4 · pdf 5768: 100 %
+      tomo 4 · pdf 5769: 100 %
+      tomo 4 · pdf 5770: 100 %
+      tomo 4 · pdf 5771: 100 %
+      tomo 4 · pdf 5772: 100 %
+      tomo 4 · pdf 5773: 100 %
+      tomo 4 · pdf 5774: 100 %
+      tomo 4 · pdf 5775: 100 %
+      tomo 4 · pdf 5776: 100 %
+      tomo 4 · pdf 5777: 100 %
+      tomo 4 · pdf 5778: 100 %
+      tomo 4 · pdf 5779: 100 %
+      tomo 4 · pdf 5780: 100 %
+      tomo 4 · pdf 5781: 100 %
+      tomo 4 · pdf 5782: 100 %
+      tomo 4 · pdf 5783: 100 %
+      tomo 4 · pdf 5784: 100 %
+      tomo 4 · pdf 5785: 100 %
+      tomo 4 · pdf 5786: 100 %
+      tomo 4 · pdf 5787: 100 %
+      tomo 4 · pdf 5788: 100 %
+      tomo 4 · pdf 5789: 100 %
+      tomo 4 · pdf 5790: 100 %
+      tomo 4 · pdf 5791: 100 %
+      tomo 4 · pdf 5792: 100 %
+      tomo 4 · pdf 5793: 100 %
+      tomo 4 · pdf 5794: 100 %
+      tomo 4 · pdf 5795: 100 %
+      tomo 4 · pdf 5796: 100 %
+      tomo 4 · pdf 5797: 100 %
+      tomo 4 · pdf 5798: 100 %
+      tomo 4 · pdf 5799: 100 %
+      tomo 4 · pdf 5800: 100 %
+      tomo 4 · pdf 5801: 100 %
+      tomo 4 · pdf 5802: 100 %
+      tomo 4 · pdf 5803: 100 %
+      tomo 4 · pdf 5804: 100 %
+      tomo 4 · pdf 5805: 100 %
+      tomo 4 · pdf 5806: 100 %
+      tomo 4 · pdf 5807: 100 %
+      tomo 4 · pdf 5808: 100 %
+      tomo 4 · pdf 5809: 100 %
+      tomo 4 · pdf 5810: 100 %
+      tomo 4 · pdf 5811: 100 %
+      tomo 4 · pdf 5812: 100 %
+      tomo 4 · pdf 5813: 100 %
+      tomo 4 · pdf 5814: 100 %
+      tomo 4 · pdf 5815: 100 %
+      tomo 4 · pdf 5816: 100 %
+      tomo 4 · pdf 5817: 100 %
+      tomo 4 · pdf 5818: 100 %
+      tomo 4 · pdf 5819: 100 %
+      tomo 4 · pdf 5820: 100 %
+      tomo 4 · pdf 5821: 100 %
+      tomo 4 · pdf 5822: 100 %
+      tomo 4 · pdf 5823: 100 %
+      tomo 4 · pdf 5824: 100 %
+      tomo 4 · pdf 5825: 100 %
+      tomo 4 · pdf 5826: 100 %
+      tomo 4 · pdf 5827: 100 %
+      tomo 4 · pdf 5828: 100 %
+      tomo 4 · pdf 5829: 100 %
+      tomo 4 · pdf 5830: 100 %
+      tomo 4 · pdf 5831: 100 %
+      tomo 4 · pdf 5832: 100 %
+      tomo 4 · pdf 5833: 100 %
+      tomo 4 · pdf 5834: 100 %
+      tomo 4 · pdf 5835: 100 %
+      tomo 4 · pdf 5836: 100 %
+      tomo 4 · pdf 5837: 100 %
+      tomo 4 · pdf 5838: 100 %
+      tomo 4 · pdf 5839: 100 %
+      tomo 4 · pdf 5840: 100 %
+      tomo 4 · pdf 5841: 100 %
+      tomo 4 · pdf 5842: 100 %
+      tomo 4 · pdf 5843: 100 %
+      tomo 4 · pdf 5844: 100 %
+      tomo 4 · pdf 5845: 100 %
+      tomo 4 · pdf 5846: 100 %
+      tomo 4 · pdf 5847: 100 %
+      tomo 4 · pdf 5848: 100 %
+      tomo 4 · pdf 5849: 100 %
+      tomo 4 · pdf 5850: 100 %
+      tomo 4 · pdf 5851: 100 %
+      tomo 4 · pdf 5852: 100 %
+      tomo 4 · pdf 5853: 100 %
+      tomo 4 · pdf 5854: 100 %
+      tomo 4 · pdf 5855: 100 %
+      tomo 4 · pdf 5856: 100 %
+      tomo 4 · pdf 5857: 100 %
+      tomo 4 · pdf 5858: 100 %
+      tomo 4 · pdf 5859: 100 %
+      tomo 4 · pdf 5860: 100 %
+      tomo 4 · pdf 5861: 100 %
+      tomo 4 · pdf 5862: 100 %
+      tomo 4 · pdf 5863: 100 %
+      tomo 4 · pdf 5864: 100 %
+      tomo 4 · pdf 5865: 100 %
+      tomo 4 · pdf 5866: 100 %
+      tomo 4 · pdf 5867: 100 %
+      tomo 4 · pdf 5868: 100 %
+      tomo 4 · pdf 5869: 100 %
+      tomo 4 · pdf 5870: 100 %
+      tomo 4 · pdf 5871: 100 %
+      tomo 4 · pdf 5872: 100 %
+      tomo 4 · pdf 5873: 100 %
+      tomo 4 · pdf 5874: 100 %
+      tomo 4 · pdf 5875: 100 %
+      tomo 4 · pdf 5876: 100 %
+      tomo 4 · pdf 5877: 100 %
+      tomo 4 · pdf 5878: 100 %
+      tomo 4 · pdf 5879: 100 %
+      tomo 4 · pdf 5880: 100 %
+      tomo 4 · pdf 5881: 100 %
+      tomo 4 · pdf 5882: 100 %
+      tomo 4 · pdf 5883: 100 %
+      tomo 4 · pdf 5884: 100 %
+      tomo 4 · pdf 5885: 100 %
+      tomo 4 · pdf 5886: 100 %
+      tomo 4 · pdf 5887: 100 %
+      tomo 4 · pdf 5888: 100 %
+      tomo 4 · pdf 5889: 100 %
+      tomo 4 · pdf 5890: 100 %
+      tomo 4 · pdf 5891: 100 %
+      tomo 4 · pdf 5892: 100 %
+      tomo 4 · pdf 5893: 100 %
+      tomo 4 · pdf 5894: 100 %
+      tomo 4 · pdf 5895: 100 %
+      tomo 4 · pdf 5896: 100 %
+      tomo 4 · pdf 5897: 100 %
+      tomo 4 · pdf 5898: 100 %
+      tomo 4 · pdf 5899: 100 %
+      tomo 4 · pdf 5900: 100 %
+      tomo 4 · pdf 5901: 100 %
+      tomo 4 · pdf 5902: 100 %
+      tomo 4 · pdf 5903: 100 %
+      tomo 4 · pdf 5904: 100 %
+      tomo 4 · pdf 5905: 100 %
+      tomo 4 · pdf 5906: 100 %
+      tomo 4 · pdf 5907: 100 %
+      tomo 4 · pdf 5908: 100 %
+      tomo 4 · pdf 5909: 100 %
+      tomo 4 · pdf 5910: 100 %
+      tomo 4 · pdf 5911: 100 %
+      tomo 4 · pdf 5912: 100 %
+      tomo 4 · pdf 5913: 100 %
+      tomo 4 · pdf 5914: 100 %
+      tomo 4 · pdf 5915: 100 %
+      tomo 4 · pdf 5916: 100 %
+      tomo 4 · pdf 5917: 100 %
+      tomo 4 · pdf 5918: 100 %
+      tomo 4 · pdf 5919: 100 %
+      tomo 4 · pdf 5920: 100 %
+      tomo 4 · pdf 5921: 100 %
+      tomo 4 · pdf 5922: 100 %
+      tomo 4 · pdf 5923: 100 %
+      tomo 4 · pdf 5924: 100 %
+      tomo 4 · pdf 5925: 100 %
+      tomo 4 · pdf 5926: 100 %
+      tomo 4 · pdf 5927: 100 %
+      tomo 4 · pdf 5928: 100 %
+      tomo 4 · pdf 5929: 100 %
+      tomo 4 · pdf 5930: 100 %
+      tomo 4 · pdf 5931: 100 %
+      tomo 4 · pdf 5932: 100 %
+      tomo 4 · pdf 5933: 100 %
+      tomo 4 · pdf 5934: 100 %
+      tomo 4 · pdf 5935: 100 %
+      tomo 4 · pdf 5936: 100 %
+      tomo 4 · pdf 5937: 100 %
+      tomo 4 · pdf 5938: 100 %
+      tomo 4 · pdf 5939: 100 %
+      tomo 4 · pdf 5940: 100 %
+      tomo 4 · pdf 5941: 100 %
+      tomo 4 · pdf 5942: 100 %
+      tomo 4 · pdf 5943: 100 %
+      tomo 4 · pdf 5944: 100 %
+      tomo 4 · pdf 5945: 100 %
+      tomo 4 · pdf 5946: 100 %
+      tomo 4 · pdf 5947: 100 %
+      tomo 4 · pdf 5948: 100 %
+      tomo 4 · pdf 5949: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 63 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 2 pdf 2355: ['*', '*']
+      tomo 2 pdf 2355: ['*', '*']
+      tomo 2 pdf 2355: ['*', '*']
+      tomo 2 pdf 2400: ['*']
+      tomo 2 pdf 2400: ['*']
+      tomo 2 pdf 2400: ['*']
+      tomo 2 pdf 2400: ['*']
+      tomo 2 pdf 2419: ['(T.P.', '.)']
+      tomo 2 pdf 2419: ['(T.P.', '.)']
+      tomo 2 pdf 2419: ['(T.P.', '.)']
+      tomo 2 pdf 2419: ['(T.P.', '.)']
+      tomo 2 pdf 2419: ['(T.P.', '.)']
+      tomo 2 pdf 2420: ['(T.P.', '.)']
+      tomo 2 pdf 2420: ['(T.P.', '.)']
+      tomo 2 pdf 2420: ['(T.P.', '.)']
+[OK ] Sin rótulos en el texto: 0 casos
+[MAL] Conteos: 2 fuera de norma
+      san-marcos-evangelista/laudes/preces incompletas
+      la-asuncion-de-la-virgen-maria/visperas1/responsorio_breve incompleto
+[OK ] Opciones: tomo 1: 13 etiquetas rojas → 13 variantes, tomo 2: 31 etiquetas rojas → 31 variantes, tomo 3: 19 etiquetas rojas → 19 variantes, tomo 4: 25 etiquetas rojas → 25 variantes
+[OK ] Remisiones: 0 rotas; 1 sin destino en el libro; 51 pendientes (fuera de esta sección)
+      sin destino en el libro (marcada para revisar): santa-teresa-de-jesus-jornet-e-ibars-virgen-patrona-de-la-ancianidad/oficio/oracion → santa-teresa-de-jesus-jornet-e-ibars-virgen-patrona-de-la-ancianidad/laudes/oracion
+      pendiente: apendices/himnos-latinos
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: comunes/apostoles
+      pendiente: comunes/caridad
+      pendiente: comunes/dedicacion
+      pendiente: comunes/doctores
+      pendiente: comunes/educadores
+      pendiente: comunes/martires
+      pendiente: comunes/martires-uno
+      pendiente: comunes/martires-varios
+      pendiente: comunes/pastores
+      pendiente: comunes/religiosos
+      pendiente: comunes/santas-mujeres
+      pendiente: comunes/santos-varones
+      pendiente: comunes/virgen
+      pendiente: comunes/virgenes
+      pendiente: himnos/maria-pureza-en-vuelo
+      pendiente: himnos/todos-te-deben-servir
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-128
+      pendiente: salmos/salmo-130
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: salterio/semana-1/domingo/laudes/salmodia
+      pendiente: texto-azul/10-de-octubre
+      pendiente: texto-azul/18-de-septiembre
+      pendiente: texto-azul/26-de-abril
+      pendiente: texto-azul/27-de-abril
+      pendiente: texto-azul/8-de-octubre
+      pendiente: texto-azul/comun-de-la-santisima-virgen-maria
+      pendiente: texto-azul/comun-de-santa-maria
+      pendiente: texto-azul/dia-3-de-mayo
+      pendiente: texto-azul/domingo-de-la-semana-i
+      pendiente: texto-azul/domingo-de-la-semana-i-del-salterio
+      pendiente: texto-azul/el-8-de-septiembre
+      pendiente: texto-azul/feria-correspondiente
+      pendiente: texto-azul/fiesta
+      pendiente: texto-azul/oficio-de-difuntos
+      pendiente: texto-azul/para-los-que-se-han-consagrado-a-una-actividad-caritativa
+      pendiente: texto-azul/salmo-128
+      pendiente: texto-azul/salmo-130
+      pendiente: texto-azul/salve-reina-de-los-cielos
+      pendiente: texto-azul/senor-de-los-milagros
+      pendiente: texto-azul/todo-como-el-14-de-septiembre
+[OK ] Salmos: 55 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: salmo-147, cantico-flp-2-6-11, salmo-2, salmo-109-1-5-7, cantico-col-1-12-20 (ver diferencias.csv)
+[OK ] Ida y vuelta: 4428/4428 piezas reescritas igual al libro
+[OK ] Fechas: 276 celebraciones; 11 con fecha móvil (sin día y mes, con su renglón literal); 0 sin renglón de fecha
+      sin fecha normalizada: san-vicente-ferrer-presbitero-patrono-de-la-archidiocesis-de-valencia
+      sin fecha normalizada: la-santa-faz-de-nuestro-senor-jesucristo
+      sin fecha normalizada: nuestra-senora-de-los-desamparados
+      sin fecha normalizada: jesucristo-sumo-y-eterno-sacerdote
+      sin fecha normalizada: el-inmaculado-corazon-de-la-virgen-maria
+      sin fecha normalizada: san-marcelino-champagnat-presbitero
+      sin fecha normalizada: beato-nicolas-factor-presbitero
+      sin fecha normalizada: san-luis-obispo
+      sin fecha normalizada: beato-juan-xxiii-papa
+      sin fecha normalizada: san-juan-de-brebeuf-y-san-isaac-jogues-presbiteros-y-companeros-martires
+      sin fecha normalizada: dedicacion-de-la-propia-iglesia
+[INF] Celebraciones por número de tomos: 1 tomo(s): 225, 2 tomo(s): 51
+[INF] Celebraciones unificadas por fecha y nombre entre tomos: 4
+      tomo III: «santa-josefa-bakhita-virgen» → «santa-joserfina-bakhita-virgen»
+      tomo III: «los-siete-santos-fundadores-de-la-orden-de-los-siervos-de-la-virgen-maria» → «los-siete-santos-fundadores-de-la-orden-de-los-siervos-de-maria»
+      tomo III: «santos-cristobal-magallanes-y-companeros-martires» → «san-cristobal-magallanes-presbitero-y-companeros-martires»
+      tomo III: «san-gregorio-vii-papa» → «sab-gregorio-vii-papa»
+[INF] Notas biográficas: 219 de 276 celebraciones
+[INF] Fragmentos impresos en verde (023300), leídos como texto: tomo III: 3244
+      el tomo III imprime en verde biografías y cuerpos de texto; qué significa el color queda pendiente de decisión de CRU
+[INF] Colores dudosos clasificados por tono: 71
+      tomo 2 pdf 2248: Del Común de pastores. {'0433ff'}
+      tomo 2 pdf 2274: Magnificat {'0433ff'}
+      tomo 2 pdf 2281: Magnificat {'0433ff'}
+      tomo 2 pdf 2287: Magnificat {'0433ff'}
+      tomo 2 pdf 2299: Magnificat {'0433ff'}
+      tomo 2 pdf 2416:  María, pureza en vuelo, O bien: Lucero de la maña {'0433ff'}
+      tomo 2 pdf 2416: Cuando el salmo 23 se ha dicho en el Invitatorio,  {'0433ff'}
+      tomo 2 pdf 2416: Las puertas del cielo se abren ante Cristo que com {'0327cf'}
+      tomo 3 pdf 3840: Los salmos y el cántico se toman del Común de un m {'0433ff'}
+      tomo 3 pdf 3840: Salmo 114 {'0433ff'}
+      tomo 3 pdf 3840: Salmo 115 {'0433ff'}
+      tomo 3 pdf 3840: Cántico Ap 4, 11; 5, 9‑10. 12 {'0433ff'}
+      tomo 3 pdf 3898: Cuando se usa la salmodia complementaria en Nona,  {'0433ff'}
+      tomo 3 pdf 3898: en las Vísperas, puede tomarse el salmo 128. {'0433ff'}
+      tomo 3 pdf 3925: Benedictus {'0433ff'}
+      tomo 3 pdf 3925: Magnificat {'0433ff'}
+      tomo 3 pdf 3932: El salmo invitatorio: Salmo 94, Salmo 99, Salmo 66 {'0433ff'}
+      tomo 3 pdf 3938: Si se hace una celebración más extensa de esta fie {'0433ff'}
+      tomo 3 pdf 3939: Benedictus {'0433ff'}
+      tomo 3 pdf 3939: Magnificat {'0433ff'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 134
+      tomo 1 pdf 761: el grado depende del lugar: «En la ciudad de Alicante: Fiesta»: En la ciudad de Alicante: Fiesta
+      tomo 1 pdf 773: remisión azul sin pieza: salmodia complementaria.
+      tomo 1 pdf 777: el grado depende del lugar: «Basílica de Guadalupe: Solemnidad. República Mexicana: Memor»:  Basílica de Guadalupe: Solemnidad. República Mexi
+      tomo 1 pdf 783: el grado depende del lugar: «En los países de América Latina y en Filipinas: Fiesta. En M»: En los países de América Latina y en Filipinas: Fi
+      tomo 1 pdf 783: texto negro sin pieza (parte None): Era el mes de diciembre de 1531, cuando, en la col
+      tomo 1 pdf 783: texto negro sin pieza (parte texto): apareció al humilde indio Juan Diego. En 1910, Pío
+      tomo 1 pdf 783: texto negro sin pieza (parte texto): patrona de toda Hispano—América.
+      tomo 1 pdf 792: remisión azul sin pieza: salmodia complementaria, con la antífona propia de
+      tomo 2 pdf 2247: el grado depende del lugar: «Fiesta. En los países de Europa: Fiesta. En América Latina: »: Fiesta. En los países de Europa: Fiesta. En Améric
+      tomo 2 pdf 2279: remisión azul sin pieza: salmodia complementaria.
+      tomo 2 pdf 2296: remisión azul sin pieza: salmodia complementaria.
+      tomo 2 pdf 2302: el grado depende del lugar: «En Perú y otros lugares de Latinoamérica: Memoria libre. En »: En Perú y otros lugares de Latinoamérica: Memoria 
+      tomo 2 pdf 2305: texto negro sin pieza (parte None): Nació en Valencia el año 1350. Miembro de la Orden
+      tomo 2 pdf 2305: texto negro sin pieza (parte texto): Como predicador recorrió muchas comarcas con gran 
+      tomo 2 pdf 2305: texto negro sin pieza (parte texto): verdadera fe como en la reforma de las costumbres.
+      tomo 2 pdf 2305: texto negro sin pieza (parte texto): 1419.
+      tomo 2 pdf 2312: el grado depende del lugar: «Mercedarios: Memoria. Madrid: Memoria libre.»: Mercedarios: Memoria. Madrid: Memoria libre.
+      tomo 2 pdf 2340: el grado depende del lugar: «Fiesta. En el Perú: Memoria»: Fiesta. En el Perú: Memoria
+      tomo 2 pdf 2344: remisión azul sin pieza: Común de pastores o de religiosos.
+      tomo 2 pdf 2347: remisión azul sin pieza: salmodia complementaria.
+      tomo 2 pdf 2348: R. suelto: R. En la asamblea le da la palabra. Aleluya, alelu
+      tomo 2 pdf 2349: el grado depende del lugar: «Memoria. En la ciudad de Alicante y Mutxamel: Fiesta»: Memoria. En la ciudad de Alicante y Mutxamel: Fies
+      tomo 2 pdf 2355: versículo con el R. antes del V.: R. Oigo en mi corazón, buscad mi rostro. * Aleluya
+      tomo 2 pdf 2372: el grado depende del lugar: «En Alcalá de Henares y en algunos lugares de América latina:»: En Alcalá de Henares y en algunos lugares de Améri
+      tomo 2 pdf 2390: el grado depende del lugar: «Familia Salesiana: Solemnidad. En Córdoba y los Monfortianos»: Familia Salesiana: Solemnidad. En Córdoba y los Mo
+      tomo 2 pdf 2396: el grado depende del lugar: «En el Instituto de las Religiosas de María Inmaculada: Solem»: En el Instituto de las Religiosas de María Inmacul
+      tomo 2 pdf 2400: R. suelto: R. Amémonos unos a otros, ya que el amor es de Dio
+      tomo 2 pdf 2404: el grado depende del lugar: «En Perú y Ecuador: Fiesta»: En Perú y Ecuador: Fiesta
+      tomo 2 pdf 2415: el grado depende del lugar: «Ciudad de Valencia: Solemnidad. Reino de Valencia: Fiesta. H»: Ciudad de Valencia: Solemnidad. Reino de Valencia:
+      tomo 3 pdf 3841: el grado depende del lugar: «Memoria. En la ciudad de Valencia: Solemnidad; en San Vicent»: Memoria. En la ciudad de Valencia: Solemnidad; en 
+      tomo 3 pdf 3842: el grado depende del lugar: «Memoria. En América Latina: Memoria libre»: Memoria. En América Latina: Memoria libre
+      tomo 3 pdf 3876: texto negro sin pieza (parte None):  de lectura
+      tomo 3 pdf 3888: el grado depende del lugar: «Fiesta. En los países de Europa: Fiesta. En América Latina: »: Fiesta. En los países de Europa: Fiesta. En Améric
+      tomo 3 pdf 3933: R. suelto: R. Amémonos unos a otros, ya que el amor es de Dio
+      tomo 3 pdf 3971: el libro imprime el rótulo «Ant. 2.» en negro: Ant. 2. Cuando se manifieste el supremo Pastor, re
+      tomo 3 pdf 3976: el libro imprime el rótulo «Ant. 2.» en negro: Ant. 2. Construye, Oh Dios, nuestra casa, construy
+      tomo 3 pdf 4002: el grado depende del lugar: «En la Prelatura Opus Dei: Solemnidad. En La Prelatura de Yau»: En la Prelatura Opus Dei: Solemnidad. En La Prelat
+      tomo 3 pdf 4029: el grado depende del lugar: «En Colombia: Solemnidad. En algunos países de América Latina»: En Colombia: Solemnidad. En algunos países de Amér
+      tomo 3 pdf 4030: el grado depende del lugar: «Fiesta. En los países de América Latina: Memoria.»: Fiesta. En los países de América Latina: Memoria.
+      tomo 3 pdf 4035: el grado depende del lugar: «Del Propio del Perú. En Lima: Fiesta. En el resto del Perú: »: Del Propio del Perú. En Lima: Fiesta. En el resto 
+      tomo 3 pdf 4038: texto negro sin pieza (parte salmodia): Acordaos de aquellos superiores vuestros que os ex
+      tomo 3 pdf 4038: texto negro sin pieza (parte salmodia): reflexionando sobre el desenlace de su vida, ¡mita
+      tomo 3 pdf 4038: texto negro sin pieza (parte salmodia): ayer, y para siempre. No os dejéis extraviar por d
+      tomo 3 pdf 4040: el grado depende del lugar: «Memoria. En Perú: Memoria libre.»: Memoria. En Perú: Memoria libre.
+      tomo 3 pdf 4049: el grado depende del lugar: «Fiesta. En América Latina: Memoria libre»: Fiesta. En América Latina: Memoria libre
+      tomo 3 pdf 4052: el grado depende del lugar: «En España: Solemnidad. Fuera de España: Fiesta»: En España: Solemnidad. Fuera de España: Fiesta
+      tomo 4 pdf 5585: texto negro sin pieza (parte None): San Emigdio se celebra como el primer obispo y már
+      tomo 4 pdf 5585: texto negro sin pieza (parte texto): Piceno, en Italia. En varios lugares de la Diócesi
+      tomo 4 pdf 5585: texto negro sin pieza (parte texto): con mucha devoción, y se le invoca como protector 
+      tomo 4 pdf 5585: el grado depende del lugar: «Sólo en la ciudad de Alicante: Solemnidad»: Sólo en la ciudad de Alicante: Solemnidad
+      tomo 4 pdf 5611: el grado depende del lugar: «Fiesta. En América Latina: Memoria»: Fiesta. En América Latina: Memoria
+      tomo 4 pdf 5621: texto negro sin pieza (parte None): Entre los numerosos mártires que durante la guerra
+      tomo 4 pdf 5621: texto negro sin pieza (parte texto): testimonio de la fe, se encuentra este grupo de sa
+      tomo 4 pdf 5621: texto negro sin pieza (parte texto): Hermandad de Sacerdotes Operarios Diocesanos, los 
+      tomo 4 pdf 5621: texto negro sin pieza (parte texto): pasos de su fundador, el beato Manuel Domingo y So
+      tomo 4 pdf 5621: texto negro sin pieza (parte texto): ministerial a la formación de los futuros sacerdot
+      tomo 4 pdf 5621: texto negro sin pieza (parte texto): sacerdotales y religiosas. Antonio Perulles Estivi
+      tomo 4 pdf 5621: texto negro sin pieza (parte texto): rector del Seminario Diocesano de Orihuela.
+      tomo 4 pdf 5641: texto negro sin pieza (parte None): Hijo del gobernador de Montpellier, nació hacia el
+      tomo 4 pdf 5641: texto negro sin pieza (parte texto): región francesa de Languedoc.. A la muerte de sus 
+      tomo 4 pdf 5641: texto negro sin pieza (parte texto): bienes y marchó en peregrinación a Roma. Mientras 
+      tomo 4 pdf 5641: texto negro sin pieza (parte texto): regiones de Europa, él se dedica al cuidado de los
+      tomo 4 pdf 5641: texto negro sin pieza (parte texto): Montpellier, no es reconocido por los suyos, que l
+      tomo 4 pdf 5641: texto negro sin pieza (parte texto): encarcelan. Olvidado por ellos, muere en la ciudad
+      tomo 4 pdf 5643: texto negro sin pieza (parte None): Nació el año 1519 en Valencia, y allí mismo ingres
+      tomo 4 pdf 5643: texto negro sin pieza (parte texto): que floreció por la obediencia, la pobreza, el can
+      tomo 4 pdf 5643: texto negro sin pieza (parte texto): amor de Dios. El día 23 de diciembre de 1583 murió
+      tomo 4 pdf 5643: texto negro sin pieza (parte texto): ciudad. El Sumo Pontífice Pío VI lo inscribió en e
+      tomo 4 pdf 5648: texto negro sin pieza (parte None): Desde el siglo XV, la S. I. Catedral de Valencia c
+      tomo 4 pdf 5648: texto negro sin pieza (parte texto): obispo de Tolosa. De la familia real de Nápoles, i
+      tomo 4 pdf 5648: texto negro sin pieza (parte texto): franciscana y ejerció luego el ministerio episcopa
+      tomo 4 pdf 5648: texto negro sin pieza (parte texto): su muerte, acaecida en este día del año 1297 cuand
+      tomo 4 pdf 5648: texto negro sin pieza (parte texto): En la S. I. Catedral Memoria
+      tomo 4 pdf 5657: el grado depende del lugar: «En España: Memoria libre. En los países de América: Fiesta. »: En España: Memoria libre. En los países de América
+      tomo 4 pdf 5706: el grado depende del lugar: «Fiesta. En la ciudad de Orihuela: Solemnidad»: Fiesta. En la ciudad de Orihuela: Solemnidad
+      tomo 4 pdf 5709: el grado depende del lugar: «En Venezuela: Solemnidad. En algunos lugares de América Lati»: En Venezuela: Solemnidad. En algunos lugares de Am
+      tomo 4 pdf 5741: el grado depende del lugar: «En América Latina: Memoria libre»: En América Latina: Memoria libre
+      tomo 4 pdf 5741: texto negro sin pieza (parte None): Nació en febrero de 1585. Huérfano de padres, hubo
+      tomo 4 pdf 5741: texto negro sin pieza (parte texto): sustento; para ello entra a servicio de un mercade
+      tomo 4 pdf 5741: texto negro sin pieza (parte texto): travesía a América. Abandonado por su amo, entra c
+      tomo 4 pdf 5741: texto negro sin pieza (parte texto): Predicadores, en Lima. Aquí ejerce el oficio de po
+      tomo 4 pdf 5741: texto negro sin pieza (parte texto): altísima oración. Murió el 17 de septiembre de 164
+      tomo 4 pdf 5744: dos celebraciones con el mismo título: la segunda es «san-juan-macias-religioso-2»: SAN JUAN MACÍAS, RELIGIOSO
+      tomo 4 pdf 5744: el grado depende del lugar: «En Perú: Fiesta»: En Perú: Fiesta
+      tomo 4 pdf 5754: el grado depende del lugar: «En la archidiócesis de Valencia: Memoria libre»: En la archidiócesis de Valencia: Memoria libre
+      tomo 4 pdf 5757: texto negro sin pieza (parte None): En el siglo XIII, san Pedro Nolasco se sintió insp
+      tomo 4 pdf 5757: texto negro sin pieza (parte texto): redención de los cautivos, bajo el título de la Me
+      tomo 4 pdf 5757: texto negro sin pieza (parte texto): unida esta advocación de la Virgen.
+      tomo 4 pdf 5765: texto negro sin pieza (parte None): Francisco Castelló Aleu nació en Alicante el año 1
+      tomo 4 pdf 5765: texto negro sin pieza (parte texto): y se dedicó activamente al apostolado, sobre todo 
+      tomo 4 pdf 5765: texto negro sin pieza (parte texto): siempre por su alegría y generosidad. Tras declara
+      tomo 4 pdf 5765: texto negro sin pieza (parte texto): muerte; en esta circunstancia, alienta a sus compa
+      tomo 4 pdf 5765: texto negro sin pieza (parte texto): contra su vida y muere fusilado el 29 de septiembr
+      tomo 4 pdf 5765: texto negro sin pieza (parte texto): Lleida.
+      tomo 4 pdf 5812: texto negro sin pieza (parte None): Hijo de nobles y piadosos padres, nació en Valenci
+      tomo 4 pdf 5812: texto negro sin pieza (parte texto): en la Orden de Predicadores en 1.544, venciendo la
+      tomo 4 pdf 5812: texto negro sin pieza (parte texto): totalmente a vivir el ideal de la Orden, fue ejemp
+      tomo 4 pdf 5812: texto negro sin pieza (parte texto): confiados. Pidió ser enviado a América y pasó allí
+      tomo 4 pdf 5812: texto negro sin pieza (parte texto): en Colombia, que lo tiene como Patrono. Trabajó po
+      tomo 4 pdf 5812: texto negro sin pieza (parte texto): reconocimiento de la dignidad humana de los indios
+      tomo 4 pdf 5812: texto negro sin pieza (parte texto): la renovación de la vida cristiana y religiosa, co
+      tomo 4 pdf 5813: texto negro sin pieza (parte texto): demás santos de su época. Murió en Valencia el 9 d
+      tomo 4 pdf 5813: texto negro sin pieza (parte texto): canonizó el 12 de abril de 1671.
+      tomo 4 pdf 5819: el grado depende del lugar: «En la archidiócesis de Valencia: Fiesta»: En la archidiócesis de Valencia: Fiesta
+      tomo 4 pdf 5824: texto negro sin pieza (parte None): Nació en Valencia el año 1526, y a los veinte años
+      tomo 4 pdf 5824: texto negro sin pieza (parte texto): Predicadores. Fue enviado a América a misionar aqu
+      tomo 4 pdf 5824: texto negro sin pieza (parte texto): gobernó varios conventos. Murió en 1581.
+      tomo 4 pdf 5829: el grado depende del lugar: «Fiesta. En Perú: Memoria libre»: Fiesta.
+      tomo 4 pdf 5837: el grado depende del lugar: «Fiesta En el Perú y otros países de América Latina: Memoria»: Fiesta
+      tomo 4 pdf 5867: el grado depende del lugar: «En Lima: Solemnidad. En el resto del Perú: Fiesta.»: En Lima: Solemnidad. En el resto del Perú: Fiesta.
+      tomo 4 pdf 5880: remisión azul sin pieza: Salmodia complementaria. Si coincide con domingo, 
+      tomo 4 pdf 5880: remisión azul sin pieza: Salterio.
+      tomo 4 pdf 5887: el grado depende del lugar: «En Colombia, Panamá y Venezuela: Memoria obligatoria. En los»: En Colombia, Panamá y Venezuela: Memoria obligator
+      tomo 4 pdf 5887: texto negro sin pieza (parte None): Nació en Lima (Perú), de padre español y madre mul
+      tomo 4 pdf 5887: texto negro sin pieza (parte texto): aprendió el oficio de barbero-cirujano, que luego,
+      tomo 4 pdf 5887: texto negro sin pieza (parte texto): Predicadores, ejerció ampliamente en favor de los 
+      tomo 4 pdf 5887: texto negro sin pieza (parte texto): mortificación, de humildad y de gran devoción a la
+      tomo 4 pdf 5889: dos celebraciones con el mismo título: la segunda es «san-martin-de-porres-religioso-2»: SAN MARTÍN DE PORRES, RELIGIOSO
+      tomo 4 pdf 5889: el grado depende del lugar: «En Perú: Solemnidad.»: En Perú: Solemnidad.
+      tomo 4 pdf 5908: texto negro sin pieza (parte None): Nació en Algemesl, diócesis de Valencia, el 11 de 
+      tomo 4 pdf 5908: texto negro sin pieza (parte texto): transcurrió en dicha población. Diariamente partic
+      tomo 4 pdf 5908: texto negro sin pieza (parte texto): distinguió sobre todo por su apostolado inteligent
+      tomo 4 pdf 5908: texto negro sin pieza (parte texto): de acuerdo con sus pastores. Murió santamente en e
+      tomo 4 pdf 5908: texto negro sin pieza (parte texto): la beatificó el 25 de septiembre de 1988.
+      tomo 4 pdf 5921: R. suelto: R. El buen Pastor da la vida por las ovejas.
+      tomo 4 pdf 5930: texto negro sin pieza (parte None): Las beatas Angeles Lloret Martí y compañeras, pert
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): Hermanas de la Doctrina Cristiana. Sus vidas fuero
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): el Padre y de sencillez y disponibilidad evangélic
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): enseñaron la Doctrina Cristiana con la palabra y e
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): religiosa que se dio en España en la guerra civil 
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): consagración y a las exigencias de su vida comunit
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): septiembre y quince el 20 de noviembre de 1936. La
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): Joiosa y la beata María del Sufragio en Altea, y r
+      tomo 4 pdf 5930: texto negro sin pieza (parte texto): provincia de Alicante y Diócesis de Orihuela-Alica

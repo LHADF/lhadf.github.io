@@ -1041,7 +1041,7 @@ Piezas marcadas para revisar: 87 · diferencias entre tomos: 4
 [OK ] Sin rótulos en el texto: 0 casos
 [OK ] Conteos: 0 fuera de norma
 [OK ] Opciones: tomo 3: 390 etiquetas rojas → 390 variantes, tomo 4: 649 etiquetas rojas → 649 variantes
-[OK ] Remisiones: 0 rotas; 14 pendientes (fuera de esta sección)
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 14 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: ordinario/invitatorio/salmodia
       pendiente: ordinario/laudes/cantico_evangelico

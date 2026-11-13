@@ -806,7 +806,7 @@ Piezas marcadas para revisar: 186 · diferencias entre tomos: 720
 [OK ] Conteos: 0 fuera de norma
       parte vacía en el libro (solo el rótulo): religiosos/laudes/salmodia
 [OK ] Opciones: tomo 1: 186 etiquetas rojas → 186 variantes, tomo 2: 291 etiquetas rojas → 291 variantes, tomo 3: 238 etiquetas rojas → 238 variantes, tomo 4: 217 etiquetas rojas → 217 variantes
-[OK ] Remisiones: 0 rotas; 19 pendientes (fuera de esta sección)
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 19 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: apendices/vigilias/santa-maria-virgen
       pendiente: himnos/finisimo-fue-el-lino

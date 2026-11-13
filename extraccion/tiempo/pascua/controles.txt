@@ -354,7 +354,7 @@ Piezas marcadas para revisar: 43 · diferencias entre tomos: 3
 [OK ] Sin rótulos en el texto: 0 casos
 [OK ] Conteos: 0 fuera de norma
 [OK ] Opciones: tomo 2: 139 etiquetas rojas → 139 variantes
-[OK ] Remisiones: 0 rotas; 20 pendientes (fuera de esta sección)
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 20 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: ordinario/conclusion
       pendiente: ordinario/invitatorio/salmodia

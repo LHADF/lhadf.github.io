@@ -122,7 +122,7 @@ Piezas marcadas para revisar: 18 · diferencias entre tomos: 88
 [OK ] Sin rótulos en el texto: 0 casos
 [OK ] Conteos: 0 fuera de norma
 [OK ] Opciones: tomo 1: 20 etiquetas rojas → 20 variantes, tomo 2: 37 etiquetas rojas → 37 variantes, tomo 3: 66 etiquetas rojas → 66 variantes, tomo 4: 61 etiquetas rojas → 61 variantes
-[OK ] Remisiones: 0 rotas; 18 pendientes (fuera de esta sección)
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 18 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: apendices/vigilias/santa-maria-virgen
       pendiente: ordinario/conclusion

@@ -1555,7 +1555,7 @@ Piezas marcadas para revisar: 382 · diferencias entre tomos: 1754
 [OK ] Sin rótulos en el texto: 0 casos
 [OK ] Conteos: 0 fuera de norma
 [OK ] Opciones: tomo 1: 140 etiquetas rojas → 140 variantes, tomo 2: 468 etiquetas rojas → 468 variantes, tomo 3: 146 etiquetas rojas → 146 variantes, tomo 4: 30 etiquetas rojas → 30 variantes
-[OK ] Remisiones: 0 rotas; 25 pendientes (fuera de esta sección)
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 25 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: himnos/alegria-de-nieve
       pendiente: himnos/cielos-lloved
