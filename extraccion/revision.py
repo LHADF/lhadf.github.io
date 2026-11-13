@@ -18,7 +18,7 @@ NOMBRE_TIPO = {
     'antifona': 'antífona', 'salmo': 'salmo', 'himno': 'himno', 'lectura_breve': 'lectura breve',
     'responsorio_breve': 'responsorio breve', 'versiculo': 'versículo', 'lectura': 'lectura',
     'responsorio': 'responsorio', 'preces': 'preces', 'oracion': 'oración', 'rubrica': 'rúbrica',
-    'texto': 'texto suelto',
+    'texto': 'texto',
 }
 
 e = html.escape
@@ -115,6 +115,13 @@ def cuerpo(v, tipo, salmos, himnos):
         if rem:
             s += f'<span class="chip azul">remite → {e(rem)}</span>'
         return s
+    if v.get('estrofas'):
+        return ''.join('<p class="estrofa">' + '<br>'.join(
+            f'<span class="s{vs["sangria"]}">{"<b class=r>+</b> " if vs.get("cruz") else ""}'
+            + (' <b class="r">*</b> '.join(e(x) for x in vs['mitades']) if vs.get('mitades') else e(vs['texto']))
+            + '</span>' for vs in es) + '</p>' for es in v['estrofas'])
+    if v.get('parrafos'):
+        return ''.join(f'<p>{e(x)}</p>' for x in v['parrafos'])
     return f'<p>{e(v.get("texto") or "")}</p>'
 
 

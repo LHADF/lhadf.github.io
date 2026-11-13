@@ -1,0 +1,652 @@
+[
+ {
+  "id": "salmo-94",
+  "cita": "Salmo 94",
+  "titulo": "INVITACIÓN A LA ALABANZA DIVINA",
+  "sentencia": {
+   "texto": "Animaos los unos a los otros, día tras día, mientras dure este hoy",
+   "cita": "Heb 3, 13"
+  },
+  "gloria": true,
+  "rubricas": [
+   {
+    "despues_de_estrofa": 0,
+    "texto": "Se recita la antífona que corresponda y la asamblea la repite."
+   },
+   {
+    "despues_de_estrofa": 1,
+    "texto": "Se repite la antífona"
+   },
+   {
+    "despues_de_estrofa": 2,
+    "texto": "Se repite la antífona"
+   },
+   {
+    "despues_de_estrofa": 3,
+    "texto": "Se repite la antífona"
+   },
+   {
+    "despues_de_estrofa": 4,
+    "texto": "Se repite la antífona"
+   },
+   {
+    "despues_de_estrofa": 5,
+    "texto": "Se repite la antífona"
+   },
+   {
+    "despues_de_estrofa": 6,
+    "texto": "Se repite la antífona"
+   }
+  ],
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Venid, aclamemos al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "demos vítores a la Roca que nos salva;",
+       "sangria": 1
+      },
+      {
+       "texto": "entremos a su presencia dándole gracias,",
+       "sangria": 1
+      },
+      {
+       "texto": "aclamándolo con cantos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Porque el Señor es un Dios grande,",
+       "sangria": 0
+      },
+      {
+       "texto": "soberano de todos los dioses:",
+       "sangria": 1
+      },
+      {
+       "texto": "tiene en su mano las cimas de la tierra,",
+       "sangria": 1
+      },
+      {
+       "texto": "son suyas las cumbres de los montes.",
+       "sangria": 1
+      },
+      {
+       "texto": "Suyo es el mar, porque él lo hizo,",
+       "sangria": 1
+      },
+      {
+       "texto": "la tierra firme que modelaron sus manos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Venid, postrémonos por tierra,",
+       "sangria": 0
+      },
+      {
+       "texto": "bendiciendo al Señor, creador nuestro.",
+       "sangria": 1
+      },
+      {
+       "texto": "Porque él es nuestro Dios,",
+       "sangria": 1
+      },
+      {
+       "texto": "y nosotros su pueblo,",
+       "sangria": 1
+      },
+      {
+       "texto": "el rebaño que él guía.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Ojalá escuchéis hoy su voz:",
+       "sangria": 0
+      },
+      {
+       "texto": "\"No endurezcáis el corazón como en Meribá,",
+       "sangria": 1
+      },
+      {
+       "texto": "como el día de Masá en el desierto:",
+       "sangria": 1
+      },
+      {
+       "texto": "cuando vuestros padres me pusieron a prueba,",
+       "sangria": 1
+      },
+      {
+       "texto": "y dudaron de mí, aunque habían visto mis obras.\"",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Durante cuarenta años",
+       "sangria": 0
+      },
+      {
+       "texto": "aquella generación me repugnó, y dije:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"Es un pueblo de corazón extraviado,",
+       "sangria": 1
+      },
+      {
+       "texto": "que no reconoce mi camino;",
+       "sangria": 1
+      },
+      {
+       "texto": "por eso he jurado en mi cólera",
+       "sangria": 1
+      },
+      {
+       "texto": "que no entrarán en mi descanso.\"",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 403,
+    "impresa": "403"
+   },
+   {
+    "tomo": 2,
+    "pdf": 1867,
+    "impresa": "739"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3315,
+    "impresa": "501"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5074,
+    "impresa": "604"
+   }
+  ],
+  "revisar": true,
+  "nota": "el texto no coincide en todos los tomos (ver diferencias.csv)"
+ },
+ {
+  "id": "salmo-99",
+  "cita": "Salmo 99",
+  "titulo": "ALEGRÍA DE LOS QUE ENTRAN EN EL TEMPLO",
+  "sentencia": {
+   "texto": "El Señor manda que los redimidos deben entonen un himno de victoria S. Atanasio).",
+   "cita": null
+  },
+  "gloria": true,
+  "rubricas": [
+   {
+    "despues_de_estrofa": 0,
+    "texto": "Se recita la antífona que corresponda y la asamblea la repite."
+   },
+   {
+    "despues_de_estrofa": 1,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 2,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 3,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 4,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 5,
+    "texto": "Se repite la antífona."
+   }
+  ],
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Aclama al Señor, tierra entera,",
+       "sangria": 0
+      },
+      {
+       "texto": "servid al Señor con alegría,",
+       "sangria": 1
+      },
+      {
+       "texto": "entrad en su presencia con aclamaciones.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Sabed que el Señor es Dios:",
+       "sangria": 0
+      },
+      {
+       "texto": "que él nos hizo y somos suyos,",
+       "sangria": 1
+      },
+      {
+       "texto": "su pueblo y ovejas de su rebaño.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Entrad por sus puertas con acción de gracias,",
+       "sangria": 0
+      },
+      {
+       "texto": "por sus atrios con himnos,",
+       "sangria": 1
+      },
+      {
+       "texto": "dándole gracias y bendiciendo su nombre:",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "«El Señor es bueno,",
+       "sangria": 0
+      },
+      {
+       "texto": "su misericordia es eterna,",
+       "sangria": 1
+      },
+      {
+       "texto": "su fidelidad por todas las edades.»",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 404,
+    "impresa": "404"
+   },
+   {
+    "tomo": 2,
+    "pdf": 1868,
+    "impresa": "740"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3316,
+    "impresa": "502"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5075,
+    "impresa": "605"
+   }
+  ]
+ },
+ {
+  "id": "salmo-66",
+  "cita": "Salmo 66",
+  "titulo": "QUE TODOS LOS PUEBLOS ALABEN AL SEÑOR",
+  "sentencia": {
+   "texto": "Sabed que esta salvación de Dios se envía a los gentiles",
+   "cita": "Hech 28, 28"
+  },
+  "gloria": true,
+  "rubricas": [
+   {
+    "despues_de_estrofa": 0,
+    "texto": "Se recita la antífona que corresponda y la asamblea la repite."
+   },
+   {
+    "despues_de_estrofa": 1,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 2,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 3,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 4,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 5,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 6,
+    "texto": "Se repite la antífona."
+   }
+  ],
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "El Señor tenga piedad y nos bendiga,",
+       "sangria": 0
+      },
+      {
+       "texto": "ilumine su rostro sobre nosotros;",
+       "sangria": 1
+      },
+      {
+       "texto": "conozca la tierra tus caminos,",
+       "sangria": 1
+      },
+      {
+       "texto": "todos los pueblos tu salvación.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Oh Dios!, que te alaben los pueblos,",
+       "sangria": 0
+      },
+      {
+       "texto": "que todos los pueblos te alaben.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Que canten de alegría las naciones,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque riges el mundo con justicia,",
+       "sangria": 1
+      },
+      {
+       "texto": "riges los pueblos con rectitud",
+       "sangria": 1
+      },
+      {
+       "texto": "y gobiernas las naciones de la tierra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Oh Dios!, que te alaben los pueblos,",
+       "sangria": 0
+      },
+      {
+       "texto": "que todos los pueblos te alaben.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "La tierra ha dado su fruto,",
+       "sangria": 0
+      },
+      {
+       "texto": "nos bendice el Señor, nuestro Dios.",
+       "sangria": 1
+      },
+      {
+       "texto": "Que Dios nos bendiga; que le teman",
+       "sangria": 1
+      },
+      {
+       "texto": "hasta los confines del orbe.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 404,
+    "impresa": "404"
+   },
+   {
+    "tomo": 2,
+    "pdf": 1869,
+    "impresa": "741"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3317,
+    "impresa": "503"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5076,
+    "impresa": "606"
+   }
+  ]
+ },
+ {
+  "id": "salmo-23",
+  "cita": "Salmo 23",
+  "titulo": "ENTRADA SOLEMNE DE DIOS EN SU TEMPLO",
+  "sentencia": {
+   "texto": "Las puertas del cielo se abren ante Cristo que como hombre sube al cielo",
+   "cita": "S. Ireneo"
+  },
+  "gloria": true,
+  "rubricas": [
+   {
+    "despues_de_estrofa": 0,
+    "texto": "Se recita la antífona que corresponda y la asamblea la repite."
+   },
+   {
+    "despues_de_estrofa": 1,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 2,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 3,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 4,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 5,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 6,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 7,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 8,
+    "texto": "Se repite la antífona."
+   },
+   {
+    "despues_de_estrofa": 9,
+    "texto": "Se repite la antífona."
+   }
+  ],
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Del Señor es la tierra y cuanto la llena,",
+       "sangria": 0
+      },
+      {
+       "texto": "el orbe y todos sus habitantes:",
+       "sangria": 1
+      },
+      {
+       "texto": "él la fundó sobre los mares,",
+       "sangria": 1
+      },
+      {
+       "texto": "él la afianzó sobre los ríos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— ¿Quién puede subir al monte del Señor?",
+       "sangria": 0
+      },
+      {
+       "texto": "¿Quién puede estar en el recinto sacro?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— El hombre de manos inocentes",
+       "sangria": 0
+      },
+      {
+       "texto": "y puro corazón,",
+       "sangria": 1
+      },
+      {
+       "texto": "que no confía en los ídolos",
+       "sangria": 1
+      },
+      {
+       "texto": "ni jura contra el prójimo en falso.",
+       "sangria": 1
+      },
+      {
+       "texto": "Ése recibirá la bendición del Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "le hará justicia el Dios de salvación.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— Éste es el grupo que busca al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "que viene a tu presencia, Dios de Jacob.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Portones!, alzad los dinteles,",
+       "sangria": 0
+      },
+      {
+       "texto": "que se alcen las antiguas compuertas:",
+       "sangria": 1
+      },
+      {
+       "texto": "va a entrar el Rey de la gloria.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— ¿Quién es ese Rey de la gloria?",
+       "sangria": 0
+      },
+      {
+       "texto": "— El Señor, héroe valeroso;",
+       "sangria": 1
+      },
+      {
+       "texto": "el Señor, héroe de la guerra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Portones!, alzad los dinteles,",
+       "sangria": 0
+      },
+      {
+       "texto": "que se alcen las antiguas compuertas:",
+       "sangria": 1
+      },
+      {
+       "texto": "va a entrar el Rey de la gloria.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— ¿Quién es ese Rey de la gloria?",
+       "sangria": 0
+      },
+      {
+       "texto": "— El Señor, Dios de los ejércitos.",
+       "sangria": 1
+      },
+      {
+       "texto": "Él es el Rey de la gloria.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 405,
+    "impresa": "405"
+   },
+   {
+    "tomo": 2,
+    "pdf": 1869,
+    "impresa": "741"
+   },
+   {
+    "tomo": 3,
+    "pdf": 3318,
+    "impresa": "504"
+   },
+   {
+    "tomo": 4,
+    "pdf": 5076,
+    "impresa": "606"
+   }
+  ]
+ }
+]

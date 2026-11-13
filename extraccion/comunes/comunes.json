@@ -102,53 +102,6 @@
           ]
          }
         ]
-       },
-       {
-        "tipo": "rubrica",
-        "variantes": [
-         {
-          "texto": "HIMNO A CRISTO, PRIMOGÉNITO DE TODA CRIATURA Y PRIMER RESUCITADO DE ENTRE",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2439,
-            "impresa": "1311"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "tipo": "rubrica",
-        "variantes": [
-         {
-          "texto": "LOS MUERTOS",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2439,
-            "impresa": "1311"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "tipo": "himno",
-        "variantes": [
-         {
-          "himno": "damos-gracias-a-dios-padre",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2439,
-            "impresa": "1311",
-            "pdf_fin": 2440,
-            "impresa_fin": "1312"
-           }
-          ]
-         }
-        ]
        }
       ]
      },
@@ -159,9 +112,6 @@
         "tipo": "antifona",
         "variantes": [
          {
-          "cuando": {
-           "opcion": 1
-          },
           "numero": 1,
           "texto": "En las plazas de Jerusalén reina la alegría y en sus casas resuena el canto de gozo: «Aleluya».",
           "tp_aleluya": false,
@@ -181,9 +131,7 @@
             "pdf": 5950,
             "impresa": "1480"
            }
-          ],
-          "revisar": true,
-          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+          ]
          },
          {
           "etiqueta": "Tiempo de Cuaresma:",
@@ -204,8 +152,7 @@
          {
           "etiqueta": "Tiempo pascual:",
           "cuando": {
-           "tiempo": "pascua",
-           "opcion": 1
+           "tiempo": "pascua"
           },
           "numero": 1,
           "texto": "En las plazas de Jerusalén reina la alegría, y en sus villas resuena el canto de gozo: «Aleluya.»",
@@ -215,71 +162,6 @@
             "tomo": 2,
             "pdf": 2438,
             "impresa": "1310"
-           }
-          ]
-         },
-         {
-          "cuando": {
-           "opcion": 2
-          },
-          "texto": "Gloria a ti, Señor, por Cristo, en la Iglesia.",
-          "tp_aleluya": false,
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2440,
-            "impresa": "1312"
-           }
-          ],
-          "revisar": true,
-          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
-         },
-         {
-          "etiqueta": "Tiempo Pascual:",
-          "cuando": {
-           "tiempo": "pascua",
-           "opcion": 2
-          },
-          "texto": "En la ciudad de Dios se alegra la muchedumbre de los santos, y los ángeles cantan himnos de júbilo ante el trono de Dios. Aleluya.",
-          "tp_aleluya": false,
-          "revisar": true,
-          "nota": "tomo 2: la antífona repetida después del salmo no coincide: «En la ciudad de Dios se alegra la muchedumbre de los santos y los ángeles cantan himnos de júbilo ante el trono de Dios. Aleluya.»",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2440,
-            "impresa": "1312"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "tipo": "rubrica",
-        "variantes": [
-         {
-          "texto": "El cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio es cantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y al final de cada estrofa.",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2440,
-            "impresa": "1312"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "tipo": "salmo",
-        "variantes": [
-         {
-          "salmo": "cantico-cf-ap-19-1-7",
-          "parte": null,
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2440,
-            "impresa": "1312"
            }
           ]
          }
@@ -359,6 +241,24 @@
             "tomo": 2,
             "pdf": 2439,
             "impresa": "1311"
+           }
+          ]
+         },
+         {
+          "etiqueta": "Tiempo Pascual:",
+          "cuando": {
+           "tiempo": "pascua"
+          },
+          "numero": 2,
+          "texto": "En la ciudad de Dios se alegra la muchedumbre de los santos, y los ángeles cantan himnos de júbilo ante el trono de Dios. Aleluya.",
+          "tp_aleluya": false,
+          "revisar": true,
+          "nota": "tomo 2: la antífona repetida después del salmo no coincide: «En la ciudad de Dios se alegra la muchedumbre de los santos y los ángeles cantan himnos de júbilo ante el trono de Dios. Aleluya.»",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2440,
+            "impresa": "1312"
            }
           ]
          }
@@ -504,6 +404,37 @@
           ]
          }
         ]
+       },
+       {
+        "tipo": "rubrica",
+        "variantes": [
+         {
+          "texto": "El cántico siguiente se dice con Aleluya, tal como está aquí, solamente cuando el Oficio es cantado. Cuando el Oficio se dice sin canto es suficiente decir Aleluya sólo al principio y al final de cada estrofa.",
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2440,
+            "impresa": "1312"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "tipo": "salmo",
+        "variantes": [
+         {
+          "salmo": "cantico-cf-ap-19-1-7",
+          "parte": null,
+          "fuentes": [
+           {
+            "tomo": 2,
+            "pdf": 2440,
+            "impresa": "1312"
+           }
+          ]
+         }
+        ]
        }
       ]
      },
@@ -639,7 +570,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -725,9 +656,6 @@
          {
           "etiqueta": "Cuando el Oficio se celebra en la misma iglesia dedicada:",
           "revisar": true,
-          "cuando": {
-           "opcion": 1
-          },
           "texto": "Señor, tú que nos haces revivir cada año el día de la consagración de esta iglesia: escucha las súplicas de tu pueblo y concédenos que, en este lugar, sepamos ofrecerte siempre un servicio digno y obtengamos de ti una redención cada vez más plena. Por nuestro Señor Jesucristo.",
           "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra en la misma iglesia dedicada:»",
           "fuentes": [
@@ -756,9 +684,6 @@
          {
           "etiqueta": "Cuando el Oficio se celebra fuera de la iglesia dedicada:",
           "revisar": true,
-          "cuando": {
-           "opcion": 2
-          },
           "texto": "Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo como cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por nuestro Señor Jesucristo.",
           "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra fuera de la iglesia dedicada:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
           "fuentes": [
@@ -786,9 +711,6 @@
          },
          {
           "etiqueta": "O bien:",
-          "cuando": {
-           "opcion": 3
-          },
           "texto": "Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.",
           "fuentes": [
            {
@@ -897,7 +819,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -1766,7 +1688,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -2194,7 +2116,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -2270,9 +2192,6 @@
          {
           "etiqueta": "Cuando el Oficio se celebra en la misma iglesia dedicada:",
           "revisar": true,
-          "cuando": {
-           "opcion": 1
-          },
           "texto": "Señor, tú que nos haces revivir cada año el día de la consagración de esta iglesia: escucha las súplicas de tu pueblo y concédenos que, en este lugar, sepamos ofrecerte siempre un servicio digno y obtengamos de ti una redención cada vez más plena. Por nuestro Señor Jesucristo.",
           "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra en la misma iglesia dedicada:»",
           "fuentes": [
@@ -2301,9 +2220,6 @@
          {
           "etiqueta": "Cuando el Oficio se celebra fuera de la iglesia dedicada:",
           "revisar": true,
-          "cuando": {
-           "opcion": 2
-          },
           "texto": "Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo como cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por nuestro Señor Jesucristo.",
           "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra fuera de la iglesia dedicada:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
           "fuentes": [
@@ -2331,9 +2247,6 @@
          },
          {
           "etiqueta": "O bien:",
-          "cuando": {
-           "opcion": 3
-          },
           "texto": "Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.",
           "fuentes": [
            {
@@ -3372,7 +3285,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -3450,9 +3363,6 @@
          {
           "etiqueta": "Cuando el Oficio se celebra en la misma iglesia dedicada:",
           "revisar": true,
-          "cuando": {
-           "opcion": 1
-          },
           "texto": "Señor, tú que nos haces revivir cada año el día de la consagración de esta iglesia: escucha las súplicas de tu pueblo y concédenos que, en este lugar, sepamos ofrecerte siempre un servicio digno y obtengamos de ti una redención cada vez más plena. Por nuestro Señor Jesucristo.",
           "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra en la misma iglesia dedicada:»",
           "fuentes": [
@@ -3481,9 +3391,6 @@
          {
           "etiqueta": "Cuando el Oficio se celebra fuera de la iglesia dedicada:",
           "revisar": true,
-          "cuando": {
-           "opcion": 2
-          },
           "texto": "Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo como cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por nuestro Señor Jesucristo.",
           "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra fuera de la iglesia dedicada:»",
           "fuentes": [
@@ -3511,9 +3418,6 @@
          },
          {
           "etiqueta": "O bien:",
-          "cuando": {
-           "opcion": 3
-          },
           "texto": "Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.",
           "fuentes": [
            {
@@ -4010,7 +3914,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -4478,7 +4382,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -5489,7 +5393,7 @@
         "variantes": [
          {
           "texto": "En las solemnidades y fiestas, después del segundo responsorio se dice el himno Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 2,
@@ -5964,7 +5868,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -7250,7 +7154,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -8093,7 +7997,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -8270,7 +8174,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -8342,7 +8246,7 @@
          {
           "texto": "El salmo invitatorio como en el Ordinario, Salmo 94; salmo 99; salmo 66; salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -9009,7 +8913,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -9452,7 +9356,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -10485,7 +10389,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -11094,14 +10998,14 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        },
        {
         "tipo": "rubrica",
         "variantes": [
          {
           "texto": "(T. P. Aleluya.) Magnificat",
-          "remite": "ordinario/magnificat",
+          "remite": "ordinario/visperas/cantico_evangelico",
           "fuentes": [
            {
             "tomo": 2,
@@ -11111,7 +11015,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -11525,7 +11429,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -12297,7 +12201,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -12867,7 +12771,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -13646,36 +13550,6 @@
           ]
          }
         ]
-       },
-       {
-        "tipo": "rubrica",
-        "variantes": [
-         {
-          "texto": "HIMNO A DIOS CREADOR",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2515,
-            "impresa": "1387"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "tipo": "himno",
-        "variantes": [
-         {
-          "himno": "eres-digno-senor-dios-nuestro-de-recibir-la-gloria",
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2515,
-            "impresa": "1387"
-           }
-          ]
-         }
-        ]
        }
       ]
      },
@@ -13686,9 +13560,6 @@
         "tipo": "antifona",
         "variantes": [
          {
-          "cuando": {
-           "opcion": 1
-          },
           "numero": 1,
           "texto": "Los cuerpos de los santos fueron sepultados en paz, y su fama vive por generaciones.",
           "tp_aleluya": true,
@@ -13713,25 +13584,7 @@
             "pdf": 6031,
             "impresa": "1561"
            }
-          ],
-          "revisar": true,
-          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
-         },
-         {
-          "cuando": {
-           "opcion": 2
-          },
-          "texto": "Éstos son aquellos santos que entregaron sus cuerpos para ser fieles a la alianza de Dios y han lavado sus vestiduras con la sangre del Cordero.",
-          "tp_aleluya": true,
-          "fuentes": [
-           {
-            "tomo": 2,
-            "pdf": 2515,
-            "impresa": "1387"
-           }
-          ],
-          "revisar": true,
-          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+          ]
          }
         ]
        },
@@ -14087,7 +13940,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -15157,7 +15010,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -15613,7 +15466,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -16302,7 +16155,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -16795,7 +16648,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -18184,7 +18037,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -19093,7 +18946,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -19449,7 +19302,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -20669,7 +20522,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -21096,7 +20949,7 @@
           "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -22242,7 +22095,7 @@
           "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -22818,7 +22671,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -22928,7 +22781,7 @@
          {
           "texto": "El salmo invitatorio como en el Ordinario, Salmo 94; salmo 99; salmo 66; salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -23004,7 +22857,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -23545,7 +23398,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -23870,7 +23723,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -24116,7 +23969,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -24707,7 +24560,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -24992,7 +24845,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -25624,7 +25477,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -26096,7 +25949,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -27329,7 +27182,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -28007,7 +27860,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -28476,7 +28329,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -29558,7 +29411,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -30131,7 +29984,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -31387,7 +31240,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -32253,14 +32106,14 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        },
        {
         "tipo": "rubrica",
         "variantes": [
          {
           "texto": "(T. P. Aleluya.) Magnificat",
-          "remite": "ordinario/magnificat",
+          "remite": "ordinario/visperas/cantico_evangelico",
           "fuentes": [
            {
             "tomo": 2,
@@ -32719,7 +32572,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -33970,7 +33823,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -34540,7 +34393,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -35808,7 +35661,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        },
        {
         "tipo": "rubrica",
@@ -35824,7 +35677,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -36411,14 +36264,14 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        },
        {
         "tipo": "rubrica",
         "variantes": [
          {
           "texto": "(T. P. Aleluya.) Magnificat",
-          "remite": "ordinario/magnificat",
+          "remite": "ordinario/visperas/cantico_evangelico",
           "fuentes": [
            {
             "tomo": 2,
@@ -36635,7 +36488,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -37063,7 +36916,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -37246,7 +37099,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        },
        {
         "tipo": "rubrica",
@@ -37277,7 +37130,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -37500,7 +37353,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        },
        {
         "tipo": "rubrica",
@@ -37516,7 +37369,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -37669,7 +37522,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -38073,7 +37926,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -38192,7 +38045,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -38341,7 +38194,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -38494,7 +38347,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -38687,7 +38540,7 @@
         "variantes": [
          {
           "texto": "HIMNO Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 1,
@@ -38806,7 +38659,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -38925,7 +38778,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -39113,7 +38966,7 @@
          {
           "texto": "El salmo invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -40314,7 +40167,7 @@
         "variantes": [
          {
           "texto": "Para el cántico del Benedictus se toma una de las siguientes antífonas:",
-          "remite": "ordinario/benedictus",
+          "remite": "ordinario/laudes/cantico_evangelico",
           "fuentes": [
            {
             "tomo": 3,
@@ -40448,7 +40301,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },

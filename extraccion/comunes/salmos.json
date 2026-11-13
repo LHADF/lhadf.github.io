@@ -4563,12 +4563,107 @@
  {
   "id": "cantico-col-1-12-20",
   "cita": "Cántico Col 1, 12-20",
-  "titulo": null,
+  "titulo": "HIMNO A CRISTO, PRIMOGÉNITO DE TODA CRIATURA Y PRIMER RESUCITADO DE ENTRE LOS MUERTOS",
   "sentencia": null,
   "partes": [
    {
     "numero": null,
-    "estrofas": []
+    "estrofas": [
+     [
+      {
+       "texto": "Damos gracias a Dios Padre,",
+       "sangria": 0
+      },
+      {
+       "texto": "que nos ha hecho capaces de compartir",
+       "sangria": 1
+      },
+      {
+       "texto": "la herencia del pueblo santo en la luz.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él nos ha sacado del dominio de las tinieblas,",
+       "sangria": 0
+      },
+      {
+       "texto": "y nos ha trasladado al reino de su Hijo querido,",
+       "sangria": 1
+      },
+      {
+       "texto": "por cuya sangre hemos recibido la redención,",
+       "sangria": 1
+      },
+      {
+       "texto": "el perdón de los pecados.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él es imagen de Dios invisible,",
+       "sangria": 0
+      },
+      {
+       "texto": "primogénito de toda criatura;",
+       "sangria": 1
+      },
+      {
+       "texto": "pues por medio de él fueron creadas todas las cosas:",
+       "sangria": 1
+      },
+      {
+       "texto": "celestes y terrestres, visibles e invisibles,",
+       "sangria": 1
+      },
+      {
+       "texto": "Tronos, Dominaciones, Principados, Potestades;",
+       "sangria": 1
+      },
+      {
+       "texto": "todo fue creado por él y para él.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él es anterior a todo, y todo se mantiene en él.",
+       "sangria": 0
+      },
+      {
+       "texto": "Él es también la cabeza del cuerpo de la Iglesia.",
+       "sangria": 1
+      },
+      {
+       "texto": "Él es el principio, el primogénito de entre los muertos,",
+       "sangria": 1
+      },
+      {
+       "texto": "y así es el primero en todo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Porque en él quiso Dios que residiera toda plenitud.",
+       "sangria": 0
+      },
+      {
+       "texto": "Y por él quiso reconciliar consigo todas las cosas:",
+       "sangria": 1
+      },
+      {
+       "texto": "haciendo la paz por la sangre de su cruz",
+       "sangria": 1
+      },
+      {
+       "texto": "con todos los seres, así del cielo como de la tierra.",
+       "sangria": 1
+      }
+     ]
+    ]
    }
   ],
   "fuentes": [

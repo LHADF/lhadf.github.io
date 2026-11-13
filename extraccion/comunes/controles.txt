@@ -1,5 +1,5 @@
 Controles — Oficios comunes (tomos I–IV) — hay controles que no pasan
-Piezas marcadas para revisar: 190 · diferencias entre tomos: 724
+Piezas marcadas para revisar: 186 · diferencias entre tomos: 720
 
 [OK ] Cobertura: 40650/40650 fragmentos asignados (100.0 %); huérfanos: 0
       tomo 1 · pdf 834: 100 %
@@ -810,11 +810,11 @@ Piezas marcadas para revisar: 190 · diferencias entre tomos: 724
       pendiente: apendices/himnos-latinos
       pendiente: apendices/vigilias/santa-maria-virgen
       pendiente: himnos/finisimo-fue-el-lino
-      pendiente: ordinario/benedictus
       pendiente: ordinario/conclusion
-      pendiente: ordinario/invitatorio/salmo
-      pendiente: ordinario/magnificat
-      pendiente: ordinario/te-deum
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
       pendiente: propio-del-tiempo/santa-maria-sabado
       pendiente: salmos/salmo-128
       pendiente: salmos/salmo-130
@@ -828,7 +828,7 @@ Piezas marcadas para revisar: 190 · diferencias entre tomos: 724
       pendiente: salterio/semana-1/domingo/laudes/salmodia
 [OK ] Salmos: 33 nombrados, todos en salmos.json
 [MAL] Salmos iguales en todos los tomos: difieren: salmo-86, salmo-45, cantico-ef-1-3-10, salmo-96, salmo-115, salmo-117, salmo-2, salmo-32, salmo-10, salmo-14 (ver diferencias.csv)
-[OK ] Ida y vuelta: 3972/3972 piezas reescritas igual al libro
+[OK ] Ida y vuelta: 3967/3967 piezas reescritas igual al libro
 [INF] Colores dudosos clasificados por tono: 10
       tomo 2 pdf 2472: Los salmos y el cántico, del domingo de la I seman {'0433ff'}
       tomo 2 pdf 2491: Los salmos y el cántico, del domingo de la I seman {'0433ff'}

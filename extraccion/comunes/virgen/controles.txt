@@ -125,11 +125,11 @@ Piezas marcadas para revisar: 18 · diferencias entre tomos: 88
 [OK ] Remisiones: 0 rotas; 18 pendientes (fuera de esta sección)
       pendiente: apendices/himnos-latinos
       pendiente: apendices/vigilias/santa-maria-virgen
-      pendiente: ordinario/benedictus
       pendiente: ordinario/conclusion
-      pendiente: ordinario/invitatorio/salmo
-      pendiente: ordinario/magnificat
-      pendiente: ordinario/te-deum
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
       pendiente: propio-del-tiempo/santa-maria-sabado
       pendiente: salmos/salmo-128
       pendiente: salmos/salmo-130

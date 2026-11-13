@@ -464,7 +464,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -932,7 +932,7 @@
          {
           "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -1943,7 +1943,7 @@
         "variantes": [
          {
           "texto": "En las solemnidades y fiestas, después del segundo responsorio se dice el himno Te Deum.",
-          "remite": "ordinario/te-deum",
+          "remite": "ordinario/oficio/te_deum",
           "otras_redacciones": [
            {
             "tomo": 2,
@@ -2418,7 +2418,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },
@@ -3704,7 +3704,7 @@
           ]
          }
         ],
-        "remite": "ordinario/magnificat"
+        "remite": "ordinario/visperas/cantico_evangelico"
        }
       ]
      },
@@ -4225,7 +4225,7 @@
          {
           "texto": "El salmo invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23",
           "remite": [
-           "ordinario/invitatorio/salmo",
+           "ordinario/invitatorio/salmodia",
            "salmos/salmo-94",
            "salmos/salmo-99",
            "salmos/salmo-66",
@@ -5426,7 +5426,7 @@
         "variantes": [
          {
           "texto": "Para el cántico del Benedictus se toma una de las siguientes antífonas:",
-          "remite": "ordinario/benedictus",
+          "remite": "ordinario/laudes/cantico_evangelico",
           "fuentes": [
            {
             "tomo": 3,
@@ -5560,7 +5560,7 @@
           ]
          }
         ],
-        "remite": "ordinario/benedictus"
+        "remite": "ordinario/laudes/cantico_evangelico"
        }
       ]
      },

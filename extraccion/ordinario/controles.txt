@@ -1,0 +1,164 @@
+Controles — Ordinario de la Liturgia de las Horas (tomos I–IV) — hay controles que no pasan
+Piezas marcadas para revisar: 32 · diferencias entre tomos: 129
+
+[OK ] Cobertura: 5646/5646 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 401: 100 %
+      tomo 1 · pdf 402: 100 %
+      tomo 1 · pdf 403: 100 %
+      tomo 1 · pdf 404: 100 %
+      tomo 1 · pdf 405: 100 %
+      tomo 1 · pdf 406: 100 %
+      tomo 1 · pdf 407: 100 %
+      tomo 1 · pdf 408: 100 %
+      tomo 1 · pdf 409: 100 %
+      tomo 1 · pdf 410: 100 %
+      tomo 1 · pdf 411: 100 %
+      tomo 1 · pdf 412: 100 %
+      tomo 1 · pdf 413: 100 %
+      tomo 1 · pdf 414: 100 %
+      tomo 1 · pdf 415: 100 %
+      tomo 1 · pdf 416: 100 %
+      tomo 1 · pdf 417: 100 %
+      tomo 1 · pdf 418: 100 %
+      tomo 1 · pdf 419: 100 %
+      tomo 1 · pdf 420: 100 %
+      tomo 1 · pdf 421: 100 %
+      tomo 1 · pdf 422: 100 %
+      tomo 1 · pdf 423: 100 %
+      tomo 1 · pdf 424: 100 %
+      tomo 1 · pdf 425: 100 %
+      tomo 1 · pdf 426: 100 %
+      tomo 1 · pdf 427: 100 %
+      tomo 1 · pdf 428: 100 %
+      tomo 1 · pdf 429: 100 %
+      tomo 1 · pdf 430: 100 %
+      tomo 1 · pdf 431: 100 %
+      tomo 1 · pdf 432: 100 %
+      tomo 2 · pdf 1865: 100 %
+      tomo 2 · pdf 1866: 100 %
+      tomo 2 · pdf 1867: 100 %
+      tomo 2 · pdf 1868: 100 %
+      tomo 2 · pdf 1869: 100 %
+      tomo 2 · pdf 1870: 100 %
+      tomo 2 · pdf 1871: 100 %
+      tomo 2 · pdf 1872: 100 %
+      tomo 2 · pdf 1873: 100 %
+      tomo 2 · pdf 1874: 100 %
+      tomo 2 · pdf 1875: 100 %
+      tomo 2 · pdf 1876: 100 %
+      tomo 2 · pdf 1877: 100 %
+      tomo 2 · pdf 1878: 100 %
+      tomo 2 · pdf 1879: 100 %
+      tomo 2 · pdf 1880: 100 %
+      tomo 2 · pdf 1881: 100 %
+      tomo 2 · pdf 1882: 100 %
+      tomo 2 · pdf 1883: 100 %
+      tomo 2 · pdf 1884: 100 %
+      tomo 2 · pdf 1885: 100 %
+      tomo 2 · pdf 1886: 100 %
+      tomo 2 · pdf 1887: 100 %
+      tomo 2 · pdf 1888: 100 %
+      tomo 2 · pdf 1889: 100 %
+      tomo 2 · pdf 1890: 100 %
+      tomo 2 · pdf 1891: 100 %
+      tomo 2 · pdf 1892: 100 %
+      tomo 2 · pdf 1893: 100 %
+      tomo 2 · pdf 1894: 100 %
+      tomo 2 · pdf 1895: 100 %
+      tomo 2 · pdf 1896: 100 %
+      tomo 2 · pdf 1897: 100 %
+      tomo 2 · pdf 1898: 100 %
+      tomo 3 · pdf 3314: 100 %
+      tomo 3 · pdf 3315: 100 %
+      tomo 3 · pdf 3316: 100 %
+      tomo 3 · pdf 3317: 100 %
+      tomo 3 · pdf 3318: 100 %
+      tomo 3 · pdf 3319: 100 %
+      tomo 3 · pdf 3320: 100 %
+      tomo 3 · pdf 3321: 100 %
+      tomo 3 · pdf 3322: 100 %
+      tomo 3 · pdf 3323: 100 %
+      tomo 3 · pdf 3324: 100 %
+      tomo 3 · pdf 3325: 100 %
+      tomo 3 · pdf 3326: 100 %
+      tomo 3 · pdf 3327: 100 %
+      tomo 3 · pdf 3328: 100 %
+      tomo 3 · pdf 3329: 100 %
+      tomo 3 · pdf 3330: 100 %
+      tomo 3 · pdf 3331: 100 %
+      tomo 3 · pdf 3332: 100 %
+      tomo 3 · pdf 3333: 100 %
+      tomo 3 · pdf 3334: 100 %
+      tomo 3 · pdf 3335: 100 %
+      tomo 3 · pdf 3336: 100 %
+      tomo 3 · pdf 3337: 100 %
+      tomo 3 · pdf 3338: 100 %
+      tomo 3 · pdf 3339: 100 %
+      tomo 3 · pdf 3340: 100 %
+      tomo 3 · pdf 3341: 100 %
+      tomo 3 · pdf 3342: 100 %
+      tomo 3 · pdf 3343: 100 %
+      tomo 4 · pdf 5073: 100 %
+      tomo 4 · pdf 5074: 100 %
+      tomo 4 · pdf 5075: 100 %
+      tomo 4 · pdf 5076: 100 %
+      tomo 4 · pdf 5077: 100 %
+      tomo 4 · pdf 5078: 100 %
+      tomo 4 · pdf 5079: 100 %
+      tomo 4 · pdf 5080: 100 %
+      tomo 4 · pdf 5081: 100 %
+      tomo 4 · pdf 5082: 100 %
+      tomo 4 · pdf 5083: 100 %
+      tomo 4 · pdf 5084: 100 %
+      tomo 4 · pdf 5085: 100 %
+      tomo 4 · pdf 5086: 100 %
+      tomo 4 · pdf 5087: 100 %
+      tomo 4 · pdf 5088: 100 %
+      tomo 4 · pdf 5089: 100 %
+      tomo 4 · pdf 5090: 100 %
+      tomo 4 · pdf 5091: 100 %
+      tomo 4 · pdf 5092: 100 %
+      tomo 4 · pdf 5093: 100 %
+      tomo 4 · pdf 5094: 100 %
+      tomo 4 · pdf 5095: 100 %
+      tomo 4 · pdf 5096: 100 %
+      tomo 4 · pdf 5097: 100 %
+      tomo 4 · pdf 5098: 100 %
+      tomo 4 · pdf 5099: 100 %
+      tomo 4 · pdf 5100: 100 %
+      tomo 4 · pdf 5101: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 6 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 2 pdf 1886: ['(T. P.', ').']
+      tomo 2 pdf 1886: ['(T. P.', ').']
+      tomo 2 pdf 1886: ['(T. P.', ').']
+      tomo 2 pdf 1887: ['(T. P.', ').']
+      tomo 3 pdf 3326: ['Lc 1, 68-79']
+      tomo 3 pdf 3336: ['Lc 1, 46-55']
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 1: 40 etiquetas rojas → 40 variantes, tomo 2: 35 etiquetas rojas → 35 variantes, tomo 3: 27 etiquetas rojas → 27 variantes, tomo 4: 27 etiquetas rojas → 27 variantes
+[OK ] Remisiones: 0 rotas; 13 pendientes (fuera de esta sección)
+      pendiente: apendices/apendice-iii
+      pendiente: apendices/himnos-latinos
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: texto-azul/bajo-tu-amparo
+      pendiente: texto-azul/dios-te-salve
+      pendiente: texto-azul/madre-del-redentor
+      pendiente: texto-azul/reina-de-los-cielos
+      pendiente: texto-azul/salve
+[OK ] Salmos: 4 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: salmo-94 (ver diferencias.csv)
+[OK ] Ida y vuelta: 1095/1095 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 5
+      tomo 2 pdf 1872: Versión española o en latín {'0433ff'}
+      tomo 2 pdf 1892: Los domingos y solemnidades, después de las I Vísp {'0433ff'}
+      tomo 2 pdf 1892: 133; después de las II vísperas, se dice el salmo  {'0433ff'}
+      tomo 2 pdf 1893: Se termina con una de las antífonas de la Santísim {'0433ff'}
+      tomo 2 pdf 1893: Reina de los cielos, Dios te salve española, Dios  {'0433ff'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 0
