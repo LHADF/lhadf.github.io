@@ -1,0 +1,399 @@
+Controles — Propio del tiempo · Pascua (tomo II) — todos pasan
+Piezas marcadas para revisar: 43 · diferencias entre tomos: 3
+
+[OK ] Cobertura: 18039/18039 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 2 · pdf 1517: 100 %
+      tomo 2 · pdf 1518: 100 %
+      tomo 2 · pdf 1519: 100 %
+      tomo 2 · pdf 1520: 100 %
+      tomo 2 · pdf 1521: 100 %
+      tomo 2 · pdf 1522: 100 %
+      tomo 2 · pdf 1523: 100 %
+      tomo 2 · pdf 1524: 100 %
+      tomo 2 · pdf 1525: 100 %
+      tomo 2 · pdf 1526: 100 %
+      tomo 2 · pdf 1527: 100 %
+      tomo 2 · pdf 1528: 100 %
+      tomo 2 · pdf 1529: 100 %
+      tomo 2 · pdf 1530: 100 %
+      tomo 2 · pdf 1531: 100 %
+      tomo 2 · pdf 1532: 100 %
+      tomo 2 · pdf 1533: 100 %
+      tomo 2 · pdf 1534: 100 %
+      tomo 2 · pdf 1535: 100 %
+      tomo 2 · pdf 1536: 100 %
+      tomo 2 · pdf 1537: 100 %
+      tomo 2 · pdf 1538: 100 %
+      tomo 2 · pdf 1539: 100 %
+      tomo 2 · pdf 1540: 100 %
+      tomo 2 · pdf 1541: 100 %
+      tomo 2 · pdf 1542: 100 %
+      tomo 2 · pdf 1543: 100 %
+      tomo 2 · pdf 1544: 100 %
+      tomo 2 · pdf 1545: 100 %
+      tomo 2 · pdf 1546: 100 %
+      tomo 2 · pdf 1547: 100 %
+      tomo 2 · pdf 1548: 100 %
+      tomo 2 · pdf 1549: 100 %
+      tomo 2 · pdf 1550: 100 %
+      tomo 2 · pdf 1551: 100 %
+      tomo 2 · pdf 1552: 100 %
+      tomo 2 · pdf 1553: 100 %
+      tomo 2 · pdf 1554: 100 %
+      tomo 2 · pdf 1555: 100 %
+      tomo 2 · pdf 1556: 100 %
+      tomo 2 · pdf 1557: 100 %
+      tomo 2 · pdf 1558: 100 %
+      tomo 2 · pdf 1559: 100 %
+      tomo 2 · pdf 1560: 100 %
+      tomo 2 · pdf 1561: 100 %
+      tomo 2 · pdf 1562: 100 %
+      tomo 2 · pdf 1563: 100 %
+      tomo 2 · pdf 1564: 100 %
+      tomo 2 · pdf 1565: 100 %
+      tomo 2 · pdf 1566: 100 %
+      tomo 2 · pdf 1567: 100 %
+      tomo 2 · pdf 1568: 100 %
+      tomo 2 · pdf 1569: 100 %
+      tomo 2 · pdf 1570: 100 %
+      tomo 2 · pdf 1571: 100 %
+      tomo 2 · pdf 1572: 100 %
+      tomo 2 · pdf 1573: 100 %
+      tomo 2 · pdf 1574: 100 %
+      tomo 2 · pdf 1575: 100 %
+      tomo 2 · pdf 1576: 100 %
+      tomo 2 · pdf 1577: 100 %
+      tomo 2 · pdf 1578: 100 %
+      tomo 2 · pdf 1579: 100 %
+      tomo 2 · pdf 1580: 100 %
+      tomo 2 · pdf 1581: 100 %
+      tomo 2 · pdf 1582: 100 %
+      tomo 2 · pdf 1583: 100 %
+      tomo 2 · pdf 1584: 100 %
+      tomo 2 · pdf 1585: 100 %
+      tomo 2 · pdf 1586: 100 %
+      tomo 2 · pdf 1587: 100 %
+      tomo 2 · pdf 1588: 100 %
+      tomo 2 · pdf 1589: 100 %
+      tomo 2 · pdf 1590: 100 %
+      tomo 2 · pdf 1591: 100 %
+      tomo 2 · pdf 1592: 100 %
+      tomo 2 · pdf 1593: 100 %
+      tomo 2 · pdf 1594: 100 %
+      tomo 2 · pdf 1595: 100 %
+      tomo 2 · pdf 1596: 100 %
+      tomo 2 · pdf 1597: 100 %
+      tomo 2 · pdf 1598: 100 %
+      tomo 2 · pdf 1599: 100 %
+      tomo 2 · pdf 1600: 100 %
+      tomo 2 · pdf 1601: 100 %
+      tomo 2 · pdf 1602: 100 %
+      tomo 2 · pdf 1603: 100 %
+      tomo 2 · pdf 1604: 100 %
+      tomo 2 · pdf 1605: 100 %
+      tomo 2 · pdf 1606: 100 %
+      tomo 2 · pdf 1607: 100 %
+      tomo 2 · pdf 1608: 100 %
+      tomo 2 · pdf 1609: 100 %
+      tomo 2 · pdf 1610: 100 %
+      tomo 2 · pdf 1611: 100 %
+      tomo 2 · pdf 1612: 100 %
+      tomo 2 · pdf 1613: 100 %
+      tomo 2 · pdf 1614: 100 %
+      tomo 2 · pdf 1615: 100 %
+      tomo 2 · pdf 1616: 100 %
+      tomo 2 · pdf 1617: 100 %
+      tomo 2 · pdf 1618: 100 %
+      tomo 2 · pdf 1619: 100 %
+      tomo 2 · pdf 1620: 100 %
+      tomo 2 · pdf 1621: 100 %
+      tomo 2 · pdf 1622: 100 %
+      tomo 2 · pdf 1623: 100 %
+      tomo 2 · pdf 1624: 100 %
+      tomo 2 · pdf 1625: 100 %
+      tomo 2 · pdf 1626: 100 %
+      tomo 2 · pdf 1627: 100 %
+      tomo 2 · pdf 1628: 100 %
+      tomo 2 · pdf 1629: 100 %
+      tomo 2 · pdf 1630: 100 %
+      tomo 2 · pdf 1631: 100 %
+      tomo 2 · pdf 1632: 100 %
+      tomo 2 · pdf 1633: 100 %
+      tomo 2 · pdf 1634: 100 %
+      tomo 2 · pdf 1635: 100 %
+      tomo 2 · pdf 1636: 100 %
+      tomo 2 · pdf 1637: 100 %
+      tomo 2 · pdf 1638: 100 %
+      tomo 2 · pdf 1639: 100 %
+      tomo 2 · pdf 1640: 100 %
+      tomo 2 · pdf 1641: 100 %
+      tomo 2 · pdf 1642: 100 %
+      tomo 2 · pdf 1643: 100 %
+      tomo 2 · pdf 1644: 100 %
+      tomo 2 · pdf 1645: 100 %
+      tomo 2 · pdf 1646: 100 %
+      tomo 2 · pdf 1647: 100 %
+      tomo 2 · pdf 1648: 100 %
+      tomo 2 · pdf 1649: 100 %
+      tomo 2 · pdf 1650: 100 %
+      tomo 2 · pdf 1651: 100 %
+      tomo 2 · pdf 1652: 100 %
+      tomo 2 · pdf 1653: 100 %
+      tomo 2 · pdf 1654: 100 %
+      tomo 2 · pdf 1655: 100 %
+      tomo 2 · pdf 1656: 100 %
+      tomo 2 · pdf 1657: 100 %
+      tomo 2 · pdf 1658: 100 %
+      tomo 2 · pdf 1659: 100 %
+      tomo 2 · pdf 1660: 100 %
+      tomo 2 · pdf 1661: 100 %
+      tomo 2 · pdf 1662: 100 %
+      tomo 2 · pdf 1663: 100 %
+      tomo 2 · pdf 1664: 100 %
+      tomo 2 · pdf 1665: 100 %
+      tomo 2 · pdf 1666: 100 %
+      tomo 2 · pdf 1667: 100 %
+      tomo 2 · pdf 1668: 100 %
+      tomo 2 · pdf 1669: 100 %
+      tomo 2 · pdf 1670: 100 %
+      tomo 2 · pdf 1671: 100 %
+      tomo 2 · pdf 1672: 100 %
+      tomo 2 · pdf 1673: 100 %
+      tomo 2 · pdf 1674: 100 %
+      tomo 2 · pdf 1675: 100 %
+      tomo 2 · pdf 1676: 100 %
+      tomo 2 · pdf 1677: 100 %
+      tomo 2 · pdf 1678: 100 %
+      tomo 2 · pdf 1679: 100 %
+      tomo 2 · pdf 1680: 100 %
+      tomo 2 · pdf 1681: 100 %
+      tomo 2 · pdf 1682: 100 %
+      tomo 2 · pdf 1683: 100 %
+      tomo 2 · pdf 1684: 100 %
+      tomo 2 · pdf 1685: 100 %
+      tomo 2 · pdf 1686: 100 %
+      tomo 2 · pdf 1687: 100 %
+      tomo 2 · pdf 1688: 100 %
+      tomo 2 · pdf 1689: 100 %
+      tomo 2 · pdf 1690: 100 %
+      tomo 2 · pdf 1691: 100 %
+      tomo 2 · pdf 1692: 100 %
+      tomo 2 · pdf 1693: 100 %
+      tomo 2 · pdf 1694: 100 %
+      tomo 2 · pdf 1695: 100 %
+      tomo 2 · pdf 1696: 100 %
+      tomo 2 · pdf 1697: 100 %
+      tomo 2 · pdf 1698: 100 %
+      tomo 2 · pdf 1699: 100 %
+      tomo 2 · pdf 1700: 100 %
+      tomo 2 · pdf 1701: 100 %
+      tomo 2 · pdf 1702: 100 %
+      tomo 2 · pdf 1703: 100 %
+      tomo 2 · pdf 1704: 100 %
+      tomo 2 · pdf 1705: 100 %
+      tomo 2 · pdf 1706: 100 %
+      tomo 2 · pdf 1707: 100 %
+      tomo 2 · pdf 1708: 100 %
+      tomo 2 · pdf 1709: 100 %
+      tomo 2 · pdf 1710: 100 %
+      tomo 2 · pdf 1711: 100 %
+      tomo 2 · pdf 1712: 100 %
+      tomo 2 · pdf 1713: 100 %
+      tomo 2 · pdf 1714: 100 %
+      tomo 2 · pdf 1715: 100 %
+      tomo 2 · pdf 1716: 100 %
+      tomo 2 · pdf 1717: 100 %
+      tomo 2 · pdf 1718: 100 %
+      tomo 2 · pdf 1719: 100 %
+      tomo 2 · pdf 1720: 100 %
+      tomo 2 · pdf 1721: 100 %
+      tomo 2 · pdf 1722: 100 %
+      tomo 2 · pdf 1723: 100 %
+      tomo 2 · pdf 1724: 100 %
+      tomo 2 · pdf 1725: 100 %
+      tomo 2 · pdf 1726: 100 %
+      tomo 2 · pdf 1727: 100 %
+      tomo 2 · pdf 1728: 100 %
+      tomo 2 · pdf 1729: 100 %
+      tomo 2 · pdf 1730: 100 %
+      tomo 2 · pdf 1731: 100 %
+      tomo 2 · pdf 1732: 100 %
+      tomo 2 · pdf 1733: 100 %
+      tomo 2 · pdf 1734: 100 %
+      tomo 2 · pdf 1735: 100 %
+      tomo 2 · pdf 1736: 100 %
+      tomo 2 · pdf 1737: 100 %
+      tomo 2 · pdf 1738: 100 %
+      tomo 2 · pdf 1739: 100 %
+      tomo 2 · pdf 1740: 100 %
+      tomo 2 · pdf 1741: 100 %
+      tomo 2 · pdf 1742: 100 %
+      tomo 2 · pdf 1743: 100 %
+      tomo 2 · pdf 1744: 100 %
+      tomo 2 · pdf 1745: 100 %
+      tomo 2 · pdf 1746: 100 %
+      tomo 2 · pdf 1747: 100 %
+      tomo 2 · pdf 1748: 100 %
+      tomo 2 · pdf 1749: 100 %
+      tomo 2 · pdf 1750: 100 %
+      tomo 2 · pdf 1751: 100 %
+      tomo 2 · pdf 1752: 100 %
+      tomo 2 · pdf 1753: 100 %
+      tomo 2 · pdf 1754: 100 %
+      tomo 2 · pdf 1755: 100 %
+      tomo 2 · pdf 1756: 100 %
+      tomo 2 · pdf 1757: 100 %
+      tomo 2 · pdf 1758: 100 %
+      tomo 2 · pdf 1759: 100 %
+      tomo 2 · pdf 1760: 100 %
+      tomo 2 · pdf 1761: 100 %
+      tomo 2 · pdf 1762: 100 %
+      tomo 2 · pdf 1763: 100 %
+      tomo 2 · pdf 1764: 100 %
+      tomo 2 · pdf 1765: 100 %
+      tomo 2 · pdf 1766: 100 %
+      tomo 2 · pdf 1767: 100 %
+      tomo 2 · pdf 1768: 100 %
+      tomo 2 · pdf 1769: 100 %
+      tomo 2 · pdf 1770: 100 %
+      tomo 2 · pdf 1771: 100 %
+      tomo 2 · pdf 1772: 100 %
+      tomo 2 · pdf 1773: 100 %
+      tomo 2 · pdf 1774: 100 %
+      tomo 2 · pdf 1775: 100 %
+      tomo 2 · pdf 1776: 100 %
+      tomo 2 · pdf 1777: 100 %
+      tomo 2 · pdf 1778: 100 %
+      tomo 2 · pdf 1779: 100 %
+      tomo 2 · pdf 1780: 100 %
+      tomo 2 · pdf 1781: 100 %
+      tomo 2 · pdf 1782: 100 %
+      tomo 2 · pdf 1783: 100 %
+      tomo 2 · pdf 1784: 100 %
+      tomo 2 · pdf 1785: 100 %
+      tomo 2 · pdf 1786: 100 %
+      tomo 2 · pdf 1787: 100 %
+      tomo 2 · pdf 1788: 100 %
+      tomo 2 · pdf 1789: 100 %
+      tomo 2 · pdf 1790: 100 %
+      tomo 2 · pdf 1791: 100 %
+      tomo 2 · pdf 1792: 100 %
+      tomo 2 · pdf 1793: 100 %
+      tomo 2 · pdf 1794: 100 %
+      tomo 2 · pdf 1795: 100 %
+      tomo 2 · pdf 1796: 100 %
+      tomo 2 · pdf 1797: 100 %
+      tomo 2 · pdf 1798: 100 %
+      tomo 2 · pdf 1799: 100 %
+      tomo 2 · pdf 1800: 100 %
+      tomo 2 · pdf 1801: 100 %
+      tomo 2 · pdf 1802: 100 %
+      tomo 2 · pdf 1803: 100 %
+      tomo 2 · pdf 1804: 100 %
+      tomo 2 · pdf 1805: 100 %
+      tomo 2 · pdf 1806: 100 %
+      tomo 2 · pdf 1807: 100 %
+      tomo 2 · pdf 1808: 100 %
+      tomo 2 · pdf 1809: 100 %
+      tomo 2 · pdf 1810: 100 %
+      tomo 2 · pdf 1811: 100 %
+      tomo 2 · pdf 1812: 100 %
+      tomo 2 · pdf 1813: 100 %
+      tomo 2 · pdf 1814: 100 %
+      tomo 2 · pdf 1815: 100 %
+      tomo 2 · pdf 1816: 100 %
+      tomo 2 · pdf 1817: 100 %
+      tomo 2 · pdf 1818: 100 %
+      tomo 2 · pdf 1819: 100 %
+      tomo 2 · pdf 1820: 100 %
+      tomo 2 · pdf 1821: 100 %
+      tomo 2 · pdf 1822: 100 %
+      tomo 2 · pdf 1823: 100 %
+      tomo 2 · pdf 1824: 100 %
+      tomo 2 · pdf 1825: 100 %
+      tomo 2 · pdf 1826: 100 %
+      tomo 2 · pdf 1827: 100 %
+      tomo 2 · pdf 1828: 100 %
+      tomo 2 · pdf 1829: 100 %
+      tomo 2 · pdf 1830: 100 %
+      tomo 2 · pdf 1831: 100 %
+      tomo 2 · pdf 1832: 100 %
+      tomo 2 · pdf 1833: 100 %
+      tomo 2 · pdf 1834: 100 %
+      tomo 2 · pdf 1835: 100 %
+      tomo 2 · pdf 1836: 100 %
+      tomo 2 · pdf 1837: 100 %
+      tomo 2 · pdf 1838: 100 %
+      tomo 2 · pdf 1839: 100 %
+      tomo 2 · pdf 1840: 100 %
+      tomo 2 · pdf 1841: 100 %
+      tomo 2 · pdf 1842: 100 %
+      tomo 2 · pdf 1843: 100 %
+      tomo 2 · pdf 1844: 100 %
+      tomo 2 · pdf 1845: 100 %
+      tomo 2 · pdf 1846: 100 %
+      tomo 2 · pdf 1847: 100 %
+      tomo 2 · pdf 1848: 100 %
+      tomo 2 · pdf 1849: 100 %
+      tomo 2 · pdf 1850: 100 %
+      tomo 2 · pdf 1851: 100 %
+      tomo 2 · pdf 1852: 100 %
+      tomo 2 · pdf 1853: 100 %
+      tomo 2 · pdf 1854: 100 %
+      tomo 2 · pdf 1855: 100 %
+      tomo 2 · pdf 1856: 100 %
+      tomo 2 · pdf 1857: 100 %
+      tomo 2 · pdf 1858: 100 %
+      tomo 2 · pdf 1859: 100 %
+      tomo 2 · pdf 1860: 100 %
+      tomo 2 · pdf 1861: 100 %
+      tomo 2 · pdf 1862: 100 %
+      tomo 2 · pdf 1863: 100 %
+      tomo 2 · pdf 1864: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 0 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 2: 139 etiquetas rojas → 139 variantes
+[OK ] Remisiones: 0 rotas; 20 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: salterio/semana-1/domingo/laudes/salmodia
+      pendiente: texto-azul/antifonas-alternativas
+      pendiente: texto-azul/bendicion
+      pendiente: texto-azul/de-la-semana-iii-del-salterio
+      pendiente: texto-azul/del-salterio
+      pendiente: texto-azul/domingo
+      pendiente: texto-azul/domingo-de-la-resurreccion
+      pendiente: texto-azul/domingo-de-la-semana-i
+      pendiente: texto-azul/domingo-de-la-semana-i-del-salterio
+[OK ] Salmos: 32 nombrados, todos en salmos.json
+[OK ] Salmos iguales en todos los tomos: sí
+[OK ] Ida y vuelta: 1760/1760 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 7
+      tomo 2 pdf 1552: Las antífonas, los salmos yelántico cántico como e {'0433ff'}
+      tomo 2 pdf 1575: Las antífonas, los salmos y el cántico como en las {'0433ff'}
+      tomo 2 pdf 1577: Cantaban un cántico nuevo ante el trono, en presen {'0327cf'}
+      tomo 2 pdf 1625: Dicha la oración conclusiva, se termina con la ben {'0433ff'}
+      tomo 2 pdf 1626: Las antífonas propias en el Salterio; los salmos y {'0433ff'}
+      tomo 2 pdf 1626: de la semana III del Salterio. {'0433ff'}
+      tomo 2 pdf 1628: Dicha la oración conclusiva, se termina con la ben {'0433ff'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 9
+      tomo 2 pdf 1533: texto negro sin pieza (parte lectura_breve): Este es el día en que actuó el Señor: sea él nuest
+      tomo 2 pdf 1552: texto negro sin pieza (parte lectura_breve): Este es el día en que actuó el Señor: sea él nuest
+      tomo 2 pdf 1625: el libro imprime «RECES» en lugar de «PRECES»: RECES
+      tomo 2 pdf 1774: remisión azul sin pieza: Antes de la Ascensión; después de la Ascensión.
+      tomo 2 pdf 1782: remisión azul sin pieza: Antes de la Ascensión; después de la Ascensión.
+      tomo 2 pdf 1788: texto negro sin pieza (parte None): Domingo VII de Pascua
+      tomo 2 pdf 1858: texto negro sin pieza (parte salmodia): corazones. Aleluya.
+      tomo 2 pdf 1858: texto negro sin pieza (parte salmodia): vosotros. Aleluya.
+      tomo 2 pdf 1864: R. suelto: R. Demos gracias a Dios. Aleluya, aleluya.

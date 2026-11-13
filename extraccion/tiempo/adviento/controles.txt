@@ -1,0 +1,214 @@
+Controles — Propio del tiempo · Adviento (tomo I) — todos pasan
+Piezas marcadas para revisar: 19 · diferencias entre tomos: 0
+
+[OK ] Cobertura: 8294/8294 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 44: 100 %
+      tomo 1 · pdf 45: 100 %
+      tomo 1 · pdf 46: 100 %
+      tomo 1 · pdf 47: 100 %
+      tomo 1 · pdf 48: 100 %
+      tomo 1 · pdf 49: 100 %
+      tomo 1 · pdf 50: 100 %
+      tomo 1 · pdf 51: 100 %
+      tomo 1 · pdf 52: 100 %
+      tomo 1 · pdf 53: 100 %
+      tomo 1 · pdf 54: 100 %
+      tomo 1 · pdf 55: 100 %
+      tomo 1 · pdf 56: 100 %
+      tomo 1 · pdf 57: 100 %
+      tomo 1 · pdf 58: 100 %
+      tomo 1 · pdf 59: 100 %
+      tomo 1 · pdf 60: 100 %
+      tomo 1 · pdf 61: 100 %
+      tomo 1 · pdf 62: 100 %
+      tomo 1 · pdf 63: 100 %
+      tomo 1 · pdf 64: 100 %
+      tomo 1 · pdf 65: 100 %
+      tomo 1 · pdf 66: 100 %
+      tomo 1 · pdf 67: 100 %
+      tomo 1 · pdf 68: 100 %
+      tomo 1 · pdf 69: 100 %
+      tomo 1 · pdf 70: 100 %
+      tomo 1 · pdf 71: 100 %
+      tomo 1 · pdf 72: 100 %
+      tomo 1 · pdf 73: 100 %
+      tomo 1 · pdf 74: 100 %
+      tomo 1 · pdf 75: 100 %
+      tomo 1 · pdf 76: 100 %
+      tomo 1 · pdf 77: 100 %
+      tomo 1 · pdf 78: 100 %
+      tomo 1 · pdf 79: 100 %
+      tomo 1 · pdf 80: 100 %
+      tomo 1 · pdf 81: 100 %
+      tomo 1 · pdf 82: 100 %
+      tomo 1 · pdf 83: 100 %
+      tomo 1 · pdf 84: 100 %
+      tomo 1 · pdf 85: 100 %
+      tomo 1 · pdf 86: 100 %
+      tomo 1 · pdf 87: 100 %
+      tomo 1 · pdf 88: 100 %
+      tomo 1 · pdf 89: 100 %
+      tomo 1 · pdf 90: 100 %
+      tomo 1 · pdf 91: 100 %
+      tomo 1 · pdf 92: 100 %
+      tomo 1 · pdf 93: 100 %
+      tomo 1 · pdf 94: 100 %
+      tomo 1 · pdf 95: 100 %
+      tomo 1 · pdf 96: 100 %
+      tomo 1 · pdf 97: 100 %
+      tomo 1 · pdf 98: 100 %
+      tomo 1 · pdf 99: 100 %
+      tomo 1 · pdf 100: 100 %
+      tomo 1 · pdf 101: 100 %
+      tomo 1 · pdf 102: 100 %
+      tomo 1 · pdf 103: 100 %
+      tomo 1 · pdf 104: 100 %
+      tomo 1 · pdf 105: 100 %
+      tomo 1 · pdf 106: 100 %
+      tomo 1 · pdf 107: 100 %
+      tomo 1 · pdf 108: 100 %
+      tomo 1 · pdf 109: 100 %
+      tomo 1 · pdf 110: 100 %
+      tomo 1 · pdf 111: 100 %
+      tomo 1 · pdf 112: 100 %
+      tomo 1 · pdf 113: 100 %
+      tomo 1 · pdf 114: 100 %
+      tomo 1 · pdf 115: 100 %
+      tomo 1 · pdf 116: 100 %
+      tomo 1 · pdf 117: 100 %
+      tomo 1 · pdf 118: 100 %
+      tomo 1 · pdf 119: 100 %
+      tomo 1 · pdf 120: 100 %
+      tomo 1 · pdf 121: 100 %
+      tomo 1 · pdf 122: 100 %
+      tomo 1 · pdf 123: 100 %
+      tomo 1 · pdf 124: 100 %
+      tomo 1 · pdf 125: 100 %
+      tomo 1 · pdf 126: 100 %
+      tomo 1 · pdf 127: 100 %
+      tomo 1 · pdf 128: 100 %
+      tomo 1 · pdf 129: 100 %
+      tomo 1 · pdf 130: 100 %
+      tomo 1 · pdf 131: 100 %
+      tomo 1 · pdf 132: 100 %
+      tomo 1 · pdf 133: 100 %
+      tomo 1 · pdf 134: 100 %
+      tomo 1 · pdf 135: 100 %
+      tomo 1 · pdf 136: 100 %
+      tomo 1 · pdf 137: 100 %
+      tomo 1 · pdf 138: 100 %
+      tomo 1 · pdf 139: 100 %
+      tomo 1 · pdf 140: 100 %
+      tomo 1 · pdf 141: 100 %
+      tomo 1 · pdf 142: 100 %
+      tomo 1 · pdf 143: 100 %
+      tomo 1 · pdf 144: 100 %
+      tomo 1 · pdf 145: 100 %
+      tomo 1 · pdf 146: 100 %
+      tomo 1 · pdf 147: 100 %
+      tomo 1 · pdf 148: 100 %
+      tomo 1 · pdf 149: 100 %
+      tomo 1 · pdf 150: 100 %
+      tomo 1 · pdf 151: 100 %
+      tomo 1 · pdf 152: 100 %
+      tomo 1 · pdf 153: 100 %
+      tomo 1 · pdf 154: 100 %
+      tomo 1 · pdf 155: 100 %
+      tomo 1 · pdf 156: 100 %
+      tomo 1 · pdf 157: 100 %
+      tomo 1 · pdf 158: 100 %
+      tomo 1 · pdf 159: 100 %
+      tomo 1 · pdf 160: 100 %
+      tomo 1 · pdf 161: 100 %
+      tomo 1 · pdf 162: 100 %
+      tomo 1 · pdf 163: 100 %
+      tomo 1 · pdf 164: 100 %
+      tomo 1 · pdf 165: 100 %
+      tomo 1 · pdf 166: 100 %
+      tomo 1 · pdf 167: 100 %
+      tomo 1 · pdf 168: 100 %
+      tomo 1 · pdf 169: 100 %
+      tomo 1 · pdf 170: 100 %
+      tomo 1 · pdf 171: 100 %
+      tomo 1 · pdf 172: 100 %
+      tomo 1 · pdf 173: 100 %
+      tomo 1 · pdf 174: 100 %
+      tomo 1 · pdf 175: 100 %
+      tomo 1 · pdf 176: 100 %
+      tomo 1 · pdf 177: 100 %
+      tomo 1 · pdf 178: 100 %
+      tomo 1 · pdf 179: 100 %
+      tomo 1 · pdf 180: 100 %
+      tomo 1 · pdf 181: 100 %
+      tomo 1 · pdf 182: 100 %
+      tomo 1 · pdf 183: 100 %
+      tomo 1 · pdf 184: 100 %
+      tomo 1 · pdf 185: 100 %
+      tomo 1 · pdf 186: 100 %
+      tomo 1 · pdf 187: 100 %
+      tomo 1 · pdf 188: 100 %
+      tomo 1 · pdf 189: 100 %
+      tomo 1 · pdf 190: 100 %
+      tomo 1 · pdf 191: 100 %
+      tomo 1 · pdf 192: 100 %
+      tomo 1 · pdf 193: 100 %
+      tomo 1 · pdf 194: 100 %
+      tomo 1 · pdf 195: 100 %
+      tomo 1 · pdf 196: 100 %
+      tomo 1 · pdf 197: 100 %
+      tomo 1 · pdf 198: 100 %
+      tomo 1 · pdf 199: 100 %
+      tomo 1 · pdf 200: 100 %
+      tomo 1 · pdf 201: 100 %
+      tomo 1 · pdf 202: 100 %
+      tomo 1 · pdf 203: 100 %
+      tomo 1 · pdf 204: 100 %
+      tomo 1 · pdf 205: 100 %
+      tomo 1 · pdf 206: 100 %
+      tomo 1 · pdf 207: 100 %
+      tomo 1 · pdf 208: 100 %
+      tomo 1 · pdf 209: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 14 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+      tomo 1 pdf 53: ['*', '*', '*', '*']
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 1: 71 etiquetas rojas → 71 variantes
+[OK ] Remisiones: 0 rotas; 18 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/semana-1/domingo/laudes/salmodia
+      pendiente: texto-azul/alegria-de-nieve
+      pendiente: texto-azul/antifonas-alternativas
+      pendiente: texto-azul/cual-coincida-este-domingo
+      pendiente: texto-azul/del-salterio
+      pendiente: texto-azul/dia-correspondiente-de-la-iv-semana
+      pendiente: texto-azul/dia-del-mes-con-el
+      pendiente: texto-azul/ven-senor
+[OK ] Salmos: 1 nombrados, todos en salmos.json
+[OK ] Salmos iguales en todos los tomos: sí
+[OK ] Ida y vuelta: 909/909 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 0
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 1
+      tomo 1 pdf 159: el título dice semana 4 dentro de «TERCERA SEMANA DE ADVIENTO»: DOMINGO IV DE ADVIENTO

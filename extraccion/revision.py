@@ -224,10 +224,18 @@ def paginas_de(x):
     return [n for r in xs for n in range(r[0], r[1] + 1)]
 
 
+DIAS_BONITOS = {'domingo': 'Domingo', 'lunes': 'Lunes', 'martes': 'Martes', 'miercoles': 'Miércoles',
+                'jueves': 'Jueves', 'viernes': 'Viernes', 'sabado': 'Sábado'}
+
+
 def etiqueta_indice(c):
-    if c.get('semana'):          # Salterio: «S1 · Domingo»
-        return f'S{c["semana"]} · {c["dia"].capitalize().replace("Miercoles", "Miércoles").replace("Sabado", "Sábado")}'
-    return c['titulo'].capitalize()
+    if c.get('semana') and c.get('dia'):     # Salterio y Propio del tiempo: «S1 · Domingo»
+        return f'S{c["semana"]} · {DIAS_BONITOS.get(c["dia"], c["dia"])}'
+    t = c['titulo'] or c['id']
+    if c.get('fecha'):
+        return f'{c["fecha"]["dia"]}/{c["fecha"]["mes"]}'
+    t = t.capitalize() if t.isupper() else t
+    return t if len(t) <= 46 else t[:44] + '…'
 
 
 def generar(doc, parsers, comunes, salmos, himnos, carpeta, tomos, resumen_html='', uni=None,

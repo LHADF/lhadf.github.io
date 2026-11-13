@@ -1,0 +1,1236 @@
+Controles — Propio del tiempo · Tiempo ordinario (tomos III y IV) — hay controles que no pasan
+Piezas marcadas para revisar: 87 · diferencias entre tomos: 4
+
+[OK ] Cobertura: 52064/52064 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 3 · pdf 2880: 100 %
+      tomo 3 · pdf 2881: 100 %
+      tomo 3 · pdf 2882: 100 %
+      tomo 3 · pdf 2883: 100 %
+      tomo 3 · pdf 2884: 100 %
+      tomo 3 · pdf 2885: 100 %
+      tomo 3 · pdf 2886: 100 %
+      tomo 3 · pdf 2887: 100 %
+      tomo 3 · pdf 2888: 100 %
+      tomo 3 · pdf 2889: 100 %
+      tomo 3 · pdf 2890: 100 %
+      tomo 3 · pdf 2891: 100 %
+      tomo 3 · pdf 2892: 100 %
+      tomo 3 · pdf 2893: 100 %
+      tomo 3 · pdf 2894: 100 %
+      tomo 3 · pdf 2895: 100 %
+      tomo 3 · pdf 2896: 100 %
+      tomo 3 · pdf 2897: 100 %
+      tomo 3 · pdf 2898: 100 %
+      tomo 3 · pdf 2899: 100 %
+      tomo 3 · pdf 2900: 100 %
+      tomo 3 · pdf 2901: 100 %
+      tomo 3 · pdf 2902: 100 %
+      tomo 3 · pdf 2903: 100 %
+      tomo 3 · pdf 2904: 100 %
+      tomo 3 · pdf 2905: 100 %
+      tomo 3 · pdf 2906: 100 %
+      tomo 3 · pdf 2907: 100 %
+      tomo 3 · pdf 2908: 100 %
+      tomo 3 · pdf 2909: 100 %
+      tomo 3 · pdf 2910: 100 %
+      tomo 3 · pdf 2911: 100 %
+      tomo 3 · pdf 2912: 100 %
+      tomo 3 · pdf 2913: 100 %
+      tomo 3 · pdf 2914: 100 %
+      tomo 3 · pdf 2915: 100 %
+      tomo 3 · pdf 2916: 100 %
+      tomo 3 · pdf 2917: 100 %
+      tomo 3 · pdf 2918: 100 %
+      tomo 3 · pdf 2919: 100 %
+      tomo 3 · pdf 2920: 100 %
+      tomo 3 · pdf 2921: 100 %
+      tomo 3 · pdf 2922: 100 %
+      tomo 3 · pdf 2923: 100 %
+      tomo 3 · pdf 2924: 100 %
+      tomo 3 · pdf 2925: 100 %
+      tomo 3 · pdf 2926: 100 %
+      tomo 3 · pdf 2927: 100 %
+      tomo 3 · pdf 2928: 100 %
+      tomo 3 · pdf 2929: 100 %
+      tomo 3 · pdf 2930: 100 %
+      tomo 3 · pdf 2931: 100 %
+      tomo 3 · pdf 2932: 100 %
+      tomo 3 · pdf 2933: 100 %
+      tomo 3 · pdf 2934: 100 %
+      tomo 3 · pdf 2935: 100 %
+      tomo 3 · pdf 2936: 100 %
+      tomo 3 · pdf 2937: 100 %
+      tomo 3 · pdf 2938: 100 %
+      tomo 3 · pdf 2939: 100 %
+      tomo 3 · pdf 2940: 100 %
+      tomo 3 · pdf 2941: 100 %
+      tomo 3 · pdf 2942: 100 %
+      tomo 3 · pdf 2943: 100 %
+      tomo 3 · pdf 2944: 100 %
+      tomo 3 · pdf 2945: 100 %
+      tomo 3 · pdf 2946: 100 %
+      tomo 3 · pdf 2947: 100 %
+      tomo 3 · pdf 2948: 100 %
+      tomo 3 · pdf 2949: 100 %
+      tomo 3 · pdf 2950: 100 %
+      tomo 3 · pdf 2951: 100 %
+      tomo 3 · pdf 2952: 100 %
+      tomo 3 · pdf 2953: 100 %
+      tomo 3 · pdf 2954: 100 %
+      tomo 3 · pdf 2955: 100 %
+      tomo 3 · pdf 2956: 100 %
+      tomo 3 · pdf 2957: 100 %
+      tomo 3 · pdf 2958: 100 %
+      tomo 3 · pdf 2959: 100 %
+      tomo 3 · pdf 2960: 100 %
+      tomo 3 · pdf 2961: 100 %
+      tomo 3 · pdf 2962: 100 %
+      tomo 3 · pdf 2963: 100 %
+      tomo 3 · pdf 2964: 100 %
+      tomo 3 · pdf 2965: 100 %
+      tomo 3 · pdf 2966: 100 %
+      tomo 3 · pdf 2967: 100 %
+      tomo 3 · pdf 2968: 100 %
+      tomo 3 · pdf 2969: 100 %
+      tomo 3 · pdf 2970: 100 %
+      tomo 3 · pdf 2971: 100 %
+      tomo 3 · pdf 2972: 100 %
+      tomo 3 · pdf 2973: 100 %
+      tomo 3 · pdf 2974: 100 %
+      tomo 3 · pdf 2975: 100 %
+      tomo 3 · pdf 2976: 100 %
+      tomo 3 · pdf 2977: 100 %
+      tomo 3 · pdf 2978: 100 %
+      tomo 3 · pdf 2979: 100 %
+      tomo 3 · pdf 2980: 100 %
+      tomo 3 · pdf 2981: 100 %
+      tomo 3 · pdf 2982: 100 %
+      tomo 3 · pdf 2983: 100 %
+      tomo 3 · pdf 2984: 100 %
+      tomo 3 · pdf 2985: 100 %
+      tomo 3 · pdf 2986: 100 %
+      tomo 3 · pdf 2987: 100 %
+      tomo 3 · pdf 2988: 100 %
+      tomo 3 · pdf 2989: 100 %
+      tomo 3 · pdf 2990: 100 %
+      tomo 3 · pdf 2991: 100 %
+      tomo 3 · pdf 2992: 100 %
+      tomo 3 · pdf 2993: 100 %
+      tomo 3 · pdf 2994: 100 %
+      tomo 3 · pdf 2995: 100 %
+      tomo 3 · pdf 2996: 100 %
+      tomo 3 · pdf 2997: 100 %
+      tomo 3 · pdf 2998: 100 %
+      tomo 3 · pdf 2999: 100 %
+      tomo 3 · pdf 3000: 100 %
+      tomo 3 · pdf 3001: 100 %
+      tomo 3 · pdf 3002: 100 %
+      tomo 3 · pdf 3003: 100 %
+      tomo 3 · pdf 3004: 100 %
+      tomo 3 · pdf 3005: 100 %
+      tomo 3 · pdf 3006: 100 %
+      tomo 3 · pdf 3007: 100 %
+      tomo 3 · pdf 3008: 100 %
+      tomo 3 · pdf 3009: 100 %
+      tomo 3 · pdf 3010: 100 %
+      tomo 3 · pdf 3011: 100 %
+      tomo 3 · pdf 3012: 100 %
+      tomo 3 · pdf 3013: 100 %
+      tomo 3 · pdf 3014: 100 %
+      tomo 3 · pdf 3015: 100 %
+      tomo 3 · pdf 3016: 100 %
+      tomo 3 · pdf 3017: 100 %
+      tomo 3 · pdf 3018: 100 %
+      tomo 3 · pdf 3019: 100 %
+      tomo 3 · pdf 3020: 100 %
+      tomo 3 · pdf 3021: 100 %
+      tomo 3 · pdf 3022: 100 %
+      tomo 3 · pdf 3023: 100 %
+      tomo 3 · pdf 3024: 100 %
+      tomo 3 · pdf 3025: 100 %
+      tomo 3 · pdf 3026: 100 %
+      tomo 3 · pdf 3027: 100 %
+      tomo 3 · pdf 3028: 100 %
+      tomo 3 · pdf 3029: 100 %
+      tomo 3 · pdf 3030: 100 %
+      tomo 3 · pdf 3031: 100 %
+      tomo 3 · pdf 3032: 100 %
+      tomo 3 · pdf 3033: 100 %
+      tomo 3 · pdf 3034: 100 %
+      tomo 3 · pdf 3035: 100 %
+      tomo 3 · pdf 3036: 100 %
+      tomo 3 · pdf 3037: 100 %
+      tomo 3 · pdf 3038: 100 %
+      tomo 3 · pdf 3039: 100 %
+      tomo 3 · pdf 3040: 100 %
+      tomo 3 · pdf 3041: 100 %
+      tomo 3 · pdf 3042: 100 %
+      tomo 3 · pdf 3043: 100 %
+      tomo 3 · pdf 3044: 100 %
+      tomo 3 · pdf 3045: 100 %
+      tomo 3 · pdf 3046: 100 %
+      tomo 3 · pdf 3047: 100 %
+      tomo 3 · pdf 3048: 100 %
+      tomo 3 · pdf 3049: 100 %
+      tomo 3 · pdf 3050: 100 %
+      tomo 3 · pdf 3051: 100 %
+      tomo 3 · pdf 3052: 100 %
+      tomo 3 · pdf 3053: 100 %
+      tomo 3 · pdf 3054: 100 %
+      tomo 3 · pdf 3055: 100 %
+      tomo 3 · pdf 3056: 100 %
+      tomo 3 · pdf 3057: 100 %
+      tomo 3 · pdf 3058: 100 %
+      tomo 3 · pdf 3059: 100 %
+      tomo 3 · pdf 3060: 100 %
+      tomo 3 · pdf 3061: 100 %
+      tomo 3 · pdf 3062: 100 %
+      tomo 3 · pdf 3063: 100 %
+      tomo 3 · pdf 3064: 100 %
+      tomo 3 · pdf 3065: 100 %
+      tomo 3 · pdf 3066: 100 %
+      tomo 3 · pdf 3067: 100 %
+      tomo 3 · pdf 3068: 100 %
+      tomo 3 · pdf 3069: 100 %
+      tomo 3 · pdf 3070: 100 %
+      tomo 3 · pdf 3071: 100 %
+      tomo 3 · pdf 3072: 100 %
+      tomo 3 · pdf 3073: 100 %
+      tomo 3 · pdf 3074: 100 %
+      tomo 3 · pdf 3075: 100 %
+      tomo 3 · pdf 3076: 100 %
+      tomo 3 · pdf 3077: 100 %
+      tomo 3 · pdf 3078: 100 %
+      tomo 3 · pdf 3079: 100 %
+      tomo 3 · pdf 3080: 100 %
+      tomo 3 · pdf 3081: 100 %
+      tomo 3 · pdf 3082: 100 %
+      tomo 3 · pdf 3083: 100 %
+      tomo 3 · pdf 3084: 100 %
+      tomo 3 · pdf 3085: 100 %
+      tomo 3 · pdf 3086: 100 %
+      tomo 3 · pdf 3087: 100 %
+      tomo 3 · pdf 3088: 100 %
+      tomo 3 · pdf 3089: 100 %
+      tomo 3 · pdf 3090: 100 %
+      tomo 3 · pdf 3091: 100 %
+      tomo 3 · pdf 3092: 100 %
+      tomo 3 · pdf 3093: 100 %
+      tomo 3 · pdf 3094: 100 %
+      tomo 3 · pdf 3095: 100 %
+      tomo 3 · pdf 3096: 100 %
+      tomo 3 · pdf 3097: 100 %
+      tomo 3 · pdf 3098: 100 %
+      tomo 3 · pdf 3099: 100 %
+      tomo 3 · pdf 3100: 100 %
+      tomo 3 · pdf 3101: 100 %
+      tomo 3 · pdf 3102: 100 %
+      tomo 3 · pdf 3103: 100 %
+      tomo 3 · pdf 3104: 100 %
+      tomo 3 · pdf 3105: 100 %
+      tomo 3 · pdf 3106: 100 %
+      tomo 3 · pdf 3107: 100 %
+      tomo 3 · pdf 3108: 100 %
+      tomo 3 · pdf 3109: 100 %
+      tomo 3 · pdf 3110: 100 %
+      tomo 3 · pdf 3111: 100 %
+      tomo 3 · pdf 3112: 100 %
+      tomo 3 · pdf 3113: 100 %
+      tomo 3 · pdf 3114: 100 %
+      tomo 3 · pdf 3115: 100 %
+      tomo 3 · pdf 3116: 100 %
+      tomo 3 · pdf 3117: 100 %
+      tomo 3 · pdf 3118: 100 %
+      tomo 3 · pdf 3119: 100 %
+      tomo 3 · pdf 3120: 100 %
+      tomo 3 · pdf 3121: 100 %
+      tomo 3 · pdf 3122: 100 %
+      tomo 3 · pdf 3123: 100 %
+      tomo 3 · pdf 3124: 100 %
+      tomo 3 · pdf 3125: 100 %
+      tomo 3 · pdf 3126: 100 %
+      tomo 3 · pdf 3127: 100 %
+      tomo 3 · pdf 3128: 100 %
+      tomo 3 · pdf 3129: 100 %
+      tomo 3 · pdf 3130: 100 %
+      tomo 3 · pdf 3131: 100 %
+      tomo 3 · pdf 3132: 100 %
+      tomo 3 · pdf 3133: 100 %
+      tomo 3 · pdf 3134: 100 %
+      tomo 3 · pdf 3135: 100 %
+      tomo 3 · pdf 3136: 100 %
+      tomo 3 · pdf 3137: 100 %
+      tomo 3 · pdf 3138: 100 %
+      tomo 3 · pdf 3139: 100 %
+      tomo 3 · pdf 3140: 100 %
+      tomo 3 · pdf 3141: 100 %
+      tomo 3 · pdf 3142: 100 %
+      tomo 3 · pdf 3143: 100 %
+      tomo 3 · pdf 3144: 100 %
+      tomo 3 · pdf 3145: 100 %
+      tomo 3 · pdf 3146: 100 %
+      tomo 3 · pdf 3147: 100 %
+      tomo 3 · pdf 3148: 100 %
+      tomo 3 · pdf 3149: 100 %
+      tomo 3 · pdf 3150: 100 %
+      tomo 3 · pdf 3151: 100 %
+      tomo 3 · pdf 3152: 100 %
+      tomo 3 · pdf 3153: 100 %
+      tomo 3 · pdf 3154: 100 %
+      tomo 3 · pdf 3155: 100 %
+      tomo 3 · pdf 3156: 100 %
+      tomo 3 · pdf 3157: 100 %
+      tomo 3 · pdf 3158: 100 %
+      tomo 3 · pdf 3159: 100 %
+      tomo 3 · pdf 3160: 100 %
+      tomo 3 · pdf 3161: 100 %
+      tomo 3 · pdf 3162: 100 %
+      tomo 3 · pdf 3163: 100 %
+      tomo 3 · pdf 3164: 100 %
+      tomo 3 · pdf 3165: 100 %
+      tomo 3 · pdf 3166: 100 %
+      tomo 3 · pdf 3167: 100 %
+      tomo 3 · pdf 3168: 100 %
+      tomo 3 · pdf 3169: 100 %
+      tomo 3 · pdf 3170: 100 %
+      tomo 3 · pdf 3171: 100 %
+      tomo 3 · pdf 3172: 100 %
+      tomo 3 · pdf 3173: 100 %
+      tomo 3 · pdf 3174: 100 %
+      tomo 3 · pdf 3175: 100 %
+      tomo 3 · pdf 3176: 100 %
+      tomo 3 · pdf 3177: 100 %
+      tomo 3 · pdf 3178: 100 %
+      tomo 3 · pdf 3179: 100 %
+      tomo 3 · pdf 3180: 100 %
+      tomo 3 · pdf 3181: 100 %
+      tomo 3 · pdf 3182: 100 %
+      tomo 3 · pdf 3183: 100 %
+      tomo 3 · pdf 3184: 100 %
+      tomo 3 · pdf 3185: 100 %
+      tomo 3 · pdf 3186: 100 %
+      tomo 3 · pdf 3187: 100 %
+      tomo 3 · pdf 3188: 100 %
+      tomo 3 · pdf 3189: 100 %
+      tomo 3 · pdf 3190: 100 %
+      tomo 3 · pdf 3191: 100 %
+      tomo 3 · pdf 3192: 100 %
+      tomo 3 · pdf 3193: 100 %
+      tomo 3 · pdf 3194: 100 %
+      tomo 3 · pdf 3195: 100 %
+      tomo 3 · pdf 3196: 100 %
+      tomo 3 · pdf 3197: 100 %
+      tomo 3 · pdf 3198: 100 %
+      tomo 3 · pdf 3199: 100 %
+      tomo 3 · pdf 3200: 100 %
+      tomo 3 · pdf 3201: 100 %
+      tomo 3 · pdf 3202: 100 %
+      tomo 3 · pdf 3203: 100 %
+      tomo 3 · pdf 3204: 100 %
+      tomo 3 · pdf 3205: 100 %
+      tomo 3 · pdf 3206: 100 %
+      tomo 3 · pdf 3207: 100 %
+      tomo 3 · pdf 3208: 100 %
+      tomo 3 · pdf 3209: 100 %
+      tomo 3 · pdf 3210: 100 %
+      tomo 3 · pdf 3211: 100 %
+      tomo 3 · pdf 3212: 100 %
+      tomo 3 · pdf 3213: 100 %
+      tomo 3 · pdf 3214: 100 %
+      tomo 3 · pdf 3215: 100 %
+      tomo 3 · pdf 3216: 100 %
+      tomo 3 · pdf 3217: 100 %
+      tomo 3 · pdf 3218: 100 %
+      tomo 3 · pdf 3219: 100 %
+      tomo 3 · pdf 3220: 100 %
+      tomo 3 · pdf 3221: 100 %
+      tomo 3 · pdf 3222: 100 %
+      tomo 3 · pdf 3223: 100 %
+      tomo 3 · pdf 3224: 100 %
+      tomo 3 · pdf 3225: 100 %
+      tomo 3 · pdf 3226: 100 %
+      tomo 3 · pdf 3227: 100 %
+      tomo 3 · pdf 3228: 100 %
+      tomo 3 · pdf 3229: 100 %
+      tomo 3 · pdf 3230: 100 %
+      tomo 3 · pdf 3231: 100 %
+      tomo 3 · pdf 3232: 100 %
+      tomo 3 · pdf 3233: 100 %
+      tomo 3 · pdf 3234: 100 %
+      tomo 3 · pdf 3235: 100 %
+      tomo 3 · pdf 3236: 100 %
+      tomo 3 · pdf 3237: 100 %
+      tomo 3 · pdf 3238: 100 %
+      tomo 3 · pdf 3239: 100 %
+      tomo 3 · pdf 3240: 100 %
+      tomo 3 · pdf 3241: 100 %
+      tomo 3 · pdf 3242: 100 %
+      tomo 3 · pdf 3243: 100 %
+      tomo 3 · pdf 3244: 100 %
+      tomo 3 · pdf 3245: 100 %
+      tomo 3 · pdf 3246: 100 %
+      tomo 3 · pdf 3247: 100 %
+      tomo 3 · pdf 3248: 100 %
+      tomo 3 · pdf 3249: 100 %
+      tomo 3 · pdf 3250: 100 %
+      tomo 3 · pdf 3251: 100 %
+      tomo 3 · pdf 3252: 100 %
+      tomo 3 · pdf 3253: 100 %
+      tomo 3 · pdf 3254: 100 %
+      tomo 3 · pdf 3255: 100 %
+      tomo 3 · pdf 3256: 100 %
+      tomo 3 · pdf 3257: 100 %
+      tomo 3 · pdf 3258: 100 %
+      tomo 3 · pdf 3259: 100 %
+      tomo 3 · pdf 3260: 100 %
+      tomo 3 · pdf 3261: 100 %
+      tomo 3 · pdf 3262: 100 %
+      tomo 3 · pdf 3263: 100 %
+      tomo 3 · pdf 3264: 100 %
+      tomo 3 · pdf 3265: 100 %
+      tomo 3 · pdf 3266: 100 %
+      tomo 3 · pdf 3267: 100 %
+      tomo 3 · pdf 3268: 100 %
+      tomo 3 · pdf 3269: 100 %
+      tomo 3 · pdf 3270: 100 %
+      tomo 3 · pdf 3271: 100 %
+      tomo 3 · pdf 3272: 100 %
+      tomo 3 · pdf 3273: 100 %
+      tomo 3 · pdf 3274: 100 %
+      tomo 3 · pdf 3275: 100 %
+      tomo 3 · pdf 3276: 100 %
+      tomo 3 · pdf 3277: 100 %
+      tomo 3 · pdf 3278: 100 %
+      tomo 3 · pdf 3279: 100 %
+      tomo 3 · pdf 3280: 100 %
+      tomo 3 · pdf 3281: 100 %
+      tomo 3 · pdf 3282: 100 %
+      tomo 3 · pdf 3283: 100 %
+      tomo 3 · pdf 3284: 100 %
+      tomo 3 · pdf 3285: 100 %
+      tomo 3 · pdf 3286: 100 %
+      tomo 3 · pdf 3287: 100 %
+      tomo 3 · pdf 3288: 100 %
+      tomo 3 · pdf 3289: 100 %
+      tomo 3 · pdf 3290: 100 %
+      tomo 3 · pdf 3291: 100 %
+      tomo 3 · pdf 3292: 100 %
+      tomo 3 · pdf 3293: 100 %
+      tomo 3 · pdf 3294: 100 %
+      tomo 3 · pdf 3295: 100 %
+      tomo 3 · pdf 3296: 100 %
+      tomo 3 · pdf 3297: 100 %
+      tomo 3 · pdf 3298: 100 %
+      tomo 3 · pdf 3299: 100 %
+      tomo 3 · pdf 3300: 100 %
+      tomo 3 · pdf 3301: 100 %
+      tomo 3 · pdf 3302: 100 %
+      tomo 3 · pdf 3303: 100 %
+      tomo 3 · pdf 3304: 100 %
+      tomo 3 · pdf 3305: 100 %
+      tomo 3 · pdf 3306: 100 %
+      tomo 3 · pdf 3307: 100 %
+      tomo 3 · pdf 3308: 100 %
+      tomo 3 · pdf 3309: 100 %
+      tomo 3 · pdf 3310: 100 %
+      tomo 3 · pdf 3311: 100 %
+      tomo 3 · pdf 3312: 100 %
+      tomo 3 · pdf 3313: 100 %
+      tomo 4 · pdf 4487: 100 %
+      tomo 4 · pdf 4488: 100 %
+      tomo 4 · pdf 4489: 100 %
+      tomo 4 · pdf 4490: 100 %
+      tomo 4 · pdf 4491: 100 %
+      tomo 4 · pdf 4492: 100 %
+      tomo 4 · pdf 4493: 100 %
+      tomo 4 · pdf 4494: 100 %
+      tomo 4 · pdf 4495: 100 %
+      tomo 4 · pdf 4496: 100 %
+      tomo 4 · pdf 4497: 100 %
+      tomo 4 · pdf 4498: 100 %
+      tomo 4 · pdf 4499: 100 %
+      tomo 4 · pdf 4500: 100 %
+      tomo 4 · pdf 4501: 100 %
+      tomo 4 · pdf 4502: 100 %
+      tomo 4 · pdf 4503: 100 %
+      tomo 4 · pdf 4504: 100 %
+      tomo 4 · pdf 4505: 100 %
+      tomo 4 · pdf 4506: 100 %
+      tomo 4 · pdf 4507: 100 %
+      tomo 4 · pdf 4508: 100 %
+      tomo 4 · pdf 4509: 100 %
+      tomo 4 · pdf 4510: 100 %
+      tomo 4 · pdf 4511: 100 %
+      tomo 4 · pdf 4512: 100 %
+      tomo 4 · pdf 4513: 100 %
+      tomo 4 · pdf 4514: 100 %
+      tomo 4 · pdf 4515: 100 %
+      tomo 4 · pdf 4516: 100 %
+      tomo 4 · pdf 4517: 100 %
+      tomo 4 · pdf 4518: 100 %
+      tomo 4 · pdf 4519: 100 %
+      tomo 4 · pdf 4520: 100 %
+      tomo 4 · pdf 4521: 100 %
+      tomo 4 · pdf 4522: 100 %
+      tomo 4 · pdf 4523: 100 %
+      tomo 4 · pdf 4524: 100 %
+      tomo 4 · pdf 4525: 100 %
+      tomo 4 · pdf 4526: 100 %
+      tomo 4 · pdf 4527: 100 %
+      tomo 4 · pdf 4528: 100 %
+      tomo 4 · pdf 4529: 100 %
+      tomo 4 · pdf 4530: 100 %
+      tomo 4 · pdf 4531: 100 %
+      tomo 4 · pdf 4532: 100 %
+      tomo 4 · pdf 4533: 100 %
+      tomo 4 · pdf 4534: 100 %
+      tomo 4 · pdf 4535: 100 %
+      tomo 4 · pdf 4536: 100 %
+      tomo 4 · pdf 4537: 100 %
+      tomo 4 · pdf 4538: 100 %
+      tomo 4 · pdf 4539: 100 %
+      tomo 4 · pdf 4540: 100 %
+      tomo 4 · pdf 4541: 100 %
+      tomo 4 · pdf 4542: 100 %
+      tomo 4 · pdf 4543: 100 %
+      tomo 4 · pdf 4544: 100 %
+      tomo 4 · pdf 4545: 100 %
+      tomo 4 · pdf 4546: 100 %
+      tomo 4 · pdf 4547: 100 %
+      tomo 4 · pdf 4548: 100 %
+      tomo 4 · pdf 4549: 100 %
+      tomo 4 · pdf 4550: 100 %
+      tomo 4 · pdf 4551: 100 %
+      tomo 4 · pdf 4552: 100 %
+      tomo 4 · pdf 4553: 100 %
+      tomo 4 · pdf 4554: 100 %
+      tomo 4 · pdf 4555: 100 %
+      tomo 4 · pdf 4556: 100 %
+      tomo 4 · pdf 4557: 100 %
+      tomo 4 · pdf 4558: 100 %
+      tomo 4 · pdf 4559: 100 %
+      tomo 4 · pdf 4560: 100 %
+      tomo 4 · pdf 4561: 100 %
+      tomo 4 · pdf 4562: 100 %
+      tomo 4 · pdf 4563: 100 %
+      tomo 4 · pdf 4564: 100 %
+      tomo 4 · pdf 4565: 100 %
+      tomo 4 · pdf 4566: 100 %
+      tomo 4 · pdf 4567: 100 %
+      tomo 4 · pdf 4568: 100 %
+      tomo 4 · pdf 4569: 100 %
+      tomo 4 · pdf 4570: 100 %
+      tomo 4 · pdf 4571: 100 %
+      tomo 4 · pdf 4572: 100 %
+      tomo 4 · pdf 4573: 100 %
+      tomo 4 · pdf 4574: 100 %
+      tomo 4 · pdf 4575: 100 %
+      tomo 4 · pdf 4576: 100 %
+      tomo 4 · pdf 4577: 100 %
+      tomo 4 · pdf 4578: 100 %
+      tomo 4 · pdf 4579: 100 %
+      tomo 4 · pdf 4580: 100 %
+      tomo 4 · pdf 4581: 100 %
+      tomo 4 · pdf 4582: 100 %
+      tomo 4 · pdf 4583: 100 %
+      tomo 4 · pdf 4584: 100 %
+      tomo 4 · pdf 4585: 100 %
+      tomo 4 · pdf 4586: 100 %
+      tomo 4 · pdf 4587: 100 %
+      tomo 4 · pdf 4588: 100 %
+      tomo 4 · pdf 4589: 100 %
+      tomo 4 · pdf 4590: 100 %
+      tomo 4 · pdf 4591: 100 %
+      tomo 4 · pdf 4592: 100 %
+      tomo 4 · pdf 4593: 100 %
+      tomo 4 · pdf 4594: 100 %
+      tomo 4 · pdf 4595: 100 %
+      tomo 4 · pdf 4596: 100 %
+      tomo 4 · pdf 4597: 100 %
+      tomo 4 · pdf 4598: 100 %
+      tomo 4 · pdf 4599: 100 %
+      tomo 4 · pdf 4600: 100 %
+      tomo 4 · pdf 4601: 100 %
+      tomo 4 · pdf 4602: 100 %
+      tomo 4 · pdf 4603: 100 %
+      tomo 4 · pdf 4604: 100 %
+      tomo 4 · pdf 4605: 100 %
+      tomo 4 · pdf 4606: 100 %
+      tomo 4 · pdf 4607: 100 %
+      tomo 4 · pdf 4608: 100 %
+      tomo 4 · pdf 4609: 100 %
+      tomo 4 · pdf 4610: 100 %
+      tomo 4 · pdf 4611: 100 %
+      tomo 4 · pdf 4612: 100 %
+      tomo 4 · pdf 4613: 100 %
+      tomo 4 · pdf 4614: 100 %
+      tomo 4 · pdf 4615: 100 %
+      tomo 4 · pdf 4616: 100 %
+      tomo 4 · pdf 4617: 100 %
+      tomo 4 · pdf 4618: 100 %
+      tomo 4 · pdf 4619: 100 %
+      tomo 4 · pdf 4620: 100 %
+      tomo 4 · pdf 4621: 100 %
+      tomo 4 · pdf 4622: 100 %
+      tomo 4 · pdf 4623: 100 %
+      tomo 4 · pdf 4624: 100 %
+      tomo 4 · pdf 4625: 100 %
+      tomo 4 · pdf 4626: 100 %
+      tomo 4 · pdf 4627: 100 %
+      tomo 4 · pdf 4628: 100 %
+      tomo 4 · pdf 4629: 100 %
+      tomo 4 · pdf 4630: 100 %
+      tomo 4 · pdf 4631: 100 %
+      tomo 4 · pdf 4632: 100 %
+      tomo 4 · pdf 4633: 100 %
+      tomo 4 · pdf 4634: 100 %
+      tomo 4 · pdf 4635: 100 %
+      tomo 4 · pdf 4636: 100 %
+      tomo 4 · pdf 4637: 100 %
+      tomo 4 · pdf 4638: 100 %
+      tomo 4 · pdf 4639: 100 %
+      tomo 4 · pdf 4640: 100 %
+      tomo 4 · pdf 4641: 100 %
+      tomo 4 · pdf 4642: 100 %
+      tomo 4 · pdf 4643: 100 %
+      tomo 4 · pdf 4644: 100 %
+      tomo 4 · pdf 4645: 100 %
+      tomo 4 · pdf 4646: 100 %
+      tomo 4 · pdf 4647: 100 %
+      tomo 4 · pdf 4648: 100 %
+      tomo 4 · pdf 4649: 100 %
+      tomo 4 · pdf 4650: 100 %
+      tomo 4 · pdf 4651: 100 %
+      tomo 4 · pdf 4652: 100 %
+      tomo 4 · pdf 4653: 100 %
+      tomo 4 · pdf 4654: 100 %
+      tomo 4 · pdf 4655: 100 %
+      tomo 4 · pdf 4656: 100 %
+      tomo 4 · pdf 4657: 100 %
+      tomo 4 · pdf 4658: 100 %
+      tomo 4 · pdf 4659: 100 %
+      tomo 4 · pdf 4660: 100 %
+      tomo 4 · pdf 4661: 100 %
+      tomo 4 · pdf 4662: 100 %
+      tomo 4 · pdf 4663: 100 %
+      tomo 4 · pdf 4664: 100 %
+      tomo 4 · pdf 4665: 100 %
+      tomo 4 · pdf 4666: 100 %
+      tomo 4 · pdf 4667: 100 %
+      tomo 4 · pdf 4668: 100 %
+      tomo 4 · pdf 4669: 100 %
+      tomo 4 · pdf 4670: 100 %
+      tomo 4 · pdf 4671: 100 %
+      tomo 4 · pdf 4672: 100 %
+      tomo 4 · pdf 4673: 100 %
+      tomo 4 · pdf 4674: 100 %
+      tomo 4 · pdf 4675: 100 %
+      tomo 4 · pdf 4676: 100 %
+      tomo 4 · pdf 4677: 100 %
+      tomo 4 · pdf 4678: 100 %
+      tomo 4 · pdf 4679: 100 %
+      tomo 4 · pdf 4680: 100 %
+      tomo 4 · pdf 4681: 100 %
+      tomo 4 · pdf 4682: 100 %
+      tomo 4 · pdf 4683: 100 %
+      tomo 4 · pdf 4684: 100 %
+      tomo 4 · pdf 4685: 100 %
+      tomo 4 · pdf 4686: 100 %
+      tomo 4 · pdf 4687: 100 %
+      tomo 4 · pdf 4688: 100 %
+      tomo 4 · pdf 4689: 100 %
+      tomo 4 · pdf 4690: 100 %
+      tomo 4 · pdf 4691: 100 %
+      tomo 4 · pdf 4692: 100 %
+      tomo 4 · pdf 4693: 100 %
+      tomo 4 · pdf 4694: 100 %
+      tomo 4 · pdf 4695: 100 %
+      tomo 4 · pdf 4696: 100 %
+      tomo 4 · pdf 4697: 100 %
+      tomo 4 · pdf 4698: 100 %
+      tomo 4 · pdf 4699: 100 %
+      tomo 4 · pdf 4700: 100 %
+      tomo 4 · pdf 4701: 100 %
+      tomo 4 · pdf 4702: 100 %
+      tomo 4 · pdf 4703: 100 %
+      tomo 4 · pdf 4704: 100 %
+      tomo 4 · pdf 4705: 100 %
+      tomo 4 · pdf 4706: 100 %
+      tomo 4 · pdf 4707: 100 %
+      tomo 4 · pdf 4708: 100 %
+      tomo 4 · pdf 4709: 100 %
+      tomo 4 · pdf 4710: 100 %
+      tomo 4 · pdf 4711: 100 %
+      tomo 4 · pdf 4712: 100 %
+      tomo 4 · pdf 4713: 100 %
+      tomo 4 · pdf 4714: 100 %
+      tomo 4 · pdf 4715: 100 %
+      tomo 4 · pdf 4716: 100 %
+      tomo 4 · pdf 4717: 100 %
+      tomo 4 · pdf 4718: 100 %
+      tomo 4 · pdf 4719: 100 %
+      tomo 4 · pdf 4720: 100 %
+      tomo 4 · pdf 4721: 100 %
+      tomo 4 · pdf 4722: 100 %
+      tomo 4 · pdf 4723: 100 %
+      tomo 4 · pdf 4724: 100 %
+      tomo 4 · pdf 4725: 100 %
+      tomo 4 · pdf 4726: 100 %
+      tomo 4 · pdf 4727: 100 %
+      tomo 4 · pdf 4728: 100 %
+      tomo 4 · pdf 4729: 100 %
+      tomo 4 · pdf 4730: 100 %
+      tomo 4 · pdf 4731: 100 %
+      tomo 4 · pdf 4732: 100 %
+      tomo 4 · pdf 4733: 100 %
+      tomo 4 · pdf 4734: 100 %
+      tomo 4 · pdf 4735: 100 %
+      tomo 4 · pdf 4736: 100 %
+      tomo 4 · pdf 4737: 100 %
+      tomo 4 · pdf 4738: 100 %
+      tomo 4 · pdf 4739: 100 %
+      tomo 4 · pdf 4740: 100 %
+      tomo 4 · pdf 4741: 100 %
+      tomo 4 · pdf 4742: 100 %
+      tomo 4 · pdf 4743: 100 %
+      tomo 4 · pdf 4744: 100 %
+      tomo 4 · pdf 4745: 100 %
+      tomo 4 · pdf 4746: 100 %
+      tomo 4 · pdf 4747: 100 %
+      tomo 4 · pdf 4748: 100 %
+      tomo 4 · pdf 4749: 100 %
+      tomo 4 · pdf 4750: 100 %
+      tomo 4 · pdf 4751: 100 %
+      tomo 4 · pdf 4752: 100 %
+      tomo 4 · pdf 4753: 100 %
+      tomo 4 · pdf 4754: 100 %
+      tomo 4 · pdf 4755: 100 %
+      tomo 4 · pdf 4756: 100 %
+      tomo 4 · pdf 4757: 100 %
+      tomo 4 · pdf 4758: 100 %
+      tomo 4 · pdf 4759: 100 %
+      tomo 4 · pdf 4760: 100 %
+      tomo 4 · pdf 4761: 100 %
+      tomo 4 · pdf 4762: 100 %
+      tomo 4 · pdf 4763: 100 %
+      tomo 4 · pdf 4764: 100 %
+      tomo 4 · pdf 4765: 100 %
+      tomo 4 · pdf 4766: 100 %
+      tomo 4 · pdf 4767: 100 %
+      tomo 4 · pdf 4768: 100 %
+      tomo 4 · pdf 4769: 100 %
+      tomo 4 · pdf 4770: 100 %
+      tomo 4 · pdf 4771: 100 %
+      tomo 4 · pdf 4772: 100 %
+      tomo 4 · pdf 4773: 100 %
+      tomo 4 · pdf 4774: 100 %
+      tomo 4 · pdf 4775: 100 %
+      tomo 4 · pdf 4776: 100 %
+      tomo 4 · pdf 4777: 100 %
+      tomo 4 · pdf 4778: 100 %
+      tomo 4 · pdf 4779: 100 %
+      tomo 4 · pdf 4780: 100 %
+      tomo 4 · pdf 4781: 100 %
+      tomo 4 · pdf 4782: 100 %
+      tomo 4 · pdf 4783: 100 %
+      tomo 4 · pdf 4784: 100 %
+      tomo 4 · pdf 4785: 100 %
+      tomo 4 · pdf 4786: 100 %
+      tomo 4 · pdf 4787: 100 %
+      tomo 4 · pdf 4788: 100 %
+      tomo 4 · pdf 4789: 100 %
+      tomo 4 · pdf 4790: 100 %
+      tomo 4 · pdf 4791: 100 %
+      tomo 4 · pdf 4792: 100 %
+      tomo 4 · pdf 4793: 100 %
+      tomo 4 · pdf 4794: 100 %
+      tomo 4 · pdf 4795: 100 %
+      tomo 4 · pdf 4796: 100 %
+      tomo 4 · pdf 4797: 100 %
+      tomo 4 · pdf 4798: 100 %
+      tomo 4 · pdf 4799: 100 %
+      tomo 4 · pdf 4800: 100 %
+      tomo 4 · pdf 4801: 100 %
+      tomo 4 · pdf 4802: 100 %
+      tomo 4 · pdf 4803: 100 %
+      tomo 4 · pdf 4804: 100 %
+      tomo 4 · pdf 4805: 100 %
+      tomo 4 · pdf 4806: 100 %
+      tomo 4 · pdf 4807: 100 %
+      tomo 4 · pdf 4808: 100 %
+      tomo 4 · pdf 4809: 100 %
+      tomo 4 · pdf 4810: 100 %
+      tomo 4 · pdf 4811: 100 %
+      tomo 4 · pdf 4812: 100 %
+      tomo 4 · pdf 4813: 100 %
+      tomo 4 · pdf 4814: 100 %
+      tomo 4 · pdf 4815: 100 %
+      tomo 4 · pdf 4816: 100 %
+      tomo 4 · pdf 4817: 100 %
+      tomo 4 · pdf 4818: 100 %
+      tomo 4 · pdf 4819: 100 %
+      tomo 4 · pdf 4820: 100 %
+      tomo 4 · pdf 4821: 100 %
+      tomo 4 · pdf 4822: 100 %
+      tomo 4 · pdf 4823: 100 %
+      tomo 4 · pdf 4824: 100 %
+      tomo 4 · pdf 4825: 100 %
+      tomo 4 · pdf 4826: 100 %
+      tomo 4 · pdf 4827: 100 %
+      tomo 4 · pdf 4828: 100 %
+      tomo 4 · pdf 4829: 100 %
+      tomo 4 · pdf 4830: 100 %
+      tomo 4 · pdf 4831: 100 %
+      tomo 4 · pdf 4832: 100 %
+      tomo 4 · pdf 4833: 100 %
+      tomo 4 · pdf 4834: 100 %
+      tomo 4 · pdf 4835: 100 %
+      tomo 4 · pdf 4836: 100 %
+      tomo 4 · pdf 4837: 100 %
+      tomo 4 · pdf 4838: 100 %
+      tomo 4 · pdf 4839: 100 %
+      tomo 4 · pdf 4840: 100 %
+      tomo 4 · pdf 4841: 100 %
+      tomo 4 · pdf 4842: 100 %
+      tomo 4 · pdf 4843: 100 %
+      tomo 4 · pdf 4844: 100 %
+      tomo 4 · pdf 4845: 100 %
+      tomo 4 · pdf 4846: 100 %
+      tomo 4 · pdf 4847: 100 %
+      tomo 4 · pdf 4848: 100 %
+      tomo 4 · pdf 4849: 100 %
+      tomo 4 · pdf 4850: 100 %
+      tomo 4 · pdf 4851: 100 %
+      tomo 4 · pdf 4852: 100 %
+      tomo 4 · pdf 4853: 100 %
+      tomo 4 · pdf 4854: 100 %
+      tomo 4 · pdf 4855: 100 %
+      tomo 4 · pdf 4856: 100 %
+      tomo 4 · pdf 4857: 100 %
+      tomo 4 · pdf 4858: 100 %
+      tomo 4 · pdf 4859: 100 %
+      tomo 4 · pdf 4860: 100 %
+      tomo 4 · pdf 4861: 100 %
+      tomo 4 · pdf 4862: 100 %
+      tomo 4 · pdf 4863: 100 %
+      tomo 4 · pdf 4864: 100 %
+      tomo 4 · pdf 4865: 100 %
+      tomo 4 · pdf 4866: 100 %
+      tomo 4 · pdf 4867: 100 %
+      tomo 4 · pdf 4868: 100 %
+      tomo 4 · pdf 4869: 100 %
+      tomo 4 · pdf 4870: 100 %
+      tomo 4 · pdf 4871: 100 %
+      tomo 4 · pdf 4872: 100 %
+      tomo 4 · pdf 4873: 100 %
+      tomo 4 · pdf 4874: 100 %
+      tomo 4 · pdf 4875: 100 %
+      tomo 4 · pdf 4876: 100 %
+      tomo 4 · pdf 4877: 100 %
+      tomo 4 · pdf 4878: 100 %
+      tomo 4 · pdf 4879: 100 %
+      tomo 4 · pdf 4880: 100 %
+      tomo 4 · pdf 4881: 100 %
+      tomo 4 · pdf 4882: 100 %
+      tomo 4 · pdf 4883: 100 %
+      tomo 4 · pdf 4884: 100 %
+      tomo 4 · pdf 4885: 100 %
+      tomo 4 · pdf 4886: 100 %
+      tomo 4 · pdf 4887: 100 %
+      tomo 4 · pdf 4888: 100 %
+      tomo 4 · pdf 4889: 100 %
+      tomo 4 · pdf 4890: 100 %
+      tomo 4 · pdf 4891: 100 %
+      tomo 4 · pdf 4892: 100 %
+      tomo 4 · pdf 4893: 100 %
+      tomo 4 · pdf 4894: 100 %
+      tomo 4 · pdf 4895: 100 %
+      tomo 4 · pdf 4896: 100 %
+      tomo 4 · pdf 4897: 100 %
+      tomo 4 · pdf 4898: 100 %
+      tomo 4 · pdf 4899: 100 %
+      tomo 4 · pdf 4900: 100 %
+      tomo 4 · pdf 4901: 100 %
+      tomo 4 · pdf 4902: 100 %
+      tomo 4 · pdf 4903: 100 %
+      tomo 4 · pdf 4904: 100 %
+      tomo 4 · pdf 4905: 100 %
+      tomo 4 · pdf 4906: 100 %
+      tomo 4 · pdf 4907: 100 %
+      tomo 4 · pdf 4908: 100 %
+      tomo 4 · pdf 4909: 100 %
+      tomo 4 · pdf 4910: 100 %
+      tomo 4 · pdf 4911: 100 %
+      tomo 4 · pdf 4912: 100 %
+      tomo 4 · pdf 4913: 100 %
+      tomo 4 · pdf 4914: 100 %
+      tomo 4 · pdf 4915: 100 %
+      tomo 4 · pdf 4916: 100 %
+      tomo 4 · pdf 4917: 100 %
+      tomo 4 · pdf 4918: 100 %
+      tomo 4 · pdf 4919: 100 %
+      tomo 4 · pdf 4920: 100 %
+      tomo 4 · pdf 4921: 100 %
+      tomo 4 · pdf 4922: 100 %
+      tomo 4 · pdf 4923: 100 %
+      tomo 4 · pdf 4924: 100 %
+      tomo 4 · pdf 4925: 100 %
+      tomo 4 · pdf 4926: 100 %
+      tomo 4 · pdf 4927: 100 %
+      tomo 4 · pdf 4928: 100 %
+      tomo 4 · pdf 4929: 100 %
+      tomo 4 · pdf 4930: 100 %
+      tomo 4 · pdf 4931: 100 %
+      tomo 4 · pdf 4932: 100 %
+      tomo 4 · pdf 4933: 100 %
+      tomo 4 · pdf 4934: 100 %
+      tomo 4 · pdf 4935: 100 %
+      tomo 4 · pdf 4936: 100 %
+      tomo 4 · pdf 4937: 100 %
+      tomo 4 · pdf 4938: 100 %
+      tomo 4 · pdf 4939: 100 %
+      tomo 4 · pdf 4940: 100 %
+      tomo 4 · pdf 4941: 100 %
+      tomo 4 · pdf 4942: 100 %
+      tomo 4 · pdf 4943: 100 %
+      tomo 4 · pdf 4944: 100 %
+      tomo 4 · pdf 4945: 100 %
+      tomo 4 · pdf 4946: 100 %
+      tomo 4 · pdf 4947: 100 %
+      tomo 4 · pdf 4948: 100 %
+      tomo 4 · pdf 4949: 100 %
+      tomo 4 · pdf 4950: 100 %
+      tomo 4 · pdf 4951: 100 %
+      tomo 4 · pdf 4952: 100 %
+      tomo 4 · pdf 4953: 100 %
+      tomo 4 · pdf 4954: 100 %
+      tomo 4 · pdf 4955: 100 %
+      tomo 4 · pdf 4956: 100 %
+      tomo 4 · pdf 4957: 100 %
+      tomo 4 · pdf 4958: 100 %
+      tomo 4 · pdf 4959: 100 %
+      tomo 4 · pdf 4960: 100 %
+      tomo 4 · pdf 4961: 100 %
+      tomo 4 · pdf 4962: 100 %
+      tomo 4 · pdf 4963: 100 %
+      tomo 4 · pdf 4964: 100 %
+      tomo 4 · pdf 4965: 100 %
+      tomo 4 · pdf 4966: 100 %
+      tomo 4 · pdf 4967: 100 %
+      tomo 4 · pdf 4968: 100 %
+      tomo 4 · pdf 4969: 100 %
+      tomo 4 · pdf 4970: 100 %
+      tomo 4 · pdf 4971: 100 %
+      tomo 4 · pdf 4972: 100 %
+      tomo 4 · pdf 4973: 100 %
+      tomo 4 · pdf 4974: 100 %
+      tomo 4 · pdf 4975: 100 %
+      tomo 4 · pdf 4976: 100 %
+      tomo 4 · pdf 4977: 100 %
+      tomo 4 · pdf 4978: 100 %
+      tomo 4 · pdf 4979: 100 %
+      tomo 4 · pdf 4980: 100 %
+      tomo 4 · pdf 4981: 100 %
+      tomo 4 · pdf 4982: 100 %
+      tomo 4 · pdf 4983: 100 %
+      tomo 4 · pdf 4984: 100 %
+      tomo 4 · pdf 4985: 100 %
+      tomo 4 · pdf 4986: 100 %
+      tomo 4 · pdf 4987: 100 %
+      tomo 4 · pdf 4988: 100 %
+      tomo 4 · pdf 4989: 100 %
+      tomo 4 · pdf 4990: 100 %
+      tomo 4 · pdf 4991: 100 %
+      tomo 4 · pdf 4992: 100 %
+      tomo 4 · pdf 4993: 100 %
+      tomo 4 · pdf 4994: 100 %
+      tomo 4 · pdf 4995: 100 %
+      tomo 4 · pdf 4996: 100 %
+      tomo 4 · pdf 4997: 100 %
+      tomo 4 · pdf 4998: 100 %
+      tomo 4 · pdf 4999: 100 %
+      tomo 4 · pdf 5000: 100 %
+      tomo 4 · pdf 5001: 100 %
+      tomo 4 · pdf 5002: 100 %
+      tomo 4 · pdf 5003: 100 %
+      tomo 4 · pdf 5004: 100 %
+      tomo 4 · pdf 5005: 100 %
+      tomo 4 · pdf 5006: 100 %
+      tomo 4 · pdf 5007: 100 %
+      tomo 4 · pdf 5008: 100 %
+      tomo 4 · pdf 5009: 100 %
+      tomo 4 · pdf 5010: 100 %
+      tomo 4 · pdf 5011: 100 %
+      tomo 4 · pdf 5012: 100 %
+      tomo 4 · pdf 5013: 100 %
+      tomo 4 · pdf 5014: 100 %
+      tomo 4 · pdf 5015: 100 %
+      tomo 4 · pdf 5016: 100 %
+      tomo 4 · pdf 5017: 100 %
+      tomo 4 · pdf 5018: 100 %
+      tomo 4 · pdf 5019: 100 %
+      tomo 4 · pdf 5020: 100 %
+      tomo 4 · pdf 5021: 100 %
+      tomo 4 · pdf 5022: 100 %
+      tomo 4 · pdf 5023: 100 %
+      tomo 4 · pdf 5024: 100 %
+      tomo 4 · pdf 5025: 100 %
+      tomo 4 · pdf 5026: 100 %
+      tomo 4 · pdf 5027: 100 %
+      tomo 4 · pdf 5028: 100 %
+      tomo 4 · pdf 5029: 100 %
+      tomo 4 · pdf 5030: 100 %
+      tomo 4 · pdf 5031: 100 %
+      tomo 4 · pdf 5032: 100 %
+      tomo 4 · pdf 5033: 100 %
+      tomo 4 · pdf 5034: 100 %
+      tomo 4 · pdf 5035: 100 %
+      tomo 4 · pdf 5036: 100 %
+      tomo 4 · pdf 5037: 100 %
+      tomo 4 · pdf 5038: 100 %
+      tomo 4 · pdf 5039: 100 %
+      tomo 4 · pdf 5040: 100 %
+      tomo 4 · pdf 5041: 100 %
+      tomo 4 · pdf 5042: 100 %
+      tomo 4 · pdf 5043: 100 %
+      tomo 4 · pdf 5044: 100 %
+      tomo 4 · pdf 5045: 100 %
+      tomo 4 · pdf 5046: 100 %
+      tomo 4 · pdf 5047: 100 %
+      tomo 4 · pdf 5048: 100 %
+      tomo 4 · pdf 5049: 100 %
+      tomo 4 · pdf 5050: 100 %
+      tomo 4 · pdf 5051: 100 %
+      tomo 4 · pdf 5052: 100 %
+      tomo 4 · pdf 5053: 100 %
+      tomo 4 · pdf 5054: 100 %
+      tomo 4 · pdf 5055: 100 %
+      tomo 4 · pdf 5056: 100 %
+      tomo 4 · pdf 5057: 100 %
+      tomo 4 · pdf 5058: 100 %
+      tomo 4 · pdf 5059: 100 %
+      tomo 4 · pdf 5060: 100 %
+      tomo 4 · pdf 5061: 100 %
+      tomo 4 · pdf 5062: 100 %
+      tomo 4 · pdf 5063: 100 %
+      tomo 4 · pdf 5064: 100 %
+      tomo 4 · pdf 5065: 100 %
+      tomo 4 · pdf 5066: 100 %
+      tomo 4 · pdf 5067: 100 %
+      tomo 4 · pdf 5068: 100 %
+      tomo 4 · pdf 5069: 100 %
+      tomo 4 · pdf 5070: 100 %
+      tomo 4 · pdf 5071: 100 %
+      tomo 4 · pdf 5072: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 97 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2884: ['*']
+      tomo 3 pdf 2885: ['*']
+      tomo 3 pdf 2885: ['*']
+      tomo 3 pdf 2885: ['*']
+      tomo 3 pdf 2885: ['*']
+      tomo 3 pdf 2885: ['*']
+      tomo 3 pdf 2885: ['*']
+      tomo 3 pdf 3104: ['4. 1-5. 24-5, 5']
+      tomo 3 pdf 3104: ['4. 1-5. 24-5, 5']
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 3: 390 etiquetas rojas → 390 variantes, tomo 4: 649 etiquetas rojas → 649 variantes
+[OK ] Remisiones: 0 rotas; 14 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: salterio/semana-1/domingo/laudes/salmodia
+      pendiente: texto-azul/antifonas-alternativas
+      pendiente: texto-azul/del-domingo-de-la-semana-i
+      pendiente: texto-azul/domingo-de-la-semana-i-del-salterio
+[OK ] Salmos: 25 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: salmo-109-1-5-7 (ver diferencias.csv)
+[OK ] Ida y vuelta: 2868/2868 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 1
+      tomo 4 pdf 4780: que os esmeréis siempre, en haceros el bien unos a {'945200'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 171
+      tomo 3 pdf 3104: texto negro sin pieza (parte salmodia): En aquellos días, cuando los rivales de Judá y Ben
+      tomo 3 pdf 3228: el título dice semana 15 dentro de «SEMANA XVI DEL TIEMPO ORDINARIO»: JUEVES XV SEMANA DEL TIEMPO ORDINARIO
+      tomo 3 pdf 3228: dos celebraciones con el mismo título: la segunda es «jueves-xv-semana-del-tiempo-ordinario-2»: JUEVES XV SEMANA DEL TIEMPO ORDINARIO
+      tomo 3 pdf 3264: texto negro sin pieza (parte None): Domingo después de Pentecostés
+      tomo 3 pdf 3310: remisión azul sin pieza: Salmodia complementaria.
+      tomo 4 pdf 4487: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4487: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4492: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4493: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4494: remisión azul sin pieza: Lunes de la semana II del Salterio
+      tomo 4 pdf 4498: remisión azul sin pieza: Martes de la semana II del Salterio
+      tomo 4 pdf 4503: remisión azul sin pieza: Miércoles de la semana II del Salterio
+      tomo 4 pdf 4508: remisión azul sin pieza: Jueves de la semana II del Salterio
+      tomo 4 pdf 4512: remisión azul sin pieza: Viernes de la semana II del Salterio
+      tomo 4 pdf 4518: remisión azul sin pieza: Sábado de la semana II del Salterio 
+      tomo 4 pdf 4524: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4524: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4529: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4529: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4530: remisión azul sin pieza: Lunes de la semana III del Salterio
+      tomo 4 pdf 4535: remisión azul sin pieza: Martes de la semana III del Salterio
+      tomo 4 pdf 4539: remisión azul sin pieza: Miércoles de la semana III del Salterio
+      tomo 4 pdf 4543: remisión azul sin pieza: Jueves de la semana III del Salterio
+      tomo 4 pdf 4548: remisión azul sin pieza: Viernes de la semana III del Salterio
+      tomo 4 pdf 4553: remisión azul sin pieza: Sábado de la semana III del Salterio
+      tomo 4 pdf 4558: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4559: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4563: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4564: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4565: remisión azul sin pieza: Lunes de la semana IV del Salterio
+      tomo 4 pdf 4568: remisión azul sin pieza: Martes de la semana IV del Salterio
+      tomo 4 pdf 4572: remisión azul sin pieza: Miércoles de la semana IV del Salterio
+      tomo 4 pdf 4576: remisión azul sin pieza: Jueves de la semana IV del Salterio
+      tomo 4 pdf 4581: remisión azul sin pieza: Viernes de la semana IV del Salterio
+      tomo 4 pdf 4585: remisión azul sin pieza: Sábado de la semana IV del Salterio
+      tomo 4 pdf 4590: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4591: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4594: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4595: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4595: remisión azul sin pieza: Lunes de la semana I del Salterio
+      tomo 4 pdf 4599: remisión azul sin pieza: Martes de la semana I del Salterio
+      tomo 4 pdf 4604: remisión azul sin pieza: Miércoles de la semana I del Salterio
+      tomo 4 pdf 4608: remisión azul sin pieza: Jueves de la semana I del Salterio
+      tomo 4 pdf 4612: remisión azul sin pieza: Viernes de la semana I del Salterio
+      tomo 4 pdf 4616: remisión azul sin pieza: Sábado de la semana I del Salterio
+      tomo 4 pdf 4622: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4623: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4628: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4628: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4629: remisión azul sin pieza: Lunes de la Semana II del Salterio
+      tomo 4 pdf 4633: remisión azul sin pieza: Martes de la Semana II del Salterio
+      tomo 4 pdf 4637: remisión azul sin pieza: Miércoles de la Semana II del Salterio
+      tomo 4 pdf 4641: remisión azul sin pieza: Jueves de la Semana II del Salterio
+      tomo 4 pdf 4645: remisión azul sin pieza: Viernes de la Semana II del Salterio
+      tomo 4 pdf 4650: remisión azul sin pieza: Sábado de la Semana II del Salterio
+      tomo 4 pdf 4655: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4656: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4660: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4661: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4661: remisión azul sin pieza: Lunes de la semana III del Salterio
+      tomo 4 pdf 4665: remisión azul sin pieza: Martes de la semana III del Salterio
+      tomo 4 pdf 4669: remisión azul sin pieza: Miércoles de la semana III del Salterio
+      tomo 4 pdf 4673: remisión azul sin pieza: Jueves de la semana III del Salterio
+      tomo 4 pdf 4677: remisión azul sin pieza: Viernes de la semana III del Salterio
+      tomo 4 pdf 4681: remisión azul sin pieza: Sábado de la semana III del Salterio
+      tomo 4 pdf 4686: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4686: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4691: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4691: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4692: remisión azul sin pieza: Lunes de la semana IV del Salterio
+      tomo 4 pdf 4696: remisión azul sin pieza: Martes de la semana IV del Salterio
+      tomo 4 pdf 4702: remisión azul sin pieza: Miércoles de la semana IV del Salterio
+      tomo 4 pdf 4705: remisión azul sin pieza: Jueves de la semana IV del Salterio
+      tomo 4 pdf 4710: remisión azul sin pieza: Viernes de la semana IV del Salterio
+      tomo 4 pdf 4715: remisión azul sin pieza: Sábado de la semana IV del Salterio
+      tomo 4 pdf 4720: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4720: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4725: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4726: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4726: remisión azul sin pieza: Lunes de la semana I del Salterio
+      tomo 4 pdf 4731: remisión azul sin pieza: Martes de la semana I del Salterio
+      tomo 4 pdf 4735: remisión azul sin pieza: Miércoles de la semana I del Salterio
+      tomo 4 pdf 4741: remisión azul sin pieza: Jueves de la semana I del Salterio
+      tomo 4 pdf 4746: remisión azul sin pieza: Viernes de la semana I del Salterio
+      tomo 4 pdf 4751: remisión azul sin pieza: Sábado de la semana I del Salterio
+      tomo 4 pdf 4756: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4757: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4760: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4761: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4762: remisión azul sin pieza: Lunes de la Semana II del Salterio
+      tomo 4 pdf 4766: remisión azul sin pieza: Martes de la Semana II del Salterio
+      tomo 4 pdf 4770: remisión azul sin pieza: Miércoles de la Semana II del Salterio
+      tomo 4 pdf 4775: remisión azul sin pieza: Jueves de la Semana II del Salterio
+      tomo 4 pdf 4779: remisión azul sin pieza: Viernes de la Semana II del Salterio
+      tomo 4 pdf 4783: remisión azul sin pieza: Sábado de la Semana II del Salterio
+      tomo 4 pdf 4789: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4789: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4794: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4794: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4795: remisión azul sin pieza: Lunes de la semana III del Salterio
+      tomo 4 pdf 4799: remisión azul sin pieza: Martes de la semana III del Salterio
+      tomo 4 pdf 4803: remisión azul sin pieza: Miércoles de la semana III del Salterio
+      tomo 4 pdf 4808: remisión azul sin pieza: Jueves de la semana III del Salterio
+      tomo 4 pdf 4812: remisión azul sin pieza: Viernes de la semana III del Salterio
+      tomo 4 pdf 4817: remisión azul sin pieza: Sábado de la semana III del Salterio
+      tomo 4 pdf 4822: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4822: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4826: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4827: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4828: remisión azul sin pieza: Lunes de la semana IV del Salterio
+      tomo 4 pdf 4832: remisión azul sin pieza: Martes de la semana IV del Salterio
+      tomo 4 pdf 4836: remisión azul sin pieza: Miércoles de la semana IV del Salterio
+      tomo 4 pdf 4841: remisión azul sin pieza: Jueves de la semana IV del Salterio
+      tomo 4 pdf 4845: remisión azul sin pieza: Viernes de la semana IV del Salterio
+      tomo 4 pdf 4849: remisión azul sin pieza: Sábado de la semana IV del Salterio
+      tomo 4 pdf 4855: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4855: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4860: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4860: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4861: remisión azul sin pieza: Lunes de la semana I del Salterio
+      tomo 4 pdf 4865: remisión azul sin pieza: Martes de la semana I del Salterio
+      tomo 4 pdf 4870: remisión azul sin pieza: Miércoles de la semana I del Salterio
+      tomo 4 pdf 4874: remisión azul sin pieza: Jueves de la semana I del Salterio
+      tomo 4 pdf 4878: remisión azul sin pieza: Viernes de la semana I del Salterio
+      tomo 4 pdf 4883: remisión azul sin pieza: Sábado de la semana I del Salterio
+      tomo 4 pdf 4888: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4889: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4892: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4893: remisión azul sin pieza: Domingo de la semana II del Salterio
+      tomo 4 pdf 4894: remisión azul sin pieza: Lunes de la Semana II del Salterio
+      tomo 4 pdf 4898: remisión azul sin pieza: Martes de la Semana II del Salterio
+      tomo 4 pdf 4902: remisión azul sin pieza: Miércoles de la Semana II del Salterio
+      tomo 4 pdf 4906: remisión azul sin pieza: Jueves de la Semana II del Salterio
+      tomo 4 pdf 4910: remisión azul sin pieza: Viernes de la Semana II del Salterio
+      tomo 4 pdf 4915: remisión azul sin pieza: Sábado de la Semana II del Salterio
+      tomo 4 pdf 4920: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4920: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4925: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4926: remisión azul sin pieza: Domingo de la semana III del Salterio
+      tomo 4 pdf 4926: remisión azul sin pieza: Lunes de la semana III del Salterio
+      tomo 4 pdf 4931: remisión azul sin pieza: Martes de la semana III del Salterio
+      tomo 4 pdf 4936: remisión azul sin pieza: Miércoles de la semana III del Salterio
+      tomo 4 pdf 4940: remisión azul sin pieza: Jueves de la semana III del Salterio
+      tomo 4 pdf 4945: remisión azul sin pieza: Viernes de la semana III del Salterio
+      tomo 4 pdf 4950: remisión azul sin pieza: Sábado de la semana III del Salterio
+      tomo 4 pdf 4955: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4955: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4960: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4961: remisión azul sin pieza: Domingo de la semana IV del Salterio
+      tomo 4 pdf 4961: remisión azul sin pieza: Lunes de la semana IV del Salterio
+      tomo 4 pdf 4966: remisión azul sin pieza: Martes de la semana IV del Salterio
+      tomo 4 pdf 4971: remisión azul sin pieza: Miércoles de la semana IV del Salterio
+      tomo 4 pdf 4976: remisión azul sin pieza: Jueves de la semana IV del Salterio
+      tomo 4 pdf 4980: remisión azul sin pieza: Viernes de la semana IV del Salterio
+      tomo 4 pdf 4985: remisión azul sin pieza: Sábado de la semana IV del Salterio
+      tomo 4 pdf 4990: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4990: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4995: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4996: remisión azul sin pieza: Domingo de la semana I del Salterio
+      tomo 4 pdf 4996: remisión azul sin pieza: Lunes de la semana I del Salterio
+      tomo 4 pdf 5001: remisión azul sin pieza: Martes de la semana I del Salterio
+      tomo 4 pdf 5005: remisión azul sin pieza: Miércoles de la semana I del Salterio
+      tomo 4 pdf 5010: remisión azul sin pieza: Jueves de la semana I del Salterio
+      tomo 4 pdf 5014: remisión azul sin pieza: Viernes de la semana I del Salterio
+      tomo 4 pdf 5019: remisión azul sin pieza: Sábado de la semana I del Salterio
+      tomo 4 pdf 5045: remisión azul sin pieza: Lunes de la semana II del Salterio
+      tomo 4 pdf 5049: remisión azul sin pieza: Martes de la semana II del Salterio
+      tomo 4 pdf 5054: remisión azul sin pieza: Miércoles de la semana II del Salterio
+      tomo 4 pdf 5058: remisión azul sin pieza: Jueves de la semana II del Salterio
+      tomo 4 pdf 5063: remisión azul sin pieza: Viernes de la semana II del Salterio
+      tomo 4 pdf 5068: remisión azul sin pieza: Sábado de la semana II del Salterio 

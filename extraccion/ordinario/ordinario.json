@@ -492,7 +492,7 @@
          "parrafos": [
           "El Señor está cerca, venid, adorémosle."
          ],
-         "nota": "etiqueta fuera del vocabulario: «Desde el día 17 de diciembre has el día 23 de diciembre inclusive, se dice:»",
+         "nota": "rango de fechas («Desde el día 17 de diciembre has el día 23 de diciembre inclusive, se dice:»): pendiente de decisión de CRU",
          "fuentes": [
           {
            "tomo": 1,
@@ -507,7 +507,7 @@
          "parrafos": [
           "Hoy sabréis que viene el Señor, y mañana contemplaréis su gloria."
          ],
-         "nota": "etiqueta fuera del vocabulario: «El día 24 de diciembre:»",
+         "nota": "rango de fechas («El día 24 de diciembre:»): pendiente de decisión de CRU",
          "fuentes": [
           {
            "tomo": 1,
@@ -8604,14 +8604,8 @@
        "tipo": "rubrica",
        "variantes": [
         {
-         "texto": "La salmodia complementaria se compone de tres grupos de tres salmos invariables",
+         "texto": "La salmodia complementaria se compone de tres grupos de tres salmos invariables (119-127), tomados de los llamados «salmos graduales»",
          "remite": "salterio/salmodia-complementaria",
-         "otras_redacciones": [
-          {
-           "tomo": 4,
-           "texto": "La salmodia complementaria se compone de tres grupos de tres salmos invariables (119-127), tomados de los llamados «salmos graduales»"
-          }
-         ],
          "fuentes": [
           {
            "tomo": 1,
@@ -8632,31 +8626,6 @@
            "tomo": 4,
            "pdf": 5092,
            "impresa": "622"
-          }
-         ]
-        }
-       ]
-      },
-      {
-       "tipo": "rubrica",
-       "variantes": [
-        {
-         "texto": "(119-127), tomados de los llamados «salmos graduales»",
-         "fuentes": [
-          {
-           "tomo": 1,
-           "pdf": 421,
-           "impresa": "421"
-          },
-          {
-           "tomo": 2,
-           "pdf": 1885,
-           "impresa": "757"
-          },
-          {
-           "tomo": 3,
-           "pdf": 3333,
-           "impresa": "519"
           }
          ]
         }

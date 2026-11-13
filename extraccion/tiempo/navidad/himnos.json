@@ -1,0 +1,5104 @@
+[
+ {
+  "id": "te-dire-mi-amor-rey-mio",
+  "primer_verso": "Te diré mi amor, Rey mío,",
+  "estrofas": [
+   [
+    {
+     "texto": "Te diré mi amor, Rey mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "en la quietud de la tarde,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando se cierran los ojos",
+     "sangria": 0
+    },
+    {
+     "texto": "y los corazones se abren.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te diré mi amor, Rey mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "con una mirada suave,",
+     "sangria": 0
+    },
+    {
+     "texto": "te lo diré contemplando",
+     "sangria": 0
+    },
+    {
+     "texto": "tu cuerpo que en pajas yace.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te diré mi amor, Rey mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "adorándote en la carne,",
+     "sangria": 0
+    },
+    {
+     "texto": "te lo diré con mis besos,",
+     "sangria": 0
+    },
+    {
+     "texto": "quizá con gotas de sangre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te diré mi amor, Rey mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "con los hombres y los ángeles,",
+     "sangria": 0
+    },
+    {
+     "texto": "con el aliento del cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "que espiran los animales.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te diré mi amor, Rey mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "con el amor de tu Madre,",
+     "sangria": 0
+    },
+    {
+     "texto": "con los labios de tu Esposa",
+     "sangria": 0
+    },
+    {
+     "texto": "y con la fe de tus mártires.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te diré mi amor, Rey mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡oh Dios del amor más grande!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Bendito en la Trinidad,",
+     "sangria": 0
+    },
+    {
+     "texto": "que has venido a nuestro valle!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 210,
+    "impresa": "210"
+   },
+   {
+    "tomo": 1,
+    "pdf": 226,
+    "impresa": "226"
+   }
+  ]
+ },
+ {
+  "id": "hoy-grande-gozo-en-el-cielo",
+  "primer_verso": "Hoy grande gozo en el cielo",
+  "estrofas": [
+   [
+    {
+     "texto": "Hoy grande gozo en el cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "todos hacen,",
+     "sangria": 1
+    },
+    {
+     "texto": "porque en un barrio del suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "nace Dios.",
+     "sangria": 1
+    },
+    {
+     "texto": "¡Qué gran gozo y alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "tengo yo!",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Mas no nace solamente",
+     "sangria": 0
+    },
+    {
+     "texto": "en Belén,",
+     "sangria": 1
+    },
+    {
+     "texto": "nace donde hay un caliente",
+     "sangria": 0
+    },
+    {
+     "texto": "corazón.",
+     "sangria": 1
+    },
+    {
+     "texto": "¡Qué gran gozo y alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "tengo yo!",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Nace en mí, nace en cualquiera",
+     "sangria": 0
+    },
+    {
+     "texto": "si hay amor;",
+     "sangria": 1
+    },
+    {
+     "texto": "nace donde hay verdadera",
+     "sangria": 0
+    },
+    {
+     "texto": "comprensión.",
+     "sangria": 1
+    },
+    {
+     "texto": "¡Qué gran gozo y alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "tengo yo!",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 212,
+    "impresa": "212"
+   },
+   {
+    "tomo": 1,
+    "pdf": 226,
+    "impresa": "226",
+    "pdf_fin": 227,
+    "impresa_fin": "227"
+   },
+   {
+    "tomo": 1,
+    "pdf": 250,
+    "impresa": "250"
+   }
+  ]
+ },
+ {
+  "id": "no-la-debemos-dormir",
+  "primer_verso": "No la debemos dormir",
+  "estrofas": [
+   [
+    {
+     "texto": "No la debemos dormir",
+     "sangria": 1
+    },
+    {
+     "texto": "la noche santa,",
+     "sangria": 1
+    },
+    {
+     "texto": "no la debemos dormir.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "La Virgen a solas piensa",
+     "sangria": 0
+    },
+    {
+     "texto": "qué hará",
+     "sangria": 1
+    },
+    {
+     "texto": "cuando al Rey de luz inmensa",
+     "sangria": 0
+    },
+    {
+     "texto": "parirá,",
+     "sangria": 1
+    },
+    {
+     "texto": "si de su divina esencia",
+     "sangria": 0
+    },
+    {
+     "texto": "temblará,",
+     "sangria": 1
+    },
+    {
+     "texto": "o qué le podrá decir.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No la debemos dormir",
+     "sangria": 1
+    },
+    {
+     "texto": "la noche santa,",
+     "sangria": 1
+    },
+    {
+     "texto": "no la debemos dormir.",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 215,
+    "impresa": "215"
+   }
+  ]
+ },
+ {
+  "id": "de-un-dios-que-se-encarno-muestra-el-misterio",
+  "primer_verso": "De un Dios que se encarnó muestra el misterio",
+  "estrofas": [
+   [
+    {
+     "texto": "De un Dios que se encarnó muestra el misterio",
+     "sangria": 0
+    },
+    {
+     "texto": "la luz de Navidad.",
+     "sangria": 1
+    },
+    {
+     "texto": "Comienza hoy Jesús, tu nuevo imperio",
+     "sangria": 0
+    },
+    {
+     "texto": "de amor y de verdad.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "El Padre eterno te engendró en su mente",
+     "sangria": 0
+    },
+    {
+     "texto": "desde la eternidad,",
+     "sangria": 1
+    },
+    {
+     "texto": "y antes que el mundo, ya eternamente,",
+     "sangria": 0
+    },
+    {
+     "texto": "fue tu natividad.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "La plenitud del tiempo está cumplida;",
+     "sangria": 0
+    },
+    {
+     "texto": "rocío bienhechor",
+     "sangria": 1
+    },
+    {
+     "texto": "baja del cielo, trae nueva vida",
+     "sangria": 0
+    },
+    {
+     "texto": "al mundo pecador.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh santa noche! Hoy Cristo nacía",
+     "sangria": 0
+    },
+    {
+     "texto": "en mísero portal;",
+     "sangria": 1
+    },
+    {
+     "texto": "Hijo de Dios, recibe de María",
+     "sangria": 0
+    },
+    {
+     "texto": "la carne del mortal.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Señor Jesús, el hombre en este suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "cantar quiere tu amor,",
+     "sangria": 1
+    },
+    {
+     "texto": "y, junto con los ángeles del cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "te ofrece su loor.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Este Jesús en brazos de María",
+     "sangria": 0
+    },
+    {
+     "texto": "es nuestra redención;",
+     "sangria": 1
+    },
+    {
+     "texto": "cielos y tierra con su abrazo unía",
+     "sangria": 0
+    },
+    {
+     "texto": "de paz y de perdón.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Tú eres el Rey de Paz, de ti recibe",
+     "sangria": 0
+    },
+    {
+     "texto": "su luz el porvenir;",
+     "sangria": 1
+    },
+    {
+     "texto": "Angel del gran Consejo, por ti vive",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando llega a existir.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "A ti, Señor, y al Padre la alabanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "y de ambos al Amor.",
+     "sangria": 1
+    },
+    {
+     "texto": "Contigo al mundo llega la esperanza;",
+     "sangria": 0
+    },
+    {
+     "texto": "a ti gloria y honor.",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 215,
+    "impresa": "215",
+    "pdf_fin": 216,
+    "impresa_fin": "216"
+   }
+  ]
+ },
+ {
+  "id": "hermanos-dios-ha-nacido",
+  "primer_verso": "Hermanos, Dios ha nacido",
+  "estrofas": [
+   [
+    {
+     "texto": "Hermanos, Dios ha nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre un pesebre. Aleluya.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"Gloria a Dios en las alturas\"",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Desde su cielo ha traído",
+     "sangria": 0
+    },
+    {
+     "texto": "mil alas hasta su cuna.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"Gloria a Dios en las alturas\".",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Hoy mueren todos los odios",
+     "sangria": 0
+    },
+    {
+     "texto": "y renacen las ternuras.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"Gloria a Dios en las alturas\".",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El corazón más perdido",
+     "sangria": 0
+    },
+    {
+     "texto": "ya sabe que alguien le busca.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"Gloria a Dios en las alturas\".",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El cielo ya no está solo",
+     "sangria": 0
+    },
+    {
+     "texto": "la tierra ya no está a oscuras.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"Gloria a Dios en las alturas\".",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 221,
+    "impresa": "221"
+   }
+  ]
+ },
+ {
+  "id": "temblando-estaba-de-frio",
+  "primer_verso": "Temblando estaba de frío",
+  "estrofas": [
+   [
+    {
+     "texto": "Temblando estaba de frío",
+     "sangria": 0
+    },
+    {
+     "texto": "el mayor fuego del cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el que hizo el tiempo mismo",
+     "sangria": 0
+    },
+    {
+     "texto": "sujeto al rigor del tiempo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Su virgen Madre le mira,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya llorando, ya riendo,",
+     "sangria": 0
+    },
+    {
+     "texto": "que como en su espejo en el Niño,",
+     "sangria": 0
+    },
+    {
+     "texto": "hace los mismos efectos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No lejos el casto esposo",
+     "sangria": 0
+    },
+    {
+     "texto": "mirándole está encogido,",
+     "sangria": 0
+    },
+    {
+     "texto": "y de los ojos atentos",
+     "sangria": 0
+    },
+    {
+     "texto": "llueve al revés de las nubes,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque llora sobre el cielo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 231,
+    "impresa": "231"
+   },
+   {
+    "tomo": 1,
+    "pdf": 242,
+    "impresa": "242"
+   }
+  ]
+ },
+ {
+  "id": "al-caer-de-la-tarde",
+  "primer_verso": "Al caer de la tarde,",
+  "estrofas": [
+   [
+    {
+     "texto": "Al caer de la tarde,",
+     "sangria": 0
+    },
+    {
+     "texto": "toda la casa",
+     "sangria": 0
+    },
+    {
+     "texto": "era aromas de vino",
+     "sangria": 0
+    },
+    {
+     "texto": "y tierna hogaza.",
+     "sangria": 0
+    },
+    {
+     "texto": "Mientras, la Madre",
+     "sangria": 0
+    },
+    {
+     "texto": "era un ánfora llena",
+     "sangria": 0
+    },
+    {
+     "texto": "de sus pesares.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al caer de la tarde,",
+     "sangria": 0
+    },
+    {
+     "texto": "la Madre hilaba",
+     "sangria": 0
+    },
+    {
+     "texto": "con aquellas sus manos",
+     "sangria": 0
+    },
+    {
+     "texto": "de virgen casta.",
+     "sangria": 0
+    },
+    {
+     "texto": "Mientras, el Niño",
+     "sangria": 0
+    },
+    {
+     "texto": "soñaba que soñaba",
+     "sangria": 0
+    },
+    {
+     "texto": "lirios y espinos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al caer de la tarde,",
+     "sangria": 0
+    },
+    {
+     "texto": "en el silencio,",
+     "sangria": 0
+    },
+    {
+     "texto": "aserraban las sierras",
+     "sangria": 0
+    },
+    {
+     "texto": "del carpintero.",
+     "sangria": 0
+    },
+    {
+     "texto": "José pensaba",
+     "sangria": 0
+    },
+    {
+     "texto": "que era el padre dichoso",
+     "sangria": 0
+    },
+    {
+     "texto": "de la Palabra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al caer de la tarde,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, atiende",
+     "sangria": 0
+    },
+    {
+     "texto": "la amargura infinita",
+     "sangria": 0
+    },
+    {
+     "texto": "que el mundo tiene.",
+     "sangria": 0
+    },
+    {
+     "texto": "Colma el vacío",
+     "sangria": 0
+    },
+    {
+     "texto": "de esta familia humana",
+     "sangria": 0
+    },
+    {
+     "texto": "sin tu cariño.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 231,
+    "impresa": "231",
+    "pdf_fin": 232,
+    "impresa_fin": "232"
+   },
+   {
+    "tomo": 1,
+    "pdf": 242,
+    "impresa": "242",
+    "pdf_fin": 243,
+    "impresa_fin": "243"
+   }
+  ]
+ },
+ {
+  "id": "de-un-dios-que-se-encarno-muestra-el-misterio-2",
+  "primer_verso": "De un Dios que se encarnó muestra el misterio",
+  "estrofas": [
+   [
+    {
+     "texto": "De un Dios que se encarnó muestra el misterio",
+     "sangria": 0
+    },
+    {
+     "texto": "la luz de Navidad.",
+     "sangria": 0
+    },
+    {
+     "texto": "Comienza hoy Jesús, tu nuevo imperio",
+     "sangria": 0
+    },
+    {
+     "texto": "de amor y de verdad.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Señor Jesús, el hombre en este suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "cantar quiere tu amor,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, junto con los ángeles del cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "te ofrece su loor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Este Jesús en brazos de María",
+     "sangria": 0
+    },
+    {
+     "texto": "es nuestra redención;",
+     "sangria": 0
+    },
+    {
+     "texto": "cielos y tierra con su abrazo unía",
+     "sangria": 0
+    },
+    {
+     "texto": "de paz y de perdón.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú eres el Rey de Paz, de ti recibe",
+     "sangria": 0
+    },
+    {
+     "texto": "su luz el porvenir;",
+     "sangria": 0
+    },
+    {
+     "texto": "Angel del gran Consejo, por ti vive",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando llega a existir.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "A ti, Señor, y al Padre la alabanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "y de ambos al Amor.",
+     "sangria": 0
+    },
+    {
+     "texto": "Contigo al mundo llega la esperanza;",
+     "sangria": 0
+    },
+    {
+     "texto": "a ti gloria y honor.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 233,
+    "impresa": "233",
+    "pdf_fin": 234,
+    "impresa_fin": "234"
+   }
+  ]
+ },
+ {
+  "id": "de-una-familia-divina",
+  "primer_verso": "De una Familia divina",
+  "estrofas": [
+   [
+    {
+     "texto": "De una Familia divina",
+     "sangria": 0
+    },
+    {
+     "texto": "pasó a una Familia humana.",
+     "sangria": 0
+    },
+    {
+     "texto": "Nació de una Virgen Madre",
+     "sangria": 0
+    },
+    {
+     "texto": "una noche iluminada",
+     "sangria": 0
+    },
+    {
+     "texto": "por ángeles y luceros",
+     "sangria": 0
+    },
+    {
+     "texto": "en una pobre cabaña;",
+     "sangria": 0
+    },
+    {
+     "texto": "tuvo un padre carpintero",
+     "sangria": 0
+    },
+    {
+     "texto": "que todo el día trabajaba",
+     "sangria": 0
+    },
+    {
+     "texto": "para darle de comer",
+     "sangria": 0
+    },
+    {
+     "texto": "al hijo de la esperanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "que un día edificó los mundos",
+     "sangria": 0
+    },
+    {
+     "texto": "por ser la eterna Palabra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De una Familia divina",
+     "sangria": 0
+    },
+    {
+     "texto": "pasó a una Familia humana.",
+     "sangria": 0
+    },
+    {
+     "texto": "Eterno Amor allá arriba;",
+     "sangria": 0
+    },
+    {
+     "texto": "acá abajo amor sin mancha.",
+     "sangria": 0
+    },
+    {
+     "texto": "Arriba, el Fuego inefable;",
+     "sangria": 0
+    },
+    {
+     "texto": "acá, el calor de una casa.",
+     "sangria": 0
+    },
+    {
+     "texto": "Allá, en el seno infinito,",
+     "sangria": 0
+    },
+    {
+     "texto": "la canción nunca acabada;",
+     "sangria": 0
+    },
+    {
+     "texto": "acá, la canción de cuna",
+     "sangria": 0
+    },
+    {
+     "texto": "y la canción de una lanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De una Familia divina",
+     "sangria": 0
+    },
+    {
+     "texto": "pasó a una Familia humana.",
+     "sangria": 0
+    },
+    {
+     "texto": "Vivió humilde en la obediencia",
+     "sangria": 0
+    },
+    {
+     "texto": "su humildad humillada;",
+     "sangria": 0
+    },
+    {
+     "texto": "pobre vivió en Nazaret",
+     "sangria": 0
+    },
+    {
+     "texto": "quien rico en su Padre estaba,",
+     "sangria": 0
+    },
+    {
+     "texto": "y siendo todo en la altura",
+     "sangria": 0
+    },
+    {
+     "texto": "en el suelo se hizo nada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh Jesús de Nazaret,",
+     "sangria": 0
+    },
+    {
+     "texto": "hijo de Familia humana,",
+     "sangria": 0
+    },
+    {
+     "texto": "por tu Familia divina,",
+     "sangria": 0
+    },
+    {
+     "texto": "santifica nuestras casas!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 234,
+    "impresa": "234",
+    "pdf_fin": 235,
+    "impresa_fin": "235"
+   }
+  ]
+ },
+ {
+  "id": "mirad-que-aposentadores",
+  "primer_verso": "Mirad qué aposentadores",
+  "estrofas": [
+   [
+    {
+     "texto": "Mirad qué aposentadores",
+     "sangria": 0
+    },
+    {
+     "texto": "tuvo la divina cámara:",
+     "sangria": 0
+    },
+    {
+     "texto": "verdín por tapicerías",
+     "sangria": 0
+    },
+    {
+     "texto": "y por cortinajes zarzas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pobre, desnudo, sin fuego,",
+     "sangria": 0
+    },
+    {
+     "texto": "quien con fuegos nos abasta,",
+     "sangria": 0
+    },
+    {
+     "texto": "está aquí el Niño. Un pesebre",
+     "sangria": 0
+    },
+    {
+     "texto": "de humildes bestias por cama.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ved, puro Amor, que sois fuego",
+     "sangria": 0
+    },
+    {
+     "texto": "y estáis sobre un haz de pajas.",
+     "sangria": 0
+    },
+    {
+     "texto": "La Virgen, llanto en los ojos:",
+     "sangria": 0
+    },
+    {
+     "texto": "a incendio tal, tales aguas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "José, que goza y que gime",
+     "sangria": 0
+    },
+    {
+     "texto": "agridulces de naranja,",
+     "sangria": 0
+    },
+    {
+     "texto": "riéndose ya ha quedado",
+     "sangria": 0
+    },
+    {
+     "texto": "dormido bajo su capa.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 239,
+    "impresa": "239"
+   }
+  ]
+ },
+ {
+  "id": "era-pobre-y-silenciosa",
+  "primer_verso": "Era pobre y silenciosa,",
+  "estrofas": [
+   [
+    {
+     "texto": "Era pobre y silenciosa,",
+     "sangria": 0
+    },
+    {
+     "texto": "pero con rayos de luz;",
+     "sangria": 0
+    },
+    {
+     "texto": "olor a jazmín y a rosa",
+     "sangria": 0
+    },
+    {
+     "texto": "y el Niño que la alboroza:",
+     "sangria": 0
+    },
+    {
+     "texto": "es la casa de Jesús.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Un taller de carpintero",
+     "sangria": 0
+    },
+    {
+     "texto": "y un gran misterio de fe;",
+     "sangria": 0
+    },
+    {
+     "texto": "manos callosas de obrero,",
+     "sangria": 0
+    },
+    {
+     "texto": "justas manos de hombre entero:",
+     "sangria": 0
+    },
+    {
+     "texto": "es la casa de José.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Había júbilo y canto;",
+     "sangria": 0
+    },
+    {
+     "texto": "ella lavaba y barría,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el arcángel saludando",
+     "sangria": 0
+    },
+    {
+     "texto": "repetía noche y día:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Casa del Ave María.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Familia pobre y divina,",
+     "sangria": 0
+    },
+    {
+     "texto": "pobre mesa, pobre casa,",
+     "sangria": 0
+    },
+    {
+     "texto": "mucha unión, ninguna espina",
+     "sangria": 0
+    },
+    {
+     "texto": "y el ejemplo que culmina",
+     "sangria": 0
+    },
+    {
+     "texto": "en un amor que no pasa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Concede, Padre, Señor,",
+     "sangria": 0
+    },
+    {
+     "texto": "una mesa y un hogar,",
+     "sangria": 0
+    },
+    {
+     "texto": "amor para trabajar,",
+     "sangria": 0
+    },
+    {
+     "texto": "padres a quienes querer",
+     "sangria": 0
+    },
+    {
+     "texto": "y una sonrisa que dar.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 239,
+    "impresa": "239",
+    "pdf_fin": 240,
+    "impresa_fin": "240"
+   }
+  ]
+ },
+ {
+  "id": "norabuena-vengais-al-mundo",
+  "primer_verso": "Norabuena vengáis al mundo,",
+  "estrofas": [
+   [
+    {
+     "texto": "Norabuena vengáis al mundo,",
+     "sangria": 1
+    },
+    {
+     "texto": "niño de perlas,",
+     "sangria": 2
+    },
+    {
+     "texto": "que sin vuestra vista",
+     "sangria": 1
+    },
+    {
+     "texto": "no hay hora buena.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Niño de jazmines,",
+     "sangria": 0
+    },
+    {
+     "texto": "rosas y azucenas,",
+     "sangria": 0
+    },
+    {
+     "texto": "niño de la niña",
+     "sangria": 0
+    },
+    {
+     "texto": "después dél más bella,",
+     "sangria": 0
+    },
+    {
+     "texto": "que tan buenos años,",
+     "sangria": 0
+    },
+    {
+     "texto": "que tan buenas nuevas,",
+     "sangria": 0
+    },
+    {
+     "texto": "que tan buenos días",
+     "sangria": 0
+    },
+    {
+     "texto": "ha dado a la tierra;",
+     "sangria": 0
+    },
+    {
+     "texto": "parabién merece,",
+     "sangria": 0
+    },
+    {
+     "texto": "parabienes tenga,",
+     "sangria": 0
+    },
+    {
+     "texto": "aunque tantos bienes",
+     "sangria": 0
+    },
+    {
+     "texto": "como Dios posea.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mientras os tardasteis,",
+     "sangria": 0
+    },
+    {
+     "texto": "dulce gloria nuestra,",
+     "sangria": 0
+    },
+    {
+     "texto": "estábamos todos",
+     "sangria": 0
+    },
+    {
+     "texto": "llenos de mil penas;",
+     "sangria": 0
+    },
+    {
+     "texto": "mas, ya que vinisteis,",
+     "sangria": 0
+    },
+    {
+     "texto": "y a la tierra alegra",
+     "sangria": 0
+    },
+    {
+     "texto": "ver que su esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "cumplida en vos sea,",
+     "sangria": 0
+    },
+    {
+     "texto": "digan los pastores,",
+     "sangria": 0
+    },
+    {
+     "texto": "respondan las sierras,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues hombre os adoran",
+     "sangria": 0
+    },
+    {
+     "texto": "y Dios os contemplan.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Norabuena vengáis al mundo,",
+     "sangria": 0
+    },
+    {
+     "texto": "niño de perlas,",
+     "sangria": 0
+    },
+    {
+     "texto": "que sin vuestra vista",
+     "sangria": 0
+    },
+    {
+     "texto": "no hay hora buena.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 245,
+    "impresa": "245",
+    "pdf_fin": 246,
+    "impresa_fin": "246"
+   }
+  ]
+ },
+ {
+  "id": "hermanos-dios-ha-nacido-2",
+  "primer_verso": "Hermanos, Dios ha nacido",
+  "estrofas": [
+   [
+    {
+     "texto": "Hermanos, Dios ha nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre un pesebre. Aleluya.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Desde su cielo ha traído",
+     "sangria": 0
+    },
+    {
+     "texto": "mil alas hasta su cuna.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Hoy mueren todos los odios",
+     "sangria": 0
+    },
+    {
+     "texto": "y renacen las ternuras.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El corazón más perdido",
+     "sangria": 0
+    },
+    {
+     "texto": "ya sabe que alguien le busca.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El cielo ya no está solo,",
+     "sangria": 0
+    },
+    {
+     "texto": "la tierra ya no está a oscuras.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hermanos, cantad conmigo:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas.»",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 246,
+    "impresa": "246"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «hermanos-dios-ha-nacido»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "blanco-lirio-florecido",
+  "primer_verso": "Blanco lirio, florecido,",
+  "estrofas": [
+   [
+    {
+     "texto": "Blanco lirio, florecido,",
+     "sangria": 1
+    },
+    {
+     "texto": "la noche de Navidad,",
+     "sangria": 1
+    },
+    {
+     "texto": "en la cumbre del Calvario,",
+     "sangria": 1
+    },
+    {
+     "texto": "¡cómo te deshojarán!",
+     "sangria": 1
+    },
+    {
+     "texto": "El niño Jesús",
+     "sangria": 0
+    },
+    {
+     "texto": "lloraba, lloraba,",
+     "sangria": 0
+    },
+    {
+     "texto": "lo han circuncidado",
+     "sangria": 0
+    },
+    {
+     "texto": "y su sangre mana.",
+     "sangria": 0
+    },
+    {
+     "texto": "Canciones del cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "María le canta",
+     "sangria": 0
+    },
+    {
+     "texto": "y, mientras lo arrulla,",
+     "sangria": 0
+    },
+    {
+     "texto": "lo baña en sus lágrimas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Niñito, no llores.",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre, el llanto acalla,",
+     "sangria": 0
+    },
+    {
+     "texto": "que por esta sangre",
+     "sangria": 0
+    },
+    {
+     "texto": "llega la esperanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "que por este llanto",
+     "sangria": 0
+    },
+    {
+     "texto": "comienza la gracia,",
+     "sangria": 0
+    },
+    {
+     "texto": "que por esta muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "renacen las almas.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 247,
+    "impresa": "247",
+    "pdf_fin": 248,
+    "impresa_fin": "248"
+   }
+  ]
+ },
+ {
+  "id": "ver-a-dios-en-la-criatura",
+  "primer_verso": "Ver a Dios en la criatura,",
+  "estrofas": [
+   [
+    {
+     "texto": "Ver a Dios en la criatura,",
+     "sangria": 0
+    },
+    {
+     "texto": "ver a Dios hecho mortal",
+     "sangria": 0
+    },
+    {
+     "texto": "y ver en humano portal",
+     "sangria": 0
+    },
+    {
+     "texto": "la celestial hermosura.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Gran merced y gran ventura",
+     "sangria": 0
+    },
+    {
+     "texto": "a quien verlo mereció!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Quién lo viera y fuera yo!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ver llorar a la alegría,",
+     "sangria": 0
+    },
+    {
+     "texto": "ver tan pobre a la riqueza,",
+     "sangria": 0
+    },
+    {
+     "texto": "ver tan baja a la grandeza",
+     "sangria": 0
+    },
+    {
+     "texto": "y ver que Dios lo quería.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Gran merced fue en aquel día",
+     "sangria": 0
+    },
+    {
+     "texto": "la que el hombre recibió!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Quién lo viera y fuera yo!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Poner paz en tanta guerra,",
+     "sangria": 0
+    },
+    {
+     "texto": "calor donde hay tanto frío,",
+     "sangria": 0
+    },
+    {
+     "texto": "ser de todos lo que es mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "plantar un cielo en la tierra.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Qué misión de escalofrío",
+     "sangria": 0
+    },
+    {
+     "texto": "la que Dios nos confió!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Quién lo hiciera y fuera yo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 249,
+    "impresa": "249",
+    "pdf_fin": 250,
+    "impresa_fin": "250"
+   }
+  ]
+ },
+ {
+  "id": "hoy-el-verbo-sacrosanto",
+  "primer_verso": "Hoy el Verbo sacrosanto",
+  "estrofas": [
+   [
+    {
+     "texto": "Hoy el Verbo sacrosanto",
+     "sangria": 0
+    },
+    {
+     "texto": "nace en carne, por tener,",
+     "sangria": 0
+    },
+    {
+     "texto": "en qué poder padecer",
+     "sangria": 0
+    },
+    {
+     "texto": "por el hombre que ama tanto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Es condición ciertamente",
+     "sangria": 0
+    },
+    {
+     "texto": "propia del enamorado,",
+     "sangria": 0
+    },
+    {
+     "texto": "padecer por el amado",
+     "sangria": 0
+    },
+    {
+     "texto": "trabajos ganosamente.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Por esto, pues, Cristo santo",
+     "sangria": 0
+    },
+    {
+     "texto": "nace en carne, por tener",
+     "sangria": 0
+    },
+    {
+     "texto": "en qué poder padecer",
+     "sangria": 0
+    },
+    {
+     "texto": "por el hombre que ama tanto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Nace en carne el Redentor",
+     "sangria": 0
+    },
+    {
+     "texto": "pasible, porque sin falta",
+     "sangria": 0
+    },
+    {
+     "texto": "la prueba de amor más alta",
+     "sangria": 0
+    },
+    {
+     "texto": "es padecer por amor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y, porque se entienda cuánto",
+     "sangria": 0
+    },
+    {
+     "texto": "nos ha venido a querer,",
+     "sangria": 0
+    },
+    {
+     "texto": "nace para padecer",
+     "sangria": 0
+    },
+    {
+     "texto": "por el hombre que ama tanto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Qué grande misterio encierra",
+     "sangria": 0
+    },
+    {
+     "texto": "Belén; cantadle, criaturas:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas",
+     "sangria": 0
+    },
+    {
+     "texto": "y paz al hombre en la tierra.»",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 250,
+    "impresa": "250",
+    "pdf_fin": 251,
+    "impresa_fin": "251"
+   }
+  ]
+ },
+ {
+  "id": "pues-siendo-tan-gran-senor",
+  "primer_verso": "Pues, siendo tan gran señor,",
+  "estrofas": [
+   [
+    {
+     "texto": "Pues, siendo tan gran señor,",
+     "sangria": 0
+    },
+    {
+     "texto": "tenéis corte en una aldea,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién hay que claro no vea",
+     "sangria": 0
+    },
+    {
+     "texto": "que estáis herido de amor?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No es menos de que en el suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "hay prendas que mucho amáis,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues el temblor que le dais",
+     "sangria": 0
+    },
+    {
+     "texto": "jamás le distes al cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y pues por darle favor",
+     "sangria": 0
+    },
+    {
+     "texto": "tenéis corte en una aldea,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién hay que claro no vea",
+     "sangria": 0
+    },
+    {
+     "texto": "que estáis herido de amor?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Esas lágrimas tan puras",
+     "sangria": 0
+    },
+    {
+     "texto": "y ese grito enternecido,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿qué son sino de un subido",
+     "sangria": 0
+    },
+    {
+     "texto": "amor regalo y dulzura?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y pues ya, de amantes flor,",
+     "sangria": 0
+    },
+    {
+     "texto": "tenéis corte en una aldea,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién hay que claro no vea",
+     "sangria": 0
+    },
+    {
+     "texto": "que estáis herido de amor?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Qué grande misterio encierra",
+     "sangria": 0
+    },
+    {
+     "texto": "Belén; cantadle, criaturas:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas",
+     "sangria": 0
+    },
+    {
+     "texto": "y paz al hombre en la tierra.»",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 252,
+    "impresa": "252",
+    "pdf_fin": 253,
+    "impresa_fin": "253"
+   }
+  ]
+ },
+ {
+  "id": "eres-nino-y-has-amor",
+  "primer_verso": "Eres niño y has amor:",
+  "estrofas": [
+   [
+    {
+     "texto": "Eres niño y has amor:",
+     "sangria": 1
+    },
+    {
+     "texto": "¿qué farás cuando mayor?",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Pues en tu natividad",
+     "sangria": 0
+    },
+    {
+     "texto": "te quema la caridad,",
+     "sangria": 0
+    },
+    {
+     "texto": "en tu varonil edad,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién sufrirá su calor?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Eres niño y has amor:",
+     "sangria": 1
+    },
+    {
+     "texto": "¿qué farás cuando mayor?",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Será tan vivo su fuego",
+     "sangria": 0
+    },
+    {
+     "texto": "que, con importuno ruego,",
+     "sangria": 0
+    },
+    {
+     "texto": "para salvar el mundo ciego",
+     "sangria": 0
+    },
+    {
+     "texto": "te dará mortal dolor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Eres niño y has amor:",
+     "sangria": 1
+    },
+    {
+     "texto": "¿qué farás cuando mayor?",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Arderá tanto tu gana",
+     "sangria": 0
+    },
+    {
+     "texto": "que por la natura humana",
+     "sangria": 0
+    },
+    {
+     "texto": "querrás pagar su manzana",
+     "sangria": 0
+    },
+    {
+     "texto": "con muerte de malhechor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Eres niño y has amor:",
+     "sangria": 1
+    },
+    {
+     "texto": "¿qué farás cuando mayor?",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh amor, digno de espanto!",
+     "sangria": 0
+    },
+    {
+     "texto": "Pues que en este niño santo",
+     "sangria": 0
+    },
+    {
+     "texto": "has de pregonarte tanto,",
+     "sangria": 0
+    },
+    {
+     "texto": "cantemos a su loor:",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Eres niño y has amor:",
+     "sangria": 1
+    },
+    {
+     "texto": "¿qué farás cuando mayor?",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 257,
+    "impresa": "257",
+    "pdf_fin": 258,
+    "impresa_fin": "258"
+   }
+  ]
+ },
+ {
+  "id": "no-lloreis-mis-ojos",
+  "primer_verso": "No lloréis, mis ojos,",
+  "estrofas": [
+   [
+    {
+     "texto": "No lloréis, mis ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "Niño Dios, callad;",
+     "sangria": 0
+    },
+    {
+     "texto": "que si llora el cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién podrá cantar?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vuestra Madre hermosa,",
+     "sangria": 0
+    },
+    {
+     "texto": "que cantando está,",
+     "sangria": 0
+    },
+    {
+     "texto": "llorará también,",
+     "sangria": 0
+    },
+    {
+     "texto": "si ve que lloráis.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "O es fuego o es frío",
+     "sangria": 0
+    },
+    {
+     "texto": "la causa que os dan:",
+     "sangria": 0
+    },
+    {
+     "texto": "si es amor, mis ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "muy pequeño amáis.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Enjugad las perlas,",
+     "sangria": 0
+    },
+    {
+     "texto": "nácar celestial;",
+     "sangria": 0
+    },
+    {
+     "texto": "que si llora el cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién podrá cantar?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los ángeles bellos",
+     "sangria": 0
+    },
+    {
+     "texto": "cantan que les dais",
+     "sangria": 0
+    },
+    {
+     "texto": "a los cielos gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "y a la tierra paz.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De aquestas montañas",
+     "sangria": 0
+    },
+    {
+     "texto": "descendiendo van",
+     "sangria": 0
+    },
+    {
+     "texto": "pastores, cantando",
+     "sangria": 0
+    },
+    {
+     "texto": "por daros solaz.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Niño de mis ojos,",
+     "sangria": 0
+    },
+    {
+     "texto": "ea, no haya más;",
+     "sangria": 0
+    },
+    {
+     "texto": "que si llora el cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién podrá cantar?",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 258,
+    "impresa": "258",
+    "pdf_fin": 259,
+    "impresa_fin": "259"
+   }
+  ]
+ },
+ {
+  "id": "el-mal-se-destierra",
+  "primer_verso": "El mal se destierra,",
+  "estrofas": [
+   [
+    {
+     "texto": "El mal se destierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya vino el consuelo:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios está en la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya la tierra es cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya el mundo es trasunto",
+     "sangria": 0
+    },
+    {
+     "texto": "del eterno bien,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues está en Belén",
+     "sangria": 0
+    },
+    {
+     "texto": "todo el cielo junto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya no habrá más guerra",
+     "sangria": 0
+    },
+    {
+     "texto": "entre cielo y suelo:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios está en la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya la tierra es cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya baja a ser hombre",
+     "sangria": 0
+    },
+    {
+     "texto": "porque subáis vos,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya están hombre y Dios",
+     "sangria": 0
+    },
+    {
+     "texto": "en un solo hombre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya muere el recelo",
+     "sangria": 0
+    },
+    {
+     "texto": "y el llanto se cierra:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios está en la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya la tierra es cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya el hombre no tiene",
+     "sangria": 0
+    },
+    {
+     "texto": "sueños de grandeza,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque el Dios que viene",
+     "sangria": 0
+    },
+    {
+     "texto": "viene en la pobreza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya nadie se encierra",
+     "sangria": 0
+    },
+    {
+     "texto": "en su propio miedo:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios está en la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya la tierra es cielo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 261,
+    "impresa": "261"
+   }
+  ]
+ },
+ {
+  "id": "la-noche-estaba-del-silencio-en-medio",
+  "primer_verso": "La noche estaba del silencio en medio,",
+  "estrofas": [
+   [
+    {
+     "texto": "La noche estaba del silencio en medio,",
+     "sangria": 0
+    },
+    {
+     "texto": "y las cosas suspensas, aguardando",
+     "sangria": 0
+    },
+    {
+     "texto": "de la dichosa hora el punto, cuando",
+     "sangria": 0
+    },
+    {
+     "texto": "reciba el mundo sin igual remedio.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Puso entre el hombre y Dios la Virgen medio,",
+     "sangria": 0
+    },
+    {
+     "texto": "su consentir humilde al ángel dando,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el resplandor del Padre, así encarnando,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya vecino al nacer confirma el medio.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "María, de extremado gozo llena",
+     "sangria": 0
+    },
+    {
+     "texto": "y en vehemente ardor toda encendida,",
+     "sangria": 0
+    },
+    {
+     "texto": "pide que salga el Sol que la enamora.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vistióse de blancura y luz serena,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, sobre humanas fuerzas conmovida,",
+     "sangria": 0
+    },
+    {
+     "texto": "virgen y madre se mostró a la hora.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria y loores por la eternidad",
+     "sangria": 0
+    },
+    {
+     "texto": "tribútense a la Santa Trinidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 263,
+    "impresa": "263"
+   }
+  ]
+ },
+ {
+  "id": "decid-a-la-noche-clara",
+  "primer_verso": "Decid a la noche clara",
+  "estrofas": [
+   [
+    {
+     "texto": "Decid a la noche clara",
+     "sangria": 0
+    },
+    {
+     "texto": "tome en sus manos el arpa,",
+     "sangria": 0
+    },
+    {
+     "texto": "y salmos de David cante,",
+     "sangria": 0
+    },
+    {
+     "texto": "cante con la Virgen santa.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ángeles del cielo vienen,",
+     "sangria": 0
+    },
+    {
+     "texto": "de luz son las bellas alas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y un canto divino traen",
+     "sangria": 0
+    },
+    {
+     "texto": "para estas nupcias sagradas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y, al amanecer, las aves",
+     "sangria": 0
+    },
+    {
+     "texto": "y el alba que se levanta,",
+     "sangria": 0
+    },
+    {
+     "texto": "con silbos del universo",
+     "sangria": 0
+    },
+    {
+     "texto": "cantadle vuestra alabanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Del Padre eterno nacido,",
+     "sangria": 0
+    },
+    {
+     "texto": "nace en carne la Palabra,",
+     "sangria": 0
+    },
+    {
+     "texto": "con nosotros vida y muerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "y una muerte ensangrentada.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al Hijo de Dios cantemos,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Ay, gracia desenfrenada!",
+     "sangria": 0
+    },
+    {
+     "texto": "Ni los cielos sospecharon",
+     "sangria": 0
+    },
+    {
+     "texto": "que el mismo Dios se encarnara.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh gracia para adorar,",
+     "sangria": 0
+    },
+    {
+     "texto": "que nunca cupo más alta!",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú, para hacernos divinos,",
+     "sangria": 0
+    },
+    {
+     "texto": "humano a nosotros bajas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cantad, criaturas todas,",
+     "sangria": 0
+    },
+    {
+     "texto": "que todas estáis salvadas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y con la boca quedaos",
+     "sangria": 0
+    },
+    {
+     "texto": "al Padre diciendo: \"¡Gracias!\"",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 268,
+    "impresa": "268",
+    "pdf_fin": 269,
+    "impresa_fin": "269"
+   },
+   {
+    "tomo": 1,
+    "pdf": 290,
+    "impresa": "290"
+   }
+  ]
+ },
+ {
+  "id": "nino-que-por-darme-vida",
+  "primer_verso": "Niño, que por darme vida",
+  "estrofas": [
+   [
+    {
+     "texto": "Niño, que por darme vida",
+     "sangria": 0
+    },
+    {
+     "texto": "te pusiste mi vestido,",
+     "sangria": 0
+    },
+    {
+     "texto": "bien que te viene nacido,",
+     "sangria": 0
+    },
+    {
+     "texto": "mas no es hecho a tu medida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aunque eres, si bien se apura,",
+     "sangria": 0
+    },
+    {
+     "texto": "tan grande como tu Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy te da señora Madre",
+     "sangria": 0
+    },
+    {
+     "texto": "un vestido de criatura.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Traerásle toda la vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "sin mudar otro vestido,",
+     "sangria": 0
+    },
+    {
+     "texto": "mas andarás encogido,",
+     "sangria": 0
+    },
+    {
+     "texto": "por ser hecho a mi medida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No te vendrá nada holgado;",
+     "sangria": 0
+    },
+    {
+     "texto": "que, aunque paño baladí,",
+     "sangria": 0
+    },
+    {
+     "texto": "primero que dé de sí",
+     "sangria": 0
+    },
+    {
+     "texto": "le tendrás todo rasgado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y aun te costará la vida",
+     "sangria": 0
+    },
+    {
+     "texto": "el habértele vestido,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque te traerá molido",
+     "sangria": 0
+    },
+    {
+     "texto": "el ser hecho a mi medida.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al Mesías tributad,",
+     "sangria": 0
+    },
+    {
+     "texto": "que nos trajo salvación,",
+     "sangria": 0
+    },
+    {
+     "texto": "honor, gloria y bendición",
+     "sangria": 0
+    },
+    {
+     "texto": "por toda la eternidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 269,
+    "impresa": "269",
+    "pdf_fin": 270,
+    "impresa_fin": "270"
+   }
+  ]
+ },
+ {
+  "id": "sobre-la-noche-reina",
+  "primer_verso": "Sobre la noche reina",
+  "estrofas": [
+   [
+    {
+     "texto": "Sobre la noche reina",
+     "sangria": 0
+    },
+    {
+     "texto": "la luz de tu esplendor;",
+     "sangria": 0
+    },
+    {
+     "texto": "en medio del silencio,",
+     "sangria": 0
+    },
+    {
+     "texto": "el eco de tu voz.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Huyó de nuestra carne",
+     "sangria": 0
+    },
+    {
+     "texto": "la densa oscuridad;",
+     "sangria": 0
+    },
+    {
+     "texto": "florece la luz nueva",
+     "sangria": 0
+    },
+    {
+     "texto": "de tu inmortalidad.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Nos ha nacido un niño,",
+     "sangria": 0
+    },
+    {
+     "texto": "un hijo se nos dio;",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy brilla la esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "de nuestra salvación.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 272,
+    "impresa": "272"
+   }
+  ]
+ },
+ {
+  "id": "alegrese-tierra-y-cielo",
+  "primer_verso": "Alégrese tierra y cielo,",
+  "estrofas": [
+   [
+    {
+     "texto": "Alégrese tierra y cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues el Verbo que ha nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "viene, siendo Dios, vestido",
+     "sangria": 0
+    },
+    {
+     "texto": "de carne en humano velo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De la raíz de Jesé",
+     "sangria": 0
+    },
+    {
+     "texto": "salió la graciosa vara",
+     "sangria": 0
+    },
+    {
+     "texto": "de más frescor y más clara",
+     "sangria": 0
+    },
+    {
+     "texto": "que en jamás será ni fue.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Della hizo el Verbo cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y fue tan esclarecido,",
+     "sangria": 0
+    },
+    {
+     "texto": "que sale de allí vestido",
+     "sangria": 0
+    },
+    {
+     "texto": "de carne en humano velo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La nieve siente y el hielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "aunque es Dios de Dios venido,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque Dios está vestido",
+     "sangria": 0
+    },
+    {
+     "texto": "de carne en humano velo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En traje de humanidad",
+     "sangria": 0
+    },
+    {
+     "texto": "nace el Verbo con cuidado",
+     "sangria": 0
+    },
+    {
+     "texto": "por destruir el pecado",
+     "sangria": 0
+    },
+    {
+     "texto": "y dar a Dios su heredad.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Quiere dar al hombre el cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "por ser su amor tan subido;",
+     "sangria": 0
+    },
+    {
+     "texto": "y, ansí, se muestra vestido",
+     "sangria": 0
+    },
+    {
+     "texto": "de carne en humano velo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "A la Santa Trinidad",
+     "sangria": 0
+    },
+    {
+     "texto": "que nos dio la redención,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria, honor y bendición",
+     "sangria": 0
+    },
+    {
+     "texto": "por toda la eternidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 273,
+    "impresa": "273",
+    "pdf_fin": 274,
+    "impresa_fin": "274"
+   }
+  ]
+ },
+ {
+  "id": "entonad-los-aires",
+  "primer_verso": "Entonad los aires",
+  "estrofas": [
+   [
+    {
+     "texto": "Entonad los aires",
+     "sangria": 0
+    },
+    {
+     "texto": "con voz celestial:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Dios niño ha nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "pobre en un portal.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Anúnciale el ángel",
+     "sangria": 0
+    },
+    {
+     "texto": "la nueva al pastor,",
+     "sangria": 0
+    },
+    {
+     "texto": "que niño ha nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "nuestro Salvador.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Adoran pastores",
+     "sangria": 0
+    },
+    {
+     "texto": "en sombras al Sol,",
+     "sangria": 0
+    },
+    {
+     "texto": "que niño ha nacido,",
+     "sangria": 0
+    },
+    {
+     "texto": "de una Virgen, Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Haciéndose hombre,",
+     "sangria": 0
+    },
+    {
+     "texto": "al hombre salvó;",
+     "sangria": 0
+    },
+    {
+     "texto": "un niño ha nacido,",
+     "sangria": 0
+    },
+    {
+     "texto": "ha nacido Dios.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 279,
+    "impresa": "279"
+   }
+  ]
+ },
+ {
+  "id": "un-tan-hermoso-doncel",
+  "primer_verso": "Un tan hermoso Doncel",
+  "estrofas": [
+   [
+    {
+     "texto": "Un tan hermoso Doncel",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy ha nacido en el suelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "que la luna y sol del cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "no lucen delante de él.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Es un Niño en quien se halla",
+     "sangria": 0
+    },
+    {
+     "texto": "hermosura tan sin par,",
+     "sangria": 0
+    },
+    {
+     "texto": "que no se pueden hartar",
+     "sangria": 0
+    },
+    {
+     "texto": "los ángeles de miralla.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y aun lo menos que hay en él",
+     "sangria": 0
+    },
+    {
+     "texto": "es lo que mostró en el suelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues la luna y sol del cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "no lucen delante de él.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Nació este hermoso Doncel",
+     "sangria": 0
+    },
+    {
+     "texto": "de una graciosa Doncella,",
+     "sangria": 0
+    },
+    {
+     "texto": "después de Dios la más bella",
+     "sangria": 0
+    },
+    {
+     "texto": "de todo lo que no es él.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Como al fin Madre de aquel",
+     "sangria": 0
+    },
+    {
+     "texto": "que es Rey del cielo y del suelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y que las lumbres del cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "no lucen delante de él.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al Padre, al Hijo, al Amor,",
+     "sangria": 0
+    },
+    {
+     "texto": "alegres cantad, criaturas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y resuene en las alturas",
+     "sangria": 0
+    },
+    {
+     "texto": "toda gloria y todo honor.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 279,
+    "impresa": "279",
+    "pdf_fin": 280,
+    "impresa_fin": "280"
+   }
+  ]
+ },
+ {
+  "id": "senor-jesus-el-hombre-en-este-suelo",
+  "primer_verso": "Señor Jesús, el hombre en este suelo",
+  "estrofas": [
+   [
+    {
+     "texto": "Señor Jesús, el hombre en este suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "cantar quiere tu amor,",
+     "sangria": 1
+    },
+    {
+     "texto": "y, junto con los ángeles del cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "te ofrece su loor.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Este Jesús en brazos de María",
+     "sangria": 0
+    },
+    {
+     "texto": "es nuestra redención;",
+     "sangria": 1
+    },
+    {
+     "texto": "cielos y tierra con su abrazo unía",
+     "sangria": 0
+    },
+    {
+     "texto": "de paz y de perdón.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Tú eres el Rey de Paz, de ti recibe",
+     "sangria": 0
+    },
+    {
+     "texto": "su luz el porvenir;",
+     "sangria": 1
+    },
+    {
+     "texto": "Ángel del gran Consejo, por ti vive",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando llega a existir.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "A ti, Señor, y al Padre la alabanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "y de ambos al Amor.",
+     "sangria": 1
+    },
+    {
+     "texto": "Contigo al mundo llega la esperanza;",
+     "sangria": 0
+    },
+    {
+     "texto": "a ti gloria y honor.",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 283,
+    "impresa": "283"
+   },
+   {
+    "tomo": 1,
+    "pdf": 293,
+    "impresa": "293",
+    "pdf_fin": 294,
+    "impresa_fin": "294"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «de-un-dios-que-se-encarno-muestra-el-misterio-2»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "reina-del-libro-de-la-vieja-alianza",
+  "primer_verso": "Reina del libro de la vieja alianza:",
+  "estrofas": [
+   [
+    {
+     "texto": "Reina del libro de la vieja alianza:",
+     "sangria": 0
+    },
+    {
+     "texto": "tu nombre es el versículo primero",
+     "sangria": 0
+    },
+    {
+     "texto": "de consuelo, promesa y esperanza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Doncella que en tu vientre a Dios tendrías:",
+     "sangria": 0
+    },
+    {
+     "texto": "se estremece de júbilo tu nombre",
+     "sangria": 0
+    },
+    {
+     "texto": "en los labios quemados de Isaías.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Reina del libro nuevo de la vida:",
+     "sangria": 0
+    },
+    {
+     "texto": "reinas desde el silencio en cada página,",
+     "sangria": 0
+    },
+    {
+     "texto": "oh reina silenciosa y escondida,",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "y es tu presencia la del tallo leve que,",
+     "sangria": 0
+    },
+    {
+     "texto": "al reventar el lirio, se recata",
+     "sangria": 0
+    },
+    {
+     "texto": "debajo de los pétalos de nieve.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Reina del claro mes de los renuevos,",
+     "sangria": 0
+    },
+    {
+     "texto": "de la infancia del mundo y de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "y de la luz y de los nidos nuevos,",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "y Reina nuestra; Reina de las manos,",
+     "sangria": 0
+    },
+    {
+     "texto": "con sangre y con estrellas, de tu Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "con flores y dolor, de sus hermanos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los ángeles te aclaman soberana,",
+     "sangria": 0
+    },
+    {
+     "texto": "pero mil veces más eres, Señora,",
+     "sangria": 0
+    },
+    {
+     "texto": "sangre y dolor de nuestra raza humana.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 283,
+    "impresa": "283",
+    "pdf_fin": 284,
+    "impresa_fin": "284"
+   },
+   {
+    "tomo": 1,
+    "pdf": 294,
+    "impresa": "294"
+   }
+  ]
+ },
+ {
+  "id": "lucero-del-alba",
+  "primer_verso": "Lucero del alba,",
+  "estrofas": [
+   [
+    {
+     "texto": "Lucero del alba,",
+     "sangria": 0
+    },
+    {
+     "texto": "luz de mi alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Virgen y Madre,",
+     "sangria": 0
+    },
+    {
+     "texto": "Hija del Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Flor del Espíritu,",
+     "sangria": 0
+    },
+    {
+     "texto": "Madre del Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    },
+    {
+     "texto": "Amor maternal",
+     "sangria": 0
+    },
+    {
+     "texto": "del Cristo total",
+     "sangria": 0
+    },
+    {
+     "texto": "santa María.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 285,
+    "impresa": "285",
+    "pdf_fin": 286,
+    "impresa_fin": "286"
+   }
+  ]
+ },
+ {
+  "id": "de-la-raiz-de-jese",
+  "primer_verso": "De la raíz de Jesé",
+  "estrofas": [
+   [
+    {
+     "texto": "De la raíz de Jesé",
+     "sangria": 0
+    },
+    {
+     "texto": "dio la vara bella flor,",
+     "sangria": 0
+    },
+    {
+     "texto": "fecundo parto ha tenido",
+     "sangria": 0
+    },
+    {
+     "texto": "sin mengua de su pudor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Feliz recibe el pesebre",
+     "sangria": 0
+    },
+    {
+     "texto": "a quien la luz fabricó,",
+     "sangria": 0
+    },
+    {
+     "texto": "con el Padre hizo los cielos",
+     "sangria": 0
+    },
+    {
+     "texto": "y está entre pañales hoy.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Al mundo le ha dado leyes",
+     "sangria": 0
+    },
+    {
+     "texto": "y diez esas leyes son,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al hacerse hombre no quiso",
+     "sangria": 0
+    },
+    {
+     "texto": "romper la ley, la cumplió.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ha nacido ya la luz,",
+     "sangria": 0
+    },
+    {
+     "texto": "muere la muerte, y huyó",
+     "sangria": 0
+    },
+    {
+     "texto": "la noche, venid, oh pueblos,",
+     "sangria": 0
+    },
+    {
+     "texto": "que María trajo a Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "A ti, Jesús, de la Virgen",
+     "sangria": 0
+    },
+    {
+     "texto": "nacido, gloria y honor,",
+     "sangria": 0
+    },
+    {
+     "texto": "con el Padre y el Paráclito,",
+     "sangria": 0
+    },
+    {
+     "texto": "sempiterna adoración.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 286,
+    "impresa": "286"
+   }
+  ]
+ },
+ {
+  "id": "lucero-del-alba-2",
+  "primer_verso": "Lucero del alba,",
+  "estrofas": [
+   [
+    {
+     "texto": "Lucero del alba,",
+     "sangria": 0
+    },
+    {
+     "texto": "aurora estremecida,",
+     "sangria": 0
+    },
+    {
+     "texto": "luz de mi alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "Santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Hija del Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "doncella en gracia concebida,",
+     "sangria": 0
+    },
+    {
+     "texto": "virgen y madre,",
+     "sangria": 0
+    },
+    {
+     "texto": "Santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Flor del Espíritu,",
+     "sangria": 0
+    },
+    {
+     "texto": "ave, blancura, caricia,",
+     "sangria": 0
+    },
+    {
+     "texto": "madre del Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "Santa María.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Llena de ternura,",
+     "sangria": 0
+    },
+    {
+     "texto": "bendita entre las benditas,",
+     "sangria": 0
+    },
+    {
+     "texto": "madre de todos los hombres,",
+     "sangria": 0
+    },
+    {
+     "texto": "Santa María.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 290,
+    "impresa": "290",
+    "pdf_fin": 291,
+    "impresa_fin": "291"
+   }
+  ]
+ },
+ {
+  "id": "naciste-del-padre-sin-principio",
+  "primer_verso": "Naciste del Padre, sin principio,",
+  "estrofas": [
+   [
+    {
+     "texto": "Naciste del Padre, sin principio,",
+     "sangria": 0
+    },
+    {
+     "texto": "antes que la luz resplandeciera;",
+     "sangria": 0
+    },
+    {
+     "texto": "del seno sin mancha de María",
+     "sangria": 0
+    },
+    {
+     "texto": "surges como luz en las tinieblas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los pobres acuden a adorarte,",
+     "sangria": 0
+    },
+    {
+     "texto": "solos, ellos velan en la noche,",
+     "sangria": 0
+    },
+    {
+     "texto": "sintiendo admirados en tu llanto",
+     "sangria": 0
+    },
+    {
+     "texto": "la voz del Pastor de los pastores.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El mundo se alegra en este día,",
+     "sangria": 0
+    },
+    {
+     "texto": "gozan los patriarcas, los profetas;",
+     "sangria": 0
+    },
+    {
+     "texto": "la flor ha nacido de la rama,",
+     "sangria": 0
+    },
+    {
+     "texto": "flor que ha perfumado nuestra Iglesia.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los ángeles cantan hoy tu gloria,",
+     "sangria": 0
+    },
+    {
+     "texto": "Padre, que enviaste a Jesucristo;",
+     "sangria": 0
+    },
+    {
+     "texto": "unimos con ellos nuestras voces,",
+     "sangria": 0
+    },
+    {
+     "texto": "oye, bondadoso, nuestros himnos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 298,
+    "impresa": "298"
+   }
+  ]
+ },
+ {
+  "id": "confiada-mira-la-luz-dorada",
+  "primer_verso": "Confiada mira la luz dorada",
+  "estrofas": [
+   [
+    {
+     "texto": "Confiada mira la luz dorada",
+     "sangria": 0
+    },
+    {
+     "texto": "que a ti hoy llega, Jerusalén:",
+     "sangria": 0
+    },
+    {
+     "texto": "de tu Mesías ve la alborada",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre Belén.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El mundo todo ve hoy gozoso",
+     "sangria": 0
+    },
+    {
+     "texto": "la luz divina sobre Israel;",
+     "sangria": 0
+    },
+    {
+     "texto": "la estrella muestra al prodigioso",
+     "sangria": 0
+    },
+    {
+     "texto": "rey Emmanuel.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya los tres magos, desde el Oriente,",
+     "sangria": 0
+    },
+    {
+     "texto": "la estrella viendo, van de ella en pos;",
+     "sangria": 0
+    },
+    {
+     "texto": "dan sus primicias de amor ferviente",
+     "sangria": 0
+    },
+    {
+     "texto": "al niño Dios.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ofrenda de oro que es Rey declara,",
+     "sangria": 0
+    },
+    {
+     "texto": "incienso ofrece a Dios su olor,",
+     "sangria": 0
+    },
+    {
+     "texto": "predice mirra muerte preclara,",
+     "sangria": 0
+    },
+    {
+     "texto": "pasión, dolor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La voz del Padre, Cristo, te llama",
+     "sangria": 0
+    },
+    {
+     "texto": "su predilecto, sobre el Jordán.",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios en los hombres hoy te proclaman",
+     "sangria": 0
+    },
+    {
+     "texto": "valiente Juan.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Virtud divina resplandecía",
+     "sangria": 0
+    },
+    {
+     "texto": "del que del agua vino sacó,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando el anuncio de Eucaristía",
+     "sangria": 0
+    },
+    {
+     "texto": "Caná bebió.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "A darte gloria, Señor, invita",
+     "sangria": 0
+    },
+    {
+     "texto": "la luz que al hombre viniste a dar,",
+     "sangria": 0
+    },
+    {
+     "texto": "luz que nos trae gloria infinita",
+     "sangria": 0
+    },
+    {
+     "texto": "de amor sin par.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 332,
+    "impresa": "332"
+   },
+   {
+    "tomo": 1,
+    "pdf": 335,
+    "impresa": "335"
+   },
+   {
+    "tomo": 1,
+    "pdf": 350,
+    "impresa": "350",
+    "pdf_fin": 351,
+    "impresa_fin": "351"
+   }
+  ]
+ },
+ {
+  "id": "ayer-en-leve-centella",
+  "primer_verso": "Ayer, en leve centella,",
+  "estrofas": [
+   [
+    {
+     "texto": "Ayer, en leve centella,",
+     "sangria": 0
+    },
+    {
+     "texto": "te vio Moisés sobre el monte;",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy no basta el horizonte",
+     "sangria": 0
+    },
+    {
+     "texto": "para contener tu estrella.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los magos preguntan; y ella",
+     "sangria": 0
+    },
+    {
+     "texto": "de un Dios infante responde",
+     "sangria": 0
+    },
+    {
+     "texto": "que en duras pajas se acuesta",
+     "sangria": 0
+    },
+    {
+     "texto": "y más se nos manifiesta",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando más hondo se esconde.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 333,
+    "impresa": "333"
+   }
+  ]
+ },
+ {
+  "id": "reyes-que-venis-por-ellas",
+  "primer_verso": "Reyes que venís por ellas,",
+  "estrofas": [
+   [
+    {
+     "texto": "Reyes que venís por ellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "no busquéis estrellas ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mirando sus luces bellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "no sigáis la vuestra ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aquí parad, que aquí está",
+     "sangria": 0
+    },
+    {
+     "texto": "quien luz a los cielos da:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios es el puerto más cierto,",
+     "sangria": 0
+    },
+    {
+     "texto": "si habéis hallado puerto",
+     "sangria": 0
+    },
+    {
+     "texto": "no busquéis estrellas ya.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No busquéis la estrella ahora:",
+     "sangria": 0
+    },
+    {
+     "texto": "que su luz ha oscurecido",
+     "sangria": 0
+    },
+    {
+     "texto": "este Sol recién nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "en esta Virgen Aurora.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya no hallaréis luz en ellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "el Niño os alumbra ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aunque eclipsarse pretende,",
+     "sangria": 0
+    },
+    {
+     "texto": "no reparéis en su llanto,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque nunca llueve tanto",
+     "sangria": 0
+    },
+    {
+     "texto": "como cuando el sol se enciende.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aquellas lágrimas bellas",
+     "sangria": 0
+    },
+    {
+     "texto": "la estrella oscurecen ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 333,
+    "impresa": "333",
+    "pdf_fin": 334,
+    "impresa_fin": "334"
+   }
+  ]
+ },
+ {
+  "id": "6-de-enero",
+  "primer_verso": "6 de enero",
+  "estrofas": [
+   [
+    {
+     "texto": "6 de enero",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 335,
+    "impresa": "335"
+   }
+  ]
+ },
+ {
+  "id": "domingo-que-ocurre-entre-los-dias-2-y-el-8-de-enero",
+  "primer_verso": "domingo que ocurre entre los días 2 y el 8 de enero",
+  "estrofas": [
+   [
+    {
+     "texto": "domingo que ocurre entre los días 2 y el 8 de enero",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 335,
+    "impresa": "335"
+   }
+  ]
+ },
+ {
+  "id": "reyes-que-venis-por-ellas-2",
+  "primer_verso": "Reyes que venís por ellas,",
+  "estrofas": [
+   [
+    {
+     "texto": "Reyes que venís por ellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "no busquéis estrellas ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mirando sus luces bellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "no sigáis la vuestra ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aquí parad, que aquí está",
+     "sangria": 0
+    },
+    {
+     "texto": "quien luz a los cielos da:",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios es el puerto más cierto,",
+     "sangria": 0
+    },
+    {
+     "texto": "y si habéis hallado puerto",
+     "sangria": 0
+    },
+    {
+     "texto": "no busquéis estrellas ya.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No busquéis la estrella ahora:",
+     "sangria": 0
+    },
+    {
+     "texto": "que su luz ha oscurecido",
+     "sangria": 0
+    },
+    {
+     "texto": "este Sol recién nacido",
+     "sangria": 0
+    },
+    {
+     "texto": "en esta Virgen Aurora.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ya no hallaréis luz en ellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "el Niño os alumbra ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aunque eclipsarse pretende,",
+     "sangria": 0
+    },
+    {
+     "texto": "no reparéis en su llanto,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque nunca llueve tanto",
+     "sangria": 0
+    },
+    {
+     "texto": "como cuando el sol se enciende.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aquellas lágrimas bellas",
+     "sangria": 0
+    },
+    {
+     "texto": "la estrella oscurecen ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque donde el sol está",
+     "sangria": 0
+    },
+    {
+     "texto": "no tienen luz las estrellas.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 335,
+    "impresa": "335",
+    "pdf_fin": 336,
+    "impresa_fin": "336"
+   },
+   {
+    "tomo": 1,
+    "pdf": 345,
+    "impresa": "345"
+   },
+   {
+    "tomo": 1,
+    "pdf": 351,
+    "impresa": "351",
+    "pdf_fin": 352,
+    "impresa_fin": "352"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «reyes-que-venis-por-ellas»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "ayer-en-leve-centella-2",
+  "primer_verso": "Ayer, en leve centella,",
+  "estrofas": [
+   [
+    {
+     "texto": "Ayer, en leve centella,",
+     "sangria": 0
+    },
+    {
+     "texto": "te vio Moisés sobre el monte;",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy no basta el horizonte",
+     "sangria": 0
+    },
+    {
+     "texto": "para contener tu estrella.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los magos preguntan; y ella",
+     "sangria": 0
+    },
+    {
+     "texto": "de un Dios infante responde",
+     "sangria": 0
+    },
+    {
+     "texto": "que en duras pajas se acuesta",
+     "sangria": 0
+    },
+    {
+     "texto": "y más se nos manifiesta",
+     "sangria": 0
+    },
+    {
+     "texto": "cuanto más hondo se esconde.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 339,
+    "impresa": "339",
+    "pdf_fin": 340,
+    "impresa_fin": "340"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «ayer-en-leve-centella»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "estrella-nunca-vista-se-aparece",
+  "primer_verso": "Estrella nunca vista se aparece",
+  "estrofas": [
+   [
+    {
+     "texto": "Estrella nunca vista se aparece",
+     "sangria": 0
+    },
+    {
+     "texto": "a los remotos magos orientales,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, al juzgar de los fuegos celestiales,",
+     "sangria": 0
+    },
+    {
+     "texto": "otra lumbre mayor los esclarece.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Nacido sacro Rey se les ofrece,",
+     "sangria": 0
+    },
+    {
+     "texto": "con nuevas maravillas y señales,",
+     "sangria": 0
+    },
+    {
+     "texto": "para que reverentes y leales",
+     "sangria": 0
+    },
+    {
+     "texto": "la obediencia le den como merece.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Parten llevados de la luz y el fuego,",
+     "sangria": 0
+    },
+    {
+     "texto": "del fuego de su amor; luz que los guía",
+     "sangria": 0
+    },
+    {
+     "texto": "con claridad ardiente y soberana.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Subió al trono de Dios el pío ruego,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, llenos de firmísima alegría,",
+     "sangria": 0
+    },
+    {
+     "texto": "vieron la luz de Dios por nube humana.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria y loores por la eternidad",
+     "sangria": 0
+    },
+    {
+     "texto": "tribútense a la Santa Trinidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 345,
+    "impresa": "345",
+    "pdf_fin": 346,
+    "impresa_fin": "346"
+   }
+  ]
+ },
+ {
+  "id": "mas-por-que-se-ha-de-lavar",
+  "primer_verso": "Mas ¿por qué se ha de lavar",
+  "estrofas": [
+   [
+    {
+     "texto": "Mas ¿por qué se ha de lavar",
+     "sangria": 0
+    },
+    {
+     "texto": "el Autor de la limpieza?",
+     "sangria": 0
+    },
+    {
+     "texto": "Porque el bautismo hoy empieza",
+     "sangria": 0
+    },
+    {
+     "texto": "y él lo quiere inaugurar.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Juan es gracia y tiene tantas,",
+     "sangria": 0
+    },
+    {
+     "texto": "que confiesa el mundo de él",
+     "sangria": 0
+    },
+    {
+     "texto": "que hombre no nació mayor",
+     "sangria": 0
+    },
+    {
+     "texto": "ni delante ni después.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y, para que hubiera alguno",
+     "sangria": 0
+    },
+    {
+     "texto": "mayor que él, fue menester",
+     "sangria": 0
+    },
+    {
+     "texto": "que viniera a hacerse hombre",
+     "sangria": 0
+    },
+    {
+     "texto": "la Palabra que Dios es.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Esta Palabra hecha carne",
+     "sangria": 0
+    },
+    {
+     "texto": "que ahora Juan tiene a sus pies",
+     "sangria": 0
+    },
+    {
+     "texto": "esperando que la lave",
+     "sangria": 0
+    },
+    {
+     "texto": "sin haber hecho por qué.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y se rompe todo el cielo",
+     "sangria": 0
+    },
+    {
+     "texto": "y entre las nubes se ve",
+     "sangria": 0
+    },
+    {
+     "texto": "una paloma que viene",
+     "sangria": 0
+    },
+    {
+     "texto": "a posarse sobre él.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y se oye la voz del Padre",
+     "sangria": 0
+    },
+    {
+     "texto": "que grita:”Tratadlo bien:",
+     "sangria": 0
+    },
+    {
+     "texto": "escuchadle, es el Maestro,",
+     "sangria": 0
+    },
+    {
+     "texto": "mi Hijo querido es”.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y así Juan, al mismo tiempo,",
+     "sangria": 0
+    },
+    {
+     "texto": "vio a Dios en personas tres,",
+     "sangria": 0
+    },
+    {
+     "texto": "voz y paloma en los cielos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Verbo eterno a sus pies.",
+     "sangria": 0
+    },
+    {
+     "texto": "",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 387,
+    "impresa": "387"
+   },
+   {
+    "tomo": 1,
+    "pdf": 398,
+    "impresa": "398"
+   }
+  ]
+ },
+ {
+  "id": "porque-el-bautismo-hoy-empieza",
+  "primer_verso": "Porque el bautismo hoy empieza",
+  "estrofas": [
+   [
+    {
+     "texto": "Porque el bautismo hoy empieza",
+     "sangria": 0
+    },
+    {
+     "texto": "y él lo quiere inaugurar,",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy se ha venido a lavar",
+     "sangria": 0
+    },
+    {
+     "texto": "el Autor de la limpieza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aunque es santo y redentor,",
+     "sangria": 0
+    },
+    {
+     "texto": "nos da ejemplo singular:",
+     "sangria": 0
+    },
+    {
+     "texto": "se quiere hoy purificar",
+     "sangria": 0
+    },
+    {
+     "texto": "como cualquier pecador.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Aunque él mismo es la Hermosura",
+     "sangria": 0
+    },
+    {
+     "texto": "y no hay hermosura par,",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy quiere al agua bajar",
+     "sangria": 0
+    },
+    {
+     "texto": "y hermosear nuestra basura.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Nadie lo hubiera pensado:",
+     "sangria": 0
+    },
+    {
+     "texto": "vino el pecado a quitar,",
+     "sangria": 0
+    },
+    {
+     "texto": "y se hace ahora pasar",
+     "sangria": 0
+    },
+    {
+     "texto": "por pecador y pecado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gracias, Bondad y Belleza,",
+     "sangria": 0
+    },
+    {
+     "texto": "pues te quisiste humillar",
+     "sangria": 0
+    },
+    {
+     "texto": "y no te pesó lavar",
+     "sangria": 0
+    },
+    {
+     "texto": "tu santidad y pureza.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 388,
+    "impresa": "388"
+   },
+   {
+    "tomo": 1,
+    "pdf": 398,
+    "impresa": "398",
+    "pdf_fin": 399,
+    "impresa_fin": "399"
+   }
+  ]
+ },
+ {
+  "id": "una-voz-se-levanta-en-el-llano",
+  "primer_verso": "Una voz se levanta en el llano:",
+  "estrofas": [
+   [
+    {
+     "texto": "Una voz se levanta en el llano:",
+     "sangria": 0
+    },
+    {
+     "texto": "Convertios y haced penitencias;",
+     "sangria": 0
+    },
+    {
+     "texto": "el Señor se sumerge en las aguas",
+     "sangria": 0
+    },
+    {
+     "texto": "para darnos la vida por ellas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En Caná manifiesta su gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "con el cambio del agua en el vino,",
+     "sangria": 0
+    },
+    {
+     "texto": "esperando la hora fijada",
+     "sangria": 0
+    },
+    {
+     "texto": "en que habrá de explicar este signo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Escuchando tu voz, Padre amado,",
+     "sangria": 0
+    },
+    {
+     "texto": "veneramos a tu único Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre el cual el Espíritu Santo",
+     "sangria": 0
+    },
+    {
+     "texto": "descendió para ser tu testigo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 389,
+    "impresa": "389",
+    "pdf_fin": 390,
+    "impresa_fin": "390"
+   }
+  ]
+ },
+ {
+  "id": "hoy-dos-extremos-se-han-visto",
+  "primer_verso": "Hoy dos extremos se han visto,",
+  "estrofas": [
+   [
+    {
+     "texto": "Hoy dos extremos se han visto,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuales nunca se verán:",
+     "sangria": 0
+    },
+    {
+     "texto": "Cristo arrodillado a Juan,",
+     "sangria": 0
+    },
+    {
+     "texto": "y Juan bautizando a Cristo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El mar y abismo profundo",
+     "sangria": 0
+    },
+    {
+     "texto": "de la pureza infinita,",
+     "sangria": 0
+    },
+    {
+     "texto": "que las inmundicias quita",
+     "sangria": 0
+    },
+    {
+     "texto": "y los pecados del mundo,",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "hoy del Bautista se ha visto",
+     "sangria": 0
+    },
+    {
+     "texto": "ser lavado en el Jordán;",
+     "sangria": 0
+    },
+    {
+     "texto": "Cristo arrodillado a Juan,",
+     "sangria": 0
+    },
+    {
+     "texto": "y Juan bautizando a Cristo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bautiza la voz al Verbo,",
+     "sangria": 0
+    },
+    {
+     "texto": "el criado al Criador;",
+     "sangria": 0
+    },
+    {
+     "texto": "ved qué humildad de Señor",
+     "sangria": 0
+    },
+    {
+     "texto": "y qué autoridad de siervo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Favor otra vez no visto",
+     "sangria": 0
+    },
+    {
+     "texto": "entre los hijos de Adán,",
+     "sangria": 0
+    },
+    {
+     "texto": "Cristo arrodillado a Juan,",
+     "sangria": 0
+    },
+    {
+     "texto": "y Juan bautizando a Cristo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los cielos se abren, y allí",
+     "sangria": 0
+    },
+    {
+     "texto": "la Voz del Padre ha entonado:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Aqueste es mi Hijo amado,",
+     "sangria": 0
+    },
+    {
+     "texto": "en el cual me complací.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y el Paracleto se ha visto,",
+     "sangria": 0
+    },
+    {
+     "texto": "testificando que están",
+     "sangria": 0
+    },
+    {
+     "texto": "Cristo arrodillado a Juan,",
+     "sangria": 0
+    },
+    {
+     "texto": "y Juan bautizando a Cristo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Qué grande misterio encierra",
+     "sangria": 0
+    },
+    {
+     "texto": "el Jordán; cantad, criaturas:",
+     "sangria": 0
+    },
+    {
+     "texto": "«Gloria a Dios en las alturas",
+     "sangria": 0
+    },
+    {
+     "texto": "y paz al hombre en la tierra.»",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 390,
+    "impresa": "390",
+    "pdf_fin": 391,
+    "impresa_fin": "391"
+   }
+  ]
+ },
+ {
+  "id": "a-la-orilla-del-jordan",
+  "primer_verso": "A la orilla del Jordán,",
+  "estrofas": [
+   [
+    {
+     "texto": "A la orilla del Jordán,",
+     "sangria": 0
+    },
+    {
+     "texto": "descalza el alma y los pies,",
+     "sangria": 0
+    },
+    {
+     "texto": "bajan buscando pureza",
+     "sangria": 0
+    },
+    {
+     "texto": "doce tribus de Israel.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Piensan que a la puerta está",
+     "sangria": 0
+    },
+    {
+     "texto": "el Mesías del Señor",
+     "sangria": 0
+    },
+    {
+     "texto": "y que para recibirle",
+     "sangria": 0
+    },
+    {
+     "texto": "gran limpieza es menester.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bajan hombres y mujeres,",
+     "sangria": 0
+    },
+    {
+     "texto": "pobres y ricos también,",
+     "sangria": 0
+    },
+    {
+     "texto": "y Juan, sobre todos ellos,",
+     "sangria": 0
+    },
+    {
+     "texto": "derrama el agua y la fe.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mas ¿por qué se ha de lavar",
+     "sangria": 0
+    },
+    {
+     "texto": "el Autor de la limpieza?",
+     "sangria": 0
+    },
+    {
+     "texto": "Porque el bautismo hoy empieza",
+     "sangria": 0
+    },
+    {
+     "texto": "y él lo quiere inaugurar.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 395,
+    "impresa": "395"
+   }
+  ]
+ },
+ {
+  "id": "a-la-orilla-del-jordan-2",
+  "primer_verso": "A la orilla del Jordán,",
+  "estrofas": [
+   [
+    {
+     "texto": "A la orilla del Jordán,",
+     "sangria": 0
+    },
+    {
+     "texto": "descalza el alma y los pies,",
+     "sangria": 0
+    },
+    {
+     "texto": "bajan buscando pureza",
+     "sangria": 0
+    },
+    {
+     "texto": "doce tribus de Israel.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Piensan que a la puerta está",
+     "sangria": 0
+    },
+    {
+     "texto": "el Mesías del Señor",
+     "sangria": 0
+    },
+    {
+     "texto": "y que para recibirle",
+     "sangria": 0
+    },
+    {
+     "texto": "gran limpieza es menester.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Bajan hombres y mujeres,",
+     "sangria": 0
+    },
+    {
+     "texto": "pobres y ricos también,",
+     "sangria": 0
+    },
+    {
+     "texto": "y Juan, sobre todos ellos,",
+     "sangria": 0
+    },
+    {
+     "texto": "derrama el agua y la fe.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mas ¿por qué se ha de lavar",
+     "sangria": 0
+    },
+    {
+     "texto": "a la Pureza, por qué?",
+     "sangria": 0
+    },
+    {
+     "texto": "Porque el bautismo hoy empieza",
+     "sangria": 0
+    },
+    {
+     "texto": "y ha comenzado por él.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 395,
+    "impresa": "395"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «a-la-orilla-del-jordan»: ¿es el mismo himno con otra redacción?"
+ }
+]

@@ -1,0 +1,281 @@
+Controles — Propio del tiempo · Cuaresma (tomo II) — todos pasan
+Piezas marcadas para revisar: 12 · diferencias entre tomos: 0
+
+[OK ] Cobertura: 12907/12907 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 2 · pdf 1185: 100 %
+      tomo 2 · pdf 1186: 100 %
+      tomo 2 · pdf 1187: 100 %
+      tomo 2 · pdf 1188: 100 %
+      tomo 2 · pdf 1189: 100 %
+      tomo 2 · pdf 1190: 100 %
+      tomo 2 · pdf 1191: 100 %
+      tomo 2 · pdf 1192: 100 %
+      tomo 2 · pdf 1193: 100 %
+      tomo 2 · pdf 1194: 100 %
+      tomo 2 · pdf 1195: 100 %
+      tomo 2 · pdf 1196: 100 %
+      tomo 2 · pdf 1197: 100 %
+      tomo 2 · pdf 1198: 100 %
+      tomo 2 · pdf 1199: 100 %
+      tomo 2 · pdf 1200: 100 %
+      tomo 2 · pdf 1201: 100 %
+      tomo 2 · pdf 1202: 100 %
+      tomo 2 · pdf 1203: 100 %
+      tomo 2 · pdf 1204: 100 %
+      tomo 2 · pdf 1205: 100 %
+      tomo 2 · pdf 1206: 100 %
+      tomo 2 · pdf 1207: 100 %
+      tomo 2 · pdf 1208: 100 %
+      tomo 2 · pdf 1209: 100 %
+      tomo 2 · pdf 1210: 100 %
+      tomo 2 · pdf 1211: 100 %
+      tomo 2 · pdf 1212: 100 %
+      tomo 2 · pdf 1213: 100 %
+      tomo 2 · pdf 1214: 100 %
+      tomo 2 · pdf 1215: 100 %
+      tomo 2 · pdf 1216: 100 %
+      tomo 2 · pdf 1217: 100 %
+      tomo 2 · pdf 1218: 100 %
+      tomo 2 · pdf 1219: 100 %
+      tomo 2 · pdf 1220: 100 %
+      tomo 2 · pdf 1221: 100 %
+      tomo 2 · pdf 1222: 100 %
+      tomo 2 · pdf 1223: 100 %
+      tomo 2 · pdf 1224: 100 %
+      tomo 2 · pdf 1225: 100 %
+      tomo 2 · pdf 1226: 100 %
+      tomo 2 · pdf 1227: 100 %
+      tomo 2 · pdf 1228: 100 %
+      tomo 2 · pdf 1229: 100 %
+      tomo 2 · pdf 1230: 100 %
+      tomo 2 · pdf 1231: 100 %
+      tomo 2 · pdf 1232: 100 %
+      tomo 2 · pdf 1233: 100 %
+      tomo 2 · pdf 1234: 100 %
+      tomo 2 · pdf 1235: 100 %
+      tomo 2 · pdf 1236: 100 %
+      tomo 2 · pdf 1237: 100 %
+      tomo 2 · pdf 1238: 100 %
+      tomo 2 · pdf 1239: 100 %
+      tomo 2 · pdf 1240: 100 %
+      tomo 2 · pdf 1241: 100 %
+      tomo 2 · pdf 1242: 100 %
+      tomo 2 · pdf 1243: 100 %
+      tomo 2 · pdf 1244: 100 %
+      tomo 2 · pdf 1245: 100 %
+      tomo 2 · pdf 1246: 100 %
+      tomo 2 · pdf 1247: 100 %
+      tomo 2 · pdf 1248: 100 %
+      tomo 2 · pdf 1249: 100 %
+      tomo 2 · pdf 1250: 100 %
+      tomo 2 · pdf 1251: 100 %
+      tomo 2 · pdf 1252: 100 %
+      tomo 2 · pdf 1253: 100 %
+      tomo 2 · pdf 1254: 100 %
+      tomo 2 · pdf 1255: 100 %
+      tomo 2 · pdf 1256: 100 %
+      tomo 2 · pdf 1257: 100 %
+      tomo 2 · pdf 1258: 100 %
+      tomo 2 · pdf 1259: 100 %
+      tomo 2 · pdf 1260: 100 %
+      tomo 2 · pdf 1261: 100 %
+      tomo 2 · pdf 1262: 100 %
+      tomo 2 · pdf 1263: 100 %
+      tomo 2 · pdf 1264: 100 %
+      tomo 2 · pdf 1265: 100 %
+      tomo 2 · pdf 1266: 100 %
+      tomo 2 · pdf 1267: 100 %
+      tomo 2 · pdf 1268: 100 %
+      tomo 2 · pdf 1269: 100 %
+      tomo 2 · pdf 1270: 100 %
+      tomo 2 · pdf 1271: 100 %
+      tomo 2 · pdf 1272: 100 %
+      tomo 2 · pdf 1273: 100 %
+      tomo 2 · pdf 1274: 100 %
+      tomo 2 · pdf 1275: 100 %
+      tomo 2 · pdf 1276: 100 %
+      tomo 2 · pdf 1277: 100 %
+      tomo 2 · pdf 1278: 100 %
+      tomo 2 · pdf 1279: 100 %
+      tomo 2 · pdf 1280: 100 %
+      tomo 2 · pdf 1281: 100 %
+      tomo 2 · pdf 1282: 100 %
+      tomo 2 · pdf 1283: 100 %
+      tomo 2 · pdf 1284: 100 %
+      tomo 2 · pdf 1285: 100 %
+      tomo 2 · pdf 1286: 100 %
+      tomo 2 · pdf 1287: 100 %
+      tomo 2 · pdf 1288: 100 %
+      tomo 2 · pdf 1289: 100 %
+      tomo 2 · pdf 1290: 100 %
+      tomo 2 · pdf 1291: 100 %
+      tomo 2 · pdf 1292: 100 %
+      tomo 2 · pdf 1293: 100 %
+      tomo 2 · pdf 1294: 100 %
+      tomo 2 · pdf 1295: 100 %
+      tomo 2 · pdf 1296: 100 %
+      tomo 2 · pdf 1297: 100 %
+      tomo 2 · pdf 1298: 100 %
+      tomo 2 · pdf 1299: 100 %
+      tomo 2 · pdf 1300: 100 %
+      tomo 2 · pdf 1301: 100 %
+      tomo 2 · pdf 1302: 100 %
+      tomo 2 · pdf 1303: 100 %
+      tomo 2 · pdf 1304: 100 %
+      tomo 2 · pdf 1305: 100 %
+      tomo 2 · pdf 1306: 100 %
+      tomo 2 · pdf 1307: 100 %
+      tomo 2 · pdf 1308: 100 %
+      tomo 2 · pdf 1309: 100 %
+      tomo 2 · pdf 1310: 100 %
+      tomo 2 · pdf 1311: 100 %
+      tomo 2 · pdf 1312: 100 %
+      tomo 2 · pdf 1313: 100 %
+      tomo 2 · pdf 1314: 100 %
+      tomo 2 · pdf 1315: 100 %
+      tomo 2 · pdf 1316: 100 %
+      tomo 2 · pdf 1317: 100 %
+      tomo 2 · pdf 1318: 100 %
+      tomo 2 · pdf 1319: 100 %
+      tomo 2 · pdf 1320: 100 %
+      tomo 2 · pdf 1321: 100 %
+      tomo 2 · pdf 1322: 100 %
+      tomo 2 · pdf 1323: 100 %
+      tomo 2 · pdf 1324: 100 %
+      tomo 2 · pdf 1325: 100 %
+      tomo 2 · pdf 1326: 100 %
+      tomo 2 · pdf 1327: 100 %
+      tomo 2 · pdf 1328: 100 %
+      tomo 2 · pdf 1329: 100 %
+      tomo 2 · pdf 1330: 100 %
+      tomo 2 · pdf 1331: 100 %
+      tomo 2 · pdf 1332: 100 %
+      tomo 2 · pdf 1333: 100 %
+      tomo 2 · pdf 1334: 100 %
+      tomo 2 · pdf 1335: 100 %
+      tomo 2 · pdf 1336: 100 %
+      tomo 2 · pdf 1337: 100 %
+      tomo 2 · pdf 1338: 100 %
+      tomo 2 · pdf 1339: 100 %
+      tomo 2 · pdf 1340: 100 %
+      tomo 2 · pdf 1341: 100 %
+      tomo 2 · pdf 1342: 100 %
+      tomo 2 · pdf 1343: 100 %
+      tomo 2 · pdf 1344: 100 %
+      tomo 2 · pdf 1345: 100 %
+      tomo 2 · pdf 1346: 100 %
+      tomo 2 · pdf 1347: 100 %
+      tomo 2 · pdf 1348: 100 %
+      tomo 2 · pdf 1349: 100 %
+      tomo 2 · pdf 1350: 100 %
+      tomo 2 · pdf 1351: 100 %
+      tomo 2 · pdf 1352: 100 %
+      tomo 2 · pdf 1353: 100 %
+      tomo 2 · pdf 1354: 100 %
+      tomo 2 · pdf 1355: 100 %
+      tomo 2 · pdf 1356: 100 %
+      tomo 2 · pdf 1357: 100 %
+      tomo 2 · pdf 1358: 100 %
+      tomo 2 · pdf 1359: 100 %
+      tomo 2 · pdf 1360: 100 %
+      tomo 2 · pdf 1361: 100 %
+      tomo 2 · pdf 1362: 100 %
+      tomo 2 · pdf 1363: 100 %
+      tomo 2 · pdf 1364: 100 %
+      tomo 2 · pdf 1365: 100 %
+      tomo 2 · pdf 1366: 100 %
+      tomo 2 · pdf 1367: 100 %
+      tomo 2 · pdf 1368: 100 %
+      tomo 2 · pdf 1369: 100 %
+      tomo 2 · pdf 1370: 100 %
+      tomo 2 · pdf 1371: 100 %
+      tomo 2 · pdf 1372: 100 %
+      tomo 2 · pdf 1373: 100 %
+      tomo 2 · pdf 1374: 100 %
+      tomo 2 · pdf 1375: 100 %
+      tomo 2 · pdf 1376: 100 %
+      tomo 2 · pdf 1377: 100 %
+      tomo 2 · pdf 1378: 100 %
+      tomo 2 · pdf 1379: 100 %
+      tomo 2 · pdf 1380: 100 %
+      tomo 2 · pdf 1381: 100 %
+      tomo 2 · pdf 1382: 100 %
+      tomo 2 · pdf 1383: 100 %
+      tomo 2 · pdf 1384: 100 %
+      tomo 2 · pdf 1385: 100 %
+      tomo 2 · pdf 1386: 100 %
+      tomo 2 · pdf 1387: 100 %
+      tomo 2 · pdf 1388: 100 %
+      tomo 2 · pdf 1389: 100 %
+      tomo 2 · pdf 1390: 100 %
+      tomo 2 · pdf 1391: 100 %
+      tomo 2 · pdf 1392: 100 %
+      tomo 2 · pdf 1393: 100 %
+      tomo 2 · pdf 1394: 100 %
+      tomo 2 · pdf 1395: 100 %
+      tomo 2 · pdf 1396: 100 %
+      tomo 2 · pdf 1397: 100 %
+      tomo 2 · pdf 1398: 100 %
+      tomo 2 · pdf 1399: 100 %
+      tomo 2 · pdf 1400: 100 %
+      tomo 2 · pdf 1401: 100 %
+      tomo 2 · pdf 1402: 100 %
+      tomo 2 · pdf 1403: 100 %
+      tomo 2 · pdf 1404: 100 %
+      tomo 2 · pdf 1405: 100 %
+      tomo 2 · pdf 1406: 100 %
+      tomo 2 · pdf 1407: 100 %
+      tomo 2 · pdf 1408: 100 %
+      tomo 2 · pdf 1409: 100 %
+      tomo 2 · pdf 1410: 100 %
+      tomo 2 · pdf 1411: 100 %
+      tomo 2 · pdf 1412: 100 %
+      tomo 2 · pdf 1413: 100 %
+      tomo 2 · pdf 1414: 100 %
+      tomo 2 · pdf 1415: 100 %
+      tomo 2 · pdf 1416: 100 %
+      tomo 2 · pdf 1417: 100 %
+      tomo 2 · pdf 1418: 100 %
+      tomo 2 · pdf 1419: 100 %
+      tomo 2 · pdf 1420: 100 %
+      tomo 2 · pdf 1421: 100 %
+      tomo 2 · pdf 1422: 100 %
+      tomo 2 · pdf 1423: 100 %
+      tomo 2 · pdf 1424: 100 %
+      tomo 2 · pdf 1425: 100 %
+      tomo 2 · pdf 1426: 100 %
+      tomo 2 · pdf 1427: 100 %
+      tomo 2 · pdf 1428: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 0 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 2: 149 etiquetas rojas → 149 variantes
+[OK ] Remisiones: 0 rotas; 17 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: texto-azul/antifonas-alternativas
+      pendiente: texto-azul/de-la-semana-ii-del-salterio
+      pendiente: texto-azul/del-salterio
+      pendiente: texto-azul/domingo
+      pendiente: texto-azul/domingo-de-la-semana-i
+      pendiente: texto-azul/domingo-de-la-semana-i-del-salterio
+      pendiente: texto-azul/domingo-de-la-semana-ii-del-salterio
+[OK ] Salmos: 0 nombrados, todos en salmos.json
+[OK ] Salmos iguales en todos los tomos: sí
+[OK ] Ida y vuelta: 1212/1212 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 5
+      tomo 2 pdf 1257: Las antífonas propias en el Salterio; los salmos y {'0433ff'}
+      tomo 2 pdf 1257: de la semana II del Salterio. {'0433ff'}
+      tomo 2 pdf 1261: domingo de la semana II del Salterio. {'0433ff'}
+      tomo 2 pdf 1263: domingo de la semana II del Salterio. {'0433ff'}
+      tomo 2 pdf 1388: Los salmos con sus antífonas se toman del domingo  {'0433ff'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 0

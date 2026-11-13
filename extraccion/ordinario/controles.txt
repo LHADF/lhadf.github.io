@@ -1,5 +1,5 @@
 Controles — Ordinario de la Liturgia de las Horas (tomos I–IV) — hay controles que no pasan
-Piezas marcadas para revisar: 32 · diferencias entre tomos: 129
+Piezas marcadas para revisar: 32 · diferencias entre tomos: 128
 
 [OK ] Cobertura: 5646/5646 fragmentos asignados (100.0 %); huérfanos: 0
       tomo 1 · pdf 401: 100 %
@@ -153,7 +153,7 @@ Piezas marcadas para revisar: 32 · diferencias entre tomos: 129
       pendiente: texto-azul/salve
 [OK ] Salmos: 4 nombrados, todos en salmos.json
 [MAL] Salmos iguales en todos los tomos: difieren: salmo-94 (ver diferencias.csv)
-[OK ] Ida y vuelta: 1095/1095 piezas reescritas igual al libro
+[OK ] Ida y vuelta: 1092/1092 piezas reescritas igual al libro
 [INF] Colores dudosos clasificados por tono: 5
       tomo 2 pdf 1872: Versión española o en latín {'0433ff'}
       tomo 2 pdf 1892: Los domingos y solemnidades, después de las I Vísp {'0433ff'}

@@ -1,0 +1,137 @@
+Controles — Propio del tiempo · Semana Santa y Triduo (tomo II) — hay controles que no pasan
+Piezas marcadas para revisar: 10 · diferencias entre tomos: 1
+
+[OK ] Cobertura: 4495/4495 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 2 · pdf 1429: 100 %
+      tomo 2 · pdf 1430: 100 %
+      tomo 2 · pdf 1431: 100 %
+      tomo 2 · pdf 1432: 100 %
+      tomo 2 · pdf 1433: 100 %
+      tomo 2 · pdf 1434: 100 %
+      tomo 2 · pdf 1435: 100 %
+      tomo 2 · pdf 1436: 100 %
+      tomo 2 · pdf 1437: 100 %
+      tomo 2 · pdf 1438: 100 %
+      tomo 2 · pdf 1439: 100 %
+      tomo 2 · pdf 1440: 100 %
+      tomo 2 · pdf 1441: 100 %
+      tomo 2 · pdf 1442: 100 %
+      tomo 2 · pdf 1443: 100 %
+      tomo 2 · pdf 1444: 100 %
+      tomo 2 · pdf 1445: 100 %
+      tomo 2 · pdf 1446: 100 %
+      tomo 2 · pdf 1447: 100 %
+      tomo 2 · pdf 1448: 100 %
+      tomo 2 · pdf 1449: 100 %
+      tomo 2 · pdf 1450: 100 %
+      tomo 2 · pdf 1451: 100 %
+      tomo 2 · pdf 1452: 100 %
+      tomo 2 · pdf 1453: 100 %
+      tomo 2 · pdf 1454: 100 %
+      tomo 2 · pdf 1455: 100 %
+      tomo 2 · pdf 1456: 100 %
+      tomo 2 · pdf 1457: 100 %
+      tomo 2 · pdf 1458: 100 %
+      tomo 2 · pdf 1459: 100 %
+      tomo 2 · pdf 1460: 100 %
+      tomo 2 · pdf 1461: 100 %
+      tomo 2 · pdf 1462: 100 %
+      tomo 2 · pdf 1463: 100 %
+      tomo 2 · pdf 1464: 100 %
+      tomo 2 · pdf 1465: 100 %
+      tomo 2 · pdf 1466: 100 %
+      tomo 2 · pdf 1467: 100 %
+      tomo 2 · pdf 1468: 100 %
+      tomo 2 · pdf 1469: 100 %
+      tomo 2 · pdf 1470: 100 %
+      tomo 2 · pdf 1471: 100 %
+      tomo 2 · pdf 1472: 100 %
+      tomo 2 · pdf 1473: 100 %
+      tomo 2 · pdf 1474: 100 %
+      tomo 2 · pdf 1475: 100 %
+      tomo 2 · pdf 1476: 100 %
+      tomo 2 · pdf 1477: 100 %
+      tomo 2 · pdf 1478: 100 %
+      tomo 2 · pdf 1479: 100 %
+      tomo 2 · pdf 1480: 100 %
+      tomo 2 · pdf 1481: 100 %
+      tomo 2 · pdf 1482: 100 %
+      tomo 2 · pdf 1483: 100 %
+      tomo 2 · pdf 1484: 100 %
+      tomo 2 · pdf 1485: 100 %
+      tomo 2 · pdf 1486: 100 %
+      tomo 2 · pdf 1487: 100 %
+      tomo 2 · pdf 1488: 100 %
+      tomo 2 · pdf 1489: 100 %
+      tomo 2 · pdf 1490: 100 %
+      tomo 2 · pdf 1491: 100 %
+      tomo 2 · pdf 1492: 100 %
+      tomo 2 · pdf 1493: 100 %
+      tomo 2 · pdf 1494: 100 %
+      tomo 2 · pdf 1495: 100 %
+      tomo 2 · pdf 1496: 100 %
+      tomo 2 · pdf 1497: 100 %
+      tomo 2 · pdf 1498: 100 %
+      tomo 2 · pdf 1499: 100 %
+      tomo 2 · pdf 1500: 100 %
+      tomo 2 · pdf 1501: 100 %
+      tomo 2 · pdf 1502: 100 %
+      tomo 2 · pdf 1503: 100 %
+      tomo 2 · pdf 1504: 100 %
+      tomo 2 · pdf 1505: 100 %
+      tomo 2 · pdf 1506: 100 %
+      tomo 2 · pdf 1507: 100 %
+      tomo 2 · pdf 1508: 100 %
+      tomo 2 · pdf 1509: 100 %
+      tomo 2 · pdf 1510: 100 %
+      tomo 2 · pdf 1511: 100 %
+      tomo 2 · pdf 1512: 100 %
+      tomo 2 · pdf 1513: 100 %
+      tomo 2 · pdf 1514: 100 %
+      tomo 2 · pdf 1515: 100 %
+      tomo 2 · pdf 1516: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 2 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 2 pdf 1493: ['28, 1-10']
+      tomo 2 pdf 1504: ['28, 1-10']
+[OK ] Sin rótulos en el texto: 0 casos
+[MAL] Conteos: 1 fuera de norma
+      viernes-santo-de-la-muerte-del-senor/visperas/preces incompletas
+[OK ] Opciones: tomo 2: 15 etiquetas rojas → 15 variantes
+[OK ] Remisiones: 0 rotas; 19 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: texto-azul/antifonas-alternativas
+      pendiente: texto-azul/despues-de-anunciar-cada-una-de-las-intenciones-de-la-oracion-universal-del-misal
+      pendiente: texto-azul/en-silencio
+      pendiente: texto-azul/lunes-de-la
+      pendiente: texto-azul/miercoles-de-la
+      pendiente: texto-azul/oracion-universal-que-se-propone
+      pendiente: texto-azul/para-este-dia-en-el-misal
+      pendiente: texto-azul/semana-ii-del-salterio
+[OK ] Salmos: 31 nombrados, todos en salmos.json
+[OK ] Salmos iguales en todos los tomos: sí
+[OK ] Ida y vuelta: 434/434 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 10
+      tomo 2 pdf 1442: Las antífonas propias en el Salterio; los salmos y {'0433ff'}
+      tomo 2 pdf 1442: semana II del Salterio. {'0433ff'}
+      tomo 2 pdf 1454: Las antífonas propias en el Salterio; los salmos y {'0433ff'}
+      tomo 2 pdf 1454: semana II del Salterio. {'0433ff'}
+      tomo 2 pdf 1482: Hoy es laudable usar como preces de Vísperas la or {'0433ff'}
+      tomo 2 pdf 1482: para este día en el Misal. Pero, si se prefiere, t {'0433ff'}
+      tomo 2 pdf 1482: proponen a continuación, o bien puede hacerse un m {'0433ff'}
+      tomo 2 pdf 1483: después de anunciar cada una de las intenciones de {'0433ff'}
+      tomo 2 pdf 1508: Los hijos de la Iglesia, nuevo pueblo de Dios, se  {'0327cf'}
+      tomo 2 pdf 1508: (Hesiquio). {'0327cf'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 2
+      tomo 2 pdf 1491: texto negro sin pieza (parte lectura_breve): Cristo, por nosotros, se sometió incluso a la muer
+      tomo 2 pdf 1504: texto negro sin pieza (parte salmodia): En la madrugada del sábado, al alborear el primer 

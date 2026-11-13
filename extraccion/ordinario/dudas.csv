@@ -1,6 +1,6 @@
 seccion,identificador,tomo,pagina_pdf,motivo,texto
-comunes,ordinario/invitatorio/versiculo/texto,1,402,"etiqueta fuera del vocabulario: «Desde el día 17 de diciembre has el día 23 de diciembre inclusive, se dice:»","El Señor está cerca, venid, adorémosle."
-comunes,ordinario/invitatorio/versiculo/texto,1,402,etiqueta fuera del vocabulario: «El día 24 de diciembre:»,"Hoy sabréis que viene el Señor, y mañana contemplaréis su gloria."
+comunes,ordinario/invitatorio/versiculo/texto,1,402,"rango de fechas («Desde el día 17 de diciembre has el día 23 de diciembre inclusive, se dice:»): pendiente de decisión de CRU","El Señor está cerca, venid, adorémosle."
+comunes,ordinario/invitatorio/versiculo/texto,1,402,rango de fechas («El día 24 de diciembre:»): pendiente de decisión de CRU,"Hoy sabréis que viene el Señor, y mañana contemplaréis su gloria."
 comunes,ordinario/invitatorio/versiculo/texto,1,403,"etiqueta fuera del vocabulario: «Desde la solemnidad de la Epifanía del Señor hasta la fiesta del Bautismo del Señor exclusive, se dice:»","A Cristo, que se nos ha manifestado, venid, adorémosle."
 comunes,ordinario/oficio/te_deum/texto,1 2 3 4,409 1873 3321 5080,"diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
 comunes,ordinario/oficio/te_deum/texto,3 4,3323 5082,etiqueta fuera del vocabulario: «En latín:»,

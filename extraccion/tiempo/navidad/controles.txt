@@ -1,0 +1,241 @@
+Controles — Propio del tiempo · Navidad (tomo I) — todos pasan
+Piezas marcadas para revisar: 37 · diferencias entre tomos: 5
+
+[OK ] Cobertura: 9176/9176 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 210: 100 %
+      tomo 1 · pdf 211: 100 %
+      tomo 1 · pdf 212: 100 %
+      tomo 1 · pdf 213: 100 %
+      tomo 1 · pdf 214: 100 %
+      tomo 1 · pdf 215: 100 %
+      tomo 1 · pdf 216: 100 %
+      tomo 1 · pdf 217: 100 %
+      tomo 1 · pdf 218: 100 %
+      tomo 1 · pdf 219: 100 %
+      tomo 1 · pdf 220: 100 %
+      tomo 1 · pdf 221: 100 %
+      tomo 1 · pdf 222: 100 %
+      tomo 1 · pdf 223: 100 %
+      tomo 1 · pdf 224: 100 %
+      tomo 1 · pdf 225: 100 %
+      tomo 1 · pdf 226: 100 %
+      tomo 1 · pdf 227: 100 %
+      tomo 1 · pdf 228: 100 %
+      tomo 1 · pdf 229: 100 %
+      tomo 1 · pdf 230: 100 %
+      tomo 1 · pdf 231: 100 %
+      tomo 1 · pdf 232: 100 %
+      tomo 1 · pdf 233: 100 %
+      tomo 1 · pdf 234: 100 %
+      tomo 1 · pdf 235: 100 %
+      tomo 1 · pdf 236: 100 %
+      tomo 1 · pdf 237: 100 %
+      tomo 1 · pdf 238: 100 %
+      tomo 1 · pdf 239: 100 %
+      tomo 1 · pdf 240: 100 %
+      tomo 1 · pdf 241: 100 %
+      tomo 1 · pdf 242: 100 %
+      tomo 1 · pdf 243: 100 %
+      tomo 1 · pdf 244: 100 %
+      tomo 1 · pdf 245: 100 %
+      tomo 1 · pdf 246: 100 %
+      tomo 1 · pdf 247: 100 %
+      tomo 1 · pdf 248: 100 %
+      tomo 1 · pdf 249: 100 %
+      tomo 1 · pdf 250: 100 %
+      tomo 1 · pdf 251: 100 %
+      tomo 1 · pdf 252: 100 %
+      tomo 1 · pdf 253: 100 %
+      tomo 1 · pdf 254: 100 %
+      tomo 1 · pdf 255: 100 %
+      tomo 1 · pdf 256: 100 %
+      tomo 1 · pdf 257: 100 %
+      tomo 1 · pdf 258: 100 %
+      tomo 1 · pdf 259: 100 %
+      tomo 1 · pdf 260: 100 %
+      tomo 1 · pdf 261: 100 %
+      tomo 1 · pdf 262: 100 %
+      tomo 1 · pdf 263: 100 %
+      tomo 1 · pdf 264: 100 %
+      tomo 1 · pdf 265: 100 %
+      tomo 1 · pdf 266: 100 %
+      tomo 1 · pdf 267: 100 %
+      tomo 1 · pdf 268: 100 %
+      tomo 1 · pdf 269: 100 %
+      tomo 1 · pdf 270: 100 %
+      tomo 1 · pdf 271: 100 %
+      tomo 1 · pdf 272: 100 %
+      tomo 1 · pdf 273: 100 %
+      tomo 1 · pdf 274: 100 %
+      tomo 1 · pdf 275: 100 %
+      tomo 1 · pdf 276: 100 %
+      tomo 1 · pdf 277: 100 %
+      tomo 1 · pdf 278: 100 %
+      tomo 1 · pdf 279: 100 %
+      tomo 1 · pdf 280: 100 %
+      tomo 1 · pdf 281: 100 %
+      tomo 1 · pdf 282: 100 %
+      tomo 1 · pdf 283: 100 %
+      tomo 1 · pdf 284: 100 %
+      tomo 1 · pdf 285: 100 %
+      tomo 1 · pdf 286: 100 %
+      tomo 1 · pdf 287: 100 %
+      tomo 1 · pdf 288: 100 %
+      tomo 1 · pdf 289: 100 %
+      tomo 1 · pdf 290: 100 %
+      tomo 1 · pdf 291: 100 %
+      tomo 1 · pdf 292: 100 %
+      tomo 1 · pdf 293: 100 %
+      tomo 1 · pdf 294: 100 %
+      tomo 1 · pdf 295: 100 %
+      tomo 1 · pdf 296: 100 %
+      tomo 1 · pdf 297: 100 %
+      tomo 1 · pdf 298: 100 %
+      tomo 1 · pdf 299: 100 %
+      tomo 1 · pdf 300: 100 %
+      tomo 1 · pdf 301: 100 %
+      tomo 1 · pdf 302: 100 %
+      tomo 1 · pdf 303: 100 %
+      tomo 1 · pdf 304: 100 %
+      tomo 1 · pdf 305: 100 %
+      tomo 1 · pdf 306: 100 %
+      tomo 1 · pdf 307: 100 %
+      tomo 1 · pdf 308: 100 %
+      tomo 1 · pdf 309: 100 %
+      tomo 1 · pdf 310: 100 %
+      tomo 1 · pdf 311: 100 %
+      tomo 1 · pdf 312: 100 %
+      tomo 1 · pdf 313: 100 %
+      tomo 1 · pdf 314: 100 %
+      tomo 1 · pdf 315: 100 %
+      tomo 1 · pdf 316: 100 %
+      tomo 1 · pdf 317: 100 %
+      tomo 1 · pdf 318: 100 %
+      tomo 1 · pdf 319: 100 %
+      tomo 1 · pdf 320: 100 %
+      tomo 1 · pdf 321: 100 %
+      tomo 1 · pdf 322: 100 %
+      tomo 1 · pdf 323: 100 %
+      tomo 1 · pdf 324: 100 %
+      tomo 1 · pdf 325: 100 %
+      tomo 1 · pdf 326: 100 %
+      tomo 1 · pdf 327: 100 %
+      tomo 1 · pdf 328: 100 %
+      tomo 1 · pdf 329: 100 %
+      tomo 1 · pdf 330: 100 %
+      tomo 1 · pdf 331: 100 %
+      tomo 1 · pdf 332: 100 %
+      tomo 1 · pdf 333: 100 %
+      tomo 1 · pdf 334: 100 %
+      tomo 1 · pdf 335: 100 %
+      tomo 1 · pdf 336: 100 %
+      tomo 1 · pdf 337: 100 %
+      tomo 1 · pdf 338: 100 %
+      tomo 1 · pdf 339: 100 %
+      tomo 1 · pdf 340: 100 %
+      tomo 1 · pdf 341: 100 %
+      tomo 1 · pdf 342: 100 %
+      tomo 1 · pdf 343: 100 %
+      tomo 1 · pdf 344: 100 %
+      tomo 1 · pdf 345: 100 %
+      tomo 1 · pdf 346: 100 %
+      tomo 1 · pdf 347: 100 %
+      tomo 1 · pdf 348: 100 %
+      tomo 1 · pdf 349: 100 %
+      tomo 1 · pdf 350: 100 %
+      tomo 1 · pdf 351: 100 %
+      tomo 1 · pdf 352: 100 %
+      tomo 1 · pdf 353: 100 %
+      tomo 1 · pdf 354: 100 %
+      tomo 1 · pdf 355: 100 %
+      tomo 1 · pdf 356: 100 %
+      tomo 1 · pdf 357: 100 %
+      tomo 1 · pdf 358: 100 %
+      tomo 1 · pdf 359: 100 %
+      tomo 1 · pdf 360: 100 %
+      tomo 1 · pdf 361: 100 %
+      tomo 1 · pdf 362: 100 %
+      tomo 1 · pdf 363: 100 %
+      tomo 1 · pdf 364: 100 %
+      tomo 1 · pdf 365: 100 %
+      tomo 1 · pdf 366: 100 %
+      tomo 1 · pdf 367: 100 %
+      tomo 1 · pdf 368: 100 %
+      tomo 1 · pdf 369: 100 %
+      tomo 1 · pdf 370: 100 %
+      tomo 1 · pdf 371: 100 %
+      tomo 1 · pdf 372: 100 %
+      tomo 1 · pdf 373: 100 %
+      tomo 1 · pdf 374: 100 %
+      tomo 1 · pdf 375: 100 %
+      tomo 1 · pdf 376: 100 %
+      tomo 1 · pdf 377: 100 %
+      tomo 1 · pdf 378: 100 %
+      tomo 1 · pdf 379: 100 %
+      tomo 1 · pdf 380: 100 %
+      tomo 1 · pdf 381: 100 %
+      tomo 1 · pdf 382: 100 %
+      tomo 1 · pdf 383: 100 %
+      tomo 1 · pdf 384: 100 %
+      tomo 1 · pdf 385: 100 %
+      tomo 1 · pdf 386: 100 %
+      tomo 1 · pdf 387: 100 %
+      tomo 1 · pdf 388: 100 %
+      tomo 1 · pdf 389: 100 %
+      tomo 1 · pdf 390: 100 %
+      tomo 1 · pdf 391: 100 %
+      tomo 1 · pdf 392: 100 %
+      tomo 1 · pdf 393: 100 %
+      tomo 1 · pdf 394: 100 %
+      tomo 1 · pdf 395: 100 %
+      tomo 1 · pdf 396: 100 %
+      tomo 1 · pdf 397: 100 %
+      tomo 1 · pdf 398: 100 %
+      tomo 1 · pdf 399: 100 %
+      tomo 1 · pdf 400: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 0 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 1: 58 etiquetas rojas → 58 variantes
+[OK ] Remisiones: 0 rotas; 18 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: salterio/semana-1/domingo/laudes/salmodia
+      pendiente: texto-azul/antifonas-alternativas
+      pendiente: texto-azul/evangelista
+      pendiente: texto-azul/protomartir
+      pendiente: texto-azul/san-esteban
+      pendiente: texto-azul/san-juan-apostol-y
+[OK ] Salmos: 29 nombrados, todos en salmos.json
+[OK ] Salmos iguales en todos los tomos: sí
+[OK ] Ida y vuelta: 960/960 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 0
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 17
+      tomo 1 pdf 211: texto negro sin pieza (parte None): Ver a Dios en la criatura,
+      tomo 1 pdf 211: texto negro sin pieza (parte None): Entonad los aires 
+      tomo 1 pdf 292: remisión azul sin pieza: salmodia complementaria, a no ser que esta solemni
+      tomo 1 pdf 297: texto negro sin pieza (parte None): entre el 2 y 5 de enero
+      tomo 1 pdf 302: versículo con el R. antes del V.: R. Cantad al Señor, bendecid su nombre.
+      tomo 1 pdf 313: versículo con el R. antes del V.: R. Él era la fuente de la vida. 
+      tomo 1 pdf 318: versículo con el R. antes del V.: R. La Palabra era la luz verdadera.
+      tomo 1 pdf 323: versículo con el R. antes del V.: R. Cantad al Señor, bendecid su nombre.
+      tomo 1 pdf 328: versículo con el R. antes del V.: R. En esta etapa final, Dios nos ha hablado por el
+      tomo 1 pdf 347: texto negro sin pieza (parte salmodia): los que estaban cerca.
+      tomo 1 pdf 348: texto negro sin pieza (parte salmodia): tierra.
+      tomo 1 pdf 356: versículo con el R. antes del V.: R. Los cielos pregonan la justicia de Dios.
+      tomo 1 pdf 361: versículo con el R. antes del V.: R. Glorifica al Señor, Jerusalén.
+      tomo 1 pdf 367: versículo con el R. antes del V.: R. El Señor nos instruirá en sus caminos.
+      tomo 1 pdf 372: versículo con el R. antes del V.: R. El Hijo de Dios ha venido y nos ha dado intelig
+      tomo 1 pdf 377: versículo con el R. antes del V.: R. Él era la fuente de la vida.
+      tomo 1 pdf 382: versículo con el R. antes del V.: R. Él era la luz verdadera.

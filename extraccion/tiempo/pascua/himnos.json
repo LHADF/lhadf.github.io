@@ -1,0 +1,2625 @@
+[
+ {
+  "id": "nuestra-pascua-inmolada-aleluya",
+  "primer_verso": "Nuestra Pascua inmolada, aleluya,",
+  "estrofas": [
+   [
+    {
+     "texto": "Nuestra Pascua inmolada, aleluya,",
+     "sangria": 0
+    },
+    {
+     "texto": "es Cristo el Señor, aleluya, aleluya.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pascua sagrada, ¡oh fiesta universal!,",
+     "sangria": 0
+    },
+    {
+     "texto": "el mundo renovado",
+     "sangria": 0
+    },
+    {
+     "texto": "canta un himno a su Señor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pascua sagrada, ¡victoria de la cruz!",
+     "sangria": 0
+    },
+    {
+     "texto": "La muerte, derrotada,",
+     "sangria": 0
+    },
+    {
+     "texto": "ha perdido su aguijón.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pascua sagrada,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡oh noche bautismal!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Del seno de las aguas",
+     "sangria": 0
+    },
+    {
+     "texto": "renacemos al Señor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pascua sagrada, ¡eterna novedad!",
+     "sangria": 0
+    },
+    {
+     "texto": "Dejad al hombre viejo,",
+     "sangria": 0
+    },
+    {
+     "texto": "revestíos del Señor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pascua sagrada. La sala del festín",
+     "sangria": 0
+    },
+    {
+     "texto": "se llena de invitados",
+     "sangria": 0
+    },
+    {
+     "texto": "que celebran al Señor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pascua sagrada, ¡Cantemos al Señor!",
+     "sangria": 0
+    },
+    {
+     "texto": "Vivamos la alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "dada a luz en el dolor.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1517,
+    "impresa": "389"
+   }
+  ]
+ },
+ {
+  "id": "quedate-con-nosotros",
+  "primer_verso": "Quédate con nosotros,",
+  "estrofas": [
+   [
+    {
+     "texto": "Quédate con nosotros,",
+     "sangria": 0
+    },
+    {
+     "texto": "la tarde está cayendo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Cómo te encontraremos",
+     "sangria": 0
+    },
+    {
+     "texto": "al declinar el día,",
+     "sangria": 0
+    },
+    {
+     "texto": "si tu camino no es nuestro camino?",
+     "sangria": 0
+    },
+    {
+     "texto": "Detente con nosotros;",
+     "sangria": 0
+    },
+    {
+     "texto": "la mesa está servida,",
+     "sangria": 0
+    },
+    {
+     "texto": "caliente el pan y envejecido el vino.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Cómo sabremos que eres",
+     "sangria": 0
+    },
+    {
+     "texto": "un hombre entre los hombres,",
+     "sangria": 0
+    },
+    {
+     "texto": "si no compartes nuestra mesa humilde?",
+     "sangria": 0
+    },
+    {
+     "texto": "Repártenos tu cuerpo,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el gozo irá alejando",
+     "sangria": 0
+    },
+    {
+     "texto": "la oscuridad que pesa sobre el hombre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vimos romper el día",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre tu hermoso rostro,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al sol abrirse paso por tu frente.",
+     "sangria": 0
+    },
+    {
+     "texto": "Que el viento de la noche",
+     "sangria": 0
+    },
+    {
+     "texto": "no apague el fuego vivo",
+     "sangria": 0
+    },
+    {
+     "texto": "que nos dejó tu paso en la mañana.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Arroja en nuestras manos,",
+     "sangria": 0
+    },
+    {
+     "texto": "tendidas en tu busca,",
+     "sangria": 0
+    },
+    {
+     "texto": "las ascuas encendidas del Espíritu;",
+     "sangria": 0
+    },
+    {
+     "texto": "y limpia, en lo más hondo",
+     "sangria": 0
+    },
+    {
+     "texto": "del corazón del hombre,",
+     "sangria": 0
+    },
+    {
+     "texto": "tu imagen empañada por la culpa.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1517,
+    "impresa": "389",
+    "pdf_fin": 1518,
+    "impresa_fin": "390"
+   }
+  ]
+ },
+ {
+  "id": "que-ves-en-la-noche",
+  "primer_verso": "¿Qué ves en la noche,",
+  "estrofas": [
+   [
+    {
+     "texto": "¿Qué ves en la noche,",
+     "sangria": 0
+    },
+    {
+     "texto": "dinos centinela?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Dios como un almendro",
+     "sangria": 0
+    },
+    {
+     "texto": "con la flor despierta;",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios que nunca duerme",
+     "sangria": 0
+    },
+    {
+     "texto": "busca quien no duerma,",
+     "sangria": 0
+    },
+    {
+     "texto": "y entre las diez vírgenes",
+     "sangria": 0
+    },
+    {
+     "texto": "sólo hay cinco en vela.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gallos vigilantes",
+     "sangria": 0
+    },
+    {
+     "texto": "que la noche alertan.",
+     "sangria": 0
+    },
+    {
+     "texto": "Quien negó tres veces",
+     "sangria": 0
+    },
+    {
+     "texto": "otras tres confiesa,",
+     "sangria": 0
+    },
+    {
+     "texto": "y pregona el llanto",
+     "sangria": 0
+    },
+    {
+     "texto": "lo que el miedo niega.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Muerto le bajaban",
+     "sangria": 0
+    },
+    {
+     "texto": "a la tumba nueva.",
+     "sangria": 0
+    },
+    {
+     "texto": "Nunca tan adentro",
+     "sangria": 0
+    },
+    {
+     "texto": "tuvo al sol la tierra.",
+     "sangria": 0
+    },
+    {
+     "texto": "Daba el monte gritos,",
+     "sangria": 0
+    },
+    {
+     "texto": "piedra contra piedra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vi los cielos nuevos",
+     "sangria": 0
+    },
+    {
+     "texto": "y la tierra nueva.",
+     "sangria": 0
+    },
+    {
+     "texto": "Cristo entre los vivos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y la muerte muerta.",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios en las criaturas,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡y eran todas buenas!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1518,
+    "impresa": "390",
+    "pdf_fin": 1519,
+    "impresa_fin": "391"
+   }
+  ]
+ },
+ {
+  "id": "porque-anochece-ya",
+  "primer_verso": "Porque anochece ya,",
+  "estrofas": [
+   [
+    {
+     "texto": "Porque anochece ya,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque es tarde, Dios mío,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque temo perder",
+     "sangria": 0
+    },
+    {
+     "texto": "las huellas del camino,",
+     "sangria": 0
+    },
+    {
+     "texto": "no me dejes tan solo",
+     "sangria": 0
+    },
+    {
+     "texto": "y quédate conmigo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Porque he sido rebelde",
+     "sangria": 0
+    },
+    {
+     "texto": "y he buscado el peligro",
+     "sangria": 0
+    },
+    {
+     "texto": "y escudriñé curioso",
+     "sangria": 0
+    },
+    {
+     "texto": "las cumbres y el abismo,",
+     "sangria": 0
+    },
+    {
+     "texto": "perdóname, Señor,",
+     "sangria": 0
+    },
+    {
+     "texto": "y quédate conmigo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Porque ardo en sed de ti",
+     "sangria": 0
+    },
+    {
+     "texto": "y en hambre de tu trigo,",
+     "sangria": 0
+    },
+    {
+     "texto": "ven, siéntate a mi mesa,",
+     "sangria": 0
+    },
+    {
+     "texto": "bendice el pan y el vino.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Qué aprisa cae la tarde!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Quédate al fin conmigo!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1519,
+    "impresa": "391"
+   }
+  ]
+ },
+ {
+  "id": "cristo-ha-resucitado",
+  "primer_verso": "¡Cristo ha resucitado!",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Cristo ha resucitado!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Resucitemos con él!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Aleluya, aleluya!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Muerte y Vida lucharon,",
+     "sangria": 0
+    },
+    {
+     "texto": "y la muerte fue vencida.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Aleluya, aleluya!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Es el grano que muere",
+     "sangria": 0
+    },
+    {
+     "texto": "para el triunfo de la espiga.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Aleluya, aleluya!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cristo es nuestra esperanza",
+     "sangria": 0
+    },
+    {
+     "texto": "nuestra paz y nuestra vida.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Aleluya, aleluya!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vivamos vida nueva,",
+     "sangria": 0
+    },
+    {
+     "texto": "el bautismo es nuestra Pascua.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Aleluya, aleluya!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Cristo ha resucitado!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Resucitemos con él!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Aleluya, aleluya!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1519,
+    "impresa": "391",
+    "pdf_fin": 1520,
+    "impresa_fin": "392"
+   }
+  ]
+ },
+ {
+  "id": "la-bella-flor-que-en-el-suelo",
+  "primer_verso": "La bella flor que en el suelo",
+  "estrofas": [
+   [
+    {
+     "texto": "La bella flor que en el suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "plantada se vio marchita",
+     "sangria": 0
+    },
+    {
+     "texto": "ya torna, ya resucita,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya su olor inunda el cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "De tierra estuvo cubierto,",
+     "sangria": 0
+    },
+    {
+     "texto": "pero no fructificó",
+     "sangria": 0
+    },
+    {
+     "texto": "del todo, hasta que quedó",
+     "sangria": 0
+    },
+    {
+     "texto": "en un árbol seco injerto.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y, aunque a los ojos del suelo",
+     "sangria": 0
+    },
+    {
+     "texto": "se puso después marchita,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya torna, ya resucita,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya su olor inunda el cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Toda es de flores la fiesta,",
+     "sangria": 0
+    },
+    {
+     "texto": "flores de finos olores,",
+     "sangria": 0
+    },
+    {
+     "texto": "más no se irá todo en flores,",
+     "sangria": 0
+    },
+    {
+     "texto": "porque flor de fruto es ésta.",
+     "sangria": 0
+    },
+    {
+     "texto": "Y, mientras su Iglesia grita",
+     "sangria": 0
+    },
+    {
+     "texto": "mendigando algún consuelo,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya torna, ya resucita,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya su olor inunda el cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Que nadie se sienta muerto",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando resucita Dios,",
+     "sangria": 0
+    },
+    {
+     "texto": "que, si el barco llega al puerto,",
+     "sangria": 0
+    },
+    {
+     "texto": "llegamos junto con vos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Hoy la cristiandad se quita",
+     "sangria": 0
+    },
+    {
+     "texto": "sus vestiduras de duelo.",
+     "sangria": 0
+    },
+    {
+     "texto": "Ya torna, ya resucita,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya su olor inunda el cielo.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1520,
+    "impresa": "392"
+   }
+  ]
+ },
+ {
+  "id": "ofrezcan-los-cristianos",
+  "primer_verso": "Ofrezcan los cristianos",
+  "estrofas": [
+   [
+    {
+     "texto": "Ofrezcan los cristianos",
+     "sangria": 0
+    },
+    {
+     "texto": "ofrendas de alabanza",
+     "sangria": 0
+    },
+    {
+     "texto": "a gloria de la Víctima",
+     "sangria": 0
+    },
+    {
+     "texto": "propicia de la Pascua.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cordero sin pecado",
+     "sangria": 0
+    },
+    {
+     "texto": "que a las ovejas salva,",
+     "sangria": 0
+    },
+    {
+     "texto": "a Dios y a los culpables",
+     "sangria": 0
+    },
+    {
+     "texto": "unió con nueva alianza.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Lucharon vida y muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "en singular batalla",
+     "sangria": 0
+    },
+    {
+     "texto": "y, muerto el que es la Vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "triunfante se levanta.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Qué has visto de camino,",
+     "sangria": 0
+    },
+    {
+     "texto": "María, en la mañana?",
+     "sangria": 0
+    },
+    {
+     "texto": "A mi Señor glorioso,",
+     "sangria": 0
+    },
+    {
+     "texto": "la tumba abandonada,",
+     "sangria": 0
+    },
+    {
+     "texto": "los ángeles testigos,",
+     "sangria": 0
+    },
+    {
+     "texto": "sudarios y mortaja.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Resucitó de veras",
+     "sangria": 0
+    },
+    {
+     "texto": "mi amor y mi esperanza!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Venid a Galilea,",
+     "sangria": 0
+    },
+    {
+     "texto": "allí el Señor aguarda;",
+     "sangria": 0
+    },
+    {
+     "texto": "allí veréis los suyos",
+     "sangria": 0
+    },
+    {
+     "texto": "la gloria de la Pascua.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Primicia de los muertos,",
+     "sangria": 0
+    },
+    {
+     "texto": "sabemos por tu gracia",
+     "sangria": 0
+    },
+    {
+     "texto": "que estás resucitado;",
+     "sangria": 0
+    },
+    {
+     "texto": "la muerte en ti no manda.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Rey vencedor, apiádate",
+     "sangria": 0
+    },
+    {
+     "texto": "de la miseria humana",
+     "sangria": 0
+    },
+    {
+     "texto": "y da a tus fieles parte",
+     "sangria": 0
+    },
+    {
+     "texto": "en tu victoria santa.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1521,
+    "impresa": "393"
+   }
+  ]
+ },
+ {
+  "id": "alegria-alegria-alegria",
+  "primer_verso": "¡Alegría!, ¡Alegría!, ¡Alegría!",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Alegría!, ¡Alegría!, ¡Alegría!",
+     "sangria": 0
+    },
+    {
+     "texto": "La muerte, en huida,",
+     "sangria": 0
+    },
+    {
+     "texto": "ya va malherida.",
+     "sangria": 0
+    },
+    {
+     "texto": "Los sepulcros se quedan desiertos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Decid a los muertos:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"¡Renace la Vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "y la muerte ya va de vencida!\"",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Quien le lloró muerto",
+     "sangria": 0
+    },
+    {
+     "texto": "lo encontró en el huerto,",
+     "sangria": 0
+    },
+    {
+     "texto": "hortelano de rosas y olivos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Decid a los vivos:",
+     "sangria": 0
+    },
+    {
+     "texto": "\"¡Viole jardinero",
+     "sangria": 0
+    },
+    {
+     "texto": "quien le viera colgar del madero!\"",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Las puertas selladas",
+     "sangria": 0
+    },
+    {
+     "texto": "hoy son derribadas.",
+     "sangria": 0
+    },
+    {
+     "texto": "En el cielo se canta victoria.",
+     "sangria": 0
+    },
+    {
+     "texto": "Gritadle a la gloria",
+     "sangria": 0
+    },
+    {
+     "texto": "que hoy son asaltadas",
+     "sangria": 0
+    },
+    {
+     "texto": "por el hombre sus \"muchas moradas\".",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1521,
+    "impresa": "393",
+    "pdf_fin": 1522,
+    "impresa_fin": "394"
+   }
+  ]
+ },
+ {
+  "id": "cristo",
+  "primer_verso": "Cristo,",
+  "estrofas": [
+   [
+    {
+     "texto": "Cristo,",
+     "sangria": 0
+    },
+    {
+     "texto": "alegría del mundo,",
+     "sangria": 0
+    },
+    {
+     "texto": "resplandor de la gloria del Padre.",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Bendita la mañana",
+     "sangria": 0
+    },
+    {
+     "texto": "que anuncia tu esplendor al universo!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En el día primero,",
+     "sangria": 0
+    },
+    {
+     "texto": "tu resurrección alegraba",
+     "sangria": 0
+    },
+    {
+     "texto": "el corazón del Padre.",
+     "sangria": 0
+    },
+    {
+     "texto": "En el día primero,",
+     "sangria": 0
+    },
+    {
+     "texto": "vió que todas las cosas eran buenas",
+     "sangria": 0
+    },
+    {
+     "texto": "porque participaban de tu gloria.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La mañana celebra",
+     "sangria": 0
+    },
+    {
+     "texto": "tu resurrección y se alegra",
+     "sangria": 0
+    },
+    {
+     "texto": "con claridad de Pascua.",
+     "sangria": 0
+    },
+    {
+     "texto": "Se levanta la tierra",
+     "sangria": 0
+    },
+    {
+     "texto": "como un joven discípulo en tu busca,",
+     "sangria": 0
+    },
+    {
+     "texto": "sabiendo que el sepulcro está vacío.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En la clara mañana,",
+     "sangria": 0
+    },
+    {
+     "texto": "tu sagrada luz se difunde",
+     "sangria": 0
+    },
+    {
+     "texto": "como una gracia nueva.",
+     "sangria": 0
+    },
+    {
+     "texto": "Que nosotros vivamos",
+     "sangria": 0
+    },
+    {
+     "texto": "como hijos de luz y no pequemos",
+     "sangria": 0
+    },
+    {
+     "texto": "contra la claridad de tu presencia.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1522,
+    "impresa": "394"
+   }
+  ]
+ },
+ {
+  "id": "la-noche-y-el-alba-con-su-estrella-fiel",
+  "primer_verso": "La noche y el alba, con su estrella fiel,",
+  "estrofas": [
+   [
+    {
+     "texto": "La noche y el alba, con su estrella fiel,",
+     "sangria": 0
+    },
+    {
+     "texto": "se gozan con Cristo, Señor de Israel,",
+     "sangria": 0
+    },
+    {
+     "texto": "con Cristo aliviado en el amanecer.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "La vida y la muerte luchándose están.",
+     "sangria": 0
+    },
+    {
+     "texto": "Oh, qué maravilla de juego mortal,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor Jesucristo, qué buen capitán.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "En él se redimen todos los pecados,",
+     "sangria": 0
+    },
+    {
+     "texto": "el árbol caído devuelve su flor,",
+     "sangria": 0
+    },
+    {
+     "texto": "oh santa mañana de resurrección.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Qué gozo de tierra, de aire y de mar,",
+     "sangria": 0
+    },
+    {
+     "texto": "qué muerte, qué vida,",
+     "sangria": 0
+    },
+    {
+     "texto": "qué fiel despertar,",
+     "sangria": 0
+    },
+    {
+     "texto": "qué gran romería de la cristiandad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1522,
+    "impresa": "394",
+    "pdf_fin": 1523,
+    "impresa_fin": "395"
+   }
+  ]
+ },
+ {
+  "id": "y-dejas-pastor-santo",
+  "primer_verso": "¿Y dejas, Pastor santo,",
+  "estrofas": [
+   [
+    {
+     "texto": "¿Y dejas, Pastor santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "tu grey en este valle hondo, oscuro,",
+     "sangria": 0
+    },
+    {
+     "texto": "en soledad y llanto;",
+     "sangria": 0
+    },
+    {
+     "texto": "y tú, rompiendo el puro",
+     "sangria": 0
+    },
+    {
+     "texto": "aire, te vas al inmortal seguro?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Los antes bienhadados",
+     "sangria": 0
+    },
+    {
+     "texto": "y los ahora tristes y afligidos,",
+     "sangria": 0
+    },
+    {
+     "texto": "a tus pechos criados,",
+     "sangria": 0
+    },
+    {
+     "texto": "de ti desposeídos,",
+     "sangria": 0
+    },
+    {
+     "texto": "¿a dónde volverán ya sus sentidos?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Qué mirarán los ojos",
+     "sangria": 0
+    },
+    {
+     "texto": "que vieron de tu rostro la hermosura",
+     "sangria": 0
+    },
+    {
+     "texto": "que no les sea enojos?",
+     "sangria": 0
+    },
+    {
+     "texto": "Quién gustó tu dulzura.",
+     "sangria": 0
+    },
+    {
+     "texto": "¿Qué no tendrá por llanto y amargura?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y a este mar turbado",
+     "sangria": 0
+    },
+    {
+     "texto": "¿quién le pondrá ya freno? ¿Quién concierto",
+     "sangria": 0
+    },
+    {
+     "texto": "al fiero viento, airado,",
+     "sangria": 0
+    },
+    {
+     "texto": "estando tú encubierto?",
+     "sangria": 0
+    },
+    {
+     "texto": "¿Qué norte guiará la nave al puerto?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ay, nube envidiosa",
+     "sangria": 0
+    },
+    {
+     "texto": "aún de este breve gozo, ¿qué te quejas?",
+     "sangria": 0
+    },
+    {
+     "texto": "¿Dónde vas presurosa?",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Cuán rica tú te alejas!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Cuán pobres y cuán ciegos, ay, nos dejas!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1788,
+    "impresa": "660"
+   }
+  ]
+ },
+ {
+  "id": "no-yo-no-dejo-la-tierra",
+  "primer_verso": "«No, yo no dejo la tierra.",
+  "estrofas": [
+   [
+    {
+     "texto": "«No, yo no dejo la tierra.",
+     "sangria": 0
+    },
+    {
+     "texto": "No, yo no olvido a los hombres.",
+     "sangria": 0
+    },
+    {
+     "texto": "Aquí, yo he dejado la guerra;",
+     "sangria": 0
+    },
+    {
+     "texto": "arriba, están vuestros nombres.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Qué hacéis mirando al cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "varones, sin alegría?",
+     "sangria": 0
+    },
+    {
+     "texto": "Lo que ahora parece un vuelo",
+     "sangria": 0
+    },
+    {
+     "texto": "ya es vuelta y es cercanía.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El gozo es mi testigo.",
+     "sangria": 0
+    },
+    {
+     "texto": "La paz, mi presencia viva,",
+     "sangria": 0
+    },
+    {
+     "texto": "que, al irme, se va conmigo",
+     "sangria": 0
+    },
+    {
+     "texto": "la cautividad cautiva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El cielo ha comenzado.",
+     "sangria": 0
+    },
+    {
+     "texto": "Vosotros sois mi cosecha.",
+     "sangria": 0
+    },
+    {
+     "texto": "El Padre ya os ha sentado",
+     "sangria": 0
+    },
+    {
+     "texto": "conmigo, a su derecha.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Partid frente a la aurora.",
+     "sangria": 0
+    },
+    {
+     "texto": "Salvad a todo el que crea.",
+     "sangria": 0
+    },
+    {
+     "texto": "Vosotros marcáis mi hora.",
+     "sangria": 0
+    },
+    {
+     "texto": "Comienza vuestra tarea.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1788,
+    "impresa": "660",
+    "pdf_fin": 1789,
+    "impresa_fin": "661"
+   }
+  ]
+ },
+ {
+  "id": "no-yo-no-dejo-la-tierra-2",
+  "primer_verso": "«No; yo no dejo la tierra.",
+  "estrofas": [
+   [
+    {
+     "texto": "«No; yo no dejo la tierra.",
+     "sangria": 2
+    },
+    {
+     "texto": "No; yo no olvido a los hombres.",
+     "sangria": 2
+    },
+    {
+     "texto": "Aquí, yo he dejado la guerra;",
+     "sangria": 2
+    },
+    {
+     "texto": "arriba, están vuestros nombres.»",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "¿Qué hacéis mirando al cielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "varones, sin alegría?",
+     "sangria": 0
+    },
+    {
+     "texto": "Lo que ahora parece un vuelo",
+     "sangria": 0
+    },
+    {
+     "texto": "ya es vuelta y es cercanía.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El gozo es mi testigo.",
+     "sangria": 0
+    },
+    {
+     "texto": "La paz, mi presencia viva,",
+     "sangria": 0
+    },
+    {
+     "texto": "que, al irme, se va conmigo",
+     "sangria": 0
+    },
+    {
+     "texto": "la cautividad cautiva.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El cielo ha comenzado.",
+     "sangria": 0
+    },
+    {
+     "texto": "Vosotros sois mi cosecha,",
+     "sangria": 0
+    },
+    {
+     "texto": "El padre ya os ha sentado",
+     "sangria": 0
+    },
+    {
+     "texto": "conmigo, a su derecha.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Partid frente a la aurora.",
+     "sangria": 0
+    },
+    {
+     "texto": "Salvad a todo el que crea.",
+     "sangria": 0
+    },
+    {
+     "texto": "Vosotros marcáis mi hora.",
+     "sangria": 0
+    },
+    {
+     "texto": "Comienza vuestra tarea.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1796,
+    "impresa": "668",
+    "pdf_fin": 1797,
+    "impresa_fin": "669"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «no-yo-no-dejo-la-tierra»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "contigo-sube-el-mundo-cuando-subes",
+  "primer_verso": "Contigo sube el mundo cuando subes,",
+  "estrofas": [
+   [
+    {
+     "texto": "Contigo sube el mundo cuando subes,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al son de tu alegría matutina",
+     "sangria": 0
+    },
+    {
+     "texto": "nos alzamos los muertos de las tumbas;",
+     "sangria": 0
+    },
+    {
+     "texto": "salvados respiramos vida pura,",
+     "sangria": 0
+    },
+    {
+     "texto": "bebiendo de tus labios el Espíritu.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cuando la lengua a proferir no alcanza",
+     "sangria": 0
+    },
+    {
+     "texto": "tu cuerpo nos lo dice, ¡oh Traspasado!",
+     "sangria": 0
+    },
+    {
+     "texto": "Tu carne santa es luz de las estrellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "victoria de los hombres, fuego y brisa,",
+     "sangria": 0
+    },
+    {
+     "texto": "y fuente bautismal, ¡oh Jesucristo!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cuanto el amor humano sueña y quiere,",
+     "sangria": 0
+    },
+    {
+     "texto": "en tu pecho, en tu médula, en tus llagas",
+     "sangria": 0
+    },
+    {
+     "texto": "vivo está, ¡oh Jesús glorificado!",
+     "sangria": 0
+    },
+    {
+     "texto": "En ti, Dios fuerte, Hijo primogénito,",
+     "sangria": 0
+    },
+    {
+     "texto": "callando, el corazón lo gusta y siente.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Lo que fue, lo que existe, lo que viene,",
+     "sangria": 0
+    },
+    {
+     "texto": "lo que en el Padre es vida incorruptible,",
+     "sangria": 0
+    },
+    {
+     "texto": "tu cuerpo lo ha heredado y nos lo entrega.",
+     "sangria": 0
+    },
+    {
+     "texto": "Tú nos haces presente la esperanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú que eres nuestro hermano para siempre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cautivos de tu vuelo y exaltados",
+     "sangria": 0
+    },
+    {
+     "texto": "contigo hasta la diestra poderosa,",
+     "sangria": 0
+    },
+    {
+     "texto": "al Padre y al Espíritu alabamos;",
+     "sangria": 0
+    },
+    {
+     "texto": "como espigas que doblan la cabeza,",
+     "sangria": 0
+    },
+    {
+     "texto": "los hijos de la Iglesia te adoramos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1797,
+    "impresa": "669"
+   }
+  ]
+ },
+ {
+  "id": "ven-espiritu-divino",
+  "primer_verso": "Ven, Espíritu divino,",
+  "estrofas": [
+   [
+    {
+     "texto": "Ven, Espíritu divino,",
+     "sangria": 0
+    },
+    {
+     "texto": "manda tu luz desde el cielo.",
+     "sangria": 0
+    },
+    {
+     "texto": "Padre amoroso del pobre;",
+     "sangria": 0
+    },
+    {
+     "texto": "don, en tus dones espléndido;",
+     "sangria": 0
+    },
+    {
+     "texto": "luz que penetra las almas;",
+     "sangria": 0
+    },
+    {
+     "texto": "fuente del mayor consuelo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ven, dulce huésped del alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "descanso de nuestro esfuerzo,",
+     "sangria": 0
+    },
+    {
+     "texto": "tregua en el duro trabajo,",
+     "sangria": 0
+    },
+    {
+     "texto": "brisa en las horas de fuego,",
+     "sangria": 0
+    },
+    {
+     "texto": "gozo que enjuga las lágrimas",
+     "sangria": 0
+    },
+    {
+     "texto": "y reconforta en los duelos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Entra hasta el fondo del alma,",
+     "sangria": 0
+    },
+    {
+     "texto": "divina luz, y enriquécenos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Mira el vacío del hombre,",
+     "sangria": 0
+    },
+    {
+     "texto": "si tú le faltas por dentro;",
+     "sangria": 0
+    },
+    {
+     "texto": "mira el poder del pecado,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando no envías tu aliento.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Riega la tierra en sequía,",
+     "sangria": 0
+    },
+    {
+     "texto": "sana el corazón enfermo,",
+     "sangria": 0
+    },
+    {
+     "texto": "lava las manchas, infunde",
+     "sangria": 0
+    },
+    {
+     "texto": "calor de vida en el hielo,",
+     "sangria": 0
+    },
+    {
+     "texto": "doma el espíritu indómito,",
+     "sangria": 0
+    },
+    {
+     "texto": "guía al que tuerce el sendero.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Reparte tus siete dones,",
+     "sangria": 0
+    },
+    {
+     "texto": "según la fe de tus siervos;",
+     "sangria": 0
+    },
+    {
+     "texto": "por tu bondad y gracia,",
+     "sangria": 0
+    },
+    {
+     "texto": "dale al esfuerzo su mérito;",
+     "sangria": 0
+    },
+    {
+     "texto": "salva al que busca salvarse",
+     "sangria": 0
+    },
+    {
+     "texto": "y danos tu gozo eterno.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1805,
+    "impresa": "677"
+   },
+   {
+    "tomo": 2,
+    "pdf": 1846,
+    "impresa": "718"
+   }
+  ]
+ },
+ {
+  "id": "oh-llama-de-amor-viva",
+  "primer_verso": "¡Oh llama de amor viva,",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Oh llama de amor viva,",
+     "sangria": 0
+    },
+    {
+     "texto": "que tiernamente hieres",
+     "sangria": 0
+    },
+    {
+     "texto": "de mi alma en el más profundo centro!;",
+     "sangria": 0
+    },
+    {
+     "texto": "pues ya no eres esquiva,",
+     "sangria": 0
+    },
+    {
+     "texto": "acaba ya, si quieres;",
+     "sangria": 0
+    },
+    {
+     "texto": "rompe la tela de este dulce encuentro.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh cauterio suave!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Oh regalada llaga!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Oh mano blanda! ¡Oh toque delicado!,",
+     "sangria": 0
+    },
+    {
+     "texto": "que a vida eterna sabe",
+     "sangria": 0
+    },
+    {
+     "texto": "y toda deuda paga;",
+     "sangria": 0
+    },
+    {
+     "texto": "matando, muerte en vida la has trocado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh lámparas de fuego,",
+     "sangria": 0
+    },
+    {
+     "texto": "en cuyos resplandores",
+     "sangria": 0
+    },
+    {
+     "texto": "las profundas cavernas del sentido,",
+     "sangria": 0
+    },
+    {
+     "texto": "que estaba oscuro y ciego,",
+     "sangria": 0
+    },
+    {
+     "texto": "con extraños primores,",
+     "sangria": 0
+    },
+    {
+     "texto": "calor y luz dan junto a su querido!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Cuán manso y amoroso",
+     "sangria": 0
+    },
+    {
+     "texto": "recuerdas en mi seno,",
+     "sangria": 0
+    },
+    {
+     "texto": "donde secretamente solo moras,",
+     "sangria": 0
+    },
+    {
+     "texto": "y en tu aspirar sabroso",
+     "sangria": 0
+    },
+    {
+     "texto": "de bien y gloria lleno,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuán delicadamente me enamoras!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1806,
+    "impresa": "678"
+   }
+  ]
+ },
+ {
+  "id": "el-mundo-brilla-de-alegria",
+  "primer_verso": "El mundo brilla de alegría.",
+  "estrofas": [
+   [
+    {
+     "texto": "El mundo brilla de alegría.",
+     "sangria": 0
+    },
+    {
+     "texto": "Se renueva la faz de la tierra.",
+     "sangria": 0
+    },
+    {
+     "texto": "Gloria al Padre, y al Hijo, y al Espíritu",
+     "sangria": 0
+    },
+    {
+     "texto": "Santo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Esta es la hora",
+     "sangria": 0
+    },
+    {
+     "texto": "en que rompe el Espíritu",
+     "sangria": 0
+    },
+    {
+     "texto": "el techo de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "y una lengua de fuego innumerable",
+     "sangria": 0
+    },
+    {
+     "texto": "purifica, renueva, enciende, alegra",
+     "sangria": 0
+    },
+    {
+     "texto": "las entrañas del mundo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Esta es la fuerza",
+     "sangria": 0
+    },
+    {
+     "texto": "que pone en pie a la Iglesia",
+     "sangria": 0
+    },
+    {
+     "texto": "en medio de las plazas",
+     "sangria": 0
+    },
+    {
+     "texto": "y levanta testigos en el pueblo,",
+     "sangria": 0
+    },
+    {
+     "texto": "para hablar con palabras como espadas",
+     "sangria": 0
+    },
+    {
+     "texto": "delante de los jueces.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Llama profunda,",
+     "sangria": 0
+    },
+    {
+     "texto": "que escrutas e iluminas",
+     "sangria": 0
+    },
+    {
+     "texto": "el corazón del hombre:",
+     "sangria": 0
+    },
+    {
+     "texto": "restablece la fe con tu noticia,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el amor ponga en vela la esperanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "hasta que el Señor vuelva.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1806,
+    "impresa": "678",
+    "pdf_fin": 1807,
+    "impresa_fin": "679"
+   }
+  ]
+ },
+ {
+  "id": "si-siendo-aun-enemigos-fuimos-reconciliados-con-dios-por-la-muerte-de-su-hijo-con",
+  "primer_verso": "Si, siendo aún enemigos, fuimos reconciliados con Dios por la muerte de su Hijo, con",
+  "estrofas": [
+   [
+    {
+     "texto": "Si, siendo aún enemigos, fuimos reconciliados con Dios por la muerte de su Hijo, con",
+     "sangria": 0
+    },
+    {
+     "texto": "mayor razón, estando ya reconciliados, seremos salvos por su vida. Y no sólo eso. Hasta",
+     "sangria": 0
+    },
+    {
+     "texto": "ponemos nuestra gloria y confianza en Dios gracias a nuestro Señor Jesucristo, por cuyo",
+     "sangria": 0
+    },
+    {
+     "texto": "medio hemos obtenido ahora la reconciliación.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1844,
+    "impresa": "716"
+   }
+  ]
+ },
+ {
+  "id": "ven-creador-espiritu-amoroso",
+  "primer_verso": "Ven, Creador, Espíritu amoroso,",
+  "estrofas": [
+   [
+    {
+     "texto": "Ven, Creador, Espíritu amoroso,",
+     "sangria": 0
+    },
+    {
+     "texto": "ven y visita el alma que a ti clama",
+     "sangria": 0
+    },
+    {
+     "texto": "y con tu soberana gracia inflama",
+     "sangria": 0
+    },
+    {
+     "texto": "los pechos que criaste poderoso.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú que abogado fiel eres llamado,",
+     "sangria": 0
+    },
+    {
+     "texto": "del Altísimo don, perenne fuente",
+     "sangria": 0
+    },
+    {
+     "texto": "de vida eterna, caridad ferviente,",
+     "sangria": 0
+    },
+    {
+     "texto": "espiritual unción, fuego sagrado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Tú que infundes al alma los siete dones,",
+     "sangria": 0
+    },
+    {
+     "texto": "fiel promesa del Padre soberano;",
+     "sangria": 0
+    },
+    {
+     "texto": "tú eres el dedo de su diestra mano,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú nos dictas palabras y razones.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ilustra con tu luz nuestros sentidos,",
+     "sangria": 0
+    },
+    {
+     "texto": "del corazón ahuyenta la tibieza,",
+     "sangria": 0
+    },
+    {
+     "texto": "haznos vencer la corporal flaqueza,",
+     "sangria": 0
+    },
+    {
+     "texto": "con tu eterna virtud fortalecidos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Por ti, nuestro enemigo desterrado,",
+     "sangria": 0
+    },
+    {
+     "texto": "gocemos de paz santa duradera,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, siendo nuestro guía en la carrera,",
+     "sangria": 0
+    },
+    {
+     "texto": "todo daño evitemos y pecado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Por ti al eterno Padre conozcamos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y al Hijo, soberano omnipotente,",
+     "sangria": 0
+    },
+    {
+     "texto": "y a ti, Espíritu, de ambos procedente,",
+     "sangria": 0
+    },
+    {
+     "texto": "con viva fe y amor siempre creamos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1846,
+    "impresa": "718",
+    "pdf_fin": 1847,
+    "impresa_fin": "719"
+   }
+  ]
+ },
+ {
+  "id": "oh-llama-de-amor-viva-2",
+  "primer_verso": "¡Oh llama de amor viva",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Oh llama de amor viva",
+     "sangria": 0
+    },
+    {
+     "texto": "que tiernamente hieres",
+     "sangria": 0
+    },
+    {
+     "texto": "de mi alma en el más profundo centro!",
+     "sangria": 0
+    },
+    {
+     "texto": "Pues ya no eres esquiva",
+     "sangria": 0
+    },
+    {
+     "texto": "acaba ya si quieres,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡rompe la tela de este dulce encuentro!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh cauterio suave!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Oh regalada llaga!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Oh mano blanda! ¡Oh toque delicado",
+     "sangria": 0
+    },
+    {
+     "texto": "que a vida eterna sabe",
+     "sangria": 0
+    },
+    {
+     "texto": "y toda deuda paga!",
+     "sangria": 0
+    },
+    {
+     "texto": "Matando, muerte en vida has trocado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh lámparas de fuego",
+     "sangria": 0
+    },
+    {
+     "texto": "en cuyos resplandores",
+     "sangria": 0
+    },
+    {
+     "texto": "las profundas cavernas del sentido,",
+     "sangria": 0
+    },
+    {
+     "texto": "que estaba oscuro y ciego,",
+     "sangria": 0
+    },
+    {
+     "texto": "con extraños primores",
+     "sangria": 0
+    },
+    {
+     "texto": "color y luz dan junto a su querido!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Cuán manso y amoroso",
+     "sangria": 0
+    },
+    {
+     "texto": "recuerdas en mi seno",
+     "sangria": 0
+    },
+    {
+     "texto": "donde secretamente solo moras,",
+     "sangria": 0
+    },
+    {
+     "texto": "y en tu aspirar sabroso",
+     "sangria": 0
+    },
+    {
+     "texto": "de bien y gloria lleno,",
+     "sangria": 0
+    },
+    {
+     "texto": "cuán delicadamente me enamoras!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1850,
+    "impresa": "722"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «oh-llama-de-amor-viva»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "oh-bien-venido-seas",
+  "primer_verso": "¡Oh, bien venido seas,",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Oh, bien venido seas,",
+     "sangria": 0
+    },
+    {
+     "texto": "Paráclito eternal, que con tus dones",
+     "sangria": 0
+    },
+    {
+     "texto": "nos nutres y recreas!",
+     "sangria": 0
+    },
+    {
+     "texto": "Lluevan tus bendiciones",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre nuestros contritos corazones.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Si alguna vez caemos,",
+     "sangria": 0
+    },
+    {
+     "texto": "tú a levantarnos ven, y tú nos guía",
+     "sangria": 0
+    },
+    {
+     "texto": "y alumbra si no vemos,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, si el pecho se enfría,",
+     "sangria": 0
+    },
+    {
+     "texto": "ven y tu calor santo en él envía.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ven y nos fortalece,",
+     "sangria": 0
+    },
+    {
+     "texto": "si alguna vez nuestro valor flaquea,",
+     "sangria": 0
+    },
+    {
+     "texto": "y tu ley enderece",
+     "sangria": 0
+    },
+    {
+     "texto": "el pie, si se ladea,",
+     "sangria": 0
+    },
+    {
+     "texto": "si tímido se para o titubea.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El fuego centelleante,",
+     "sangria": 0
+    },
+    {
+     "texto": "que sobre los apóstoles ardía,",
+     "sangria": 0
+    },
+    {
+     "texto": "al pecho de diamante,",
+     "sangria": 0
+    },
+    {
+     "texto": "al alma seca y fría,",
+     "sangria": 0
+    },
+    {
+     "texto": "ablande y dé calor en este día.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Y unidos y enlazados",
+     "sangria": 0
+    },
+    {
+     "texto": "en tus lazos, Amor omnipotente,",
+     "sangria": 0
+    },
+    {
+     "texto": "de pueblos apartados",
+     "sangria": 0
+    },
+    {
+     "texto": "haz una sola gente,",
+     "sangria": 0
+    },
+    {
+     "texto": "un corazón, un alma solamente.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1850,
+    "impresa": "722",
+    "pdf_fin": 1851,
+    "impresa_fin": "723"
+   }
+  ]
+ },
+ {
+  "id": "el-mundo-brilla-de-alegria-2",
+  "primer_verso": "El mundo brilla de alegría.",
+  "estrofas": [
+   [
+    {
+     "texto": "El mundo brilla de alegría.",
+     "sangria": 2
+    },
+    {
+     "texto": "Se renueva la faz de la tierra.",
+     "sangria": 2
+    },
+    {
+     "texto": "Gloria al Padre, y al Hijo, y al Espíritu Santo.",
+     "sangria": 2
+    }
+   ],
+   [
+    {
+     "texto": "Esta es la hora",
+     "sangria": 0
+    },
+    {
+     "texto": "en que rompe el Espíritu",
+     "sangria": 0
+    },
+    {
+     "texto": "el techo de la tierra,",
+     "sangria": 0
+    },
+    {
+     "texto": "y una lengua de fuego innumerable",
+     "sangria": 0
+    },
+    {
+     "texto": "purifica, renueva, enciende, alegra",
+     "sangria": 0
+    },
+    {
+     "texto": "las entrañas del mundo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Esta es la fuerza",
+     "sangria": 0
+    },
+    {
+     "texto": "que pone en pie a la Iglesia",
+     "sangria": 0
+    },
+    {
+     "texto": "en medio de las plazas",
+     "sangria": 0
+    },
+    {
+     "texto": "y levanta testigos en el pueblo,",
+     "sangria": 0
+    },
+    {
+     "texto": "para hablar con palabras como espadas",
+     "sangria": 0
+    },
+    {
+     "texto": "delante de los jueces.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Llama profunda,",
+     "sangria": 0
+    },
+    {
+     "texto": "que escrutas e iluminas",
+     "sangria": 0
+    },
+    {
+     "texto": "el corazón del hombre:",
+     "sangria": 0
+    },
+    {
+     "texto": "restablece la fe con tu noticia,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el amor ponga en vela la esperanza,",
+     "sangria": 0
+    },
+    {
+     "texto": "hasta que el Señor vuelva.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1856,
+    "impresa": "728"
+   }
+  ],
+  "revisar": true,
+  "nota": "casi igual a «el-mundo-brilla-de-alegria»: ¿es el mismo himno con otra redacción?"
+ },
+ {
+  "id": "hoy-desciende-el-espiritu-de-fuego",
+  "primer_verso": "Hoy desciende el Espíritu de fuego",
+  "estrofas": [
+   [
+    {
+     "texto": "Hoy desciende el Espíritu de fuego",
+     "sangria": 0
+    },
+    {
+     "texto": "al corazón creyente de la Iglesia,",
+     "sangria": 0
+    },
+    {
+     "texto": "el Señor que la quema y atraviesa",
+     "sangria": 0
+    },
+    {
+     "texto": "enciende con su llama al universo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Ebrios del Santo Espíritu, los Doce",
+     "sangria": 0
+    },
+    {
+     "texto": "rebosan de carismas y alabanzas;",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios baja al Sinaí, y en llamarada",
+     "sangria": 0
+    },
+    {
+     "texto": "y en ímpetu de amor retumba el monte.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Razas y pueblos quedan convocados;",
+     "sangria": 0
+    },
+    {
+     "texto": "Dios se muestra en Sión, la bella altura,",
+     "sangria": 0
+    },
+    {
+     "texto": "y en voz concorde aquí a los hombres junta,",
+     "sangria": 0
+    },
+    {
+     "texto": "desde Babel dispersos en pecado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Se lanzan por el mundo los testigos;",
+     "sangria": 0
+    },
+    {
+     "texto": "y sin ceñir espadas lo conquistan,",
+     "sangria": 0
+    },
+    {
+     "texto": "y sin oro a los pobres dan la vida;",
+     "sangria": 0
+    },
+    {
+     "texto": "el Espíritu guía y Cristo invicto.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "El Viento es brisa y fuerza de huracanes,",
+     "sangria": 0
+    },
+    {
+     "texto": "y el Agua viva mueve los océanos;",
+     "sangria": 0
+    },
+    {
+     "texto": "alzan los brazos y oran bendiciendo",
+     "sangria": 0
+    },
+    {
+     "texto": "y el gozo transfigura sus semblantes.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Espíritu de amor y de verdad,",
+     "sangria": 0
+    },
+    {
+     "texto": "Espíritu confín de las promesas,",
+     "sangria": 0
+    },
+    {
+     "texto": "oh Santo, a ti la gloria siempre sea,",
+     "sangria": 0
+    },
+    {
+     "texto": "y a nosotros de ti la santidad.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1856,
+    "impresa": "728",
+    "pdf_fin": 1857,
+    "impresa_fin": "729"
+   }
+  ]
+ }
+]

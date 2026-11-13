@@ -1,0 +1,4755 @@
+[
+ {
+  "id": "salmo-1",
+  "cita": "Salmo 1",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Dichoso el hombre",
+       "sangria": 0
+      },
+      {
+       "texto": "que no sigue el consejo de los impíos,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni entra por la senda de los pecadores,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni se sienta en la reunión de los cínicos;",
+       "sangria": 1
+      },
+      {
+       "texto": "sino que su gozo es la ley del Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "y medita su ley día y noche.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Será como un árbol",
+       "sangria": 0
+      },
+      {
+       "texto": "plantado al borde de la acequia:",
+       "sangria": 1
+      },
+      {
+       "texto": "da fruto en su sazón",
+       "sangria": 1
+      },
+      {
+       "texto": "y no se marchitan sus hojas;",
+       "sangria": 1
+      },
+      {
+       "texto": "y cuanto emprende tiene buen fin.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "No así los impíos, no así;",
+       "sangria": 0
+      },
+      {
+       "texto": "serán paja que arrebata el viento.",
+       "sangria": 1
+      },
+      {
+       "texto": "En el juicio los impíos no se levantarán,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni los pecadores en la asamblea de los justos;",
+       "sangria": 1
+      },
+      {
+       "texto": "porque el Señor protege el camino de los justos,",
+       "sangria": 1
+      },
+      {
+       "texto": "pero el camino de los impíos acaba mal.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1524,
+    "impresa": "396"
+   }
+  ]
+ },
+ {
+  "id": "salmo-2",
+  "cita": "Salmo 2",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "¿Por qué se amotinan las naciones,",
+       "sangria": 0
+      },
+      {
+       "texto": "y los pueblos planean un fracaso?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Se alían los reyes de la tierra,",
+       "sangria": 0
+      },
+      {
+       "texto": "los príncipes conspiran",
+       "sangria": 1
+      },
+      {
+       "texto": "contra el Señor y contra su Mesías:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"Rompamos sus coyundas,",
+       "sangria": 1
+      },
+      {
+       "texto": "sacudamos su yugo\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El que habita en el cielo sonríe,",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor se burla de ellos.",
+       "sangria": 1
+      },
+      {
+       "texto": "Luego les habla con ira,",
+       "sangria": 1
+      },
+      {
+       "texto": "los espanta con su cólera:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"yo mismo he establecido a mi Rey",
+       "sangria": 1
+      },
+      {
+       "texto": "en Sión, mi monte santo\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Voy a proclamar el decreto del Señor;",
+       "sangria": 0
+      },
+      {
+       "texto": "él me ha dicho:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"Tú eres mi hijo: yo te he engendrado hoy.",
+       "sangria": 1
+      },
+      {
+       "texto": "Pídemelo: te daré en herencia las naciones,",
+       "sangria": 1
+      },
+      {
+       "texto": "en posesión, los confines de la tierra:",
+       "sangria": 1
+      },
+      {
+       "texto": "los gobernarás con cetro de hierro,",
+       "sangria": 1
+      },
+      {
+       "texto": "los quebrarás como jarro de loza\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Y ahora, reyes, sed sensatos;",
+       "sangria": 0
+      },
+      {
+       "texto": "escarmentad, los que regís la tierra:",
+       "sangria": 1
+      },
+      {
+       "texto": "servid al Señor con temor,",
+       "sangria": 1
+      },
+      {
+       "texto": "rendidle homenaje temblando;",
+       "sangria": 1
+      },
+      {
+       "texto": "no sea que se irrite, y vayáis a la ruina,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque se inflama de pronto su ira.",
+       "sangria": 1
+      },
+      {
+       "texto": "¡Dichosos los que se refugian en él!",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1524,
+    "impresa": "396"
+   }
+  ]
+ },
+ {
+  "id": "salmo-3",
+  "cita": "Salmo 3",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Señor, cuántos son mis enemigos,",
+       "sangria": 0
+      },
+      {
+       "texto": "cuántos se levantan contra mí;",
+       "sangria": 1
+      },
+      {
+       "texto": "cuántos dicen de mí:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"ya no lo protege Dios\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Pero tú, Señor, eres mi escudo y mi gloria,",
+       "sangria": 0
+      },
+      {
+       "texto": "tú mantienes alta mi cabeza.",
+       "sangria": 1
+      },
+      {
+       "texto": "Si grito invocando al Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "él me escucha desde su monte santo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Puedo acostarme y dormir y despertar:",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor me sostiene.",
+       "sangria": 1
+      },
+      {
+       "texto": "No temeré al pueblo innumerable",
+       "sangria": 1
+      },
+      {
+       "texto": "que acampa a mi alrededor.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Levántate, Señor;",
+       "sangria": 0
+      },
+      {
+       "texto": "sálvame, Dios mío:",
+       "sangria": 1
+      },
+      {
+       "texto": "tú golpeaste a mis enemigos en la mejilla,",
+       "sangria": 1
+      },
+      {
+       "texto": "rompiste los dientes de los malvados.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "De ti, Señor, viene la salvación",
+       "sangria": 0
+      },
+      {
+       "texto": "y la bendición sobre tu pueblo.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1525,
+    "impresa": "397"
+   }
+  ]
+ },
+ {
+  "id": "salmo-8",
+  "cita": "Salmo 8",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Señor, dueño nuestro,",
+       "sangria": 0
+      },
+      {
+       "texto": "¡qué admirable es tu nombre",
+       "sangria": 0
+      },
+      {
+       "texto": "en toda la tierra!",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Ensalzaste tu majestad sobre los cielos.",
+       "sangria": 0
+      },
+      {
+       "texto": "De la boca de los niños de pecho",
+       "sangria": 0
+      },
+      {
+       "texto": "has sacado una alabanza contra tus enemigos,",
+       "sangria": 0
+      },
+      {
+       "texto": "para reprimir al adversario y al rebelde.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Cuando contemplo el cielo, obra de tus dedos,",
+       "sangria": 0
+      },
+      {
+       "texto": "la luna y las estrellas que has creado,",
+       "sangria": 0
+      },
+      {
+       "texto": "¿qué es el hombre, para que te acuerdes de él,",
+       "sangria": 0
+      },
+      {
+       "texto": "el ser humano, para darle poder?",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Lo hiciste poco inferior a los ángeles,",
+       "sangria": 0
+      },
+      {
+       "texto": "le coronaste de gloria y dignidad,",
+       "sangria": 0
+      },
+      {
+       "texto": "le diste el mando sobre las obras de tus manos,",
+       "sangria": 0
+      },
+      {
+       "texto": "todo lo sometiste bajo sus pies:",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "rebaños de ovejas y toros,",
+       "sangria": 0
+      },
+      {
+       "texto": "y hasta las bestias del campo,",
+       "sangria": 0
+      },
+      {
+       "texto": "las aves del cielo, los peces del mar,",
+       "sangria": 0
+      },
+      {
+       "texto": "que trazan sendas por el mar.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Señor, dueño nuestro,",
+       "sangria": 0
+      },
+      {
+       "texto": "¡qué admirable es tu nombre",
+       "sangria": 0
+      },
+      {
+       "texto": "en toda la tierra!",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1530,
+    "impresa": "402"
+   }
+  ]
+ },
+ {
+  "id": "salmo-18-a",
+  "cita": "Salmo 18 A",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "El cielo proclama la gloria de Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "el firmamento pregona",
+       "sangria": 0
+      },
+      {
+       "texto": "la obra de sus manos:",
+       "sangria": 0
+      },
+      {
+       "texto": "el día al día le pasa el mensaje,",
+       "sangria": 0
+      },
+      {
+       "texto": "la noche a la noche se lo susurra.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Sin que hablen, sin que pronuncien,",
+       "sangria": 0
+      },
+      {
+       "texto": "sin que resuene su voz,",
+       "sangria": 0
+      },
+      {
+       "texto": "a toda la tierra alcanza su pregón",
+       "sangria": 0
+      },
+      {
+       "texto": "y hasta los límites del orbe su lenguaje.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Allí le ha puesto su tienda al sol:",
+       "sangria": 0
+      },
+      {
+       "texto": "él sale como el esposo de su alcoba,",
+       "sangria": 0
+      },
+      {
+       "texto": "contento como un héroe,",
+       "sangria": 0
+      },
+      {
+       "texto": "a recorrer su camino.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Asoma por un extremo del cielo,",
+       "sangria": 0
+      },
+      {
+       "texto": "y su órbita llega al otro extremo:",
+       "sangria": 0
+      },
+      {
+       "texto": "nada se libra de su calor.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1531,
+    "impresa": "403"
+   }
+  ]
+ },
+ {
+  "id": "salmo-18b",
+  "cita": "Salmo 18B",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "La ley del Señor es perfecta",
+       "sangria": 0
+      },
+      {
+       "texto": "y es descanso del alma;",
+       "sangria": 1
+      },
+      {
+       "texto": "el precepto del Señor es fiel",
+       "sangria": 1
+      },
+      {
+       "texto": "e instruye al ignorante.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Los mandatos del Señor son rectos",
+       "sangria": 0
+      },
+      {
+       "texto": "y alegran el corazón;",
+       "sangria": 1
+      },
+      {
+       "texto": "la norma del Señor es límpida",
+       "sangria": 1
+      },
+      {
+       "texto": "y da luz a los ojos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "La voluntad del Señor es pura",
+       "sangria": 0
+      },
+      {
+       "texto": "y eternamente estable;",
+       "sangria": 1
+      },
+      {
+       "texto": "los mandamientos del Señor son verdaderos",
+       "sangria": 1
+      },
+      {
+       "texto": "y enteramente justos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Más preciosos que el oro,",
+       "sangria": 0
+      },
+      {
+       "texto": "más que el oro fino;",
+       "sangria": 1
+      },
+      {
+       "texto": "más dulces que la miel",
+       "sangria": 1
+      },
+      {
+       "texto": "de un panal que destila.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Aunque tu siervo vigila",
+       "sangria": 0
+      },
+      {
+       "texto": "para guardarlos con cuidado,",
+       "sangria": 1
+      },
+      {
+       "texto": "¿quién conoce sus faltas?",
+       "sangria": 1
+      },
+      {
+       "texto": "Absuélveme de lo que se me oculta.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Preserva a tu siervo de la arrogancia,",
+       "sangria": 0
+      },
+      {
+       "texto": "para que no me domine:",
+       "sangria": 1
+      },
+      {
+       "texto": "así quedaré libre e inocente",
+       "sangria": 1
+      },
+      {
+       "texto": "del gran pecado.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Que te agraden las palabras de mi boca,",
+       "sangria": 0
+      },
+      {
+       "texto": "y llegue a tu presencia el meditar de mi corazón,",
+       "sangria": 1
+      },
+      {
+       "texto": "Señor, roca mía, redentor mío.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1531,
+    "impresa": "403"
+   }
+  ]
+ },
+ {
+  "id": "salmo-23",
+  "cita": "Salmo 23",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Del Señor es la tierra y cuanto la llena,",
+       "sangria": 0
+      },
+      {
+       "texto": "el orbe y todos sus habitantes:",
+       "sangria": 1
+      },
+      {
+       "texto": "él la fundó sobre los mares,",
+       "sangria": 1
+      },
+      {
+       "texto": "él la afianzó sobre los ríos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— ¿Quién puede subir al monte del Señor?",
+       "sangria": 0
+      },
+      {
+       "texto": "¿Quién puede estar en el recinto sacro?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— El hombre de manos inocentes",
+       "sangria": 0
+      },
+      {
+       "texto": "y puro corazón,",
+       "sangria": 1
+      },
+      {
+       "texto": "que no confía en los ídolos",
+       "sangria": 1
+      },
+      {
+       "texto": "ni jura contra el prójimo en falso.",
+       "sangria": 1
+      },
+      {
+       "texto": "Ése recibirá la bendición del Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "le hará justicia el Dios de salvación.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— Éste es el grupo que busca al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "que viene a tu presencia, Dios de Jacob.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Portones!, alzad los dinteles,",
+       "sangria": 0
+      },
+      {
+       "texto": "que se alcen las antiguas compuertas:",
+       "sangria": 1
+      },
+      {
+       "texto": "va a entrar el Rey de la gloria.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— ¿Quién es ese Rey de la gloria?",
+       "sangria": 0
+      },
+      {
+       "texto": "— El Señor, héroe valeroso;",
+       "sangria": 1
+      },
+      {
+       "texto": "el Señor, héroe de la guerra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Portones!, alzad los dinteles,",
+       "sangria": 0
+      },
+      {
+       "texto": "que se alcen las antiguas compuertas:",
+       "sangria": 1
+      },
+      {
+       "texto": "va a entrar el Rey de la gloria.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "— ¿Quién es ese Rey de la gloria?",
+       "sangria": 0
+      },
+      {
+       "texto": "— El Señor, Dios de los ejércitos.",
+       "sangria": 1
+      },
+      {
+       "texto": "Él es el Rey de la gloria.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1534,
+    "impresa": "406"
+   }
+  ]
+ },
+ {
+  "id": "salmo-65",
+  "cita": "Salmo 65",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Aclamad al Señor, tierra entera;",
+       "sangria": 0
+      },
+      {
+       "texto": "tocad en honor de su nombre,",
+       "sangria": 1
+      },
+      {
+       "texto": "cantad himnos a su gloria.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Decid a Dios: \"¡Qué temibles son tus obras,",
+       "sangria": 0
+      },
+      {
+       "texto": "por tu inmenso poder tus enemigos te adulan!\"",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Que se postre ante ti la tierra entera,",
+       "sangria": 0
+      },
+      {
+       "texto": "que toquen en tu honor,",
+       "sangria": 1
+      },
+      {
+       "texto": "que toquen para tu nombre.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Venid a ver las obras de Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "sus temibles proezas en favor de los hombres:",
+       "sangria": 1
+      },
+      {
+       "texto": "transformó el mar en tierra firme,",
+       "sangria": 1
+      },
+      {
+       "texto": "a pie atravesaron el río.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Alegrémonos con Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "que con su poder gobierna eternamente;",
+       "sangria": 1
+      },
+      {
+       "texto": "sus ojos vigilan a las naciones,",
+       "sangria": 1
+      },
+      {
+       "texto": "para que no se subleven los rebeldes.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Bendecid, pueblos, a nuestro Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "haced resonar sus alabanzas,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque él nos ha devuelto la vida",
+       "sangria": 1
+      },
+      {
+       "texto": "y no dejó que tropezaran nuestros pies.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Oh Dios, nos pusiste a prueba,",
+       "sangria": 0
+      },
+      {
+       "texto": "nos refinaste como refinan la plata;",
+       "sangria": 1
+      },
+      {
+       "texto": "nos empujaste a la trampa,",
+       "sangria": 1
+      },
+      {
+       "texto": "nos echaste a cuestas un fardo:",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "sobre nuestro cuello cabalgaban,",
+       "sangria": 0
+      },
+      {
+       "texto": "pasamos por fuego y por agua,",
+       "sangria": 1
+      },
+      {
+       "texto": "pero nos has dado respiro.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Entraré en tu casa con víctimas,",
+       "sangria": 0
+      },
+      {
+       "texto": "para cumplirte mis votos:",
+       "sangria": 1
+      },
+      {
+       "texto": "los que pronunciaron mis labios",
+       "sangria": 1
+      },
+      {
+       "texto": "y prometió mi boca en el peligro.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Te ofreceré víctimas cebadas,",
+       "sangria": 0
+      },
+      {
+       "texto": "te quemaré carneros,",
+       "sangria": 1
+      },
+      {
+       "texto": "inmolaré bueyes y cabras.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Fieles de Dios, venid a escuchar,",
+       "sangria": 0
+      },
+      {
+       "texto": "os contaré lo que ha hecho conmigo:",
+       "sangria": 1
+      },
+      {
+       "texto": "a él gritó mi boca",
+       "sangria": 1
+      },
+      {
+       "texto": "y lo ensalzó mi lengua.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Si hubiera tenido yo mala intención,",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor no me habría escuchado;",
+       "sangria": 1
+      },
+      {
+       "texto": "pero Dios me escuchó,",
+       "sangria": 1
+      },
+      {
+       "texto": "y atendió a mi voz suplicante.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Bendito sea Dios, que no rechazó mi súplica",
+       "sangria": 0
+      },
+      {
+       "texto": "ni me retiró su favor.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1535,
+    "impresa": "407"
+   }
+  ]
+ },
+ {
+  "id": "salmo-118-1-8",
+  "cita": "Salmo 118, 1-8",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Dichoso el que, con vida intachable,",
+       "sangria": 0
+      },
+      {
+       "texto": "camina en la voluntad del Señor;",
+       "sangria": 1
+      },
+      {
+       "texto": "dichoso el que, guardando sus preceptos,",
+       "sangria": 1
+      },
+      {
+       "texto": "lo busca de todo corazón;",
+       "sangria": 1
+      },
+      {
+       "texto": "el que, sin cometer iniquidad,",
+       "sangria": 1
+      },
+      {
+       "texto": "anda por sus senderos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Tú promulgas tus decretos",
+       "sangria": 0
+      },
+      {
+       "texto": "para que se observen exactamente.",
+       "sangria": 1
+      },
+      {
+       "texto": "Ojalá esté firme mi camino,",
+       "sangria": 1
+      },
+      {
+       "texto": "para cumplir tus consignas;",
+       "sangria": 1
+      },
+      {
+       "texto": "entonces no sentiré vergüenza",
+       "sangria": 1
+      },
+      {
+       "texto": "al mirar tus mandatos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Te alabaré con sincero corazón",
+       "sangria": 0
+      },
+      {
+       "texto": "cuando aprenda tus justos mandamientos.",
+       "sangria": 1
+      },
+      {
+       "texto": "Quiero guardar tus leyes exactamente,",
+       "sangria": 1
+      },
+      {
+       "texto": "tú, no me abandones.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1540,
+    "impresa": "412"
+   }
+  ]
+ },
+ {
+  "id": "salmo-15",
+  "cita": "Salmo 15",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Protégeme, Dios mío, que me refugio en ti;",
+       "sangria": 0
+      },
+      {
+       "texto": "yo digo al Señor: \"Tú eres mi bien\".",
+       "sangria": 1
+      },
+      {
+       "texto": "Los dioses y señores de la tierra",
+       "sangria": 1
+      },
+      {
+       "texto": "no me satisfacen.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Multiplican las estatuas",
+       "sangria": 0
+      },
+      {
+       "texto": "de dioses extraños;",
+       "sangria": 1
+      },
+      {
+       "texto": "no derramaré sus libaciones con mis manos,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni tomaré sus nombres en mis labios.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El Señor es el lote de mi heredad y mi copa;",
+       "sangria": 0
+      },
+      {
+       "texto": "mi suerte está en tu mano:",
+       "sangria": 1
+      },
+      {
+       "texto": "me ha tocado un lote hermoso,",
+       "sangria": 1
+      },
+      {
+       "texto": "me encanta mi heredad.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Bendeciré al Señor, que me aconseja,",
+       "sangria": 0
+      },
+      {
+       "texto": "hasta de noche me instruye internamente.",
+       "sangria": 1
+      },
+      {
+       "texto": "Tengo siempre presente al Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "con él a mi derecha no vacilaré.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Por eso se me alegra el corazón,",
+       "sangria": 0
+      },
+      {
+       "texto": "se gozan mis entrañas,",
+       "sangria": 1
+      },
+      {
+       "texto": "y mi carne descansa serena.",
+       "sangria": 1
+      },
+      {
+       "texto": "Porque no me entregarás a la muerte,",
+       "sangria": 1
+      },
+      {
+       "texto": "ni dejarás a tu fiel conocer la corrupción.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Me enseñarás el sendero de la vida,",
+       "sangria": 0
+      },
+      {
+       "texto": "me saciarás de gozo en tu presencia,",
+       "sangria": 1
+      },
+      {
+       "texto": "de alegría perpetua a tu derecha.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1540,
+    "impresa": "412"
+   }
+  ]
+ },
+ {
+  "id": "salmo-22",
+  "cita": "Salmo 22",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "El Señor es mi Pastor, nada me falta:",
+       "sangria": 0
+      },
+      {
+       "texto": "en verdes praderas me hace recostar;",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "me conduce hacia fuentes tranquilas",
+       "sangria": 0
+      },
+      {
+       "texto": "y repara mis fuerzas;",
+       "sangria": 1
+      },
+      {
+       "texto": "me guía por el sendero justo,",
+       "sangria": 1
+      },
+      {
+       "texto": "por el honor de su nombre.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Aunque camine por cañadas oscuras,",
+       "sangria": 0
+      },
+      {
+       "texto": "nada temo, porque tú vas conmigo:",
+       "sangria": 1
+      },
+      {
+       "texto": "tu vara y tu cayado me sosiegan.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Preparas una mesa ante mí,",
+       "sangria": 0
+      },
+      {
+       "texto": "enfrente de mis enemigos;",
+       "sangria": 1
+      },
+      {
+       "texto": "me unges la cabeza con perfume,",
+       "sangria": 1
+      },
+      {
+       "texto": "y mi copa rebosa.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Tu bondad y tu misericordia me acompañan",
+       "sangria": 0
+      },
+      {
+       "texto": "todos los días de mi vida,",
+       "sangria": 1
+      },
+      {
+       "texto": "y habitaré en la casa del Señor",
+       "sangria": 1
+      },
+      {
+       "texto": "por años sin término.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1541,
+    "impresa": "413"
+   }
+  ]
+ },
+ {
+  "id": "salmo-103",
+  "cita": "Salmo 103",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Bendice, alma mía, al Señor:",
+       "sangria": 0
+      },
+      {
+       "texto": "¡Dios mío, qué grande eres!",
+       "sangria": 0
+      },
+      {
+       "texto": "Te vistes de belleza y majestad,",
+       "sangria": 0
+      },
+      {
+       "texto": "la luz te envuelve como un manto.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Extiendes los cielos como una tienda,",
+       "sangria": 0
+      },
+      {
+       "texto": "construyes tu morada sobre las aguas;",
+       "sangria": 0
+      },
+      {
+       "texto": "las nubes te sirven de carroza,",
+       "sangria": 0
+      },
+      {
+       "texto": "avanzas en las olas del viento;",
+       "sangria": 0
+      },
+      {
+       "texto": "los vientos te sirven de mensajeros;",
+       "sangria": 0
+      },
+      {
+       "texto": "el fuego llameante, de ministro.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Asentaste la tierra sobre sus cimientos,",
+       "sangria": 0
+      },
+      {
+       "texto": "y no vacilará jamás;",
+       "sangria": 0
+      },
+      {
+       "texto": "la cubriste con el manto del océano,",
+       "sangria": 0
+      },
+      {
+       "texto": "y las aguas se posaron sobre las montañas;",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "pero a tu bramido huyeron,",
+       "sangria": 0
+      },
+      {
+       "texto": "al fragor de tu trueno se precipitaron,",
+       "sangria": 0
+      },
+      {
+       "texto": "mientras subían los montes y bajaban los valles:",
+       "sangria": 0
+      },
+      {
+       "texto": "cada cual al puesto asignado.",
+       "sangria": 0
+      },
+      {
+       "texto": "Trazaste una frontera que no traspasarán,",
+       "sangria": 0
+      },
+      {
+       "texto": "y no volverán a cubrir la tierra.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "De los manantiales sacas los ríos,",
+       "sangria": 0
+      },
+      {
+       "texto": "para que fluyan entre los montes;",
+       "sangria": 0
+      },
+      {
+       "texto": "en ellos beben las fieras de los campos,",
+       "sangria": 0
+      },
+      {
+       "texto": "el asno salvaje apaga su sed;",
+       "sangria": 0
+      },
+      {
+       "texto": "junto a ellos habitan las aves del cielo,",
+       "sangria": 0
+      },
+      {
+       "texto": "y entre las frondas se oye su canto.",
+       "sangria": 0
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Desde tu morada riegas los montes,",
+       "sangria": 0
+      },
+      {
+       "texto": "y la tierra se sacia de tu acción fecunda;",
+       "sangria": 0
+      },
+      {
+       "texto": "haces brotar hierba para los ganados,",
+       "sangria": 0
+      },
+      {
+       "texto": "y forraje para los que sirven al hombre.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Él saca pan de los campos,",
+       "sangria": 0
+      },
+      {
+       "texto": "y vino que le alegra el corazón;",
+       "sangria": 0
+      },
+      {
+       "texto": "y aceite que da brillo a su rostro,",
+       "sangria": 0
+      },
+      {
+       "texto": "y alimento que le da fuerzas.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Se llenan de savia los árboles del Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "los cedros del Líbano que él plantó:",
+       "sangria": 0
+      },
+      {
+       "texto": "allí anidan los pájaros,",
+       "sangria": 0
+      },
+      {
+       "texto": "en su cima pone casa la cigüeña.",
+       "sangria": 0
+      },
+      {
+       "texto": "Los riscos son para las cabras,",
+       "sangria": 0
+      },
+      {
+       "texto": "las peñas son madriguera de erizos.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Hiciste la luna con sus fases,",
+       "sangria": 0
+      },
+      {
+       "texto": "el sol conoce su ocaso.",
+       "sangria": 0
+      },
+      {
+       "texto": "Pones las tinieblas y viene la noche,",
+       "sangria": 0
+      },
+      {
+       "texto": "y rondan las fieras de la selva;",
+       "sangria": 0
+      },
+      {
+       "texto": "los cachorros rugen por la presa,",
+       "sangria": 0
+      },
+      {
+       "texto": "reclamando a Dios su comida.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Cuando brilla el sol, se retiran,",
+       "sangria": 0
+      },
+      {
+       "texto": "y se tumban en sus guaridas;",
+       "sangria": 0
+      },
+      {
+       "texto": "el hombre sale a sus faenas,",
+       "sangria": 0
+      },
+      {
+       "texto": "a su labranza hasta el atardecer.",
+       "sangria": 0
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "III",
+    "estrofas": [
+     [
+      {
+       "texto": "Cuántas son tus obras, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "y todas las hiciste con sabiduría;",
+       "sangria": 0
+      },
+      {
+       "texto": "la tierra está llena de tus criaturas.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Ahí está el mar: ancho y dilatado,",
+       "sangria": 0
+      },
+      {
+       "texto": "en él bullen, sin número,",
+       "sangria": 0
+      },
+      {
+       "texto": "animales pequeños y grandes;",
+       "sangria": 0
+      },
+      {
+       "texto": "lo surcan las naves, y el Leviatán",
+       "sangria": 0
+      },
+      {
+       "texto": "que modelaste para que retoce.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Todos ellos aguardan",
+       "sangria": 0
+      },
+      {
+       "texto": "a que les eches comida a su tiempo:",
+       "sangria": 0
+      },
+      {
+       "texto": "se la echas, y la atrapan;",
+       "sangria": 0
+      },
+      {
+       "texto": "abres tu mano, y se sacian de bienes;",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "escondes tu rostro, y se espantan;",
+       "sangria": 0
+      },
+      {
+       "texto": "les retiras el aliento, y expiran",
+       "sangria": 0
+      },
+      {
+       "texto": "y vuelven a ser polvo;",
+       "sangria": 0
+      },
+      {
+       "texto": "envías tu aliento, y los creas,",
+       "sangria": 0
+      },
+      {
+       "texto": "y repueblas la faz de la tierra.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Gloria a Dios para siempre,",
+       "sangria": 0
+      },
+      {
+       "texto": "goce el Señor con sus obras,",
+       "sangria": 0
+      },
+      {
+       "texto": "cuando él mira la tierra, ella tiembla;",
+       "sangria": 0
+      },
+      {
+       "texto": "cuando toca los montes, humean.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Cantaré al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "tocaré para mi Dios mientras exista:",
+       "sangria": 0
+      },
+      {
+       "texto": "que le sea agradable mi poema,",
+       "sangria": 0
+      },
+      {
+       "texto": "y yo me alegraré con el Señor.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Que se acaben los pecadores en la tierra,",
+       "sangria": 0
+      },
+      {
+       "texto": "que los malvados no existan más.",
+       "sangria": 0
+      },
+      {
+       "texto": "¡Bendice, alma mía, al Señor!",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1543,
+    "impresa": "415"
+   }
+  ]
+ },
+ {
+  "id": "salmo-118-17-24",
+  "cita": "Salmo 118, 17-24",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Haz bien a tu siervo: viviré",
+       "sangria": 0
+      },
+      {
+       "texto": "y cumpliré tus palabras;",
+       "sangria": 1
+      },
+      {
+       "texto": "ábreme los ojos, y contemplaré",
+       "sangria": 1
+      },
+      {
+       "texto": "las maravillas de tu voluntad;",
+       "sangria": 1
+      },
+      {
+       "texto": "soy un forastero en la tierra:",
+       "sangria": 1
+      },
+      {
+       "texto": "no me ocultes tus promesas.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Mi alma se consume, deseando",
+       "sangria": 0
+      },
+      {
+       "texto": "continuamente tus mandamientos;",
+       "sangria": 1
+      },
+      {
+       "texto": "reprendes a los soberbios,",
+       "sangria": 1
+      },
+      {
+       "texto": "malditos los que se apartan de tus mandatos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Aleja de mí las afrentas y el desprecio,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque observo tus preceptos;",
+       "sangria": 1
+      },
+      {
+       "texto": "aunque los nobles se sienten a murmurar de mí,",
+       "sangria": 1
+      },
+      {
+       "texto": "tu siervo medita tus leyes;",
+       "sangria": 1
+      },
+      {
+       "texto": "tus preceptos son mi delicia,",
+       "sangria": 1
+      },
+      {
+       "texto": "tus decretos son mis consejeros.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1550,
+    "impresa": "422"
+   }
+  ]
+ },
+ {
+  "id": "salmo-29",
+  "cita": "Salmo 29",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Te ensalzaré, Señor, porque me has librado",
+       "sangria": 0
+      },
+      {
+       "texto": "y no has dejado que mis enemigos se rían de mí.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Señor, Dios mío, a ti grité,",
+       "sangria": 0
+      },
+      {
+       "texto": "y tú me sanaste.",
+       "sangria": 1
+      },
+      {
+       "texto": "Señor, sacaste mi vida del abismo,",
+       "sangria": 1
+      },
+      {
+       "texto": "me hiciste revivir cuando bajaba a la fosa.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Tañed para el Señor, fieles suyos,",
+       "sangria": 0
+      },
+      {
+       "texto": "dad gracias a su nombre santo;",
+       "sangria": 1
+      },
+      {
+       "texto": "su cólera dura un instante;",
+       "sangria": 1
+      },
+      {
+       "texto": "su bondad, de por vida;",
+       "sangria": 1
+      },
+      {
+       "texto": "al atardecer nos invita el llanto;",
+       "sangria": 1
+      },
+      {
+       "texto": "por la mañana, el júbilo.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Yo pensaba muy seguro:",
+       "sangria": 0
+      },
+      {
+       "texto": "\"no vacilaré jamás\".",
+       "sangria": 1
+      },
+      {
+       "texto": "Tu bondad, Señor, me aseguraba",
+       "sangria": 1
+      },
+      {
+       "texto": "el honor y la fuerza;",
+       "sangria": 1
+      },
+      {
+       "texto": "pero escondiste tu rostro,",
+       "sangria": 1
+      },
+      {
+       "texto": "y quedé desconcertado.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "A ti, Señor, llamé, supliqué a mi Dios:",
+       "sangria": 0
+      },
+      {
+       "texto": "\"¿qué ganas con mi muerte,",
+       "sangria": 1
+      },
+      {
+       "texto": "con que yo baje a la fosa?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¿Te va a dar gracias el polvo,",
+       "sangria": 0
+      },
+      {
+       "texto": "o va a proclamar tu lealtad?",
+       "sangria": 1
+      },
+      {
+       "texto": "Escucha, Señor, y ten piedad de mí;",
+       "sangria": 1
+      },
+      {
+       "texto": "Señor, socórreme\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Cambiaste mi luto en danzas,",
+       "sangria": 0
+      },
+      {
+       "texto": "me desataste el sayal y me has vestido de fiesta;",
+       "sangria": 1
+      },
+      {
+       "texto": "te cantará mi alma sin callarse.",
+       "sangria": 1
+      },
+      {
+       "texto": "Señor, Dios mío, te daré gracias por siempre.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1550,
+    "impresa": "422"
+   }
+  ]
+ },
+ {
+  "id": "salmo-117",
+  "cita": "Salmo 117",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Dad gracias al Señor porque es bueno,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Diga la casa de Israel:",
+       "sangria": 0
+      },
+      {
+       "texto": "eterna es su misericordia.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Diga la casa de Aarón:",
+       "sangria": 0
+      },
+      {
+       "texto": "eterna es su misericordia.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Digan los fieles del Señor:",
+       "sangria": 0
+      },
+      {
+       "texto": "eterna es su misericordia.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "En el peligro grité al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "y me escuchó, poniéndome a salvo.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "El Señor está conmigo: no temo;",
+       "sangria": 0
+      },
+      {
+       "texto": "¿qué podrá hacerme el hombre?",
+       "sangria": 0
+      },
+      {
+       "texto": "El Señor está conmigo y me auxilia,",
+       "sangria": 0
+      },
+      {
+       "texto": "veré la derrota de mis adversarios.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Mejor es refugiarse en el Señor",
+       "sangria": 0
+      },
+      {
+       "texto": "que fiarse de los hombres,",
+       "sangria": 0
+      },
+      {
+       "texto": "mejor es refugiarse en el Señor",
+       "sangria": 0
+      },
+      {
+       "texto": "que fiarse de los jefes.",
+       "sangria": 0
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Todos los pueblos me rodeaban,",
+       "sangria": 0
+      },
+      {
+       "texto": "en el nombre del Señor los rechacé;",
+       "sangria": 0
+      },
+      {
+       "texto": "me rodeaban cerrando el cerco,",
+       "sangria": 0
+      },
+      {
+       "texto": "en el nombre del Señor los rechacé;",
+       "sangria": 0
+      },
+      {
+       "texto": "me rodeaban como avispas,",
+       "sangria": 0
+      },
+      {
+       "texto": "ardiendo como fuego en las zarzas,",
+       "sangria": 0
+      },
+      {
+       "texto": "en el nombre del Señor los rechacé.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Empujaban y empujaban para derribarme,",
+       "sangria": 0
+      },
+      {
+       "texto": "pero el Señor me ayudó;",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor es mi fuerza y mi energía,",
+       "sangria": 0
+      },
+      {
+       "texto": "él es mi salvación.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Escuchad: hay cantos de victoria",
+       "sangria": 0
+      },
+      {
+       "texto": "en las tiendas de los justos:",
+       "sangria": 0
+      },
+      {
+       "texto": "“la diestra del Señor es poderosa,",
+       "sangria": 0
+      },
+      {
+       "texto": "la diestra del Señor es excelsa,",
+       "sangria": 0
+      },
+      {
+       "texto": "la diestra del Señor es poderosa”.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "No he de morir, viviré",
+       "sangria": 0
+      },
+      {
+       "texto": "para contar las hazañas del Señor.",
+       "sangria": 0
+      },
+      {
+       "texto": "Me castigó, me castigó el Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "pero no me entregó a la muerte.",
+       "sangria": 0
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "III",
+    "estrofas": [
+     [
+      {
+       "texto": "Abridme las puertas del triunfo,",
+       "sangria": 0
+      },
+      {
+       "texto": "y entraré para dar gracias al Señor.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Ésta es la puerta del Señor:",
+       "sangria": 0
+      },
+      {
+       "texto": "los vencedores entrarán por ella.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Te doy gracias porque me escuchaste",
+       "sangria": 0
+      },
+      {
+       "texto": "y fuiste mi salvación.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "La piedra que desecharon los arquitectos",
+       "sangria": 0
+      },
+      {
+       "texto": "es ahora la piedra angular.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Es el Señor quien lo ha hecho,",
+       "sangria": 0
+      },
+      {
+       "texto": "ha sido un milagro patente.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Éste es el día en que actuó el Señor:",
+       "sangria": 0
+      },
+      {
+       "texto": "sea nuestra alegría y nuestro gozo.",
+       "sangria": 0
+      },
+      {
+       "texto": "Señor, danos la salvación;",
+       "sangria": 0
+      },
+      {
+       "texto": "Señor, danos prosperidad.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Bendito el que viene en nombre del Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "os bendecimos desde la casa del Señor;",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor es Dios, él nos ilumina.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Ordenad una procesión con ramos",
+       "sangria": 0
+      },
+      {
+       "texto": "hasta los ángulos del altar.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Tú eres mi Dios, te doy gracias;",
+       "sangria": 0
+      },
+      {
+       "texto": "Dios mío, yo te ensalzo.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Dad gracias al Señor porque es bueno,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1553,
+    "impresa": "425"
+   }
+  ]
+ },
+ {
+  "id": "salmo-75",
+  "cita": "Salmo 75",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Dios se manifiesta en Judá,",
+       "sangria": 0
+      },
+      {
+       "texto": "su fama es grande en Israel;",
+       "sangria": 1
+      },
+      {
+       "texto": "su tabernáculo está en Jerusalén,",
+       "sangria": 1
+      },
+      {
+       "texto": "su morada en Sión:",
+       "sangria": 1
+      },
+      {
+       "texto": "allí quebró los relámpagos del arco,",
+       "sangria": 1
+      },
+      {
+       "texto": "el escudo, la espada y la guerra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Tú eres deslumbrante, magnífico,",
+       "sangria": 0
+      },
+      {
+       "texto": "con montones de botín conquistados.",
+       "sangria": 1
+      },
+      {
+       "texto": "Los valientes duermen su sueño,",
+       "sangria": 1
+      },
+      {
+       "texto": "y a los guerreros no les responden sus brazos.",
+       "sangria": 1
+      },
+      {
+       "texto": "Con un bramido, oh Dios de Jacob,",
+       "sangria": 1
+      },
+      {
+       "texto": "inmovilizaste carros y caballos.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Tú eres terrible: ¿quién resiste frente a ti",
+       "sangria": 0
+      },
+      {
+       "texto": "al ímpetu de tu ira?",
+       "sangria": 1
+      },
+      {
+       "texto": "Desde el cielo proclamas la sentencia:",
+       "sangria": 1
+      },
+      {
+       "texto": "la tierra teme sobrecogida,",
+       "sangria": 1
+      },
+      {
+       "texto": "cuando Dios se pone en pie para juzgar,",
+       "sangria": 1
+      },
+      {
+       "texto": "para salvar a los humildes de la tierra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "La cólera humana tendrá que alabarte,",
+       "sangria": 0
+      },
+      {
+       "texto": "los que sobrevivan al castigo te rodearán.",
+       "sangria": 1
+      },
+      {
+       "texto": "Haced votos al Señor y cumplidlos,",
+       "sangria": 1
+      },
+      {
+       "texto": "y traigan los vasallos tributo al Temible:",
+       "sangria": 1
+      },
+      {
+       "texto": "él deja sin aliento a los príncipes,",
+       "sangria": 1
+      },
+      {
+       "texto": "y es temible para los reyes del orbe.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1559,
+    "impresa": "431"
+   }
+  ]
+ },
+ {
+  "id": "salmo-135",
+  "cita": "Salmo 135",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Dad gracias al Señor porque es bueno:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dad gracias al Dios de los dioses:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dad gracias al Señor de los señores:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Sólo él hizo grandes maravillas:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él hizo sabiamente los cielos:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él afianzó sobre las aguas la tierra:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él hizo lumbreras gigantes:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El sol que gobierna el día:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "La luna que gobierna la noche:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Él hirió a Egipto en sus primogénitos:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Y sacó a Israel de aquel país:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Con mano poderosa, con brazo extendido:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él dividió en dos partes el mar Rojo:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Y condujo por en medio a Israel:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Arrojó en el mar Rojo al Faraón:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "III",
+    "estrofas": [
+     [
+      {
+       "texto": "Guió por el desierto a su pueblo:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él hirió a reyes famosos:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dio muerte a reyes poderosos:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "A Sijón, rey de los amorreos:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Y a Hog, rey de Basán:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Les dio su tierra en heredad:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "En heredad a Israel su siervo:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "En nuestra humillación, se acordó de nosotros:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Y nos libró de nuestros opresores:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él da alimento a todo viviente:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dad gracias al Dios del cielo:",
+       "sangria": 0
+      },
+      {
+       "texto": "porque es eterna su misericordia.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1561,
+    "impresa": "433"
+   }
+  ]
+ },
+ {
+  "id": "salmo-118-25-32",
+  "cita": "Salmo 118, 25-32",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Mi alma está pegada al polvo:",
+       "sangria": 0
+      },
+      {
+       "texto": "reanímame con tus palabras;",
+       "sangria": 1
+      },
+      {
+       "texto": "te expliqué mi camino, y me escuchaste:",
+       "sangria": 1
+      },
+      {
+       "texto": "enséñame tus leyes;",
+       "sangria": 1
+      },
+      {
+       "texto": "instrúyeme en el camino de tus decretos,",
+       "sangria": 1
+      },
+      {
+       "texto": "y meditaré tus maravillas.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Mi alma llora de tristeza,",
+       "sangria": 0
+      },
+      {
+       "texto": "consuélame con tus promesas;",
+       "sangria": 1
+      },
+      {
+       "texto": "apártame del camino falso,",
+       "sangria": 1
+      },
+      {
+       "texto": "y dame la gracia de tu voluntad;",
+       "sangria": 1
+      },
+      {
+       "texto": "escogí el camino verdadero,",
+       "sangria": 1
+      },
+      {
+       "texto": "deseé tus mandamientos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Me apegué a tus preceptos,",
+       "sangria": 0
+      },
+      {
+       "texto": "Señor, no me defraudes;",
+       "sangria": 1
+      },
+      {
+       "texto": "correré por el camino de tus mandatos",
+       "sangria": 1
+      },
+      {
+       "texto": "cuando me ensanches el corazón.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1567,
+    "impresa": "439"
+   }
+  ]
+ },
+ {
+  "id": "salmo-95",
+  "cita": "Salmo 95",
+  "titulo": "EL SEÑOR, REY Y JUEZ DEL MUNDO",
+  "sentencia": {
+   "texto": "Cantaban un cántico nuevo ante el trono, en presencia del Cordero",
+   "cita": "Ap 14, 3"
+  },
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Cantad al Señor un cántico nuevo,",
+       "sangria": 0
+      },
+      {
+       "texto": "cantad al Señor, toda la tierra;",
+       "sangria": 1
+      },
+      {
+       "texto": "cantad al Señor, bendecid su nombre,",
+       "sangria": 1
+      },
+      {
+       "texto": "proclamad día tras día su victoria.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Contad a los pueblos su gloria,",
+       "sangria": 0
+      },
+      {
+       "texto": "sus maravillas a todas las naciones;",
+       "sangria": 1
+      },
+      {
+       "texto": "porque es grande el Señor, y muy digno de alabanza,",
+       "sangria": 1
+      },
+      {
+       "texto": "más temible que todos los dioses.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Pues los dioses de los gentiles son apariencia,",
+       "sangria": 0
+      },
+      {
+       "texto": "mientras que el Señor ha hecho el cielo;",
+       "sangria": 1
+      },
+      {
+       "texto": "honor y majestad lo preceden,",
+       "sangria": 1
+      },
+      {
+       "texto": "fuerza y esplendor están en su templo.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Familias de los pueblos, aclamad al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "aclamad la gloria y el poder del Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "aclamad la gloria del nombre del Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "entrad en sus atrios trayéndole ofrendas.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Postraos ante el Señor en el atrio sagrado,",
+       "sangria": 0
+      },
+      {
+       "texto": "tiemble en su presencia la tierra toda;",
+       "sangria": 1
+      },
+      {
+       "texto": "decid a los pueblos: \"El Señor es rey,",
+       "sangria": 1
+      },
+      {
+       "texto": "él afianzó el orbe, y no se moverá;",
+       "sangria": 1
+      },
+      {
+       "texto": "él gobierna a los pueblos rectamente\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Alégrese el cielo, goce la tierra,",
+       "sangria": 0
+      },
+      {
+       "texto": "retumbe el mar y cuanto lo llena;",
+       "sangria": 1
+      },
+      {
+       "texto": "vitoreen los campos y cuanto hay en ellos,",
+       "sangria": 1
+      },
+      {
+       "texto": "aclamen los árboles del bosque,",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "delante del Señor, que ya llega,",
+       "sangria": 0
+      },
+      {
+       "texto": "ya llega a regir la tierra:",
+       "sangria": 1
+      },
+      {
+       "texto": "regirá el orbe con justicia",
+       "sangria": 1
+      },
+      {
+       "texto": "y los pueblos con fidelidad.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1568,
+    "impresa": "440"
+   }
+  ]
+ },
+ {
+  "id": "salmo-144",
+  "cita": "Salmo 144",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Te ensalzaré, Dios mío, mi rey;",
+       "sangria": 0
+      },
+      {
+       "texto": "bendeciré tu nombre por siempre jamás.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Día tras día, te bendeciré",
+       "sangria": 0
+      },
+      {
+       "texto": "y alabaré tu nombre por siempre jamás.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Grande es el Señor, merece toda alabanza,",
+       "sangria": 0
+      },
+      {
+       "texto": "es incalculable su grandeza;",
+       "sangria": 1
+      },
+      {
+       "texto": "una generación pondera tus obras a la otra,",
+       "sangria": 1
+      },
+      {
+       "texto": "y le cuenta tus hazañas.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Alaban ellos la gloria de tu majestad,",
+       "sangria": 0
+      },
+      {
+       "texto": "y yo repito tus maravillas;",
+       "sangria": 1
+      },
+      {
+       "texto": "encarecen ellos tus temibles proezas,",
+       "sangria": 1
+      },
+      {
+       "texto": "y yo narro tus grandes acciones;",
+       "sangria": 1
+      },
+      {
+       "texto": "difunden la memoria de tu inmensa bondad,",
+       "sangria": 1
+      },
+      {
+       "texto": "y aclaman tus victorias.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El Señor es clemente y misericordioso,",
+       "sangria": 0
+      },
+      {
+       "texto": "lento a la cólera y rico en piedad;",
+       "sangria": 1
+      },
+      {
+       "texto": "el Señor es bueno con todos,",
+       "sangria": 1
+      },
+      {
+       "texto": "es cariñoso con todas sus criaturas.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "Que todas tus criaturas te den gracias, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "que te bendigan tus fieles;",
+       "sangria": 1
+      },
+      {
+       "texto": "que proclamen la gloria de tu reinado,",
+       "sangria": 1
+      },
+      {
+       "texto": "que hablen de tus hazañas;",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "explicando tus hazañas a los hombres,",
+       "sangria": 0
+      },
+      {
+       "texto": "la gloria y majestad de tu reinado.",
+       "sangria": 1
+      },
+      {
+       "texto": "Tu reinado es un reinado perpetuo,",
+       "sangria": 1
+      },
+      {
+       "texto": "tu gobierno va de edad en edad.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "III",
+    "estrofas": [
+     [
+      {
+       "texto": "El Señor es fiel a sus palabras,",
+       "sangria": 0
+      },
+      {
+       "texto": "bondadoso en todas sus acciones.",
+       "sangria": 1
+      },
+      {
+       "texto": "El Señor sostiene a los que van a caer,",
+       "sangria": 1
+      },
+      {
+       "texto": "endereza a los que ya se doblan.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Los ojos de todos te están aguardando,",
+       "sangria": 0
+      },
+      {
+       "texto": "tú les das la comida a su tiempo;",
+       "sangria": 1
+      },
+      {
+       "texto": "abres tú la mano,",
+       "sangria": 1
+      },
+      {
+       "texto": "y sacias de favores a todo viviente.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "El Señor es justo en todos sus caminos,",
+       "sangria": 0
+      },
+      {
+       "texto": "es bondadoso en todas sus acciones;",
+       "sangria": 1
+      },
+      {
+       "texto": "cerca está el Señor de los que lo invocan,",
+       "sangria": 1
+      },
+      {
+       "texto": "de los que lo invocan sinceramente.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Satisface los deseos de sus fieles,",
+       "sangria": 0
+      },
+      {
+       "texto": "escucha sus gritos, y los salva.",
+       "sangria": 1
+      },
+      {
+       "texto": "El Señor guarda a los que lo aman,",
+       "sangria": 1
+      },
+      {
+       "texto": "pero destruye a los malvados.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Pronuncie mi boca la alabanza del Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "todo viviente bendiga su santo nombre",
+       "sangria": 1
+      },
+      {
+       "texto": "por siempre jamás.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1570,
+    "impresa": "442"
+   }
+  ]
+ },
+ {
+  "id": "salmo-118-33-40",
+  "cita": "Salmo 118, 33-40",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Muéstrame, Señor, el camino de tus leyes,",
+       "sangria": 0
+      },
+      {
+       "texto": "y lo seguiré puntualmente;",
+       "sangria": 1
+      },
+      {
+       "texto": "enséñame a cumplir tu voluntad",
+       "sangria": 1
+      },
+      {
+       "texto": "y a guardarla de todo corazón;",
+       "sangria": 1
+      },
+      {
+       "texto": "guíame por la senda de tus mandatos,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque ella es mi gozo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Inclina mi corazón a tus preceptos,",
+       "sangria": 0
+      },
+      {
+       "texto": "y no al interés;",
+       "sangria": 1
+      },
+      {
+       "texto": "aparta mis ojos de las vanidades,",
+       "sangria": 1
+      },
+      {
+       "texto": "dame vida con tu palabra;",
+       "sangria": 1
+      },
+      {
+       "texto": "cumple a tu siervo la promesa",
+       "sangria": 1
+      },
+      {
+       "texto": "que hiciste a tus fieles.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Aparta de mí la afrenta que temo,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque tus mandamientos son amables;",
+       "sangria": 1
+      },
+      {
+       "texto": "mira cómo ansío tus decretos:",
+       "sangria": 1
+      },
+      {
+       "texto": "dame vida con tu justicia.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1576,
+    "impresa": "448"
+   }
+  ]
+ },
+ {
+  "id": "salmo-112",
+  "cita": "Salmo 112",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Alabad, siervos del Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "alabad el nombre del Señor.",
+       "sangria": 0
+      },
+      {
+       "texto": "Bendito sea el nombre del Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "ahora y por siempre:",
+       "sangria": 0
+      },
+      {
+       "texto": "de la salida del sol hasta su ocaso,",
+       "sangria": 0
+      },
+      {
+       "texto": "alabado sea el nombre del Señor.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "El Señor se eleva sobre todos los pueblos,",
+       "sangria": 0
+      },
+      {
+       "texto": "su gloria sobre los cielos.",
+       "sangria": 0
+      },
+      {
+       "texto": "¿Quién como el Señor, Dios nuestro,",
+       "sangria": 0
+      },
+      {
+       "texto": "que se eleva en su trono",
+       "sangria": 0
+      },
+      {
+       "texto": "y se abaja para mirar",
+       "sangria": 0
+      },
+      {
+       "texto": "al cielo y a la tierra?",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Levanta del polvo al desvalido,",
+       "sangria": 0
+      },
+      {
+       "texto": "alza de la basura al pobre,",
+       "sangria": 0
+      },
+      {
+       "texto": "para sentarlo con los príncipes,",
+       "sangria": 0
+      },
+      {
+       "texto": "los príncipes de su pueblo;",
+       "sangria": 0
+      },
+      {
+       "texto": "a la estéril le da un puesto en la casa,",
+       "sangria": 0
+      },
+      {
+       "texto": "como madre feliz de hijos.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1789,
+    "impresa": "661"
+   }
+  ]
+ },
+ {
+  "id": "salmo-116",
+  "cita": "Salmo 116",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Alabad al Señor, todas las naciones,",
+       "sangria": 0
+      },
+      {
+       "texto": "aclamadlo, todos los pueblos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Firme es su misericordia con nosotros,",
+       "sangria": 0
+      },
+      {
+       "texto": "su fidelidad dura por siempre.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1790,
+    "impresa": "662"
+   }
+  ]
+ },
+ {
+  "id": "cantico-ap-11-17-18-12-10b-12a",
+  "cita": "Cántico Ap 11, 17-18; 12, 10b-12a",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Gracias te damos, Señor Dios omnipotente,",
+       "sangria": 0
+      },
+      {
+       "texto": "el que eres y el que eras,",
+       "sangria": 1
+      },
+      {
+       "texto": "porque has asumido el gran poder",
+       "sangria": 1
+      },
+      {
+       "texto": "y comenzaste a reinar.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Se encolerizaron las naciones,",
+       "sangria": 0
+      },
+      {
+       "texto": "llegó tu cólera,",
+       "sangria": 1
+      },
+      {
+       "texto": "y el tiempo de que sean juzgados los muertos,",
+       "sangria": 1
+      },
+      {
+       "texto": "y de dar el galardón a tus siervos los profetas,",
+       "sangria": 1
+      },
+      {
+       "texto": "y a los santos y a los que temen tu nombre,",
+       "sangria": 1
+      },
+      {
+       "texto": "y a los pequeños y a los grandes,",
+       "sangria": 1
+      },
+      {
+       "texto": "y de arruinar a los que arruinaron la tierra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Ahora se estableció la salud y el poderío,",
+       "sangria": 0
+      },
+      {
+       "texto": "y el reinado de nuestro Dios,",
+       "sangria": 1
+      },
+      {
+       "texto": "y la potestad de su Cristo;",
+       "sangria": 1
+      },
+      {
+       "texto": "porque fue precipitado",
+       "sangria": 1
+      },
+      {
+       "texto": "el acusador de nuestros hermanos,",
+       "sangria": 1
+      },
+      {
+       "texto": "el que los acusaba ante nuestro Dios día y noche.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Ellos le vencieron en virtud de la sangre del Cordero",
+       "sangria": 0
+      },
+      {
+       "texto": "y por la palabra del testimonio que dieron,",
+       "sangria": 1
+      },
+      {
+       "texto": "y no amaron tanto su vida que temieran la muerte.",
+       "sangria": 1
+      },
+      {
+       "texto": "Por esto, estad alegres, cielos,",
+       "sangria": 1
+      },
+      {
+       "texto": "y los que moráis en sus tiendas.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1790,
+    "impresa": "662"
+   }
+  ]
+ },
+ {
+  "id": "salmo-67",
+  "cita": "Salmo 67",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": "I",
+    "estrofas": [
+     [
+      {
+       "texto": "Se levanta Dios, y se dispersan sus enemigos,",
+       "sangria": 0
+      },
+      {
+       "texto": "huyen de su presencia los que lo odian;",
+       "sangria": 1
+      },
+      {
+       "texto": "como el humo se disipa, se disipan ellos;",
+       "sangria": 1
+      },
+      {
+       "texto": "como se derrite la cera ante el fuego,",
+       "sangria": 1
+      },
+      {
+       "texto": "así perecen los impíos ante Dios.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "En cambio, los justos se alegran,",
+       "sangria": 0
+      },
+      {
+       "texto": "gozan en la presencia de Dios,",
+       "sangria": 1
+      },
+      {
+       "texto": "rebosando de alegría.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Cantad a Dios, tocad en su honor,",
+       "sangria": 0
+      },
+      {
+       "texto": "alfombrad el camino del que avanza por el desierto;",
+       "sangria": 1
+      },
+      {
+       "texto": "su nombre es el Señor:",
+       "sangria": 1
+      },
+      {
+       "texto": "alegraos en su presencia.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Padre de huérfanos, protector de viudas,",
+       "sangria": 0
+      },
+      {
+       "texto": "Dios vive en su santa morada.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dios prepara casa a los desvalidos,",
+       "sangria": 0
+      },
+      {
+       "texto": "libera a los cautivos y los enriquece;",
+       "sangria": 1
+      },
+      {
+       "texto": "sólo los rebeldes",
+       "sangria": 1
+      },
+      {
+       "texto": "se quedan en la tierra abrasada.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Oh Dios, cuando salías al frente de tu pueblo",
+       "sangria": 0
+      },
+      {
+       "texto": "y avanzabas por el desierto,",
+       "sangria": 1
+      },
+      {
+       "texto": "la tierra tembló, el cielo destiló",
+       "sangria": 1
+      },
+      {
+       "texto": "ante Dios, el Dios del Sinaí;",
+       "sangria": 1
+      },
+      {
+       "texto": "ante Dios, el Dios de Israel.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Derramaste en tu heredad, oh Dios una lluvia copiosa,",
+       "sangria": 0
+      },
+      {
+       "texto": "aliviaste la tierra extenuada;",
+       "sangria": 1
+      },
+      {
+       "texto": "y tu rebaño habitó en la tierra",
+       "sangria": 1
+      },
+      {
+       "texto": "que tu bondad, oh Dios, preparó para los pobres.",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "II",
+    "estrofas": [
+     [
+      {
+       "texto": "El Señor pronuncia un oráculo,",
+       "sangria": 0
+      },
+      {
+       "texto": "millares pregonan la alegre noticia:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"los reyes, los ejércitos van huyendo, van huyendo;",
+       "sangria": 1
+      },
+      {
+       "texto": "las mujeres reparten el botín.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Mientras reposabais en los apriscos,",
+       "sangria": 0
+      },
+      {
+       "texto": "las palomas batieron sus alas de plata,",
+       "sangria": 1
+      },
+      {
+       "texto": "el oro destellaba en sus plumas.",
+       "sangria": 1
+      },
+      {
+       "texto": "Mientras el Todopoderoso dispersaba a los reyes,",
+       "sangria": 1
+      },
+      {
+       "texto": "la nieve bajaba sobre el Monte Umbrío\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Las montañas de Basán son altísimas,",
+       "sangria": 0
+      },
+      {
+       "texto": "las montañas de Basán son escarpadas;",
+       "sangria": 1
+      },
+      {
+       "texto": "¿por qué tenéis envidia, montañas escarpadas,",
+       "sangria": 1
+      },
+      {
+       "texto": "del monte escogido por Dios para habitar,",
+       "sangria": 1
+      },
+      {
+       "texto": "morada perpetua del Señor?",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Los carros de Dios son miles y miles:",
+       "sangria": 0
+      },
+      {
+       "texto": "Dios marcha del Sinaí al santuario.",
+       "sangria": 1
+      },
+      {
+       "texto": "Subiste a la cumbre llevando cautivos,",
+       "sangria": 1
+      },
+      {
+       "texto": "te dieron tributo de hombres:",
+       "sangria": 1
+      },
+      {
+       "texto": "incluso los que se resistían",
+       "sangria": 1
+      },
+      {
+       "texto": "a que el Señor Dios tuviera una morada.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Bendito el Señor cada día,",
+       "sangria": 0
+      },
+      {
+       "texto": "Dios lleva nuestras cargas, es nuestra salvación.",
+       "sangria": 1
+      },
+      {
+       "texto": "Nuestro Dios es un Dios que salva,",
+       "sangria": 1
+      },
+      {
+       "texto": "el Señor Dios nos hace escapar de la muerte.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dios aplasta las cabezas de sus enemigos,",
+       "sangria": 0
+      },
+      {
+       "texto": "los cráneos de los malvados contumaces.",
+       "sangria": 1
+      },
+      {
+       "texto": "Dice el Señor: \"Los traeré desde Basán,",
+       "sangria": 1
+      },
+      {
+       "texto": "los traeré desde el fondo del mar;",
+       "sangria": 1
+      },
+      {
+       "texto": "teñirás tus pies en la sangre del enemigo",
+       "sangria": 1
+      },
+      {
+       "texto": "y los perros la lamerán con sus lenguas\".",
+       "sangria": 1
+      }
+     ]
+    ]
+   },
+   {
+    "numero": "III",
+    "estrofas": [
+     [
+      {
+       "texto": "Aparece tu cortejo, oh Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "el cortejo de mi Dios, de mi Rey,",
+       "sangria": 1
+      },
+      {
+       "texto": "hacia el santuario.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Al frente, marchan los cantores;",
+       "sangria": 0
+      },
+      {
+       "texto": "los últimos, los tocadores de arpa;",
+       "sangria": 1
+      },
+      {
+       "texto": "en medio, las muchachas van tocando panderos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "\"En el bullicio de la fiesta, bendecid a Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "al Señor, estirpe de Israel\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Va delante Benjamín, el más pequeño;",
+       "sangria": 0
+      },
+      {
+       "texto": "los príncipes de Judá con sus tropeles;",
+       "sangria": 1
+      },
+      {
+       "texto": "los príncipes de Zabulón,",
+       "sangria": 1
+      },
+      {
+       "texto": "los príncipes de Neftalí.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Oh Dios, despliega tu poder,",
+       "sangria": 0
+      },
+      {
+       "texto": "tu poder, oh Dios, que actúa en favor nuestro.",
+       "sangria": 1
+      },
+      {
+       "texto": "A tu templo de Jerusalén",
+       "sangria": 1
+      },
+      {
+       "texto": "traigan los reyes su tributo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Reprime a la Fiera del Cañaveral,",
+       "sangria": 0
+      },
+      {
+       "texto": "al tropel de los Toros,",
+       "sangria": 1
+      },
+      {
+       "texto": "a los Novillos de los pueblos.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Que se te rindan con lingotes de plata:",
+       "sangria": 0
+      },
+      {
+       "texto": "dispersa las naciones belicosas.",
+       "sangria": 1
+      },
+      {
+       "texto": "Lleguen los magnates de Egipto,",
+       "sangria": 1
+      },
+      {
+       "texto": "Etiopía extienda sus manos a Dios.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Reyes de la tierra, cantad a Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "tocad para el Señor,",
+       "sangria": 1
+      },
+      {
+       "texto": "que avanza por los cielos,",
+       "sangria": 1
+      },
+      {
+       "texto": "los cielos antiquísimos,",
+       "sangria": 1
+      },
+      {
+       "texto": "que lanza su voz, su voz poderosa:",
+       "sangria": 1
+      },
+      {
+       "texto": "\"reconoced el poder de Dios\".",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Sobre Israel resplandece su majestad,",
+       "sangria": 0
+      },
+      {
+       "texto": "y su poder sobre las nubes.",
+       "sangria": 1
+      },
+      {
+       "texto": "Desde el santuario, Dios impone reverencia:",
+       "sangria": 1
+      },
+      {
+       "texto": "es el Dios de Israel",
+       "sangria": 1
+      },
+      {
+       "texto": "quien da fuerza y poder a su pueblo.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "¡Dios sea bendito!",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1792,
+    "impresa": "664"
+   }
+  ]
+ },
+ {
+  "id": "salmo-18-b",
+  "cita": "Salmo 18 B",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "La ley del Señor es perfecta",
+       "sangria": 0
+      },
+      {
+       "texto": "y es descanso del alma;",
+       "sangria": 0
+      },
+      {
+       "texto": "el precepto del Señor es fiel",
+       "sangria": 0
+      },
+      {
+       "texto": "e instruye al ignorante.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Los mandatos del Señor son rectos",
+       "sangria": 0
+      },
+      {
+       "texto": "y alegran el corazón;",
+       "sangria": 0
+      },
+      {
+       "texto": "la norma del Señor es límpida",
+       "sangria": 0
+      },
+      {
+       "texto": "y da luz a los ojos.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "La voluntad del Señor es pura",
+       "sangria": 0
+      },
+      {
+       "texto": "y eternamente estable;",
+       "sangria": 0
+      },
+      {
+       "texto": "los mandamientos del Señor son verdaderos",
+       "sangria": 0
+      },
+      {
+       "texto": "y enteramente justos.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Más preciosos que el oro,",
+       "sangria": 0
+      },
+      {
+       "texto": "más que el oro fino;",
+       "sangria": 0
+      },
+      {
+       "texto": "más dulces que la miel",
+       "sangria": 0
+      },
+      {
+       "texto": "de un panal que destila.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Aunque tu siervo vigila",
+       "sangria": 0
+      },
+      {
+       "texto": "para guardarlos con cuidado,",
+       "sangria": 0
+      },
+      {
+       "texto": "¿quién conoce sus faltas?",
+       "sangria": 0
+      },
+      {
+       "texto": "Absuélveme de lo que se me oculta.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Preserva a tu siervo de la arrogancia,",
+       "sangria": 0
+      },
+      {
+       "texto": "para que no me domine:",
+       "sangria": 0
+      },
+      {
+       "texto": "así quedaré libre e inocente",
+       "sangria": 0
+      },
+      {
+       "texto": "del gran pecado.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Que te agraden las palabras de mi boca,",
+       "sangria": 0
+      },
+      {
+       "texto": "y llegue a tu presencia el meditar de mi corazón,",
+       "sangria": 0
+      },
+      {
+       "texto": "Señor, roca mía, redentor mío.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1800,
+    "impresa": "672"
+   }
+  ]
+ },
+ {
+  "id": "salmo-109-1-5-7",
+  "cita": "Salmo 109, 1-5. 7",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Oráculo del Señor a mi Señor:",
+       "sangria": 0
+      },
+      {
+       "texto": "\"siéntate a mi derecha,",
+       "sangria": 0
+      },
+      {
+       "texto": "y haré de tus enemigos",
+       "sangria": 0
+      },
+      {
+       "texto": "estrado de tus pies\".",
+       "sangria": 0
+      },
+      {
+       "texto": "Desde Sión extenderá el Señor",
+       "sangria": 0
+      },
+      {
+       "texto": "el poder de tu cetro:",
+       "sangria": 0
+      },
+      {
+       "texto": "somete en la batalla a tus enemigos.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "\"Eres príncipe desde el día de tu nacimiento,",
+       "sangria": 0
+      },
+      {
+       "texto": "entre esplendores sagrados;",
+       "sangria": 0
+      },
+      {
+       "texto": "yo mismo te engendré, como rocío,",
+       "sangria": 0
+      },
+      {
+       "texto": "antes de la aurora\".",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "El Señor lo ha jurado y no se arrepiente:",
+       "sangria": 0
+      },
+      {
+       "texto": "\"Tú eres sacerdote eterno,",
+       "sangria": 0
+      },
+      {
+       "texto": "según el rito de Melquisedec\".",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "El Señor a tu derecha, el día de su ira,",
+       "sangria": 0
+      },
+      {
+       "texto": "quebrantará a los reyes.",
+       "sangria": 0
+      },
+      {
+       "texto": "En su camino beberá del torrente,",
+       "sangria": 0
+      },
+      {
+       "texto": "por eso, levantará la cabeza.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1801,
+    "impresa": "673"
+   }
+  ]
+ },
+ {
+  "id": "salmo-46",
+  "cita": "Salmo 46",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Pueblos todos, batid palmas,",
+       "sangria": 0
+      },
+      {
+       "texto": "aclamad a Dios con gritos de júbilo;",
+       "sangria": 1
+      },
+      {
+       "texto": "porque el Señor es sublime y terrible,",
+       "sangria": 1
+      },
+      {
+       "texto": "emperador de toda la tierra.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Él nos somete los pueblos",
+       "sangria": 0
+      },
+      {
+       "texto": "y nos sojuzga las naciones;",
+       "sangria": 1
+      },
+      {
+       "texto": "Él nos escogió por heredad suya:",
+       "sangria": 1
+      },
+      {
+       "texto": "gloria de Jacob, su amado.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Dios asciende entre aclamaciones;",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor, al son de trompetas:",
+       "sangria": 1
+      },
+      {
+       "texto": "tocad para Dios, tocad,",
+       "sangria": 1
+      },
+      {
+       "texto": "tocad para nuestro Rey, tocad.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Porque Dios es el rey del mundo:",
+       "sangria": 0
+      },
+      {
+       "texto": "tocad con maestría.",
+       "sangria": 1
+      },
+      {
+       "texto": "Dios reina sobre las naciones,",
+       "sangria": 1
+      },
+      {
+       "texto": "Dios se sienta en su trono sagrado.",
+       "sangria": 1
+      }
+     ],
+     [
+      {
+       "texto": "Los príncipes de los gentiles se reúnen",
+       "sangria": 0
+      },
+      {
+       "texto": "con el pueblo del Dios de Abrahán;",
+       "sangria": 1
+      },
+      {
+       "texto": "porque de Dios son los grandes de la tierra,",
+       "sangria": 1
+      },
+      {
+       "texto": "y él es excelso.",
+       "sangria": 1
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1802,
+    "impresa": "674"
+   }
+  ]
+ },
+ {
+  "id": "salmo-146",
+  "cita": "Salmo 146",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Alabad al Señor, que la música es buena;",
+       "sangria": 0
+      },
+      {
+       "texto": "nuestro Dios merece una alabanza armoniosa.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "El Señor reconstruye Jerusalén,",
+       "sangria": 0
+      },
+      {
+       "texto": "reúne a los deportados de Israel;",
+       "sangria": 0
+      },
+      {
+       "texto": "él sana los corazones destrozados,",
+       "sangria": 0
+      },
+      {
+       "texto": "venda sus heridas.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Cuenta el número de las estrellas,",
+       "sangria": 0
+      },
+      {
+       "texto": "a cada una la llama por su nombre.",
+       "sangria": 0
+      },
+      {
+       "texto": "Nuestro Señor es grande y poderoso,",
+       "sangria": 0
+      },
+      {
+       "texto": "su sabiduría no tiene medida.",
+       "sangria": 0
+      },
+      {
+       "texto": "El Señor sostiene a los humildes,",
+       "sangria": 0
+      },
+      {
+       "texto": "humilla hasta el polvo a los malvados.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Entonad la acción de gracias al Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "tocad la cítara para nuestro Dios,",
+       "sangria": 0
+      },
+      {
+       "texto": "que cubre el cielo de nubes,",
+       "sangria": 0
+      },
+      {
+       "texto": "preparando la lluvia para la tierra;",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "que hace brotar hierba en los montes,",
+       "sangria": 0
+      },
+      {
+       "texto": "para los que sirven al hombre;",
+       "sangria": 0
+      },
+      {
+       "texto": "que da su alimento al ganado",
+       "sangria": 0
+      },
+      {
+       "texto": "y a las crías de cuervo que graznan.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "No aprecia el vigor de los caballos,",
+       "sangria": 0
+      },
+      {
+       "texto": "no estima los jarretes del hombre:",
+       "sangria": 0
+      },
+      {
+       "texto": "el Señor aprecia a sus fieles,",
+       "sangria": 0
+      },
+      {
+       "texto": "que confían en su misericordia.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1848,
+    "impresa": "720"
+   }
+  ]
+ },
+ {
+  "id": "cantico-ap-15-3-4",
+  "cita": "Cántico Ap 15, 3-4",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Grandes y maravillosas son tus obras,",
+       "sangria": 0
+      },
+      {
+       "texto": "Señor, Dios omnipotente,",
+       "sangria": 0
+      },
+      {
+       "texto": "justos y verdaderos tus caminos,",
+       "sangria": 0
+      },
+      {
+       "texto": "¡oh Rey de los siglos!",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "¿Quién no temerá, Señor,",
+       "sangria": 0
+      },
+      {
+       "texto": "y glorificará tu nombre?",
+       "sangria": 0
+      },
+      {
+       "texto": "Porque tú solo eres santo,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque vendrán todas las naciones",
+       "sangria": 0
+      },
+      {
+       "texto": "y se postrarán en tu acatamiento,",
+       "sangria": 0
+      },
+      {
+       "texto": "porque tus juicios se hicieron manifiestos.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1848,
+    "impresa": "720"
+   }
+  ]
+ },
+ {
+  "id": "salmo-113",
+  "cita": "Salmo 113",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Cuando Israel salió de Egipto,",
+       "sangria": 0
+      },
+      {
+       "texto": "los hijos de Jacob de un pueblo balbuciente,",
+       "sangria": 0
+      },
+      {
+       "texto": "Judá fue su santuario,",
+       "sangria": 0
+      },
+      {
+       "texto": "Israel fue su dominio.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "El mar, al verlos, huyó,",
+       "sangria": 0
+      },
+      {
+       "texto": "el Jordán se echó atrás;",
+       "sangria": 0
+      },
+      {
+       "texto": "los montes saltaron como carneros;",
+       "sangria": 0
+      },
+      {
+       "texto": "las colinas, como corderos.",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "¿Qué te pasa, mar, que huyes,",
+       "sangria": 0
+      },
+      {
+       "texto": "y a ti, Jordán, que te echas atrás?",
+       "sangria": 0
+      },
+      {
+       "texto": "¿Y a vosotros, montes, que saltáis como carneros;",
+       "sangria": 0
+      },
+      {
+       "texto": "colinas, que saltáis como corderos?",
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "En presencia del Señor se estremece la tierra,",
+       "sangria": 0
+      },
+      {
+       "texto": "en presencia del Dios de Jacob;",
+       "sangria": 0
+      },
+      {
+       "texto": "que transforma las peñas en estanques,",
+       "sangria": 0
+      },
+      {
+       "texto": "el pedernal en manantiales de agua.",
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1862,
+    "impresa": "734"
+   }
+  ]
+ },
+ {
+  "id": "cantico-cf-ap-19-1-7",
+  "cita": "Cántico Cf. Ap 19, 1-7",
+  "titulo": null,
+  "sentencia": null,
+  "partes": [
+   {
+    "numero": null,
+    "estrofas": [
+     [
+      {
+       "texto": "Aleluya.",
+       "sangria": 0
+      },
+      {
+       "texto": "La salvación y la gloria y el poder son de nuestro Dios.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya.",
+       "estribillo": true,
+       "opcional": true,
+       "sangria": 0
+      },
+      {
+       "texto": "Porque sus juicios son verdaderos y justos.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya, [aleluya].",
+       "estribillo": true,
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Aleluya.",
+       "sangria": 0
+      },
+      {
+       "texto": "Alabad al Señor, sus siervos todos.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya.",
+       "estribillo": true,
+       "opcional": true,
+       "sangria": 0
+      },
+      {
+       "texto": "Los que le teméis, pequeños y grandes.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya, [aleluya].",
+       "estribillo": true,
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Aleluya.",
+       "sangria": 0
+      },
+      {
+       "texto": "Porque reina el Señor, nuestro Dios, dueño de todo.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya.",
+       "estribillo": true,
+       "opcional": true,
+       "sangria": 0
+      },
+      {
+       "texto": "Alegrémonos y gocemos y démosle gracias.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya, [aleluya].",
+       "estribillo": true,
+       "sangria": 0
+      }
+     ],
+     [
+      {
+       "texto": "Aleluya.",
+       "sangria": 0
+      },
+      {
+       "texto": "Llegó la boda del Cordero.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya.",
+       "estribillo": true,
+       "opcional": true,
+       "sangria": 0
+      },
+      {
+       "texto": "Su esposa se ha embellecido.",
+       "sangria": 0
+      },
+      {
+       "texto": "Aleluya, [aleluya].",
+       "estribillo": true,
+       "sangria": 0
+      }
+     ]
+    ]
+   }
+  ],
+  "fuentes": [
+   {
+    "tomo": 2,
+    "pdf": 1862,
+    "impresa": "734"
+   }
+  ]
+ }
+]
