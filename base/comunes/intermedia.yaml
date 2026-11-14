@@ -1,7 +1,9 @@
-# Comunes de intermedia, del libro (Liturgia de las Horas, tomo III; tools/importar/comunes_libro.py).
+# Comunes de intermedia, de la extracción del libro (los cuatro tomos; extraccion/a_base_comunes.py).
 # Se usan para las celebraciones sin textos propios en la base (base/santoral/adf.yaml) y para lo que les falte.
-# «oraciones»: las que el libro da «en su defecto», con N. en lugar del nombre; «para» dice a quién corresponde cada una.
-# El común de doctores trae solo algunas partes: el resto se copió del de pastores. Se corrigen acá.
+# «oraciones»: con N. en lugar del nombre; «para» dice a quién corresponde cada una (la app elige por el nombre).
+# «pascua»: lo que cambia en el tiempo pascual. «variantes»: las otras opciones del libro, con su etiqueta.
+# «hereda» (y «hereda_mujeres», para las santas): el común del que se toma lo que este no trae.
+# Desde ahora la base es la fuente: se corrige acá.
 dedicacion:
   nombre: Común de la dedicación de una iglesia
   tercia:
@@ -16,7 +18,7 @@ dedicacion:
       - El lugar donde reside tu gloria.
   sexta:
     lectura:
-      ref: 2 Co 6, 10
+      ref: 2 Co 6, 16
       texto: 'Nosotros somos templo del Dios vivo, como dijo Dios: «Habitaré en medio de ellos y andaré entre ellos; yo seré su Dios, y ellos serán mi pueblo.»'
     ant: La santidad es el adorno de tu casa, Señor, por días sin término.
     versiculo:
@@ -34,13 +36,19 @@ dedicacion:
       - Entrad por las puertas del Señor con acción de gracias.
     - - R
       - Por sus atrios con himnos.
+    variantes:
+      lectura:
+      - etiqueta: 'O bien:'
+        texto:
+          ref: Ag 2, 6a. 7.9
+          texto: 'Así dice el Señor de los ejércitos: «Pondré en movimiento todos los pueblos; vendrán las riquezas de todo el mundo, y llenaré de gloria este templo —dice el Señor de los ejércitos—. La gloria de este segundo templo será mayor que la del primero; y en este sitio daré la paz —oráculo del Señor de los ejércitos—.»'
 virgen-maria:
   nombre: Común de la Santísima Virgen María
   tercia:
     lectura:
       ref: So 3, 14. 15b
       texto: Regocíjate, hija de Sión; grita de júbilo, Israel; alégrate y gózate de todo corazón, hija de Jerusalén. El Señor será el rey de Israel, en medio de ti.
-    ant: Todos se dedicaban a la oración en común, con María la madre de Jesús. En la salmodia complementaria, en lugar del salmo 121, que se dice en las II Vísperas, puede tomarse el salmo 128.
+    ant: Todos se dedicaban a la oración en común, con María la madre de Jesús.
     versiculo:
     - - V
       - Dichosos los que escuchan la palabra de Dios.
@@ -139,19 +147,53 @@ un-martir:
     ant: El Señor le dio la victoria en la dura batalla, para que supiera que la sabiduría es más fuerte que nada.
     versiculo:
     - - V
-      - El Señor lo (la) revistió con un manto de gloria.”
+      - El Señor lo [la] revistió con un manto de gloria.
     - - R
       - Y puso sobre su cabeza la corona de vencedor.
+    pascua:
+      lectura:
+        ref: Ap 2,10
+        texto: No temas nada de lo que vas a sufrir, porque el diablo va a meter a algunos de vosotros en la cárcel para poneros a prueba; tus apuros durarán diez días. Sé fiel hasta la muerte, y te daré la corona de la vida.
+    variantes:
+      lectura:
+      - etiqueta: 'opcion: 1'
+        texto:
+          ref: 1 Pe 5, 10-11
+          texto: Tras un breve padecer, el mismo Dios de toda gracia, que os ha llamado en Cristo a su eterna gloria, os restablecerá, os afianzará, os robustecerá. Suyo es el poder por los siglos. Amén.
+      versiculo:
+      - etiqueta: 'opcion: 2'
+        texto:
+        - - V
+          - Los santos que esperan en el Señor.
+        - - R
+          - Serán fuertes y no fallarán.
   sexta:
     lectura:
-      ref: Cf. St 1, 12
+      ref: St 1, 12
       texto: Dichoso el hombre que soporta la prueba, porque, una vez aquilatado, recibirá la corona de la vida que el Señor ha prometido a los que lo aman.
-    ant: El Señor lo (la) coronó con una diadema de justicia, y le dio un nombre santo y glorioso.
+    ant: El Señor lo [la] coronó con una diadema de justicia, y le dio un nombre de gloria.
     versiculo:
     - - V
       - En Dios confío y no temo.
     - - R
       - ¿Qué podrá hacerme un mortal?
+    pascua:
+      lectura:
+        ref: Ap 3, 21
+        texto: Al que salga vencedor lo sentaré en mi trono, junto a mí; lo mismo que yo, cuando vencí, me senté en el trono de mi Padre, junto a él.
+    variantes:
+      lectura:
+      - etiqueta: 'opcion: 2'
+        texto:
+          ref: Cf. Hb 11, 33
+          texto: Los santos, por la fe, subyugaron reinos, ejercieron la justicia, alcanzaron lo prometido, por su fe en Cristo nuestro Señor.
+      versiculo:
+      - etiqueta: 'opcion: 2'
+        texto:
+        - - V
+          - Vuestra tristeza.
+        - - R
+          - Se convertirá en alegría.
   nona:
     lectura:
       ref: Sb 3, 1-2a. 3b
@@ -162,6 +204,16 @@ un-martir:
       - Al volver, vuelven cantando.
     - - R
       - Trayendo sus gavillas.
+    pascua:
+      lectura:
+        ref: Ap 19, 7.9
+        texto: Con alegría y regocijo, demos gloria a Dios, porque han llegado las bodas del Cordero. Dichosos los invitados al banquete de bodas del Cordero.
+    variantes:
+      lectura:
+      - etiqueta: 'opcion: 1'
+        texto:
+          ref: Sb 13, 1-2a. 3b
+          texto: La vida de los justos está en manos de Dios y no los tocará el tormento. La gente insensata pensaba que morían, pero ellos están en paz.
 pastores:
   nombre: Común de pastores
   tercia:
@@ -210,7 +262,7 @@ virgenes:
     lectura:
       ref: 1 Co 7, 25
       texto: Respecto al celibato no tengo órdenes del Señor, sino que doy mi parecer como hombre de fiar que soy, por la misericordia del Señor.
-    ant: Sostenme, Señor, con tu promesa y viviré, que no quede frustrada mi esperanza.
+    ant: Sosténme, Señor, con tu promesa y viviré, que no quede frustrada mi esperanza.
     versiculo:
     - - V
       - Ésta es la virgen sensata.

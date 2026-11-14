@@ -20,12 +20,12 @@ function capas(L, fecha, sel, campos){
   const adf=(L.adf||{})[ref.n]||{}, k=L.mapa[ref.n]||adf.como;
   const santo=k?L.santoral[k]:null; capa(santo);
   // Sin propio en la base: el común que corresponde (base/santoral/adf.yaml), del libro
-  const C=(!k && adf.comun && L.comunes) ? L.comunes[adf.comun]||null : null;
+  const C=(!k && adf.comun && L.comunes) ? X.comun(L.comunes, adf.comun, ref.n) : null;
   const PR=!k ? adf.propio||null : null;   // propio del libro (base/santoral/libro.yaml)
   // Fiesta o solemnidad con propio en la base pero sin todas sus partes (p. ej. una memoria que un calendario eleva):
   // lo que falte, del común que indica el santoral. M: datos de Laudes para la Hora intermedia.
   const M=mayor(ref) ? (L.mayores||{})[ref.n] : null;
-  const CS=(mayor(ref) && (k||M) && L.comunes) ? L.comunes[X.comunDe((santo&&santo.comun) || (M&&M.comun)) || adf.comun]||null : null;
+  const CS=(mayor(ref) && (k||M) && L.comunes) ? X.comun(L.comunes, X.comunDe((santo&&santo.comun) || (M&&M.comun)) || adf.comun, ref.n) : null;
   return {P, ref, dia, dom:d.getDay()===0, santo, k, C, PR, CS, M, tiempo:!!(T1||T2)};
 }
 function aviso(ref, k, L, C, hora, PR){

@@ -1,5 +1,6 @@
 # Celebraciones propias del calendario ADF sin textos en la base. Para cada una, hasta tener sus textos propios:
-#   comun: clave de base/comunes/ (himno, lectura, responsorio, antífona del cántico evangélico y preces del común)
+#   comun: clave de base/comunes/ (himno, lectura, responsorio, antífona del cántico evangélico y preces del común);
+#          también religiosos, caridad y educadores, que toman lo demás de santos varones o de santas mujeres
 #   como: nombre de otra celebración del santoral de la base, de la que toma todo
 #   es: la misma celebración con otro nombre en la base (usa sus textos, sin aviso)
 #   pendiente: oficio propio del que no hay nada

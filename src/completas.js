@@ -46,7 +46,7 @@ const PALABRAS=['papa','obispo','presbítero','sacerdote','abad','religios','vir
 // El común que indica el santoral de la base («Del Común de pastores: para un santo obispo.») → su clave en base/comunes/.
 // Si nombra dos («de pastores… y del de doctores»), el primero.
 const COMUN_DE=[[/dedicaci/,'dedicacion'],[/virgen mar/,'virgen-maria'],[/ap[óo]stol/,'apostoles'],[/para un m[áa]rt|un m[áa]rt/,'un-martir'],
-  [/varios m[áa]rt/,'varios-martires'],[/pastores/,'pastores'],[/doctores/,'doctores'],[/v[íi]rgenes/,'virgenes'],[/santos varones/,'santos-varones'],[/santas mujeres/,'santas-mujeres']];
+  [/varios m[áa]rt/,'varios-martires'],[/pastores/,'pastores'],[/doctores/,'doctores'],[/v[íi]rgenes/,'virgenes'],[/santos varones/,'santos-varones'],[/santas mujeres/,'santas-mujeres'],[/religios/,'religiosos'],[/caritativ/,'caridad'],[/educador/,'educadores']];
 function comunDe(texto){
   const t=String(texto||'').toLowerCase(); let mejor=null, pos=1e9;
   for(const [re,id] of COMUN_DE){ const m=t.match(re); if(m && m.index<pos){ pos=m.index; mejor=id; } }
@@ -68,7 +68,28 @@ function oracionComun(oraciones, nombre){
   const o=oraciones.reduce((m,o)=>pts(o)>pts(m)?o:m, oraciones[0]);
   const nucleo=n.split(',')[0].replace(/^(San|Santa|Santo|Santos|Santas|Beato|Beata|Beatos|Beatas)\s+/,'').trim()
     + (/y compañer/i.test(n) && !/y compañer/i.test(n.split(',')[0]) ? ' y compañeros' : '');
-  return o.texto.replace(/\bN\.(\s*y\s*N\.)?/g, nucleo).replace(/\s*\((obispo|presbítero|papa|abad|abadesa)\)/g, '');
+  return alternativas(o.texto, fem).replace(/\bN\.(\s*y\s*N\.)?/g, nucleo).replace(/\s*[([](obispo|presbítero|papa|abad|abadesa)[)\]]/g, '');
+}
+// El libro marca la forma femenina entre corchetes: «san [santa] N.», «este santo [esta santa]». Se queda una.
+function alternativas(texto, fem){
+  return String(texto).replace(/((?:\p{L}+ ){0,3}\p{L}+) \[([^\]]+)\]/gu, (m, antes, alt)=>{
+    const n=alt.trim().split(/\s+/).length, pal=antes.split(' '), masc=pal.slice(-n).join(' '), resto=pal.slice(0,-n).join(' ');
+    if(/^(obispo|presbítero|papa|abad|abadesa)$/.test(alt)) return m;   // se quita aparte
+    return (resto?resto+' ':'')+(fem?alt:masc);
+  });
+}
+// Un común del libro (base/comunes/), con lo que hereda: «hereda» (o «hereda_mujeres», para las santas) es el común del que
+// se toma lo que este no trae (religiosos, caridad y educadores, de santos varones o santas mujeres; doctores, de pastores).
+function comun(comunes, id, nombre){
+  const c=comunes && comunes[id]; if(!c) return null;
+  const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||''));
+  const h=comunes[(fem && c.hereda_mujeres) || c.hereda];
+  if(!h) return c;
+  const b=comun(comunes, (fem && c.hereda_mujeres) || c.hereda, nombre);
+  const out={...b, ...c, nombre:c.nombre};
+  if(b.primeras || c.primeras) out.primeras={...(b.primeras||{}), ...(c.primeras||{})};
+  for(const k of ['tercia','sexta','nona']) if(b[k] || c[k]) out[k]={...(b[k]||{}), ...(c[k]||{})};
+  return out;
 }
 
 /* ---------- Utilidades de texto ---------- */
@@ -263,5 +284,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{oracionComun, comunDe, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{oracionComun, comunDe, comun, alternativas, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

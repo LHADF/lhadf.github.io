@@ -62,6 +62,6 @@ Laudes y Vísperas: cargadas y armadas en la app (11/2026); falta revisar los pr
 
 ## Comunes y propio del libro
 
-- `comunes/`: los comunes de Laudes, Vísperas, Oficio de lectura y Hora intermedia, del libro (tomo III), más Santa María en sábado.
+- `comunes/`: los catorce comunes de Laudes, Vísperas (con sus I Vísperas en `primeras`), Oficio de lectura y Hora intermedia, más Santa María en sábado, de la extracción limpia de los cuatro tomos (`extraccion/a_base_comunes.py`, 11/2026; reemplazó la carga a mano desde el texto del tomo III). `pascua`: lo que cambia en el tiempo pascual; `variantes`: las otras opciones del libro con su etiqueta (la app todavía no usa ninguna de las dos). Religiosos, caridad y educadores guardan solo lo propio y heredan el resto (`hereda`: santos varones; `hereda_mujeres`: santas mujeres, para las santas); doctores hereda de pastores. Las oraciones traen la forma femenina entre corchetes («san [santa] N.»): la app elige por el nombre.
 - `santoral/libro.yaml`: propio del libro para las celebraciones que sync no traía (clave: el nombre en el Ordo).
 - `santoral/adf.yaml`: qué común (o qué otra celebración) usa cada una. Se corrige a mano.
