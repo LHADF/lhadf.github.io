@@ -410,8 +410,10 @@ test('comunes y propio del libro: oración propia, segunda lectura y oficio ente
   const ses = W.Oficio.armar('2026-05-28', '');
   assert.match(ses.dia.titulo, /Sumo y Eterno Sacerdote/); assert.equal(ses.secciones.filter(s => s.k === 'salmo').length, 3);
   // oración del común con el nombre, sin «N.»
-  const agata = LA.armar('2027-02-05', ''), o = agata.secciones.filter(s => s.k === 'prosa').pop().t.es;   // sin propio en el libro
-  assert.match(o, /santa Ágata/); assert.ok(!/\bN\./.test(o));
+  const agata = LA.armar('2027-02-05', '');   // ahora con oración propia del libro (allí, «santa Águeda»)
+  assert.match(agata.secciones.filter(s => s.k === 'prosa').pop().t.es, /santa Águeda/);
+  const enrique = LA.armar('2027-07-17', ''), o = enrique.secciones.filter(s => s.k === 'prosa').pop().t.es;   // ADF, sin propio en el libro
+  assert.match(o, /san Enrique de Alemania/); assert.ok(!/\bN\./.test(o) && !/\[/.test(o));
   // Santa María en sábado: Oficio con su himno y su segunda lectura
   const smo = W.Oficio.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Sancta María in sábbato'}});
   assert.equal(smo.secciones.find(s => s.k === 'himno').opciones[0].n, 'Rosa entre rosas');

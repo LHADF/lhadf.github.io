@@ -389,6 +389,23 @@ def intermedia(C, previo):
     return out
 
 
+def guardar_bibliotecas():
+    """Agrega a base/himnos/ los himnos nuevos (al final del archivo, sin tocar lo que ya estaba) y a base/salmos/ los salmos."""
+    import tempfile
+    for h, nuevos in HIM_NUEVOS.items():
+        if nuevos:
+            tmp = Path(tempfile.mkdtemp()) / 'h.yaml'
+            escribir(tmp, aleluia(nuevos), 'Himnos del libro que la base no tenía (extracción del libro).')
+            p = BASE / 'himnos' / f'{h}.yaml'
+            p.write_text(p.read_text(encoding='utf-8').rstrip('\n') + '\n' + tmp.read_text(encoding='utf-8'), encoding='utf-8')
+            HIM_BASE[h].update(nuevos)
+            nuevos.clear()
+    for k, (tit, s) in list(SAL_NUEVOS.items()):
+        escribir(BASE / 'salmos' / f'{k}.yaml', s, f'{tit}. Texto de la Liturgia de las Horas en español (extracción del libro).')
+        SAL_BASE.add(k)
+    SAL_NUEVOS.clear()
+
+
 def main():
     d = json.loads((AQUI / 'comunes' / 'comunes.json').read_text(encoding='utf-8'))
     previos = {h: leer(BASE / 'comunes' / f'{h}.yaml') or {} for h in ('laudes', 'visperas', 'oficio', 'intermedia')}
@@ -434,19 +451,11 @@ def main():
     for h, datos in salida.items():
         orden = {k: datos[k] for k in ORDEN if k in datos}
         escribir(BASE / 'comunes' / f'{h}.yaml', aleluia(orden), cabecera.format(h=h))
-    import tempfile
-    for h, nuevos in HIM_NUEVOS.items():
-        if nuevos:    # al final del archivo, sin tocar lo que ya estaba
-            tmp = Path(tempfile.mkdtemp()) / 'h.yaml'
-            escribir(tmp, nuevos, 'Himnos de los Oficios comunes que la base no tenía (extracción del libro).')
-            p = BASE / 'himnos' / f'{h}.yaml'
-            p.write_text(p.read_text(encoding='utf-8').rstrip('\n') + '\n' + tmp.read_text(encoding='utf-8'), encoding='utf-8')
-    for k, (tit, s) in SAL_NUEVOS.items():
-        escribir(BASE / 'salmos' / f'{k}.yaml', s, f'{tit}. Texto de la Liturgia de las Horas en español (extracción del libro).')
     print('comunes:', {h: len(x) for h, x in salida.items()})
     print('himnos agregados:', {h: len(x) for h, x in HIM_NUEVOS.items()}, '· salmos agregados:', sorted(SAL_NUEVOS))
     for a in AVISOS:
         print('aviso:', a)
+    guardar_bibliotecas()
 
 
 if __name__ == '__main__':
