@@ -65,8 +65,8 @@ Santa Teresa de Calcuta, religiosa:
   comun: santas-mujeres
 Santísimo Nombre de la bienaventurada Virgen María:
   comun: virgen-maria
-Bienaventurada Virgen María Corredentora:
-  comun: virgen-maria
+Bienaventurada Virgen María Corredentora:   # nombre ADF de Nuestra Señora de los Dolores (15 de septiembre)
+  es: NUESTRA SEÑORA DE LOS DOLORES
 Santa Hildegarda de Bingen, virgen y doctora de la Iglesia:
   comun: virgenes
 Nuestra Señora de la Salette:
