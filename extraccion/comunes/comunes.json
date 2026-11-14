@@ -11060,15 +11060,15 @@
           ],
           "libres_despues_de": null,
           "final": "Padre nuestro.",
-          "revisar": true,
-          "nota": "intención sin segunda mitad: «Porque nos amaste hasta el extremo, Salkvador nues» · intención sin segunda mitad: «Porque no cesas de llamar a los pecadores arrepent» · intención sin segunda mitad: «Porque has dado a la Iglesia, como sacrificio, a s» · intención sin segunda mitad: «Porque, con tu gracia, nos has dado perseverancia » · intención sin segunda mitad: «Porque has asociado a tu muerte a nuestros hermano» · variante sin etiqueta distinta de la de otro tomo: no se inventa condición",
           "fuentes": [
            {
             "tomo": 1,
             "pdf": 887,
             "impresa": "887"
            }
-          ]
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          },
          {
           "etiquetas_en_tomos": [
@@ -13985,15 +13985,15 @@
           ],
           "libres_despues_de": null,
           "final": "Padre nuestro.",
-          "revisar": true,
-          "nota": "intención sin segunda mitad: «Porque nos amaste hasta el extremo, Salkvador nues» · intención sin segunda mitad: «Porque no cesas de llamar a los pecadores arrepent» · intención sin segunda mitad: «Porque has dado a la Iglesia, como sacrificio, a s» · intención sin segunda mitad: «Porque, con tu gracia, nos has dado perseverancia » · intención sin segunda mitad: «Porque has asociado a tu muerte a nuestros hermano» · variante sin etiqueta distinta de la de otro tomo: no se inventa condición",
           "fuentes": [
            {
             "tomo": 1,
             "pdf": 899,
             "impresa": "899"
            }
-          ]
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          },
          {
           "etiquetas_en_tomos": [
@@ -15055,15 +15055,15 @@
           ],
           "libres_despues_de": null,
           "final": "Padre nuestro.",
-          "revisar": true,
-          "nota": "intención sin segunda mitad: «Porque nos amaste hasta el extremo, Salkvador nues» · intención sin segunda mitad: «Porque no cesas de llamar a los pecadores arrepent» · intención sin segunda mitad: «Porque has dado a la Iglesia, como sacrificio, a s» · intención sin segunda mitad: «Porque, con tu gracia, nos has dado perseverancia » · intención sin segunda mitad: «Porque has asociado a tu muerte a nuestros hermano» · variante sin etiqueta distinta de la de otro tomo: no se inventa condición",
           "fuentes": [
            {
             "tomo": 1,
             "pdf": 904,
             "impresa": "904"
            }
-          ]
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          },
          {
           "etiquetas_en_tomos": [
@@ -18082,15 +18082,15 @@
           ],
           "libres_despues_de": null,
           "final": "Padre nuestro.",
-          "revisar": true,
-          "nota": "intención sin segunda mitad: «Porque nos amaste hasta el extremo, Salkvador nues» · intención sin segunda mitad: «Porque no cesas de llamar a los pecadores arrepent» · intención sin segunda mitad: «Porque has dado a la Iglesia, como sacrificio, a s» · intención sin segunda mitad: «Porque, con tu gracia, nos has dado perseverancia » · intención sin segunda mitad: «Porque has asociado a tu muerte a nuestros hermano» · variante sin etiqueta distinta de la de otro tomo: no se inventa condición",
           "fuentes": [
            {
             "tomo": 1,
             "pdf": 916,
             "impresa": "916"
            }
-          ]
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          },
          {
           "etiquetas_en_tomos": [
@@ -18192,8 +18192,6 @@
           ],
           "libres_despues_de": 4,
           "final": "Dirijamos ahora nuestra oración al Padre que está en los cielos, diciendo: Padre nuestro.",
-          "revisar": true,
-          "nota": "intención sin segunda mitad: «Porque nos amaste hasta el extremo, Salvador nuest» · intención sin segunda mitad: «Porque no cesas de llamar a los pecadores arrepent» · intención sin segunda mitad: «Porque hoy hemos ofrecido la sangre de la alianza » · intención sin segunda mitad: «Porque, con tu gracia, nos has dado perseverancia » · intención sin segunda mitad: «Porque has asociado a tu muerte a nuestros hermano» · variante sin etiqueta distinta de la de otro tomo: no se inventa condición",
           "fuentes": [
            {
             "tomo": 4,
@@ -18202,7 +18200,9 @@
             "pdf_fin": 6052,
             "impresa_fin": "1582"
            }
-          ]
+          ],
+          "revisar": true,
+          "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
          }
         ]
        }

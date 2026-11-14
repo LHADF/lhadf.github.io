@@ -1,0 +1,142 @@
+Controles — Oficio de difuntos (tomos I–IV) — hay controles que no pasan
+Piezas marcadas para revisar: 49 · diferencias entre tomos: 63
+
+[OK ] Cobertura: 4954/4954 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 1013: 100 %
+      tomo 1 · pdf 1014: 100 %
+      tomo 1 · pdf 1015: 100 %
+      tomo 1 · pdf 1016: 100 %
+      tomo 1 · pdf 1017: 100 %
+      tomo 1 · pdf 1018: 100 %
+      tomo 1 · pdf 1019: 100 %
+      tomo 1 · pdf 1020: 100 %
+      tomo 1 · pdf 1021: 100 %
+      tomo 1 · pdf 1022: 100 %
+      tomo 1 · pdf 1023: 100 %
+      tomo 1 · pdf 1024: 100 %
+      tomo 1 · pdf 1025: 100 %
+      tomo 1 · pdf 1026: 100 %
+      tomo 1 · pdf 1027: 100 %
+      tomo 1 · pdf 1028: 100 %
+      tomo 1 · pdf 1029: 100 %
+      tomo 1 · pdf 1030: 100 %
+      tomo 1 · pdf 1031: 100 %
+      tomo 1 · pdf 1032: 100 %
+      tomo 1 · pdf 1033: 100 %
+      tomo 1 · pdf 1034: 100 %
+      tomo 1 · pdf 1035: 100 %
+      tomo 1 · pdf 1036: 100 %
+      tomo 2 · pdf 2643: 100 %
+      tomo 2 · pdf 2644: 100 %
+      tomo 2 · pdf 2645: 100 %
+      tomo 2 · pdf 2646: 100 %
+      tomo 2 · pdf 2647: 100 %
+      tomo 2 · pdf 2648: 100 %
+      tomo 2 · pdf 2649: 100 %
+      tomo 2 · pdf 2650: 100 %
+      tomo 2 · pdf 2651: 100 %
+      tomo 2 · pdf 2652: 100 %
+      tomo 2 · pdf 2653: 100 %
+      tomo 2 · pdf 2654: 100 %
+      tomo 2 · pdf 2655: 100 %
+      tomo 2 · pdf 2656: 100 %
+      tomo 2 · pdf 2657: 100 %
+      tomo 2 · pdf 2658: 100 %
+      tomo 2 · pdf 2659: 100 %
+      tomo 2 · pdf 2660: 100 %
+      tomo 2 · pdf 2661: 100 %
+      tomo 2 · pdf 2662: 100 %
+      tomo 2 · pdf 2663: 100 %
+      tomo 2 · pdf 2664: 100 %
+      tomo 2 · pdf 2665: 100 %
+      tomo 2 · pdf 2666: 100 %
+      tomo 3 · pdf 4284: 100 %
+      tomo 3 · pdf 4285: 100 %
+      tomo 3 · pdf 4286: 100 %
+      tomo 3 · pdf 4287: 100 %
+      tomo 3 · pdf 4288: 100 %
+      tomo 3 · pdf 4289: 100 %
+      tomo 3 · pdf 4290: 100 %
+      tomo 3 · pdf 4291: 100 %
+      tomo 3 · pdf 4292: 100 %
+      tomo 3 · pdf 4293: 100 %
+      tomo 3 · pdf 4294: 100 %
+      tomo 3 · pdf 4295: 100 %
+      tomo 3 · pdf 4296: 100 %
+      tomo 3 · pdf 4297: 100 %
+      tomo 3 · pdf 4298: 100 %
+      tomo 3 · pdf 4299: 100 %
+      tomo 3 · pdf 4300: 100 %
+      tomo 3 · pdf 4301: 100 %
+      tomo 3 · pdf 4302: 100 %
+      tomo 3 · pdf 4303: 100 %
+      tomo 3 · pdf 4304: 100 %
+      tomo 3 · pdf 4305: 100 %
+      tomo 3 · pdf 4306: 100 %
+      tomo 3 · pdf 4307: 100 %
+      tomo 3 · pdf 4308: 100 %
+      tomo 4 · pdf 6151: 100 %
+      tomo 4 · pdf 6152: 100 %
+      tomo 4 · pdf 6153: 100 %
+      tomo 4 · pdf 6154: 100 %
+      tomo 4 · pdf 6155: 100 %
+      tomo 4 · pdf 6156: 100 %
+      tomo 4 · pdf 6157: 100 %
+      tomo 4 · pdf 6158: 100 %
+      tomo 4 · pdf 6159: 100 %
+      tomo 4 · pdf 6160: 100 %
+      tomo 4 · pdf 6161: 100 %
+      tomo 4 · pdf 6162: 100 %
+      tomo 4 · pdf 6163: 100 %
+      tomo 4 · pdf 6164: 100 %
+      tomo 4 · pdf 6165: 100 %
+      tomo 4 · pdf 6166: 100 %
+      tomo 4 · pdf 6167: 100 %
+      tomo 4 · pdf 6168: 100 %
+      tomo 4 · pdf 6169: 100 %
+      tomo 4 · pdf 6170: 100 %
+      tomo 4 · pdf 6171: 100 %
+      tomo 4 · pdf 6172: 100 %
+      tomo 4 · pdf 6173: 100 %
+      tomo 4 · pdf 6174: 100 %
+      tomo 4 · pdf 6175: 100 %
+      tomo 4 · pdf 6176: 100 %
+      tomo 4 · pdf 6177: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 51 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 1 pdf 1022: ['(', ')']
+      tomo 1 pdf 1022: ['(', ')']
+      tomo 1 pdf 1022: ['(', ')']
+      tomo 1 pdf 1022: ['(', ')']
+      tomo 1 pdf 1028: ['(', ')']
+      tomo 1 pdf 1028: ['(', ')']
+      tomo 1 pdf 1028: ['(', ')']
+      tomo 1 pdf 1028: ['(', ')']
+      tomo 1 pdf 1036: ['(', ')']
+      tomo 1 pdf 1036: ['(', ')']
+      tomo 1 pdf 1036: ['(', ')']
+      tomo 1 pdf 1036: ['(', ')']
+      tomo 2 pdf 2652: ['(', ')']
+      tomo 2 pdf 2652: ['(', ')']
+      tomo 2 pdf 2652: ['(', ')']
+[OK ] Sin rótulos en el texto: 0 casos
+[MAL] Conteos: 1 fuera de norma
+      difuntos/laudes/salmodia: 3 antífonas, 4 salmos
+[OK ] Opciones: tomo 1: 21 etiquetas rojas → 21 variantes, tomo 2: 21 etiquetas rojas → 21 variantes, tomo 3: 28 etiquetas rojas → 28 variantes, tomo 4: 28 etiquetas rojas → 28 variantes
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 11 pendientes (fuera de esta sección)
+      pendiente: apendices/himnos-latinos
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/invitatorio/salmodia
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: salmos/salmo-23
+      pendiente: salmos/salmo-66
+      pendiente: salmos/salmo-94
+      pendiente: salmos/salmo-99
+      pendiente: salterio/salmodia-complementaria
+      pendiente: texto-azul/despues-de-las-ii-visperas
+[OK ] Salmos: 12 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: salmo-39-2-14-17-18 (ver diferencias.csv)
+[OK ] Ida y vuelta: 424/424 piezas reescritas igual al libro
+[INF] Colores dudosos clasificados por tono: 0
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 0

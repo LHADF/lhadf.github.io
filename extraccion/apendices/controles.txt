@@ -1,0 +1,777 @@
+Controles — Apéndices (tomos I–IV) — hay controles que no pasan
+Piezas marcadas para revisar: 441 · diferencias entre tomos: 155
+
+[OK ] Cobertura: 22671/22671 fragmentos asignados (100.0 %); huérfanos: 0
+      tomo 1 · pdf 1037: 100 %
+      tomo 1 · pdf 1038: 100 %
+      tomo 1 · pdf 1039: 100 %
+      tomo 1 · pdf 1040: 100 %
+      tomo 1 · pdf 1041: 100 %
+      tomo 1 · pdf 1042: 100 %
+      tomo 1 · pdf 1043: 100 %
+      tomo 1 · pdf 1044: 100 %
+      tomo 1 · pdf 1045: 100 %
+      tomo 1 · pdf 1046: 100 %
+      tomo 1 · pdf 1047: 100 %
+      tomo 1 · pdf 1048: 100 %
+      tomo 1 · pdf 1049: 100 %
+      tomo 1 · pdf 1050: 100 %
+      tomo 1 · pdf 1051: 100 %
+      tomo 1 · pdf 1052: 100 %
+      tomo 1 · pdf 1053: 100 %
+      tomo 1 · pdf 1054: 100 %
+      tomo 1 · pdf 1055: 100 %
+      tomo 1 · pdf 1056: 100 %
+      tomo 1 · pdf 1057: 100 %
+      tomo 1 · pdf 1058: 100 %
+      tomo 1 · pdf 1059: 100 %
+      tomo 1 · pdf 1060: 100 %
+      tomo 1 · pdf 1061: 100 %
+      tomo 1 · pdf 1062: 100 %
+      tomo 1 · pdf 1063: 100 %
+      tomo 1 · pdf 1064: 100 %
+      tomo 1 · pdf 1065: 100 %
+      tomo 1 · pdf 1066: 100 %
+      tomo 1 · pdf 1067: 100 %
+      tomo 1 · pdf 1068: 100 %
+      tomo 1 · pdf 1069: 100 %
+      tomo 1 · pdf 1070: 100 %
+      tomo 1 · pdf 1071: 100 %
+      tomo 1 · pdf 1072: 100 %
+      tomo 1 · pdf 1073: 100 %
+      tomo 1 · pdf 1074: 100 %
+      tomo 1 · pdf 1075: 100 %
+      tomo 1 · pdf 1076: 100 %
+      tomo 1 · pdf 1077: 100 %
+      tomo 1 · pdf 1078: 100 %
+      tomo 1 · pdf 1079: 100 %
+      tomo 1 · pdf 1080: 100 %
+      tomo 1 · pdf 1081: 100 %
+      tomo 1 · pdf 1082: 100 %
+      tomo 1 · pdf 1083: 100 %
+      tomo 1 · pdf 1084: 100 %
+      tomo 1 · pdf 1085: 100 %
+      tomo 1 · pdf 1086: 100 %
+      tomo 1 · pdf 1087: 100 %
+      tomo 1 · pdf 1088: 100 %
+      tomo 1 · pdf 1089: 100 %
+      tomo 1 · pdf 1090: 100 %
+      tomo 1 · pdf 1091: 100 %
+      tomo 1 · pdf 1092: 100 %
+      tomo 1 · pdf 1093: 100 %
+      tomo 1 · pdf 1094: 100 %
+      tomo 1 · pdf 1095: 100 %
+      tomo 1 · pdf 1096: 100 %
+      tomo 1 · pdf 1097: 100 %
+      tomo 1 · pdf 1098: 100 %
+      tomo 1 · pdf 1099: 100 %
+      tomo 1 · pdf 1100: 100 %
+      tomo 1 · pdf 1101: 100 %
+      tomo 1 · pdf 1102: 100 %
+      tomo 1 · pdf 1103: 100 %
+      tomo 1 · pdf 1104: 100 %
+      tomo 1 · pdf 1105: 100 %
+      tomo 1 · pdf 1106: 100 %
+      tomo 1 · pdf 1107: 100 %
+      tomo 1 · pdf 1108: 100 %
+      tomo 1 · pdf 1109: 100 %
+      tomo 1 · pdf 1110: 100 %
+      tomo 1 · pdf 1111: 100 %
+      tomo 1 · pdf 1112: 100 %
+      tomo 1 · pdf 1113: 100 %
+      tomo 1 · pdf 1114: 100 %
+      tomo 1 · pdf 1115: 100 %
+      tomo 1 · pdf 1116: 100 %
+      tomo 1 · pdf 1117: 100 %
+      tomo 1 · pdf 1118: 100 %
+      tomo 1 · pdf 1119: 100 %
+      tomo 1 · pdf 1120: 100 %
+      tomo 1 · pdf 1121: 100 %
+      tomo 1 · pdf 1122: 100 %
+      tomo 1 · pdf 1123: 100 %
+      tomo 1 · pdf 1124: 100 %
+      tomo 1 · pdf 1125: 100 %
+      tomo 1 · pdf 1126: 100 %
+      tomo 1 · pdf 1127: 100 %
+      tomo 1 · pdf 1128: 100 %
+      tomo 2 · pdf 2667: 100 %
+      tomo 2 · pdf 2668: 100 %
+      tomo 2 · pdf 2669: 100 %
+      tomo 2 · pdf 2670: 100 %
+      tomo 2 · pdf 2671: 100 %
+      tomo 2 · pdf 2672: 100 %
+      tomo 2 · pdf 2673: 100 %
+      tomo 2 · pdf 2674: 100 %
+      tomo 2 · pdf 2675: 100 %
+      tomo 2 · pdf 2676: 100 %
+      tomo 2 · pdf 2677: 100 %
+      tomo 2 · pdf 2678: 100 %
+      tomo 2 · pdf 2679: 100 %
+      tomo 2 · pdf 2680: 100 %
+      tomo 2 · pdf 2681: 100 %
+      tomo 2 · pdf 2682: 100 %
+      tomo 2 · pdf 2683: 100 %
+      tomo 2 · pdf 2684: 100 %
+      tomo 2 · pdf 2685: 100 %
+      tomo 2 · pdf 2686: 100 %
+      tomo 2 · pdf 2687: 100 %
+      tomo 2 · pdf 2688: 100 %
+      tomo 2 · pdf 2689: 100 %
+      tomo 2 · pdf 2690: 100 %
+      tomo 2 · pdf 2691: 100 %
+      tomo 2 · pdf 2692: 100 %
+      tomo 2 · pdf 2693: 100 %
+      tomo 2 · pdf 2694: 100 %
+      tomo 2 · pdf 2695: 100 %
+      tomo 2 · pdf 2696: 100 %
+      tomo 2 · pdf 2697: 100 %
+      tomo 2 · pdf 2698: 100 %
+      tomo 2 · pdf 2699: 100 %
+      tomo 2 · pdf 2700: 100 %
+      tomo 2 · pdf 2701: 100 %
+      tomo 2 · pdf 2702: 100 %
+      tomo 2 · pdf 2703: 100 %
+      tomo 2 · pdf 2704: 100 %
+      tomo 2 · pdf 2705: 100 %
+      tomo 2 · pdf 2706: 100 %
+      tomo 2 · pdf 2707: 100 %
+      tomo 2 · pdf 2708: 100 %
+      tomo 2 · pdf 2709: 100 %
+      tomo 2 · pdf 2710: 100 %
+      tomo 2 · pdf 2711: 100 %
+      tomo 2 · pdf 2712: 100 %
+      tomo 2 · pdf 2713: 100 %
+      tomo 2 · pdf 2714: 100 %
+      tomo 2 · pdf 2715: 100 %
+      tomo 2 · pdf 2716: 100 %
+      tomo 2 · pdf 2717: 100 %
+      tomo 2 · pdf 2718: 100 %
+      tomo 2 · pdf 2719: 100 %
+      tomo 2 · pdf 2720: 100 %
+      tomo 2 · pdf 2721: 100 %
+      tomo 2 · pdf 2722: 100 %
+      tomo 2 · pdf 2723: 100 %
+      tomo 2 · pdf 2724: 100 %
+      tomo 2 · pdf 2725: 100 %
+      tomo 2 · pdf 2726: 100 %
+      tomo 2 · pdf 2727: 100 %
+      tomo 2 · pdf 2728: 100 %
+      tomo 2 · pdf 2729: 100 %
+      tomo 2 · pdf 2730: 100 %
+      tomo 2 · pdf 2731: 100 %
+      tomo 2 · pdf 2732: 100 %
+      tomo 2 · pdf 2733: 100 %
+      tomo 2 · pdf 2734: 100 %
+      tomo 2 · pdf 2735: 100 %
+      tomo 2 · pdf 2736: 100 %
+      tomo 2 · pdf 2737: 100 %
+      tomo 2 · pdf 2738: 100 %
+      tomo 2 · pdf 2739: 100 %
+      tomo 2 · pdf 2740: 100 %
+      tomo 2 · pdf 2741: 100 %
+      tomo 2 · pdf 2742: 100 %
+      tomo 2 · pdf 2743: 100 %
+      tomo 2 · pdf 2744: 100 %
+      tomo 2 · pdf 2745: 100 %
+      tomo 2 · pdf 2746: 100 %
+      tomo 2 · pdf 2747: 100 %
+      tomo 2 · pdf 2748: 100 %
+      tomo 2 · pdf 2749: 100 %
+      tomo 2 · pdf 2750: 100 %
+      tomo 2 · pdf 2751: 100 %
+      tomo 2 · pdf 2752: 100 %
+      tomo 2 · pdf 2753: 100 %
+      tomo 2 · pdf 2754: 100 %
+      tomo 2 · pdf 2755: 100 %
+      tomo 2 · pdf 2756: 100 %
+      tomo 2 · pdf 2757: 100 %
+      tomo 2 · pdf 2758: 100 %
+      tomo 2 · pdf 2759: 100 %
+      tomo 2 · pdf 2760: 100 %
+      tomo 2 · pdf 2761: 100 %
+      tomo 2 · pdf 2762: 100 %
+      tomo 2 · pdf 2763: 100 %
+      tomo 2 · pdf 2764: 100 %
+      tomo 2 · pdf 2765: 100 %
+      tomo 2 · pdf 2766: 100 %
+      tomo 2 · pdf 2767: 100 %
+      tomo 2 · pdf 2768: 100 %
+      tomo 2 · pdf 2769: 100 %
+      tomo 2 · pdf 2770: 100 %
+      tomo 2 · pdf 2771: 100 %
+      tomo 2 · pdf 2772: 100 %
+      tomo 2 · pdf 2773: 100 %
+      tomo 2 · pdf 2774: 100 %
+      tomo 2 · pdf 2775: 100 %
+      tomo 2 · pdf 2776: 100 %
+      tomo 2 · pdf 2777: 100 %
+      tomo 2 · pdf 2778: 100 %
+      tomo 2 · pdf 2779: 100 %
+      tomo 2 · pdf 2780: 100 %
+      tomo 2 · pdf 2781: 100 %
+      tomo 2 · pdf 2782: 100 %
+      tomo 2 · pdf 2783: 100 %
+      tomo 2 · pdf 2784: 100 %
+      tomo 2 · pdf 2785: 100 %
+      tomo 2 · pdf 2786: 100 %
+      tomo 2 · pdf 2787: 100 %
+      tomo 2 · pdf 2788: 100 %
+      tomo 2 · pdf 2789: 100 %
+      tomo 2 · pdf 2790: 100 %
+      tomo 2 · pdf 2791: 100 %
+      tomo 2 · pdf 2792: 100 %
+      tomo 2 · pdf 2793: 100 %
+      tomo 2 · pdf 2794: 100 %
+      tomo 2 · pdf 2795: 100 %
+      tomo 2 · pdf 2796: 100 %
+      tomo 2 · pdf 2797: 100 %
+      tomo 2 · pdf 2798: 100 %
+      tomo 2 · pdf 2799: 100 %
+      tomo 2 · pdf 2800: 100 %
+      tomo 2 · pdf 2801: 100 %
+      tomo 2 · pdf 2802: 100 %
+      tomo 2 · pdf 2803: 100 %
+      tomo 2 · pdf 2804: 100 %
+      tomo 2 · pdf 2805: 100 %
+      tomo 2 · pdf 2806: 100 %
+      tomo 2 · pdf 2807: 100 %
+      tomo 2 · pdf 2808: 100 %
+      tomo 2 · pdf 2809: 100 %
+      tomo 2 · pdf 2810: 100 %
+      tomo 2 · pdf 2811: 100 %
+      tomo 2 · pdf 2812: 100 %
+      tomo 2 · pdf 2813: 100 %
+      tomo 3 · pdf 4309: 100 %
+      tomo 3 · pdf 4310: 100 %
+      tomo 3 · pdf 4311: 100 %
+      tomo 3 · pdf 4312: 100 %
+      tomo 3 · pdf 4313: 100 %
+      tomo 3 · pdf 4314: 100 %
+      tomo 3 · pdf 4315: 100 %
+      tomo 3 · pdf 4316: 100 %
+      tomo 3 · pdf 4317: 100 %
+      tomo 3 · pdf 4318: 100 %
+      tomo 3 · pdf 4319: 100 %
+      tomo 3 · pdf 4320: 100 %
+      tomo 3 · pdf 4321: 100 %
+      tomo 3 · pdf 4322: 100 %
+      tomo 3 · pdf 4323: 100 %
+      tomo 3 · pdf 4324: 100 %
+      tomo 3 · pdf 4325: 100 %
+      tomo 3 · pdf 4326: 100 %
+      tomo 3 · pdf 4327: 100 %
+      tomo 3 · pdf 4328: 100 %
+      tomo 3 · pdf 4329: 100 %
+      tomo 3 · pdf 4330: 100 %
+      tomo 3 · pdf 4331: 100 %
+      tomo 3 · pdf 4332: 100 %
+      tomo 3 · pdf 4333: 100 %
+      tomo 3 · pdf 4334: 100 %
+      tomo 3 · pdf 4335: 100 %
+      tomo 3 · pdf 4336: 100 %
+      tomo 3 · pdf 4337: 100 %
+      tomo 3 · pdf 4338: 100 %
+      tomo 3 · pdf 4339: 100 %
+      tomo 3 · pdf 4340: 100 %
+      tomo 3 · pdf 4341: 100 %
+      tomo 3 · pdf 4342: 100 %
+      tomo 3 · pdf 4343: 100 %
+      tomo 3 · pdf 4344: 100 %
+      tomo 3 · pdf 4345: 100 %
+      tomo 3 · pdf 4346: 100 %
+      tomo 3 · pdf 4347: 100 %
+      tomo 3 · pdf 4348: 100 %
+      tomo 3 · pdf 4349: 100 %
+      tomo 3 · pdf 4350: 100 %
+      tomo 3 · pdf 4351: 100 %
+      tomo 3 · pdf 4352: 100 %
+      tomo 3 · pdf 4353: 100 %
+      tomo 3 · pdf 4354: 100 %
+      tomo 3 · pdf 4355: 100 %
+      tomo 3 · pdf 4356: 100 %
+      tomo 3 · pdf 4357: 100 %
+      tomo 3 · pdf 4358: 100 %
+      tomo 3 · pdf 4359: 100 %
+      tomo 3 · pdf 4360: 100 %
+      tomo 3 · pdf 4361: 100 %
+      tomo 3 · pdf 4362: 100 %
+      tomo 3 · pdf 4363: 100 %
+      tomo 3 · pdf 4364: 100 %
+      tomo 3 · pdf 4365: 100 %
+      tomo 3 · pdf 4366: 100 %
+      tomo 3 · pdf 4367: 100 %
+      tomo 3 · pdf 4368: 100 %
+      tomo 3 · pdf 4369: 100 %
+      tomo 3 · pdf 4370: 100 %
+      tomo 3 · pdf 4371: 100 %
+      tomo 3 · pdf 4372: 100 %
+      tomo 3 · pdf 4373: 100 %
+      tomo 3 · pdf 4374: 100 %
+      tomo 3 · pdf 4375: 100 %
+      tomo 3 · pdf 4376: 100 %
+      tomo 3 · pdf 4377: 100 %
+      tomo 3 · pdf 4378: 100 %
+      tomo 3 · pdf 4379: 100 %
+      tomo 3 · pdf 4380: 100 %
+      tomo 3 · pdf 4381: 100 %
+      tomo 3 · pdf 4382: 100 %
+      tomo 3 · pdf 4383: 100 %
+      tomo 3 · pdf 4384: 100 %
+      tomo 3 · pdf 4385: 100 %
+      tomo 3 · pdf 4386: 100 %
+      tomo 3 · pdf 4387: 100 %
+      tomo 3 · pdf 4388: 100 %
+      tomo 3 · pdf 4389: 100 %
+      tomo 3 · pdf 4390: 100 %
+      tomo 3 · pdf 4391: 100 %
+      tomo 3 · pdf 4392: 100 %
+      tomo 3 · pdf 4393: 100 %
+      tomo 3 · pdf 4394: 100 %
+      tomo 3 · pdf 4395: 100 %
+      tomo 3 · pdf 4396: 100 %
+      tomo 3 · pdf 4397: 100 %
+      tomo 3 · pdf 4398: 100 %
+      tomo 3 · pdf 4399: 100 %
+      tomo 3 · pdf 4400: 100 %
+      tomo 3 · pdf 4401: 100 %
+      tomo 3 · pdf 4402: 100 %
+      tomo 3 · pdf 4403: 100 %
+      tomo 3 · pdf 4404: 100 %
+      tomo 3 · pdf 4405: 100 %
+      tomo 3 · pdf 4406: 100 %
+      tomo 3 · pdf 4407: 100 %
+      tomo 3 · pdf 4408: 100 %
+      tomo 3 · pdf 4409: 100 %
+      tomo 3 · pdf 4410: 100 %
+      tomo 3 · pdf 4411: 100 %
+      tomo 3 · pdf 4412: 100 %
+      tomo 3 · pdf 4413: 100 %
+      tomo 3 · pdf 4414: 100 %
+      tomo 3 · pdf 4415: 100 %
+      tomo 3 · pdf 4416: 100 %
+      tomo 3 · pdf 4417: 100 %
+      tomo 3 · pdf 4418: 100 %
+      tomo 3 · pdf 4419: 100 %
+      tomo 3 · pdf 4420: 100 %
+      tomo 3 · pdf 4421: 100 %
+      tomo 3 · pdf 4422: 100 %
+      tomo 3 · pdf 4423: 100 %
+      tomo 3 · pdf 4424: 100 %
+      tomo 3 · pdf 4425: 100 %
+      tomo 3 · pdf 4426: 100 %
+      tomo 3 · pdf 4427: 100 %
+      tomo 3 · pdf 4428: 100 %
+      tomo 3 · pdf 4429: 100 %
+      tomo 3 · pdf 4430: 100 %
+      tomo 3 · pdf 4431: 100 %
+      tomo 3 · pdf 4432: 100 %
+      tomo 3 · pdf 4433: 100 %
+      tomo 3 · pdf 4434: 100 %
+      tomo 3 · pdf 4435: 100 %
+      tomo 3 · pdf 4436: 100 %
+      tomo 3 · pdf 4437: 100 %
+      tomo 3 · pdf 4438: 100 %
+      tomo 3 · pdf 4439: 100 %
+      tomo 3 · pdf 4440: 100 %
+      tomo 3 · pdf 4441: 100 %
+      tomo 3 · pdf 4442: 100 %
+      tomo 3 · pdf 4443: 100 %
+      tomo 3 · pdf 4444: 100 %
+      tomo 3 · pdf 4445: 100 %
+      tomo 3 · pdf 4446: 100 %
+      tomo 3 · pdf 4447: 100 %
+      tomo 3 · pdf 4448: 100 %
+      tomo 3 · pdf 4449: 100 %
+      tomo 3 · pdf 4450: 100 %
+      tomo 3 · pdf 4451: 100 %
+      tomo 3 · pdf 4452: 100 %
+      tomo 3 · pdf 4453: 100 %
+      tomo 3 · pdf 4454: 100 %
+      tomo 3 · pdf 4455: 100 %
+      tomo 3 · pdf 4456: 100 %
+      tomo 3 · pdf 4457: 100 %
+      tomo 3 · pdf 4458: 100 %
+      tomo 3 · pdf 4459: 100 %
+      tomo 3 · pdf 4460: 100 %
+      tomo 3 · pdf 4461: 100 %
+      tomo 3 · pdf 4462: 100 %
+      tomo 3 · pdf 4463: 100 %
+      tomo 3 · pdf 4464: 100 %
+      tomo 3 · pdf 4465: 100 %
+      tomo 3 · pdf 4466: 100 %
+      tomo 3 · pdf 4467: 100 %
+      tomo 3 · pdf 4468: 100 %
+      tomo 3 · pdf 4469: 100 %
+      tomo 4 · pdf 6178: 100 %
+      tomo 4 · pdf 6179: 100 %
+      tomo 4 · pdf 6180: 100 %
+      tomo 4 · pdf 6181: 100 %
+      tomo 4 · pdf 6182: 100 %
+      tomo 4 · pdf 6183: 100 %
+      tomo 4 · pdf 6184: 100 %
+      tomo 4 · pdf 6185: 100 %
+      tomo 4 · pdf 6186: 100 %
+      tomo 4 · pdf 6187: 100 %
+      tomo 4 · pdf 6188: 100 %
+      tomo 4 · pdf 6189: 100 %
+      tomo 4 · pdf 6190: 100 %
+      tomo 4 · pdf 6191: 100 %
+      tomo 4 · pdf 6192: 100 %
+      tomo 4 · pdf 6193: 100 %
+      tomo 4 · pdf 6194: 100 %
+      tomo 4 · pdf 6195: 100 %
+      tomo 4 · pdf 6196: 100 %
+      tomo 4 · pdf 6197: 100 %
+      tomo 4 · pdf 6198: 100 %
+      tomo 4 · pdf 6199: 100 %
+      tomo 4 · pdf 6200: 100 %
+      tomo 4 · pdf 6201: 100 %
+      tomo 4 · pdf 6202: 100 %
+      tomo 4 · pdf 6203: 100 %
+      tomo 4 · pdf 6204: 100 %
+      tomo 4 · pdf 6205: 100 %
+      tomo 4 · pdf 6206: 100 %
+      tomo 4 · pdf 6207: 100 %
+      tomo 4 · pdf 6208: 100 %
+      tomo 4 · pdf 6209: 100 %
+      tomo 4 · pdf 6210: 100 %
+      tomo 4 · pdf 6211: 100 %
+      tomo 4 · pdf 6212: 100 %
+      tomo 4 · pdf 6213: 100 %
+      tomo 4 · pdf 6214: 100 %
+      tomo 4 · pdf 6215: 100 %
+      tomo 4 · pdf 6216: 100 %
+      tomo 4 · pdf 6217: 100 %
+      tomo 4 · pdf 6218: 100 %
+      tomo 4 · pdf 6219: 100 %
+      tomo 4 · pdf 6220: 100 %
+      tomo 4 · pdf 6221: 100 %
+      tomo 4 · pdf 6222: 100 %
+      tomo 4 · pdf 6223: 100 %
+      tomo 4 · pdf 6224: 100 %
+      tomo 4 · pdf 6225: 100 %
+      tomo 4 · pdf 6226: 100 %
+      tomo 4 · pdf 6227: 100 %
+      tomo 4 · pdf 6228: 100 %
+      tomo 4 · pdf 6229: 100 %
+      tomo 4 · pdf 6230: 100 %
+      tomo 4 · pdf 6231: 100 %
+      tomo 4 · pdf 6232: 100 %
+      tomo 4 · pdf 6233: 100 %
+      tomo 4 · pdf 6234: 100 %
+      tomo 4 · pdf 6235: 100 %
+      tomo 4 · pdf 6236: 100 %
+      tomo 4 · pdf 6237: 100 %
+      tomo 4 · pdf 6238: 100 %
+      tomo 4 · pdf 6239: 100 %
+      tomo 4 · pdf 6240: 100 %
+      tomo 4 · pdf 6241: 100 %
+      tomo 4 · pdf 6242: 100 %
+      tomo 4 · pdf 6243: 100 %
+      tomo 4 · pdf 6244: 100 %
+      tomo 4 · pdf 6245: 100 %
+      tomo 4 · pdf 6246: 100 %
+      tomo 4 · pdf 6247: 100 %
+      tomo 4 · pdf 6248: 100 %
+      tomo 4 · pdf 6249: 100 %
+      tomo 4 · pdf 6250: 100 %
+      tomo 4 · pdf 6251: 100 %
+      tomo 4 · pdf 6252: 100 %
+      tomo 4 · pdf 6253: 100 %
+      tomo 4 · pdf 6254: 100 %
+      tomo 4 · pdf 6255: 100 %
+      tomo 4 · pdf 6256: 100 %
+      tomo 4 · pdf 6257: 100 %
+      tomo 4 · pdf 6258: 100 %
+      tomo 4 · pdf 6259: 100 %
+      tomo 4 · pdf 6260: 100 %
+      tomo 4 · pdf 6261: 100 %
+      tomo 4 · pdf 6262: 100 %
+      tomo 4 · pdf 6263: 100 %
+[OK ] Sin rojo en el texto: ningún texto conserva rojo; 849 fragmentos rojos sueltos dentro de un texto (†, corchetes…) se sacaron del texto y la pieza quedó marcada para revisar
+      tomo 2 pdf 2811: ['(', ')']
+      tomo 2 pdf 2811: ['(', ')']
+      tomo 2 pdf 2811: ['(', ')']
+      tomo 2 pdf 2811: ['(', ')']
+      tomo 2 pdf 2811: ['(', ')']
+      tomo 2 pdf 2811: ['(', ')']
+      tomo 2 pdf 2812: ['[', ']']
+      tomo 2 pdf 2812: ['[', ']']
+      tomo 2 pdf 2812: ['[', ']']
+      tomo 2 pdf 2812: ['[', ']']
+      tomo 2 pdf 2812: ['(', ')']
+      tomo 2 pdf 2812: ['(', ')']
+      tomo 2 pdf 2812: ['(', ')']
+      tomo 2 pdf 2812: ['(', ')']
+      tomo 2 pdf 2812: ['(', ')']
+[OK ] Sin rótulos en el texto: 0 casos
+[OK ] Conteos: 0 fuera de norma
+[OK ] Opciones: tomo 1: 74 etiquetas rojas → 74 variantes, tomo 2: 154 etiquetas rojas → 154 variantes, tomo 3: 203 etiquetas rojas → 203 variantes, tomo 4: 18 etiquetas rojas → 18 variantes
+[OK ] Remisiones: 0 rotas; 0 sin destino en el libro; 70 pendientes (fuera de esta sección)
+      pendiente: apendices/vigilias/santa-maria-virgen
+      pendiente: comunes/apostoles
+      pendiente: comunes/dedicacion
+      pendiente: comunes/doctores
+      pendiente: comunes/martires
+      pendiente: comunes/pastores
+      pendiente: comunes/santas-mujeres
+      pendiente: comunes/santos-varones
+      pendiente: comunes/virgenes
+      pendiente: ordinario/conclusion
+      pendiente: ordinario/laudes/cantico_evangelico
+      pendiente: ordinario/oficio/te_deum
+      pendiente: ordinario/visperas/cantico_evangelico
+      pendiente: texto-azul/1-11
+      pendiente: texto-azul/aeterne-rex-altisimae
+      pendiente: texto-azul/ave-maris-stella
+      pendiente: texto-azul/christe-qui-splendor-et-dies
+      pendiente: texto-azul/claro-paschali-gaudio
+      pendiente: texto-azul/como-en-el-propio
+      pendiente: texto-azul/comun-de-la-santisima-virgen-maria
+      pendiente: texto-azul/comun-de-la-virgen-maria
+      pendiente: texto-azul/dei-fide
+      pendiente: texto-azul/dies-aetasque
+      pendiente: texto-azul/domingo
+      pendiente: texto-azul/iesu-corona-virginum
+      pendiente: texto-azul/jn-11-1-45
+      pendiente: texto-azul/jn-11-3-7-17-30-27-33b-45
+      pendiente: texto-azul/jn-12-20-33
+      pendiente: texto-azul/jn-2-1-12
+      pendiente: texto-azul/jn-3-13-25
+      pendiente: texto-azul/jn-3-14-21
+      pendiente: texto-azul/jn-4-5-15-19b-26-39a-40-42
+      pendiente: texto-azul/jn-4-5-42
+      pendiente: texto-azul/jn-8
+      pendiente: texto-azul/jn-8-21-30
+      pendiente: texto-azul/jn-9-1-41
+      pendiente: texto-azul/jn-9-1-6-9-13-17-34-38
+      pendiente: texto-azul/lc-13-1-9
+      pendiente: texto-azul/lc-13-22-32
+      pendiente: texto-azul/lc-15-13-11-32
+      pendiente: texto-azul/lc-23-50-56
+      pendiente: texto-azul/lc-4-1-13
+      pendiente: texto-azul/lc-9-28b-36
+      pendiente: texto-azul/mc-1-12-15
+      pendiente: texto-azul/mc-10-32-45
+      pendiente: texto-azul/mc-15-42-47
+      pendiente: texto-azul/mc-8-27-38
+      pendiente: texto-azul/mc-9-2-10
+      pendiente: texto-azul/mc-9-30-48
+      pendiente: texto-azul/mt-1-1-25
+      pendiente: texto-azul/mt-16-13-19
+      pendiente: texto-azul/mt-17-1-9
+      pendiente: texto-azul/mt-21-33-46
+      pendiente: texto-azul/mt-27-57-66
+      pendiente: texto-azul/mt-4-1-11
+      pendiente: texto-azul/nona
+      pendiente: texto-azul/o-gloriosa-domina
+      pendiente: texto-azul/optatus-votis-omnium
+      pendiente: texto-azul/qua-christus
+      pendiente: texto-azul/quod-chorus
+      pendiente: texto-azul/s
+      pendiente: texto-azul/salve-dies
+      pendiente: texto-azul/sexta
+      pendiente: texto-azul/te-ioseph-celebrent-agmina-caelitum
+      pendiente: texto-azul/te-lucis-ante-terminum
+      pendiente: texto-azul/tercia
+      pendiente: texto-azul/ternis-ter-horis
+      pendiente: texto-azul/todos-los-santos
+      pendiente: texto-azul/tristes-erant-apostoli
+      pendiente: texto-azul/veni-creator-spiritus
+[OK ] Salmos: 45 nombrados, todos en salmos.json
+[MAL] Salmos iguales en todos los tomos: difieren: cantico-iii-is-66-10-14a, cantico-iii-jr-7-2-7, cantico-ii-is-62-4-7, cantico-iii-sb-10-17-21 (ver diferencias.csv)
+[OK ] Ida y vuelta: 2337/2337 piezas reescritas igual al libro
+[INF] Páginas casi sin texto (el libro las imprime como imagen): 37
+      tomo I pdf 1037
+      tomo II pdf 2667
+      tomo II pdf 2703
+      tomo II pdf 2785
+      tomo II pdf 2786
+      tomo II pdf 2787
+      tomo II pdf 2788
+      tomo II pdf 2789
+      tomo II pdf 2790
+      tomo II pdf 2791
+      tomo II pdf 2792
+      tomo II pdf 2793
+      tomo II pdf 2794
+      tomo II pdf 2795
+      tomo II pdf 2796
+      tomo II pdf 2797
+      tomo II pdf 2798
+      tomo II pdf 2799
+      tomo II pdf 2800
+      tomo III pdf 4309
+      tomo III pdf 4439
+      tomo III pdf 4440
+      tomo III pdf 4441
+      tomo III pdf 4442
+      tomo III pdf 4443
+      tomo III pdf 4444
+      tomo III pdf 4445
+      tomo III pdf 4446
+      tomo III pdf 4447
+      tomo III pdf 4448
+      tomo III pdf 4449
+      tomo III pdf 4450
+      tomo III pdf 4451
+      tomo III pdf 4452
+      tomo III pdf 4453
+      tomo III pdf 4454
+      tomo IV pdf 6178
+      son las partituras del Apéndice VI: no hay texto que extraer
+[INF] Colores dudosos clasificados por tono: 96
+      tomo 1 pdf 1123: Alma Redemptóris Máter, quæ pérvia caéli {'330634'}
+      tomo 2 pdf 2670: Domingo I de Cuaresma: Lc 13, 22-32 {'0433ff'}
+      tomo 2 pdf 2670: Domingo II de Cuaresma: Mc 8, 27-38 {'0433ff'}
+      tomo 2 pdf 2670: Domingo II de Cuaresma: Mc 9, 30-48 {'0433ff'}
+      tomo 2 pdf 2670: Domingo IV de Cuaresma: Mc 10, 32-45 {'0433ff'}
+      tomo 2 pdf 2670: Domingo V de Cuaresma: Mt 21, 33-46 {'0433ff'}
+      tomo 2 pdf 2670: Domingo de Ramos: Jn 8, 21-30 {'0433ff'}
+      tomo 2 pdf 2671: Sábado santo: Mt 27, 57-66; O bien: Mc 15, 42-47;  {'0433ff'}
+      tomo 2 pdf 2671: O bien, el evangelio del domingo que este año no s {'0433ff'}
+      tomo 2 pdf 2671: Ciclo B: Mc 1, 12-15. Ciclo C: Lc 4, 1-13. {'0433ff'}
+      tomo 2 pdf 2672: O bien, el evangelio del domingo que este año no s {'0433ff'}
+      tomo 2 pdf 2672: Ciclo B: Mc 9, 2-10. Ciclo C: Lc 9, 28b-36. {'0433ff'}
+      tomo 2 pdf 2673: O bien, el evangelio del domingo que este año no s {'0433ff'}
+      tomo 2 pdf 2673: bien más breve: Jn 4, 5-15. 19b-26. 39a. 40-42). C {'0433ff'}
+      tomo 2 pdf 2674: O bien, el evangelio del domingo que este año no s {'0433ff'}
+      tomo 2 pdf 2674: bien más breve: Jn 9, 1. 6-9. 13-17. 34-38). Ciclo {'0433ff'}
+      tomo 2 pdf 2674: O bien, el evangelio del domingo que este año no s {'0433ff'}
+      tomo 2 pdf 2674: (o bien más breve: Jn 11, 3-7. 17. 30-27. 33b-45). {'0433ff'}
+      tomo 2 pdf 2674: 1-11. {'0433ff'}
+      tomo 2 pdf 2685: El primer día de la semana, de madrugada, las muje {'463820'}
+[INF] Líneas unidas por guion de corte: 0
+[INF] Avisos del análisis: 132
+      tomo 1 pdf 1109: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/visperas-y-oficio-de-lectura-2»: Vísperas y Oficio de lectura
+      tomo 1 pdf 1114: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/visperas-y-oficio-de-lectura-3»: Vísperas y Oficio de lectura
+      tomo 2 pdf 2725: remisión azul sin pieza: Tercia, Sexta, Nona
+      tomo 2 pdf 2746: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/laudes-y-visperas-2»: Laudes y Vísperas
+      tomo 2 pdf 2766: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/visperas-y-oficio-de-lectura-2»: Vísperas y Oficio de lectura
+      tomo 2 pdf 2772: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/visperas-y-oficio-de-lectura-3»: Vísperas y Oficio de lectura
+      tomo 2 pdf 2782: dos títulos iguales en el apéndice V: el segundo es «apendice-v/canticos-evangelicos-2»: CÁNTICOS EVANGÉLICOS
+      tomo 2 pdf 2808: R. suelto: R. Amén.
+      tomo 2 pdf 2808: R. suelto: R. Amén.
+      tomo 2 pdf 2808: R. suelto: R. Amén.
+      tomo 2 pdf 2808: R. suelto: R. Amén.
+      tomo 2 pdf 2808: R. suelto: R. Amén.
+      tomo 2 pdf 2808: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2809: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2810: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2811: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2812: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 2 pdf 2813: R. suelto: R. Amén.
+      tomo 3 pdf 4349: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/propio-del-tiempo-2»: PROPIO DEL TIEMPO
+      tomo 3 pdf 4394: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/laudes-y-visperas-2»: Laudes y Vísperas
+      tomo 3 pdf 4400: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/oficio-de-lectura-y-visperas-2»: Oficio de lectura y Vísperas
+      tomo 3 pdf 4402: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/oficio-de-lectura-y-visperas-3»: Oficio de lectura y Vísperas
+      tomo 3 pdf 4404: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/laudes-y-visperas-3»: Laudes y Vísperas
+      tomo 3 pdf 4424: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/visperas-y-oficio-de-lectura-2»: Vísperas y Oficio de lectura
+      tomo 3 pdf 4430: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/visperas-y-oficio-de-lectura-3»: Vísperas y Oficio de lectura
+      tomo 3 pdf 4464: R. suelto: R. Amén.
+      tomo 3 pdf 4464: R. suelto: R. Amén.
+      tomo 3 pdf 4464: R. suelto: R. Amén.
+      tomo 3 pdf 4464: R. suelto: R. Amén.
+      tomo 3 pdf 4464: R. suelto: R. Amén.
+      tomo 3 pdf 4464: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4465: R. suelto: R. Amén.
+      tomo 3 pdf 4466: R. suelto: R. Amén.
+      tomo 3 pdf 4466: R. suelto: R. Amén.
+      tomo 3 pdf 4466: R. suelto: R. Amén.
+      tomo 3 pdf 4466: R. suelto: R. Amén.
+      tomo 3 pdf 4466: R. suelto: R. Amén.
+      tomo 3 pdf 4466: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4467: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4468: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 3 pdf 4469: R. suelto: R. Amén.
+      tomo 4 pdf 6215: dos títulos iguales en el apéndice IV: el segundo es «apendice-iv/propio-del-tiempo-2»: PROPIO DEL TIEMPO
+      tomo 4 pdf 6260: R. suelto: R. Amén.
+      tomo 4 pdf 6260: R. suelto: R. Amén.
+      tomo 4 pdf 6260: R. suelto: R. Amén.
+      tomo 4 pdf 6260: R. suelto: R. Amén.
+      tomo 4 pdf 6260: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6261: R. suelto: R. Amén.
+      tomo 4 pdf 6262: R. suelto: R. Amén.
+      tomo 4 pdf 6262: R. suelto: R. Amén.
+      tomo 4 pdf 6262: R. suelto: R. Amén.
+      tomo 4 pdf 6262: R. suelto: R. Amén.
+      tomo 4 pdf 6262: R. suelto: R. Amén.
+      tomo 4 pdf 6262: R. suelto: R. Amén.
+      tomo 4 pdf 6263: R. suelto: R. Amén.
+      tomo 4 pdf 6263: R. suelto: R. Amén.
+      tomo 4 pdf 6263: R. suelto: R. Amén.
+      tomo 4 pdf 6263: R. suelto: R. Amén.

@@ -1,0 +1,903 @@
+[
+ {
+  "id": "cuando-senor-tendre-el-gozo-de-verte",
+  "primer_verso": "¿Cuándo, Señor, tendré el gozo de verte?",
+  "estrofas": [
+   [
+    {
+     "texto": "¿Cuándo, Señor, tendré el gozo de verte?",
+     "sangria": 0
+    },
+    {
+     "texto": "¿Por qué para el encuentro deseado",
+     "sangria": 0
+    },
+    {
+     "texto": "tengo que soportar, desconsolado,",
+     "sangria": 0
+    },
+    {
+     "texto": "el trágico abandono de la muerte?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Padre mío, ¿me has abandonado?",
+     "sangria": 0
+    },
+    {
+     "texto": "Encomiendo mi espíritu en tus manos.",
+     "sangria": 0
+    },
+    {
+     "texto": "Los dolores de muerte sobrehumanos",
+     "sangria": 0
+    },
+    {
+     "texto": "dan a luz el vivir tan esperado.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Se acabaron la lucha y el camino,",
+     "sangria": 0
+    },
+    {
+     "texto": "y, dejando el vestido corruptible,",
+     "sangria": 0
+    },
+    {
+     "texto": "revistióme mi Dios de incorruptible.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "A la noche del tiempo sobrevino",
+     "sangria": 0
+    },
+    {
+     "texto": "el día del Señor; vida indecible,",
+     "sangria": 0
+    },
+    {
+     "texto": "aun siendo mía, es ya vivir divino.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1014,
+    "impresa": "1014"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2644,
+    "impresa": "1516"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4285,
+    "impresa": "1471"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6152,
+    "impresa": "1682"
+   }
+  ]
+ },
+ {
+  "id": "amargo-es-el-recuerdo-de-la-muerte",
+  "primer_verso": "Amargo es el recuerdo de la muerte",
+  "estrofas": [
+   [
+    {
+     "texto": "Amargo es el recuerdo de la muerte",
+     "sangria": 0
+    },
+    {
+     "texto": "en que el hombre mortal se aflige y gime",
+     "sangria": 0
+    },
+    {
+     "texto": "en la vida presente, cuya suerte",
+     "sangria": 0
+    },
+    {
+     "texto": "es morir cada día que se vive.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Es verdad que la luz del pleno día",
+     "sangria": 0
+    },
+    {
+     "texto": "oculta el resplandor de las estrellas,",
+     "sangria": 0
+    },
+    {
+     "texto": "y la noche en silencio es armonía",
+     "sangria": 0
+    },
+    {
+     "texto": "de la paz y descanso en las tareas.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Pero el hombre, Señor, la vida quiere;",
+     "sangria": 0
+    },
+    {
+     "texto": "toda muerte es en él noche y tiniebla,",
+     "sangria": 0
+    },
+    {
+     "texto": "toda vida es amor que le sugiere",
+     "sangria": 0
+    },
+    {
+     "texto": "la esperanza feliz de vida eterna.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "No se oiga ya más el triste llanto;",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando llega la muerte, poco muere;",
+     "sangria": 0
+    },
+    {
+     "texto": "la vida, hija de Dios, abre su encanto:",
+     "sangria": 0
+    },
+    {
+     "texto": "«La niña no está muerta, sólo duerme.»",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Señor, da el descanso merecido",
+     "sangria": 0
+    },
+    {
+     "texto": "a tus siervos dormidos en la muerte;",
+     "sangria": 0
+    },
+    {
+     "texto": "si el ser hijos de Dios fue don vivido,",
+     "sangria": 0
+    },
+    {
+     "texto": "sea luz que ilumine eternamente.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1014,
+    "impresa": "1014",
+    "pdf_fin": 1015,
+    "impresa_fin": "1015"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2644,
+    "impresa": "1516",
+    "pdf_fin": 2645,
+    "impresa_fin": "1517"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4286,
+    "impresa": "1472"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6153,
+    "impresa": "1683"
+   }
+  ]
+ },
+ {
+  "id": "si-vivimos-vivimos-para-dios",
+  "primer_verso": "Si vivimos, vivimos para Dios;",
+  "estrofas": [
+   [
+    {
+     "texto": "Si vivimos, vivimos para Dios;",
+     "sangria": 0
+    },
+    {
+     "texto": "si morimos, morimos para Dios;",
+     "sangria": 0
+    },
+    {
+     "texto": "en la vida y en la muerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "somos de Dios.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Nuestras vidas son del Señor,",
+     "sangria": 0
+    },
+    {
+     "texto": "en sus manos descansarán;",
+     "sangria": 0
+    },
+    {
+     "texto": "el que cree y vive en él",
+     "sangria": 0
+    },
+    {
+     "texto": "no morirá.",
+     "sangria": 1
+    }
+   ],
+   [
+    {
+     "texto": "Con Cristo viviré,",
+     "sangria": 0
+    },
+    {
+     "texto": "con Cristo moriré;",
+     "sangria": 0
+    },
+    {
+     "texto": "llevando en el cuerpo",
+     "sangria": 0
+    },
+    {
+     "texto": "la muerte del Señor;",
+     "sangria": 0
+    },
+    {
+     "texto": "llevando en el alma",
+     "sangria": 0
+    },
+    {
+     "texto": "la vida del Señor.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Si vivimos, vivimos para Dios;",
+     "sangria": 0
+    },
+    {
+     "texto": "si morimos, morimos para Dios;",
+     "sangria": 0
+    },
+    {
+     "texto": "en la vida y en la muerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "somos de Dios.",
+     "sangria": 1
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4285,
+    "impresa": "1471",
+    "pdf_fin": 4286,
+    "impresa_fin": "1472"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6152,
+    "impresa": "1682",
+    "pdf_fin": 6153,
+    "impresa_fin": "1683"
+   }
+  ]
+ },
+ {
+  "id": "salen-de-la-ciudad-en-larga-hilera",
+  "primer_verso": "Salen de la ciudad en larga hilera",
+  "estrofas": [
+   [
+    {
+     "texto": "Salen de la ciudad en larga hilera",
+     "sangria": 0
+    },
+    {
+     "texto": "los amigos del hombre, entristecidos,",
+     "sangria": 0
+    },
+    {
+     "texto": "llevan al joven muerto en la litera,",
+     "sangria": 0
+    },
+    {
+     "texto": "su madre lo acompaña entre gemidos.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Lazos de muerte a todos nos alcanzan,",
+     "sangria": 0
+    },
+    {
+     "texto": "las redes del abismo nos envuelven,",
+     "sangria": 0
+    },
+    {
+     "texto": "pueblos enteros lentamente avanzan,",
+     "sangria": 0
+    },
+    {
+     "texto": "y todos los que van ya nunca vuelven.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Alza tu voz, Jesús resucitado;",
+     "sangria": 0
+    },
+    {
+     "texto": "detente, caravana de la muerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "mira al Señor Jesús, él ha pagado",
+     "sangria": 0
+    },
+    {
+     "texto": "el precio del rescate de tu suerte.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Llora, Raquel, de gozo y alegría,",
+     "sangria": 0
+    },
+    {
+     "texto": "tus hijos vivirán eternamente.",
+     "sangria": 0
+    },
+    {
+     "texto": "Danos, Señor, llegar a tu gran día,",
+     "sangria": 0
+    },
+    {
+     "texto": "que de ansia de vivir el alma muere.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1022,
+    "impresa": "1022",
+    "pdf_fin": 1023,
+    "impresa_fin": "1023"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2653,
+    "impresa": "1525"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4294,
+    "impresa": "1480"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6162,
+    "impresa": "1692",
+    "pdf_fin": 6163,
+    "impresa_fin": "1693"
+   }
+  ]
+ },
+ {
+  "id": "dejame-senor-asi",
+  "primer_verso": "Déjame, Señor, así;",
+  "estrofas": [
+   [
+    {
+     "texto": "Déjame, Señor, así;",
+     "sangria": 0
+    },
+    {
+     "texto": "déjame que en ti me muera,",
+     "sangria": 0
+    },
+    {
+     "texto": "mientras la brisa en la era",
+     "sangria": 0
+    },
+    {
+     "texto": "dora el tamo que yo fui.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Déjame que dé de mí",
+     "sangria": 0
+    },
+    {
+     "texto": "el grano limpio, y que fuera,",
+     "sangria": 0
+    },
+    {
+     "texto": "en un montón, toda entera,",
+     "sangria": 0
+    },
+    {
+     "texto": "caiga el alma para ti.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Déjame, cristal, infancia,",
+     "sangria": 0
+    },
+    {
+     "texto": "tarde seca, sol violento,",
+     "sangria": 0
+    },
+    {
+     "texto": "crujir de trigo en sazón.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Coge, Señor, mi abundancia,",
+     "sangria": 0
+    },
+    {
+     "texto": "mientras se queda en el viento",
+     "sangria": 0
+    },
+    {
+     "texto": "el olor del corazón.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Gloria al Padre, gloria al Hijo,",
+     "sangria": 0
+    },
+    {
+     "texto": "gloria al Espíritu Santo,",
+     "sangria": 0
+    },
+    {
+     "texto": "por los siglos de los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4294,
+    "impresa": "1480",
+    "pdf_fin": 4295,
+    "impresa_fin": "1481"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6163,
+    "impresa": "1693"
+   }
+  ]
+ },
+ {
+  "id": "dejad-que-el-grano-se-muera",
+  "primer_verso": "Dejad que el grano se muera",
+  "estrofas": [
+   [
+    {
+     "texto": "Dejad que el grano se muera",
+     "sangria": 0
+    },
+    {
+     "texto": "y venga el tiempo oportuno:",
+     "sangria": 0
+    },
+    {
+     "texto": "dará cien granos por uno",
+     "sangria": 0
+    },
+    {
+     "texto": "la espiga de primavera.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Mirad que es dulce la espera",
+     "sangria": 0
+    },
+    {
+     "texto": "cuando los signos son ciertos;",
+     "sangria": 0
+    },
+    {
+     "texto": "tened los ojos abiertos",
+     "sangria": 0
+    },
+    {
+     "texto": "y el corazón consolado;",
+     "sangria": 0
+    },
+    {
+     "texto": "si Cristo ha resucitado,",
+     "sangria": 0
+    },
+    {
+     "texto": "¡resucitarán los muertos!",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1029,
+    "impresa": "1029"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2659,
+    "impresa": "1531"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4300,
+    "impresa": "1486"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6168,
+    "impresa": "1698"
+   }
+  ]
+ },
+ {
+  "id": "camino-del-sepulcro-preguntabamos",
+  "primer_verso": "Camino del sepulcro, preguntábamos:",
+  "estrofas": [
+   [
+    {
+     "texto": "Camino del sepulcro, preguntábamos:",
+     "sangria": 0
+    },
+    {
+     "texto": "«¿Quién moverá la piedra?»",
+     "sangria": 0
+    },
+    {
+     "texto": "Pero tú,",
+     "sangria": 0
+    },
+    {
+     "texto": "como el agua viva,",
+     "sangria": 0
+    },
+    {
+     "texto": "manas de la piedra;",
+     "sangria": 0
+    },
+    {
+     "texto": "como el fuego nuevo,",
+     "sangria": 0
+    },
+    {
+     "texto": "brotas de la piedra;",
+     "sangria": 0
+    },
+    {
+     "texto": "como ciudad fuerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "creces en la piedra.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Oh Cristo, piedra viva!",
+     "sangria": 0
+    },
+    {
+     "texto": "Tu muerte es tu fuerza.",
+     "sangria": 0
+    },
+    {
+     "texto": "A ti se acogen todos los que duermen;",
+     "sangria": 0
+    },
+    {
+     "texto": "en tu descanso habitan,",
+     "sangria": 0
+    },
+    {
+     "texto": "bajo tu piedra esperan.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1029,
+    "impresa": "1029"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2659,
+    "impresa": "1531"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4300,
+    "impresa": "1486"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6168,
+    "impresa": "1698",
+    "pdf_fin": 6169,
+    "impresa_fin": "1699"
+   }
+  ]
+ },
+ {
+  "id": "tu-senor-que-asumiste-la-existencia",
+  "primer_verso": "Tú, Señor, que asumiste la existencia,",
+  "estrofas": [
+   [
+    {
+     "texto": "Tú, Señor, que asumiste la existencia,",
+     "sangria": 0
+    },
+    {
+     "texto": "la lucha y el dolor que el hombre vive,",
+     "sangria": 0
+    },
+    {
+     "texto": "no dejes sin la luz de tu presencia",
+     "sangria": 0
+    },
+    {
+     "texto": "la noche de la muerte que lo aflige.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Te rebajaste, Cristo, hasta la muerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "y una muerte de cruz, por amor nuestro;",
+     "sangria": 0
+    },
+    {
+     "texto": "así te exaltó el Padre, al acogerte,",
+     "sangria": 0
+    },
+    {
+     "texto": "sobre todo poder de tierra y cielo.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Para ascender después gloriosamente,",
+     "sangria": 0
+    },
+    {
+     "texto": "bajaste sepultado a los abismos;",
+     "sangria": 0
+    },
+    {
+     "texto": "fue el amor del Señor omnipotente",
+     "sangria": 0
+    },
+    {
+     "texto": "más fuerte que la muerte y que su sino.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Primicia de los muertos, tu victoria",
+     "sangria": 0
+    },
+    {
+     "texto": "es la fe y la esperanza del creyente,",
+     "sangria": 0
+    },
+    {
+     "texto": "el secreto final de nuestra historia,",
+     "sangria": 0
+    },
+    {
+     "texto": "abierta a nueva vida para siempre.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Cuando la noche llegue y sea el día",
+     "sangria": 0
+    },
+    {
+     "texto": "de pasar de este mundo a nuestro Padre,",
+     "sangria": 0
+    },
+    {
+     "texto": "concédenos la paz y la alegría",
+     "sangria": 0
+    },
+    {
+     "texto": "de un encuentro feliz que nunca acabe.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1033,
+    "impresa": "1033"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2663,
+    "impresa": "1535"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4304,
+    "impresa": "1490"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6172,
+    "impresa": "1702",
+    "pdf_fin": 6173,
+    "impresa_fin": "1703"
+   }
+  ]
+ },
+ {
+  "id": "librame-de-esta-carne-de-pecado",
+  "primer_verso": "¡Líbrame de esta carne de pecado",
+  "estrofas": [
+   [
+    {
+     "texto": "¡Líbrame de esta carne de pecado",
+     "sangria": 0
+    },
+    {
+     "texto": "de la que siento en alas desasirme,",
+     "sangria": 0
+    },
+    {
+     "texto": "Señor, que, en una cruz, por redimirme,",
+     "sangria": 0
+    },
+    {
+     "texto": "diste todo en la llaga del costado!",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¿Y volaré, para volver atado",
+     "sangria": 0
+    },
+    {
+     "texto": "a mi antigua enemiga?; ¿andaré firme",
+     "sangria": 0
+    },
+    {
+     "texto": "el día que otra vez vuelva a vestirme",
+     "sangria": 0
+    },
+    {
+     "texto": "de la túnica inútil del pasado?",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "Vivo en la fe, y el alma no se atreve",
+     "sangria": 0
+    },
+    {
+     "texto": "a pedir verte sólo en lo inefable,",
+     "sangria": 0
+    },
+    {
+     "texto": "sólo en aliento y en blancor de nieve.",
+     "sangria": 0
+    }
+   ],
+   [
+    {
+     "texto": "¡Otra vez lo corpóreo, lo palpable!",
+     "sangria": 0
+    },
+    {
+     "texto": "¡Que mi segunda carne sea leve!",
+     "sangria": 0
+    },
+    {
+     "texto": "Dame, Señor, la vida perdurable!",
+     "sangria": 0
+    },
+    {
+     "texto": "Gloria al Padre, y al Hijo, y al Espíritu,",
+     "sangria": 0
+    },
+    {
+     "texto": "por los siglos de los siglos.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": true,
+  "fuentes": [
+   {
+    "tomo": 3,
+    "pdf": 4304,
+    "impresa": "1490",
+    "pdf_fin": 4305,
+    "impresa_fin": "1491"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6173,
+    "impresa": "1703"
+   }
+  ]
+ }
+]

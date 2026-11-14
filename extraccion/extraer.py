@@ -82,6 +82,14 @@ SECCIONES = {
     'tiempo-ordinario': {'tomos': {3: (2880, 3313), 4: (4487, 5072)}, 'salida': AQUI / 'tiempo/ordinario',
                          'archivo': 'tiempo-ordinario.json', 'seccion': 'tiempo-ordinario',
                          'nombre': 'Propio del tiempo · Tiempo ordinario', 'modo': 'tiempo'},
+    # paso 8: Apéndices I–VIII (hasta antes de los créditos del tomo IV y del colofón de los tomos II y III)
+    'apendices': {'tomos': {1: (1037, 1128), 2: (2667, 2813), 3: (4309, 4469), 4: (6178, 6263)},
+                  'salida': AQUI / 'apendices', 'archivo': 'apendices.json', 'seccion': 'apendices',
+                  'nombre': 'Apéndices', 'modo': 'apendices'},
+    # paso 7: Oficio de difuntos, repetido en los cuatro tomos
+    'difuntos': {'tomos': {1: (1013, 1036), 2: (2643, 2666), 3: (4284, 4308), 4: (6151, 6177)},
+                 'salida': AQUI / 'difuntos', 'archivo': 'difuntos.json', 'seccion': 'difuntos',
+                 'nombre': 'Oficio de difuntos'},
     # paso 6: Propio de los santos; cada tomo trae solo los meses que caen en su tiempo, así que
     # se unifica por fecha y nombre, no por posición
     'santoral': {'tomos': {1: (752, 833, None, 'OFICIOS COMUNES'), 2: (2237, 2437, None, 'OFICIOS COMUNES'),
@@ -115,6 +123,10 @@ def tiempo():
 
 def santoral():
     return MODO == 'santoral'
+
+
+def apendices():
+    return MODO == 'apendices'
 
 
 # Salterio y Completas: etiquetas de día, de tiempo y de formulario que el vocabulario general no reconoce
@@ -159,6 +171,12 @@ MESES_RX = ('enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiem
 RE_FECHA_SANT = re.compile(r'^\(?\s*(?:El mismo d[íi]a\s*)?(\d{1,2})\s*(?:de\s+)?(' + MESES_RX + r')\s*\)?$', re.I)
 RE_GRADO = re.compile(r'^(Solemnidad|Fiesta|Memoria(?: libre)?|Conmemoraci[óo]n)\s*\.?$')
 RE_GRADO_DENTRO = re.compile(r'\b(Solemnidad|Fiesta|Memoria(?: libre)?|Conmemoraci[óo]n)\b')
+# Apéndices: el encabezado del apéndice y los renglones que abren la antífona de un domingo
+RE_APENDICE = re.compile(r'^\s*(?:\d{1,2}\s+)?(?:AP[ÉE]NDICE\s+|Ap[ée]ndice\s+)?([IVX]{1,5})\b\s*(.*)$')
+RE_HORA_ANT = re.compile(r'^((?:I|II)\s+v[íi]speras|v[íi]speras|laudes|oficio de lectura)\s*:', re.I)
+RE_ET_APENDICE = re.compile(r'^\s*((?:Hasta|Desde|Antes de|Despu[ée]s de)\s+(?:el\s+)?(?:d[íi]a\s+)?\d{1,2} de \w+'
+                            r'|Hasta la solemnidad de \w+|Para (?:un|una|unos|unas|varios|varias|los|las)\b[^.]{0,60})'
+                            r'\s*[:.]?\s*$')
 ROTULOS_SAL = {'VERSÍCULO', 'LECTURAS', 'CONCLUSIÓN', 'EXAMEN DE CONCIENCIA', 'Bendición', 'BENDICIÓN',
                'ANTÍFONA FINAL', 'Antífona final', 'LECTURA BREVE', 'RESPONSORIO BREVE', 'CÁNTICO EVANGÉLICO'}
 
@@ -532,6 +550,8 @@ class Parser:
             return self._clase_tiempo(r, k)
         if self.modo == 'santoral':
             return self._clase_santoral(r, k)
+        if self.modo == 'apendices':
+            return self._clase_apendices(r, k)
         if self.modo != 'ordinario' or k in ('blanco', 'titulo', 'hora', 'separador'):
             return k
         t = r.texto.strip()
@@ -605,6 +625,36 @@ class Parser:
                 (r.talla >= 14 or r.negrita or t == tu):
             # el título que sigue a la fecha, aunque el libro lo imprima en cuerpo 11 o 12
             return 'celebracion'
+        return k
+
+    def _clase_apendices(self, r, k):
+        """Apéndices: el número del apéndice, los títulos que agrupan y los rótulos propios."""
+        if k in ('blanco', 'separador', 'numero_seccion', 'hora'):
+            return k
+        t = espacios(r.texto)
+        tu = t.upper()
+        if r.talla >= 20 and tu.startswith('APÉNDICE'):
+            return 'seccion_apendice'
+        if r.c0 == 'R' and r.talla >= 15 and RE_APENDICE.match(t):
+            return 'apendice'
+        if r.talla >= 14 and not r.vacio and (r.c0 == 'k' or r.solo <= {'R'}) and k != 'etiqueta':
+            return 'entrada_ap'            # «PROPIO DEL TIEMPO», «TIEMPO DE ADVIENTO», «Domingo I de Adviento»
+        if r.c0 == 'k' and r.negrita and r.x > 150 and r.solo == {'k'}:
+            return 'entrada_ap'            # «Domingo», «I. Para varios mártires», «CÁNTICOS EVANGÉLICOS»
+        if r.c0 == 'k' and 'R' in r.solo and RE_HORA_ANT.match(t):
+            return 'hora_ant'              # «I Vísperas: Magnificat, ant.:»
+        if r.c0 == 'k' and re.fullmatch(r'([\dIVXLC]+\.|[\dIVXLC]+)\s*', r.primer()['t']) and 'R' in r.solo and \
+                not re.search(r'[.:]\s*$', t):
+            return 'etiqueta'              # «1. Tiempo ordinario, I»
+        if r.c0 == 'k' and r.solo <= {'k'} and r.x > 150 and r.talla <= 12 and \
+                (RE_FECHA_SANT.match(t) or (t == tu and re.search(r'[A-ZÁÉÍÓÚ]{4}', t))):
+            return 'entrada_ap'            # «30 de noviembre», «DOMINGO II DE ADVIENTO»
+        if r.c0 == 'R' and r.solo <= {'R'} and RE_ET_APENDICE.match(t):
+            return 'etiqueta'              # «Hasta el 16 de diciembre», «Desde el 17 de diciembre»
+        if r.c0 == 'R' and r.solo <= {'R'} and not t.endswith(('.', ':', ',')) and \
+                ((r.x < 70 and len(t.split()) <= 6 and (tu == t or re.fullmatch(r'[A-ZÁÉÍÓÚ][a-záéíóúïü]+', t))) or
+                 (len(t.split()) <= 2 and re.fullmatch(r'[A-ZÁÉÍÓÚ][\wÁÉÍÓÚáéíóúñü]+', t))):
+            return 'rotulo'                # «Cánticos», «EVANGELIOS» (al margen o centrados)
         return k
 
     def es_fecha(self, r):
@@ -752,6 +802,84 @@ class Parser:
         self.comun['biografia'] = pars
         self.comun['_biografia'] = v
 
+    def c_seccion_apendice(self, r):
+        t, lineas = self.titulo_largo(r)
+        if not getattr(self, 'titulo_apendices', None):
+            self.titulo_apendices = t
+        for x in lineas:
+            self.tomar(x, 'sección: ' + t)
+
+    def c_apendice(self, r):
+        """«Apéndice I», «IV Himnos latinos», «26 Apéndice I»: abre un apéndice."""
+        mm = RE_APENDICE.match(espacios(r.texto))
+        num = mm.group(1)
+        titulo = espacios(mm.group(2))
+        lineas = [r]
+        self.i += 1
+        while True:
+            # el título del apéndice: el renglón siguiente, o la continuación del que ya traía el número
+            x = self.actual()
+            limite = 25 if titulo else 70
+            if x is None or x.vacio or x.gap > limite or x.talla < 13 or self.clase(x) == 'hora':
+                break
+            if not (x.talla >= 14 and (x.negrita or x.c0 == 'R')):
+                break
+            titulo = espacios(titulo + ' ' + espacios(x.texto))
+            lineas.append(x)
+            self.i += 1
+        if not hasattr(self, 'apendices_ap'):
+            self.apendices_ap = []
+        aid = 'apendice-' + num.lower()
+        self.apendice_ap = {'id': aid, 'numero': num, 'titulo': titulo or None,
+                            'pdf': r.pdf, 'impresa': r.impresa}
+        if aid not in [a['id'] for a in self.apendices_ap]:
+            self.apendices_ap.append(self.apendice_ap)
+        self.abrir_entrada(aid, titulo or num, r, _apendice=aid, _es_apendice=True)
+        self.seccion_ap = None
+        for x in lineas:
+            self.tomar(x, self.comun)
+
+    def c_entrada_ap(self, r):
+        """Título que agrupa dentro de un apéndice: tiempo litúrgico, día, domingo, común…"""
+        if r.texto.strip().isupper():
+            t, lineas = self.titulo_largo(r)      # titulo_largo ya avanza
+        else:
+            t, lineas = espacios(r.texto), [r]
+            self.i += 1
+        ap = getattr(self, 'apendice_ap', None)
+        if ap is None:
+            self.avisos.append((r, f'título «{t[:40]}» antes del primer apéndice'))
+            self.abrir_entrada('introduccion', t, r, _apendice=None)
+            for x in lineas:
+                self.tomar(x, self.comun)
+            return
+        eid = f"{ap['id']}/{slug(t)}"
+        if any(c['id'] == eid for c in self.comunes):
+            n = 2
+            while any(c['id'] == f'{eid}-{n}' for c in self.comunes):
+                n += 1
+            self.avisos.append((r, f'dos títulos iguales en el apéndice {ap["numero"]}: el segundo es «{eid}-{n}»'))
+            eid = f'{eid}-{n}'
+        et = self.etiqueta        # «Para los religiosos» antes del título del bloque: sigue pendiente
+        self.abrir_entrada(eid, t, r, _apendice=ap['id'], _pos=len(self.comunes))
+        self.etiqueta = et
+        for x in lineas:
+            self.tomar(x, self.comun)
+
+    def c_hora_ant(self, r):
+        """«I Vísperas: Magnificat, ant.:» abre la hora y la antífona del cántico evangélico."""
+        t = espacios(r.texto)
+        hid = HORAS.get(re.sub(r'\s+', ' ', RE_HORA_ANT.match(t).group(1).strip().lower()))
+        self.abrir_hora(hid or 'visperas')
+        self.abrir_parte('cantico_evangelico')
+        v = nueva_variante('rubrica', texto=t)
+        self.tomar(r, v)
+        self.i += 1
+        rem = remite_de(t)
+        if rem:
+            v['remite'] = rem
+        self.agregar_variante('rubrica', v, forzar_nueva=True)
+
     def _clase_salterio(self, r, k):
         """Salterio y Completas: semanas, días, formularios de Completas, rótulos y etiquetas propias."""
         if k in ('blanco', 'separador', 'numero_seccion'):
@@ -887,7 +1015,7 @@ class Parser:
 
     def abrir_parte(self, nombre, reusar=False):
         if self.hora is None:
-            self.abrir_hora('antes_del_oficio' if self.modo == 'ordinario' else 'visperas1')
+            self.abrir_hora({'ordinario': 'antes_del_oficio', 'apendices': 'sin_hora'}.get(self.modo, 'visperas1'))
         if reusar:
             for p in reversed(self.hora):
                 if p['parte'] == nombre:
@@ -1028,6 +1156,10 @@ class Parser:
             v['signo_cruz'] = True
             v.setdefault('_signos', []).append('+')
             m = re.sub(r'\s*\x01\s*\+\s*\x02', '', m)
+        # el libro imprime a veces unas letras en rojo en medio de una palabra («Jes» + «ús. »):
+        # son parte del texto y se devuelven a su sitio
+        m = re.sub(r'(?<=\w)\x01([a-záéíóúñüï]{1,11}[.,;:»!?\s]{0,3}|[.,;:»!?]{1,3})\x02',
+                   lambda x: x.group(1), m)
         quedan = [q for q in re.findall(r'\x01(.*?)\x02', m) if q.strip()]
         if quedan:
             v.setdefault('_rojo', []).extend(q.strip() for q in quedan)
@@ -1306,9 +1438,9 @@ class Parser:
         else:
             self.etiqueta = {'texto': t, 'renglones': [r]}
         self.i += 1
-        if self.modo == 'santoral':
-            # «En el tiempo de Cuaresma: Para la conmemoración sólo lo siguiente:» antes de una hora:
-            # la condición vale para todo el resto de la celebración
+        if self.modo in ('santoral', 'apendices'):
+            # «En el tiempo de Cuaresma: Para la conmemoración sólo lo siguiente:», «Para varios mártires»
+            # antes de una hora: la condición vale para todo lo que sigue
             j = self.i
             while j < len(self.R) and self.R[j].vacio:
                 j += 1
@@ -1371,7 +1503,7 @@ class Parser:
             cruz = re.match(r'^\x01\s*\+\s*\x02', r.m)
             if k not in ('negro', 'asterisco') and not cruz:
                 break
-            if lineas and lineas[-1] is not None and r.gap > 34:
+            if lineas and lineas[-1] is not None and r.gap > (50 if self.modo == 'apendices' else 34):
                 break
             lineas.append(r); self.tomar(r, v); self.i += 1
         reales = [x for x in lineas if x is not None]
@@ -1519,7 +1651,7 @@ class Parser:
         if nombre == 'preces':
             self.tomar(r, p)
             return
-        if nombre in ('primera_lectura', 'segunda_lectura'):
+        if nombre in ('primera_lectura', 'segunda_lectura', 'evangelios'):
             self.tomar(r, p)
             return
         self.tomar(r, p)
@@ -1723,7 +1855,8 @@ class Parser:
             sig_ = self.R[self.i + n_l] if self.i + n_l < len(self.R) else None
             if (len(xs_) == n_l and all(x.c0 == 'k' and x.solo == {'k'} and x.x > 60 for x in xs_) and
                     not es_sent(xs_[0]) and re.search(r'\([^()]+\)\.?\s*$', ' '.join(x.texto.strip() for x in xs_)) and
-                    sig_ is not None and sig_.c0 == 'R'):
+                    ((sig_ is not None and sig_.c0 == 'R') or
+                     all(round(x.primer()['s']) == 11 for x in xs_))):
                 for x0 in xs_:
                     sent.append(plano(x0.m)); self.tomar(x0, lib); lib['_raw'].append(x0); self.i += 1
                 break
@@ -1927,7 +2060,8 @@ class Parser:
             self.leer_texto_generico(r)
             return
         en_salmodia = p == 'salmodia' and (getattr(self, '_rot_ant', None) is not None or self.etiqueta is not None)
-        if p in ('cantico_evangelico', 'antifona') or en_salmodia or (p is None and self.hora_id == 'invitatorio'):
+        if p in ('cantico_evangelico', 'antifona') or (self.modo == 'apendices' and p == 'antifonas') or \
+                en_salmodia or (p is None and self.hora_id == 'invitatorio'):
             if p is None:
                 self.abrir_parte('antifona')
             num = None
@@ -1979,7 +2113,7 @@ class Parser:
                     break
                 j += 1
                 n += 1
-        if p in ('primera_lectura', 'segunda_lectura'):
+        if p in ('primera_lectura', 'segunda_lectura') or (self.modo == 'apendices' and p == 'evangelios'):
             self.leer_lectura()
             return
         if self.hora_id == 'oficio' and re.match(r'^De(l| la| las| los)\b', r.texto.strip()) and \
@@ -2004,6 +2138,18 @@ class Parser:
             v = nueva_variante('oracion')
             v['texto'] = self.texto_limpio(self.leer_parrafos(v, uno=True)[0], v, 'una oración')
             self.agregar_variante('oracion', v)
+            return
+        if self.modo == 'apendices':
+            if re.match(r'^(Lectura del santo [Ee]vangelio|Del santo [Ee]vangelio|Del [Ee]vangelio'
+                        r'|Pasi[óo]n de nuestro Se[ñn]or)\b', espacios(r.texto)):
+                self.abrir_parte('evangelios', reusar=True)
+                self.leer_lectura()
+                return
+            if self.parte is None:
+                et = self.etiqueta           # abrir la hora no puede perder la etiqueta pendiente
+                self.abrir_parte('texto')
+                self.etiqueta = et
+            self.leer_texto_generico(r)
             return
         if self.modo in ('salterio', 'completas', 'tiempo'):
             # Completas del tomo IV: examen de conciencia, fórmulas penitenciales… (texto fijo con rótulo propio)
@@ -2127,7 +2273,7 @@ class Parser:
             self.agregar_variante('versiculo', v)
             return
         self.avisos.append((r, 'R. suelto'))
-        if self.modo in ('tiempo', 'santoral'):
+        if self.modo in ('tiempo', 'santoral', 'apendices'):
             # «R.» sin su V. (la despedida del tiempo pascual): se guarda con su rótulo aparte
             if self.parte is None:
                 self.abrir_parte('versiculo')
@@ -2151,16 +2297,10 @@ class Parser:
                 break
             letra = 'V' if self.clase(r) == 'v' else 'R'
             self.tomar(r, v); self.i += 1
-            if self.modo in ('salterio', 'completas') and re.match(r'^\x01\s*[VR]\s*\x02\s*\.', r.m):
-                # «R» rojo y el punto en negro (errata de imprenta)
-                txt = self.leer_texto_simple(v, re.sub(r'^\x01\s*[VR]\s*\x02\s*\.\s*', '', r.m))
-                v.setdefault('_marcas_vr', []).append(len(out))
-            elif santoral():
-                mm = re.match(r'^\x01\s*([VR])\s*(\.?)\s*(?:\x02\s*(\.?)\s*)?', r.m)
-                v.setdefault('_rot_vr', []).append((letra + (mm.group(2) or mm.group(3) or '')) if mm else letra + '.')
-                txt = self.leer_texto_simple(v, r.m[mm.end():] if mm else r.m)
-            else:
-                txt = self.leer_texto_simple(v, re.sub(r'^\x01\s*[VR]\.\s*\x02?', '', r.m))
+            # el rótulo tal como lo imprime el libro: «V.», «V» sin punto, o el punto en negro
+            mm = re.match(r'^\x01\s*([VR])\s*(\.?)\s*(?:\x02\s*(\.?)\s*)?', r.m)
+            v.setdefault('_rot_vr', []).append((letra + (mm.group(2) or mm.group(3) or '')) if mm else letra + '.')
+            txt = self.leer_texto_simple(v, r.m[mm.end():] if mm else r.m)
             out.append((letra, txt))
         return out
 
@@ -2214,7 +2354,8 @@ class Parser:
 
     # lecturas del Oficio
     def leer_lectura(self):
-        v = nueva_variante('lectura', orden=1 if self.parte['parte'] == 'primera_lectura' else 2)
+        orden = {'primera_lectura': 1, 'segunda_lectura': 2}.get(self.parte['parte'])
+        v = nueva_variante('lectura', orden=orden)
         self.agregar_variante('lectura', v)
         enc = []
         while True:
@@ -2310,6 +2451,10 @@ class Parser:
                 v['etiqueta'] = par['etiqueta']
                 v['_etiqueta_heredada'] = True
 
+    def _paren_roja(self, r):
+        """Renglón que sigue un párrafo y empieza con un paréntesis rojo: «( nuestra hermana ) N.»."""
+        return bool(re.match(r'^\x01\s*\(\s*\x02', r.m) and 'k' in r.solo)
+
     # preces
     def leer_preces(self):
         v = nueva_variante('preces', introduccion=None, respuesta=[], intenciones=[],
@@ -2368,16 +2513,17 @@ class Parser:
             if k == 'negro':
                 prim = [r.m]
                 self.tomar(r, v); self.i += 1
-                while self.actual() is not None and self.clase(self.actual()) == 'negro' and \
-                        self.actual().gap <= 16.5:
+                while self.actual() is not None and self.actual().gap <= 16.5 and \
+                        (self.clase(self.actual()) == 'negro' or self._paren_roja(self.actual())):
                     rr = self.actual(); self.tomar(rr, v); self.i += 1; prim.append(rr.m)
                 texto = self.texto_limpio(unir_lineas(prim), v, 'una intención')
                 seg = None
                 if self.actual() is not None and self.clase(self.actual()) == 'guion':
                     rr = self.actual(); self.tomar(rr, v); self.i += 1
                     sg = [re.sub(r'^\x01\s*—\s*\x02?', '', rr.m)]
-                    while self.actual() is not None and self.clase(self.actual()) == 'negro' and \
-                            self.actual().gap <= 16.5 and not re.search(r'[.!?»]\s*$', plano(sg[-1])):
+                    while self.actual() is not None and self.actual().gap <= 16.5 and \
+                            not re.search(r'[.!?»]\s*$', plano(sg[-1])) and \
+                            (self.clase(self.actual()) == 'negro' or self._paren_roja(self.actual())):
                         r3 = self.actual(); self.tomar(r3, v); self.i += 1; sg.append(r3.m)
                     seg = self.texto_limpio(unir_lineas(sg), v, 'una intención')
                 if seg is None and re.search(r'Padre\s+[Nn]uestro', texto):
@@ -2390,6 +2536,11 @@ class Parser:
                     v.setdefault('_notas', []).append(f'intención sin segunda mitad: «{texto[:50]}»')
                 continue
             break
+        if v['intenciones'] and not any(i['segunda'] for i in v['intenciones']):
+            # intercesiones breves (Apéndice II): el libro no les da segunda mitad
+            v['_notas'] = [n for n in v.get('_notas', []) if not n.startswith('intención sin segunda mitad')]
+            if not v['_notas'] and not v.get('_rojo'):
+                v['revisar'] = False
         v['_cerrada'] = True
 
     # rúbricas
@@ -2443,8 +2594,8 @@ class Parser:
             if nx.c0 == 'k' and nx.gap <= 16.5 and plano(lineas[-1].m).rstrip().endswith(('el himno', 'Te')):
                 lineas.append(nx); self.i += 1
                 continue
-            if self.modo in ('salterio', 'completas') and nx.c0 == 'k' and nx.gap <= 16.5 and nx.x < 62 and \
-                    'R' in nx.solo and not re.search(r'[.:]$', ult):
+            if self.modo in ('salterio', 'completas', 'apendices') and nx.c0 == 'k' and nx.gap <= 16.5 and \
+                    nx.x < 62 and 'R' in nx.solo and not re.search(r'[.:]$', ult):
                 # «… con la antífona Al Rey que» / «viene.»: la rúbrica sigue en negro con el punto en rojo
                 lineas.append(nx); self.i += 1
                 continue
@@ -2469,6 +2620,12 @@ class Parser:
         destino = self.parte_de_rubrica(texto)
         if destino == 'comun':
             v['_fuente'] = {'tomo': self.tomo}
+            if self.etiqueta is not None:
+                v['etiqueta'] = self.etiqueta['texto']
+                v['_cuando'] = condicion(self.etiqueta['texto'])[0]
+                for rr in self.etiqueta['renglones']:
+                    self.tomar(rr, v)
+                self.etiqueta = None
             self.comun['rubricas'].append(v)
             return
         if destino:
@@ -2932,6 +3089,13 @@ class Unificador:
                     self.dif(f'{cid}/{k}', [t for t in tomos if not vals.get(t)],
                              {str(t): (' ¶ '.join(v) if isinstance(v, list) else v) if v else '—'
                               for t, v in vals.items()}, 'omisión', f'{k} solo en algunos tomos')
+        if apendices():
+            meta = {}
+            for t in tomos:
+                for k in ('_apendice', '_es_apendice', '_pos'):
+                    if por_tomo[t].get(k) is not None and k not in meta:
+                        meta[k] = por_tomo[t][k]
+            out = {'id': cid, 'titulo': None, 'fuentes': [], 'rubricas': [], 'horas': {}, **meta}
         if tiempo():
             meta = {}
             for t in tomos:
@@ -3602,7 +3766,8 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo, re
                         if pz['tipo'] == 'responsorio_breve' and not all(v.get(k) for k in ('v1', 'r1', 'v2', 'r2')):
                             malos.append(f'{c["id"]}/{h}/responsorio_breve incompleto')
                             v['revisar'] = True
-                        if pz['tipo'] == 'preces' and not (v.get('introduccion') and v.get('respuesta') and v.get('intenciones') and v.get('final')):
+                        if pz['tipo'] == 'preces' and not (v.get('introduccion') and v.get('respuesta') and
+                                                           v.get('intenciones') and (v.get('final') or apendices())):
                             malos.append(f'{c["id"]}/{h}/preces incompletas')
                             v['revisar'] = True
     linea(not malos, 'Conteos', f'{len(malos)} fuera de norma' + ''.join('\n      ' + x for x in malos) +
@@ -3632,6 +3797,9 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo, re
     et_var = Counter()
     for p in parsers:
         for c in p.comunes:
+            for v in c.get('rubricas', []):      # rúbricas generales de la entrada, con su etiqueta
+                if v.get('etiqueta') and not v.get('_etiqueta_heredada') and not v.get('_et_bloque'):
+                    et_var[p.tomo] += 1
             for h, partes in c['horas'].items():
                 for pt in partes:
                     for pz in pt['piezas']:
@@ -3765,6 +3933,18 @@ def controles(parsers, descartes, comunes, salmos, himnos, uni, textos_salmo, re
                  (', '.join(f'tomo {ROMANOS_T[t]}: {n}' for t, n in sorted(verdes.items())) or 'ninguno') +
                  '\n      el tomo III imprime en verde biografías y cuerpos de texto; qué significa el color '
                  'queda pendiente de decisión de CRU')
+    if apendices():
+        img = []
+        for p in parsers:
+            largo = Counter()
+            for r in p.R:
+                largo[r.pdf] += len(r.texto.strip())
+            for pag in paginas(TOMOS[p.tomo]):
+                if largo[pag] < 120:
+                    img.append((p.tomo, pag))
+        L.append(f'[INF] Páginas casi sin texto (el libro las imprime como imagen): {len(img)}' +
+                 ''.join(f'\n      tomo {ROMANOS_T[t]} pdf {x}' for t, x in img[:40]) +
+                 ('\n      son las partituras del Apéndice VI: no hay texto que extraer' if img else ''))
     # rojos y azules dudosos
     dud = [(p.tomo, r.pdf, r.texto[:50], {s["hex"] for s in r.segs if s['dud']}) for p in parsers for r in p.R if r.dudoso]
     L.append(f'[INF] Colores dudosos clasificados por tono: {len(dud)}' + ''.join(f'\n      tomo {a} pdf {b}: {c} {d}' for a, b, c, d in dud[:20]))
@@ -3847,12 +4027,13 @@ def reescribir(d):
         for j, x in enumerate(d['respuesta']):
             s += (x['etiqueta'] or '') + (d.get('_resp_rotulo', '') if j == 0 else '') + x['texto']
         reps = d.get('_rep_respuesta') or []
+        resp0 = 'R.' + d['respuesta'][0]['texto'] if d['respuesta'] else ''
         for n, i in enumerate(d['intenciones']):
             if d.get('libres_despues_de') == n:
                 s += d.get('_libres_raw', '')
-            s += reps.count(n) * ('R.' + d['respuesta'][0]['texto'])
+            s += reps.count(n) * resp0
             s += i['primera'] + ('—' + i['segunda'] if i['segunda'] else '')
-        s += reps.count(len(d['intenciones'])) * ('R.' + d['respuesta'][0]['texto'])
+        s += reps.count(len(d['intenciones'])) * resp0
         if d.get('libres_despues_de') == len(d['intenciones']):
             s += d.get('_libres_raw', '')
         return s + (d.get('final') or '')
@@ -4109,6 +4290,40 @@ def salida_santoral(seccion, entradas, parsers):
     return datos
 
 
+def salida_apendices(seccion, entradas, parsers):
+    """apendices.json: los ocho apéndices, cada uno con sus bloques (tiempo, día, domingo, común…)."""
+    aps, orden = {}, []
+    for p in parsers:
+        for a in getattr(p, 'apendices_ap', []):
+            if a['id'] not in aps:
+                aps[a['id']] = {'id': a['id'], 'numero': a['numero'], 'titulo': a['titulo'],
+                                'fuentes': [], 'rubricas': [], 'horas': {}, 'bloques': []}
+                orden.append(a['id'])
+    datos = {'seccion': seccion,
+             'titulo': next((getattr(p, 'titulo_apendices', None) for p in parsers
+                             if getattr(p, 'titulo_apendices', None)), None)}
+    sueltas = []
+    for e in entradas:
+        aid = e.pop('_apendice', None)
+        e.pop('_pos', None)
+        if e.pop('_es_apendice', False) and e['id'] in aps:
+            a = aps[e['id']]
+            a.update({'titulo': e['titulo'] or a['titulo'], 'fuentes': e['fuentes'],
+                      'rubricas': e['rubricas'], 'horas': e.get('horas') or {}})
+            continue
+        e['horas'] = {h: ps for h, ps in e.get('horas', {}).items() if ps}
+        if aid in aps:
+            aps[aid]['bloques'].append(e)
+        else:
+            sueltas.append(e)
+    for a in aps.values():
+        a['horas'] = {h: ps for h, ps in a['horas'].items() if ps}
+    datos['apendices'] = [aps[i] for i in orden]
+    if sueltas:
+        datos['bloques'] = sueltas       # títulos antes del primer apéndice: no debería haber
+    return datos
+
+
 def salida_salterio(seccion, entradas):
     """salterio.json: portada (rúbricas), semanas → días, y la salmodia complementaria.
     completas.json: rúbricas generales y los formularios (domingo tras las I y II Vísperas, lunes… viernes)."""
@@ -4233,13 +4448,16 @@ def main():
         datos = limpiar_salida(salida_tiempo(cfg['seccion'], comunes, parsers))
     elif MODO == 'santoral':
         datos = limpiar_salida(salida_santoral(cfg['seccion'], comunes, parsers))
+    elif MODO == 'apendices':
+        datos = limpiar_salida(salida_apendices(cfg['seccion'], comunes, parsers))
     else:
         datos = {'seccion': cfg['seccion'], cfg['seccion']: limpiar_salida(comunes[0] if len(comunes) == 1 else comunes)}
     (SALIDA / cfg['archivo']).write_text(json.dumps(datos, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (SALIDA / 'salmos.json').write_text(json.dumps(limpiar_salida(list(salmos.values())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     (SALIDA / 'himnos.json').write_text(json.dumps(limpiar_salida(list(uni.himnos.values())), ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     dudas = dudas_csv(comunes, salmos, SALIDA / 'dudas.csv', uni.himnos,
-                      seccion=cfg['seccion'] if MODO in ('salterio', 'completas', 'tiempo', 'santoral') else 'comunes')
+                      seccion=cfg['seccion'] if MODO in ('salterio', 'completas', 'tiempo', 'santoral',
+                                                         'apendices') else 'comunes')
     nd = diferencias_csv(uni, SALIDA / 'diferencias.csv')
     ts = sorted(TOMOS)
     tomos_txt = 'tomos I–IV' if ts == [1, 2, 3, 4] else \
@@ -4253,9 +4471,9 @@ def main():
         import revision as rv
         rv.generar(doc, parsers, comunes, salmos, uni.himnos, revision, TOMOS,
                    resumen_html=resumen_html(comunes, dudas, uni, L, ok), uni=uni, nombre=cfg['nombre'],
-                   # el santoral son 917 páginas: tiras más largas y algo menos de resolución, para que
-                   # la página de revisión entre en un artifact
-                   **({'por_tira': 40, 'dpi': 58, 'calidad': 50} if MODO == 'santoral' else {}),
+                   # el santoral (917 páginas) y los apéndices (486): tiras más largas y algo menos de
+                   # resolución, para que la página de revisión entre en un artifact
+                   **({'por_tira': 40, 'dpi': 58, 'calidad': 50} if MODO in ('santoral', 'apendices') else {}),
                    **({'archivo': archivo_rev, 'enlaces': enlaces_rev} if enlaces_rev else {}))
 
 
@@ -4276,6 +4494,24 @@ def resumen_html(comunes, dudas, uni, L, ok):
                     if any('opcion' in (v.get('cuando') or {}) for v in pz['variantes']):
                         piezas_op += 1
     s = ''
+    if apendices():
+        aps = [c for c in comunes if c.get('_es_apendice')]
+        bloques = [c for c in comunes if not c.get('_es_apendice')]
+        s += ('<h2>Lo propio de esta etapa</h2>'
+              f'<p>{len(aps)} apéndices y {len(bloques)} bloques dentro de ellos (tiempo litúrgico, domingo, día '
+              'de la semana, común, fecha). Los apéndices II, III, V, VI, VII y VIII son los mismos en los cuatro '
+              'tomos y se unifican como los comunes; el I (cánticos y evangelios para las vigilias) y el IV '
+              '(himnos latinos) traen en cada tomo los textos de su tiempo, y solo se unifica lo que de veras se '
+              'repite. El tomo I no trae el Apéndice VIII, y el IV no trae el VI ni el VII.</p>'
+              '<p>Los himnos y los cánticos latinos quedan como piezas de su apéndice: <code>himnos.json</code> '
+              'sigue siendo la biblioteca de los himnos en castellano. Donde el libro no nombra la hora, las '
+              'piezas van bajo <code>sin_hora</code>. El Apéndice VI («Textos musicalizados») está impreso como '
+              'imágenes de partituras: en el tomo I es una nota que dice que lo omitieron y en los tomos II y III '
+              'son unas quince páginas sin texto que extraer; las páginas están listadas en '
+              '<code>controles.txt</code>.</p>'
+              '<p>Claves nuevas de <code>cuando</code>: ninguna. Quedan marcadas para CRU las etiquetas que el '
+              'vocabulario no cubre, sobre todo los rangos de fechas del Apéndice IV («Hasta el 16 de diciembre») '
+              'y los números de orden de las fórmulas de bendición del Apéndice VIII.</p>')
     if santoral():
         cels = [c for c in comunes if c['id'] != 'introduccion']
         dos = len([c for c in cels if len(c['fuentes']) > 1])

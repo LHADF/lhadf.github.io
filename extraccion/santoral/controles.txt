@@ -1,5 +1,5 @@
 Controles — Propio de los santos (tomos I–IV) — hay controles que no pasan
-Piezas marcadas para revisar: 317 · diferencias entre tomos: 230
+Piezas marcadas para revisar: 313 · diferencias entre tomos: 230
 
 [OK ] Cobertura: 45599/45599 fragmentos asignados (100.0 %); huérfanos: 0
       tomo 1 · pdf 752: 100 %

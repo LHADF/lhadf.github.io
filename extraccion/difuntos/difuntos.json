@@ -1,0 +1,4158 @@
+{
+ "seccion": "difuntos",
+ "difuntos": {
+  "id": "difuntos",
+  "titulo": "OFICIO DE DIFUNTOS",
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1013,
+    "impresa": "1013"
+   },
+   {
+    "tomo": 2,
+    "pdf": 2643,
+    "impresa": "1515"
+   },
+   {
+    "tomo": 3,
+    "pdf": 4284,
+    "impresa": "1470"
+   },
+   {
+    "tomo": 4,
+    "pdf": 6151,
+    "impresa": "1681"
+   }
+  ],
+  "rubricas": [
+   {
+    "tipo": "rubrica",
+    "variantes": [
+     {
+      "texto": "Las oraciones deben adaptarse, cambiando el género y número, según las circunstancias.",
+      "fuentes": [
+       {
+        "tomo": 1,
+        "pdf": 1013,
+        "impresa": "1013"
+       },
+       {
+        "tomo": 3,
+        "pdf": 4284,
+        "impresa": "1470"
+       },
+       {
+        "tomo": 4,
+        "pdf": 6151,
+        "impresa": "1681"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "rubrica",
+    "variantes": [
+     {
+      "texto": "En el tiempo pascual, si se juzga oportuno, puede añadirse Aleluya al final de las antífonas, de los versículos y de los responsorios.",
+      "fuentes": [
+       {
+        "tomo": 2,
+        "pdf": 2643,
+        "impresa": "1515"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "rubrica",
+    "variantes": [
+     {
+      "texto": "Los himnos latinos del Oficio de difuntos se hallan en el Apéndice IV.",
+      "remite": "apendices/himnos-latinos",
+      "fuentes": [
+       {
+        "tomo": 1,
+        "pdf": 1014,
+        "impresa": "1014"
+       },
+       {
+        "tomo": 3,
+        "pdf": 4285,
+        "impresa": "1471"
+       },
+       {
+        "tomo": 4,
+        "pdf": 6152,
+        "impresa": "1682"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "rubrica",
+    "variantes": [
+     {
+      "texto": "Las oraciones deben adaptarse, cambiando el género y número, según las circunstancias.",
+      "fuentes": [
+       {
+        "tomo": 2,
+        "pdf": 2643,
+        "impresa": "1515"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "rubrica",
+    "variantes": [
+     {
+      "texto": "En el tiempo pascual, puede decirse Aleluya al final de las antífonas y versículos, pero no en los responsorios.",
+      "fuentes": [
+       {
+        "tomo": 2,
+        "pdf": 2644,
+        "impresa": "1516"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "tipo": "rubrica",
+    "variantes": [
+     {
+      "texto": "Las oraciones deben adaptarse, cambiando el género y número, según las circunstancias.",
+      "fuentes": [
+       {
+        "tomo": 2,
+        "pdf": 2644,
+        "impresa": "1516"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "horas": {
+   "invitatorio": [
+    {
+     "parte": "antifona",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "Venid, adoremos al Señor, rey de los que viven.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1014,
+           "impresa": "1014"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2644,
+           "impresa": "1516"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Al Señor, rey de los que viven, venid, adorémosle.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4285,
+           "impresa": "1471"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6152,
+           "impresa": "1682"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "salmo",
+     "piezas": [
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "A continuación se dice el salmo del Invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23.",
+         "remite": [
+          "ordinario/invitatorio/salmodia",
+          "salmos/salmo-94",
+          "salmos/salmo-99",
+          "salmos/salmo-66",
+          "salmos/salmo-23"
+         ],
+         "otras_redacciones": [
+          {
+           "tomo": 2,
+           "texto": "El salmo invitatorio como en el Ordinario, Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+          },
+          {
+           "tomo": 3,
+           "texto": "El salmo invitatorio: Salmo 94; Salmo 99; Salmo 66; Salmo 23"
+          },
+          {
+           "tomo": 4,
+           "texto": "El salmo invitatorio como en el Ordinario, pp. 543 ss."
+          }
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1014,
+           "impresa": "1014"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2644,
+           "impresa": "1516"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4285,
+           "impresa": "1471"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6152,
+           "impresa": "1682"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "oficio": [
+    {
+     "parte": "himno",
+     "piezas": [
+      {
+       "tipo": "himno",
+       "variantes": [
+        {
+         "etiquetas_en_tomos": [
+          {
+           "tomo": 1,
+           "etiqueta": null
+          },
+          {
+           "tomo": 2,
+           "etiqueta": null
+          },
+          {
+           "tomo": 3,
+           "etiqueta": "I"
+          },
+          {
+           "tomo": 4,
+           "etiqueta": "I"
+          }
+         ],
+         "etiqueta": "I",
+         "cuando": {
+          "opcion": 1
+         },
+         "himno": "cuando-senor-tendre-el-gozo-de-verte",
+         "revisar": true,
+         "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1014,
+           "impresa": "1014"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2644,
+           "impresa": "1516"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4285,
+           "impresa": "1471"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6152,
+           "impresa": "1682"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "himno": "amargo-es-el-recuerdo-de-la-muerte",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1014,
+           "impresa": "1014",
+           "pdf_fin": 1015,
+           "impresa_fin": "1015"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2644,
+           "impresa": "1516",
+           "pdf_fin": 2645,
+           "impresa_fin": "1517"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4286,
+           "impresa": "1472"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6153,
+           "impresa": "1683"
+          }
+         ]
+        },
+        {
+         "etiqueta": "II",
+         "cuando": {
+          "opcion": 3
+         },
+         "himno": "si-vivimos-vivimos-para-dios",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4285,
+           "impresa": "1471",
+           "pdf_fin": 4286,
+           "impresa_fin": "1472"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6152,
+           "impresa": "1682",
+           "pdf_fin": 6153,
+           "impresa_fin": "1683"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 1,
+         "texto": "De tierra me formaste y me revestiste de carne; Señor, Redentor mío, resucítame en el último día.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1015,
+           "impresa": "1015"
+          },
+          {
+           "tomo": 1,
+           "pdf": 1016,
+           "impresa": "1016"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2645,
+           "impresa": "1517"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2646,
+           "impresa": "1518"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4286,
+           "impresa": "1472"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4287,
+           "impresa": "1473"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6153,
+           "impresa": "1683"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6154,
+           "impresa": "1684"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "numero": 2,
+         "texto": "Señor, dígnate librarme, date prisa en socorrerme",
+         "tp_aleluya": false,
+         "revisar": true,
+         "nota": "tomo 1: la antífona repetida después del salmo no coincide: «Señor, dígnate librarme; Señor, date prisa en socorrerme» · variante sin etiqueta distinta de la de otro tomo: no se inventa condición",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1016,
+           "impresa": "1016"
+          }
+         ]
+        },
+        {
+         "cuando": {
+          "opcion": 2
+         },
+         "numero": 2,
+         "texto": "Señor, dígnate librarme; Señor, date prisa en socorrerme",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2646,
+           "impresa": "1518"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4287,
+           "impresa": "1473"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6154,
+           "impresa": "1684"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-39-2-14-17-18",
+         "parte": "II",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1016,
+           "impresa": "1016"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2646,
+           "impresa": "1518"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4287,
+           "impresa": "1473"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6154,
+           "impresa": "1684"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 3,
+         "texto": "Mi alma tiene sed del Dios vivo: ¿cuándo entraré a ver el rostro del Señor?",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1016,
+           "impresa": "1016"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2646,
+           "impresa": "1518"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4288,
+           "impresa": "1474"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6155,
+           "impresa": "1685"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-41",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1016,
+           "impresa": "1016"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2647,
+           "impresa": "1519"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4288,
+           "impresa": "1474"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6155,
+           "impresa": "1685"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-39-2-14-17-18",
+         "parte": "I",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1015,
+           "impresa": "1015"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2645,
+           "impresa": "1517"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4286,
+           "impresa": "1472"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6154,
+           "impresa": "1684"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "El versículo Gloria al Padre se dice al final de todos los salmos y cánticos del Oficio de difuntos, como en los demás Oficios.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1016,
+           "impresa": "1016"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2646,
+           "impresa": "1518"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4287,
+           "impresa": "1473"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6154,
+           "impresa": "1684"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "versiculo",
+     "piezas": [
+      {
+       "tipo": "versiculo",
+       "variantes": [
+        {
+         "v": "Grande es tu ternura, Señor.",
+         "r": "Con tu palabra dame vida.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1018,
+           "impresa": "1018"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2648,
+           "impresa": "1520"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4289,
+           "impresa": "1475"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6157,
+           "impresa": "1687"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "primera_lectura",
+     "piezas": [
+      {
+       "tipo": "lectura",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "orden": 1,
+         "cita": "15, 12-34",
+         "encabezado": "De la primera carta del apóstol san Pablo a los Corintios",
+         "titulo": "LA RESURRECCIÓN DE CRISTO ESPERANZA DE LOS CREYENTES",
+         "parrafos": [
+          "Hermanos: Si anunciamos que Cristo resucitó de entre los muertos, ¿cómo es que dice alguno que los muertos no resucitan? Si no hay resurrección de muertos, tampoco Cristo resucitó. Y si no resucitó Cristo, vana es nuestra predicación, vana también vuestra fe. Y somos convictos de falsos testigos de Dios porque hemos atestiguado contra Dios que resucitó a Cristo, a quien no resucitó, si es que los muertos no resucitan. Porque si los muertos no resucitan, tampoco Cristo ha resucitado. Y si Cristo no ha resucitado, vuestra fe no tiene sentido, seguís con vuestros pecados; y los que murieron con Cristo se han perdido. Si nuestra esperanza en Cristo acaba con esta vida, somos los hombres más desdichados.",
+          "¡Pero no! Cristo resucitó de entre los muertos: el primero de todos. Lo mismo que por un hombre hubo muerte, por otro hombre hay resurrección de los muertos. Y lo mismo que en Adán todos mueren, en Cristo todos serán llamados de nuevo a la vida. Pero cada uno en su puesto: primero, Cristo; después, en su Parusía, los de Cristo. Después será la consumación: cuando devuelva el reino a Dios Padre, después de aniquilar todo principado, poder y fuerza.",
+          "Pues él debe reinar hasta poner a todos sus enemigos bajo sus pies. El último enemigo aniquilado será la muerte. Porque ha sometido todas las cosas bajo sus pies. Mas cuando él dice que «todo está sometido», es evidente que se excluye a aquel que ha sometido a él todas las cosas. Cuando hayan sido sometidas a él todas las cosas, entonces también el Hijo se someterá a aquel que ha sometido a él todas las cosas, para que Dios sea todo en todo.",
+          "De no ser así, ¿a qué viene el bautizarse por los muertos? Si los muertos no resucitan en manera alguna, ¿por qué bautizarse por ellos? Y nosotros mismos, ¿por qué nos ponemos en peligro a todas horas? Os juro, hermanos, por el orgullo que siento por vosotros en Cristo Jesús, Señor nuestro, que cada día estoy en peligro de muerte. Si por motivos humanos luché en Éfeso contra las bestias, ¿qué provecho saqué? Si los muertos no resucitan, comamos y bebamos, que mañana moriremos. No os engañéis: «Las malas compañías corrompen las buenas costumbres.» Despertaos, como conviene, y no pequéis; que hay entre vosotros quienes desconocen a Dios. Para vergüenza vuestra lo digo."
+         ],
+         "revisar": true,
+         "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1018,
+           "impresa": "1018"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2648,
+           "impresa": "1520"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4289,
+           "impresa": "1475",
+           "pdf_fin": 4290,
+           "impresa_fin": "1476"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6157,
+           "impresa": "1687"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 2
+         },
+         "orden": 1,
+         "cita": "15, 35-57",
+         "encabezado": "De la primera carta del apóstol san Pablo a los Corintios",
+         "titulo": "LA RESURRECCIÓN DE LOS MUERTOS Y LA VENIDA DEL SEÑOR",
+         "parrafos": [
+          "Hermanos: Dirá alguno: «¿Cómo resucitan los muertos? ¿Con qué cuerpo vuelven a la vida?» ¡Necio! Lo que tú siembras no revive si no muere. Y lo que tú siembras no es el cuerpo que va a brotar, sino un simple grano, de trigo por ejemplo o alguna otra semilla. Y Dios le da un cuerpo a su voluntad: a cada semilla un cuerpo peculiar. No toda carne es igual, sino que una es la carne de los hombres, otra la de los animales, otra la de las aves, otra la de los peces. Hay cuerpos celestes y cuerpos terrestres; pero uno es el resplandor de los cuerpos celestes y otro el de los cuerpos terrestres. Uno es el resplandor del sol, otro el de la luna, otro el de las estrellas. Y una estrella difiere de otra en resplandor.",
+          "Así también en la resurrección de los muertos: se siembra corrupción, resucita incorrupción; se siembra vileza, resucita gloria; se siembra debilidad, resucita fortaleza; se siembra un cuerpo natural, resucita un cuerpo espiritual. Pues si hay un cuerpo natural, hay también un cuerpo espiritual. En efecto, así es como dice la Escritura: «El primer hombre, Adán, se convirtió en ser vivo.» El último Adán, en espíritu que da vida. El espíritu no fue lo primero: primero vino la vida y después el espíritu.",
+          "El primer hombre, hecho de tierra, era terreno; el segundo es del cielo. Pues igual que el terreno son los hombres terrenos; igual que el celestial son los hombres celestiales.",
+          "Nosotros, que somos imagen del hombre terreno, seremos también imagen del hombre celestial. Os digo esto, hermanos: La carne y la sangre no pueden heredar el reino de los cielos, ni la corrupción hereda la incorrupción.",
+          "Os voy a declarar un misterio: No todos moriremos pero todos nos veremos transformados. En un instante, en un abrir y cerrar de ojos, al toque de la última trompeta; porque resonará, y los muertos despertarán incorruptibles y nosotros nos veremos transformados. Porque esto corruptible tiene que vestirse de incorrupción, y esto mortal tiene que vestirse de inmortalidad. Cuando esto corruptible se vista de incorrupción, y esto mortal se vista de inmortalidad, entonces se cumplirá la palabra escrita: «La muerte ha sido absorbida en la victoria. ¿Dónde está, muerte, tu victoria? ¿Dónde está, muerte, tu aguijón?» El aguijón de la muerte es el pecado, y la fuerza del pecado es la ley. ¡Demos gracias a Dios, que nos da la victoria por nuestro Señor Jesucristo!"
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1018,
+           "impresa": "1018",
+           "pdf_fin": 1019,
+           "impresa_fin": "1019"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2649,
+           "impresa": "1521"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4290,
+           "impresa": "1476",
+           "pdf_fin": 4291,
+           "impresa_fin": "1477"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6158,
+           "impresa": "1688"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 3
+         },
+         "orden": 1,
+         "cita": "4, 16—5, 10",
+         "encabezado": "De la segunda carta del apóstol san Pablo a los Corintios",
+         "titulo": "AL DESHACERSE NUESTRA MORADA TERRENAL, ADQUIRIMOS UNA MANSIÓN ETERNA EN EL CIELO",
+         "parrafos": [
+          "Hermanos: Aunque nuestra condición física se vaya deshaciendo, nuestro interior se renueva día a día. Y una tribulación pasajera y liviana produce un inmenso e incalculable tesoro de gloria. No nos fijamos en lo que se ve, sino en lo que no se ve. Lo que se ve es transitorio; lo que no se ve es eterno.",
+          "Aunque se desmorone la morada terrestre en que acampamos, sabemos que Dios nos dará una casa eterna en el cielo, no construida por hombres. Y así gemimos en este estado, deseando ardientemente ser revestidos de nuestra habitación celeste, si es que nos encontramos vestidos, y no desnudos. ¡Sí!, los que estamos en esta tienda gemimos oprimidos. No es que queramos ser desvestidos, sino más bien sobrevestidos, para que lo mortal sea absorbido por la vida. Y el que nos ha destinado a eso es Dios, el cual nos ha dado en arras el Espíritu.",
+          "Así pues, siempre tenemos confianza, aunque sabemos que mientras vivimos estamos desterrados lejos del Señor. Caminamos sin verlo, guiados por la fe. Y es tal nuestra confianza que preferimos desterrarnos del cuerpo y vivir junto al Señor. Por lo cual, en destierro o en patria, nos esforzamos en agradarle. Porque todos tendremos que comparecer ante el tribunal de Cristo, para recibir premio o castigo por lo que hayamos hecho en esta vida."
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1019,
+           "impresa": "1019",
+           "pdf_fin": 1020,
+           "impresa_fin": "1020"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2649,
+           "impresa": "1521",
+           "pdf_fin": 2650,
+           "impresa_fin": "1522"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4291,
+           "impresa": "1477"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6158,
+           "impresa": "1688",
+           "pdf_fin": 6159,
+           "impresa_fin": "1689"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "responsorio",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "cita": "1 Co 15, 25-26; cf., Ap 20, 13. 14",
+         "r": [
+          "Cristo tiene que reinar hasta que Dios haga de sus enemigos estrado de sus pies.",
+          "El último enemigo aniquilado será la muerte."
+         ],
+         "v": "Entonces la muerte y el abismo entregarán sus muertos, y la muerte y el abismo serán arrojados al lago de fuego.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1018,
+           "impresa": "1018"
+          }
+         ],
+         "de": "difuntos/oficio/primera_lectura/lectura#1",
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 2
+         },
+         "cita": "Cf. Jb 19, 25. 26. 27",
+         "r": [
+          "Yo sé que está vivo mi Redentor, y que al final yo resucitaré de la tierra;",
+          "y en mi carne veré a Dios, mi salvador."
+         ],
+         "v": "Yo mismo lo veré, y no otro, mis propios ojos lo contemplarán.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1019,
+           "impresa": "1019"
+          }
+         ],
+         "de": "difuntos/oficio/primera_lectura/lectura#2",
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien esta otra:» en otro tomo"
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 3
+         },
+         "cita": "Cf. Sal 50, 4",
+         "r": [
+          "Señor, no me juzgues según mis actos: nada digno de mérito he hecho en tu presencia; por esto ruego a tu majestad,",
+          "que tú, Dios mío, borres mi culpa."
+         ],
+         "v": "Lava del todo mi delito, Señor, limpia mi pecado.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1020,
+           "impresa": "1020"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2650,
+           "impresa": "1522"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4291,
+           "impresa": "1477"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6159,
+           "impresa": "1689"
+          }
+         ],
+         "de": "difuntos/oficio/primera_lectura/lectura#3"
+        },
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "cita": "1 Co 15, 25-26; cf., Ap 20, 13. 14",
+         "r": [
+          "Cristo debe reinar hasta que Dios ponga todos sus enemigos bajo sus pies.",
+          "El último enemigo aniquilado será la muerte."
+         ],
+         "v": "Entonces la muerte y el hades devolverán los muertos, y la muerte y el hades serán arrojados al lago de fuego.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2648,
+           "impresa": "1520",
+           "pdf_fin": 2649,
+           "impresa_fin": "1521"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4290,
+           "impresa": "1476"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6157,
+           "impresa": "1687"
+          }
+         ],
+         "de": "difuntos/oficio/primera_lectura/lectura#1",
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 2
+         },
+         "cita": "Cf. Jb 19, 25. 26. 27",
+         "r": [
+          "Sé que mi Redentor vive y que en el último día yo resucitaré de la tierra;",
+          "y en mi carne veré a Dios, mi salvador."
+         ],
+         "v": "A quien yo mismo veré y no otro, y mis ojos lo contemplarán.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2649,
+           "impresa": "1521"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4291,
+           "impresa": "1477"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6158,
+           "impresa": "1688"
+          }
+         ],
+         "de": "difuntos/oficio/primera_lectura/lectura#2",
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien esta otra:» en otro tomo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "segunda_lectura",
+     "piezas": [
+      {
+       "tipo": "lectura",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "orden": 2,
+         "encabezado": "De los sermones de san Anastasio de Antioquía, obispo",
+         "fuente": "(Sermón 5, Sobre la resurrección de Cristo, 6-7. 9: PG 89, 1358-1359.1361-1362)",
+         "titulo": "CRISTO TRANSFORMARÁ NUESTRO CUERPO HUMILDE",
+         "parrafos": [
+          "Para esto murió y resucitó Cristo: para ser Señor de vivos y muertos. Pero, no obstante, Dios no es Dios de muertos, sino de vivos. Los muertos, por tanto, que tienen como Señor al que volvió a la vida, ya no están muertos, sino que viven, y la vida los penetra hasta tal punto que viven sin temer ya a la muerte.",
+          "Como Cristo que, una vez resucitado de entre los muertos, ya no muere más, así ellos también, liberados de la corrupción, no conocerán ya la muerte y participarán de la resurrección de Cristo, como Cristo participó de nuestra muerte.",
+          "Cristo, en efecto, no descendió a la tierra sino para destrozar las puertas de bronce y quebrar los cerrojos de hierro, que, desde antiguo, aprisionaban al hombre, y para librar nuestras vidas de la corrupción y atraernos hacia él, trasladándonos de la esclavitud a la libertad.",
+          "Si este plan de salvación no lo contemplamos aún totalmente realizado —pues los hombres continúan muriendo, y sus cuerpos continúan corrompiéndose en los sepulcros—, que nadie vea en ello un obstáculo para la fe. Que piense más bien cómo hemos recibido ya las primicias de los bienes que hemos mencionado y cómo poseemos ya la prenda de nuestra ascensión a lo más alto de los cielos, pues estamos ya sentados en el trono de Dios, junto con aquel que, como afirma san Pablo, nos ha llevado consigo a las alturas; escuchad, si no, lo que dice el Apóstol: Nos ha resucitado con Cristo Jesús y nos ha sentado en el cielo con él.",
+          "Llegaremos a la consumación cuando llegue el tiempo prefijado por el Padre, cuando, dejando de ser niños, alcancemos la medida del hombre perfecto. Así le agradó al Padre de los siglos, que lo determinó de esta forma para que no volviéramos a recaer en la insensatez infantil, y no se perdieran de nuevo sus dones.",
+          "Siendo así que el cuerpo del Señor resucitó de una manera espiritual, ¿será necesario insistir en que, como afirma san Pablo de los otros cuerpos, se siembra un cuerpo animal, pero resucita un cuerpo espiritual, es decir, transfigurado como el de Jesucristo, que nos ha precedido con su gloriosa transfiguración?",
+          "El Apóstol, en efecto, bien enterado de esta materia, nos enseña cuál sea el futuro de toda la humanidad, gracias a Cristo, el cual transformará nuestro cuerpo humilde, según el modelo de su cuerpo glorioso.",
+          "Si, pues, esta transfiguración consiste en que el cuerpo se torna espiritual, y este cuerpo es semejante al cuerpo glorioso de Cristo, que resucitó con un cuerpo espiritual, todo ello no significa sino que el cuerpo, que fue sembrado en condición humilde, será transformado en cuerpo glorioso.",
+          "Por esta razón, cuando Cristo elevó hasta el Padre las primicias de nuestra naturaleza, elevó ya a las alturas a todo el universo, como él mismo lo había prometido al decir: Cuando yo sea elevado sobre la tierra atraeré a todos hacia mí."
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1020,
+           "impresa": "1020",
+           "pdf_fin": 1021,
+           "impresa_fin": "1021"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2650,
+           "impresa": "1522",
+           "pdf_fin": 2651,
+           "impresa_fin": "1523"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4291,
+           "impresa": "1477",
+           "pdf_fin": 4292,
+           "impresa_fin": "1478"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6159,
+           "impresa": "1689",
+           "pdf_fin": 6160,
+           "impresa_fin": "1690"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 2
+         },
+         "orden": 2,
+         "encabezado": "De las cartas de san Braulio de Zaragoza, obispo",
+         "fuente": "(Carta 19: PL 80, 665-666)",
+         "titulo": "CRISTO RESUCITADO, ESPERANZA DE TODOS LOS CREYENTES",
+         "parrafos": [
+          "Cristo, esperanza de todos los creyentes, llama durmientes, no muertos, a los que salen de este mundo, ya que dice: Lázaro, nuestro amigo, está dormido.",
+          "Y el apóstol san Pablo quiere que no nos entristezcamos por la suerte de los difuntos, pues nuestra fe nos enseña que todos los que creen en Cristo, según se afirma en el Evangelio, no morirán para siempre: por la fe, en efecto, sabemos que ni Cristo murió para siempre ni nosotros tampoco moriremos para siempre.",
+          "Pues él mismo, el Señor, a la voz del arcángel y al son de la trompeta divina, descenderá del cielo, y los muertos en Cristo resucitarán.",
+          "Así, pues, debe sostenernos esta esperanza de la resurrección, pues los que hemos perdido en este mundo, los volveremos a encontrar en el otro; es suficiente que creamos en Cristo de verdad, es decir, obedeciendo sus mandatos, ya que es más fácil para él resucitar a los muertos que para nosotros despertar a los que duermen. Mas he aquí que, por una parte, afirmamos esta creencia y, por otra, no sé por qué profundo sentimiento, nos refugiamos en las lágrimas, y el deseo de nuestra sensibilidad hace vacilar la fe de nuestro espíritu. ¡Oh miserable condición humana y vanidad de toda nuestra vida sin Cristo!",
+          "¡Oh muerte, que separas a los que estaban unidos y, cruel e insensible, desunes a los que unía la amistad! Tu poder ha sido ya quebrantado. Ya ha sido roto tu cruel yugo por aquel que te amenazaba por boca del profeta Oseas: ¡Oh muerte, yo seré tu muerte! Por esto podemos apostrofarte con las palabras del Apóstol: ¿Dónde está, muerte, tu victoria? ¿Dónde está, muerte, tu aguijón?",
+          "El mismo que te ha vencido a ti nos ha redimido a nosotros, entregando su vida en poder de los impíos para convertir a estos impíos en amigos suyos. Son ciertamente muy abundantes y variadas las enseñanzas que podemos tomar de las Escrituras santas para nuestro consuelo. Pero bástanos ahora la esperanza de la resurrección y la contemplación de la gloria de nuestro Redentor, en quien nosotros, por la fe, nos consideramos ya resucitados, pues, como afirma el Apóstol: Si hemos muerto con Cristo, creemos que también viviremos con él.",
+          "No nos pertenecemos, pues, a nosotros mismos, sino a aquel que nos redimió, de cuya voluntad debe estar siempre pendiente la nuestra, tal como decimos en la oración: Hágase tu voluntad. Por eso, ante la muerte, hemos de decir como Job: El Señor me lo dio, el Señor me lo quitó, bendito sea el nombre del Señor. Repitamos, pues, ahora estas palabras de Job y así, siendo iguales a él en este mundo, alcanzaremos después, en el otro, un premio semejante al suyo."
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1021,
+           "impresa": "1021",
+           "pdf_fin": 1022,
+           "impresa_fin": "1022"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2651,
+           "impresa": "1523",
+           "pdf_fin": 2652,
+           "impresa_fin": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4292,
+           "impresa": "1478",
+           "pdf_fin": 4293,
+           "impresa_fin": "1479"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6160,
+           "impresa": "1690",
+           "pdf_fin": 6161,
+           "impresa_fin": "1691"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "responsorio",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "cita": "Jn 5, 28-29; 1 Co 15, 52",
+         "r": [
+          "Los que están en el sepulcro oirán la voz del Hijo de Dios.",
+          "Los que hayan hecho el bien saldrán a una resurrección de vida; los que hayan hecho el mal, a una resurrección de condena."
+         ],
+         "v": "En un instante, en un abrir y cerrar de ojos, al toque de la última trompeta, los muertos despertarán.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1021,
+           "impresa": "1021"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2651,
+           "impresa": "1523"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4292,
+           "impresa": "1478"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6160,
+           "impresa": "1690"
+          }
+         ],
+         "de": "difuntos/oficio/segunda_lectura/lectura#1"
+        },
+        {
+         "etiqueta": "O bien esta otra:",
+         "cuando": {
+          "opcion": 2
+         },
+         "cita": "1 Ts 4, 13-14; Jr 22, 10",
+         "r": [
+          "No os aflijáis por la suerte de los difuntos, como los hombres sin esperanza.",
+          "Pues si creemos que Jesús ha muerto y resucitado, del mismo modo a los que han muerto en Jesús, Dios los llevará con él."
+         ],
+         "v": "No lloréis por el muerto, ni os lamentéis por él.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4293,
+           "impresa": "1479"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6161,
+           "impresa": "1691"
+          }
+         ],
+         "de": "difuntos/oficio/segunda_lectura/lectura#2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "oracion",
+     "piezas": [
+      {
+       "tipo": "oracion",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "Escucha, Señor, nuestras súplicas, para que, al confesar la resurrección de Jesucristo, tu Hijo, se afiance también la esperanza de que nuestro hermano {N} resucitará. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Oh Dios, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva] {N} y pues creyó en la resurrección futura, merezca alcanzar los gozos de la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "revisar": true,
+         "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · otro texto bajo la misma etiqueta «O bien:» en otro tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 3
+         },
+         "texto": "Presta oídos, Señor, a las oraciones con que imploramos tu misericordia en favor de nuestro hermano [nuestra hermana] {N}; tú que lo hiciste miembro de la Iglesia durante su vida mortal, llévalo [llévala] contigo a la patria de la luz, para que ahora participe también de la ciudadanía de los santos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        },
+        {
+         "etiqueta": "Para varios difuntos:",
+         "revisar": true,
+         "texto": "Oh Dios, que resucitaste a tu Hijo para que, venciendo a la muerte, entrara en tu reino, concede a tus hijos {N} y {N} , difuntos que, superada su condición mortal, puedan contemplarte para siempre como su Creador y Salvador. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para varios difuntos:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · rojo dentro de un párrafo, sacado del texto: ['(', ')']",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para los hermanos, familiares y bienhechores difuntos:",
+         "revisar": true,
+         "texto": "Oh Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, parientes y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para los hermanos, familiares y bienhechores difuntos:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692"
+          }
+         ]
+        },
+        {
+         "cuando": {
+          "opcion": 4
+         },
+         "texto": "Escucha, Señor, nuestras súplicas y haz que, al proclamar nuestra fe en la resurrección de tu Hijo, se avive también nuestra esperanza en la resurrección de nuestros hermanos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4293,
+           "impresa": "1479"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 5
+         },
+         "texto": "Señor, Dios nuestro, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva]",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4293,
+           "impresa": "1479"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 6
+         },
+         "texto": "Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] {N}, miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "O bien otra de las que figuran en el Misal romano.",
+         "otras_redacciones": [
+          {
+           "tomo": 4,
+           "texto": "O bien otra de las que figuran en el Misal Romano."
+          }
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "N. y, pues creyó en la futura resurrección, merezca alcanzar los gozos de la eterna",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "oracion",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "bienaventuranza. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] {N}, miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para varios difuntos:",
+         "revisar": true,
+         "texto": "Señor Dios, que resucitaste a tu Hijo, para que venciendo a la muerte entrara en tu reino, concede a tus siervos {N} y {N} , hijos tuyos, que, superada su condición mortal, puedan contemplarte a ti, su Creador y Redentor. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para varios difuntos:» · rojo dentro de un párrafo, sacado del texto: ['(', ')']",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2652,
+           "impresa": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para los hermanos, familiares y bienhechores difuntos:",
+         "revisar": true,
+         "texto": "Señor Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, familiares y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para los hermanos, familiares y bienhechores difuntos:»",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2653,
+           "impresa": "1525",
+           "pdf_fin": 2652,
+           "impresa_fin": "1524"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "La conclusión de la Hora como en el Ordinario.",
+         "remite": "ordinario/conclusion",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2653,
+           "impresa": "1525"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "O bien otra de las que figuran en el Misal Romano.",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "laudes": [
+    {
+     "parte": "himno",
+     "piezas": [
+      {
+       "tipo": "himno",
+       "variantes": [
+        {
+         "etiquetas_en_tomos": [
+          {
+           "tomo": 1,
+           "etiqueta": null
+          },
+          {
+           "tomo": 2,
+           "etiqueta": null
+          },
+          {
+           "tomo": 3,
+           "etiqueta": "I"
+          },
+          {
+           "tomo": 4,
+           "etiqueta": "I"
+          }
+         ],
+         "etiqueta": "I",
+         "cuando": {
+          "opcion": 1
+         },
+         "himno": "salen-de-la-ciudad-en-larga-hilera",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1022,
+           "impresa": "1022",
+           "pdf_fin": 1023,
+           "impresa_fin": "1023"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2653,
+           "impresa": "1525"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6162,
+           "impresa": "1692",
+           "pdf_fin": 6163,
+           "impresa_fin": "1693"
+          }
+         ]
+        },
+        {
+         "etiqueta": "II",
+         "cuando": {
+          "opcion": 2
+         },
+         "himno": "dejame-senor-asi",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4294,
+           "impresa": "1480",
+           "pdf_fin": 4295,
+           "impresa_fin": "1481"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6163,
+           "impresa": "1693"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 1,
+         "texto": "Se alegrarán en el Señor los huesos quebrantados.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1023,
+           "impresa": "1023"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2653,
+           "impresa": "1525"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4295,
+           "impresa": "1481"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6163,
+           "impresa": "1693"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-50",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1023,
+           "impresa": "1023"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2653,
+           "impresa": "1525"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4295,
+           "impresa": "1481"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6163,
+           "impresa": "1693"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 2,
+         "texto": "Líbrame, Señor, de las puertas del abismo.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1024,
+           "impresa": "1024"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2654,
+           "impresa": "1526"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4296,
+           "impresa": "1482"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6164,
+           "impresa": "1694"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "cantico-is-38-10-14-17-20",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1024,
+           "impresa": "1024"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2654,
+           "impresa": "1526"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4296,
+           "impresa": "1482"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6164,
+           "impresa": "1694"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "numero": 3,
+         "texto": "Alabaré al Señor mientras viva.",
+         "tp_aleluya": false,
+         "revisar": true,
+         "nota": "tomo 1: la antífona repetida después del salmo no coincide: «Todo ser que alienta alabe al Señor.» · tomo 2: la antífona repetida después del salmo no coincide: «Todo ser que alienta alabe al Señor.»",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1025,
+           "impresa": "1025"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2655,
+           "impresa": "1527"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4297,
+           "impresa": "1483"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6165,
+           "impresa": "1695"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "numero": 3,
+         "texto": "Todo ser que alienta alabe al Señor.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4298,
+           "impresa": "1484"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6166,
+           "impresa": "1696"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-145",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1025,
+           "impresa": "1025"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2655,
+           "impresa": "1527"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4297,
+           "impresa": "1483"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6165,
+           "impresa": "1695"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-150",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1026,
+           "impresa": "1026"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2656,
+           "impresa": "1528"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4298,
+           "impresa": "1484"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6166,
+           "impresa": "1696"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "lectura_breve",
+     "piezas": [
+      {
+       "tipo": "lectura_breve",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "cita": "1 Ts 4, 14",
+         "texto": "Creemos que Jesús ha muerto y resucitado; del mismo modo, a los que han muerto, por medio de Jesús, los llevará con él.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1026,
+           "impresa": "1026"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "cuando": {
+          "opcion": 2
+         },
+         "cita": "1 Ts 4, 13",
+         "texto": "Creemos que Jesús ha muerto y resucitado, del mismo modo a los que han muerto en Jesús, Dios los llevará con él.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2656,
+           "impresa": "1528",
+           "pdf_fin": 2657,
+           "impresa_fin": "1529"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4298,
+           "impresa": "1484"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6167,
+           "impresa": "1697"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "responsorio_breve",
+     "piezas": [
+      {
+       "tipo": "responsorio_breve",
+       "variantes": [
+        {
+         "v1": "Te ensalzaré, Señor, porque me has librado.",
+         "r1": "Te ensalzaré, Señor, porque me has librado.",
+         "v2": "Cambiaste mi luto en danza.",
+         "r2": "Porque me has librado.",
+         "gloria": true,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1026,
+           "impresa": "1026",
+           "pdf_fin": 1027,
+           "impresa_fin": "1027"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2657,
+           "impresa": "1529"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4298,
+           "impresa": "1484"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6167,
+           "impresa": "1697"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "cantico_evangelico",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "texto": "Yo soy la resurrección y la vida, el que cree en mí aunque haya muerto, vivirá; y el que está vivo y cree en mí no morirá para siempre.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1027,
+           "impresa": "1027"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2657,
+           "impresa": "1529"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4298,
+           "impresa": "1484"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6167,
+           "impresa": "1697"
+          }
+         ]
+        }
+       ],
+       "remite": "ordinario/laudes/cantico_evangelico"
+      }
+     ]
+    },
+    {
+     "parte": "preces",
+     "piezas": [
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Cuando se ofrece por los difuntos en general:",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1027,
+           "impresa": "1027"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2657,
+           "impresa": "1529"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "preces",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "introduccion": "Oremos a Dios Padre todopoderoso, que ha resucitado a Jesucristo de entre los muertos y vivificará también nuestros cuerpos mortales, y digámosle:",
+         "respuesta": [
+          {
+           "etiqueta": null,
+           "texto": "Señor, danos la vida en Cristo"
+          }
+         ],
+         "intenciones": [
+          {
+           "primera": "Padre santo, ya que por el bautismo hemos sido sepultados con Cristo en la muerte y con él hemos resucitado,",
+           "segunda": "haz que de tal forma andemos en vida nueva que aún después de nuestra muerte vivamos para siempre con Cristo."
+          },
+          {
+           "primera": "Padre providente, que nos has dado el pan vivo bajado del cielo, para que lo comamos santamente,",
+           "segunda": "haz que al comerlo tengamos vida eterna y resucitemos en el último día."
+          },
+          {
+           "primera": "Oh Señor, que enviaste un ángel para que confortara a tu Hijo en la agonía de Getsemaní,",
+           "segunda": "dígnate consolarnos en nuestro tránsito con la dulzura de tu esperanza."
+          },
+          {
+           "primera": "Tú que libraste a los tres jóvenes del fuego ardiente,",
+           "segunda": "libra también las almas de los difuntos del castigo que sufren por sus pecados."
+          },
+          {
+           "primera": "Dios y Señor de vivos y de muertos, que resucitaste a Cristo del sepulcro,",
+           "segunda": "resucita también a los difuntos, y a nosotros danos un lugar junto a ellos en tu gloria."
+          }
+         ],
+         "libres_despues_de": null,
+         "final": "Porque deseamos que la luz de Cristo ilumine a los vivos y a los muertos, pidamos al Padre que a todos llegue su reino: Padre nuestro.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1027,
+           "impresa": "1027"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2657,
+           "impresa": "1529"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "cuando": {
+          "opcion": 2
+         },
+         "introduccion": "Oremos a Dios Padre todopoderoso, que ha resucitado a Jesucristo de entre los muertos y vivificará también nuestros cuerpos mortales, y digámosle:",
+         "respuesta": [
+          {
+           "etiqueta": null,
+           "texto": "Dueño de la vida y de la muerte, escúchanos."
+          }
+         ],
+         "intenciones": [
+          {
+           "primera": "Padre santo, ya que por el bautismo hemos sido sepultados con Cristo en la muerte y con él hemos resucitado,",
+           "segunda": "haz que de tal forma andemos en vida nueva que aún después de nuestra muerte vivamos para siempre con Cristo."
+          },
+          {
+           "primera": "Padre providente, que nos has dado el pan vivo bajado del cielo, para que lo comamos santamente,",
+           "segunda": "haz que al comerlo tengamos vida eterna y resucitemos en el último día."
+          },
+          {
+           "primera": "Señor, que diste a tu Hijo en su agonía el consuelo del ángel,",
+           "segunda": "confórtanos en nuestra agonía con la serena esperanza de la resurrección."
+          },
+          {
+           "primera": "Tú, Señor, que libraste a los tres jóvenes del horno ardiente,",
+           "segunda": "libra también las almas de los difuntos del castigo que sufren por sus pecados."
+          },
+          {
+           "primera": "Dios y Señor de vivos y de muertos, que resucitaste a Cristo del sepulcro,",
+           "segunda": "resucita también a los difuntos, y a nosotros danos un lugar junto a ellos en tu gloria."
+          }
+         ],
+         "libres_despues_de": null,
+         "final": "Porque deseamos que la luz de Cristo ilumine a los vivos y a los muertos, pidamos al Padre que a todos llegue su reino: Padre nuestro.",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6167,
+           "impresa": "1697"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Cuando el oficio se celebra por un solo difunto o por varios difuntos:",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1027,
+           "impresa": "1027"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2657,
+           "impresa": "1529"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "preces",
+       "variantes": [
+        {
+         "introduccion": "Pidamos al Señor que escuche nuestra oración y atienda nuestras súplicas por nuestro hermano difunto [nuestra hermana difunta], y, llenos de confianza, digámosle:",
+         "respuesta": [
+          {
+           "etiqueta": null,
+           "texto": "Señor, danos la vida en Cristo"
+          },
+          {
+           "etiqueta": "O bien:",
+           "texto": "Dueño de la vida y de la muerte, escúchanos."
+          }
+         ],
+         "intenciones": [
+          {
+           "primera": "Señor Jesús, haz que nuestro hermano [nuestra hermana] que ha pasado ya de este mundo a tu reino se alegre con júbilo eterno en tu presencia,",
+           "segunda": "y se llene de gozo en la asamblea de los santos."
+          },
+          {
+           "primera": "Libra su alma del abismo y sálvalo [sálvala] por tu misericordia,",
+           "segunda": "porque en el reino de la muerte nadie te alaba."
+          },
+          {
+           "primera": "Que tu bondad y tu misericordia lo [la] acompañe eternamente,",
+           "segunda": "y que habite en tu casa por años sin término."
+          },
+          {
+           "primera": "Condúcelo [Condúcela] hacia las fuentes tranquilas de tu paraíso,",
+           "segunda": "y hazlo [hazla] recostar en las praderas verdes de tu reino."
+          },
+          {
+           "primera": "A nosotros, que caminamos aún por las cañadas oscuras de este mundo, guíanos por el sendero justo,",
+           "segunda": "y haz que en tu vara y en tu cayado de pastor encontremos siempre nuestro sosiego."
+          }
+         ],
+         "libres_despues_de": null,
+         "final": "Para que la luz de Cristo ilumine a los vivos y a los muertos, pidamos que a todos llegue el reino de Jesucristo: Padre nuestro.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1027,
+           "impresa": "1027",
+           "pdf_fin": 1028,
+           "impresa_fin": "1028"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2657,
+           "impresa": "1529",
+           "pdf_fin": 2658,
+           "impresa_fin": "1530"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "oracion",
+     "piezas": [
+      {
+       "tipo": "oracion",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "Escucha, Señor, nuestras súplicas, para que, al confesar la resurrección de Jesucristo, tu Hijo, se afiance también la esperanza de que nuestro hermano {N} resucitará. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1028,
+           "impresa": "1028"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Oh Dios, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva] {N} y pues creyó en la resurrección futura, merezca alcanzar los gozos de la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "revisar": true,
+         "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · otro texto bajo la misma etiqueta «O bien:» en otro tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1028,
+           "impresa": "1028"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 3
+         },
+         "texto": "Presta oídos, Señor, a las oraciones con que imploramos tu misericordia en favor de nuestro hermano [nuestra hermana] {N}; tú que lo hiciste miembro de la Iglesia durante su vida mortal, llévalo [llévala] contigo a la patria de la luz, para que ahora participe también de la ciudadanía de los santos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1028,
+           "impresa": "1028"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        },
+        {
+         "etiqueta": "Para varios difuntos:",
+         "revisar": true,
+         "texto": "Oh Dios, que resucitaste a tu Hijo para que, venciendo a la muerte, entrara en tu reino, concede a tus hijos {N} y {N} , difuntos que, superada su condición mortal, puedan contemplarte para siempre como su Creador y Salvador. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para varios difuntos:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · rojo dentro de un párrafo, sacado del texto: ['(', ')']",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1028,
+           "impresa": "1028"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para los hermanos, familiares y bienhechores difuntos:",
+         "revisar": true,
+         "texto": "Oh Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, parientes y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para los hermanos, familiares y bienhechores difuntos:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1028,
+           "impresa": "1028"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ]
+        },
+        {
+         "cuando": {
+          "opcion": 4
+         },
+         "texto": "Escucha, Señor, nuestras súplicas y haz que, al proclamar nuestra fe en la resurrección de tu Hijo, se avive también nuestra esperanza en la resurrección de nuestros hermanos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2658,
+           "impresa": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 5
+         },
+         "texto": "Señor, Dios nuestro, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva]",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2658,
+           "impresa": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 6
+         },
+         "texto": "Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] {N}, miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "O bien otra de las que figuran en el Misal romano.",
+         "otras_redacciones": [
+          {
+           "tomo": 4,
+           "texto": "O bien otra de las que figuran en el Misal Romano."
+          }
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1028,
+           "impresa": "1028"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "N. y, pues creyó en la futura resurrección, merezca alcanzar los gozos de la eterna",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2658,
+           "impresa": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "oracion",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "bienaventuranza. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2658,
+           "impresa": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] {N}, miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2658,
+           "impresa": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para varios difuntos:",
+         "revisar": true,
+         "texto": "Señor Dios, que resucitaste a tu Hijo, para que venciendo a la muerte entrara en tu reino, concede a tus siervos {N} y {N} , hijos tuyos, que, superada su condición mortal, puedan contemplarte a ti, su Creador y Redentor. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para varios difuntos:» · rojo dentro de un párrafo, sacado del texto: ['(', ')']",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2658,
+           "impresa": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para los hermanos, familiares y bienhechores difuntos:",
+         "revisar": true,
+         "texto": "Señor Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, familiares y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para los hermanos, familiares y bienhechores difuntos:»",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531",
+           "pdf_fin": 2658,
+           "impresa_fin": "1530"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4299,
+           "impresa": "1485"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "O bien otra de las que figuran en el Misal Romano.",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "intermedia": [
+    {
+     "parte": "himno",
+     "piezas": [
+      {
+       "tipo": "himno",
+       "variantes": [
+        {
+         "etiqueta": "I",
+         "cuando": {
+          "opcion": 1
+         },
+         "himno": "dejad-que-el-grano-se-muera",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698"
+          }
+         ]
+        },
+        {
+         "etiqueta": "II",
+         "cuando": {
+          "opcion": 2
+         },
+         "himno": "camino-del-sepulcro-preguntabamos",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6168,
+           "impresa": "1698",
+           "pdf_fin": 6169,
+           "impresa_fin": "1699"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Para las otras Horas se puede decir un himno propio de la Hora.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6169,
+           "impresa": "1699"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Tercia: Vuélvete, Señor, liberta mi alma.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6169,
+           "impresa": "1699"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Sexta: Sana, Señor, mi alma, porque he pecado contra ti.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6169,
+           "impresa": "1699"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Nona: Oh Dios, sálvame por tu nombre, sal por mí con tu poder.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2659,
+           "impresa": "1531"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6169,
+           "impresa": "1699"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-69",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1029,
+           "impresa": "1029"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2660,
+           "impresa": "1532"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4300,
+           "impresa": "1486"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6169,
+           "impresa": "1699"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-84",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1030,
+           "impresa": "1030"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2660,
+           "impresa": "1532"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4301,
+           "impresa": "1487"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6169,
+           "impresa": "1699"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-85",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1030,
+           "impresa": "1030"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2661,
+           "impresa": "1533"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4302,
+           "impresa": "1488"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6170,
+           "impresa": "1700"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Para las otras Horas, se toman los salmos de la salmodia complementaria, series II y III.",
+         "remite": "salterio/salmodia-complementaria",
+         "otras_redacciones": [
+          {
+           "tomo": 3,
+           "texto": "Para las otras Horas, la salmodia complementaria."
+          },
+          {
+           "tomo": 4,
+           "texto": "Para las otras Horas, la salmodia complementaria."
+          }
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6171,
+           "impresa": "1701"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "oracion",
+     "piezas": [
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Oración como en las Laudes.",
+         "remite": "difuntos/laudes/oracion",
+         "otras_redacciones": [
+          {
+           "tomo": 3,
+           "texto": "La oración como en las Laudes."
+          },
+          {
+           "tomo": 4,
+           "texto": "La oración como en las Laudes."
+          }
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2663,
+           "impresa": "1535"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Oración como en las Laudes.",
+         "remite": "difuntos/laudes/oracion",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Oración como en las Laudes.",
+         "remite": "difuntos/laudes/oracion",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tercia": [
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "texto": "Vuélvete, Señor, liberta mi alma.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6171,
+           "impresa": "1701"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "lectura_breve",
+     "piezas": [
+      {
+       "tipo": "lectura_breve",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "cita": "Jb 19, 25-26",
+         "texto": "Sé que mi Redentor vive y que en el último día yo resucitaré de la tierra; y de nuevo me revestiré de mi piel; y en mi carne veré a Dios.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "cita": "2M 7, 9a",
+         "texto": "Cuando hayamos muerto por su ley, el rey del universo nos resucitará para una vida eterna.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "versiculo",
+     "piezas": [
+      {
+       "tipo": "versiculo",
+       "variantes": [
+        {
+         "v": "¿Por qué te acongojas, alma mía, por qué te me turbas?",
+         "r": "Espera en Dios, que volverás a alabarlo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "sexta": [
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "texto": "Sana, Señor, mi alma, porque he pecado contra ti.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "lectura_breve",
+     "piezas": [
+      {
+       "tipo": "lectura_breve",
+       "variantes": [
+        {
+         "cita": "Sb 1, 13-14a. 15",
+         "texto": "Dios no hizo la muerte, ni se recrea en la destrucción de los vivientes; todo lo creó para que subsistiera, porque la justicia es inmortal.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "versiculo",
+     "piezas": [
+      {
+       "tipo": "versiculo",
+       "variantes": [
+        {
+         "v": "Aunque camine por cañadas oscuras, nada temo.",
+         "r": "Porque tú, Señor, vas conmigo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "nona": [
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "texto": "Oh Dios, sálvame por tu nombre, sal por mí con tu poder.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "lectura_breve",
+     "piezas": [
+      {
+       "tipo": "lectura_breve",
+       "variantes": [
+        {
+         "cita": "Is 25, 8",
+         "texto": "Aniquilará Dios la muerte para siempre. El Señor Dios enjugará las lágrimas de todos los rostros, y el oprobio de su pueblo lo alejará de todo el país —lo ha dicho el Señor—.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2662,
+           "impresa": "1534"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "versiculo",
+     "piezas": [
+      {
+       "tipo": "versiculo",
+       "variantes": [
+        {
+         "v": "Escucha, Señor, mis súplicas.",
+         "r": "A ti acude todo mortal.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1032,
+           "impresa": "1032"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2663,
+           "impresa": "1535"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4303,
+           "impresa": "1489"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "visperas": [
+    {
+     "parte": "himno",
+     "piezas": [
+      {
+       "tipo": "himno",
+       "variantes": [
+        {
+         "etiquetas_en_tomos": [
+          {
+           "tomo": 1,
+           "etiqueta": null
+          },
+          {
+           "tomo": 2,
+           "etiqueta": null
+          },
+          {
+           "tomo": 3,
+           "etiqueta": "I"
+          },
+          {
+           "tomo": 4,
+           "etiqueta": "I"
+          }
+         ],
+         "etiqueta": "I",
+         "cuando": {
+          "opcion": 1
+         },
+         "himno": "tu-senor-que-asumiste-la-existencia",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1033,
+           "impresa": "1033"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2663,
+           "impresa": "1535"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4304,
+           "impresa": "1490"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6172,
+           "impresa": "1702",
+           "pdf_fin": 6173,
+           "impresa_fin": "1703"
+          }
+         ]
+        },
+        {
+         "etiqueta": "II",
+         "cuando": {
+          "opcion": 2
+         },
+         "himno": "librame-de-esta-carne-de-pecado",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4304,
+           "impresa": "1490",
+           "pdf_fin": 4305,
+           "impresa_fin": "1491"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6173,
+           "impresa": "1703"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "ALMODIA",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4305,
+           "impresa": "1491"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "salmodia",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 1,
+         "texto": "El Señor te guarda de todo mal, él guarda tu alma.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1033,
+           "impresa": "1033"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2663,
+           "impresa": "1535"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4305,
+           "impresa": "1491"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6173,
+           "impresa": "1703"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-120",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1033,
+           "impresa": "1033"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2663,
+           "impresa": "1535"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4305,
+           "impresa": "1491"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6173,
+           "impresa": "1703"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 2,
+         "texto": "Si llevas cuenta de los delitos, Señor, ¿quién podrá resistir?",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1034,
+           "impresa": "1034"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2664,
+           "impresa": "1536"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4305,
+           "impresa": "1491"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6174,
+           "impresa": "1704"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "salmo-129",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1034,
+           "impresa": "1034"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2664,
+           "impresa": "1536"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4305,
+           "impresa": "1491"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6174,
+           "impresa": "1704"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "numero": 3,
+         "texto": "Lo mismo que el Padre resucita a los muertos y les da vida, así también el Hijo da vida a los que quiere.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1034,
+           "impresa": "1034"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2664,
+           "impresa": "1536"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4306,
+           "impresa": "1492"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6174,
+           "impresa": "1704"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "salmo",
+       "variantes": [
+        {
+         "salmo": "cantico-flp-2-6-11",
+         "parte": null,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1034,
+           "impresa": "1034"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2664,
+           "impresa": "1536"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4306,
+           "impresa": "1492"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6174,
+           "impresa": "1704"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "lectura_breve",
+     "piezas": [
+      {
+       "tipo": "lectura_breve",
+       "variantes": [
+        {
+         "cita": "1 Co 15, 55-57",
+         "texto": "¿Dónde está, muerte tu victoria? ¿Dónde está, muerte, tu aguijón? El aguijón de la muerte es el pecado, y la fuerza del pecado es la ley. ¡Demos gracias a Dios, que nos da la victoria por nuestro Señor Jesucristo!",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1035,
+           "impresa": "1035"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2665,
+           "impresa": "1537"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4306,
+           "impresa": "1492"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6175,
+           "impresa": "1705"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "responsorio_breve",
+     "piezas": [
+      {
+       "tipo": "responsorio_breve",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "v1": "A ti, Señor, me acojo: no quede yo nunca defraudado.",
+         "r1": "A ti, Señor, me acojo: no quede yo nunca defraudado.",
+         "v2": "Tu misericordia es mi gozo y mi alegría.",
+         "r2": "No quede yo nunca defraudado.",
+         "gloria": true,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1035,
+           "impresa": "1035"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2665,
+           "impresa": "1537"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4306,
+           "impresa": "1492"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6175,
+           "impresa": "1705"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "v1": "Por tu misericordia, Señor, dales el descanso eterno.",
+         "r1": "Por tu misericordia, Señor, dales el descanso eterno.",
+         "v2": "Tú, que vendrás a juzgar a los vivos y a los muertos.",
+         "r2": "Dales el descanso eterno.",
+         "gloria": true,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1035,
+           "impresa": "1035"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2665,
+           "impresa": "1537"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4306,
+           "impresa": "1492"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6175,
+           "impresa": "1705"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "cantico_evangelico",
+     "piezas": [
+      {
+       "tipo": "antifona",
+       "variantes": [
+        {
+         "texto": "Todos los que el Padre me ha entregado vendrán a mí, y al que venga a mí no lo echaré fuera.",
+         "tp_aleluya": false,
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1035,
+           "impresa": "1035"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2665,
+           "impresa": "1537"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4307,
+           "impresa": "1493"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6175,
+           "impresa": "1705"
+          }
+         ]
+        }
+       ],
+       "remite": "ordinario/visperas/cantico_evangelico"
+      }
+     ]
+    },
+    {
+     "parte": "preces",
+     "piezas": [
+      {
+       "tipo": "preces",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "introduccion": "Oremos al Señor Jesús, que transformará nuestro cuerpo frágil en cuerpo glorioso como el suyo, y digámosle:",
+         "respuesta": [
+          {
+           "etiqueta": null,
+           "texto": "Tú, Señor, eres nuestra oida y nuestra resurrección."
+          }
+         ],
+         "intenciones": [
+          {
+           "primera": "Oh Cristo, Hiio de Dios vivo, que resucitaste de entre los muertos a tu amigo Lázaro,",
+           "segunda": "lleva a una resurrección de vida a los difuntos que rescataste con tu sangre preciosa."
+          },
+          {
+           "primera": "Oh Cristo, consolador de los afligidos, que, ante el dolor de los que lloraban la muerte de Lázaro, del joven de Naín y de la hija de Jairo, acudiste compasivo a eniugar sus lágrimas,",
+           "segunda": "consuela también ahora a los que lloran la muerte de sus seres queridos."
+          },
+          {
+           "primera": "Oh Cristo salvador, destruye en nuestro cuerpo mortal el dominio del pecado por el que merecimos la muerte,",
+           "segunda": "para que obtengamos en ti la vida eterna."
+          },
+          {
+           "primera": "Oh Cristo redentor, mira benignamente a los que, por no conocerte, viven sin esperanza,",
+           "segunda": "para que crean también ellos en la resurrección de los muertos y en la vida del mundo futuro."
+          },
+          {
+           "primera": "Tú que, al dar la vista al ciego de nacimiento, hiciste que pudiera mirarte,",
+           "segunda": "descubre tu rostro a los difuntos que todavía carecen de tu resplandor."
+          },
+          {
+           "primera": "Tú, Señor, que permites que nuestra morada corpórea sea destruida,",
+           "segunda": "concédenos una morada eterna en los cielos."
+          }
+         ],
+         "libres_despues_de": null,
+         "final": "Que el mismo Señor, que lloró junto al sepulcro de Lázaro y que, en su propia agonía, acudió conmovido al Padre, nos ayude a decir: Padre nuestro.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1035,
+           "impresa": "1035",
+           "pdf_fin": 1036,
+           "impresa_fin": "1036"
+          },
+          {
+           "tomo": 2,
+           "pdf": 2665,
+           "impresa": "1537",
+           "pdf_fin": 2666,
+           "impresa_fin": "1538"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "cuando": {
+          "opcion": 2
+         },
+         "introduccion": "Oremos al Señor Jesús, que transformará nuestro cuerpo frágil en cuerpo glorioso como el suyo, y digámosle:",
+         "respuesta": [
+          {
+           "etiqueta": null,
+           "texto": "Dueño de la vida y de la muerte, escúchanos."
+          }
+         ],
+         "intenciones": [
+          {
+           "primera": "Señor Jesucristo, Hijo de Dios vivo, que resucitaste de entre los muertos a tu amigo Lázaro,",
+           "segunda": "lleva a una resurrección de vida a los difuntos que rescataste con tu sangre preciosa."
+          },
+          {
+           "primera": "Señor Jesucristo, consolador de los afligidos, que ante el dolor de los que lloraban la muerte de Lázaro, del joven de Naím y de la hija de Jairo acudiste compasivo a enjugar sus lágrimas,",
+           "segunda": "consuela también ahora a los que lloran la muerte de sus seres queridos."
+          },
+          {
+           "primera": "Señor Jesucristo, siempre vivo para interceder por nosotros y por todos los hombres,",
+           "segunda": "enséñanos a ofrecer el sacrificio de alabanza por los difuntos, para que sean absueltos de sus pecados."
+          },
+          {
+           "primera": "Cristo salvador, destruye en nuestro cuerpo mortal el dominio del pecado por el que merecimos la muerte,",
+           "segunda": "para que obtengamos, como don de Dios, la vida eterna."
+          },
+          {
+           "primera": "Cristo redentor, mira benignamente a aquellos que, al no conocerte, viven sin esperanza,",
+           "segunda": "para que crean también ellos en la resurrección y en la vida del mundo futuro."
+          },
+          {
+           "primera": "Tú, Señor, que has dispuesto que nuestra casa terrena sea destruida,",
+           "segunda": "concédenos una morada eterna en los cielos."
+          }
+         ],
+         "libres_despues_de": null,
+         "final": "Porque deseamos que la luz de Cristo ilumine a los vivos y a los muertos, pidamos al Padre que llegue a todos su reino: Padre nuestro.",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4307,
+           "impresa": "1493"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6176,
+           "impresa": "1706"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "Cuando el Oficio se celebra por un solo difunto o por varios difuntos:",
+         "revisar": true,
+         "introduccion": "Oremos, hermanos, a Cristo, el Señor, esperanza de los que vivimos aún en este mundo, y vida y resurrección de los que ya han muerto; llenos de confianza, digámosle:",
+         "respuesta": [
+          {
+           "etiqueta": null,
+           "texto": "Tú que eres la vida y la resurrección, escúchanos."
+          }
+         ],
+         "intenciones": [
+          {
+           "primera": "Recuerda, Señor, que tu ternura y tu misericordia son eternas,",
+           "segunda": "y no te acuerdes de los pecados ni de las maldades de nuestro hermano [nuestra hermana] {N}"
+          },
+          {
+           "primera": "Por el honor de tu nombre, Señor, perdónale todas sus culpas,",
+           "segunda": "y haz que viva eternamente feliz en tu presencia."
+          },
+          {
+           "primera": "Que habite en tu casa por días sin término,",
+           "segunda": "y goce de tu presencia contemplando tu rostro."
+          },
+          {
+           "primera": "No rechaces a tu siervo [sierva] ni lo [la] olvides en el reino de la muerte,",
+           "segunda": "antes concédele gozar de tu dicha en el país de la vida."
+          },
+          {
+           "primera": "Sé tú, Señor, el apoyo y la salvación de cuantos a ti acudimos,",
+           "segunda": "sálvanos y bendícenos, porque somos tu pueblo y tu heredad."
+          }
+         ],
+         "libres_despues_de": null,
+         "final": "Que el mismo Señor, que lloró junto al sepulcro de Lázaro y que, en su propia agonía, acudió conmovido al Padre, nos ayude a decir: Padre nuestro.",
+         "nota": "etiqueta fuera del vocabulario: «Cuando el Oficio se celebra por un solo difunto o por varios difuntos:»",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4307,
+           "impresa": "1493",
+           "pdf_fin": 4308,
+           "impresa_fin": "1494"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6176,
+           "impresa": "1706",
+           "pdf_fin": 6177,
+           "impresa_fin": "1707"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "parte": "oracion",
+     "piezas": [
+      {
+       "tipo": "oracion",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "Escucha, Señor, nuestras súplicas, para que, al confesar la resurrección de Jesucristo, tu Hijo, se afiance también la esperanza de que nuestro hermano {N} resucitará. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Oh Dios, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva] {N} y pues creyó en la resurrección futura, merezca alcanzar los gozos de la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "revisar": true,
+         "nota": "diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · otro texto bajo la misma etiqueta «O bien:» en otro tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 3
+         },
+         "texto": "Presta oídos, Señor, a las oraciones con que imploramos tu misericordia en favor de nuestro hermano [nuestra hermana] {N}; tú que lo hiciste miembro de la Iglesia durante su vida mortal, llévalo [llévala] contigo a la patria de la luz, para que ahora participe también de la ciudadanía de los santos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        },
+        {
+         "etiqueta": "Para varios difuntos:",
+         "revisar": true,
+         "texto": "Oh Dios, que resucitaste a tu Hijo para que, venciendo a la muerte, entrara en tu reino, concede a tus hijos {N} y {N} , difuntos que, superada su condición mortal, puedan contemplarte para siempre como su Creador y Salvador. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para varios difuntos:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo · rojo dentro de un párrafo, sacado del texto: ['(', ')']",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para los hermanos, familiares y bienhechores difuntos:",
+         "revisar": true,
+         "texto": "Oh Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, parientes y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para los hermanos, familiares y bienhechores difuntos:» · diferencia de pocas letras entre tomos, sin mayoría: se tomó el primer tomo",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ]
+        },
+        {
+         "cuando": {
+          "opcion": 4
+         },
+         "texto": "Escucha, Señor, nuestras súplicas y haz que, al proclamar nuestra fe en la resurrección de tu Hijo, se avive también nuestra esperanza en la resurrección de nuestros hermanos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ],
+         "revisar": true,
+         "nota": "variante sin etiqueta distinta de la de otro tomo: no se inventa condición"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 5
+         },
+         "texto": "Señor, Dios nuestro, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva]",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 6
+         },
+         "texto": "Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] {N}, miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ],
+         "revisar": true,
+         "nota": "otro texto bajo la misma etiqueta «O bien:» en otro tomo"
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "O bien otra de las que figuran en el Misal romano.",
+         "otras_redacciones": [
+          {
+           "tomo": 4,
+           "texto": "O bien otra de las que figuran en el Misal Romano."
+          }
+         ],
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "N. y, pues creyó en la futura resurrección, merezca alcanzar los gozos de la eterna",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "oracion",
+       "variantes": [
+        {
+         "cuando": {
+          "opcion": 1
+         },
+         "texto": "bienaventuranza. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        },
+        {
+         "etiqueta": "O bien:",
+         "cuando": {
+          "opcion": 2
+         },
+         "texto": "Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] {N}, miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para varios difuntos:",
+         "revisar": true,
+         "texto": "Señor Dios, que resucitaste a tu Hijo, para que venciendo a la muerte entrara en tu reino, concede a tus siervos {N} y {N} , hijos tuyos, que, superada su condición mortal, puedan contemplarte a ti, su Creador y Redentor. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para varios difuntos:» · rojo dentro de un párrafo, sacado del texto: ['(', ')']",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        },
+        {
+         "etiqueta": "Para los hermanos, familiares y bienhechores difuntos:",
+         "revisar": true,
+         "texto": "Señor Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, familiares y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.",
+         "nota": "etiqueta fuera del vocabulario: «Para los hermanos, familiares y bienhechores difuntos:»",
+         "fuentes": [
+          {
+           "tomo": 2,
+           "pdf": 2666,
+           "impresa": "1538"
+          },
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Completas del domingo de después de las II Vísperas.",
+         "remite": [
+          "texto-azul/despues-de-las-ii-visperas"
+         ],
+         "otras_redacciones": [
+          {
+           "tomo": 4,
+           "texto": "Completas del domingo de después de las II Vísperas, p. 1026."
+          }
+         ],
+         "nota": "remisión azul sin destino normalizado: después de las II Vísperas",
+         "fuentes": [
+          {
+           "tomo": 1,
+           "pdf": 1036,
+           "impresa": "1036"
+          },
+          {
+           "tomo": 4,
+           "pdf": 6177,
+           "impresa": "1707"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "O bien otra de las que figuran en el Misal Romano.",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "tipo": "rubrica",
+       "variantes": [
+        {
+         "texto": "Completas del domingo de después de las II Vísperas.",
+         "fuentes": [
+          {
+           "tomo": 3,
+           "pdf": 4308,
+           "impresa": "1494"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "la-oracion-como-en-el-propio",
+  "primer_verso": "La oración como en el Propio.",
+  "estrofas": [
+   [
+    {
+     "texto": "La oración como en el Propio.",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1057,
+    "impresa": "1057"
+   }
+  ]
+ },
+ {
+  "id": "comun-de-un-santo-varon-o-una-santa-mujer-de-varios-santos-varones-o",
+  "primer_verso": "COMÚN DE UN SANTO VARÓN O UNA SANTA MUJER, DE VARIOS SANTOS VARONES O",
+  "estrofas": [
+   [
+    {
+     "texto": "COMÚN DE UN SANTO VARÓN O UNA SANTA MUJER, DE VARIOS SANTOS VARONES O",
+     "sangria": 0
+    }
+   ]
+  ],
+  "amen": false,
+  "fuentes": [
+   {
+    "tomo": 1,
+    "pdf": 1057,
+    "impresa": "1057"
+   }
+  ]
+ }
+]
