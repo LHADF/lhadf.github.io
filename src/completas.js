@@ -38,6 +38,8 @@ function opcionesDia(fecha, sel){
   return [{tipo:'b', siglas:sig(base), f:base}, ...variantesDe(fecha)].map(o=>({...o, actual:o.f.n===act.n&&o.f.g===act.g}));
 }
 const enRango=f=>f>=CAL.desde && f<=CAL.hasta;
+// La entrada de la base para una fecha fija del Propio del tiempo («17 de diciembre»)
+const fechaClave=f=>`${+f.slice(8,10)} de ${MESES[+f.slice(5,7)-1]}`;
 
 /* ---------- Oración del común, con el nombre de la celebración ----------
    Los comunes traen varias oraciones «para» distintos casos (un santo obispo, varios mártires, una virgen…), con N. en
@@ -314,5 +316,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{oracionComun, comunDe, comun, enPascua, turno, alternativas, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

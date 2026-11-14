@@ -6464,3 +6464,269 @@ XXXIII Domingo del Tiempo Ordinario (B):
   ant_magnificat: Verán venir al Hijo del hombre sobre las nubes del cielo con gran poder y majestad.
 XXXIII Domingo del Tiempo Ordinario (C):
   ant_magnificat: «Con vuestra perseverancia salvaréis vuestras vidas», dice el Señor.
+# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+17 de diciembre:
+  lectura:
+    ref: 1 Ts 5, 23-24
+    texto: Que el mismo Dios de la paz os consagre totalmente y que todo vuestro ser —espíritu, alma y cuerpo— sea custodiado sin reproche hasta la Parusía de nuestro Señor Jesucristo. Fiel es a sus promesas el que os ha convocado; y él las cumplirá.
+  responsorio:
+  - - V
+    - Muéstranos, Señor, tu misericordia.
+  - - R
+    - Muéstranos, Señor, tu misericordia.
+  - - V
+    - Y danos tu salvación.
+  - - R
+    - Muéstranos, Señor, tu misericordia.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Muéstranos, Señor, tu misericordia.
+  ant_magnificat: Oh Sabiduría, que brotaste de los labios del Altísimo, abarcando del uno al otro confín y ordenándolo todo con firmeza y suavidad, ven y muéstranos el camino de la salvación.
+  preces:
+    intro: 'Invoquemos a Cristo, alegría y júbilo de cuantos esperan su llegada, y digámosle:'
+    respuesta: Ven, Señor, y no tardes más.
+    preces:
+    - - Esperamos alegres tu venida,
+      - ven, Señor Jesús.
+    - - Tú que existes antes de los tiempos,
+      - ven y salva a los que viven en el tiempo.
+    - - Tú que creaste el mundo y a todos los que en él habitan,
+      - ven a restaurar la obra de tus manos.
+    - - Tú que no despreciaste nuestra naturaleza mortal,
+      - ven y arráncanos del dominio de la muerte.
+    - - Tú que viniste para que tuviéramos vida abundante,
+      - ven y danos tu vida eterna.
+    - - Tú que quieres congregar a todos los hombres en tu reino,
+      - ven y reúne a cuantos desean contemplar tu rostro.
+  padrenuestro_intro: 'Pidamos ahora con gran confianza la venida del reino de Dios, con las palabras que Cristo nos enseñó:'
+  oracion: Dios, creador y restaurador del hombre, que has querido que tu Hijo, Palabra eterna, se encarnara en el seno de María, siempre Virgen; escucha nuestras súplicas, y que Cristo, tu Unigénito, hecho hombre por nosotros, se digne hacernos partícipes de su condición divina. Por nuestro Señor Jesucristo.
+18 de diciembre:
+  lectura:
+    ref: Flp 4, 4-5
+    texto: 'Estad siempre alegres en el Señor. Otra vez os lo digo: Estad alegres. Que vuestra bondad sea conocida de todos. El Señor está cerca.'
+  responsorio:
+  - - V
+    - Muéstranos, Señor, tu misericordia.
+  - - R
+    - Muéstranos, Señor, tu misericordia.
+  - - V
+    - Y danos tu salvación.
+  - - R
+    - Muéstranos, Señor, tu misericordia.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Muéstranos, Señor, tu misericordia.
+  ant_magnificat: Oh Adonai, Pastor de la casa de Israel, que te apareciste a Moisés en la zarza ardiente y en el Sinaí le diste tu ley, ven a librarnos con el poder de tu brazo.
+  preces:
+    intro: 'Hermanos, oremos a Cristo, el Señor que viene a salvar a todos los hombres, y digámosle confiadamente:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Señor Jesucristo, que por el misterio de la encarnación manifestaste al mundo la gloria de tu divinidad,
+      - vivifica al mundo con tu venida.
+    - - Tú que participaste de nuestra debilidad,
+      - concédenos tu misericordia.
+    - - Tú que en tu primera venida viniste humildemente para salvar al mundo de sus pecados,
+      - absuélvenos de todas las culpas, cuando vuelvas de nuevo con gloria y majestad.
+    - - Tú que lo gobiernas todo con tu poder,
+      - ayúdanos, por tu bondad, a alcanzar la herencia eterna.
+    - - Tú que estás sentado a la derecha del Padre,
+      - alegra con la visión de tu rostro a nuestros hermanos difuntos.
+  padrenuestro_intro: 'Con el deseo de que la luz de Cristo ilumine a todos los hombres, digamos al Padre:'
+  oracion: Concede, Señor, a los que vivimos oprimidos por la antigua esclavitud del pecado ser liberados por el nuevo y esperado nacimiento de tu Hijo. Por nuestro Señor Jesucristo.
+19 de diciembre:
+  lectura:
+    ref: Flp 3, 20b-21
+    texto: Esperamos que venga como salvador Cristo Jesús, el Señor. Él transfigurará nuestro cuerpo de humilde condición en un cuerpo glorioso, semejante al suyo, en virtud del poder que tiene para someter a su imperio todas las cosas.
+  responsorio:
+  - - V
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - V
+    - Que brille tu rostro y nos salve.
+  - - R
+    - Señor Dios de los ejércitos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  ant_magnificat: Oh renuevo del tronco de Jesé, que te alzas como un signo para los pueblos, ante quien los reyes enmudecen y cuyo auxilio imploran las naciones, ven a librarnos, no tardes más.
+  preces:
+    intro: 'Supliquemos, hermanos, a Cristo, juez de vivos y muertos, y digámosle confiados:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Haz, Señor, que tu justicia, que pregonan los cielos, la reconozca también el mundo,
+      - para que tu gloria habite en nuestra tierra.
+    - - Tú que por nosotros quisiste ser débil en tu humanidad,
+      - fortalece a los hombres con la fuerza de tu divinidad.
+    - - Ven, Señor, y con la luz de tu palabra,
+      - ilumina a los que viven sumergidos en las tinieblas de la ignorancia.
+    - - Tú que con tu humillación borraste nuestros pecados,
+      - por tu glorificación llévanos a la felicidad eterna.
+    - - Tú que vendrás a juzgar al mundo con gloria y majestad,
+      - lleva a nuestros hermanos difuntos al reino de los cielos.
+  padrenuestro_intro: 'Movidos por la fe, invoquemos a Dios Padre con la oración que Cristo nos enseñó:'
+  oracion: Señor y Dios nuestro, que en el parto de la Virgen María has querido revelar al mundo entero el esplendor de tu gloria, asístenos con tu gracia para que proclamemos con fe íntegra y celebremos con piedad sincera el misterio admirable de la Encarnación de tu Hijo. Él que vive y reina contigo.
+20 de diciembre:
+  lectura:
+    ref: Cf. 1Co 1, 7b-9
+    texto: Esperamos vivamente la revelación de Jesucristo, Señor nuestro. Él nos fortalecerá hasta el fin, de modo que nos encontremos libres de culpa en el día de Jesucristo, nuestro Señor. Fiel es Dios, por quien hemos sido convocados a la unión con su Hijo.
+  responsorio:
+  - - V
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - V
+    - Que brille tu rostro y nos salve.
+  - - R
+    - Señor Dios de los ejércitos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  ant_magnificat: Oh llave de David y cetro de la casa de Israel, que abres y nadie puede cerrar, cierras y nadie puede abrir, ven y libra a los cautivos que viven en tinieblas y en sombras de muerte.
+  preces:
+    intro: 'Oremos, hermanos, a Cristo, nuestro Señor y redentor, que vendrá con gloria al fin de los tiempos, y digámosle:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Señor y redentor nuestro, que al nacer en la carne nos libraste del yugo de la ley,
+      - completa en nosotros los beneficios de tu amor.
+    - - Tú que tomaste de nuestra humanidad todo lo que no repugnaba a tu divinidad,
+      - danos de tu naturaleza los dones de los que la nuestra está sedienta.
+    - - Con tu presencia da cumplimiento a nuestros deseos,
+      - y con la fuerza de tu amor inflama nuestros corazones.
+    - - Danos la gracia de alegrarnos contigo en la gloria,
+      - pues ya en este mundo nuestra fe sincera te confiesa.
+    - - Derrama, Señor, el rocío de tu amor,
+      - sobre las almas de todos los difuntos.
+  padrenuestro_intro: 'Llenos del Espíritu de Jesucristo, nos atrevemos a decir:'
+  oracion: Señor y Dios nuestro, a cuyo designio se sometió la Virgen Inmaculada, aceptando, al anunciárselo el ángel, encarnar en su seno a tu Hijo; tú que la has transformado, por obra del Espíritu Santo, en templo de tu divinidad, concédenos, siguiendo su ejemplo, la gracia de aceptar tus designios con humildad de corazón. Por nuestro Señor Jesucristo.
+21 de diciembre:
+  lectura:
+    ref: 1 Co 4, 5
+    texto: No juzguéis antes de tiempo; dejad que venga el Señor. Él sacará a la luz lo que está oculto en las tinieblas y pondrá al descubierto las intenciones del corazón. Entonces vendrá a cada uno su alabanza de parte de Dios.
+  responsorio:
+  - - V
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - V
+    - Que brille tu rostro y nos salve.
+  - - R
+    - Señor Dios de los ejércitos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  ant_magnificat: Oh sol que naces de lo alto, resplandor de la luz eterna, sol de justicia, ven a iluminar a los que viven en tinieblas y en sombras de muerte.
+  preces:
+    intro: 'Roguemos, amados hermanos, a Jesucristo, que nos salvó de las tinieblas de nuestros pecados, y con humildad invoquémoslo, diciendo:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Congrega, Señor, a todos los pueblos de la tierra,
+      - y establece con todos tu alianza eterna.
+    - - Cordero de Dios, que viniste para quitar el pecado del mundo,
+      - purifícanos de nuestras faltas y pecados.
+    - - Tú que viniste a salvar lo que se había perdido,
+      - ven de nuevo para que no perezcan los que salvaste.
+    - - Cuando vengas, danos parte en tu gozo eterno,
+      - pues ya desde ahora hemos puesto nuestra fe en ti.
+    - - Tú que has de venir a juzgar a los vivos y a los muertos,
+      - recibe, entre tus elegidos, a nuestros hermanos difuntos.
+  padrenuestro_intro: 'Digamos juntos con fe las palabras que Cristo nos enseñó:'
+  oracion: Escucha, Señor, la oración de tu pueblo, alegre por la venida de tu Hijo en carne mortal, y haz que cuando vuelva en su gloria, al final de los tiempos, podamos alegrarnos al escuchar de sus labios la invitación a poseer el reino eterno. Por nuestro Señor Jesucristo.
+22 de diciembre:
+  lectura:
+    ref: St 5, 7-8. 9b
+    texto: Aguardad con paciencia, hermanos, hasta la manifestación del Señor. Ved cómo el labrador espera el precioso fruto de la tierra. Lo va aguardando pacientemente, hasta que la tierra reciba las lluvias tempranas y las tardías. Aguardad también vosotros con toda paciencia, fortaleced vuestros corazones, porque la manifestación del Señor está ya cerca. Mirad que el juez está a las puertas.
+  responsorio:
+  - - V
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - V
+    - Que brille tu rostro y nos salve.
+  - - R
+    - Señor Dios de los ejércitos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  ant_magnificat: Oh Rey de las naciones y deseado de los pueblos, piedra angular de la Iglesia que haces de dos pueblos uno solo, ven y salva al hombre que formaste del barro de la tierra.
+  preces:
+    intro: 'Oremos, hermanos, a Cristo el Señor, que por nosotros se anonadó a sí mismo, y digámosle confiados:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Señor Jesús, que con tu encarnación has salvado al mundo,
+      - purifica nuestras almas y nuestros cuerpos de todo pecado.
+    - - No permitas que aquellos a quienes llamas hermanos por tu encarnación,
+      - se alejen de ti por el pecado.
+    - - No permitas que aquellos a quienes has salvado con tu venida,
+      - merezcan ser castigados en el día de tu juicio.
+    - - Cristo Jesús, que nunca alejas de nosotros tu bondad y tu amor,
+      - haz que alcancemos la corona inmarcesible de gloria.
+    - - Te encomendamos, Señor, a nuestros hermanos que han sido separados temporalmente de su cuerpo,
+      - haz que, muertos para el mundo, vivan eternamente para ti.
+  padrenuestro_intro: 'Movidos por la fe, invoquemos a Dios Padre con la oración que Cristo nos enseñó:'
+  oracion: Señor Dios, que con la venida de tu Hijo has querido redimir al hombre sentenciado a muerte, compadecido del hombre caído y, quisiste redimirlo, concede a los que van a adorarlo, hecho niño en Belén, participar de los bienes de su redención. Por nuestro Señor Jesucristo.
+23 de diciembre:
+  lectura:
+    ref: 2 Pe 3, 8b-9
+    texto: Para el Señor un día es como mil años, y mil años como un día. No es tardo el Señor en el cumplimiento de sus promesas, como algunos piensan. Lo que hace es aguardaros pacientemente, porque no quiere que nadie perezca, sino que todos vengáis a arrepentiros.
+  responsorio:
+  - - V
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  - - V
+    - Que brille tu rostro y nos salve.
+  - - R
+    - Señor Dios de los ejércitos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Ven a salvarnos, Señor Dios de los ejércitos.
+  ant_magnificat: Oh Emmanuel, rey y legislador nuestro, esperanza de las naciones y salvador de los pueblos, ven a salvarnos, Señor, Dios nuestro.
+  preces:
+    intro: 'Roguemos a nuestro Redentor, que viene a dar la Buena Noticia a los pobres, y digámosle:'
+    respuesta: Manifiesta, Señor, tu gloria a los hombres.
+    preces:
+    - - Manifiéstate, Señor, a todos los que no te conocen,
+      - para que también ellos vean tu salvación.
+    - - Que tu nombre, Señor, se anuncie hasta los confines de la tierra,
+      - y que todos los hombres descubran el camino que conduce a ti.
+    - - Tú que viniste la vez primera para salvar al mundo,
+      - ven de nuevo para salvar a los que en ti creen.
+    - - Aquella libertad que tu venida dio a los redimidos,
+      - consérvala y defiéndela siempre con tu poder.
+    - - Tú que ya viniste en la carne y vendrás de nuevo a juzgar al mundo,
+      - da en tu venida el premio eterno a los difuntos.
+  padrenuestro_intro: 'Llenos del Espíritu de Jesucristo, nos atrevemos a decir:'
+  oracion: Dios todopoderoso y eterno, al acercarnos a las fiestas de Navidad, te pedimos que tu Hijo, que se encarnó en las entrañas de la Virgen María y quiso vivir entre nosotros, nos haga partícipes de la abundancia de su misericordia. Por nuestro Señor Jesucristo.
+Jueves antes del 24 de diciembre:
+  antifonas:
+  - A ti, Señor, levanto mi alma; ven y líbrame, Señor, que en ti confío.
+  - Da su paga, Señor, a los que esperan en ti, para que tus profetas sean hallados veraces.
+  - Vuélvete, Señor, a nosotros y no tardes más en venir.
+Lunes antes del 24 de diciembre:
+  antifonas:
+  - Mirad, vendrá el Señor, príncipe de los reyes de la tierra; ¡dichosos los que están preparados para salir a su encuentro!
+  - Cantad al Señor un cántico nuevo, llegue su alabanza hasta el confín de la tierra.
+  - Cuando venga el Hijo del hombre, ¿encontrará fe en la tierra?
+Martes antes del 24 de diciembre:
+  antifonas:
+  - Saldrá el Señor de su santuario, y vendrá a salvar a su pueblo.
+  - 'Tenemos en Sión una ciudad fuerte: el Salvador ha puesto en ella murallas y baluartes; abrid las puertas, que con nosotros está Dios. Aleluia.'
+  - Conozca la tierra, Señor, tus caminos, todos los pueblos tu salvación.
+Miércoles antes del 24 de diciembre:
+  antifonas:
+  - Desde Sión vendrá el Señor todopoderoso a salvar a su pueblo.
+  - Por amor de Sión no callaré, hasta que amanezca, como una aurora.
+  - El Espíritu del Señor está sobre mí; me ha enviado para dar la Buena Noticia a los pobres.
+Viernes antes del 24 de diciembre:
+  antifonas:
+  - 'De Sión vendrá el Señor que ha de reinar: su nombre será Emmanuel.'
+  - Perseverad constantes, a vosotros vendrá el auxilio del Señor.
+  - Yo miro atento al Señor, espero en Dios, mi salvador.

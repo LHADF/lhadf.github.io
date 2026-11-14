@@ -2267,3 +2267,84 @@ XXXIII Domingo del Tiempo Ordinario (B):
   oracion: Señor, Dios nuestro, concédenos alegrarnos siempre en tu servicio, porque la profunda y verdadera alegría está en ser fiel a ti, autor de todo bien. Por Cristo nuestro Señor.
 XXXIII Domingo del Tiempo Ordinario (C):
   oracion: Señor, Dios nuestro, concédenos alegrarnos siempre en tu servicio, porque la profunda y verdadera alegría está en ser fiel a ti, autor de todo bien. Por Cristo nuestro Señor.
+# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+17 de diciembre:
+  lectura:
+    ref: Is 61, 11
+    texto: Como el suelo echa sus brotes, como un jardín hace brotar sus semillas, así el Señor hará brotar la justicia y los himnos, ante todos los pueblos.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Dios, creador y restaurador del hombre, que has querido que tu Hijo, Palabra eterna, se encarnara en el seno de María, siempre Virgen; escucha nuestras súplicas, y que Cristo, tu Unigénito, hecho hombre por nosotros, se digne hacernos partícipes de su condición divina. Por nuestro Señor Jesucristo.
+18 de diciembre:
+  lectura:
+    ref: Cf. 2 Ts 1, 6. 7. 10
+    texto: Es justo a los ojos de Dios que a vosotros, los atribulados, os pague con descanso eterno, descanso que será en nuestra compañía. Esto sucederá el día de la revelación de Jesús, el Señor, cuando venga del cielo con los ángeles ejecutores de su poder, cuando venga aquel día para ser glorificado en sus santos y para ser la admiración de los que han tenido fe.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Concede, Señor, a los que vivimos oprimidos por la antigua esclavitud del pecado ser liberados por el nuevo y esperado nacimiento de tu Hijo. Por nuestro Señor Jesucristo.
+19 de diciembre:
+  lectura:
+    ref: Cf. Is 13, 22; cf. 14, 1
+    texto: Ya está a punto de llegar su hora, sus días no tardarán. El Señor se apiadará de Jacob y volverá a escoger a Israel.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Señor y Dios nuestro, que en el parto de la Virgen María has querido revelar al mundo entero el esplendor de tu gloria, asístenos con tu gracia para que proclamemos con fe íntegra y celebremos con piedad sincera el misterio admirable de la Encarnación de tu Hijo. Él que vive y reina contigo.
+20 de diciembre:
+  lectura:
+    ref: Ez 34, 15-16
+    texto: Yo mismo apacentaré a mis ovejas y las llevaré a reposar —oráculo del Señor—. Buscaré las ovejas perdidas, recogeré las descarriadas; vendaré a las heridas, curaré a las enfermas; cuidaré de las fuertes y robustas, y las apacentaré como es debido.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Señor y Dios nuestro, a cuyo designio se sometió la Virgen Inmaculada, aceptando, al anunciárselo el ángel, encarnar en su seno a tu Hijo; tú que la has transformado, por obra del Espíritu Santo, en templo de tu divinidad, concédenos, siguiendo su ejemplo, la gracia de aceptar tus designios con humildad de corazón. Por nuestro Señor Jesucristo.
+21 de diciembre:
+  lectura:
+    ref: Dn 9, 19
+    texto: ¡Señor, escucha! ¡Señor, perdona! ¡Señor, atiende y obra! ¡No tardes más, por ti mismo, oh Dios mío, pues tu nombre se invoca sobre tu pueblo!
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Escucha, Señor, la oración de tu pueblo, alegre por la venida de tu Hijo en carne mortal, y haz que cuando vuelva en su gloria, al final de los tiempos, podamos alegrarnos al escuchar de sus labios la invitación a poseer el reino eterno. Por nuestro Señor Jesucristo.
+22 de diciembre:
+  lectura:
+    ref: Ml 4,2
+    texto: A los que honran mi nombre los iluminará un sol de justicia que lleva la salud en los rayos; vosotros saldréis brincando como terneros del establo —dice el Señor de los ejércitos—.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Señor Dios, que con la venida de tu Hijo has querido redimir al hombre sentenciado a muerte, compadecido del hombre caído y, quisiste redimirlo, concede a los que van a adorarlo, hecho niño en Belén, participar de los bienes de su redención. Por nuestro Señor Jesucristo.
+23 de diciembre:
+  lectura:
+    ref: Ba 3, 5-6a
+    texto: No te acuerdes de las iniquidades de nuestros padres, sino acuérdate de tu mano y de tu nombre en esta hora, pues eres el Señor, Dios nuestro.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Dios todopoderoso y eterno, al acercarnos a las fiestas de Navidad, te pedimos que tu Hijo, que se encarnó en las entrañas de la Virgen María y quiso vivir entre nosotros, nos haga partícipes de la abundancia de su misericordia. Por nuestro Señor Jesucristo.
+24 de diciembre:
+  lectura:
+    ref: Is 61, 11
+    texto: Como el suelo echa sus brotes, como un jardín hace brotar sus semillas, así el Señor hará brotar la justicia y los himnos, ante todos los pueblos.
+  versiculo:
+  - - V
+    - Ven, Señor, y no tardes.
+  - - R
+    - Perdona los pecados de tu pueblo.
+  oracion: Apresúrate, Señor Jesús, y no tardes, para que tu venida consuele y fortalezca a los que esperan todo de tu amor. Tú que vives y reinas.

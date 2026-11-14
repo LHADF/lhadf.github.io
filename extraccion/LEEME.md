@@ -14,6 +14,7 @@ Extracción del PDF de los cuatro tomos (`LH_completa.pdf`, que no está en el r
 
       python3 extraccion/clasificar.py
 - `a_base_comunes.py`: pasa los Oficios comunes de la extracción a `base/comunes/` (y los himnos que faltaban a `base/himnos/`). Ya se corrió (11/2026): desde entonces los comunes se corrigen en la base. - `a_base_santoral.py`: pasa el Propio de los santos de la extracción a `base/santoral/libro.yaml`, solo para las celebraciones del calendario sin propio de sync (las de `santoral/adf.yaml`). `calendario_adf.mjs` lista las celebraciones del calendario (después de `tools/armar.py`) y `emparejar_santoral.py` las cruza con el libro.
+- `a_base_adviento.py`: agrega a `base/tiempo/` las ferias del 17 al 24 de diciembre (lo propio de cada día, las antífonas «Oh» y las antífonas de Laudes y Vísperas por día de la semana), que la base de sync juntaba en una sola «Feria privilegiada de Adviento».
 - `planilla_santos.py`: la planilla de revisión del santoral (`informes/santoral-revision.csv`: cada celebración, qué tiene en la base, su común y lo que indica el libro; `informes/santoral-sin-propio.csv`: las que no tienen propio en ninguna de nuestras fuentes). Con una ruta `.xlsx`, además la planilla con formato para subir a Google Drive.
 - `apendices/`: paso 8, los ocho apéndices de los cuatro tomos (tomo I 1037–1128, II 2667–2813, III 4309–4469, IV 6178–6263; no entran los créditos del tomo IV ni la hoja de colofón de los tomos II y III): `apendices.json`, `salmos.json`, `himnos.json`, `dudas.csv`, `diferencias.csv` y `controles.txt`.
 

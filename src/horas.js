@@ -17,6 +17,7 @@ function capas(L, fecha, sel, campos){
   capa((L.salterio['semana_'+(ref.sal||1)]||L.salterio.semana_1)[dia]);
   const cic=window.Laudes.ciclo(fecha), T1=L.tiempo[ref.fer], T2=L.tiempo[`${ref.fer} (${cic})`];
   capa(T1); capa(T2);
+  capa(L.tiempo[X.fechaClave(fecha)]);   // días con fecha propia en el tiempo (del 17 al 24 de diciembre)
   const adf=(L.adf||{})[ref.n]||{}, k=L.mapa[ref.n]||adf.como;
   const santo=k?L.santoral[k]:null; capa(santo);
   // Sin propio en la base: el común que corresponde (base/santoral/adf.yaml), del libro
@@ -71,7 +72,7 @@ function conclusion(S, L){
 }
 function datosDia(ref, fecha, nota){
   const d=CP.deIso(fecha);
-  return {dia:{titulo:ref.n, tiempo:X.TIEMPO_TXT[ref.t]||ref.t, salterio:ref.sal?`Semana ${X.ROMANO(ref.sal)} del salterio`:'', color:ref.c, grado:ref.g, nota},
+  return {dia:{titulo:ref.n+(/^Feria privilegiada/.test(ref.n)?` · ${X.fechaClave(fecha)}`:''), tiempo:X.TIEMPO_TXT[ref.t]||ref.t, salterio:ref.sal?`Semana ${X.ROMANO(ref.sal)} del salterio`:'', color:ref.c, grado:ref.g, nota},
           fechaTxt:`${X.DIAS_TXT[d.getDay()]} ${d.getDate()} de ${X.MESES[d.getMonth()]}`,
           versiones:{es:{n:'Liturgia de las Horas'}},
           gloria:{es:['Gloria al Padre, y al Hijo, * y al Espíritu Santo.','Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.']}};

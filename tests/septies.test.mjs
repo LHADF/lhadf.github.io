@@ -411,6 +411,16 @@ test('comunes: las «O bien» se alternan entre celebraciones del mismo común, 
   assert.match(JSON.stringify(fidel.secciones.find(s => s.k === 'resp').l.es), /[Aa]leluia/);
 });
 
+test('ferias del 17 al 24 de diciembre: lo propio de cada día y las antífonas «Oh»', () => {
+  const W = ctx.window, l17 = LA.armar('2026-12-17', ''), l18 = LA.armar('2026-12-18', '');
+  assert.notEqual(l17.secciones.find(s => s.id === 'ab').t.es, l18.secciones.find(s => s.id === 'ab').t.es);
+  assert.match(VI.armar('2026-12-17', '').secciones.find(s => s.id === 'ab').t.es, /^Oh Sabiduría/);
+  assert.match(VI.armar('2026-12-19', '').secciones.find(s => s.id === 'ab').t.es, /^Oh renuevo/);   // sábado: I Vísperas del domingo
+  assert.match(LA.armar('2026-12-24', '').secciones.find(s => s.id === 'a1').t.es, /Belén/);
+  assert.notEqual(W.Oficio.armar('2026-12-17', '').secciones.filter(s => s.k === 'prosa').pop().t.es,
+                  W.Oficio.armar('2026-12-18', '').secciones.filter(s => s.k === 'prosa').pop().t.es);
+});
+
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
   const W = ctx.window;
   const blas = LA.armar('2027-02-03', '');

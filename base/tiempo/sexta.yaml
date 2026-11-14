@@ -2250,3 +2250,84 @@ XXXIII Domingo del Tiempo Ordinario (B):
 XXXIII Domingo del Tiempo Ordinario (C):
   himno: Cuando la luz del día está en su cumbre
   oracion: Señor, Dios nuestro, concédenos alegrarnos siempre en tu servicio, porque la profunda y verdadera alegría está en ser fiel a ti, autor de todo bien. Por Cristo nuestro Señor.
+# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+17 de diciembre:
+  lectura:
+    ref: Is 4, 3
+    texto: 'A los que queden en Sión, a los restantes en Jerusalén, los llamarán santos: serán inscritos para vivir en Jerusalén.'
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Dios, creador y restaurador del hombre, que has querido que tu Hijo, Palabra eterna, se encarnara en el seno de María, siempre Virgen; escucha nuestras súplicas, y que Cristo, tu Unigénito, hecho hombre por nosotros, se digne hacernos partícipes de su condición divina. Por nuestro Señor Jesucristo.
+18 de diciembre:
+  lectura:
+    ref: 1 Ts 3, 12-13
+    texto: Que el Señor os haga aumentar y rebosar en amor de unos con otros y con todos, así como os amamos nosotros, para que conservéis vuestros corazones intachables en santidad ante Dios, Padre nuestro, cuando venga nuestro Señor Jesucristo con todos sus santos.
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Concede, Señor, a los que vivimos oprimidos por la antigua esclavitud del pecado ser liberados por el nuevo y esperado nacimiento de tu Hijo. Por nuestro Señor Jesucristo.
+19 de diciembre:
+  lectura:
+    ref: Cf. Is 10. 24. 27
+    texto: 'Esto dice el Señor de los ejércitos: «Pueblo mío, que habitas en Sión, no temas.» Aquel día, la carga resbalará de tu hombro, arrancarán el yugo de tu cuello.'
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Señor y Dios nuestro, que en el parto de la Virgen María has querido revelar al mundo entero el esplendor de tu gloria, asístenos con tu gracia para que proclamemos con fe íntegra y celebremos con piedad sincera el misterio admirable de la Encarnación de tu Hijo. Él que vive y reina contigo.
+20 de diciembre:
+  lectura:
+    ref: Jr 23, 6
+    texto: 'En sus días se salvará Judá, Israel habitará seguro. Y lo llamarán con este nombre: «El— Señor—nuestra—justicia».'
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Señor y Dios nuestro, a cuyo designio se sometió la Virgen Inmaculada, aceptando, al anunciárselo el ángel, encarnar en su seno a tu Hijo; tú que la has transformado, por obra del Espíritu Santo, en templo de tu divinidad, concédenos, siguiendo su ejemplo, la gracia de aceptar tus designios con humildad de corazón. Por nuestro Señor Jesucristo.
+21 de diciembre:
+  lectura:
+    ref: Is 12, 2
+    texto: 'Él es mi Dios y salvador: confiaré y no temeré, porque mi fuerza y mi poder es el Señor, él fue mi salvación.'
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Escucha, Señor, la oración de tu pueblo, alegre por la venida de tu Hijo en carne mortal, y haz que cuando vuelva en su gloria, al final de los tiempos, podamos alegrarnos al escuchar de sus labios la invitación a poseer el reino eterno. Por nuestro Señor Jesucristo.
+22 de diciembre:
+  lectura:
+    ref: Ag 2, 7. 10
+    texto: Todavía un poco más, y agitaré cielo y tierra, mar y continentes. La gloria de este segundo templo será mayor que la del primero y en este sitio daré la paz —oráculo del Señor de los ejércitos—.
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Señor Dios, que con la venida de tu Hijo has querido redimir al hombre sentenciado a muerte, compadecido del hombre caído y, quisiste redimirlo, concede a los que van a adorarlo, hecho niño en Belén, participar de los bienes de su redención. Por nuestro Señor Jesucristo.
+23 de diciembre:
+  lectura:
+    ref: Jr 30, 18
+    texto: 'Esto dice el Señor: «Yo cambiaré la suerte de las tiendas de Jacob, me compadeceré de sus moradas.»'
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo.
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Dios todopoderoso y eterno, al acercarnos a las fiestas de Navidad, te pedimos que tu Hijo, que se encarnó en las entrañas de la Virgen María y quiso vivir entre nosotros, nos haga partícipes de la abundancia de su misericordia. Por nuestro Señor Jesucristo.
+24 de diciembre:
+  lectura:
+    ref: Is 4, 3
+    texto: 'A los que queden en Sión, a los restantes en Jerusalén, los llamarán santos: serán inscritos para vivir en Jerusalén.'
+  versiculo:
+  - - V
+    - Acuérdate de nosotros, Señor, por amor a tu pueblo
+  - - R
+    - Visítanos con tu salvación.
+  oracion: Apresúrate, Señor Jesús, y no tardes, para que tu venida consuele y fortalezca a los que esperan todo de tu amor. Tú que vives y reinas.

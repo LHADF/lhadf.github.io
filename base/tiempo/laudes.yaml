@@ -5512,3 +5512,295 @@ XXXIII Domingo del Tiempo Ordinario (B):
   ant_benedictus: Los justos brillarán como el fulgor del firmamento por toda la eternidad.
 XXXIII Domingo del Tiempo Ordinario (C):
   ant_benedictus: 'Por mi causa os perseguirán; eso os dará ocasión de profesar vuestra fe: yo os daré palabras y sabiduría a las que no podrá hacer frente ningún adversario vuestro.'
+# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+17 de diciembre:
+  lectura:
+    ref: Is 11, 1-3a
+    texto: 'Saldrá un renuevo del tronco de Jesé, y de su raíz brotará un vástago. Sobre él se posará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza, espíritu de ciencia y de temor del Señor.'
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: Entended que el reino de Dios está ya cerca; os aseguro que no tardará.
+  preces:
+    intro: 'Oremos a Dios Padre, que trazó desde antiguo un plan de salvación para su pueblo, y digámosle:'
+    respuesta: Guarda a tu pueblo, Señor.
+    preces:
+    - - Oh Dios, que prometiste a tu pueblo un vástago que haría justicia,
+      - vela por la santidad de tu Iglesia.
+    - - Inclina, oh Dios, el corazón de los hombres a tu palabra,
+      - y afianza la santidad de tus fieles.
+    - - Por tu Espíritu consérvanos en el amor,
+      - para que podamos recibir la misericordia de tu Hijo que se acerca.
+    - - Haz que nos mantengamos firmes, Dios de clemencia,
+      - hasta el día de la manifestación de nuestro Señor Jesucristo.
+  padrenuestro_intro: 'Pidamos ahora con gran confianza la venida del reino de Dios, con las palabras que Cristo nos enseñó:'
+  oracion: Dios, creador y restaurador del hombre, que has querido que tu Hijo, Palabra eterna, se encarnara en el seno de María, siempre Virgen; escucha nuestras súplicas, y que Cristo, tu Unigénito, hecho hombre por nosotros, se digne hacernos partícipes de su condición divina. Por nuestro Señor Jesucristo.
+18 de diciembre:
+  lectura:
+    ref: Rm 13, 11b-12
+    texto: Ya es hora que despertéis del sueño, pues la salud está ahora más cerca que cuando abrazamos la fe. La noche va pasando, el día está encima; desnudémonos, pues, de las obras de las tinieblas y vistámonos de las armas de la luz.
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: 'No dejéis de velar: pronto llegará el Señor, nuestro Dios.'
+  preces:
+    intro: 'Roguemos, hermanos, al Señor Jesús, juez de vivos y muertos, y digámosle:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Señor Jesucristo, tú que viniste a salvar a los pecadores,
+      - líbranos de caer en la tentación.
+    - - Tú que vendrás con gloria para juzgar a tu pueblo,
+      - muestra en nosotros tu poder salvador.
+    - - Ayúdanos a cumplir con fortaleza de espíritu los preceptos de tu ley,
+      - para que podamos esperar tu venida sin temor.
+    - - Tú que eres bendito por los siglos,
+      - concédenos, por tu misericordia, que llevando ya desde ahora una vida sobria y religiosa esperemos con gozo tu gloriosa aparición.
+  padrenuestro_intro: 'Porque Jesucristo mismo nos lo enseñó, nos atrevemos a decir:'
+  oracion: Concede, Señor, a los que vivimos oprimidos por la antigua esclavitud del pecado ser liberados por el nuevo y esperado nacimiento de tu Hijo. Por nuestro Señor Jesucristo.
+19 de diciembre:
+  lectura:
+    ref: Is 2, 3
+    texto: 'Venid, subamos al monte del Señor, a la casa del Dios de Jacob: él nos instruirá en sus caminos, y marcharemos por sus sendas; porque de Sión saldrá la ley, de Jerusalén la palabra del Señor.'
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: El Salvador del mundo aparecerá como el sol naciente y descenderá al seno de la Virgen como la lluvia desciende sobre el césped. Aleluia.
+  preces:
+    intro: 'Hermanos, oremos a Cristo, el redentor, que viene a librar del poder de la muerte a los que se convierten a él, y digámosle:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Que al anunciar tu venida, Señor,
+      - nuestro corazón se sienta libre de toda vanidad.
+    - - Que la Iglesia que tú fundaste, Señor,
+      - glorifique tu nombre por todo el mundo.
+    - - Que tu ley, Señor, sea luz para nuestros ojos,
+      - y sirva de protección a los pueblos que confiesan tu nombre.
+    - - Tú que por la Iglesia nos anuncias el gozo de tu venida,
+      - concédenos también el deseo de recibirte.
+  padrenuestro_intro: 'Con el gozo que nos da el saber que Cristo viene para hacernos hijos de Dios, digamos al Padre:'
+  oracion: Señor y Dios nuestro, que en el parto de la Virgen María has querido revelar al mundo entero el esplendor de tu gloria, asístenos con tu gracia para que proclamemos con fe íntegra y celebremos con piedad sincera el misterio admirable de la Encarnación de tu Hijo. Él que vive y reina contigo.
+20 de diciembre:
+  lectura:
+    ref: Gn 49, 10
+    texto: No se apartará de Judá el cetro, ni el bastón de mando de entre sus rodillas, hasta que venga el que ha de venir, aquel a quien le está reservado, a quien rendirán homenaje las naciones.
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: El ángel Gabriel fue enviado a María Virgen, desposada con José.
+  preces:
+    intro: 'Oremos, hermanos, a Cristo el Señor, luz que alumbra a todo hombre, y digámosle con gozo:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Que la luz de tu presencia disipe, Señor, nuestras tinieblas,
+      - y nos haga dignos de recibir tus dones.
+    - - Sálvanos, Señor Dios nuestro,
+      - y durante todo el día daremos gracias a tu santo nombre.
+    - - Enciende nuestros corazones en tu amor, para que deseemos ardientemente tu venida,
+      - y anhelemos vivir íntimamente unidos a ti.
+    - - Tú que quisiste experimentar nuestras dolencias,
+      - socorre a los enfermos y a los que morirán en el día de hoy.
+  padrenuestro_intro: 'Recitemos las palabras de Jesús, pidiendo al Padre que venga su reino:'
+  oracion: Señor y Dios nuestro, a cuyo designio se sometió la Virgen Inmaculada, aceptando, al anunciárselo el ángel, encarnar en su seno a tu Hijo; tú que la has transformado, por obra del Espíritu Santo, en templo de tu divinidad, concédenos, siguiendo su ejemplo, la gracia de aceptar tus designios con humildad de corazón. Por nuestro Señor Jesucristo.
+21 de diciembre:
+  lectura:
+    ref: Is 7, 14b-15
+    texto: 'Mirad: la Virgen ha concebido y dará a luz un hijo, y le pondrá por nombre Emmanuel: «Dios—con—nosotros». Éste comerá requesón y miel, hasta que aprenda a rechazar el mal y a escoger el bien.'
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: No temáis, dentro de cinco días vendrá a vosotros el Señor, nuestro Dios.
+  preces:
+    intro: 'Oremos, hermanos, a nuestro Señor Jesucristo, que en su misericordia nos visita, y digámosle con insistencia:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Tú que viniste del seno del Padre para revestirte de nuestra carne mortal,
+      - libra de toda corrupción a nuestra naturaleza caída.
+    - - Tú que cuando vengas al final de los tiempos aparecerás glorioso ante tus elegidos,
+      - al venir ahora muéstrate clemente y compasivo con los pecadores.
+    - - Nuestra gloria, oh Cristo, es alabarte,
+      - visítanos, pues, con tu salvación.
+    - - Tú que por la fe nos has llevado a la luz,
+      - haz que te agrademos también con nuestras obras.
+  padrenuestro_intro: Pidamos que el reino de Dios llegue a todos los hombres.
+  oracion: Escucha, Señor, la oración de tu pueblo, alegre por la venida de tu Hijo en carne mortal, y haz que cuando vuelva en su gloria, al final de los tiempos, podamos alegrarnos al escuchar de sus labios la invitación a poseer el reino eterno. Por nuestro Señor Jesucristo.
+22 de diciembre:
+  lectura:
+    ref: Is 45, 8
+    texto: Cielos, destilad el rocío; nubes, derramad al Justo; ábrase la tierra y brote la salvación, y con ella germine la justicia.
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: Tan pronto como tus palabras de saludo han resonado en mis oídos, la criatura ha dado saltos de contento en mi seno. Aleluia.
+  preces:
+    intro: 'Imploremos, hermanos, a Dios Padre, que ha enviado a su Hijo para salvar al mundo, y digámosle suplicantes:'
+    respuesta: Muéstranos, Señor, tu misericordia.
+    preces:
+    - - Padre lleno de amor, no permitas que nuestra vida y nuestras obras rechacen a Cristo, tu enviado,
+      - pues nuestra lengua lo proclama con fe plena.
+    - - Tú que enviaste a tu Hijo para salvación de los hombres,
+      - aleja de nuestra nación y del mundo entero toda desgracia y todo dolor.
+    - - Que la tierra entera se alegre por la venida de tu Hijo,
+      - experimentando cada día más la felicidad que en ti se encierra.
+    - - Concédenos, por tu misericordia, llevar ya desde ahora una vida sobria y religiosa,
+      - mientras aguardamos la dichosa esperanza, la aparición gloriosa de Jesucristo.
+  padrenuestro_intro: 'Con el gozo que nos da el saber que Cristo viene para hacernos hijos de Dios, digamos al Padre:'
+  oracion: Señor Dios, que con la venida de tu Hijo has querido redimir al hombre sentenciado a muerte, compadecido del hombre caído y, quisiste redimirlo, concede a los que van a adorarlo, hecho niño en Belén, participar de los bienes de su redención. Por nuestro Señor Jesucristo.
+23 de diciembre:
+  lectura:
+    ref: Jr 30, 21. 22
+    texto: 'Esto dice el Señor: «Saldrá de Jacob un príncipe, su señor saldrá de en medio de él; me lo acercaré y se llegará a mí. Vosotros seréis mi pueblo y yo seré vuestro Dios.»'
+  responsorio:
+  - - V
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  - - V
+    - Su gloria aparecerá sobre ti.
+  - - R
+    - Amanecerá el Señor.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Sobre ti, Jerusalén, amanecerá el Señor.
+  ant_benedictus: Se ha cumplido ya todo lo que el ángel dijo de la Virgen María.
+  preces:
+    intro: 'Oremos, hermanos, a Cristo, nuestro redentor, que ha venido para darnos la justificación, y digámosle con júbilo:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Señor, cuya venida en la carne anunciaron antiguamente los profetas,
+      - haz germinar en nosotros la semilla de las virtudes.
+    - - Concede a los que anunciamos al mundo tu salvación,
+      - que la encontremos también en ti.
+    - - Tú que viniste a librar a los oprimidos,
+      - cura las dolencias de los que sufren.
+    - - Tú que reconciliaste al mundo con Dios en tu primera venida,
+      - absuélvenos de toda condenación cuando vengas como juez.
+  padrenuestro_intro: 'Repitamos las palabras de Jesús, pidiendo al Padre que venga su reino:'
+  oracion: Dios todopoderoso y eterno, al acercarnos a las fiestas de Navidad, te pedimos que tu Hijo, que se encarnó en las entrañas de la Virgen María y quiso vivir entre nosotros, nos haga partícipes de la abundancia de su misericordia. Por nuestro Señor Jesucristo.
+24 de diciembre:
+  lectura:
+    ref: Is 11, 1-3a
+    texto: 'Brotará un renuevo del tronco de Jesé, y de su raíz brotará un vástago. Sobre él se posará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza, espíritu de ciencia y de temor del Señor.'
+  responsorio:
+  - - V
+    - Mañana quedará borrada la iniquidad de la tierra.
+  - - R
+    - Mañana quedará borrada la iniquidad de la tierra.
+  - - V
+    - Y sobre nosotros reinará el Salvador del mundo.
+  - - R
+    - Quedará borrada la iniquidad de la tierra.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Mañana quedará borrada la iniquidad de la tierra.
+  ant_benedictus: A María le llegó el tiempo de su alumbramiento, y dio a luz a su Hijo primogénito.
+  preces:
+    intro: 'Hermanos, oremos con todo nuestro espíritu a Cristo redentor, que vendrá con gran poder y gloria, y digámosle:'
+    respuesta: Ven, Señor Jesús.
+    preces:
+    - - Señor Jesucristo, que vendrás con poder desde el cielo,
+      - mira nuestra pequeñez y haz que seamos dignos de tus dones.
+    - - Tú que viniste a anunciar la Buena Noticia a los hombres,
+      - danos fuerza para que también nosotros anunciemos el Evangelio a nuestros hermanos.
+    - - Tú que desde el trono del Padre todo lo gobiernas,
+      - haz que aguardemos con alegría la dicha que esperamos, tu aparición gloriosa.
+    - - Consuélanos, Señor, con los dones de tu divinidad,
+      - a los que anhelamos la gracia de tu venida.
+  padrenuestro_intro: 'Pidamos que el reino de Dios llegue a todos los hombres:'
+  antifonas:
+  - Y tú, Belén, tierra de Judá, no eres ni mucho menos la última de las ciudades de Judá; pues de ti saldrá un jefe que será el pastor de mi pueblo, Israel.
+  - Levantaos, alzad la cabeza; se acerca vuestra liberación.
+  - «Mañana será el día de vuestra salvación», dice el Señor, Dios de los ejércitos.
+  inv_ant: Hoy sabréis que vendrá el Señor, y mañana veréis su gloria.
+  oracion: Apresúrate, Señor Jesús, y no tardes, para que tu venida consuele y fortalezca a los que esperan todo de tu amor. Tú que vives y reinas.
+Jueves antes del 24 de diciembre:
+  antifonas:
+  - A ti, Señor, levanto mi alma; ven y líbrame, Señor, que en ti confío.
+  - Da su paga, Señor, a los que esperan en ti, para que tus profetas sean hallados veraces.
+  - Vuélvete, Señor, a nosotros y no tardes más en venir.
+Lunes antes del 24 de diciembre:
+  antifonas:
+  - Mirad, vendrá el Señor, príncipe de los reyes de la tierra; ¡dichosos los que están preparados para salir a su encuentro!
+  - Cantad al Señor un cántico nuevo, llegue su alabanza hasta el confín de la tierra.
+  - Cuando venga el Hijo del hombre, ¿encontrará fe en la tierra?
+Martes antes del 24 de diciembre:
+  antifonas:
+  - Saldrá el Señor de su santuario, y vendrá a salvar a su pueblo.
+  - 'Tenemos en Sión una ciudad fuerte: el Salvador ha puesto en ella murallas y baluartes; abrid las puertas, que con nosotros está Dios. Aleluia.'
+  - Conozca la tierra, Señor, tus caminos, todos los pueblos tu salvación.
+Miércoles antes del 24 de diciembre:
+  antifonas:
+  - Desde Sión vendrá el Señor todopoderoso a salvar a su pueblo.
+  - Por amor de Sión no callaré, hasta que amanezca, como una aurora.
+  - El Espíritu del Señor está sobre mí; me ha enviado para dar la Buena Noticia a los pobres.
+Sábado antes del 24 de diciembre:
+  antifonas:
+  - Tú, Belén, tierra de Judá, de ningún modo eres la menor, porque de ti saldrá un jefe, que gobernará a mi pueblo Israel.
+  - Levantaos, alzad la cabeza; se acerca vuestra liberación.
+  - «Mañana será el día de vuestra liberación», dice el Señor de los ejércitos.
+Viernes antes del 24 de diciembre:
+  antifonas:
+  - 'De Sión vendrá el Señor que ha de reinar: su nombre será Emmanuel.'
+  - Perseverad constantes, a vosotros vendrá el auxilio del Señor.
+  - Yo miro atento al Señor, espero en Dios, mi salvador.

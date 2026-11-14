@@ -21153,3 +21153,475 @@ Sábado de la XXXIV semana del Tiempo Ordinario:
   oracion: Mueve, Señor, nuestros corazones, para que correspondamos con mayor generosidad a la acción de tu gracia, y recibamos en mayor abundancia la ayuda de tu bondad. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
 IX Domingo del Tiempo Ordinario:
   oracion: Señor, nos acogemos confiadamente a tu providencia, que nunca se equivoca, y te suplicamos que apartes de nosotros todo mal y nos concedas aquellos beneficios que pueden ayudarnos para la vida presente y la futura. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
+# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+17 de diciembre:
+  lectura1:
+    titulo: EL REY CIRO SALVADOR DE ISRAEL
+    texto: |-
+      Así dice el Señor a su Ungido Ciro, a quien he tomado de la diestra para someter ante él a las naciones y desceñir las cinturas de los reyes, para abrir ante él los batientes de modo que no queden cerradas las puertas.
+
+      Yo marcharé delante de ti y allanaré las pendientes. Quebraré los batientes de bronce y romperé los cerrojos de hierro. Te daré los tesoros ocultos y las riquezas escondidas, para que sepas que yo soy el Señor, el Dios de Israel, que te llamo por tu nombre.
+
+      A causa de mi siervo Jacob y de Israel, mi elegido, te he llamado por tu nombre y te he ennoblecido, sin que tú me conozcas.
+
+      Yo soy el Señor, no hay ningún otro; fuera de mí ningún dios existe. Yo te he ceñido, sin que tú me conozcas, para que se sepa desde el sol levante hasta el poniente, que todo es nada fuera de mí. Yo soy el Señor, no ningún otro; yo modelo la luz y creo la tiniebla, yo hago la dicha y creo la desgracia, yo soy el Señor, el que hago todo esto.
+
+      Destilad, cielos, como rocío de lo alto, derramad, nubes, la victoria. Abrase la tierra y produzca salvación, y germine juntamente la justicia. Yo, el Señor, lo he creado.
+
+      ¡Ay de quien litiga con el que la ha modelado, la vasija entre las vasijas de barro! ¿Dice la arcilla al que la modela: «¿Qué haces tú?», y «¿Tu obra no está hecha con destreza?» ¡Ay del que dice a su padre!: «¿Qué has engendrado?» y a su madre: «¿Qué has dado a luz?»
+
+      Así dice el Señor, el Santo de Israel y su modelador: «¿Vais a pedirme señales acerca de mis hijos y a darme órdenes acerca de la obra de mis manos? Yo hice la tierra y creé al hombre en ella. Yo extendí los cielos con mis manos y doy órdenes a todo su ejército. Yo le he suscitado para la victoria y he allanado todos sus caminos. Él reconstruirá mi ciudad y enviará a mis deportados sin rescate y sin recompensa», dice el Señor de los ejércitos.
+    ref: Del libro del profeta Isaías 45, 1-13
+  resp1:
+    ref: Is 45, 8; cf. 16, 1
+    vr:
+    - - R
+      - Cielos, destilad el rocío; nubes, derramad al justo; * ábrase la tierra y brote la salvación.
+    - - V
+      - Envía, Señor, al Cordero, soberano de toda la tierra, desde la Peña del desierto al monte Sión.
+    - - R
+      - Ábrase la tierra y brote la salvación.
+  lectura2:
+    titulo: EL MISTERIO DE NUESTRA RECONCILIACIÓN
+    texto: |-
+      De nada sirve reconocer a nuestro Señor como hijo de la bienaventurada Virgen María y como hombre verdadero y perfecto, si no se le cree descendiente de aquella estirpe que en el Evangelio se le atribuye.
+
+      Pues dice Mateo: Genealogía de Jesucristo, hijo de David, hijo de Abrahán; y a continuación viene el orden de su origen humano hasta llegar a José, con quien se hallaba desposada la madre del Señor.
+
+      Lucas, por su parte, retrocede por los grados de ascendencia y se remonta hasta el mismo origen del linaje humano, con el fin de poner de relieve que el primer Adán y el último Adán son de la misma naturaleza.
+
+      Para enseñar y justificar a los hombres, la omnipotencia del Hijo de Dios podía haber aparecido, por supuesto, del mismo modo que había aparecido ante los patriarcas y los profetas, es decir, bajo apariencia humana: por ejemplo, cuando trabó con ellos un combate o mantuvo una conversación, cuando no rehuyó la hospitalidad que se le ofrecía y comió los alimentos que le presentaban.
+
+      Pero aquellas imágenes eran indicios de este hombre; y las significaciones místicas de estos indicios anunciaban que él había de pertenecer en realidad a la estirpe de los padres que le antecedieron.
+
+      Y, en consecuencia, ninguna de aquellas figuras era el cumplimiento del misterio de nuestra reconciliación, dispuesto desde la eternidad, porque el Espíritu Santo aún no había descendido a la Virgen ni la virtud del Altísimo la había cubierto con su sombra, para que la Palabra hubiera podido ya hacerse carne dentro de las virginales entrañas, de modo que la Sabiduría se construyera su propia casa; el Creador de los tiempos no había nacido aún en el tiempo, haciendo que la forma de Dios y la de siervo se encontraran en una sola persona; y aquel que había creado todas las cosas no había sido engendrado todavía en medio de ellas.
+
+      Pues de no haber sido porque el hombre nuevo, encarnado en una carne pecadora como la nuestra, aceptó nuestra antigua condición y, consustancial como era con el Padre, se dignó a su vez hacerse consustancial con su madre, y, siendo como era el único que se hallaba libre de pecado, unió consigo nuestra naturaleza, la humanidad hubiera seguido para siempre bajo la cautividad del demonio. Y no hubiésemos podido beneficiarnos de la victoria del triunfador, si su victoria se hubiera logrado al margen de nuestra naturaleza.
+
+      Por esta admirable participación ha brillado para nosotros el misterio de la regeneración, de tal manera que, gracias al mismo Espíritu por cuya virtud Cristo fue concebido y nació, hemos nacido de nuevo de un origen espiritual.
+
+      Por lo cual, el evangelista dice de los creyentes: Éstos no han nacido de sangre, ni de amor carnal, ni de amor humano, sino de Dios.
+    autor: |-
+      De las cartas de san León Magno, papa
+      (Carta 31, 2-3: PL 54, 791-793)
+  resp2:
+    ref: Cf. Is 11, 10; Lc 1, 32
+    vr:
+    - - R
+      - 'Mirad: la raíz de Jesé descenderá como salvación de los pueblos y la buscarán los gentiles; * y su nombre será glorioso.'
+    - - V
+      - El Señor le dará el trono de David, su padre, y reinará en la casa de Jacob para siempre.
+    - - R
+      - Y su nombre será glorioso.
+  oracion: Dios, creador y restaurador del hombre, que has querido que tu Hijo, Palabra eterna, se encarnara en el seno de María, siempre Virgen; escucha nuestras súplicas, y que Cristo, tu Unigénito, hecho hombre por nosotros, se digne hacernos partícipes de su condición divina. Por nuestro Señor Jesucristo.
+18 de diciembre:
+  lectura1:
+    titulo: EL SEÑOR CONTRA LOS DIOSES DE BABILONIA
+    texto: |-
+      Bel se desploma, Nebo se derrumba, sus ídolos van sobre animales y bestias de carga; llevados como fardos sobre un animal desfallecido. Se derrumbaron, se desplomaron todos, no pudieron salvar la carga; ellos mismos van cautivos.
+
+      Escuchadme, casa de Jacob, y todos los supervivientes de la casa de Israel, los que habéis sido transportados desde el seno, llevados desde el vientre materno. Hasta vuestra vejez, yo seré el mismo, hasta que se os vuelva el pelo blanco, yo os llevaré. Ya lo tengo hecho, yo me encargaré, yo me encargo de ello, yo os salvaré.
+
+      ¿A quién me podréis asemejar o comparar? ¿A quién me asemejaréis para que seamos parecidos? Sacan el oro de sus bolsas, pesan la plata en la balanza, y pagan a un orfebre para que les haga un dios, al que adoran y ante el cual se postran. Se lo cargan al hombro y lo transportan, lo colocan en su sitio y allí se queda. No se mueve de su lugar. Hasta llegan a invocarle, mas no responde, no salva de la angustia.
+
+      Recordad esto y sed hombres, tened seso, rebeldes, recordad lo pasado desde antiguo, pues yo soy Dios y no hay ningún otro, yo soy Dios, no hay otro como yo.
+
+      Yo anuncio desde el principio lo que viene después y desde el comienzo lo que aún no ha sucedido. Yo digo: Mis planes se realizarán y todos mis deseos llevaré a cabo. Yo llamo del Oriente un ave rapaz de un país lejano al hombre en quien pensé. Tal como lo he dicho, así se cumplirá; como lo he planeado, así lo haré.
+
+      Escuchadme vosotros, los que habéis perdido el corazón, los que estáis alejados de lo justo. Yo hago acercarse mi victoria, no está lejos, mi salvación no tardará. Pondré salvación en Sión, mi prez será para Israel.
+    ref: Del libro del profeta Isaías 46, 1-13
+  resp1:
+    ref: Is 46, 12. 13
+    vr:
+    - - R
+      - 'Escuchadme, los desanimados, que os creéis lejos de la victoria: * Daré la salvación en Sión y mi honor será para Israel.'
+    - - V
+      - Yo acerco mi victoria, no está lejos, mi salvación no tardará.
+    - - R
+      - Daré la salvación en Sión y mi honor será para Israel.
+  lectura2:
+    titulo: DIOS HA REVELADO SU CARIDAD POR MEDIO DE SU HIJO
+    texto: |-
+      Nadie pudo ver ni dar a conocer a Dios, sino que fue él mismo quien se reveló. Y lo hizo mediante la fe, único medio de ver a Dios. Pues el Señor y Creador de todas las cosas, que lo hizo todo y dispuso cada cosa en su propio orden, no sólo amó a los hombres, sino que fue también paciente con ellos. Siempre fue, es y seguirá siendo benigno, bueno, incapaz de ira y veraz; más aún, es el único bueno; y cuando concibió en su mente algo grande e inefable, lo comunicó únicamente con su Hijo.
+
+      Mientras mantenía en lo oculto y reservaba sabiamente su designio, podía parecer que nos tenía olvidados y no se preocupaba de nosotros; pero, una vez que, por medio de su Hijo querido, reveló y manifestó todo lo que se hallaba preparado desde el comienzo, puso a la vez todas las cosas a nuestra disposición: la posibilidad de disfrutar de sus beneficios, y la posibilidad de verlos y comprenderlos. ¿Quién de nosotros se hubiera atrevido a imaginar jamás tanta generosidad?
+
+      Así pues, una vez que Dios ya lo había dispuesto todo en compañía de su Hijo, permitió que, hasta la venida del Salvador, nos dejáramos arrastrar, a nuestro arbitrio, por desordenados impulsos, y fuésemos desviados del recto camino por nuestros voluptuosos apetitos; no porque, en modo alguno, Dios se complaciese con nuestros pecados, sino por tolerancia; ni porque aprobase aquel tiempo de iniquidad, sino porque era el creador del presente tiempo de justicia, de modo que, ya que en aquel tiempo habíamos quedado convictos por nuestras propias obras de ser indignos de la vida, la benignidad de Dios se dignase ahora otorgárnosla, y una vez que habíamos puesto de manifiesto que por nuestra parte no seríamos capaces de tener acceso al reino de Dios, el poder de Dios nos concediese tal posibilidad.
+
+      Y cuando nuestra injusticia llegó a su colmo y se puso completamente de manifiesto que el suplicio y la muerte, su recompensa, nos amenazaban, al llegar el tiempo que Dios había establecido de antemano para poner de manifiesto su benignidad y poder (¡inmensa humanidad y caridad de Dios!), no se dejó llevar del odio hacia nosotros ni nos rechazó, ni se vengó, sino que soportó y echó sobre sí con paciencia nuestros pecados, asumiéndolos compadecido de nosotros, y entregó a su propio Hijo como precio de nuestra redención: al santo por los inicuos, al inocente por los culpables, al justo por los injustos, al incorruptible por los corruptibles, al inmortal por los mortales. ¿Qué otra cosa que no fuera su justicia pudo cubrir nuestros pecados? ¿Por obra de quién, que no fuera el Hijo único de Dios, pudimos nosotros quedar justificados, inicuos e impíos como éramos?
+
+      ¡Feliz intercambio, disposición fuera del alcance de nuestra inteligencia, insospechados beneficios: la iniquidad de muchos quedó sepultada por un solo justo, la justicia de uno solo justificó a muchos injustos!
+    autor: |-
+      De la Carta a Diogneto
+      (Caps. 8, 5-9, 6: Funk I, 325-327)
+  resp2:
+    ref: Hch 4, 12; Is 9, 6
+    vr:
+    - - R
+      - En ningún otro se encuentra la salud; * y no hay bajo el cielo otro nombre dado a los hombres por el que nosotros debamos salvarnos.
+    - - V
+      - 'Será llamado: «Consejero admirable», «Dios poderoso», «Padre sempiterno» y «Príncipe de la paz».'
+    - - R
+      - Y no hay bajo el cielo otro nombre dado a los hombres por el que nosotros debamos salvarnos.
+  oracion: Concede, Señor, a los que vivimos oprimidos por la antigua esclavitud del pecado ser liberados por el nuevo y esperado nacimiento de tu Hijo. Por nuestro Señor Jesucristo.
+19 de diciembre:
+  lectura1:
+    titulo: LAMENTACIÓN SOBRE BABILONIA
+    texto: |-
+      Baja, siéntate en el polvo, virgen, hija de Babel! ¡Siéntate en tierra, destronada, hija de los caldeos! Ya no se te volverá a llamar la dulce, la exquisita. Voy a vengarme y nadie intervendrá. Nuestro redentor, cuyo nombre es el Señor de los ejércitos, el Santo de Israel, dice:
+
+      Siéntate en silencio y entra en la tiniebla, hija de los caldeos, que ya no se te volverá a llamar señora de reinos.
+
+      Irritado estaba yo contra mi pueblo, había profanado mi heredad y en tus manos los había entregado; pero tú no tuviste piedad de ellos; hiciste caer pesadamente tu yugo sobre el anciano. Tú decías: «Seré por siempre la señora eterna.» No has meditado esto en tu corazón no te has acordado de su fin.
+
+      Pero ahora, voluptuosa, escucha esto, tú que te sientas en seguro y te dices en tu corazón: «¡Yo, y nadie más! No seré viuda, ni sabré lo que es carecer de hijos.» Estas dos desgracias vendrán sobre ti en un instante, en el mismo día. Carencia de hijos y viudez caerán súbitamente sobre ti, a pesar de tus numerosas hechicerías y del poder de tus muchos sortilegios.
+
+      Te sentías segura en tu maldad, te decías: «Nadie me ve.» Tu sabiduría y tu misma ciencia te han desviado. Dijiste en tu corazón: «¡Yo, y nadie más!» Vendrá sobre ti una desgracia que no sabrás conjurar; caerá sobre ti un desastre que no podrás evitar. Vendrá sobre ti súbitamente una devastación que no sospechas.
+
+      ¡Quédate, pues, con tus sortilegios y tus muchas hechicerías con que te fatigas desde tu juventud! ¿Te podrán servir de algo? ¿Acaso harás temblar? Te has cansado de tus planes. Que se presenten, pues, y que te salven los que describen los cielos, los que observan las estrellas y hacen saber, en cada mes, lo que te sucederá.
+
+      Mira, ellos serán como tamo que el fuego quemará. No librarán sus vidas del poder de las llamas. No serán brasas para el pan ni llama ante la cual sentarse. Eso serán para ti tus hechiceros por los que te has fatigado desde tu juventud. Cada uno errará por su camino, y no habrá quien te salve.
+    ref: Del libro del profeta Isaías 47, 1. 3b-15
+  resp1:
+    ref: Is 49, 13; 47, 4
+    vr:
+    - - R
+      - Exulta, cielo, goce la tierra, romped a cantar, montañas, * porque el Señor se compadecerá de los desamparados.
+    - - V
+      - Nuestro Redentor se llama el Señor de los ejércitos, el Santo de Israel.
+    - - R
+      - Porque el Señor se compadecerá de los desamparados.
+  lectura2:
+    titulo: LA ECONOMÍA DE LA ENCARNACIÓN REDENTORA
+    texto: |-
+      La gloria del hombre es Dios; el hombre, en cambio, es el receptáculo de la actuación de Dios, de toda su sabiduría y su poder.
+
+      De la misma manera que los enfermos demuestran cuál sea el médico, así los hombres manifiestan cuál sea Dios. Por lo cual dice también Pablo: Pues Dios nos encerró a todos en la rebeldía para tener misericordia de todos. Esto lo dice del hombre, que desobedeció a Dios y fue privado de la inmortalidad, pero después alcanzó misericordia y, gracias al Hijo de Dios, recibió la filiación que es propia de éste.
+
+      Si el hombre acoge sin vanidad ni jactancia la verdadera gloria procedente de cuanto ha sido creado y de quien lo creó, que no es otro que el poderosísimo Dios que hace que todo exista, y si permanece en el amor, en la sumisión y en la acción de gracias a Dios, recibirá de él aún más gloria, así como un acrecentamiento de su propio ser, hasta hacerse semejante a aquel que murió por él.
+
+      Porque el Hijo de Dios se encarnó en una carne pecadora como la nuestra, a fin de condenar al pecado y, una vez condenado, arrojarlo fuera de la carne. Asumió la carne para incitar al hombre a hacerse semejante a él y para proponerle a Dios como modelo a quién imitar. Le impuso la obediencia al Padre para que llegara a ver a Dios, dándole así el poder de alcanzar al Padre. La Palabra de Dios, que habitó en el hombre, se hizo también Hijo del hombre, para habituar al hombre a percibir a Dios, y a Dios a habitar en el hombre, según el beneplácito del Padre.
+
+      Por esta razón el mismo Señor nos dio como señal de nuestra salvación al que es Dios— con—nosotros, nacido de la Virgen, ya que era el Señor mismo quien salvaba a aquellos que no tenían posibilidad de salvarse por sí mismos; por lo que Pablo, al referirse a la debilidad humana, exclama: Sé que no es bueno eso que habita en mi carne, dando a entender que el bien de nuestra salvación no proviene de nosotros, sino de Dios; y añade: ¡Desgraciado de mi! ¿Quién me librará de este cuerpo presa de la muerte? Después de lo cual se refiere al libertador: la gracia de nuestro Señor Jesucristo.
+
+      También Isaías dice lo mismo: Fortaleced las manos débiles, robusteced las rodillas vacilantes; decid a los cobardes de corazón: «Sed fuertes, no temáis.» Mirad a vuestro Dios que trae el desquite, viene en persona y os salvará; porque hemos de salvarnos, no por nosotros mismos, sino con la ayuda de Dios.
+    autor: |-
+      Del Tratado de san Ireneo, obispo, contra las herejías
+      (Libro 3, 20; 2-3: SC 34, 342-344)
+  resp2:
+    ref: Cf. Jr 31, 10; cf. 4, 5
+    vr:
+    - - R
+      - 'Escuchad, pueblos, la palabra del Señor, anunciadla hasta los confines de la tierra, * y decid a las islas remotas: «Vendrá nuestro Salvador.»'
+    - - V
+      - 'Anunciadlo y haced que se escuche en todas partes: proclamad la nueva, gritadla a plena voz.'
+    - - R
+      - 'Y decid a las islas remotas: «Vendrá nuestro Salvador.»'
+  oracion: Señor y Dios nuestro, que en el parto de la Virgen María has querido revelar al mundo entero el esplendor de tu gloria, asístenos con tu gracia para que proclamemos con fe íntegra y celebremos con piedad sincera el misterio admirable de la Encarnación de tu Hijo. Él que vive y reina contigo.
+20 de diciembre:
+  lectura1:
+    titulo: EL SEÑOR ES EL ÚNICO DUEÑO DEL FUTURO
+    texto: |-
+      Escucha esto, casa de Jacob, los que lleváis el nombre de Israel, los que habéis salido de las aguas de Judá. Los que juráis por el nombre del Señor, los que invocáis al Dios de Israel, mas no según verdad y justicia. Porque lleváis el nombre de la ciudad santa y os apoyáis en el Dios de Israel, cuyo nombre es el Señor de los ejércitos. Yo anuncié desde hace tiempo las cosas pasadas, salieron de mi boca y las di a conocer; de pronto, las hice y se cumplieron. Yo sabía que tú eres obstinado, que es tu cerviz una barra de hierro y tu frente de bronce.
+
+      Por eso te anuncié las cosas hace tiempo y antes que ocurrieran te las di a conocer, no sea que dijeras: «Las hizo mi ídolo, mi estatua, mi imagen fundida lo ordenó.» Tú has oído todo esto, ¿no vas a admitirlo?
+
+      Ahora te hago saber cosas nuevas, secretas, no sabidas, que han sido creadas ahora, no hace tiempo, de las que hasta ahora nada oíste, para que no puedas decir: «Ya lo sabía.» Ni las oíste ni las hiciste ni de antemano te fue abierto el oído, pues sé muy bien que tú eres pérfido y se te llama rebelde desde el seno materno.
+
+      Por amor de mi nombre retardé mi cólera, a causa de mi alabanza me contuve para no arrancarte. Mira que te he apurado, y no había en ti plata, te he probado en el crisol de la desgracia. Por mí, por mí, lo hago, pues ¿cómo mi nombre sería profanado? No cederé a otro mi gloria.
+    ref: Del libro del profeta Isaías 48, 1-11
+  resp1:
+    ref: Is 48, 10b-11; 54, 8
+    vr:
+    - - R
+      - 'Yo te he probado en el crisol de la desgracia; por mí, por mí lo hago: porque mi nombre no ha de ser profanado, * y mi gloria no la cedo a nadie.'
+    - - V
+      - En un arranque de ira te escondí un instante mi rostro; pero te amo con amor eterno.
+    - - R
+      - Y mi gloria no la cedo a nadie.
+  lectura2:
+    titulo: TODO EL MUNDO ESPERA LA RESPUESTA DE MARÍA
+    texto: |-
+      Oíste, Virgen, que concebirás y darás a luz a un hijo; oíste que no será por obra de varón, sino por obra del Espíritu Santo. Mira que el ángel aguarda tu respuesta, porque ya es tiempo que se vuelva al Señor que lo envió. También nosotros, los condenados infelizmente a muerte por la divina sentencia, esperamos, Señora, esta palabra de misericordia.
+
+      Se pone entre tus manos el precio de nuestra salvación; en seguida seremos librados si consientes. Por la Palabra eterna de Dios fuimos todos creados, y a pesar de eso morimos; mas por tu breve respuesta seremos ahora restablecidos para ser llamados de nuevo a la vida.
+
+      Esto te suplica, oh piadosa Virgen, el triste Adán, desterrado del paraíso con toda su miserable posteridad. Esto Abrahán, esto David, con todos los santos antecesores tuyos, que están detenidos en la región de la sombra de la muerte; esto mismo te pide el mundo todo, postrado a tus pies.
+
+      Y no sin motivo aguarda con ansia tu respuesta, porque de tu palabra depende el consuelo de los miserables, la redención de los cautivos, la libertad de los condenados, la salvación, finalmente, de todos los hijos de Adán, de todo tu linaje.
+
+      Da pronto tu respuesta. Responde presto al ángel, o, por mejor decir, al Señor por medio del ángel; responde una palabra y recibe al que es la Palabra; pronuncia tu palabra y concibe la divina; emite una palabra fugaz y acoge en tu seno a la Palabra eterna.
+
+      ¿Por qué tardas? ¿Qué recelas? Cree, di que sí y recibe. Que tu humildad se revista de audacia, y tu modestia de confianza. De ningún modo conviene que tu sencillez virginal se olvide aquí de la prudencia. En este asunto no temas, Virgen prudente, la presunción; porque, aunque es buena la modestia en el silencio, más necesaria es ahora la piedad en las palabras.
+
+      Abre, Virgen dichosa, el corazón a la fe, los labios al consentimiento, las castas entrañas al Criador. Mira que el deseado de todas las gentes está llamando a tu puerta. Si te demoras en abrirle, pasará adelante, y después volverás con dolor a buscar al amado de tu alma. Levántate, corre, abre. Levántate por la fe, corre por la devoción abre por el consentimiento.
+
+      Aquí está —dice la Virgen— la esclava del Señor; hágase en mi según tu palabra.
+    autor: |-
+      De las homilías de san Bernardo, abad, sobre las excelencias de la Virgen Madre
+      (Homilía 4, 8-9: Opera omnia, edición cisterciense, 4 [1966), 53-54)
+  resp2:
+    ref: Cf. Lc 1, 31. 42
+    vr:
+    - - R
+      - 'Recibe la palabra, Virgen María, que el Señor te anuncia por medio del ángel: concebirás y darás a luz al Dios hecho hombre, * para que te llamen bienaventurada entre las mujeres.'
+    - - V
+      - Darás a luz un hijo sin perder tu virginidad, concebirás en tu seno y serás madre siempre intacta.
+    - - R
+      - Para que te llamen bienaventurada entre las mujeres.
+  oracion: Señor y Dios nuestro, a cuyo designio se sometió la Virgen Inmaculada, aceptando, al anunciárselo el ángel, encarnar en su seno a tu Hijo; tú que la has transformado, por obra del Espíritu Santo, en templo de tu divinidad, concédenos, siguiendo su ejemplo, la gracia de aceptar tus designios con humildad de corazón. Por nuestro Señor Jesucristo.
+21 de diciembre:
+  lectura1:
+    titulo: EL NUEVO ÉXODO
+    texto: |-
+      Esto dice el Señor:
+
+      «Escúchame, Jacob, Israel, a quien llamé: Yo soy, yo soy el primero y también soy el último. Sí, es mi mano la que fundamentó la tierra y mi diestra la que extendió los cielos. Yo los llamo y todos se presentan.
+
+      Reuníos todos y escuchad: ¿Quién de entre ellos anunció estas cosas? «Mi amigo cumplirá mi deseo contra Babilonia y la raza de los caldeos.»
+
+      Yo mismo le he hablado, le he llamado, le he hecho que venga y triunfe en sus empresas. Acercaos a mí y escuchad esto: Desde el principio no he hablado en oculto, desde que sucedió estoy yo allí. Y ahora el Señor me envía con su espíritu.
+
+      Así dice el Señor, tu redentor, el Santo de Israel. Yo, el Señor, tu Dios, te instruyo en lo que es provechoso y te marco el camino por donde debes ir. ¡Si hubieras atendido a mis mandatos, tu dicha habría sido como un río y tu victoria como las olas del mar! ¡Tu raza sería como la arena los salidos de ti como sus granos! ¡Nunca habría sido arrancado ni borrado de mi presencia su nombre!
+
+      ¡Salid de Babilonia! ¡Huid de los caldeos! ¡Anunciad con voz de júbilo, hacedlo saber, proclamad hasta el extremo de la tierra, decid: el Señor ha rescatado a su siervo Jacob! No padecieron sed en los sequedales a donde los llevó; hizo brotar para ellos agua de la roca. Rompió la roca y corrieron las aguas.
+
+      Por los caminos pacerán y en todos los calveros tendrán pasto. No tendrán hambre ni sed, ni les dará el bochorno ni el sol, pues el que tiene piedad de ellos los conducirá, y a manantiales de agua los guiará. Convertiré todos mis montes en caminos, y mis calzadas serán levantadas.
+
+      Mira: Estos vienen de lejos, esos otros del norte y del oeste, y aquéllos de la tierra de Sinim. ¡Aclamad, cielos, y exulta, tierra! Prorrumpan los montes en gritos de alegría, pues el Señor ha consolado a su pueblo, y de sus pobres se ha compadecido.
+    ref: Del libro del profeta Isaías 48, 12-21; 49, 9b-13
+  resp1:
+    ref: Sal 95, 11; Is 49, 13; Sal 71, 7
+    vr:
+    - - R
+      - Alégrese el cielo, goce la tierra, romped a cantar, montañas, porque el señor, nuestro Dios, va a venir * y se compadecerá de los desamparados.
+    - - V
+      - En sus días florecerá la justicia y abundará la paz.
+    - - R
+      - Y se compadecerá de los desamparados.
+  lectura2:
+    titulo: LA VISITACIÓN DE SANTA MARÍA VIRGEN
+    texto: |-
+      El ángel que anunciaba los misterios, para llevar a la fe mediante algún ejemplo, anunció a la Virgen María la maternidad de una mujer estéril y ya entrada en años, manifestando así que Dios puede hacer todo cuanto le place.
+
+      Desde que lo supo, María, no por falta de fe en la profecía, no por incertidumbre respecto al anuncio, no por duda acerca del ejemplo indicado por el ángel, sino con el regocijo de su deseo, como quien cumple un piadoso deber, presurosa por el gozo, se dirigió a las montañas.
+
+      Llena de Dios de ahora en adelante, ¿cómo no iba a elevarse apresuradamente hacia las alturas? La lentitud en el esfuerzo es extraña a la gracia del Espíritu. Bien pronto se manifiestan los beneficios de la llegada de María y de la presencia del Señor; pues en el momento mismo en que Isabel oyó el saludo de María, saltó la criatura en su vientre, y ella se llenó del Espíritu Santo.
+
+      Considera la precisión y exactitud de cada una de las palabras: Isabel fue la primera en oír la voz, pero Juan fue el primero en experimentar la gracia, porque Isabel escuchó según las facultades de la naturaleza, pero Juan, en cambio, se alegró a causa del misterio. Isabel sintió la proximidad de María, Juan la del Señor; la mujer oyó la salutación de la mujer, el hijo sintió la presencia del Hijo; ellas proclaman la gracia, ellos, viviéndola interiormente, logran que sus madres se aprovechen de este don hasta tal punto que, con un doble milagro, ambas empiezan a profetizar por inspiración de sus propios hijos.
+
+      El niño saltó de gozo y la madre fue llena del Espíritu Santo, pero no fue enriquecida la madre antes que el hijo, sino que, después que fue repleto el hijo, quedó también colmada la madre. Juan salta de gozo y María se alegra en su espíritu. En el momento que Juan salta de gozo, Isabel se llena del Espíritu, pero, si observas bien, de María no se dice que fuera llena del Espíritu, sino que se afirma únicamente que se alegró en su espíritu (pues en ella actuaba ya el Espíritu de una manera incomprensible); en efecto: Isabel fue llena del Espíritu después de concebir; María, en cambio, lo fue ya antes de concebir, porque de ella se dice: ¡Dichosa tú que has creído!
+
+      Pero dichosos también vosotros, porque habéis oído y creído; pues toda alma creyente concibe y engendra la Palabra de Dios y reconoce sus obras.
+
+      Que en todos resida el alma de María para glorificar al Señor; que en todos esté el espíritu de María para alegrarse en Dios. Porque si corporalmente no hay más que una madre de Cristo, en cambio, por la fe, Cristo es el fruto de todos; pues toda alma recibe la Palabra de Dios, a condición de que, sin mancha y preservada de los vicios, guarde la castidad con una pureza intachable.
+
+      Toda alma, pues, que llega a tal estado proclama la grandeza del Señor, igual que el alma de María la ha proclamado, y su espíritu se ha alegrado en Dios Salvador.
+
+      El Señor, en efecto, es engrandecido, según puede leerse en otro lugar: Proclamad conmigo la grandeza del Señor. No porque con la palabra humana pueda añadirse algo a Dios, sino porque él queda engrandecido en nosotros. Pues Cristo es la imagen de Dios y, por esto, el alma que obra justa y religiosamente engrandece esa imagen de Dios, a cuya semejanza ha sido creada, y, al engrandecerla, también la misma alma queda engrandecida por una mayor participación de la grandeza divina.
+    autor: |-
+      De la Exposición de san Ambrosio, obispo, sobre el evangelio de san Lucas
+      (Libro 2,19. 22-23. 26-27: CCL 14, 39-42)
+  resp2:
+    ref: Lc 1, 45. 46; Sal 65, 16
+    vr:
+    - - R
+      - 'Dichosa tú que has creído porque lo que te ha dicho el Señor se cumplirá. Y dijo María: * «Proclama mi alma la grandeza del Señor.»'
+    - - V
+      - Venid a escuchar, os contaré lo que Dios ha hecho conmigo.
+    - - R
+      - «Proclama mi alma la grandeza del Señor.»
+  oracion: Escucha, Señor, la oración de tu pueblo, alegre por la venida de tu Hijo en carne mortal, y haz que cuando vuelva en su gloria, al final de los tiempos, podamos alegrarnos al escuchar de sus labios la invitación a poseer el reino eterno. Por nuestro Señor Jesucristo.
+22 de diciembre:
+  lectura1:
+    titulo: RESTAURACIÓN DE SIÓN
+    texto: |-
+      Dice Sión:
+
+      «El Señor me ha abandonado, el Señor me ha olvidado.»
+
+      ¿Acaso olvida una mujer a su niño de pecho, sin compadecerse del hijo de sus entrañas? Pues aunque ésas llegasen a olvidar, yo no te olvido.
+
+      Míralo, en las palmas de mis manos te tengo tatuada, tus muros están ante mí perpetuamente. Apresúrense los que te reedifican, y salgan de ti los que te arruinaron y demolieron.
+
+      Alza en torno los ojos y mira: todos ellos se han reunido y han venido a ti. ¡Por mi vida! —oráculo del Señor— que con todos ellos como con velo nupcial te vestirás, y te ceñirás con ellos como una novia. Porque tus ruinas y desolaciones y tu tierra arrasada van a ser ahora demasiado estrechas para tanto morador, y se habrán alejado tus devoradores. Todavía te dirán al oído los hijos de que fuiste privada: «El lugar es estrecho para mí, cédeme sitio para alojarme.» Y dirás para ti misma: «¿Quién me ha dado a luz éstos? Pues yo había quedado sin hijos y estéril, desterrada y aparte, y a éstos ¿quién los crió? He aquí que yo había quedado sola, pues éstos ¿dónde estaban?»
+
+      Así dice el Señor:
+
+      «He aquí que yo voy a alzar hacia las gentes de mi mano, y hacia los pueblos voy a levantar mi bandera; traerán a tus hijos en brazos, y tus hijas serán llevadas a hombros. Reyes serán tus tutores, y sus princesas, nodrizas tuyas. Rostro en tierra se postrarán ante ti, y el polvo de tus pies lamerán. Y sabrás que yo soy el Señor; no se avergonzarán los que en mí esperan. ¿Se arrebata al valiente la presa, o se escapa el prisionero del guerrero?»
+
+      Pues así dice el Señor:
+
+      «Sí, al valiente se le quitará el prisionero, y la presa del guerrero se le escapará; con tus litigantes yo litigaré, y a tus hijos yo salvaré.»
+
+      Haré comer a tus opresores su propia carne, como con vino nuevo, con su sangre se embriagarán. Y sabrá todo el mundo que yo, el Señor, soy el que te salva, y el que te rescata, el Fuerte de Jacob.
+
+      Así dice el Señor:
+
+      «¿Dónde está esa carta de divorcio de vuestra madre a quien repudié? ¿O a cuál de mis acreedores os vendí? Mirad que por vuestras culpas fuisteis vendidos, y por vuestras rebeldías fue repudiada vuestra madre.»
+    ref: Del libro del profeta Isaías 49, 14-50, 1
+  resp1:
+    ref: Is 49, 15; cf. Sal 26, 10
+    vr:
+    - - R
+      - ¿Puede una madre olvidarse de su criatura, dejar de querer al hijo de sus entrañas? * Pues, aunque ella se olvide, yo no te olvidaré.
+    - - V
+      - Si mi padre y mi madre me abandonan, tú, Señor, me recogerás.
+    - - R
+      - Pues, aunque ella se olvide, yo no te olvidaré.
+  lectura2:
+    titulo: MAGNIFICAT
+    texto: |-
+      María dijo: Proclama mi alma la grandeza del Señor, se alegra mi espíritu en Dios, mi salvador.
+
+      «El Señor —dice— me ha engrandecido con un don tan inmenso y tan inaudito, que no hay posibilidad de explicarlo con palabras, ni apenas el afecto más profundo del corazón es capaz de comprenderlo; por ello ofrezco todas las fuerzas del alma en acción de gracias, y me dedico con todo mi ser, mis sentidos y mi inteligencia a contemplar con agradecimiento la grandeza de aquel que no tiene fin, ya que mi espíritu se complace en la eterna divinidad de Jesús, mi salvador, con cuya temporal concepción ha quedado fecundada mi carne.»
+
+      Porque el Poderoso ha hecho obras grandes por mí: su nombre es santo.
+
+      Se refiere al comienzo del himno, donde había dicho: Proclama mi alma la grandeza del Señor. Porque sólo aquella alma a la que el Señor se digna hacer grandes favores puede proclamar la grandeza del Señor con dignas alabanzas y dirigir a quienes comparten los mismos votos y propósitos una exhortación como ésta: Proclamad conmigo la grandeza del Señor, ensalcemos juntos su nombre.
+
+      Pues quien, una vez que haya conocido al Señor, tenga en menos el proclamar su grandeza y santificar su nombre en la medida de sus fuerzas será el menos importante en el reino de los cielos. Ya que el nombre del Señor se llama santo, porque con su singular poder trasciende a toda criatura y dista ampliamente de todas las cosas que ha hecho.
+
+      Auxilia a Israel, su siervo, acordándose de la misericordia. Bellamente llama a Israel siervo del Señor, ya que efectivamente el Señor lo ha acogido para salvarlo por ser obediente y humilde, de acuerdo con lo que dice Oseas: Israel es mi siervo, y yo lo amo.
+
+      Porque quien rechaza la humillación tampoco puede acoger la salvación, ni exclamar con el profeta: Dios es mi auxilio, el Señor sostiene mi vida, y el que se haga pequeño como este niño, ése es el más grande en el reino de los cielos.
+
+      Como lo había prometido a nuestros padres, en favor de Abrahán y su descendencia por siempre. No se refiere a la descendencia carnal de Abrahán, sino a la espiritual, o sea, no habla de los nacidos solamente de su carne, sino de los que siguieron las huellas de su fe, lo mismo dentro que fuera de Israel. Pues Abrahán había creído antes de la circuncisión, y su fe le fue tenida en cuenta para la justificación.
+
+      De modo que el advenimiento del Salvador se le prometió a Abrahán y a su descendencia por siempre, o sea, a los hijos de la promesa, de los que se dice: Si sois de Cristo, sois descendencia de Abrahán y herederos de la promesa.
+
+      Con razón, pues, fueron ambas madres quienes anunciaron con sus profecías los nacimientos del Señor y de Juan, para que, así como el pecado empezó por medio de las mujeres, también los bienes comiencen por ellas, y la vida que pereció por el engaño de una sola mujer sea devuelta al mundo por la proclamación de dos mujeres que compiten por anunciar la salvación.
+    autor: |-
+      De la Exposición de san Beda el Venerable, presbítero, sobre el evangelio de san Lucas
+      (Libro 1, 46-55: CCL 120, 37-39)
+  resp2:
+    ref: Lc 1, 48-50
+    vr:
+    - - R
+      - 'Desde ahora me felicitarán todas las generaciones, * porque el Poderoso ha hecho obras grandes por mí: su nombre es santo.'
+    - - V
+      - Y su misericordia llega a sus fieles de generación en generación.
+    - - R
+      - 'Porque el Poderoso ha hecho obras grandes por mí: su nombre es santo.'
+  oracion: Señor Dios, que con la venida de tu Hijo has querido redimir al hombre sentenciado a muerte, compadecido del hombre caído y, quisiste redimirlo, concede a los que van a adorarlo, hecho niño en Belén, participar de los bienes de su redención. Por nuestro Señor Jesucristo.
+23 de diciembre:
+  lectura1:
+    titulo: DIOS PROMETE LA SALVACIÓN A LOS HIJOS DE ABRAHAM
+    texto: |-
+      Prestadme oído, seguidores de lo justo, los que buscáis al Señor. Reparad en la peña de donde fuisteis tallados, y en la cavidad de pozo de donde fuisteis excavados. Reparad en Abraham vuestro padre, y en Sara, que os dio a luz; pues uno solo era cuando le llamé, pero le bendije y le multipliqué.
+
+      Cuando haya consolado el Señor a Sión, haya consolado todas sus ruinas y haya trocado el desierto en Edén y la estepa en Paraíso del Señor, regocijo y alegría se encontrarán en ella, alabanza y son de canciones.
+
+      Préstame atención, pueblo mío, mi nación, escúchame; que una instrucción saldrá de mí, y juicio mío para luz de las naciones. Inminente, cercana está mi justicia, saldrá mi liberación, y mis brazos juzgarán a los pueblos. Las islas esperan en mí y cuentan con mi brazo.
+
+      Alzad a los cielos vuestros ojos y contemplad la tierra abajo, pues los cielos como humareda se disiparán, la tierra como un vestido se gastará y sus moradores como el mosquito morirán. Pero mi salvación por siempre será, y mi justicia se mantendrá intacta.
+
+      Prestadme oído, sabedores de lo justo, pueblo consciente de mi ley. No temáis las injurias de los hombres, y de sus ultrajes no os asustéis; pues como un vestido se los comerá la polilla, y como lana los comerá la tiña. Pero mi justicia por siempre será, y mi salvación por generaciones de generaciones.
+
+      ¡Despierta, despierta, revístete de poderío, oh brazo del Señor! ¡Despierta como en los días de antaño, en las generaciones pasadas! ¿No eres tú el que partió al dragón, el que atravesó al Dragón? ¿No eres tú el que secó la Mar, las aguas del gran Océano, el que trocó las honduras del mar en camino para que pasasen los rescatados?
+
+      Los redimidos del Señor volverán, entrarán en Sión entre aclamaciones, y habrá alegría eterna sobre sus cabezas. ¡Regocijo y alegría les acompañarán! ¡Adiós, el penar y suspiros!
+    ref: Del libro del profeta Isaías 51, 1-11
+  resp1:
+    ref: Cf. Is 51, 4. 5; cf. 35, 10
+    vr:
+    - - R
+      - Hacedme caso, pueblos, dadme oído, naciones, * en un momento haré llegar mi Justo, amanecerá como el día mi Salvador.
+    - - V
+      - Volverán los rescatados del Señor, vendrán a Sión entre aclamaciones.
+    - - R
+      - En un momento haré llegar mi Justo, amanecerá como el día mi Salvador.
+  lectura2:
+    titulo: MANIFESTACIÓN DEL MISTERIO ESCONDIDO
+    texto: |-
+      Hay un único Dios, hermanos, que sólo puede ser conocido a través de las Escrituras santas: Por ello debemos esforzarnos por penetrar en todas las cosas que nos anuncian las divinas Escrituras y procurar profundizar en lo que nos enseñan. Debemos conocer al Padre como él desea ser conocido, debemos glorificar al Hijo como el Padre desea que lo glorifiquemos, debemos recibir al Espíritu Santo como el Padre desea dárnoslo. En todo debemos proceder no según nuestro arbitrio ni según nuestros propios sentimientos ni haciendo violencia a tos deseos de Dios, sino según los caminos que el mismo Señor nos ha dado a conocer en las santas Escrituras.
+
+      Cuando sólo existía Dios y nada había aún que coexistiera con él, el Señor quiso crear al mundo. Lo creó por su inteligencia, por su voluntad y por su palabra; y el mundo llegó a la existencia tal como él lo quiso y cuando él lo quiso. Nos basta, por tanto, saber que, al principio, nada coexistía con Dios, nada había fuera de él. Pero Dios siendo único, era también múltiple. Porque con él estaba su sabiduría, su razón, su poder y su consejo; todo esto estaba en él, y él era todas estas cosas. Y, cuando quiso y como quiso, y en el tiempo por él mismo predeterminado, manifestó al mundo su Palabra, por quien fueron hechas todas las cosas.
+
+      Y como Dios contenía en sí mismo a la Palabra, aunque ella fuera invisible para el mundo creado, cuando Dios hizo oír su voz, la Palabra se hizo entonces visible; así, de la luz que es el Padre salió la luz que es el Hijo, y la imagen del Señor fue como reproducida en el ser de la criatura; de esta manera el que al principio era sólo visible para el Padre empezó a ser visible también para el mundo, para que éste, al contemplarlo, pudiera alcanzar la salvación.
+
+      El sentido de todo esto es que, al entrar en el mundo, la Palabra quiso aparecer como hijo de Dios; pues, en efecto, todas las cosas fueron hechas por el Hijo, pero él es engendrado únicamente por el Padre.
+
+      Dios dio la ley y los profetas, impulsando a éstos a hablar bajo la moción del Espíritu Santo, para que, habiendo recibido la inspiración del poder del Padre, anunciaran su consejo y su voluntad.
+
+      La Palabra, pues, se hizo visible, como dice san Juan. Y repitió en síntesis todo lo que dijeron los profetas, demostrando así que es realmente la Palabra por quien fueron hechas todas las cosas. Dice: En el principio ya existía la Palabra, y la Palabra estaba junto a Dios, y la Palabra era Dios. Por medio de la Palabra se hizo todo, y sin ella no se hizo nada de lo que se ha hecho. Y más adelante: El mundo se hizo por medio de ella, y el mundo no la conoció. Vino a su casa, y los suyos no la recibieron.
+    autor: |-
+      Del Tratado de san Hipólito, presbítero, contra la herejía de Noeto
+      (Caps. 9-12: PG 10, 815-819)
+  resp2:
+    ref: Cf. Is 9, 6. 7; Jn 1, 4
+    vr:
+    - - R
+      - 'Nos nacerá un niño y será llamado «Dios poderoso» * se sentará sobre el trono de David, su padre, y grande será su poder: llevará sobre sus hombros el señorío.'
+    - - V
+      - Él era la fuente de vida, y esta vida era la luz para los hombres.
+    - - R
+      - 'Se sentará sobre el trono de David, su padre, y grande será su poder: llevará sobre sus hombros el señorío.'
+  oracion: Dios todopoderoso y eterno, al acercarnos a las fiestas de Navidad, te pedimos que tu Hijo, que se encarnó en las entrañas de la Virgen María y quiso vivir entre nosotros, nos haga partícipes de la abundancia de su misericordia. Por nuestro Señor Jesucristo.
+24 de diciembre:
+  versiculo:
+  - - V
+    - El Señor anuncia su palabra a Jacob.
+  - - R
+    - Sus decretos y mandatos a Israel.
+  lectura1:
+    titulo: JERUSALÉN ES EVANGELIZADA
+    texto: |-
+      ¡Despierta, despierta! ¡Levántate, Jerusalén! Tú, que has bebido de mano del Señor la copa de su ira. El cáliz del vértigo has bebido hasta vaciarlo. No hay quien la guíe de entre todos los hijos que ha dado a luz, no hay quien la tome de la mano de entre todos los hijos que ha criado.
+
+      Esos dos males te han acaecido —¿quién te consuela?—: saqueo y quebranto, hambre y espada —¿quién te consuela?—. Tus hijos desfallecen, yacen, en la esquina de todas las calles como antílope en la red, llenos de la ira del Señor, de la amenaza de tu Dios.
+
+      Por tanto, escucha esto, pobrecilla, ebria, pero no de vino. Así dice tu Señor, el Señor, tu Dios, defensor de tu pueblo: Mira que yo te quito de la mano la copa del vértigo, el cáliz de mi ira; ya no tendrás que seguir bebiéndolo.
+
+      Yo lo pondré en la mano de los que te afligían, de los que a ti misma te decían: «Póstrate para que pasemos», y tú pusiste tu espalda como suelo y como calle de los que pasaban.
+
+      ¡Despierta, despierta! ¡Revístete de tu fortaleza, Sión! ¡Vístete tus ropas de gala, Jerusalén, Ciudad Santa! Porque no volverán a entrar en ti incircuncisos ni impuros.
+
+      Sacúdete el polvo, levántate, cautiva Jerusalén, líbrate de las ligaduras de tu cerviz, cautiva hija de Sión.
+
+      ¡Qué hermosos son sobre los montes los pies del mensajero que anuncia la paz, que trae buenas nuevas, que anuncia salvación, que dice a Sión: «Ya reina tu Dios!»
+
+      Escucha: Tus vigías alzan la voz, a una dan gritos de júbilo, porque con sus propios ojos ven el retorno del Señor a Sión.
+
+      Prorrumpid a una en gritos de júbilo, soledades de Jerusalén, porque ha consolado el Señor a su pueblo, ha rescatado a Jerusalén. Ha desnudado el Señor su santo brazo a los ojos de todas las naciones, y han visto todos los cabos de la tierra la salvación de nuestro Dios.
+    ref: Del libro del profeta Isaías 51, 17-52, 2. 7-10
+  resp1:
+    ref: Cf. Ex 19, 10. 11; Dt 7, 15; cf. Dn 9, 24
+    vr:
+    - - R
+      - 'Purificaos, hijos de Israel: porque mañana descenderá el Señor, * y alejará de vosotros toda enfermedad.'
+    - - V
+      - Mañana quedará borrada la iniquidad de la tierra y sobre vosotros reinará el Salvador del mundo.
+    - - R
+      - Y alejará de vosotros toda enfermedad.
+  lectura2:
+    titulo: LA FIDELIDAD BROTA DE LA TIERRA Y LA JUSTICIA MIRA DESDE EL CIELO
+    texto: |-
+      Despiértate: Dios se ha hecho hombre por ti. Despierta, tú que duermes, levántate de entre los muertos, y Cristo será tu luz. Por ti precisamente, Dios se ha hecho hombre.
+
+      Hubieses muerto para siempre, si él no hubiera nacido en el tiempo. Nunca te hubieses visto libre de la carne del pecado, si él no hubiera aceptado la semejanza de la carne de pecado. Una inacabable miseria se hubiera apoderado de ti, si no se hubiera llevado a cabo esta misericordia. Nunca hubieras vuelto a la vida, si él no hubiera venido al encuentro de tu muerte. Te hubieras derrumbado, si él no te hubiera ayudado. Hubieras perecido, si él no hubiera venido.
+
+      Celebremos con alegría el advenimiento de nuestra salvación y redención. Celebremos el día afortunado en el que quien era el inmenso y eterno día, que procedía del inmenso y eterno día, descendió hasta este día nuestro tan breve y temporal. Éste se convirtió para nosotros en justicia, santificación y redención: y así —como dice la Escritura—: El que se gloríe, que se gloríe en el Señor.
+
+      Pues la verdad brota de la tierra: Cristo, que dijo: Yo soy la verdad, nació de una virgen. Y la justicia mira desde el cielo: puesto que, al creer en el que ha nacido, el hombre no se ha encontrado justificado por sí mismo, sino por Dios.
+
+      La verdad brota de la tierra: porque la Palabra se hizo carne. Y la justicia mira desde el cielo: porque todo beneficio y todo don perfecto viene de arriba. La verdad brota de la tierra: la carne, de María. Y la justicia mira desde el cielo: porque el hombre no puede recibir nada, si no se lo dan desde el cielo.
+
+      Ya que hemos recibido la justificación por la fe, estamos en paz con Dios, porque la justicia y la paz se besan. Por medio de nuestro Señor Jesucristo, porque la verdad brota de la tierra. Por él hemos obtenido con la fe el acceso a esta gracia en que estamos: y nos gloriamos apoyados en la esperanza de alcanzar la gloria de Dios. No dice: «Nuestra gloria», sino: La gloria de Dios; porque la justicia no procede de nosotros, sino que mira desde el cielo. Por tanto, el que se gloríe, que se gloríe en el Señor, y no en sí mismo.
+
+      Por eso, después que la Virgen dio a luz al Señor, el pregón de las voces angélicas fue así: Gloria a Dios en el cielo, y en la tierra paz a los hombres que ama el Señor. ¿Por qué la paz en la tierra, sino porque la verdad brota de la tierra, o sea, Cristo ha nacido de la carne? Y él es nuestra paz; él ha hecho de los dos pueblos una sola cosa: para que fuésemos hombres que ama el Señor, unidos suavemente con vínculos de unidad.
+
+      Alegrémonos, por tanto, con esta gracia, para que el testimonio de nuestra conciencia constituya nuestra gloria: y no nos gloriemos en nosotros mismos, sino en Dios. Por eso se ha dicho: Tú eres mi gloria, tú mantienes alta mi cabeza. ¿Pues qué gracia de Dios pudo brillar más intensamente para nosotros que ésta: teniendo un Hijo unigénito, hacerlo hijo del hombre, para, a su vez, hacer al hijo del hombre hijo de Dios? Busca méritos, busca justicia, busca motivos; y a ver si encuentras algo que no sea gracia.
+    autor: |-
+      De los sermones de san Agustín, obispo
+      (Sermón 185: PL 38, 997-999)
+  resp2:
+    ref: Is 11, 1. 5. 2
+    vr:
+    - - R
+      - Saldrá un renuevo del tronco de Jesé, y de su raíz brotará un vástago. * La justicia será el ceñidor de su cintura, y la lealtad el cinturón de sus caderas.
+    - - V
+      - 'Sobre él se posará el espíritu del Señor: espíritu de sabiduría y de inteligencia, espíritu de consejo y de fortaleza.'
+    - - R
+      - La justicia será el ceñidor de su cintura, y la lealtad el cinturón de sus caderas.
+  oracion: Apresúrate, Señor Jesús, y no tardes, para que tu venida consuele y fortalezca a los que esperan todo de tu amor. Tú que vives y reinas.

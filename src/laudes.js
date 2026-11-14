@@ -28,9 +28,17 @@ function propio(hora, fecha, region){
     const semana=L.salterio['semana_'+(ref.sal||1)];
     // (Vísperas no tiene «sábado» en el salterio: esa tarde es del domingo; una solemnidad en sábado toma lo del domingo I)
     capa(primeras ? (dom ? semana.domingo_1 : L.salterio.semana_1.domingo_1) : (semana[dia] || L.salterio.semana_1.domingo));
+    const S0=P.salmodia;   // la del Salterio
     const T1=L.tiempo[ref.fer+I], T2=L.tiempo[`${ref.fer} (${ciclo(fRef)})${I}`];
     capa(T1); capa(T2);   // (con ciclo: los domingos y las solemnidades que alguna vez cayeron en domingo)
-    const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia));
+    // Días con fecha propia dentro del tiempo (del 17 al 24 de diciembre): lo de ese día. Los salmos, los de la feria del
+    // Salterio; las antífonas, las del día de la semana («Lunes antes del 24 de diciembre») o las propias del día (24).
+    const TD=!primeras && L.tiempo[X.fechaClave(fRef)];
+    if(TD){ capa(TD);
+      const AS=TD.antifonas ? TD : L.tiempo[`${X.DIAS_TXT[d.getDay()]} antes del 24 de diciembre`];
+      if(!TD.salmodia && S0) P.salmodia = AS && AS.antifonas ? S0.map((g,i)=>({...g, ant: AS.antifonas[i]||g.ant})) : S0;
+    }
+    const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia)||(TD&&TD.salmodia));
     let santo=null, nota='';
     const adf=(L.adf||{})[ref.n]||{};
     const k=L.mapa[ref.n] || adf.como;   // «como»: celebración propia de ADF que toma todo de otra de la base
@@ -63,6 +71,8 @@ function propio(hora, fecha, region){
       P.salmodia=SC || L.salterio.semana_1[primeras?'domingo_1':'domingo'].salmodia;
     }
     if(!P.salmodia) P.salmodia=(semana[dia]||L.salterio.semana_1.domingo).salmodia;
+    // Antífonas «Oh» (del 17 al 23 de diciembre): se dicen todas las tardes, también en las I Vísperas del domingo
+    if(hora==='visperas'){ const O=L.tiempo[X.fechaClave(fecha)]; if(O && O.ant_magnificat && /^Oh /.test(O.ant_magnificat)) P.ant_magnificat=O.ant_magnificat; }
     return {P, dia, nota, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
   };
   // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
@@ -163,7 +173,7 @@ function armar(hora, fecha, region){
     hora, nombre:LAU?'Laudes':'Vísperas', primeras,
     versiones:{es:{n:'Liturgia de las Horas'}},
     gloria:{es:['Gloria al Padre, y al Hijo, * y al Espíritu Santo.','Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.']},
-    dia:{titulo:hoy.n+(primeras?' · I Vísperas':''), tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
+    dia:{titulo:hoy.n+(/^Feria privilegiada/.test(hoy.n)&&!primeras?` · ${X.fechaClave(fRef)}`:'')+(primeras?' · I Vísperas':''), tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
     fechaTxt:`${X.DIAS_TXT[d.getDay()]} ${d.getDate()} de ${X.MESES[d.getMonth()]}`,
     secciones:S,
   };
