@@ -439,6 +439,7 @@ test('2 de noviembre: Oficio de difuntos, con sus salmos, y la oración propia',
   assert.match(o.secciones.filter(s => s.k === 'lectura_larga').pop().titulo, /MURAMOS CON CRISTO/);
   assert.equal(t.secciones.filter(s => s.k === 'salmo').map(s => s.id).join(' '), ['salmo-69', 'salmo-84', 'salmo-85'].join(' '));
   assert.ok(!o.secciones.some(s => s.k === 'tedeum'));
+  assert.match(t.secciones.find(s => s.k === 'himno').opciones[0].n, /Dejad que el grano|Camino del sepulcro/);   // himno del Oficio de difuntos
 });
 
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {

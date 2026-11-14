@@ -139,7 +139,7 @@ function armarMenor(hora, fecha, sel, opc){
   if(CS && CS[hora]) for(const c of ['ant','lectura','versiculo']) if(!(santo&&santo[c]!=null) && CS[hora][c]!=null) P[c]=CS[hora][c];
   if(M && M.oracion && !(santo&&santo.oracion)) P.oracion=M.oracion;
   if((C || PR) && (mayor(ref) || (C && C.salmodia_propia))){   // fiestas y solemnidades (y el Oficio de difuntos) sin propio en la base: del libro (propio y común); la oración, la de Laudes
-    for(const c of ['ant','lectura','versiculo']){ if(C && C[hora] && C[hora][c]!=null) P[c]=C[hora][c]; if(PR && PR[hora] && PR[hora][c]!=null) P[c]=PR[hora][c]; }
+    for(const c of ['himno','ant','lectura','versiculo']){ if(C && C[hora] && C[hora][c]!=null) P[c]=C[hora][c]; if(PR && PR[hora] && PR[hora][c]!=null) P[c]=PR[hora][c]; }
     const o=(PR&&PR.oracion) || (C&&X.oracionComun(C.oraciones, ref.n, n)); if(o) P.oracion=o;
   }
   // Salmodia del día: la del salterio, o los salmos que indiquen el tiempo o la celebración (con sus antífonas solo si son los mismos)

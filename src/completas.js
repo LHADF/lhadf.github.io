@@ -184,6 +184,8 @@ function eleccion(hoy, man){
   const T=B.completas.tiempo[hoy.fer];
   const solemneDia=d=>d && (d.sol||d.dom);
   if(T) return {juego:T.juego, especial:T, solemne:true};
+  // Todos los Fieles Difuntos: «Completas del domingo, después de las II Vísperas» (libro, 2 de noviembre)
+  if(hoy.n==='Todos los Fieles Difuntos' && !hoy.dom) return {juego:'domingo', oracion:'juego', solemne:false};
   if(hoy.oct==='navidad'){
     if(man&&man.pv) return {juego:'sabado', oracion:'solemnidad', solemne:true};
     if(hoy.dom) return {juego:'domingo', oracion:'solemnidad', solemne:true};

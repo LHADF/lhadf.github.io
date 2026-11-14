@@ -92,7 +92,7 @@ HIM_LIBRO = {}
 for f in sorted(AQUI.glob('**/himnos.json')):
     for h in json.loads(f.read_text(encoding='utf-8')):
         HIM_LIBRO.setdefault(h['id'], h)
-HIM_BASE = {h: leer(BASE / 'himnos' / f'{h}.yaml') or {} for h in ('laudes', 'visperas', 'oficio')}
+HIM_BASE = {h: leer(BASE / 'himnos' / f'{h}.yaml') or {} for h in ('laudes', 'visperas', 'oficio', 'tercia', 'sexta', 'nona')}
 HIM_NUEVOS = {h: {} for h in HIM_BASE}
 SAL_NUEVOS = {}
 AVISOS = []
@@ -513,6 +513,11 @@ def main():
                                                                              'salmo': 'salmo-150'}]]
     if 'difuntos' in salida['intermedia']:
         salida['intermedia']['difuntos']['salmos'] = ['salmo-69', 'salmo-84', 'salmo-85']
+        # himno de la Hora intermedia: el I, y el II como otra opción (el libro: «para las otras Horas, un himno de la Hora»)
+        for h in ('tercia', 'sexta', 'nona'):
+            x = salida['intermedia']['difuntos'].setdefault(h, {})
+            x['himno'] = himno('dejad-que-el-grano-se-muera', h)
+            x.setdefault('opciones', {})['himno'] = [himno('camino-del-sepulcro-preguntabamos', h)]
     cabecera = ('Comunes de {h}, de la extracción del libro (los cuatro tomos; extraccion/a_base_comunes.py).\n'
                 'Se usan para las celebraciones sin textos propios en la base (base/santoral/adf.yaml) y para lo que les falte.\n'
                 '«oraciones»: con N. en lugar del nombre; «para» dice a quién corresponde cada una (la app elige por el nombre).\n'

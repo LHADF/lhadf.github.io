@@ -543,6 +543,9 @@ difuntos:
       lectura:
       - ref: 2M 7, 9a
         texto: Cuando hayamos muerto por su ley, el rey del universo nos resucitará para una vida eterna.
+      himno:
+      - Camino del sepulcro, preguntábamos
+    himno: Dejad que el grano se muera
   sexta:
     lectura:
       ref: Sb 1, 13-14a. 15
@@ -553,6 +556,10 @@ difuntos:
       - Aunque camine por cañadas oscuras, nada temo.
     - - R
       - Porque tú, Señor, vas conmigo.
+    himno: Dejad que el grano se muera
+    opciones:
+      himno:
+      - Camino del sepulcro, preguntábamos
   nona:
     lectura:
       ref: Is 25, 8
@@ -563,6 +570,10 @@ difuntos:
       - Escucha, Señor, mis súplicas.
     - - R
       - A ti acude todo mortal.
+    himno: Dejad que el grano se muera
+    opciones:
+      himno:
+      - Camino del sepulcro, preguntábamos
   salmos:
   - salmo-69
   - salmo-84
