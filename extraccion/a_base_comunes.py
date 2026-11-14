@@ -103,10 +103,12 @@ def estrofas_salmo(s, parte=None):
 
 
 # las claves de la base que no son la de la extracción: emparejadas por el texto
-POR_TEXTO = {}
-for k in SAL_BASE:
+POR_TEXTO, POR_TEXTO_ENTERO = {}, {}
+for k in sorted(SAL_BASE):
     b = leer(BASE / 'salmos' / f'{k}.yaml') or {}
-    POR_TEXTO.setdefault(fuerte(' '.join(b.get('texto') or []))[:300], k)
+    t = fuerte(' '.join(b.get('texto') or []))
+    POR_TEXTO.setdefault(t[:300], k)
+    POR_TEXTO_ENTERO.setdefault(t, k)
 
 
 ALIAS_SAL = {'cantico-cf-ap-19-1-7': 'cantico-ap-19-1-2-5-7'}   # el cántico de las II Vísperas del domingo
@@ -126,7 +128,8 @@ def salmo(sid, parte):
     if s is None:
         AVISOS.append(f'salmo {sid} {parte or ""}: no está ni en la base ni en el libro')
         return cand
-    k = POR_TEXTO.get(fuerte(' '.join(estrofas_salmo(s, parte)))[:300])
+    t = fuerte(' '.join(estrofas_salmo(s, parte)))
+    k = POR_TEXTO_ENTERO.get(t) or POR_TEXTO.get(t[:300])
     if k:
         return k
     if not parte and sid in SAL_BASE:

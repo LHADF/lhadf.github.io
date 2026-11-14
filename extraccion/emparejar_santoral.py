@@ -20,7 +20,9 @@ def slug(s):
 
 
 def nucleo(s):
-    s = st(s.split(',')[0])
+    corto = st(s.split(',')[0])
+    # «Santa María, Madre de Dios»: lo que va antes de la coma no alcanza para distinguirla
+    s = st(s) if re.fullmatch(r'(la |el )?(santa |santisima |bienaventurada )*(virgen )?maria', corto.strip()) else corto
     s = re.sub(r'^(la |el |los )?(santisimo |san |santa |santo |santos |santas |beato |beata |beatos |beatas |'
                r'bienaventurada virgen maria |nuestra senora |la bienaventurada virgen maria |nuestro senor )+', '', s)
     s = slug(s)
@@ -58,9 +60,13 @@ def buscar(nombre, fechas):
     best, pt = None, 0.0
     for c, f, nc in LIBRO:
         r = difflib.SequenceMatcher(None, n, nc, autojunk=False).ratio()
-        if nc and (n.startswith(nc + '-') or nc.startswith(n + '-')):
-            r = max(r, 0.8)       # «hilario» = «hilario-de-poitiers»
         cerca = f and fechas and min(dist(f, x) for x in fechas) <= 3
+        if '-' not in n and r == 1.0:      # una sola palabra («jesucristo»): se compara el título entero
+            a, b = slug(nombre), slug(c['titulo'])
+            r = 0.9 if (a in b or b in a) else \
+                difflib.SequenceMatcher(None, a, b, autojunk=False).ratio() + (0.3 if cerca else 0)
+        if cerca and nc and (n.startswith(nc + '-') or nc.startswith(n + '-')):
+            r = max(r, 0.8)       # «hilario» = «hilario-de-poitiers», en la misma fecha
         s = r + (0.15 if cerca else 0)
         if (cerca and r >= 0.6 or r >= 0.88) and s > pt:
             best, pt = c, s
