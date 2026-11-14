@@ -79,8 +79,8 @@ Santa Margarita María de Alacoque, virgen:
   comun: virgenes
 San Rafael Arcángel:
   como: SANTOS ARCÁNGELES MIGUEL GABRIEL Y RAFAEL
-Todos los Fieles Difuntos:
-  pendiente: 'Oficio propio: faltan todos los textos.'
+Todos los Fieles Difuntos:   # Oficio de difuntos (base/comunes/, «difuntos»); la oración y la 2.ª lectura propias, en santoral/libro.yaml
+  comun: difuntos
 Nuestra Señora de la Medalla Milagrosa:
   comun: virgen-maria
 Bienaventurada Virgen María de Loreto:

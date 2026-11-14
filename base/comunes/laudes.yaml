@@ -1038,3 +1038,104 @@ educadores:
     texto: Señor, tú elegiste entre tus fieles a san [santa] N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
   pascua:
     ant_benedictus: El hombre que se compadece de su prójimo educa, enseña y guía como pastor a su rebaño. Aleluia.
+difuntos:
+  nombre: Oficio de difuntos
+  salmodia_propia: true
+  himno: Salen de la ciudad en larga hilera
+  salmodia:
+  - ant: Se alegrarán en el Señor los huesos quebrantados.
+    salmo: salmo-50
+  - ant: Líbrame, Señor, de las puertas del abismo.
+    salmo: cantico-is-38-10-14-17-20
+  - ant: Alabaré al Señor mientras viva.
+    salmo: salmo-145
+  lectura:
+    ref: 1 Ts 4, 14
+    texto: Creemos que Jesús ha muerto y resucitado; del mismo modo, a los que han muerto, por medio de Jesús, los llevará con él.
+  responsorio:
+  - - V
+    - Te ensalzaré, Señor, porque me has librado.
+  - - R
+    - Te ensalzaré, Señor, porque me has librado.
+  - - V
+    - Cambiaste mi luto en danza.
+  - - R
+    - Porque me has librado.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Te ensalzaré, Señor, porque me has librado.
+  ant_benedictus: Yo soy la resurrección y la vida, el que cree en mí aunque haya muerto, vivirá; y el que está vivo y cree en mí no morirá para siempre.
+  preces:
+    intro: 'Oremos a Dios Padre todopoderoso, que ha resucitado a Jesucristo de entre los muertos y vivificará también nuestros cuerpos mortales, y digámosle:'
+    respuesta: Señor, danos la vida en Cristo
+    preces:
+    - - Padre santo, ya que por el bautismo hemos sido sepultados con Cristo en la muerte y con él hemos resucitado,
+      - haz que de tal forma andemos en vida nueva que aún después de nuestra muerte vivamos para siempre con Cristo.
+    - - Padre providente, que nos has dado el pan vivo bajado del cielo, para que lo comamos santamente,
+      - haz que al comerlo tengamos vida eterna y resucitemos en el último día.
+    - - Oh Señor, que enviaste un ángel para que confortara a tu Hijo en la agonía de Getsemaní,
+      - dígnate consolarnos en nuestro tránsito con la dulzura de tu esperanza.
+    - - Tú que libraste a los tres jóvenes del fuego ardiente,
+      - libra también las almas de los difuntos del castigo que sufren por sus pecados.
+    - - Dios y Señor de vivos y de muertos, que resucitaste a Cristo del sepulcro,
+      - resucita también a los difuntos, y a nosotros danos un lugar junto a ellos en tu gloria.
+  padrenuestro_intro: 'Porque deseamos que la luz de Cristo ilumine a los vivos y a los muertos, pidamos al Padre que a todos llegue su reino:'
+  oraciones:
+  - para: ''
+    texto: Escucha, Señor, nuestras súplicas, para que, al confesar la resurrección de Jesucristo, tu Hijo, se afiance también la esperanza de que nuestro hermano N. resucitará. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Oh Dios, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva] N. y pues creyó en la resurrección futura, merezca alcanzar los gozos de la eterna bienaventuranza. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Presta oídos, Señor, a las oraciones con que imploramos tu misericordia en favor de nuestro hermano [nuestra hermana] N.; tú que lo hiciste miembro de la Iglesia durante su vida mortal, llévalo [llévala] contigo a la patria de la luz, para que ahora participe también de la ciudadanía de los santos. Por nuestro Señor Jesucristo.
+  - para: varios difuntos
+    texto: Oh Dios, que resucitaste a tu Hijo para que, venciendo a la muerte, entrara en tu reino, concede a tus hijos N. y N. , difuntos que, superada su condición mortal, puedan contemplarte para siempre como su Creador y Salvador. Por nuestro Señor Jesucristo.
+  - para: los hermanos, familiares y bienhechores difuntos
+    texto: Oh Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, parientes y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Escucha, Señor, nuestras súplicas y haz que, al proclamar nuestra fe en la resurrección de tu Hijo, se avive también nuestra esperanza en la resurrección de nuestros hermanos. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Señor, Dios nuestro, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva]
+  - para: ''
+    texto: 'Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] N., miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.'
+  - para: ''
+    texto: bienaventuranza. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: 'Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] N., miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.'
+  - para: varios difuntos
+    texto: Señor Dios, que resucitaste a tu Hijo, para que venciendo a la muerte entrara en tu reino, concede a tus siervos N. y N. , hijos tuyos, que, superada su condición mortal, puedan contemplarte a ti, su Creador y Redentor. Por nuestro Señor Jesucristo.
+  - para: los hermanos, familiares y bienhechores difuntos
+    texto: Señor Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, familiares y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.
+  opciones:
+    himno:
+    - Déjame, Señor, así
+    salmodia:
+    - - ant: Se alegrarán en el Señor los huesos quebrantados.
+        salmo: salmo-50
+      - ant: Líbrame, Señor, de las puertas del abismo.
+        salmo: cantico-is-38-10-14-17-20
+      - ant: Todo ser que alienta alabe al Señor.
+        salmo: salmo-150
+  variantes:
+    lectura:
+    - etiqueta: 'opcion: 2'
+      texto:
+        ref: 1 Ts 4, 13
+        texto: Creemos que Jesús ha muerto y resucitado, del mismo modo a los que han muerto en Jesús, Dios los llevará con él.
+    preces:
+    - etiqueta: 'opcion: 2'
+      texto:
+        intro: 'Oremos a Dios Padre todopoderoso, que ha resucitado a Jesucristo de entre los muertos y vivificará también nuestros cuerpos mortales, y digámosle:'
+        respuesta: Dueño de la vida y de la muerte, escúchanos.
+        preces:
+        - - Padre santo, ya que por el bautismo hemos sido sepultados con Cristo en la muerte y con él hemos resucitado,
+          - haz que de tal forma andemos en vida nueva que aún después de nuestra muerte vivamos para siempre con Cristo.
+        - - Padre providente, que nos has dado el pan vivo bajado del cielo, para que lo comamos santamente,
+          - haz que al comerlo tengamos vida eterna y resucitemos en el último día.
+        - - Señor, que diste a tu Hijo en su agonía el consuelo del ángel,
+          - confórtanos en nuestra agonía con la serena esperanza de la resurrección.
+        - - Tú, Señor, que libraste a los tres jóvenes del horno ardiente,
+          - libra también las almas de los difuntos del castigo que sufren por sus pecados.
+        - - Dios y Señor de vivos y de muertos, que resucitaste a Cristo del sepulcro,
+          - resucita también a los difuntos, y a nosotros danos un lugar junto a ellos en tu gloria.
+  inv_ant: Venid, adoremos al Señor, rey de los que viven.

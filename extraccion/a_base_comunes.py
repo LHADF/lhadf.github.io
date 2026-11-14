@@ -40,7 +40,7 @@ CLAVE = {'dedicacion': 'dedicacion', 'virgen': 'virgen-maria', 'santa-maria-saba
          'apostoles': 'apostoles', 'martires-varios': 'varios-martires', 'martires-uno': 'un-martir',
          'pastores': 'pastores', 'doctores': 'doctores', 'virgenes': 'virgenes', 'santos-varones': 'santos-varones',
          'santas-mujeres': 'santas-mujeres', 'religiosos': 'religiosos', 'caridad': 'caridad',
-         'educadores': 'educadores'}
+         'educadores': 'educadores', 'difuntos': 'difuntos'}
 NOMBRE = {'dedicacion': 'Común de la dedicación de una iglesia', 'virgen-maria': 'Común de la Santísima Virgen María',
           'santa-maria-sabado': 'Memoria de santa María en sábado', 'apostoles': 'Común de apóstoles',
           'varios-martires': 'Común de mártires: para varios mártires', 'un-martir': 'Común de mártires: para un mártir',
@@ -49,11 +49,12 @@ NOMBRE = {'dedicacion': 'Común de la dedicación de una iglesia', 'virgen-maria
           'santas-mujeres': 'Común de santas mujeres',
           'religiosos': 'Común de santos varones o de santas mujeres: para religiosos',
           'caridad': 'Común de santos varones o de santas mujeres: para los que se han consagrado a una actividad caritativa',
-          'educadores': 'Común de santos varones o de santas mujeres: para educadores'}
+          'educadores': 'Común de santos varones o de santas mujeres: para educadores',
+          'difuntos': 'Oficio de difuntos'}
 HEREDA = {'doctores': ('pastores', None), 'religiosos': ('santos-varones', 'santas-mujeres'),
           'caridad': ('santos-varones', 'santas-mujeres'), 'educadores': ('santos-varones', 'santas-mujeres')}
 ORDEN = ['dedicacion', 'virgen-maria', 'santa-maria-sabado', 'apostoles', 'varios-martires', 'un-martir', 'pastores',
-         'doctores', 'virgenes', 'santos-varones', 'santas-mujeres', 'religiosos', 'caridad', 'educadores']
+         'doctores', 'virgenes', 'santos-varones', 'santas-mujeres', 'religiosos', 'caridad', 'educadores', 'difuntos']
 
 
 def sin_tildes(s):
@@ -457,11 +458,16 @@ def guardar_bibliotecas():
 
 def main():
     d = json.loads((AQUI / 'comunes' / 'comunes.json').read_text(encoding='utf-8'))
+    # el Oficio de difuntos (sección aparte en el libro) va como un común más: lo usan el 2 de noviembre y las exequias
+    dif = json.loads((AQUI / 'difuntos' / 'difuntos.json').read_text(encoding='utf-8'))['difuntos']
+    d['comunes'].append({**dif, 'id': 'difuntos'})
     previos = {h: leer(BASE / 'comunes' / f'{h}.yaml') or {} for h in ('laudes', 'visperas', 'oficio', 'intermedia')}
     salida = {h: {} for h in previos}
     for C in d['comunes']:
         k = CLAVE[C['id']]
         cab = {'nombre': NOMBRE[k]}
+        if k == 'difuntos':
+            cab['salmodia_propia'] = True     # sus salmos siempre, aunque el día sea una conmemoración
         if k in HEREDA:
             cab['hereda'] = HEREDA[k][0]
             if HEREDA[k][1]:
@@ -494,6 +500,19 @@ def main():
         I = intermedia(C, pv('intermedia'))
         if I:
             salida['intermedia'][k] = {**cab, **I}
+    # Oficio de difuntos: lo que la extracción no puede ordenar sola (el libro imprime el salmo 39 I al final y da el 150
+    # como otra opción del 145, con su antífona), y los salmos propios de la Hora intermedia
+    if 'difuntos' in salida['oficio']:
+        o = salida['oficio']['difuntos']['salmodia']
+        for g, sid in zip(o, ['salmo-39-2-14-17-18-i', 'salmo-39-2-14-17-18-ii', 'salmo-41']):
+            g['salmo'] = sid
+    if 'difuntos' in salida['laudes']:
+        L = salida['laudes']['difuntos']
+        L['salmodia'] = L['salmodia'][:3]
+        L.setdefault('opciones', {})['salmodia'] = [L['salmodia'][:2] + [{'ant': 'Todo ser que alienta alabe al Señor.',
+                                                                             'salmo': 'salmo-150'}]]
+    if 'difuntos' in salida['intermedia']:
+        salida['intermedia']['difuntos']['salmos'] = ['salmo-69', 'salmo-84', 'salmo-85']
     cabecera = ('Comunes de {h}, de la extracción del libro (los cuatro tomos; extraccion/a_base_comunes.py).\n'
                 'Se usan para las celebraciones sin textos propios en la base (base/santoral/adf.yaml) y para lo que les falte.\n'
                 '«oraciones»: con N. en lugar del nombre; «para» dice a quién corresponde cada una (la app elige por el nombre).\n'

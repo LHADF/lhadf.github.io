@@ -55,7 +55,7 @@ function propio(hora, fecha, region){
       const PR0=(ref.t==='Pascua' ? X.enPascua(adf.propio) : adf.propio)||{}, PR=(primeras&&PR0.primeras)?{...PR0,...PR0.primeras}:PR0;
       const CAMPOS=['himno','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'];
       for(const c of CAMPOS) if(C[c]!=null) P[c]=C[c];
-      if(mayor && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }
+      if((mayor || C.salmodia_propia) && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }   // (el Oficio de difuntos, siempre con sus salmos)
       for(const c of CAMPOS) if(PR[c]!=null) P[c]=PR[c];
       if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
       const o=PR.oracion || X.oracionComun(C.oraciones||C0.oraciones, ref.n, n);

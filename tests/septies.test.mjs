@@ -431,6 +431,16 @@ test('Oficio de lectura: ciclo bienal (años impares, I; pares, II; el año lit�
   assert.match(pl('2027-12-18'), /^EL SEÑOR CONTRA LOS DIOSES DE BABILONIA/);  // 2027-28, año II: Isaías 46
 });
 
+test('2 de noviembre: Oficio de difuntos, con sus salmos, y la oración propia', () => {
+  const W = ctx.window, l = LA.armar('2027-11-02', ''), o = W.Oficio.armar('2027-11-02', ''), t = W.Tercia.armar('2027-11-02', '');
+  assert.equal(l.secciones.filter(s => s.k === 'salmo').map(s => s.id).slice(0, 2).join(' '), ['salmo-50', 'cantico-is-38-10-14-17-20'].join(' '));
+  assert.match(l.secciones.filter(s => s.k === 'prosa').pop().t.es, /resurrección de Jesucristo/);
+  assert.equal(o.secciones.filter(s => s.k === 'salmo').map(s => s.id).join(' '), ['salmo-39-2-14-17-18-i', 'salmo-39-2-14-17-18-ii', 'salmo-41'].join(' '));
+  assert.match(o.secciones.filter(s => s.k === 'lectura_larga').pop().titulo, /MURAMOS CON CRISTO/);
+  assert.equal(t.secciones.filter(s => s.k === 'salmo').map(s => s.id).join(' '), ['salmo-69', 'salmo-84', 'salmo-85'].join(' '));
+  assert.ok(!o.secciones.some(s => s.k === 'tedeum'));
+});
+
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
   const W = ctx.window;
   const blas = LA.armar('2027-02-03', '');

@@ -1690,3 +1690,123 @@ educadores:
       texto: Señor, tú elegiste entre tus fieles a san [santa] N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
     pascua:
       ant_magnificat: Guarda, hijo mío, los consejos de tu padre, no rechaces las instrucciones de tu madre, llévalos siempre atados al corazón. Aleluia.
+difuntos:
+  nombre: Oficio de difuntos
+  salmodia_propia: true
+  himno: Tú, Señor, que asumiste la existencia
+  salmodia:
+  - ant: El Señor te guarda de todo mal, él guarda tu alma.
+    salmo: salmo-120
+  - ant: Si llevas cuenta de los delitos, Señor, ¿quién podrá resistir?
+    salmo: salmo-129
+  - ant: Lo mismo que el Padre resucita a los muertos y les da vida, así también el Hijo da vida a los que quiere.
+    salmo: cantico-flp-2-6-11
+  lectura:
+    ref: 1 Co 15, 55-57
+    texto: ¿Dónde está, muerte tu victoria? ¿Dónde está, muerte, tu aguijón? El aguijón de la muerte es el pecado, y la fuerza del pecado es la ley. ¡Demos gracias a Dios, que nos da la victoria por nuestro Señor Jesucristo!
+  responsorio:
+  - - V
+    - 'A ti, Señor, me acojo: no quede yo nunca defraudado.'
+  - - R
+    - 'A ti, Señor, me acojo: no quede yo nunca defraudado.'
+  - - V
+    - Tu misericordia es mi gozo y mi alegría.
+  - - R
+    - No quede yo nunca defraudado.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - 'A ti, Señor, me acojo: no quede yo nunca defraudado.'
+  ant_magnificat: Todos los que el Padre me ha entregado vendrán a mí, y al que venga a mí no lo echaré fuera.
+  preces:
+    intro: 'Oremos al Señor Jesús, que transformará nuestro cuerpo frágil en cuerpo glorioso como el suyo, y digámosle:'
+    respuesta: Tú, Señor, eres nuestra oida y nuestra resurrección.
+    preces:
+    - - Oh Cristo, Hiio de Dios vivo, que resucitaste de entre los muertos a tu amigo Lázaro,
+      - lleva a una resurrección de vida a los difuntos que rescataste con tu sangre preciosa.
+    - - Oh Cristo, consolador de los afligidos, que, ante el dolor de los que lloraban la muerte de Lázaro, del joven de Naín y de la hija de Jairo, acudiste compasivo a eniugar sus lágrimas,
+      - consuela también ahora a los que lloran la muerte de sus seres queridos.
+    - - Oh Cristo salvador, destruye en nuestro cuerpo mortal el dominio del pecado por el que merecimos la muerte,
+      - para que obtengamos en ti la vida eterna.
+    - - Oh Cristo redentor, mira benignamente a los que, por no conocerte, viven sin esperanza,
+      - para que crean también ellos en la resurrección de los muertos y en la vida del mundo futuro.
+    - - Tú que, al dar la vista al ciego de nacimiento, hiciste que pudiera mirarte,
+      - descubre tu rostro a los difuntos que todavía carecen de tu resplandor.
+    - - Tú, Señor, que permites que nuestra morada corpórea sea destruida,
+      - concédenos una morada eterna en los cielos.
+  padrenuestro_intro: 'Que el mismo Señor, que lloró junto al sepulcro de Lázaro y que, en su propia agonía, acudió conmovido al Padre, nos ayude a decir:'
+  oraciones:
+  - para: ''
+    texto: Escucha, Señor, nuestras súplicas, para que, al confesar la resurrección de Jesucristo, tu Hijo, se afiance también la esperanza de que nuestro hermano N. resucitará. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Oh Dios, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva] N. y pues creyó en la resurrección futura, merezca alcanzar los gozos de la eterna bienaventuranza. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Presta oídos, Señor, a las oraciones con que imploramos tu misericordia en favor de nuestro hermano [nuestra hermana] N.; tú que lo hiciste miembro de la Iglesia durante su vida mortal, llévalo [llévala] contigo a la patria de la luz, para que ahora participe también de la ciudadanía de los santos. Por nuestro Señor Jesucristo.
+  - para: varios difuntos
+    texto: Oh Dios, que resucitaste a tu Hijo para que, venciendo a la muerte, entrara en tu reino, concede a tus hijos N. y N. , difuntos que, superada su condición mortal, puedan contemplarte para siempre como su Creador y Salvador. Por nuestro Señor Jesucristo.
+  - para: los hermanos, familiares y bienhechores difuntos
+    texto: Oh Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, parientes y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Escucha, Señor, nuestras súplicas y haz que, al proclamar nuestra fe en la resurrección de tu Hijo, se avive también nuestra esperanza en la resurrección de nuestros hermanos. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: Señor, Dios nuestro, gloria de los fieles y vida de los justos, nosotros, los redimidos por la muerte y resurrección de tu Hijo, te pedimos que acojas con bondad a tu siervo [sierva]
+  - para: ''
+    texto: 'Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] N., miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.'
+  - para: ''
+    texto: bienaventuranza. Por nuestro Señor Jesucristo.
+  - para: ''
+    texto: 'Confiados, Señor, en tu misericordia, te presentamos nuestras oraciones en favor de nuestro hermano [nuestra hermana] N., miembro de tu Iglesia peregrina durante su vida mortal: llévalo [llévala] contigo a la patria de la luz, para que participe también ahora de la ciudadanía de tus elegidos. Por nuestro Señor Jesucristo.'
+  - para: varios difuntos
+    texto: Señor Dios, que resucitaste a tu Hijo, para que venciendo a la muerte entrara en tu reino, concede a tus siervos N. y N. , hijos tuyos, que, superada su condición mortal, puedan contemplarte a ti, su Creador y Redentor. Por nuestro Señor Jesucristo.
+  - para: los hermanos, familiares y bienhechores difuntos
+    texto: Señor Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, familiares y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.
+  opciones:
+    himno:
+    - ¡Líbrame de esta carne de pecado
+    responsorio:
+    - - - V
+        - Por tu misericordia, Señor, dales el descanso eterno.
+      - - R
+        - Por tu misericordia, Señor, dales el descanso eterno.
+      - - V
+        - Tú, que vendrás a juzgar a los vivos y a los muertos.
+      - - R
+        - Dales el descanso eterno.
+      - - V
+        - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+      - - R
+        - Por tu misericordia, Señor, dales el descanso eterno.
+  variantes:
+    preces:
+    - etiqueta: 'opcion: 2'
+      texto:
+        intro: 'Oremos al Señor Jesús, que transformará nuestro cuerpo frágil en cuerpo glorioso como el suyo, y digámosle:'
+        respuesta: Dueño de la vida y de la muerte, escúchanos.
+        preces:
+        - - Señor Jesucristo, Hijo de Dios vivo, que resucitaste de entre los muertos a tu amigo Lázaro,
+          - lleva a una resurrección de vida a los difuntos que rescataste con tu sangre preciosa.
+        - - Señor Jesucristo, consolador de los afligidos, que ante el dolor de los que lloraban la muerte de Lázaro, del joven de Naím y de la hija de Jairo acudiste compasivo a enjugar sus lágrimas,
+          - consuela también ahora a los que lloran la muerte de sus seres queridos.
+        - - Señor Jesucristo, siempre vivo para interceder por nosotros y por todos los hombres,
+          - enséñanos a ofrecer el sacrificio de alabanza por los difuntos, para que sean absueltos de sus pecados.
+        - - Cristo salvador, destruye en nuestro cuerpo mortal el dominio del pecado por el que merecimos la muerte,
+          - para que obtengamos, como don de Dios, la vida eterna.
+        - - Cristo redentor, mira benignamente a aquellos que, al no conocerte, viven sin esperanza,
+          - para que crean también ellos en la resurrección y en la vida del mundo futuro.
+        - - Tú, Señor, que has dispuesto que nuestra casa terrena sea destruida,
+          - concédenos una morada eterna en los cielos.
+    - etiqueta: 'Cuando el Oficio se celebra por un solo difunto o por varios difuntos:'
+      texto:
+        intro: 'Oremos, hermanos, a Cristo, el Señor, esperanza de los que vivimos aún en este mundo, y vida y resurrección de los que ya han muerto; llenos de confianza, digámosle:'
+        respuesta: Tú que eres la vida y la resurrección, escúchanos.
+        preces:
+        - - Recuerda, Señor, que tu ternura y tu misericordia son eternas,
+          - y no te acuerdes de los pecados ni de las maldades de nuestro hermano [nuestra hermana] N.
+        - - Por el honor de tu nombre, Señor, perdónale todas sus culpas,
+          - y haz que viva eternamente feliz en tu presencia.
+        - - Que habite en tu casa por días sin término,
+          - y goce de tu presencia contemplando tu rostro.
+        - - No rechaces a tu siervo [sierva] ni lo [la] olvides en el reino de la muerte,
+          - antes concédele gozar de tu dicha en el país de la vida.
+        - - Sé tú, Señor, el apoyo y la salvación de cuantos a ti acudimos,
+          - sálvanos y bendícenos, porque somos tu pueblo y tu heredad.

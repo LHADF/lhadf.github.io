@@ -209,7 +209,7 @@ def salmos_comunes(hora):
     LIB = leer(os.path.join(B, 'santoral', 'libro.yaml')) or {}
     claves = {'laudes': ['laudes'], 'visperas': ['visperas', 'visperas1'], 'oficio': ['oficio'], 'intermedia': ['tercia', 'sexta', 'nona']}[hora]
     partes = [p for c in C.values() for p in (c, c.get('primeras') or {})] + [e[k] for e in LIB.values() for k in claves if e.get(k)]
-    return {g['salmo'] for p in partes for g in (p.get('salmodia') or [])}
+    return {g['salmo'] for p in partes for g in (p.get('salmodia') or [])} | {s for c in C.values() for s in (c.get('salmos') or [])}   # (Oficio de difuntos: salmos propios de la Hora intermedia)
 
 
 def comunes_latin(GL):

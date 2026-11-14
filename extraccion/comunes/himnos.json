@@ -2050,7 +2050,9 @@
     {
      "texto": "apóstoles santos.",
      "sangria": 0
-    },
+    }
+   ],
+   [
     {
      "texto": "Locura de cruz,",
      "sangria": 0
@@ -2067,6 +2069,10 @@
    [
     {
      "texto": "Mensaje del Rey,",
+     "sangria": 0
+    },
+    {
+     "texto": "de amor es la ley,",
      "sangria": 0
     },
     {
@@ -4502,7 +4508,9 @@
     {
      "texto": "que hicieron de su amor amar divino.",
      "sangria": 0
-    },
+    }
+   ],
+   [
     {
      "texto": "Esperasteis en vela a vuestro Esposo",
      "sangria": 0

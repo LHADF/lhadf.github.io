@@ -92,7 +92,7 @@ function armarOficio(fecha, sel){
   const {P, ref, dom, k, C, PR, CS, santo, n}=capas(L, fecha, sel, CAMPOS_O);
   if(CS) for(const c of ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2']) if(!(santo&&santo[c]!=null) && CS[c]!=null) P[c]=CS[c];
   if(C){   // Común: memorias, himno y segunda lectura (la primera, de la feria); fiestas y solemnidades, todo
-    const cs=mayor(ref) ? ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2'] : ['himno','lectura2','resp2'];
+    const cs=(mayor(ref) || C.salmodia_propia) ? ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2'] : ['himno','lectura2','resp2'];
     for(const c of cs) if(C[c]!=null) P[c]=C[c];
     const o=X.oracionComun(C.oraciones, ref.n, n); if(o) P.oracion=o;
   }
@@ -138,13 +138,14 @@ function armarMenor(hora, fecha, sel, opc){
   const {P, ref, dom, k, C, PR, CS, M, santo, n}=capas({salterio:H.salterio, tiempo:H.tiempo, santoral:H.santoral, mapa:L.mapa, adf:L.adf, comunes:L.comunes, mayores:L.mayores}, fecha, sel, ['himno','ant','lectura','versiculo','oracion']);
   if(CS && CS[hora]) for(const c of ['ant','lectura','versiculo']) if(!(santo&&santo[c]!=null) && CS[hora][c]!=null) P[c]=CS[hora][c];
   if(M && M.oracion && !(santo&&santo.oracion)) P.oracion=M.oracion;
-  if((C || PR) && mayor(ref)){   // fiestas y solemnidades sin propio en la base: del libro (propio y común); la oración, la de Laudes
+  if((C || PR) && (mayor(ref) || (C && C.salmodia_propia))){   // fiestas y solemnidades (y el Oficio de difuntos) sin propio en la base: del libro (propio y común); la oración, la de Laudes
     for(const c of ['ant','lectura','versiculo']){ if(C && C[hora] && C[hora][c]!=null) P[c]=C[hora][c]; if(PR && PR[hora] && PR[hora][c]!=null) P[c]=PR[hora][c]; }
     const o=(PR&&PR.oracion) || (C&&X.oracionComun(C.oraciones, ref.n, n)); if(o) P.oracion=o;
   }
   // Salmodia del día: la del salterio, o los salmos que indiquen el tiempo o la celebración (con sus antífonas solo si son los mismos)
   let sal=D.P.salmodia||[];
   if(D.P.salmos && D.P.salmos.join(' ')!==ids(sal)) sal=D.P.salmos.map(s=>({salmo:s}));
+  if(C && C.salmodia_propia && C.salmos) sal=C.salmos.map(s=>({salmo:s}));   // Oficio de difuntos: sus salmos (69, 84, 85)
   // Complementaria: si se eligió, y siempre en las solemnidades que no caen en domingo
   const obligada=!!(ref.sol && !dom), comp=obligada || !!(opc&&opc.complementaria);
   if(comp) sal=L.complementaria[hora];
@@ -158,7 +159,7 @@ function armarMenor(hora, fecha, sel, opc){
   if(P.versiculo) S.push({k:'resp', es:true, l:{es:P.versiculo}});
   oracion(S, P.oracion);
   conclusion(S, L);
-  return {hora, nombre:NOMBRES[hora], primeras:false, ...datosDia(ref, fecha, (M&&!k) ? '' : aviso(ref, k, L, C&&mayor(ref)?C:null, hora, mayor(ref)?PR:null)), secciones:S};
+  return {hora, nombre:NOMBRES[hora], primeras:false, ...datosDia(ref, fecha, (M&&!k) ? '' : aviso(ref, k, L, C&&(mayor(ref)||C.salmodia_propia)?C:null, hora, (mayor(ref)||(C&&C.salmodia_propia))?PR:null)), secciones:S};
 }
 
 window.Oficio={armar:armarOficio};

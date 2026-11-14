@@ -526,3 +526,44 @@ santas-mujeres:
         - Para ti es mi música, Señor. Aleluia.
       - - R
         - Voy a explicar el camino perfecto. Aleluia.
+difuntos:
+  nombre: Oficio de difuntos
+  salmodia_propia: true
+  tercia:
+    lectura:
+      ref: Jb 19, 25-26
+      texto: Sé que mi Redentor vive y que en el último día yo resucitaré de la tierra; y de nuevo me revestiré de mi piel; y en mi carne veré a Dios.
+    ant: Vuélvete, Señor, liberta mi alma.
+    versiculo:
+    - - V
+      - ¿Por qué te acongojas, alma mía, por qué te me turbas?
+    - - R
+      - Espera en Dios, que volverás a alabarlo.
+    opciones:
+      lectura:
+      - ref: 2M 7, 9a
+        texto: Cuando hayamos muerto por su ley, el rey del universo nos resucitará para una vida eterna.
+  sexta:
+    lectura:
+      ref: Sb 1, 13-14a. 15
+      texto: Dios no hizo la muerte, ni se recrea en la destrucción de los vivientes; todo lo creó para que subsistiera, porque la justicia es inmortal.
+    ant: Sana, Señor, mi alma, porque he pecado contra ti.
+    versiculo:
+    - - V
+      - Aunque camine por cañadas oscuras, nada temo.
+    - - R
+      - Porque tú, Señor, vas conmigo.
+  nona:
+    lectura:
+      ref: Is 25, 8
+      texto: Aniquilará Dios la muerte para siempre. El Señor Dios enjugará las lágrimas de todos los rostros, y el oprobio de su pueblo lo alejará de todo el país —lo ha dicho el Señor—.
+    ant: Oh Dios, sálvame por tu nombre, sal por mí con tu poder.
+    versiculo:
+    - - V
+      - Escucha, Señor, mis súplicas.
+    - - R
+      - A ti acude todo mortal.
+  salmos:
+  - salmo-69
+  - salmo-84
+  - salmo-85
