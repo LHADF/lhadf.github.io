@@ -70,6 +70,9 @@ def propio(c):
         p, _, _ = AC.principal(inv['variantes'])
         if p:
             out['invitatorio'] = {'inv_ant': p['texto']}
+            ps = AC.tp(p)
+            if ps:
+                out['invitatorio']['pascua'] = {'inv_ant': ps['texto']}
     for h, dest, kw in (('oficio', 'oficio', {'es_oficio': True}), ('laudes', 'laudes', {}),
                         ('visperas2', 'visperas', {'es_visperas': True}), ('visperas', 'visperas', {'es_visperas': True}),
                         ('visperas1', 'visperas1', {'es_visperas': True})):

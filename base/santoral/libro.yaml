@@ -180,22 +180,20 @@ San Vicente, diácono y mártir:
         - Lo perdí todo a fin de tener una íntima experiencia de Cristo y de la comunión con sus padecimientos.
       - - R
         - Mis pies pisaban sus huellas, seguían su camino sin desviarse.
-    variantes:
+    opciones:
       lectura2:
-      - etiqueta: 'O bien:'
-        texto:
-          titulo: VICENTE, POR SU FE, FUE VENCEDOR EN TODO
-          texto: |-
-            Hemos contemplado un gran espectáculo con los ojos de la fe al mártir san Vicente, vencedor en todo. Venció en las palabras y venció en los tormentos, venció en la confesión y venció en la tribulación, venció abrasado por el fuego y venció al ser arrojado a las olas, venció, finalmente, al ser atormentado y venció al morir por la fe.
+      - titulo: VICENTE, POR SU FE, FUE VENCEDOR EN TODO
+        texto: |-
+          Hemos contemplado un gran espectáculo con los ojos de la fe al mártir san Vicente, vencedor en todo. Venció en las palabras y venció en los tormentos, venció en la confesión y venció en la tribulación, venció abrasado por el fuego y venció al ser arrojado a las olas, venció, finalmente, al ser atormentado y venció al morir por la fe.
 
-            Cuando su carne, en la cual estaba el trofeo de Cristo vencedor, era arrojada desde la nave al mar, Vicente decía calladamente:
+          Cuando su carne, en la cual estaba el trofeo de Cristo vencedor, era arrojada desde la nave al mar, Vicente decía calladamente:
 
-            «Nos derriban, pero no nos rematan.»
+          «Nos derriban, pero no nos rematan.»
 
-            ¿Quién dio esta paciencia a su soldado, sino aquel que antes derramó la propia sangre por él? A quien se dice en el salmo: Porque tú, Dios mío, fuiste mi esperanza y mi confianza, Señor, desde mi juventud. Un gran combate comporta una gran gloria, no humana ni temporal, sino divina y eterna. Lucha la fe, y cuando lucha la fe nada se consigue con la victoria sobre la carne. Porque, aunque sea desgarrado y despedazado, ¿cómo puede perecer el que ha sido redimido por la sangre de Cristo?
-          autor: |-
-            De los sermones de san Agustín, obispo
-            (Sermón 274, sobre el martirio de san Vicente: PL 38, 1252.1253)
+          ¿Quién dio esta paciencia a su soldado, sino aquel que antes derramó la propia sangre por él? A quien se dice en el salmo: Porque tú, Dios mío, fuiste mi esperanza y mi confianza, Señor, desde mi juventud. Un gran combate comporta una gran gloria, no humana ni temporal, sino divina y eterna. Lucha la fe, y cuando lucha la fe nada se consigue con la victoria sobre la carne. Porque, aunque sea desgarrado y despedazado, ¿cómo puede perecer el que ha sido redimido por la sangre de Cristo?
+        autor: |-
+          De los sermones de san Agustín, obispo
+          (Sermón 274, sobre el martirio de san Vicente: PL 38, 1252.1253)
 San Ildefonso, obispo:
   nombre_libro: San Ildefonso, Obispo
   comun_libro: pastores
@@ -401,6 +399,16 @@ San Hermenegildo, mártir:
         - El Señor es la defensa de mi vida, ¿quién me hará temblar?
       - - R
         - Ni la muerte ni la vida.
+    pascua:
+      resp2:
+        ref: Rm 8, 35. 38; Sal 26, 1
+        vr:
+        - - R
+          - ¿Quién podrá apartarnos del amor de Cristo? * Ni la muerte ni la vida.
+        - - V
+          - El Señor es la defensa de mi vida, ¿quién me hará temblar? Aleluia.
+        - - R
+          - Ni la muerte ni la vida.
 San Anselmo, obispo y doctor de la Iglesia:
   nombre_libro: San Anselmo, Obispo y Doctor de la Iglesia
   comun_libro: pastores
@@ -679,37 +687,33 @@ San Isidro, labrador:
         - Éste fue un hombre paciente, que tributó a Dios un culto verdadero, se abstuvo de todo mal y se mantuvo en la inocencia.
       - - R
         - Que él interceda por los pecados de todos los pueblos.
-    variantes:
+    opciones:
       lectura2:
-      - etiqueta: 'O bien:'
-        texto:
-          titulo: FUE GRANDE LA CARIDAD DE ISIDRO HACIA LOS DEMÁS
-          texto: ''
-          autor: |-
-            De la bula Rationi congruit de Benedicto XIII
-            (4 junio 1724)
-      - etiqueta: 'O bien:'
-        texto:
-          titulo: FUE GRANDE LA CARIDAD DE ISIDRO HACIA LOS DEMÁS
-          texto: |-
-            En Mantua Carpetana, sede de los reyes de España, llamada comúnmente Madrid, perteneciente a la diócesis de Toledo, nacido de humildes pero piadosos y católicos padres, floreció Isidro en el siglo XII.
+      - titulo: FUE GRANDE LA CARIDAD DE ISIDRO HACIA LOS DEMÁS
+        texto: ''
+        autor: |-
+          De la bula Rationi congruit de Benedicto XIII
+          (4 junio 1724)
+      - titulo: FUE GRANDE LA CARIDAD DE ISIDRO HACIA LOS DEMÁS
+        texto: |-
+          En Mantua Carpetana, sede de los reyes de España, llamada comúnmente Madrid, perteneciente a la diócesis de Toledo, nacido de humildes pero piadosos y católicos padres, floreció Isidro en el siglo XII.
 
-            Desde su infancia practicó Isidro las virtudes cristianas con tal grado de perfección que en su edad adulta prefirió vivir de la agricultura, por parecerle el oficio más humilde, más penoso y más apto y seguro para la salvación de su alma.
+          Desde su infancia practicó Isidro las virtudes cristianas con tal grado de perfección que en su edad adulta prefirió vivir de la agricultura, por parecerle el oficio más humilde, más penoso y más apto y seguro para la salvación de su alma.
 
-            Toda su vida la desempeñó de manera que no fuera obstáculo, ni un solo día, para sus prácticas piadosas y vida religiosa. Nunca fue a labrar sin haber asistido primero al santo sacrificio de la misa, y haber implorado el auxilio de Dios y de la bienaventurada Virgen María.
+          Toda su vida la desempeñó de manera que no fuera obstáculo, ni un solo día, para sus prácticas piadosas y vida religiosa. Nunca fue a labrar sin haber asistido primero al santo sacrificio de la misa, y haber implorado el auxilio de Dios y de la bienaventurada Virgen María.
 
-            En muchas ocasiones se vio protegido por el favor del cielo, en particular cuando fue acusado ante el amo de la tierra que cultivaba, de parecer negligente en su trabajo por su excesiva dedicación a las prácticas de piedad. El amo, lleno de cólera, marchó al campo que suponía abandonado, para castigar a Isidro. A su llegada, le vio arar con su yunta de bueyes, entre dos más, guiadas por otros tantos jóvenes, vestidos de blanco, que desaparecieron nada más aproximarse a Isidro. Comprendió entonces el dueño lo que muchas veces le había asegurado Isidro: que no eran horas perdidas las empleadas en el divino servicio.
+          En muchas ocasiones se vio protegido por el favor del cielo, en particular cuando fue acusado ante el amo de la tierra que cultivaba, de parecer negligente en su trabajo por su excesiva dedicación a las prácticas de piedad. El amo, lleno de cólera, marchó al campo que suponía abandonado, para castigar a Isidro. A su llegada, le vio arar con su yunta de bueyes, entre dos más, guiadas por otros tantos jóvenes, vestidos de blanco, que desaparecieron nada más aproximarse a Isidro. Comprendió entonces el dueño lo que muchas veces le había asegurado Isidro: que no eran horas perdidas las empleadas en el divino servicio.
 
-            Fue tan grande la caridad de Isidro hacia los demás que, aun siendo pobre, se privaba a sí mismo de lo necesario, para entregárselo a los necesitados.
+          Fue tan grande la caridad de Isidro hacia los demás que, aun siendo pobre, se privaba a sí mismo de lo necesario, para entregárselo a los necesitados.
 
-            Un buen día se acercó un mendigo a pedirle limosna. Muy apenado Isidro por no tener con qué socorrerle, porfió a su piadosísima mujer para que le diera alimentos. Ella, ante la insistencia de Isidro, aun sabiendo que la olla estaba vacía, por obedecerle, la registró una y otra vez. La encontró, al cabo, repleta de comida. De ella pudo extraer alimentos en abundancia y saciar el hambre de aquel mendigo.
+          Un buen día se acercó un mendigo a pedirle limosna. Muy apenado Isidro por no tener con qué socorrerle, porfió a su piadosísima mujer para que le diera alimentos. Ella, ante la insistencia de Isidro, aun sabiendo que la olla estaba vacía, por obedecerle, la registró una y otra vez. La encontró, al cabo, repleta de comida. De ella pudo extraer alimentos en abundancia y saciar el hambre de aquel mendigo.
 
-            Tan grande fue la confianza de este buen hombre en Dios, que en todos los asuntos, aun siendo grandes y difíciles, se mantenía seguro y esperanzado.
+          Tan grande fue la confianza de este buen hombre en Dios, que en todos los asuntos, aun siendo grandes y difíciles, se mantenía seguro y esperanzado.
 
-            Dios puso de manifiesto los méritos y santidad de san Isidro con otros muchos y grandes milagros, hechos durante su vida.
-          autor: |-
-            De la bula Rationi congruit de Benedicto XIII
-            (4 junio 1724)
+          Dios puso de manifiesto los méritos y santidad de san Isidro con otros muchos y grandes milagros, hechos durante su vida.
+        autor: |-
+          De la bula Rationi congruit de Benedicto XIII
+          (4 junio 1724)
 San Juan I, papa y mártir:
   nombre_libro: San Juan I, Papa y Mártir
   comun_libro: un-martir
@@ -868,10 +872,24 @@ María, Auxilio de los Cristianos:
         - Ruega por nosotros, dulce Virgen María.
       - - R
         - Tú, ensalzada por los coros de los ángeles.
+    pascua:
+      resp2:
+        ref: null
+        vr:
+        - - R
+          - Bendita tú, Madre de Cristo; has engendrado al que es tu Señor. Fulgente estrella del mar, guía y salva a tus fieles. * Tú, ensalzada por los coros de los ángeles.
+        - - V
+          - Ruega por nosotros, dulce Virgen María. Aleluia.
+        - - R
+          - Tú, ensalzada por los coros de los ángeles.
   laudes:
     ant_benedictus: 'Alégrate, Virgen Madre: contigo el Señor nos ha librado de los enemigos y nos ha revelado su amor.'
+    pascua:
+      ant_benedictus: 'Alégrate, Virgen Madre: contigo el Señor nos ha librado de los enemigos y nos ha revelado su amor. Aleluia.'
   visperas:
     ant_magnificat: A ti acudimos, Santa Madre de Dios; por ti nos ha llegado el auxilio del Señor.
+    pascua:
+      ant_magnificat: A ti acudimos, Santa Madre de Dios; por ti nos ha llegado el auxilio del Señor. Aleluia.
 San Agustín de Canterbury, obispo:
   nombre_libro: San Agustín de Cantorbery, Obispo
   comun_libro: pastores
@@ -915,7 +933,7 @@ Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:
     - ant: Lo he pedido a mi Padre, y me ha dado en herencia las naciones.
       salmo: salmo-2
     - ant: Presentad vuestros cuerpos como hostia viva, santa, agradable a Dios.
-      salmo: salmo-39-2-14-17-18
+      salmo: salmo-39-2-14-17-18-i
     - ant: Cristo amó a su Iglesia; él se entregó a sí mismo por ella, para consagrarla.
       salmo: salmo-84
     versiculo:
@@ -2362,29 +2380,25 @@ San Leandro de Sevilla, obispo:
       vr:
       - - R
         - Yo soy el buen Pastor —dice el Señor—; El buen Pastor da la vida por las ovejas.
-    variantes:
+    opciones:
       lectura2:
-      - etiqueta: 'O bien:'
-        texto:
-          titulo: DEFENSOR Y RESTAURADOR DE LA FE
-          texto: |-
-            Leandro, hijo de Severino, natural de Cartagena, fue, primeramente, monje y, después, metropolitano de la Bética. Era hombre de condición apacible, de extraordinaria inteligencia y de preclarísima moralidad y doctrina. La conversión de los visigodos, de la herejía arriana a la fe católica, fue fruto de su constancia y prudencia. Antes había sufrido destierro, y aprovechó este tiempo para redactar dos volúmenes contra los arrianos y una exhortación, a su hermana Florentina, sobre la vida consagrada y el desprecio del mundo.
+      - titulo: DEFENSOR Y RESTAURADOR DE LA FE
+        texto: |-
+          Leandro, hijo de Severino, natural de Cartagena, fue, primeramente, monje y, después, metropolitano de la Bética. Era hombre de condición apacible, de extraordinaria inteligencia y de preclarísima moralidad y doctrina. La conversión de los visigodos, de la herejía arriana a la fe católica, fue fruto de su constancia y prudencia. Antes había sufrido destierro, y aprovechó este tiempo para redactar dos volúmenes contra los arrianos y una exhortación, a su hermana Florentina, sobre la vida consagrada y el desprecio del mundo.
 
-            Trabajó asiduamente en la restauración litúrgica, arregló el Salterio y compuso sentidas melodías para la santa misa, Laudes y salmos. Escribió variedad de cartas al papa Gregorio, a su propio hermano y a varios prelados. Gobernó su diócesis en tiempos del rey Recaredo.
-          autor: |-
-            Del libro de san Isidoro, obispo, sobre los varones ilustres
-            (Cap. 41: PL 83, 1103-1104)
+          Trabajó asiduamente en la restauración litúrgica, arregló el Salterio y compuso sentidas melodías para la santa misa, Laudes y salmos. Escribió variedad de cartas al papa Gregorio, a su propio hermano y a varios prelados. Gobernó su diócesis en tiempos del rey Recaredo.
+        autor: |-
+          Del libro de san Isidoro, obispo, sobre los varones ilustres
+          (Cap. 41: PL 83, 1103-1104)
       resp2:
-      - etiqueta: 'O bien:'
-        texto:
-          ref: Jn 10, 11. 14
-          vr:
-          - - R
-            - Yo soy el buen Pastor —dice el Señor—; * El buen Pastor da la vida por las ovejas.
-          - - V
-            - Conozco a mis ovejas, y ellas me conocen.
-          - - R
-            - El buen Pastor da la vida por las ovejas.
+      - ref: Jn 10, 11. 14
+        vr:
+        - - R
+          - Yo soy el buen Pastor —dice el Señor—; * El buen Pastor da la vida por las ovejas.
+        - - V
+          - Conozco a mis ovejas, y ellas me conocen.
+        - - R
+          - El buen Pastor da la vida por las ovejas.
 Santa Gertrudis, virgen:
   nombre_libro: Santa Gertrudis, Virgen
   comun_libro: virgenes

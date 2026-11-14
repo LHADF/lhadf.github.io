@@ -11,9 +11,12 @@ Cómo elige entre las variantes del libro:
 - La principal: la que no tiene condición; si hay varias opciones sin otra condición («O bien:»), la que coincide
   con lo que ya tenía la base (que estaba revisado) o, si no, la primera.
 - Oraciones: todas, con su «para» («un santo obispo», «varias santas vírgenes»): la app elige por el nombre.
-- Tiempo pascual: en `pascua`, con los mismos campos (la app todavía no lo usa).
-- Las demás («Para un santo presbítero:», «En tiempo de cuaresma:», las otras opciones): en `variantes`, con su
-  etiqueta, para no perder nada (la app todavía no las usa).
+- Tiempo pascual: en `pascua`, con los mismos campos (la app lo usa en Pascua).
+- Tiempo pascual: además, donde el libro marca «(T. P. Aleluya.)», la antífona o el versículo con «Aleluia» al final.
+- Las otras opciones para el mismo caso («O bien:», «O bien esta otra:»): en `opciones`; la app las alterna de una
+  celebración a la siguiente que use el mismo común.
+- Las demás («Para un santo presbítero:», «En tiempo de cuaresma:»): en `variantes`, con su etiqueta, para no perder
+  nada (la app todavía no las usa).
 - I Vísperas: en `primeras`, dentro de visperas.yaml (la app ya las usa).
 - Los comunes que el libro da «todo como en el común de santos varones, o de santas mujeres, excepto…» (religiosos,
   caridad, educadores) y el de doctores (que remite al de pastores) guardan solo lo propio y dicen de cuál heredan
@@ -185,6 +188,25 @@ def etiqueta(v):
     return e
 
 
+def es_opcion(etiqueta):
+    """«O bien:», «O bien esta otra:», «I», «II», o una opción sin etiqueta: otra opción para el mismo caso (la app las
+    alterna de una celebración a la siguiente). «Para un santo presbítero:», «En tiempo de cuaresma:», no."""
+    e = (etiqueta or '').strip().lower()
+    if re.search(r'\bpara\b|tiempo|cuaresma|adviento|navidad|pascua|region|iglesia|oficio', e):
+        return False
+    return bool(re.match(r'^(o bien|i+:?$|otra)', e))
+
+
+def repartir(k, resto, var, opc):
+    """Las demás variantes de un campo: las opciones van a «opciones» (se alternan) y el resto a «variantes»."""
+    o = [x for e, x in resto if es_opcion(e)]
+    v = [{'etiqueta': e, 'texto': x} for e, x in resto if not es_opcion(e)]
+    if o:
+        opc[k] = o
+    if v:
+        var[k] = v
+
+
 def vr(pares):
     return [[a, b] for a, b in pares if b]
 
@@ -249,12 +271,31 @@ def piezas(hora, parte, tipo=None):
                     yield pz
 
 
+def con_aleluia(t):
+    """«(T. P. Aleluya.)»: en el tiempo pascual, la antífona (o el versículo) termina con «Aleluia»."""
+    if not t or re.search(r'aleluia\W*$', t, re.I):
+        return t
+    return t.rstrip() + ' Aleluia.'
+
+
+def tp(v):
+    """La variante en su forma pascual, si el libro la marca «T. P. Aleluya.»; si no, None."""
+    if not v or not v.get('tp_aleluya'):
+        return None
+    w = dict(v)
+    for k in ('texto', 'v', 'r'):
+        if isinstance(w.get(k), str):
+            w[k] = con_aleluia(w[k])
+    return w
+
+
 def campo(hora, parte, tipo, conv, previo=None):
     """(principal, pascua, [demás]) ya convertidos, para la primera pieza de ese tipo en esa parte."""
     pz = next(piezas(hora, parte, tipo), None)
     if pz is None:
         return None, None, []
     p, pas, resto = principal(pz['variantes'], previo, conv)
+    pas = pas or tp(p)
     return (conv(p) if p else None), (conv(pas) if pas else None), [(etiqueta(v), conv(v)) for v in resto]
 
 
@@ -285,8 +326,8 @@ def salmodia(hora, h_libro, nombre_hora, previo=None):
         AVISOS.append(f'{nombre_hora}: {len(ants)} antífonas y {len(sals)} salmos')
     out = [{'ant': a[0].get('texto') if a[0] else None, 'salmo': s} for a, s in zip(ants + [(None, None)] * 9, sals)]
     pas = None
-    if any(a[1] for a in ants):
-        pas = [{'ant': (a[1] or a[0] or {}).get('texto'), 'salmo': s} for a, s in zip(ants, sals)]
+    if any(a[1] or tp(a[0]) for a in ants):
+        pas = [{'ant': (a[1] or tp(a[0]) or a[0] or {}).get('texto'), 'salmo': s} for a, s in zip(ants, sals)]
     return out, pas
 
 
@@ -303,7 +344,7 @@ def oraciones(hora):
 
 def hora_comun(H, nombre, previo, es_visperas=False, es_oficio=False):
     """Una hora del común en el formato de la base. previo: lo que tenía la base (para elegir entre opciones)."""
-    out, pas, var = {}, {}, {}
+    out, pas, var, opc = {}, {}, {}, {}
 
     def poner(k, trio):
         p, ps, resto = trio
@@ -312,7 +353,7 @@ def hora_comun(H, nombre, previo, es_visperas=False, es_oficio=False):
         if ps is not None:
             pas[k] = ps
         if resto:
-            var[k] = [{'etiqueta': e, 'texto': x} for e, x in resto]
+            repartir(k, resto, var, opc)
 
     pz = next(piezas(H, 'himno', 'himno'), None)
     if pz:
@@ -320,8 +361,8 @@ def hora_comun(H, nombre, previo, es_visperas=False, es_oficio=False):
         if p and p.get('himno'):
             out['himno'] = himno(p['himno'], 'oficio' if es_oficio else ('visperas' if es_visperas else 'laudes'))
         if resto:
-            var['himno'] = [{'etiqueta': etiqueta(v), 'texto': himno(v['himno'], 'oficio' if es_oficio else ('visperas' if es_visperas else 'laudes'))}
-                            for v in resto if v.get('himno')]
+            hora_h = 'oficio' if es_oficio else ('visperas' if es_visperas else 'laudes')
+            repartir('himno', [(etiqueta(v), himno(v['himno'], hora_h)) for v in resto if v.get('himno')], var, opc)
     sal, sal_p = salmodia(H, None, nombre)
     if sal:
         out['salmodia'] = sal
@@ -344,10 +385,12 @@ def hora_comun(H, nombre, previo, es_visperas=False, es_oficio=False):
             if pr[0].get('final'):
                 out['padrenuestro_intro'] = re.sub(r'\s*Padre nuestro\.?\s*$', '', pr[0]['final'])
         if pr[2]:
-            var['preces'] = [{'etiqueta': e, 'texto': preces(x)} for e, x in pr[2]]
+            repartir('preces', [(e, preces(x)) for e, x in pr[2]], var, opc)
     o = oraciones(H)
     if o:
         out['oraciones'] = o
+    if opc:
+        out['opciones'] = opc
     if pas:
         out['pascua'] = pas
     if var:
@@ -361,7 +404,7 @@ def intermedia(C, previo):
         H = C['horas'].get(h)
         if not H:
             continue
-        d, pas, var = {}, {}, {}
+        d, pas, var, opc = {}, {}, {}, {}
         lb = campo(H, 'lectura_breve', 'lectura_breve', lectura_breve, (previo.get(h) or {}).get('lectura'))
         an = next((pz for pz in piezas(H, 'salmodia', 'antifona')), None) or next(piezas(H, 'antifona', 'antifona'), None)
         ve = campo(H, 'versiculo', 'versiculo', versiculo, (previo.get(h) or {}).get('versiculo'))
@@ -371,6 +414,7 @@ def intermedia(C, previo):
             p, ps, resto = principal(an['variantes'])
             if p:
                 d['ant'] = p.get('texto')
+            ps = ps or tp(p)
             if ps:
                 pas['ant'] = ps.get('texto')
         if ve[0]:
@@ -379,7 +423,9 @@ def intermedia(C, previo):
             if t[1]:
                 pas[k] = t[1]
             if t[2]:
-                var[k] = [{'etiqueta': e, 'texto': x} for e, x in t[2]]
+                repartir(k, t[2], var, opc)
+        if opc:
+            d['opciones'] = opc
         if pas:
             d['pascua'] = pas
         if var:
@@ -425,6 +471,9 @@ def main():
             p, ps, _ = principal(inv['variantes'])
             if p:
                 L['inv_ant'] = p['texto']
+            ps = ps or tp(p)
+            if ps:
+                L.setdefault('pascua', {})['inv_ant'] = ps['texto']
         if L:
             salida['laudes'][k] = {**cab, **L}
         V2 = hs.get('visperas2') or hs.get('visperas')

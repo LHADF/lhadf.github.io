@@ -310,8 +310,9 @@ test('Vísperas: Magníficat en latín con interlineal palabra por palabra', () 
 test('celebraciones propias de ADF: toman del común (o de otra celebración) hasta tener textos propios', () => {
   const r = LA.armar('2027-02-03', 'ARG');                                       // San Blas (solemnidad ADF): común de un mártir
   assert.match(r.dia.nota, /para un mártir/); assert.match(r.secciones.find(s => s.k === 'prosa').t.es, /Blas/);   // oración del común, con el nombre
-  assert.equal(r.secciones.find(s => s.k === 'himno').opciones[0].n, LD.comunes['un-martir'].himno);
-  assert.equal(r.secciones.find(s => s.id === 'ab').t.es, LD.comunes['un-martir'].ant_benedictus);
+  const um = LD.comunes['un-martir'], op = (k) => [um[k], ...((um.opciones || {})[k] || [])];   // las «O bien» se alternan
+  assert.ok(op('himno').includes(r.secciones.find(s => s.k === 'himno').opciones[0].n));
+  assert.ok(op('ant_benedictus').includes(r.secciones.find(s => s.id === 'ab').t.es));
   assert.equal(LD.mapa['Divino Niño Jesús'], undefined);                         // no se confunde con santa Teresa del Niño Jesús
   for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || (a.es && LD.mapa[n] === a.es) || a.pendiente, n);
 });
@@ -398,6 +399,16 @@ test('Oficio de lectura y Hora intermedia', () => {
   const sol = W.Sexta.armar('2026-12-08', '');                                              // solemnidad entre semana: complementaria, sin elegir
   assert.ok(!sol.secciones.some(s => s.k === 'salop'));
   for (const h of ['Tercia', 'Sexta', 'Nona']) assert.ok(W[h].armar('2026-11-12', '').secciones.some(s => s.k === 'lectura'));
+});
+
+test('comunes: las «O bien» se alternan entre celebraciones del mismo común, y en Pascua va lo pascual', () => {
+  const X = ctx.window.Completas._, C = { a: { himno: 'H1', opciones: { himno: ['H2'] }, pascua: { ant: 'A, aleluia' }, ant: 'A' } };
+  assert.equal(X.comun(C, 'a', 'San X', false, 0).himno, 'H1');
+  assert.equal(X.comun(C, 'a', 'San X', false, 1).himno, 'H2');
+  assert.equal(X.comun(C, 'a', 'San X', false, 2).himno, 'H1');
+  assert.equal(X.comun(C, 'a', 'San X', true, 0).ant, 'A, aleluia');
+  const fidel = LA.armar('2027-04-24', '');   // memoria en Pascua, del común de un mártir: responsorio pascual
+  assert.match(JSON.stringify(fidel.secciones.find(s => s.k === 'resp').l.es), /[Aa]leluia/);
 });
 
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {

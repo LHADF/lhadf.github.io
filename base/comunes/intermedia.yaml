@@ -16,6 +16,13 @@ dedicacion:
       - Señor, yo amo la belleza de tu casa.
     - - R
       - El lugar donde reside tu gloria.
+    pascua:
+      ant: El templo del Señor es santo, es campo de Dios, es edificación de Dios. Aleluia.
+      versiculo:
+      - - V
+        - Señor, yo amo la belleza de tu casa. Aleluia.
+      - - R
+        - El lugar donde reside tu gloria. Aleluia.
   sexta:
     lectura:
       ref: 2 Co 6, 16
@@ -26,6 +33,13 @@ dedicacion:
       - Desead la paz a Jerusalén.
     - - R
       - Vivan seguros los que te aman.
+    pascua:
+      ant: La santidad es el adorno de tu casa, Señor, por días sin término. Aleluia.
+      versiculo:
+      - - V
+        - Desead la paz a Jerusalén. Aleluia.
+      - - R
+        - Vivan seguros los que te aman. Aleluia.
   nona:
     lectura:
       ref: Jr 7, 2b. 4-5a. 7a
@@ -36,12 +50,17 @@ dedicacion:
       - Entrad por las puertas del Señor con acción de gracias.
     - - R
       - Por sus atrios con himnos.
-    variantes:
+    opciones:
       lectura:
-      - etiqueta: 'O bien:'
-        texto:
-          ref: Ag 2, 6a. 7.9
-          texto: 'Así dice el Señor de los ejércitos: «Pondré en movimiento todos los pueblos; vendrán las riquezas de todo el mundo, y llenaré de gloria este templo —dice el Señor de los ejércitos—. La gloria de este segundo templo será mayor que la del primero; y en este sitio daré la paz —oráculo del Señor de los ejércitos—.»'
+      - ref: Ag 2, 6a. 7.9
+        texto: 'Así dice el Señor de los ejércitos: «Pondré en movimiento todos los pueblos; vendrán las riquezas de todo el mundo, y llenaré de gloria este templo —dice el Señor de los ejércitos—. La gloria de este segundo templo será mayor que la del primero; y en este sitio daré la paz —oráculo del Señor de los ejércitos—.»'
+    pascua:
+      ant: Ésta es la casa del Señor, construida sólidamente sobre roca firme. Aleluia.
+      versiculo:
+      - - V
+        - Entrad por las puertas del Señor con acción de gracias. Aleluia.
+      - - R
+        - Por sus atrios con himnos. Aleluia.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
   tercia:
@@ -54,6 +73,13 @@ virgen-maria:
       - Dichosos los que escuchan la palabra de Dios.
     - - R
       - Y la cumplen.
+    pascua:
+      ant: Todos se dedicaban a la oración en común, con María la madre de Jesús. Aleluia.
+      versiculo:
+      - - V
+        - Dichosos los que escuchan la palabra de Dios. Aleluia.
+      - - R
+        - Y la cumplen. Aleluia.
   sexta:
     lectura:
       ref: Za 9, 9a
@@ -64,6 +90,13 @@ virgen-maria:
       - Dichoso el seno de santa María Virgen.
     - - R
       - Que llevó al Hijo del eterno Padre.
+    pascua:
+      ant: 'Dijo la madre de Jesús: «Haced lo que él diga.» Aleluia.'
+      versiculo:
+      - - V
+        - Dichoso el seno de santa María Virgen. Aleluia.
+      - - R
+        - Que llevó al Hijo del eterno Padre. Aleluia.
   nona:
     lectura:
       ref: Jdt 13, 18-19
@@ -74,6 +107,13 @@ virgen-maria:
       - Bendita tú entre las mujeres.
     - - R
       - Y bendito el fruto de tu vientre.
+    pascua:
+      ant: 'Dijo el Señor a su madre: «Mujer, ahí tienes a tu hijo.» Luego dijo al discípulo: «Ahí tienes a tu madre.» Aleluia.'
+      versiculo:
+      - - V
+        - Bendita tú entre las mujeres. Aleluia.
+      - - R
+        - Y bendito el fruto de tu vientre. Aleluia.
 apostoles:
   nombre: Común de apóstoles
   tercia:
@@ -86,6 +126,13 @@ apostoles:
       - A toda la tierra alcanza su pregón.
     - - R
       - Y hasta los límites del orbe su lenguaje.
+    pascua:
+      ant: 'Id y proclamad el Evangelio del Señor: gratis habéis recibido, dad gratis. Aleluia.'
+      versiculo:
+      - - V
+        - A toda la tierra alcanza su pregón. Aleluia.
+      - - R
+        - Y hasta los límites del orbe su lenguaje. Aleluia.
   sexta:
     lectura:
       ref: Hch 5, 12a. 14
@@ -96,6 +143,13 @@ apostoles:
       - Guardaron los preceptos del Señor.
     - - R
       - Las normas y mandatos que les ordenó.
+    pascua:
+      ant: Yo estoy con vosotros todos los días, hasta el fin del mundo. Aleluia.
+      versiculo:
+      - - V
+        - Guardaron los preceptos del Señor. Aleluia.
+      - - R
+        - Las normas y mandatos que les ordenó. Aleluia.
   nona:
     lectura:
       ref: Hch 5, 41-42
@@ -106,6 +160,13 @@ apostoles:
       - Estad alegres, dice el Señor.
     - - R
       - Porque vuestros nombres están inscritos en el cielo.
+    pascua:
+      ant: Con vuestra perseverancia, salvaréis vuestras almas. Aleluia.
+      versiculo:
+      - - V
+        - Estad alegres, dice el Señor. Aleluia.
+      - - R
+        - Porque vuestros nombres están inscritos en el cielo. Aleluia.
 varios-martires:
   nombre: 'Común de mártires: para varios mártires'
   tercia:
@@ -118,6 +179,13 @@ varios-martires:
       - Los santos que esperan en el Señor.
     - - R
       - Serán fuertes y no fallarán.
+    pascua:
+      ant: El Señor les dio la victoria en la dura batalla, para que supieran que la sabiduría es más fuerte que nada. Aleluia.
+      versiculo:
+      - - V
+        - Los santos que esperan en el Señor. Aleluia.
+      - - R
+        - Serán fuertes y no fallarán. Aleluia.
   sexta:
     lectura:
       ref: Cf. Hb 11, 33
@@ -128,6 +196,13 @@ varios-martires:
       - Vuestra tristeza.
     - - R
       - Se convertirá en alegría.
+    pascua:
+      ant: El Señor los coronó con una diadema de justicia, y les dio un nombre santo y glorioso. Aleluia.
+      versiculo:
+      - - V
+        - Vuestra tristeza. Aleluia.
+      - - R
+        - Se convertirá en alegría. Aleluia.
   nona:
     lectura:
       ref: Sb 3, 1-2a. 3b
@@ -138,6 +213,13 @@ varios-martires:
       - Al volver, vuelven cantando.
     - - R
       - Trayendo sus gavillas.
+    pascua:
+      ant: Al ir, iban llorando, llevando la semilla. Aleluia.
+      versiculo:
+      - - V
+        - Al volver, vuelven cantando. Aleluia.
+      - - R
+        - Trayendo sus gavillas. Aleluia.
 un-martir:
   nombre: 'Común de mártires: para un mártir'
   tercia:
@@ -151,9 +233,15 @@ un-martir:
     - - R
       - Y puso sobre su cabeza la corona de vencedor.
     pascua:
+      ant: El Señor le dio la victoria en la dura batalla, para que supiera que la sabiduría es más fuerte que nada. Aleluia.
       lectura:
         ref: Ap 2,10
         texto: No temas nada de lo que vas a sufrir, porque el diablo va a meter a algunos de vosotros en la cárcel para poneros a prueba; tus apuros durarán diez días. Sé fiel hasta la muerte, y te daré la corona de la vida.
+      versiculo:
+      - - V
+        - El Señor lo [la] revistió con un manto de gloria. Aleluia.
+      - - R
+        - Y puso sobre su cabeza la corona de vencedor. Aleluia.
     variantes:
       lectura:
       - etiqueta: 'opcion: 1'
@@ -178,9 +266,15 @@ un-martir:
     - - R
       - ¿Qué podrá hacerme un mortal?
     pascua:
+      ant: El Señor lo [la] coronó con una diadema de justicia, y le dio un nombre de gloria. Aleluia.
       lectura:
         ref: Ap 3, 21
         texto: Al que salga vencedor lo sentaré en mi trono, junto a mí; lo mismo que yo, cuando vencí, me senté en el trono de mi Padre, junto a él.
+      versiculo:
+      - - V
+        - En Dios confío y no temo. Aleluia.
+      - - R
+        - ¿Qué podrá hacerme un mortal? Aleluia.
     variantes:
       lectura:
       - etiqueta: 'opcion: 2'
@@ -205,9 +299,15 @@ un-martir:
     - - R
       - Trayendo sus gavillas.
     pascua:
+      ant: Al ir, iban llorando, llevando la semilla. Aleluia.
       lectura:
         ref: Ap 19, 7.9
         texto: Con alegría y regocijo, demos gloria a Dios, porque han llegado las bodas del Cordero. Dichosos los invitados al banquete de bodas del Cordero.
+      versiculo:
+      - - V
+        - Al volver, vuelven cantando. Aleluia.
+      - - R
+        - Trayendo sus gavillas. Aleluia.
     variantes:
       lectura:
       - etiqueta: 'opcion: 1'
@@ -226,6 +326,13 @@ pastores:
       - Escogió el Señor a su siervo.
     - - R
       - Para pastorear a Jacob, su heredad.
+    pascua:
+      ant: Padre, como tú me enviaste al mundo, así también los envío yo al mundo. Aleluia.
+      versiculo:
+      - - V
+        - Escogió el Señor a su siervo. Aleluia.
+      - - R
+        - Para pastorear a Jacob, su heredad. Aleluia.
   sexta:
     lectura:
       ref: 1 Tm 1, 12
@@ -236,6 +343,13 @@ pastores:
       - No me avergüenzo del Evangelio.
     - - R
       - Que es una fuerza de Dios para la salvación.
+    pascua:
+      ant: El que os recibe a vosotros me recibe a mí, y el que me recibe a mí recibe al que me ha enviado. Aleluia.
+      versiculo:
+      - - V
+        - No me avergüenzo del Evangelio. Aleluia.
+      - - R
+        - Que es una fuerza de Dios para la salvación. Aleluia.
   nona:
     lectura:
       ref: 1 Tm 3, 13
@@ -246,6 +360,13 @@ pastores:
       - Si el Señor no construye la casa.
     - - R
       - En vano se cansan los albañiles.
+    pascua:
+      ant: Somos colaboradores de Dios, y vosotros campo de Dios, edificación de Dios. Aleluia.
+      versiculo:
+      - - V
+        - Si el Señor no construye la casa. Aleluia.
+      - - R
+        - En vano se cansan los albañiles. Aleluia.
 virgenes:
   nombre: Común de vírgenes
   tercia:
@@ -258,6 +379,13 @@ virgenes:
       - Ésta es la virgen sensata.
     - - R
       - Que el Señor encontró velando.
+    pascua:
+      ant: Para mí lo bueno es estar junto a Dios, y hacer del Señor mi refugio. Aleluia.
+      versiculo:
+      - - V
+        - Ésta es la virgen sensata. Aleluia.
+      - - R
+        - Que el Señor encontró velando. Aleluia.
   sexta:
     lectura:
       ref: 1 Co 7, 25
@@ -268,6 +396,13 @@ virgenes:
       - Ésta es la virgen sensata.
     - - R
       - Una del número de las prudentes.
+    pascua:
+      ant: Sosténme, Señor, con tu promesa y viviré, que no quede frustrada mi esperanza. Aleluia.
+      versiculo:
+      - - V
+        - Ésta es la virgen sensata. Aleluia.
+      - - R
+        - Una del número de las prudentes. Aleluia.
   nona:
     lectura:
       ref: Ap 19, 6. 7
@@ -278,6 +413,13 @@ virgenes:
       - Encontré al amor de mi alma.
     - - R
       - Lo abracé y ya no lo soltaré.
+    pascua:
+      ant: Qué hermosa y resplandeciente es la generación casta. Aleluia.
+      versiculo:
+      - - V
+        - Encontré al amor de mi alma. Aleluia.
+      - - R
+        - Lo abracé y ya no lo soltaré. Aleluia.
 santos-varones:
   nombre: Común de santos varones
   tercia:
@@ -290,6 +432,13 @@ santos-varones:
       - El Señor enseña su camino a los humildes.
     - - R
       - Hace caminar a los humildes con rectitud.
+    pascua:
+      ant: Quien guarda la palabra de Cristo ha llegado ciertamente a la plenitud del amor. Aleluia.
+      versiculo:
+      - - V
+        - El Señor enseña su camino a los humildes. Aleluia.
+      - - R
+        - Hace caminar a los humildes con rectitud. Aleluia.
   sexta:
     lectura:
       ref: 1 Co 9, 26. 27a
@@ -300,6 +449,13 @@ santos-varones:
       - Dichoso el hombre a quien tú educas, Señor.
     - - R
       - Al que enseñas tu ley.
+    pascua:
+      ant: El que cumple la voluntad de mi Padre que está en el cielo, éste entrará en el reino de los cielos. Aleluia.
+      versiculo:
+      - - V
+        - Dichoso el hombre a quien tú educas, Señor. Aleluia.
+      - - R
+        - Al que enseñas tu ley. Aleluia.
   nona:
     lectura:
       ref: Flp 4, 8, 9b
@@ -310,6 +466,13 @@ santos-varones:
       - Que se alegren los que se acogen a ti.
     - - R
       - Que se llenen de gozo los que aman tu nombre.
+    pascua:
+      ant: Nadie vio, Señor, fuera de ti, lo que has preparado para los que te aman. Aleluia.
+      versiculo:
+      - - V
+        - Que se alegren los que se acogen a ti. Aleluia.
+      - - R
+        - Que se llenen de gozo los que aman tu nombre. Aleluia.
 santas-mujeres:
   nombre: Común de santas mujeres
   tercia:
@@ -322,6 +485,13 @@ santas-mujeres:
       - Dichosos los que con vida intachable.
     - - R
       - Caminan en la voluntad del Señor.
+    pascua:
+      ant: Sobre mis siervos y siervas derramaré mi Espíritu. Aleluia.
+      versiculo:
+      - - V
+        - Dichosos los que con vida intachable. Aleluia.
+      - - R
+        - Caminan en la voluntad del Señor. Aleluia.
   sexta:
     lectura:
       ref: 1 Co 9, 26. 27a
@@ -332,6 +502,13 @@ santas-mujeres:
       - Encontré al amor de mi alma.
     - - R
       - Lo abracé y ya no lo soltaré.
+    pascua:
+      ant: Mi corazón y mi carne se alegran por el Dios vivo. Aleluia.
+      versiculo:
+      - - V
+        - Encontré al amor de mi alma. Aleluia.
+      - - R
+        - Lo abracé y ya no lo soltaré. Aleluia.
   nona:
     lectura:
       ref: Flp 4, 8, 9b
@@ -342,3 +519,10 @@ santas-mujeres:
       - Para ti es mi música, Señor.
     - - R
       - Voy a explicar el camino perfecto.
+    pascua:
+      ant: Mi amado es para mí y yo para él. Aleluia.
+      versiculo:
+      - - V
+        - Para ti es mi música, Señor. Aleluia.
+      - - R
+        - Voy a explicar el camino perfecto. Aleluia.

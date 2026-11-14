@@ -60,7 +60,51 @@ dedicacion:
       - Al volver, vuelven cantando, trayendo sus gavillas.
     - - R
       - 'Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
+  opciones:
+    himno:
+    - ¡Jerusalén, ciudad dichosa!
+    - Nueva Jerusalén y ciudad santa
+    lectura2:
+    - titulo: EDIFICACIÓN Y CONSAGRACIÓN DE LA CASA DE DIOS EN NOSOTROS
+      texto: |-
+        El motivo que hoy nos congrega es la consagración de una casa de oración. Esta es la casa de nuestras oraciones, pero la casa de Dios somos nosotros mismos. Por eso nosotros, que somos la casa de Dios, nos vamos edificando durante esta vida, para ser consagrados al final de los tiempos. El edificio o, mejor dicho, la construcción del edificio exige ciertamente trabajo; la consagración, en cambio, trae consigo el gozo.
+
+        Lo que aquí se hacía, cuando se iba construyendo esta casa, sucede también cuando los creyentes se congregan en Cristo. Pues, al acceder a la fe, es como si se extrajeran de los montes y de las selvas las piedras y los troncos; y, cuando reciben la catequesis y el bautismo es como si fueran tallándose, alineándose y nivelándose por las manos de los artífices y carpinteros.
+
+        Pero no llegan a ser casa de Dios sino cuando se aglutinan en la caridad. Nadie entraría en esta casa si las piedras y los maderos no estuviesen unidos y compactos con un determinado orden, si no estuviesen bien trabados, y si la unión entre ellos no fuera tan íntima que en cierto modo puede decirse que se aman. Pues cuando ves en un edificio que las piedras y que los maderos están perfectamente unidos, entras sin miedo y no temes que se hunda.
+
+        Así, pues, porque nuestro Señor Jesucristo quería entrar en nosotros y habitar en nosotros, afirmaba, como si nos estuviera edificando: Os doy un mandamiento nuevo: que os améis unos a otros. «Os doy —dice— un mandamiento. Antes erais hombres viejos, todavía no erais para mí una casa, yacíais en vuestra propia ruina. Para salir, pues, de la caducidad de vuestra propia ruina, amaos unos a otros».
+
+        Considerad, pues, que esta casa, como fue profetizado y prometido, debe ser edificada por todo el mundo. Cuando se construía el templo después del exilio, como se afirma en un salmo, decían: Cantad al Señor un cántico nuevo, cantad al Señor toda la tierra. Lo que allí decía: Un cántico nuevo, el Señor lo llama: Un mandamiento nuevo. Pues ¿qué novedad posee un cántico, si no es el amor nuevo? Cantar es propio de quien ama, y la voz del cantor amante es el fervor de un amor santo.
+
+        Así, pues, lo que vemos que se realiza aquí materialmente en las paredes, hagámoslo espiritualmente en nuestras almas. Lo que consideramos como una obra perfecta en las piedras y en los maderos, ayudados por la gracia de Dios, hagamos que sea perfecto también en nuestros cuerpos.
+
+        En primer lugar, demos gracias a Dios, nuestro Señor, de quien proviene todo buen don y toda dádiva perfecta. Llenos de gozo, alabemos su bondad, pues para construir esta casa de oración ha visitado las almas de sus fieles, ha despertado su afecto, les ha concedido su ayuda, ha inspirado a los reticentes para que quieran, ha ayudado sus buenos intentos para que obren, y de esta forma Dios, que activa en los suyos el querer y la actividad según su beneplácito, él mismo ha comenzado y ha llevado a perfección todas estas cosas.
+      autor: |-
+        De los Sermones de san Agustín, obispo
+        (Sermón 336, 1. 6: PL 38 [ed. 1861], 1471-1472. 1475)
+    resp2:
+    - ref: Cf. Sal 83, 2-3. 5
+      vr:
+      - - R
+        - ¡Qué deseables son tus moradas, Señor de los ejércitos! * Mi alma se consume y anhela los atrios del Señor.
+      - - V
+        - Los que viven en tu casa te alabarán siempre.
+      - - R
+        - Mi alma se consume y anhela los atrios del Señor.
   pascua:
+    salmodia:
+    - ant: ¡Portones!, alzad los dinteles, levantaos, puertas antiguas. Aleluia.
+      salmo: salmo-23
+    - ant: ¡Qué deseables son tus moradas, Señor de los ejércitos! Aleluia.
+      salmo: salmo-83
+    - ant: ¡Qué pregón tan glorioso para ti, ciudad de Dios! Aleluia.
+      salmo: salmo-86
+    versiculo:
+    - - V
+      - Me postraré hacia tu santuario. Aleluia.
+    - - R
+      - Daré gracias a tu nombre, Señor. Aleluia.
     lectura1:
       titulo: VISIÓN DE LA JERUSALÉN CELESTIAL
       texto: |-
@@ -87,12 +131,16 @@ dedicacion:
         - Brillarás cual luz de lámpara y todos los confines de la tierra vendrán a ti.
       - - R
         - 'Y todas tus casas cantarán: «Aleluia».'
+    resp2:
+      ref: Cf. Is 2, 2. 3; Sal 125, 6
+      vr:
+      - - R
+        - 'La casa del Señor está firme en la cima de los montes, encumbrada sobre todas las montañas. * Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
+      - - V
+        - Al volver, vuelven cantando, trayendo sus gavillas. Aleluia.
+      - - R
+        - 'Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
   variantes:
-    himno:
-    - etiqueta: II
-      texto: ¡Jerusalén, ciudad dichosa!
-    - etiqueta: 'O bien en América latina:'
-      texto: Nueva Jerusalén y ciudad santa
     lectura1:
     - etiqueta: 'En tiempo de Cuaresma:'
       texto:
@@ -143,38 +191,6 @@ dedicacion:
           - Las puertas de Jerusalén serán rehechas con zafiros y esmeraldas, y con piedras preciosas sus murallas.
         - - R
           - Y sus torres serán batidas con oro.
-    lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: EDIFICACIÓN Y CONSAGRACIÓN DE LA CASA DE DIOS EN NOSOTROS
-        texto: |-
-          El motivo que hoy nos congrega es la consagración de una casa de oración. Esta es la casa de nuestras oraciones, pero la casa de Dios somos nosotros mismos. Por eso nosotros, que somos la casa de Dios, nos vamos edificando durante esta vida, para ser consagrados al final de los tiempos. El edificio o, mejor dicho, la construcción del edificio exige ciertamente trabajo; la consagración, en cambio, trae consigo el gozo.
-
-          Lo que aquí se hacía, cuando se iba construyendo esta casa, sucede también cuando los creyentes se congregan en Cristo. Pues, al acceder a la fe, es como si se extrajeran de los montes y de las selvas las piedras y los troncos; y, cuando reciben la catequesis y el bautismo es como si fueran tallándose, alineándose y nivelándose por las manos de los artífices y carpinteros.
-
-          Pero no llegan a ser casa de Dios sino cuando se aglutinan en la caridad. Nadie entraría en esta casa si las piedras y los maderos no estuviesen unidos y compactos con un determinado orden, si no estuviesen bien trabados, y si la unión entre ellos no fuera tan íntima que en cierto modo puede decirse que se aman. Pues cuando ves en un edificio que las piedras y que los maderos están perfectamente unidos, entras sin miedo y no temes que se hunda.
-
-          Así, pues, porque nuestro Señor Jesucristo quería entrar en nosotros y habitar en nosotros, afirmaba, como si nos estuviera edificando: Os doy un mandamiento nuevo: que os améis unos a otros. «Os doy —dice— un mandamiento. Antes erais hombres viejos, todavía no erais para mí una casa, yacíais en vuestra propia ruina. Para salir, pues, de la caducidad de vuestra propia ruina, amaos unos a otros».
-
-          Considerad, pues, que esta casa, como fue profetizado y prometido, debe ser edificada por todo el mundo. Cuando se construía el templo después del exilio, como se afirma en un salmo, decían: Cantad al Señor un cántico nuevo, cantad al Señor toda la tierra. Lo que allí decía: Un cántico nuevo, el Señor lo llama: Un mandamiento nuevo. Pues ¿qué novedad posee un cántico, si no es el amor nuevo? Cantar es propio de quien ama, y la voz del cantor amante es el fervor de un amor santo.
-
-          Así, pues, lo que vemos que se realiza aquí materialmente en las paredes, hagámoslo espiritualmente en nuestras almas. Lo que consideramos como una obra perfecta en las piedras y en los maderos, ayudados por la gracia de Dios, hagamos que sea perfecto también en nuestros cuerpos.
-
-          En primer lugar, demos gracias a Dios, nuestro Señor, de quien proviene todo buen don y toda dádiva perfecta. Llenos de gozo, alabemos su bondad, pues para construir esta casa de oración ha visitado las almas de sus fieles, ha despertado su afecto, les ha concedido su ayuda, ha inspirado a los reticentes para que quieran, ha ayudado sus buenos intentos para que obren, y de esta forma Dios, que activa en los suyos el querer y la actividad según su beneplácito, él mismo ha comenzado y ha llevado a perfección todas estas cosas.
-        autor: |-
-          De los Sermones de san Agustín, obispo
-          (Sermón 336, 1. 6: PL 38 [ed. 1861], 1471-1472. 1475)
-    resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Cf. Sal 83, 2-3. 5
-        vr:
-        - - R
-          - ¡Qué deseables son tus moradas, Señor de los ejércitos! * Mi alma se consume y anhela los atrios del Señor.
-        - - V
-          - Los que viven en tu casa te alabarán siempre.
-        - - R
-          - Mi alma se consume y anhela los atrios del Señor.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
   himno: María, pureza en vuelo
@@ -254,7 +270,96 @@ virgen-maria:
       - Por ti alcanzan la salvación tus progenitores.
     - - R
       - Por ti la bendición del Padre ha brillado sobre los hombres.
+  opciones:
+    himno:
+    - Lucero de la mañana
+    lectura1:
+    - titulo: POR LA FE, SOMOS HIJOS Y HEREDEROS DE DIOS
+      texto: |-
+        Hermanos: La Escritura ha declarado que todos los hombres son culpables de pecado, para que así la pro-mesa se concediese a los creyentes, por su fe en Jesucristo.
+
+        Antes de venir la economía de la fe, estábamos enterrados bajo la custodia de la ley, en espera de la fe que había de revelarse. De este modo la ley fue nuestro ayo para llevarnos a Cristo, a fin de ser justificados por la fe. Pero, una vez llegada la era de la fe, no estamos más bajo la potestad del ayo, pues ya sois todos hijos de Dios por la fe en Cristo Jesús.
+
+        En efecto, todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay distinción entre judío y gentil, ni entre libre y esclavo, ni entre hombre y mujer: todos sois uno en Cristo Jesús. Y si sois de Cristo sois por lo mismo descendencia de Abraham, herederos según la promesa.
+
+        Pongo también otra comparación: El heredero, mientras es menor de edad, con ser dueño de todo, no se distingue en nada del esclavo: está bajo tutores y administradores hasta el tiempo prefijado por su padre. De igual modo: Nosotros, cuando éramos menores de edad, vivíamos esclavizados por los «elementos del mundo».
+
+        Pero, cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción. Y la prueba de que sois hijos es que Dios ha enviado a vuestros corazones el Espíritu de su Hijo, que clama: «¡Padre!» Por consiguiente, ya no eres esclavo, sino hijo; y, si eres hijo, también eres heredero por voluntad de Dios.
+      ref: De la carta del apóstol san Pablo a los Gálatas 3, 22-4, 7
+    resp1:
+    - ref: Cf. Ga 4. 4-5; Ef 2, 4; Rm 8, 3
+      vr:
+      - - R
+        - Mirad que ya se cumplió el tiempo, y ha enviado Dios a su Hijo a la tierra, nacido de una Virgen, nacido bajo la ley, * para rescatar a los que estaban bajo la ley.
+      - - V
+        - Por el gran amor con que nos amó, envió a su propio Hijo, sometido a una existencia semejante a la de la carne de pecado,
+      - - R
+        - Para rescatar a los que estaban bajo la ley.
+    lectura2:
+    - titulo: MARÍA, MADRE NUESTRA
+      texto: |-
+        Acudamos a la esposa del Señor, acudamos a su madre, acudamos a su más perfecta esclava. Pues todo esto es María.
+
+        ¿Y qué es lo que le ofrecemos? ¿Con qué dones le obsequiaremos? ¡Ojalá pudiéramos presentarle lo que en justicia le debemos! Le debemos honor, porque es la madre de nuestro Señor. Pues quien no honra a la madre sin duda que deshonra al hijo. La Escritura, en efecto, afirma: Honra a tu padre y a tu madre.
+
+        ¿Qué es lo que diremos, hermanos? ¿Acaso no es nuestra madre? En verdad, hermanos, ella es nuestra madre. Por ella hemos nacido no al mundo, sino a Dios.
+
+        Como sabéis y creéis, nos encontrábamos todos en el reino de la muerte, en el dominio de la caducidad, en las tinieblas, en la miseria. En el reino de la muerte, porque habíamos perdido al Señor; en el dominio de la caducidad, porque vivíamos en la corrupción; en las tinieblas, porque habíamos perdido la luz de la sabiduría, y, como consecuencia de todo esto, habíamos perecido completamente. Pero por medio de María hemos nacido de una forma mucho más excelsa que por medio de Eva, ya que por María ha nacido Cristo. En vez de la antigua caducidad, hemos recuperado la novedad de vida; en vez de la corrupción, la incorrupción; en vez de las tinieblas, la luz.
+
+        María es nuestra madre, la madre de nuestra vida, la madre de nuestra incorrupción, la madre de nuestra luz. El Apóstol afirma de nuestro Señor: Dios lo ha hecho para nosotros sabiduría, justicia, santificación y redención.
+
+        Ella, pues, que es madre de Cristo, es también madre de nuestra sabiduría, madre de nuestra justicia, madre de nuestra santificación, madre de nuestra redención. Por lo tanto, es para nosotros madre en un sentido mucho más profundo aún que nuestra propia madre según la carne. Porque nuestro nacimiento de María es mucho mejor, pues de ella viene nuestra santidad, nuestra sabiduría, nuestra justicia, nuestra santificación, nuestra redención.
+
+        Afirma la Escritura: Alabad al Señor en sus santos. Si nuestro Señor debe ser alabado en sus santos, en los que hizo maravillas y prodigios, cuánto más debe ser alabado en María, en la que hizo la mayor de las maravillas, pues él mismo quiso nacer de ella.
+      autor: |-
+        De los sermones del beato Elredo, abad
+        (Sermón 20, en la Natividad de santa María: PL 195, 322-324)
+    - titulo: LA MATERNIDAD DE MARÍA EN LA ECONOMÍA DE LA GRACIA
+      texto: |-
+        La Santísima Virgen, desde toda la eternidad, fue predestinada como Madre de Dios, al mismo tiempo que la encarnación del Verbo, y por disposición de la divina providencia fue en la tierra la madre excelsa del divino Redentor y, de forma singular, la generosa colaboradora entre todas las criaturas y la humilde esclava del Señor. Concibiendo a Cristo, engendrándolo, alimentándolo, presentándolo al Padre en el templo, padeciendo con su Hijo cuando él moría en la cruz, cooperó de forma única a la obra del Salvador, por su obediencia, su fe, su esperanza y su ardiente caridad, para restaurar la vida sobrenatural de las almas. Por todo ello es nuestra madre en el orden de la gracia.
+
+        Ya desde el consentimiento que prestó fielmente en la anunciación y que mantuvo sin vacilar al pie de la cruz, hasta el momento de la consumación final de todos los elegidos, pervive sin cesar en la economía de la gracia esta maternidad de María.
+
+        Porque, después de su asunción a los cielos, no ha abandonado esta misión salvadora, sino que con su constante intercesión continúa consiguiéndonos los dones de la salvación eterna.
+
+        Con su amor materno, vela sobre los hermanos de su Hijo que todavía peregrinan y que se encuentran en peligro y angustia, hasta que sean conducidos a la patria del cielo. Por todo ello, la bienaventurada Virgen es invocada en la Iglesia con los títulos de abogada, auxiliadora, socorro, mediadora. Sin embargo, estos títulos hay que entenderlos de tal forma que no disminuyan ni añadan nada a la dignidad y eficacia de Cristo, único mediador.
+
+        Ninguna criatura podrá nunca compararse con el Verbo encarnado, Redentor nuestro. Pero así como el sacerdocio de Cristo se participa de diversas formas, tanto por los ministros sagrados como por el pueblo fiel, y así como la única bondad divina se difunde realmente de formas diversas en las criaturas, igualmente la única mediación del Redentor no excluye, sino que suscita en las criaturas diversas clases de cooperación, participada de la única fuente.
+
+        La Iglesia no duda en confesar esta función subordinada de María, la experimenta continuamente y la recomienda a la piedad de los fieles, para que, apoyados en esta protección maternal, se unan con mayor intimidad al Mediador y Salvador.
+      autor: |-
+        De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo
+        (Núms. 61-62)
+    resp2:
+    - ref: null
+      vr:
+      - - R
+        - Dichosa eres, santa Virgen María, y digna de toda alabanza. * De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
+      - - V
+        - Celebremos con gozo esta fiesta de santa María Virgen.
+      - - R
+        - De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
+    - ref: null
+      vr:
+      - - R
+        - No hay alabanza digna de ti, virginidad inmaculada y santa. * Porque en tu seno has llevado al que ni el cielo puede contener.
+      - - V
+        - Bendita tú entre las mujeres y bendito el fruto de tu vientre.
+      - - R
+        - Porque en tu seno has llevado al que ni el cielo puede contener.
   pascua:
+    salmodia:
+    - ant: María ha recibido la bendición del Señor y la misericordia de Dios, su salvador. Aleluia.
+      salmo: salmo-23
+    - ant: El Altísimo consagra su morada. Aleluia.
+      salmo: salmo-45
+    - ant: ¡Qué pregón tan glorioso para ti, Virgen María! Aleluia.
+      salmo: salmo-86
+    versiculo:
+    - - V
+      - María conservaba todas estas cosas. Aleluia.
+    - - R
+      - Meditándolas en su corazón. Aleluia.
     lectura1:
       titulo: EL GRAN SIGNO DE UNA MUJER APARECIÓ EN EL CIELO
       texto: |-
@@ -277,10 +382,16 @@ virgen-maria:
         - 'Apareció una figura portentosa en el cielo: Una mujer vestida de sol, la luna por pedestal, coronada con doce estrellas.'
       - - R
         - ¡Demos gracias a Dios, que nos da la victoria por nuestro Señor Jesucristo! Aleluia.
+    resp2:
+      ref: S. Sofronio, Disertación 2
+      vr:
+      - - R
+        - Verdaderamente, bendita tú eres entre todas las mujeres, ya que has cambiado en bendición la maldición de Eva. * Por ti la bendición del Padre ha brillado sobre los hombres.
+      - - V
+        - Por ti alcanzan la salvación tus progenitores. Aleluia.
+      - - R
+        - Por ti la bendición del Padre ha brillado sobre los hombres.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Lucero de la mañana
     versiculo:
     - etiqueta: 'opcion: 1'
       texto:
@@ -325,20 +436,6 @@ virgen-maria:
 
           Habitará el lobo con el cordero, y la pantera se echará con el cabrito, el novillo y el león pacerán juntos: y un niño pequeño los conducirá. La vaca pastará con el oso, sus crías yacerán juntas; el león comerá paja con el buey. El niño jugará junto al agujero del áspid, la criatura meterá la mano en el escondrijo de la serpiente. Nadie hará daño ni estrago por todo mi Monte Santo: porque estará lleno el país de ciencia del Señor, como las aguas colman el mar.»
         ref: Del libro del profeta Isaías 7, 10-14; 8, 10; 11, 1-9
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: POR LA FE, SOMOS HIJOS Y HEREDEROS DE DIOS
-        texto: |-
-          Hermanos: La Escritura ha declarado que todos los hombres son culpables de pecado, para que así la pro-mesa se concediese a los creyentes, por su fe en Jesucristo.
-
-          Antes de venir la economía de la fe, estábamos enterrados bajo la custodia de la ley, en espera de la fe que había de revelarse. De este modo la ley fue nuestro ayo para llevarnos a Cristo, a fin de ser justificados por la fe. Pero, una vez llegada la era de la fe, no estamos más bajo la potestad del ayo, pues ya sois todos hijos de Dios por la fe en Cristo Jesús.
-
-          En efecto, todos los que habéis sido bautizados en Cristo os habéis revestido de Cristo. Ya no hay distinción entre judío y gentil, ni entre libre y esclavo, ni entre hombre y mujer: todos sois uno en Cristo Jesús. Y si sois de Cristo sois por lo mismo descendencia de Abraham, herederos según la promesa.
-
-          Pongo también otra comparación: El heredero, mientras es menor de edad, con ser dueño de todo, no se distingue en nada del esclavo: está bajo tutores y administradores hasta el tiempo prefijado por su padre. De igual modo: Nosotros, cuando éramos menores de edad, vivíamos esclavizados por los «elementos del mundo».
-
-          Pero, cuando se cumplió el tiempo, envió Dios a su Hijo, nacido de una mujer, nacido bajo la ley, para rescatar a los que estaban bajo la ley, para que recibiéramos el ser hijos por adopción. Y la prueba de que sois hijos es que Dios ha enviado a vuestros corazones el Espíritu de su Hijo, que clama: «¡Padre!» Por consiguiente, ya no eres esclavo, sino hijo; y, si eres hijo, también eres heredero por voluntad de Dios.
-        ref: De la carta del apóstol san Pablo a los Gálatas 3, 22-4, 7
     resp1:
     - etiqueta: 'En tiempo de cuaresma:'
       texto:
@@ -360,76 +457,6 @@ virgen-maria:
           - Se sentará sobre el trono de David y reinará para siempre.
         - - R
           - Y tendrá por nombre «Consejero admirable» y «Dios poderoso».
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Cf. Ga 4. 4-5; Ef 2, 4; Rm 8, 3
-        vr:
-        - - R
-          - Mirad que ya se cumplió el tiempo, y ha enviado Dios a su Hijo a la tierra, nacido de una Virgen, nacido bajo la ley, * para rescatar a los que estaban bajo la ley.
-        - - V
-          - Por el gran amor con que nos amó, envió a su propio Hijo, sometido a una existencia semejante a la de la carne de pecado,
-        - - R
-          - Para rescatar a los que estaban bajo la ley.
-    lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: MARÍA, MADRE NUESTRA
-        texto: |-
-          Acudamos a la esposa del Señor, acudamos a su madre, acudamos a su más perfecta esclava. Pues todo esto es María.
-
-          ¿Y qué es lo que le ofrecemos? ¿Con qué dones le obsequiaremos? ¡Ojalá pudiéramos presentarle lo que en justicia le debemos! Le debemos honor, porque es la madre de nuestro Señor. Pues quien no honra a la madre sin duda que deshonra al hijo. La Escritura, en efecto, afirma: Honra a tu padre y a tu madre.
-
-          ¿Qué es lo que diremos, hermanos? ¿Acaso no es nuestra madre? En verdad, hermanos, ella es nuestra madre. Por ella hemos nacido no al mundo, sino a Dios.
-
-          Como sabéis y creéis, nos encontrábamos todos en el reino de la muerte, en el dominio de la caducidad, en las tinieblas, en la miseria. En el reino de la muerte, porque habíamos perdido al Señor; en el dominio de la caducidad, porque vivíamos en la corrupción; en las tinieblas, porque habíamos perdido la luz de la sabiduría, y, como consecuencia de todo esto, habíamos perecido completamente. Pero por medio de María hemos nacido de una forma mucho más excelsa que por medio de Eva, ya que por María ha nacido Cristo. En vez de la antigua caducidad, hemos recuperado la novedad de vida; en vez de la corrupción, la incorrupción; en vez de las tinieblas, la luz.
-
-          María es nuestra madre, la madre de nuestra vida, la madre de nuestra incorrupción, la madre de nuestra luz. El Apóstol afirma de nuestro Señor: Dios lo ha hecho para nosotros sabiduría, justicia, santificación y redención.
-
-          Ella, pues, que es madre de Cristo, es también madre de nuestra sabiduría, madre de nuestra justicia, madre de nuestra santificación, madre de nuestra redención. Por lo tanto, es para nosotros madre en un sentido mucho más profundo aún que nuestra propia madre según la carne. Porque nuestro nacimiento de María es mucho mejor, pues de ella viene nuestra santidad, nuestra sabiduría, nuestra justicia, nuestra santificación, nuestra redención.
-
-          Afirma la Escritura: Alabad al Señor en sus santos. Si nuestro Señor debe ser alabado en sus santos, en los que hizo maravillas y prodigios, cuánto más debe ser alabado en María, en la que hizo la mayor de las maravillas, pues él mismo quiso nacer de ella.
-        autor: |-
-          De los sermones del beato Elredo, abad
-          (Sermón 20, en la Natividad de santa María: PL 195, 322-324)
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA MATERNIDAD DE MARÍA EN LA ECONOMÍA DE LA GRACIA
-        texto: |-
-          La Santísima Virgen, desde toda la eternidad, fue predestinada como Madre de Dios, al mismo tiempo que la encarnación del Verbo, y por disposición de la divina providencia fue en la tierra la madre excelsa del divino Redentor y, de forma singular, la generosa colaboradora entre todas las criaturas y la humilde esclava del Señor. Concibiendo a Cristo, engendrándolo, alimentándolo, presentándolo al Padre en el templo, padeciendo con su Hijo cuando él moría en la cruz, cooperó de forma única a la obra del Salvador, por su obediencia, su fe, su esperanza y su ardiente caridad, para restaurar la vida sobrenatural de las almas. Por todo ello es nuestra madre en el orden de la gracia.
-
-          Ya desde el consentimiento que prestó fielmente en la anunciación y que mantuvo sin vacilar al pie de la cruz, hasta el momento de la consumación final de todos los elegidos, pervive sin cesar en la economía de la gracia esta maternidad de María.
-
-          Porque, después de su asunción a los cielos, no ha abandonado esta misión salvadora, sino que con su constante intercesión continúa consiguiéndonos los dones de la salvación eterna.
-
-          Con su amor materno, vela sobre los hermanos de su Hijo que todavía peregrinan y que se encuentran en peligro y angustia, hasta que sean conducidos a la patria del cielo. Por todo ello, la bienaventurada Virgen es invocada en la Iglesia con los títulos de abogada, auxiliadora, socorro, mediadora. Sin embargo, estos títulos hay que entenderlos de tal forma que no disminuyan ni añadan nada a la dignidad y eficacia de Cristo, único mediador.
-
-          Ninguna criatura podrá nunca compararse con el Verbo encarnado, Redentor nuestro. Pero así como el sacerdocio de Cristo se participa de diversas formas, tanto por los ministros sagrados como por el pueblo fiel, y así como la única bondad divina se difunde realmente de formas diversas en las criaturas, igualmente la única mediación del Redentor no excluye, sino que suscita en las criaturas diversas clases de cooperación, participada de la única fuente.
-
-          La Iglesia no duda en confesar esta función subordinada de María, la experimenta continuamente y la recomienda a la piedad de los fieles, para que, apoyados en esta protección maternal, se unan con mayor intimidad al Mediador y Salvador.
-        autor: |-
-          De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo
-          (Núms. 61-62)
-    resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Dichosa eres, santa Virgen María, y digna de toda alabanza. * De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
-        - - V
-          - Celebremos con gozo esta fiesta de santa María Virgen.
-        - - R
-          - De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - No hay alabanza digna de ti, virginidad inmaculada y santa. * Porque en tu seno has llevado al que ni el cielo puede contener.
-        - - V
-          - Bendita tú entre las mujeres y bendito el fruto de tu vientre.
-        - - R
-          - Porque en tu seno has llevado al que ni el cielo puede contener.
 santa-maria-sabado:
   nombre: Memoria de santa María en sábado
   himno: Rosa entre rosas
@@ -478,234 +505,200 @@ santa-maria-sabado:
     texto: Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.
   - para: ''
     texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
-  variantes:
+  opciones:
     himno:
-    - etiqueta: II
-      texto: Ruega por nosotros
-    - etiqueta: 'O bien:'
-      texto: Llena de rosas mi herida
+    - Ruega por nosotros
+    - Llena de rosas mi herida
     lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: MARÍA, MADRE NUESTRA
-        texto: |-
-          Acudamos a la esposa del Señor, acudamos a su madre, acudamos a su más perfecta esclava. Pues todo esto es María.
+    - titulo: MARÍA, MADRE NUESTRA
+      texto: |-
+        Acudamos a la esposa del Señor, acudamos a su madre, acudamos a su más perfecta esclava. Pues todo esto es María.
 
-          ¿Y qué es lo que le ofrecemos? ¿Con qué dones le obsequiaremos? ¡Ojalá pudiéramos presentarle lo que en justicia le debemos! Le debemos honor, porque es la madre de nuestro Señor. Pues quien no honra a la madre sin duda que deshonra al hijo. La Escritura, en efecto, afirma: Honra a tu padre y a tu madre.
+        ¿Y qué es lo que le ofrecemos? ¿Con qué dones le obsequiaremos? ¡Ojalá pudiéramos presentarle lo que en justicia le debemos! Le debemos honor, porque es la madre de nuestro Señor. Pues quien no honra a la madre sin duda que deshonra al hijo. La Escritura, en efecto, afirma: Honra a tu padre y a tu madre.
 
-          ¿Qué es lo que diremos, hermanos? ¿Acaso no es nuestra madre? En verdad, hermanos, ella es nuestra madre. Por ella hemos nacido no al mundo, sino a Dios.
+        ¿Qué es lo que diremos, hermanos? ¿Acaso no es nuestra madre? En verdad, hermanos, ella es nuestra madre. Por ella hemos nacido no al mundo, sino a Dios.
 
-          Como sabéis y creéis, nos encontrábamos todos en el reino de la muerte, en el dominio de la caducidad, en las tinieblas, en la miseria. En el reino de la muerte, porque habíamos perdido al Señor; en el dominio de la caducidad, porque vivíamos en la corrupción; en las tinieblas, porque habíamos perdido la luz de la sabiduría, y, como consecuencia de todo esto, habíamos perecido completamente. Pero por medio de María hemos nacido de una forma mucho más excelsa que por medio de Eva, ya que por María ha nacido Cristo. En vez de la antigua caducidad, hemos recuperado la novedad de vida; en vez de la corrupción, la incorrupción; en vez de las tinieblas, la luz.
+        Como sabéis y creéis, nos encontrábamos todos en el reino de la muerte, en el dominio de la caducidad, en las tinieblas, en la miseria. En el reino de la muerte, porque habíamos perdido al Señor; en el dominio de la caducidad, porque vivíamos en la corrupción; en las tinieblas, porque habíamos perdido la luz de la sabiduría, y, como consecuencia de todo esto, habíamos perecido completamente. Pero por medio de María hemos nacido de una forma mucho más excelsa que por medio de Eva, ya que por María ha nacido Cristo. En vez de la antigua caducidad, hemos recuperado la novedad de vida; en vez de la corrupción, la incorrupción; en vez de las tinieblas, la luz.
 
-          María es nuestra madre, la madre de nuestra vida, la madre de nuestra incorrupción, la madre de nuestra luz. El Apóstol afirma de nuestro Señor: Dios lo ha hecho para nosotros sabiduría, justicia, santificación y redención.
+        María es nuestra madre, la madre de nuestra vida, la madre de nuestra incorrupción, la madre de nuestra luz. El Apóstol afirma de nuestro Señor: Dios lo ha hecho para nosotros sabiduría, justicia, santificación y redención.
 
-          Ella, pues, que es madre de Cristo, es también madre de nuestra sabiduría, madre de nuestra justicia, madre de nuestra santificación, madre de nuestra redención. Por lo tanto, es para nosotros madre en un sentido mucho más profundo aún que nuestra propia madre según la carne. Porque nuestro nacimiento de María es mucho mejor, pues de ella viene nuestra santidad, nuestra sabiduría, nuestra justicia, nuestra santificación, nuestra redención.
+        Ella, pues, que es madre de Cristo, es también madre de nuestra sabiduría, madre de nuestra justicia, madre de nuestra santificación, madre de nuestra redención. Por lo tanto, es para nosotros madre en un sentido mucho más profundo aún que nuestra propia madre según la carne. Porque nuestro nacimiento de María es mucho mejor, pues de ella viene nuestra santidad, nuestra sabiduría, nuestra justicia, nuestra santificación, nuestra redención.
 
-          Afirma la Escritura: Alabad al Señor en sus santos. Si nuestro Señor debe ser alabado en sus santos, en los que hizo maravillas y prodigios, cuánto más debe ser alabado en María, en la que hizo la mayor de las maravillas, pues él mismo quiso nacer de ella.
-        autor: |-
-          De los sermones del beato Elredo, abad
-          (Sermón 20, en la Natividad de santa María: PL 195, 322-324)
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA MATERNIDAD DE MARÍA EN LA ECONOMÍA DE LA GRACIA
-        texto: |-
-          La Santísima Virgen, desde toda la eternidad, fue predestinada como Madre de Dios, al mismo tiempo que la encarnación del Verbo, y por disposición de la divina providencia fue en la tierra la madre excelsa del divino Redentor y, de forma singular, la generosa colaboradora entre todas las criaturas y la humilde esclava del Señor. Concibiendo a Cristo, engendrándolo, alimentándolo, presentándolo al Padre en el templo, padeciendo con su Hijo cuando él moría en la cruz, cooperó de forma única a la obra del Salvador, por su obediencia, su fe, su esperanza y su ardiente caridad, para restaurar la vida sobrenatural de las almas. Por todo ello es nuestra madre en el orden de la gracia.
+        Afirma la Escritura: Alabad al Señor en sus santos. Si nuestro Señor debe ser alabado en sus santos, en los que hizo maravillas y prodigios, cuánto más debe ser alabado en María, en la que hizo la mayor de las maravillas, pues él mismo quiso nacer de ella.
+      autor: |-
+        De los sermones del beato Elredo, abad
+        (Sermón 20, en la Natividad de santa María: PL 195, 322-324)
+    - titulo: LA MATERNIDAD DE MARÍA EN LA ECONOMÍA DE LA GRACIA
+      texto: |-
+        La Santísima Virgen, desde toda la eternidad, fue predestinada como Madre de Dios, al mismo tiempo que la encarnación del Verbo, y por disposición de la divina providencia fue en la tierra la madre excelsa del divino Redentor y, de forma singular, la generosa colaboradora entre todas las criaturas y la humilde esclava del Señor. Concibiendo a Cristo, engendrándolo, alimentándolo, presentándolo al Padre en el templo, padeciendo con su Hijo cuando él moría en la cruz, cooperó de forma única a la obra del Salvador, por su obediencia, su fe, su esperanza y su ardiente caridad, para restaurar la vida sobrenatural de las almas. Por todo ello es nuestra madre en el orden de la gracia.
 
-          Ya desde el consentimiento que prestó fielmente en la anunciación y que mantuvo sin vacilar al pie de la cruz, hasta el momento de la consumación final de todos los elegidos, pervive sin cesar en la economía de la gracia esta maternidad de María.
+        Ya desde el consentimiento que prestó fielmente en la anunciación y que mantuvo sin vacilar al pie de la cruz, hasta el momento de la consumación final de todos los elegidos, pervive sin cesar en la economía de la gracia esta maternidad de María.
 
-          Porque, después de su asunción a los cielos, no ha abandonado esta misión salvadora, sino que con su constante intercesión continúa consiguiéndonos los dones de la salvación eterna.
+        Porque, después de su asunción a los cielos, no ha abandonado esta misión salvadora, sino que con su constante intercesión continúa consiguiéndonos los dones de la salvación eterna.
 
-          Con su amor materno, vela sobre los hermanos de su Hijo que todavía peregrinan y que se encuentran en peligro y angustia, hasta que sean conducidos a la patria del cielo. Por todo ello, la bienaventurada Virgen es invocada en la Iglesia con los títulos de abogada, auxiliadora, socorro, mediadora. Sin embargo, estos títulos hay que entenderlos de tal forma que no disminuyan ni añadan nada a la dignidad y eficacia de Cristo, único mediador.
+        Con su amor materno, vela sobre los hermanos de su Hijo que todavía peregrinan y que se encuentran en peligro y angustia, hasta que sean conducidos a la patria del cielo. Por todo ello, la bienaventurada Virgen es invocada en la Iglesia con los títulos de abogada, auxiliadora, socorro, mediadora. Sin embargo, estos títulos hay que entenderlos de tal forma que no disminuyan ni añadan nada a la dignidad y eficacia de Cristo, único mediador.
 
-          Ninguna criatura podrá nunca compararse con el Verbo encarnado, Redentor nuestro. Pero así como el sacerdocio de Cristo se participa de diversas formas, tanto por los ministros sagrados como por el pueblo fiel, y así como la única bondad divina se difunde realmente de formas diversas en las criaturas, igualmente la única mediación del Redentor no excluye, sino que suscita en las criaturas diversas clases de cooperación, participada de la única fuente.
+        Ninguna criatura podrá nunca compararse con el Verbo encarnado, Redentor nuestro. Pero así como el sacerdocio de Cristo se participa de diversas formas, tanto por los ministros sagrados como por el pueblo fiel, y así como la única bondad divina se difunde realmente de formas diversas en las criaturas, igualmente la única mediación del Redentor no excluye, sino que suscita en las criaturas diversas clases de cooperación, participada de la única fuente.
 
-          La Iglesia no duda en confesar esta función subordinada de María, la experimenta continuamente y la recomienda a la piedad de los fieles, para que, apoyados en esta protección maternal, se unan con mayor intimidad al Mediador y Salvador.
-        autor: |-
-          De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo
-          (Núms. 61-62)
-    - etiqueta: 'O bien esta Otra:'
-      texto:
-        titulo: MARÍA, ANTES DE CONCEBIR CORPORALMENTE, CONCIBIÓ EN SU ESPÍRITU
-        texto: |-
-          Dios elige a una virgen de la descendencia real de David; y esta virgen, destinada a llevar en su seno el fruto de una sagrada fecundación, antes de concebir corporalmente a su prole, divina y humana a la vez, la concibió en su espíritu. Y, para que no se espantara, ignorando los designios divinos, al observar en su cuerpo unos cambios inesperados, conoce, por la conversación con el ángel, lo que el Espíritu Santo ha de operar en ella. Y la que ha de ser Madre de Dios confía en que su virginidad ha de permanecer sin detrimento. ¿Por qué había de dudar de este nuevo género de concepción, si se le promete que el Altísimo pondrá en juego su poder? Su fe y su confianza quedan, además, confirmadas cuando el ángel le da una prueba de la eficacia maravillosa de este poder divino, haciéndole saber que Isabel ha obtenido también una inesperada fecundidad: el que es capaz de hacer concebir a una mujer estéril puede hacer lo mismo con una mujer virgen.
+        La Iglesia no duda en confesar esta función subordinada de María, la experimenta continuamente y la recomienda a la piedad de los fieles, para que, apoyados en esta protección maternal, se unan con mayor intimidad al Mediador y Salvador.
+      autor: |-
+        De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo
+        (Núms. 61-62)
+    - titulo: MARÍA, ANTES DE CONCEBIR CORPORALMENTE, CONCIBIÓ EN SU ESPÍRITU
+      texto: |-
+        Dios elige a una virgen de la descendencia real de David; y esta virgen, destinada a llevar en su seno el fruto de una sagrada fecundación, antes de concebir corporalmente a su prole, divina y humana a la vez, la concibió en su espíritu. Y, para que no se espantara, ignorando los designios divinos, al observar en su cuerpo unos cambios inesperados, conoce, por la conversación con el ángel, lo que el Espíritu Santo ha de operar en ella. Y la que ha de ser Madre de Dios confía en que su virginidad ha de permanecer sin detrimento. ¿Por qué había de dudar de este nuevo género de concepción, si se le promete que el Altísimo pondrá en juego su poder? Su fe y su confianza quedan, además, confirmadas cuando el ángel le da una prueba de la eficacia maravillosa de este poder divino, haciéndole saber que Isabel ha obtenido también una inesperada fecundidad: el que es capaz de hacer concebir a una mujer estéril puede hacer lo mismo con una mujer virgen.
 
-          Así, pues, el Verbo de Dios, que es Dios, el Hijo de
+        Así, pues, el Verbo de Dios, que es Dios, el Hijo de
 
-          Dios, que en el principio estaba junto a Dios, por medio del cual se hizo todo, y sin el cual no se hizo nada, se hace hombre para librar al hombre de la muerte eterna; se abaja hasta asumir nuestra pequeñez, sin menguar por ello su majestad, de tal modo que, permaneciendo lo que era y asumiendo lo que no era, une la auténtica condición de esclavo a su condición divina, por la que es igual al Padre; la unión que establece entre ambas naturalezas es tan admirable, que ni la gloria de la divinidad absorbe la humanidad, ni la humanidad disminuye en nada la divinidad.
+        Dios, que en el principio estaba junto a Dios, por medio del cual se hizo todo, y sin el cual no se hizo nada, se hace hombre para librar al hombre de la muerte eterna; se abaja hasta asumir nuestra pequeñez, sin menguar por ello su majestad, de tal modo que, permaneciendo lo que era y asumiendo lo que no era, une la auténtica condición de esclavo a su condición divina, por la que es igual al Padre; la unión que establece entre ambas naturalezas es tan admirable, que ni la gloria de la divinidad absorbe la humanidad, ni la humanidad disminuye en nada la divinidad.
 
-          Quedando, pues, a salvo el carácter propio de cada una de las naturalezas, y unidas ambas en una sola persona, la majestad asume la humildad, el poder la debilidad, la eternidad la mortalidad; y, para saldar la deuda contraída por nuestra condición pecadora, la naturaleza invulnerable se une a la naturaleza pasible, Dios verdadero y hombre verdadero se conjugan armoniosamente en la única persona del Señor; de este modo, tal como convenía para nuestro remedio, el único y mismo mediador entre Dios y los hombres pudo a la vez morir y resucitar, por la conjunción en él de esta doble condición. Con razón, pues, este nacimiento salvador había de dejar intacta la virginidad de la madre, ya que fue a la vez salvaguarda del pudor y alumbramiento de la verdad.
+        Quedando, pues, a salvo el carácter propio de cada una de las naturalezas, y unidas ambas en una sola persona, la majestad asume la humildad, el poder la debilidad, la eternidad la mortalidad; y, para saldar la deuda contraída por nuestra condición pecadora, la naturaleza invulnerable se une a la naturaleza pasible, Dios verdadero y hombre verdadero se conjugan armoniosamente en la única persona del Señor; de este modo, tal como convenía para nuestro remedio, el único y mismo mediador entre Dios y los hombres pudo a la vez morir y resucitar, por la conjunción en él de esta doble condición. Con razón, pues, este nacimiento salvador había de dejar intacta la virginidad de la madre, ya que fue a la vez salvaguarda del pudor y alumbramiento de la verdad.
 
-          Tal era, amadísimos, la clase de nacimiento que convenía a Cristo, fuerza y sabiduría de Dios; con él se mostró igual a nosotros por su humanidad, superior a nosotros por su divinidad. Si no hubiera sido Dios verdadero, no hubiera podido remediar nuestra situación; si no hubiera sido hombre verdadero, no hubiera podido darnos ejemplo.
+        Tal era, amadísimos, la clase de nacimiento que convenía a Cristo, fuerza y sabiduría de Dios; con él se mostró igual a nosotros por su humanidad, superior a nosotros por su divinidad. Si no hubiera sido Dios verdadero, no hubiera podido remediar nuestra situación; si no hubiera sido hombre verdadero, no hubiera podido darnos ejemplo.
 
-          Por eso, al nacer el Señor, los ángeles cantan llenos de gozo: Gloria a Dios en el cielo, y proclaman: y en la tierra paz a los hombres que ama el Señor. Ellos ven, en efecto, que la Jerusalén celestial se va edificando por medio de todas las naciones del orbe. ¿Cómo, pues, no habría de alegrarse la pequeñez humana ante esta obra inenarrable de la misericordia divina, cuando incluso los coros sublimes de los ángeles encontraban en ella un gozo tan intenso?
-        autor: |-
-          De los sermones de san León Magno, papa
-          (Sermón 1 en la Natividad del Señor, 2. 3: PL 54,191-192)
-    - etiqueta: 'O bien esta Otra:'
-      texto:
-        titulo: ALABANZAS DE LA MADRE DE DIOS
-        texto: |-
-          Tengo ante mis ojos la asamblea de los santos padres que, llenos de gozo y fervor, han acudido aquí, respondiendo con prontitud a la invitación de la santa Madre de Dios, la siempre Virgen María. Este espectáculo ha trocado en gozo la gran tristeza que antes me oprimía. Vemos realizadas en esta reunión aquellas hermosas palabras de David, el salmista: Ved qué dulzura, qué delicia; convivir los hermanos unidos.
+        Por eso, al nacer el Señor, los ángeles cantan llenos de gozo: Gloria a Dios en el cielo, y proclaman: y en la tierra paz a los hombres que ama el Señor. Ellos ven, en efecto, que la Jerusalén celestial se va edificando por medio de todas las naciones del orbe. ¿Cómo, pues, no habría de alegrarse la pequeñez humana ante esta obra inenarrable de la misericordia divina, cuando incluso los coros sublimes de los ángeles encontraban en ella un gozo tan intenso?
+      autor: |-
+        De los sermones de san León Magno, papa
+        (Sermón 1 en la Natividad del Señor, 2. 3: PL 54,191-192)
+    - titulo: ALABANZAS DE LA MADRE DE DIOS
+      texto: |-
+        Tengo ante mis ojos la asamblea de los santos padres que, llenos de gozo y fervor, han acudido aquí, respondiendo con prontitud a la invitación de la santa Madre de Dios, la siempre Virgen María. Este espectáculo ha trocado en gozo la gran tristeza que antes me oprimía. Vemos realizadas en esta reunión aquellas hermosas palabras de David, el salmista: Ved qué dulzura, qué delicia; convivir los hermanos unidos.
 
-          Te saludamos, santa y misteriosa Trinidad, que nos has convocado a todos nosotros en esta iglesia de santa María, Madre de Dios.
+        Te saludamos, santa y misteriosa Trinidad, que nos has convocado a todos nosotros en esta iglesia de santa María, Madre de Dios.
 
-          Te saludamos, María, Madre de Dios, tesoro digno de ser venerado por todo el orbe, lámpara inextinguible, corona de la virginidad, trono de la recta doctrina, templo indestructible, lugar propio de aquel que no puede ser contenido en lugar alguno, madre y virgen, por quien es llamado bendito, en los santos evangelios, el que viene en nombre del Señor.
+        Te saludamos, María, Madre de Dios, tesoro digno de ser venerado por todo el orbe, lámpara inextinguible, corona de la virginidad, trono de la recta doctrina, templo indestructible, lugar propio de aquel que no puede ser contenido en lugar alguno, madre y virgen, por quien es llamado bendito, en los santos evangelios, el que viene en nombre del Señor.
 
-          Te saludamos, a ti, que encerraste en tu seno virginal a aquel que es inmenso e inabarcable; a ti, por quien la santa Trinidad es adorada y glorificada; por quien la cruz preciosa es celebrada y adorada en todo el orbe; por quien exulta el cielo; por quien se alegran los ángeles y arcángeles; por quien son puestos en fuga los demonios; por quien el diablo tentador cayó del cielo; por quien la criatura, caída en el pecado, es elevada al cielo; por quien la creación, sujeta a la insensatez de la idolatría, llega al conocimiento de la verdad; por quien los creyentes obtienen la gracia del bautismo y el aceite de la alegría; por quien han sido fundamentadas las Iglesias en el orbe de la tierra; por quien todos los hombres son llamados a la conversión.
+        Te saludamos, a ti, que encerraste en tu seno virginal a aquel que es inmenso e inabarcable; a ti, por quien la santa Trinidad es adorada y glorificada; por quien la cruz preciosa es celebrada y adorada en todo el orbe; por quien exulta el cielo; por quien se alegran los ángeles y arcángeles; por quien son puestos en fuga los demonios; por quien el diablo tentador cayó del cielo; por quien la criatura, caída en el pecado, es elevada al cielo; por quien la creación, sujeta a la insensatez de la idolatría, llega al conocimiento de la verdad; por quien los creyentes obtienen la gracia del bautismo y el aceite de la alegría; por quien han sido fundamentadas las Iglesias en el orbe de la tierra; por quien todos los hombres son llamados a la conversión.
 
-          Y ¿qué más diré? Por ti, el Hijo unigénito de Dios ha iluminado a los que vivían en tinieblas y en sombra de muerte; por ti, los profetas anunciaron las cosas futuras; por ti, los apóstoles predicaron la salvación a los gentiles; por ti, los muertos resucitan; por ti, reinan los reyes, por la santísima Trinidad.
+        Y ¿qué más diré? Por ti, el Hijo unigénito de Dios ha iluminado a los que vivían en tinieblas y en sombra de muerte; por ti, los profetas anunciaron las cosas futuras; por ti, los apóstoles predicaron la salvación a los gentiles; por ti, los muertos resucitan; por ti, reinan los reyes, por la santísima Trinidad.
 
-          ¿Quién habrá que sea capaz de cantar como es debido las alabanzas de María? Ella es madre y virgen a la vez; ¡qué cosa tan admirable! Es una maravilla que me llena de estupor. ¿Quién ha oído jamás decir que le esté prohibido al constructor habitar en el mismo templo que él ha construido? ¿Quién podrá tachar de ignominia el hecho de que la sirviente sea adoptada como madre?
+        ¿Quién habrá que sea capaz de cantar como es debido las alabanzas de María? Ella es madre y virgen a la vez; ¡qué cosa tan admirable! Es una maravilla que me llena de estupor. ¿Quién ha oído jamás decir que le esté prohibido al constructor habitar en el mismo templo que él ha construido? ¿Quién podrá tachar de ignominia el hecho de que la sirviente sea adoptada como madre?
 
-          Mirad: hoy todo el mundo se alegra; quiera Dios que todos nosotros reverenciemos y adoremos la unidad, que rindamos un culto impregnado de santo temor a la Trinidad indivisa, al celebrar, con nuestras alabanzas, a María siempre Virgen, el templo santo de Dios, y a su Hijo y esposo inmaculado: porque a él pertenece la gloria por los siglos de los siglos. Amén.
-        autor: |-
-          De la homilía de san Cirilo de Alejandría, obispo, pronunciada en el Concilio de Éfeso
-          (Homilía 4: PG 77, 991. 995-996)
-    - etiqueta: 'O bien esta Otra:'
-      texto:
-        titulo: EL AMIGO DE LOS HOMBRES SE HA HECHO HOMBRE, NACIENDO DE LA VIRGEN
-        texto: |-
-          Alégrense los cielos, y las nubes destilen la justicia, porque el Señor se ha apiadado de su pueblo. Alégrense los cielos, porque, al ser creados en el principio, también Adán fue formado de la tierra virgen por el Creador, mostrándose como amigo y familiar de Dios. Alégrense los cielos, porque ahora, de acuerdo con el plan divino, la tierra ha sido santificada por la encarnación de nuestro Señor, y el género humano ha sido liberado del culto idolátrico. Las nubes destilen la justicia, porque hoy el antiguo extravío de Eva ha sido reparado y destruido por la pureza de la Virgen María y por el que de ella ha nacido Dios y hombre juntamente. Hoy el hombre, cancelada la antigua condena, ha sido liberado de la horrenda noche que sobre él pesaba.
+        Mirad: hoy todo el mundo se alegra; quiera Dios que todos nosotros reverenciemos y adoremos la unidad, que rindamos un culto impregnado de santo temor a la Trinidad indivisa, al celebrar, con nuestras alabanzas, a María siempre Virgen, el templo santo de Dios, y a su Hijo y esposo inmaculado: porque a él pertenece la gloria por los siglos de los siglos. Amén.
+      autor: |-
+        De la homilía de san Cirilo de Alejandría, obispo, pronunciada en el Concilio de Éfeso
+        (Homilía 4: PG 77, 991. 995-996)
+    - titulo: EL AMIGO DE LOS HOMBRES SE HA HECHO HOMBRE, NACIENDO DE LA VIRGEN
+      texto: |-
+        Alégrense los cielos, y las nubes destilen la justicia, porque el Señor se ha apiadado de su pueblo. Alégrense los cielos, porque, al ser creados en el principio, también Adán fue formado de la tierra virgen por el Creador, mostrándose como amigo y familiar de Dios. Alégrense los cielos, porque ahora, de acuerdo con el plan divino, la tierra ha sido santificada por la encarnación de nuestro Señor, y el género humano ha sido liberado del culto idolátrico. Las nubes destilen la justicia, porque hoy el antiguo extravío de Eva ha sido reparado y destruido por la pureza de la Virgen María y por el que de ella ha nacido Dios y hombre juntamente. Hoy el hombre, cancelada la antigua condena, ha sido liberado de la horrenda noche que sobre él pesaba.
 
-          Cristo ha nacido de la Virgen, ya que de ella ha tomado carne, según la libre disposición del plan divino: La Palabra se hizo carne y acampó entre nosotros; por esto, la Virgen ha venido a ser madre de Dios. Y es virgen y madre al mismo tiempo, porque ha dado a luz a la Palabra encarnada, sin concurso de varón; y, así, ha conservado su virginidad por la acción milagrosa de aquel que de este modo quiso nacer. Ella es madre, con toda verdad, de la naturaleza humana de aquel que es la Palabra divina, ya que en ella se encarnó, de ella salió a la luz del mundo identificado con nuestra naturaleza, según su sabiduría y voluntad, con las que obra semejantes prodigios. De ellos, según la carne, nació el Mesías, como dice san Pablo.
+        Cristo ha nacido de la Virgen, ya que de ella ha tomado carne, según la libre disposición del plan divino: La Palabra se hizo carne y acampó entre nosotros; por esto, la Virgen ha venido a ser madre de Dios. Y es virgen y madre al mismo tiempo, porque ha dado a luz a la Palabra encarnada, sin concurso de varón; y, así, ha conservado su virginidad por la acción milagrosa de aquel que de este modo quiso nacer. Ella es madre, con toda verdad, de la naturaleza humana de aquel que es la Palabra divina, ya que en ella se encarnó, de ella salió a la luz del mundo identificado con nuestra naturaleza, según su sabiduría y voluntad, con las que obra semejantes prodigios. De ellos, según la carne, nació el Mesías, como dice san Pablo.
 
-          En efecto, él fue, es y será siempre el mismo; mas por nosotros se hizo hombre; el Amigo de los hombres se hizo hombre, sin sufrir por eso menoscabo alguno en su divinidad. Por mí se hizo semejante a mí, se hizo lo que no era, aunque conservando lo que era. Finalmente, se hizo hombre, para cargar sobre sí el castigo por nosotros merecido y hacernos, de esta manera, capaces de la adopción filial y otorgarnos aquel reino, del cual pedimos que nos haga dignos la gracia y misericordia del Señor Jesucristo, al cual, junto con el Padre y el Espíritu Santo, pertenece la gloria, el honor y el poder, ahora y siempre y por los siglos de los siglos. Amén.
-        autor: |-
-          De los sermones de san Proclo de Constantinopla, obispo
-          (Sobre la Natividad del Señor, 1-2: PG 65, 843-846)
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: MARÍA, MADRE DE CRISTO Y MADRE DE LOS CRISTIANOS
-        texto: |-
-          Un solo hijo dio a luz María, el cual, así como es Hijo único del Padre celestial, así también es el hijo único de su madre terrena. Y esta única virgen y madre, que tiene la gloria de haber dado a luz al Hijo único del Padre, abarca, en su único hijo, a todos los que son miembros del mismo; y no se avergüenza de llamarse madre de todos aquellos en los que ve formado o sabe que se va formando Cristo, su hijo.
+        En efecto, él fue, es y será siempre el mismo; mas por nosotros se hizo hombre; el Amigo de los hombres se hizo hombre, sin sufrir por eso menoscabo alguno en su divinidad. Por mí se hizo semejante a mí, se hizo lo que no era, aunque conservando lo que era. Finalmente, se hizo hombre, para cargar sobre sí el castigo por nosotros merecido y hacernos, de esta manera, capaces de la adopción filial y otorgarnos aquel reino, del cual pedimos que nos haga dignos la gracia y misericordia del Señor Jesucristo, al cual, junto con el Padre y el Espíritu Santo, pertenece la gloria, el honor y el poder, ahora y siempre y por los siglos de los siglos. Amén.
+      autor: |-
+        De los sermones de san Proclo de Constantinopla, obispo
+        (Sobre la Natividad del Señor, 1-2: PG 65, 843-846)
+    - titulo: MARÍA, MADRE DE CRISTO Y MADRE DE LOS CRISTIANOS
+      texto: |-
+        Un solo hijo dio a luz María, el cual, así como es Hijo único del Padre celestial, así también es el hijo único de su madre terrena. Y esta única virgen y madre, que tiene la gloria de haber dado a luz al Hijo único del Padre, abarca, en su único hijo, a todos los que son miembros del mismo; y no se avergüenza de llamarse madre de todos aquellos en los que ve formado o sabe que se va formando Cristo, su hijo.
 
-          La antigua Eva, más que madre madrastra, ya que dio a gustar a sus hijos la muerte antes que la luz del día, aunque fue llamada madre de todos los que viven, no justificó este apelativo; María, en cambio, realizó plenamente su significado, ya que ella, como la Iglesia de la que es figura, es madre de todos los que renacen a la vida. Es, en efecto, madre de aquella Vida por la que todos viven, pues, al dar a luz esta Vida, regeneró, en cierto modo, a todos los que habían de vivir por ella.
+        La antigua Eva, más que madre madrastra, ya que dio a gustar a sus hijos la muerte antes que la luz del día, aunque fue llamada madre de todos los que viven, no justificó este apelativo; María, en cambio, realizó plenamente su significado, ya que ella, como la Iglesia de la que es figura, es madre de todos los que renacen a la vida. Es, en efecto, madre de aquella Vida por la que todos viven, pues, al dar a luz esta Vida, regeneró, en cierto modo, a todos los que habían de vivir por ella.
 
-          Esta santa madre de Cristo, como sabe que, en virtud de este misterio, es madre de los cristianos, se comporta con ellos con solicitud y afecto maternal, y en modo alguno trata con dureza a sus hijos, como si no fuesen suyos, ya que sus entrañas, una sola vez fecundadas, aunque nunca agotadas, no cesan de dar a luz el fruto de piedad.
+        Esta santa madre de Cristo, como sabe que, en virtud de este misterio, es madre de los cristianos, se comporta con ellos con solicitud y afecto maternal, y en modo alguno trata con dureza a sus hijos, como si no fuesen suyos, ya que sus entrañas, una sola vez fecundadas, aunque nunca agotadas, no cesan de dar a luz el fruto de piedad.
 
-          Si el Apóstol de Cristo no deja de dar a luz a sus hijos, con su solicitud y deseo piadoso, hasta que Cristo tome forma en ellos, ¿cuánto más la madre de Cristo? Y Pablo los engendró con la predicación de la palabra de verdad con que fueron regenerados; pero María de un modo mucho más santo y divino, al engendrar al que es la Palabra en persona. Es, ciertamente, digno de alabanza el ministerio de la predicación de Pablo; pero es más admirable y digno de veneración el misterio de la generación de María.
+        Si el Apóstol de Cristo no deja de dar a luz a sus hijos, con su solicitud y deseo piadoso, hasta que Cristo tome forma en ellos, ¿cuánto más la madre de Cristo? Y Pablo los engendró con la predicación de la palabra de verdad con que fueron regenerados; pero María de un modo mucho más santo y divino, al engendrar al que es la Palabra en persona. Es, ciertamente, digno de alabanza el ministerio de la predicación de Pablo; pero es más admirable y digno de veneración el misterio de la generación de María.
 
-          Por eso, vemos cómo sus hijos la reconocen por madre, y así, llevados por un natural impulso de piedad y de fe, cuando se hallan en alguna necesidad o peligro, lo primero que hacen es invocar su nombre y buscar refugio en ella, como el niño que se acoge al regazo de su madre. Por esto, creo que no es un desatino el aplicar a estos hijos lo que el profeta había prometido: Tus hijos habitarán en ti; salvando, claro está, el sentido originario que la Iglesia da a esta profecía.
+        Por eso, vemos cómo sus hijos la reconocen por madre, y así, llevados por un natural impulso de piedad y de fe, cuando se hallan en alguna necesidad o peligro, lo primero que hacen es invocar su nombre y buscar refugio en ella, como el niño que se acoge al regazo de su madre. Por esto, creo que no es un desatino el aplicar a estos hijos lo que el profeta había prometido: Tus hijos habitarán en ti; salvando, claro está, el sentido originario que la Iglesia da a esta profecía.
 
-          Y, si ahora habitamos al amparo de la madre del Altísimo, vivamos a su sombra, como quien está bajo sus alas, y así después reposaremos en su regazo, hechos partícipes de su gloria. Entonces resonará unánime la voz de los que se alegran y se congratulan con su madre: Y cantarán mientras danzan: «Todas mis fuentes están en ti, santa Madre de Dios»
-        autor: |-
-          De los sermones del beato Guerrico, abad
-          (Sermón 1 en la Asunción de santa María: PL 185,187-189)
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: ADÁN Y CRISTO, EVA Y MARÍA
-        texto: |-
-          ¿Te das cuenta, qué victoria tan admirable? ¿Te das cuenta de cuán esclarecidas son las obras de la cruz? ¿Puedo decirte algo más maravilloso todavía? Entérate cómo ha sido conseguida esta victoria, y te admirarás más aún. Pues, Cristo venció al diablo valiéndose de aquello mismo con que el diablo había vencido antes, y lo derrotó con las mismas armas que él había antes utilizado. Escucha de qué modo.
+        Y, si ahora habitamos al amparo de la madre del Altísimo, vivamos a su sombra, como quien está bajo sus alas, y así después reposaremos en su regazo, hechos partícipes de su gloria. Entonces resonará unánime la voz de los que se alegran y se congratulan con su madre: Y cantarán mientras danzan: «Todas mis fuentes están en ti, santa Madre de Dios»
+      autor: |-
+        De los sermones del beato Guerrico, abad
+        (Sermón 1 en la Asunción de santa María: PL 185,187-189)
+    - titulo: ADÁN Y CRISTO, EVA Y MARÍA
+      texto: |-
+        ¿Te das cuenta, qué victoria tan admirable? ¿Te das cuenta de cuán esclarecidas son las obras de la cruz? ¿Puedo decirte algo más maravilloso todavía? Entérate cómo ha sido conseguida esta victoria, y te admirarás más aún. Pues, Cristo venció al diablo valiéndose de aquello mismo con que el diablo había vencido antes, y lo derrotó con las mismas armas que él había antes utilizado. Escucha de qué modo.
 
-          Una virgen, un madero y la muerte fueron el signo de nuestra derrota. Eva era virgen, porque aún no había conocido varón; el madero era un árbol; la muerte, el castigo de Adán. Mas he aquí que, de nuevo, una Virgen, un madero y la muerte, antes signo de derrota, se convierten ahora en signo de victoria. En lugar de Eva está María en lugar del árbol de la ciencia del bien y del mal, el árbol de la cruz; en lugar de la muerte de Adán, la muerte de Cristo.
+        Una virgen, un madero y la muerte fueron el signo de nuestra derrota. Eva era virgen, porque aún no había conocido varón; el madero era un árbol; la muerte, el castigo de Adán. Mas he aquí que, de nuevo, una Virgen, un madero y la muerte, antes signo de derrota, se convierten ahora en signo de victoria. En lugar de Eva está María en lugar del árbol de la ciencia del bien y del mal, el árbol de la cruz; en lugar de la muerte de Adán, la muerte de Cristo.
 
-          ¿Te das cuenta de cómo el diablo es vencido en aquello mismo en que antes había triunfado? En un árbol el diablo hizo caer a Adán; en un árbol derrotó Cristo al diablo. Aquel árbol hacía descender a la región de los muertos; éste, en cambio, hace volver de este lugar a los que a él habían descendido. Otro árbol ocultó la desnudez del hombre, después de su caída; éste, en cambio, mostró a todos, elevado en alto, al vencedor, también desnudo. Aquella primera muerte condenó a todos los que habían de nacer después de ella; esta segunda muerte resucitó incluso a los nacidos anteriormente a ella. ¿Quién podrá contar las hazañas de Dios? Una muerte se ha convertido en causa de nuestra inmortalidad: éstas son las obras esclarecidas de la cruz.
+        ¿Te das cuenta de cómo el diablo es vencido en aquello mismo en que antes había triunfado? En un árbol el diablo hizo caer a Adán; en un árbol derrotó Cristo al diablo. Aquel árbol hacía descender a la región de los muertos; éste, en cambio, hace volver de este lugar a los que a él habían descendido. Otro árbol ocultó la desnudez del hombre, después de su caída; éste, en cambio, mostró a todos, elevado en alto, al vencedor, también desnudo. Aquella primera muerte condenó a todos los que habían de nacer después de ella; esta segunda muerte resucitó incluso a los nacidos anteriormente a ella. ¿Quién podrá contar las hazañas de Dios? Una muerte se ha convertido en causa de nuestra inmortalidad: éstas son las obras esclarecidas de la cruz.
 
-          ¿Has entendido el modo y significado de esta victoria? Entérate ahora cómo esta victoria fue lograda sin esfuerzo ni sudor por nuestra parte. Nosotros no tuvimos que ensangrentar nuestras armas, ni resistir en la batalla, recibir heridas, ni tan siquiera vimos la batalla, y, con todo, obtuvimos la victoria; fue el Señor quien luchó y nosotros quienes hemos sido coronados. Por tanto, ya que la victoria es nuestra, imitando a los soldados, canten hoy, llenos de alegría, las alabanzas de esta victoria, alabemos al Señor, diciendo: La muerte ha sido absorbida en la victoria. ¿Dónde está, muerte, tu victoria? ¿Dónde está, muerte, tu aguijón?
+        ¿Has entendido el modo y significado de esta victoria? Entérate ahora cómo esta victoria fue lograda sin esfuerzo ni sudor por nuestra parte. Nosotros no tuvimos que ensangrentar nuestras armas, ni resistir en la batalla, recibir heridas, ni tan siquiera vimos la batalla, y, con todo, obtuvimos la victoria; fue el Señor quien luchó y nosotros quienes hemos sido coronados. Por tanto, ya que la victoria es nuestra, imitando a los soldados, canten hoy, llenos de alegría, las alabanzas de esta victoria, alabemos al Señor, diciendo: La muerte ha sido absorbida en la victoria. ¿Dónde está, muerte, tu victoria? ¿Dónde está, muerte, tu aguijón?
 
-          Éstos son los admirables beneficios de la cruz en favor nuestro: la cruz es el trofeo erigido contra los demonios, la espada contra el pecado, la espada con la que Cristo atravesó a la serpiente; la cruz es la voluntad del Padre, la gloria de su Hijo único, el júbilo del Espíritu Santo, el ornato de los ángeles, la seguridad de la Iglesia, el motivo de gloriarse de Pablo, la protección de los santos, la luz de todo el orbe.
-        autor: |-
-          De las homilías de san Juan Crisóstomo, obispo
-          (Sobre el cementerio y la cruz, 2: PG 49, 396)
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: MARÍA, TIPO DE LA IGLESIA
-        texto: |-
-          La bienaventurada Virgen, por el don y la prerrogativa de la maternidad divina, con la que está unida al Hijo redentor, y por sus singulares gracias y dones, está unida también íntimamente a la Iglesia. La Madre de Dios es tipo de la Iglesia, como ya enseñaba san Ambrosio, a saber: en el orden de la fe, de la caridad y de la perfecta unión con Cristo.
+        Éstos son los admirables beneficios de la cruz en favor nuestro: la cruz es el trofeo erigido contra los demonios, la espada contra el pecado, la espada con la que Cristo atravesó a la serpiente; la cruz es la voluntad del Padre, la gloria de su Hijo único, el júbilo del Espíritu Santo, el ornato de los ángeles, la seguridad de la Iglesia, el motivo de gloriarse de Pablo, la protección de los santos, la luz de todo el orbe.
+      autor: |-
+        De las homilías de san Juan Crisóstomo, obispo
+        (Sobre el cementerio y la cruz, 2: PG 49, 396)
+    - titulo: MARÍA, TIPO DE LA IGLESIA
+      texto: |-
+        La bienaventurada Virgen, por el don y la prerrogativa de la maternidad divina, con la que está unida al Hijo redentor, y por sus singulares gracias y dones, está unida también íntimamente a la Iglesia. La Madre de Dios es tipo de la Iglesia, como ya enseñaba san Ambrosio, a saber: en el orden de la fe, de la caridad y de la perfecta unión con Cristo.
 
-          Porque en el misterio de la Iglesia, que con razón también es llamada madre y virgen, la bienaventurada Virgen María la precedió, mostrando, en forma eminente y singular, el modelo de la virgen y de la madre, pues, creyendo y obedeciendo, engendró en la tierra al mismo Hijo del Padre, y esto sin conocer varón, cubierta con la sombra del Espíritu Santo, como nueva Eva, prestando fe, no adulterada por duda alguna, no a la antigua serpiente, sino al mensaje de Dios. Dio a luz al Hijo, a quien Dios constituyó como primogénito de muchos hermanos, a saber: los fieles a cuya generación y educación coopera con materno amor.
+        Porque en el misterio de la Iglesia, que con razón también es llamada madre y virgen, la bienaventurada Virgen María la precedió, mostrando, en forma eminente y singular, el modelo de la virgen y de la madre, pues, creyendo y obedeciendo, engendró en la tierra al mismo Hijo del Padre, y esto sin conocer varón, cubierta con la sombra del Espíritu Santo, como nueva Eva, prestando fe, no adulterada por duda alguna, no a la antigua serpiente, sino al mensaje de Dios. Dio a luz al Hijo, a quien Dios constituyó como primogénito de muchos hermanos, a saber: los fieles a cuya generación y educación coopera con materno amor.
 
-          Ahora bien, la Iglesia, contemplando su arcana santidad e imitando su caridad, y cumpliendo fielmente la voluntad del Padre, también ella es hecha madre, por la palabra de Dios fielmente recibida; en efecto, por la predicación y el bautismo, engendra para la vida nueva e inmortal a los hijos concebidos por el Espíritu Santo y nacidos de Dios. Y también ella es virgen que custodia pura e íntegramente la fe prometida al Esposo e, imitando a la madre de su Señor, por la virtud del Espíritu Santo, conserva virginalmente la fe íntegra, la sólida esperanza, la sincera caridad.
+        Ahora bien, la Iglesia, contemplando su arcana santidad e imitando su caridad, y cumpliendo fielmente la voluntad del Padre, también ella es hecha madre, por la palabra de Dios fielmente recibida; en efecto, por la predicación y el bautismo, engendra para la vida nueva e inmortal a los hijos concebidos por el Espíritu Santo y nacidos de Dios. Y también ella es virgen que custodia pura e íntegramente la fe prometida al Esposo e, imitando a la madre de su Señor, por la virtud del Espíritu Santo, conserva virginalmente la fe íntegra, la sólida esperanza, la sincera caridad.
 
-          Mientras que la Iglesia en la Santísima Virgen ya llegó a la perfección, por la que se presenta sin mancha ni arruga, los fieles, en cambio, aún se esfuerzan en crecer en la santidad venciendo al pecado; y, por eso, levantan sus ojos hacia María, que brilla ante toda la comunidad de los elegidos como modelo de virtudes. La Iglesia, reflexionando piadosamente sobre ella y contemplándola en la luz de la Palabra hecha hombre, llena de veneración, entra más profundamente en el sumo misterio de la encarnación y se asemeja más y más a su Esposo.
+        Mientras que la Iglesia en la Santísima Virgen ya llegó a la perfección, por la que se presenta sin mancha ni arruga, los fieles, en cambio, aún se esfuerzan en crecer en la santidad venciendo al pecado; y, por eso, levantan sus ojos hacia María, que brilla ante toda la comunidad de los elegidos como modelo de virtudes. La Iglesia, reflexionando piadosamente sobre ella y contemplándola en la luz de la Palabra hecha hombre, llena de veneración, entra más profundamente en el sumo misterio de la encarnación y se asemeja más y más a su Esposo.
 
-          Porque María, que, habiendo entrado íntimamente en la historia de la salvación, en cierta manera une y refleja en sí las más grandes exigencias de la fe, mientras es predicada y honrada, atrae a los creyentes hacia su Hijo y su sacrificio y hacia el amor del Padre. La Iglesia, a su vez, buscando la gloria de Cristo, se hace más semejante a su excelso modelo, progresando continuamente en la fe, la esperanza y la caridad, buscando y obedeciendo en todas las cosas la divina voluntad.
+        Porque María, que, habiendo entrado íntimamente en la historia de la salvación, en cierta manera une y refleja en sí las más grandes exigencias de la fe, mientras es predicada y honrada, atrae a los creyentes hacia su Hijo y su sacrificio y hacia el amor del Padre. La Iglesia, a su vez, buscando la gloria de Cristo, se hace más semejante a su excelso modelo, progresando continuamente en la fe, la esperanza y la caridad, buscando y obedeciendo en todas las cosas la divina voluntad.
 
-          Por lo cual, también en su obra apostólica, con razón la Iglesia mira hacia aquella que engendró a Cristo, concebido por el Espíritu Santo y nacido de la Virgen, precisamente para que, por la Iglesia, nazca y crezca también en los corazones de los fieles. La Virgen en su vida fue ejemplo de aquel afecto materno que debe animar también a los que, en la misión apostólica de la Iglesia, cooperan para regenerar a los hombres.
-        autor: |-
-          De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo
-          (Núms. 63-65)
+        Por lo cual, también en su obra apostólica, con razón la Iglesia mira hacia aquella que engendró a Cristo, concebido por el Espíritu Santo y nacido de la Virgen, precisamente para que, por la Iglesia, nazca y crezca también en los corazones de los fieles. La Virgen en su vida fue ejemplo de aquel afecto materno que debe animar también a los que, en la misión apostólica de la Iglesia, cooperan para regenerar a los hombres.
+      autor: |-
+        De la Constitución dogmática Lumen gentium, sobre la Iglesia, del Concilio Vaticano segundo
+        (Núms. 63-65)
     resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Dichosa eres, santa Virgen María, y digna de toda alabanza. * De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
-        - - V
-          - Celebremos con gozo esta fiesta de santa María Virgen.
-        - - R
-          - De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - No hay alabanza digna de ti, virginidad inmaculada y santa. * Porque en tu seno has llevado al que ni el cielo puede contener.
-        - - V
-          - Bendita tú entre las mujeres y bendito el fruto de tu vientre.
-        - - R
-          - Porque en tu seno has llevado al que ni el cielo puede contener.
-    - etiqueta: 'O bien esta Otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Celebremos la festividad de la gloriosa Virgen María, en cuya humildad puso el Señor sus ojos; * ella concibió al Salvador del mundo, como el ángel lo anunció.
-        - - V
-          - Cantemos alabanzas a Cristo en este día, al celebrar las glorias de la admirable Madre de Dios.
-        - - R
-          - Ella concibió al Salvador del mundo, como el ángel lo anunció.
-    - etiqueta: 'O bien esta Otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Felicitadme, todos los que amáis al Señor; porque, siendo pequeña, agradé al Altísimo, * y de mis entrañas engendré al Dios-Hombre.
-        - - V
-          - Me felicitarán todas las generaciones, porque Dios puso sus ojos en su humilde esclava.
-        - - R
-          - Y de mis entrañas engendré al Dios-Hombre.
-    - etiqueta: 'O bien esta Otra:'
-      texto:
-        ref: Sal 71, 6. 19; Ap 21, 3
-        vr:
-        - - R
-          - Que baje como lluvia sobre el césped. * Que la gloria de Dios llene la tierra.
-        - - V
-          - Ésta es la morada de Dios con los hombres, y acampará entre ellos; ellos serán su pueblo y Dios estará con ellos.
-        - - R
-          - Que la gloria de Dios llene la tierra.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Mt 1, 20. 21; Mi 5, 4-5a
-        vr:
-        - - R
-          - Lo concebido en María es obra del Espíritu Santo; dará a luz un Hijo. * Él salvará a su pueblo de los pecados.
-        - - V
-          - Se mostrará él grande hasta los confines de la tierra, y él será nuestra paz.
-        - - R
-          - Él salvará a su pueblo de los pecados.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Por voluntad del Señor, que quiso restablecer nuestra dignidad, * Eva engendró a María, como una espina a una rosa.
-        - - V
-          - Para que la virtud cubriera el pecado, y la gracia remediara la culpa.
-        - - R
-          - Eva engendró a María, como una espina a una rosa.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Por la Virgen María se manifestó a los creyentes la salvación del mundo. * Su vida ínclita embellece a toda la Iglesia.
-        - - V
-          - Celebremos con todo nuestro afecto la conmemoración de la santísima Virgen María.
-        - - R
-          - Su vida ínclita embellece a toda la Iglesia.
+    - ref: null
+      vr:
+      - - R
+        - Dichosa eres, santa Virgen María, y digna de toda alabanza. * De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
+      - - V
+        - Celebremos con gozo esta fiesta de santa María Virgen.
+      - - R
+        - De ti nació el sol de justicia, Cristo, nuestro Dios, por quien hemos sido salvados y redimidos.
+    - ref: null
+      vr:
+      - - R
+        - No hay alabanza digna de ti, virginidad inmaculada y santa. * Porque en tu seno has llevado al que ni el cielo puede contener.
+      - - V
+        - Bendita tú entre las mujeres y bendito el fruto de tu vientre.
+      - - R
+        - Porque en tu seno has llevado al que ni el cielo puede contener.
+    - ref: null
+      vr:
+      - - R
+        - Celebremos la festividad de la gloriosa Virgen María, en cuya humildad puso el Señor sus ojos; * ella concibió al Salvador del mundo, como el ángel lo anunció.
+      - - V
+        - Cantemos alabanzas a Cristo en este día, al celebrar las glorias de la admirable Madre de Dios.
+      - - R
+        - Ella concibió al Salvador del mundo, como el ángel lo anunció.
+    - ref: null
+      vr:
+      - - R
+        - Felicitadme, todos los que amáis al Señor; porque, siendo pequeña, agradé al Altísimo, * y de mis entrañas engendré al Dios-Hombre.
+      - - V
+        - Me felicitarán todas las generaciones, porque Dios puso sus ojos en su humilde esclava.
+      - - R
+        - Y de mis entrañas engendré al Dios-Hombre.
+    - ref: Sal 71, 6. 19; Ap 21, 3
+      vr:
+      - - R
+        - Que baje como lluvia sobre el césped. * Que la gloria de Dios llene la tierra.
+      - - V
+        - Ésta es la morada de Dios con los hombres, y acampará entre ellos; ellos serán su pueblo y Dios estará con ellos.
+      - - R
+        - Que la gloria de Dios llene la tierra.
+    - ref: Mt 1, 20. 21; Mi 5, 4-5a
+      vr:
+      - - R
+        - Lo concebido en María es obra del Espíritu Santo; dará a luz un Hijo. * Él salvará a su pueblo de los pecados.
+      - - V
+        - Se mostrará él grande hasta los confines de la tierra, y él será nuestra paz.
+      - - R
+        - Él salvará a su pueblo de los pecados.
+    - ref: null
+      vr:
+      - - R
+        - Por voluntad del Señor, que quiso restablecer nuestra dignidad, * Eva engendró a María, como una espina a una rosa.
+      - - V
+        - Para que la virtud cubriera el pecado, y la gracia remediara la culpa.
+      - - R
+        - Eva engendró a María, como una espina a una rosa.
+    - ref: null
+      vr:
+      - - R
+        - Por la Virgen María se manifestó a los creyentes la salvación del mundo. * Su vida ínclita embellece a toda la Iglesia.
+      - - V
+        - Celebremos con todo nuestro afecto la conmemoración de la santísima Virgen María.
+      - - R
+        - Su vida ínclita embellece a toda la Iglesia.
 apostoles:
   nombre: Común de apóstoles
   himno: ¡Guardadnos en la fe y en la unidad
@@ -741,7 +734,23 @@ apostoles:
       - No seréis vosotros los que habléis, el Espíritu de vuestro Padre hablará por vosotros.
     - - R
       - En su momento se os sugerirá lo que tenéis que decir.
+  opciones:
+    himno:
+    - Mensajeros de Dios
+    - Voceros de Dios
   pascua:
+    salmodia:
+    - ant: A toda la tierra alcanza su pregón y hasta los límites del orbe su lenguaje. Aleluia.
+      salmo: salmo-18-a
+    - ant: Proclamaron la obra de Dios y meditaron sus acciones. Aleluia.
+      salmo: salmo-63
+    - ant: Pregonaron su justicia y todos los pueblos contemplaron su gloria. Aleluia.
+      salmo: salmo-96
+    versiculo:
+    - - V
+      - Contaron las alabanzas del Señor y su poder. Aleluia.
+    - - R
+      - Y las maravillas que realizó. Aleluia.
     lectura1:
       titulo: LOS APÓSTOLES EN LA IGLESIA PRIMITIVA
       texto: |-
@@ -765,11 +774,6 @@ apostoles:
       - - R
         - Y la gracia de Dios abundaba en todos ellos, aleluia.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Mensajeros de Dios
-    - etiqueta: II
-      texto: Voceros de Dios
     lectura1:
     - etiqueta: 'En tiempo de cuaresma:'
       texto:
@@ -887,7 +891,15 @@ varios-martires:
       - Revistámonos de fuerza y preparémonos para la lucha con un espíritu indoblegable, con una fe sincera, con una total entrega.
     - - R
       - Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo.
+  opciones:
+    himno:
+    - Testigos de amor
   pascua:
+    versiculo:
+    - - V
+      - Nosotros esperamos en el Señor. Aleluia.
+    - - R
+      - Él es nuestro auxilio y escudo. Aleluia.
     lectura1:
       titulo: ESTOS SON LOS QUE VIENEN DE LA GRAN TRIBULACIÓN
       texto: |-
@@ -906,10 +918,16 @@ varios-martires:
         - Celebraron, Señor, tu santo Nombre, alabando unánimemente tu mano protectora.
       - - R
         - Los condujo por medio de las aguas caudalosas, y les hizo pasar a pie por el Mar Rojo. Aleluia.
+    resp2:
+      ref: San Cipriano, Carta 58
+      vr:
+      - - R
+        - Dios nos contempla, Cristo y sus ángeles nos miran, mientras luchamos por la fe. * Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo.
+      - - V
+        - Revistámonos de fuerza y preparémonos para la lucha con un espíritu indoblegable, con una fe sincera, con una total entrega. Aleluia.
+      - - R
+        - Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Testigos de amor
     lectura1:
     - etiqueta: 'En tiempo de cuaresma:'
       texto:
@@ -1031,7 +1049,22 @@ un-martir:
       - Lo perdí todo a fin de tener una íntima experiencia de Cristo y de la comunión con sus padecimientos, muriendo su misma muerte.
     - - R
       - Ahora me aguarda la corona merecida.
+  opciones:
+    himno:
+    - Testigos de amor
   pascua:
+    salmodia:
+    - ant: Todos os odiarán por mi nombre; pero el que persevere hasta el fin se salvará. Aleluia.
+      salmo: salmo-2
+    - ant: Los trabajos de ahora no pesan lo que la gloria que un día se nos descubrirá. Aleluia.
+      salmo: salmo-10
+    - ant: El Señor probó a los elegidos como oro en el crisol y los recibió como sacrificio de holocausto para siempre. Aleluia.
+      salmo: salmo-16
+    versiculo:
+    - - V
+      - Me asaltaban angustias y aprietos. Aleluia.
+    - - R
+      - Tus mandatos son mi delicia. Aleluia.
     lectura1:
       titulo: ESTOS SON LOS QUE VIENEN DE LA GRAN TRIBULACIÓN
       texto: |-
@@ -1051,9 +1084,6 @@ un-martir:
       - - R
         - El vencedor no temerá la muerte eterna. Aleluia.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Testigos de amor
     lectura1:
     - etiqueta: 'opcion: 2'
       texto:
@@ -1159,6 +1189,23 @@ pastores:
       - Dios la ha fundado para siempre.
     - - R
       - Y los poderes del infierno no la derrotarán.»
+  pascua:
+    salmodia:
+    - ant: Quien quiera ser el primero que sea el ultimo de todos y el servidor de todos. Aleluia.
+      salmo: salmo-20-2-8-14
+    - ant: Cuando aparezca el supremo Pastor, recibiréis la corona de gloria que no se marchita. Aleluia.
+      salmo: salmo-91-i
+    - ant: Siervo bueno y fiel, pasa al banquete de tu Señor. Aleluia.
+      salmo: salmo-91-ii
+    resp2:
+      ref: Mt 16, 18; Sal 47, 9
+      vr:
+      - - R
+        - 'Dijo Jesús a Simón: «Yo te digo: Tú eres Pedro, y sobre esta piedra edificaré mi Iglesia, * y los poderes del infierno no la derrotarán.»'
+      - - V
+        - Dios la ha fundado para siempre. Aleluia.
+      - - R
+        - Y los poderes del infierno no la derrotarán.»
   variantes:
     versiculo:
     - etiqueta: 'opcion: 1'
@@ -1451,6 +1498,35 @@ doctores:
       - En corazón sensato habita la sabiduría, aun en medio de necios se da a conocer.
     - - R
       - Es como un padre de familia que va sacando del arca lo nuevo y lo antiguo.
+  opciones:
+    himno:
+    - Hondo saber de Dios fue vuestra ciencia
+    lectura2:
+    - titulo: SOBRE LA TRANSMISIÓN DE LA REVELACIÓN DIVINA
+      texto: |-
+        Cristo, el Señor, en quien se consuma la plena revelación del Dios sumo, mandó a los apóstoles que predicaran a todos los hombres el Evangelio, comunicándoles para ello dones divinos. Este Evangelio, prometido antes por los profetas, lo llevó él a su más plena realidad y lo promulgó con su propia boca, como fuente de verdad salvadora y como norma de conducta para todos los hombres.
+
+        Este mandato del Señor lo realizaron fielmente tanto los apóstoles, que con su predicación oral transmitieron por medio de ejemplos y enseñanzas lo que habían recibido por la palabra, por la convivencia y por las acciones de Cristo y lo que habían aprendido por inspiración del Espíritu Santo, como aquellos apóstoles y varones apostólicos que, bajo la inspiración del Espíritu Santo, pusieron por escrito el mensaje de la salvación.
+
+        Para que el Evangelio se conservara vivo e integro en la Iglesia, los apóstoles constituyeron, como sucesores suyos, a los obispos, dejándoles su misión de magisterio. Ahora bien, lo que los apóstoles enseñaron contiene todo lo que es necesario para que el pueblo de Dios viva santamente y crezca en la fe; así, la Iglesia, en su doctrina, en su vida y en su culto, perpetúa y transmite a todas las generaciones todo lo que ella es y todo lo que ella cree.
+
+        La Iglesia, con la asistencia del Espíritu Santo, va penetrando cada vez con mayor intensidad en esta tradición recibida de los apóstoles: crece, en efecto, la comprensión de las enseñanzas y de la predicación apostólicas, tanto por medio de la contemplación y el estudio de los creyentes, que las meditan en su corazón y experimentan en su vida espiritual, como por medio de la predicación de aquellos que, con la sucesión del episcopado, han recibido el carisma infalible de la verdad. Así, la Iglesia, en el decurso de los siglos, tiende constantemente a la plenitud de la verdad divina, hasta que se realicen en ella las promesas divinas.
+
+        Las enseñanzas de los santos Padres testifican cómo está viva esta tradición, cuyas riquezas van pasando a las costumbres de la Iglesia creyente y orante.
+
+        También por medio de esta tradición la Iglesia descubre cuál sea el canon íntegro de las sagradas Escrituras, penetra cada vez más en el sentido de las mismas y saca de ellas fuente de vida y de actividad; así, Dios, que habló antiguamente a nuestros padres por los profetas, continúa hoy conversando con la Esposa de su Hijo, y el Espíritu Santo, por quien la voz del Evangelio resuena siempre viva en la Iglesia y, por la Iglesia, en el mundo, va llevando a los creyentes hasta la verdad plena y hace que la palabra de Cristo habite en ellos con toda su riqueza.
+      autor: |-
+        De la Constitución dogmática Dei verbum, sobre la divina revelación, del Concilio Vaticano segundo
+        (Núms. 7-8)
+    resp2:
+    - ref: 1 Pe 1, 25; Lc 1, 2
+      vr:
+      - - R
+        - 'La palabra del Señor permanece eternamente. * Y ésta es la palabra: la Buena Noticia anunciada a vosotros.'
+      - - V
+        - Siguiendo las tradiciones transmitidas por los que primero fueron testigos oculares y luego predicadores de la palabra.
+      - - R
+        - 'Y ésta es la palabra: la Buena Noticia anunciada a vosotros.'
   pascua:
     lectura1:
       titulo: EL ESPÍRITU PENETRA HASTA LA PROFUNDIDAD DE DIOS
@@ -1466,10 +1542,16 @@ doctores:
         - Pues lo necio de Dios es más sabio que los hombres; y lo débil de Dios es más fuerte que los hombres.
       - - R
         - Nosotros predicamos a Cristo crucificado, aleluia.
+    resp2:
+      ref: Mt 13, 52; Pr 14, 33
+      vr:
+      - - R
+        - Un letrado que entiende del reino de los cielos * es como un padre de familia que va sacando del arca lo nuevo y lo antiguo.
+      - - V
+        - En corazón sensato habita la sabiduría, aun en medio de necios se da a conocer. Aleluia.
+      - - R
+        - Es como un padre de familia que va sacando del arca lo nuevo y lo antiguo.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Hondo saber de Dios fue vuestra ciencia
     lectura1:
     - etiqueta: 'En tiempo de cuaresma:'
       texto:
@@ -1520,36 +1602,6 @@ doctores:
           - Alcanzará gozo y alegría.
         - - R
           - Y el Señor lo llena de espíritu, sabiduría e inteligencia.
-    lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: SOBRE LA TRANSMISIÓN DE LA REVELACIÓN DIVINA
-        texto: |-
-          Cristo, el Señor, en quien se consuma la plena revelación del Dios sumo, mandó a los apóstoles que predicaran a todos los hombres el Evangelio, comunicándoles para ello dones divinos. Este Evangelio, prometido antes por los profetas, lo llevó él a su más plena realidad y lo promulgó con su propia boca, como fuente de verdad salvadora y como norma de conducta para todos los hombres.
-
-          Este mandato del Señor lo realizaron fielmente tanto los apóstoles, que con su predicación oral transmitieron por medio de ejemplos y enseñanzas lo que habían recibido por la palabra, por la convivencia y por las acciones de Cristo y lo que habían aprendido por inspiración del Espíritu Santo, como aquellos apóstoles y varones apostólicos que, bajo la inspiración del Espíritu Santo, pusieron por escrito el mensaje de la salvación.
-
-          Para que el Evangelio se conservara vivo e integro en la Iglesia, los apóstoles constituyeron, como sucesores suyos, a los obispos, dejándoles su misión de magisterio. Ahora bien, lo que los apóstoles enseñaron contiene todo lo que es necesario para que el pueblo de Dios viva santamente y crezca en la fe; así, la Iglesia, en su doctrina, en su vida y en su culto, perpetúa y transmite a todas las generaciones todo lo que ella es y todo lo que ella cree.
-
-          La Iglesia, con la asistencia del Espíritu Santo, va penetrando cada vez con mayor intensidad en esta tradición recibida de los apóstoles: crece, en efecto, la comprensión de las enseñanzas y de la predicación apostólicas, tanto por medio de la contemplación y el estudio de los creyentes, que las meditan en su corazón y experimentan en su vida espiritual, como por medio de la predicación de aquellos que, con la sucesión del episcopado, han recibido el carisma infalible de la verdad. Así, la Iglesia, en el decurso de los siglos, tiende constantemente a la plenitud de la verdad divina, hasta que se realicen en ella las promesas divinas.
-
-          Las enseñanzas de los santos Padres testifican cómo está viva esta tradición, cuyas riquezas van pasando a las costumbres de la Iglesia creyente y orante.
-
-          También por medio de esta tradición la Iglesia descubre cuál sea el canon íntegro de las sagradas Escrituras, penetra cada vez más en el sentido de las mismas y saca de ellas fuente de vida y de actividad; así, Dios, que habló antiguamente a nuestros padres por los profetas, continúa hoy conversando con la Esposa de su Hijo, y el Espíritu Santo, por quien la voz del Evangelio resuena siempre viva en la Iglesia y, por la Iglesia, en el mundo, va llevando a los creyentes hasta la verdad plena y hace que la palabra de Cristo habite en ellos con toda su riqueza.
-        autor: |-
-          De la Constitución dogmática Dei verbum, sobre la divina revelación, del Concilio Vaticano segundo
-          (Núms. 7-8)
-    resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: 1 Pe 1, 25; Lc 1, 2
-        vr:
-        - - R
-          - 'La palabra del Señor permanece eternamente. * Y ésta es la palabra: la Buena Noticia anunciada a vosotros.'
-        - - V
-          - Siguiendo las tradiciones transmitidas por los que primero fueron testigos oculares y luego predicadores de la palabra.
-        - - R
-          - 'Y ésta es la palabra: la Buena Noticia anunciada a vosotros.'
 virgenes:
   nombre: Común de vírgenes
   himno: Esta mujer no quiso
@@ -1611,35 +1663,62 @@ virgenes:
       - Se consume mi corazón por Dios, mi herencia eterna.
     - - R
       - Se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
-  variantes:
+  opciones:
     lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA IGLESIA SIGUE A SU ÚNICO ESPOSO, CRISTO
-        texto: |-
-          Ya desde el comienzo de la Iglesia, hubo hombres y mujeres que, por la práctica de los consejos evangélicos, se propusieron seguir a Cristo con más libertad e imitarlo más íntimamente, y, cada uno a su manera, llevaron una vida consagrada a Dios. Muchos de ellos, por inspiración del Espíritu Santo, o vivieron en la soledad o fundaron familias religiosas, que fueron admitidas y aprobadas de buen grado por la autoridad de la Iglesia. Como consecuencia, por disposición divina, surgió un gran número de familias religiosas, que han contribuido mucho a que la Iglesia no sólo esté equipada para toda obra buena y dispuesta para el perfeccionamiento de los santos, en función de su ministerio, y para la edificación del cuerpo de Cristo, sino para que también, adornada con los diversos dones de sus hijos, aparezca como una novia que se adorna para su esposo y por ella se manifieste la multiforme sabiduría de Dios.
+    - titulo: LA IGLESIA SIGUE A SU ÚNICO ESPOSO, CRISTO
+      texto: |-
+        Ya desde el comienzo de la Iglesia, hubo hombres y mujeres que, por la práctica de los consejos evangélicos, se propusieron seguir a Cristo con más libertad e imitarlo más íntimamente, y, cada uno a su manera, llevaron una vida consagrada a Dios. Muchos de ellos, por inspiración del Espíritu Santo, o vivieron en la soledad o fundaron familias religiosas, que fueron admitidas y aprobadas de buen grado por la autoridad de la Iglesia. Como consecuencia, por disposición divina, surgió un gran número de familias religiosas, que han contribuido mucho a que la Iglesia no sólo esté equipada para toda obra buena y dispuesta para el perfeccionamiento de los santos, en función de su ministerio, y para la edificación del cuerpo de Cristo, sino para que también, adornada con los diversos dones de sus hijos, aparezca como una novia que se adorna para su esposo y por ella se manifieste la multiforme sabiduría de Dios.
 
-          Todos aquellos que, en medio de tanta diversidad de dones, son llamados por Dios a la práctica de los consejos evangélicos, y la profesan fielmente, se consagran de una forma especial a Dios, siguiendo a Cristo, quien, virgen y pobre, por medio de su obediencia hasta la muerte de cruz, redimió y santificó a los hombres. De esta forma, movidos por la caridad que el Espíritu Santo difunde en sus corazones, viven más y más para Cristo y para su cuerpo que es la Iglesia. Por lo tanto, cuanto más íntimamente se unen a Cristo por su entrega total, que abarca toda su vida, más fecunda se hace la vida de la Iglesia y más vivificante su apostolado.
+        Todos aquellos que, en medio de tanta diversidad de dones, son llamados por Dios a la práctica de los consejos evangélicos, y la profesan fielmente, se consagran de una forma especial a Dios, siguiendo a Cristo, quien, virgen y pobre, por medio de su obediencia hasta la muerte de cruz, redimió y santificó a los hombres. De esta forma, movidos por la caridad que el Espíritu Santo difunde en sus corazones, viven más y más para Cristo y para su cuerpo que es la Iglesia. Por lo tanto, cuanto más íntimamente se unen a Cristo por su entrega total, que abarca toda su vida, más fecunda se hace la vida de la Iglesia y más vivificante su apostolado.
 
-          Recuerden ante todo los miembros de cualquier instituto que, por la profesión de los consejos evangélicos, respondieron a un llamamiento divino, de forma que no sólo muertos al pecado, sino renunciando también al mundo, vivan únicamente para Dios. Pues han entregado toda su vida a su servicio, lo que constituye ciertamente una consagración peculiar, que se funda íntimamente en la consagración bautismal y la expresa en toda su plenitud.
+        Recuerden ante todo los miembros de cualquier instituto que, por la profesión de los consejos evangélicos, respondieron a un llamamiento divino, de forma que no sólo muertos al pecado, sino renunciando también al mundo, vivan únicamente para Dios. Pues han entregado toda su vida a su servicio, lo que constituye ciertamente una consagración peculiar, que se funda íntimamente en la consagración bautismal y la expresa en toda su plenitud.
 
-          Los que profesan los consejos evangélicos, ante todo busquen y amen a Dios, que nos amó primero, y en todas las circunstancias intenten fomentar la vida escondida con Cristo en Dios, de donde mana y crece el amor del prójimo para la salvación del mundo y edificación de la Iglesia. Esta caridad vivifica y guía también la misma práctica de los consejos evangélicos.
+        Los que profesan los consejos evangélicos, ante todo busquen y amen a Dios, que nos amó primero, y en todas las circunstancias intenten fomentar la vida escondida con Cristo en Dios, de donde mana y crece el amor del prójimo para la salvación del mundo y edificación de la Iglesia. Esta caridad vivifica y guía también la misma práctica de los consejos evangélicos.
 
-          La castidad que los religiosos profesan por el reino de los cielos debe de ser estimada como un don eximio de la gracia, pues libera el corazón del hombre de un modo peculiar para que se encienda más en el amor de Dios y en el de los hombres, y, por ello, es signo especial de los bienes celestes y medio aptísimo para que los religiosos se dediquen con fervor al servicio de Dios y a las obras de apostolado. De esta forma evocan ante todos los fieles cristianos el admirable desposorio establecido por Dios, que se manifestará plenamente en el siglo futuro, por el que la Iglesia tiene como único esposo a Cristo.
-        autor: |-
-          Del Decreto Perfectae caritatis, sobre la adecuada renovación de la vida religiosa, del Concilio Vaticano segundo
-          (Núms. 1. 5. 6.12)
+        La castidad que los religiosos profesan por el reino de los cielos debe de ser estimada como un don eximio de la gracia, pues libera el corazón del hombre de un modo peculiar para que se encienda más en el amor de Dios y en el de los hombres, y, por ello, es signo especial de los bienes celestes y medio aptísimo para que los religiosos se dediquen con fervor al servicio de Dios y a las obras de apostolado. De esta forma evocan ante todos los fieles cristianos el admirable desposorio establecido por Dios, que se manifestará plenamente en el siglo futuro, por el que la Iglesia tiene como único esposo a Cristo.
+      autor: |-
+        Del Decreto Perfectae caritatis, sobre la adecuada renovación de la vida religiosa, del Concilio Vaticano segundo
+        (Núms. 1. 5. 6.12)
     resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - ¡Qué hermosa eres, virgen de Cristo! * Tú que has merecido recibir la corona del Señor, la corona de la virginidad perpetua.
-        - - V
-          - Nadie podrá quitarte la palma de la virginidad, ni separarte del amor de Cristo.
-        - - R
-          - Tú que has merecido recibir la corona del Señor, la corona de la virginidad perpetua.
+    - ref: null
+      vr:
+      - - R
+        - ¡Qué hermosa eres, virgen de Cristo! * Tú que has merecido recibir la corona del Señor, la corona de la virginidad perpetua.
+      - - V
+        - Nadie podrá quitarte la palma de la virginidad, ni separarte del amor de Cristo.
+      - - R
+        - Tú que has merecido recibir la corona del Señor, la corona de la virginidad perpetua.
+  pascua:
+    salmodia:
+    - ant: Virgen ilustre, sensata, prudente en tu decisión, tienes como esposo del alma al Verbo inmaculado. Aleluia.
+      salmo: salmo-18-a
+    - ant: Por amor a mi Señor Jesucristo, tuve en nada los bienes de este mundo y del tiempo presente. Aleluia.
+      salmo: salmo-44-i
+    - ant: Prendado está el rey de tu belleza, porque él es tu Señor y tu Dios.
+      salmo: salmo-44-ii
+    versiculo:
+    - - V
+      - Me enseñarás el sendero de la vida. Aleluia.
+    - - R
+      - Me saciarás de gozo en tu presencia. Aleluia.
+    resp1:
+      ref: null
+      vr:
+      - - R
+        - Prendado está el rey de tu belleza, obra de sus manos; él es tu Dios y tu rey. * Tu rey es al mismo tiempo tu esposo.
+      - - V
+        - Has tomado por esposo al rey y Dios; él te ha dotado, él te ha engalanado, te ha redimido, te ha santificado. Aleluia.
+      - - R
+        - Tu rey es al mismo tiempo tu esposo.
+    resp2:
+      ref: 1 Co 7, 34; Sal 72, 26
+      vr:
+      - - R
+        - La mujer sin marido y la soltera * se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
+      - - V
+        - Se consume mi corazón por Dios, mi herencia eterna. Aleluia.
+      - - R
+        - Se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
 santos-varones:
   nombre: Común de santos varones
   himno: Desde que mi voluntad
@@ -1713,7 +1792,114 @@ santos-varones:
       - Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres.
     - - R
       - Toda bondad, justicia y verdad son fruto de la luz.
+  opciones:
+    himno:
+    - Dichosos los que, oyendo la llamada
+    lectura1:
+    - titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
+      texto: |-
+        Hermanos: A vosotros se os ha concedido la gracia de estar al lado de Cristo, no sólo creyendo en él, sino sufriendo por él, estando como estamos en el mismo combate; ése en que me visteis una vez y que ahora conocéis de oídas.
+
+        Si queréis darme el consuelo de Cristo, y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: Manteneos unánimes y concordes, con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+
+        Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre—sobre—todo— nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
+
+        Por lo tanto, queridos hermanos, ya que siempre habéis obedecido, no sólo cuando yo estaba presente, sino mucho más ahora en mi ausencia, seguid actuando vuestra salvación con temor y temblor, porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
+
+        Cualquier cosa que hagáis, sea sin protestas ni discusiones: así seréis irreprochables y límpidos, hijos de Dios sin tacha, en medio de una gente torcida y depravada, contra la cual brilláis como lumbreras del mundo, mostrando una razón para vivir. El día de Cristo, eso será una honra para mí, que no he corrido ni me he fatigado en vano.
+      ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
+    - titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
+      texto: |-
+        Hermanos: Dios os ha dado la gracia de creer en Jesucristo y aun de padecer por él, porque combatís la misma pelea que me visteis combatir a mí y que sabéis sigo combatiendo.
+
+        Si queréis darme el consuelo de Cristo y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: manteneos unánimes y concordes con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+
+        Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre–sobre–todo–nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
+
+        Hermanos míos queridos, si siempre me habéis obedecido, cuando estaba presente, mucho más ahora que estoy ausente. Trabajad por vuestra salvación con respeto y seriedad. Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
+
+        Proceded en todo sin murmuraciones ni discusiones: así seréis irreprochables y puros, hijos de Dios sin mancha, en medio de una generación extraviada y pervertida, dentro de la cual vosotros brilláis como luminarias en el mundo, mostrándole la Palabra de Vida. De esa manera, el Día de Cristo yo podré gloriarme de no haber trabajado ni sufrido en vano.
+      ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
+    - titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
+      texto: |-
+        Os exhorto, hermanos, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto. Por la gracia que Dios me ha dado, os pido a todos y a cada uno: No tengáis de vosotros mismos un concepto superior a lo que es justo. Abrigad sentimientos de justa moderación, cada uno en la medida de la fe que Dios le ha dado.
+
+        A la manera que en un solo cuerpo tenemos muchos miembros y todos los miembros desempeñan distinta función, lo mismo nosotros: siendo muchos, somos un solo cuerpo en Cristo, e individualmente somos miembros unos de otros. Y teniendo carismas diferentes, según la gracia que Dios nos ha dado, quien tenga carisma de hablar por inspiración de Dios haga uso de él según le mueva la fe, quien tenga el carisma de ministerio que se ocupe en su oficio, quien tenga el don de enseñar que enseñe, quien el de exhortar que exhorte y consuele, quien reparta sus bienes que lo haga con sencillez, quien presida obre con solicitud, quien practique la misericordia que lo haga con jovialidad.
+
+        Que vuestra caridad sea sincera. Aborreced el mal y aplicaos al bien. En punto a caridad fraterna, amaos entrañablemente unos a otros. En cuanto a la mutua estima, tened por más dignos a los demás. Nada de pereza en vuestro celo, sirviendo con fervor de espíritu al Señor. Que la esperanza os tenga alegres; estad firmes en la tribulación, sed asiduos en la oración. Socorred las necesidades de los fieles, dedicaos activamente a la hospitalidad.
+
+        Bendecid a los que os persiguen, no maldigáis. Alegraos con los que se alegran; llorad con los que lloran. Tened un mismo sentir entre vosotros, sin apetecer grandezas; atraídos más bien por lo humilde. No os tengáis por sabios. No devolváis a nadie mal por mal y procurad hacer lo que es bueno no sólo ante Dios, sino también ante todos los hombres.
+
+        A ser posible, y en cuanto de vosotros depende, vivid en paz con todos. No os toméis, carísimos hermanos, la justicia por vuestra mano, sino dejadlo al juicio de Dios. Dice la Escritura: «Es mía la venganza; mía la recompensa; palabra del Señor.» Pero también dice: «Si tu enemigo tiene hambre, dale de comer; sí tiene sed, dale de beber. Si haces esto, se sentirá avergonzado de su odio y lo depondrá.»
+
+        No te dejes vencer por el mal, sino vence el mal con el bien.
+      ref: De la carta del apóstol san Pablo a los Romanos 12, 1-21
+    resp1:
+    - ref: Flp 2, 12-13; Jn 15, 5
+      vr:
+      - - R
+        - Seguid actuando vuestra salvación con temor y temblor, * Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
+      - - V
+        - 'Dice el Señor: «Sin mí no podéis hacer nada.»'
+      - - R
+        - Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
+    - ref: Flp 2, 12-13; Jn 15, 5
+      vr:
+      - - R
+        - Trabajad por vuestra salvación con respeto y seriedad. * Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
+      - - V
+        - 'Dice el Señor: Sin mí no podéis hacer nada.'
+      - - R
+        - Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
+    - ref: Rm 12, 2; cf. Ef 4, 23-24a
+      vr:
+      - - R
+        - Transformaos por la renovación de la mente, * para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
+      - - V
+        - Renovaos en la mente y en el espíritu y vestíos de la nueva condición humana.
+      - - R
+        - Para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
+    lectura2:
+    - titulo: SOBRE LA VOCACIÓN UNIVERSAL A LA SANTIDAD
+      texto: |-
+        El que quiera venirse conmigo, que se niegue a sí mismo, que cargue con su cruz y me siga. Parece duro y grave este precepto del Señor de negarse a sí mismo para seguirle. Pero no es ni duro ni grave lo que manda aquel que ayuda a realizar lo que ordena.
+
+        Es verdad, en efecto, lo que se dice en el salmo: Según tus mandatos, me he mantenido en la senda penosa. Como también es cierto lo que él mismo afirma: Mi yugo es llevadero y mi carga ligera. El amor hace suave lo que hay de duro en el precepto.
+
+        ¿Qué significa: Cargue con su cruz? Acepte todo lo que es molesto y sígame de esta forma. Cuando empiece a seguirme en mis ejemplos y preceptos, en seguida encontrará contradictores, muchos que intentarán prohibírselo, muchos que intentarán disuadirle, y los encontrará incluso entre los seguidores de Cristo. A Cristo acompañaban aquellos que querían hacer callar a los ciegos. Si quieres seguirle, acepta como cruz las amenazas, las seducciones y los obstáculos de cualquier clase; soporta, aguanta, mantente firme.
+
+        En este mundo santo, bueno, reconciliado, salvado, mejor dicho, que ha de ser salvado —ya que ahora está salvado sólo en esperanza, porque en esperanza fuimos salvados—, en este mundo, pues, que es la Iglesia, que sigue a Cristo, el Señor dice a todos: El que quiera venirse conmigo, que se niegue a sí mismo.
+
+        Este precepto no se refiere sólo a las vírgenes, con exclusión de las casadas; o a las viudas, excluyendo a las que viven en matrimonio; o a los monjes, y no a los casados; o a los clérigos, con exclusión de los laicos: toda la Iglesia, todo el cuerpo y cada uno de sus miembros, de acuerdo con su función propia y específica, debe seguir a Cristo.
+
+        Sígale, pues, toda entera la Iglesia única, esta paloma y esposa redimida y enriquecida con la sangre del Esposo. En ella encuentra su lugar la integridad virginal, la continencia de las viudas y el pudor conyugal.
+
+        Todos estos miembros, que encuentran en ella su lugar, de acuerdo con sus funciones propias, sigan a Cristo; niéguense, es decir, no se vanaglorien; carguen con su cruz, es decir, soporten en el mundo por amor de Cristo todo lo que en el mundo les aflija. Amen a aquel que es el único que no traiciona, el único que no es engañado ni engaña; ámenle a él, porque es verdad lo que promete. vacila, porque sus promesas tardan. Mantente fiel, pero tolera, acepta la dilación: todo esto es cargar con la cruz.
+      autor: |-
+        De los sermones de san Agustín, obispo
+        (Sermón 96,1. 4. 9: PL 38, 584. 586. 588)
+    resp2:
+    - ref: null
+      vr:
+      - - R
+        - Éste sí que realizó ante Dios obras realmente maravillosas, y alabó al Señor de todo corazón. * Que él interceda por los pecados de todos los pueblos.
+      - - V
+        - Éste fue un hombre paciente, que tributó a Dios un culto verdadero, se abstuvo de todo mal y se mantuvo en la inocencia.
+      - - R
+        - Que él interceda por los pecados de todos los pueblos.
   pascua:
+    salmodia:
+    - ant: Te pidió vida y se la has concedido, Señor; lo has vestido de honor y majestad. Aleluia.
+      salmo: salmo-20-2-8-14
+    - ant: La senda del justo brilla como la aurora, se va esclareciendo hasta que es de día.
+      salmo: salmo-91-i
+    - ant: El justo crecerá como palmera, se alzará como cedro del Líbano. Aleluia.
+      salmo: salmo-91-ii
+    versiculo:
+    - - V
+      - El Señor condujo al justo por sendas llanas. Aleluia.
+    - - R
+      - Le mostró el reino de Dios. Aleluia.
     lectura1:
       titulo: DICHOSOS LOS INVITADOS AL BANQUETE DE BODAS DEL CORDERO
       texto: |-
@@ -1732,25 +1918,17 @@ santos-varones:
         - 'Y salió una voz del trono que decía: Alabad a nuestro Dios todos sus siervos y los que le teméis, pequeños y grandes.'
       - - R
         - Ahora se estableció la salud y el poderío, y el reinado de nuestro Dios, y la potestad de su Cristo. Aleluia.
+    resp2:
+      ref: Ef 5, 8-9; Mt 5, 14. 16
+      vr:
+      - - R
+        - Sois luz en el Señor. Caminad como hijos de la luz. * Toda bondad, justicia y verdad son fruto de la luz.
+      - - V
+        - Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres. Aleluia.
+      - - R
+        - Toda bondad, justicia y verdad son fruto de la luz.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Dichosos los que, oyendo la llamada
     lectura1:
-    - etiqueta: 'O bien:'
-      texto:
-        titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
-        texto: |-
-          Hermanos: A vosotros se os ha concedido la gracia de estar al lado de Cristo, no sólo creyendo en él, sino sufriendo por él, estando como estamos en el mismo combate; ése en que me visteis una vez y que ahora conocéis de oídas.
-
-          Si queréis darme el consuelo de Cristo, y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: Manteneos unánimes y concordes, con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
-
-          Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre—sobre—todo— nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
-
-          Por lo tanto, queridos hermanos, ya que siempre habéis obedecido, no sólo cuando yo estaba presente, sino mucho más ahora en mi ausencia, seguid actuando vuestra salvación con temor y temblor, porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
-
-          Cualquier cosa que hagáis, sea sin protestas ni discusiones: así seréis irreprochables y límpidos, hijos de Dios sin tacha, en medio de una gente torcida y depravada, contra la cual brilláis como lumbreras del mundo, mostrando una razón para vivir. El día de Cristo, eso será una honra para mí, que no he corrido ni me he fatigado en vano.
-        ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
     - etiqueta: 'Para un santo que vivió en el matrimonio:'
       texto:
         titulo: GLORIFICAD EN VUESTROS CORAZONES A CRISTO SEÑOR
@@ -1768,20 +1946,6 @@ santos-varones:
           fugaz; como una nave que surca el mar agitado, sin que pueda descubrirse la huella de su paso ni la estela de su quilla entre las olas; o como un pájaro que vuela por el aire sin dejar rastros de su trayecto: él golpea la brisa con el látigo de sus plumas y la corta con un agudo silbido, se abre camino batiendo las alas y después no queda ni una señal de su paso; o como una flecha arrojada hacia el blanco: el aire desplazado vuelve en seguida a su lugar, y se ignora el camino que ella siguió. Así también nosotros, desaparecimos apenas nacidos y no tenemos para mostrar ninguna señal de virtud, porque nos hemos consumido en nuestra maldad". Sí, la esperanza del impío es como brizna llevada por el viento, como espuma ligera arrastrada por el huracán: ella se disipa como el humo por el viento, se desvanece como el recuerdo del huésped de un día. Pero los justos viven para siempre; su recompensa está en el Señor y el Altísimo se preocupa de ellos. Por eso, recibirán la espléndida realeza
           y la hermosa diadema de las manos del Señor; porque él los protegerá con su mano derecha y los defenderá con su brazo.'
         ref: Del libro de la Sabiduría 5, 1-16
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
-        texto: |-
-          Hermanos: Dios os ha dado la gracia de creer en Jesucristo y aun de padecer por él, porque combatís la misma pelea que me visteis combatir a mí y que sabéis sigo combatiendo.
-
-          Si queréis darme el consuelo de Cristo y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: manteneos unánimes y concordes con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
-
-          Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre–sobre–todo–nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
-
-          Hermanos míos queridos, si siempre me habéis obedecido, cuando estaba presente, mucho más ahora que estoy ausente. Trabajad por vuestra salvación con respeto y seriedad. Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
-
-          Proceded en todo sin murmuraciones ni discusiones: así seréis irreprochables y puros, hijos de Dios sin mancha, en medio de una generación extraviada y pervertida, dentro de la cual vosotros brilláis como luminarias en el mundo, mostrándole la Palabra de Vida. De esa manera, el Día de Cristo yo podré gloriarme de no haber trabajado ni sufrido en vano.
-        ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
     - etiqueta: 'opcion: 3'
       texto:
         titulo: VUESTRA VIDA ESTÁ OCULTA CON CRISTO EN DIOS
@@ -1800,22 +1964,6 @@ santos-varones:
 
           Todo lo que de palabra o de obra realicéis, sea todo en nombre de Jesús, ofreciendo la Acción de Gracias a Dios Padre por medio de él.
         ref: De la carta del apóstol san Pablo a los Colosenses 3, 1-17
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
-        texto: |-
-          Os exhorto, hermanos, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto. Por la gracia que Dios me ha dado, os pido a todos y a cada uno: No tengáis de vosotros mismos un concepto superior a lo que es justo. Abrigad sentimientos de justa moderación, cada uno en la medida de la fe que Dios le ha dado.
-
-          A la manera que en un solo cuerpo tenemos muchos miembros y todos los miembros desempeñan distinta función, lo mismo nosotros: siendo muchos, somos un solo cuerpo en Cristo, e individualmente somos miembros unos de otros. Y teniendo carismas diferentes, según la gracia que Dios nos ha dado, quien tenga carisma de hablar por inspiración de Dios haga uso de él según le mueva la fe, quien tenga el carisma de ministerio que se ocupe en su oficio, quien tenga el don de enseñar que enseñe, quien el de exhortar que exhorte y consuele, quien reparta sus bienes que lo haga con sencillez, quien presida obre con solicitud, quien practique la misericordia que lo haga con jovialidad.
-
-          Que vuestra caridad sea sincera. Aborreced el mal y aplicaos al bien. En punto a caridad fraterna, amaos entrañablemente unos a otros. En cuanto a la mutua estima, tened por más dignos a los demás. Nada de pereza en vuestro celo, sirviendo con fervor de espíritu al Señor. Que la esperanza os tenga alegres; estad firmes en la tribulación, sed asiduos en la oración. Socorred las necesidades de los fieles, dedicaos activamente a la hospitalidad.
-
-          Bendecid a los que os persiguen, no maldigáis. Alegraos con los que se alegran; llorad con los que lloran. Tened un mismo sentir entre vosotros, sin apetecer grandezas; atraídos más bien por lo humilde. No os tengáis por sabios. No devolváis a nadie mal por mal y procurad hacer lo que es bueno no sólo ante Dios, sino también ante todos los hombres.
-
-          A ser posible, y en cuanto de vosotros depende, vivid en paz con todos. No os toméis, carísimos hermanos, la justicia por vuestra mano, sino dejadlo al juicio de Dios. Dice la Escritura: «Es mía la venganza; mía la recompensa; palabra del Señor.» Pero también dice: «Si tu enemigo tiene hambre, dale de comer; sí tiene sed, dale de beber. Si haces esto, se sentirá avergonzado de su odio y lo depondrá.»
-
-          No te dejes vencer por el mal, sino vence el mal con el bien.
-        ref: De la carta del apóstol san Pablo a los Romanos 12, 1-21
     - etiqueta: 'Para un santo que vivió en el matrimonio:'
       texto:
         titulo: LA SANTIDAD DEL MATRIMONIO CRISTIANO
@@ -1829,16 +1977,6 @@ santos-varones:
           Nadie aborrece jamás su propia carne, sino que la alimenta y la cuida con cariño. Lo mismo hace Cristo con la Iglesia, porque somos miembros de su cuerpo. «Por eso dejará el hombre a su padre y a su madre y se unirá a su mujer y serán los dos una sola carne.» ¡Gran misterio es éste! Y yo lo refiero a Cristo y a la Iglesia.
         ref: De la carta del apóstol san Pablo a los Efesios 5, 21-32
     resp1:
-    - etiqueta: 'O bien:'
-      texto:
-        ref: Flp 2, 12-13; Jn 15, 5
-        vr:
-        - - R
-          - Seguid actuando vuestra salvación con temor y temblor, * Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
-        - - V
-          - 'Dice el Señor: «Sin mí no podéis hacer nada.»'
-        - - R
-          - Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
     - etiqueta: 'Para un santo que vivió en el matrimonio:'
       texto:
         ref: 1P 1, 13. 15; Lv 11, 44
@@ -1859,16 +1997,6 @@ santos-varones:
           - Así se distinguen los hijos de Dios y los hijos del demonio.
         - - R
           - El que peca es del demonio, porque desde el principio el demonio peca.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Flp 2, 12-13; Jn 15, 5
-        vr:
-        - - R
-          - Trabajad por vuestra salvación con respeto y seriedad. * Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
-        - - V
-          - 'Dice el Señor: Sin mí no podéis hacer nada.'
-        - - R
-          - Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
     - etiqueta: 'Para un santo que vivió en el matrimonio:'
       texto:
         ref: 1 Pe 1, 13. 15; Lv 11, 44
@@ -1889,48 +2017,6 @@ santos-varones:
           - 'Vestíos de la nueva condición humana, creada a imagen de Dios: justicia y santidad verdaderas.'
         - - R
           - Todos sois uno en Cristo Jesús.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Rm 12, 2; cf. Ef 4, 23-24a
-        vr:
-        - - R
-          - Transformaos por la renovación de la mente, * para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
-        - - V
-          - Renovaos en la mente y en el espíritu y vestíos de la nueva condición humana.
-        - - R
-          - Para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
-    lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: SOBRE LA VOCACIÓN UNIVERSAL A LA SANTIDAD
-        texto: |-
-          El que quiera venirse conmigo, que se niegue a sí mismo, que cargue con su cruz y me siga. Parece duro y grave este precepto del Señor de negarse a sí mismo para seguirle. Pero no es ni duro ni grave lo que manda aquel que ayuda a realizar lo que ordena.
-
-          Es verdad, en efecto, lo que se dice en el salmo: Según tus mandatos, me he mantenido en la senda penosa. Como también es cierto lo que él mismo afirma: Mi yugo es llevadero y mi carga ligera. El amor hace suave lo que hay de duro en el precepto.
-
-          ¿Qué significa: Cargue con su cruz? Acepte todo lo que es molesto y sígame de esta forma. Cuando empiece a seguirme en mis ejemplos y preceptos, en seguida encontrará contradictores, muchos que intentarán prohibírselo, muchos que intentarán disuadirle, y los encontrará incluso entre los seguidores de Cristo. A Cristo acompañaban aquellos que querían hacer callar a los ciegos. Si quieres seguirle, acepta como cruz las amenazas, las seducciones y los obstáculos de cualquier clase; soporta, aguanta, mantente firme.
-
-          En este mundo santo, bueno, reconciliado, salvado, mejor dicho, que ha de ser salvado —ya que ahora está salvado sólo en esperanza, porque en esperanza fuimos salvados—, en este mundo, pues, que es la Iglesia, que sigue a Cristo, el Señor dice a todos: El que quiera venirse conmigo, que se niegue a sí mismo.
-
-          Este precepto no se refiere sólo a las vírgenes, con exclusión de las casadas; o a las viudas, excluyendo a las que viven en matrimonio; o a los monjes, y no a los casados; o a los clérigos, con exclusión de los laicos: toda la Iglesia, todo el cuerpo y cada uno de sus miembros, de acuerdo con su función propia y específica, debe seguir a Cristo.
-
-          Sígale, pues, toda entera la Iglesia única, esta paloma y esposa redimida y enriquecida con la sangre del Esposo. En ella encuentra su lugar la integridad virginal, la continencia de las viudas y el pudor conyugal.
-
-          Todos estos miembros, que encuentran en ella su lugar, de acuerdo con sus funciones propias, sigan a Cristo; niéguense, es decir, no se vanaglorien; carguen con su cruz, es decir, soporten en el mundo por amor de Cristo todo lo que en el mundo les aflija. Amen a aquel que es el único que no traiciona, el único que no es engañado ni engaña; ámenle a él, porque es verdad lo que promete. vacila, porque sus promesas tardan. Mantente fiel, pero tolera, acepta la dilación: todo esto es cargar con la cruz.
-        autor: |-
-          De los sermones de san Agustín, obispo
-          (Sermón 96,1. 4. 9: PL 38, 584. 586. 588)
-    resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Éste sí que realizó ante Dios obras realmente maravillosas, y alabó al Señor de todo corazón. * Que él interceda por los pecados de todos los pueblos.
-        - - V
-          - Éste fue un hombre paciente, que tributó a Dios un culto verdadero, se abstuvo de todo mal y se mantuvo en la inocencia.
-        - - R
-          - Que él interceda por los pecados de todos los pueblos.
 santas-mujeres:
   nombre: Común de santas mujeres
   himno: La mujer fuerte
@@ -2004,7 +2090,134 @@ santas-mujeres:
       - Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres.
     - - R
       - Toda bondad, justicia y verdad son fruto de la luz.
+  opciones:
+    himno:
+    - Dichosa la mujer que ha conservado
+    lectura1:
+    - titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
+      texto: |-
+        Hermanos: A vosotros se os ha concedido la gracia de estar al lado de Cristo, no sólo creyendo en él, sino sufriendo por él, estando como estamos en el mismo combate; ése en que me visteis una vez y que ahora conocéis de oídas.
+
+        Si queréis darme el consuelo de Cristo, y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: Manteneos unánimes y concordes, con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+
+        Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre—sobre—todo— nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
+
+        Por lo tanto, queridos hermanos, ya que siempre habéis obedecido, no sólo cuando yo estaba presente, sino mucho más ahora en mi ausencia, seguid actuando vuestra salvación con temor y temblor, porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
+
+        Cualquier cosa que hagáis, sea sin protestas ni discusiones: así seréis irreprochables y límpidos, hijos de Dios sin tacha, en medio de una gente torcida y depravada, contra la cual brilláis como lumbreras del mundo, mostrando una razón para vivir. El día de Cristo, eso será una honra para mí, que no he corrido ni me he fatigado en vano.
+      ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
+    - titulo: GLORIFICAD EN VUESTROS CORAZONES A CRISTO SEÑOR
+      texto: |-
+        Mujeres, sed sumisas a vuestros maridos para que, si incluso algunos no creen en la palabra, sean ganados no por palabras, sino por la conducta de sus mujeres, al considerar vuestra conducta casta y respetuosa.
+
+        Que vuestro adorno no esté en el exterior: en peinados, joyas y modas, sino en lo oculto del corazón, en la incorruptibilidad de un alma dulce y serena: esto es precioso ante Dios. Así se adornaban en otro tiempo las santas mujeres que esperaban en Dios, siendo sumisas a sus maridos; así obedeció Sara a Abraham, llamándole señor. De ella os hacéis hijas cuando obráis bien, sin tener ningún temor.
+
+        En conclusión, procurad todos tener un mismo pensar y un mismo sentir: con afecto fraternal, con ternura, con humildad. No devolváis mal por mal o insulto por insulto; al contrarío, responded con una bendición, porque vuestra vocación mira a esto: a heredar una bendición.
+
+        «El que quiera amar la vida y ver días felices, refrene su lengua del mal y sus labios de la falsedad; apártese del mal y obre el bien; busque la paz y corra tras ella. Porque los ojos del Señor se fijan en los justos y sus oídos atienden a sus ruegos; pero el Señor se enfrenta con los que hacen el mal.»
+
+        ¿Quién os podrá hacer daño si os dedicáis al bien? Y si tuvierais que sufrir por ser honrados, ¡dichosos vosotros! No les tengáis miedo ni os asustéis; sino glorificad en vuestros corazones a Cristo Señor y estad siempre prontos para dar razón de vuestra esperanza a todo el que os la pidiere; pero con mansedumbre y respeto y en buena conciencia, para que en aquello mismo en que sois calumniados queden confundidos los que denigran vuestra buena conducta en Cristo; que mejor es padecer haciendo el bien, si tal es la voluntad de Dios, que padecer haciendo el mal.
+      ref: De la primera carta del apóstol san Pedro 3, 1-6. 8-17
+    - titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
+      texto: |-
+        Hermanos: Dios os ha dado la gracia de creer en Jesucristo y aun de padecer por él, porque combatís la misma pelea que me visteis combatir a mí y que sabéis sigo combatiendo.
+
+        Si queréis darme el consuelo de Cristo y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: manteneos unánimes y concordes con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+
+        Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre–sobre–todo–nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
+
+        Hermanos míos queridos, si siempre me habéis obedecido, cuando estaba presente, mucho más ahora que estoy ausente. Trabajad por vuestra salvación con respeto y seriedad. Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
+
+        Proceded en todo sin murmuraciones ni discusiones: así seréis irreprochables y puros, hijos de Dios sin mancha, en medio de una generación extraviada y pervertida, dentro de la cual vosotros brilláis como luminarias en el mundo, mostrándole la Palabra de Vida. De esa manera, el Día de Cristo yo podré gloriarme de no haber trabajado ni sufrido en vano.
+      ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
+    - titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
+      texto: |-
+        Os exhorto, hermanos, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto. Por la gracia que Dios me ha dado, os pido a todos y a cada uno: No tengáis de vosotros mismos un concepto superior a lo que es justo. Abrigad sentimientos de justa moderación, cada uno en la medida de la fe que Dios le ha dado.
+
+        A la manera que en un solo cuerpo tenemos muchos miembros y todos los miembros desempeñan distinta función, lo mismo nosotros: siendo muchos, somos un solo cuerpo en Cristo, e individualmente somos miembros unos de otros. Y teniendo carismas diferentes, según la gracia que Dios nos ha dado, quien tenga carisma de hablar por inspiración de Dios haga uso de él según le mueva la fe, quien tenga el carisma de ministerio que se ocupe en su oficio, quien tenga el don de enseñar que enseñe, quien el de exhortar que exhorte y consuele, quien reparta sus bienes que lo haga con sencillez, quien presida obre con solicitud, quien practique la misericordia que lo haga con jovialidad.
+
+        Que vuestra caridad sea sincera. Aborreced el mal y aplicaos al bien. En punto a caridad fraterna, amaos entrañablemente unos a otros. En cuanto a la mutua estima, tened por más dignos a los demás. Nada de pereza en vuestro celo, sirviendo con fervor de espíritu al Señor. Que la esperanza os tenga alegres; estad firmes en la tribulación, sed asiduos en la oración. Socorred las necesidades de los fieles, dedicaos activamente a la hospitalidad.
+
+        Bendecid a los que os persiguen, no maldigáis. Alegraos con los que se alegran; llorad con los que lloran. Tened un mismo sentir entre vosotros, sin apetecer grandezas; atraídos más bien por lo humilde. No os tengáis por sabios. No devolváis a nadie mal por mal y procurad hacer lo que es bueno no sólo ante Dios, sino también ante todos los hombres.
+
+        A ser posible, y en cuanto de vosotros depende, vivid en paz con todos. No os toméis, carísimos hermanos, la justicia por vuestra mano, sino dejadlo al juicio de Dios. Dice la Escritura: «Es mía la venganza; mía la recompensa; palabra del Señor.» Pero también dice: «Si tu enemigo tiene hambre, dale de comer; sí tiene sed, dale de beber. Si haces esto, se sentirá avergonzado de su odio y lo depondrá.»
+
+        No te dejes vencer por el mal, sino vence el mal con el bien.
+      ref: De la carta del apóstol san Pablo a los Romanos 12, 1-21
+    resp1:
+    - ref: Flp 2, 12-13; Jn 15, 5
+      vr:
+      - - R
+        - Seguid actuando vuestra salvación con temor y temblor, * Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
+      - - V
+        - 'Dice el Señor: «Sin mí no podéis hacer nada.»'
+      - - R
+        - Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
+    - ref: Flp 2, 2. 3. 4; 1 Ts 5, 14. 15
+      vr:
+      - - R
+        - Manteneos en el amor, y considerad siempre superiores a los demás. * No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+      - - V
+        - Sostened a los débiles, sed comprensivos con todos; procurad siempre el bien entre vosotros y para con todos.
+      - - R
+        - No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
+    - ref: Flp 2, 12-13; Jn 15, 5
+      vr:
+      - - R
+        - Trabajad por vuestra salvación con respeto y seriedad. * Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
+      - - V
+        - 'Dice el Señor: Sin mí no podéis hacer nada.'
+      - - R
+        - Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
+    - ref: Rm 12, 2; cf. Ef 4, 23-24a
+      vr:
+      - - R
+        - Transformaos por la renovación de la mente, * para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
+      - - V
+        - Renovaos en la mente y en el espíritu y vestíos de la nueva condición humana.
+      - - R
+        - Para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
+    lectura2:
+    - titulo: SOBRE LA VOCACIÓN UNIVERSAL A LA SANTIDAD
+      texto: |-
+        El que quiera venirse conmigo, que se niegue a sí mismo, que cargue con su cruz y me siga. Parece duro y grave este precepto del Señor de negarse a sí mismo para seguirle. Pero no es ni duro ni grave lo que manda aquel que ayuda a realizar lo que ordena.
+
+        Es verdad, en efecto, lo que se dice en el salmo: Según tus mandatos, me he mantenido en la senda penosa. Como también es cierto lo que él mismo afirma: Mi yugo es llevadero y mi carga ligera. El amor hace suave lo que hay de duro en el precepto.
+
+        ¿Qué significa: Cargue con su cruz? Acepte todo lo que es molesto y sígame de esta forma. Cuando empiece a seguirme en mis ejemplos y preceptos, en seguida encontrará contradictores, muchos que intentarán prohibírselo, muchos que intentarán disuadirle, y los encontrará incluso entre los seguidores de Cristo. A Cristo acompañaban aquellos que querían hacer callar a los ciegos. Si quieres seguirle, acepta como cruz las amenazas, las seducciones y los obstáculos de cualquier clase; soporta, aguanta, manténte firme.
+
+        En este mundo santo, bueno, reconciliado, salvado, mejor dicho, que ha de ser salvado —ya que ahora está salvado sólo en esperanza, porque en esperanza fuimos salvados—, en este mundo, pues, que es la Iglesia, que sigue a Cristo, el Señor dice a todos: El que quiera venirse conmigo, que se niegue a sí mismo.
+
+        Este precepto no se refiere sólo a las vírgenes, con exclusión de las casadas; o a las viudas, excluyendo a las que viven en matrimonio; o a los monjes, y no a los casados; o a los clérigos, con exclusión de los laicos: toda la Iglesia, todo el cuerpo y cada uno de sus miembros, de acuerdo con su función propia y específica, debe seguir a Cristo.
+
+        Sígale, pues, toda entera la Iglesia única, esta paloma y esposa redimida y enriquecida con la sangre del Esposo. En ella encuentra su lugar la integridad virginal, la continencia de las viudas y el pudor conyugal.
+
+        Todos estos miembros, que encuentran en ella su lugar, de acuerdo con sus funciones propias, sigan a Cristo; niéguense, es decir, no se vanaglorien; carguen con su cruz, es decir, soporten en el mundo por amor de Cristo todo lo que en el mundo les aflija. Amen a aquel que es el único que no traiciona, el único que no es engañado ni engaña; ámenle a él, porque es verdad lo que promete. Tu fe vacila, porque sus promesas tardan. Mantente fiel, persevera, tolera, acepta la dilación: todo esto es cargar con la cruz.
+      autor: |-
+        De los sermones de san Agustín, obispo
+        (Sermón 96,1. 4. 9: PL 38, 584. 586. 588)
+    resp2:
+    - ref: null
+      vr:
+      - - R
+        - Éste sí que realizó ante Dios obras realmente maravillosas, y alabó al Señor de todo corazón. * Que él interceda por los pecados de todos los pueblos.
+      - - V
+        - Éste fue un hombre paciente, que tributó a Dios un culto verdadero, se abstuvo de todo mal y se mantuvo en la inocencia.
+      - - R
+        - Que él interceda por los pecados de todos los pueblos.
   pascua:
+    salmodia:
+    - ant: Abre la boca con sabiduría y su lengua enseña con bondad. Aleluia.
+      salmo: salmo-18-a
+    - ant: Las santas mujeres vivieron esperando en Dios y cantando en su corazón. Aleluia.
+      salmo: salmo-44-i
+    - ant: Las llevan ante el Señor con alegría y algazara. Aleluia.
+      salmo: salmo-44-ii
+    versiculo:
+    - - V
+      - Que llegue a tu presencia el meditar de mi corazón. Aleluia.
+    - - R
+      - Señor, roca mía y redentor mío. Aleluia.
     lectura1:
       titulo: DICHOSOS LOS INVITADOS AL BANQUETE DE BODAS DEL CORDERO
       texto: |-
@@ -2023,25 +2236,17 @@ santas-mujeres:
         - 'Y salió una voz del trono que decía: Alabad a nuestro Dios todos sus siervos y los que le teméis, pequeños y grandes.'
       - - R
         - Ahora se estableció la salud y el poderío, y el reinado de nuestro Dios, y la potestad de su Cristo. Aleluia.
+    resp2:
+      ref: Ef 5, 8-9; Mt 5, 14. 16
+      vr:
+      - - R
+        - Sois luz en el Señor. Caminad como hijos de la luz. * Toda bondad, justicia y verdad son fruto de la luz.
+      - - V
+        - Vosotros sois la luz del mundo. Alumbre vuestra luz a los hombres. Aleluia.
+      - - R
+        - Toda bondad, justicia y verdad son fruto de la luz.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Dichosa la mujer que ha conservado
     lectura1:
-    - etiqueta: 'O bien:'
-      texto:
-        titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
-        texto: |-
-          Hermanos: A vosotros se os ha concedido la gracia de estar al lado de Cristo, no sólo creyendo en él, sino sufriendo por él, estando como estamos en el mismo combate; ése en que me visteis una vez y que ahora conocéis de oídas.
-
-          Si queréis darme el consuelo de Cristo, y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: Manteneos unánimes y concordes, con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
-
-          Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre—sobre—todo— nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
-
-          Por lo tanto, queridos hermanos, ya que siempre habéis obedecido, no sólo cuando yo estaba presente, sino mucho más ahora en mi ausencia, seguid actuando vuestra salvación con temor y temblor, porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
-
-          Cualquier cosa que hagáis, sea sin protestas ni discusiones: así seréis irreprochables y límpidos, hijos de Dios sin tacha, en medio de una gente torcida y depravada, contra la cual brilláis como lumbreras del mundo, mostrando una razón para vivir. El día de Cristo, eso será una honra para mí, que no he corrido ni me he fatigado en vano.
-        ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
     - etiqueta: 'Para una santa que vivió en el matrimonio:'
       texto:
         titulo: LA MUJER TEMEROSA DEL SEÑOR
@@ -2058,20 +2263,6 @@ santas-mujeres:
 
           Sus hijos se levantan para felicitarla, su marido proclama su alabanza: «Muchas mujeres reunieron riquezas, pero tú las ganas a todas.» Engañosa es la gracia, fugaz la hermosura, la que teme al Señor merece alabanza. Cantadle por el éxito de su trabajo, que sus obras la alaben en la plaza.
         ref: Del libro de los Proverbios 31, 10-31
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: GLORIFICAD EN VUESTROS CORAZONES A CRISTO SEÑOR
-        texto: |-
-          Mujeres, sed sumisas a vuestros maridos para que, si incluso algunos no creen en la palabra, sean ganados no por palabras, sino por la conducta de sus mujeres, al considerar vuestra conducta casta y respetuosa.
-
-          Que vuestro adorno no esté en el exterior: en peinados, joyas y modas, sino en lo oculto del corazón, en la incorruptibilidad de un alma dulce y serena: esto es precioso ante Dios. Así se adornaban en otro tiempo las santas mujeres que esperaban en Dios, siendo sumisas a sus maridos; así obedeció Sara a Abraham, llamándole señor. De ella os hacéis hijas cuando obráis bien, sin tener ningún temor.
-
-          En conclusión, procurad todos tener un mismo pensar y un mismo sentir: con afecto fraternal, con ternura, con humildad. No devolváis mal por mal o insulto por insulto; al contrarío, responded con una bendición, porque vuestra vocación mira a esto: a heredar una bendición.
-
-          «El que quiera amar la vida y ver días felices, refrene su lengua del mal y sus labios de la falsedad; apártese del mal y obre el bien; busque la paz y corra tras ella. Porque los ojos del Señor se fijan en los justos y sus oídos atienden a sus ruegos; pero el Señor se enfrenta con los que hacen el mal.»
-
-          ¿Quién os podrá hacer daño si os dedicáis al bien? Y si tuvierais que sufrir por ser honrados, ¡dichosos vosotros! No les tengáis miedo ni os asustéis; sino glorificad en vuestros corazones a Cristo Señor y estad siempre prontos para dar razón de vuestra esperanza a todo el que os la pidiere; pero con mansedumbre y respeto y en buena conciencia, para que en aquello mismo en que sois calumniados queden confundidos los que denigran vuestra buena conducta en Cristo; que mejor es padecer haciendo el bien, si tal es la voluntad de Dios, que padecer haciendo el mal.
-        ref: De la primera carta del apóstol san Pedro 3, 1-6. 8-17
     - etiqueta: 'En tiempo de cuaresma:'
       texto:
         titulo: LOS JUSTOS SON VERDADEROS HIJOS DE DIOS
@@ -2079,20 +2270,6 @@ santas-mujeres:
           fugaz; como una nave que surca el mar agitado, sin que pueda descubrirse la huella de su paso ni la estela de su quilla entre las olas; o como un pájaro que vuela por el aire sin dejar rastros de su trayecto: él golpea la brisa con el látigo de sus plumas y la corta con un agudo silbido, se abre camino batiendo las alas y después no queda ni una señal de su paso; o como una flecha arrojada hacia el blanco: el aire desplazado vuelve en seguida a su lugar, y se ignora el camino que ella siguió. Así también nosotros, desaparecimos apenas nacidos y no tenemos para mostrar ninguna señal de virtud, porque nos hemos consumido en nuestra maldad". Sí, la esperanza del impío es como brizna llevada por el viento, como espuma ligera arrastrada por el huracán: ella se disipa como el humo por el viento, se desvanece como el recuerdo del huésped de un día. Pero los justos viven para siempre; su recompensa está en el Señor y el Altísimo se preocupa de ellos. Por eso, recibirán la espléndida realeza
           y la hermosa diadema de las manos del Señor; porque él los protegerá con su mano derecha y los defenderá con su brazo.'
         ref: Del libro de la Sabiduría 5, 1-16
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
-        texto: |-
-          Hermanos: Dios os ha dado la gracia de creer en Jesucristo y aun de padecer por él, porque combatís la misma pelea que me visteis combatir a mí y que sabéis sigo combatiendo.
-
-          Si queréis darme el consuelo de Cristo y aliviarme con vuestro amor, si nos une el mismo Espíritu y tenéis entrañas compasivas, dadme esta gran alegría: manteneos unánimes y concordes con un mismo amor y un mismo sentir. No obréis por rivalidad ni por ostentación, dejaos guiar por la humildad y considerad siempre superiores a los demás. No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
-
-          Tened entre vosotros los sentimientos propios de Cristo Jesús. Él, a pesar de su condición divina, no hizo alarde de su categoría de Dios; al contrario, se despojó de su rango y tomó la condición de esclavo, pasando por uno de tantos. Y así, actuando como un hombre cualquiera, se rebajó hasta someterse incluso a la muerte, y una muerte de cruz. Por eso Dios lo levantó sobre todo y le concedió el «Nombre–sobre–todo–nombre»; de modo que al nombre de Jesús toda rodilla se doble en el cielo, en la tierra, en el abismo, y toda lengua proclame: Jesucristo es Señor, para gloria de Dios Padre.
-
-          Hermanos míos queridos, si siempre me habéis obedecido, cuando estaba presente, mucho más ahora que estoy ausente. Trabajad por vuestra salvación con respeto y seriedad. Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
-
-          Proceded en todo sin murmuraciones ni discusiones: así seréis irreprochables y puros, hijos de Dios sin mancha, en medio de una generación extraviada y pervertida, dentro de la cual vosotros brilláis como luminarias en el mundo, mostrándole la Palabra de Vida. De esa manera, el Día de Cristo yo podré gloriarme de no haber trabajado ni sufrido en vano.
-        ref: De la carta del apóstol san Pablo a los Filipenses 1, 29-2, 16
     - etiqueta: 'opcion: 3'
       texto:
         titulo: VUESTRA VIDA ESTÁ OCULTA CON CRISTO EN DIOS
@@ -2111,33 +2288,7 @@ santas-mujeres:
 
           Todo lo que de palabra o de obra realicéis, sea todo en nombre de Jesús, ofreciendo la Acción de Gracias a Dios Padre por medio de él.
         ref: De la carta del apóstol san Pablo a los Colosenses 3, 1-17
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: LA VIDA CRISTIANA ES UN CULTO ESPIRITUAL
-        texto: |-
-          Os exhorto, hermanos, por la misericordia de Dios, a presentar vuestros cuerpos como hostia viva, santa, agradable a Dios; éste es vuestro culto razonable. Y no os ajustéis a este mundo, sino transformaos por la renovación de la mente, para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto. Por la gracia que Dios me ha dado, os pido a todos y a cada uno: No tengáis de vosotros mismos un concepto superior a lo que es justo. Abrigad sentimientos de justa moderación, cada uno en la medida de la fe que Dios le ha dado.
-
-          A la manera que en un solo cuerpo tenemos muchos miembros y todos los miembros desempeñan distinta función, lo mismo nosotros: siendo muchos, somos un solo cuerpo en Cristo, e individualmente somos miembros unos de otros. Y teniendo carismas diferentes, según la gracia que Dios nos ha dado, quien tenga carisma de hablar por inspiración de Dios haga uso de él según le mueva la fe, quien tenga el carisma de ministerio que se ocupe en su oficio, quien tenga el don de enseñar que enseñe, quien el de exhortar que exhorte y consuele, quien reparta sus bienes que lo haga con sencillez, quien presida obre con solicitud, quien practique la misericordia que lo haga con jovialidad.
-
-          Que vuestra caridad sea sincera. Aborreced el mal y aplicaos al bien. En punto a caridad fraterna, amaos entrañablemente unos a otros. En cuanto a la mutua estima, tened por más dignos a los demás. Nada de pereza en vuestro celo, sirviendo con fervor de espíritu al Señor. Que la esperanza os tenga alegres; estad firmes en la tribulación, sed asiduos en la oración. Socorred las necesidades de los fieles, dedicaos activamente a la hospitalidad.
-
-          Bendecid a los que os persiguen, no maldigáis. Alegraos con los que se alegran; llorad con los que lloran. Tened un mismo sentir entre vosotros, sin apetecer grandezas; atraídos más bien por lo humilde. No os tengáis por sabios. No devolváis a nadie mal por mal y procurad hacer lo que es bueno no sólo ante Dios, sino también ante todos los hombres.
-
-          A ser posible, y en cuanto de vosotros depende, vivid en paz con todos. No os toméis, carísimos hermanos, la justicia por vuestra mano, sino dejadlo al juicio de Dios. Dice la Escritura: «Es mía la venganza; mía la recompensa; palabra del Señor.» Pero también dice: «Si tu enemigo tiene hambre, dale de comer; sí tiene sed, dale de beber. Si haces esto, se sentirá avergonzado de su odio y lo depondrá.»
-
-          No te dejes vencer por el mal, sino vence el mal con el bien.
-        ref: De la carta del apóstol san Pablo a los Romanos 12, 1-21
     resp1:
-    - etiqueta: 'O bien:'
-      texto:
-        ref: Flp 2, 12-13; Jn 15, 5
-        vr:
-        - - R
-          - Seguid actuando vuestra salvación con temor y temblor, * Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
-        - - V
-          - 'Dice el Señor: «Sin mí no podéis hacer nada.»'
-        - - R
-          - Porque es Dios quien activa en vosotros el querer y la actividad para realizar su designio de amor.
     - etiqueta: 'Para una santa que vivió en el matrimonio:'
       texto:
         ref: Cf. Pr 31, 17. 18; cf. Sal 45, 6
@@ -2148,16 +2299,6 @@ santas-mujeres:
           - Dios la socorre con su mirada; teniendo a Dios en medio, no vacila.
         - - R
           - Por esto su lámpara nunca se apagará.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Flp 2, 2. 3. 4; 1 Ts 5, 14. 15
-        vr:
-        - - R
-          - Manteneos en el amor, y considerad siempre superiores a los demás. * No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
-        - - V
-          - Sostened a los débiles, sed comprensivos con todos; procurad siempre el bien entre vosotros y para con todos.
-        - - R
-          - No os encerréis en vuestros intereses, sino buscad todos el interés de los demás.
     - etiqueta: 'En tiempo de cuaresma:'
       texto:
         ref: 1Jn 3, 7. 8. 10
@@ -2168,16 +2309,6 @@ santas-mujeres:
           - Así se distinguen los hijos de Dios y los hijos del demonio.
         - - R
           - El que peca es del demonio, porque desde el principio el demonio peca.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Flp 2, 12-13; Jn 15, 5
-        vr:
-        - - R
-          - Trabajad por vuestra salvación con respeto y seriedad. * Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
-        - - V
-          - 'Dice el Señor: Sin mí no podéis hacer nada.'
-        - - R
-          - Porque es Dios el que obra en vosotros, haciendo que queráis y obréis movidos por lo que a él le agrada.
     - etiqueta: 'opcion: 3'
       texto:
         ref: Ga 3, 27. 28; cf. Ef 4, 24
@@ -2188,37 +2319,7 @@ santas-mujeres:
           - 'Vestíos de la nueva condición humana, creada a imagen de Dios: justicia y santidad verdaderas.'
         - - R
           - Todos sois uno en Cristo Jesús.
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: Rm 12, 2; cf. Ef 4, 23-24a
-        vr:
-        - - R
-          - Transformaos por la renovación de la mente, * para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
-        - - V
-          - Renovaos en la mente y en el espíritu y vestíos de la nueva condición humana.
-        - - R
-          - Para que sepáis discernir lo que es la voluntad de Dios, lo bueno, lo que agrada, lo perfecto.
     lectura2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        titulo: SOBRE LA VOCACIÓN UNIVERSAL A LA SANTIDAD
-        texto: |-
-          El que quiera venirse conmigo, que se niegue a sí mismo, que cargue con su cruz y me siga. Parece duro y grave este precepto del Señor de negarse a sí mismo para seguirle. Pero no es ni duro ni grave lo que manda aquel que ayuda a realizar lo que ordena.
-
-          Es verdad, en efecto, lo que se dice en el salmo: Según tus mandatos, me he mantenido en la senda penosa. Como también es cierto lo que él mismo afirma: Mi yugo es llevadero y mi carga ligera. El amor hace suave lo que hay de duro en el precepto.
-
-          ¿Qué significa: Cargue con su cruz? Acepte todo lo que es molesto y sígame de esta forma. Cuando empiece a seguirme en mis ejemplos y preceptos, en seguida encontrará contradictores, muchos que intentarán prohibírselo, muchos que intentarán disuadirle, y los encontrará incluso entre los seguidores de Cristo. A Cristo acompañaban aquellos que querían hacer callar a los ciegos. Si quieres seguirle, acepta como cruz las amenazas, las seducciones y los obstáculos de cualquier clase; soporta, aguanta, manténte firme.
-
-          En este mundo santo, bueno, reconciliado, salvado, mejor dicho, que ha de ser salvado —ya que ahora está salvado sólo en esperanza, porque en esperanza fuimos salvados—, en este mundo, pues, que es la Iglesia, que sigue a Cristo, el Señor dice a todos: El que quiera venirse conmigo, que se niegue a sí mismo.
-
-          Este precepto no se refiere sólo a las vírgenes, con exclusión de las casadas; o a las viudas, excluyendo a las que viven en matrimonio; o a los monjes, y no a los casados; o a los clérigos, con exclusión de los laicos: toda la Iglesia, todo el cuerpo y cada uno de sus miembros, de acuerdo con su función propia y específica, debe seguir a Cristo.
-
-          Sígale, pues, toda entera la Iglesia única, esta paloma y esposa redimida y enriquecida con la sangre del Esposo. En ella encuentra su lugar la integridad virginal, la continencia de las viudas y el pudor conyugal.
-
-          Todos estos miembros, que encuentran en ella su lugar, de acuerdo con sus funciones propias, sigan a Cristo; niéguense, es decir, no se vanaglorien; carguen con su cruz, es decir, soporten en el mundo por amor de Cristo todo lo que en el mundo les aflija. Amen a aquel que es el único que no traiciona, el único que no es engañado ni engaña; ámenle a él, porque es verdad lo que promete. Tu fe vacila, porque sus promesas tardan. Mantente fiel, persevera, tolera, acepta la dilación: todo esto es cargar con la cruz.
-        autor: |-
-          De los sermones de san Agustín, obispo
-          (Sermón 96,1. 4. 9: PL 38, 584. 586. 588)
     - etiqueta: 'Si se trata de una mujer santa que vivió en el matrimonio, puede leerse la siguiente:'
       texto:
         titulo: LA ESPOSA ES EL SOL DE LA FAMILIA
@@ -2236,16 +2337,6 @@ santas-mujeres:
           De una alocución del papa Pío doce a los recién casados
           (Discorsi e radiomessaggi, 11 de marzo de 1942:3,385-390)
     resp2:
-    - etiqueta: 'O bien esta otra:'
-      texto:
-        ref: null
-        vr:
-        - - R
-          - Éste sí que realizó ante Dios obras realmente maravillosas, y alabó al Señor de todo corazón. * Que él interceda por los pecados de todos los pueblos.
-        - - V
-          - Éste fue un hombre paciente, que tributó a Dios un culto verdadero, se abstuvo de todo mal y se mantuvo en la inocencia.
-        - - R
-          - Que él interceda por los pecados de todos los pueblos.
     - etiqueta: 'Si se trata de una mujer santa que vivió en el matrimonio, puede leerse la siguiente:'
       texto:
         ref: Sir 26, 16. 21
@@ -2436,6 +2527,16 @@ caridad:
       - Quien se apiada del pobre presta al Señor.
     - - R
       - Os aseguro que cada vez que lo hicisteis con uno de estos mis humildes hermanos, conmigo lo hicisteis.
+  pascua:
+    resp2:
+      ref: Mt 25, 35. 40; Pr 19, 17
+      vr:
+      - - R
+        - Tuve hambre y me disteis de comer, tuve sed y me disteis de beber, fui forastero y me hospedasteis. * Os aseguro que cada vez que lo hicisteis con uno de estos mis humildes hermanos, conmigo lo hicisteis.
+      - - V
+        - Quien se apiada del pobre presta al Señor. Aleluia.
+      - - R
+        - Os aseguro que cada vez que lo hicisteis con uno de estos mis humildes hermanos, conmigo lo hicisteis.
   variantes:
     lectura1:
     - etiqueta: 'opcion: 2'
@@ -2513,3 +2614,13 @@ educadores:
       - Hijo mío, haz caso de mi sabiduría, presta oído a mi inteligencia.
     - - R
       - Pues será hermosa diadema en tu cabeza.
+  pascua:
+    resp2:
+      ref: Pr 23, 26; 1, 9; 5, 1
+      vr:
+      - - R
+        - Hijo mío, hazme caso, acepta de buena gana mi camino, * pues será hermosa diadema en tu cabeza.
+      - - V
+        - Hijo mío, haz caso de mi sabiduría, presta oído a mi inteligencia. Aleluia.
+      - - R
+        - Pues será hermosa diadema en tu cabeza.

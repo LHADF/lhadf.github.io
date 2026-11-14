@@ -53,9 +53,12 @@ dedicacion:
     texto: 'Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo como cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por nuestro Señor Jesucristo.'
   - para: ''
     texto: 'Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.'
+  opciones:
+    himno:
+    - Alta ciudad de piedras vivas
   pascua:
     salmodia:
-    - ant: El Altísimo consagra su morada; teniendo a Dios en medio, no vacila.
+    - ant: El Altísimo consagra su morada; teniendo a Dios en medio, no vacila. Aleluia.
       salmo: salmo-45
     - ant: Alabad al Señor, nuestro Dios, todos sus santos. Aleluia.
       salmo: salmo-121
@@ -74,10 +77,7 @@ dedicacion:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - Dichosos, Señor, los que habitan en tu casa. Aleluia, aleluia.
-  variantes:
-    himno:
-    - etiqueta: 'O bien en América latina:'
-      texto: Alta ciudad de piedras vivas
+    ant_magnificat: 'Santificó el Señor su tabernáculo, porque ésta es la casa de Dios, donde se invoca su nombre, del cual está escrito: «Mi nombre habitará allí», dice el Señor. Aleluia.'
   primeras:
     salmodia:
     - ant: 'En las plazas de Jerusalén reina la alegría y en sus casas resuena el canto de gozo: «Aleluia».'
@@ -146,6 +146,7 @@ dedicacion:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - La santidad, Señor, es el adorno de tu casa. Aleluia, aleluia.
+      ant_magnificat: Gozad con Jerusalén, todos los que la amáis, y alegraos por siempre más de su alegría. Aleluia.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
   himno: Todos te deben servir
@@ -205,10 +206,33 @@ virgen-maria:
     texto: Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.
   - para: ''
     texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
-  variantes:
+  opciones:
     himno:
-    - etiqueta: 'O bien:'
-      texto: Salve, del mar Estrella
+    - Salve, del mar Estrella
+    preces:
+    - intro: 'Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:'
+      respuesta: Que la llena de gracia interceda por nosotros. / Mira a la llena de gracia y escúchanos.
+      preces:
+      - - Tú que hiciste de María la madre de misericordia,
+        - haz que los que viven en peligro o están tentados sientan su protección maternal.
+      - - Tú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de José,
+        - haz que por su intercesión todas las madres fomenten en sus hogares el amor y la santidad.
+      - - Tú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la resurrección de su Hijo,
+        - levanta y robustece la esperanza de los decaídos.
+      - - Tú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,
+        - por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo.
+      - - Tú que coronaste a María como reina del cielo,
+        - haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
+  pascua:
+    salmodia:
+    - ant: Alégrate, María, llena de gracia, el Señor está contigo. Aleluia.
+      salmo: salmo-121
+    - ant: Aquí está la esclava del Señor, hágase en mí según tu palabra. Aleluia.
+      salmo: salmo-126
+    - ant: Bendita tú entre las mujeres y bendito el fruto de tu vientre. Aleluia.
+      salmo: cantico-ef-1-3-10
+    ant_magnificat: Dichosa tú, María, que has creído; porque lo que te ha dicho el Señor se cumplirá. Aleluia.
+  variantes:
     responsorio:
     - etiqueta: 'opcion: 2'
       texto:
@@ -224,22 +248,6 @@ virgen-maria:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - Alégrate, María, llena de gracia, el Señor está contigo. Aleluia, aleluia.
-    preces:
-    - etiqueta: 'O bien estas otras:'
-      texto:
-        intro: 'Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:'
-        respuesta: Que la llena de gracia interceda por nosotros. / Mira a la llena de gracia y escúchanos.
-        preces:
-        - - Tú que hiciste de María la madre de misericordia,
-          - haz que los que viven en peligro o están tentados sientan su protección maternal.
-        - - Tú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de José,
-          - haz que por su intercesión todas las madres fomenten en sus hogares el amor y la santidad.
-        - - Tú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la resurrección de su Hijo,
-          - levanta y robustece la esperanza de los decaídos.
-        - - Tú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,
-          - por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo.
-        - - Tú que coronaste a María como reina del cielo,
-          - haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
   primeras:
     salmodia:
     - ant: Dichosa eres, Virgen María que llevaste en tu seno al Creador del mundo.
@@ -297,7 +305,31 @@ virgen-maria:
       texto: Concédenos, Señor, la valiosa intercesión de la Virgen María, cuya gloriosa memoria hoy celebramos, y danos parte en los dones de tu amor por la intercesión de aquella a la que hiciste llena de gracia. Por nuestro Señor Jesucristo.
     - para: ''
       texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
+    opciones:
+      ant_magnificat:
+      - Me felicitarán todas las generaciones, porque Dios ha mirado la humillación de su esclava.
+      preces:
+      - intro: 'Proclamemos la grandeza de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la Madre de su Hijo, y supliquémosle diciendo:'
+        respuesta: Que la llena de gracia interceda por nosotros. / Mira a la llena de gracia y escúchanos.
+        preces:
+        - - Tú que hiciste de María la madre de misericordia,
+          - haz que los que viven en peligro o están tentados sientan su protección maternal.
+        - - Tú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de José,
+          - haz que por su intercesión todas las madres fomenten en sus hogares el amor y la santidad.
+        - - Tú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la resurrección de su Hijo,
+          - levanta y robustece la esperanza de los decaídos.
+        - - Tú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,
+          - por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo.
+        - - Tú que coronaste a María como reina del cielo,
+          - haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
     pascua:
+      salmodia:
+      - ant: Dichosa eres, Virgen María que llevaste en tu seno al Creador del mundo. Aleluia.
+        salmo: salmo-112
+      - ant: Engendraste al que te creó y permanecerás virgen para siempre. Aleluia.
+        salmo: salmo-147
+      - ant: Tú eres la mujer a quien Dios ha bendecido, y por ti hemos recibido el fruto de la vida. Aleluia.
+        salmo: cantico-ef-1-3-10
       responsorio:
       - - V
         - Después del parto, ¡oh Virgen!, has permanecido intacta. Aleluia, aleluia.
@@ -311,26 +343,7 @@ virgen-maria:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - Después del parto, ¡oh Virgen!, has permanecido intacta. Aleluia, aleluia.
-    variantes:
-      ant_magnificat:
-      - etiqueta: 'O bien:'
-        texto: Me felicitarán todas las generaciones, porque Dios ha mirado la humillación de su esclava.
-      preces:
-      - etiqueta: 'O bien estas otras:'
-        texto:
-          intro: 'Proclamemos la grandeza de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la Madre de su Hijo, y supliquémosle diciendo:'
-          respuesta: Que la llena de gracia interceda por nosotros. / Mira a la llena de gracia y escúchanos.
-          preces:
-          - - Tú que hiciste de María la madre de misericordia,
-            - haz que los que viven en peligro o están tentados sientan su protección maternal.
-          - - Tú que encomendaste a María la misión de madre de familia en el hogar de Jesús y de José,
-            - haz que por su intercesión todas las madres fomenten en sus hogares el amor y la santidad.
-          - - Tú que fortaleciste a María cuando estaba al pie de la cruz y la llenaste de gozo en la resurrección de su Hijo,
-            - levanta y robustece la esperanza de los decaídos.
-          - - Tú que hiciste que María meditara tus palabras en su corazón y fuera tu esclava fiel,
-            - por su intercesión haz de nosotros siervos fieles y discípulos dóciles de tu Hijo.
-          - - Tú que coronaste a María como reina del cielo,
-            - haz que los difuntos puedan alcanzar con todos los santos la felicidad de tu reino.
+      ant_magnificat: El Señor ha mirado mi humillación y el Poderoso ha hecho obras grandes por mí. Aleluia.
 apostoles:
   nombre: Común de apóstoles
   himno: Benditos son los pies de los que llegan
@@ -373,7 +386,17 @@ apostoles:
     - - Tú que quisiste que tu Hijo resucitara el primero de entre los muertos,
       - concede a todos los que son de Cristo resucitar con él, el día de su venida.
   padrenuestro_intro: 'Oremos ahora al Padre, como Jesús enseñó a los apóstoles:'
+  opciones:
+    himno:
+    - ¡Columnas de la Iglesia, piedras vivas!
   pascua:
+    salmodia:
+    - ant: Vosotros sois los que habéis perseverado conmigo en mis pruebas. Aleluia.
+      salmo: salmo-115
+    - ant: Yo estoy en medio de vosotros como el que sirve. Aleluia.
+      salmo: salmo-125
+    - ant: Ya no os llamo siervos, a vosotros os llamo amigos, porque todo lo que he oído a mi Padre os lo he dado a conocer. Aleluia.
+      salmo: cantico-ef-1-3-10
     responsorio:
     - - V
       - Contad a los pueblos la gloria del Señor. Aleluia, aleluia.
@@ -387,10 +410,7 @@ apostoles:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - Contad a los pueblos la gloria del Señor. Aleluia, aleluia.
-  variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: ¡Columnas de la Iglesia, piedras vivas!
+    ant_magnificat: Cuando llegue la renovación y el Hijo del hombre se siente en el trono de su gloria, os sentaréis también vosotros en doce tronos para regir a las doce tribus de Israel. Aleluia.
   primeras:
     salmodia:
     - ant: Llamó Jesús a sus discípulos, escogió doce entre ellos, y les dio el nombre de apóstoles.
@@ -432,6 +452,13 @@ apostoles:
         - concede a todos los que son de Cristo resucitar con él, el día de su venida.
     padrenuestro_intro: 'Oremos ahora al Padre, como Jesús enseñó a los apóstoles:'
     pascua:
+      salmodia:
+      - ant: Llamó Jesús a sus discípulos, escogió doce entre ellos, y les dio el nombre de apóstoles. Aleluia.
+        salmo: salmo-116
+      - ant: Dejaron las redes y siguieron al Señor, su redentor. Aleluia.
+        salmo: salmo-147
+      - ant: Vosotros sois mis amigos, porque permanecisteis en mi amor. Aleluia.
+        salmo: cantico-ef-1-3-10
       responsorio:
       - - V
         - En esto conocerán todos que sois mis discípulos. Aleluia, aleluia.
@@ -445,6 +472,7 @@ apostoles:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - En esto conocerán todos que sois mis discípulos. Aleluia, aleluia.
+      ant_magnificat: No sois vosotros los que me habéis elegido, soy yo quien os he elegido; y os he destinado para que vayáis y deis fruto, y vuestro fruto dure. Aleluia.
 varios-martires:
   nombre: 'Común de mártires: para varios mártires'
   himno: Espíritus sublimes, ¡oh mártires gloriosos!
@@ -492,6 +520,13 @@ varios-martires:
   - para: las santas mujeres
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de las santas mártires N. y N. que obtengamos la fortaleza de vencer nuestras dificultades como ellas vencieron los tormentos del martirio. Por nuestro Señor Jesucristo.
   pascua:
+    salmodia:
+    - ant: Los cuerpos de los santos fueron sepultados en paz, y su fama vive por generaciones. Aleluia.
+      salmo: salmo-114
+    - ant: Vi las almas de los sacrificados a causa de la palabra de Dios y del testimonio que mantuvieron. Aleluia.
+      salmo: salmo-115
+    - ant: Éstos son aquellos santos que entregaron sus cuerpos para ser fieles a la alianza de Dios y han lavado sus vestiduras con la sangre del Cordero. Aleluia.
+      salmo: cantico-ap-4-11-5-9-10-12
     lectura:
       ref: Ap 7, 14-17
       texto: 'Estos son los que vienen de la gran tribulación: han lavado y blanqueado sus mantos en la sangre del Cordero. Por eso están ante el trono de Dios dándole culto día y noche en su templo. El que se sienta en el trono acampará entre ellos. Ya no pasarán hambre ni sed, no les hará daño el sol ni el bochorno. Porque el Cordero que está delante del trono será su pastor, y los conducirá hacia fuentes de aguas vivas. Y Dios enjugará las lágrimas de sus ojos.'
@@ -571,6 +606,13 @@ varios-martires:
     - para: las santas mujeres
       texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de las santas mártires N. y N. que obtengamos la fortaleza de vencer nuestras dificultades como ellas vencieron los tormentos del martirio. Por nuestro Señor Jesucristo.
     pascua:
+      salmodia:
+      - ant: Muchos tormentos sufrieron los santos antes de alcanzar la palma del martirio. Aleluia.
+        salmo: salmo-117-i
+      - ant: Los santos han llegado al reino con la palma del martirio, y de la mano de Dios han recibido una corona de gloria. Aleluia.
+        salmo: salmo-117-ii
+      - ant: Los mártires murieron por Cristo, pero ahora viven eternamente. Aleluia.
+        salmo: cantico-1pe-2-21b-24
       lectura:
         ref: Ap 3, 10-12
         texto: 'Ya que has cumplido mi consigna de ser constante, yo también te preservaré en la hora de la tribulación, que ha de venir sobre el mundo entero para poner a prueba a todos los habitantes de la tierra. Yo volveré pronto: conserva firmemente lo que ya posees, para que nadie pueda arrebatarte la corona. Haré que el vencedor sea una columna en el Templo de mi Dios, y nunca más saldrá de allí. Y sobre él escribiré el nombre de mi Dios, y el nombre de la Ciudad de mi Dios —la nueva Jerusalén que desciende del cielo y viene de Dios— y también mi nombre nuevo".'
@@ -638,7 +680,17 @@ un-martir:
     texto: Tú, Señor, que nos alegras hoy con la fiesta anual de santa N., concédenos la ayuda de sus méritos, ya que has querido iluminarnos con el ejemplo de su virginidad y de su fortaleza. Por nuestro Señor Jesucristo.
   - para: una mujer mártir
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de la santa mártir N. que obtengamos la fortaleza de vencer nuestras dificultades como ella venció los tormentos del martirio. Por nuestro Señor Jesucristo.
+  opciones:
+    himno:
+    - Oh Dios, que eres el premio, la corona
   pascua:
+    salmodia:
+    - ant: El que quiera seguirme, que se niegue a sí mismo, cargue con su cruz y se venga conmigo. Aleluia.
+      salmo: salmo-114
+    - ant: A quien me sirva, mi Padre del cielo lo premiará. Aleluia.
+      salmo: salmo-115
+    - ant: El que pierda su vida por mí la encontrará para siempre. Aleluia.
+      salmo: cantico-ap-4-11-5-9-10-12
     lectura:
       ref: Ap 7, 14-17
       texto: 'Estos son los que vienen de la gran tribulación: han lavado y blanqueado sus mantos en la sangre del Cordero. Por eso están ante el trono de Dios dándole culto día y noche en su templo. El que se sienta en el trono acampará entre ellos. Ya no pasarán hambre ni sed, no les hará daño el sol ni el bochorno. Porque el Cordero que está delante del trono será su pastor, y los conducirá hacia fuentes de aguas vivas. Y Dios enjugará las lágrimas de sus ojos.'
@@ -657,9 +709,6 @@ un-martir:
       - Los justos brillarán en la presencia del Señor. Aleluia, aleluia.
     ant_magnificat: Si el grano de trigo no cae en tierra y muere queda infecundo, si muere produce mucho fruto. Aleluia.
   variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Oh Dios, que eres el premio, la corona
     responsorio:
     - etiqueta: 'En tiempo de cuaresma Para un solo mártir:'
       texto:
@@ -732,6 +781,13 @@ un-martir:
     - para: una mujer mártir
       texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de la santa mártir N. que obtengamos la fortaleza de vencer nuestras dificultades como ella venció los tormentos del martirio. Por nuestro Señor Jesucristo.
     pascua:
+      salmodia:
+      - ant: Si uno se pone de mi parte ante los hombres, también el Hijo del hombre se pondrá de su parte ante el Padre. Aleluia.
+        salmo: salmo-117-i
+      - ant: El que me sigue no camina en las tinieblas, sino que tendrá la luz de la vida. Aleluia.
+        salmo: salmo-117-ii
+      - ant: Si los sufrimientos de Cristo rebosan sobre nosotros, también por Cristo rebosa nuestro consuelo. Aleluia.
+        salmo: cantico-1pe-2-21b-24
       lectura:
         ref: Ap 3, 10-12
         texto: 'Ya que has cumplido mi consigna de ser constante, yo también te preservaré en la hora de la tribulación, que ha de venir sobre el mundo entero para poner a prueba a todos los habitantes de la tierra. Yo volveré pronto: conserva firmemente lo que ya posees, para que nadie pueda arrebatarte la corona. Haré que el vencedor sea una columna en el Templo de mi Dios, y nunca más saldrá de allí. Y sobre él escribiré el nombre de mi Dios, y el nombre de la Ciudad de mi Dios —la nueva Jerusalén que desciende del cielo y viene de Dios— y también mi nombre nuevo".'
@@ -870,7 +926,17 @@ pastores:
     texto: Señor, tú que diste a san N. la abundancia del espíritu de verdad y de amor para que fuera un buen pastor de tu pueblo, concede a cuantos celebramos hoy su fiesta adelantar en la virtud, imitando sus ejemplos, y sentirnos protegidos con su valiosa intercesión. Por nuestro Señor Jesucristo.
   - para: un santo misionero
     texto: Dios y Señor nuestro, que con tu amor hacia los hombres quisiste que san N. anunciara a los pueblos la riqueza insondable que es Cristo, concédenos, por su intercesión, crecer en el conocimiento del misterio de Cristo y vivir siempre según las enseñanzas del Evangelio, fructificando con toda clase de buenas obras. Por nuestro Señor Jesucristo.
+  opciones:
+    ant_magnificat:
+    - Te doy gracias, Cristo, pastor bueno, porque has querido glorificarme; te suplico que las ovejas que pusiste a mi cuidado participen conmigo eternamente de tu gloria.
   pascua:
+    salmodia:
+    - ant: Soy ministro del Evangelio por don de la gracia de Dios. Aleluia.
+      salmo: salmo-14
+    - ant: Administrador fiel y solícito a quien el amo ha puesto al frente de su servidumbre.
+      salmo: salmo-111
+    - ant: Mis ovejas escucharán mi voz, y habrá un solo rebaño y un solo pastor. Aleluia.
+      salmo: cantico-ap-15-3-4
     responsorio:
     - - V
       - Éste es el que ama a sus hermanos, el que ora mucho por su pueblo. Aleluia, aleluia.
@@ -888,8 +954,6 @@ pastores:
     ant_magnificat:
     - etiqueta: 'opcion: 1'
       texto: Éste es el administrador fiel y prudente, a quien su señor ha puesto al frente de su servidumbre para que les reparta la ración a sus horas.
-    - etiqueta: 'O bien:'
-      texto: Te doy gracias, Cristo, pastor bueno, porque has querido glorificarme; te suplico que las ovejas que pusiste a mi cuidado participen conmigo eternamente de tu gloria.
   primeras:
     salmodia:
     - ant: Os daré pastores conforme a mi corazón, que os apacienten con ciencia y doctrina.
@@ -944,6 +1008,13 @@ pastores:
     - para: un santo misionero
       texto: Dios y Señor nuestro, que con tu amor hacia los hombres quisiste que san N. anunciara a los pueblos la riqueza insondable que es Cristo, concédenos, por su intercesión, crecer en el conocimiento del misterio de Cristo y vivir siempre según las enseñanzas del Evangelio, fructificando con toda clase de buenas obras. Por nuestro Señor Jesucristo.
     pascua:
+      salmodia:
+      - ant: Os daré pastores conforme a mi corazón, que os apacienten con ciencia y doctrina.
+        salmo: salmo-112
+      - ant: Yo mismo apacentaré mis ovejas; buscaré a las perdidas y haré volver a las descarriadas. Aleluia.
+        salmo: salmo-145
+      - ant: El buen pastor da su vida por las ovejas. Aleluia.
+        salmo: cantico-ef-1-3-10
       responsorio:
       - - V
         - Sacerdotes del Señor, bendecid al Señor. Aleluia, aleluia.
@@ -957,6 +1028,7 @@ pastores:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - Sacerdotes del Señor, bendecid al Señor. Aleluia, aleluia.
+      ant_magnificat: Sacerdote del Altísimo, modelo de virtudes, pastor bueno del pueblo, tú agradaste al Señor. Aleluia.
     variantes:
       ant_magnificat:
       - etiqueta: 'Para un santo presbítero:'
@@ -999,6 +1071,7 @@ doctores:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - En la asamblea le da la palabra. Aleluia, aleluia.
+    ant_magnificat: Oh doctor admirable, luz de la Iglesia santa, san N., fiel cumplidor de la ley, ruega por nosotros al Hijo de Dios. Aleluia.
   primeras:
     lectura:
       ref: Si 3, 17-18
@@ -1036,6 +1109,7 @@ doctores:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - La boca del justo expone la sabiduría. Aleluia, aleluia.
+      ant_magnificat: Quien cumpla y enseñe mi ley será grande en el reino de los cielos. Aleluia.
 virgenes:
   nombre: Común de vírgenes
   himno: Dichosa tú, que, entre todas
@@ -1085,7 +1159,17 @@ virgenes:
     texto: Escucha, Señor, nuestras plegarias y concede a los que celebramos la virtud de santa N., virgen, crecer siempre en tu amor y perseverar en él hasta el fin. Que vive y reina contigo.
   - para: varias santas vírgenes
     texto: Te pedimos, Señor, que manifiestes la grandeza de tu amor hacia nosotros, para que así como hoy podemos alegrarnos al celebrar la fiesta de las santas vírgenes N. y N., así podamos también disfrutar un día de su compañía en la felicidad de tu reino.
+  opciones:
+    himno:
+    - La gracia de mujer es toda Gracia
   pascua:
+    salmodia:
+    - ant: Quiero ser solamente tuya, oh Cristo esposo, a ti vengo con mi lámpara encendida.
+      salmo: salmo-121
+    - ant: Dichosos los limpios de corazón, porque ellos verán a Dios. Aleluia.
+      salmo: salmo-126
+    - ant: Mi alma se siente firme, está cimentada en Cristo, el Señor. Aleluia.
+      salmo: cantico-ef-1-3-10
     responsorio:
     - - V
       - Llevan ante el Rey al séquito de vírgenes, las traen entre alegría. Aleluia, aleluia.
@@ -1099,10 +1183,8 @@ virgenes:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - Llevan ante el Rey al séquito de vírgenes, las traen entre alegría. Aleluia, aleluia.
+    ant_magnificat: 'En una sola víctima celebramos un doble triunfo: la gloria de la virginidad y la victoria sobre la muerte; permaneció virgen y obtuvo la palma del martirio. Aleluia.'
   variantes:
-    himno:
-    - etiqueta: II
-      texto: La gracia de mujer es toda Gracia
     ant_magnificat:
     - etiqueta: 'Para una santa virgen:'
       texto: Ven, esposa de Cristo, recibe la corona eterna que el Señor te trae preparada.
@@ -1156,6 +1238,13 @@ virgenes:
     - para: varias santas vírgenes
       texto: Te pedimos, Señor, que manifiestes la grandeza de tu amor hacia nosotros, para que así como hoy podemos alegrarnos al celebrar la fiesta de las santas vírgenes N. y N., así podamos también disfrutar un día de su compañía en la felicidad de tu reino. Por nuestro Señor Jesucristo.
     pascua:
+      salmodia:
+      - ant: Venid, hijas, contemplad al Señor y quedaréis radiantes. Aleluia.
+        salmo: salmo-112
+      - ant: Ahora te seguimos de todo corazón, te respetamos y buscamos tu rostro; Señor, no nos defraudes. Aleluia.
+        salmo: salmo-147
+      - ant: Alegraos, vírgenes de Cristo, y gozad de vuestro desposorio divino que no tendrá fin. Aleluia.
+        salmo: cantico-ef-1-3-10
       responsorio:
       - - V
         - Mi porción es el Señor, dice mi alma. Aleluia, aleluia.
@@ -1169,6 +1258,7 @@ virgenes:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - Mi porción es el Señor, dice mi alma. Aleluia, aleluia.
+      ant_magnificat: Mirad, la virgen esforzada sigue ya al Cordero que fue crucificado por nosotros; también ella, como el Señor, ha sido víctima pura, una hostia inmaculada. Aleluia.
     variantes:
       ant_magnificat:
       - etiqueta: 'Para una santa virgen:'
@@ -1241,6 +1331,13 @@ santos-varones:
   - para: un santo que se ha consagrado a una actividad caritativa
     texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de san N., podamos ser un día contados entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
   pascua:
+    salmodia:
+    - ant: Fue hallado intachable y perfecto; su gloria será eterna. Aleluia.
+      salmo: salmo-14
+    - ant: El Señor protege a sus santos y les muestra su amor y su misericordia. Aleluia.
+      salmo: salmo-111
+    - ant: Los santos cantaban un cántico nuevo ante el trono de Dios y del Cordero, y sus voces llenaban toda la tierra. Aleluia.
+      salmo: cantico-ap-15-3-4
     responsorio:
     - - V
       - El Señor es justo y ama la justicia. Aleluia, aleluia.
@@ -1254,6 +1351,7 @@ santos-varones:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - El Señor es justo y ama la justicia. Aleluia, aleluia.
+    ant_magnificat: Empleado fiel y cumplidor, pasa al banquete de tu Señor. Aleluia.
   variantes:
     himno:
     - etiqueta: 'II Para un santo religioso:'
@@ -1325,6 +1423,13 @@ santos-varones:
     - para: un santo que se ha consagrado a una actividad caritativa
       texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de san N., podamos ser un día contados entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
     pascua:
+      salmodia:
+      - ant: Alabad a nuestro Dios, todos sus santos. Aleluia.
+        salmo: salmo-112
+      - ant: Dichosos los que tienen hambre y sed de la justicia, porque ellos quedarán saciados. Aleluia.
+        salmo: salmo-145
+      - ant: Bendito sea Dios, que nos ha elegido para ser santos e inmaculados en el amor. Aleluia.
+        salmo: cantico-ef-1-3-10
       responsorio:
       - - V
         - El Señor lo amó y lo enalteció. Aleluia, aleluia.
@@ -1338,6 +1443,7 @@ santos-varones:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - El Señor lo amó y lo enalteció. Aleluia, aleluia.
+      ant_magnificat: Lo asemejaré a un hombre prudente, que edificó su casa sobre roca. Aleluia.
     variantes:
       ant_magnificat:
       - etiqueta: 'Para varios santos:'
@@ -1407,7 +1513,17 @@ santas-mujeres:
     texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de santa N., podamos ser un día contados entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
   - para: un santo educador
     texto: Señor, tú elegiste entre tus fieles a santa N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
+  opciones:
+    himno:
+    - Un amor casto y puro
   pascua:
+    salmodia:
+    - ant: Tu sierva, Señor, se regocijó con tu salvación. Aleluia.
+      salmo: salmo-121
+    - ant: Como está sólido el fundamento sobre la roca, así estuvo la voluntad de Dios en el corazón de la mujer santa. Aleluia.
+      salmo: salmo-126
+    - ant: El Señor te ha dado su fuerza, por ello serás bendita eternamente. Aleluia.
+      salmo: cantico-ef-1-3-10
     responsorio:
     - - V
       - Dios la eligió y la predestinó. Aleluia, aleluia.
@@ -1421,10 +1537,6 @@ santas-mujeres:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - Dios la eligió y la predestinó. Aleluia, aleluia.
-  variantes:
-    himno:
-    - etiqueta: 'O bien:'
-      texto: Un amor casto y puro
   primeras:
     salmodia:
     - ant: Bendito sea el nombre del Señor, que ha hecho por mí prodigios de misericordia.
@@ -1489,6 +1601,13 @@ santas-mujeres:
     - para: un santo educador
       texto: Señor, tú elegiste entre tus fieles a santa N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
     pascua:
+      salmodia:
+      - ant: Bendito sea el nombre del Señor, que ha hecho por mí prodigios de misericordia.
+        salmo: salmo-112
+      - ant: Glorifica al Señor, Jerusalén, que ha bendecido a tus hijos dentro de ti. Aleluia.
+        salmo: salmo-147
+      - ant: El Señor te prefiere a ti, y tu Dios encontrará la alegría contigo. Aleluia.
+        salmo: cantico-ef-1-3-10
       responsorio:
       - - V
         - Tu misericordia es mi gozo y mi alegría. Aleluia, aleluia.
@@ -1502,6 +1621,7 @@ santas-mujeres:
         - Gloria al Padre, y al Hijo, y al Espíritu Santo.
       - - R
         - Tu misericordia es mi gozo y mi alegría. Aleluia, aleluia.
+      ant_magnificat: Cantadle por el éxito de su trabajo, que sus obras la alaben en la plaza. Aleluia.
     variantes:
       ant_magnificat:
       - etiqueta: 'Para varias santas:'
@@ -1512,10 +1632,11 @@ religiosos:
   hereda_mujeres: santas-mujeres
   himno: Feliz quien ha escuchado la llamada
   ant_magnificat: Vosotros, los que lo habéis dejado todo y me habéis seguido, recibiréis cien veces más y heredaréis la vida eterna.
-  variantes:
+  opciones:
     ant_magnificat:
-    - etiqueta: 'O bien:'
-      texto: En donde se reúnen los hermanos para glorificar a Dios, allí el Señor bendecirá a su pueblo.
+    - En donde se reúnen los hermanos para glorificar a Dios, allí el Señor bendecirá a su pueblo.
+  pascua:
+    ant_magnificat: Vosotros, los que lo habéis dejado todo y me habéis seguido, recibiréis cien veces más y heredaréis la vida eterna. Aleluia.
   primeras:
     ant_magnificat: «El que no renuncia a todos sus bienes no puede ser discípulo mío», dice el Señor.
     oraciones:
@@ -1527,6 +1648,8 @@ religiosos:
       texto: Señor, tú que otorgaste a san [santa] N. la gracia de imitar con fidelidad a Cristo pobre y humilde, concédenos también a nosotros, por intercesión de este santo [esta santa], la gracia de vivir fielmente nuestra vocación, para que así tendamos a la perfección que tú nos has propuesto en la persona de tu Hijo. Que vive y reina contigo.
     - para: un santo abad
       texto: Señor, tú que nos has querido dejarnos en san N., abad, un claro testimonio de perfección evangélica, concédenos, por su intercesión, abrazar de corazón las realidades del cielo en medio de las vicisitudes de este mundo. Por nuestro Señor Jesucristo.
+    pascua:
+      ant_magnificat: «El que no renuncia a todos sus bienes no puede ser discípulo mío», dice el Señor. Aleluia.
     variantes:
       ant_magnificat:
       - etiqueta: 'O bien, para un religioso:'
@@ -1538,6 +1661,8 @@ caridad:
   hereda: santos-varones
   hereda_mujeres: santas-mujeres
   ant_magnificat: Os aseguro que lo que hicisteis con uno de estos mis humildes hermanos, conmigo lo hicisteis. Venid, benditos de mi Padre, heredad el reino preparado para vosotros desde la creación del mundo.
+  pascua:
+    ant_magnificat: Os aseguro que lo que hicisteis con uno de estos mis humildes hermanos, conmigo lo hicisteis. Venid, benditos de mi Padre, heredad el reino preparado para vosotros desde la creación del mundo. Aleluia.
   primeras:
     ant_magnificat: Dichoso quien se apiada de los pobres; quien imita al Señor ama la misericordia.
     oraciones:
@@ -1547,11 +1672,15 @@ caridad:
       texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de san
     - para: ''
       texto: nuestro Señor Jesucristo.
+    pascua:
+      ant_magnificat: Dichoso quien se apiada de los pobres; quien imita al Señor ama la misericordia. Aleluia.
 educadores:
   nombre: 'Común de santos varones o de santas mujeres: para educadores'
   hereda: santos-varones
   hereda_mujeres: santas-mujeres
   ant_magnificat: 'Dejad que los niños se acerquen a mí: no se lo impidáis; de los que son como ellos es el reino de Dios.'
+  pascua:
+    ant_magnificat: 'Dejad que los niños se acerquen a mí: no se lo impidáis; de los que son como ellos es el reino de Dios. Aleluia.'
   primeras:
     ant_magnificat: Guarda, hijo mío, los consejos de tu padre, no rechaces las instrucciones de tu madre, llévalos siempre atados al corazón.
     oraciones:
@@ -1559,3 +1688,5 @@ educadores:
       texto: Señor Dios todopoderoso, que de entre tus fieles elegiste a san [santa] N. para que manifestara a sus hermanos el camino que conduce a ti, concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro maestro, para que logremos así alcanzar un día, junto con nuestros hermanos, la gloria de tu reino eterno. Por nuestro Señor Jesucristo.
     - para: ''
       texto: Señor, tú elegiste entre tus fieles a san [santa] N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
+    pascua:
+      ant_magnificat: Guarda, hijo mío, los consejos de tu padre, no rechaces las instrucciones de tu madre, llévalos siempre atados al corazón. Aleluia.

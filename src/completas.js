@@ -52,7 +52,7 @@ function comunDe(texto){
   for(const [re,id] of COMUN_DE){ const m=t.match(re); if(m && m.index<pos){ pos=m.index; mejor=id; } }
   return mejor;
 }
-function oracionComun(oraciones, nombre){
+function oracionComun(oraciones, nombre, turnoN){
   if(!oraciones || !oraciones.length) return null;
   const n=String(nombre||''), tit=n.toLowerCase(), plural=/^(santos|santas|beatos|beatas)\b|y compañer/i.test(n);
   const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(n);
@@ -65,7 +65,8 @@ function oracionComun(oraciones, nombre){
     if(fem ? (pm && !pf) : pf) x-=10;
     if(fem ? /\bsan N\./.test(o.texto) : /\bsanta N\./.test(o.texto)) x-=5;
     return x; };
-  const o=oraciones.reduce((m,o)=>pts(o)>pts(m)?o:m, oraciones[0]);
+  // Entre las que cuadran igual de bien (las «O bien»), se alternan de una celebración a la siguiente (n: turno del común)
+  const max=Math.max(...oraciones.map(pts)), empate=oraciones.filter(o=>pts(o)===max), o=empate[(turnoN||0)%empate.length];
   const nucleo=n.split(',')[0].replace(/^(San|Santa|Santo|Santos|Santas|Beato|Beata|Beatos|Beatas)\s+/,'').trim()
     + (/y compañer/i.test(n) && !/y compañer/i.test(n.split(',')[0]) ? ' y compañeros' : '');
   return alternativas(o.texto, fem).replace(/\bN\.(\s*y\s*N\.)?/g, nucleo).replace(/\s*[([](obispo|presbítero|papa|abad|abadesa)[)\]]/g, '');
@@ -80,12 +81,41 @@ function alternativas(texto, fem){
 }
 // Un común del libro (base/comunes/), con lo que hereda: «hereda» (o «hereda_mujeres», para las santas) es el común del que
 // se toma lo que este no trae (religiosos, caridad y educadores, de santos varones o santas mujeres; doctores, de pastores).
-function comun(comunes, id, nombre){
-  const c=comunes && comunes[id]; if(!c) return null;
+// En el tiempo pascual, lo que el común (o el propio del libro) trae para Pascua reemplaza a lo de siempre: las antífonas
+// con «Aleluia», los responsorios breves pascuales… (también en sus I Vísperas y en Tercia, Sexta y Nona).
+function enPascua(o){
+  if(!o) return o;
+  const out=o.pascua ? {...o, ...o.pascua} : {...o};
+  if(o.primeras) out.primeras=enPascua(o.primeras);
+  for(const k of ['tercia','sexta','nona','invitatorio']) if(o[k] && typeof o[k]==='object' && o[k].pascua) out[k]={...o[k], ...o[k].pascua};
+  return out;
+}
+// Las «opciones» de un común («O bien:») se alternan: la celebración n.º n del año que toma de ese común usa la opción n.
+function rotar(o, n){
+  if(!o || typeof o!=='object') return o;
+  const out={...o};
+  for(const [k,alt] of Object.entries(o.opciones||{})){ const l=[o[k], ...alt].filter(x=>x!=null); if(l.length) out[k]=l[(n||0)%l.length]; }
+  for(const k of ['primeras','tercia','sexta','nona']) if(o[k] && typeof o[k]==='object') out[k]=rotar(o[k], n);
+  return out;
+}
+// Cuántas celebraciones del año, antes de esta fecha, toman del mismo común (según base/santoral/adf.yaml): el turno.
+const TURNOS={};
+function turno(adf, id, fecha, sel){
+  if(!adf || !id || !fecha) return 0;
+  const clave=fecha.slice(0,4)+'|'+id+'|'+JSON.stringify(sel||'');
+  if(!TURNOS[clave]){ const l=[]; for(let f=fecha.slice(0,4)+'-01-01'; f.slice(0,4)===fecha.slice(0,4) && enRango(f); f=masDias(f,1)){
+      const r=diaCal(f, sel); if(r && adf[r.n] && adf[r.n].comun===id) l.push(f); }
+    TURNOS[clave]=l; }
+  return TURNOS[clave].filter(f=>f<fecha).length;
+}
+function comun(comunes, id, nombre, pascua, n){
+  if(pascua) { const c=comun(comunes, id, nombre, false, n); return c && enPascua(c); }
+  const c0=comunes && comunes[id]; if(!c0) return null;
+  const c=rotar(c0, n);
   const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||''));
   const h=comunes[(fem && c.hereda_mujeres) || c.hereda];
   if(!h) return c;
-  const b=comun(comunes, (fem && c.hereda_mujeres) || c.hereda, nombre);
+  const b=comun(comunes, (fem && c.hereda_mujeres) || c.hereda, nombre, false, n);
   const out={...b, ...c, nombre:c.nombre};
   if(b.primeras || c.primeras) out.primeras={...(b.primeras||{}), ...(c.primeras||{})};
   for(const k of ['tercia','sexta','nona']) if(b[k] || c[k]) out[k]={...(b[k]||{}), ...(c[k]||{})};
@@ -284,5 +314,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{oracionComun, comunDe, comun, alternativas, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{oracionComun, comunDe, comun, enPascua, turno, alternativas, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
