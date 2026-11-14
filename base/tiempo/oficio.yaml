@@ -21153,7 +21153,7 @@ Sábado de la XXXIV semana del Tiempo Ordinario:
   oracion: Mueve, Señor, nuestros corazones, para que correspondamos con mayor generosidad a la acción de tu gracia, y recibamos en mayor abundancia la ayuda de tu bondad. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
 IX Domingo del Tiempo Ordinario:
   oracion: Señor, nos acogemos confiadamente a tu providencia, que nunca se equivoca, y te suplicamos que apartes de nosotros todo mal y nos concedas aquellos beneficios que pueden ayudarnos para la vida presente y la futura. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
-# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+# ── Ferias de fecha fija (17 al 24 de diciembre, 7 al 12 de enero), del libro (extraccion/a_base_fechas.py) ──
 17 de diciembre:
   lectura1:
     titulo: EL REY CIRO SALVADOR DE ISRAEL
@@ -21625,3 +21625,333 @@ IX Domingo del Tiempo Ordinario:
     - - R
       - La justicia será el ceñidor de su cintura, y la lealtad el cinturón de sus caderas.
   oracion: Apresúrate, Señor Jesús, y no tardes, para que tu venida consuele y fortalezca a los que esperan todo de tu amor. Tú que vives y reinas.
+7 de enero:
+  lectura1:
+    titulo: ALEGRÍA Y HERMOSURA DE LA NUEVA CIUDAD
+    texto: |-
+      Alégrate, la estéril, que no dabas a luz; rompe a cantar de júbilo, la que no tenías dolores: porque la abandonada tendrá más hijos que la casada —dice el Señor—. Ensancha el espacio de tu tienda, despliega sin miedo tus lonas, alarga tus cuerdas, hinca bien tus estacas: porque te extenderás a derecha e izquierda. Tu estirpe heredará las naciones y poblará ciudades desiertas.
+
+      No temas, no tendrás que avergonzarte; no te sonrojes, que no te afrentarán. Olvidarás la vergüenza de tu soltería, ya no recordarás la afrenta de tu viudez. El que te hizo te tomará por esposa: su nombre es el Señor de los ejércitos. Tu redentor es el Santo de Israel, se llama Dios de toda la tierra. Como a mujer abandonada y abatida te vuelve a llamar el Señor; como a esposa de juventud, repudiada —dice tu Dios—. Por un instante te abandoné, pero con gran cariño te reuniré. En un arrebato de ira te escondí un instante mi rostro, pero con misericordia eterna te quiero —dice el Señor, tu Redentor—.
+
+      Me sucede como en tiempo de Noé: Juré que las aguas del diluvio no volverían a cubrir la tierra; así juro no airarme contra ti ni amenazarte. Aunque se retiren los montes y vacilen las colinas, no se retirará de ti mi misericordia ni mí alianza de paz vacilará —dice el Señor, que te quiere—. ¡Oh afligida, zarandeada, desconsolada! Mira, yo mismo coloco tus piedras sobre azabaches, tus cimientos sobre zafiros; te pondré almenas de rubí, y puertas de esmeralda, y muralla de piedras preciosas. Tus hijos serán discípulos del Señor, tendrán gran paz tus hijos. Tendrás firme asiento en la justicia. Estarás lejos de la opresión, y no tendrás que temer; y lejos del terror, que no se acercará.
+
+      Si alguien te ataca, no será de parte mía; cualquiera que te ataque, contra ti se estrellará. Yo he creado al herrero, que sopla en las brasas y saca una herramienta; y yo he creado al devastador funesto: ninguna arma forjada contra ti tendrá éxito, ninguna lengua que te acuse en juicio logrará condenarte. Esta es la herencia de los siervos del Señor, esta es la victoria que yo les doy —oráculo del Señor—.
+    ref: Del libro del profeta Isaías 54, 1-17
+  resp1:
+    ref: Cf. Is 54, 8. 10; 43, 11
+    vr:
+    - - R
+      - Con misericordia eterna te quiero —dice el Señor, tu Redentor—; * no se retirará de ti mi misericordia ni mi alianza de paz vacilará.
+    - - V
+      - Yo soy el Señor; fuera de mí no hay salvador.
+    - - R
+      - No se retirará de ti mi misericordia ni mi alianza de paz vacilará.
+  lectura2:
+    titulo: EL QUE POR NOSOTROS QUISO NACER NO QUISO SER IGNORADO POR NOSOTROS
+    texto: |-
+      Aunque en el mismo misterio del nacimiento del Señor se dieron insignes testimonios de su divinidad, sin embargo la solemnidad que celebramos manifiesta y revela de diversas formas que Dios ha asumido un cuerpo humano, para nuestra inteligencia, ofuscada por tantas oscuridades, no pierda por su ignorancia lo que por gracia ha merecido recibir y poseer.
+
+      Pues el que por nosotros quiso nacer no quiso ser ignorado por nosotros; y por esto se manifestó de tal forma que el gran misterio de su bondad no fuera ocasión de un gran error.
+
+      Hoy el mago encuentra llorando en la cuna a aquel que, resplandeciente, buscaba en las estrellas. Hoy el mago contempla claramente entre pañales a aquel que, encubierto, buscaba pacientemente en los astros.
+
+      Hoy el mago discierne con profundo asombro lo que allí contempla: el cielo en la tierra, la tierra en el cielo, el hombre en Dios, y Dios en el hombre; y a aquel que no puede ser encerrado en todo el universo incluido en un cuerpo de niño. Y, viendo, cree y no duda; y lo proclama con sus dones místicos: el incienso para Dios, el oro para el Rey, y la mirra para el que morirá.
+
+      Hoy el gentil, que era el último, ha pasado a ser el primero, pues entonces la fe de los magos consagró la creencia de las naciones.
+
+      Hoy Cristo ha entrado en el cauce del Jordán para lavar el pecado del mundo. El mismo Juan atestigua que Cristo ha venido para esto: Éste es el Cordero de Dios, que quita el pecado del mundo. Hoy el siervo recibe al Señor, el hombre a Dios, Juan a Cristo; el que no puede dar el perdón recibe a quien se lo concederá.
+
+      Hoy, como afirma el profeta, la voz del Señor sobre las aguas. ¿Qué voz? Éste es mi Hijo, el amado, mi predilecto.
+
+      Hoy el Espíritu Santo se cierne sobre las aguas en forma de paloma, para que, así como la paloma de Noé anunció el fin del diluvio, de la misma forma ésta fuera signo de que ha terminado el perpetuo naufragio del mundo. Pero a diferencia de aquélla, que sólo llevaba un ramo de olivo caduco, ésta derramará la enjundia completa del nuevo crisma en la cabeza del Autor de la nueva progenie, para que se cumpliera aquello que predijo el profeta: Por eso el Señor, tu Dios, te ha ungido con aceite de júbilo entre todos tus compañeros.
+
+      Hoy Cristo, al convertir el agua en vino, comienza los signos celestes. Pero el agua había de convertirse en el misterio de la sangre, para que Cristo ofreciese a los que tienen sed la pura bebida del vaso de su cuerpo, y se cumpliese lo que dice el profeta: Y mi copa rebosa.
+    autor: |-
+      De los sermones de san Pedro Crisólogo, obispo
+      (Sermón 160: PL 52, 620-622)
+  resp2:
+    ref: null
+    vr:
+    - - R
+      - 'Tres fueron los dones preciosos que los magos ofrecieron al Señor en aquel día, y que encerraban en sí tres divinos misterios: * el oro, que lo reconocía como rey poderoso; el incienso, que lo proclamaba como sumo sacerdote; y la mirra, que profetizaba su muerte y sepultura.'
+    - - V
+      - Los magos adoraron en la cuna al autor de nuestra salvación y, de sus tesoros, le ofrecieron presentes, llenos de un místico simbolismo.
+    - - R
+      - El oro, que lo reconocía como rey poderoso; el incienso, que lo proclamaba como sumo sacerdote; y la mirra, que profetizaba su muerte y sepultura.
+  oracion: Padre Dios, la eternidad resplandece con la gloria del Verbo que la Virgen María recibió en la fragilidad de nuestra carne; te pedimos que Jesús, hecho uno de los nuestros para dar a conocer la luz de la verdad, manifieste la plenitud de su poder a favor de la redención del mundo. Él que vive y reina contigo.
+8 de enero:
+  lectura1:
+    titulo: LA ALIANZA PERPETUA SE OFRECE A TODOS EN LA PALABRA DEL SEÑOR
+    texto: |-
+      Esto dice el Señor:
+
+      «Oíd, sedientos todos, acudid por agua, también los que no tenéis dinero: venid, comprad trigo, comed sin pagar: vino y leche de balde. ¿Por qué gastáis dinero en lo que no alimenta y el salario en lo que no da hartura? Escuchadme atentos, y comeréis bien, saborearéis platos sustanciosos. Inclinad el oído, venid a mí: escuchadme y viviréis.
+
+      Sellaré con vosotros alianza perpetua, la promesa que aseguré a David: a él lo hice mi testigo para los pueblos, caudillo y soberano de naciones; tú llamarás a un pueblo desconocido, un pueblo que no te conocía correrá hacia ti: por el Señor, tu Dios, por el Santo de Israel que te honra.»
+
+      Buscad al Señor mientras se le puede encontrar, invocadlo mientras está cerca; que el malvado abandone su camino y el criminal sus planes; que regrese al Señor y él tendrá piedad, a nuestro Dios, que es rico en perdón.
+
+      «Mis planes no son vuestros planes, vuestros caminos no son mis caminos —oráculo del Señor—. Como el cielo es más alto que la tierra, mis caminos son más altos que los vuestros; mis planes, que vuestros planes. Como bajan la lluvia y la nieve del cielo, y no vuelven allá, sino después de empapar la tierra, de fecundarla y hacerla germinar, para que dé semilla al sembrador y pan al que come, así será mi palabra, que sale de mi boca: no volverá a mí vacía; sino que hará mi voluntad y cumplirá mi encargo.»
+
+      Saldréis con alegría, os llevarán seguros: montes y colinas romperán a cantar ante vosotros, y aplaudirán los árboles del campo. En vez de espinos, crecerá el ciprés; en vez de ortigas, el arrayán: serán el renombre del Señor, y monumento perpetuo imperecedero.
+    ref: Del libro del profeta Isaías 55, 1-13
+  resp1:
+    ref: Is 55, 4-5; Tb 13, 13
+    vr:
+    - - R
+      - A él lo hice mi testigo para los pueblos, caudillo y soberano de naciones; * tú llamarás a un pueblo desconocido, un pueblo que no te conocía correrá hacia ti.
+    - - V
+      - Pueblos numerosos vendrán de lejos al nombre del Señor, nuestro Dios, trayendo ofrendas en sus manos, ofrendas para el rey del cielo.
+    - - R
+      - Tú llamarás a un pueblo desconocido, un pueblo que no te conocía correrá hacia ti.
+  lectura2:
+    titulo: EL AGUA Y EL ESPÍRITU
+    texto: |-
+      Jesús fue a donde Juan y recibió de él el bautismo. Cosa realmente admirable. La corriente inextinguible que alegra la ciudad de Dios es lavada con un poco de agua. La fuente inalcanzable, que hace germinar la vida para todos los hombres y que nunca se agota, se sumerge en unas aguas pequeñas y temporales.
+
+      El que se halla presente en todas partes y jamás se ausenta, el que es incomprensible para los ángeles y está lejos de las miradas de los hombres, se acercó al bautismo cuando él quiso. Se abrió el cielo, y vino una voz del cielo que decía: «Éste es mi Hijo, el amado, mi predilecto.»
+
+      El amado produce amor, y la luz inmaterial genera una luz inaccesible: «Éste es el que se llamó hijo de José, es mi Unigénito según la esencia divina.»
+
+      Este es mi Hijo, el amado: aquel que pasó hambre, y dio de comer a innumerables multitudes; que trabajaba, y confortaba a los que trabajaban; que no tenía dónde reclinar su cabeza, y lo había creado todo con su mano; que padeció, y curaba todos los padecimientos; que recibió bofetadas, y dio al mundo la libertad; que fue herido en el costado, y curó el costado de Adán.
+
+      Pero prestadme cuidadosamente atención: quiero acudir a la fuente de la vida, quiero contemplar esa fuente medicinal.
+
+      El Padre de la inmortalidad envió al mundo a su Hijo, Palabra inmortal, que vino a los hombres para lavarlos con el agua y el Espíritu: y, para regenerarnos con la incorruptibilidad del alma y del cuerpo, insufló en nosotros el espíritu de vida y nos vistió con una armadura incorruptible.
+
+      Si, pues, el hombre ha sido hecho inmortal, también será dios. Y si se ve hecho dios por la regeneración del baño del bautismo, en virtud del agua y del Espíritu Santo, resulta también que después de la resurrección de entre los muertos será coheredero de Cristo.
+
+      Por lo cual, grito con voz de pregonero: Venid, las tribus todas de las gentes, al bautismo de la inmortalidad. Ésta es el agua unida con el Espíritu, con la que se riega el paraíso, se fecunda la tierra, las plantas crecen, los animales se multiplican; y, en definitiva, el agua por la que el hombre regenerado se vivifica, con la que Cristo fue bautizado, sobre la que descendió el Espíritu Santo en forma de paloma.
+
+      Y el que desciende con fe a este baño de regeneración renuncia al diablo y se entrega a Cristo, reniega del enemigo y confiesa que Cristo es Dios, se libra de la esclavitud y se reviste de la adopción, y vuelve del bautismo tan espléndido como el sol, fulgurante de rayos de justicia; y, lo que es el máximo don, se convierte en hijo de Dios y coheredero de Cristo.
+
+      A él la gloria y el poder, junto con el Espíritu Santo, bueno y vivificante, ahora y siempre, y por los siglos de los siglos. Amén.
+    autor: |-
+      Del Sermón en la santa Teofanía, atribuido a san Hipólito, presbítero
+      (Núms. 2. 6-8.10: PG 10, 854. 858-859. 862)
+  resp2:
+    ref: Jn 1, 32. 34. 33
+    vr:
+    - - R
+      - Vi al Espíritu Santo bajar del cielo como una paloma y posarse sobre él; * y, después que lo he visto, testifico que es el Hijo de Dios.
+    - - V
+      - 'El que me envió a bautizar con agua me dijo: «Aquel sobre quien veas descender el Espíritu y posarse sobre él, ése es el que bautiza con el Espíritu Santo.»'
+    - - R
+      - Y, después que lo he visto, testifico que es el Hijo de Dios.
+  oracion: Señor, Dios nuestro, cuyo Hijo se manifestó en la realidad de nuestra carne, concédenos poder transformarnos interiormente a imagen de aquel que hemos conocido semejante a nosotros en su humanidad. Por nuestro Señor Jesucristo.
+9 de enero:
+  lectura1:
+    titulo: LOS EXTRANJEROS Y LOS EUNUCOS SON ADMITIDOS EN LA CASA DEL SEÑOR
+    texto: |-
+      Así dice el Señor:
+
+      «Guardad el derecho, practicad la justicia, que mi salvación está para llegar y se va a revelar mi victoria.»
+
+      Dichoso el hombre que obra así, dichoso el mortal que persevera en ello, que guarda el sábado sin profanarlo y guarda su mano de obrar el mal.
+
+      No diga el extranjero que se ha dado al Señor: «El Señor me excluirá de su pueblo.» No diga el eunuco: «Yo soy un árbol seco.» Porque así dice el Señor:
+
+      «A los eunucos que guardan mis sábados, que deciden lo que me agrada y perseveran en mi alianza, les daré en mi casa y en mis murallas un monumento y un nombre mejores que hijos e hijas; nombre eterno les daré, que no se extinguirá.
+
+      A los extranjeros que se han dado al Señor, para servirlo, para amar el nombre del Señor y ser sus servidores, que guardan el sábado sin profanarlo y perseveran en mi alianza, los traeré a mi Monte Santo, los alegraré en mi casa de oración; aceptaré sobre mi altar sus holocaustos y sacrificios; porque mi casa es casa de oración, y así la llamarán todos los pueblos.»
+
+      Oráculo del Señor, que reúne a los dispersos de Israel, y reunirá otros a los ya reunidos.
+    ref: Del libro del profeta Isaías 56, 1-8
+  resp1:
+    ref: Is 56, 8. 6. 7; Col 1, 27
+    vr:
+    - - R
+      - Oráculo del Señor, que reúne a los dispersos de Israel, a los extranjeros que se han dado al Señor, para servirlo; * los traeré a mi Monte Santo, los alegraré en mi casa de oración.
+    - - V
+      - 'Ha querido Dios dar a conocer las riquezas de gloria con que brilla este misterio entre los gentiles: el misterio de que Cristo está entre nosotros.'
+    - - R
+      - Los traeré a mi Monte Santo, los alegraré en mi casa de oración.
+  lectura2:
+    titulo: LA SANTIFICACIÓN DE LAS AGUAS
+    texto: |-
+      Cristo apareció en el mundo, y, al embellecerlo y acabar con su desorden, lo transformó en brillante y jubiloso. Hizo suyo el pecado del mundo y acabó con el enemigo del mundo. Santificó las fuentes de las aguas e iluminó las almas de los hombres. Acumuló milagros sobre milagros cada vez mayores.
+
+      Y así, hoy, tierra y mar se han repartido entre sí la gracia del Salvador, y el universo entero se halla bañado en alegría; hoy es precisamente el día que añade prodigios mayores y más crecidos a los de la precedente solemnidad.
+
+      Pues en la solemnidad anterior, que era la del nacimiento del Salvador, se alegraba la tierra, porque sostenía al Señor en el pesebre; en la presente festividad, en cambio, que es la de las Teofanías, el mar es quien salta y se estremece de júbilo; y lo hace porque en medio del Jordán encontró la bendición santificadora.
+
+      En la solemnidad anterior se nos mostraba un niño débil, que atestiguaba nuestra propia imperfección; en cambio, en la festividad de hoy se nos presenta ya como un hombre perfecto, mostrando que procede, como perfecto que es, de quien también lo es. En aquel caso, el Rey vestía la púrpura de su cuerpo; en éste, la fuente rodea y como recubre al río.
+
+      Atended, pues, a estos nuevos y estupendos prodigios. El Sol de justicia que se purifica en el Jordán, el fuego sumergido en el agua, Dios santificado por ministerio de un hombre.
+
+      Hoy la creación entera resuena de himnos: Bendito el que viene en nombre del Señor. Bendito el que viene en todo momento: pues no es ahora la primera vez.
+
+      Y ¿de quién se trata? Dilo con más claridad, por favor, santo David: El Señor es Dios: él nos ilumina. Y no es sólo David quien lo dice, sino que el apóstol Pablo se asocia también a su testimonio y dice: Ha aparecido la gracia de Dios, que trae la salvación para todos los hombres, enseñándonos. No «para unos cuantos», sino para todos: porque la salvación a través del bautismo se otorga a todos, judíos y griegos; el bautismo ofrece a todos un mismo y común beneficio.
+
+      Fijaos, mirad este diluvio sorprendente y nuevo, mayor y más prodigioso que el que hubo en tiempos de Noé. Entonces, el agua del diluvio acabó con el género humano; en cambio, ahora, el agua del bautismo, con la virtud de quien fue bautizado por Juan, retorna los muertos a la vida. Entonces, la paloma con la rama de olivo figuró la fragancia del olor de Cristo, nuestro Señor; ahora, el Espíritu Santo, al sobrevenir en forma de paloma, manifiesta la misericordia del Señor.
+    autor: |-
+      De los sermones de San Proclo de Constantinopla
+      (Sermón 7 en la santa Teofanía, 1-3: PG 65, 758-759)
+  resp2:
+    ref: null
+    vr:
+    - - R
+      - 'Hoy se manifestó a nosotros el que es «Luz de Luz», al cual bautizó Juan en el Jordán: * Nosotros creemos firmemente y proclamamos que nació de la Virgen María.'
+    - - V
+      - Los cielos se abrieron sobre él y se oyó la voz del Padre.
+    - - R
+      - Nosotros creemos firmemente y proclamamos que nació de la Virgen María.
+  oracion: Señor, luz radiante de todas las naciones, concede a los pueblos de la tierra gozar de una paz estable, e ilumina nuestros corazones con aquella luz espléndida que condujo a nuestros padres al conocimiento de tu Hijo. Él que vive y reina contigo.
+10 de enero:
+  lectura1:
+    titulo: EL SEÑOR VIENE
+    texto: |-
+      La lealtad está ausente, y expolian a quien evita el mal. El Señor contempla disgustado que ya no existe justicia. Ve que no hay nadie, se extraña de que nadie intervenga. Entonces, su brazo le dio la victoria, y su justicia lo mantuvo: por coraza se puso la justicia y por casco la salvación; por traje se vistió la venganza, y por manto se envolvió en la indignación. A cada uno va a pagar lo que merece: a su enemigo, furia; a su adversario, represalia.
+
+      Los de Occidente temerán el nombre del Señor, los de Oriente respetarán su gloria: porque vendrá como torrente encajonado, empujado por el aliento del Señor. Pero a Sión vendrá el Redentor, para alejar los crímenes de Jacob —oráculo del Señor—.
+
+      «Por mi parte —dice el Señor—, éste es mi pacto con ellos: el espíritu mío, que te envié; las palabras mías, que puse en tu boca, no se caerán de tu boca, de la boca de tus hijos, de la boca de tus nietos, desde ahora y por siempre —lo dice el Señor—».
+    ref: Del libro del profeta Isaías 59, 15-21
+  resp1:
+    ref: Ez 37, 27-28; Hch 10, 34-35
+    vr:
+    - - R
+      - Yo seré su Dios y ellos serán mi pueblo; * y sabrán las naciones que yo soy el Señor que consagra a Israel, cuando esté entre ellos mi santuario para siempre.
+    - - V
+      - Dios no hace distinciones, sino que acepta al que le es fiel y obra rectamente, sea de la nación que sea.
+    - - R
+      - Y sabrán las naciones que yo soy el Señor que consagra a Israel, cuando esté entre ellos mi santuario para siempre.
+  lectura2:
+    titulo: EFUSIÓN DEL ESPÍRITU SANTO SOBRE TODA CARNE
+    texto: |-
+      Cuando el Creador del universo decidió restaurar todas las cosas en Cristo, dentro del más maravilloso orden, y devolver a su anterior estado la naturaleza del hombre, prometió que, al mismo tiempo que los restantes bienes, le otorgaría también ampliamente el Espíritu Santo, ya que de otro modo no podría verse reintegrado a la pacífica y estable posesión de aquellos bienes.
+
+      Determinó, por tanto, el tiempo en que el Espíritu Santo habría de descender hasta nosotros, a saber, el del advenimiento de Cristo, y lo prometió al decir: En aquellos días — se refiere a los del Salvador— derramaré mi Espíritu sobre toda carne.
+
+      Y cuando el tiempo de tan gran munificencia y libertad produjo para todos al Unigénito encarnado en el mundo, como hombre nacido de mujer —de acuerdo con la divina Escritura—, Dios Padre otorgó a su vez el Espíritu, y Cristo, como primicia de la naturaleza renovada, fue el primero que lo recibió. Y esto fue lo que atestiguó Juan Bautista cuando dijo: He contemplado al Espíritu que bajaba del cielo y se posó sobre él.
+
+      Decimos que Cristo, por su parte, recibió el Espíritu, en cuanto se había hecho hombre, y en cuanto convenía que el hombre lo recibiera; y, aunque es el Hijo de Dios Padre, engendrado de su misma substancia, incluso antes de la encarnación —más aún, antes de todos los siglos—, no se da por ofendido de que el Padre le diga, después que se hizo hombre: Tú eres mi Hijo: yo te he engendrado hoy.
+
+      Dice haber engendrado hoy a quien era Dios, engendrado de él mismo desde antes de los siglos, a fin de recibirnos por su medio como hijos adoptivos; pues en Cristo, en cuanto hombre, se encuentra significada toda la naturaleza: y así también el Padre, que posee su propio Espíritu, se dice que se lo otorga a su Hijo, para que nosotros nos beneficiemos del Espíritu en él. Por esta causa perteneció a la descendencia de Abrahán, como está escrito, y se asemejó en todo a sus hermanos.
+
+      De manera que el Hijo unigénito recibe el Espíritu Santo no para sí mismo —pues es suyo, habita en él, y por su medio se comunica, como ya dijimos antes—, sino para instaurar y restituir a su integridad a la naturaleza entera, ya que, al haberse hecho hombre, la poseía en su totalidad. Puede, por tanto, entenderse —si es que queremos usar nuestra recta razón, así como los testimonios de la Escritura— que Cristo no recibió el Espíritu para sí, sino más bien para nosotros en sí mismo: pues por su medio nos vienen todos los bienes.
+    autor: |-
+      Del Comentario de san Cirilo de Alejandría, obispo, sobre el evangelio de san Juan
+      (Libro 5, cap. 2: PG 73, 751-754)
+  resp2:
+    ref: Ez 37, 27-28; Hb 8, 8
+    vr:
+    - - R
+      - Yo seré su Dios y ellos serán mi pueblo; * y sabrán las naciones que yo soy el Señor que consagra a Israel, cuando esté entre ellos mi santuario para siempre.
+    - - V
+      - Yo concertaré una nueva alianza con la casa de Israel y con la casa de Judá.
+    - - R
+      - Y sabrán las naciones que yo soy el Señor que consagra a Israel, cuando esté entre ellos mi santuario para siempre.
+  oracion: Oh Dios, que por medio de tu Hijo has hecho clarear para todos los pueblos la aurora de tu eternidad, concede a tu pueblo reconocer la gloria de su Redentor y llegar un día a la luz eterna. Por nuestro Señor Jesucristo.
+11 de enero:
+  lectura1:
+    titulo: SIÓN ANIMA A SUS HIJOS Y LOS CONSUELA
+    texto: |-
+      ¡Ánimo, pueblo mío, que llevas el nombre de Israel! Os vendieron a los gentiles, pero no para ser aniquilados; por la cólera de Dios contra vosotros, os entregaron a vuestros enemigos, porque irritasteis a vuestro Creador, sacrificando a los demonios y no a Dios; os olvidasteis del Señor eterno, que os había criado, y afligisteis a Jerusalén, que os sustentó. Cuando ella vio que el castigo de Dios se avecinaba, dijo:
+
+      «Escuchad, habitantes de Sión, Dios me ha enviado una pena terrible: vi cómo el Eterno desterraba a mis hijos e hijas; yo los crié con alegría, los despedí con lágrimas de pena. Que nadie se alegre viendo a esta viuda abandonada de todos. Si estoy desierta, es por los pecados de mis hijos, que se apartaron de la ley de Dios. No hicieron caso de sus mandatos ni siguieron la vía de sus preceptos, ni entraron por el camino que los educara para su justicia. Que se acerquen los vecinos de Sión, recuerden que el Eterno llevó cautivos a mis hijos e hijas.
+
+      Les envió un pueblo remoto, cruel y de lengua extraña, que no respetaba a los ancianos ni sentía piedad por los niños; arrebataron a la viuda sus hijos queridos, la dejaron sola y sin hijas.
+
+      Y yo, ¿qué puedo hacer por vosotros? Sólo el que os envió tales desgracias os librará del poder enemigo. Marchad, hijos, marchad, mientras yo quedo sola. Me he quitado el vestido de la paz, me he puesto el sayal de suplicante, gritaré al Eterno toda mi vida.
+
+      Hijos, clamad al Señor: él os librará de la tiranía y de la mano de vuestros enemigos. Yo espero del Eterno vuestra salvación, del Santo me ha venido la alegría, por la misericordia que llegará pronto a vosotros de parte del Eterno, vuestro Salvador.
+
+      Si os expulsó entre duelo y llantos, Dios mismo os devolverá a mí con gozo y alegría sin término. Como hace poco los vecinos de Sión os vieron marchar cautivos, así pronto os verán salvados por vuestro Dios, nimbados con la gloria y el esplendor del Eterno.
+
+      Hijos, soportad con fortaleza el castigo que Dios os ha enviado; si tus enemigos te dieron alcance, muy pronto verás su perdición y pondrás el pie sobre sus cuellos. Mis niños mimados recorrieron caminos ásperos, los robó el enemigo como a un rebaño.
+
+      ¡Ánimo, hijos, gritad a Dios! Que el que os castigó se acordará de vosotros. Como os inclinasteis a apartaros de Dios, así convertidos lo buscaréis diez veces más, pues el que trajo sobre vosotros el castigo os traerá con la redención la eterna alegría.»
+    ref: Del libro del profeta Baruc 4, 5-29
+  resp1:
+    ref: Ba 4, 27. 29; Sal 95, 3
+    vr:
+    - - R
+      - ¡Ánimo, hijos, gritad a Dios! Que el que os castigó se acordará de vosotros. * El que trajo sobre vosotros el castigo os traerá con la redención la eterna alegría.
+    - - V
+      - Contad a los pueblos su gloria, sus maravillas a todas las naciones.
+    - - R
+      - El que trajo sobre vosotros el castigo os traerá con la redención la eterna alegría.
+  lectura2:
+    titulo: LOS MISTERIOS DEL BAUTISMO DEL SEÑOR
+    texto: |-
+      Nos refiere el texto evangélico que el Señor acudió al Jordán para bautizarse y que allí mismo quiso verse consagrado con los misterios celestiales.
+
+      Era, por tanto, lógico que después del día del nacimiento del Señor —por el mismo tiempo, aunque la cosa sucedió años después— viniera esta festividad, que pienso que debe llamarse también fiesta del nacimiento.
+
+      Pues entonces, el Señor nació en medio de los hombres; hoy ha renacido en virtud de los sacramentos; entonces, le dio a luz la Virgen; hoy ha vuelto a ser engendrado por el misterio. Entonces, cuando nació como hombre, María, su madre, lo acogió en su regazo; ahora, que el misterio lo engendra, Dios Padre lo abraza con su voz y dice: Éste es mi Hijo, el amado, mi predilecto; escuchadlo. La madre acaricia al recién nacido en su blando seno; el Padre acude en ayuda de su Hijo con su piadoso testimonio; la madre se lo presenta a los Magos para que lo adoren, el Padre se lo manifiesta a las gentes para que lo veneren.
+
+      De manera que tal día como hoy el Señor Jesús vino a bautizarse y quiso que el agua bañase su santo cuerpo.
+
+      No faltará quien diga: ¿Por qué quiso bautizarse, si es santo?» Escucha. Cristo se hace bautizar, no para santificarse con el agua, sino para santificar el agua y para purificar aquella corriente con su propia purificación y mediante el contacto de su cuerpo. Pues la consagración de Cristo es la consagración completa del agua.
+
+      Y así, cuando se lava el Salvador, se purifica toda el agua necesaria para nuestro bautismo, y queda limpia la fuente, para que pueda luego administrarse a los pueblos que habían de venir a la gracia de aquel baño. Cristo, pues, se adelanta mediante su bautismo, a fin de que los pueblos cristianos vengan luego tras él con confianza.
+
+      Así es como entiendo yo el misterio: Cristo precede, de la misma manera que la columna de fuego iba delante a través del mar Rojo, para que los hijos de Israel siguieran intrépidamente su camino; y fue la primera en atravesar las aguas, para preparar la senda a los que seguían tras ella. Hecho que, como dice el Apóstol, fue un símbolo del bautismo. Y en un cierto modo aquello fue verdaderamente un bautismo, cuando la nube cubría a los israelitas y las olas les dejaban paso.
+
+      Pero todo esto lo llevó a cabo el mismo Cristo Señor que ahora actúa, quien, como entonces precedió a través del mar a los hijos de Israel en figura de columna de fuego, así ahora, mediante el bautismo, va delante de los pueblos cristianos con la columna de su cuerpo. Efectivamente, la misma columna, que entonces ofreció su resplandor a los ojos de los que la seguían, es ahora la que enciende su luz en los corazones de los creyentes: entonces, hizo posible una senda para ellos en medio de las olas del mar; ahora, corrobora sus pasos en el baño de la fe.
+    autor: |-
+      De los sermones de san Máximo de Turín, obispo
+      (Sermón 100, En la Epifanía, 1, 3: CCL 23, 398-400)
+  resp2:
+    ref: Jn 1, 29; Is 53, 11
+    vr:
+    - - R
+      - 'Juan Bautista vio a Jesús que venía hacia él y exclamó: * «Éste es el Cordero de Dios, que quita el pecado del mundo.»'
+    - - V
+      - Él justificará a muchos, porque cargó sobre sí los crímenes de ellos.
+    - - R
+      - «Éste es el Cordero de Dios, que quita el pecado del mundo.»
+  oracion: Dios todopoderoso, tú que has anunciado al mundo por medio de la estrella, el nacimiento del Salvador, manifiéstanos siempre este misterio y haz que cada día avancemos en su contemplación. Por nuestro Señor Jesucristo.
+12 de enero:
+  lectura1:
+    titulo: ALEGRÍA DE LA NUEVA JERUSALÉN
+    texto: |-
+      ¡Ánimo, Jerusalén! El que te dio su nombre te consuela.
+
+      Malditos los que te hicieron mal y se alegraron de tu caída, malditas las naciones que esclavizaron a tus hijos, maldita la ciudad que los aceptó. Como se alegró de tu caída y disfrutó de tu ruina, llorará su propia desolación. Le quitaré la población de que se enorgullece, y su arrogancia se convertirá en duelo. El Eterno le enviará un fuego que arderá muchos días, y la habitarán largos años los demonios.
+
+      Mira hacia levante, Jerusalén, contempla el gozo que Dios te envía. Ya llegan los hijos que despediste, reunidos por la palabra del Santo en oriente y occidente; ya llegan alegres y dando gloria a Dios.
+
+      Jerusalén, despójate de tu vestido de luto y aflicción y vístete las galas perpetuas de la gloria que Dios te da, envuélvete en el manto de la justicia de Dios y ponte en la cabeza la diadema de la gloria del Eterno; porque Dios mostrará tu esplendor a todo lo que hay bajo el cielo. Dios te dará para siempre este nombre: «Paz de la justicia» y «Gloria de la piedad».
+
+      Ponte en pie, Jerusalén, sube a la altura, mira hacia oriente y contempla a tus hijos, reunidos de oriente y occidente a la voz del Santo, gozosos invocando a Dios. A pie se marcharon, conducidos por el enemigo, pero Dios te los traerá con gloria como llevados en carroza real.
+
+      Dios ha mandado abajarse a los montes elevados y a las colinas encumbradas, ha mandado llenarse a los barrancos hasta allanar el suelo, para que Israel camine con seguridad guiado por la gloria de Dios; ha mandado al boscaje y a los árboles aromáticos hacer sombra a Israel. Porque Dios guiará a Israel con alegría a la luz de su gloria, con su justicia y su misericordia.
+    ref: Del libro del profeta Baruc 4, 30-5, 9
+  resp1:
+    ref: Ba 5, 5; Is 60, 5
+    vr:
+    - - R
+      - Ponte en pie, Jerusalén, sube a la altura, mira hacia oriente * y contempla a tus hijos, reunidos de oriente y occidente a la voz del Santo.
+    - - V
+      - Cuando esto veas, te pondrás radiante de alegría; se estremecerá y se ensanchará tu corazón, pues vendrán a ti las riquezas de las naciones.
+    - - R
+      - Y contempla a tus hijos, reunidos de oriente y occidente a la voz del Santo.
+  lectura2:
+    titulo: LAS NUPCIAS DE CRISTO Y DE LA IGLESIA
+    texto: |-
+      A los tres días hubo unas bodas. ¿Qué otras bodas pueden ser éstas, sino las promesas y gozos de la salvación humana? Las mismas que se celebran evidentemente o bien a causa de la confesión de la Trinidad, o bien por la fe en la resurrección, como se indica en el misterio del número tres.
+
+      Así como también, en otra de las lecturas evangélicas, se acoge con cantos y música, y con atuendos nupciales, la vuelta del hijo más joven, o sea, la conversión del pueblo gentil.
+
+      Por eso, como el esposo que sale de su alcoba, descendió el Señor hasta la tierra para unirse, mediante la encarnación, con la Iglesia, que había de congregarse de entre los gentiles, a la cual dio sus arras y su dote: las arras, cuando Dios se unió con el hombre; la dote, cuando se inmoló por su salvación. Por arras entendemos la redención actual, y por dote, la vida eterna. Todas estas cosas eran, para quienes las veían, otros tantos milagros; para quienes las entendían, otros tantos misterios. Porque, si nos fijamos bien, de alguna manera en la misma agua se da una cierta analogía del bautismo y de la regeneración. Pues, mientras una cosa se transforma en otra, mientras la criatura inferior se transforma en algo superior mediante una secreta conversión, se lleva a cabo el misterio del segundo nacimiento. Se cambian súbitamente las aguas que luego van a cambiar a los hombres.
+
+      Así pues, por el poder de Cristo, en Galilea el agua se convierte en vino —esto es, concluye la ley y le sucede la gracia; se aparta lo que no era más que sombra y se hace presente la verdad; lo carnal se sitúa junto a lo espiritual; la antigua observancia se transmuta en Nuevo Testamento; como dice el Apóstol: Lo antiguo ha pasado, lo nuevo ha comenzado—; y como el agua aquella que se contenía en las tinajas, sin dejar de ser en absoluto lo que era, comenzó a ser lo que no era, de la misma manera la ley, manifestada por el advenimiento de Cristo, no perece, sino que se mejora.
+
+      Si falta el vino, se saca otro: el vino del Antiguo Testamento es bueno, pero el del Nuevo es mejor; el Antiguo Testamento, que observan los judíos, se diluye en la letra, mientras que el Nuevo, que es el que nos atañe, convierte en gracia el sabor de la vida.
+
+      Se trata de «buen vino» siempre que oigas hablar de un buen precepto de la ley: Amarás a tu prójimo y aborrecerás a tu enemigo. Pero es mejor y más fuerte el vino del Evangelio, como cuando oyes decir: Yo, en cambio, os digo: Amad a vuestros enemigos, y rezad por los que os persiguen.
+    autor: |-
+      De los sermones de Fausto de Riez, obispo
+      (Sermón 5, En la Epifanía, 2: PLS 3, 560-562)
+  resp2:
+    ref: Cf. Tb 13, 11. 13-14; Lc 13, 29
+    vr:
+    - - R
+      - Jerusalén, ciudad de Dios brillará, cual luz de lámpara y todos los confines de la tierra vendrán a ti; pueblos numerosos vendrán de lejos; * y, trayendo sus ofrendas, adorarán en ti al Señor.
+    - - V
+      - Vendrán del oriente y del occidente, del norte y del sur.
+    - - R
+      - Y, trayendo sus ofrendas, adorarán en ti al Señor.
+  oracion: Dios todopoderoso y eterno, tú que nos has hecho renacer a una vida nueva por medio de tu Hijo, concédenos que la gracia nos modele a imagen de Cristo, en quien nuestra naturaleza mortal se une a tu naturaleza divina. Por nuestro Señor Jesucristo.

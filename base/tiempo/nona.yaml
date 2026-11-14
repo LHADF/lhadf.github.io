@@ -2267,7 +2267,7 @@ XXXIII Domingo del Tiempo Ordinario (B):
   oracion: Señor, Dios nuestro, concédenos alegrarnos siempre en tu servicio, porque la profunda y verdadera alegría está en ser fiel a ti, autor de todo bien. Por Cristo nuestro Señor.
 XXXIII Domingo del Tiempo Ordinario (C):
   oracion: Señor, Dios nuestro, concédenos alegrarnos siempre en tu servicio, porque la profunda y verdadera alegría está en ser fiel a ti, autor de todo bien. Por Cristo nuestro Señor.
-# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+# ── Ferias de fecha fija (17 al 24 de diciembre, 7 al 12 de enero), del libro (extraccion/a_base_fechas.py) ──
 17 de diciembre:
   lectura:
     ref: Is 61, 11
@@ -2348,3 +2348,63 @@ XXXIII Domingo del Tiempo Ordinario (C):
   - - R
     - Perdona los pecados de tu pueblo.
   oracion: Apresúrate, Señor Jesús, y no tardes, para que tu venida consuele y fortalezca a los que esperan todo de tu amor. Tú que vives y reinas.
+7 de enero:
+  lectura:
+    ref: Tb 14, 8-9
+    texto: Los pueblos abandonarán sus ídolos y subirán a Jerusalén y habitarán en ella; en ella se alegrarán todos los reyes de la tierra y adorarán al Rey de Israel.
+  versiculo:
+  - - V
+    - Bendecid, pueblos, a nuestro Dios.
+  - - R
+    - Haced resonar sus alabanzas.
+  oracion: Padre Dios, la eternidad resplandece con la gloria del Verbo que la Virgen María recibió en la fragilidad de nuestra carne; te pedimos que Jesús, hecho uno de los nuestros para dar a conocer la luz de la verdad, manifieste la plenitud de su poder a favor de la redención del mundo. Él que vive y reina contigo.
+8 de enero:
+  lectura:
+    ref: Is 65, 1
+    texto: 'Ofrecí una respuesta a los que no preguntaban, me dejé encontrar de quienes no me buscaban; y dije: «Aquí estoy, aquí estoy», a un pueblo que no invocaba mi nombre.'
+  versiculo:
+  - - V
+    - Bendecid, pueblos, a nuestro Dios.
+  - - R
+    - Haced resonar sus alabanzas.
+  oracion: Señor, Dios nuestro, cuyo Hijo se manifestó en la realidad de nuestra carne, concédenos poder transformarnos interiormente a imagen de aquel que hemos conocido semejante a nosotros en su humanidad. Por nuestro Señor Jesucristo.
+9 de enero:
+  lectura:
+    ref: 1 Jn 1, 5
+    texto: 'El mensaje que de él hemos recibido y os transmitimos es éste: Dios es luz y en él no hay tiniebla alguna.'
+  versiculo:
+  - - V
+    - Bendecid, pueblos, a nuestro Dios.
+  - - R
+    - Haced resonar sus alabanzas.
+  oracion: Señor, luz radiante de todas las naciones, concede a los pueblos de la tierra gozar de una paz estable, e ilumina nuestros corazones con aquella luz espléndida que condujo a nuestros padres al conocimiento de tu Hijo. Él que vive y reina contigo.
+10 de enero:
+  lectura:
+    ref: Is 60, 4-5
+    texto: Tus hijos, Jerusalén, llegan de lejos, a tus hijas las traen en brazos. Cuando esto veas, te pondrás radiante de alegría; se estremecerá y se ensanchará tu corazón, pues se volcarán sobre ti los tesoros del mar, vendrán a ti las riquezas de las naciones.
+  versiculo:
+  - - V
+    - Bendecid, pueblos, a nuestro Dios.
+  - - R
+    - Haced resonar sus alabanzas.
+  oracion: Oh Dios, que por medio de tu Hijo has hecho clarear para todos los pueblos la aurora de tu eternidad, concede a tu pueblo reconocer la gloria de su Redentor y llegar un día a la luz eterna. Por nuestro Señor Jesucristo.
+11 de enero:
+  lectura:
+    ref: Za 8, 7-8
+    texto: Yo libertaré a mi pueblo del país de oriente y del país de occidente, y los traeré para que habiten en medio de Jerusalén. Ellos serán mi pueblo y yo seré su Dios con verdad y con justicia.
+  versiculo:
+  - - V
+    - Bendecid, pueblos, a nuestro Dios.
+  - - R
+    - Haced resonar sus alabanzas.
+  oracion: Dios todopoderoso, tú que has anunciado al mundo por medio de la estrella, el nacimiento del Salvador, manifiéstanos siempre este misterio y haz que cada día avancemos en su contemplación. Por nuestro Señor Jesucristo.
+12 de enero:
+  lectura:
+    ref: Mi 2, 12
+    texto: Yo te he de reunir, Jacob; congregaré tus supervivientes, Israel. Los juntaré como ovejas en un redil, como un rebaño en el aprisco.
+  versiculo:
+  - - V
+    - Bendecid, pueblos, a nuestro Dios.
+  - - R
+    - Haced resonar sus alabanzas.
+  oracion: Dios todopoderoso y eterno, tú que nos has hecho renacer a una vida nueva por medio de tu Hijo, concédenos que la gracia nos modele a imagen de Cristo, en quien nuestra naturaleza mortal se une a tu naturaleza divina. Por nuestro Señor Jesucristo.

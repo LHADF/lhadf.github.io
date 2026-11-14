@@ -33,10 +33,11 @@ function propio(hora, fecha, region){
     capa(T1); capa(T2);   // (con ciclo: los domingos y las solemnidades que alguna vez cayeron en domingo)
     // Días con fecha propia dentro del tiempo (del 17 al 24 de diciembre): lo de ese día. Los salmos, los de la feria del
     // Salterio; las antífonas, las del día de la semana («Lunes antes del 24 de diciembre») o las propias del día (24).
-    const TD=!primeras && L.tiempo[X.fechaClave(fRef)];
+    // (Del 7 al 12 de enero, igual: lo de la fecha, porque ADF celebra la Epifanía el 6.) Nunca en domingo.
+    const TD=!primeras && !dom && L.tiempo[X.fechaClave(fRef)];
     if(TD){ capa(TD);
-      const AS=TD.antifonas ? TD : L.tiempo[`${X.DIAS_TXT[d.getDay()]} antes del 24 de diciembre`];
-      if(!TD.salmodia && S0) P.salmodia = AS && AS.antifonas ? S0.map((g,i)=>({...g, ant: AS.antifonas[i]||g.ant})) : S0;
+      const AS=TD.antifonas ? TD : (/diciembre$/.test(X.fechaClave(fRef)) && L.tiempo[`${X.DIAS_TXT[d.getDay()]} antes del 24 de diciembre`]);
+      if(!TD.salmodia && S0 && AS && AS.antifonas) P.salmodia = S0.map((g,i)=>({...g, ant: AS.antifonas[i]||g.ant}));
     }
     const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia)||(TD&&TD.salmodia));
     let santo=null, nota='';
@@ -173,7 +174,7 @@ function armar(hora, fecha, region){
     hora, nombre:LAU?'Laudes':'Vísperas', primeras,
     versiones:{es:{n:'Liturgia de las Horas'}},
     gloria:{es:['Gloria al Padre, y al Hijo, * y al Espíritu Santo.','Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.']},
-    dia:{titulo:hoy.n+(/^Feria privilegiada/.test(hoy.n)&&!primeras?` · ${X.fechaClave(fRef)}`:'')+(primeras?' · I Vísperas':''), tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
+    dia:{titulo:hoy.n+(!primeras && hoy.n===hoy.fer && CP.deIso(fRef).getDay()!==0 && window[hora.toUpperCase()].tiempo[X.fechaClave(fRef)] ? ` · ${X.fechaClave(fRef)}`:'')+(primeras?' · I Vísperas':''), tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
     fechaTxt:`${X.DIAS_TXT[d.getDay()]} ${d.getDate()} de ${X.MESES[d.getMonth()]}`,
     secciones:S,
   };

@@ -6464,7 +6464,7 @@ XXXIII Domingo del Tiempo Ordinario (B):
   ant_magnificat: Verán venir al Hijo del hombre sobre las nubes del cielo con gran poder y majestad.
 XXXIII Domingo del Tiempo Ordinario (C):
   ant_magnificat: «Con vuestra perseverancia salvaréis vuestras vidas», dice el Señor.
-# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+# ── Ferias de fecha fija (17 al 24 de diciembre, 7 al 12 de enero), del libro (extraccion/a_base_fechas.py) ──
 17 de diciembre:
   lectura:
     ref: 1 Ts 5, 23-24
@@ -6730,3 +6730,173 @@ Viernes antes del 24 de diciembre:
   - 'De Sión vendrá el Señor que ha de reinar: su nombre será Emmanuel.'
   - Perseverad constantes, a vosotros vendrá el auxilio del Señor.
   - Yo miro atento al Señor, espero en Dios, mi salvador.
+7 de enero:
+  lectura:
+    ref: Cf. 2 Pe 1, 3-4
+    texto: Cristo, con su divino poder, nos ha concedido todo lo referente a la vida eterna y a la verdadera religión, mediante el perfecto conocimiento del que nos convocó por su propia gloria y virtud. Por ellas nos ha hecho merced de las preciosas y magníficas promesas, para que así seáis partícipes de la naturaleza divina, escapando de la corrupción existente en el mundo por causa de la concupiscencia.
+  responsorio:
+  - - V
+    - Será la bendición de todos los pueblos.
+  - - R
+    - Será la bendición de todos los pueblos.
+  - - V
+    - Lo proclamarán dichoso todas las razas de la tierra.
+  - - R
+    - Todos los pueblos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Será la bendición de todos los pueblos.
+  ant_magnificat: Al divisar la estrella los magos sintieron grandísimo gozo; entraron en la casa y ofrecieron al Señor oro, incienso y mirra.
+  preces:
+    intro: 'Bendito sea el Señor Jesucristo, que ha visitado a los que vivían en tinieblas y en sombra de muerte a fin de iluminarlos; supliquémosle, diciendo:'
+    respuesta: Oh Cristo, sol que naces de lo alto, ilumínanos con tu luz.
+    preces:
+    - - Señor Jesucristo, que al venir al mundo diste nacimiento a la Iglesia, tu cuerpo,
+      - haz que esta Iglesia crezca y se construya en la caridad.
+    - - Tú que con tu poder gobiernas el cielo y la tierra,
+      - haz que los pueblos y sus gobernantes reconozcan y confiesen tu soberanía divina.
+    - - Tú que, al hacerte hombre, has sido constituido sacerdote eterno,
+      - haz que todos los sacerdotes sean ministros idóneos de tu redención.
+    - - Tú que en el seno de María Virgen desposaste místicamente la humanidad con la divinidad,
+      - bendice a las vírgenes que se han consagrado a ti para tenerte como su único y celestial esposo.
+    - - Tú que al unirte a nuestra naturaleza mortal destruiste la muerte introducida por el pecado,
+      - transforma en vida eterna la muerte de nuestros difuntos.
+  padrenuestro_intro: 'Como Jesucristo, también nosotros somos hijos de Dios; por eso con él nos atrevemos a decir:'
+  oracion: Padre Dios, la eternidad resplandece con la gloria del Verbo que la Virgen María recibió en la fragilidad de nuestra carne; te pedimos que Jesús, hecho uno de los nuestros para dar a conocer la luz de la verdad, manifieste la plenitud de su poder a favor de la redención del mundo. Él que vive y reina contigo.
+8 de enero:
+  lectura:
+    ref: Ef 2, 3b-5
+    texto: Naturalmente, estábamos destinados a la reprobación como los demás. Pero Dios, rico en misericordia, por el gran amor con que nos amó, estando nosotros muertos por los pecados, nos ha hecho vivir con Cristo. Por pura gracia estáis salvados.
+  responsorio:
+  - - V
+    - Será la bendición de todos los pueblos.
+  - - R
+    - Será la bendición de todos los pueblos.
+  - - V
+    - Lo proclamarán dichoso todas las razas de la tierra.
+  - - R
+    - Todos los pueblos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Será la bendición de todos los pueblos.
+  ant_magnificat: Oh Cristo, luz de luz, tú te manifestaste a los magos y ellos te presentaron sus dones. Aleluia.
+  preces:
+    intro: 'Unidos a los cristianos del mundo entero, oremos y glorifiquemos al Señor, diciendo:'
+    respuesta: Escucha, Padre santo, la oración de tus hijos.
+    preces:
+    - - Manifiéstate, Señor, a los hombres que te buscan, como a Dios escondido, en las diversas religiones, ideologías o en los vestigios que de ti encuentran en la creación,
+      - haz que todos ellos lleguen al conocimiento de Cristo y sean iluminados por su Evangelio.
+    - - Contempla con amor a los que te adoran como a su único Dios verdadero y te esperan como al juez universal del último día,
+      - que siempre vean en ti a su amigo y protector.
+    - - Acuérdate de todos aquellos a quienes constantemente das la vida, la luz y todos los bienes,
+      - que nunca, Señor, se vean alejados de ti.
+    - - Manda a tus ángeles para que velen sobre los que están de viaje,
+      - y líbralos de la muerte imprevista y repentina.
+    - - Tú que manifestaste tu verdad en esta vida a nuestros hermanos difuntos,
+      - concédeles llegar a tu reino a contemplar tu inefable belleza.
+  padrenuestro_intro: 'Como Jesucristo, también nosotros somos hijos de Dios; por eso con él nos atrevemos a decir:'
+  oracion: Señor, Dios nuestro, cuyo Hijo se manifestó en la realidad de nuestra carne, concédenos poder transformarnos interiormente a imagen de aquel que hemos conocido semejante a nosotros en su humanidad. Por nuestro Señor Jesucristo.
+9 de enero:
+  lectura:
+    ref: Col 1, 13-15
+    texto: Dios nos ha sacado del dominio de las tinieblas, y nos ha trasladado al reino de su Hijo querido, por cuya sangre hemos recibido la redención, el perdón de los pecados. Él es imagen de Dios invisible, primogénito de toda criatura.
+  responsorio:
+  - - V
+    - Será la bendición de todos los pueblos.
+  - - R
+    - Será la bendición de todos los pueblos.
+  - - V
+    - Lo proclamarán dichoso todas las razas de la tierra.
+  - - R
+    - Todos los pueblos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Será la bendición de todos los pueblos.
+  ant_magnificat: 'Preguntó Herodes a los magos: «¿Qué signo habéis visto sobre el Rey recién nacido?» «Vimos una estrella resplandeciente, cuyo fulgor ilumina al mundo entero.»'
+  preces:
+    intro: 'Glorifiquemos a Cristo, Palabra de Dios, que ha venido para arrojar a lo hondo del mar todos nuestros delitos y, llenos de confianza en su poder, digámosle suplicantes:'
+    respuesta: Muéstranos, Señor, tu misericordia.
+    preces:
+    - - Sacerdote eterno, que al entrar en el mundo llevaste a plenitud el culto divino,
+      - haz que, por medio de la Iglesia, todos participen del culto que tú has instituido.
+    - - Médico de las almas y de los cuerpos, que viniste a visitar a los que estábamos enfermos,
+      - concede la salud a quienes carecen de ella y fortifica a los que se sienten débiles.
+    - - Tú que en tu nacimiento eres motivo de alegría y paz para todos,
+      - ayuda a los pobres, compadécete de los pecadores, y haz que todos encuentren en ti su alegría.
+    - - Rey vencedor, que has venido a destruir las cadenas de nuestra antigua esclavitud,
+      - haz justicia a los oprimidos y consuela a los encarcelados.
+    - - Tú que has venido al mundo para ser la puerta de entrada en el cielo,
+      - haz que los difuntos tengan, por ti, acceso al Padre
+  padrenuestro_intro: 'Con el deseo de que la luz de Cristo ilumine a todo los hombres y que su amor se extienda por toda la tierra pidamos al Padre que su reino venga a nosotros:'
+  oracion: Señor, luz radiante de todas las naciones, concede a los pueblos de la tierra gozar de una paz estable, e ilumina nuestros corazones con aquella luz espléndida que condujo a nuestros padres al conocimiento de tu Hijo. Él que vive y reina contigo.
+10 de enero:
+  lectura:
+    ref: Jn 1, 5b. 7
+    texto: Dios es luz y en él no hay tiniebla alguna. Si caminamos en la luz, lo mismo que está él en la luz, entonces vivimos en comunión unos con otros; y la sangre de Jesús, su Hijo, nos purifica de todo pecado.
+  responsorio:
+  - - V
+    - Será la bendición de todos los pueblos.
+  - - R
+    - Será la bendición de todos los pueblos.
+  - - V
+    - Lo proclamarán dichoso todas las razas de la tierra.
+  - - R
+    - Todos los pueblos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Será la bendición de todos los pueblos.
+  ant_magnificat: Vendrán todos de Saba, cargados de oro e incienso. Aleluia.
+  preces:
+    intro: 'Unidos en oración con todos nuestros hermanos de todo el mundo, bendigamos a Dios y supliquémosle, diciendo:'
+    respuesta: Muéstranos, Señor, tu misericordia.
+    preces:
+    - - Padre santo, te pedimos por los que te conocen únicamente a través de la luz de su razón,
+      - haz que sean iluminados también con la luz del Evangelio, para que vean con mayor claridad la grandeza de tu amor.
+    - - Pon, Señor, tus ojos en aquellos que, sin formar parte de la Iglesia, se esfuerzan en librar a los hombres de la miseria y de la esclavitud,
+      - haz que descubran que Cristo es el camino, la verdad y la vida para todos los hombres.
+    - - Sal al encuentro de aquellos que te adoran por medio de las diversas religiones,
+      - ilumínalos, Señor, con la admirable luz de Cristo.
+    - - Purifica sin cesar los corazones de tus fieles,
+      - para que te conozcan cada día con mayor plenitud.
+    - - Manifiesta a los difuntos tu misericordia,
+      - y dales parte en la gloria de tus elegidos.
+  padrenuestro_intro: 'Gracias a Jesucristo somos hijos de Dios, por ello nos atrevemos a decir:'
+  oracion: Oh Dios, que por medio de tu Hijo has hecho clarear para todos los pueblos la aurora de tu eternidad, concede a tu pueblo reconocer la gloria de su Redentor y llegar un día a la luz eterna. Por nuestro Señor Jesucristo.
+11 de enero:
+  lectura:
+    ref: Rm 8, 3b-4
+    texto: Dios envió a su propio Hijo, sometido a una existencia semejante a la de la carne de pecado. Así dictó sentencia de condenación contra el pecado, que ejercía su poder en la vida según la carne. De este modo la exigencia y el fin de la ley tuvieron cumplimiento en nosotros, que no vivimos la vida puramente natural según la carne, sino la vida sobrenatural según el Espíritu.
+  responsorio:
+  - - V
+    - Será la bendición de todos los pueblos.
+  - - R
+    - Será la bendición de todos los pueblos.
+  - - V
+    - Lo proclamarán dichoso todas las razas de la tierra.
+  - - R
+    - Todos los pueblos.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Será la bendición de todos los pueblos.
+  ant_magnificat: Los magos, advertidos en sueños por el ángel, regresaron a su tierra por otro camino.
+  preces:
+    intro: 'Oremos al Padre, que ha querido que Cristo fuera luz de las naciones, y digámosle:'
+    respuesta: Escúchanos, Padre nuestro.
+    preces:
+    - - Haz, Señor, que tu Iglesia se extienda por todo el mundo,
+      - para que todos los hombres lleguen a conocer la gloria de Jesucristo.
+    - - Padre eterno, tú que encaminaste a los sabios de oriente hacia la cuna de Jesucristo,
+      - manifiesta también a tu Hijo a cuantos buscan la verdad.
+    - - Haz que todos los pueblos lleguen a contemplar tu admirable luz,
+      - para que al nombre de Jesús toda rodilla se doble.
+    - - Envía trabajadores a tu mies,
+      - para que los pobres sean evangelizados y sea predicado a todo el mundo el tiempo de la salvación.
+    - - Concede a los difuntos la plena redención de sus cuerpos,
+      - para que puedan alegrarse de la victoria de Cristo sobre la muerte.
+  padrenuestro_intro: 'A pesar de que en el mundo existe el odio y la división, oremos a aquel que nos ha hermanado en Jesucristo, diciendo:'
+  oracion: Dios todopoderoso, tú que has anunciado al mundo por medio de la estrella, el nacimiento del Salvador, manifiéstanos siempre este misterio y haz que cada día avancemos en su contemplación. Por nuestro Señor Jesucristo.

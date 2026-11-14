@@ -1,6 +1,12 @@
-"""Las ferias del 17 al 24 de diciembre, de la extracción del libro, a `base/tiempo/`.
+"""Las ferias de fecha fija del Propio del tiempo, de la extracción del libro, a `base/tiempo/`.
 
-    python3 extraccion/a_base_adviento.py
+    python3 extraccion/a_base_fechas.py
+
+Del 7 al 12 de enero: ADF celebra la Epifanía el 6 de enero, así que las ferias que siguen van por fecha («7 de enero o
+lunes después del domingo de Epifanía» → «7 de enero»). La base de sync las tiene con el nombre del día de la semana,
+corridas (su «Jueves después de la Epifanía» es el 7 de enero del libro): la entrada por fecha manda.
+
+Ferias del 17 al 24 de diciembre:
 
 La base de sync junta esos ocho días en una sola «Feria privilegiada de Adviento» (con los textos de uno u otro día).
 Este script agrega, sin tocar lo que ya estaba, una entrada por fecha («17 de diciembre», …, «24 de diciembre») en
@@ -33,9 +39,11 @@ def de_anio(H):
     out = []
     for p in H or []:
         if p['parte'] == 'primera_lectura':
-            p = {**p, 'piezas': [{**pz, 'variantes': [v for v in pz['variantes']
-                                                       if (v.get('cuando') or {}).get('anio') in (None, ANIO)]}
-                                 for pz in p['piezas']]}
+            def serie(vs):
+                if any((v.get('cuando') or {}).get('anio') == ANIO for v in vs):    # (a veces el año I va sin etiqueta)
+                    return [v for v in vs if (v.get('cuando') or {}).get('anio') == ANIO]
+                return vs
+            p = {**p, 'piezas': [{**pz, 'variantes': serie(pz['variantes'])} for pz in p['piezas']]}
             for pz in p['piezas']:
                 for v in pz['variantes']:
                     v.pop('cuando', None)
@@ -100,29 +108,39 @@ def agregar(hora, entradas, titulo):
     p = BASE / 'tiempo' / f'{hora}.yaml'
     texto = p.read_text(encoding='utf-8')
     marca = f'\n# ── {titulo} '
-    if marca in texto:      # se vuelve a correr: se reemplaza el bloque agregado antes
-        texto = texto[:texto.index(marca)]
+    viejo = '\n# ── Ferias del 17 al 24 de diciembre, del libro '
+    for m in (marca, viejo):
+        if m in texto:      # se vuelve a correr: se reemplaza el bloque agregado antes
+            texto = texto[:texto.index(m)]
     tmp = Path(tempfile.mkdtemp()) / 't.yaml'
     AC.escribir(tmp, AC.aleluia(entradas), '')
-    p.write_text(texto.rstrip('\n') + '\n' + marca.lstrip('\n') + '(extraccion/a_base_adviento.py) ──\n'
+    p.write_text(texto.rstrip('\n') + '\n' + marca.lstrip('\n') + '(extraccion/a_base_fechas.py) ──\n'
                  + tmp.read_text(encoding='utf-8'), encoding='utf-8')
 
 
 def main():
+    por_hora = {h: {} for h in ('oficio', 'laudes', 'tercia', 'sexta', 'nona', 'visperas')}
+    # del 17 al 24 de diciembre
     d = json.loads((AQUI / 'tiempo' / 'adviento' / 'tiempo-adviento.json').read_text(encoding='utf-8'))
     bloque = next(b for b in d['bloques'] if b['titulo'].startswith('II.'))
-    por_hora = {h: {} for h in ('oficio', 'laudes', 'tercia', 'sexta', 'nona', 'visperas')}
     for c in bloque['celebraciones']:
-        f = c['fecha']
-        clave = f"{f['dia']} de diciembre"
         for h, x in dia(c).items():
             if h in por_hora and x:
-                por_hora[h][clave] = x
+                por_hora[h][f"{c['fecha']['dia']} de diciembre"] = x
     ants = antifonas_semana()
     for (h, dd), l in sorted(ants.items()):
         por_hora[h][f'{NOMBRE_DIA[dd]} antes del 24 de diciembre'] = {'antifonas': l}
+    # del 7 al 12 de enero (después de la Epifanía, el 6)
+    d = json.loads((AQUI / 'tiempo' / 'navidad' / 'tiempo-navidad.json').read_text(encoding='utf-8'))
+    bloque = next(b for b in d['bloques'] if 'POSTERIORES A LA EPIFAN' in b['titulo'])
+    for c in bloque['celebraciones']:
+        if not c['id'][:1].isdigit():      # el Bautismo del Señor, que el libro pone en el mismo bloque
+            continue
+        for h, x in dia(c).items():
+            if h in por_hora and x:
+                por_hora[h][f"{int(c['id'].split('-')[0])} de enero"] = x
     for h, e in por_hora.items():
-        agregar(h, e, 'Ferias del 17 al 24 de diciembre, del libro')
+        agregar(h, e, 'Ferias de fecha fija (17 al 24 de diciembre, 7 al 12 de enero), del libro')
     AC.guardar_bibliotecas()
     print({h: len(e) for h, e in por_hora.items()})
     for a in AC.AVISOS:

@@ -5512,7 +5512,7 @@ XXXIII Domingo del Tiempo Ordinario (B):
   ant_benedictus: Los justos brillarán como el fulgor del firmamento por toda la eternidad.
 XXXIII Domingo del Tiempo Ordinario (C):
   ant_benedictus: 'Por mi causa os perseguirán; eso os dará ocasión de profesar vuestra fe: yo os daré palabras y sabiduría a las que no podrá hacer frente ningún adversario vuestro.'
-# ── Ferias del 17 al 24 de diciembre, del libro (extraccion/a_base_adviento.py) ──
+# ── Ferias de fecha fija (17 al 24 de diciembre, 7 al 12 de enero), del libro (extraccion/a_base_fechas.py) ──
 17 de diciembre:
   lectura:
     ref: Is 11, 1-3a
@@ -5804,3 +5804,197 @@ Viernes antes del 24 de diciembre:
   - 'De Sión vendrá el Señor que ha de reinar: su nombre será Emmanuel.'
   - Perseverad constantes, a vosotros vendrá el auxilio del Señor.
   - Yo miro atento al Señor, espero en Dios, mi salvador.
+7 de enero:
+  lectura:
+    ref: Is 9, 6
+    texto: 'Un niño nos ha nacido, un hijo se nos ha dado; lleva sobre sus hombros el señorío y será llamado: “consejero admirable”, “Dios poderoso”, “Padre sempiterno” y “Príncipe de la paz”.'
+  responsorio:
+  - - V
+    - Se postrarán ante él todos los reyes.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  - - V
+    - Todos los pueblos le servirán.
+  - - R
+    - Y todos los reyes.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  ant_benedictus: 'Desde oriente vinieron unos magos a Belén para adorar al Señor, y, abriendo sus cofres, le ofrecieron regalos: oro, como a rey soberano; incienso, como a Dios verdadero; y mirra, como a hombre mortal. Aleluia.'
+  preces:
+    intro: 'Aclamemos a Cristo, salvador enviado por Dios, a quien han contemplado los confines de la tierra, y digámosle:'
+    respuesta: Gloria a ti, Señor Jesús.
+    preces:
+    - - Redentor de todos los pueblos, que al venir al mundo destruiste el muro que separaba a Israel de las naciones paganas,
+      - haz que desaparezcan del mundo todas las discriminaciones que atentan contra la dignidad humana.
+    - - Tú que por tu encarnación y tu nacimiento quisiste habitar entre nosotros,
+      - enséñanos a descubrir tu presencia en la Iglesia y en todos los hombres.
+    - - Tú que nos has dado el pleno conocimiento de Dios, nuestro Padre,
+      - ayúdanos a vivir plenamente de tu palabra por nuestra fe y por nuestras obras.
+    - - Tú que eres el «Dios—con—nosotros» que has renovado maravillosamente la creación entera,
+      - 'haz que en nosotros todo se renueve también: el corazón, las palabras y las obras.'
+  padrenuestro_intro: 'A pesar de que en el mundo existe el odio y la división, oremos a aquel que nos ha hermanado en Jesucristo, diciendo:'
+  oracion: Padre Dios, la eternidad resplandece con la gloria del Verbo que la Virgen María recibió en la fragilidad de nuestra carne; te pedimos que Jesús, hecho uno de los nuestros para dar a conocer la luz de la verdad, manifieste la plenitud de su poder a favor de la redención del mundo. Él que vive y reina contigo.
+8 de enero:
+  lectura:
+    ref: Is 4, 2-3
+    texto: 'Aquel día, el vástago del Señor será joya y gloria, fruto del país, honor y ornamento para los supervivientes de Israel. A los que queden en Sión, a los restantes en Jerusalén, los llamarán santos: serán inscritos para vivir en Jerusalén.'
+  responsorio:
+  - - V
+    - Se postrarán ante él todos los reyes.
+  - - R
+    - Se, postrarán ante él todos los reyes.
+  - - V
+    - Todos los pueblos le servirán.
+  - - R
+    - Y todos los reyes.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Se, postrarán ante él todos los reyes.
+  ant_benedictus: 'Tres son los regalos que ofrecieron los magos al Señor, al Hijo de Dios, al gran Rey: oro, incienso y mirra. Aleluia.'
+  preces:
+    intro: 'Celebremos la misericordia de Cristo, que ha venido al mundo para que la creación se viera liberada de la esclavitud de la corrupción y pudiera entrar en la libertad gloriosa de los hijos de Dios; seguros, pues, de este amor que Dios nos tiene, digamos:'
+    respuesta: Por tu nacimiento, líbranos, Señor, de todo mal.
+    preces:
+    - - Tú, Señor, que existiendo, desde siempre has querido asumir una vida nueva al hacerte hombre,
+      - renuévanos a nosotros por el misterio de tu nacimiento.
+    - - Tú que, sin dejar de ser Dios como el Padre, quisiste hacerte hombre como nosotros,
+      - haz que nuestra vida alcance su plenitud por la participación en tu vida divina.
+    - - Tú que al venir al mundo has querido ser luz de los paganos y maestro de todos los hombres,
+      - haz que tu palabra sea antorcha para nuestros pasos.
+    - - Palabra de Dios, que te hiciste carne en el seno de María Virgen y viniste al mundo,
+      - dígnate habitar siempre por la fe en nuestros corazones.
+  padrenuestro_intro: 'Con el deseo de que la luz de Cristo ilumine a todos los hombres y que su amor se extienda por toda la tierra, pidamos al Padre que su reino venga a nosotros:'
+  oracion: Señor, Dios nuestro, cuyo Hijo se manifestó en la realidad de nuestra carne, concédenos poder transformarnos interiormente a imagen de aquel que hemos conocido semejante a nosotros en su humanidad. Por nuestro Señor Jesucristo.
+9 de enero:
+  lectura:
+    ref: Is 49, 8-9a
+    texto: 'Te he constituido como alianza del pueblo, para restaurar el país, para repartir las heredades desoladas, para decir a los cautivos: «Salid», y a los que están en tinieblas: «Venid a la luz.»'
+  responsorio:
+  - - V
+    - Se postrarán ante él todos los reyes.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  - - V
+    - Todos los pueblos le servirán.
+  - - R
+    - Y todos los reyes.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  ant_benedictus: Hemos visto su estrella en oriente y hemos venido con presentes a adorar al Señor.
+  preces:
+    intro: 'Acudamos a Cristo, Palabra eterna engendrada por el Padre antes del comienzo del mundo y nacido como hombre en el momento culminante de la historia, y aclamémoslo, alegres, diciendo:'
+    respuesta: Bendito seas, Señor.
+    preces:
+    - - Oh Cristo, Hijo de Dios vivo, que existes antes que el mundo fuera creado y viniste en el tiempo a la tierra para salvar al hombre,
+      - haz que todos seamos testigos de la Buena Noticia de la salvación.
+    - - Sol de justicia, que brillas desde el seno del Padre e iluminas a todo el orbe,
+      - sé luz para todos los que yacen en tiniebla y en sombra de muerte.
+    - - Tú que quisiste ser niño y fuiste colocado en un pesebre,
+      - renueva en nosotros la sencillez de la infancia.
+    - - Tú que para darnos la vida eterna has querido ser nuestro pan vivo,
+      - alegra nuestro espíritu con la celebración de la eucaristía.
+  padrenuestro_intro: 'Ya que somos de la familia de Dios, digamos con gran confianza a nuestro Padre del cielo:'
+  oracion: Señor, luz radiante de todas las naciones, concede a los pueblos de la tierra gozar de una paz estable, e ilumina nuestros corazones con aquella luz espléndida que condujo a nuestros padres al conocimiento de tu Hijo. Él que vive y reina contigo.
+10 de enero:
+  lectura:
+    ref: Is 62, 11-12
+    texto: 'Decid a la ciudad de Sión: «Mira a tu Salvador que llega, el premio de su victoria lo acompaña, su recompensa lo precede. Los llamarán "Pueblo santo", "Redimidos del Señor".»'
+  responsorio:
+  - - V
+    - Se postrarán ante él todos los reyes.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  - - V
+    - Todos los pueblos le servirán.
+  - - R
+    - Y todos los reyes.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  ant_benedictus: Desde lejos vienen los pueblos, trayendo sus dones. Aleluia.
+  preces:
+    intro: 'Celebremos las maravillas de Dios que nos ha consolado con el nacimiento de su Hijo, y aclamémoslo, alegres, diciendo:'
+    respuesta: Gloria a Dios en el cielo.
+    preces:
+    - - Con los ángeles, con los patriarcas y con los profetas,
+      - te alabamos, Señor.
+    - - Con María, la madre de tu Hijo,
+      - nuestra alma proclama, Señor, tu grandeza.
+    - - Con los apóstoles y evangelistas,
+      - te damos gracias, Señor.
+    - - Con todos los santos mártires,
+      - ofrecemos, Señor, nuestros cuerpos como sacrificio de alabanza.
+    - - Con todos los santos, que han sido el honor de la Iglesia,
+      - te consagramos totalmente nuestras vidas.
+  padrenuestro_intro: 'Porque Dios ha infundido en nuestros corazones un espíritu filial, nos atrevemos a decir:'
+  oracion: Oh Dios, que por medio de tu Hijo has hecho clarear para todos los pueblos la aurora de tu eternidad, concede a tu pueblo reconocer la gloria de su Redentor y llegar un día a la luz eterna. Por nuestro Señor Jesucristo.
+11 de enero:
+  lectura:
+    ref: Is 45, 22-24
+    texto: 'Volveos hacia mí para salvaros, confines de la tierra, Pues yo soy Dios y no hay otro. Yo juro por mi nombre, de mi boca sale una sentencia, una palabra irrevocable: «Ante mí se doblará toda rodilla, por mí jurará toda lengua.»'
+  responsorio:
+  - - V
+    - Se postrarán ante él todos los reyes.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  - - V
+    - Todos los pueblos le servirán.
+  - - R
+    - Y todos los reyes.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  ant_benedictus: Vendrán a ti los que te despreciaban y se postrarán a tus pies.
+  preces:
+    intro: 'Demos honor y gloria a Cristo, que ha venido a renovar al hombre, y supliquémosle, diciendo:'
+    respuesta: Por tu nacimiento, renuévanos, Señor.
+    preces:
+    - - Tú que al revestirte de nuestra humanidad te has convertido para nosotros en sacramento de Dios,
+      - haz que te descubramos en el sacramento de tu palabra y de tu cuerpo, que has entregado a la Iglesia.
+    - - Creador del género humano que, por medio de la Virgen inmaculada, has querido ser hombre entre los hombres,
+      - concédenos participar, por intercesión de María, en las riquezas de tu divinidad.
+    - - Redentor nuestro, que viniste al mundo como llovizna que empapa la tierra,
+      - fecundiza nuestras almas con el agua viva que brota para comunicar vida eterna.
+    - - A quienes en estos días celebramos los inicios de tu vida humana,
+      - concédenos llegar a la madurez del varón perfecto, según aquella plenitud que resplandece en tu persona.
+  padrenuestro_intro: 'Alegres porque Jesucristo nos ha hecho hijos de Dios, digamos:'
+  oracion: Dios todopoderoso, tú que has anunciado al mundo por medio de la estrella, el nacimiento del Salvador, manifiéstanos siempre este misterio y haz que cada día avancemos en su contemplación. Por nuestro Señor Jesucristo.
+12 de enero:
+  lectura:
+    ref: Sb 7, 26-27
+    texto: La Sabiduría es un reflejo de la luz eterna, un espejo, sin mancha de la actividad de Dios, una imagen de su bondad. Aun siendo sola, lo puede todo; sin salir de sí misma, todo lo renueva; en todas las edades entra en las almas santas y forma en ellas amigos de Dios y profetas.
+  responsorio:
+  - - V
+    - Se postrarán ante él todos los reyes.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  - - V
+    - Todos los pueblos le servirán.
+  - - R
+    - Y todos los reyes.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Se postrarán ante él todos los reyes.
+  ant_benedictus: En Caná de Galilea dio Jesús la primera señal por la que reveló su gloria.
+  preces:
+    intro: 'Glorifiquemos a Cristo, imagen del Dios verdadero, y digámosle con fe:'
+    respuesta: Cristo, Hijo de Dios, escúchanos.
+    preces:
+    - - Hijo de Dios, que nos has manifestado el amor del Padre,
+      - haz que los hombres puedan descubrir en nuestro amor fraterno el amor con que Dios nos ama.
+    - - Tú que te has revelado como Señor de la vida,
+      - danos parte en la plenitud de tu vida divina.
+    - - Haz que reproduzcamos siempre tu muerte en nuestros cuerpos,
+      - para que en nuestro vivir se manifieste también tu vida.
+    - - Ilumina nuestros corazones con tu luz,
+      - para que, a través de nosotros, resplandezca la gloria de Dios.
+  padrenuestro_intro: 'Como Jesucristo, también nosotros somos hijos de Dios; por eso con él nos atrevemos a decir:'
+  oracion: Dios todopoderoso y eterno, tú que nos has hecho renacer a una vida nueva por medio de tu Hijo, concédenos que la gracia nos modele a imagen de Cristo, en quien nuestra naturaleza mortal se une a tu naturaleza divina. Por nuestro Señor Jesucristo.
