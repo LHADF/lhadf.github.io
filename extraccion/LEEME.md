@@ -7,6 +7,9 @@ Extracción del PDF de los cuatro tomos (`LH_completa.pdf`, que no está en el r
 
 - `extraer.py`: el script (lectura, clasificación, piezas, unificación de tomos, controles).
 - `revision.py`: arma la página de revisión lado a lado (con `--revision`; las imágenes de las páginas no van al repo).
+- `comparar_base.py`: compara los textos de la app (`base/`, cargados una vez del repositorio `sync`) con la extracción del libro. Sale en `informes/`: `base-vs-libro.md` (el informe), `textos.csv` (una fila por texto que no coincide) y `faltantes.csv`. Con `--html CARPETA`, además la página para leer. No toca ni `base/` ni la app.
+
+      python3 extraccion/comparar_base.py [--html CARPETA]
 - `apendices/`: paso 8, los ocho apéndices de los cuatro tomos (tomo I 1037–1128, II 2667–2813, III 4309–4469, IV 6178–6263; no entran los créditos del tomo IV ni la hoja de colofón de los tomos II y III): `apendices.json`, `salmos.json`, `himnos.json`, `dudas.csv`, `diferencias.csv` y `controles.txt`.
 
   Estructura de `apendices.json`: `titulo` y `apendices`, uno por apéndice (I a VIII), con su `numero`, su `titulo`, sus `fuentes`, sus `rubricas`, sus `horas` y sus `bloques` (los títulos que agrupan dentro del apéndice: tiempo litúrgico, domingo, día de la semana, común, fecha). Cada bloque tiene a su vez `titulo`, `fuentes`, `rubricas` y `horas`; donde el libro no nombra la hora, las piezas van bajo `sin_hora`.
