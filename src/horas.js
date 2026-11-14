@@ -17,7 +17,11 @@ function capas(L, fecha, sel, campos){
   capa((L.salterio['semana_'+(ref.sal||1)]||L.salterio.semana_1)[dia]);
   const cic=window.Laudes.ciclo(fecha), T1=L.tiempo[ref.fer], T2=L.tiempo[`${ref.fer} (${cic})`];
   capa(T1); capa(T2);
-  if(d.getDay()!==0) capa(L.tiempo[X.fechaClave(fecha)]);   // días con fecha propia en el tiempo (17 al 24 de diciembre, 7 al 12 de enero), nunca en domingo
+  const TD=d.getDay()!==0 ? L.tiempo[X.fechaClave(fecha)] : null;   // días con fecha propia en el tiempo (17 al 24 de diciembre, 7 al 12 de enero), nunca en domingo
+  capa(TD);
+  // Ciclo bienal de la primera lectura del Oficio: la entrada del tiempo dice de qué año es la suya («anio») y trae la del otro
+  const TB=[TD, T2, T1].find(x=>x && x.otro_anio);
+  if(TB && P.lectura1===TB.lectura1 && TB.anio!==X.anioBienal(fecha, ref)){ P.lectura1=TB.otro_anio.lectura1; if(TB.otro_anio.resp1) P.resp1=TB.otro_anio.resp1; }
   const adf=(L.adf||{})[ref.n]||{}, k=L.mapa[ref.n]||adf.como;
   const santo=k?L.santoral[k]:null; capa(santo);
   // Sin propio en la base: el común que corresponde (base/santoral/adf.yaml), del libro

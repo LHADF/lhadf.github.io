@@ -259,7 +259,7 @@ def responsorio(v):
     if v.get('secuencia'):
         pares = [[rotulo(x, 'R'), x['texto']] for x in v['secuencia']]
     else:
-        r = v.get('r') or []
+        r = [x for x in (v.get('r') or []) if x]
         pares = ([['R', ' * '.join(r)]] if r else []) + ([['V', v['v']]] if v.get('v') else []) + ([['R', r[-1][:1].upper() + r[-1][1:]]] if len(r) > 1 else [])
     return {'ref': v.get('cita'), 'vr': pares}
 

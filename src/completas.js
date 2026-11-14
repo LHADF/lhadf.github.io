@@ -39,6 +39,9 @@ function opcionesDia(fecha, sel){
 }
 const enRango=f=>f>=CAL.desde && f<=CAL.hasta;
 // La entrada de la base para una fecha fija del Propio del tiempo («17 de diciembre»)
+// Año del ciclo bienal (Oficio de lectura): años impares, el I; pares, el II. Cuenta el año litúrgico, que empieza en
+// Adviento: el Adviento y la Navidad de 2026 son del año 2027 (año I).
+const anioBienal=(f, ref)=>{ const y=+f.slice(0,4)+((f.slice(5,7)==='12' || (f.slice(5,7)==='11' && ref && ref.t==='Adviento')) ? 1 : 0); return y%2 ? 'I' : 'II'; };
 const fechaClave=f=>`${+f.slice(8,10)} de ${MESES[+f.slice(5,7)-1]}`;
 
 /* ---------- Oración del común, con el nombre de la celebración ----------
@@ -316,5 +319,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

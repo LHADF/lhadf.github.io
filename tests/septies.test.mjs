@@ -424,6 +424,13 @@ test('ferias de fecha fija (17 al 24 de diciembre, 7 al 12 de enero) y las antí
                   W.Oficio.armar('2026-12-18', '').secciones.filter(s => s.k === 'prosa').pop().t.es);
 });
 
+test('Oficio de lectura: ciclo bienal (años impares, I; pares, II; el año litúrgico empieza en Adviento)', () => {
+  const W = ctx.window, X = W.Completas._, pl = f => W.Oficio.armar(f, '').secciones.find(s => s.k === 'lectura_larga').titulo;
+  assert.equal(X.anioBienal('2026-12-17', { t: 'Adviento' }), 'I'); assert.equal(X.anioBienal('2026-06-10', { t: 'Ordinario' }), 'II');
+  assert.match(pl('2026-12-18'), /^GRANDEZA DEL SEÑOR/);                    // 2026-27, año I: Isaías 40
+  assert.match(pl('2027-12-18'), /^EL SEÑOR CONTRA LOS DIOSES DE BABILONIA/);  // 2027-28, año II: Isaías 46
+});
+
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
   const W = ctx.window;
   const blas = LA.armar('2027-02-03', '');

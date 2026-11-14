@@ -15,7 +15,7 @@ del cántico evangélico —las antífonas «O»—, preces y oración), y las a
 según el día de la semana («Lunes antes del 24 de diciembre», …), que el libro pone en la feria del Salterio. Lo común
 del tramo (himnos, invitatorio, antífonas de la Hora intermedia) sigue saliendo de «Feria privilegiada de Adviento».
 
-Primera lectura del Oficio: el libro da dos años; se toma la serie que ya usa la base (la que el libro marca «II»).
+Primera lectura del Oficio: el libro da dos años; acá va la del año II y `a_base_bienal.py` (que se corre después) agrega la del año I.
 """
 import json
 import re
