@@ -748,6 +748,11 @@ def comparar_tiempo():
                 s = slug(k)
                 mejor, pt = None, 0.0
                 for nom, x in por_nombre.items():
+                    # «Lunes de la Octava de Pascua» no puede ir con «martes-de-la-octava-de-pascua»
+                    d_b = next((d for d in DIAS if d in s.split('-')), None)
+                    d_l = next((d for d in DIAS if d in nom.split('-')), None)
+                    if d_b and d_l and d_b != d_l:
+                        continue
                     r = difflib.SequenceMatcher(None, s, nom, autojunk=False).ratio()
                     if r > pt:
                         mejor, pt = x, r

@@ -10,6 +10,9 @@ Extracción del PDF de los cuatro tomos (`LH_completa.pdf`, que no está en el r
 - `comparar_base.py`: compara los textos de la app (`base/`, cargados una vez del repositorio `sync`) con la extracción del libro. Sale en `informes/`: `base-vs-libro.md` (el informe), `textos.csv` (una fila por texto que no coincide) y `faltantes.csv`. Con `--html CARPETA`, además la página para leer. No toca ni `base/` ni la app.
 
       python3 extraccion/comparar_base.py [--html CARPETA]
+- `clasificar.py`: clasifica cada pieza del libro según lo que hay que hacer con ella en la base, con la regla «el texto de `sync` manda»: queda la de sync, sync más variantes del libro, sync con error de estructura, reemplazar lo cargado a mano del libro, falta, sin cotejar. Usa los emparejamientos de `comparar_base.py` y suma las lecturas y responsorios del Oficio de lectura, la Hora intermedia del Salterio y las solemnidades que la base guarda en el santoral. Sale en `informes/clasificacion.md` y `clasificacion.csv` (una fila por pieza). Tarda unos tres minutos.
+
+      python3 extraccion/clasificar.py
 - `apendices/`: paso 8, los ocho apéndices de los cuatro tomos (tomo I 1037–1128, II 2667–2813, III 4309–4469, IV 6178–6263; no entran los créditos del tomo IV ni la hoja de colofón de los tomos II y III): `apendices.json`, `salmos.json`, `himnos.json`, `dudas.csv`, `diferencias.csv` y `controles.txt`.
 
   Estructura de `apendices.json`: `titulo` y `apendices`, uno por apéndice (I a VIII), con su `numero`, su `titulo`, sus `fuentes`, sus `rubricas`, sus `horas` y sus `bloques` (los títulos que agrupan dentro del apéndice: tiempo litúrgico, domingo, día de la semana, común, fecha). Cada bloque tiene a su vez `titulo`, `fuentes`, `rubricas` y `horas`; donde el libro no nombra la hora, las piezas van bajo `sin_hora`.

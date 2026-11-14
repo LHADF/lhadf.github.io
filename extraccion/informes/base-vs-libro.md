@@ -19,10 +19,10 @@ Las dos fuentes no están armadas igual, y eso explica buena parte de las difere
 | Salterio | 1040 | 659 | 171 | 11 | 0 | 199 | 0 |
 | Oficios comunes | 361 | 235 | 82 | 5 | 15 | 23 | 1 |
 | Propio de los santos | 1961 | 945 | 248 | 15 | 149 | 604 | 0 |
-| Propio del tiempo | 5190 | 2478 | 1142 | 31 | 432 | 1098 | 9 |
-| **Total** | **9268** | **4626** | **1754** | **119** | **598** | **2138** | **33** |
+| Propio del tiempo | 5190 | 2491 | 1149 | 32 | 432 | 1077 | 9 |
+| **Total** | **9268** | **4639** | **1761** | **120** | **598** | **2117** | **33** |
 
-Detalle de «solo en la forma»: 657 tildes, comillas, guiones, mayúsculas o puntuación, 586 normas de ADF que la base ya aplicó («aleluia»), 341 la base no copia el «Padre nuestro.» final, 167 la conclusión de la oración, entera o abreviada, 3 los mismos textos en otro orden.
+Detalle de «solo en la forma»: 659 tildes, comillas, guiones, mayúsculas o puntuación, 589 normas de ADF que la base ya aplicó («aleluia»), 343 la base no copia el «Padre nuestro.» final, 167 la conclusión de la oración, entera o abreviada, 3 los mismos textos en otro orden.
 
 Además, en 451 casos la base trae una hora entera que el libro no imprime en ese lugar porque la toma del Salterio o de un Común: Propio del tiempo tercia (94), Propio del tiempo nona (86), Propio del tiempo sexta (84), Propio de los santos sexta (49), Propio de los santos nona (47), Propio de los santos laudes (35), Propio de los santos visperas (32), Propio de los santos tercia (20).
 
@@ -424,9 +424,9 @@ Por campo: oración (180), lectura (64), salmodia: antífonas (53), preces: inte
   - libro: 1 Jn 1, 1-2
 - … y 594 más en `informes/textos.csv`.
 
-### Propio del tiempo (1098)
+### Propio del tiempo (1077)
 
-Por campo: oración (517), lectura (98), lectura: cita (84), himno (título) (65), antífona del Magníficat (56), preces: intenciones (48), versículo (41), antífona del Benedictus (40), preces: introducción (37), monición del Padre nuestro (32), preces: respuesta (24), antífona del invitatorio (16), salmodia: salmos (13), responsorio breve (12), salmodia: antífonas (11), antífona (4).
+Por campo: oración (517), lectura (93), lectura: cita (80), himno (título) (65), antífona del Magníficat (56), preces: intenciones (46), versículo (40), antífona del Benedictus (39), preces: introducción (35), monición del Padre nuestro (30), preces: respuesta (22), antífona del invitatorio (16), responsorio breve (12), salmodia: salmos (12), salmodia: antífonas (10), antífona (4).
 
 - **Jueves de la I semana de Adviento/nona · lectura: cita**
   - base: Ml 4, 2
@@ -458,7 +458,7 @@ Por campo: oración (517), lectura (98), lectura: cita (84), himno (título) (65
 - **VII Domingo de Pascua (C)/nona · lectura: cita**
   - base: Col 3, 1-2
   - libro: Rm 6, 4
-- … y 1088 más en `informes/textos.csv`.
+- … y 1067 más en `informes/textos.csv`.
 
 ## Lo que tiene una fuente y no la otra
 
