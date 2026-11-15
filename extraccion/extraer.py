@@ -586,6 +586,10 @@ class Parser:
                 return 'bloque_tiempo'
             if r.c0 == 'k':
                 return 'celebracion'
+        # el libro imprime algunos días en cuerpo 12 (Cuaresma: lunes a jueves y sábado de la III semana)
+        if r.c0 == 'k' and r.negrita and r.talla >= 11.5 and t == tu and \
+                re.fullmatch(r'(DOMINGO|LUNES|MARTES|MIÉRCOLES|JUEVES|VIERNES|SÁBADO) [IVXL]+ SEMANA DEL? [A-ZÁÉÍÓÚ ]+', t):
+            return 'celebracion'
         if r.c0 == 'R' and r.x < 70 and t.strip() == 'RECES':
             return 'rotulo'          # «PRECES» impreso sin la P
         if r.c0 == 'k' and r.x < 70 and len(t) < 60 and re.match(r'^Responsorio\b', t):
@@ -4364,6 +4368,15 @@ def salida_tiempo(seccion, entradas, parsers):
                                     'horas': {}, 'celebraciones': []}
                 orden.append(b['id'])
     sueltas = []
+    # erratas del libro en el título de un día: «JUEVES XV SEMANA…» impreso dos veces (la segunda es la XVI)
+    ERRATAS_DIA = {'jueves-xv-semana-del-tiempo-ordinario-2': ('jueves-xvi-semana-del-tiempo-ordinario',
+                                                              'JUEVES XVI SEMANA DEL TIEMPO ORDINARIO', 16)}
+    for e in entradas:
+        if e.get('id') in ERRATAS_DIA:
+            e['id'], titulo_ok, sem = ERRATAS_DIA[e['id']]
+            e['titulo_impreso'], e['titulo'] = e.get('titulo'), titulo_ok
+            if 'semana' in e:
+                e['semana'] = sem
     for e in entradas:
         bid = e.pop('_bloque', None)
         if e.pop('_es_bloque', False) and e['id'] in bloques:

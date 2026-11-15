@@ -270,7 +270,7 @@ Piezas marcadas para revisar: 12 · diferencias entre tomos: 0
       pendiente: texto-azul/domingo-de-la-semana-ii-del-salterio
 [OK ] Salmos: 0 nombrados, todos en salmos.json
 [OK ] Salmos iguales en todos los tomos: sí
-[OK ] Ida y vuelta: 1212/1212 piezas reescritas igual al libro
+[OK ] Ida y vuelta: 1208/1208 piezas reescritas igual al libro
 [INF] Colores dudosos clasificados por tono: 5
       tomo 2 pdf 1257: Las antífonas propias en el Salterio; los salmos y {'0433ff'}
       tomo 2 pdf 1257: de la semana II del Salterio. {'0433ff'}

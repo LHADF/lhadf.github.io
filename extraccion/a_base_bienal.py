@@ -12,6 +12,8 @@ ya estaba: inserta esas dos claves debajo del nombre del día. La app elige seg�
 """
 import difflib
 import re
+
+import yaml
 import sys
 import tempfile
 from pathlib import Path
@@ -62,6 +64,11 @@ def emparejar(k, idx, por_nombre):
         d_l = next((d for d in cb.DIAS if d in nom.split('-')), None)
         if d_b and d_l and d_b != d_l:
             continue
+        # tampoco otra semana: «III semana de Cuaresma» no es «ii-semana-de-cuaresma»
+        r_b = re.search(r'\b([ivxl]+)-semana', s)
+        r_l = re.search(r'\b([ivxl]+)-semana', nom)
+        if r_b and r_l and r_b.group(1) != r_l.group(1):
+            continue
         r = difflib.SequenceMatcher(None, s, nom, autojunk=False).ratio()
         if r > pt:
             mejor, pt = x, r
@@ -98,10 +105,29 @@ def que_anio(b, anios):
     return (mejor, pt) if pt >= 0.6 else (None, pt)
 
 
+# Días en que la lectura de sync no es de ninguno de los dos años del libro: se reemplaza por la del libro (decisión
+# del 14-11-2026), la del año II como principal y la del I como «otro_anio».
+REEMPLAZAR = {'III Domingo de Adviento «Gaudete» (B)', '2 de enero, del Tiempo de Navidad'}
+
+
+def reemplazar_bloque(texto, clave, cambios):
+    """Cambia campos de primer nivel de una entrada (sin tocar las demás entradas del archivo)."""
+    lineas = texto.split('\n')
+    ini = next(i for i, l in enumerate(lineas) if l and not l.startswith((' ', '#', '-')) and l.endswith(':')
+               and list(yaml.safe_load(l) or {None: 0})[0] == clave)
+    fin = next((i for i in range(ini + 1, len(lineas)) if lineas[i] and not lineas[i].startswith((' ', '-'))), len(lineas))
+    d = yaml.safe_load('\n'.join(lineas[ini:fin]))[clave]
+    d.update(cambios)
+    tmp = Path(tempfile.mkdtemp()) / 'r.yaml'
+    AC.escribir(tmp, {clave: AC.aleluia(d)}, '')
+    nuevo = [l for l in tmp.read_text(encoding='utf-8').rstrip('\n').split('\n') if not l.startswith('#')]
+    return '\n'.join(lineas[:ini] + nuevo + lineas[fin:])
+
+
 def main():
     base = AC.leer(ARCH) or {}
     idx, por_nombre = cb.indice_tiempo()
-    nuevos, sin_par, dudosos = {}, [], []
+    nuevos, sin_par, dudosos, reemplazos = {}, [], [], {}
     for k, b in base.items():
         if not isinstance(b, dict) or not b.get('lectura1') or re.search(r'antes del 24', k):
             continue
@@ -113,6 +139,13 @@ def main():
         if set(anios) != {'I', 'II'}:
             continue
         a, pt = que_anio(b, anios)
+        if a is None and k in REEMPLAZAR:
+            x = anios['II']
+            r = {'lectura1': AC.lectura_larga(x['lectura'])}
+            if x.get('responsorio'):
+                r['resp1'] = AC.responsorio(x['responsorio'])
+            reemplazos[k] = r
+            a = 'II'
         if a is None:
             dudosos.append((k, round(pt, 2)))
             continue
@@ -125,6 +158,8 @@ def main():
     # insertar debajo de cada clave (sin reescribir el archivo); antes, se borra lo que haya insertado una corrida anterior
     import yaml
     texto = ARCH.read_text(encoding='utf-8')
+    for k, r in reemplazos.items():
+        texto = reemplazar_bloque(texto, k, r)
     texto = re.sub(r'\n  anio: (?:I|II)\n  otro_anio:\n(?:(?:    .*|)\n)*?(?=  \S|\S)', '\n', texto)
     lineas = texto.split('\n')
     res = []
@@ -140,6 +175,7 @@ def main():
     ARCH.write_text('\n'.join(res), encoding='utf-8')
     c = {'I': sum(1 for v in nuevos.values() if v['anio'] == 'I'), 'II': sum(1 for v in nuevos.values() if v['anio'] == 'II')}
     print(f'días con los dos años: {len(nuevos)} (la base tenía el año I en {c["I"]}, el II en {c["II"]})')
+    print('reemplazadas por la del libro:', sorted(reemplazos))
     print(f'sin par en el libro: {len(sin_par)}; no se pudo saber el año: {len(dudosos)}')
     for k, pt in dudosos[:40]:
         print('  dudoso:', k, pt)

@@ -27651,10 +27651,10 @@
      }
     },
     {
-     "id": "jueves-xv-semana-del-tiempo-ordinario-2",
-     "semana": 15,
+     "id": "jueves-xvi-semana-del-tiempo-ordinario",
+     "semana": 16,
      "dia": "jueves",
-     "titulo": "JUEVES XV SEMANA DEL TIEMPO ORDINARIO",
+     "titulo": "JUEVES XVI SEMANA DEL TIEMPO ORDINARIO",
      "fuentes": [
       {
        "tomo": 3,
@@ -27980,7 +27980,8 @@
         ]
        }
       ]
-     }
+     },
+     "titulo_impreso": "JUEVES XV SEMANA DEL TIEMPO ORDINARIO"
     },
     {
      "id": "viernes-xvi-semana-del-tiempo-ordinario",
