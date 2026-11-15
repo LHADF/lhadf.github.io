@@ -308,3 +308,4 @@ p.rec{margin:0 0 .8em}
 .lec-larga .lec-obra{font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2);margin:0 0 .4em}
 .lec-larga .lec-tit{font-variant:small-caps;letter-spacing:.03em;color:var(--rubric);margin:.8em 0 .9em}
 .lec-larga p{margin:0 0 .8em}
+.vers{font-variant:small-caps;letter-spacing:.03em}   /* «Venid, postrémonos por tierra» (invitatorio) */

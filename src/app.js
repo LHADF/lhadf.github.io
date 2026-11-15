@@ -483,6 +483,9 @@ function horaHTML(){
       case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`
         +sec.estrofas.map(e=>partituraHTML(e.gabc, S.trad?e.glosa:null, false)).join(''); break;
       case 'ant': h+=antHTML(sec); break;
+      case 'salmoinv':   // Salmo 94 del invitatorio: en estrofas, y «Venid, postrémonos por tierra» en versalitas
+        h+=`<div class="salmo-h"><span class="t">${esc(cita(sec.titulo))}</span>${sec.lema?`<span class="lema">${esc(sec.lema)}</span>`:''}</div>`
+          +`<div class="himno sin-num">${sec.estrofas.map(e=>`<p class="est">${e.map(l=>`<span class="ln">${esc(l).replace(/^(Venid, postrémonos por tierra)/i,'<span class="vers">$1</span>')}</span>`).join('')}</p>`).join('')}</div>`; break;
       case 'salmo': h+=salmoHTML(sec)+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;

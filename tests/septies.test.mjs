@@ -241,7 +241,7 @@ test('Laudes: se arman completas para todos los días del calendario', () => {
 
 test('Laudes: invitatorio solo los domingos; tono de la invocación; ciclo dominical', () => {
   const ids = f => LA.armar(f, 'ARG').secciones.filter(s => s.k === 'sec').map(s => s.id);
-  assert.equal(ids('2026-11-08')[0], 'invitatorio'); assert.equal(secL('2026-11-08', 'salmo')[0].id, 'salmo-94');
+  assert.equal(ids('2026-11-08')[0], 'invitatorio'); assert.equal(secL('2026-11-08', 'salmoinv')[0].id, 'salmo-94');
   assert.equal(ids('2026-11-10')[0], 'inicio');
   assert.equal(secL('2026-11-08', 'vr')[1].tono, 'solemne'); assert.equal(secL('2026-11-10', 'vr')[1].tono, 'ferial'); assert.equal(secL('2026-11-09', 'vr')[1].tono, 'festivo');
   assert.equal(LA.ciclo('2026-11-08'), 'A'); assert.equal(LA.ciclo('2026-11-29'), 'B'); assert.equal(LA.ciclo('2025-06-01'), 'C');
@@ -349,10 +349,13 @@ test('invitatorio gregoriano de los domingos del Tiempo Ordinario, con traducci�
   const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
   const pal = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>|[{}]/g, '').split(/\s+/).map(norm).filter(Boolean).join(' ');
   const pp = ps => ps.flatMap(p => String(p[0]).split(/\s+/)).map(norm).filter(Boolean).join(' ');
-  const S = LA.armar('2026-11-15', '').secciones, g = S.find(s => s.k === 'invgreg');
-  assert.ok(g && S.some(s => s.k === 'invop') && S.some(s => s.k === 'salmo' && s.inv === 'es'));
-  assert.equal(g.estrofas.length, 6);
-  for (const x of [g.ant, ...g.estrofas]) { assert.equal(pp(x.glosa), pal(x.gabc)); assert.ok(!/[jJ]/.test(x.gabc.split('%%')[1].replace(/\([^)]*\)/g, ''))); }
+  // (la opción de cantarlo en latín está oculta: el invitatorio va en español, en estrofas y sin asteriscos)
+  const S = LA.armar('2026-11-15', '').secciones, inv = S.find(s => s.k === 'salmoinv');
+  assert.ok(!S.some(s => s.k === 'invgreg' || s.k === 'invop'));
+  assert.equal(inv.estrofas.length, 6); assert.ok(!inv.estrofas.flat().some(l => /[*†]/.test(l)));
+  assert.equal(inv.estrofas.map(e => e[e.length - 1].split(' ').pop()).join(' '), 'cantos. manos. guía. obras. descanso». Amén.');
+  const IG = ctx.window.LAUDES.gregoriano.invitatorio_to;   // los textos en latín siguen en la base
+  for (const x of [IG.ant, ...IG.estrofas]) { assert.equal(pp(x.traduccion), pal(x.gabc)); assert.ok(!/[jJ]/.test(x.gabc.split('%%')[1].replace(/\([^)]*\)/g, ''))); }
   assert.ok(!LA.armar('2026-12-06', '').secciones.some(s => s.k === 'invgreg'));   // Adviento: todavía no
   assert.ok(B.oraciones.preparatoria.texto.length > 6 && B.oraciones.conclusiva.texto.length > 7);
   for (const k of ['preparatoria', 'conclusiva']) for (const [la] of B.oraciones[k].texto) assert.ok(la.length <= 52, la);   // renglones cortos
