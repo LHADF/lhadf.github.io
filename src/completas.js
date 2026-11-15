@@ -321,5 +321,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
-  _:{oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo:{}, oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

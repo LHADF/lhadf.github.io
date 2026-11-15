@@ -445,6 +445,19 @@ test('2 de noviembre: Oficio de difuntos, con sus salmos, y la oración propia',
   assert.match(t.secciones.find(s => s.k === 'himno').opciones[0].n, /Dejad que el grano|Camino del sepulcro/);   // himno del Oficio de difuntos
 });
 
+test('Oficio de difuntos (botón del inicio) e invitatorio a elección', () => {
+  const W = ctx.window, M = W.Completas._.modo;
+  M.difuntos = true;
+  const l = LA.armar('2027-03-10', ''), o = W.Oficio.armar('2027-03-10', ''), v = VI.armar('2027-03-13', '');   // (un sábado: no pasa a las I Vísperas)
+  M.difuntos = false;
+  assert.equal(l.secciones.filter(s => s.k === 'salmo').map(s => s.id).slice(0, 2).join(' '), 'salmo-50 cantico-is-38-10-14-17-20');
+  assert.equal(o.secciones.filter(s => s.k === 'salmo').map(s => s.id).join(' '), 'salmo-39-2-14-17-18-i salmo-39-2-14-17-18-ii salmo-41');
+  assert.ok(!v.primeras && !o.secciones.some(s => s.k === 'tedeum'));
+  M.inv = false; assert.ok(!LA.armar('2026-11-15', '').secciones.some(s => s.k === 'salmoinv')); M.inv = undefined;   // domingo sin invitatorio
+  M.inv = true; assert.ok(LA.armar('2026-11-17', '').secciones.some(s => s.k === 'salmoinv')); M.inv = undefined;     // para el Oficio, cualquier día
+  assert.ok(LA.armar('2026-11-15', '').secciones.some(s => s.k === 'salmoinv') && !LA.armar('2026-11-17', '').secciones.some(s => s.k === 'salmoinv'));
+});
+
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
   const W = ctx.window;
   const blas = LA.armar('2027-02-03', '');

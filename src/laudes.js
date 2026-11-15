@@ -21,7 +21,8 @@ function propio(hora, fecha, region){
   const L=window[hora.toUpperCase()], hoyC=CP.diaCal(fecha, region), CE=hora==='laudes'?'ant_benedictus':'ant_magnificat';
   const fm=CP.masDias(fecha,1), man=(hora==='visperas' && CP.enRango(fm)) ? CP.diaCal(fm, region) : null;
   const calc=primeras=>{
-    const ref=primeras?man:hoyC, fRef=primeras?fm:fecha;
+    // Oficio de difuntos (botón del inicio): el día cualquiera, con todo del Oficio de difuntos (base/comunes/, «difuntos»)
+    const DIF=!!X.modo.difuntos, ref0=primeras?man:hoyC, ref=DIF?{...ref0, n:'Oficio de difuntos', g:'Oficio de difuntos', sol:false}:ref0, fRef=primeras?fm:fecha;
     const d=CP.deIso(fRef), dom=d.getDay()===0, dia=X.DIAS[d.getDay()];
     const P={}, capa=o=>{ if(o) for(const k of CAMPOS) if(o[k]!=null) P[k]=o[k]; };
     const I=primeras?' · I Vísperas':'';
@@ -41,8 +42,8 @@ function propio(hora, fecha, region){
     }
     const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia)||(TD&&TD.salmodia));
     let santo=null, nota='';
-    const adf=(L.adf||{})[ref.n]||{};
-    const k=L.mapa[ref.n] || adf.como;   // «como»: celebración propia de ADF que toma todo de otra de la base
+    const adf=DIF ? {comun:'difuntos'} : (L.adf||{})[ref.n]||{};
+    const k=DIF ? null : (L.mapa[ref.n] || adf.como);   // «como»: celebración propia de ADF que toma todo de otra de la base
     if(k){ santo=L.santoral[k+I]||(primeras?null:L.santoral[k]); if(santo){ delete P.pendiente; capa(santo); }
            else if(primeras){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
            if(adf.como) nota='Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
@@ -60,7 +61,7 @@ function propio(hora, fecha, region){
       if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
       const o=PR.oracion || X.oracionComun(C.oraciones||C0.oraciones, ref.n, n);
       if(o) P.oracion=o;
-      nota = adf.comun==='santa-maria-sabado' ? ''
+      nota = (adf.comun==='santa-maria-sabado' || DIF) ? ''
         : PR.oracion ? (C0.nombre ? `Oración propia; lo demás, del ${C0.nombre}.` : '')
         : `Textos del ${C0.nombre}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
     } else if(ref.n!==ref.fer){
@@ -77,7 +78,7 @@ function propio(hora, fecha, region){
     return {P, dia, nota, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
   };
   // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
-  const quiere = !!(man && man.pv && !(hoyC.sol && !man.sol) && hoyC.t!=='Triduo');
+  const quiere = !X.modo.difuntos && !!(man && man.pv && !(hoyC.sol && !man.sol) && hoyC.t!=='Triduo');
   let r=calc(quiere);
   if(!r.completo && man && hoyC.t!=='Triduo'){   // sin textos para lo elegido: la otra posibilidad (hoy, o las I Vísperas de mañana si es domingo o solemnidad)
     const otra = quiere ? calc(false) : ((man.dom||man.sol) ? calc(true) : null);
@@ -101,7 +102,10 @@ function armar(hora, fecha, region){
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.
   // Todos los días se empieza con «Dómine, lábia mea apéries»; el invitatorio (antífona y Salmo 94), solo los domingos.
   const labia=LAU && {k:'vr', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])};
-  if(LAU && CP.deIso(fecha).getDay()===0){
+  // Invitatorio: en Laudes, los domingos, si Laudes es la primera oración del día (botón en la hora; X.modo.inv: true o false
+  // lo fuerza, p. ej. para el Oficio de lectura cuando es la primera oración)
+  const conInv = LAU && (X.modo.inv!=null ? X.modo.inv : (CP.deIso(fecha).getDay()===0 && !X.modo.difuntos));
+  if(conInv){
     sec('invitatorio','Invitatorio');
     S.push(labia);
     // Domingos del Tiempo Ordinario: se puede cantar en gregoriano («Veníte, exsultémus Dómino» y Salmo 94). inv: 'greg' o 'es', según se elija.
@@ -119,7 +123,7 @@ function armar(hora, fecha, region){
   }
 
   sec('inicio','Invocación inicial');
-  if(LAU && CP.deIso(fecha).getDay()!==0) S.push(labia);
+  if(LAU && !conInv) S.push(labia);
   const tono = solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
   S.push({k:'vr', tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:trInv,

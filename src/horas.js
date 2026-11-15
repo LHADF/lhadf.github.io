@@ -12,7 +12,8 @@ const SIN_GLORIA=['cantico-dn-3-57-88-56'];
 // Las partes del día, capa sobre capa
 const mayor=ref=>/^(Fiesta|Solemnidad)/.test(ref.g);
 function capas(L, fecha, sel, campos){
-  const ref=CP.diaCal(fecha, sel), d=CP.deIso(fecha), dia=X.DIAS[d.getDay()];
+  const DIF=!!X.modo.difuntos, ref0=CP.diaCal(fecha, sel), d=CP.deIso(fecha), dia=X.DIAS[d.getDay()];
+  const ref=DIF ? {...ref0, n:'Oficio de difuntos', g:'Oficio de difuntos', sol:false} : ref0;   // Oficio de difuntos (botón del inicio)
   const P={}, capa=o=>{ if(o) for(const k of campos) if(o[k]!=null) P[k]=o[k]; };
   capa((L.salterio['semana_'+(ref.sal||1)]||L.salterio.semana_1)[dia]);
   const cic=window.Laudes.ciclo(fecha), T1=L.tiempo[ref.fer], T2=L.tiempo[`${ref.fer} (${cic})`];
@@ -22,7 +23,7 @@ function capas(L, fecha, sel, campos){
   // Ciclo bienal de la primera lectura del Oficio: la entrada del tiempo dice de qué año es la suya («anio») y trae la del otro
   const TB=[TD, T2, T1].find(x=>x && x.otro_anio);
   if(TB && P.lectura1===TB.lectura1 && TB.anio!==X.anioBienal(fecha, ref)){ P.lectura1=TB.otro_anio.lectura1; if(TB.otro_anio.resp1) P.resp1=TB.otro_anio.resp1; }
-  const adf=(L.adf||{})[ref.n]||{}, k=L.mapa[ref.n]||adf.como;
+  const adf=DIF ? {comun:'difuntos'} : (L.adf||{})[ref.n]||{}, k=DIF ? null : (L.mapa[ref.n]||adf.como);
   const santo=k?L.santoral[k]:null; capa(santo);
   // Sin propio en la base: el común que corresponde (base/santoral/adf.yaml), del libro
   const n=X.turno(L.adf, adf.comun, fecha, sel);   // las «O bien» del común se alternan entre celebraciones
@@ -35,6 +36,7 @@ function capas(L, fecha, sel, campos){
   return {P, ref, dia, dom:d.getDay()===0, santo, k, C, PR, CS, M, n, tiempo:!!(T1||T2)};
 }
 function aviso(ref, k, L, C, hora, PR){
+  if(X.modo.difuntos) return '';
   if(ref.n===ref.fer || k) return (L.adf||{})[ref.n]&&(L.adf||{})[ref.n].como ? 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base.' : '';
   if(hora!=='oficio' && /^Memoria/.test(ref.g)) return '';   // Hora intermedia de una memoria: todo de la feria
   if(PR && PR.oracion) return C ? `Oración propia; lo demás, del ${C.nombre}.` : '';
@@ -101,7 +103,7 @@ function armarOficio(fecha, sel){
   const propia=[L.tiempo[ref.fer], L.tiempo[`${ref.fer} (${window.Laudes.ciclo(fecha)})`], k&&L.santoral[k], C&&mayor(ref)&&C, CS, PR].some(x=>x&&x.salmodia);
   if(/^(Fiesta|Solemnidad)/.test(ref.g) && !dom && !propia) P.salmodia=L.salterio.semana_1.domingo.salmodia;
   // Te Deum: domingos fuera de Cuaresma, solemnidades, fiestas y octavas de Navidad y de Pascua
-  const teDeum = (dom && ref.t!=='Cuaresma' && ref.t!=='Triduo') || ref.sol || /^Fiesta/.test(ref.g) || !!ref.oct;
+  const teDeum = !X.modo.difuntos && ((dom && ref.t!=='Cuaresma' && ref.t!=='Triduo') || ref.sol || /^Fiesta/.test(ref.g) || !!ref.oct);
   const S=[];
   invocacion(S, ref);
   himno(S, L.himnos, P.himno, 'oficio');

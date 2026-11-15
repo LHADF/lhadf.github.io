@@ -28,7 +28,7 @@ function aplicarModo(kind, sec){
   else S.lengua = ((kind==='salmo'&&!(sec&&sec.cantico))||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
 }
 aplicarModo();
-function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
+function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,difuntos,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
 let DH=null; // la hora abierta cuando no es Completas (Laudes o Vísperas)
 const MAYORES={laudes:'Laudes', visperas:'Visperas', oficio:'Oficio', tercia:'Tercia', sexta:'Sexta', nona:'Nona'};
 // Archivo de datos de cada hora (Tercia, Sexta y Nona comparten el de la Hora intermedia)
@@ -61,15 +61,26 @@ function fichasCal(){
 }
 function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
+  const MODO=CP._.modo;
+  MODO.difuntos=false; MODO.inv=undefined;
   D=CP.armar(S.fecha, SEL());
+  // Oficio de difuntos (botón del inicio): las horas, con todo del Oficio de difuntos. Invitatorio de Laudes: se puede quitar.
+  MODO.difuntos=!!S.difuntos;
+  MODO.inv = (S.hora==='laudes' && S.invLaudes===false) ? false : undefined;
   DH = (MAYORES[S.hora] && cargada(S.hora)) ? window[MAYORES[S.hora]].armar(S.fecha, SEL(), {complementaria:!!S.compl}) : null;
   // Oficio de lectura unido a Laudes: después de las lecturas (y del Te Deum) siguen las Laudes desde la salmodia,
   // sin su invocación inicial ni su himno; el Oficio no tiene oración ni conclusión propias.
+  // Oficio de lectura como primera oración del día: empieza con el invitatorio (el de Laudes de ese día)
+  if(DH && S.hora==='oficio' && S.invOficio && window.LAUDES){
+    MODO.inv=true; const Li=window.Laudes.armar(S.fecha, SEL()); MODO.inv=undefined;
+    const a=Li.secciones.findIndex(s=>s.k==='sec'&&s.id==='invitatorio'), b=Li.secciones.findIndex(s=>s.k==='sec'&&s.id==='inicio');
+    if(a>=0 && b>a) DH={...DH, secciones:[...Li.secciones.slice(a,b), ...DH.secciones]};
+  }
   if(DH && S.hora==='oficio' && S.unirLaudes && window.LAUDES){
     const O=DH.secciones, corte=O.findIndex(s=>s.k==='sec'&&s.id==='oracion'), Lh=window.Laudes.armar(S.fecha, SEL());
     if(Lh){ const i=Lh.secciones.findIndex(s=>s.k==='sec'&&s.id==='salmodia');
       // El Oficio pasa a ser la primera hora del día: empieza como Laudes (Dómine, lábia mea e invitatorio), no con «Deus in adiutórium»
-      const iniL=Lh.secciones.slice(0, Lh.secciones.findIndex(s=>s.k==='sec'&&s.id==='himno')), iniO=O.findIndex(s=>s.k==='sec'&&s.id==='himno');
+      const iniL=S.invOficio ? O.slice(0, O.findIndex(s=>s.k==='sec'&&s.id==='himno')) : Lh.secciones.slice(0, Lh.secciones.findIndex(s=>s.k==='sec'&&s.id==='himno')), iniO=O.findIndex(s=>s.k==='sec'&&s.id==='himno');
       DH={...DH, unidas:true, secciones:[...iniL, ...O.slice(iniO,corte), {k:'sec', id:'l-laudes', t:'Laudes', titulo:true}, ...Lh.secciones.slice(i).map(s=>s.k==='sec'?{...s,id:'l-'+s.id}:s)]}; }
   }
   // Uso ADF: Vísperas y Completas juntas. Después de la oración de Vísperas se omite su conclusión y siguen, de Completas:
@@ -80,6 +91,7 @@ function cargarDia(){
     for(const s of D.secciones){ if(s.k==='sec') toma=['examen','cantico','oracion','bendicion','mariana'].includes(s.id); if(toma) C.push(s.k==='sec'?{...s,id:'c-'+s.id,plegable:false}:{...s,pleg:false}); }
     DH={...DH, unidas:true, secciones:[...V.slice(0,corte), ...C]};
   }
+  if(DH && MODO.difuntos) DH={...DH, difuntos:true, dia:{...DH.dia, titulo:'Oficio de difuntos', grado:'', nota:''}};
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
 cargarDia();
@@ -453,6 +465,10 @@ function horaHTML(){
   if(r.hora==='visperas' && r.primeras && CP.deIso(S.fecha).getDay()===6)
     h+=`<div class="prep"><button class="discreto" data-act="prep" aria-expanded="${!!S._prep}">Oración preparatoria</button></div>`+(S._prep?`<div class="orof-b">${oracionOficioHTML('preparatoria')}</div>`:'');
   h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
+  // Invitatorio: en Laudes (los domingos) y en el Oficio de lectura, si es la primera oración del día
+  const invL = r.hora==='laudes' && CP.deIso(S.fecha).getDay()===0 && !r.difuntos, invO = r.hora==='oficio';
+  if(invL || invO){ const on = invL ? S.invLaudes!==false : !!S.invOficio;
+    h+=`<div class="opciones unir"><button data-act="invtog" aria-pressed="${on}">Invitatorio</button></div><p class="rub nota-inv">Si ${invL?'Laudes es':'el Oficio de lectura es'} la primera oración, se hace el Invitatorio.</p>`; }
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
@@ -564,6 +580,7 @@ function portadaHTML(){
       const ok=true, ya=ahora.includes(id);
       if(id==='visperas') n=nombreVisperas();
       return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
+    <button class="discreto" data-act="difuntos">Oficio de difuntos</button>
     <button class="discreto" data-act="oraciones">Oraciones antes y después del oficio</button>
     <p class="nota-proto">Versión de prueba: todas las horas, con el calendario ADF. Los textos y el santoral están en revisión; puede haber errores.</p>
   </div>`;
@@ -630,8 +647,13 @@ document.addEventListener('click',e=>{
   switch(a){
     case 'cerrar': cerrar(); break;
     case 'deshacer': if(_undo){ S=JSON.parse(_undo); cargarDia(); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
-    case 'abrir': { const abrir=()=>{ S._marDia={}; S.hora=v||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
-      const faltan=[v, ...(v==='oficio'&&S.unirLaudes?['laudes']:[])].filter(h=>MAYORES[h]&&!cargada(h));   // Oficio unido a Laudes: también Laudes
+    case 'difuntos': hoja('Oficio de difuntos', `<p class="rub">Con todos los textos del Oficio de difuntos, en lugar de los del día.</p><ul class="horas">${[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas']].map(([id,n])=>`<li class="disp"><button data-act="abrirdif" data-v="${id}"><span class="n">${n}</span><span class="h"></span><span class="chev">›</span></button></li>`).join('')}</ul>`); break;
+    case 'invtog': if(S.hora==='laudes') S.invLaudes=(S.invLaudes===false); else S.invOficio=!S.invOficio;
+      { const sigue=()=>{ cargarDia(); guardar(); render(); };
+        if(S.hora==='oficio' && S.invOficio && !cargada('laudes')) cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar el invitatorio.')); else sigue(); } break;
+    case 'abrirdif': case 'abrir': { if(a==='abrirdif'){ quitarCapa(); S.difuntos=true; } else S.difuntos=false;
+      const abrir=()=>{ S._marDia={}; S.hora=v||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
+      const faltan=[v, ...(v==='oficio'&&(S.unirLaudes||S.invOficio)?['laudes']:[])].filter(h=>MAYORES[h]&&!cargada(h));   // Oficio unido a Laudes (o con invitatorio): también Laudes
       if(faltan.length){ toast('Cargando…'); Promise.all(faltan.map(cargarHora)).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.')); } else abrir();
       break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
