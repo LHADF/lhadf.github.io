@@ -497,7 +497,7 @@ function horaHTML(){
       case 'preces': {
         // Cada prece: flexa (†) en el corte del medio y asterisco (*) al final; la respuesta la dicen todos
         if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
-        h+=`<p>${esc(sec.intro)}</p><p class="todos">${esc(sec.respuesta)}</p>`
+        h+=`<p>${esc(sec.intro)}</p><div class="vr"><p class="todos"><span class="k">℟.</span> ${esc(sec.respuesta)}</p></div>`
           +`<div class="preces">${sec.preces.map(([a,b])=>b ? `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`
               : `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`   // prece sin corte
 ; break; }
