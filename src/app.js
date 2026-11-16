@@ -177,11 +177,11 @@ function lineasVerso(v, modo, cod, lang, intonar){
   if(modo==='texto'){
     const d=SAL.dividirVerso(v); const out=[];
     if(d.flex) out.push(`${esc(d.flex)}&nbsp;<span class="sg">†</span>`);
-    if(d.ter!=null){ out.push(`${esc(d.med)}&nbsp;<span class="sg">*</span>`); out.push(esc(d.ter)); }
-    else out.push(esc(d.med));
+    if(d.ter!=null){ out.push(`${esc(d.med)}&nbsp;<span class="sg">*</span>`); out.push(...d.ter.split(' ¶ ').map(esc)); }   // « ¶ »: dos renglones en la misma mitad
+    else out.push(...d.med.split(' ¶ ').map(esc));
     return out;
   }
-  return SAL.htmlVerso(SAL.pautarVerso(v,cod,lang,intonar)).split('<br>');
+  return SAL.htmlVerso(SAL.pautarVerso(v.replace(/ ¶ /g,' '),cod,lang,intonar)).split('<br>');
 }
 // Traducción de un verso repartida en las mismas líneas que el latín
 function glosaVerso(latV, glV){

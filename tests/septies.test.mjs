@@ -463,6 +463,15 @@ test('Cántico Ap 19: sus «Aleluia» van aparte (la app los muestra según se c
   assert.equal(c.aleluyas.length, 4); assert.ok(c.aleluyas.every(e => e.length === 2 && e.every(l => !/aleluia/i.test(l))));
 });
 
+test('salmos en español: asterisco y flexa (de a dos; sobra uno: los tres últimos, o los tres primeros si un punto los cierra)', () => {
+  const X = ctx.window.Completas._, v = t => X.versosDe([t]).versos.join(' | ');
+  assert.equal(v('a,\nb,\nc,\nd,\ne.'), 'a, * b, | c, † d, * e.');
+  assert.equal(v('a,\nb,\nc.\nd,\ne.'), 'a, † b, * c. | d, * e.');
+  assert.equal(v('a:\nb,\nc.'), 'a: * b, ¶ c.');
+  assert.equal(v('a,\nb:\nc.'), 'a, † b: * c.');
+  assert.equal(v('Anuncien todos los pueblos sus maravillas\nb,\nc;\nd,\ne\nf.'), 'Anuncien todos los pueblos sus maravillas † b, * c; | d, † e * f.');
+});
+
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
   const W = ctx.window;
   const blas = LA.armar('2027-02-03', '');

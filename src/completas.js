@@ -134,14 +134,32 @@ function oracionCase(s){ // «ACCIÓN DE GRACIAS» → «Acción de gracias», r
   return t.split(/(\s+)/).map(w=>{ const lim=w.replace(/[^\p{L}]/gu,''); const m=MAYUS.find(x=>x.toLocaleLowerCase('es')===lim); return m?w.replace(lim,m):w; }).join('').replace(/\.$/,'');
 }
 // Estrofas (renglones) → versos salmódicos: pares con mediante; si sobra una línea, flexa
+// Estrofas → versos (con * mediante y † flexa). De a dos renglones; si sobra uno, los tres últimos van juntos con flexa en
+// el primero, salvo que un punto fuerte (. ! ?) al final del tercer renglón cierre claramente los tres primeros: entonces
+// van juntos los tres primeros. En un grupo de tres, si el primer renglón termina en dos puntos, no hay flexa: mediante
+// ahí, y los otros dos seguidos (en renglones separados: « ¶ »). Si los dos puntos están en el segundo, flexa y mediante.
+const FUERTE=/[.!?][»”’)]*$/;
+const TRES_PRIMEROS=[/^Anuncien todos los pueblos sus maravillas/];   // (Tb 13: los tres primeros juntos, y los tres últimos)
+function gruposDe(ls){
+  const n=ls.length;
+  if(n<3) return [n];
+  if(n===6 && TRES_PRIMEROS.some(r=>r.test(ls[0]))) return [3,3];
+  if(n%2===0) return Array(n/2).fill(2);
+  const pares=Array((n-3)/2).fill(2);
+  if(n>=5 && FUERTE.test(ls[2]) && !FUERTE.test(ls[n-4])) return [3, ...pares];
+  return [...pares, 3];
+}
+function verso(g){
+  if(g.length===1) return g[0];
+  if(g.length===2) return `${g[0]} * ${g[1]}`;
+  return /:$/.test(g[0]) ? `${g[0]} * ${g[1]} ¶ ${g[2]}` : `${g[0]} † ${g[1]} * ${g[2]}`;
+}
 function versosDe(estrofas){
   const versos=[], grupos=[];
   estrofas.forEach(e=>{
     const ls=e.split('\n').map(x=>x.trim()).filter(Boolean), g=[];
     let i=0;
-    if(ls.length%2===1 && ls.length>=3){ versos.push(`${ls[0]} † ${ls[1]} * ${ls[2]}`); g.push(versos.length-1); i=3; }
-    for(;i+1<ls.length;i+=2){ versos.push(`${ls[i]} * ${ls[i+1]}`); g.push(versos.length-1); }
-    if(i<ls.length){ versos.push(ls[i]); g.push(versos.length-1); }
+    for(const t of gruposDe(ls)){ versos.push(verso(ls.slice(i, i+t))); g.push(versos.length-1); i+=t; }
     grupos.push(g);
   });
   return {versos, grupos};
