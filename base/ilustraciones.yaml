@@ -1050,7 +1050,7 @@ imagenes:
   ecclesia:
     album: temaP7-18-4.jpg
     descripcion: «Ecclesia»
-    generica: true
+    comun: dedicacion
   dos-corazones-con-la-cruz:
     album: temaP7-18-5.jpg
     descripcion: Dos corazones con la cruz
@@ -1381,7 +1381,7 @@ imagenes:
   el-santuario-con-incienso:
     album: temaP8-11-3.jpg
     descripcion: El santuario con incienso
-    generica: true
+    comun: dedicacion
   catedral:
     album: temaP8-11-4.jpg
     descripcion: Catedral
