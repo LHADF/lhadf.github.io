@@ -583,12 +583,12 @@ function portadaHTML(){
       <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
     </div>
     ${cals || `<p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>`}
+    <button class="discreto arriba" data-act="oraciones">Oraciones antes y después del oficio</button>
     <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=true, ya=ahora.includes(id);
       if(id==='visperas') n=nombreVisperas();
       return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
     <button class="discreto" data-act="difuntos">Oficio de difuntos</button>
-    <button class="discreto" data-act="oraciones">Oraciones antes y después del oficio</button>
     <p class="nota-proto">Versión de prueba: todas las horas, con el calendario ADF. Los textos y el santoral están en revisión; puede haber errores.</p>
   </div>`;
 }

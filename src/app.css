@@ -90,6 +90,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .btn{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);padding:10px 18px;font-weight:600}
 .btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
 .discreto{align-self:center;border:0;background:none;min-height:44px;padding:8px 12px;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
+.discreto.arriba{margin:-6px 0 2px}
 .orof-b{font-family:var(--serif);font-size:calc(var(--lec)*1rem);line-height:1.5}
 .orof-b h3{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:1.6em 0 .7em}
 .orof-b h3:first-child{margin-top:0}
