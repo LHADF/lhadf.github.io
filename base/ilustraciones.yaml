@@ -1339,12 +1339,6 @@ imagenes:
     album: temaP8-1-4.jpg
     descripcion: Grupo junto al árbol
     generica: true
-  camello:
-    album: temaP8-1-6.jpg
-    descripcion: Camello (el ojo de la aguja)
-    generica: true
-    domingos:
-    - XXVIII Domingo del Tiempo Ordinario (B)
   jesus-con-un-nino:
     album: temaP8-1-7.jpg
     descripcion: Jesús con un niño
@@ -1900,3 +1894,5 @@ descartadas:
   motivo: Recuerdo de un difunto
 - album: unnamed-11.jpg
   motivo: Duplicado del 5
+- album: temaP8-1-6.jpg
+  motivo: Camello (no conviene en la portada)

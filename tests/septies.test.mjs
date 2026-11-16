@@ -523,6 +523,10 @@ test('imágenes de la tarjeta del inicio', () => {
     if (r.t === 'Ordinario' && c && I.comunes[c] && !I.propias[r.n] && !I.domingos[r.n]) { assert.ok(I.comunes[c].includes(en(f, 0)), r.n); memorias++; }
   }
   assert.ok(memorias > 10, memorias);
+  // las dedicaciones sin común propio toman la imagen de la dedicación de una iglesia
+  assert.equal(CP.diaCal('2026-11-18', '').n, 'Dedicación de las Basílicas de San Pedro y San Pablo');
+  for (const h of [0, 1, 2, 3, 4, 5]) assert.ok(I.comunes.dedicacion.includes(en('2026-11-18', h)));
+  assert.ok(!I.img.includes('camello'));
   // franjas del reloj
   const a = h => CP.franjaHoraria(new Date(2027, 0, 1, h, 0));
   assert.deepEqual([2, 6, 9, 12, 15, 18, 22].map(a), [5, 0, 1, 2, 3, 4, 5]);

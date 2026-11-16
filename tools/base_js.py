@@ -314,6 +314,13 @@ def comun_de_texto(t):
     return next((k for p, k in COMUN_TEXTO if p in t), None)
 
 
+def nombres_calendario():
+    cal = open(os.path.join(RAIZ, 'src', 'datos', 'calendario.js'), encoding='utf-8').read()
+    cal = json.loads(cal[cal.index('=') + 1:].rstrip().rstrip(';'))
+    n = cal['campos'].index('n')
+    return {cal['tabla'][r[n]] for r in cal['dias']} | {cal['tabla'][v[2][n]] for vs in cal['var'].values() for v in vs}
+
+
 def ilustraciones():
     Y = leer(os.path.join(B, 'ilustraciones.yaml'))['imagenes']
     claves = list(Y)
@@ -341,6 +348,8 @@ def ilustraciones():
     for n, a in A.items():
         c = a.get('comun') or (a.get('es') in SaL and comun_de_texto(SaL[a['es']].get('comun'))) or (a.get('como') in SaL and comun_de_texto(SaL[a['como']].get('comun')))
         if c: comun_de[n] = c
+    for n in nombres_calendario():   # las dedicaciones sin común dicho, al de la dedicación de una iglesia
+        if n.startswith('Dedicación') and n not in comun_de: comun_de[n] = 'dedicacion'
     datos = {'img': claves, 'd': [Y[k]['descripcion'] for k in claves], 'propias': propias, 'domingos': domingos,
              'comunes': comunes, 'tiempos': tiempos, 'genericas': genericas, 'comunDe': comun_de}
     destino = os.path.join(RAIZ, 'src', 'datos', 'ilustraciones.js')
