@@ -562,6 +562,12 @@ function nombreVisperas(){
   if(man && man.pv && !(hoy.sol && !man.sol) && hoy.t!=='Triduo') return 'I Vísperas';
   return (hoy.dom || hoy.sol) ? 'II Vísperas' : 'Vísperas';
 }
+// Imagen de la tarjeta: la que toca al día y a la franja horaria (completas.js); si no hay, el coro
+function iluHTML(){
+  const i=window.ILU_DIR && window.ILUS ? CP.ilustracion(S.fecha, SEL(), CP.franjaHoraria(new Date())) : null;
+  const url=i==null ? window.ILU : window.ILU_DIR+window.ILUS.img[i]+'.webp', alt=i==null ? 'Coro cantando' : window.ILUS.d[i];
+  return `<span class="ilu" role="img" aria-label="${esc(alt)}" style="--ilu:url(${url})"></span>`;
+}
 function portadaHTML(){
   const r=R(); const esHoy=S.fecha===fechaHoy(), ahora=esHoy?horasAhora():[];
   // Calendarios: solo cuando el día tiene variantes o nota. La ficha gris es lo que se está celebrando; las encendidas, las otras opciones.
@@ -580,7 +586,7 @@ function portadaHTML(){
         <div><div class="hoy">${esc(r.dia.grado)}</div><h2 class="${r.dia.titulo.length>80?'muy-largo':r.dia.titulo.length>48?'largo':''}">${esc(r.dia.titulo)}</h2></div>
         <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
       </div>
-      <div class="arco"><span class="ilu" style="--ilu:url(${window.ILU})"></span></div>
+      <div class="arco">${iluHTML()}</div>
     </div>
     ${cals || `<p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>`}
     <button class="discreto arriba" data-act="oraciones">Oraciones antes y después del oficio</button>

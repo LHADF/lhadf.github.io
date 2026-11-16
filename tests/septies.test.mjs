@@ -490,3 +490,40 @@ test('comunes y propio del libro: oración propia, segunda lectura y oficio ente
   const smo = W.Oficio.armar('2026-11-14', {cal: '', dia: {'2026-11-14': 'Sancta María in sábbato'}});
   assert.equal(smo.secciones.find(s => s.k === 'himno').opciones[0].n, 'Rosa entre rosas');
 });
+
+test('imágenes de la tarjeta del inicio', () => {
+  vm.runInNewContext(readFileSync(new URL('../src/datos/ilustraciones.js', import.meta.url), 'utf8'), ctx);
+  const I = ctx.window.ILUS, C = ctx.window.CAL;
+  // cada imagen tiene su archivo, y no sobra ninguno
+  const archivos = readdirSync(new URL('../src/assets/ilu/', import.meta.url)).filter(f => f.endsWith('.webp')).map(f => f.slice(0, -5)).sort();
+  assert.deepEqual(archivos, [...I.img].sort());
+  // las celebraciones, domingos, comunes y tiempos que nombra existen
+  const nombres = new Set([...C.dias.map(d => C.tabla[d[3]]), ...Object.values(C.var).flatMap(vs => vs.map(v => C.tabla[v[2][3]]))]);
+  for (const n of [...Object.keys(I.propias), ...Object.keys(I.domingos)]) assert.ok(nombres.has(n), n);
+  for (const k of Object.keys(I.comunes)) assert.ok(['dedicacion','virgen-maria','apostoles','varios-martires','un-martir','pastores','doctores','virgenes','santos-varones','santas-mujeres','religiosos','caridad','educadores'].includes(k), k);
+  for (const k of Object.keys(I.tiempos)) assert.ok(['adviento','navidad','cuaresma','pascua'].includes(k), k);
+  // todos los días tienen imagen
+  for (let f = C.desde; f <= C.hasta; f = CP.masDias(f, 1)) assert.ok(CP.ilustracion(f, '', 0) != null, f);
+  const en = (f, h) => CP.ilustracion(f, '', h), seis = f => new Set([0, 1, 2, 3, 4, 5].map(h => en(f, h)));
+  // propia del día, que cambia en cada hora: Viernes Santo
+  assert.ok(I.propias['Viernes Santo de la Pasión del Señor'].includes(en('2027-03-26', 2)));
+  assert.ok(seis('2027-03-26').size > 1);
+  // domingo, según el ciclo: IV de Adviento de 2026 (ciclo B) → la Anunciación
+  assert.equal(CP.ciclo('2026-12-20'), 'B');
+  assert.ok(I.domingos['IV Domingo de Adviento'].B.includes(en('2026-12-20', 0)));
+  // en Cuaresma, una memoria con imagen propia la conserva; sin propia, va la de Cuaresma y no la del común
+  assert.ok(I.propias['San Blas, obispo y mártir'].includes(en('2027-02-03', 0)));   // 2027: San Blas cae fuera de Cuaresma
+  const cua = []; for (let f = '2027-02-10'; f <= '2027-03-20'; f = CP.masDias(f, 1)) { const r = CP.diaCal(f, ''); if (r.t === 'Cuaresma' && !I.propias[r.n] && !I.domingos[r.n]) cua.push(f); }
+  assert.ok(cua.length > 20);
+  for (const f of cua) assert.ok(I.tiempos.cuaresma.includes(en(f, 0)), f);
+  // fuera de Cuaresma, una memoria sin propia toma la de su común
+  let memorias = 0;
+  for (let f = '2027-06-01'; f <= '2027-10-31'; f = CP.masDias(f, 1)) {
+    const r = CP.diaCal(f, ''), c = I.comunDe[r.n];
+    if (r.t === 'Ordinario' && c && I.comunes[c] && !I.propias[r.n] && !I.domingos[r.n]) { assert.ok(I.comunes[c].includes(en(f, 0)), r.n); memorias++; }
+  }
+  assert.ok(memorias > 10, memorias);
+  // franjas del reloj
+  const a = h => CP.franjaHoraria(new Date(2027, 0, 1, h, 0));
+  assert.deepEqual([2, 6, 9, 12, 15, 18, 22].map(a), [5, 0, 1, 2, 3, 4, 5]);
+});

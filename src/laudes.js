@@ -7,13 +7,7 @@ const CP=window.Completas, X=CP._;
 const CAMPOS=['inv_ant','himno','salmodia','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','oracion','en_lugar_del_responsorio','pendiente'];
 const SIN_GLORIA=['cantico-dn-3-57-88-56'];   // el cántico de Daniel 3, 57-88 no lleva Gloria
 
-// Ciclo dominical del año litúrgico (empieza el I Domingo de Adviento)
-function ciclo(fecha){
-  const d=CP.deIso(fecha);
-  const adv=y=>{ const n=new Date(y,11,25,12); n.setDate(n.getDate()-(n.getDay()||7)-21); return n; };
-  const y = d>=adv(d.getFullYear()) ? d.getFullYear() : d.getFullYear()-1;
-  return 'ABC'[(((y-2016)%3)+3)%3];
-}
+const ciclo=CP.ciclo;   // ciclo dominical A/B/C (completas.js)
 
 // Las partes del día, capa sobre capa. hora: 'laudes' | 'visperas'.
 // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.

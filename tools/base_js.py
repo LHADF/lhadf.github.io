@@ -95,6 +95,7 @@ def main():
     visperas()
     oficio()
     intermedia()
+    ilustraciones()
 
 
 # ---------- Laudes: archivo aparte (src/carga/laudes.js), la app lo carga recién al abrir Laudes ----------
@@ -298,6 +299,54 @@ def mayores_sin_intermedia(mapa_inter):
         e = SaL[mapaL[n]]
         if e.get('comun') or e.get('oracion'): out[n] = {'comun': e.get('comun', ''), 'oracion': e.get('oracion', '')}
     return out
+
+
+# ---------- Imágenes de la tarjeta del inicio (base/ilustraciones.yaml → src/datos/ilustraciones.js) ----------
+COMUN_TEXTO = [('religios', 'religiosos'), ('educador', 'educadores'), ('misericordia', 'caridad'), ('virgen maría', 'virgen-maria'),
+               ('dedicación', 'dedicacion'), ('apóstoles', 'apostoles'), ('para un mártir', 'un-martir'), ('varios mártires', 'varios-martires'),
+               ('un márt', 'un-martir'), ('pastores', 'pastores'), ('doctores', 'doctores'), ('vírgenes', 'virgenes'),
+               ('santas mujeres', 'santas-mujeres'), ('santos varones', 'santos-varones')]
+
+
+def comun_de_texto(t):
+    """«Del Común de pastores: para un santo obispo…» → «pastores» (el primero que nombra, salvo las variantes de santos varones)."""
+    t = (t or '').lower()
+    return next((k for p, k in COMUN_TEXTO if p in t), None)
+
+
+def ilustraciones():
+    Y = leer(os.path.join(B, 'ilustraciones.yaml'))['imagenes']
+    claves = list(Y)
+    propias, domingos, comunes, tiempos, genericas = {}, {}, {}, {}, []
+    for i, (k, e) in enumerate(Y.items()):
+        if e.get('propia'): propias.setdefault(e['propia'], []).append(i)
+        elif e.get('comun'): comunes.setdefault(e['comun'], []).append(i)
+        elif e.get('tiempo'): tiempos.setdefault(e['tiempo'], []).append(i)
+        elif e.get('generica'): genericas.append(i)
+        for d in e.get('domingos') or []:
+            m = re.fullmatch(r'(.+) \((A|B|C|ABC)\)', d)
+            assert m, f'ilustraciones: «{d}» ({k}) no dice el ciclo'
+            for c in m[2]: domingos.setdefault(m[1], {}).setdefault(c, []).append(i)
+    # Común de cada celebración del calendario: lo escrito en santoral/adf.yaml, o lo que dice el santoral de la base o el libro
+    SaL = leer(os.path.join(B, 'santoral', 'laudes.yaml'))
+    A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
+    LIB = leer(os.path.join(B, 'santoral', 'libro.yaml')) or {}
+    mapa, _ = vincular_santoral(SaL)
+    comun_de = {}
+    for n, k in mapa.items():
+        c = comun_de_texto(SaL[k].get('comun'))
+        if c: comun_de[n] = c
+    for n, l in LIB.items():
+        if l.get('comun_libro') and n not in comun_de: comun_de[n] = l['comun_libro']
+    for n, a in A.items():
+        c = a.get('comun') or (a.get('es') in SaL and comun_de_texto(SaL[a['es']].get('comun'))) or (a.get('como') in SaL and comun_de_texto(SaL[a['como']].get('comun')))
+        if c: comun_de[n] = c
+    datos = {'img': claves, 'd': [Y[k]['descripcion'] for k in claves], 'propias': propias, 'domingos': domingos,
+             'comunes': comunes, 'tiempos': tiempos, 'genericas': genericas, 'comunDe': comun_de}
+    destino = os.path.join(RAIZ, 'src', 'datos', 'ilustraciones.js')
+    with open(destino, 'w', encoding='utf-8') as f:
+        f.write('window.ILUS=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    print(f'{os.path.relpath(destino, RAIZ)}: {len(claves)} imágenes · común conocido de {len(comun_de)} celebraciones')
 
 
 def _escribir_carga(nombre, var, datos, mapa, sin):

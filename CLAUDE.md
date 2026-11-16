@@ -8,3 +8,4 @@
 - **Armado:** `tools/base_js.py` pasa la base a `src/datos/base.js` (Completas) y a `src/carga/laudes.js`, `visperas.js`, `oficio.js` e `intermedia.js` (se cargan al abrir la hora); `src/completas.js` arma Completas, `src/laudes.js` Laudes y Vísperas, y `src/horas.js` el Oficio de lectura y la Hora intermedia; `app.js` las dibuja. Decisiones: `docs/laudes.md`, `docs/visperas.md`, `docs/horas.md`.
 - Antes de proponer cambios: `node --test tests/*.test.mjs` y `python3 tools/armar.py`.
 - Hablale al usuario en español rioplatense.
+- **Imágenes del inicio:** `base/ilustraciones.yaml` dice cuándo va cada una; `tools/ilustraciones.py <carpeta del álbum>` genera `src/assets/ilu/*.webp` (el álbum no se sube); `base_js.py` arma `src/datos/ilustraciones.js` y `completas.js` elige la del día y la franja horaria.

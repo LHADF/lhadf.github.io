@@ -44,6 +44,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 - **Modo claro:** papel blanco, tinta negra, pergamino `#f4eee4` para tarjetas, arco `#e7ddcc`, tinta de ilustración `#2a201a`. Nada de tonos pastel.
 - **Modo oscuro:** fondo negro puro (`#000`) y superficies en gris neutro (`#161616`, `#111`). Las ilustraciones no se invierten.
 - **Ilustraciones:** grabado y mosaico antiguo, en línea, dentro de arcos de pergamino, sin imágenes pixeladas.
+- **Imagen de la tarjeta del inicio:** grabados de una sola tinta del álbum «Liturgical Cliparts», pintados con la tinta de ilustración sobre el pergamino del arco; entran enteros, apoyados abajo. Cuál va cada día lo dice `base/ilustraciones.yaml`: propia de la celebración o del día (también en Cuaresma) → la del evangelio del domingo, según el ciclo → la del común (en Cuaresma, la del tiempo) → la del tiempo → una genérica. Si el día tiene varias, cambian en cada hora. Las figuras muy angostas llevan una guarda del álbum a cada costado. Nada de escenas modernas ni de textos que contradigan estas reglas (por ejemplo, «Aleluya» con y).
 - **Controles:** escondidos. Nada de barras inferiores ni índice: todo está en el menú «⋯» (lectura, aspecto, canto).
 - **Modo claro por defecto;** el oscuro solo si la persona lo elige.
 - **Una sola versión de cada texto.** No hay selector de versiones.

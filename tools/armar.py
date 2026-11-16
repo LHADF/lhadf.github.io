@@ -47,7 +47,7 @@ cuerpo = f'''<style>{leer('assets', 'signos.css')}
 <script>{leer('cantoral.js')}</script>
 <script>{leer('salmodia.js')}</script>
 <script>{''.join(leer('datos', f) for f in datos)}
-window.ILU="data:image/png;base64,{ilustracion}";</script>
+window.ILU="data:image/png;base64,{ilustracion}";window.ILU_DIR={"null" if "--artifact" in sys.argv else "'ilu/'"};</script>
 <script>{leer('completas.js')}</script>
 <script>{leer('laudes.js')}</script>
 <script>{leer('horas.js')}</script>
@@ -63,6 +63,11 @@ for _h in ('laudes', 'visperas', 'oficio', 'intermedia'):
     shutil.copyfile(os.path.join(SRC, 'carga', _h + '.js'), os.path.join(DIST, _h + '.js'))
     _urls[_h] = _h + '.js?v=' + hashlib.md5(_l).hexdigest()[:8]
 import json as _json
+# Imágenes de la tarjeta del inicio (src/assets/ilu, de tools/ilustraciones.py): archivos aparte; la app carga solo la del día.
+# Publicada como Artifact no hay archivos aparte: queda el coro.
+if '--artifact' not in sys.argv:
+    shutil.rmtree(os.path.join(DIST, 'ilu'), ignore_errors=True)
+    shutil.copytree(os.path.join(SRC, 'assets', 'ilu'), os.path.join(DIST, 'ilu'))
 cuerpo = cuerpo.replace("<script>" + leer('app.js'), "<script>window.HORAS_URL=" + _json.dumps(_urls) + ";" + leer('app.js'))
 if '--artifact' in sys.argv:
     destino, html = os.path.join(DIST, 'artifact.html'), cabeza + cuerpo

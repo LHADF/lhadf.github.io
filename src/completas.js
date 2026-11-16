@@ -30,6 +30,29 @@ function diaCal(fecha, sel){
   for(let c=sel.cal; c; c=CAL.padres[c]){ const v=vs.find(v=>v.tipo==='r'&&v.siglas.includes(c)); if(v) return v.f; }   // el calendario preferido o el de su país
   return base;
 }
+// Ciclo dominical del año litúrgico (empieza el I Domingo de Adviento)
+function ciclo(fecha){
+  const d=deIso(fecha);
+  const adv=y=>{ const n=new Date(y,11,25,12); n.setDate(n.getDate()-(n.getDay()||7)-21); return n; };
+  const y = d>=adv(d.getFullYear()) ? d.getFullYear() : d.getFullYear()-1;
+  return 'ABC'[(((y-2016)%3)+3)%3];
+}
+
+/* Imagen de la tarjeta del inicio (window.ILUS, de base/ilustraciones.yaml). Orden: propia de la celebración o del día
+   (también en Cuaresma) → la del evangelio del domingo, según el ciclo → la del común (en Cuaresma, no: va la del
+   tiempo) → la del tiempo → una genérica. Si hay varias, cambian con la franja horaria (0 Oficio y Laudes, 1 Tercia,
+   2 Sexta, 3 Nona, 4 Vísperas, 5 Completas) y, de un día al otro, se corren seis lugares. Devuelve el índice o null. */
+const TIEMPO_ILU={Adviento:'adviento', Navidad:'navidad', Cuaresma:'cuaresma', Triduo:'cuaresma', Pascua:'pascua'};
+function franjaHoraria(d){ const m=d.getHours()*60+d.getMinutes();
+  return m<4*60 ? 5 : m<7*60+30 ? 0 : m<10*60+30 ? 1 : m<13*60+30 ? 2 : m<16*60+30 ? 3 : m<20*60 ? 4 : 5; }
+function ilustracion(fecha, sel, franja){
+  const I=window.ILUS, r=diaCal(fecha, sel); if(!I || !r) return null;
+  const cuaresma=r.t==='Cuaresma', com=I.comunDe[r.n]==='santa-maria-sabado' ? 'virgen-maria' : I.comunDe[r.n];
+  const l=I.propias[r.n] || (I.domingos[r.n]||{})[ciclo(fecha)] || (!cuaresma && com && I.comunes[com]) || I.tiempos[TIEMPO_ILU[r.t]] || I.genericas;
+  if(!l || !l.length) return null;
+  const dia=Math.round((deIso(fecha)-deIso('2000-01-01'))/864e5);
+  return l[(dia*6+(franja||0))%l.length];
+}
 // Para el inicio: todas las celebraciones posibles del día (la primera, la del calendario ADF) y cuál está elegida
 function opcionesDia(fecha, sel){
   const base=fichaBase(fecha); if(!base) return [];
@@ -338,6 +361,6 @@ function armar(fecha, region){
   };
 }
 
-window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, calendarios:CAL.calendarios,
+window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
   _:{modo:{}, oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

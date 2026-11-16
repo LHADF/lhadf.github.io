@@ -1,0 +1,1902 @@
+# Imágenes de la tarjeta del inicio, del álbum «Liturgical Cliparts» (grabados de una sola tinta). El álbum no está
+# en el repositorio: tools/ilustraciones.py convierte cada original («album») en src/assets/ilu/<clave>.webp.
+# Cada imagen dice cuándo va:
+#   propia: nombre de la celebración o del día en el calendario (también en Cuaresma)
+#   domingos: domingos o fiestas cuyo evangelio ilustra, con el ciclo: (A), (B), (C) o (ABC)
+#   comun: clave de base/comunes/ (en Cuaresma las memorias sin imagen propia llevan la del tiempo)
+#   tiempo: adviento, navidad, cuaresma o pascua
+#   generica: true, para cualquier día sin otra
+#   guarda: rosetas, rombos o zigzag, a los dos costados de las figuras muy angostas
+# Orden: propia → domingo → común → tiempo → genérica. Si el día tiene varias, cambian en cada hora.
+# «descartadas»: lo que no se usa del álbum, con el motivo.
+imagenes:
+  pesebre-con-ic-xc:
+    album: 12_24_16_-_christmas_eve.jpg
+    descripcion: Pesebre con IC XC (línea fina)
+    tiempo: navidad
+  adoracion-de-los-magos:
+    album: 1_6_19_-_festival_of_epiphany.jpg
+    descripcion: Adoración de los Magos
+    propia: Epifanía del Señor
+  simeon-y-ana-con-el-nino:
+    album: 2018 ADF Cancionero Ciclo de Navidad Interior color.jpg
+    descripcion: Simeón y Ana con el Niño
+    propia: Presentación del Señor en el Templo y Purificación de la Virgen María
+    domingos:
+    - Sagrada Familia de Jesús, María y José (B)
+  arbol-de-jese:
+    album: 2018 ADF Vigilia de la Natividad del Se#U00f1or - Interior blanco y negro.jpg
+    descripcion: Árbol de Jesé (Jesé dormido)
+    tiempo: adviento
+  anunciacion-bajo-arcos:
+    album: B-06F.jpg
+    descripcion: Anunciación bajo arcos
+    propia: Anunciación del Señor
+    domingos:
+    - IV Domingo de Adviento (B)
+  los-magos-a-caballo:
+    album: Reyes.jpg
+    descripcion: Los Magos a caballo
+    tiempo: navidad
+  musicos-alabanza:
+    album: image--011.png
+    descripcion: 'Músicos: alabanza'
+    generica: true
+  adoracion-de-los-magos-2:
+    album: reyes 2.jpg
+    descripcion: Adoración de los Magos
+    propia: Epifanía del Señor
+  tinajas:
+    album: temaP1-1-3.jpg
+    descripcion: Tinajas (Caná)
+    generica: true
+    domingos:
+    - II Domingo del Tiempo Ordinario (C)
+  mujer-en-vela-de-noche:
+    album: temaP1-1-4.jpg
+    descripcion: Mujer en vela, de noche
+    tiempo: adviento
+    domingos:
+    - I Domingo de Adviento (B)
+    guarda: zigzag
+  mujer-orando-junto-a-la-ventana:
+    album: temaP1-1-5.jpg
+    descripcion: Mujer orando junto a la ventana
+    comun: santas-mujeres
+  eli-y-samuel:
+    album: temaP1-1-6.jpg
+    descripcion: Elí y Samuel
+    generica: true
+    domingos:
+    - II Domingo del Tiempo Ordinario (B)
+  pastora-con-ovejas:
+    album: temaP1-2-3.jpg
+    descripcion: Pastora con ovejas
+    generica: true
+  el-ladron-en-la-noche:
+    album: temaP1-2-4.jpg
+    descripcion: El ladrón en la noche
+    tiempo: adviento
+    domingos:
+    - I Domingo de Adviento (A)
+    guarda: zigzag
+  abrazo-de-maria-e-isabel:
+    album: temaP1-2-5.jpg
+    descripcion: Abrazo de María e Isabel
+    propia: Visitación de la Bienaventurada Virgen María
+    domingos:
+    - IV Domingo de Adviento (C)
+  juan-bautista-predica-en-el-jordan:
+    album: temaP1-2-6.jpg
+    descripcion: Juan Bautista predica en el Jordán
+    tiempo: adviento
+    domingos:
+    - II Domingo de Adviento (ABC)
+  trigo-y-cosecha:
+    album: temaP1-2-7.jpg
+    descripcion: Trigo y cosecha
+    generica: true
+  anunciacion:
+    album: temaP1-3-1.jpg
+    descripcion: Anunciación
+    propia: Anunciación del Señor
+    domingos:
+    - IV Domingo de Adviento (B)
+  dos-mujeres-con-instrumento:
+    album: temaP1-3-3.jpg
+    descripcion: Dos mujeres con instrumento
+    generica: true
+  juan-bautista-en-la-carcel:
+    album: temaP1-4-1.jpg
+    descripcion: Juan Bautista en la cárcel
+    tiempo: adviento
+    domingos:
+    - III Domingo de Adviento «Gaudete» (A)
+  hombre-y-paloma:
+    album: temaP1-4-2.jpg
+    descripcion: Hombre y paloma
+    generica: true
+  dos-figuras-junto-al-arbol:
+    album: temaP1-4-3.jpg
+    descripcion: Dos figuras junto al árbol
+    generica: true
+  el-desierto-florecera:
+    album: temaP1-4-4.jpg
+    descripcion: El desierto florecerá
+    tiempo: adviento
+    domingos:
+    - III Domingo de Adviento «Gaudete» (A)
+  jesus-entre-fariseos:
+    album: temaP1-4-6.jpg
+    descripcion: Jesús entre fariseos
+    generica: true
+  arca-de-la-alianza:
+    album: temaP1-5-1.jpg
+    descripcion: Arca de la alianza
+    comun: virgen-maria
+  david-y-natan:
+    album: temaP1-5-2.jpg
+    descripcion: David y Natán
+    tiempo: adviento
+    domingos:
+    - IV Domingo de Adviento (B)
+  cruz-con-profetas:
+    album: temaP1-5-3.jpg
+    descripcion: Cruz con profetas
+    tiempo: cuaresma
+  angel-con-ave-maria:
+    album: temaP1-5-4.jpg
+    descripcion: Ángel con «Ave Maria»
+    comun: virgen-maria
+  camino-a-belen:
+    album: temaP1-5-5.jpg
+    descripcion: Camino a Belén
+    tiempo: navidad
+    domingos:
+    - Sagrada Familia de Jesús, María y José (A)
+  anunciacion-2:
+    album: temaP1-5-6.jpg
+    descripcion: Anunciación
+    propia: Anunciación del Señor
+    domingos:
+    - IV Domingo de Adviento (B)
+  huida-a-egipto:
+    album: temaP2-1-1.jpg
+    descripcion: Huida a Egipto (medallón)
+    propia: Sagrada Familia de Jesús, María y José
+    domingos:
+    - Sagrada Familia de Jesús, María y José (A)
+  retono-del-tronco-de-jese:
+    album: temaP2-1-2.jpg
+    descripcion: Retoño del tronco de Jesé
+    tiempo: adviento
+    guarda: rosetas
+  belen-y-la-estrella:
+    album: temaP2-1-3.jpg
+    descripcion: Belén y la estrella
+    tiempo: navidad
+  angeles-gloria-in-excelsis:
+    album: temaP2-1-4.jpg
+    descripcion: Ángeles «Gloria in excelsis»
+    propia: Natividad del Señor
+  san-esteban:
+    album: temaP2-2-1.jpg
+    descripcion: San Esteban
+    propia: San Esteban, protomártir
+  santos-inocentes:
+    album: temaP2-2-5.jpg
+    descripcion: Santos Inocentes
+    propia: Santos Inocentes, mártires
+  presentacion-con-ana-y-simeon:
+    album: temaP2-2-6.jpg
+    descripcion: Presentación con «Ana» y «Simeón»
+    propia: Presentación del Señor en el Templo y Purificación de la Virgen María
+    domingos:
+    - Sagrada Familia de Jesús, María y José (B)
+  sacerdote-con-candelabro:
+    album: temaP2-3-2.jpg
+    descripcion: Sacerdote con candelabro
+    generica: true
+  oracion-con-incienso:
+    album: temaP2-3-3.jpg
+    descripcion: Oración con incienso
+    generica: true
+  santos-basilio-y-gregorio:
+    album: temaP2-3-5.jpg
+    descripcion: Santos Basilio y Gregorio
+    propia: Santos Basilio Magno y Gregorio Nacianceno, obispos y doctores de la Iglesia
+  maria-con-el-nino-magos-y-pastor:
+    album: temaP2-3-6.jpg
+    descripcion: María con el Niño, Magos y pastor
+    propia: Santa María, Madre de Dios
+  maria-con-el-nino-y-la-estrella:
+    album: temaP2-4-2.jpg
+    descripcion: María con el Niño y la estrella
+    propia: Santa María, Madre de Dios
+    guarda: zigzag
+  los-magos-ante-herodes:
+    album: temaP2-4-3.jpg
+    descripcion: Los Magos ante Herodes
+    tiempo: navidad
+  cantores-con-la-estrella:
+    album: temaP2-4-6.jpg
+    descripcion: Cantores con la estrella
+    tiempo: navidad
+  llamando-a-la-puerta:
+    album: temaP2-5-1.jpg
+    descripcion: Llamando a la puerta
+    generica: true
+    domingos:
+    - XVII Domingo del Tiempo Ordinario (C)
+  jesus-con-los-discipulos:
+    album: temaP2-5-2.jpg
+    descripcion: Jesús con los discípulos
+    generica: true
+  paloma-con-ramo-de-olivo:
+    album: temaP2-5-3.jpg
+    descripcion: Paloma con ramo de olivo
+    generica: true
+  dos-peces:
+    album: temaP2-5-4.jpg
+    descripcion: Dos peces
+    generica: true
+  bautismo-este-es-mi-amado:
+    album: temaP2-5-6.jpg
+    descripcion: 'Bautismo: «Este es mi amado»'
+    propia: Bautismo del Señor
+  santo-tomas-de-aquino:
+    album: temaP2-5-7.jpg
+    descripcion: Santo Tomás de Aquino
+    propia: Santo Tomás de Aquino, presbítero y doctor de la Iglesia
+  san-antonio-abad-con-el-baston-en-tau:
+    album: temaP3-1-1.jpg
+    descripcion: San Antonio abad, con el bastón en tau
+    propia: San Antonio, abad
+    guarda: zigzag
+  arca-y-samuel-dormido:
+    album: temaP3-1-2.jpg
+    descripcion: Arca y Samuel dormido
+    generica: true
+    domingos:
+    - II Domingo del Tiempo Ordinario (B)
+  santa-ines-con-el-cordero:
+    album: temaP3-1-3.jpg
+    descripcion: Santa Inés con el cordero
+    propia: Santa Inés, virgen y mártir
+    guarda: rombos
+  juan-bautista-este-es-el-cordero-de-dios:
+    album: temaP3-1-4.jpg
+    descripcion: 'Juan Bautista: «Este es el Cordero de Dios»'
+    tiempo: adviento
+    domingos:
+    - III Domingo de Adviento «Gaudete» (B)
+    - II Domingo del Tiempo Ordinario (A)
+  pablo-predica:
+    album: temaP3-1-5.jpg
+    descripcion: Pablo predica (1 Corintios)
+    generica: true
+  jesus-llama-a-los-discipulos:
+    album: temaP3-1-6.jpg
+    descripcion: Jesús llama a los discípulos
+    generica: true
+    domingos:
+    - II Domingo del Tiempo Ordinario (B)
+  ninive:
+    album: temaP3-2-4.jpg
+    descripcion: Nínive
+    generica: true
+    domingos:
+    - III Domingo del Tiempo Ordinario (B)
+  cantores-con-la-estrella-2:
+    album: temaP3-2-5.jpg
+    descripcion: Cantores con la estrella
+    tiempo: navidad
+  pescadores-en-la-barca:
+    album: temaP3-2-6.jpg
+    descripcion: Pescadores en la barca
+    generica: true
+    domingos:
+    - III Domingo del Tiempo Ordinario (A)
+    - III Domingo del Tiempo Ordinario (B)
+  jesus-llama-desde-la-orilla:
+    album: temaP3-2-7.jpg
+    descripcion: Jesús llama desde la orilla
+    generica: true
+    domingos:
+    - III Domingo de Pascua (C)
+    - V Domingo del Tiempo Ordinario (C)
+  tres-velas:
+    album: temaP3-3-1.jpg
+    descripcion: Tres velas (Candelaria)
+    propia: Presentación del Señor en el Templo y Purificación de la Virgen María
+  profeta-ante-el-pueblo:
+    album: temaP3-3-2.jpg
+    descripcion: Profeta ante el pueblo
+    generica: true
+    domingos:
+    - IV Domingo del Tiempo Ordinario (B)
+  pastor-con-ovejas:
+    album: temaP3-3-3.jpg
+    descripcion: Pastor con ovejas (David)
+    generica: true
+  jesus-libera-a-un-endemoniado:
+    album: temaP3-3-6.jpg
+    descripcion: Jesús libera a un endemoniado
+    generica: true
+    domingos:
+    - IV Domingo del Tiempo Ordinario (B)
+  bendicion-de-las-velas:
+    album: temaP3-4-1.jpg
+    descripcion: Bendición de las velas
+    propia: Presentación del Señor en el Templo y Purificación de la Virgen María
+  san-blas:
+    album: temaP3-4-2.jpg
+    descripcion: San Blas
+    propia: San Blas, obispo y mártir
+    guarda: rombos
+  presentacion-en-el-templo:
+    album: temaP3-4-4.jpg
+    descripcion: Presentación en el templo
+    propia: Presentación del Señor en el Templo y Purificación de la Virgen María
+    domingos:
+    - Sagrada Familia de Jesús, María y José (B)
+  santa-escolastica:
+    album: temaP3-5-1.jpg
+    descripcion: Santa Escolástica
+    propia: Santa Escolástica, virgen
+    guarda: zigzag
+  job:
+    album: temaP3-5-2.jpg
+    descripcion: Job
+    generica: true
+    domingos:
+    - V Domingo del Tiempo Ordinario (B)
+  santa-agata:
+    album: temaP3-5-4.jpg
+    descripcion: Santa Ágata
+    propia: Santa Ágata, virgen y mártir
+    guarda: zigzag
+  jesus-ora-en-el-desierto:
+    album: temaP3-5-5.jpg
+    descripcion: Jesús ora en el desierto
+    generica: true
+    domingos:
+    - V Domingo del Tiempo Ordinario (B)
+  jesus-cura-a-la-suegra-de-pedro:
+    album: temaP3-5-6.jpg
+    descripcion: Jesús cura a la suegra de Pedro
+    generica: true
+    domingos:
+    - V Domingo del Tiempo Ordinario (B)
+  santos-cirilo-y-metodio:
+    album: temaP3-6-5.jpg
+    descripcion: Santos Cirilo y Metodio
+    propia: Santos Cirilo, monje, y Metodio, obispo
+  jesus-y-el-leproso:
+    album: temaP3-6-7.jpg
+    descripcion: Jesús y el leproso
+    generica: true
+    domingos:
+    - VI Domingo del Tiempo Ordinario (B)
+  palmeras-junto-al-agua:
+    album: temaP3-7-1.jpg
+    descripcion: Palmeras junto al agua (Sal 1)
+    comun: santos-varones
+  paloma:
+    album: temaP3-7-2.jpg
+    descripcion: Paloma (II Corintios)
+    generica: true
+  el-paralitico-bajado-por-el-techo:
+    album: temaP3-7-6.jpg
+    descripcion: El paralítico bajado por el techo
+    generica: true
+    domingos:
+    - VII Domingo del Tiempo Ordinario (B)
+  pablo-vosotros-sois-mi-carta:
+    album: temaP3-8-3.jpg
+    descripcion: 'Pablo: «Vosotros sois mi carta»'
+    generica: true
+  copa-y-pan:
+    album: temaP3-8-4.jpg
+    descripcion: Copa y pan
+    generica: true
+    domingos:
+    - VIII Domingo del Tiempo Ordinario (B)
+  jarra-y-jofaina:
+    album: temaP3-9-5.jpg
+    descripcion: Jarra y jofaina (lavatorio)
+    propia: Jueves Santo
+  jesus-y-el-joven-rico:
+    album: temaP3-9-6.jpg
+    descripcion: Jesús y el joven rico
+    generica: true
+    domingos:
+    - XXVIII Domingo del Tiempo Ordinario (B)
+  alcancia-pobres:
+    album: temaP4-1-2.jpg
+    descripcion: Alcancía «Pobres» (limosna)
+    propia: Miércoles de Ceniza
+  incienso-en-el-templo:
+    album: temaP4-1-4.jpg
+    descripcion: Incienso en el templo
+    generica: true
+  palmas:
+    album: temaP4-1-5.jpg
+    descripcion: Palmas
+    propia: Domingo de Ramos en la Pasión del Señor
+  arco-con-sol-y-luna:
+    album: temaP4-2-1.jpg
+    descripcion: Arco con sol y luna
+    generica: true
+    domingos:
+    - I Domingo de Cuaresma (ABC)
+  bautismo-en-la-fuente-cirio-pascual:
+    album: temaP4-2-2.jpg
+    descripcion: Bautismo en la fuente, cirio pascual
+    tiempo: pascua
+  pila-bautismal-y-cirio-pascual:
+    album: temaP4-2-4.jpg
+    descripcion: Pila bautismal y cirio pascual
+    tiempo: pascua
+  sacrificio-de-isaac:
+    album: temaP4-2-6.jpg
+    descripcion: Sacrificio de Isaac
+    tiempo: cuaresma
+    domingos:
+    - II Domingo de Cuaresma (B)
+  arca-de-noe:
+    album: temaP4-2-7.jpg
+    descripcion: Arca de Noé
+    tiempo: cuaresma
+    domingos:
+    - I Domingo de Cuaresma (B)
+  cristo-en-la-mandorla:
+    album: temaP4-3-2.jpg
+    descripcion: Cristo en la mandorla
+    generica: true
+  abraham-e-isaac:
+    album: temaP4-3-4.jpg
+    descripcion: Abraham e Isaac
+    tiempo: cuaresma
+    domingos:
+    - II Domingo de Cuaresma (B)
+  no-lo-digais-a-nadie:
+    album: temaP4-3-5.jpg
+    descripcion: «No lo digáis a nadie»
+    propia: Transfiguración del Señor
+    domingos:
+    - II Domingo de Cuaresma (ABC)
+  transfiguracion:
+    album: temaP4-3-6.jpg
+    descripcion: Transfiguración
+    propia: Transfiguración del Señor
+    domingos:
+    - II Domingo de Cuaresma (ABC)
+  moises-con-las-tablas:
+    album: temaP4-4-2.jpg
+    descripcion: Moisés con las tablas
+    tiempo: cuaresma
+    domingos:
+    - III Domingo de Cuaresma (B)
+  crucifijo-ic-xc-nika:
+    album: temaP4-4-5.jpg
+    descripcion: Crucifijo IC XC NIKA
+    propia: Exaltación de la Santa Cruz
+  expulsion-de-los-mercaderes:
+    album: temaP4-4-6.jpg
+    descripcion: Expulsión de los mercaderes
+    tiempo: cuaresma
+    domingos:
+    - III Domingo de Cuaresma (B)
+  arpa:
+    album: temaP4-5-2.jpg
+    descripcion: Arpa
+    generica: true
+  mujer-orando-bajo-el-arbol:
+    album: temaP4-5-3.jpg
+    descripcion: Mujer orando bajo el árbol
+    generica: true
+    guarda: zigzag
+  rey-con-dios-este-cantico:
+    album: temaP4-5-4.jpg
+    descripcion: Rey con «Dios… este cántico»
+    generica: true
+  serpiente-de-bronce:
+    album: temaP4-5-5.jpg
+    descripcion: Serpiente de bronce
+    propia: Exaltación de la Santa Cruz
+    domingos:
+    - IV Domingo de Cuaresma «Lætare» (B)
+  el-hijo-prodigo:
+    album: temaP4-5-7.jpg
+    descripcion: El hijo pródigo
+    tiempo: cuaresma
+    domingos:
+    - IV Domingo de Cuaresma «Lætare» (C)
+  ecce-homo:
+    album: temaP4-6-2.jpg
+    descripcion: Ecce Homo
+    propia: Viernes Santo de la Pasión del Señor
+  lampara-jarra-y-jofaina:
+    album: temaP4-6-3.jpg
+    descripcion: Lámpara, jarra y jofaina
+    generica: true
+  angel-lo-he-glorificado:
+    album: temaP4-6-4.jpg
+    descripcion: 'Ángel: «Lo he glorificado»'
+    tiempo: cuaresma
+    domingos:
+    - V Domingo de Cuaresma (B)
+  grano-de-trigo:
+    album: temaP4-6-5.jpg
+    descripcion: Grano de trigo
+    tiempo: cuaresma
+    domingos:
+    - V Domingo de Cuaresma (B)
+  jesus-ante-la-multitud:
+    album: temaP4-6-6.jpg
+    descripcion: Jesús ante la multitud (Lázaro)
+    tiempo: cuaresma
+    domingos:
+    - V Domingo de Cuaresma (A)
+  tunica-y-dados:
+    album: temaP4-7-1.jpg
+    descripcion: Túnica y dados
+    propia: Viernes Santo de la Pasión del Señor
+  domingo-de-ramos-hosanna:
+    album: temaP4-7-2.jpg
+    descripcion: 'Domingo de Ramos: «Hosanna»'
+    propia: Domingo de Ramos en la Pasión del Señor
+  uncion-en-betania:
+    album: temaP4-7-3.jpg
+    descripcion: Unción en Betania
+    propia: Lunes Santo
+  jofaina-y-jarra:
+    album: temaP4-7-4.jpg
+    descripcion: Jofaina y jarra (lavatorio)
+    propia: Jueves Santo
+  portadores-de-palmas:
+    album: temaP4-7-5.jpg
+    descripcion: Portadores de palmas
+    propia: Domingo de Ramos en la Pasión del Señor
+  entrada-en-jerusalen:
+    album: temaP4-7-6.jpg
+    descripcion: Entrada en Jerusalén
+    propia: Domingo de Ramos en la Pasión del Señor
+  la-cena:
+    album: temaP5-1-1.jpg
+    descripcion: La Cena
+    propia: Jueves Santo
+    guarda: zigzag
+  la-cena-2:
+    album: temaP5-1-2.jpg
+    descripcion: La Cena
+    propia: Jueves Santo
+  lavatorio-de-los-pies:
+    album: temaP5-1-3.jpg
+    descripcion: Lavatorio de los pies
+    propia: Jueves Santo
+  los-santos-oleos:
+    album: temaP5-1-4.jpg
+    descripcion: Los santos óleos
+    propia: Jueves Santo
+    guarda: zigzag
+  getsemani:
+    album: temaP5-1-5.jpg
+    descripcion: Getsemaní
+    propia: Jueves Santo
+  la-ultima-cena:
+    album: temaP5-1-6.jpg
+    descripcion: La Última Cena
+    propia: Jueves Santo
+  crucifixion-con-los-ladrones:
+    album: temaP5-2-3.jpg
+    descripcion: Crucifixión con los ladrones
+    propia: Viernes Santo de la Pasión del Señor
+  orante-de-rodillas:
+    album: temaP5-2-4.jpg
+    descripcion: Orante de rodillas
+    generica: true
+    guarda: zigzag
+  cruz-y-vela:
+    album: temaP5-2-6.jpg
+    descripcion: Cruz y vela (Viernes Santo)
+    propia: Viernes Santo de la Pasión del Señor
+  sepultura:
+    album: temaP5-2-7.jpg
+    descripcion: Sepultura
+    propia: Sábado Santo
+  el-mar-rojo:
+    album: temaP5-3-2.jpg
+    descripcion: El mar Rojo
+    propia: Domingo de Pascua de la Resurrección del Señor
+  bautismo-con-cirio-pascual:
+    album: temaP5-3-4.jpg
+    descripcion: Bautismo con cirio pascual
+    tiempo: pascua
+  angel-en-el-sepulcro-no-esta-aqui:
+    album: temaP5-3-6.jpg
+    descripcion: 'Ángel en el sepulcro: «No está aquí»'
+    propia: Domingo de Pascua de la Resurrección del Señor
+  azucena:
+    album: temaP5-3-7.jpg
+    descripcion: Azucena
+    tiempo: pascua
+  anciano-ante-la-multitud:
+    album: temaP6-1-2.jpg
+    descripcion: Anciano ante la multitud
+    generica: true
+  cordero-en-el-sol:
+    album: temaP6-1-3.jpg
+    descripcion: Cordero en el sol
+    tiempo: pascua
+  natanael-bajo-la-higuera:
+    album: temaP6-1-6.jpg
+    descripcion: Natanael bajo la higuera
+    propia: San Bartolomé, apóstol
+  santa-catalina-de-siena:
+    album: temaP6-2-1.jpg
+    descripcion: Santa Catalina de Siena
+    propia: Santa Catalina de Siena, virgen y doctora de la Iglesia
+    guarda: rombos
+  mujeres-ante-los-ancianos:
+    album: temaP6-2-2.jpg
+    descripcion: Mujeres ante los ancianos
+    generica: true
+  san-jorge-y-el-dragon:
+    album: temaP6-2-4.jpg
+    descripcion: San Jorge y el dragón
+    propia: San Jorge, mártir
+    guarda: rombos
+  hombre-arrodillado:
+    album: temaP6-2-5.jpg
+    descripcion: Hombre arrodillado
+    generica: true
+  curacion-del-ciego:
+    album: temaP6-2-6.jpg
+    descripcion: Curación del ciego
+    tiempo: cuaresma
+    domingos:
+    - IV Domingo de Cuaresma «Lætare» (A)
+  pentecostes:
+    album: temaP6-3-3.jpg
+    descripcion: Pentecostés
+    propia: Domingo de Pentecostés
+    guarda: rosetas
+  resucitado-en-la-mandorla:
+    album: temaP6-3-4.jpg
+    descripcion: Resucitado en la mandorla
+    propia: Domingo de Pascua de la Resurrección del Señor
+  leon-alado-de-san-marcos:
+    album: temaP6-3-5.jpg
+    descripcion: León alado de san Marcos
+    propia: San Marcos, evangelista
+  jesus-entre-los-discipulos:
+    album: temaP6-3-6.jpg
+    descripcion: Jesús entre los discípulos
+    tiempo: pascua
+    domingos:
+    - III Domingo de Pascua (B)
+  el-buen-samaritano:
+    album: temaP6-4-1.jpg
+    descripcion: El buen samaritano
+    generica: true
+    domingos:
+    - XV Domingo del Tiempo Ordinario (C)
+  pastor-con-el-cordero:
+    album: temaP6-4-4.jpg
+    descripcion: Pastor con el cordero
+    tiempo: pascua
+    domingos:
+    - IV Domingo de Pascua (ABC)
+  el-buen-pastor:
+    album: temaP6-4-6.jpg
+    descripcion: El Buen Pastor
+    comun: pastores
+    domingos:
+    - IV Domingo de Pascua (ABC)
+  cordero-y-estrella:
+    album: temaP6-4-7.jpg
+    descripcion: Cordero y estrella
+    generica: true
+  cristo-y-los-sepulcros:
+    album: temaP6-5-2.jpg
+    descripcion: Cristo y los sepulcros
+    propia: Todos los Fieles Difuntos
+  pablo-y-bernabe:
+    album: temaP6-5-3.jpg
+    descripcion: Pablo y Bernabé
+    propia: San Bernabé, apóstol
+  lirio:
+    album: temaP6-5-4.jpg
+    descripcion: Lirio
+    comun: virgenes
+  racimo-de-uvas:
+    album: temaP6-5-5.jpg
+    descripcion: Racimo de uvas
+    generica: true
+    domingos:
+    - V Domingo de Pascua (B)
+  yo-soy-la-vid:
+    album: temaP6-5-6.jpg
+    descripcion: «Yo soy la vid»
+    tiempo: pascua
+    domingos:
+    - V Domingo de Pascua (B)
+  imposicion-de-manos:
+    album: temaP6-6-2.jpg
+    descripcion: Imposición de manos
+    comun: pastores
+  corona-de-espigas:
+    album: temaP6-6-3.jpg
+    descripcion: Corona de espigas
+    generica: true
+  san-isidro-labrador:
+    album: temaP6-6-4.jpg
+    descripcion: San Isidro labrador
+    propia: San Isidro, labrador
+    guarda: rosetas
+  jesus-ensena:
+    album: temaP6-6-6.jpg
+    descripcion: Jesús enseña
+    generica: true
+  que-haceis-mirando-al-cielo:
+    album: temaP6-7-3.jpg
+    descripcion: «¿Qué hacéis mirando al cielo?»
+    propia: Ascensión del Señor
+  ascension:
+    album: temaP6-7-4.jpg
+    descripcion: Ascensión
+    propia: Ascensión del Señor
+    guarda: rosetas
+  cristo-en-majestad:
+    album: temaP6-7-5.jpg
+    descripcion: Cristo en majestad
+    propia: Nuestro Señor Jesucristo, Rey del Universo
+  hombres-orando:
+    album: temaP6-7-6.jpg
+    descripcion: Hombres orando
+    generica: true
+  cristo-bendice:
+    album: temaP6-7-7.jpg
+    descripcion: Cristo bendice
+    generica: true
+  dos-hombres-bajo-arcos:
+    album: temaP6-8-1.jpg
+    descripcion: Dos hombres bajo arcos
+    generica: true
+  san-miguel-bendecid-al-senor-todos-sus-angeles:
+    album: temaP6-8-2.jpg
+    descripcion: 'San Miguel: «Bendecid al Señor, todos sus ángeles»'
+    propia: San Miguel Arcángel
+  jesus-con-los-discipulos-2:
+    album: temaP6-8-6.jpg
+    descripcion: Jesús con los discípulos
+    tiempo: pascua
+    domingos:
+    - III Domingo de Pascua (B)
+  torre-de-babel:
+    album: temaP6-9-1.jpg
+    descripcion: Torre de Babel
+    generica: true
+  ezequiel-y-los-huesos-secos:
+    album: temaP6-9-2.jpg
+    descripcion: Ezequiel y los huesos secos
+    tiempo: pascua
+  pentecostes-2:
+    album: temaP6-9-3.jpg
+    descripcion: Pentecostés
+    propia: Domingo de Pentecostés
+  sol-y-luna:
+    album: temaP6-9-4.jpg
+    descripcion: Sol y luna
+    generica: true
+    domingos:
+    - I Domingo de Adviento (C)
+    - XXXIII Domingo del Tiempo Ordinario (B)
+  hombre-en-el-viento:
+    album: temaP6-9-5.jpg
+    descripcion: Hombre en el viento
+    tiempo: pascua
+  paloma-y-llamas:
+    album: temaP6-9-6.jpg
+    descripcion: Paloma y llamas
+    propia: Domingo de Pentecostés
+  orante-abba:
+    album: temaP7-1-1.jpg
+    descripcion: 'Orante: «Abba»'
+    generica: true
+    guarda: zigzag
+  moises-y-el-pueblo:
+    album: temaP7-1-2.jpg
+    descripcion: Moisés y el pueblo
+    generica: true
+  trebol-y-triangulo:
+    album: temaP7-1-3.jpg
+    descripcion: Trébol y triángulo
+    propia: Santísima Trinidad
+  flores:
+    album: temaP7-1-4.jpg
+    descripcion: Flores
+    comun: virgenes
+    guarda: zigzag
+  yo-estare-con-vosotros:
+    album: temaP7-1-5.jpg
+    descripcion: «Yo estaré con vosotros»
+    propia: Ascensión del Señor
+  jesus-y-una-mujer:
+    album: temaP7-1-6.jpg
+    descripcion: Jesús y una mujer
+    generica: true
+  san-benito:
+    album: temaP7-10-1.jpg
+    descripcion: San Benito
+    propia: San Benito de Nursia, abad
+    guarda: zigzag
+  pastor-ovejas-y-perro:
+    album: temaP7-10-2.jpg
+    descripcion: Pastor, ovejas y perro
+    generica: true
+    domingos:
+    - IV Domingo de Pascua (C)
+    - XVI Domingo del Tiempo Ordinario (B)
+  santa-maria-magdalena:
+    album: temaP7-10-3.jpg
+    descripcion: Santa María Magdalena
+    propia: Santa María Magdalena, penitente
+  cristo-ensena-en-el-circulo-de-estrellas:
+    album: temaP7-10-5.jpg
+    descripcion: Cristo enseña en el círculo de estrellas
+    generica: true
+  camino-de-emaus:
+    album: temaP7-10-6.jpg
+    descripcion: Camino de Emaús
+    tiempo: pascua
+    domingos:
+    - III Domingo de Pascua (A)
+  nubes-y-estrellas:
+    album: temaP7-11-2.jpg
+    descripcion: Nubes y estrellas
+    generica: true
+  david-con-el-arpa:
+    album: temaP7-11-3.jpg
+    descripcion: David con el arpa
+    generica: true
+    guarda: rombos
+  pablo-escribe:
+    album: temaP7-11-4.jpg
+    descripcion: Pablo escribe (Efesios)
+    comun: doctores
+  labrador-con-el-buey:
+    album: temaP7-11-5.jpg
+    descripcion: Labrador con el buey
+    generica: true
+  jesus-en-la-barca:
+    album: temaP7-11-6.jpg
+    descripcion: Jesús en la barca
+    generica: true
+    domingos:
+    - XII Domingo del Tiempo Ordinario (B)
+  jesus-predica-a-la-multitud:
+    album: temaP7-11-7.jpg
+    descripcion: Jesús predica a la multitud
+    generica: true
+    domingos:
+    - IV Domingo del Tiempo Ordinario (A)
+  reparto-de-los-panes:
+    album: temaP7-12-1.jpg
+    descripcion: Reparto de los panes
+    generica: true
+    domingos:
+    - Santísimo Cuerpo y Sangre de Cristo (C)
+    - XVII Domingo del Tiempo Ordinario (B)
+  preso-encadenado:
+    album: temaP7-12-2.jpg
+    descripcion: Preso encadenado
+    comun: un-martir
+  panes:
+    album: temaP7-12-3.jpg
+    descripcion: Panes
+    propia: Santísimo Cuerpo y Sangre de Cristo
+  canasta-con-panes-y-peces:
+    album: temaP7-12-5.jpg
+    descripcion: Canasta con panes y peces
+    generica: true
+    domingos:
+    - Santísimo Cuerpo y Sangre de Cristo (C)
+    - XVIII Domingo del Tiempo Ordinario (A)
+  martir-con-palma-ante-la-multitud:
+    album: temaP7-12-6.jpg
+    descripcion: Mártir con palma ante la multitud
+    comun: varios-martires
+  recogiendo-el-mana:
+    album: temaP7-13-2.jpg
+    descripcion: Recogiendo el maná
+    generica: true
+    domingos:
+    - Santísimo Cuerpo y Sangre de Cristo (A)
+    - XVIII Domingo del Tiempo Ordinario (B)
+  jesus-abraza:
+    album: temaP7-13-3.jpg
+    descripcion: Jesús abraza
+    generica: true
+    domingos:
+    - III Domingo de Pascua (C)
+  caliz-con-la-hostia:
+    album: temaP7-13-5.jpg
+    descripcion: Cáliz con la hostia
+    propia: Santísimo Cuerpo y Sangre de Cristo
+  jesus-en-el-altar:
+    album: temaP7-13-6.jpg
+    descripcion: Jesús en el altar
+    propia: Santísimo Cuerpo y Sangre de Cristo
+  cristo-en-majestad-2:
+    album: temaP7-14-1.jpg
+    descripcion: Cristo en majestad
+    propia: Nuestro Señor Jesucristo, Rey del Universo
+  discipulos-dormidos:
+    album: temaP7-14-2.jpg
+    descripcion: Discípulos dormidos
+    generica: true
+  lampara-encendida-de-noche:
+    album: temaP7-14-3.jpg
+    descripcion: Lámpara encendida de noche
+    generica: true
+    domingos:
+    - XXXII Domingo del Tiempo Ordinario (A)
+  sol-y-viento:
+    album: temaP7-14-4.jpg
+    descripcion: Sol y viento
+    generica: true
+  luna-y-estrellas:
+    album: temaP7-14-5.jpg
+    descripcion: Luna y estrellas
+    generica: true
+  santo-entre-la-gente:
+    album: temaP7-14-6.jpg
+    descripcion: Santo entre la gente
+    generica: true
+  escuchadlo:
+    album: temaP7-14-7.jpg
+    descripcion: «Escuchadlo»
+    propia: Transfiguración del Señor
+    domingos:
+    - II Domingo de Cuaresma (ABC)
+  santo-domingo:
+    album: temaP7-15-1.jpg
+    descripcion: Santo Domingo
+    propia: Santo Domingo de Guzmán, presbítero
+    guarda: zigzag
+  elias-y-el-angel:
+    album: temaP7-15-2.jpg
+    descripcion: Elías y el ángel
+    generica: true
+    domingos:
+    - XIX Domingo del Tiempo Ordinario (B)
+  peregrino:
+    album: temaP7-15-3.jpg
+    descripcion: Peregrino
+    generica: true
+  santa-clara:
+    album: temaP7-15-4.jpg
+    descripcion: Santa Clara
+    propia: Santa Clara, virgen
+    guarda: zigzag
+  jesus-y-una-mujer-2:
+    album: temaP7-15-5.jpg
+    descripcion: Jesús y una mujer
+    generica: true
+  jesus-y-dos-discipulos:
+    album: temaP7-15-6.jpg
+    descripcion: Jesús y dos discípulos
+    generica: true
+    domingos:
+    - II Domingo del Tiempo Ordinario (B)
+  el-dragon:
+    album: temaP7-16-2.jpg
+    descripcion: El dragón (Ap 12)
+    propia: Asunción de la Virgen María
+  david-y-el-arca:
+    album: temaP7-16-3.jpg
+    descripcion: David y el arca
+    comun: virgen-maria
+  la-mujer-vestida-de-sol:
+    album: temaP7-16-4.jpg
+    descripcion: La mujer vestida de sol
+    propia: Asunción de la Virgen María
+    guarda: zigzag
+  corona-con-ave:
+    album: temaP7-16-6.jpg
+    descripcion: Corona con «Ave»
+    comun: virgen-maria
+  la-visitacion:
+    album: temaP7-16-7.jpg
+    descripcion: La Visitación
+    propia: Visitación de la Bienaventurada Virgen María
+    domingos:
+    - IV Domingo de Adviento (C)
+  el-banquete:
+    album: temaP7-17-1.jpg
+    descripcion: El banquete
+    generica: true
+    domingos:
+    - XXVIII Domingo del Tiempo Ordinario (A)
+  san-bernardo:
+    album: temaP7-17-3.jpg
+    descripcion: San Bernardo
+    propia: San Bernardo, abad
+  san-agustin-y-santa-monica:
+    album: temaP7-17-4.jpg
+    descripcion: San Agustín y santa Mónica
+    propia: Santa Mónica, viuda
+  flores-2:
+    album: temaP7-17-5.jpg
+    descripcion: Flores
+    comun: virgenes
+  mujer-a-la-mesa:
+    album: temaP7-17-6.jpg
+    descripcion: Mujer a la mesa (Marta y María)
+    generica: true
+    domingos:
+    - XVI Domingo del Tiempo Ordinario (C)
+  hojas:
+    album: temaP7-17-7.jpg
+    descripcion: Hojas
+    generica: true
+  dos-figuras-en-la-puerta:
+    album: temaP7-18-3.jpg
+    descripcion: Dos figuras en la puerta
+    generica: true
+  ecclesia:
+    album: temaP7-18-4.jpg
+    descripcion: «Ecclesia»
+    generica: true
+  dos-corazones-con-la-cruz:
+    album: temaP7-18-5.jpg
+    descripcion: Dos corazones con la cruz
+    propia: Sagrado Corazón de Jesús
+  jesus-y-los-ninos:
+    album: temaP7-18-6.jpg
+    descripcion: Jesús y los niños
+    comun: educadores
+    domingos:
+    - XXVII Domingo del Tiempo Ordinario (B)
+  san-gregorio-magno:
+    album: temaP7-19-1.jpg
+    descripcion: San Gregorio Magno
+    propia: San Gregorio Magno, papa y doctor de la Iglesia
+    guarda: rombos
+  soldado-con-espada:
+    album: temaP7-19-3.jpg
+    descripcion: Soldado con espada
+    propia: Pasión de san Juan Bautista
+  san-pedro-claver:
+    album: temaP7-19-4.jpg
+    descripcion: San Pedro Claver
+    propia: San Pedro Claver, presbítero
+    guarda: rombos
+  nina-presentada-en-el-templo:
+    album: temaP7-19-5.jpg
+    descripcion: Niña presentada en el templo
+    propia: Presentación de la bienaventurada Virgen María
+  jesus-los-ninos-y-un-fariseo:
+    album: temaP7-19-6.jpg
+    descripcion: Jesús, los niños y un fariseo
+    generica: true
+    domingos:
+    - XXVII Domingo del Tiempo Ordinario (B)
+  san-bonifacio-con-el-hacha:
+    album: temaP7-2-1.jpg
+    descripcion: San Bonifacio con el hacha
+    propia: San Bonifacio, obispo y mártir
+    guarda: rombos
+  ofrenda-junto-al-candelabro:
+    album: temaP7-2-2.jpg
+    descripcion: Ofrenda junto al candelabro
+    generica: true
+  caliz-y-pan:
+    album: temaP7-2-3.jpg
+    descripcion: Cáliz y pan
+    propia: Santísimo Cuerpo y Sangre de Cristo
+    domingos:
+    - Santísimo Cuerpo y Sangre de Cristo (B)
+  san-carlos-lwanga:
+    album: temaP7-2-4.jpg
+    descripcion: San Carlos Lwanga
+    propia: San Carlos Lwanga y compañeros, mártires
+    guarda: rombos
+  jesus-y-la-mujer-adultera:
+    album: temaP7-2-5.jpg
+    descripcion: Jesús y la mujer adúltera
+    generica: true
+    domingos:
+    - V Domingo de Cuaresma (C)
+  emaus-la-fraccion-del-pan:
+    album: temaP7-2-6.jpg
+    descripcion: 'Emaús: la fracción del pan'
+    tiempo: pascua
+    domingos:
+    - III Domingo de Pascua (A)
+  ciervo:
+    album: temaP7-20-2.jpg
+    descripcion: Ciervo
+    generica: true
+  preso-con-cadenas:
+    album: temaP7-20-3.jpg
+    descripcion: Preso con cadenas
+    generica: true
+    guarda: rosetas
+  lectura-de-la-ley:
+    album: temaP7-20-4.jpg
+    descripcion: Lectura de la Ley
+    comun: doctores
+    domingos:
+    - III Domingo del Tiempo Ordinario (C)
+  arbol-junto-al-agua:
+    album: temaP7-20-5.jpg
+    descripcion: Árbol junto al agua
+    generica: true
+    domingos:
+    - VIII Domingo del Tiempo Ordinario (C)
+  jesus-cura-a-un-hombre:
+    album: temaP7-20-7.jpg
+    descripcion: Jesús cura a un hombre
+    generica: true
+  rey-y-madre-con-nino:
+    album: temaP7-21-2.jpg
+    descripcion: Rey y madre con niño
+    generica: true
+  san-cipriano:
+    album: temaP7-21-5.jpg
+    descripcion: San Cipriano
+    propia: Santos Cornelio, papa, y Cipriano, obispo, mártires
+  san-cornelio:
+    album: temaP7-21-7.jpg
+    descripcion: San Cornelio
+    propia: Santos Cornelio, papa, y Cipriano, obispo, mártires
+  san-juan-crisostomo:
+    album: temaP7-22-1.jpg
+    descripcion: San Juan Crisóstomo
+    propia: San Juan Crisóstomo, obispo y doctor de la Iglesia
+    guarda: rosetas
+  moises-y-la-serpiente:
+    album: temaP7-22-2.jpg
+    descripcion: Moisés y la serpiente
+    propia: Exaltación de la Santa Cruz
+    domingos:
+    - IV Domingo de Cuaresma «Lætare» (B)
+  cruz:
+    album: temaP7-22-3.jpg
+    descripcion: Cruz
+    propia: Exaltación de la Santa Cruz
+  santa-rosa-de-lima:
+    album: temaP7-22-4.jpg
+    descripcion: Santa Rosa de Lima
+    propia: Santa Rosa de Lima, virgen
+    guarda: rosetas
+  cruz-con-palomas-y-ciervos:
+    album: temaP7-22-6.jpg
+    descripcion: Cruz con palomas y ciervos
+    generica: true
+  tienda:
+    album: temaP7-3-2.jpg
+    descripcion: Tienda
+    generica: true
+  san-ireneo:
+    album: temaP7-3-4.jpg
+    descripcion: San Ireneo
+    propia: San Ireneo de Lyon, obispo y mártir
+    guarda: rosetas
+  hombre-junto-al-pozo:
+    album: temaP7-3-5.jpg
+    descripcion: Hombre junto al pozo
+    generica: true
+  jesus-ensena-sentado:
+    album: temaP7-3-7.jpg
+    descripcion: Jesús enseña sentado
+    generica: true
+  zaqueo-en-el-arbol:
+    album: temaP7-4-1.jpg
+    descripcion: Zaqueo en el árbol
+    generica: true
+    domingos:
+    - XXXI Domingo del Tiempo Ordinario (C)
+  rut-espigando:
+    album: temaP7-4-2.jpg
+    descripcion: Rut espigando
+    generica: true
+  orante-junto-a-la-palmera:
+    album: temaP7-4-3.jpg
+    descripcion: Orante junto a la palmera
+    comun: santos-varones
+  el-vinador-poda:
+    album: temaP7-4-5.jpg
+    descripcion: El viñador poda
+    generica: true
+    domingos:
+    - III Domingo de Cuaresma (C)
+  arbol-con-pajaros:
+    album: temaP7-4-6.jpg
+    descripcion: Árbol con pájaros
+    generica: true
+    domingos:
+    - XI Domingo del Tiempo Ordinario (B)
+  hombre-con-el-balde:
+    album: temaP7-4-7.jpg
+    descripcion: Hombre con el balde
+    generica: true
+  olas-y-estrella:
+    album: temaP7-5-1.jpg
+    descripcion: Olas y estrella
+    generica: true
+  hombre-y-angel-bajo-el-arbol:
+    album: temaP7-5-2.jpg
+    descripcion: Hombre y ángel bajo el árbol
+    generica: true
+  la-mujer-vestida-de-sol-2:
+    album: temaP7-5-3.jpg
+    descripcion: La mujer vestida de sol
+    propia: Asunción de la Virgen María
+  dos-hombres-en-la-barca:
+    album: temaP7-5-4.jpg
+    descripcion: Dos hombres en la barca
+    generica: true
+    domingos:
+    - XII Domingo del Tiempo Ordinario (B)
+  jonas-arrojado-al-mar:
+    album: temaP7-5-5.jpg
+    descripcion: Jonás arrojado al mar
+    generica: true
+  jonas-y-el-pez:
+    album: temaP7-5-6.jpg
+    descripcion: Jonás y el pez
+    generica: true
+  jacob-lucha-con-el-angel:
+    album: temaP7-6-2.jpg
+    descripcion: Jacob lucha con el ángel
+    generica: true
+  maria-en-el-trono-con-el-nino:
+    album: temaP7-6-3.jpg
+    descripcion: María en el trono con el Niño
+    comun: virgen-maria
+  tres-apostoles:
+    album: temaP7-6-5.jpg
+    descripcion: Tres apóstoles
+    comun: apostoles
+  su-nombre-es-juan:
+    album: temaP7-6-6.jpg
+    descripcion: «Su nombre es Juan»
+    propia: Nacimiento de san Juan Bautista
+  cristo-en-el-circulo-del-ano:
+    album: temaP7-7-4.jpg
+    descripcion: Cristo en el círculo del año
+    generica: true
+  jesus-junto-al-lecho:
+    album: temaP7-7-7.jpg
+    descripcion: Jesús junto al lecho
+    generica: true
+    domingos:
+    - X Domingo del Tiempo Ordinario (C)
+  curacion-en-la-puerta-del-templo:
+    album: temaP7-8-1.jpg
+    descripcion: Curación en la puerta del templo
+    generica: true
+  el-angel-libera-a-pedro:
+    album: temaP7-8-2.jpg
+    descripcion: El ángel libera a Pedro
+    propia: Santos Pedro y Pablo, apóstoles
+  sol-y-luna-2:
+    album: temaP7-8-4.jpg
+    descripcion: Sol y luna
+    generica: true
+    domingos:
+    - I Domingo de Adviento (C)
+    - XXXIII Domingo del Tiempo Ordinario (B)
+  san-pedro:
+    album: temaP7-8-5.jpg
+    descripcion: San Pedro
+    propia: Santos Pedro y Pablo, apóstoles
+    domingos:
+    - XXI Domingo del Tiempo Ordinario (A)
+  san-pedro-y-san-pablo:
+    album: temaP7-8-6.jpg
+    descripcion: San Pedro y san Pablo
+    propia: Santos Pedro y Pablo, apóstoles
+  san-pablo:
+    album: temaP7-8-7.jpg
+    descripcion: San Pablo
+    propia: Conversión de san Pablo, apóstol
+  san-antonio-abad-tentado:
+    album: temaP7-9-3.jpg
+    descripcion: San Antonio abad tentado
+    propia: San Antonio, abad
+  santo-tomas-apostol:
+    album: temaP7-9-4.jpg
+    descripcion: Santo Tomás apóstol
+    propia: Santo Tomás, apóstol
+    domingos:
+    - II Domingo de Pascua (de la Divina Misericordia) (ABC)
+  capitel:
+    album: temaP7-9-5.jpg
+    descripcion: Capitel (II Corintios)
+    generica: true
+  mujer-con-el-rollo:
+    album: temaP7-9-6.jpg
+    descripcion: Mujer con el rollo
+    generica: true
+  gavillas:
+    album: temaP8-1-2.jpg
+    descripcion: Gavillas
+    generica: true
+    domingos:
+    - XVI Domingo del Tiempo Ordinario (A)
+  angel-con-el-libro:
+    album: temaP8-1-3.jpg
+    descripcion: Ángel con el libro
+    generica: true
+    guarda: rosetas
+  grupo-junto-al-arbol:
+    album: temaP8-1-4.jpg
+    descripcion: Grupo junto al árbol
+    generica: true
+  camello:
+    album: temaP8-1-6.jpg
+    descripcion: Camello (el ojo de la aguja)
+    generica: true
+    domingos:
+    - XXVIII Domingo del Tiempo Ordinario (B)
+  jesus-con-un-nino:
+    album: temaP8-1-7.jpg
+    descripcion: Jesús con un niño
+    generica: true
+    domingos:
+    - XXV Domingo del Tiempo Ordinario (B)
+  elias-y-la-viuda-de-sarepta:
+    album: temaP8-10-1.jpg
+    descripcion: Elías y la viuda de Sarepta
+    generica: true
+    domingos:
+    - X Domingo del Tiempo Ordinario (C)
+    - XXXII Domingo del Tiempo Ordinario (B)
+  obispo-en-la-catedra:
+    album: temaP8-10-3.jpg
+    descripcion: Obispo en la cátedra
+    comun: pastores
+  obispo-bendice:
+    album: temaP8-10-4.jpg
+    descripcion: Obispo bendice
+    comun: pastores
+  la-ofrenda-de-la-viuda:
+    album: temaP8-10-6.jpg
+    descripcion: La ofrenda de la viuda
+    comun: santas-mujeres
+    domingos:
+    - XXXII Domingo del Tiempo Ordinario (B)
+  santa-isabel:
+    album: temaP8-10-7.jpg
+    descripcion: Santa Isabel
+    propia: Santa Isabel de Hungría, reina
+  sacerdote-con-los-brazos-abiertos:
+    album: temaP8-11-1.jpg
+    descripcion: Sacerdote con los brazos abiertos
+    generica: true
+  la-escala-de-jacob:
+    album: temaP8-11-2.jpg
+    descripcion: La escala de Jacob
+    generica: true
+  el-santuario-con-incienso:
+    album: temaP8-11-3.jpg
+    descripcion: El santuario con incienso
+    generica: true
+  catedral:
+    album: temaP8-11-4.jpg
+    descripcion: Catedral
+    comun: dedicacion
+  angel-con-incensario:
+    album: temaP8-11-5.jpg
+    descripcion: Ángel con incensario
+    generica: true
+  hoy-ha-entrado-la-salvacion-en-esta-casa:
+    album: temaP8-11-6.jpg
+    descripcion: «Hoy ha entrado la salvación en esta casa»
+    generica: true
+    domingos:
+    - XXXI Domingo del Tiempo Ordinario (C)
+  san-miguel-y-el-dragon:
+    album: temaP8-12-2.jpg
+    descripcion: San Miguel y el dragón
+    propia: San Miguel Arcángel
+  sol:
+    album: temaP8-12-3.jpg
+    descripcion: Sol
+    generica: true
+  san-andres-dung-lac:
+    album: temaP8-12-4.jpg
+    descripcion: San Andrés Dung-Lac
+    propia: Santos Andrés Dung-Lac, presbítero, y compañeros, mártires
+    guarda: rosetas
+  cristo-con-alfa-y-omega:
+    album: temaP8-12-6.jpg
+    descripcion: Cristo con Alfa y Omega
+    generica: true
+  corona-y-orbe:
+    album: temaP8-13-2.jpg
+    descripcion: Corona y orbe
+    propia: Nuestro Señor Jesucristo, Rey del Universo
+  cristo-en-majestad-con-el-tetramorfos:
+    album: temaP8-13-3.jpg
+    descripcion: Cristo en majestad con el tetramorfos
+    propia: Nuestro Señor Jesucristo, Rey del Universo
+  cristo-pantocrator:
+    album: temaP8-13-4.jpg
+    descripcion: Cristo Pantocrátor
+    propia: Nuestro Señor Jesucristo, Rey del Universo
+    guarda: rosetas
+  monograma-am:
+    album: temaP8-13-5.jpg
+    descripcion: Monograma AM
+    comun: virgen-maria
+  gavillas-2:
+    album: temaP8-13-6.jpg
+    descripcion: Gavillas
+    generica: true
+  sacerdotes-con-incienso:
+    album: temaP8-2-1.jpg
+    descripcion: Sacerdotes con incienso
+    generica: true
+  santiago-apostol:
+    album: temaP8-2-2.jpg
+    descripcion: Santiago apóstol
+    propia: Santiago, apóstol
+  miguel-y-gabriel:
+    album: temaP8-2-3.jpg
+    descripcion: Miguel y Gabriel
+    propia: San Gabriel Arcángel
+  rafael-y-uriel:
+    album: temaP8-2-4.jpg
+    descripcion: Rafael y Uriel
+    propia: San Rafael Arcángel
+  hebreos-libro-y-espada:
+    album: temaP8-3-3.jpg
+    descripcion: 'Hebreos: libro y espada'
+    generica: true
+  ramo-de-olivo:
+    album: temaP8-3-4.jpg
+    descripcion: Ramo de olivo
+    generica: true
+  jesus-con-los-ninos:
+    album: temaP8-3-6.jpg
+    descripcion: Jesús con los niños
+    comun: educadores
+    domingos:
+    - XXVII Domingo del Tiempo Ordinario (B)
+  santa-teresa-de-jesus:
+    album: temaP8-4-1.jpg
+    descripcion: Santa Teresa de Jesús
+    propia: Santa Teresa de Jesús, virgen y doctora de la Iglesia
+    guarda: zigzag
+  orante-ante-el-altar:
+    album: temaP8-4-2.jpg
+    descripcion: Orante ante el altar
+    comun: religiosos
+  angel-de-la-guarda:
+    album: temaP8-4-3.jpg
+    descripcion: Ángel de la guarda
+    propia: Santos Ángeles Custodios
+  san-francisco-con-el-lobo:
+    album: temaP8-4-4.jpg
+    descripcion: San Francisco con el lobo
+    propia: San Francisco de Asís, religioso
+    guarda: zigzag
+  jesus-y-un-hombre-junto-al-arbol:
+    album: temaP8-4-5.jpg
+    descripcion: Jesús y un hombre junto al árbol
+    generica: true
+  burro-ante-la-puerta-de-jerusalen:
+    album: temaP8-4-6.jpg
+    descripcion: Burro ante la puerta de Jerusalén
+    propia: Domingo de Ramos en la Pasión del Señor
+  san-ignacio-de-antioquia:
+    album: temaP8-5-3.jpg
+    descripcion: San Ignacio de Antioquía
+    propia: San Ignacio de Antioquía, obispo y mártir
+    guarda: rombos
+  jesus-y-dos-hombres:
+    album: temaP8-5-4.jpg
+    descripcion: Jesús y dos hombres
+    generica: true
+  limosna-al-pobre:
+    album: temaP8-6-1.jpg
+    descripcion: Limosna al pobre
+    comun: caridad
+    domingos:
+    - III Domingo de Adviento «Gaudete» (C)
+  bartimeo-jesus-hijo-de-david-ten-piedad-de-mi:
+    album: temaP8-6-2.jpg
+    descripcion: 'Bartimeo: «Jesús, Hijo de David, ten piedad de mí»'
+    generica: true
+    domingos:
+    - XXX Domingo del Tiempo Ordinario (B)
+  el-sembrador:
+    album: temaP8-6-3.jpg
+    descripcion: El sembrador
+    generica: true
+    domingos:
+    - XV Domingo del Tiempo Ordinario (A)
+  el-segador:
+    album: temaP8-6-4.jpg
+    descripcion: El segador
+    generica: true
+    domingos:
+    - XVI Domingo del Tiempo Ordinario (A)
+  mujer-con-el-incienso:
+    album: temaP8-6-5.jpg
+    descripcion: Mujer con el incienso
+    generica: true
+  jesus-cura-a-un-hombre-arrodillado:
+    album: temaP8-6-6.jpg
+    descripcion: Jesús cura a un hombre arrodillado
+    generica: true
+  virgen-del-rosario:
+    album: temaP8-6-7.jpg
+    descripcion: Virgen del Rosario
+    propia: Bienaventurada Virgen María del Rosario
+    guarda: rosetas
+  las-tablas-de-la-ley:
+    album: temaP8-7-1.jpg
+    descripcion: Las tablas de la Ley
+    tiempo: cuaresma
+    domingos:
+    - III Domingo de Cuaresma (B)
+  la-casa-sobre-roca:
+    album: temaP8-7-5.jpg
+    descripcion: La casa sobre roca
+    generica: true
+    domingos:
+    - IX Domingo del Tiempo Ordinario (A)
+  jesus-y-un-anciano:
+    album: temaP8-7-6.jpg
+    descripcion: Jesús y un anciano
+    generica: true
+    domingos:
+    - IV Domingo de Cuaresma «Lætare» (B)
+  palma:
+    album: temaP8-8-1.jpg
+    descripcion: Palma
+    propia: Domingo de Ramos en la Pasión del Señor
+    guarda: rombos
+  angel-con-el-rollo:
+    album: temaP8-8-3.jpg
+    descripcion: Ángel con el rollo
+    generica: true
+  hombre-con-lira-y-palma:
+    album: temaP8-8-4.jpg
+    descripcion: Hombre con lira y palma
+    generica: true
+    guarda: rombos
+  orante-ante-la-tumba:
+    album: temaP8-9-2.jpg
+    descripcion: Orante ante la tumba
+    propia: Todos los Fieles Difuntos
+  angel-y-la-resurreccion-de-los-muertos:
+    album: temaP8-9-3.jpg
+    descripcion: Ángel y la resurrección de los muertos
+    propia: Todos los Fieles Difuntos
+    guarda: zigzag
+  baptisterio-con-el-cirio-pascual:
+    album: temaP8-9-4.jpg
+    descripcion: Baptisterio con el cirio pascual
+    propia: Domingo de Pascua de la Resurrección del Señor
+  cruz-del-cementerio:
+    album: temaP8-9-5.jpg
+    descripcion: Cruz del cementerio
+    propia: Todos los Fieles Difuntos
+  por-que-buscais-entre-los-muertos-al-que-vive:
+    album: temaP8-9-7.jpg
+    descripcion: «¿Por qué buscáis entre los muertos al que vive?»
+    propia: Domingo de Pascua de la Resurrección del Señor
+descartadas:
+- album: 2018 ADF Vigilia de la Natividad del Se#U00f1or - Interior blanco y negro a.jpg
+  motivo: Árbol de Jesé (vertical, grabado fino)
+- album: 2018 ADF Vigilia de la Natividad del Se#U00f1or - Interior blanco y negro b.jpg
+  motivo: Ornamento celta
+- album: 2018 Vigilia de la Natividad del Se#U00f1or - Cuerpo 4.jpg
+  motivo: Sagrada Familia, grabado con grises, vertical
+- album: 2018 Vigilia de la Natividad del Se#U00f1or - Cuerpo b.jpg
+  motivo: 'Ornamento: ave'
+- album: 2018 Vigilia de la Natividad del Se#U00f1or - Cuerpo c.jpg
+  motivo: Duplicado del 3
+- album: 2018 Vigilia de la Natividad del Se#U00f1or - Cuerpo d.jpg
+  motivo: Friso
+- album: 2018 Vigilia de la Natividad del Se#U00f1or - Cuerpo.jpg
+  motivo: Natividad, grabado del s. XIX (otro estilo)
+- album: 2018 Vigilia de la Natividad del Se#U00f1or - Cuerpoa.jpg
+  motivo: Duplicado del 5
+- album: 2021 Himnario Ad Fontes - Ciclo de Navidad (Borrador 2).jpg
+  motivo: Templo (línea fina, otro estilo)
+- album: temaP1-1-1.jpg
+  motivo: Escena moderna
+- album: temaP1-1-2.jpg
+  motivo: El alfarero (escena moderna)
+- album: temaP1-2-1.jpg
+  motivo: Friso
+- album: temaP1-2-2.jpg
+  motivo: Balanza (poco legible)
+- album: temaP1-3-2.jpg
+  motivo: 'Adán y Eva (desnudos: dudosa para la portada)'
+- album: temaP1-3-4.jpg
+  motivo: Ornamento de esquina
+- album: temaP1-4-5.jpg
+  motivo: Figura con manto de estrellas (dudosa)
+- album: temaP1-4-7.jpg
+  motivo: Rostro y estrella (fragmento)
+- album: temaP2-1-5.jpg
+  motivo: Friso de ramas
+- album: temaP2-2-2.jpg
+  motivo: Escena moderna
+- album: temaP2-2-3.jpg
+  motivo: Escena dudosa
+- album: temaP2-2-4.jpg
+  motivo: Escena dudosa
+- album: temaP2-3-1.jpg
+  motivo: Sacerdote sin identificar
+- album: temaP2-3-4.jpg
+  motivo: Mujer con canasta (escena moderna)
+- album: temaP2-4-1.jpg
+  motivo: Friso
+- album: temaP2-4-4.jpg
+  motivo: Rosetón (ornamento)
+- album: temaP2-4-5.jpg
+  motivo: Duplicado del 14
+- album: temaP2-5-5.jpg
+  motivo: Concha y agua
+- album: temaP3-2-1.jpg
+  motivo: Friso
+- album: temaP3-2-2.jpg
+  motivo: Muñeco de nieve
+- album: temaP3-2-3.jpg
+  motivo: Muy angosta
+- album: temaP3-3-4.jpg
+  motivo: Animal (poco legible)
+- album: temaP3-3-5.jpg
+  motivo: Teléfono celular
+- album: temaP3-4-3.jpg
+  motivo: Casa
+- album: temaP3-4-5.jpg
+  motivo: 'Friso: ave'
+- album: temaP3-5-3.jpg
+  motivo: Poco legible
+- album: temaP3-6-1.jpg
+  motivo: Friso
+- album: temaP3-6-2.jpg
+  motivo: Tijera y bisturí
+- album: temaP3-6-3.jpg
+  motivo: San Valentín (no está en el calendario ADF)
+- album: temaP3-6-4.jpg
+  motivo: Escena poco legible
+- album: temaP3-6-6.jpg
+  motivo: Máquina de escribir
+- album: temaP3-7-3.jpg
+  motivo: Grupo murmurando
+- album: temaP3-7-4.jpg
+  motivo: Silla de ruedas
+- album: temaP3-7-5.jpg
+  motivo: Cactus
+- album: temaP3-7-7.jpg
+  motivo: Muletas
+- album: temaP3-8-1.jpg
+  motivo: Escena moderna
+- album: temaP3-8-2.jpg
+  motivo: Escena dudosa
+- album: temaP3-8-5.jpg
+  motivo: Costura
+- album: temaP3-8-6.jpg
+  motivo: Escena moderna
+- album: temaP3-9-1.jpg
+  motivo: Muy angosta
+- album: temaP3-9-2.jpg
+  motivo: Escena moderna
+- album: temaP3-9-3.jpg
+  motivo: Figura con manto (dudosa)
+- album: temaP3-9-4.jpg
+  motivo: Muy angosta
+- album: temaP4-1-1.jpg
+  motivo: Friso
+- album: temaP4-1-3.jpg
+  motivo: Muy angosta
+- album: temaP4-1-6.jpg
+  motivo: Lagartija
+- album: temaP4-1-7.jpg
+  motivo: Escena moderna
+- album: temaP4-2-3.jpg
+  motivo: Poco legible
+- album: temaP4-2-5.jpg
+  motivo: Poco legible
+- album: temaP4-3-1.jpg
+  motivo: Poco legible
+- album: temaP4-3-3.jpg
+  motivo: Mano (fragmento)
+- album: temaP4-4-1.jpg
+  motivo: Muy angosta
+- album: temaP4-4-3.jpg
+  motivo: Abejas
+- album: temaP4-4-4.jpg
+  motivo: Santas Perpetua y Felicidad (no están en el calendario ADF)
+- album: temaP4-5-1.jpg
+  motivo: Friso
+- album: temaP4-5-6.jpg
+  motivo: Escena dudosa
+- album: temaP4-6-1.jpg
+  motivo: Escena dudosa
+- album: temaP4-6-7.jpg
+  motivo: Escena dudosa
+- album: temaP5-2-1.jpg
+  motivo: Muy angosta
+- album: temaP5-2-2.jpg
+  motivo: Poco legible
+- album: temaP5-2-5.jpg
+  motivo: Escena dudosa
+- album: temaP5-3-1.jpg
+  motivo: Adán y Eva en el jardín (dudosa)
+- album: temaP5-3-3.jpg
+  motivo: Escena moderna
+- album: temaP5-3-5.jpg
+  motivo: Cordero de pastelería
+- album: temaP6-1-1.jpg
+  motivo: Casa
+- album: temaP6-1-4.jpg
+  motivo: Harina
+- album: temaP6-1-5.jpg
+  motivo: Escena moderna
+- album: temaP6-2-3.jpg
+  motivo: Canasta de huevos
+- album: temaP6-3-1.jpg
+  motivo: Muy angosta
+- album: temaP6-3-2.jpg
+  motivo: Canasta
+- album: temaP6-3-7.jpg
+  motivo: 'Ángel con «Aleluya» (con y: va contra la regla)'
+- album: temaP6-4-2.jpg
+  motivo: Escena moderna
+- album: temaP6-4-3.jpg
+  motivo: Casa
+- album: temaP6-4-5.jpg
+  motivo: Jofaina
+- album: temaP6-5-1.jpg
+  motivo: «I Juan»
+- album: temaP6-6-1.jpg
+  motivo: Santa María de la Cabeza (no está en el calendario ADF)
+- album: temaP6-6-5.jpg
+  motivo: Escena dudosa
+- album: temaP6-7-1.jpg
+  motivo: Friso
+- album: temaP6-7-2.jpg
+  motivo: 'Ángel con «Aleluya» (con y: va contra la regla)'
+- album: temaP6-8-3.jpg
+  motivo: Barrilete
+- album: temaP6-8-4.jpg
+  motivo: Poco legible
+- album: temaP6-8-5.jpg
+  motivo: León
+- album: temaP6-8-7.jpg
+  motivo: Gato
+- album: temaP7-10-4.jpg
+  motivo: Santa Kateri (no está en el calendario ADF)
+- album: temaP7-11-1.jpg
+  motivo: Friso
+- album: temaP7-12-4.jpg
+  motivo: Escena dudosa
+- album: temaP7-12-7.jpg
+  motivo: Escena dudosa
+- album: temaP7-13-1.jpg
+  motivo: Cuervo
+- album: temaP7-13-4.jpg
+  motivo: Tazas
+- album: temaP7-16-1.jpg
+  motivo: Friso
+- album: temaP7-16-5.jpg
+  motivo: Avispa
+- album: temaP7-17-2.jpg
+  motivo: Duplicado del 15
+- album: temaP7-18-1.jpg
+  motivo: Rostro y manos
+- album: temaP7-18-2.jpg
+  motivo: Hombres discutiendo
+- album: temaP7-19-2.jpg
+  motivo: Escena dudosa
+- album: temaP7-20-1.jpg
+  motivo: Friso
+- album: temaP7-20-6.jpg
+  motivo: Escena dudosa
+- album: temaP7-21-1.jpg
+  motivo: Escena dudosa
+- album: temaP7-21-3.jpg
+  motivo: Músicos modernos
+- album: temaP7-21-4.jpg
+  motivo: Escena dudosa
+- album: temaP7-21-6.jpg
+  motivo: Escena dudosa
+- album: temaP7-22-5.jpg
+  motivo: 'Ornamento: cruz celta'
+- album: temaP7-3-1.jpg
+  motivo: Friso
+- album: temaP7-3-3.jpg
+  motivo: Adán y Eva (desnudos)
+- album: temaP7-3-6.jpg
+  motivo: Anillos
+- album: temaP7-4-4.jpg
+  motivo: Poco legible
+- album: temaP7-6-1.jpg
+  motivo: Muy angosta
+- album: temaP7-6-4.jpg
+  motivo: Muy angosta
+- album: temaP7-7-1.jpg
+  motivo: Friso
+- album: temaP7-7-2.jpg
+  motivo: Escena dudosa
+- album: temaP7-7-3.jpg
+  motivo: Muy angosta
+- album: temaP7-7-5.jpg
+  motivo: Escena dudosa
+- album: temaP7-7-6.jpg
+  motivo: Rostros
+- album: temaP7-8-3.jpg
+  motivo: Escena dudosa
+- album: temaP7-9-1.jpg
+  motivo: Escena dudosa
+- album: temaP7-9-2.jpg
+  motivo: Escena dudosa
+- album: temaP8-1-1.jpg
+  motivo: Friso
+- album: temaP8-1-5.jpg
+  motivo: Sembradora (escena moderna)
+- album: temaP8-10-2.jpg
+  motivo: Obispo con pavo real (dudosa)
+- album: temaP8-10-5.jpg
+  motivo: Santa Francisca Cabrini (no está en el calendario ADF)
+- album: temaP8-12-1.jpg
+  motivo: Santa Filipina Duchesne (no está en el calendario ADF)
+- album: temaP8-12-5.jpg
+  motivo: Escena dudosa
+- album: temaP8-13-1.jpg
+  motivo: Friso
+- album: temaP8-13-7.jpg
+  motivo: Escena dudosa
+- album: temaP8-2-5.jpg
+  motivo: Jarra y vasos
+- album: temaP8-2-6.jpg
+  motivo: Escena dudosa
+- album: temaP8-2-7.jpg
+  motivo: Campana
+- album: temaP8-3-1.jpg
+  motivo: Escena moderna
+- album: temaP8-3-2.jpg
+  motivo: Adán y Eva (desnudos)
+- album: temaP8-3-5.jpg
+  motivo: Escena moderna
+- album: temaP8-5-1.jpg
+  motivo: Muy angosta
+- album: temaP8-5-2.jpg
+  motivo: Lleva escrito «Oración de la mañana»
+- album: temaP8-5-5.jpg
+  motivo: Calabaza de Halloween
+- album: temaP8-5-6.jpg
+  motivo: Lleva escrito «Oración de la tarde»
+- album: temaP8-5-7.jpg
+  motivo: Escena dudosa
+- album: temaP8-7-2.jpg
+  motivo: Escena dudosa
+- album: temaP8-7-3.jpg
+  motivo: Anunciación (4)
+- album: temaP8-7-4.jpg
+  motivo: Poco legible
+- album: temaP8-8-2.jpg
+  motivo: Jinetes del Apocalipsis
+- album: temaP8-8-5.jpg
+  motivo: 'Cordero y ángeles: muy apaisada y detallada'
+- album: temaP8-9-1.jpg
+  motivo: Friso
+- album: temaP8-9-6.jpg
+  motivo: Recuerdo de un difunto
+- album: unnamed-11.jpg
+  motivo: Duplicado del 5
