@@ -531,3 +531,45 @@ test('imágenes de la tarjeta del inicio', () => {
   const a = h => CP.franjaHoraria(new Date(2027, 0, 1, h, 0));
   assert.deepEqual([2, 6, 9, 12, 15, 18, 22].map(a), [5, 0, 1, 2, 3, 4, 5]);
 });
+
+// ---------- Himnos en gregoriano de Laudes y Vísperas (base/gregoriano/himnos.yaml) ----------
+test('himnos gregorianos de Laudes y Vísperas: opción después del himno en español, en sus días', () => {
+  const hg = (A, f) => { const o = A.armar(f, 'ARG').secciones.find(s => s.k === 'himno').opciones; assert.equal(o[0].lang, 'es'); return o[1] ? o[1].n : ''; };
+  assert.equal(hg(VI, '2026-11-14'), 'Deus, Creátor ómnium');          // I Vísperas, domingo de la semana I
+  assert.equal(hg(LA, '2026-11-15'), 'Ætérne rerum Cónditor');
+  assert.equal(hg(VI, '2026-11-15'), 'Lucis Creátor óptime');
+  assert.equal(hg(VI, '2026-11-07'), 'Rerum Deus fons ómnium');         // semana IV
+  assert.equal(hg(LA, '2026-11-08'), 'Ecce iam noctis');
+  assert.equal(hg(VI, '2026-11-08'), 'O lux beáta Trínitas');
+  assert.equal(hg(VI, '2026-11-21'), 'Te sæculórum Príncipem');         // Cristo Rey: I y II Vísperas
+  assert.equal(hg(VI, '2026-11-22'), 'Te sæculórum Príncipem');
+  assert.equal(hg(LA, '2026-11-22'), '');
+  assert.equal(hg(VI, '2026-11-28'), 'Creátor alme síderum');           // Adviento
+  assert.equal(hg(LA, '2026-12-06'), 'En clara vox redárguit');
+  assert.equal(hg(VI, '2026-12-24'), 'Iesu, Redémptor ómnium');         // Navidad
+  assert.equal(hg(VI, '2026-12-25'), 'Iesu, Redémptor ómnium');
+  assert.equal(hg(VI, '2027-05-15'), 'Veni Creátor Spíritus');          // Pentecostés
+  assert.equal(hg(VI, '2027-05-16'), 'Veni Creátor Spíritus');
+  assert.equal(hg(LA, '2026-11-10'), '');                               // ferias: solo el himno en español
+  assert.equal(hg(LA, '2027-01-24'), '');                               // domingo reemplazado por una solemnidad
+});
+
+test('himnos gregorianos: latín con i y tildes; la traducción por frases cubre la partitura', () => {
+  const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
+  const pal = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>|\[[^\]]*\]|[{}]/g, '').split(/\s+/).map(norm).filter(Boolean).join(' ');
+  const H = { ...LD.gregoriano.himnos.himnos, ...ctx.window.VISPERAS.gregoriano.himnos.himnos };
+  assert.equal(Object.keys(H).length, 11);
+  for (const [k, h] of Object.entries(H)) {
+    const pares = h.estrofas.flat(2).concat([h.amen]);
+    assert.equal(pares.flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), pal(h.gabc), k);
+    assert.ok(pares.every(p => p[0] && p[1]), k);
+    assert.ok(!/[jJ]/.test(letra(h.gabc)), k);
+    assert.ok(!/aleluya/i.test(JSON.stringify(h)), k);
+    const sinTilde = palabrasGabc(h.gabc).filter(([w, n]) => n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́ë]/.test(w)).map(x => x[0]);
+    assert.deepEqual(sinTilde, [], k);
+    assert.ok(h.estrofas.every(e => e.length === 4), k);                 // cuatro versos por estrofa (la versión recitada)
+  }
+  const o = ctx.window.Visperas.armar('2026-11-15', 'ARG').secciones.find(s => s.k === 'himno').opciones[1];
+  assert.equal(o.rec.length, 5); assert.equal(o.rec.at(-1).versos.at(-1)[0][0], 'Amen.');
+  assert.equal(o.glosa.length, o.rec.flatMap(l => l.pares).length);
+});

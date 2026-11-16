@@ -1,0 +1,589 @@
+# Himnos en gregoriano de Laudes y Vísperas: opción para cantar en los días que dice «cuando» (abajo).
+# El himno en español del día sigue siendo la primera opción. Partituras: los .gabc de esta carpeta (latín con i, æ y œ).
+# Traducción interlineal por frases breves, en el orden del latín: un par «latín = español» por frase. Se tomó, en lo posible,
+# la de la «Liturgia de las Horas Dominical» de ADF (y, para el Veni Creator y el Creator alme, la de sus hojas de ADF);
+# En clara vox, Te sæculórum Príncipem y Iesu Redémptor ómnium: traducción propia.
+# estrofas: una lista por estrofa; en cada estrofa, una lista por verso (así se parte la versión recitada); en cada verso, los pares.
+# La prueba verifica que las palabras latinas de los pares sean exactamente las de la partitura.
+
+# Cuándo va cada himno (el día de la celebración; en Vísperas, también sus I Vísperas):
+cuando:
+  # Domingos del Tiempo Ordinario (sin otra celebración que los reemplace), según la semana del salterio
+  ordinario:
+    semanas_1_3: {visperas1: deus-creator-omnium, laudes: aeterne-rerum-conditor, visperas2: lucis-creator-optime}
+    semanas_2_4: {visperas1: rerum-deus-fons-omnium, laudes: ecce-iam-noctis, visperas2: o-lux-beata-trinitas}
+  # Domingos de Adviento (I y II Vísperas)
+  adviento: {visperas: creator-alme-siderum, laudes: en-clara-vox}
+  # Celebraciones, por su nombre en el Ordo (I y II Vísperas)
+  celebraciones:
+    Nuestro Señor Jesucristo, Rey del Universo: {visperas: te-saeculorum-principem}
+    Domingo de Pentecostés: {visperas: veni-creator-spiritus}
+    Natividad del Señor: {visperas: iesu-redemptor-omnium}
+
+himnos:
+  deus-creator-omnium:
+    titulo: Deus, Creátor ómnium
+    partitura: deus-creator-omnium.gabc
+    fuente: Liber Hymnarius, 1983, p. 181
+    estrofas:
+    - - - Deus, = Dios,
+        - creátor ómnium = creador de todo
+      - - políque rector, = y Señor del cielo,
+        - véstiens = que revistes
+      - - diem = el día
+        - decóro lúmine, = con hermosa luz,
+      - - noctem = y la noche
+        - sopóris grátia, = con la gracia del sueño,
+    - - - Artus solútos = los miembros reposados
+        - ut quies = para que el descanso
+      - - reddat = devuelva
+        - labóris úsui = al trabajo,
+      - - mentésque fessas = y las mentes cansadas
+        - állevet = alivie,
+      - - luctúsque = y los pesares
+        - solvat ánxios, = angustiosos disuelva.
+    - - - Grates = Gracias,
+        - perácto iam die = cumplido ya el día,
+      - - et noctis exórtu = y al nacer la noche,
+        - preces, = súplicas,
+      - - voti reos = ligados por un voto,
+        - ut ádiuves, = para que nos auxilies,
+      - - hymnum canéntes = entonando un himno,
+        - sólvimus. = elevamos.
+    - - - Te = Para ti
+        - cordis ima = lo íntimo del corazón
+        - cóncinant, = suene,
+      - - te = para ti
+        - vox canóra = la voz sonora
+        - cóncrepet, = resuene,
+      - - te díligat = te ame
+        - castus amor, = el casto amor,
+      - - te mens adóret = te adore el alma
+        - sóbria, = pura,
+    - - - Ut cum profúnda = para que, cuando la profunda
+        - cláuserit = envuelva
+      - - diem = el día
+        - calígo nóctium, = oscuridad de la noche,
+      - - fides = la fe
+        - tenébras nésciat = no conozca las tinieblas
+      - - et nox = y la noche
+        - fide relúceat. = resplandezca por la fe.
+    - - - Christum = A Cristo
+        - rogámus = rogamos
+        - et Patrem, = y al Padre,
+      - - Christi Patrísque Spíritum; = y al Espíritu de Cristo y del Padre;
+      - - unum = única,
+        - potens per ómnia, = omnipotente,
+      - - fove precántes, = escucha a los que te suplican,
+        - Trínitas. = oh Trinidad.
+    amen: Amen. = Amén.
+
+  aeterne-rerum-conditor:
+    titulo: Ætérne rerum Cónditor
+    partitura: aeterne-rerum-conditor.gabc
+    fuente: Antiphonale Monasticum, 1934, p. 34
+    estrofas:
+    - - - Ætérne = Eterno
+        - rerum Cónditor, = Creador de las cosas,
+      - - Noctem diémque = la noche y el día
+        - qui regis, = que gobiernas,
+      - - Et témporum = y a los tiempos
+        - das témpora, = das su sucesión,
+      - - Ut álleves = para aliviar
+        - fastídium = el hastío.
+    - - - Præco diéi = El pregonero del día
+        - iam sonat, = ya resuena,
+      - - Noctis profúndæ = en la profunda noche
+        - pérvigil, = vigilante,
+      - - Noctúrna lux = luz nocturna
+        - viántibus = para los caminantes,
+      - - A nocte noctem = una noche de la otra
+        - ségregans. = separando.
+    - - - Hoc excitátus = Por él despertado,
+        - Lúcifer = el lucero
+      - - Solvit polum = libera al cielo
+        - 'calígine: = de las tinieblas;'
+      - - Hoc = por él
+        - omnis errónum cohors = toda banda de extraviados
+      - - Viam nocéndi = el camino del mal
+        - déserit. = abandona.
+    - - - Hoc nauta = Por él el marinero
+        - vires cólligit, = recobra fuerzas,
+      - - Pontíque = y del mar
+        - 'mitéscunt freta: = se apaciguan las olas;'
+      - - Hoc, = por él,
+        - ipsa petra Ecclésiæ, = la misma roca de la Iglesia [Pedro],
+      - - Canénte, = al cantar,
+        - culpam díluit. = lava su culpa.
+    - - - Surgámus ergo = Levantémonos, pues,
+        - 'strénue: = con presteza:'
+      - - Gallus = el gallo
+        - iacéntes éxcitat, = despierta a los que yacen
+      - - Et somnoléntos = y a los somnolientos
+        - íncrepat, = increpa;
+      - - Gallus = el gallo
+        - negántes árguit. = reprende a los que niegan.
+    - - - Gallo canénte, = Al cantar el gallo,
+        - spes redit, = vuelve la esperanza,
+      - - Ægris = a los enfermos
+        - salus refúnditur, = se les devuelve la salud,
+      - - Mucro latrónis = la espada del ladrón
+        - cónditur, = se envaina,
+      - - Lapsis = a los caídos
+        - fides revértitur. = les vuelve la fe.
+    - - - Iesu, = Jesús,
+        - labéntes réspice, = mira a los que vacilan
+      - - Et nos = y a nosotros
+        - 'vidéndo córrige: = corrígenos con tu mirada;'
+      - - Si réspicis, = si nos miras,
+        - lapsi stabunt, = los caídos se levantan
+      - - Fletúque = y en llanto
+        - culpa sólvitur. = la culpa se disuelve.
+    - - - Tu, lux, = Tú, oh Luz,
+        - refúlge sénsibus, = ilumina los sentidos
+      - - Mentísque somnum = y el sueño de la mente
+        - 'díscute: = disipa;'
+      - - Te = a ti
+        - nostra vox = nuestra voz
+        - primum sonet, = primero te cante
+      - - Et vota = y los votos
+        - solvámus tibi. = te ofrezcamos.
+    - - - Deo Patri = A Dios Padre
+        - sit glória, = sea la gloria,
+      - - Eiúsque soli Fílio, = y a su Hijo único,
+      - - Cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      - - Et nunc, = ahora
+        - et in perpétuum. = y por la eternidad.
+    amen: Amen. = Amén.
+
+  lucis-creator-optime:
+    titulo: Lucis Creátor óptime
+    partitura: lucis-creator-optime.gabc
+    fuente: The Liber Usualis, 1961, p. 256
+    estrofas:
+    - - - Lucis = De la luz
+        - Creátor óptime, = excelso Creador,
+      - - Lucem diérum = la lumbre de los días
+        - próferens, = que haces brotar,
+      - - Primórdiis = con los albores
+        - lucis novæ = de la luz recién nacida
+      - - Mundi = al mundo
+        - 'parans oríginem: = das origen:'
+    - - - Qui mane = Tú, que a la mañana
+        - iunctum vésperi = unida a la tarde
+      - - 'Diem vocári prǽcipis: = mandas llamar día:'
+      - - Illábitur = se desliza
+        - tetrum chaos, = el caos tenebroso;
+      - - Audi preces = atiende las plegarias
+        - cum flétibus. = y los gemidos.
+    - - - Ne mens = Que el alma,
+        - graváta crímine, = cargada de faltas,
+      - - Vitæ sit exsul múnere, = no sea exiliada del don de la vida,
+      - - Dum = mientras
+        - nil perénne cógitat, = no piensa en nada duradero
+      - - Seséque culpis = y en sus culpas
+        - ílligat. = se enreda.
+    - - - Cæléste pulset óstium, = Que empuje la puerta celeste,
+      - - 'Vitále tollat prǽmium: = que alcance el premio de la vida;'
+      - - Vitémus = que evitemos
+        - omne nóxium, = todo lo dañino,
+      - - Purgémus = que expiemos
+        - omne péssimum. = todo lo perverso.
+    - - - Præsta, = Concédenos,
+        - Pater piíssime, = Padre piadosísimo,
+      - - Patríque compar = y tú, igual al Padre,
+        - Únice, = Hijo único,
+      - - Cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      - - Regnans = que reinas
+        - per omne sǽculum. = por todos los siglos.
+    amen: Amen. = Amén.
+
+  rerum-deus-fons-omnium:
+    titulo: Rerum Deus fons ómnium
+    partitura: rerum-deus-fons-omnium.gabc
+    fuente: Liber Hymnarius, 1983, p. 208
+    estrofas:
+    - - - Rerum Deus, = Dios de las cosas,
+        - fons ómnium, = fuente de todo,
+      - - qui, = que,
+        - rebus actis ómnibus, = una vez realizadas todas tus obras,
+      - - totíus orbis ámbitum = el universo entero
+      - - censu replésti = llenaste con la riqueza
+        - múnerum, = de tus dones;
+    - - - Ac, = Y,
+        - mole tanta cóndita, = creada tan gran obra,
+      - - tandem = al fin
+        - quiétem díceris = se dice que el descanso
+      - - sumpsísse, = tomaste,
+        - dans labóribus = concediendo a nuestras fatigas
+      - - ut nos levémur = que seamos aliviados
+        - 'grátius: = más benignamente:'
+    - - - Concéde = concede
+        - nunc mortálibus = ahora a los mortales
+      - - deflére = llorar
+        - vitæ crímina, = los pecados de su vida,
+      - - instáre iam = aplicarse ya
+        - virtútibus = a las virtudes
+      - - et munerári = y ser enriquecidos
+        - prósperis, = con tus dones,
+    - - - Ut cum = para que, cuando
+        - treméndi iúdicis = del tremendo Juez
+      - - horror suprémus = el supremo terror
+        - cœ́perit, = llegue,
+      - - lætémur = nos alegremos
+        - omnes ínvicem = todos juntos,
+      - - pacis repléti múnere. = colmados con el don de la paz.
+    - - - Præsta, = Concédenos,
+        - Pater piíssime, = Padre piadosísimo,
+      - - Patríque compar = y tú, igual al Padre,
+        - Únice, = Hijo único,
+      - - cum Spíritu Paráclito = con el Espíritu Paráclito,
+      - - regnans = que reinas
+        - per omne sǽculum. = por todos los siglos.
+    amen: Amen. = Amén.
+
+  ecce-iam-noctis:
+    titulo: Ecce iam noctis
+    partitura: ecce-iam-noctis.gabc
+    fuente: Liturgia de las Horas Dominical (ADF), p. 19
+    estrofas:
+    - - - Ecce iam = He aquí que ya
+        - noctis tenuátur umbra, = se atenúa la sombra de la noche,
+      - - lucis auróra = la aurora de la luz
+        - 'rútilans corúscat: = resplandece brillante;'
+      - - nísibus totis = con todas nuestras fuerzas
+        - rogitémus omnes = roguemos todos
+      - - cunctipoténtem. = al Omnipotente.
+    - - - Ut Deus = Que Dios,
+        - nostri miserátus, = compadecido de nosotros,
+        - omnem = toda
+      - - pellat languórem, = dolencia aleje,
+        - tríbuat salútem, = conceda la salud
+      - - donet et nobis = y nos otorgue,
+        - pietáte Patris = por su bondad de Padre,
+      - - regna polórum. = el reino de los cielos.
+    - - - Præstet hoc nobis = Concédanos esto
+        - Déitas beáta = la Deidad bienaventurada
+      - - Patris ac Nati, = del Padre y del Hijo,
+        - paritérque Sancti = y también del Santo
+      - - Spíritus, = Espíritu,
+        - cuius = cuya
+        - résonat = resuena
+        - per omnem = por todo
+      - - glória = gloria
+        - mundum. = el mundo.
+    amen: Amen. = Amén.
+
+  o-lux-beata-trinitas:
+    titulo: O lux beáta Trínitas
+    partitura: o-lux-beata-trinitas.gabc
+    fuente: Antiphonale Monasticum, 1934, p. 163
+    estrofas:
+    - - - O lux = Oh luz,
+        - beáta Trínitas, = Trinidad bienaventurada,
+      - - Et principális = y originaria
+        - 'Únitas: = Unidad:'
+      - - Iam sol = ya el sol
+        - recédit ígneus, = ardiente se retira,
+      - - Infúnde lumen = infunde luz
+        - córdibus. = a los corazones.
+    - - - Te mane = A ti, al alba,
+        - laudum cármine, = con canto de alabanzas,
+      - - Te deprecémur = a ti te imploremos
+        - 'véspere: = al ocaso;'
+      - - Te = a ti
+        - nostra supplex glória = nuestro loor suplicante
+      - - Per cuncta = por todos
+        - laudet sǽcula. = los siglos te alabe.
+    - - - Deo Patri = A Dios Padre
+        - sit glória = sea la gloria
+      - - Eiúsque soli Fílio, = y a su Hijo único,
+      - - Cum Spíritu Paráclito = con el Espíritu Paráclito,
+      - - Et nunc = ahora
+        - et in perpétuum. = y por la eternidad.
+    amen: Amen. = Amén.
+
+  creator-alme-siderum:
+    titulo: Creátor alme síderum
+    partitura: creator-alme-siderum.gabc
+    fuente: The Liber Usualis, 1961, p. 324
+    estrofas:
+    - - - Creátor alme = Creador benigno
+        - síderum, = de los astros,
+      - - Ætérna lux = luz eterna
+        - credéntium, = de los creyentes,
+      - - Iesu, = Jesús,
+        - Redémptor ómnium, = Redentor de todos,
+      - - Inténde = escucha
+        - votis súpplicum. = las súplicas de los que claman.
+    - - - Qui = Tú, que,
+        - dǽmonis ne fráudibus = para que por el engaño del demonio no
+      - - Períret orbis, = pereciera el mundo,
+        - ímpetu = por el impulso
+      - - Amóris actus, = de tu amor movido,
+        - lánguidi = para el enfermo
+      - - Mundi = mundo
+        - medéla factus es. = te hiciste remedio.
+    - - - Commúne qui = Tú, que el común
+        - mundi nefas = pecado del mundo
+      - - Ut expiáres, = para expiar,
+        - ad crucem = a la cruz
+      - - E Vírginis sacrário = desde el sacrario de la Virgen
+      - - Intácta prodis víctima. = sales, víctima inmaculada.
+    - - - Cuius = Tu
+        - potéstas glóriæ, = poder glorioso
+      - - Noménque = y tu nombre,
+        - cum primum sonat, = apenas suena,
+      - - Et cǽlites = tanto el cielo
+        - et ínferi = como el infierno
+      - - Treménte = temblorosos
+        - curvántur genu. = doblan la rodilla.
+    - - - Te deprecámur, = Te suplicamos,
+        - últimæ = del último
+      - - Magnum diéi Iúdicem, = día, oh gran Juez,
+      - - Armis = con las armas
+        - supérnæ grátiæ = de tu suprema gracia
+      - - Defénde nos = defiéndenos
+        - ab hóstibus. = del enemigo.
+    - - - Virtus, honor, = Poder, honor,
+        - laus, glória = alabanza y gloria
+      - - Deo Patri = a Dios Padre
+        - cum Fílio, = con el Hijo,
+      - - Sancto simul Paráclito, = y al Santo Paráclito,
+      - - In sæculórum sǽcula. = por los siglos de los siglos.
+    amen: Amen. = Amén.
+
+  en-clara-vox:
+    titulo: En clara vox redárguit
+    partitura: en-clara-vox.gabc
+    fuente: Liber antiphonarius, 1960, p. 215
+    estrofas:
+    - - - En clara vox = He aquí que una voz clara
+        - redárguit = reprende
+      - - Obscúra quæque, = todo lo oscuro,
+        - 'pérsonans: = resonando:'
+      - - Procul = lejos
+        - fugéntur sómnia, = huyan los sueños;
+      - - Ab alto = desde lo alto
+        - Iesus prómicat. = Jesús resplandece.
+    - - - Mens iam resúrgat = Que el alma se levante ya,
+        - tórpida, = adormecida,
+      - - Non ámplius = no más
+        - 'iacens humi: = tendida en el suelo;'
+      - - Sidus refúlget = brilla un astro
+        - iam novum, = ya nuevo,
+      - - Ut tollat = para quitar
+        - omne nóxium. = todo lo dañino.
+    - - - En Agnus = He aquí que el Cordero
+        - ad nos míttitur = es enviado a nosotros
+      - - Laxáre gratis = para perdonar gratis
+        - 'débitum: = la deuda;'
+      - - Omnes simul = todos juntos
+        - cum lácrimis = con lágrimas
+      - - Precémur = pidamos
+        - indulgéntiam. = perdón.
+    - - - Ut cum secúndo = Para que, cuando por segunda vez
+        - fúlserit, = resplandezca
+      - - Metúque = y de temor
+        - mundum cínxerit, = envuelva al mundo,
+      - - Non pro reátu = no por la culpa
+        - púniat, = nos castigue,
+      - - Sed nos = sino que nos
+        - pius = compasivo
+        - tunc prótegat. = proteja entonces.
+    - - - Virtus, honor, = Poder, honor,
+        - laus, glória = alabanza y gloria
+      - - Deo Patri = a Dios Padre
+        - cum Fílio, = con el Hijo,
+      - - Sancto simul Paráclito, = y al Santo Paráclito,
+      - - In sæculórum sǽcula. = por los siglos de los siglos.
+    amen: Amen. = Amén.
+
+  te-saeculorum-principem:
+    titulo: Te sæculórum Príncipem
+    partitura: te-saeculorum-principem.gabc
+    fuente: The Liber Usualis, 1961, p. 1716
+    estrofas:
+    - - - Te = A ti,
+        - sæculórum Príncipem, = Príncipe de los siglos,
+      - - Te, Christe, = a ti, oh Cristo,
+        - Regem Géntium, = Rey de las naciones,
+      - - Te méntium, = a ti, de las mentes,
+        - Te córdium = a ti, de los corazones,
+      - - Unum = único
+        - fatémur árbitrum. = árbitro te confesamos.
+    - - - Scelésta turba = La turba malvada
+        - 'clámitat: = grita:'
+      - - Regnáre Christum = Que reine Cristo
+        - 'nólumus: = no queremos.'
+      - - Te nos = A ti nosotros,
+        - ovántes = exultantes,
+        - ómnium = de todos
+      - - Regem suprémum = Rey supremo
+        - dícimus. = te proclamamos.
+    - - - O Christe, = Oh Cristo,
+        - Princeps Pácifer, = Príncipe pacífico,
+      - - Mentes rebélles = las mentes rebeldes
+        - 'súbiice: = somete;'
+      - - Tuóque amóre = y con tu amor
+        - dévios, = a los extraviados
+      - - Ovíle in unum = en un solo redil
+        - cóngrega. = congrega.
+    - - - Ad hoc = Para esto,
+        - cruénta ab árbore, = del árbol ensangrentado
+      - - Pendes = pendes
+        - 'apértis bráchiis: = con los brazos abiertos;'
+      - - Diráque = y por la cruel
+        - fossum cúspide = lanza traspasado
+      - - Cor = el corazón
+        - igne flagrans = ardiendo en fuego
+        - éxhibes. = muestras.
+    - - - Ad hoc = Para esto
+        - in aris ábderis = en los altares te ocultas
+      - - Vini dapísque imágine, = bajo la figura del vino y del manjar,
+      - - Fundens = derramando
+        - salútem fíliis = la salvación sobre tus hijos
+      - - Transverberáto péctore. = de tu pecho traspasado.
+    - - - Te = A ti
+        - natiónum Prǽsides = los gobernantes de las naciones
+      - - Honóre tollant = te ensalcen con honor
+        - público, = público,
+      - - Colant = te veneren
+        - magístri, iúdices, = maestros y jueces,
+      - - Leges et artes = las leyes y las artes
+        - éxprimant. = te expresen.
+    - - - Submíssa = Sometidas,
+        - regum = de los reyes
+        - fúlgeant = brillen
+      - - Tibi dicáta = a ti consagradas
+        - 'insígnia: = las insignias;'
+      - - Mitíque sceptro = y a tu suave cetro
+        - pátriam = la patria
+      - - Domósque = y los hogares
+        - subde = somete
+        - cívium. = de los ciudadanos.
+    - - - Iesu, = Jesús,
+        - tibi sit glória, = a ti sea la gloria,
+      - - Qui sceptra mundi = que los cetros del mundo
+        - témperas, = gobiernas,
+      - - Cum Patre, = con el Padre
+        - et almo Spíritu, = y el Espíritu benigno,
+      - - In sempitérna sǽcula. = por los siglos eternos.
+    amen: Amen. = Amén.
+
+  veni-creator-spiritus:
+    titulo: Veni Creátor Spíritus
+    partitura: veni-creator-spiritus.gabc
+    fuente: Graduale Romanum, 1961, p. 150*; traducción de ADF
+    estrofas:
+    - - - Veni = Ven,
+        - Creátor Spíritus, = Espíritu Creador,
+      - - Mentes tuórum = las almas de tus fieles
+        - 'vísita: = visita;'
+      - - Imple = colma
+        - supérna grátia = con tu divina gracia
+      - - Quæ tu creásti péctora. = los corazones que creaste.
+    - - - Qui díceris = Tú, a quien llamamos
+        - Paráclitus, = Consolador,
+      - - Altíssimi = del Altísimo
+        - donum Dei, = don de Dios,
+      - - Fons vivus, = fuente viva,
+        - ignis, cáritas, = fuego, caridad,
+      - - Et spiritális = y espiritual
+        - únctio. = unción.
+    - - - Tu = Tú,
+        - septifórmis múnere, = de los siete dones,
+      - - Dígitus = dedo
+        - patérnæ déxteræ, = de la diestra del Padre,
+      - - Tu rite = tú, fiel
+        - promíssum Patris, = promesa del Padre,
+      - - Sermóne ditans = que enriqueces con la palabra
+        - gúttura. = nuestros labios.
+    - - - Accénde lumen = Enciende la luz
+        - sénsibus, = en los sentidos,
+      - - Infúnde amórem = infunde tu amor
+        - córdibus, = en los corazones,
+      - - Infírma = lo débil
+        - nostri córporis = de nuestro cuerpo
+      - - Virtúte firmans = fortalece con fuerza
+        - pérpeti. = perpetua.
+    - - - Hostem repéllas = Aleja al enemigo
+        - lóngius, = lejos de nosotros,
+      - - Pacémque = y la paz
+        - 'dones prótinus: = danos pronto;'
+      - - Ductóre sic te = así, contigo como guía
+        - prǽvio, = que nos precede,
+      - - Vitémus = evitemos
+        - omne nóxium. = todo mal.
+    - - - Per te sciámus = Por ti conozcamos,
+        - da Patrem, = concédenos, al Padre,
+      - - Noscámus atque = y conozcamos también
+        - Fílium, = al Hijo,
+      - - Teque = y a ti,
+        - utriúsque Spíritum = Espíritu de ambos,
+      - - Credámus = creamos
+        - omni témpore. = en todo tiempo.
+    - - - Deo Patri = A Dios Padre
+        - sit glória, = sea la gloria,
+      - - Et Fílio, = y al Hijo,
+        - qui a mórtuis = que de entre los muertos
+      - - Surréxit, = resucitó,
+        - ac Paráclito, = y al Paráclito,
+      - - In sæculórum sǽcula. = por los siglos de los siglos.
+    amen: Amen. = Amén.
+
+  iesu-redemptor-omnium:
+    titulo: Iesu, Redémptor ómnium
+    partitura: iesu-redemptor-omnium.gabc
+    fuente: The Liber Usualis, 1961, p. 365
+    estrofas:
+    - - - Iesu = Jesús,
+        - Redémptor ómnium, = Redentor de todos,
+      - - Quem = a quien,
+        - lucis ante oríginem, = antes del origen de la luz,
+      - - Parem = igual
+        - patérnæ glóriæ, = a la gloria paterna,
+      - - Pater suprémus = el Padre supremo
+        - édidit. = engendró.
+    - - - Tu lumen = Tú, luz
+        - et splendor Patris, = y resplandor del Padre,
+      - - Tu spes perénnis = tú, esperanza perenne
+        - 'ómnium: = de todos:'
+      - - Inténde = atiende
+        - quas fundunt preces = las súplicas que elevan
+      - - Tui per orbem sérvuli. = tus siervos por el mundo.
+    - - - Meménto, = Recuerda,
+        - rerum Cónditor, = Creador de las cosas,
+      - - Nostri quod olim = que en otro tiempo, de nuestro
+        - córporis, = cuerpo,
+      - - Sacráta ab alvo Vírginis = del sagrado seno de la Virgen
+      - - Nascéndo, = al nacer,
+        - formam súmpseris. = tomaste la forma.
+    - - - Testátur hoc = Lo atestigua
+        - præsens dies, = el día presente,
+      - - Currens = que recorre
+        - 'per anni círculum, = el ciclo del año:'
+      - - Quod solus = que tú solo,
+        - e sinu Patris = del seno del Padre,
+      - - Mundi salus = salvación del mundo,
+        - advéneris. = viniste.
+    - - - Hunc = A él
+        - astra, tellus, ǽquora, = los astros, la tierra, los mares,
+      - - Hunc = a él
+        - omne quod cælo subest, = todo lo que está bajo el cielo,
+      - - Salútis auctórem novæ = autor de la nueva salvación,
+      - - Novo salútat cántico. = lo saluda con un cántico nuevo.
+    - - - Et nos, = Y nosotros,
+        - beáta quos sacri = a quienes la dichosa
+      - - Rigávit unda sánguinis, = ola de sangre sagrada bañó,
+      - - Natális ob diem tui, = por el día de tu nacimiento,
+      - - Hymni tribútum = el tributo de un himno
+        - sólvimus. = te ofrecemos.
+    - - - Iesu, = Jesús,
+        - tibi sit glória, = a ti sea la gloria,
+      - - Qui natus es = que naciste
+        - de Vírgine, = de la Virgen,
+      - - Cum Patre = con el Padre
+        - et almo Spíritu, = y el Espíritu benigno,
+      - - In sempitérna sǽcula. = por los siglos eternos.
+    amen: Amen. = Amén.

@@ -168,6 +168,7 @@ def laudes():
             'invitatorio_to': invitatorio_gregoriano(GL['invitatorio_per_annum']),
             'cantico': {'titulo': bn['titulo'], 'ref': bn['ref'], 'versos': bn['versos'], 'traduccion_versos': [pares(v) for v in bn['traduccion_versos']]},
             **comunes_latin(GL),
+            'himnos': himnos_gregorianos('laudes'),
             'conclusion': {'gabc': gabc(GL['conclusion']['partitura']), 'traduccion': pares(GL['conclusion']['traduccion'])},
         },
     }
@@ -213,6 +214,19 @@ def salmos_comunes(hora):
     return {g['salmo'] for p in partes for g in (p.get('salmodia') or [])} | {s for c in C.values() for s in (c.get('salmos') or [])}   # (Oficio de difuntos: salmos propios de la Hora intermedia)
 
 
+def himnos_gregorianos(hora):
+    """Himnos en gregoriano de esta hora (base/gregoriano/himnos.yaml): cuándo va cada uno, partitura y traducción por frases
+    (estrofas → versos → pares «latín = español»)."""
+    H = leer(os.path.join(B, 'gregoriano', 'himnos.yaml'))
+    C = H['cuando']
+    tablas = [*C['ordinario'].values(), C['adviento'], *C['celebraciones'].values()]
+    usados = {v for t in tablas for k, v in t.items() if (k == 'laudes') == (hora == 'laudes')}
+    for v in {v for t in tablas for v in t.values()}: assert v in H['himnos'], f'himnos.yaml: falta el himno «{v}»'
+    himnos = {k: {'titulo': h['titulo'], 'gabc': gabc(h['partitura']), 'estrofas': [[pares(v) for v in e] for e in h['estrofas']],
+                  'amen': pares([h['amen']])[0]} for k, h in H['himnos'].items() if k in usados}
+    return {'cuando': C, 'himnos': himnos}
+
+
 def comunes_latin(GL):
     """Partes en latín compartidas por Laudes y Vísperas."""
     return {'pater_noster': pares(GL['pater_noster']), 'pater_cortes': GL['pater_cortes'],
@@ -231,7 +245,7 @@ def visperas():
     salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
     mapa, sin = vincular_santoral(SaV)
     datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'comunes': adf_y_comunes('visperas', SaV)[1],
-             'gregoriano': {**comunes_latin(GL),
+             'gregoriano': {**comunes_latin(GL), 'himnos': himnos_gregorianos('visperas'),
                             'cantico': {'titulo': MG['titulo'], 'ref': MG['ref'], 'versos': MG['versos'], 'traduccion_versos': [pares(v) for v in MG['traduccion_versos']]}}}
     destino = os.path.join(RAIZ, 'src', 'carga', 'visperas.js')
     with open(destino, 'w', encoding='utf-8') as f:

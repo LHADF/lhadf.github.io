@@ -82,6 +82,23 @@ function propio(hora, fecha, region){
   return r;
 }
 
+// Himno en gregoriano (base/gregoriano/himnos.yaml), como opción después del himno en español: domingos del Tiempo
+// Ordinario y de Adviento sin otra celebración (en el Ordinario, según la semana del salterio: I Vísperas, Laudes y
+// II Vísperas) y algunas celebraciones por nombre (Vísperas: también las I). ref: el día del oficio (en las I Vísperas, mañana).
+function himnoGregoriano(hora, ref, primeras, GH){
+  if(!GH || !ref) return null;
+  const C=GH.cuando, dom=ref.dom && ref.n===ref.fer;
+  const t = C.celebraciones[ref.n]
+    || (dom && ref.t==='Ordinario' && ref.sal ? C.ordinario[ref.sal%2 ? 'semanas_1_3' : 'semanas_2_4'] : null)
+    || (dom && ref.t==='Adviento' ? C.adviento : null);
+  if(!t) return null;
+  const k = hora==='laudes' ? t.laudes : (t[primeras?'visperas1':'visperas2'] || t.visperas);
+  const H = k && GH.himnos[k]; if(!H) return null;
+  const ult=H.estrofas.length-1;
+  return {id:'greg', n:H.titulo, lang:'la', gabc:H.gabc, glosa:H.estrofas.flat(2).concat([H.amen]),
+          rec:H.estrofas.map((e,i)=>{ const vs=i===ult?e.concat([[H.amen]]):e; return {rol:'', todos:false, pares:vs.flat(), versos:vs}; })};
+}
+
 function armar(hora, fecha, region){
   const L=window[hora.toUpperCase()]; if(!L) return null;
   if(!CP.diaCal(fecha, region)) return null;
@@ -129,7 +146,9 @@ function armar(hora, fecha, region){
 
   sec('himno','Himno');
   const H=L.himnos[P.himno]||[];
-  S.push({k:'himno', es:true, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}]});
+  // El himno en español va primero; el gregoriano del día, como opción (la elección se recuerda: «greg» vale para todos los días que lo tienen)
+  const HG=himnoGregoriano(hora, hoy, primeras, GL.himnos);
+  S.push({k:'himno', es:true, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}].concat(HG?[HG]:[])});
 
   sec('salmodia','Salmodia');
   (P.salmodia||[]).forEach((g,gi)=>{
@@ -186,6 +205,6 @@ function armar(hora, fecha, region){
   };
 }
 
-window.Laudes={armar:(f,r)=>armar('laudes',f,r), ciclo, propio};
+window.Laudes={armar:(f,r)=>armar('laudes',f,r), ciclo, propio, himnoGregoriano};
 window.Visperas={armar:(f,r)=>armar('visperas',f,r), propio};
 })();
