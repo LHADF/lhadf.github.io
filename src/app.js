@@ -236,6 +236,13 @@ function salmoHTML(sal){
   const modo=S.canto? S.salmos : 'texto';
   let h=`<div class="salmo-h"><span class="t">${esc(cita(t.p))}</span>${sal.ref?`<span class="ref">${esc(sal.ref)}</span>`:''}${lema&&lema.p?`<span class="lema">${esc(lema.p)}</span>`:''}`;
   h+='</div>';
+  // Cántico Ap 19: «Aleluia» al principio y al final de cada estrofa; cantado, también en medio y doble al final. En negrita (todos).
+  if(sal.aleluyas){
+    const al=t=>`<p class="v todos"><b>${t}</b></p>`, R_=t=>`<p class="v todos"><span class="k">℟.</span> <b>${t}</b></p>`, c=CANTA();
+    h+=`<div class="versos al19">${sal.aleluyas.map(e=>`<div class="est">${al('Aleluia.')}${e.map((l,i)=>`<p class="v">${esc(l)}</p>`+(c && i<e.length-1?R_('Aleluia.'):'')).join('')}${R_(c?'Aleluia, aleluia.':'Aleluia.')}</div>`).join('')}</div>`;
+    if(sal.gloria) h+=`<div class="versos">${versosHTML(glP,'texto',cod,L,0,null)}</div>`;
+    return h;
+  }
   // partitura
   let todos=vP.concat(sal.gloria?glP:[]);
   const inter = S.lengua==='bi' && sal.inter ? sal.inter : null;

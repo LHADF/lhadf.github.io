@@ -309,3 +309,5 @@ p.rec{margin:0 0 .8em}
 .lec-larga .lec-tit{font-variant:small-caps;letter-spacing:.03em;color:var(--rubric);margin:.8em 0 .9em}
 .lec-larga p{margin:0 0 .8em}
 .vers{font-variant:small-caps;letter-spacing:.03em}   /* «Venid, postrémonos por tierra» (invitatorio) */
+.al19 .est{margin-bottom:1.1em}   /* Cántico Ap 19: cada estrofa con sus «Aleluia» */
+.al19 .est .v{margin:0 0 .15em}

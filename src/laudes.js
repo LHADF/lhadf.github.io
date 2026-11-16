@@ -96,7 +96,11 @@ function armar(hora, fecha, region){
   const cuaresma=hoy.t==='Cuaresma'||hoy.t==='Triduo';
   const solemne=!!(hoy.sol||hoy.dom||hoy.t==='Triduo'||hoy.oct);
   const S=[]; const sec=(id,t,extra)=>S.push({k:'sec',id,t,...extra});
+  // Cántico Ap 19 (Vísperas del domingo): sus «Aleluia» van aparte; la app los muestra todos si el oficio se canta,
+  // y si se recita, solo al principio y al final de cada estrofa (rúbrica del libro)
+  const aleluyas=t=>t.filter(e=>/\n/.test(e)).map(e=>e.split('\n').map(x=>x.trim()).filter(x=>x && !/aleluia/i.test(x)));
   const salmo=(sid, ant)=>{ const s=L.salmos[sid]; const v=X.versosDe(s.texto);
+    if(/^cantico-ap-19-/.test(sid)) return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:[]}, grupos:{es:[]}, aleluyas:aleluyas(s.texto), gloria:true, rubrica:''};
     return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!SIN_GLORIA.includes(sid), rubrica:s.rubrica_final||''}; };
 
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.

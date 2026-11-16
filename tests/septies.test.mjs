@@ -458,6 +458,11 @@ test('Oficio de difuntos (botón del inicio) e invitatorio a elección', () => {
   assert.ok(LA.armar('2026-11-15', '').secciones.some(s => s.k === 'salmoinv') && !LA.armar('2026-11-17', '').secciones.some(s => s.k === 'salmoinv'));
 });
 
+test('Cántico Ap 19: sus «Aleluia» van aparte (la app los muestra según se cante o se recite)', () => {
+  const c = VI.armar('2026-11-15', '').secciones.find(s => s.id === 'cantico-ap-19-1-2-5-7');
+  assert.equal(c.aleluyas.length, 4); assert.ok(c.aleluyas.every(e => e.length === 2 && e.every(l => !/aleluia/i.test(l))));
+});
+
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
   const W = ctx.window;
   const blas = LA.armar('2027-02-03', '');
