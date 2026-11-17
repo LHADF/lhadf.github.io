@@ -280,29 +280,6 @@ function interHTML(pares){
 // Ubica las traducciones: cada una empieza bajo su palabra; si la anterior es más larga, se corre a la derecha;
 // si el renglón se pasa del margen, se recorren hacia la izquierda. Solo si aun así no entran, la última palabra
 // latina con traducción pasa al renglón siguiente (el latín nunca se estira ni se abre).
-// Renglón que no entra en el ancho y se quiebra: guion rojo (rúbrica) al final de cada parte cortada, para que no se lea
-// como flexa ni metro. El corte lo decide el navegador; esto solo lo marca (y se rehace al cambiar el ancho o la letra).
-const QUIEBRE='.v>.h1,.v>.h2,.himno .est>.ln';
-function marcarQuiebres(raiz){
-  raiz=raiz||document;
-  raiz.querySelectorAll('.quiebre').forEach(q=>q.remove());
-  const marcas=[];
-  raiz.querySelectorAll(QUIEBRE).forEach(el=>{
-    if(el.closest('.il')) return;
-    const rg=document.createRange(); rg.selectNodeContents(el);
-    const rs=[...rg.getClientRects()].filter(r=>r.width>0.5 && r.height>0); if(rs.length<2) return;
-    const lh=parseFloat(getComputedStyle(el).lineHeight)||rs[0].height, lineas=[];
-    for(const r of rs.sort((a,b)=>a.top-b.top||a.left-b.left)){
-      const l=lineas.find(x=>Math.abs(x.top-r.top)<lh*.5 || Math.abs(x.bottom-r.bottom)<lh*.5);
-      if(l){ l.right=Math.max(l.right,r.right); l.top=Math.min(l.top,r.top); l.bottom=Math.max(l.bottom,r.bottom); } else lineas.push({top:r.top,bottom:r.bottom,right:r.right});
-    }
-    if(lineas.length<2) return;
-    const b=el.getBoundingClientRect();
-    lineas.sort((a,c)=>a.top-c.top).slice(0,-1).forEach(l=>marcas.push([el, l.right-b.left, l.top-b.top]));
-  });
-  marcas.forEach(([el,x,y])=>{ const q=document.createElement('span'); q.className='quiebre'; q.setAttribute('aria-hidden','true'); q.textContent='—';
-    q.style.left=x+'px'; q.style.top=y+'px'; el.appendChild(q); });
-}
 function ajustarGlosas(raiz){
   raiz=raiz||document;
   raiz.querySelectorAll('br.ajuste').forEach(b=>b.remove());
@@ -689,7 +666,7 @@ function render(){
   $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(!enHora) vigilarTitulo();
-  if(enHora){ ajustarGlosas($('#main')); marcarQuiebres($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ ajustarGlosas($('#main')); marcarQuiebres($('#main')); }); pintar($('#main')); }
+  if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ ajustarGlosas($('#main')); }); pintar($('#main')); }
 }
 
 /* ---------- Hojas ---------- */
@@ -798,7 +775,7 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
 // Barras que se esconden al bajar y vuelven al subir
 let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const bajar=y>yAnt && y>120; if(S.vista==='hora'){ $('#top').classList.toggle('oculta',bajar); } yAnt=y; },{passive:true});
 document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.classList.contains('desliza')) f.classList.toggle('mas', f.scrollLeft+f.clientWidth<f.scrollWidth-2); },true);
-let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); marcarQuiebres($('#main')); pintar($('#main')); } },250); });
+let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
 
 // App instalable: el service worker (sw.js, de armar.py) guarda la app para abrirla sin conexión.
 // No en el Artifact (sin ILU_DIR) ni abierta como archivo.

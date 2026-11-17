@@ -5,7 +5,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 ## Ortotipografía
 
 - **En rojo:** rúbricas (además en cursiva), la letra capital inicial del gregoriano y el número de modo, los números de estrofa de los himnos, ℣, ℟, asterisco y cruz.
-- **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): guion rojo (—, color rúbrica) al final de la parte cortada, para que no se confunda con flexa ni metro. No es un corte fijo: lo marca la app solo donde el navegador quebró el renglón (`marcarQuiebres` en `src/app.js`), en salmos, cánticos e himnos.
+- **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): lo que baja va más adentro que el renglón de la cadencia, como con dos sangrías (2,2 em; el renglón de la cadencia, 1,1 em). Sin guion ni otra marca. Vale para salmos, cánticos e himnos.
 - **Partituras de himnos:** cada estrofa y el Amén empiezan renglón nuevo; el anterior termina con el custos de la nota siguiente y el pentagrama vacío hasta el final (en el GABC, `(::Z)`).
 - **Glifos propios** (fuente «Cantoral Signos»): ℣ y ℟ con trazo diagonal, cruz patada (✠) y asterisco de cinco pétalos.
 - **Latín:** *i* en lugar de *j*; ligaduras æ/œ; tildes de acento. Source Serif 4 no trae «ǽ» ni «Ǽ»: van en `src/assets/ae.css` (familia propia «Septies AE», nunca «Cantoral Signos»), armadas con la «æ» y la tilde de la misma fuente (`tools/fuente_ae.py`), para que no se vean más altas.

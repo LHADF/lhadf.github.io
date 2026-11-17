@@ -165,7 +165,7 @@ b .k,.todos .k{font-weight:400}
 .himno .est .num{position:absolute;left:0;top:0;color:var(--glosa)}
 .himno.sin-num .est{padding-left:0}
 .himno .est.estribillo{font-style:italic}
-.himno .ln{display:block}
+.himno .ln{display:block;padding-left:2.2em;text-indent:-2.2em}
 .himno .est .gl{margin:0 0 .25em}
 .salmo-h{margin:1em 0 .6em}
 .salmo-h .t{font-family:var(--titulo);font-weight:600;color:var(--rubric);font-size:.95em}
@@ -173,8 +173,10 @@ b .k,.todos .k{font-weight:400}
 .salmo-h .lema{display:block;font-style:italic;font-size:.8em;color:var(--glosa);margin-top:.15em}
 .versos{margin:0 0 .4em}
 .v{margin:0 0 .55em}
-.v .h1{display:block}
-.v .h2{display:block;padding-left:1.1em}
+.v .h1{display:block;padding-left:2.2em;text-indent:-2.2em}
+.v .h2{display:block;padding-left:2.2em;text-indent:-1.1em}
+/* Renglón que no entra en el ancho: lo que baja va más adentro que el renglón de la cadencia (dos sangrías) */
+.v .h1 *,.v .h2 *,.himno .ln *{text-indent:0}
 .v .sg{color:var(--rubric);font-family:var(--serif);font-size:.95em}
 .v b{font-weight:600}
 .v i{font-style:italic;color:var(--ink2)}
@@ -333,6 +335,3 @@ p.rec{margin:0 0 .8em}
 .vers{font-variant:small-caps;letter-spacing:.03em}   /* «Venid, postrémonos por tierra» (invitatorio) */
 .al19 .est{margin-bottom:1.1em}   /* Cántico Ap 19: cada estrofa con sus «Aleluia» */
 .al19 .est .v{margin:0 0 .15em}
-/* Renglón quebrado por falta de ancho: guion rojo al final de la parte cortada (lo pone marcarQuiebres) */
-.v>.h1,.v>.h2,.himno .est>.ln{position:relative;padding-right:.9em}
-.quiebre{position:absolute;margin-left:.15em;color:var(--rubric);font-family:var(--serif);font-weight:400;font-style:normal;line-height:normal;pointer-events:none;user-select:none}
