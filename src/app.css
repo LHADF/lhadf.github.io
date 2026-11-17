@@ -54,6 +54,9 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 
 .portada{padding-top:max(10px,env(safe-area-inset-top,0px)) !important}
 .dia .meta{display:flex;flex-wrap:wrap;gap:1px 12px;font-size:var(--f-dato);line-height:1.35;color:var(--ink2)}
+.dia h2 .tit{display:block;margin-top:.15em;font-size:max(.62em,.8rem);line-height:1.25;font-weight:400;font-style:italic;color:var(--ink2)}
+/* rayita suave entre el nombre y los datos del día */
+.dia .meta{border-top:1px solid var(--line2);padding-top:7px}
 .color{display:inline-flex;align-items:center;gap:6px}
 .color::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--col,var(--verde));box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 30%,transparent)}
 .navdia{display:flex;align-items:center;gap:6px;margin-bottom:-6px}

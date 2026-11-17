@@ -591,11 +591,24 @@ function iluHTML(){
   const url=i==null ? window.ILU : window.ILU_DIR+window.ILUS.img[i]+'.webp', alt=i==null ? 'Coro cantando' : window.ILUS.d[i];
   return `<span class="ilu" role="img" aria-label="${esc(alt)}" style="--ilu:url(${url})"></span>`;
 }
-// Título del día: los títulos del santo (obispo, papa y mártir, reina…) en cursiva; el nombre y lo que empieza con
-// mayúscula o con «y» («y Metodio», «y compañeros») quedan en redonda. Se parte por las comas.
+// Título del día: el nombre arriba y, en un renglón aparte, los títulos del santo («obispo y doctor de la Iglesia»,
+// «papa y mártir», «reina»), en letra más fina. Se parte por las comas: lo que empieza en minúscula es título, salvo
+// lo que empieza con «y» («y Metodio», «y compañeros»), que sigue al nombre. Si los títulos estaban intercalados
+// («Andrés Dung-Lac, presbítero, y compañeros, mártires»), se juntan: «Andrés Dung-Lac y compañeros» / «presbítero y mártires».
+function partesTitulo(t){
+  const nombre=[], titulos=[];
+  t.split(', ').forEach((x,i)=>{
+    if(i>0 && /^[a-záéíóúñ]/.test(x) && !/^(y|e) /.test(x)) titulos.push(x);
+    else if(i>0 && /^(y|e) /.test(x)) nombre.push(nombre.pop()+' '+x);
+    else nombre.push(x);
+  });
+  // dos títulos: «presbítero y mártires»; tres o más: los de cada uno con «y», y el común al final: «papa y obispo, mártires»
+  const tit=titulos.length>2 ? titulos.slice(0,-1).join(' y ')+', '+titulos[titulos.length-1] : titulos.join(' y ');
+  return {nombre:nombre.join(', '), titulos:tit};
+}
 function tituloHTML(t){
-  const p=t.split(', ');
-  return p.map((x,i)=>i>0 && /^[a-záéíóúñ]/.test(x) && !/^(y|e) /.test(x) ? `<i>${esc(x)}</i>` : esc(x)).join(', ');
+  const p=partesTitulo(t);
+  return esc(p.nombre)+(p.titulos?`<span class="tit">${esc(p.titulos)}</span>`:'');
 }
 // El título del día se achica hasta entrar en la tarjeta, que no cambia de proporción. Solo si ni al mínimo entra, la tarjeta crece.
 function ajustarTitulo(){
