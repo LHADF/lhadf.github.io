@@ -50,10 +50,10 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .dia .txt{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;min-height:0;overflow:hidden;padding:4px 2px 2px 6px}
 .dia .hoy{font-size:var(--f-dato);color:var(--ink2)}
 .dia h2{font-family:var(--titulo);font-size:1.6rem;line-height:1.15;margin:4px 0 0;font-weight:600;text-wrap:balance}
-.dia .bio{align-self:flex-start;border:0;background:none;padding:6px 0;min-height:32px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
+.dia .bio{align-self:flex-start;border:0;background:none;padding:2px 0;min-height:24px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
 
 .portada{padding-top:max(10px,env(safe-area-inset-top,0px)) !important}
-.dia .meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:var(--f-dato);color:var(--ink2)}
+.dia .meta{display:flex;flex-wrap:wrap;gap:1px 12px;font-size:var(--f-dato);line-height:1.35;color:var(--ink2)}
 .color{display:inline-flex;align-items:center;gap:6px}
 .color::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--col,var(--verde));box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 30%,transparent)}
 .navdia{display:flex;align-items:center;gap:6px;margin-bottom:-6px}
@@ -93,7 +93,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .btn{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);padding:10px 18px;font-weight:600}
 .btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
 .discreto{align-self:center;border:0;background:none;min-height:44px;padding:8px 12px;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
-.discreto.arriba{margin:-6px 0 2px}
+.discreto.arriba{margin:0}
 .orof-b{font-family:var(--serif);font-size:calc(var(--lec)*1rem);line-height:1.5}
 .orof-b h3{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:1.6em 0 .7em}
 .orof-b h3:first-child{margin-top:0}

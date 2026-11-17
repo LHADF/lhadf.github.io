@@ -591,11 +591,17 @@ function iluHTML(){
   const url=i==null ? window.ILU : window.ILU_DIR+window.ILUS.img[i]+'.webp', alt=i==null ? 'Coro cantando' : window.ILUS.d[i];
   return `<span class="ilu" role="img" aria-label="${esc(alt)}" style="--ilu:url(${url})"></span>`;
 }
+// Título del día: los títulos del santo (obispo, papa y mártir, reina…) en cursiva; el nombre y lo que empieza con
+// mayúscula o con «y» («y Metodio», «y compañeros») quedan en redonda. Se parte por las comas.
+function tituloHTML(t){
+  const p=t.split(', ');
+  return p.map((x,i)=>i>0 && /^[a-záéíóúñ]/.test(x) && !/^(y|e) /.test(x) ? `<i>${esc(x)}</i>` : esc(x)).join(', ');
+}
 // El título del día se achica hasta entrar en la tarjeta, que no cambia de proporción. Solo si ni al mínimo entra, la tarjeta crece.
 function ajustarTitulo(){
   const dia=$('.dia'), txt=dia&&dia.querySelector('.txt'), h=txt&&txt.querySelector('h2'); if(!h) return;
   dia.classList.remove('crece'); h.style.fontSize='';
-  const raiz=parseFloat(getComputedStyle(document.documentElement).fontSize)||16, min=raiz*0.9;
+  const raiz=parseFloat(getComputedStyle(document.documentElement).fontSize)||16, min=raiz*1.05;
   let t=parseFloat(getComputedStyle(h).fontSize);
   while(txt.scrollHeight>txt.clientHeight+1 && t>min){ t=Math.max(min,t-1); h.style.fontSize=t+'px'; h.style.lineHeight=t<raiz*1.2?'1.2':''; }
   if(txt.scrollHeight>txt.clientHeight+1) dia.classList.add('crece');
@@ -622,12 +628,12 @@ function portadaHTML(){
     </div>
     <div class="dia">
       <div class="txt">
-        <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${esc(r.dia.titulo)}</h2></div>
+        <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${tituloHTML(r.dia.titulo)}</h2></div>
         <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
       </div>
       <div class="arco">${iluHTML()}</div>
     </div>
-    ${cals || `<p class="lbl">${esHoy?'Las horas de hoy':'Las horas del día'}</p>`}
+    ${cals}
     <button class="discreto arriba" data-act="oraciones">Oraciones antes y después del oficio</button>
     <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=true, ya=ahora.includes(id);

@@ -46,7 +46,9 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 - **Modo claro:** papel blanco, tinta negra, pergamino `#f4eee4` para tarjetas, arco `#e7ddcc`, tinta de ilustración `#2a201a`. Nada de tonos pastel.
 - **Modo oscuro:** fondo negro puro (`#000`) y superficies en gris neutro (`#161616`, `#111`). Las ilustraciones no se invierten.
 - **Ilustraciones:** grabado y mosaico antiguo, en línea, dentro de arcos de pergamino, sin imágenes pixeladas.
-- **Tarjeta del día (inicio):** altura fija y arco de forma fija (ancho = 0,72 del alto). Si el título no entra, se achica la letra hasta 0,9 rem; solo si ni así entra, la tarjeta crece.
+- **Tarjeta del día (inicio):** altura fija y arco de forma fija (ancho = 0,72 del alto). Si el título no entra, se achica la letra hasta 1,05 rem; solo si ni así entra, la tarjeta crece.
+- **Título del día:** los títulos del santo («obispo y doctor de la Iglesia», «papa y mártir», «reina») van en cursiva; el nombre, en redonda. Tiempo, semana del salterio y síntesis biográfica, juntos al pie de la tarjeta.
+- **Inicio:** sin el rótulo «Las horas de hoy»; «Oraciones antes y después del oficio» va centrado entre la tarjeta (o los calendarios) y la lista de horas.
 - **Imagen de la tarjeta del inicio:** grabados de una sola tinta del álbum «Liturgical Cliparts», pintados con la tinta de ilustración sobre el pergamino del arco; entran enteros, apoyados abajo. Cuál va cada día lo dice `base/ilustraciones.yaml`: propia de la celebración o del día (también en Cuaresma) → la del evangelio del domingo, según el ciclo → la del común (en Cuaresma, la del tiempo) → la del tiempo → una genérica. Si el día tiene varias, cambian en cada hora. Las figuras muy angostas llevan una guarda del álbum a cada costado. Nada de escenas modernas ni de textos que contradigan estas reglas (por ejemplo, «Aleluya» con y).
 - **Controles:** escondidos. Nada de barras inferiores ni índice: todo está en el menú «⋯» (lectura, aspecto, canto).
 - **Modo claro por defecto;** el oscuro solo si la persona lo elige.
