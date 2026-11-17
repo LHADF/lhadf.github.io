@@ -68,7 +68,7 @@ Santísimo Nombre de la bienaventurada Virgen María:
 Bienaventurada Virgen María Corredentora:   # nombre ADF de Nuestra Señora de los Dolores (15 de septiembre)
   es: NUESTRA SEÑORA DE LOS DOLORES
 Santa Hildegarda de Bingen, virgen y doctora de la Iglesia:
-  comun: doctores
+  comun: virgenes   # excepción: solo del común de vírgenes
 Nuestra Señora de la Salette:
   comun: virgen-maria
 San Dionisio, obispo, y compañeros, mártires:

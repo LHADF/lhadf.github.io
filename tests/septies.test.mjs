@@ -594,9 +594,10 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   assert.equal(X.rubricaVale('opcion: 2', 'San Blas, obispo y mártir'), false);
   // todo doctor toma del común de doctores; el nombre va en lugar de «N.» también fuera de la oración
   const bel = JSON.stringify(VI.armar('2027-09-17', '').secciones);
-  assert.match(bel, /Oh doctor admirable, luz de la Iglesia santa, san Roberto Belarmino,/);
+  assert.match(bel, /Oh doctor admirable, luz de la Iglesia santa, san Roberto, fiel/);
   assert.ok(!/\bN\./.test(bel) && !/\bN\./.test(JSON.stringify(LA.armar('2026-11-16', '').secciones)));
-  assert.match(JSON.stringify(LA.armar('2027-09-18', '').secciones), /concediste a santa Hildegarda de Bingen/);
+  assert.match(JSON.stringify(VI.armar('2026-11-16', '').secciones), /la fiesta de santa Gertrudis, virgen,/);
+  assert.match(LA.armar('2027-09-18', '').dia.nota || '', /vírgenes/i);   // santa Hildegarda: solo del común de vírgenes
   assert.ok(X.esDoctor('San Agustín, obispo y doctor de la Iglesia') && X.esDoctor('Santa Teresa de Jesús, virgen y doctora de la Iglesia') && !X.esDoctor('San Blas, obispo y mártir'));
   // en Pascua, lo que se hereda de otro común conserva su «Aleluia» (santa Catalina de Siena: doctores ← vírgenes)
   const cat = ctx.window.Oficio.armar('2027-04-29', '').secciones.find(s => s.k === 'ant' && s.id === 'a1');

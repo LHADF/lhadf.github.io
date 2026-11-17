@@ -76,7 +76,8 @@ const PALABRAS=['papa','obispo','presbítero','sacerdote','abad','religios','vir
 const COMUN_DE=[[/dedicaci/,'dedicacion'],[/virgen mar/,'virgen-maria'],[/ap[óo]stol/,'apostoles'],[/para un m[áa]rt|un m[áa]rt/,'un-martir'],
   [/varios m[áa]rt/,'varios-martires'],[/pastores/,'pastores'],[/doctores/,'doctores'],[/v[íi]rgenes/,'virgenes'],[/santos varones/,'santos-varones'],[/santas mujeres/,'santas-mujeres'],[/religios/,'religiosos'],[/caritativ/,'caridad'],[/educador/,'educadores']];
 // Todo doctor de la Iglesia toma del común de doctores (completado por el de pastores; las doctoras, por el de vírgenes),
-// salvo sus elementos propios, aunque la rúbrica del libro nombre primero otro común.
+// salvo sus elementos propios, aunque la rúbrica del libro nombre primero otro común. Lo que asigne adf.yaml manda
+// (santa Hildegarda: solo del común de vírgenes).
 const esDoctor=nombre=>/\bdoctor(a|es)?\b/i.test(String(nombre||''));
 function comunDe(texto){
   const t=String(texto||'').toLowerCase(); let mejor=null, pos=1e9;
@@ -89,10 +90,10 @@ function nucleoDe(n){
   return n.split(',')[0].replace(/^(San|Santa|Santo|Santos|Santas|Beato|Beata|Beatos|Beatas)\s+/,'').trim()
     + (/y compañer/i.test(n) && !/y compañer/i.test(n.split(',')[0]) ? ' y compañeros' : '');
 }
-// En los textos del común (fuera de las oraciones, que arma oracionComun): «san N.» / «santa N.» → el nombre de la celebración
+// En los textos del común (fuera de las oraciones, que arma oracionComun): «san N.» / «santa N.» → el primer nombre del santo
 function conNombre(o, nombre){
   const n=String(nombre||''), m=/^(San|Santa|Santo|Beato|Beata)\s/.exec(n); if(!m) return o;
-  const fem=/^(Santa|Beata)$/.test(m[1]), nom=m[1].toLowerCase()+' '+nucleoDe(n);
+  const fem=/^(Santa|Beata)$/.test(m[1]), nom=m[1].toLowerCase()+' '+nucleoDe(n).split(/\s+/)[0];   // solo el primer nombre: «san Roberto»
   const f=x=> typeof x==='string' ? x.replace(/\b(san|santa|santo)\s+N\./gi, (t,a)=>(/^[A-Z]/.test(a)?nom[0].toUpperCase()+nom.slice(1):nom)).replace(/\bdoctor admirable/g, fem?'doctora admirable':'doctor admirable')
     : Array.isArray(x) ? x.map(f) : (x && typeof x==='object') ? Object.fromEntries(Object.entries(x).map(([k,v])=>[k, k==='oraciones'?v:f(v)])) : x;
   return f(o);
