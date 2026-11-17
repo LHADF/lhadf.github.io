@@ -578,6 +578,30 @@ function horasAhora(){ const d=new Date(), m=d.getHours()*60+d.getMinutes();
   return !h ? [] : h[0]==='laudes' ? ['oficio','laudes'] : [h[0]]; }
 const HORAS=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas'],['completas','Completas']];
 const COLORES={Verde:'#3f9142','Rosa o morado':'#d58aa0',Morado:'#6b3f8a',Rojo:'#b0302a',Blanco:'#fff',Rosa:'#d58aa0',Negro:'#333','Azul o blanco':'#4f7fbf'};
+// «Rojo o color del Tiempo litúrgico» → rojo: el primero que nombra
+const colorLit=c=>COLORES[c]||COLORES[(c||'').split(' ')[0]]||'#3f9142';
+/* Calendario del mes (al tocar la fecha en el inicio): cada día con un globito de su color litúrgico */
+let _calMes=null;
+function hojaCalendario(){
+  const M=CP._.MESES, hoy=fechaHoy();
+  const [y,m]=(_calMes||S.fecha).slice(0,7).split('-').map(Number);
+  const pad=n=>String(n).padStart(2,'0'), mes=`${y}-${pad(m)}`;
+  const primero=new Date(y,m-1,1), dias=new Date(y,m,0).getDate(), hueco=(primero.getDay()+6)%7;   // la semana empieza el lunes
+  let celdas='<span></span>'.repeat(hueco);
+  for(let d=1; d<=dias; d++){
+    const f=`${mes}-${pad(d)}`, ok=CP.enRango(f), r=ok?CP.diaCal(f, SEL()):null;
+    const cls=[f===S.fecha?'sel':'', f===hoy?'hoy':'', r&&/^(Domingo|Solemnidad)$/.test(r.g)?'mayor':''].join(' ').trim();
+    celdas+= ok ? `<button class="${cls}" data-act="irdia" data-v="${f}" aria-label="${esc(d+' de '+M[m-1]+': '+r.n+' ('+r.c.toLowerCase()+')')}" ${f===S.fecha?'aria-current="date"':''}><span class="num">${d}</span><span class="globo" style="--col:${colorLit(r.c)}"></span></button>`
+               : `<button disabled aria-label="${d}"><span class="num">${d}</span></button>`;
+  }
+  const antes=CP.enRango(CP.masDias(`${mes}-01`,-1)), despues=CP.enRango(`${m===12?y+1:y}-${pad(m===12?1:m+1)}-01`);
+  hoja('Calendario', `<div class="calmes">
+    <div class="calmes-h"><button class="iconbtn" data-act="calmes" data-v="-1" aria-label="Mes anterior" ${antes?'':'disabled'}>‹</button><h3>${M[m-1][0].toUpperCase()+M[m-1].slice(1)} ${y}</h3><button class="iconbtn" data-act="calmes" data-v="1" aria-label="Mes siguiente" ${despues?'':'disabled'}>›</button></div>
+    <div class="calmes-s" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+    <div class="calmes-g">${celdas}</div>
+    ${mes!==hoy.slice(0,7)?'<button class="discreto" data-act="calhoy">Volver a este mes</button>':''}
+  </div>`);
+}
 // Vísperas del día: I Vísperas (sábados y vísperas de solemnidad), II Vísperas (domingos y solemnidades) o Vísperas
 function nombreVisperas(){
   const hoy=CP.diaCal(S.fecha, SEL()), fm=CP.masDias(S.fecha,1), man=CP.enRango(fm)?CP.diaCal(fm, SEL()):null;
@@ -634,7 +658,7 @@ function portadaHTML(){
   return `<div class="portada"><h1 class="vh">Liturgia de las Horas</h1>
     <div class="navdia">
       <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${'‹'}</button>
-      <span class="fecha">${esHoy?'Hoy, ':''}${esc(esHoy?r.fechaTxt.toLowerCase():r.fechaTxt)}</span>
+      <button class="fecha" data-act="calendario" aria-label="Abrir el calendario">${esHoy?'Hoy, ':''}${esc(esHoy?r.fechaTxt.toLowerCase():r.fechaTxt)}</button>
       <button class="iconbtn" data-act="dia" data-v="1" aria-label="Día siguiente">${'›'}</button>
       ${esHoy?'':'<button class="hoybtn" data-act="hoy">Hoy</button>'}
       <button class="iconbtn mas" data-act="opciones" aria-label="Opciones"><svg class="ico" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></button>
@@ -642,7 +666,7 @@ function portadaHTML(){
     <div class="dia">
       <div class="txt">
         <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${tituloHTML(r.dia.titulo)}</h2></div>
-        <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
+        <div class="meta"><span class="color" style="--col:${colorLit(r.dia.color)}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
       </div>
       <div class="arco">${iluHTML()}</div>
     </div>
@@ -731,6 +755,10 @@ document.addEventListener('click',e=>{
       break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
+    case 'calendario': _calMes=S.fecha; hojaCalendario(); break;
+    case 'calmes': { const [y,m]=_calMes.slice(0,7).split('-').map(Number), d=new Date(y,m-1+(+v),1); _calMes=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-01`; hojaCalendario(); break; }
+    case 'calhoy': _calMes=fechaHoy(); hojaCalendario(); break;
+    case 'irdia': if(CP.enRango(v)){ S.fecha=v; cargarDia(); cerrar(); render(); } break;
     case 'dia': { const n=CP.masDias(S.fecha,+v); if(CP.enRango(n)){ S.fecha=n; cargarDia(); render(); } else toast('Fuera del calendario cargado'); break; }
     case 'hoy': S.fecha=fechaHoy(); cargarDia(); render(); break;
     case 'cal': { const c=fichasCal().find(x=>String(x.i)===v && x.sg===(b.dataset.s||'')); if(!c||c.on) break;

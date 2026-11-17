@@ -418,7 +418,7 @@ function armar(fecha, region){
   const d=deIso(fecha);
   const salterio = hoy.sal ? `Semana ${ROMANO(hoy.sal)} del salterio` : '';
   return {
-    nombre:'Liturgia de las Horas',
+    nombre:'Completas',
     versiones:{es:{n:'Liturgia de las Horas'}},
     gloria:{es:['Gloria al Padre, y al Hijo, * y al Espíritu Santo.','Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.']},
     dia:{titulo:hoy.n, tiempo:TIEMPO_TXT[hoy.t]||hoy.t, salterio, color:hoy.c, grado:hoy.g,
