@@ -591,6 +591,22 @@ function iluHTML(){
   const url=i==null ? window.ILU : window.ILU_DIR+window.ILUS.img[i]+'.webp', alt=i==null ? 'Coro cantando' : window.ILUS.d[i];
   return `<span class="ilu" role="img" aria-label="${esc(alt)}" style="--ilu:url(${url})"></span>`;
 }
+// El título del día se achica hasta entrar en la tarjeta, que no cambia de proporción. Solo si ni al mínimo entra, la tarjeta crece.
+function ajustarTitulo(){
+  const dia=$('.dia'), txt=dia&&dia.querySelector('.txt'), h=txt&&txt.querySelector('h2'); if(!h) return;
+  dia.classList.remove('crece'); h.style.fontSize='';
+  const raiz=parseFloat(getComputedStyle(document.documentElement).fontSize)||16, min=raiz*0.9;
+  let t=parseFloat(getComputedStyle(h).fontSize);
+  while(txt.scrollHeight>txt.clientHeight+1 && t>min){ t=Math.max(min,t-1); h.style.fontSize=t+'px'; h.style.lineHeight=t<raiz*1.2?'1.2':''; }
+  if(txt.scrollHeight>txt.clientHeight+1) dia.classList.add('crece');
+}
+let vigiaTitulo=null;
+function vigilarTitulo(){
+  ajustarTitulo();
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(ajustarTitulo);
+  if(!vigiaTitulo && window.ResizeObserver){ let ancho=0; vigiaTitulo=new ResizeObserver(e=>{ const w=Math.round(e[0].contentRect.width); if(w!==ancho){ ancho=w; ajustarTitulo(); } }); }
+  const d=$('.dia'); if(vigiaTitulo&&d){ vigiaTitulo.disconnect(); vigiaTitulo.observe(d); }
+}
 function portadaHTML(){
   const r=R(); const esHoy=S.fecha===fechaHoy(), ahora=esHoy?horasAhora():[];
   // Calendarios: solo cuando el día tiene variantes o nota. La ficha gris es lo que se está celebrando; las encendidas, las otras opciones.
@@ -606,7 +622,7 @@ function portadaHTML(){
     </div>
     <div class="dia">
       <div class="txt">
-        <div><div class="hoy">${esc(r.dia.grado)}</div><h2 class="${r.dia.titulo.length>80?'muy-largo':r.dia.titulo.length>48?'largo':''}">${esc(r.dia.titulo)}</h2></div>
+        <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${esc(r.dia.titulo)}</h2></div>
         <div class="meta"><span class="color" style="--col:${COLORES[r.dia.color]||'#3f9142'}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
       </div>
       <div class="arco">${iluHTML()}</div>
@@ -629,6 +645,7 @@ function render(){
   $('#atras').hidden=!enHora; $('#top').hidden=!enHora;   // en el inicio no hay barra: los tres puntos van junto a la fecha
   $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
+  if(!enHora) vigilarTitulo();
   if(enHora){ ajustarGlosas($('#main')); marcarQuiebres($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ ajustarGlosas($('#main')); marcarQuiebres($('#main')); }); pintar($('#main')); }
 }
 

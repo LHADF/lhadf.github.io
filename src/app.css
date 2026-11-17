@@ -44,11 +44,12 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 
 /* ---------- Portada «Hoy» ---------- */
 .portada{display:flex;flex-direction:column;gap:18px;padding-block:18px 40px}
-.dia{background:var(--perg);border-radius:var(--r-2);padding:14px;display:grid;grid-template-columns:1fr 38%;gap:12px;min-height:190px}
-.dia .txt{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;padding:4px 2px 2px 6px}
+/* la tarjeta del día tiene siempre la misma altura y el arco la misma forma: si el título no entra, se achica la letra (ajustarTitulo, app.js) */
+.dia{background:var(--perg);border-radius:var(--r-2);padding:14px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:100%;gap:12px;height:13.5rem}
+.dia.crece{height:auto;min-height:13.5rem;grid-template-rows:auto}
+.dia .txt{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;min-height:0;overflow:hidden;padding:4px 2px 2px 6px}
 .dia .hoy{font-size:var(--f-dato);color:var(--ink2)}
 .dia h2{font-family:var(--titulo);font-size:1.6rem;line-height:1.15;margin:4px 0 0;font-weight:600;text-wrap:balance}
-.dia h2.largo{font-size:1.3rem}.dia h2.muy-largo{font-size:1.1rem;line-height:1.2}
 .dia .bio{align-self:flex-start;border:0;background:none;padding:6px 0;min-height:32px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
 
 .portada{padding-top:max(10px,env(safe-area-inset-top,0px)) !important}
@@ -60,7 +61,8 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .navdia .iconbtn{font-size:1.5rem;line-height:1}
 .hoybtn{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 14px;min-height:36px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric)}
 .region{display:flex;flex-direction:column;gap:8px;font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2)}
-.arco{position:relative;background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden}
+.arco{position:relative;background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden;height:100%;aspect-ratio:.72}
+.dia.crece .arco{height:calc(13.5rem - 28px);align-self:end}
 /* la imagen entra entera, apoyada abajo, dentro del arco (también las verticales) */
 .ilu{position:absolute;inset:16% 10% 7%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center bottom/contain no-repeat;mask:var(--ilu) center bottom/contain no-repeat}
 .cals{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 -8px}
