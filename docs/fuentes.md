@@ -13,7 +13,7 @@ Las antífonas gregorianas del rito actual («Caro mea», «Salva nos») se tran
 ## Textos provisionales
 
 - **Latín de la Liturgia de las Horas:** salmo y Nunc dimittis de la Nova Vulgata; lectura breve sin cotejar con la edición típica. Falta la oración del jueves.
-- **Traducciones interlineales:** literales, redactadas para Septies; deben revisarse.
+- **Traducciones interlineales:** literales, redactadas para Cervus; deben revisarse.
 - **Himno Te lucis (rito actual):** melodía ferial aplicada al texto de la Liturgia Horarum.
 
 ## Derechos

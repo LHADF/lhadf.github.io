@@ -1,6 +1,9 @@
-# Septies
+# Cervus
 
-*Septies in die laudem dixi tibi* (Sal 118, 164).
+*Quemadmodum desíderat cervus ad fontes aquárum, ita desíderat ánima mea ad te, Deus* (Sal 41, 2).  
+Como desea el ciervo las fuentes de las aguas, así te desea mi alma a ti, Dios.
+
+La app se llamaba antes Septies; la dirección sigue siendo la de LH ADF: <https://lhadf.github.io/>.
 
 Liturgia de las Horas con canto gregoriano, en una sola versión: salmos y lecturas en español pautados en cualquier tono; lo demás en latín con traducción interlineal y antífonas en notación cuadrada.
 
@@ -14,7 +17,9 @@ Liturgia de las Horas con canto gregoriano, en una sola versión: salmos y lectu
 | `src/salmodia.js` | Silabeo latino y español, acentos, tonos salmódicos 1–8 y peregrino, pautado y GABC de los salmos. |
 | `src/cantoral.js` | Funciones de dibujo de partituras compartidas con el Cantoral (espaciado, glosa bajo los neumas). |
 | `src/vendor/exsurge.js` | Exsurge, motor de notación gregoriana (MIT). |
-| `src/assets/` | Fuente «Cantoral Signos» (℣, ℟, cruz patada, asterisco) e ilustración de la portada. |
+| `src/assets/` | Fuente «Cantoral Signos» (℣, ℟, cruz patada, asterisco), ilustraciones de la portada y logo de Cervus (`cervus.png`). |
+| `src/app/`, `src/assets/app/` | App instalable: manifest, service worker (abre sin conexión), íconos, capturas e imagen para compartir el enlace. |
+| `tools/iconos.py` | Genera los íconos de `src/assets/app/` a partir de `src/assets/cervus.png`. |
 | `src/datos/` | Los textos y partituras de cada hora, generados por `tools/datos.py`. |
 | `tools/datos.py` | Arma los datos a partir de las fuentes (ver [docs/fuentes.md](docs/fuentes.md)). |
 | `tools/armar.py` | Une todo en un solo `dist/index.html`. |
@@ -32,6 +37,10 @@ Para regenerar los datos hacen falta los clones de las fuentes en una carpeta he
 ## Publicación
 
 Cada cambio en `main` ejecuta las pruebas, arma la app y la publica en GitHub Pages (**Settings → Pages → Source → GitHub Actions**). Dirección: <https://lhadf.github.io/>.
+
+## App instalable
+
+En Chrome, Edge o Android, Cervus se instala como una app más (botón de instalar en la barra de direcciones, o «Instalar Cervus» en Opciones); en iPhone, con «Compartir → Agregar a inicio». `armar.py` copia a `dist/` el manifest y los íconos y escribe `sw.js` con la huella de la versión: cuando cambia algo, la app instalada se renueva sola. Si cambia el logo: `python3 tools/iconos.py`.
 
 ## Reglas
 

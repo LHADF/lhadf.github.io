@@ -1,4 +1,4 @@
-/* ================== LH ADF — Completas ================== */
+/* ================== Cervus (LH ADF) ================== */
 const SAL=window.Salmodia, CP=window.Completas;
 let D=null; // Completas del día elegido (src/completas.js)
 const $=s=>document.querySelector(s);
@@ -655,7 +655,8 @@ function hojaOpciones(){
     <div class="grupo"><h3>Tamaño</h3><div class="tam"><button data-act="menos" aria-label="Achicar" ${S.zoom<=.8?'disabled':''}>A−</button><span>${Math.round(S.zoom*100)} %</span><button data-act="mas" aria-label="Agrandar" ${S.zoom>=2?'disabled':''}>A+</button></div></div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
     <div class="grupo"><h3>Canto</h3>
-      ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>`);
+      ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>
+    ${_instalar?`<div class="grupo"><h3>App</h3><p class="hint">Cervus queda como una app más, con su ícono, y abre sin conexión.</p><button class="btn" data-act="instalar">Instalar Cervus</button></div>`:''}`);
 }
 let _toast, _toastFin, _undo=null;
 // Aviso breve: aparece y se desvanece (clases «entra» y «sale» de app.css)
@@ -725,6 +726,7 @@ document.addEventListener('click',e=>{
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
     case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio('Tamaño: '+Math.round(z*100)+' %',false); break; }
+    case 'instalar': if(_instalar){ const p=_instalar; _instalar=null; cerrar(); p.prompt(); } break;
     case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); break;   // sin aviso
   }
 });
@@ -733,6 +735,20 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
 let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const bajar=y>yAnt && y>120; if(S.vista==='hora'){ $('#top').classList.toggle('oculta',bajar); } yAnt=y; },{passive:true});
 document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.classList.contains('desliza')) f.classList.toggle('mas', f.scrollLeft+f.clientWidth<f.scrollWidth-2); },true);
 let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); marcarQuiebres($('#main')); pintar($('#main')); } },250); });
+
+// App instalable: el service worker (sw.js, de armar.py) guarda la app para abrirla sin conexión.
+// No en el Artifact (sin ILU_DIR) ni abierta como archivo.
+if(window.ILU_DIR && 'serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost'))
+  window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js')
+    .then(()=>navigator.serviceWorker.ready).then(()=>{
+      // la imagen del día se pidió antes de que el service worker tomara el control: se guarda ahora
+      const m=getComputedStyle(document.querySelector('.ilu')||document.body).getPropertyValue('--ilu').match(/url\(["']?([^"')]+)/);
+      if(m) caches.open('cervus-ilu').then(c=>c.match(m[1]).then(g=>g||c.add(m[1])));
+    }).catch(()=>{}));
+// Chrome avisa cuando se puede instalar: entonces «Instalar Cervus» aparece en Opciones
+let _instalar=null;
+window.addEventListener('beforeinstallprompt',e=>{ _instalar=e; });
+window.addEventListener('appinstalled',()=>{ _instalar=null; toast('Cervus instalada'); });
 
 // Si se recarga con Laudes abierta, primero se cargan sus datos
 if(S.vista==='hora' && MAYORES[S.hora] && !cargada(S.hora)){ S.vista='hoy'; Promise.all([S.hora, ...(S.hora==='oficio'&&S.unirLaudes?['laudes']:[])].map(cargarHora)).then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }

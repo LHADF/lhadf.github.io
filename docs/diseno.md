@@ -1,6 +1,6 @@
-# Reglas de diseño de Septies
+# Reglas de diseño de Cervus
 
-Septies es app hermana del Cantoral: comparte su sistema visual y sus gestos. Las reglas de **ortotipografía son innegociables**; las demás se aplican en la medida en que la app las necesite.
+Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y sus gestos. Las reglas de **ortotipografía son innegociables**; las demás se aplican en la medida en que la app las necesite.
 
 ## Ortotipografía
 

@@ -1,4 +1,4 @@
-# Septies — instrucciones para trabajar en este repositorio
+# Cervus (LH ADF) — instrucciones para trabajar en este repositorio
 
 - Antes de tocar la interfaz o los textos, seguí [docs/diseno.md](docs/diseno.md). Las reglas de ortotipografía son innegociables.
 - La app es un solo HTML armado por `tools/armar.py` desde `src/`. No hay paso de compilación con npm.
