@@ -563,7 +563,7 @@ function hojaCalendario(){
   const M=CP._.MESES, hoy=fechaHoy();
   const [y,m]=(_calMes||S.fecha).slice(0,7).split('-').map(Number);
   const pad=n=>String(n).padStart(2,'0'), mes=`${y}-${pad(m)}`;
-  const primero=new Date(y,m-1,1), dias=new Date(y,m,0).getDate(), hueco=(primero.getDay()+6)%7;   // la semana empieza el lunes
+  const primero=new Date(y,m-1,1), dias=new Date(y,m,0).getDate(), hueco=primero.getDay();   // la semana empieza el domingo
   let celdas='<span></span>'.repeat(hueco);
   for(let d=1; d<=dias; d++){
     const f=`${mes}-${pad(d)}`, ok=CP.enRango(f), r=ok?CP.diaCal(f, SEL()):null;
@@ -574,7 +574,7 @@ function hojaCalendario(){
   const antes=CP.enRango(CP.masDias(`${mes}-01`,-1)), despues=CP.enRango(`${m===12?y+1:y}-${pad(m===12?1:m+1)}-01`);
   hoja('Calendario', `<div class="calmes">
     <div class="calmes-h"><button class="iconbtn" data-act="calmes" data-v="-1" aria-label="Mes anterior" ${antes?'':'disabled'}>‹</button><h3>${M[m-1][0].toUpperCase()+M[m-1].slice(1)} ${y}</h3><button class="iconbtn" data-act="calmes" data-v="1" aria-label="Mes siguiente" ${despues?'':'disabled'}>›</button></div>
-    <div class="calmes-s" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+    <div class="calmes-s" aria-hidden="true"><span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span></div>
     <div class="calmes-g">${celdas}</div>
     ${mes!==hoy.slice(0,7)?'<button class="discreto" data-act="calhoy">Volver a este mes</button>':''}
   </div>`);
