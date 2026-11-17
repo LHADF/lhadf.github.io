@@ -1036,6 +1036,7 @@ pastores:
 doctores:
   nombre: Común de doctores de la Iglesia
   hereda: pastores
+  hereda_mujeres: virgenes   # las doctoras (todas vírgenes): completadas por el común de vírgenes
   himno: Verbo de Dios, eterna luz divina
   lectura:
     ref: St 3, 17-18

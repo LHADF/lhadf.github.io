@@ -621,6 +621,7 @@ pastores:
 doctores:
   nombre: Común de doctores de la Iglesia
   hereda: pastores
+  hereda_mujeres: virgenes   # las doctoras (todas vírgenes): completadas por el común de vírgenes
   himno: Experiencia de Dios fue vuestra ciencia
   lectura:
     ref: Sb 7, 13-14

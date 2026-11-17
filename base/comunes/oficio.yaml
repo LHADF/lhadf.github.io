@@ -1445,6 +1445,7 @@ pastores:
 doctores:
   nombre: Común de doctores de la Iglesia
   hereda: pastores
+  hereda_mujeres: virgenes   # las doctoras (todas vírgenes): completadas por el común de vírgenes
   himno: Vosotros sois luz del mundo
   lectura1:
     titulo: FELICIDAD DE LOS JUSTOS EN DIOS

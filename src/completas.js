@@ -75,10 +75,27 @@ const PALABRAS=['papa','obispo','presbítero','sacerdote','abad','religios','vir
 // Si nombra dos («de pastores… y del de doctores»), el primero.
 const COMUN_DE=[[/dedicaci/,'dedicacion'],[/virgen mar/,'virgen-maria'],[/ap[óo]stol/,'apostoles'],[/para un m[áa]rt|un m[áa]rt/,'un-martir'],
   [/varios m[áa]rt/,'varios-martires'],[/pastores/,'pastores'],[/doctores/,'doctores'],[/v[íi]rgenes/,'virgenes'],[/santos varones/,'santos-varones'],[/santas mujeres/,'santas-mujeres'],[/religios/,'religiosos'],[/caritativ/,'caridad'],[/educador/,'educadores']];
+// Todo doctor de la Iglesia toma del común de doctores (completado por el de pastores; las doctoras, por el de vírgenes),
+// salvo sus elementos propios, aunque la rúbrica del libro nombre primero otro común.
+const esDoctor=nombre=>/\bdoctor(a|es)?\b/i.test(String(nombre||''));
 function comunDe(texto){
   const t=String(texto||'').toLowerCase(); let mejor=null, pos=1e9;
   for(const [re,id] of COMUN_DE){ const m=t.match(re); if(m && m.index<pos){ pos=m.index; mejor=id; } }
   return mejor;
+}
+// «San Roberto Belarmino, presbítero…» → «Roberto Belarmino» (lo que va en lugar de «N.»)
+function nucleoDe(n){
+  n=String(n||'');
+  return n.split(',')[0].replace(/^(San|Santa|Santo|Santos|Santas|Beato|Beata|Beatos|Beatas)\s+/,'').trim()
+    + (/y compañer/i.test(n) && !/y compañer/i.test(n.split(',')[0]) ? ' y compañeros' : '');
+}
+// En los textos del común (fuera de las oraciones, que arma oracionComun): «san N.» / «santa N.» → el nombre de la celebración
+function conNombre(o, nombre){
+  const n=String(nombre||''), m=/^(San|Santa|Santo|Beato|Beata)\s/.exec(n); if(!m) return o;
+  const fem=/^(Santa|Beata)$/.test(m[1]), nom=m[1].toLowerCase()+' '+nucleoDe(n);
+  const f=x=> typeof x==='string' ? x.replace(/\b(san|santa|santo)\s+N\./gi, (t,a)=>(/^[A-Z]/.test(a)?nom[0].toUpperCase()+nom.slice(1):nom)).replace(/\bdoctor admirable/g, fem?'doctora admirable':'doctor admirable')
+    : Array.isArray(x) ? x.map(f) : (x && typeof x==='object') ? Object.fromEntries(Object.entries(x).map(([k,v])=>[k, k==='oraciones'?v:f(v)])) : x;
+  return f(o);
 }
 function oracionComun(oraciones, nombre, turnoN){
   if(!oraciones || !oraciones.length) return null;
@@ -95,9 +112,8 @@ function oracionComun(oraciones, nombre, turnoN){
     return x; };
   // Entre las que cuadran igual de bien (las «O bien»), se alternan de una celebración a la siguiente (n: turno del común)
   const max=Math.max(...oraciones.map(pts)), empate=oraciones.filter(o=>pts(o)===max), o=empate[(turnoN||0)%empate.length];
-  const nucleo=n.split(',')[0].replace(/^(San|Santa|Santo|Santos|Santas|Beato|Beata|Beatos|Beatas)\s+/,'').trim()
-    + (/y compañer/i.test(n) && !/y compañer/i.test(n.split(',')[0]) ? ' y compañeros' : '');
-  return alternativas(o.texto, fem).replace(/\bN\.(\s*y\s*N\.)?/g, nucleo).replace(/\s*[([](obispo|presbítero|papa|abad|abadesa)[)\]]/g, '');
+  const nucleo=nucleoDe(n);
+  return alternativas(o.texto, fem).replace(/\bsan N\./g, fem?'santa N.':'san N.').replace(/\bN\.(\s*y\s*N\.)?/g, nucleo).replace(/\s*[([](obispo|presbítero|papa|abad|abadesa)[)\]]/g, '');
 }
 // El libro marca la forma femenina entre corchetes: «san [santa] N.», «este santo [esta santa]». Se queda una.
 function alternativas(texto, fem){
@@ -172,14 +188,16 @@ function conVariantes(o, nombre){
 function comun(comunes, id, nombre, pascua, n){
   if(pascua) { const c=comun(comunes, id, nombre, false, n); return c && enPascua(c); }
   const c0=comunes && comunes[id]; if(!c0) return null;
-  const c=conVariantes(rotar(c0, n), nombre);
+  const c=conNombre(conVariantes(rotar(c0, n), nombre), nombre);
   const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||''));
   const h=comunes[(fem && c.hereda_mujeres) || c.hereda];
   if(!h) return c;
   const b=comun(comunes, (fem && c.hereda_mujeres) || c.hereda, nombre, false, n);
-  const out={...b, ...c, nombre:c.nombre};
-  if(b.primeras || c.primeras) out.primeras={...(b.primeras||{}), ...(c.primeras||{})};
-  for(const k of ['tercia','sexta','nona']) if(b[k] || c[k]) out[k]={...(b[k]||{}), ...(c[k]||{})};
+  // lo heredado se completa también en su versión de Pascua (si no, se perdería el «Aleluia» de lo que trae el otro común)
+  const mezclar=(x,y)=>{ const o={...(x||{}), ...(y||{})}; if((x&&x.pascua) || (y&&y.pascua)) o.pascua={...((x&&x.pascua)||{}), ...((y&&y.pascua)||{})}; return o; };
+  const out={...mezclar(b, c), nombre:c.nombre};
+  if(b.primeras || c.primeras) out.primeras=mezclar(b.primeras, c.primeras);
+  for(const k of ['tercia','sexta','nona']) if(b[k] || c[k]) out[k]=mezclar(b[k], c[k]);
   return out;
 }
 
@@ -411,5 +429,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo:{}, oracionComun, comunDe, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo:{}, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

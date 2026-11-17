@@ -32,7 +32,7 @@ function capas(L, fecha, sel, campos){
   // Fiesta o solemnidad con propio en la base pero sin todas sus partes (p. ej. una memoria que un calendario eleva):
   // lo que falte, del común que indica el santoral. M: datos de Laudes para la Hora intermedia.
   const M=mayor(ref) ? (L.mayores||{})[ref.n] : null;
-  const CS=(mayor(ref) && (k||M) && L.comunes) ? X.comun(L.comunes, X.comunDe((santo&&santo.comun) || (M&&M.comun)) || adf.comun, ref.n, ref.t==='Pascua') : null;
+  const CS=(mayor(ref) && (k||M) && L.comunes) ? X.comun(L.comunes, (X.esDoctor(ref.n)&&'doctores') || X.comunDe((santo&&santo.comun) || (M&&M.comun)) || adf.comun, ref.n, ref.t==='Pascua') : null;
   return {P, ref, dia, dom:d.getDay()===0, santo, k, C, PR, CS, M, n, tiempo:!!(T1||T2)};
 }
 function aviso(ref, k, L, C, hora, PR){
