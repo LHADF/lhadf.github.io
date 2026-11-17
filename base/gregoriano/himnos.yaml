@@ -81,7 +81,7 @@ himnos:
   aeterne-rerum-conditor:
     titulo: Ætérne rerum Cónditor
     partitura: aeterne-rerum-conditor.gabc
-    fuente: Antiphonale Monasticum, 1934, p. 34
+    fuente: Antiphonale Monasticum, 1934, p. 34 (melodía); texto de la Liturgia de las Horas Dominical (ADF), 7 estrofas
     estrofas:
     - - - Ætérne = Eterno
         - rerum Cónditor, = Creador de las cosas,
@@ -90,7 +90,7 @@ himnos:
       - - Et témporum = y a los tiempos
         - das témpora, = das su sucesión,
       - - Ut álleves = para aliviar
-        - fastídium = el hastío.
+        - fastídium. = el hastío.
     - - - Præco diéi = El pregonero del día
         - iam sonat, = ya resuena,
       - - Noctis profúndæ = en la profunda noche
@@ -104,8 +104,8 @@ himnos:
       - - Solvit polum = libera al cielo
         - 'calígine: = de las tinieblas;'
       - - Hoc = por él
-        - omnis errónum cohors = toda banda de extraviados
-      - - Viam nocéndi = el camino del mal
+        - omnis errónum chorus = toda banda de extraviados
+      - - Vias nocéndi = los caminos del mal
         - déserit. = abandona.
     - - - Hoc nauta = Por él el marinero
         - vires cólligit, = recobra fuerzas,
@@ -115,24 +115,8 @@ himnos:
         - ipsa petra Ecclésiæ, = la misma roca de la Iglesia [Pedro],
       - - Canénte, = al cantar,
         - culpam díluit. = lava su culpa.
-    - - - Surgámus ergo = Levantémonos, pues,
-        - 'strénue: = con presteza:'
-      - - Gallus = el gallo
-        - iacéntes éxcitat, = despierta a los que yacen
-      - - Et somnoléntos = y a los somnolientos
-        - íncrepat, = increpa;
-      - - Gallus = el gallo
-        - negántes árguit. = reprende a los que niegan.
-    - - - Gallo canénte, = Al cantar el gallo,
-        - spes redit, = vuelve la esperanza,
-      - - Ægris = a los enfermos
-        - salus refúnditur, = se les devuelve la salud,
-      - - Mucro latrónis = la espada del ladrón
-        - cónditur, = se envaina,
-      - - Lapsis = a los caídos
-        - fides revértitur. = les vuelve la fe.
     - - - Iesu, = Jesús,
-        - labéntes réspice, = mira a los que vacilan
+        - labántes réspice, = mira a los que vacilan
       - - Et nos = y a nosotros
         - 'vidéndo córrige: = corrígenos con tu mirada;'
       - - Si réspicis, = si nos miras,
@@ -148,12 +132,12 @@ himnos:
         - primum sonet, = primero te cante
       - - Et vota = y los votos
         - solvámus tibi. = te ofrezcamos.
-    - - - Deo Patri = A Dios Padre
-        - sit glória, = sea la gloria,
-      - - Eiúsque soli Fílio, = y a su Hijo único,
+    - - - Sit, Christe, = A ti, Cristo,
+        - rex piíssime, = Rey piadosísimo,
+      - - Tibi Patríque = y al Padre
+        - glória, = sea la gloria,
       - - Cum Spíritu Paráclito, = con el Espíritu Paráclito,
-      - - Et nunc, = ahora
-        - et in perpétuum. = y por la eternidad.
+      - - In sempitérna sǽcula. = por los siglos sin fin.
     amen: Amen. = Amén.
 
   lucis-creator-optime:

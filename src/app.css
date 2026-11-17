@@ -313,3 +313,6 @@ p.rec{margin:0 0 .8em}
 .vers{font-variant:small-caps;letter-spacing:.03em}   /* «Venid, postrémonos por tierra» (invitatorio) */
 .al19 .est{margin-bottom:1.1em}   /* Cántico Ap 19: cada estrofa con sus «Aleluia» */
 .al19 .est .v{margin:0 0 .15em}
+/* Renglón quebrado por falta de ancho: guion rojo al final de la parte cortada (lo pone marcarQuiebres) */
+.v>.h1,.v>.h2,.himno .est>.ln{position:relative;padding-right:.9em}
+.quiebre{position:absolute;margin-left:.15em;color:var(--rubric);font-family:var(--serif);font-weight:400;font-style:normal;line-height:normal;pointer-events:none;user-select:none}

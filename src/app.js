@@ -177,7 +177,7 @@ function lineasVerso(v, modo, cod, lang, intonar){
   if(modo==='texto'){
     const d=SAL.dividirVerso(v); const out=[];
     if(d.flex) out.push(`${esc(d.flex)}&nbsp;<span class="sg">†</span>`);
-    if(d.ter!=null){ out.push(`${esc(d.med)}&nbsp;<span class="sg">*</span>`); out.push(...d.ter.split(' ¶ ').map(esc)); }   // « ¶ »: dos renglones en la misma mitad
+    if(d.ter!=null){ const m=d.med.split(' ¶ ').map(esc); m[m.length-1]+='&nbsp;<span class="sg">*</span>'; out.push(...m, ...d.ter.split(' ¶ ').map(esc)); }   // « ¶ »: dos renglones en la misma mitad
     else out.push(...d.med.split(' ¶ ').map(esc));
     return out;
   }
@@ -280,6 +280,29 @@ function interHTML(pares){
 // Ubica las traducciones: cada una empieza bajo su palabra; si la anterior es más larga, se corre a la derecha;
 // si el renglón se pasa del margen, se recorren hacia la izquierda. Solo si aun así no entran, la última palabra
 // latina con traducción pasa al renglón siguiente (el latín nunca se estira ni se abre).
+// Renglón que no entra en el ancho y se quiebra: guion rojo (rúbrica) al final de cada parte cortada, para que no se lea
+// como flexa ni metro. El corte lo decide el navegador; esto solo lo marca (y se rehace al cambiar el ancho o la letra).
+const QUIEBRE='.v>.h1,.v>.h2,.himno .est>.ln';
+function marcarQuiebres(raiz){
+  raiz=raiz||document;
+  raiz.querySelectorAll('.quiebre').forEach(q=>q.remove());
+  const marcas=[];
+  raiz.querySelectorAll(QUIEBRE).forEach(el=>{
+    if(el.closest('.il')) return;
+    const rg=document.createRange(); rg.selectNodeContents(el);
+    const rs=[...rg.getClientRects()].filter(r=>r.width>0.5 && r.height>0); if(rs.length<2) return;
+    const lh=parseFloat(getComputedStyle(el).lineHeight)||rs[0].height, lineas=[];
+    for(const r of rs.sort((a,b)=>a.top-b.top||a.left-b.left)){
+      const l=lineas.find(x=>Math.abs(x.top-r.top)<lh*.5 || Math.abs(x.bottom-r.bottom)<lh*.5);
+      if(l){ l.right=Math.max(l.right,r.right); l.top=Math.min(l.top,r.top); l.bottom=Math.max(l.bottom,r.bottom); } else lineas.push({top:r.top,bottom:r.bottom,right:r.right});
+    }
+    if(lineas.length<2) return;
+    const b=el.getBoundingClientRect();
+    lineas.sort((a,c)=>a.top-c.top).slice(0,-1).forEach(l=>marcas.push([el, l.right-b.left, l.top-b.top]));
+  });
+  marcas.forEach(([el,x,y])=>{ const q=document.createElement('span'); q.className='quiebre'; q.setAttribute('aria-hidden','true'); q.textContent='—';
+    q.style.left=x+'px'; q.style.top=y+'px'; el.appendChild(q); });
+}
 function ajustarGlosas(raiz){
   raiz=raiz||document;
   raiz.querySelectorAll('br.ajuste').forEach(b=>b.remove());
@@ -606,7 +629,7 @@ function render(){
   $('#atras').hidden=!enHora; $('#top').hidden=!enHora;   // en el inicio no hay barra: los tres puntos van junto a la fecha
   $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
-  if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>ajustarGlosas($('#main'))); pintar($('#main')); }
+  if(enHora){ ajustarGlosas($('#main')); marcarQuiebres($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ ajustarGlosas($('#main')); marcarQuiebres($('#main')); }); pintar($('#main')); }
 }
 
 /* ---------- Hojas ---------- */
@@ -709,7 +732,7 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
 // Barras que se esconden al bajar y vuelven al subir
 let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const bajar=y>yAnt && y>120; if(S.vista==='hora'){ $('#top').classList.toggle('oculta',bajar); } yAnt=y; },{passive:true});
 document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.classList.contains('desliza')) f.classList.toggle('mas', f.scrollLeft+f.clientWidth<f.scrollWidth-2); },true);
-let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
+let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); marcarQuiebres($('#main')); pintar($('#main')); } },250); });
 
 // Si se recarga con Laudes abierta, primero se cargan sus datos
 if(S.vista==='hora' && MAYORES[S.hora] && !cargada(S.hora)){ S.vista='hoy'; Promise.all([S.hora, ...(S.hora==='oficio'&&S.unirLaudes?['laudes']:[])].map(cargarHora)).then(()=>{ S.vista='hora'; cargarDia(); render(); }, ()=>{}); }

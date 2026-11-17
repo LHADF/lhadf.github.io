@@ -136,10 +136,43 @@ function turno(adf, id, fecha, sel){
     TURNOS[clave]=l; }
   return TURNOS[clave].filter(f=>f<fecha).length;
 }
+// Las «variantes» de un común llevan rúbrica («Para una santa virgen:», «Para varios santos:»…): se toma la que corresponde
+// a la celebración, por su nombre (número, sexo, mártir, presbítero). Sin rúbrica que corresponda, queda el texto principal
+// (en el común de vírgenes, el de una virgen mártir). Las de un tiempo, las «O bien» y las demás no se eligen solas.
+function rubricaVale(et, nombre){
+  const e=String(et||'').toLowerCase(), n=String(nombre||'');
+  if(/opcion|o bien|latinoamericana|tiempo|cuaresma|pascual|matrimonio|fundador|misionero|^ii |difunto|si se trata/.test(e)) return false;
+  const varios=/^(Santos|Santas|Beatos|Beatas)\b/.test(n), fem=/^(Santa|Santas|Beata|Beatas)\b/.test(n), martir=/mártir/i.test(n);
+  if(/\bvari[oa]s\b/.test(e)) return varios;
+  if(varios) return false;
+  if(/santa virgen/.test(e)) return !martir;
+  if(/una mártir/.test(e)) return fem;
+  if(/un mártir/.test(e)) return !fem;
+  if(/presbítero/.test(e)) return /presbítero/i.test(n);
+  return false;
+}
+const conAleluia=t=>t.replace(/\s*$/,'').replace(/([^.!?»])$/,'$1.')+' Aleluia.';
+function conVariantes(o, nombre){
+  if(!o || typeof o!=='object') return o;
+  const out={...o};
+  if(o.variantes){
+    const pas=o.pascua?{...o.pascua}:null;
+    for(const [k,vs] of Object.entries(o.variantes)){
+      const ok=(vs||[]).filter(v=>rubricaVale(v.etiqueta, nombre)); if(!ok.length) continue;
+      const tieneA=v=>/aleluia/i.test(JSON.stringify(v.texto));
+      const sin=ok.find(v=>!tieneA(v)), con=ok.find(tieneA);
+      if(sin) out[k]=sin.texto;
+      if(pas && pas[k]!=null) pas[k] = con ? con.texto : (sin && typeof sin.texto==='string' ? conAleluia(sin.texto) : pas[k]);
+    }
+    if(pas) out.pascua=pas;
+  }
+  for(const k of ['primeras','tercia','sexta','nona']) if(o[k] && typeof o[k]==='object') out[k]=conVariantes(o[k], nombre);
+  return out;
+}
 function comun(comunes, id, nombre, pascua, n){
   if(pascua) { const c=comun(comunes, id, nombre, false, n); return c && enPascua(c); }
   const c0=comunes && comunes[id]; if(!c0) return null;
-  const c=rotar(c0, n);
+  const c=conVariantes(rotar(c0, n), nombre);
   const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||''));
   const h=comunes[(fem && c.hereda_mujeres) || c.hereda];
   if(!h) return c;
@@ -177,10 +210,26 @@ function verso(g){
   if(g.length===2) return `${g[0]} * ${g[1]}`;
   return /:$/.test(g[0]) ? `${g[0]} * ${g[1]} ¶ ${g[2]}` : `${g[0]} † ${g[1]} * ${g[2]}`;
 }
+// Estrofa marcada a mano en la base (algún renglón termina en « *» o « †»): manda lo marcado. Cada verso: los renglones
+// hasta el que termina en « *» (los que terminan en « †» llevan flexa; los demás, sin signo, van en renglón aparte: « ¶ »)
+// y, después, un renglón (al final de la estrofa, todos los que queden).
+const MARCA=/\s+[*†]$/;
+function versosMarcados(ls){
+  const out=[]; let i=0;
+  while(i<ls.length){
+    let j=i; while(j<ls.length && !/\s\*$/.test(ls[j])) j++;
+    if(j>=ls.length){ out.push(ls.slice(i).map(l=>l.replace(MARCA,'')).join(' ¶ ')); break; }
+    const prim=ls.slice(i,j+1).map((l,k,a)=>{ const t=l.replace(MARCA,''); return k===a.length-1 ? t+' * ' : t+(/\s†$/.test(l)?' † ':' ¶ '); }).join('');
+    const resto = ls.slice(j+1).some(l=>MARCA.test(l)) ? ls.slice(j+1, j+2) : ls.slice(j+1);
+    out.push(prim+resto.join(' ¶ ')); i=j+1+resto.length;
+  }
+  return out;
+}
 function versosDe(estrofas){
   const versos=[], grupos=[];
   estrofas.forEach(e=>{
     const ls=e.split('\n').map(x=>x.trim()).filter(Boolean), g=[];
+    if(ls.some(l=>MARCA.test(l))){ for(const v of versosMarcados(ls)){ versos.push(v); g.push(versos.length-1); } grupos.push(g); return; }
     let i=0;
     for(const t of gruposDe(ls)){ versos.push(verso(ls.slice(i, i+t))); g.push(versos.length-1); i+=t; }
     grupos.push(g);
@@ -362,5 +411,5 @@ function armar(fecha, region){
 }
 
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo:{}, oracionComun, comunDe, comun, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo:{}, oracionComun, comunDe, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

@@ -470,6 +470,13 @@ test('salmos en español: asterisco y flexa (de a dos; sobra uno: los tres últi
   assert.equal(v('a:\nb,\nc.'), 'a: * b, ¶ c.');
   assert.equal(v('a,\nb:\nc.'), 'a, † b: * c.');
   assert.equal(v('Anuncien todos los pueblos sus maravillas\nb,\nc;\nd,\ne\nf.'), 'Anuncien todos los pueblos sus maravillas † b, * c; | d, † e * f.');
+  // marcados a mano en la base: manda lo marcado (renglón sin signo antes del metro: aparte, sin flexa)
+  assert.equal(v('a, *\nb,\nc,\nd, *\ne.'), 'a, * b, | c, ¶ d, * e.');
+  assert.equal(v('a †\nb *\nc:\nd, *\ne.'), 'a † b * c: | d, * e.');
+  const ef = ctx.window.VISPERAS.salmos['cantico-ef-1-3-10'], vs = X.versosDe(ef.texto).versos;
+  assert.ok(vs.includes('que tan generosamente nos ha concedido ¶ en su querido Hijo, * redunde en alabanza suya.'));
+  assert.ok(vs.includes('Éste es el plan † que había proyectado realizar por Cristo * cuando llegase el momento culminante:'));
+  assert.equal(X.versosDe(ctx.window.LAUDES.salmos['salmo-150'].texto).versos.at(-1), 'Todo ser que alienta, * alabe al Señor.');
 });
 
 test('comunes y propio del libro: oración propia, segunda lectura y oficio entero cuando lo hay', () => {
@@ -572,4 +579,20 @@ test('himnos gregorianos: latín con i y tildes; la traducción por frases cubre
   const o = ctx.window.Visperas.armar('2026-11-15', 'ARG').secciones.find(s => s.k === 'himno').opciones[1];
   assert.equal(o.rec.length, 5); assert.equal(o.rec.at(-1).versos.at(-1)[0][0], 'Amen.');
   assert.equal(o.glosa.length, o.rec.flatMap(l => l.pares).length);
+});
+
+test('comunes: se elige la variante que indica la rúbrica, por el nombre de la celebración', () => {
+  const X = ctx.window.Completas._;
+  const antEv = (A, f) => { const s = A.armar(f, '').secciones, i = s.findIndex(x => x.k === 'cantico'); return s[i - 1].t.es; };
+  // santa Gertrudis, virgen (no mártir): no la antífona de una virgen mártir
+  assert.match(antEv(VI, '2026-11-16'), /^Ven, esposa de Cristo/);
+  assert.match(antEv(LA, '2026-11-16'), /^Ésta es la virgen prudente/);
+  assert.equal(X.rubricaVale('Para una santa virgen:', 'Santa Inés, virgen y mártir'), false);
+  assert.equal(X.rubricaVale('Para varios santos:', 'Santos Mauro y Plácido, religiosos'), true);
+  assert.equal(X.rubricaVale('Para un santo presbítero:', 'San Cayetano, presbítero'), true);
+  assert.equal(X.rubricaVale('En tiempo de cuaresma Para un solo mártir:', 'San Blas, obispo y mártir'), false);
+  assert.equal(X.rubricaVale('opcion: 2', 'San Blas, obispo y mártir'), false);
+  // san Alberto Magno: del común de doctores, completado por el de pastores
+  const alberto = VI.armar('2027-11-17', '');
+  assert.match(alberto.dia.nota || '', /doctores/i);
 });
