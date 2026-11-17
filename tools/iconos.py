@@ -3,7 +3,7 @@
 
     python3 tools/iconos.py   -> src/assets/app/*.png y favicon.ico
 
-El logo es src/assets/cervus.png (ciervo bebiendo, con la cruz y las aguas, sobre crema; sin la C).
+El logo es src/assets/cervus.png (variante B2: la cruz azul se vuelve fuente; ciervo dorado, sin la C, sobre crema).
 Lo que se genera se sube al repositorio; armar.py lo copia a dist/.
 """
 import os
