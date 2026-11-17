@@ -10,7 +10,7 @@
 Santísimo Nombre de Jesús:
   pendiente: 'Oficio propio: faltan todos los textos.'
 San Hilario de Poitiers, obispo y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 Santos Mauro y Plácido, religiosos:
   comun: santos-varones
 San Vicente, diácono y mártir:
@@ -114,13 +114,13 @@ Siete Santos Fundadores de la Orden de los Siervos de la Virgen María, religios
 San Francisco y santa Jacinta Marto, videntes:
   comun: santos-varones
 San Pedro Damián, obispo y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 Beata Ludovica de Ángeles, virgen:
   comun: virgenes
 San Casimiro, príncipe:
   comun: santos-varones
 San Juan de Ávila, presbítero y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 San Bernardino de Siena, presbítero:
   comun: pastores
 San Cristóbal Magallanes, presbítero, y compañeros, mártires:
@@ -138,7 +138,7 @@ San Norberto, obispo:
 San Pelayo, mártir:
   comun: un-martir
 San Cirilo de Alejandría, obispo y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 Santos Protomártires de la Iglesia romana:
   comun: varios-martires
 Santa Isabel de Portugal, reina:
@@ -158,11 +158,11 @@ San Enrique de Alemania, emperador:
 San Apolinar, obispo y mártir:
   comun: un-martir
 San Lorenzo de Brindisi, presbítero y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 Santa Brígida, religiosa:
   comun: santas-mujeres
 San Pedro Crisólogo, obispo y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 San Pedro Julián Eymard, presbítero:
   comun: pastores
 San Cayetano, presbítero:
@@ -190,7 +190,7 @@ San Junípero Serra, religioso:
 San Pedro Claver, presbítero:
   comun: pastores
 San Roberto Belarmino, presbítero y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 San Jenaro, obispo y mártir:
   comun: un-martir
 Santos Cosme y Damián, mártires:
@@ -222,7 +222,7 @@ Santa Catalina de Alejandría, virgen y mártir:
 San Columbano, abad:
   comun: santos-varones
 San Juan Damasceno, presbítero y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 San Nicolás, obispo:
   comun: pastores
 San Juan Diego Cuauhtlatoatzin, religioso:
@@ -234,7 +234,7 @@ Beata Laura Vicuña, virgen:
 San Hermenegildo, mártir:
   comun: un-martir
 San Anselmo, obispo y doctor de la Iglesia:
-  comun: pastores
+  comun: doctores
 San Jorge, mártir:
   comun: un-martir
 San Fidel de Sigmaringen, presbítero y mártir:
