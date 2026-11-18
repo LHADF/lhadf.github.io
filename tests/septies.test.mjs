@@ -611,6 +611,12 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   const antEvB = (A, f) => { const s = A.armar(f, '').secciones, i = s.findIndex(x => x.k === 'cantico'); return s[i - 1].t.es; };
   assert.match(antEvB(LA, '2026-11-18'), /^Pedro, apóstol, y Pablo, maestro de los gentiles/);
   assert.match(antEvB(VI, '2026-11-18'), /^Los cuerpos de los santos fueron sepultados en paz/);
+  // preces: la respuesta va una vez, con ℟, y no pegada al final de cada intención
+  for (const [A, f] of [[LA, '2026-11-18'], [VI, '2027-01-20']]) {
+    const p = A.armar(f, '').secciones.find(s => s.k === 'preces');
+    assert.ok(p.preces.every(x => !x.filter(Boolean).at(-1).includes(p.respuesta.replace(/\.$/, ''))), f);
+    assert.ok(!JSON.stringify(p).includes('Salkvador'));
+  }
   // san Alberto Magno: del común de doctores, completado por el de pastores
   const alberto = VI.armar('2027-11-17', '');
   assert.match(alberto.dia.nota || '', /doctores/i);

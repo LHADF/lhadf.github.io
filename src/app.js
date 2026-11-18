@@ -293,10 +293,12 @@ function ajustarGlosas(raiz){
       if(!g||g.caja!==caja||Math.abs(top-g.top)>2){ g={caja,top,it:[]}; grupos.push(g); }
       g.it.push(t);
     });
-    let quebrar=null;
+    let quebrar=null; const vistas=new Set();
     for(const g of grupos){
       const cs=getComputedStyle(g.caja), cr=g.caja.getBoundingClientRect();
-      const izq=cr.left+parseFloat(cs.paddingLeft), der=cr.right-parseFloat(cs.paddingRight);
+      // el primer renglón empieza donde dice la sangría francesa (text-indent negativo); los que bajan, en el padding
+      const primero=!vistas.has(g.caja); vistas.add(g.caja);
+      const izq=cr.left+parseFloat(cs.paddingLeft)+(primero?Math.min(0,parseFloat(cs.textIndent)||0):0), der=cr.right-parseFloat(cs.paddingRight);
       const gap=.45*parseFloat(getComputedStyle(g.it[0]).fontSize);
       const m=g.it.map(t=>{ const r=t.getBoundingClientRect(); return {t,base:r.left,w:r.width}; });
       let x=-Infinity; m.forEach(o=>{ o.l=Math.max(o.base,x); x=o.l+o.w+gap; });
