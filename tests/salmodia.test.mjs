@@ -118,6 +118,11 @@ test('modo 6: también la otra fórmula del Liber (mediante de un acento con una
   assert.equal(S.tono('6altF').med.prep.length, 1);
 });
 
+test('latín: la tilde vale también en mayúscula inicial', () => {
+  assert.deepEqual(S.silabasLatin('Ísrael').map(x => x.acc), [1, 0, 0]);
+  assert.deepEqual(S.silabasLatin('Ábraham').map(x => x.acc), [1, 0, 0]);
+});
+
 test('entonación: en el primer verso de los salmos; en todos los del cántico evangélico', () => {
   const g1 = S.gabcSalmo(['Señor, tú eres mi Dios, * por ti madrugo.', 'Mi alma está sedienta de ti, * mi carne tiene ansia de ti.'], '8G', 'es', { todos: true });
   const versos = g1.split('(::)');

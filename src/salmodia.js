@@ -78,7 +78,7 @@ function tono(cod){
 
 /* ---------- Silabeo latino ---------- */
 const VOC_LA='aeiouyáéíóúýæœǽëäöü';
-const ACENTO_LA=/[áéíóúýǽ]/;
+const ACENTO_LA=/[áéíóúýǽÁÉÍÓÚÝǼ]/;   // también en mayúscula (Ísrael)
 const esVocLa=c=>VOC_LA.includes(c);
 function silabasLatin(pal){
   const w=pal, low=w.toLowerCase();
