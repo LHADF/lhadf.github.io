@@ -13,13 +13,11 @@ invocacion:
   cortes_gloria: [7, 8, 5]   # renglones del Gloria Patri recitado (lo que sobra: si es una palabra, sigue en el último renglón)
   traduccion:
     - Deus, = Dios [mío],
-    - in = en
-    - adiutórium = auxilio
+    - in adiutórium = en auxilio
     - meum = mío
     - inténde. = atiende.
     - Dómine, = Señor,
-    - ad = para
-    - adiuvándum = ayudar
+    - ad adiuvándum = para ayudar
     - me = me
     - festína. = apresúrate.
     - Glória = Gloria
@@ -31,15 +29,13 @@ invocacion:
     - Sancto. = Santo.
     - Sicut = Como
     - erat = era
-    - in = en
-    - princípio, = el principio,
+    - in princípio, = en el principio,
     - et = y
     - nunc, = ahora,
     - et = y
     - semper, = siempre,
     - et = y
-    - in = por
-    - sǽcula = los siglos
+    - in sǽcula = por los siglos
     - sæculórum. = de los siglos.
     - Amen. = Amén.
     - Allelúia. = Aleluia.
@@ -64,12 +60,10 @@ cantico_evangelico:
     - dormiéntes, = dormidos,
     - ut = para que
     - vigilémus = velemos
-    - cum = con
-    - Christo, = Cristo,
+    - cum Christo, = con Cristo,
     - et = y
     - requiescámus = descansemos
-    - in = en
-    - pace. = paz.
+    - in pace. = en paz.
     - Allelúia. = Aleluia.
   traduccion_cantico:   # primer versículo, en partitura
     - Nunc = Ahora
@@ -77,11 +71,9 @@ cantico_evangelico:
     - servum = al siervo
     - tuum, = tuyo,
     - Dómine, = Señor,
-    - secúndum = según
-    - verbum = la palabra
+    - secúndum verbum = según la palabra
     - tuum = tuya
-    - in = en
-    - 'pace: = paz:'
+    - 'in pace: = en paz:'
   # Del segundo versículo en adelante, pautados en latín, con su traducción
   tono_cantico: 3a
   # Marcas escritas a mano, como en el libro de Completas ADF: **negrita** = acento, _cursiva_ = preparación.
@@ -103,13 +95,11 @@ cantico_evangelico:
       - tuum, = tuya,
     - - quod = que
       - parásti = preparaste
-      - ante = ante
-      - fáciem = el rostro
+      - ante fáciem = ante el rostro
       - ómnium = de todos
       - populórum, = los pueblos,
     - - Lumen = Luz
-      - ad = para
-      - revelatiónem = revelación
+      - ad revelatiónem = para revelación
       - géntium, = de las naciones,
       - et = y
       - glóriam = gloria
@@ -125,15 +115,13 @@ cantico_evangelico:
       - Sancto. = Santo.
     - - Sicut = Como
       - erat = era
-      - in = en
-      - princípio, = el principio,
+      - in princípio, = en el principio,
       - et = y
       - nunc = ahora
       - et = y
       - semper, = siempre,
       - et = y
-      - in = por
-      - sǽcula = los siglos
+      - in sǽcula = por los siglos
       - sæculórum. = de los siglos.
       - Amen. = Amén.
 
@@ -168,14 +156,12 @@ himno:
   traduccion:
     - Te = A ti,
     - lucis = de la luz
-    - ante = antes del
-    - términum, = término,
+    - ante términum, = antes del término,
     - Rerum = de las cosas
     - Creátor, = Creador,
     - póscimus, = pedimos,
     - Ut = que
-    - pro = por
-    - tua = tu
+    - pro tua = por tu
     - cleméntia = clemencia
     - Sis = seas
     - præsul = protector
@@ -199,12 +185,10 @@ himno:
     - Patríque = y al Padre
     - compar = igual,
     - Únice, = Unigénito,
-    - Cum = con
-    - Spíritu = el Espíritu
+    - Cum Spíritu = con el Espíritu
     - Paráclito = Paráclito
     - Regnans = reinando
-    - per = por
-    - omne = todo
+    - per omne = por todo
     - sǽculum. = siglo.
     - Amen. = Amén.
 
@@ -217,15 +201,13 @@ responsorio:
   ordinario:
     partitura: in-manus-tuas.gabc
     traduccion:
-      - In = En
-      - manus = manos
+      - In manus = En manos
       - tuas, = tuyas,
       - Dómine, = Señor,
       - Comméndo = encomiendo
       - spíritum = el espíritu
       - meum. = mío.
-      - In = En
-      - manus. = manos.
+      - In manus. = En manos.
       - Redemísti = Redimiste
       - nos, = nos,
       - Dómine, = Señor,
@@ -239,8 +221,7 @@ responsorio:
       - et = y
       - Spirítui = al Espíritu
       - Sancto. = Santo.
-      - In = En
-      - manus. = manos.
+      - In manus. = En manos.
 
 # Antífonas finales de la Virgen en gregoriano. Solemne: domingos y solemnidades (y sus I Vísperas, Triduo y Octavas); simple: los demás días.
 # Adviento y Navidad: Alma Redemptóris; de la Candelaria al fin de Cuaresma: Ave Regína cælórum; Pascua: Regína cæli (sin versículo).
@@ -262,20 +243,17 @@ marianas:
       - spes = esperanza
       - nostra, = nuestra,
       - salve. = salve.
-      - Ad = A
-      - te = ti
+      - Ad te = A ti
       - clamámus, = clamamos,
       - éxsules, = desterrados,
       - fílii = hijos
       - Hevæ. = de Eva.
-      - Ad = A
-      - te = ti
+      - Ad te = A ti
       - suspirámus, = suspiramos,
       - geméntes = gimiendo
       - et = y
       - flentes = llorando
-      - in = en
-      - hac = este
+      - in hac = en este
       - lacrimárum = de lágrimas
       - valle. = valle.
       - Eia = Ea,
@@ -286,8 +264,7 @@ marianas:
       - tuos = tuyos
       - misericórdes = misericordiosos
       - óculos = ojos
-      - ad = a
-      - nos = nosotros
+      - ad nos = a nosotros
       - convérte. = vuelve.
       - Et = Y
       - Iesum, = a Jesús,
@@ -296,8 +273,7 @@ marianas:
       - ventris = del vientre
       - tui, = tuyo,
       - nobis = a nosotros
-      - post = después de
-      - hoc = este
+      - post hoc = después de este
       - exsílium = destierro
       - osténde. = muestra.
       - O = Oh
@@ -318,8 +294,7 @@ marianas:
     partitura: sub-tuum-praesidium.gabc
     cortes: [4, 3, 6, 7, 4]   # palabras latinas por renglón, cuando va recitada
     traduccion:
-      - Sub = Bajo
-      - tuum = tu
+      - Sub tuum = Bajo tu
       - præsídium = amparo
       - confúgimus, = nos refugiamos,
       - sancta = santa
@@ -328,11 +303,9 @@ marianas:
       - deprecatiónes = súplicas
       - ne = no
       - despícias = desprecies
-      - in = en
-      - 'necessitátibus: = las necesidades:'
+      - 'in necessitátibus: = en las necesidades:'
       - sed = sino
-      - a = de
-      - perículis = los peligros
+      - a perículis = de los peligros
       - cunctis = todos
       - líbera = libra
       - nos = nos
@@ -356,8 +329,7 @@ marianas:
       - radix, = raíz,
       - salve, = salve,
       - porta, = puerta,
-      - Ex = de
-      - qua = la cual
+      - Ex qua = de la cual
       - mundo = al mundo
       - lux = la luz
       - est = ha
@@ -365,16 +337,14 @@ marianas:
       - Gaude, = Alégrate,
       - Virgo = Virgen
       - gloriósa, = gloriosa,
-      - Super = sobre
-      - omnes = todas
+      - Super omnes = sobre todas
       - 'speciósa: = hermosa:'
       - Vale, = Adiós,
       - o = oh
       - valde = muy
       - decóra, = bella,
       - Et = y
-      - pro = por
-      - nobis = nosotros
+      - pro nobis = por nosotros
       - Christum = a Cristo
       - exóra. = ruega.
   ave_solemne:
@@ -417,8 +387,7 @@ marianas:
       - ac = y
       - postérius, = después,
       - Gabriélis = de Gabriel
-      - ab = de
-      - ore = la boca
+      - ab ore = de la boca
       - sumens = recibiendo
       - illud = aquel
       - Ave, = Ave,
@@ -448,8 +417,7 @@ marianas:
       - dixit, = dijo,
       - 'allelúia: = aleluia:'
       - Ora = Ruega
-      - pro = por
-      - nobis = nosotros
+      - pro nobis = por nosotros
       - Deum, = a Dios,
       - allelúia. = aleluia.
   regina_caeli_solemne:
@@ -471,7 +439,6 @@ marianas:
       - dixit, = dijo,
       - 'allelúia: = aleluia:'
       - Ora = Ruega
-      - pro = por
-      - nobis = nosotros
+      - pro nobis = por nosotros
       - Deum, = a Dios,
       - alle = aleluia.

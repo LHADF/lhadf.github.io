@@ -187,7 +187,7 @@ test('Completas: cada pieza cantada tiene su versión recitada (latín con tradu
   }
   const inv = secc('2026-11-05', 'vr')[0].rec;
   assert.equal(JSON.stringify(inv.map(l => [l.rol, l.todos])), JSON.stringify([['V', false], ['R', true], ['', true]]));
-  assert.equal(inv[0].pares[1][0], '✠ in');
+  assert.equal(inv[0].pares[1][0], '✠ in adiutórium');   // la preposición va con la palabra que sigue
   assert.ok(!secc('2027-02-17', 'vr')[0].rec.flatMap(l => l.pares).some(p => /^Allel/.test(p[0])));
   // Cuaresma: «Laus tibi, Christe» en lugar del aleluya, en partitura y en el texto, con su traducción palabra por palabra
   for (const f of ['2027-02-17', '2027-02-21', '2027-03-25']) {
@@ -213,9 +213,11 @@ test('interlineal: los pares cubren el texto latino palabra por palabra', () => 
   const plano = v => v.replace(/\*\*|_/g, '').split(/\s+/).filter(w => w !== '*' && w !== '†').map(norm).filter(Boolean).join(' ');
   G.cantico.versos.forEach((v, i) => assert.equal(palPares(G.cantico.traduccion_versos[i]), plano(v)));
   assert.equal(palPares(G.cantico.traduccion), plano(G.cantico.primer_verso));
-  // los pares van palabra por palabra salvo pocas frases hechas
+  // los pares van palabra por palabra salvo pocas frases hechas; la preposición va siempre con la palabra que sigue
+  const PREP = /^(a|ab|ad|ante|apud|contra|cum|de|e|ex|in|inter|ob|per|post|pro|propter|sine|sub|super|secúndum)$/i;
   const todos = casos.flatMap(c => c[1]).concat(G.cantico.traduccion_versos.flat());
-  assert.ok(todos.filter(p => /\s/.test(String(p[0]).trim())).length <= 3);
+  assert.ok(todos.filter(p => /\s/.test(String(p[0]).trim()) && !PREP.test(String(p[0]).trim().replace(/^[✠*]\s*/, '').split(/\s+/)[0])).length <= 3);
+  assert.ok(!todos.some(p => PREP.test(String(p[0]).trim())), 'preposición suelta');
 });
 
 test('español: «aleluia», nunca «aleluya»', () => {
@@ -257,7 +259,7 @@ test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
   const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
   c.versos.forEach((v, i) => assert.equal(c.inter[i].flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), v.split(/\s+/).filter(w => w !== '*').map(norm).join(' ')));
   const pn = secL('2026-11-10', 'pater')[0];
-  assert.equal(pn.pares[0][0], 'Pater'); assert.equal(pn.pares[2][0], '* qui'); assert.equal(pn.pares.at(-1)[1], 'mal.');
+  assert.equal(pn.pares[0][0], 'Pater'); assert.equal(pn.pares[2][0], '* qui'); assert.equal(pn.pares.at(-1)[0], 'a malo.'); assert.equal(pn.pares.at(-1)[1], 'del mal.');
   assert.equal(pn.intro, ''); assert.ok(secL('2026-11-09', 'pater')[0].intro && secL('2026-11-08', 'pater')[0].intro);   // monición: solo domingos, fiestas y solemnidades
   assert.equal(LA.armar('2026-11-10', 'ARG').secciones.filter(x => x.k === 'vr').length, 2);                          // Dómine, lábia mea + Deus in adiutórium
   const co = secL('2026-11-10', 'conclusion')[0].opciones;

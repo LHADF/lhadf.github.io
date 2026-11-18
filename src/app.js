@@ -212,11 +212,14 @@ function versosMarcados(versos, glosas){
     const hs=mitades.map((h,hi)=>h.trim().split(/\s+/).map(w=>{
         if(w==='†') return `<span class="sg">†</span>`;
         if(!pares) return m(w);
-        let tr='';
-        if(resto===0 && k<pares.length){ const p=pares[k++]; resto=String(p[0]).trim().split(/\s+/).length; tr=p[1]; }
+        let tr='', ini=false;
+        if(resto===0 && k<pares.length){ const p=pares[k++]; resto=String(p[0]).trim().split(/\s+/).length; tr=p[1]; ini=resto>1; }
         if(resto>0) resto--;
-        return `<span class="w">${m(w)}${tr?`<span class="tr">${marcas(tr)}</span>`:''}</span>`;
-      }));
+        const h=`<span class="w">${m(w)}${tr?`<span class="tr">${marcas(tr)}</span>`:''}</span>`;
+        return ini ? {ini:h} : h;
+      }).reduce((a,x)=>{ // las dos primeras palabras de un par («ad dandam») no se separan de renglón
+        const u=a[a.length-1]; if(u && typeof u==='object'){ a[a.length-1]=`<span class="nw">${u.ini} ${x}</span>`; } else a.push(x); return a; },[])
+        .map(x=>typeof x==='object'?x.ini:x));
     const hs2=hs.map((ws,hi)=>{ // el asterisco no baja solo de renglón: va pegado a la última palabra
       if(hi<mitades.length-1 && ws.length){ const u=ws.pop(); ws.push(`<span class="nw">${u}&nbsp;<span class="sg">*</span></span>`); }
       return ws.join(' '); });
@@ -274,47 +277,65 @@ function interHTML(pares){
     if(m){ sg=m[1]; a=m[2]; b=String(b||'').replace(/^[✠*†]\s*/,''); }
     const ws=String(a).trim().split(/\s+/);
     const pal=ws.map((w,i)=>`<span class="w">${marcas(w)}${i===0&&b?`<span class="tr">${marcas(b)}</span>`:''}</span>`);
+    if(pal.length>1) pal.splice(0,2,`<span class="nw">${pal[0]} ${pal[1]}</span>`);   // las dos primeras palabras del par («ad dandam») no se separan
     if(sg) pal[0]=`<span class="nw">${marcas(sg)} ${pal[0]}</span>`;   // el signo no queda solo al final del renglón
     return pal.join(' ');
   }).join(' ');
 }
-// Ubica las traducciones: cada una empieza bajo su palabra; si la anterior es más larga, se corre a la derecha;
-// si el renglón se pasa del margen, se recorren hacia la izquierda. Solo si aun así no entran, la última palabra
-// latina con traducción pasa al renglón siguiente (el latín nunca se estira ni se abre).
+// Traducción interlineal: cada traducción arranca bajo su palabra latina; si se encima con la de al lado, se reparten
+// las del renglón en el espacio libre de ambos lados (lo menos lejos posible de su palabra: el anclaje cede) y nunca se
+// superponen. Si ni así entran en el ancho, el renglón se quiebra antes de la última palabra. El latín no se toca.
+function colocarGlosas(m, izq, der, gap){
+  // m: [{base,w}] en orden. Posiciones l con l[i] ≥ l[i-1]+w[i-1]+gap, izq ≤ l[0], l[n-1]+w[n-1] ≤ der, lo más cerca de base.
+  const off=[]; let o=0; m.forEach((x,i)=>{ off.push(o); o+=x.w+gap; });
+  const n=m.length, hi=der-off[n-1]-m[n-1].w; if(hi<izq-1) return false;
+  const bl=[];   // regresión isótona (bloques que se juntan): y = l - off, no decreciente
+  m.forEach((x,i)=>{ bl.push({s:x.base-off[i], c:1}); while(bl.length>1 && bl[bl.length-2].s/bl[bl.length-2].c > bl[bl.length-1].s/bl[bl.length-1].c){ const z=bl.pop(); bl[bl.length-1].s+=z.s; bl[bl.length-1].c+=z.c; } });
+  let i=0; bl.forEach(z=>{ const y=Math.min(hi, Math.max(izq, z.s/z.c)); for(let k=0;k<z.c;k++,i++) m[i].l=y+off[i]; });
+  return true;
+}
 function ajustarGlosas(raiz){
   raiz=raiz||document;
   raiz.querySelectorAll('br.ajuste').forEach(b=>b.remove());
-  for(let vuelta=0; vuelta<40; vuelta++){
-    const trs=[...raiz.querySelectorAll('.il .tr')];
-    trs.forEach(t=>{ t.style.left=''; });
-    const grupos=[]; let g=null;
-    trs.forEach(t=>{
-      let caja=t.parentElement.parentElement; while(caja.parentElement&&/^inline/.test(getComputedStyle(caja).display)) caja=caja.parentElement;   // la caja de bloque que lo contiene
-      const top=t.parentElement.getBoundingClientRect().top;
-      if(!g||g.caja!==caja||Math.abs(top-g.top)>2){ g={caja,top,it:[]}; grupos.push(g); }
-      g.it.push(t);
-    });
-    let quebrar=null; const vistas=new Set();
-    for(const g of grupos){
-      const cs=getComputedStyle(g.caja), cr=g.caja.getBoundingClientRect();
-      // el primer renglón empieza donde dice la sangría francesa (text-indent negativo); los que bajan, en el padding
-      const primero=!vistas.has(g.caja); vistas.add(g.caja);
-      const izq=cr.left+parseFloat(cs.paddingLeft)+(primero?Math.min(0,parseFloat(cs.textIndent)||0):0), der=cr.right-parseFloat(cs.paddingRight);
-      const gap=.45*parseFloat(getComputedStyle(g.it[0]).fontSize);
-      const m=g.it.map(t=>{ const r=t.getBoundingClientRect(); return {t,base:r.left,w:r.width}; });
-      let x=-Infinity; m.forEach(o=>{ o.l=Math.max(o.base,x); x=o.l+o.w+gap; });
-      let lim=der; for(let k=m.length-1;k>=0;k--){ const o=m[k]; if(o.l+o.w>lim) o.l=lim-o.w; lim=o.l-gap; }
-      if(m[0].l<izq-1){
-        if(m.length>1){ quebrar=m[m.length-1].t.parentElement; break; }
-        m[0].l=m[0].base;   // una sola traducción más larga que el renglón: se deja correr
-      }
-      m.forEach(o=>{ if(Math.abs(o.l-o.base)>.5) o.t.style.left=(o.l-o.base)+'px'; });
+  const todas=[...raiz.querySelectorAll('.il .tr')]; todas.forEach(t=>{ t.style.left=''; });
+  if(!todas.length) return true;
+  const cajaDe=t=>{ let c=t.parentElement.parentElement; while(c.parentElement&&/^inline/.test(getComputedStyle(c).display)) c=c.parentElement; return c; };   // la caja de bloque
+  const cajas=new Map(); todas.forEach(t=>{ const c=cajaDe(t); if(!cajas.has(c)) cajas.set(c,[]); cajas.get(c).push(t); });
+  let listo=true;
+  for(const [caja,trs] of cajas){
+    for(let vuelta=0; vuelta<60; vuelta++){
+      trs.forEach(t=>{ t.style.left=''; });
+      const cs=getComputedStyle(caja), cr=caja.getBoundingClientRect();
+      if(!cr.width){ listo=false; break; }   // sin dibujar todavía: se rehace después
+      const grupos=[]; let g=null;
+      trs.forEach(t=>{ const top=t.parentElement.getBoundingClientRect().top; if(!g||Math.abs(top-g.top)>2){ g={top,it:[]}; grupos.push(g); } g.it.push(t); });
+      let quebrar=null;
+      grupos.forEach((g,gi)=>{
+        if(quebrar) return;
+        // el primer renglón empieza donde dice la sangría francesa (text-indent negativo); los que bajan, en el padding
+        const izq=cr.left+parseFloat(cs.paddingLeft)+(gi===0?Math.min(0,parseFloat(cs.textIndent)||0):0), der=cr.right-parseFloat(cs.paddingRight);
+        const gap=.45*parseFloat(getComputedStyle(g.it[0]).fontSize);
+        const m=g.it.map(t=>{ const r=t.getBoundingClientRect(); return {t,base:r.left,w:r.width,l:r.left}; });
+        if(!colocarGlosas(m, izq, der, gap)){
+          if(m.length>1){ quebrar=m[m.length-1].t.parentElement; return; }
+          m[0].l=m[0].base;   // una sola traducción más larga que el renglón: se deja correr
+        }
+        m.forEach(o=>{ if(Math.abs(o.l-o.base)>.5) o.t.style.left=(o.l-o.base)+'px'; });
+      });
+      if(!quebrar) break;
+      const w=quebrar.parentElement.classList.contains('nw')?quebrar.parentElement:quebrar;
+      const br=document.createElement('br'); br.className='ajuste'; w.parentNode.insertBefore(br,w);
     }
-    if(!quebrar) return;
-    const w=quebrar.parentElement.classList.contains('nw')?quebrar.parentElement:quebrar;
-    const br=document.createElement('br'); br.className='ajuste'; w.parentNode.insertBefore(br,w);
   }
+  return listo;
 }
+// Se rehace cuando cambia lo que mide: la letra (al cargar), el ancho, el tamaño, o al volver a la app.
+let _glosaPend=0;
+function reajustarGlosas(){ cancelAnimationFrame(_glosaPend); _glosaPend=requestAnimationFrame(()=>{ if(S.vista==='hora' && $('#main') && !ajustarGlosas($('#main'))) setTimeout(reajustarGlosas,300); }); }
+if(document.fonts&&document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', reajustarGlosas);
+window.addEventListener('pageshow', reajustarGlosas);
+document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) reajustarGlosas(); });
+if(window.ResizeObserver){ let _anchoMain=0; new ResizeObserver(es=>{ const w=Math.round(es[0].contentRect.width); if(w!==_anchoMain){ _anchoMain=w; reajustarGlosas(); } }).observe(document.documentElement); }
 /* Cantado o recitado: un solo botón al comienzo decide todas las piezas gregorianas.
    Recitado: el texto latino de la pieza, con su traducción literal debajo (si está activa). */
 const CANTA=()=>S.cantado!==false;
@@ -669,7 +690,7 @@ function render(){
   $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(!enHora) vigilarTitulo();
-  if(enHora){ ajustarGlosas($('#main')); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ ajustarGlosas($('#main')); }); pintar($('#main')); }
+  if(enHora){ if(!ajustarGlosas($('#main'))) reajustarGlosas(); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(reajustarGlosas); pintar($('#main')); }
 }
 
 /* ---------- Hojas ---------- */

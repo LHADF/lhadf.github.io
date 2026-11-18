@@ -113,10 +113,8 @@ examen:
       - vos, = a vosotros,
       - fratres, = hermanos,
     - - oráre = que oréis
-      - pro = por
-      - me = mí
-      - ad = ante
-      - Dóminum = el Señor
+      - pro me = por mí
+      - ad Dóminum = ante el Señor
       - Deum = Dios
       - nostrum. = nuestro.
     absolucion:
@@ -131,8 +129,7 @@ examen:
       - nostris, = nuestros,
       - perdúcat = lleve
       - nos = nos
-      - ad = a
-      - vitam = la vida
+      - ad vitam = a la vida
       - ætérnam. = eterna.
     - R:
       - Amen. = Amén.
