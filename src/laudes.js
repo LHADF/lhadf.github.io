@@ -9,18 +9,26 @@ const SIN_GLORIA=['cantico-dn-3-57-88-56'];   // el cántico de Daniel 3, 57-88 
 
 const ciclo=CP.ciclo;   // ciclo dominical A/B/C (completas.js)
 
-// Modo de la salmodia (docs/laudes.md): uno por semana del salterio para las ferias y otro para cada domingo; el mismo para
-// todos los salmos y cánticos de la hora y para el cántico evangélico. Las solemnidades siguen el ritmo de la semana en que
-// caen (CRU): un martes de la semana II, el modo de las ferias de la II. Los días que el calendario deja sin semana del salterio
-// (octavas, Triduo, tiempo de Navidad, Ascensión, Pentecostés) toman la de los días anteriores.
+// Modo de la salmodia (docs/laudes.md, docs/salmodia.md): uno por semana del salterio para las ferias y otro para cada
+// domingo; el mismo para todos los salmos y cánticos de la hora y para el cántico evangélico. Las solemnidades siguen el
+// ritmo de la semana en que caen (CRU): un martes de la semana II, el modo de las ferias de la II.
+// Días que el calendario deja sin semana del salterio (CRU):
+//  - Ascensión y Pentecostés: la semana en que caen (de domingo a sábado): en domingo, el modo de ese domingo; la Ascensión
+//    en jueves, el de las ferias de esa semana;
+//  - Navidad (tiempo de Navidad) y Pascua (domingo y octava): modo 1 g;
+//  - Viernes y Sábado Santo: modo 4 g.
 const MODOS={domingo:{1:'1g',2:'3a',3:'6F',4:'7a'}, feria:{1:'2D',2:'4g',3:'5a',4:'8G'}};
 function semanaDe(ref, fRef){
   if(ref.sal) return ref.sal;
-  let f=fRef;
-  for(let k=0;k<40;k++){ f=CP.masDias(f,-1); if(!CP.enRango(f)) break; const d=CP.diaCal(f,''); if(d && d.sal) return d.sal; }
+  const dom=CP.masDias(fRef, -CP.deIso(fRef).getDay());   // domingo de esa semana
+  for(let k=0;k<7;k++){ const f=CP.masDias(dom,k); if(f===fRef || !CP.enRango(f)) continue; const d=CP.diaCal(f,''); if(d && d.sal) return d.sal; }
   return 1;
 }
 function modoDe(ref, fRef){
+  if(!ref.sal && !/Ascensi[oó]n|Pentecost[eé]s/i.test(ref.n||'')){
+    if(ref.t==='Triduo') return '4g';
+    if(ref.t==='Navidad' || ref.t==='Pascua') return '1g';
+  }
   const dom = CP.deIso(fRef).getDay()===0;
   return MODOS[dom?'domingo':'feria'][semanaDe(ref,fRef)] || MODOS[dom?'domingo':'feria'][1];
 }

@@ -18,7 +18,7 @@ Motor: `src/salmodia.js` (tonos de jgabc, de B. Bloomfield). Pruebas: `tests/sal
 | III | 6 F | 5 a |
 | IV | 7 a | 8 G |
 
-El mismo modo para todos los salmos y cánticos de la hora y para el cántico evangélico. Las I Vísperas llevan el del domingo. Las solemnidades siguen el ritmo de la semana en que caen (CRU): en martes de la semana II, el de las ferias de la II. Los días que el calendario deja sin semana del salterio (octava de Navidad y tiempo de Navidad hasta el Bautismo, Triduo, octava de Pascua, Ascensión, Pentecostés) toman la semana de los días anteriores (para confirmar con CRU).
+El mismo modo para todos los salmos y cánticos de la hora y para el cántico evangélico. Las I Vísperas llevan el del domingo. Las solemnidades siguen el ritmo de la semana en que caen (CRU): en martes de la semana II, el de las ferias de la II. Días que el calendario deja sin semana del salterio (CRU): la Ascensión y Pentecostés, la semana en que caen, contada de domingo a sábado (en domingo, el modo de ese domingo; la Ascensión en jueves, el de las ferias); el tiempo de Navidad (de Navidad al Bautismo) y Pascua con su octava, modo 1 g; Viernes y Sábado Santo, modo 4 g.
 
 **Desplegable:** junto al título de cada salmo y del cántico evangélico, «Modo …» en rojo con un desplegable (el del día primero, después los demás). El cambio vale para esa pieza en esa hora de ese día (`S.tonos`, se guardan los de la última semana).
 

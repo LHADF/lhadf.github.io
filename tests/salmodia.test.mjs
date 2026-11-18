@@ -13,7 +13,7 @@ const sil = w => S.silabasEspanol(w).map(s => (s.acc ? s.t.toUpperCase() : s.t))
 const ctx = { window: {} };
 for (const f of ['datos/base.js', 'datos/calendario.js', 'completas.js', 'carga/laudes.js', 'carga/visperas.js', 'laudes.js'])
   vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), ctx);
-const X = ctx.window.Completas._, LA = ctx.window.Laudes, VI = ctx.window.Visperas;
+const CP = ctx.window.Completas, X = ctx.window.Completas._, LA = ctx.window.Laudes, VI = ctx.window.Visperas;
 const SALMOS = { ...ctx.window.LAUDES.salmos, ...ctx.window.VISPERAS.salmos };
 const MODOS = ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G'];
 
@@ -209,8 +209,16 @@ test('modo de la salmodia: uno por semana del salterio y otro por domingo', () =
   assert.equal(LA.modoDe({ sal: 3 }, '2026-12-01'), '5a');
   assert.equal(LA.modoDe({ sal: 4 }, '2026-11-12'), '8G');
   assert.equal(LA.modoDe({ sal: 2, sol: 1 }, '2026-11-24'), '4g');   // solemnidad en martes de la II: el modo de la semana (CRU)
-  assert.equal(LA.modoDe({ sal: 0, sol: 1 }, '2026-12-25'), '8G');   // sin semana del salterio (Navidad, viernes): la de los días anteriores (IV)
-  assert.equal(LA.modoDe({ sal: 0, sol: 1 }, '2026-05-14'), '4g');   // Ascensión, jueves: semana II
+  // días sin semana del salterio (CRU)
+  const dia = f => CP.diaCal(f, '');
+  assert.equal(LA.modoDe(dia('2026-12-25'), '2026-12-25'), '1g');   // Navidad
+  assert.equal(LA.modoDe(dia('2027-01-06'), '2027-01-06'), '1g');   // tiempo de Navidad (Epifanía)
+  assert.equal(LA.modoDe(dia('2027-03-28'), '2027-03-28'), '1g');   // Domingo de Pascua
+  assert.equal(LA.modoDe(dia('2027-03-31'), '2027-03-31'), '1g');   // octava de Pascua
+  assert.equal(LA.modoDe(dia('2027-03-26'), '2027-03-26'), '4g');   // Viernes Santo
+  assert.equal(LA.modoDe(dia('2027-03-27'), '2027-03-27'), '4g');   // Sábado Santo
+  assert.equal(LA.modoDe(dia('2027-05-06'), '2027-05-06'), '4g');   // Ascensión en jueves: feria de su semana (II)
+  assert.equal(LA.modoDe(dia('2027-05-16'), '2027-05-16'), '6F');   // Pentecostés: domingo de su semana (III)
   // en las horas: el mismo modo para todos los salmos, los cánticos y el cántico evangélico
   assert.equal(m('2026-11-18'), '2D');
   assert.equal(m('2026-11-15'), '1g');
