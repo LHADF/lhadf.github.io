@@ -231,14 +231,21 @@ const CONFIG={atonasDebiles:false};
 function clasificar(s){
   return s.map((x,i)=> x.f ? 'F' : ((CONFIG.atonasDebiles && x.atona) || (s[i-1]&&s[i-1].f) || (s[i+1]&&s[i+1].f)) ? 'D' : 'N');
 }
-// Último acento de la cadencia, mirando desde el final
-function acentoFinal(t){
+// Último acento de la mitad, mirando desde el final. En la cadencia (terminación) nunca va en la última sílaba
+// (CRU): «a quién temeré» se acentúa en «te»; se prefiere una neutra. En la mediante y la flexa sí, si hace falta.
+function acentoFinal(t, cadencia, s){
   const n=t.length; if(n===0) return {p:-1,regla:''}; if(n===1) return {p:0,regla:'f'};
   if(t[n-1]==='F'){
     if(t[n-2]==='F') return {p:n-2, regla:'ff'};
-    if(n<3) return {p:n-1, regla:'df'};
+    if(n<3) return cadencia? {p:n-2, regla:'df·'} : {p:n-1, regla:'df'};
     if(t[n-3]==='F') return {p:n-3, regla:'fdf'};   // esdrújula: «tendrás razón»
     if(t[n-3]==='N') return {p:n-3, regla:'ndf'};   // esdrújula suave: «sinceridad»
+    if(cadencia){
+      // cadencia: en la antepenúltima («a quién temeré», «bendecid al Señor»), salvo que sea la sílaba que sigue al acento
+      // de su propia palabra: entonces en la penúltima («sedienta de ti», «se exalta por Dios») (CRU)
+      const postonica = s && s[n-4] && s[n-4].f && s[n-4].iw===s[n-3].iw;
+      return postonica ? {p:n-2, regla:'ddf··'} : {p:n-3, regla:'ddf·'};
+    }
     return {p:n-1, regla:'ddf'};                    // aguda suave: «para juzgar»
   }
   if(t[n-2]==='F') return {p:n-2, regla:'fd'};      // normal: «con ira»
@@ -261,10 +268,10 @@ function acentoPrevio(t, a){
 const nota0=x=>String(x).replace(/[^a-mA-M]/g,'').slice(-1).toLowerCase();
 // Asigna notas a las sílabas de una mitad. E: parte del tono (parseParte). Devuelve {res:[{nota,rol}], regla}.
 // rol: 'int' (entonación), 'ten' (cuerda), 'prep' (preparatoria), 'acc' (acento), 'post' (después del acento), 'fin'
-function puntear(s, E, intonar, flexa){
+function puntear(s, E, intonar, flexa, cadencia){
   const n=s.length, res=new Array(n).fill(null); if(!n) return {res, regla:''};
   const t=clasificar(s);
-  const ult=acentoFinal(t);
+  const ult=acentoFinal(t, cadencia, s);
   const pos=new Array(E.acc.length).fill(-1);
   pos[E.acc.length-1]=ult.p;
   for(let k=E.acc.length-2;k>=0;k--) pos[k]= pos[k+1]>=0 ? acentoPrevio(t,pos[k+1]) : -1;
@@ -317,9 +324,14 @@ function pautarVerso(verso, cod, lang, intonar){
   const d=dividirVerso(String(verso).replace(/✠\s*/g,''));
   const mitad=(txt, E, into, flexa)=>{
     if(txt==null) return null;
-    const pals=palabras(txt.replace(/\+/g,'').trim(), lang); const s=plano(pals);
+    const pals=palabras(txt.replace(/\+/g,'').trim(), lang);
+    // Gloria: «por los siglos de los siglos. Amén.» El «Amén» se canta como llana (A-men), sin acento en «-mén» (CRU)
+    if(lang==='es' && E===T.ter && /por los siglos de los siglos\.?\s+Amén\.?\s*$/i.test(txt)){
+      const am=pals[pals.length-1]; if(am && am.sil.length===2){ am.sil[0].acc=1; am.sil[0].f=true; am.sil[1].acc=0; am.sil[1].f=false; }
+    }
+    const s=plano(pals);
     // la flexa con entonación: la entonación del tono, y la cuerda hasta la flexa
-    const r=puntear(s, into&&flexa?{...E, inton:T.med.inton}:E, into, flexa);
+    const r=puntear(s, into&&flexa?{...E, inton:T.med.inton}:E, into, flexa, E===T.ter);
     return {pals, sils:s, res:r.res, regla:r.regla};
   };
   if(d.ter==null) return {tono:T, flex:null, med:null, ter:mitad(d.med, T.ter, intonar, false)};

@@ -39,9 +39,11 @@ Tipos de sílaba: **F** (fuerte: la acentuada de su palabra), **D** (débil: inm
 4. Evitar en lo posible acentuar la última.
 5. Período de 2 a 3 sílabas por acento.
 
-Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás razón»); …ndf, esdrújula suave («sinceridad»); …ddf, aguda suave («para juzgar»). Agregado nuestro: …ff, la penúltima («Señor Dios»). Monosílabos fuertes: «no tengo miedo a Dios» va en «Dios».
+Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás razón»); …ndf, esdrújula suave («sinceridad»); …ddf, aguda suave («para juzgar»).
 
-- **Agudas:** no se juntan en una sílaba notas que irían en sílabas distintas: la última lleva la nota del acento y se omiten las que seguían (también en la terminación, que entonces acaba en la nota del acento). En la flexa, si el acento cae en la última, esa sílaba baja.
+**En la cadencia (terminación), nunca en la última sílaba** (CRU, 18/11/2026): donde la mediante haría aguda suave (…ddf), la cadencia acentúa la antepenúltima («a quién **te**meré», «bendecid **al** Señor»), salvo que sea la sílaba que sigue al acento de su propia palabra: entonces la penúltima («sedienta **de** ti», «se exalta **por** Dios»). Así la cadencia termina siempre en la nota final del modo. En el Gloria, «Amén» se canta como llana: «de los *si*glos. **A**mén». Agregado nuestro: …ff, la penúltima («Señor Dios»). Monosílabos fuertes: «no tengo miedo a Dios» va en «Dios».
+
+- **Agudas:** en la mediante (y la flexa) no se juntan en una sílaba notas que irían en sílabas distintas: la última lleva la nota del acento y se omiten las que seguían (forma B del Liber). En la cadencia la última nunca lleva el acento (ver arriba). En la flexa, si el acento cae en la última, esa sílaba baja.
 - **Modos de dos acentos** (1, 3, 6 y 7 en la mediante; 5 y 7 en la terminación): período de 2 sílabas, 3 como máximo, como en el gregoriano latino y en Chant Tools (jgabc). El primer acento va en una fuerte a 2 sílabas, si no a 3; si el intervalo entre acentos es mayor, como último recurso en una neutra a 2 o a 3; si tampoco hay, a 2 aunque sea débil (acento ficticio, como hace Chant Tools: «in progénies **et** pro**gé**nies»).
 - **Flexa:** baja un grado desde la cuerda; desde do o desde fa (semitono), una tercera menor.
 - **Entonación:** en el primer verso de cada salmo; en el cántico evangélico, en cada verso. Si la mitad es corta, la cadencia tiene prioridad.

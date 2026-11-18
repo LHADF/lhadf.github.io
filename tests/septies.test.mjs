@@ -39,11 +39,11 @@ test('pautado latino, tono 8 G', () => {
   assert.deepEqual(roles('Ego vero egénus et pauper sum: * Deus, ádiuva me.', '8G', 'la')[1], '..IIB.');
 });
 
-test('pautado español: aguda al final del verso (sin juntar notas de sílabas distintas)', () => {
+test('pautado español: en la cadencia, la última sílaba no se acentúa', () => {
   const pv = S.pautarVerso('yo digo al Señor * «Tú eres mi bien.»', '8G', 'es', false);
   const ult = pv.ter.res[pv.ter.res.length - 1];
-  assert.equal(ult.rol, 'acc');
-  assert.equal(ult.nota, 'h');
+  assert.equal(ult.rol, 'fin');
+  assert.equal(ult.nota, 'g.');
 });
 
 // Datos: base y calendario; armado de Completas

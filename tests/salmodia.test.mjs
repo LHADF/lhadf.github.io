@@ -65,14 +65,36 @@ test('reglas de CRU para el acento del metro (modos de un acento)', () => {
   for (const cod of ['2D', '4g', '5a', '8G']) assert.equal(acentoMetro('En su boca no hay sinceridad', cod), 'ce');
 });
 
-test('agudas: no se juntan en una sílaba notas de sílabas distintas', () => {
+test('agudas en la mediante: no se juntan en una sílaba notas de sílabas distintas', () => {
   for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
-    const T = S.tono(cod), pv = S.pautarVerso('para juzgar * no tengo miedo a Dios', cod, 'es', false);
-    const um = pv.med.res.at(-1), ut = pv.ter.res.at(-1);
+    const T = S.tono(cod), pv = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false);
+    const um = pv.med.res.at(-1);
     assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // la última lleva la nota del acento, sola
-    assert.equal(ut.rol, 'acc'); assert.equal(ut.nota, T.ter.acc.at(-1).n, cod);
   }
-  assert.equal(pautar('Llegó la boda del cordero. * Su esposa se ha embellecido.', '8G'), 'Llegó la boda del cor[de]ro. | Su esposa se ha em_be__lle_[ci]do.');
+});
+
+test('cadencia: nunca acento en la última sílaba (CRU)', () => {
+  const cad = v => { const h = S.pautarVerso('Y dije: * ' + v, '8G', 'es', false).ter; return h.sils.filter((x, i) => h.res[i].rol === 'acc').map(x => x.t).join(' '); };
+  assert.equal(cad('¿a quién temeré?'), 'te');
+  assert.equal(cad('bendecid al Señor.'), 'al');                 // antepenúltima
+  assert.equal(cad('la luz del Señor.'), 'del');
+  assert.equal(cad('mi alma está sedienta de ti;'), 'de');       // la antepenúltima sigue al acento de su palabra: la penúltima
+  assert.equal(cad('se exalta por Dios;'), 'por');
+  assert.equal(cad('para juzgar.'), 'juz');
+  // termina en la nota final del modo
+  for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
+    const ut = S.pautarVerso('Y dije: * ¿a quién temeré?', cod, 'es', false).ter.res.at(-1);
+    assert.notEqual(ut.rol, 'acc', cod); assert.equal(ut.nota, S.tono(cod).ter.acc.at(-1).fijas.at(-1), cod);
+  }
+});
+
+test('Gloria: «Amén» sin acento en «-mén» (como llana)', () => {
+  for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
+    const h = S.pautarVerso('Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.', cod, 'es', false).ter;
+    assert.equal(h.res.at(-1).rol, 'fin', cod); assert.equal(h.res.at(-2).rol, 'acc', cod); assert.equal(h.sils.at(-2).t, 'A');
+  }
+  // fuera del Gloria, «amén» sigue siendo aguda
+  assert.equal(sil('Amén'), 'A-MÉN');
 });
 
 test('flexa: baja un tono, o una tercera menor desde do o fa; con aguda, baja en la última', () => {
@@ -144,7 +166,8 @@ test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', ()
         if (h.res.some(r => !r || !r.nota)) mal.push(`${id} ${cod}: sílaba sin nota: ${v}`);
         const acc = h.res.map((r, i) => r.rol === 'acc' ? i : -1).filter(i => i >= 0);
         if (k >= 3 && (!acc.length || acc.at(-1) < k - 3)) mal.push(`${id} ${cod}: acento fuera de las tres últimas: ${v}`);
-        if (acc.length && t[acc.at(-1)] === 'D' && h.regla !== 'sin F') mal.push(`${id} ${cod}: acento en débil: ${v}`);
+        if (acc.length && t[acc.at(-1)] === 'D' && h.regla !== 'sin F' && !/^ddf·/.test(h.regla)) mal.push(`${id} ${cod}: acento en débil: ${v}`);
+        if (h === pv.ter && k >= 2 && h.res[k - 1].rol === 'acc') mal.push(`${id} ${cod}: cadencia con acento en la última: ${v}`);
         if (h.sils.some(x => !/[aeiouáéíóúüy]/i.test(x.t))) mal.push(`${id}: sílaba sin vocal: ${v}`);
       }
       const g = S.gabcVerso(pv);
@@ -158,7 +181,7 @@ test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', ()
 test('versos reales, pautados', () => {
   // Salmo 62 (domingo I, Laudes): modo 1 g
   assert.equal(pautar("¡Oh Dios!, tú eres mi Dios, por ti madrugo, * mi alma está sedienta de ti;", '1g'),
-    '¡Oh Dios!, tú eres mi Dios, por [ti] ma[dru]go, | mi alma está sedien_ta_ _de_ [ti];');
+    '¡Oh Dios!, tú eres mi Dios, por [ti] ma[dru]go, | mi alma está se_dien__ta_ [de] ti;');
   // Salmo 35 (miércoles I, Laudes): modo 2
   assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo a [Dios], | ni en su _pre_[sen]cia.»');
   assert.equal(pautar('acostado medita el crimen, † se obstina en el mal camino, * no rechaza la maldad.', '2D'),
