@@ -46,3 +46,12 @@ Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás raz�
 - **Flexa:** baja un grado desde la cuerda; desde do o desde fa (semitono), una tercera menor.
 - **Entonación:** en el primer verso de cada salmo; en el cántico evangélico, en cada verso. Si la mitad es corta, la cadencia tiene prioridad.
 - **Latín (cántico evangélico):** las mismas reglas; el acento sale de las tildes y los monosílabos átonos están en `ATONOS_LA`.
+
+## Lo que dice el Liber Usualis (1961, pp. 112-117)
+
+- **Período:** en las fórmulas de dos acentos, entre un acento y el otro hay una nota fija y otra hueca, que se canta solo si la palabra es esdrújula: 2 sílabas, o 3 como máximo. El caso sin acento a 2 o 3 no está en estas páginas (estaría en las reglas del comienzo del Liber).
+- **Cadencia dactílica** en la mediante del modo 3 y en las terminaciones 1 D² y 4 E: la nota adicional se anticipa en la sílaba acentuada y la clivis pasa a la siguiente (Fí(j) li(ih) o(j)). Aplicado (`antic` en `parseParte`).
+- **Monosílabo o palabra hebrea en la mediante** de los modos de un acento (2, 4, 5, 6 alt., 8): se puede usar la forma B (termina en la nota del acento) o la modulación ordinaria A. Coincide con la regla de CRU para las agudas. Para las terminaciones y las mediantes de dos acentos el Liber no trae forma B: ahí la terminación aguda es extensión nuestra, por decidir.
+- **Flexa:** baja una segunda o una tercera según el tono, en la última sílaba antes de la †, o también en la penúltima si no está acentuada; vale también para monosílabos y palabras hebreas.
+- **Entonación:** en el primer verso de cada salmo con su Gloria; en el Benedictus, el Magníficat y el Nunc dimíttis, en cada verso.
+- **Modo 6:** también «otra fórmula», con mediante de un acento con una preparatoria: «6 alt. F» en el desplegable.

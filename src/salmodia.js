@@ -19,17 +19,18 @@ const TONOS={
  '4alt':{clef:'c3',med:"i hi ir h i 'j ir i.",ter:{'c':"ir 'i hr h.",'A':"ir h i j 'h fr f.",'d':"ir h i j 'h ir i."}},
  '5':{clef:'c3',med:"d f hr 'i hr h.",ter:{'a':"hr 'i gr 'h fr f."}},
  '6':{clef:'c4',med:"f gh hr 'ixi hr 'g hr h.",ter:{'F':"hr f gh 'g fr f."}},
+ '6alt':{clef:'c4',med:"f gh hr g 'h fr f.",ter:{'F':"hr f gh 'g fr f."}},   // Liber: «otra fórmula», mediante de un acento con una preparatoria
  '7':{clef:'c3',med:"hg hi ir 'k jr 'i jr j.",ter:{'a':"ir 'j ir 'h hr gf..",'b':"ir 'j ir 'h hr g.",'c':"ir 'j ir 'h hr gh..",'c2':"ir 'j ir 'h hr ih..",'d':"ir 'j ir 'h hr gi.."}},
  '8':{clef:'c4',med:"g h jr 'k jr j.",ter:{'G':"jr i j 'h gr g.",'G*':"jr i j 'h gr gh..",'c':"jr h j 'k jr j."}},
  'per':{clef:'c4',med:"ixhi hr g ixi h 'g fr f.",ter:{'':"gr d 'f fr ed.."}}
 };
-const NOMBRE_TONO={'1':'1','2':'2','3':'3','4':'4','4alt':'4 alt.','5':'5','6':'6','7':'7','8':'8','per':'peregrino'};
+const NOMBRE_TONO={'1':'1','2':'2','3':'3','4':'4','4alt':'4 alt.','5':'5','6':'6','6alt':'6 alt.','7':'7','8':'8','per':'peregrino'};
 const ROMANO=['','I','II','III','IV','V','VI','VII','VIII'];
 
 function partes(cod){ // "8G" -> {tono:'8', fin:'G'}
   cod=String(cod||'').replace(/\s|\./g,'');
   if(/^per/i.test(cod)) return {tono:'per',fin:''};
-  const m=cod.match(/^(4alt|[1-8])(.*)$/); if(!m) return null;
+  const m=cod.match(/^(4alt|6alt|[1-8])(.*)$/); if(!m) return null;
   let t=m[1], f=m[2]||'';
   const def=TONOS[t]; if(!def) return null;
   if(!(f in def.ter)){ const k=Object.keys(def.ter).find(k=>k.toLowerCase()===f.toLowerCase()); f=k!==undefined?k:Object.keys(def.ter)[0]; }
@@ -39,18 +40,23 @@ function etiquetaTono(cod){ const p=partes(cod); if(!p) return ''; return (p.ton
 function etiquetaCorta(cod){ const p=partes(cod); if(!p) return ''; return p.tono==='per'?'Peregrino':NOMBRE_TONO[p.tono]+(p.fin?' '+p.fin:''); }
 
 // Una mitad del tono: entonación, cuerda y cadencia. La cadencia queda en grupos de acento:
-// prep (preparatorias antes del primer acento) y, por cada acento, su nota, la de relleno (rep) y las fijas que siguen.
+// prep (preparatorias antes del primer acento) y, por cada acento, su nota, la de relleno (rep), las fijas que siguen y,
+// si la hay, la nota que se anticipa en la sílaba acentuada cuando la cadencia es dactílica (antic).
+// Liber Usualis: «the additional note of the dactylic cadence is anticipated with the accented syllable and precedes the
+// clivis» (mediante del modo 3, terminaciones 1 D² y 4 E). En jgabc es la nota abierta justo antes de ese acento.
 function parseParte(s){
   const toks=s.trim().split(/\s+/).map(x=>{ const acc=x[0]==="'"; if(acc) x=x.slice(1); const rep=/r$/.test(x); if(rep) x=x.slice(0,-1); return {n:x,acc,rep}; });
   const iT=toks.findIndex(t=>t.rep);
   const E={inton:toks.slice(0,iT).map(t=>t.n), tenor:toks[iT].n, prep:[], acc:[]};
-  let cur=null;
-  for(const t of toks.slice(iT+1)){
-    if(t.acc){ cur={n:t.n, rep:null, fijas:[]}; E.acc.push(cur); }
+  const cad=toks.slice(iT+1); let cur=null, antic=null;
+  cad.forEach((t,q)=>{
+    const sig=cad[q+1];
+    if(t.acc){ cur={n:t.n, rep:null, fijas:[], antic}; antic=null; E.acc.push(cur); }
+    else if(t.rep && sig && sig.acc && (!cur || cur.rep!=null)) antic=t.n;
     else if(!cur) E.prep.push(t.n);
-    else if(t.rep){ if(cur.rep==null) cur.rep=t.n; }   // (tono 3: dos notas de relleno iguales entre los acentos)
+    else if(t.rep){ if(cur.rep==null) cur.rep=t.n; }
     else cur.fijas.push(t.n);
-  }
+  });
   return E;
 }
 // La flexa baja un grado desde la cuerda; si ese grado es de semitono (desde do o desde fa), baja una tercera menor.
@@ -267,7 +273,11 @@ function puntear(s, E, intonar, flexa){
     const p=pos[k], A=E.acc[k]; if(p<0) break;
     const rep=A.rep!=null?A.rep:nota0(A.fijas[0]||A.n);
     const post=fin-p, nf=A.fijas.length, esUlt=k===E.acc.length-1;
-    if(post>=nf){
+    if(A.antic && post===nf+1){
+      // cadencia dactílica: la sílaba acentuada canta la nota anticipada y la siguiente, la nota del acento (la clivis)
+      for(let j=0;j<nf;j++) res[fin-nf+1+j]={nota:A.fijas[j], rol:(esUlt&&j===nf-1)?'fin':'post'};
+      res[p+1]={nota:A.n, rol:'post'}; res[p]={nota:A.antic, rol:'acc'};
+    } else if(post>=nf){
       for(let j=0;j<nf;j++) res[fin-nf+1+j]={nota:A.fijas[j], rol:(esUlt&&j===nf-1)?'fin':'post'};
       for(let i=p+1;i<=fin-nf;i++) res[i]={nota:rep, rol:'post'};
       res[p]={nota:A.n, rol:'acc'};

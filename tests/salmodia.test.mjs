@@ -100,6 +100,23 @@ test('modos de dos acentos: período de 2 sílabas, 3 como máximo (como Chant T
   }
 });
 
+test('Liber Usualis: en la cadencia dactílica, la nota adicional se anticipa en la sílaba acentuada (modo 3, 1 D², 4 E)', () => {
+  const notas = (v, cod, l) => { const h = S.pautarVerso(v + ' * y nada más.', cod, l, false).med; return h.sils.slice(-4).map((x, i) => x.t + '(' + h.res[h.res.length - 4 + i].nota + ')').join(' '); };
+  // como Chant Tools: «et Fí(j) li(ih) o(j.)»
+  assert.equal(notas('Glória Patri, et Fílio,', '3a', 'la'), 'et(j) Fí(j) li(ih) o(j.)');
+  assert.deepEqual(S.pautarVerso('cantad al Señor un cántico, * bendecid su nombre.', '3a', 'es', false).med.res.slice(-3).map(r => r.nota), ['j', 'ih', 'j.']);
+  // llana: la clivis sigue en la sílaba acentuada
+  assert.deepEqual(S.pautarVerso('Dad gracias al Señor porque es bueno, * porque es eterna su misericordia.', '3a', 'es', false).med.res.slice(-2).map(r => r.nota), ['ih', 'j.']);
+  assert.deepEqual(S.tono('1D2').ter.acc[0].antic, 'g');
+  assert.deepEqual(S.tono('4E').ter.acc[0].antic, 'g');
+});
+
+test('modo 6: también la otra fórmula del Liber (mediante de un acento con una preparatoria)', () => {
+  assert.equal(S.etiquetaTono('6altF'), 'Modo 6 alt. F');
+  assert.equal(S.tono('6altF').med.acc.length, 1);
+  assert.equal(S.tono('6altF').med.prep.length, 1);
+});
+
 test('entonación: en el primer verso de los salmos; en todos los del cántico evangélico', () => {
   const g1 = S.gabcSalmo(['Señor, tú eres mi Dios, * por ti madrugo.', 'Mi alma está sedienta de ti, * mi carne tiene ansia de ti.'], '8G', 'es', { todos: true });
   const versos = g1.split('(::)');
