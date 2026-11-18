@@ -602,6 +602,10 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   // en Pascua, lo que se hereda de otro común conserva su «Aleluia» (santa Catalina de Siena: doctores ← vírgenes)
   const cat = ctx.window.Oficio.armar('2027-04-29', '').secciones.find(s => s.k === 'ant' && s.id === 'a1');
   assert.match(cat.t.es, /Aleluia\.$/);
+  // Basílicas de san Pedro y san Pablo: del común de apóstoles, no los textos del 29 de junio
+  const bas = VI.armar('2026-11-18', '');
+  assert.match(bas.dia.nota || '', /apóstoles/i);
+  assert.ok(!JSON.stringify(bas.secciones).includes('Yo he rogado por ti, Pedro'));
   // san Alberto Magno: del común de doctores, completado por el de pastores
   const alberto = VI.armar('2027-11-17', '');
   assert.match(alberto.dia.nota || '', /doctores/i);

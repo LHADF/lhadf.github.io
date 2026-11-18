@@ -273,3 +273,7 @@ San Beda el Venerable, abad y doctor de la Iglesia:
   comun: doctores
 Sancta María in sábbato:
   comun: santa-maria-sabado
+Dedicación de las Basílicas de San Pedro y San Pablo:
+  comun: apostoles   # no tiene propio: no tomar los textos de los santos Pedro y Pablo (29 de junio)
+Beata María Tránsito de Jesús Sacramentado, religiosa:
+  comun: santas-mujeres   # no es santa Mariana de Jesús Paredes (26 de mayo)
