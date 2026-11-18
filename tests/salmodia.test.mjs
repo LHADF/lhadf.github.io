@@ -152,6 +152,33 @@ test('latín: la tilde vale también en mayúscula inicial', () => {
   assert.deepEqual(S.silabasLatin('Ábraham').map(x => x.acc), [1, 0, 0]);
 });
 
+test('latín como Chant Tools: silabeo de Solesmes', () => {
+  const sl = w => S.silabasLatin(w).map(x => x.t).join('-');
+  assert.equal(sl('Magníficat'), 'Ma-gní-fi-cat');      // gn juntas
+  assert.equal(sl('eum'), 'e-um');                      // eu: dos sílabas
+  assert.equal(sl('Deus'), 'De-us');
+  assert.equal(sl('Eucharistía'), 'Eu-cha-ris-tí-a');
+  assert.equal(sl('eréxit'), 'e-ré-xit');               // x con la vocal que sigue
+  assert.equal(sl('exaltávit'), 'ex-al-tá-vit');        // salvo el prefijo ex-
+  assert.equal(sl('víscera'), 'ví-sce-ra');             // sc y sp juntas
+  assert.equal(sl('dispérsit'), 'di-spér-sit');
+  assert.equal(sl('testaménti'), 'tes-ta-mén-ti');      // st no
+  assert.equal(sl('iusiurándum'), 'ius-iu-rán-dum');
+  assert.equal(sl('redemptiónem'), 'red-emp-ti-ó-nem');
+  assert.equal(sl('Óriens'), 'Ó-ri-ens');
+});
+
+test('mitad corta con entonación, como Chant Tools («Magníficat»)', () => {
+  const g = cod => S.gabcSalmo(['Magníficat * ánima mea Dóminum.'], cod, 'la', { entonarTodos: true }).split(' *(:)')[0];
+  assert.equal(g('2D'), '(f3) Ma(e)gní(fe)fi(eh)cat(h.)');   // entonación corta del modo 2
+  assert.equal(g('8G'), '(c4) Ma(g)gní(hg)fi(gj)cat(j.)');   // y del 8
+  assert.equal(g('1g'), '(c4) Ma(f)gní(gh)fi(h)cat(h.)');
+  assert.equal(g('7a'), '(c3) Ma(hg)gní(hi)fi(i)cat(i.)');
+  // «timéntibus eum»: e-um, acento en e- (Chant Tools)
+  const h = S.pautarVerso('Et misericórdia eius in progénies et progénies * timéntibus eum.', '2D', 'la', true).ter;
+  assert.equal(h.sils.map((x, i) => x.t + '(' + h.res[i].nota + ')').join(' '), 'ti(h) mén(h) ti(h) bus(g) e(e) um(f.)');
+});
+
 test('entonación: en el primer verso de los salmos; en todos los del cántico evangélico', () => {
   const g1 = S.gabcSalmo(['Señor, tú eres mi Dios, * por ti madrugo.', 'Mi alma está sedienta de ti, * mi carne tiene ansia de ti.'], '8G', 'es', { todos: true });
   const versos = g1.split('(::)');
@@ -172,7 +199,7 @@ test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', ()
         const k = h.res.length, t = S.clasificar(h.sils);
         if (h.res.some(r => !r || !r.nota)) mal.push(`${id} ${cod}: sílaba sin nota: ${v}`);
         const acc = h.res.map((r, i) => r.rol === 'acc' ? i : -1).filter(i => i >= 0);
-        if (k >= 3 && (!acc.length || acc.at(-1) < k - 3)) mal.push(`${id} ${cod}: acento fuera de las tres últimas: ${v}`);
+        if (k >= 3 && h.regla !== 'corta' && (!acc.length || acc.at(-1) < k - 3)) mal.push(`${id} ${cod}: acento fuera de las tres últimas: ${v}`);
         if (acc.length && t[acc.at(-1)] === 'D' && h.regla !== 'sin F' && !/^ddf·/.test(h.regla)) mal.push(`${id} ${cod}: acento en débil: ${v}`);
         if (h === pv.ter && k >= 2 && h.res[k - 1].rol === 'acc') mal.push(`${id} ${cod}: cadencia con acento en la última: ${v}`);
         if (h.sils.some(x => !/[aeiouáéíóúüy]/i.test(x.t))) mal.push(`${id}: sílaba sin vocal: ${v}`);

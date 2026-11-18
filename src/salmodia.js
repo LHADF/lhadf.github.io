@@ -13,7 +13,7 @@
 // ' marca la nota del acento; r, la nota de recitación (cuerda) o la de relleno que absorbe sílabas.
 const TONOS={
  '1':{clef:'c4',med:"f gh hr 'ixi hr 'g hr h.",ter:{'D':"hr g f 'gh gr gvFED.",'D2':"hr g f gr 'gf d.",'f':"hr g f 'gh gr gf..",'g':"hr g f 'gh gr g.",'g2':"hr g f 'g gr ghg.",'g3':"hr g f 'g gr g.",'a':"hr g f 'g hr h.",'a2':"hr g f 'g gr gh..",'a3':"hr g f 'gh gr gh.."}},
- '2':{clef:'f3',med:"e f hr 'i hr h.",ter:{'D':"hr g 'e fr f."}},
+ '2':{clef:'f3',med:"e f hr 'i hr h.",corta:"e fe eh",ter:{'D':"hr g 'e fr f."}},
  '3':{clef:'c4',med:"g hj jr 'k jr jr 'ih j.",ter:{'b':"jr h 'j jr i.",'a':"jr h 'j jr ih..",'a2':"jr ji hi 'h gr gh..",'g':"jr ji hi 'h gr g.",'g2':"jr h j i 'h gr g."}},
  '4':{clef:'c4',med:"h gh hr g h 'i hr h.",ter:{'g':"hr 'h gr g.",'E':"hr g h ih gr 'gf e."}},
  '4alt':{clef:'c3',med:"i hi ir h i 'j ir i.",ter:{'c':"ir 'i hr h.",'A':"ir h i j 'h fr f.",'d':"ir h i j 'h ir i."}},
@@ -21,7 +21,7 @@ const TONOS={
  '6':{clef:'c4',med:"f gh hr 'ixi hr 'g hr h.",ter:{'F':"hr f gh 'g fr f."}},
  '6alt':{clef:'c4',med:"f gh hr g 'h fr f.",ter:{'F':"hr f gh 'g fr f."}},   // Liber: «otra fórmula», mediante de un acento con una preparatoria
  '7':{clef:'c3',med:"hg hi ir 'k jr 'i jr j.",ter:{'a':"ir 'j ir 'h hr gf..",'b':"ir 'j ir 'h hr g.",'c':"ir 'j ir 'h hr gh..",'c2':"ir 'j ir 'h hr ih..",'d':"ir 'j ir 'h hr gi.."}},
- '8':{clef:'c4',med:"g h jr 'k jr j.",ter:{'G':"jr i j 'h gr g.",'G*':"jr i j 'h gr gh..",'c':"jr h j 'k jr j."}},
+ '8':{clef:'c4',med:"g h jr 'k jr j.",corta:"g hg gj",ter:{'G':"jr i j 'h gr g.",'G*':"jr i j 'h gr gh..",'c':"jr h j 'k jr j."}},
  'per':{clef:'c4',med:"ixhi hr g ixi h 'g fr f.",ter:{'':"gr d 'f fr ed.."}}
 };
 const NOMBRE_TONO={'1':'1','2':'2','3':'3','4':'4','4alt':'4 alt.','5':'5','6':'6','6alt':'6 alt.','7':'7','8':'8','per':'peregrino'};
@@ -70,6 +70,9 @@ function flexDe(tenor, clef){
 function tono(cod){
   const p=partes(cod); if(!p) return null; const d=TONOS[p.tono];
   const med=parseParte(d.med), ter=parseParte(d.ter[p.fin]);
+  // entonación de la mediante corta (Chant Tools: shortMediant, o la de la solemne): para la mitad que no alcanza para
+  // entonación y cadencia («Magníficat»)
+  med.intonCorta = d.corta ? d.corta.trim().split(/\s+/) : med.inton;
   const flex=flexDe(med.tenor, d.clef);
   return {cod:p.tono+p.fin, clef:d.clef, med, ter, tenor:med.tenor, flex,
           flexa:{inton:[], tenor:med.tenor, prep:[], acc:[{n:med.tenor, rep:flex, fijas:[flex]}]}};
@@ -80,8 +83,21 @@ function tono(cod){
 const VOC_LA='aeiouyáéíóúýæœǽëäöü';
 const ACENTO_LA=/[áéíóúýǽÁÉÍÓÚÝǼ]/;   // también en mayúscula (Ísrael)
 const esVocLa=c=>VOC_LA.includes(c);
+// Divisiones etimológicas de los libros de Solesmes (como Chant Tools): palabra sin tildes → cortes
+const EXCEPCIONES_LA={'redemptionem':'red-emp-ti-o-nem','redemptio':'red-emp-ti-o','redemptor':'red-emp-tor','inimicis':'in-i-mi-cis','inimicorum':'in-i-mi-co-rum',
+  'inimici':'in-i-mi-ci','inimicos':'in-i-mi-cos','inanes':'in-a-nes','iniquitas':'in-i-qui-tas','iniquitatem':'in-i-qui-ta-tem','potens':'pot-ens','potentes':'pot-en-tes',
+  'potentiam':'pot-en-ti-am','potentia':'pot-en-ti-a','sicut':'sic-ut','iusiurandum':'ius-iu-ran-dum'};
+const sinTilde=w=>w.toLowerCase().replace(/[áéíóúý]/g,c=>'aeiouy'['áéíóúý'.indexOf(c)]).replace(/ǽ/g,'æ');
 function silabasLatin(pal){
   const w=pal, low=w.toLowerCase();
+  const exc=EXCEPCIONES_LA[sinTilde(w)];
+  if(exc){
+    const partes=exc.split('-'); const sil=[]; let a=0;
+    partes.forEach(pt=>{ sil.push(w.slice(a,a+pt.length)); a+=pt.length; });
+    let acc=sil.findIndex(x=>ACENTO_LA.test(x));
+    if(acc<0) acc= sil.length===1?0: sil.length===2?0: sil.length-2;
+    return sil.map((t,k)=>({t,acc:(k===acc&&sil.length>1)?1:0}));
+  }
   const n=low.length; const tipo=[]; // V o C por posición
   for(let i=0;i<n;i++){
     const c=low[i];
@@ -102,7 +118,10 @@ function silabasLatin(pal){
   while(i<n){
     if(tipo[i]==='V'){
       let j=i+1; const a=low[i], b=low[j]||'';
-      if(tipo[j]==='V' && ((a==='a'&&b==='u')||(a==='á'&&b==='u')||(a==='a'&&b==='ú')||(a==='e'&&b==='u'&&i===0))) j++;
+      // diptongos: au; eu solo en las palabras griegas que empiezan por eu + consonante (Eu-cha-rí-sti-a) y en heu, ceu, seu,
+      // neu; en lo demás, dos sílabas: e-um, De-us, me-us
+      const eu = a==='e' && b==='u' && ((i===0 && low[2] && !esVocLa(low[2]) && !/[mn]/.test(low[2])) || /^[hcsn]eu$/.test(low));
+      if(tipo[j]==='V' && ((a==='a'&&b==='u')||(a==='á'&&b==='u')||(a==='a'&&b==='ú')||eu)) j++;
       nucleos.push([i,j]); i=j;
     } else i++;
   }
@@ -116,14 +135,16 @@ function silabasLatin(pal){
     // qu y gu consonántica forman una sola consonante con la q/g
     if(cons.length>=2 && low[cons[cons.length-1]]==='u' && /[qg]/.test(low[cons[cons.length-2]])){ const u=cons.pop(); }
     if(cons.length===0) corte=ini;
-    else if(cons.length===1){ corte = low[cons[0]]==='x' ? cons[0]+1 : cons[0]; }
+    // x entre vocales, con la vocal que sigue (e-ré-xit, di-xit), salvo el prefijo ex- (ex-al-tá-vit)
+    else if(cons.length===1){ corte = (low[cons[0]]==='x' && cons[0]===1 && low[0]==='e') ? cons[0]+1 : cons[0]; }
     else {
       // pares que no se separan: muda + líquida, ch, ph, th, qu, gu
       const last2=low[cons[cons.length-2]]+low[cons[cons.length-1]];
-      if(/^([bcdgptf][lr]|ch|ph|th|rh)$/.test(last2) && !(last2[1]==='h' && false)) corte=cons[cons.length-2];
+      if(/^([bcdgptf][lr]|ch|ph|th|rh|gn)$/.test(last2)) corte=cons[cons.length-2];   // gn junta: Ma-gní-fi-cat, re-gnum
+      else if(/^s[cp]$/.test(last2)) corte=cons[cons.length-2];                        // sc y sp juntas: ví-sce-ra, di-spér-sit (st no: tes-ta-mén-ti)
       else if(low[cons[cons.length-1]]==='h' && cons.length>=2) corte=cons[cons.length-2];
       else corte=cons[cons.length-1];
-      if(low[cons[0]]==='x') corte=cons[0]+1;
+      if(low[cons[0]]==="x" && cons.length>=2 && !/^s[cp]$/.test(last2)) corte=cons[0]+1;
     }
     cortes.push(corte);
   }
@@ -299,6 +320,14 @@ function puntear(s, E, intonar, flexa, cadencia){
       res[p]={nota:A.n, rol:'acc'};
     }
     primero=p; fin=p-1;
+  }
+  // Mitad corta con entonación (como Chant Tools): si la entonación y la cadencia no entran, va la entonación corta del modo
+  // y la mitad termina en la cuerda con punto («Ma-gní-fi-cat»: do, re-do, do-fa, fa.), sin cadencia
+  if(intonar && E.inton.length && (primero<0 || primero-E.prep.length < E.inton.length)){
+    const ic=E.intonCorta||E.inton, r2=new Array(n);
+    for(let i=0;i<n;i++) r2[i]= (i<n-1 && i<ic.length) ? {nota:ic[i], rol:'int'} : {nota:E.tenor, rol:'ten'};
+    r2[n-1]={nota:E.tenor+'.', rol:'fin'};
+    return {res:r2, regla:'corta'};
   }
   if(primero>=0){
     E.prep.forEach((nt,j)=>{ const i=primero-E.prep.length+j; if(i>=0) res[i]={nota:nt, rol:'prep'}; });

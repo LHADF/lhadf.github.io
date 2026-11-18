@@ -10,7 +10,7 @@ const S = require('../src/salmodia.js');
 const sil = (f, w) => f(w).map(s => (s.acc ? s.t.toUpperCase() : s.t)).join('-');
 
 test('silabeo latino', () => {
-  assert.equal(sil(S.silabasLatin, 'requiéscet'), 're-qui-ÉS-cet');
+  assert.equal(sil(S.silabasLatin, 'requiéscet'), 're-qui-É-scet');
   assert.equal(sil(S.silabasLatin, 'lingua'), 'LIN-gua');
   assert.equal(sil(S.silabasLatin, 'Iesum'), 'IE-sum');
   assert.equal(sil(S.silabasLatin, 'eius'), 'E-ius');
