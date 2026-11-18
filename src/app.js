@@ -126,7 +126,8 @@ function marcas(s){ // ℣ ℟ * † ✠ en rojo
 
 /* ---------- Partituras (Exsurge, igual que el Cantoral) ---------- */
 let _id=0; const GAB=new Map();
-function partituraHTML(gabc, glosa, drop=true){ const id='g'+(++_id); GAB.set(id,{gabc,glosa,drop}); return `<div class="partitura" data-g="${id}"><p class="cargando">Preparando la partitura…</p></div>`; }
+// sal: partitura de la salmodia (los acentos del modo van en 700, docs/diseno.md)
+function partituraHTML(gabc, glosa, drop=true, sal=false){ const id='g'+(++_id); GAB.set(id,{gabc,glosa,drop}); return `<div class="partitura${sal?' sal-p':''}" data-g="${id}"><p class="cargando">Preparando la partitura…</p></div>`; }
 const cacheSvg=new Map();
 function svgDe(id, ancho, tam){ // tam: tamaño de la letra y de la traducción, en unidades de la partitura
   const it=GAB.get(id); if(!it) return Promise.reject();
@@ -215,7 +216,7 @@ function versosHTML(versos, modo, cod, lang, desde, glosas){
 // glosas: por versículo, pares «latín → español» palabra por palabra, en el orden del texto (el * y la † no llevan par)
 function versosMarcados(versos, glosas){
   // las marcas de la pauta de canto (**negrita**, _cursiva_) solo en el modo cantado; recitado, texto llano
-  const m=t=>CANTA() ? esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/_(.+?)_/g,'<i>$1</i>') : esc(t.replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1'));
+  const m=t=>CANTA() ? esc(t).replace(/\*\*(.+?)\*\*/g,'<b class="ac">$1</b>').replace(/_(.+?)_/g,'<i>$1</i>') : esc(t.replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1'));
   return versos.map((v,i)=>{
     const pares=glosas&&glosas[i]||null; let k=0, resto=0;
     const mitades=v.split(/ \* /);
@@ -260,7 +261,7 @@ function salmoHTML(sal){
       const vs=sal.aleluyas.flatMap(e=>[`Aleluia. † ${e[0]} * Aleluia.`, `${e[1]} * Aleluia, aleluia.`]);
       const lin=(v,i)=>{ const ls=SAL.renglonesVerso(SAL.pautarVerso(v,cod,'es',i===0));
         return ls.map((l,k)=>`<p class="v">${k===ls.length-1?'<span class="k">℟.</span> ':''}${l}</p>`).join(''); };
-      if(modo==='primer'||modo==='todos') h+=partituraHTML(`name:salmo;\n%%\n${SAL.gabcSalmo(modo==='todos'?vs:vs.slice(0,1),cod,'es',{marcas:true})}`, null, false);
+      if(modo==='primer'||modo==='todos') h+=partituraHTML(`name:salmo;\n%%\n${SAL.gabcSalmo(modo==='todos'?vs:vs.slice(0,1),cod,'es',{marcas:true})}`, null, false, true);
       const desde=(modo==='primer'||modo==='todos')?(modo==='todos'?vs.length:1):0;
       h+=`<div class="versos al19">${sal.aleluyas.map((e,k)=>{ const par=[2*k,2*k+1].filter(i=>i>=desde); return par.length?`<div class="est">${par.map(i=>lin(vs[i],i)).join('')}</div>`:''; }).join('')}</div>`;
     } else {
@@ -279,7 +280,7 @@ function salmoHTML(sal){
   if(canta && (modo==='primer'||modo==='todos')){ // el primer verso (o todos) en partitura, con la entonación
     const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,1);
     const g=SAL.gabcSalmo(lista,cod,L,{marcas:true});   // acento en negrita y preparatorias en cursiva, como en el pautado
-    h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false);
+    h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false, true);
     // traducción de los versos que van en partitura, debajo de ella
     if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
     if(modo==='todos') return h;
@@ -567,14 +568,14 @@ function horaHTML(){
         if(sec.modo && !sec.gabc && CANTA()){
           const cod=tonoDe(sec), lista=S.salmos==='todos'?sec.versos:S.salmos==='pautado'?[]:sec.versos.slice(0,1);
           h+=`<div class="salmo-h"><div class="cab"><span class="t">${esc(sec.titulo)}</span>${selectorModo(sec)}</div></div>`;
-          if(lista.length) h+=partituraHTML(`name:cantico;\n%%\n${SAL.gabcSalmo(lista,cod,'la',{entonarTodos:true, marcas:true})}`, S.trad&&sec.inter?lista.flatMap((v,i)=>sec.inter[i]||[]):null, false);
+          if(lista.length) h+=partituraHTML(`name:cantico;\n%%\n${SAL.gabcSalmo(lista,cod,'la',{entonarTodos:true, marcas:true})}`, S.trad&&sec.inter?lista.flatMap((v,i)=>sec.inter[i]||[]):null, false, true);
           const resto=sec.versos.slice(lista.length);
           if(resto.length) h+=`<div class="versos${S.trad?' inter':''}">${versosMarcados(resto.map(v=>SAL.marcadoVerso(SAL.pautarVerso(v,cod,'la',true))),S.trad&&sec.inter?sec.inter.slice(lista.length):null)}</div>`;
           break;
         }
         h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span></div>`
           +(!sec.gabc ? `<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`   // sin partitura (Benedictus): todo pautado
-            : CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false)
+            : CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false, true)   // Nunc dimíttis: acentos del modo en 700, como el pautado
               +`<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`
             : `<div class="versos${S.trad?' inter':''}">${versosMarcados([sec.verso1,...sec.versos],S.trad?[sec.inter1,...sec.inter]:null)}</div>`); break;
       case 'preces': {

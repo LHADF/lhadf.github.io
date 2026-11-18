@@ -40,7 +40,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 
 ## Diseño visual
 
-- **Texto negro: dos pesos, como en el Cantoral Laudibus.** Normal 400 y negrita 600 (la tipografía se carga solo en esos dos pesos), también en la letra de las partituras. La letra bajo los neumas mide lo mismo que el texto en español y la traducción, lo mismo que la glosa (app.js lo calcula al dibujar cada partitura); solo se achica la traducción de un renglón que no entra (hasta 72 %).
+- **Texto negro: dos pesos, como en el Cantoral Laudibus.** Normal 400 y negrita 600, también en la letra de las partituras. **Excepción (18/11/2026):** los acentos del modo en la salmodia (pautado y letra de la partitura de salmos, cánticos y cántico evangélico) van en bold 700, para que se vean más; por eso Source Serif 4 se carga también en 700 (solo redonda) y «Septies AE» trae ǽ/Ǽ en 400, 600 y 700. La letra bajo los neumas mide lo mismo que el texto en español y la traducción, lo mismo que la glosa (app.js lo calcula al dibujar cada partitura); solo se achica la traducción de un renglón que no entra (hasta 72 %).
 - **Tipografías:** Source Serif 4 para textos, títulos y latín; Source Sans 3 para la interfaz y los datos. Etiquetas en mayúsculas con espaciado (no hay versalitas reales).
 - **Cuatro tamaños:** título, ítem, interfaz y dato. El mínimo es el dato (unos 14 px) y toda la interfaz se puede agrandar.
 - **Radios:** dos, de 8 px y 16 px.

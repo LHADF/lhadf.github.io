@@ -20,7 +20,7 @@ from fontTools.varLib import instancer
 from fontTools import subset
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PESOS = (400, 600)   # texto normal y negrita (los dos únicos pesos del texto negro, como en el Cantoral)
+PESOS = (400, 600, 700)   # texto normal, negrita (600) y acentos de la salmodia (700)
 
 
 def anclas(f, base, marca):

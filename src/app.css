@@ -184,6 +184,7 @@ b .k,.todos .k{font-weight:400}
 .v .h1 *,.v .h2 *,.himno .ln *{text-indent:0}
 .v .sg{color:var(--rubric);font-family:var(--serif);font-size:.95em}
 .v b{font-weight:600}
+.v b.ac,.sal-p svg.Exsurge tspan[style*="bold"]{font-weight:700!important}   /* acentos del modo en la salmodia (docs/diseno.md) */
 .v i{font-style:italic;color:var(--ink2)}
 .v u{text-decoration:underline dotted var(--rubric);text-underline-offset:.2em}
 .grupo-gl{color:var(--glosa);font-style:italic;font-size:.86em;margin:-.15em 0 .9em;border-left:2px solid color-mix(in srgb,var(--glosa) 35%,transparent);padding-left:.7em}

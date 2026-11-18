@@ -355,7 +355,7 @@ function renglonesMitad(h){
     if(p.br && cur){ out.push(cur.trim()); cur=''; }
     cur+=esc(p.pre);
     p.sil.forEach(sy=>{ const r=h.res[k++]||{rol:'ten'}; let t=esc(sy.t);
-      if(r.rol==='acc') t='<b>'+t+'</b>'; else if(r.rol==='prep') t='<i>'+t+'</i>';
+      if(r.rol==='acc') t='<b class="ac">'+t+'</b>'; else if(r.rol==='prep') t='<i>'+t+'</i>';
       cur+=t; });
     cur+=esc(p.post)+' ';
   });
