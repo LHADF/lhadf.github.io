@@ -9,6 +9,14 @@ const require = createRequire(import.meta.url);
 const S = require('../src/salmodia.js');
 const sil = w => S.silabasEspanol(w).map(s => (s.acc ? s.t.toUpperCase() : s.t)).join('-');
 
+// ---------- Salmos reales de Laudes y Vísperas ----------
+const ctx = { window: {} };
+for (const f of ['datos/base.js', 'datos/calendario.js', 'completas.js', 'carga/laudes.js', 'carga/visperas.js', 'laudes.js'])
+  vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), ctx);
+const X = ctx.window.Completas._, LA = ctx.window.Laudes, VI = ctx.window.Visperas;
+const SALMOS = { ...ctx.window.LAUDES.salmos, ...ctx.window.VISPERAS.salmos };
+const MODOS = ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G'];
+
 // Una mitad de verso pautada, con el acento entre corchetes y las preparatorias entre guiones bajos
 const marca = h => h.pals.map((p, iw) => p.pre + p.sil.map((x, k) => {
   const r = h.res[h.sils.findIndex(s => s.iw === iw && s.k === k)];
@@ -77,10 +85,19 @@ test('flexa: baja un tono, o una tercera menor desde do o fa; con aguda, baja en
   assert.ok(pv.flex.res.slice(0, -1).every(r => r.nota === 'j'));
 });
 
-test('modos de dos acentos: el primero a 2 o 3 sílabas, sin acentuar débiles si se puede', () => {
-  assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '1g'), 'Gloria al [Pa]dre, y al [Hi]jo, | y al Espí_ri__tu_ [San]to.');
-  assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '7a'), 'Gloria al [Pa]dre, y al [Hi]jo, | y al Es[pí]ritu [San]to.');
-  assert.equal(pautar('Llegó la boda del cordero. * Su esposa se ha embellecido.', '1g').split(' | ')[0], 'Llegó la [bo]da del cor[de]ro.');
+test('modos de dos acentos: período de 2 sílabas, 3 como máximo (como Chant Tools en latín)', () => {
+  // fuerte a 2 o a 3
+  assert.equal(pautar('No tengo miedo a Dios, * ni en su presencia.', '1g').split(' | ')[0], 'No tengo [mie]do a [Dios],');
+  assert.equal(pautar('El Señor da la muerte y la vida, * hunde en el abismo y levanta.', '7a').split(' | ')[0], 'El Señor da la muerte [y] la [vi]da,');
+  // sin fuerte ni neutra a 2 o a 3: acento a 2 aunque sea débil (Chant Tools: «in progénies et progénies»)
+  assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '1g'), 'Gloria al Padre, [y] al [Hi]jo, | y al Espí_ri__tu_ [San]to.');
+  assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '7a'), 'Gloria al Padre, [y] al [Hi]jo, | y al Es[pí]ritu [San]to.');
+  // nunca a más de 3 sílabas, en ningún salmo
+  for (const [id, s] of Object.entries(SALMOS)) for (const v of X.versosDe(s.texto).versos) for (const cod of ['1g', '3a', '6F', '7a', '5a']) {
+    const pv = S.pautarVerso(v, cod, 'es', false);
+    for (const h of [pv.med, pv.ter].filter(Boolean)) { const a = h.res.map((r, i) => r.rol === 'acc' ? i : -1).filter(i => i >= 0);
+      for (let k = 1; k < a.length; k++) assert.ok(a[k] - a[k - 1] <= 3, `${id} ${cod}: ${v}`); }
+  }
 });
 
 test('entonación: en el primer verso de los salmos; en todos los del cántico evangélico', () => {
@@ -91,14 +108,6 @@ test('entonación: en el primer verso de los salmos; en todos los del cántico e
   const g2 = S.gabcSalmo(['Benedíctus Dóminus Deus Ísrael, * quia visitávit', 'et eréxit cornu salútis nobis, * in domo David'], '8G', 'la', { entonarTodos: true });
   assert.match(g2.split('(::)')[1], /^ et\(g\) e\(h\)/);
 });
-
-// ---------- Salmos reales de Laudes y Vísperas ----------
-const ctx = { window: {} };
-for (const f of ['datos/base.js', 'datos/calendario.js', 'completas.js', 'carga/laudes.js', 'carga/visperas.js', 'laudes.js'])
-  vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), ctx);
-const X = ctx.window.Completas._, LA = ctx.window.Laudes, VI = ctx.window.Visperas;
-const SALMOS = { ...ctx.window.LAUDES.salmos, ...ctx.window.VISPERAS.salmos };
-const MODOS = ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G'];
 
 test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', () => {
   const mal = []; let n = 0;

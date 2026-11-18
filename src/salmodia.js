@@ -242,14 +242,12 @@ function acentoFinal(t){
   if(n>=3 && t[n-3]!=='D') return {p:n-3, regla:'sin F'};
   return {p:n-2, regla:'sin F'};
 }
-// Acento anterior (tonos de dos acentos): a 2 o 3 sílabas del siguiente, mejor fuerte y si no neutra. Si las dos son débiles,
-// antes que acentuar una débil se alarga el período: a 4 sílabas una fuerte o neutra («Gloria al Padre, y al Hijo»: Pa…Hi),
-// a 5 una fuerte («la grandeza y el poder»: de…der); si tampoco, la débil.
+// Acento anterior (tonos de dos acentos). Período de 2 sílabas, 3 como máximo, como en el gregoriano latino (Chant Tools):
+// una fuerte a 2, si no a 3; si no hay, una neutra a 2 o a 3; si tampoco, un acento a 2 aunque sea débil (como el
+// «et» de «in progénies et progénies» en Chant Tools).
 function acentoPrevio(t, a){
   const c=[a-2,a-3].filter(i=>i>=0); if(!c.length) return -1;
   for(const k of ['F','N']) for(const i of c) if(t[i]===k) return i;
-  if(a-4>=0 && t[a-4]!=='D') return a-4;
-  if(a-5>=0 && t[a-5]==='F') return a-5;
   return c[0];
 }
 
