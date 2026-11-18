@@ -606,6 +606,7 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   const bas = VI.armar('2026-11-18', '');
   assert.match(bas.dia.nota || '', /apóstoles/i);
   assert.ok(!JSON.stringify(bas.secciones).includes('Yo he rogado por ti, Pedro'));
+  assert.match(bas.secciones.filter(s => s.k === 'prosa').pop().t.es, /^Defiende a tu Iglesia, Señor, con la protección de los apóstoles/);
   // san Alberto Magno: del común de doctores, completado por el de pastores
   const alberto = VI.armar('2027-11-17', '');
   assert.match(alberto.dia.nota || '', /doctores/i);
