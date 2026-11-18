@@ -31,7 +31,7 @@ El mismo modo para todos los salmos y cánticos de la hora y para el cántico ev
 
 ## Acento (reglas de CRU)
 
-Tipos de sílaba: **F** (fuerte: la acentuada de su palabra), **D** (débil: inmediatamente antes o después de una fuerte), **N** (neutra: sin acento, en una palabra que lo tiene: «ma-» de majestad). Las palabras átonas cuentan como débiles (lectura nuestra, para confirmar: con la otra, «estrado de tus pies» se acentuaría en «de»).
+Tipos de sílaba: **F** (fuerte: la acentuada de su palabra), **D** (débil: inmediatamente antes o después de una fuerte), **N** (neutra: átona no pegada a una acentuada, también la de una palabra átona: «ma-» de majestad, «de» en «estrado de tus pies»). Las neutras se acentúan como último recurso (CRU, 18/11/2026).
 
 1. Mirar del final hacia el comienzo.
 2. El acento, en la penúltima o en la antepenúltima; nunca más atrás; en la última solo si no se puede en otra.
@@ -42,7 +42,7 @@ Tipos de sílaba: **F** (fuerte: la acentuada de su palabra), **D** (débil: inm
 Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás razón»); …ndf, esdrújula suave («sinceridad»); …ddf, aguda suave («para juzgar»). Agregado nuestro: …ff, la penúltima («Señor Dios»). Monosílabos fuertes: «no tengo miedo a Dios» va en «Dios».
 
 - **Agudas:** no se juntan en una sílaba notas que irían en sílabas distintas: la última lleva la nota del acento y se omiten las que seguían (también en la terminación, que entonces acaba en la nota del acento). En la flexa, si el acento cae en la última, esa sílaba baja.
-- **Modos de dos acentos** (1, 3, 6 y 7 en la mediante; 5 y 7 en la terminación): período de 2 sílabas, 3 como máximo, como en el gregoriano latino y en Chant Tools (jgabc). El primer acento va en una fuerte a 2 sílabas, si no a 3; si no hay, en una neutra a 2 o a 3; si tampoco, a 2 aunque sea débil (acento ficticio: Chant Tools hace lo mismo, «in progénies **et** pro**gé**nies»). Sin sinalefa, «Gloria al Padre, **y** al **Hi**jo». Pendiente de estudio con CRU (Liber Usualis).
+- **Modos de dos acentos** (1, 3, 6 y 7 en la mediante; 5 y 7 en la terminación): período de 2 sílabas, 3 como máximo, como en el gregoriano latino y en Chant Tools (jgabc). El primer acento va en una fuerte a 2 sílabas, si no a 3; si el intervalo entre acentos es mayor, como último recurso en una neutra a 2 o a 3; si tampoco hay, a 2 aunque sea débil (acento ficticio, como hace Chant Tools: «in progénies **et** pro**gé**nies»).
 - **Flexa:** baja un grado desde la cuerda; desde do o desde fa (semitono), una tercera menor.
 - **Entonación:** en el primer verso de cada salmo; en el cántico evangélico, en cada verso. Si la mitad es corta, la cadencia tiene prioridad.
 - **Latín (cántico evangélico):** las mismas reglas; el acento sale de las tildes y los monosílabos átonos están en `ATONOS_LA`.

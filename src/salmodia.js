@@ -224,10 +224,10 @@ function plano(pals){
 }
 
 /* ---------- Acentuación (reglas de CRU) ---------- */
-// F: acentuada; D: inmediatamente antes o después de una acentuada; N: sin acento, en una palabra que lo tiene («ma-» de
-// «majestad»). Las palabras átonas (artículos, preposiciones, posesivos: «de», «la», «mi») cuentan como débiles.
-// (CONFIG.atonasDebiles=false: la lectura literal, en la que una átona lejos del acento es neutra; para comparar)
-const CONFIG={atonasDebiles:true};
+// F: acentuada; D: inmediatamente antes o después de una acentuada; N (neutra): átona no pegada a una acentuada, también
+// la de una palabra átona («ma-» de «majestad», «de» en «estrado de tus pies»). Las neutras se acentúan como último recurso.
+// (CONFIG.atonasDebiles=true: las palabras átonas cuentan siempre como débiles; lectura descartada por CRU, para comparar)
+const CONFIG={atonasDebiles:false};
 function clasificar(s){
   return s.map((x,i)=> x.f ? 'F' : ((CONFIG.atonasDebiles && x.atona) || (s[i-1]&&s[i-1].f) || (s[i+1]&&s[i+1].f)) ? 'D' : 'N');
 }
@@ -249,8 +249,8 @@ function acentoFinal(t){
   return {p:n-2, regla:'sin F'};
 }
 // Acento anterior (tonos de dos acentos). Período de 2 sílabas, 3 como máximo, como en el gregoriano latino (Chant Tools):
-// una fuerte a 2, si no a 3; si no hay, una neutra a 2 o a 3; si tampoco, un acento a 2 aunque sea débil (como el
-// «et» de «in progénies et progénies» en Chant Tools).
+// una fuerte a 2, si no a 3; si el intervalo entre acentos es mayor, como último recurso una neutra a 2 o a 3; si tampoco
+// hay, un acento a 2 aunque sea débil (como el «et» de «in progénies et progénies» en Chant Tools).
 function acentoPrevio(t, a){
   const c=[a-2,a-3].filter(i=>i>=0); if(!c.length) return -1;
   for(const k of ['F','N']) for(const i of c) if(t[i]===k) return i;

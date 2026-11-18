@@ -51,7 +51,8 @@ test('sílabas fuertes, débiles y neutras', () => {
   assert.equal(tipos('majestad'), 'NDF');
   assert.equal(tipos('Señor'), 'DF');
   assert.equal(tipos('sinceridad'), 'NNDF');
-  assert.equal(tipos('de tus pies'), 'DDF');   // las palabras átonas cuentan como débiles
+  assert.equal(tipos('de tus pies'), 'NDF');   // neutra: átona no pegada a una acentuada, también la de una palabra átona
+  assert.equal(tipos('a mi Señor'), 'NNDF');
 });
 
 test('reglas de CRU para el acento del metro (modos de un acento)', () => {
@@ -66,7 +67,7 @@ test('reglas de CRU para el acento del metro (modos de un acento)', () => {
 
 test('agudas: no se juntan en una sílaba notas de sílabas distintas', () => {
   for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
-    const T = S.tono(cod), pv = S.pautarVerso('para juzgar * yo digo al Señor', cod, 'es', false);
+    const T = S.tono(cod), pv = S.pautarVerso('para juzgar * no tengo miedo a Dios', cod, 'es', false);
     const um = pv.med.res.at(-1), ut = pv.ter.res.at(-1);
     assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // la última lleva la nota del acento, sola
     assert.equal(ut.rol, 'acc'); assert.equal(ut.nota, T.ter.acc.at(-1).n, cod);
@@ -156,9 +157,9 @@ test('versos reales, pautados', () => {
   // Salmo 35 (miércoles I, Laudes): modo 2
   assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo a [Dios], | ni en su _pre_[sen]cia.»');
   assert.equal(pautar('acostado medita el crimen, † se obstina en el mal camino, * no rechaza la maldad.', '2D'),
-    'acostado medita el [cri]men, | se obstina en el mal ca[mi]no, | no rechaza la _mal_[dad].');
+    'acostado medita el [cri]men, | se obstina en el mal ca[mi]no, | no recha_za_ [la] maldad.');
   // Salmo 109 (domingos, Vísperas): modo 3 a
-  assert.equal(pautar('y haré de tus enemigos * estrado de tus pies.»', '3a'), 'y haré de tus [e]ne[mi]gos | estrado de _tus_ [pies].»');
+  assert.equal(pautar('y haré de tus enemigos * estrado de tus pies.»', '3a'), 'y haré de tus [e]ne[mi]gos | estra_do_ [de] tus pies.»');
 });
 
 test('modo de la salmodia: uno por semana del salterio y otro por domingo', () => {
