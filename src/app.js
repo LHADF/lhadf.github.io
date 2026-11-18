@@ -204,7 +204,8 @@ function versosHTML(versos, modo, cod, lang, desde, glosas){
 // Versos con marcas escritas a mano: **negrita** (acento) y _cursiva_ (preparación); * mediante, † flexa.
 // glosas: por versículo, pares «latín → español» palabra por palabra, en el orden del texto (el * y la † no llevan par)
 function versosMarcados(versos, glosas){
-  const m=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/_(.+?)_/g,'<i>$1</i>');
+  // las marcas de la pauta de canto (**negrita**, _cursiva_) solo en el modo cantado; recitado, texto llano
+  const m=t=>CANTA() ? esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/_(.+?)_/g,'<i>$1</i>') : esc(t.replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1'));
   return versos.map((v,i)=>{
     const pares=glosas&&glosas[i]||null; let k=0, resto=0;
     const mitades=v.split(/ \* /);
