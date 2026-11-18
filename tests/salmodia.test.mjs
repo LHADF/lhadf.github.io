@@ -65,6 +65,13 @@ test('reglas de CRU para el acento del metro (modos de un acento)', () => {
   for (const cod of ['2D', '4g', '5a', '8G']) assert.equal(acentoMetro('En su boca no hay sinceridad', cod), 'ce');
 });
 
+test('dos fuertes seguidas: la segunda manda y la primera es débil («¡oh Dios!»)', () => {
+  const tipos = t => S.clasificar(S.plano(S.palabras(t, 'es'))).join('');
+  assert.equal(tipos('¡oh Dios!'), 'DF');
+  assert.equal(tipos('mar, ¡oh Dios!'), 'FDF');
+  assert.equal(pautar('Te vio el mar, ¡oh Dios! * te vieron las aguas.', '8G').split(' | ')[0], 'Te vio el [mar], ¡oh Dios!');
+});
+
 test('agudas en la mediante: no se juntan en una sílaba notas de sílabas distintas', () => {
   for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
     const T = S.tono(cod), pv = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false);
@@ -201,7 +208,9 @@ test('modo de la salmodia: uno por semana del salterio y otro por domingo', () =
   assert.equal(LA.modoDe({ sal: 2 }, '2026-11-24'), '4g');
   assert.equal(LA.modoDe({ sal: 3 }, '2026-12-01'), '5a');
   assert.equal(LA.modoDe({ sal: 4 }, '2026-11-12'), '8G');
-  assert.equal(LA.modoDe({ sal: 0, sol: 1 }, '2026-12-25'), '1g');   // solemnidad sin semana: como el domingo de la I
+  assert.equal(LA.modoDe({ sal: 2, sol: 1 }, '2026-11-24'), '4g');   // solemnidad en martes de la II: el modo de la semana (CRU)
+  assert.equal(LA.modoDe({ sal: 0, sol: 1 }, '2026-12-25'), '8G');   // sin semana del salterio (Navidad, viernes): la de los días anteriores (IV)
+  assert.equal(LA.modoDe({ sal: 0, sol: 1 }, '2026-05-14'), '4g');   // Ascensión, jueves: semana II
   // en las horas: el mismo modo para todos los salmos, los cánticos y el cántico evangélico
   assert.equal(m('2026-11-18'), '2D');
   assert.equal(m('2026-11-15'), '1g');

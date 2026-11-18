@@ -228,8 +228,11 @@ function plano(pals){
 // la de una palabra átona («ma-» de «majestad», «de» en «estrado de tus pies»). Las neutras se acentúan como último recurso.
 // (CONFIG.atonasDebiles=true: las palabras átonas cuentan siempre como débiles; lectura descartada por CRU, para comparar)
 const CONFIG={atonasDebiles:false};
+// Dos fuertes seguidas: la segunda manda y la primera es débil («¡oh Dios!»: fuerte «Dios», débil «oh») (CRU).
 function clasificar(s){
-  return s.map((x,i)=> x.f ? 'F' : ((CONFIG.atonasDebiles && x.atona) || (s[i-1]&&s[i-1].f) || (s[i+1]&&s[i+1].f)) ? 'D' : 'N');
+  const f=new Array(s.length).fill(false);   // de derecha a izquierda: «mar, ¡oh Dios!» → mar fuerte, oh débil, Dios fuerte
+  for(let i=s.length-1;i>=0;i--) f[i]= !!s[i].f && !f[i+1];
+  return s.map((x,i)=> f[i] ? 'F' : ((CONFIG.atonasDebiles && x.atona) || f[i-1] || f[i+1]) ? 'D' : 'N');
 }
 // Último acento de la mitad, mirando desde el final. En la cadencia (terminación) nunca va en la última sílaba
 // (CRU): «a quién temeré» se acentúa en «te»; se prefiere una neutra. En la mediante y la flexa sí, si hace falta.

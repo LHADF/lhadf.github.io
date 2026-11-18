@@ -10,11 +10,19 @@ const SIN_GLORIA=['cantico-dn-3-57-88-56'];   // el cántico de Daniel 3, 57-88 
 const ciclo=CP.ciclo;   // ciclo dominical A/B/C (completas.js)
 
 // Modo de la salmodia (docs/laudes.md): uno por semana del salterio para las ferias y otro para cada domingo; el mismo para
-// todos los salmos y cánticos de la hora y para el cántico evangélico. Las solemnidades, como domingo; sin semana, la I.
+// todos los salmos y cánticos de la hora y para el cántico evangélico. Las solemnidades siguen el ritmo de la semana en que
+// caen (CRU): un martes de la semana II, el modo de las ferias de la II. Los días que el calendario deja sin semana del salterio
+// (octavas, Triduo, tiempo de Navidad, Ascensión, Pentecostés) toman la de los días anteriores.
 const MODOS={domingo:{1:'1g',2:'3a',3:'6F',4:'7a'}, feria:{1:'2D',2:'4g',3:'5a',4:'8G'}};
+function semanaDe(ref, fRef){
+  if(ref.sal) return ref.sal;
+  let f=fRef;
+  for(let k=0;k<40;k++){ f=CP.masDias(f,-1); if(!CP.enRango(f)) break; const d=CP.diaCal(f,''); if(d && d.sal) return d.sal; }
+  return 1;
+}
 function modoDe(ref, fRef){
-  const dom = CP.deIso(fRef).getDay()===0 || !!ref.sol;
-  return MODOS[dom?'domingo':'feria'][ref.sal||1] || MODOS[dom?'domingo':'feria'][1];
+  const dom = CP.deIso(fRef).getDay()===0;
+  return MODOS[dom?'domingo':'feria'][semanaDe(ref,fRef)] || MODOS[dom?'domingo':'feria'][1];
 }
 
 // Las partes del día, capa sobre capa. hora: 'laudes' | 'visperas'.

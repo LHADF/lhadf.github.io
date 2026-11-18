@@ -18,7 +18,7 @@ Motor: `src/salmodia.js` (tonos de jgabc, de B. Bloomfield). Pruebas: `tests/sal
 | III | 6 F | 5 a |
 | IV | 7 a | 8 G |
 
-El mismo modo para todos los salmos y cánticos de la hora y para el cántico evangélico. Las I Vísperas llevan el del domingo. Para confirmar con CRU: las solemnidades llevan el del domingo de su semana; los días sin semana del salterio (Navidad, octava de Pascua, Pentecostés), la semana I.
+El mismo modo para todos los salmos y cánticos de la hora y para el cántico evangélico. Las I Vísperas llevan el del domingo. Las solemnidades siguen el ritmo de la semana en que caen (CRU): en martes de la semana II, el de las ferias de la II. Los días que el calendario deja sin semana del salterio (octava de Navidad y tiempo de Navidad hasta el Bautismo, Triduo, octava de Pascua, Ascensión, Pentecostés) toman la semana de los días anteriores (para confirmar con CRU).
 
 **Desplegable:** junto al título de cada salmo y del cántico evangélico, «Modo …» en rojo con un desplegable (el del día primero, después los demás). El cambio vale para esa pieza en esa hora de ese día (`S.tonos`, se guardan los de la última semana).
 
@@ -39,9 +39,9 @@ Tipos de sílaba: **F** (fuerte: la acentuada de su palabra), **D** (débil: inm
 4. Evitar en lo posible acentuar la última.
 5. Período de 2 a 3 sílabas por acento.
 
-Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás razón»); …ndf, esdrújula suave («sinceridad»); …ddf, aguda suave («para juzgar»).
+Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás razón»); …ndf, esdrújula suave («sinceridad»); …ddf, aguda suave («para juzgar»). Dos fuertes seguidas: la segunda manda y la primera es débil (CRU): «¡oh Dios!» tiene fuerte «Dios» y débil «oh»; «mar, ¡oh Dios!» queda F D F. Monosílabos fuertes: «no tengo miedo a Dios» va en «Dios».
 
-**En la cadencia (terminación), nunca en la última sílaba** (CRU, 18/11/2026): donde la mediante haría aguda suave (…ddf), la cadencia acentúa la antepenúltima («a quién **te**meré», «bendecid **al** Señor»), salvo que sea la sílaba que sigue al acento de su propia palabra: entonces la penúltima («sedienta **de** ti», «se exalta **por** Dios»). Así la cadencia termina siempre en la nota final del modo. En el Gloria, «Amén» se canta como llana: «de los *si*glos. **A**mén». Agregado nuestro: …ff, la penúltima («Señor Dios»). Monosílabos fuertes: «no tengo miedo a Dios» va en «Dios».
+**En la cadencia (terminación), nunca en la última sílaba** (CRU, 18/11/2026): donde la mediante haría aguda suave (…ddf), la cadencia acentúa la antepenúltima («a quién **te**meré», «bendecid **al** Señor»), salvo que sea la sílaba que sigue al acento de su propia palabra: entonces la penúltima («sedienta **de** ti», «se exalta **por** Dios»). Así la cadencia termina siempre en la nota final del modo. En el Gloria, «Amén» se canta como llana: «de los *si*glos. **A**mén».
 
 - **Agudas:** en la mediante (y la flexa) no se juntan en una sílaba notas que irían en sílabas distintas: la última lleva la nota del acento y se omiten las que seguían (forma B del Liber). En la cadencia la última nunca lleva el acento (ver arriba). En la flexa, si el acento cae en la última, esa sílaba baja.
 - **Modos de dos acentos** (1, 3, 6 y 7 en la mediante; 5 y 7 en la terminación): período de 2 sílabas, 3 como máximo, como en el gregoriano latino y en Chant Tools (jgabc). El primer acento va en una fuerte a 2 sílabas, si no a 3; si el intervalo entre acentos es mayor, como último recurso en una neutra a 2 o a 3; si tampoco hay, a 2 aunque sea débil (acento ficticio, como hace Chant Tools: «in progénies **et** pro**gé**nies»).
