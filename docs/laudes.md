@@ -70,3 +70,7 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 - **Sancta María in sábbato**: sus elementos propios del libro (invitatorio, himnos, lectura breve, responsorio, antífona del Benedictus, preces, seis oraciones; en el Oficio, himno y segunda lectura); lo demás, de la feria.
 - Tres comunes corregidos según el libro: san Camilo de Lelis y san Jerónimo Emiliani (santos varones), san Efrén (doctores).
 - Fiestas y solemnidades con propio en la base pero sin salmodia (p. ej. san Martín, solemnidad en Buenos Aires): salmos y antífonas del común que indica el santoral (en las I Vísperas, los de sus I Vísperas), no los del domingo. Lo mismo en el Oficio de lectura (salmodia, versículo y primera lectura del común) y en la Hora intermedia (antífona, lectura y versículo del común; la oración, la de Laudes).
+
+## Salmodia cantada en español (18/11/2026)
+
+Modo por semana del salterio y por domingo, pautado y primer verso en partitura en Laudes y Vísperas, con desplegable para cambiar el modo; el cántico evangélico en el mismo modo con entonación en cada verso. Reglas de silabeo y acentuación de CRU: [salmodia.md](salmodia.md).

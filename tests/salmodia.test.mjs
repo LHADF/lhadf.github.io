@@ -1,0 +1,163 @@
+// Salmodia en español (src/salmodia.js) y modos de Laudes y Vísperas: node --test tests/
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+import { readFileSync } from 'node:fs';
+import vm from 'node:vm';
+
+const require = createRequire(import.meta.url);
+const S = require('../src/salmodia.js');
+const sil = w => S.silabasEspanol(w).map(s => (s.acc ? s.t.toUpperCase() : s.t)).join('-');
+
+// Una mitad de verso pautada, con el acento entre corchetes y las preparatorias entre guiones bajos
+const marca = h => h.pals.map((p, iw) => p.pre + p.sil.map((x, k) => {
+  const r = h.res[h.sils.findIndex(s => s.iw === iw && s.k === k)];
+  return r.rol === 'acc' ? `[${x.t}]` : r.rol === 'prep' ? `_${x.t}_` : x.t;
+}).join('') + p.post).join(' ');
+const pautar = (v, cod) => { const pv = S.pautarVerso(v, cod, 'es', false); return [pv.flex, pv.med, pv.ter].filter(Boolean).map(marca).join(' | '); };
+const acentoMetro = (h, cod = '8G') => { const pv = S.pautarVerso(h + ' * y nada más.', cod, 'es', false);
+  return pv.med.sils.filter((s, i) => pv.med.res[i].rol === 'acc').map(s => s.t).join(' '); };
+
+test('silabeo español: qu y gu, Aleluia, Sión, hiatos y diptongos', () => {
+  assert.equal(sil('porque'), 'POR-que');
+  assert.equal(sil('aunque'), 'AUN-que');
+  assert.equal(sil('exquisitos'), 'ex-qui-SI-tos');
+  assert.equal(sil('distinguir'), 'dis-tin-GUIR');
+  assert.equal(sil('averigüéis'), 'a-ve-ri-GÜÉIS');
+  assert.equal(sil('Aleluia'), 'A-le-LU-ia');
+  assert.equal(sil('Sión'), 'Si-ÓN');
+  assert.equal(sil('guió'), 'gui-Ó');
+  assert.equal(sil('dió'), 'DIÓ');
+  assert.equal(sil('Israel'), 'Is-ra-EL');
+  assert.equal(sil('Jerusalén'), 'Je-ru-sa-LÉN');
+  assert.equal(sil('oído'), 'o-Í-do');
+  assert.equal(sil('guía'), 'GUÍ-a');
+  assert.equal(sil('reyes'), 'RE-yes');
+  assert.equal(sil('Dios'), 'DIOS');
+  assert.equal(sil('de'), 'de');   // átona
+  assert.equal(sil('para'), 'PA-ra');   // «pa-» de «para» es fuerte
+});
+
+test('sílabas fuertes, débiles y neutras', () => {
+  const tipos = t => S.clasificar(S.plano(S.palabras(t, 'es'))).join('');
+  assert.equal(tipos('majestad'), 'NDF');
+  assert.equal(tipos('Señor'), 'DF');
+  assert.equal(tipos('sinceridad'), 'NNDF');
+  assert.equal(tipos('de tus pies'), 'DDF');   // las palabras átonas cuentan como débiles
+});
+
+test('reglas de CRU para el acento del metro (modos de un acento)', () => {
+  assert.equal(acentoMetro('Señor, no me corrijas con ira'), 'i');                    // …fd
+  assert.equal(acentoMetro('En la sentencia tendrás razón'), 'drás');                  // fdf: esdrújula
+  assert.equal(acentoMetro('En su boca no hay sinceridad'), 'ce');                     // ndf: esdrújula suave
+  assert.equal(acentoMetro('en el trono que ha colocado para juzgar'), 'gar');         // ddf: aguda suave
+  assert.equal(acentoMetro('no tengo miedo a Dios'), 'Dios');                          // monosílabo fuerte
+  assert.equal(acentoMetro('a cantar sus cánticos'), 'cán');                           // esdrújula
+  for (const cod of ['2D', '4g', '5a', '8G']) assert.equal(acentoMetro('En su boca no hay sinceridad', cod), 'ce');
+});
+
+test('agudas: no se juntan en una sílaba notas de sílabas distintas', () => {
+  for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
+    const T = S.tono(cod), pv = S.pautarVerso('para juzgar * yo digo al Señor', cod, 'es', false);
+    const um = pv.med.res.at(-1), ut = pv.ter.res.at(-1);
+    assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // la última lleva la nota del acento, sola
+    assert.equal(ut.rol, 'acc'); assert.equal(ut.nota, T.ter.acc.at(-1).n, cod);
+  }
+  assert.equal(pautar('Llegó la boda del cordero. * Su esposa se ha embellecido.', '8G'), 'Llegó la boda del cor[de]ro. | Su esposa se ha em_be__lle_[ci]do.');
+});
+
+test('flexa: baja un tono, o una tercera menor desde do o fa; con aguda, baja en la última', () => {
+  assert.equal(S.tono('8G').flex, 'h');   // cuerda do (c4: j) → la
+  assert.equal(S.tono('2D').flex, 'f');   // cuerda fa (f3: h) → re
+  assert.equal(S.tono('4g').flex, 'g');   // cuerda la → sol
+  assert.equal(S.tono('5a').flex, 'f');   // cuerda do (c3: h) → la
+  assert.equal(S.tono('7a').flex, 'h');   // cuerda re → do
+  const pv = S.pautarVerso('Desde Sión extenderá el Señor † el poder de tu cetro: * somete en la batalla a tus enemigos.', '8G', 'es', false);
+  assert.deepEqual(pv.flex.res.at(-1), { nota: 'h', rol: 'acc' });
+  assert.ok(pv.flex.res.slice(0, -1).every(r => r.nota === 'j'));
+});
+
+test('modos de dos acentos: el primero a 2 o 3 sílabas, sin acentuar débiles si se puede', () => {
+  assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '1g'), 'Gloria al [Pa]dre, y al [Hi]jo, | y al Espí_ri__tu_ [San]to.');
+  assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '7a'), 'Gloria al [Pa]dre, y al [Hi]jo, | y al Es[pí]ritu [San]to.');
+  assert.equal(pautar('Llegó la boda del cordero. * Su esposa se ha embellecido.', '1g').split(' | ')[0], 'Llegó la [bo]da del cor[de]ro.');
+});
+
+test('entonación: en el primer verso de los salmos; en todos los del cántico evangélico', () => {
+  const g1 = S.gabcSalmo(['Señor, tú eres mi Dios, * por ti madrugo.', 'Mi alma está sedienta de ti, * mi carne tiene ansia de ti.'], '8G', 'es', { todos: true });
+  const versos = g1.split('(::)');
+  assert.match(versos[0], /^\(c4\) Se\(g\)ñor,\(h\)/);
+  assert.match(versos[1], /^ Mi\(j\)/);
+  const g2 = S.gabcSalmo(['Benedíctus Dóminus Deus Ísrael, * quia visitávit', 'et eréxit cornu salútis nobis, * in domo David'], '8G', 'la', { entonarTodos: true });
+  assert.match(g2.split('(::)')[1], /^ et\(g\) e\(h\)/);
+});
+
+// ---------- Salmos reales de Laudes y Vísperas ----------
+const ctx = { window: {} };
+for (const f of ['datos/base.js', 'datos/calendario.js', 'completas.js', 'carga/laudes.js', 'carga/visperas.js', 'laudes.js'])
+  vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), ctx);
+const X = ctx.window.Completas._, LA = ctx.window.Laudes, VI = ctx.window.Visperas;
+const SALMOS = { ...ctx.window.LAUDES.salmos, ...ctx.window.VISPERAS.salmos };
+const MODOS = ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G'];
+
+test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', () => {
+  const mal = []; let n = 0;
+  for (const [id, s] of Object.entries(SALMOS)) {
+    if (/^cantico-ap-19-/.test(id)) continue;
+    const vs = X.versosDe(s.texto).versos.filter(v => !/^R\.\s/.test(v));
+    for (const cod of MODOS) vs.forEach((v, i) => {
+      const pv = S.pautarVerso(v, cod, 'es', i === 0); n++;
+      for (const h of [pv.flex, pv.med, pv.ter].filter(Boolean)) {
+        const k = h.res.length, t = S.clasificar(h.sils);
+        if (h.res.some(r => !r || !r.nota)) mal.push(`${id} ${cod}: sílaba sin nota: ${v}`);
+        const acc = h.res.map((r, i) => r.rol === 'acc' ? i : -1).filter(i => i >= 0);
+        if (k >= 3 && (!acc.length || acc.at(-1) < k - 3)) mal.push(`${id} ${cod}: acento fuera de las tres últimas: ${v}`);
+        if (acc.length && t[acc.at(-1)] === 'D' && h.regla !== 'sin F') mal.push(`${id} ${cod}: acento en débil: ${v}`);
+        if (h.sils.some(x => !/[aeiouáéíóúüy]/i.test(x.t))) mal.push(`${id}: sílaba sin vocal: ${v}`);
+      }
+      const g = S.gabcVerso(pv);
+      if ((g.match(/\(/g) || []).length !== (g.match(/\)/g) || []).length) mal.push(`${id} ${cod}: GABC mal formado`);
+    });
+  }
+  assert.ok(n > 10000, String(n));
+  assert.deepEqual(mal, []);
+});
+
+test('versos reales, pautados', () => {
+  // Salmo 62 (domingo I, Laudes): modo 1 g
+  assert.equal(pautar("¡Oh Dios!, tú eres mi Dios, por ti madrugo, * mi alma está sedienta de ti;", '1g'),
+    '¡Oh Dios!, tú eres mi Dios, por [ti] ma[dru]go, | mi alma está sedien_ta_ _de_ [ti];');
+  // Salmo 35 (miércoles I, Laudes): modo 2
+  assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo a [Dios], | ni en su _pre_[sen]cia.»');
+  assert.equal(pautar('acostado medita el crimen, † se obstina en el mal camino, * no rechaza la maldad.', '2D'),
+    'acostado medita el [cri]men, | se obstina en el mal ca[mi]no, | no rechaza la _mal_[dad].');
+  // Salmo 109 (domingos, Vísperas): modo 3 a
+  assert.equal(pautar('y haré de tus enemigos * estrado de tus pies.»', '3a'), 'y haré de tus [e]ne[mi]gos | estrado de _tus_ [pies].»');
+});
+
+test('modo de la salmodia: uno por semana del salterio y otro por domingo', () => {
+  const m = (f, h = LA) => { const r = h.armar(f, 'ARG').secciones; return [...new Set(r.filter(s => s.k === 'salmo' || s.k === 'cantico').map(s => s.modo))].join(','); };
+  // Noviembre de 2026: el 15 es domingo de la semana I; el 18, miércoles de la I; el 22 (Cristo Rey), domingo de la II
+  assert.equal(LA.modoDe({ sal: 1, dom: 1 }, '2026-11-15'), '1g');
+  assert.equal(LA.modoDe({ sal: 2 }, '2026-11-22'), '3a');
+  assert.equal(LA.modoDe({ sal: 3 }, '2026-11-29'), '6F');
+  assert.equal(LA.modoDe({ sal: 4 }, '2026-12-06'), '7a');
+  assert.equal(LA.modoDe({ sal: 1 }, '2026-11-18'), '2D');
+  assert.equal(LA.modoDe({ sal: 2 }, '2026-11-24'), '4g');
+  assert.equal(LA.modoDe({ sal: 3 }, '2026-12-01'), '5a');
+  assert.equal(LA.modoDe({ sal: 4 }, '2026-11-12'), '8G');
+  assert.equal(LA.modoDe({ sal: 0, sol: 1 }, '2026-12-25'), '1g');   // solemnidad sin semana: como el domingo de la I
+  // en las horas: el mismo modo para todos los salmos, los cánticos y el cántico evangélico
+  assert.equal(m('2026-11-18'), '2D');
+  assert.equal(m('2026-11-15'), '1g');
+  assert.equal(m('2026-11-15', VI), '1g');
+  assert.equal(m('2026-11-12', VI), '8G');
+  // sábado por la tarde: las I Vísperas del domingo, con el modo del domingo
+  assert.equal(m('2026-11-14', VI), '1g');
+});
+
+test('Completas no cambia: el Nunc dimíttis sigue en el modo 3 a y los salmos sin modo de la semana', () => {
+  const C = ctx.window.Completas.armar('2026-11-18', 'ARG').secciones;
+  assert.ok(C.filter(s => s.k === 'salmo').every(s => !s.modo));
+  assert.equal(C.find(s => s.id === 'ac').modo, '3a');
+});

@@ -171,6 +171,9 @@ b .k,.todos .k{font-weight:400}
 .salmo-h .t{font-family:var(--titulo);font-weight:600;color:var(--rubric);font-size:.95em}
 .salmo-h .ref{font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin-left:.5em}
 .salmo-h .lema{display:block;font-style:italic;font-size:.8em;color:var(--glosa);margin-top:.15em}
+.salmo-h .modo{float:right;margin-left:.8em;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);white-space:nowrap;line-height:1.6}
+.salmo-h .modo select{font:inherit;font-weight:600;color:var(--rubric);background:transparent;border:1px solid color-mix(in srgb,var(--rubric) 35%,transparent);border-radius:6px;padding:.05em .3em;margin-left:.2em;cursor:pointer}
+.salmo-h .modo select:focus-visible{outline:2px solid var(--rubric);outline-offset:1px}
 .versos{margin:0 0 .4em}
 .v{margin:0 0 .55em}
 .v .h1{display:block;padding-left:2.2em;text-indent:-2.2em}

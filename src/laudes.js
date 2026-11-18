@@ -9,6 +9,14 @@ const SIN_GLORIA=['cantico-dn-3-57-88-56'];   // el cántico de Daniel 3, 57-88 
 
 const ciclo=CP.ciclo;   // ciclo dominical A/B/C (completas.js)
 
+// Modo de la salmodia (docs/laudes.md): uno por semana del salterio para las ferias y otro para cada domingo; el mismo para
+// todos los salmos y cánticos de la hora y para el cántico evangélico. Las solemnidades, como domingo; sin semana, la I.
+const MODOS={domingo:{1:'1g',2:'3a',3:'6F',4:'7a'}, feria:{1:'2D',2:'4g',3:'5a',4:'8G'}};
+function modoDe(ref, fRef){
+  const dom = CP.deIso(fRef).getDay()===0 || !!ref.sol;
+  return MODOS[dom?'domingo':'feria'][ref.sal||1] || MODOS[dom?'domingo':'feria'][1];
+}
+
 // Las partes del día, capa sobre capa. hora: 'laudes' | 'visperas'.
 // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
 function propio(hora, fecha, region){
@@ -110,9 +118,10 @@ function armar(hora, fecha, region){
   // Cántico Ap 19 (Vísperas del domingo): sus «Aleluia» van aparte; la app los muestra todos si el oficio se canta,
   // y si se recita, solo al principio y al final de cada estrofa (rúbrica del libro)
   const aleluyas=t=>t.filter(e=>/\n/.test(e)).map(e=>e.split('\n').map(x=>x.trim()).filter(x=>x && !/aleluia/i.test(x)));
+  const modo=modoDe(hoy, fRef);
   const salmo=(sid, ant)=>{ const s=L.salmos[sid]; const v=X.versosDe(s.texto);
-    if(/^cantico-ap-19-/.test(sid)) return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:[]}, grupos:{es:[]}, aleluyas:aleluyas(s.texto), gloria:true, rubrica:''};
-    return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!SIN_GLORIA.includes(sid), rubrica:s.rubrica_final||''}; };
+    if(/^cantico-ap-19-/.test(sid)) return {k:'salmo', es:true, id:sid, ant, modo, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:[]}, grupos:{es:[]}, aleluyas:aleluyas(s.texto), gloria:true, rubrica:''};
+    return {k:'salmo', es:true, id:sid, ant, modo, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!SIN_GLORIA.includes(sid), rubrica:s.rubrica_final||''}; };
 
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.
   // Todos los días se empieza con «Dómine, lábia mea apéries»; el invitatorio (antífona y Salmo 94), solo los domingos.
@@ -153,7 +162,7 @@ function armar(hora, fecha, region){
   sec('salmodia','Salmodia');
   (P.salmodia||[]).forEach((g,gi)=>{
     const id='a'+(gi+1);
-    S.push({k:'ant', id, es:true, n:`Ant. ${gi+1}`, t:{es:g.ant}, modo:'8G'});
+    S.push({k:'ant', id, es:true, n:`Ant. ${gi+1}`, t:{es:g.ant}, modo});
     S.push(salmo(g.salmo, id));
     S.push(g.ant_fin ? {k:'ant', id:id+'f', es:true, n:`Ant. ${gi+1}`, t:{es:g.ant_fin}} : {k:'ant', rep:id, es:true});
   });
@@ -173,7 +182,7 @@ function armar(hora, fecha, region){
   sec('cantico','Cántico evangélico',{ref:GL.cantico.ref});
   const BN=GL.cantico;
   S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}});
-  S.push({k:'cantico', titulo:BN.titulo, versos:BN.versos, inter:BN.traduccion_versos});
+  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo, titulo:BN.titulo, versos:BN.versos, inter:BN.traduccion_versos});
   S.push({k:'ant', rep:'ab', es:true});
 
   sec('preces','Preces');
@@ -205,6 +214,6 @@ function armar(hora, fecha, region){
   };
 }
 
-window.Laudes={armar:(f,r)=>armar('laudes',f,r), ciclo, propio, himnoGregoriano};
+window.Laudes={armar:(f,r)=>armar('laudes',f,r), ciclo, propio, himnoGregoriano, modoDe, MODOS};
 window.Visperas={armar:(f,r)=>armar('visperas',f,r), propio};
 })();
