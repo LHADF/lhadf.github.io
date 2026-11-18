@@ -607,6 +607,10 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   assert.match(bas.dia.nota || '', /apóstoles/i);
   assert.ok(!JSON.stringify(bas.secciones).includes('Yo he rogado por ti, Pedro'));
   assert.match(bas.secciones.filter(s => s.k === 'prosa').pop().t.es, /^Defiende a tu Iglesia, Señor, con la protección de los apóstoles/);
+  // y lo propio del libro: antífonas del Benedictus y del Magnificat
+  const antEvB = (A, f) => { const s = A.armar(f, '').secciones, i = s.findIndex(x => x.k === 'cantico'); return s[i - 1].t.es; };
+  assert.match(antEvB(LA, '2026-11-18'), /^Pedro, apóstol, y Pablo, maestro de los gentiles/);
+  assert.match(antEvB(VI, '2026-11-18'), /^Los cuerpos de los santos fueron sepultados en paz/);
   // san Alberto Magno: del común de doctores, completado por el de pastores
   const alberto = VI.armar('2027-11-17', '');
   assert.match(alberto.dia.nota || '', /doctores/i);

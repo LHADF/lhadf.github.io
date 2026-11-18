@@ -3102,7 +3102,36 @@ San Casimiro, príncipe:
       - - R
         - Y te aprovecharán más que el oro.
 Dedicación de las Basílicas de San Pedro y San Pablo:
-  nombre_libro: Dedicación de las Basílicas de San Pedro y San Pablo
+  nombre_libro: La Dedicación de las Basílicas de los Apóstoles San Pedro y San Pablo
   comun_libro: apostoles
-  indicacion: Del Común de apóstoles.
+  indicacion: 'Del Común de los apóstoles, excepto lo siguiente:'
   oracion: Defiende a tu Iglesia, Señor, con la protección de los apóstoles y, pues ha recibido por ellos el primer anuncio del Evangelio, reciba también, por su intercesión, aumento de gracia hasta el fin de los tiempos. Por nuestro Señor Jesucristo.
+  oficio:
+    lectura2:
+      titulo: PEDRO Y PABLO, DOS VÁSTAGOS PLANTADOS POR DIOS
+      texto: |-
+        Vale mucho a los ojos del Señor la vida de sus fieles, y ningún género de crueldad puede destruir la religión fundada en el misterio de la cruz de Cristo. Las persecuciones no son en detrimento, sino en provecho de la Iglesia, y el campo del Señor se viste siempre con una cosecha más rica al nacer multiplicados los granos que caen uno a uno.
+
+        Por esto, los millares de bienaventurados mártires atestiguan cuán abundante es la prole en que se han multiplicado estos dos insignes vástagos plantados por Dios, ya que aquéllos, emulando los triunfos de los apóstoles, han rodeado nuestra ciudad por todos lados con una multitud purpurada y rutilante, y la han coronado a manera de una diadema formada por una hermosa variedad de piedras preciosas.
+
+        De esta protección, amadísimos hermanos, preparada por Dios para nosotros como un ejemplo de paciencia y para fortalecer nuestra fe, hemos de alegrarnos siempre que celebramos la conmemoración de cualquiera de los santos, pero nuestra alegría ha de ser mayor aún cuando se trata de conmemorar a estos padres, que destacan por encima de los demás, ya que la gracia de Dios los elevó, entre los miembros de la Iglesia, a tan alto lugar, que los puso como los dos ojos de aquel cuerpo cuya cabeza es Cristo.
+
+        Respecto a sus méritos y virtudes, que exceden cuanto pueda decirse, no debemos hacer distinción ni oposición alguna, ya que son iguales en la elección, semejantes en el trabajo, parecidos en la muerte.
+
+        Como nosotros mismos hemos experimentado y han comprobado nuestros mayores, creemos y confiamos que no ha de faltarnos la ayuda de las oraciones de nuestros particulares patronos, para obtener la misericordia de Dios en medio de las dificultades de esta vida; y así, cuanto más nos oprime el peso de nuestros pecados, tanto más levantarán nuestros ánimos los méritos de los apóstoles.
+      autor: |-
+        De los sermones de san León Magno, papa
+        (Sermón 82, En el natalicio de los apóstoles Pedro y Pablo, 1, 6-7: PL 54, 426-428)
+    resp2:
+      ref: null
+      vr:
+      - - R
+        - Los santos apóstoles que, sirviendo a Cristo con ánimo ferviente, plantaron con su sangre a la Iglesia, * Bebieron el cáliz del Señor y se convirtieron en amigos de Dios.
+      - - V
+        - Así como en la vida les unió un estrecho afecto, así también ni en la muerte fueron separados.
+      - - R
+        - Bebieron el cáliz del Señor y se convirtieron en amigos de Dios.
+  laudes:
+    ant_benedictus: Pedro, apóstol, y Pablo, maestro de los gentiles, nos enseñaron tu ley, Señor.
+  visperas:
+    ant_magnificat: Los cuerpos de los santos fueron sepultados en paz, vive su fama por generaciones.
