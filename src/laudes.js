@@ -62,16 +62,28 @@ function propio(hora, fecha, region){
     let santo=null, nota='';
     const adf=DIF ? {comun:'difuntos'} : (L.adf||{})[ref.n]||{};
     const k=DIF ? null : (L.mapa[ref.n] || adf.como);   // «como»: celebración propia de ADF que toma todo de otra de la base
-    if(k){ santo=L.santoral[k+I]||(primeras?null:L.santoral[k]); if(santo){ delete P.pendiente; capa(santo); }
-           else if(primeras){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
-           if(adf.como) nota='Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
+    // «de»: celebración (nombre del calendario) de la que se toma lo que falte (San José obrero, del 19 de marzo)
+    const kd=(!DIF && adf.de && !adf.como) ? (L.mapa[adf.de] || (L.santoral[adf.de] ? adf.de : null)) : null;
+    const pas=o=>ref.t==='Pascua' ? X.textosPascua(o) : o;   // tiempo pascual: con «Aleluia»
+    const DE=kd ? pas(L.santoral[kd+I] || (primeras ? null : L.santoral[kd])) : null;
+    const deTxt=adf.de ? X.deCelebracion(adf.de, L.santoral[kd]||L.santoral[k]) : '';
+    const PR0=(ref.t==='Pascua' ? X.textosPascua(X.enPascua(adf.propio)) : adf.propio)||{}, PR=(primeras&&PR0.primeras)?{...PR0,...PR0.primeras}:PR0;
+    if(k){ santo=L.santoral[k+I]||(primeras?null:L.santoral[k]);
+           if(DE) capa(DE);
+           if(santo){ delete P.pendiente; capa(santo); }
+           else if(primeras && !DE){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
+           if(DE){ nota=X.notaPropios(santo, deTxt); santo={...DE, ...(santo||{})}; }
+           else if(adf.como) nota=deTxt ? `Textos ${deTxt}.` : 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
+    } else if(DE){   // sin propio en la base para esta hora: lo propio que haya (libro u oración de Laudes) y lo demás, de la otra celebración
+      capa(DE); capa(PR); delete P.pendiente;
+      santo={...DE, ...PR};
+      nota=X.notaPropios(PR, deTxt);
     } else if((adf.comun && L.comunes && L.comunes[adf.comun]) || adf.propio){
       const n=X.turno(L.adf, adf.comun, fRef, region);   // las «O bien» del común se alternan entre celebraciones
       // Sin textos propios en la base: lo propio del libro (base/santoral/libro.yaml) y el resto del común (libro).
       // Memorias: salmos de la feria; fiestas y solemnidades, también los del común. En las I Vísperas, lo de las I Vísperas.
       // Oración: la propia; si no hay, la del común «en su defecto», con el nombre.
       const C0=X.comun(L.comunes, adf.comun, ref.n, ref.t==='Pascua', n)||{nombre:''}, C=(primeras&&C0.primeras)?{...C0,...C0.primeras}:C0, mayor=/^(Fiesta|Solemnidad)/.test(ref.g);
-      const PR0=(ref.t==='Pascua' ? X.enPascua(adf.propio) : adf.propio)||{}, PR=(primeras&&PR0.primeras)?{...PR0,...PR0.primeras}:PR0;
       const CAMPOS=['himno','lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'];
       for(const c of CAMPOS) if(C[c]!=null) P[c]=C[c];
       if((mayor || C.salmodia_propia) && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }   // (el Oficio de difuntos, siempre con sus salmos)
@@ -79,8 +91,11 @@ function propio(hora, fecha, region){
       if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
       const o=PR.oracion || X.oracionComun(C.oraciones||C0.oraciones, ref.n, n);
       if(o) P.oracion=o;
+      delete P.pendiente;
+      // lo que falta (sin común): del día. Si está todo, sin nota.
+      const todo=['himno','salmodia','lectura','responsorio',CE,'preces','oracion'].every(c=>PR[c]!=null);
       nota = (adf.comun==='santa-maria-sabado' || DIF) ? ''
-        : PR.oracion ? (C0.nombre ? `Oración propia; lo demás, del ${C0.nombre}.` : '')
+        : PR.oracion ? (todo ? '' : X.notaPropios(PR, C0.nombre ? `del ${C0.nombre}` : 'del día'))
         : `Textos del ${C0.nombre}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
     } else if(ref.n!==ref.fer){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }

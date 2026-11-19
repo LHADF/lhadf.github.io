@@ -4,11 +4,13 @@
 #   como: nombre de otra celebración del santoral de la base, de la que toma todo
 #   es: la misma celebración con otro nombre en la base (usa sus textos, sin aviso)
 #   pendiente: oficio propio del que no hay nada
+#   de: nombre en el calendario de otra celebración de la que se toma lo que falte (San José obrero, del 19 de marzo);
+#       la nota al comienzo de la hora dice qué es propio y de dónde sale lo demás
 #   (comun también sirve a una celebración que tiene textos en la base sin decir su común: de ahí salen los salmos
 #   cuando ADF la celebra como fiesta o solemnidad)
 # La asignación inicial es automática, por el nombre (tools/adf_santoral.py): corregir a mano acá.
-Santísimo Nombre de Jesús:
-  pendiente: 'Oficio propio: faltan todos los textos.'
+Santísimo Nombre de Jesús:   # Laudes y Vísperas de ADF y Oficio de lectura del libro (libro.yaml); lo demás, del día
+  propio_libro: true
 San Hilario de Poitiers, obispo y doctor de la Iglesia:
   comun: doctores
 Santos Mauro y Plácido, religiosos:
@@ -31,14 +33,18 @@ San Papías, obispo:
   comun: pastores
 Tránsito de san Benito, abad:
   como: SAN BENITO ABAD, patrono de Europa
+  de: San Benito de Nursia, abad
 San Gabriel Arcángel:
   como: SANTOS ARCÁNGELES MIGUEL GABRIEL Y RAFAEL
 San Luis María Grignon de Montfort, presbítero:
   comun: pastores
 San Pío V, papa:
   comun: pastores
-San Juan ante la Puerta Latina:
-  comun: apostoles
+San José, obrero:   # propio en la base (Laudes y Oficio); lo demás, del 19 de marzo
+  es: SAN JOSÉ OBRERO
+  de: San José, esposo de la bienaventurada Virgen María
+San Juan ante la Puerta Latina:   # propio de ADF (borrador, 2026) en libro.yaml; lo demás, del 27 de diciembre
+  de: San Juan, apóstol y evangelista
 San Pancracio, mártir:
   comun: un-martir
 Bienaventurada Virgen María de Fátima:
@@ -53,8 +59,8 @@ Santa Juana de Arco, virgen y mártir:
   comun: un-martir
 San Fernando de Castilla, rey:
   comun: santos-varones
-Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:
-  pendiente: 'Oficio propio: faltan todos los textos.'
+Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:   # todo del libro (libro.yaml)
+  propio_libro: true
 San Josemaría Escrivá de Balaguer, presbítero:
   comun: pastores
 Bienaventurada Virgen María del Monte Carmelo:
@@ -97,8 +103,8 @@ Nuestra Señora del Buen Consejo:
   comun: virgen-maria
 Beata María Felicia de Jesús Sacramentado (Chiquitunga), religiosa:
   comun: santas-mujeres
-Divino Niño Jesús:
-  pendiente: 'Oficio propio: faltan todos los textos.'
+Divino Niño Jesús:   # I Vísperas, Laudes y II Vísperas de ADF (libro.yaml); faltan el Oficio de lectura y la Hora intermedia
+  propio_libro: true
 San Raimundo de Peñafort, presbítero:
   comun: pastores
 Santos Fabián, papa, y Sebastián, mártires:

@@ -284,12 +284,16 @@ test('antífona con † (como en el libro): lo que repite la antífona se omite 
   assert.ok(/^\(c4\) se\(h\)/.test(S.gabcSalmo(o.versos, '4g', 'es', { entonarEn: 1 })));
   // después de la flexa: queda un verso entero; con «Aleluia» en la antífona
   const v64 = ['¡Oh Dios!, tú mereces un himno en Sión, † y a ti se te cumplen los votos, * porque tú escuchas las súplicas.'];
-  assert.deepEqual(S.omitirAnt(v64, '¡Oh Dios!, tú mereces un himno en Sión. Aleluia. †').versos, ['y a ti se te cumplen los votos, * porque tú escuchas las súplicas.']);
-  assert.equal(S.omitirAnt(v26, 'El Señor es mi luz y mi salvación, ¿a quién temeré?'), null);   // sin †
+  // después de la flexa: queda el metro y la terminación, sin entonación; la entonación, en el verso siguiente
+  const o64 = S.omitirAnt(v64.concat(['A ti acude todo mortal * a causa de sus culpas;']), '¡Oh Dios!, tú mereces un himno en Sión. Aleluia. †');
+  assert.deepEqual(o64, { gris: ['¡Oh Dios!, tú mereces un himno en Sión,'], versos: ['y a ti se te cumplen los votos, * porque tú escuchas las súplicas.', 'A ti acude todo mortal * a causa de sus culpas;'], ent: 1 });
+  assert.ok(/^\(c4\) y\(h\) a\(h\)/.test(S.gabcSalmo(o64.versos, '4g', 'es', { entonarEn: 1 })));   // sin entonación (4 g: h g h)
+  // sin † en el libro, pero igual al comienzo del salmo: también (CRU)
+  assert.equal(S.omitirAnt(v26, 'El Señor es mi luz y mi salvación, ¿a quién temeré?').versos[0], v26[1]);
   assert.equal(S.omitirAnt(v26, 'El Señor es mi luz. †'), null);                                // no coincide con un corte del verso
 });
 
-test('las antífonas con † de la base coinciden con el comienzo de su salmo', () => {
+test('las antífonas con † de la base (las del libro) coinciden con el comienzo de su salmo', () => {
   const comp = ctx.window.BASE.salmos, mal = [];
   const ver = (ant, sid, donde) => { const s = SALMOS[sid] || comp[sid]; if (s && !S.omitirAnt(X.versosDe(s.texto).versos, ant)) mal.push(`${donde}: ${sid}`); };
   for (const L of [ctx.window.LAUDES, ctx.window.VISPERAS])

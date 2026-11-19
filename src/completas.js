@@ -429,6 +429,41 @@ function armar(fecha, region){
   };
 }
 
+// Tiempo pascual: las antífonas y el responsorio breve de lo que no trae su versión pascual (propios de ADF, lo que se
+// toma de otra celebración, lo propio del libro) llevan «Aleluia», como en el libro («T.P.»)
+const tieneAleluia=t=>/aleluia/i.test(String(t||''));
+function respPascua(r){   // [[V,a],[R,a],[V,b],[R,c],[V,Gloria],[R,a]] → a con «Aleluia, aleluia.»; c = «Aleluia, aleluia.»
+  if(!Array.isArray(r) || r.length<4 || r.some(x=>tieneAleluia(x[1]))) return r;
+  const a=r[0][1], a2=a.replace(/\s*$/,'').replace(/([^.!?»])$/,'$1.')+' Aleluia, aleluia.';
+  return r.map((x,i)=> (x[1]===a) ? [x[0], a2] : (i===3 && x[0]==='R') ? ['R','Aleluia, aleluia.'] : x);
+}
+function textosPascua(o){
+  if(!o || typeof o!=='object') return o;
+  const out={...o};
+  if(Array.isArray(o.salmodia)) out.salmodia=o.salmodia.map(g=>g && g.ant && !tieneAleluia(g.ant) ? {...g, ant:conAleluia(g.ant)} : g);
+  for(const k of ['ant_benedictus','ant_magnificat','inv_ant','ant']) if(typeof o[k]==='string' && !tieneAleluia(o[k])) out[k]=conAleluia(o[k]);
+  if(o.responsorio) out.responsorio=respPascua(o.responsorio);
+  for(const k of ['primeras','tercia','sexta','nona','invitatorio']) if(o[k] && typeof o[k]==='object' && !Array.isArray(o[k])) out[k]=textosPascua(o[k]);
+  return out;
+}
+// Nota al comienzo de la hora: qué es propio y de dónde sale lo demás («Himno, lectura breve y oración propios; lo
+// demás, de San José, esposo de la bienaventurada Virgen María (19 de marzo).»). o: lo propio; resto: «de …», «del día»…
+const CAMPO_NOTA=[['himno','himno','m'],['salmodia','antífonas','fp'],['lectura1','primera lectura','f'],['lectura2','segunda lectura','f'],
+  ['lectura','lectura breve','f'],['responsorio','responsorio','m'],['ant','antífona','f'],['ant_benedictus','antífona del Benedictus','f'],
+  ['ant_magnificat','antífona del Magníficat','f'],['preces','preces','fp'],['oracion','oración','f']];
+function notaPropios(o, resto){
+  const cs=CAMPO_NOTA.filter(c=>o && o[c[0]]!=null);
+  if(!cs.length) return resto ? `Textos ${resto}.` : '';
+  const ns=cs.map(c=>c[1]), lista=ns.length>1 ? ns.slice(0,-1).join(', ')+' y '+ns[ns.length-1] : ns[0];
+  const m=cs.some(c=>c[2]==='m'), pl=cs.length>1 || cs[0][2]==='fp';
+  const adj='propi'+(m?'o':'a')+(pl?'s':'');
+  return lista[0].toUpperCase()+lista.slice(1)+' '+adj+(resto ? `; lo demás, ${resto}.` : '.');
+}
+// «de San José, esposo de la bienaventurada Virgen María (19 de marzo)»: la celebración de la que se toma lo que falta
+function deCelebracion(nombre, e){
+  const f=/^(\d\d)-(\d\d)$/.exec((e&&e.fecha)||'');
+  return 'de '+nombre+(f ? ` (${+f[2]} de ${MESES[+f[1]-1]})` : '');
+}
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo:{}, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo:{}, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

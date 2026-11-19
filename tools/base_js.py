@@ -204,16 +204,19 @@ def adf_y_comunes(hora, santoral):
         out[n] = a
     # Celebraciones con propio en Laudes pero sin entrada en esta hora (p. ej. memorias cuyas Vísperas el libro manda
     # tomar del común: Santa Isabel de Hungría): el común que dice su santoral de Laudes (o adf.yaml, o el libro) y
-    # la oración de Laudes. Sin esto se rezaba la feria.
-    if hora in ('visperas', 'oficio'):
+    # la oración de Laudes. Sin esto se rezaba la feria. Con «de» (adf.yaml), sin común: lo demás sale de esa celebración.
+    if hora in ('visperas', 'oficio', 'intermedia'):
         SaL = leer(os.path.join(B, 'santoral', 'laudes.yaml')) or {}
         mapaL, _ = vincular_santoral(SaL)
         mapaH, _ = vincular_santoral(santoral)
-        for n, k in mapaL.items():
-            if n in mapaH or (n in out and (out[n].get('como') or out[n].get('es') or out[n].get('pendiente'))): continue
-            c = (A.get(n) or {}).get('comun') or comun_de_texto(SaL[k].get('comun')) or (LIB.get(n) or {}).get('comun_libro')
-            if not c or c not in C: continue
-            a = dict(out.get(n) or {}, comun=c)
+        for n, k in list(mapaL.items()) + [(n, a['es']) for n, a in A.items() if a.get('es') in SaL]:
+            a = dict(out.get(n) or {})
+            if n in mapaH or a.get('como') or a.get('pendiente') or (a.get('es') and a['es'] in santoral): continue
+            if not a.get('de'):
+                if hora == 'intermedia' or a.get('es'): continue
+                c = (A.get(n) or {}).get('comun') or comun_de_texto(SaL[k].get('comun')) or (LIB.get(n) or {}).get('comun_libro')
+                if not c or c not in C: continue
+                a['comun'] = c
             if SaL[k].get('oracion'): a['propio'] = {'oracion': SaL[k]['oracion'], **(a.get('propio') or {})}
             out[n] = a
     return out, C

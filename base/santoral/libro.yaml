@@ -6,21 +6,23 @@ Santísimo Nombre de Jesús:
   nombre_libro: Santo Nombre de Jesús
   comun_libro: ''
   indicacion: ''
-  oracion: Oh Dios, que fundaste la salvación del género humano en la encarnación de tu Palabra, concede a tu pueblo la misericordia que implora, para que todos sepan que no ha de ser invocado otro Nombre que el de tu Unigénito. Él, que vive y reina contigo.
+  oracion: Oh Dios, que realizaste la salvación del género humano en la encarnación de tu Verbo, concede a tu pueblo la misericordia que espera, a fin de que sepan todos que no existe otro Nombre que invocar, sino el de tu Hijo único, que vive y reina contigo en la unidad del Espíritu Santo y es Dios por los siglos de los siglos.
   oficio:
     lectura2:
       titulo: EL NOMBRE DE JESÚS, EL GRAN FUNDAMENTO DE LA FE
-      texto: |-
-        Este es aquel santísimo nombre que fue tan deseado por los antiguos patriarcas, anhelado en tantas angustias, prolongado en tantas enfermedades, invocado en tantos suspiros, suplicado en tantas lágrimas, pero donado misericordiosamente en el tiempo de la gracia. Te suplico que ocultes el nombre del poder, que no se escuche el nombre de la venganza, que se mantenga el nombre de la justicia. Danos el nombre de la misericordia, suene el nombre de Jesús en mis oídos, porque entonces tu voz es dulce, y tu rostro, hermoso.
+      texto: 'Este es aquel santísimo nombre que fue tan deseado por los antiguos patriarcas, anhelado en tantas angustias, prolongado en tantas enfermedades, invocado en tantos suspiros, suplicado en tantas lágrimas, pero donado misericordiosamente en el tiempo de la gracia. Te suplico que ocultes el nombre del poder, que no se escuche el nombre de la venganza, que se mantenga el nombre de la justicia. Danos el nombre de la misericordia, suene el nombre de Jesús en mis oídos, porque entonces tu voz es dulce, y tu rostro, hermoso.
+
 
         Así pues, el gran fundamento de la fe es el nombre de Jesús, que hace hijos de Dios. En efecto, la fe de la religión católica consiste en el conocimiento y la luz de Jesucristo, que es la luz del alma, la puerta de la vida, el fundamento de la salvación eterna. Si alguien carece de ella o la ha abandonado, camina sin luz por las tinieblas de la noche, y avanza raudo por los peligros con los ojos cerrados y, por mucho que brille la excelencia de la razón, sigue a un guía ciego mientras siga a su propio intelecto para comprender los misterios celestes, o intenta construir una casa olvidándose de los cimientos, o quiere entrar por el tejado dejando de lado la puerta. Por tanto, Jesús es ese fundamento, luz y puerta, que, habiendo de mostrar el camino a los que andaban perdidos, se manifestó a todos como la luz de la fe, por la que el Dios es conocido puede ser deseado y, suplicado, puede ser creído y, creído, puede ser encontrado.
 
+
         Este fundamento sustenta la Iglesia, que se edifica en el nombre de Jesús. El nombre de Jesús es esplendor de los predicadores, porque con un luminoso esplendor hace anunciar y oír su palabra. ¿Cómo piensas que la luz de la fe se extendió por todo el orbe tanto, tan rápida y encendidamente, a no ser porque Jesús es predicado? ¿No nos llamó Dios a su luz admirable por la luz y sabor de ese nombre? Porque hemos sido iluminados y hemos visto la luz en esa luz, dice Pablo con razón: “En otro tiempo erais tinieblas, pero ahora sois luz en el Señor: caminad como hijos de la luz”.
 
-        ¡Oh nombre glorioso, nombre grato, nombre amoroso y virtuoso! Por tu medio son perdonados los delitos, por tu medio son vencidos los enemigos, por tu medio son librados los débiles, por tu medio son confortados y alegrados los que sufren en las adversidades. Tú, honor de los creyentes; tú, doctor de los predicadores; tú, fortalecedor de los que obran; tú, sustentador de los vacilantes. Con tu ardiente fervor y calor, se inflaman los deseos, se alcanzan las ayudas suplicadas, se embriagan las almas al contemplarte y, por tu medio, son glorificados todos los que han alcanzado el triunfo en la gloria celeste. Dulcísimo Jesús, haznos reinar juntamente con ellos por medio de tu santísimo nombre.
-      autor: |-
-        De los sermones de san Bernardino de Siena, presbítero
-        (Sermón 49, art. 1: Opera omnia 4, 495ss.)
+
+        ¡Oh nombre glorioso, nombre grato, nombre amoroso y virtuoso! Por tu medio son perdonados los delitos, por tu medio son vencidos los enemigos, por tu medio son librados los débiles, por tu medio son confortados y alegrados los que sufren en las adversidades. Tú, honor de los creyentes; tú, doctor de los predicadores; tú, fortalecedor de los que obran; tú, sustentador de los vacilantes. Con tu ardiente fervor y calor, se inflaman los deseos, se alcanzan las ayudas suplicadas, se embriagan las almas al contemplarte y, por tu medio, son glorificados todos los que han alcanzado el triunfo en la gloria celeste. Dulcísimo Jesús, haznos reinar juntamente con ellos por medio de tu santísimo nombre.'
+      autor: 'De los sermones de san Bernardino de Siena, presbítero
+
+        (Sermón 49, art. 1: Opera omnia 4, 495ss.)'
     resp2:
       ref: Cf. Sal 5, 12; 88, 16b-17a
       vr:
@@ -31,9 +33,83 @@ Santísimo Nombre de Jesús:
       - - R
         - Los que aman tu nombre.
   laudes:
-    ant_benedictus: Se entregó para liberar al pueblo y adquirirse un nombre eterno.
+    salmodia:
+    - ant: Señor, mi alma está sedienta de tu nombre.
+      salmo: salmo-62-2-9
+    - ant: Bendito y alabado sea el nombre del Señor ahora y por siempre.
+      salmo: cantico-dn-3-57-88-56
+    - ant: Los jóvenes y también las doncellas, los viejos junto con los niños, alaben el nombre del Señor, el único nombre sublime.
+      salmo: salmo-149
+    lectura:
+      ref: Hch 4, 12
+      texto: Ningún otro puede salvar y bajo el cielo no se nos ha dado otro nombre que pueda salvarnos.
+    responsorio:
+    - - V
+      - Te damos gracias, oh Dios, invocando tu nombre.
+    - - R
+      - Te damos gracias, oh Dios, invocando tu nombre.
+    - - V
+      - Pregonando tus maravillas.
+    - - R
+      - Invocando tu nombre.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Te damos gracias, oh Dios, invocando tu nombre.
+    ant_benedictus: Donde dos o tres están reunidos en mi nombre, allí estoy yo en medio de ellos, dice el Señor.
+    preces:
+      intro: 'Dios Padre escucha la voz de los humildes que confían en la intercesión de su Hijo. Confortados por esta certidumbre digamos con fe:'
+      respuesta: En el nombre de Jesús, escúchanos.
+      preces:
+      - - Tú, que a tu Hijo humillado hasta la muerte de cruz concediste el Nombre-sobre-todo-nombre,
+        - danos la mansedumbre y la humildad del corazón para que sea agradable a tus ojos la oración por los trabajadores de la mies.
+      - - Tú que naciste pobre y humilde,
+        - mira con amor a los pobres y dígnate consolarlos.
+      - - Tú, que eres el Señor de la mies,
+        - envía trabajadores a tu mies, para que el nombre de Jesús sea conocido y glorificado entre todos los pueblos.
+      - - Envía sobre nosotros tu Espíritu,
+        - para que en nuestras comunidades reine siempre la concordia y el amor.
+    padrenuestro_intro: 'Gracias a Jesucristo somos hijos de Dios; por eso nos atrevemos a decir:'
   visperas:
-    ant_magnificat: Le pondrás por nombre Jesús, pues salvará a su pueblo de sus pecados.
+    salmodia:
+    - ant: Nuestra fuerza es el nombre del Señor.
+      salmo: salmo-109-1-5-7
+    - ant: Ahora y por siempre bendeciremos el nombre del Señor.
+      salmo: salmo-113-b
+    - ant: Al nombre de Jesús toda rodilla se doble en el cielo y en la tierra.
+      salmo: cantico-flp-2-6-11
+    lectura:
+      ref: 2Ts 1, 11-12
+      texto: Siempre rezamos por vosotros, para que Dios os considere dignos de vuestra vocación, para que con su fuerza os permita cumplir vuestros buenos deseos y la tarea de la fe, para que así Jesús, nuestro Señor, sea vuestra gloria y vosotros seáis la gloria de él, según la gracia de Dios y del Señor Jesucristo.
+    responsorio:
+    - - V
+      - De la salida del sol hasta su ocaso alabado sea el nombre del Señor.
+    - - R
+      - De la salida del sol hasta su ocaso alabado sea el nombre del Señor.
+    - - V
+      - Su gloria inmensa es más alta que los cielos.
+    - - R
+      - Alabado sea el nombre del Señor.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - De la salida del sol hasta su ocaso alabado sea el nombre del Señor.
+    ant_magnificat: Lo que pidáis al Padre en mi nombre, yo lo haré, dice el Señor.
+    preces:
+      intro: 'En la hora en que Cristo, único Mediador, en la cena pascual reveló el secreto de la oración en su nombre, a él elévese nuestra alabanza:'
+      respuesta: Te alabamos y te adoramos, Señor.
+      preces:
+      - - Te alabamos y te adoramos, oh Cristo, origen y modelo de nuestra oración, porque eres nuestro intercesor ante el Padre,
+        - te alabamos y te adoramos, Señor.
+      - - Porque cada día nos concedes la posibilidad de unirnos a la alabanza perfecta que elevas al Padre en el Sacramento de la Eucaristía,
+        - te alabamos y te adoramos, Señor.
+      - - Tú, que eres el Señor de la mies,
+        - te alabamos y te adoramos, Señor.
+      - - Porque asociaste a nuestros hermanos y hermanas a tu muerte redentora,
+        - te alabamos y te adoramos, Señor.
+    padrenuestro_intro: 'Gracias a Jesucristo somos hijos de Dios; por eso nos atrevemos a decir:'
+  fuente: 'Laudes y Vísperas: propio de ADF (PDF de CRU, 2026). Oficio de lectura: del libro. Falta el himno Jesu dulcis memoria (Ad Fontes 44).'
+  oracion_libro: Oh Dios, que fundaste la salvación del género humano en la encarnación de tu Palabra, concede a tu pueblo la misericordia que implora, para que todos sepan que no ha de ser invocado otro Nombre que el de tu Unigénito. Él, que vive y reina contigo.
 San Raimundo de Peñafort, presbítero:
   nombre_libro: San Raimundo de Peñafort, Presbítero
   comun_libro: pastores
@@ -3135,3 +3211,210 @@ Dedicación de las Basílicas de San Pedro y San Pablo:
     ant_benedictus: Pedro, apóstol, y Pablo, maestro de los gentiles, nos enseñaron tu ley, Señor.
   visperas:
     ant_magnificat: Los cuerpos de los santos fueron sepultados en paz, vive su fama por generaciones.
+Divino Niño Jesús:
+  fuente: 'Propio de ADF: «Liturgia de las horas del Divino Niño Jesús» (PDF de CRU, 2026). Solo I Vísperas, Laudes y II Vísperas.'
+  oracion: Concédenos, oh Padre, reconocer y adorar tu gloria en la pobreza de tu Hijo hecho hombre, y adorar tu divina grandeza en la humildad de su infancia; haz que, acogiendo el reino de los cielos como hijos, obtengamos el premio prometido a los humildes de corazón. Por nuestro Señor Jesucristo.
+  invitatorio:
+    inv_ant: Venid a adorar al Niño que se nos ha dado, sobre cuyos hombros está el imperio.
+  visperas1:
+    himno: Reyes que venís por ellas
+    salmodia:
+    - ant: 'El Rey de la paz viene en gloria: toda la tierra anhela ver su rostro.'
+      salmo: salmo-112
+    - ant: Aprended de mí, que soy manso y humilde de corazón.
+      salmo: salmo-130
+    - ant: Aquel que estaba desde el principio nos ha nacido en el tiempo, Dios de Dios, Luz de Luz.
+      salmo: cantico-flp-2-6-11
+    lectura:
+      ref: Hb 1, 1-3
+      texto: Después de haber hablado antiguamente a nuestros padres por medio de los profetas, en muchas ocasiones y de diversas maneras, ahora, en este tiempo final, Dios nos habló por medio de su Hijo, a quien constituyó heredero de todas las cosas y por quien hizo el mundo. Él es el resplandor de su gloria y la impronta de su ser. Él sostiene el universo con su Palabra poderosa, y después de realizar la purificación de los pecados, se sentó a la derecha del trono de Dios en lo más alto del cielo.
+    responsorio:
+    - - V
+      - La Palabra se hizo carne y puso su morada entre nosotros.
+    - - R
+      - La Palabra se hizo carne y puso su morada entre nosotros.
+    - - V
+      - Y de su plenitud hemos recibido todos.
+    - - R
+      - Y puso su morada entre nosotros.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - La Palabra se hizo carne y puso su morada entre nosotros.
+    ant_magnificat: Oh dichosa infancia, que ha restaurado la vida humana; Cristo, como el esposo que sale de su alcoba, ha salido del seno de María.
+    preces:
+      intro: 'Adoremos a Cristo, que se anonadó a sí mismo y tomó la condición de esclavo, probado en todo exactamente como nosotros, menos en el pecado, y supliquémosle con fe ardiente, diciendo:'
+      respuesta: Por tu nacimiento, socorre, Señor, a quienes has redimido.
+      preces:
+      - - Tú que al entrar en el mundo has inaugurado el tiempo nuevo anunciado por los profetas,
+        - haz que tu Iglesia se rejuvenezca siempre.
+      - - Tú que asumiste las debilidades de los hombres,
+        - dígnate ser luz para los que no ven, fuerza para los débiles, consuelo para los tristes.
+      - - Tú que naciste pobre y humilde,
+        - mira con amor a los pobres y dígnate consolarlos.
+      - - Tú que anuncias a todos la alegría de una vida sin fin por tu nacimiento terreno,
+        - alegra a los agonizantes con la esperanza de un nacimiento a una vida eterna.
+      - - Tú que descendiste al mundo para que los hombres pudiesen ascender al cielo,
+        - admite en tu gloria a todos los difuntos.
+    padrenuestro_intro: 'Porque Dios ha infundido en nuestros corazones un espíritu filial, nos atrevemos a decir:'
+  laudes:
+    himno: Niño, que por darme vida
+    salmodia:
+    - ant: 'Ha brotado un renuevo del tronco de Jesé, ha salido una estrella de la casa de Jacob: la Virgen ha dado a luz al Salvador; te alabamos, Dios nuestro.'
+      salmo: salmo-62-2-9
+    - ant: El Niño crecía, lleno de fuerza y sabiduría, y la gracia de Dios estaba en él.
+      salmo: cantico-dn-3-57-88-56
+    - ant: 'Viene tu luz, Jerusalén: la gloria del Señor se ha elevado sobre ti y las naciones caminan bajo tu luz.'
+      salmo: salmo-149
+    lectura:
+      ref: Hb 1, 1-3
+      texto: Después de haber hablado antiguamente a nuestros padres por medio de los profetas, en muchas ocasiones y de diversas maneras, ahora, en este tiempo final, Dios nos habló por medio de su Hijo, a quien constituyó heredero de todas las cosas y por quien hizo el mundo. Él es el resplandor de su gloria y la impronta de su ser. Él sostiene el universo con su Palabra poderosa, y después de realizar la purificación de los pecados, se sentó a la derecha del trono de Dios en lo más alto del cielo.
+    responsorio:
+    - - V
+      - El Señor ha manifestado su salvación.
+    - - R
+      - El Señor ha manifestado su salvación.
+    - - V
+      - Ha revelado a todos los pueblos su amor.
+    - - R
+      - Su salvación.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - El Señor ha manifestado su salvación.
+    ant_benedictus: ¡Qué admirable intercambio! El Creador del género humano, tomando cuerpo y alma, nace de una virgen y, hecho hombre sin concurso de varón, nos da parte en su divinidad.
+    preces:
+      intro: 'Glorifiquemos a Cristo, Palabra eterna del Padre, engendrado antes de los siglos y nacido por nosotros en el tiempo, y aclamémoslo, diciendo:'
+      respuesta: Que se goce la tierra, Señor, ante tu venida.
+      preces:
+      - - Cristo, Palabra eterna, que al venir al mundo anunciaste la alegría a la tierra,
+        - alegra nuestros corazones con la gracia de tu visita.
+      - - Salvador del mundo, que con tu nacimiento nos has revelado la fidelidad de Dios,
+        - haz que nosotros seamos también fieles a las promesas de nuestro bautismo.
+      - - Rey del cielo y de la tierra, que por tus ángeles anunciaste la paz a los hombres,
+        - conserva nuestras vidas en tu paz.
+      - - Señor, tú que viniste para ser la vid verdadera que nos diera el fruto de vida,
+        - haz que permanezcamos siempre en ti y demos fruto abundante.
+    padrenuestro_intro: 'Con el deseo de que la luz de Cristo ilumine a todos los hombres y que su amor se extienda por toda la tierra, pidamos al Padre que su reino venga a nosotros:'
+  visperas:
+    himno: Reyes que venís por ellas
+    salmodia:
+    - ant: El Rey de la paz ha sido glorificado por encima de todos los reyes de la tierra.
+      salmo: salmo-109-1-5-7
+    - ant: El Señor nos ha suscitado una fuerza de salvación en la casa de David, su siervo.
+      salmo: salmo-131-ii
+    - ant: Vendrán todas las naciones y se postrarán en tu acatamiento, Señor.
+      salmo: cantico-ap-15-3-4
+    lectura:
+      ref: 1Jn 1, 1-3
+      texto: 'Lo que existía desde un principio, lo que hemos oído, lo que hemos visto con nuestros ojos, lo que contemplamos y lo que tocaron nuestras manos acerca de la Palabra de vida (porque la vida se ha manifestado, y nosotros hemos visto y testificamos y os anunciamos esta vida eterna, la que estaba con el Padre y se nos ha manifestado): lo que hemos visto y oído os lo anunciamos, a fin de que viváis en comunión con nosotros. Y esta nuestra comunión de vida es con el Padre y con su Hijo Jesucristo.'
+    responsorio:
+    - - V
+      - La Palabra se hizo carne y puso su morada entre nosotros.
+    - - R
+      - La Palabra se hizo carne y puso su morada entre nosotros.
+    - - V
+      - Y de su plenitud hemos recibido todos.
+    - - R
+      - Y puso su morada entre nosotros.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - La Palabra se hizo carne y puso su morada entre nosotros.
+    ant_magnificat: 'Los magos, al ver la estrella, se dijeron: «Este es el signo del gran Rey; vayamos a buscarlo y ofrezcámosle nuestros dones: oro, incienso y mirra». Aleluia.'
+    preces:
+      intro: 'Bendigamos a Cristo, el «Dios-con-nosotros», a quien María concibió y dio a luz, y supliquémosle, diciendo:'
+      respuesta: Hijo de la Virgen María, escúchanos.
+      preces:
+      - - Tú que diste a María el gozo de la maternidad,
+        - concede a todos los padres y madres de familia poder alegrarse en sus hijos.
+      - - Rey pacífico, cuyo reino es justicia y paz,
+        - haz que busquemos siempre lo que lleva a la paz.
+      - - Tú que viniste para hacer del género humano el pueblo de Dios,
+        - haz que todas las naciones alcancen la concordia mutua y vivan como una sola familia.
+      - - Tú que al nacer en una familia fortaleciste los vínculos familiares,
+        - haz que las familias vean crecer su unidad.
+      - - Tú que quisiste nacer en nuestro tiempo,
+        - concede a los difuntos nacer a tu eternidad.
+    padrenuestro_intro: 'Hermanos, sintiéndonos todos hijos de Dios, digamos a nuestro Padre del cielo:'
+San Juan ante la Puerta Latina:
+  fuente: 'Propio de ADF: «San Juan ante la Puerta Latina. Oficio (borrador)» (PDF de CRU, 2026). Laudes y Vísperas; lo demás, del 27 de diciembre.'
+  oracion: Dios nuestro, que nos descubriste los arcanos de tu Verbo por medio del apóstol san Juan, concédenos alcanzar una debida comprensión de todo aquello que él ha hecho llegar a nuestros oídos. Por nuestro Señor Jesucristo, tu Hijo.
+  laudes:
+    himno: Juan, que en el pecho del Señor sagrado
+    salmodia:
+    - ant: Muy honrado ha de ser el bienaventurado Juan, el cual en la cena descansó sobre el pecho del Señor.
+      salmo: salmo-62-2-9
+    - ant: Este es el discípulo que nos da testimonio de estas cosas; y sabemos que su testimonio es verdadero.
+      salmo: cantico-dn-3-57-88-56
+    - ant: Este es mi discípulo; así quiero que permanezca hasta que yo venga.
+      salmo: salmo-149
+    lectura:
+      ref: 1Jn 1, 1-4
+      texto: Lo que era desde el principio, lo que hemos oído, lo que hemos visto con nuestros ojos, lo que hemos contemplado y lo que hemos tocado con nuestras manos acerca del Verbo de vida (pues la vida fue manifestada, y la hemos visto, y testificamos y os anunciamos la vida eterna, la cual estaba con el Padre y se nos manifestó); lo que hemos visto y oído, eso os anunciamos, para que también vosotros tengáis comunión con nosotros; y nuestra comunión verdaderamente es con el Padre y con su Hijo Jesucristo. Estas cosas os escribimos para que vuestro gozo sea completo.
+    responsorio:
+    - - V
+      - Este es aquel discípulo que nos da testimonio de estas cosas, y las escribió.
+    - - R
+      - Este es aquel discípulo que nos da testimonio de estas cosas, y las escribió.
+    - - V
+      - Bebió las aguas vivas del Evangelio en la misma sagrada fuente del pecho del Señor.
+    - - R
+      - Y sabemos que su testimonio es verdadero.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Este es aquel discípulo que nos da testimonio de estas cosas, y las escribió.
+    ant_benedictus: Juan, siervo de Cristo, que en el pecho del Señor conoció los secretos del Padre, y se llenó del Verbo. Arrojado al aceite hirviendo, por divina protección, como oro purísimo fue exaltado ileso.
+    preces:
+      intro: 'Hermanos, edificados sobre el cimiento de los apóstoles, oremos al Padre por su pueblo santo, diciendo:'
+      respuesta: Acuérdate, Señor, de tu Iglesia.
+      preces:
+      - - Padre nuestro, que quisiste que tu Hijo resucitado de entre los muertos se manifestara en primer lugar a los apóstoles,
+        - haz que también nosotros seamos testigos de Cristo hasta los confines del mundo.
+      - - Padre nuestro, que enviaste a tu Hijo al mundo para dar la Buena Noticia a los pobres,
+        - haz que sepamos proclamar el Evangelio a todas las creaturas.
+      - - Padre nuestro, que enviaste a tu Hijo a sembrar la semilla de la palabra,
+        - haz que, sembrando también tu palabra con nuestro esfuerzo, recojamos sus frutos con alegría.
+      - - Padre nuestro, que enviaste a tu Hijo para que reconciliara al mundo contigo,
+        - haz que también nosotros cooperemos a la reconciliación de los hombres.
+    padrenuestro_intro: 'Sintiéndonos asociados a Cristo en su obra redentora, sintámonos también unidos con él en su filiación divina, y digamos:'
+  visperas:
+    himno: Juan es su nombre
+    salmodia:
+    - ant: Hay aquí algunos que no han de morir, hasta que vean al Hijo del hombre en su reino.
+      salmo: salmo-109-1-5-7
+    - ant: He aquí a mi siervo escogido, al cual elegí, y sobre el cual he derramado mi espíritu.
+      salmo: salmo-129
+    - ant: 'Entre los hermanos corrió la voz de que aquel discípulo no moriría; y no dijo Jesús: «No morirá»; sino: «Quiero que quede así hasta que yo venga».'
+      salmo: cantico-col-1-12-20
+    lectura:
+      ref: Hch 5, 41-42
+      texto: Y ellos salieron de la presencia del concilio, gozosos de haber sido tenidos por dignos de padecer afrenta por causa del Nombre. Y todos los días, en el templo y por las casas, no cesaban de enseñar y predicar a Jesucristo.
+    responsorio:
+    - - V
+      - Este es aquel discípulo que nos da testimonio de estas cosas, y las escribió.
+    - - R
+      - Este es aquel discípulo que nos da testimonio de estas cosas, y las escribió.
+    - - V
+      - Bebió las aguas vivas del Evangelio en la misma sagrada fuente del pecho del Señor.
+    - - R
+      - Y sabemos que su testimonio es verdadero.
+    - - V
+      - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+    - - R
+      - Este es aquel discípulo que nos da testimonio de estas cosas, y las escribió.
+    ant_magnificat: Habiendo sido echado el bienaventurado apóstol Juan a una caldera de aceite hirviendo, protegido por la divina gracia, salió de ella sano y salvo. Aleluia.
+    preces:
+      intro: 'Hermanos, edificados sobre el cimiento de los apóstoles, oremos al Padre por su pueblo santo, diciendo:'
+      respuesta: Acuérdate, Señor, de tu Iglesia.
+      preces:
+      - - Padre nuestro, que quisiste que tu Hijo resucitado de entre los muertos se manifestara en primer lugar a los apóstoles,
+        - haz que también nosotros seamos testigos de Cristo hasta los confines del mundo.
+      - - Padre nuestro, que enviaste a tu Hijo al mundo para dar la Buena Noticia a los pobres,
+        - haz que sepamos proclamar el Evangelio a todas las creaturas.
+      - - Padre nuestro, que enviaste a tu Hijo a sembrar la semilla de la palabra,
+        - haz que, sembrando también tu palabra con nuestro esfuerzo, recojamos sus frutos con alegría.
+      - - Padre nuestro, que enviaste a tu Hijo para que reconciliara al mundo contigo,
+        - haz que también nosotros cooperemos a la reconciliación de los hombres.
+    padrenuestro_intro: 'Sintiéndonos asociados a Cristo en su obra redentora, sintámonos también unidos con él en su filiación divina, y digamos:'

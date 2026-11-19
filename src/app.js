@@ -184,9 +184,9 @@ function selectorModo(sec){
 // Devuelve las líneas (hemistiquios) de un verso, ya marcadas
 const ESTRIBILLO=/^R\.\s/;
 const CRUZ_ANT=SAL.CRUZ_ANT, omitirAnt=SAL.omitirAnt;   // antífona con † (salmodia.js)
-// La antífona de un salmo, si su † vale (el salmo que la usa empieza con ella)
+// La antífona lleva † (en rojo) si el salmo que la usa empieza con ella
 function cruzVale(antSec){
-  const t=antSec && antSec.t && antSec.t.es; if(!t || !CRUZ_ANT.test(t)) return false;
+  const t=antSec && antSec.t && antSec.t.es; if(!t) return false;
   const sal=R().secciones.find(s=>s.k==='salmo' && s.ant===antSec.id);
   return !!(sal && sal.es && sal.versos.es && omitirAnt(sal.versos.es, t));
 }

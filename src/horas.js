@@ -11,7 +11,7 @@ const SIN_GLORIA=['cantico-dn-3-57-88-56'];
 
 // Las partes del día, capa sobre capa
 const mayor=ref=>/^(Fiesta|Solemnidad)/.test(ref.g);
-function capas(L, fecha, sel, campos){
+function capas(L, fecha, sel, campos, hora){
   const DIF=!!X.modo.difuntos, ref0=CP.diaCal(fecha, sel), d=CP.deIso(fecha), dia=X.DIAS[d.getDay()];
   const ref=DIF ? {...ref0, n:'Oficio de difuntos', g:'Oficio de difuntos', sol:false} : ref0;   // Oficio de difuntos (botón del inicio)
   const P={}, capa=o=>{ if(o) for(const k of campos) if(o[k]!=null) P[k]=o[k]; };
@@ -24,22 +24,33 @@ function capas(L, fecha, sel, campos){
   const TB=[TD, T2, T1].find(x=>x && x.otro_anio);
   if(TB && P.lectura1===TB.lectura1 && TB.anio!==X.anioBienal(fecha, ref)){ P.lectura1=TB.otro_anio.lectura1; if(TB.otro_anio.resp1) P.resp1=TB.otro_anio.resp1; }
   const adf=DIF ? {comun:'difuntos'} : (L.adf||{})[ref.n]||{}, k=DIF ? null : (L.mapa[ref.n]||adf.como);
-  const santo=k?L.santoral[k]:null; capa(santo);
+  // «de»: celebración (nombre del calendario) de la que se toma lo que falte (San José obrero, del 19 de marzo)
+  // (en la Hora intermedia, solo si es fiesta o solemnidad: en las memorias, todo de la feria)
+  const kd=(!DIF && adf.de && !adf.como && (!hora || hora==='oficio' || mayor(ref))) ? (L.mapa[adf.de] || (L.santoral[adf.de] ? adf.de : null)) : null;
+  const DE=kd ? (ref.t==='Pascua' ? X.textosPascua(L.santoral[kd]) : L.santoral[kd]) : null;   // tiempo pascual: con «Aleluia»
+  capa(DE);
+  const santo0=k?L.santoral[k]:null; capa(santo0);
+  const santo=DE ? {...DE, ...(santo0||{})} : santo0;
+  const deTxt=adf.de ? X.deCelebracion(adf.de, L.santoral[kd]||(window.LAUDES&&window.LAUDES.santoral[(window.LAUDES.mapa||{})[adf.de]])) : '';
   // Sin propio en la base: el común que corresponde (base/santoral/adf.yaml), del libro
   const n=X.turno(L.adf, adf.comun, fecha, sel);   // las «O bien» del común se alternan entre celebraciones
   const C=(!k && adf.comun && L.comunes) ? X.comun(L.comunes, adf.comun, ref.n, ref.t==='Pascua', n) : null;
-  const PR=!k ? (ref.t==='Pascua' ? X.enPascua(adf.propio) : adf.propio)||null : null;   // propio del libro (base/santoral/libro.yaml)
+  const PR=!k ? (ref.t==='Pascua' ? X.textosPascua(X.enPascua(adf.propio)) : adf.propio)||null : null;   // propio del libro (base/santoral/libro.yaml)
   // Fiesta o solemnidad con propio en la base pero sin todas sus partes (p. ej. una memoria que un calendario eleva):
   // lo que falte, del común que indica el santoral. M: datos de Laudes para la Hora intermedia.
   const M=mayor(ref) ? (L.mayores||{})[ref.n] : null;
   const CS=(mayor(ref) && (k||M) && L.comunes) ? X.comun(L.comunes, (X.esDoctor(ref.n)&&(adf.comun||'doctores')) || X.comunDe((santo&&santo.comun) || (M&&M.comun)) || adf.comun, ref.n, ref.t==='Pascua') : null;
-  return {P, ref, dia, dom:d.getDay()===0, santo, k, C, PR, CS, M, n, tiempo:!!(T1||T2)};
+  // Nota: qué es propio y de dónde sale lo demás (otra celebración, el común o el día)
+  const PRh = PR && (hora && hora!=='oficio' ? {...(PR[hora]||{}), oracion:PR.oracion} : PR);
+  const nota = DE ? X.notaPropios(k ? santo0 : PRh, deTxt) : (adf.como && deTxt) ? `Textos ${deTxt}.` : null;
+  return {P, ref, dia, dom:d.getDay()===0, santo, k, C, PR, CS, M, n, nota, tiempo:!!(T1||T2)};
 }
-function aviso(ref, k, L, C, hora, PR){
+function aviso(ref, k, L, C, hora, PR, nota){
   if(X.modo.difuntos) return '';
+  if(nota!=null) return nota;
   if(ref.n===ref.fer || k) return (L.adf||{})[ref.n]&&(L.adf||{})[ref.n].como ? 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base.' : '';
   if(hora!=='oficio' && /^Memoria/.test(ref.g)) return '';   // Hora intermedia de una memoria: todo de la feria
-  if(PR && PR.oracion) return C ? `Oración propia; lo demás, del ${C.nombre}.` : '';
+  if(PR && PR.oracion) return X.notaPropios(hora==='oficio' ? PR : {...(PR[hora]||{}), oracion:PR.oracion}, C ? `del ${C.nombre}` : 'del día');
   if(C) return /^Memoria de santa María/.test(C.nombre) ? '' : `Textos del ${C.nombre}`+(C.oraciones?', con su oración (falta la propia).':'.');
   if(/^Memoria/.test(ref.g)) return 'Memoria: se toma de la feria. Falta en la base la oración propia.';
   return 'El propio de esta celebración todavía no está en la base: se reza el oficio del día.';
@@ -91,7 +102,7 @@ const oracion=(S, t)=>{ S.push({k:'sec', id:'oracion', t:'Oración'}); S.push({k
 const CAMPOS_O=['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2','oracion'];
 function armarOficio(fecha, sel){
   const L=window.OFICIO; if(!L || !CP.diaCal(fecha, sel)) return null;
-  const {P, ref, dom, k, C, PR, CS, santo, n}=capas(L, fecha, sel, CAMPOS_O);
+  const {P, ref, dom, k, C, PR, CS, santo, n, nota}=capas(L, fecha, sel, CAMPOS_O, 'oficio');
   if(CS) for(const c of ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2']) if(!(santo&&santo[c]!=null) && CS[c]!=null) P[c]=CS[c];
   if(C){   // Común: memorias, himno y segunda lectura (la primera, de la feria); fiestas y solemnidades, todo
     const cs=(mayor(ref) || C.salmodia_propia) ? ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2'] : ['himno','lectura2','resp2'];
@@ -128,7 +139,7 @@ function armarOficio(fecha, sel){
   }
   oracion(S, P.oracion);
   conclusion(S, L);
-  return {hora:'oficio', nombre:NOMBRES.oficio, primeras:false, ...datosDia(ref, fecha, aviso(ref, k, L, C, 'oficio', PR)), secciones:S};
+  return {hora:'oficio', nombre:NOMBRES.oficio, primeras:false, ...datosDia(ref, fecha, aviso(ref, k, L, C, 'oficio', PR, nota)), secciones:S};
 }
 
 // ---------- Hora intermedia ----------
@@ -137,7 +148,7 @@ function armarMenor(hora, fecha, sel, opc){
   const L=window.INTERMEDIA; if(!L || !CP.diaCal(fecha, sel)) return null;
   const H=L.horas[hora];
   const D=capas({salterio:L.salterio, tiempo:L.tiempo, santoral:L.santoral, mapa:L.mapa, adf:L.adf}, fecha, sel, ['salmodia','salmos']);
-  const {P, ref, dom, k, C, PR, CS, M, santo, n}=capas({salterio:H.salterio, tiempo:H.tiempo, santoral:H.santoral, mapa:L.mapa, adf:L.adf, comunes:L.comunes, mayores:L.mayores}, fecha, sel, ['himno','ant','lectura','versiculo','oracion']);
+  const {P, ref, dom, k, C, PR, CS, M, santo, n, nota}=capas({salterio:H.salterio, tiempo:H.tiempo, santoral:H.santoral, mapa:L.mapa, adf:L.adf, comunes:L.comunes, mayores:L.mayores}, fecha, sel, ['himno','ant','lectura','versiculo','oracion'], hora);
   if(CS && CS[hora]) for(const c of ['ant','lectura','versiculo']) if(!(santo&&santo[c]!=null) && CS[hora][c]!=null) P[c]=CS[hora][c];
   if(M && M.oracion && !(santo&&santo.oracion)) P.oracion=M.oracion;
   if((C || PR) && (mayor(ref) || (C && C.salmodia_propia))){   // fiestas y solemnidades (y el Oficio de difuntos) sin propio en la base: del libro (propio y común); la oración, la de Laudes
@@ -161,7 +172,7 @@ function armarMenor(hora, fecha, sel, opc){
   if(P.versiculo) S.push({k:'resp', es:true, l:{es:P.versiculo}});
   oracion(S, P.oracion);
   conclusion(S, L);
-  return {hora, nombre:NOMBRES[hora], primeras:false, ...datosDia(ref, fecha, (M&&!k) ? '' : aviso(ref, k, L, C&&(mayor(ref)||C.salmodia_propia)?C:null, hora, (mayor(ref)||(C&&C.salmodia_propia))?PR:null)), secciones:S};
+  return {hora, nombre:NOMBRES[hora], primeras:false, ...datosDia(ref, fecha, (M&&!k&&nota==null) ? '' : aviso(ref, k, L, C&&(mayor(ref)||C.salmodia_propia)?C:null, hora, (mayor(ref)||(C&&C.salmodia_propia))?PR:null, nota)), secciones:S};
 }
 
 window.Oficio={armar:armarOficio};

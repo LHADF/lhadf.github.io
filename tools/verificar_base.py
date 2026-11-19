@@ -121,8 +121,10 @@ falta(len(MGv['versos']) == len(MGv['traduccion_versos']), 'gregoriano/magnifica
 ADF = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
 CL, CV = leer(os.path.join(B, 'comunes', 'laudes.yaml')), leer(os.path.join(B, 'comunes', 'visperas.yaml'))
 for n, a in ADF.items():
-    falta(a.get('comun') or a.get('como') or a.get('es') or a.get('pendiente'), f'santoral/adf.yaml · {n}: falta comun, como, es o pendiente')
-    if a.get('es'): falta(a['es'] in SaL and a['es'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["es"]}»')
+    falta(a.get('comun') or a.get('como') or a.get('es') or a.get('de') or a.get('propio_libro') or a.get('pendiente'),
+          f'santoral/adf.yaml · {n}: falta comun, como, es, de, propio_libro o pendiente')
+    if a.get('propio_libro'): falta(n in (leer(os.path.join(B, 'santoral', 'libro.yaml')) or {}), f'santoral/adf.yaml · {n}: propio_libro, pero no está en libro.yaml')
+    if a.get('es'): falta(a['es'] in SaL and (a['es'] in SaV or a.get('de')), f'santoral/adf.yaml · {n}: no existe la celebración «{a["es"]}»')   # con «de», lo que falte sale de otra
     if a.get('comun'): falta(a['comun'] in CL, f'santoral/adf.yaml · {n}: no existe el común «{a["comun"]}»')
     if a.get('como'): falta(a['como'] in SaL and a['como'] in SaV, f'santoral/adf.yaml · {n}: no existe la celebración «{a["como"]}»')
 for nom, C, H in (('laudes', CL, HL), ('visperas', CV, HV)):

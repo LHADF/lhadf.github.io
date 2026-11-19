@@ -455,13 +455,14 @@ function gabcSalmo(versos, cod, lang, op){
 }
 
 function listaTonos(){ const l=[]; Object.keys(TONOS).forEach(t=>Object.keys(TONOS[t].ter).forEach(f=>l.push({cod:t+f, et:etiquetaTono(t+f), corta:etiquetaCorta(t+f)}))); return l; }
-// Antífona con † al final (como en el libro): el salmo empieza después de lo que la antífona ya dijo. Lo repetido queda
-// en gris y no se canta; si de ese verso queda solo la segunda mitad, va con la terminación y sin entonación, y la
-// entonación pasa al verso siguiente (CRU, 19/11/2026). Solo si la antífona coincide de verdad con el comienzo del salmo.
+// Antífona igual al comienzo de su salmo (en el libro, con † al final; CRU, 19/11/2026: también si el libro no la pone,
+// siempre que coincidan de verdad): el salmo empieza después de lo que la antífona ya dijo. Lo repetido queda en gris y no
+// se canta. Si de ese verso queda una parte (después de la flexa o del asterisco), va sin entonación (con el metro, si lo
+// tiene, y la terminación), y la entonación pasa al verso siguiente.
 const CRUZ_ANT=/\s*†\s*$/;
-const palabrasN=t=>String(t).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/\baleluia\b/g,'').match(/[a-zñ]+/g)||[];
+const palabrasN=t=>String(t).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\baleluia\b/g,'').match(/[a-zñ]+/g)||[];
 function omitirAnt(versos, ant){
-  if(!ant || !CRUZ_ANT.test(ant)) return null;
+  if(!ant) return null;
   const a=palabrasN(ant.replace(CRUZ_ANT,'')).join(' '); if(!a) return null;
   let acum=[];
   for(let i=0;i<versos.length;i++){
@@ -474,7 +475,7 @@ function omitirAnt(versos, ant){
       if(s===a){
         const resto=v.slice(fin).trim(), mitad=v.slice(ini,fin).includes('*');
         const gris=versos.slice(0,i).concat([v.slice(0,ini).trim()]);
-        return {gris, versos:(resto?[(mitad?'* ':'')+resto]:[]).concat(versos.slice(i+1)), ent:(resto&&mitad)?1:0};
+        return {gris, versos:(resto?[(mitad?'* ':'')+resto]:[]).concat(versos.slice(i+1)), ent:resto?1:0};
       }
       if(!(a+' ').startsWith(s+' ')) return null;
     }

@@ -316,7 +316,18 @@ test('celebraciones propias de ADF: toman del común (o de otra celebración) ha
   assert.ok(op('himno').includes(r.secciones.find(s => s.k === 'himno').opciones[0].n));
   assert.ok(op('ant_benedictus').includes(r.secciones.find(s => s.id === 'ab').t.es));
   assert.equal(LD.mapa['Divino Niño Jesús'], undefined);                         // no se confunde con santa Teresa del Niño Jesús
-  for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || (a.es && LD.mapa[n] === a.es) || a.pendiente, n);
+  for (const [n, a] of Object.entries(LD.adf)) assert.ok((a.comun && LD.comunes[a.comun]) || (a.como && LD.santoral[a.como]) || (a.es && LD.mapa[n] === a.es)
+    || (a.de && LD.mapa[a.de]) || (a.propio_libro && a.propio) || a.pendiente, n);
+  // «de»: lo que falte sale de otra celebración, y la nota dice qué es propio (San José obrero, del 19 de marzo)
+  const jo = LA.armar('2026-05-01', ''), jv = VI.armar('2026-05-01', '');
+  assert.match(jo.dia.nota, /^Himno, lectura breve, .* y oración propios; lo demás, de San José, esposo de la bienaventurada Virgen María \(19 de marzo\)\.$/);
+  assert.equal(jo.secciones.find(s => s.k === 'salmo').ant, 'a1');
+  assert.match(jo.secciones.find(s => s.id === 'a1').t.es, /^Los pastores vinieron/);                       // antífonas del 19 de marzo
+  assert.match(jv.dia.nota, /^Oración propia; lo demás, de San José/);
+  assert.match(jv.secciones.find(s => s.k === 'prosa' && /creador del universo/.test(s.t.es)).t.es, /^Dios nuestro, creador/);
+  assert.match(LA.armar('2026-03-21', '').dia.nota, /^Textos de San Benito de Nursia, abad \(11 de julio\)\.$/);   // «como»
+  assert.match(LA.armar('2026-05-06', '').dia.nota, /lo demás, de San Juan, apóstol y evangelista \(27 de diciembre\)/);
+  assert.equal(LA.armar('2026-07-20', '').dia.nota, '');                                                    // Divino Niño: todo propio
 });
 
 test('cántico de Daniel 3, 57-88: «No se dice Gloria al Padre» va como rúbrica, no como verso', () => {
