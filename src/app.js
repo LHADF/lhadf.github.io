@@ -279,7 +279,9 @@ function salmoHTML(sal){
     return h;
   }
   // antífona con †: lo que repite la antífona, en gris y sin cantar; la entonación, en el primer verso entero que sigue
-  const aS=sal.es && keyP==='es' && antDe(sal.ant), om=aS ? omitirAnt(vP, txt(aS.t).p) : null, ent=om?om.ent:0;
+  const aS=sal.es && keyP==='es' && antDe(sal.ant), om=aS ? omitirAnt(vP, txt(aS.t).p) : null;
+  // la entonación: en el primer verso; con antífona igual al comienzo, en el siguiente; sin entonación si la base lo dice (Ef 1, «Bendito sea Dios», CRU)
+  const ent=om ? om.ent : (sal.sinEnt ? -1 : 0), np=(om && om.ent) ? 2 : 1;
   if(om) h+=`<div class="versos omit" title="Lo dice la antífona">${om.gris.map(v=>`<p class="v">${lineasVerso(v,'texto').map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>`).join('')}</p>`).join('')}</div>`;
   // partitura
   let todos=(om?om.versos:vP).concat(sal.gloria?glP:[]);
@@ -289,14 +291,14 @@ function salmoHTML(sal){
   const i0=Math.max(0, todos.findIndex(v=>!ESTRIBILLO.test(v)));
   if(canta && modo==='primer' && i0>0){ h+=`<div class="versos">${versosHTML(todos.slice(0,i0),'pautado',cod,L,1,null)}</div>`; todos=todos.slice(i0); }
   if(canta && (modo==='primer'||modo==='todos')){ // el primer verso (o todos) en partitura, con la entonación
-    const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,1+ent);
+    const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,np);
     const g=SAL.gabcSalmo(lista,cod,L,{marcas:true, entonarEn:ent});   // acento en negrita y preparatorias en cursiva, como en el pautado
     h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false, true);
     // traducción de los versos que van en partitura, debajo de ella
     if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
     if(modo==='todos') return h;
   }
-  const inicio=(canta&&modo==='primer')?1+ent:0;
+  const inicio=(canta&&modo==='primer')?np:0;
   const modoTxt=(canta&&modo!=='texto')?'pautado':'texto'; // sin canto: con * y †, sin pautas
   const resto=todos.slice(inicio);
   h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null,ent)}</div>`;

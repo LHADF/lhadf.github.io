@@ -276,7 +276,7 @@ test('texto recitado: renglones con sentido (Gloria, Salve, Pater noster)', () =
   const salve = ln(secc('2026-11-05', 'mariana')[0].opciones[0].rec[0].versos);
   assert.equal(salve.length, 10); assert.equal(salve[4], 'in hac lacrimárum valle.'); assert.equal(salve.at(-1), 'O clemens: O pia: O dulcis Virgo María.');
   const pn = ln(secL('2026-11-10', 'pater')[0].lineas);
-  assert.equal(pn.length, 9); assert.equal(pn[0], 'Pater noster, * qui es in cælis,'); assert.equal(pn.at(-1), 'sed líbera nos a malo.');
+  assert.equal(pn.length, 12); assert.equal(pn[4], 'sicut in cælo, et in terra.'); assert.equal(pn[9], 'debitóribus nostris;'); assert.equal(pn[0], 'Pater noster, * qui es in cælis,'); assert.equal(pn.at(-1), 'sed líbera nos a malo.');
   for (const m of Object.values(B.completas.gregoriano.marianas))   // los cortes cubren todo el texto
     assert.ok(Math.abs(m.cortes.reduce((a, b) => a + b, 0) - m.traduccion.flatMap(p => p[0].split(/\s+/)).length) <= 1);
 });
