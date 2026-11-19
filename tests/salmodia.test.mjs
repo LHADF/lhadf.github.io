@@ -104,15 +104,16 @@ test('Gloria: «Amén» sin acento en «-mén» (como llana)', () => {
   assert.equal(sil('Amén'), 'A-MÉN');
 });
 
-test('flexa: baja un tono, o una tercera menor desde do o fa; con aguda, baja en la última', () => {
+test('flexa: baja un tono, o una tercera menor desde do o fa; nunca acentúa la última (como la cadencia)', () => {
   assert.equal(S.tono('8G').flex, 'h');   // cuerda do (c4: j) → la
   assert.equal(S.tono('2D').flex, 'f');   // cuerda fa (f3: h) → re
   assert.equal(S.tono('4g').flex, 'g');   // cuerda la → sol
   assert.equal(S.tono('5a').flex, 'f');   // cuerda do (c3: h) → la
   assert.equal(S.tono('7a').flex, 'h');   // cuerda re → do
   const pv = S.pautarVerso('Desde Sión extenderá el Señor † el poder de tu cetro: * somete en la batalla a tus enemigos.', '8G', 'es', false);
-  assert.deepEqual(pv.flex.res.at(-1), { nota: 'h', rol: 'acc' });
-  assert.ok(pv.flex.res.slice(0, -1).every(r => r.nota === 'j'));
+  // ddf: acento en la antepenúltima («extenderá el Señor»: «el»), y bajan las que siguen (CRU, 19/11/2026)
+  assert.equal(pv.flex.sils.map((x, i) => x.t + '(' + pv.flex.res[i].nota + ')').slice(-3).join(' '), 'el(j) Se(h) ñor(h)');
+  assert.equal(pv.flex.res.at(-3).rol, 'acc');
 });
 
 test('modos de dos acentos: período de 2 sílabas, 3 como máximo (como Chant Tools en latín)', () => {

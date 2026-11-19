@@ -295,7 +295,7 @@ const nota0=x=>String(x).replace(/[^a-mA-M]/g,'').slice(-1).toLowerCase();
 function puntear(s, E, intonar, flexa, cadencia, lang){
   const n=s.length, res=new Array(n).fill(null); if(!n) return {res, regla:''};
   const t=clasificar(s);
-  const ult=acentoFinal(t, cadencia, s);
+  const ult=acentoFinal(t, cadencia||flexa, s);   // en la flexa, como en la cadencia: nunca la última (CRU, 19/11/2026)
   const pos=new Array(E.acc.length).fill(-1);
   pos[E.acc.length-1]=ult.p;
   for(let k=E.acc.length-2;k>=0;k--) pos[k]= pos[k+1]>=0 ? acentoPrevio(t,pos[k+1]) : -1;
