@@ -179,6 +179,16 @@ test('mitad corta con entonación, como Chant Tools («Magníficat»)', () => {
   assert.equal(h.sils.map((x, i) => x.t + '(' + h.res[i].nota + ')').join(' '), 'ti(h) mén(h) ti(h) bus(g) e(e) um(f.)');
 });
 
+test('mitad corta en español: sin entonación, directo a la cuerda y la mediante (CRU, «Bendito sea Dios»)', () => {
+  const g = cod => S.gabcSalmo(['Bendito sea Dios, * Padre de nuestro Señor Jesucristo,'], cod, 'es', {}).split(' *(:)')[0];
+  assert.equal(g('1g'), '(c4) Ben(h)di(ixi)to(h) se(g)a(h) Dios,(h.)');
+  assert.equal(g('3a'), '(c4) Ben(j)di(k)to(j) se(j)a(ih) Dios,(j.)');
+  assert.equal(g('4g'), '(c4) Ben(h)di(g)to(h) se(i)a(h) Dios,(h.)');
+  assert.equal(g('7a'), '(c3) Ben(i)di(k)to(j) se(i)a(j) Dios,(j.)');
+  // con lugar para la entonación, la entonación sigue
+  assert.equal(g('2D'), '(f3) Ben(e)di(f)to(h) se(i)a(h) Dios,(h.)');
+});
+
 test('entonación: en el primer verso de los salmos; en todos los del cántico evangélico', () => {
   const g1 = S.gabcSalmo(['Señor, tú eres mi Dios, * por ti madrugo.', 'Mi alma está sedienta de ti, * mi carne tiene ansia de ti.'], '8G', 'es', { todos: true });
   const versos = g1.split('(::)');
@@ -259,4 +269,33 @@ test('Completas no cambia: el Nunc dimíttis sigue en el modo 3 a y los salmos s
   const C = ctx.window.Completas.armar('2026-11-18', 'ARG').secciones;
   assert.ok(C.filter(s => s.k === 'salmo').every(s => !s.modo));
   assert.equal(C.find(s => s.id === 'ac').modo, '3a');
+});
+
+test('antífona con † (como en el libro): lo que repite la antífona se omite y la entonación pasa al verso siguiente', () => {
+  const v26 = ['El Señor es mi luz y mi salvación, * ¿a quién temeré?', 'El Señor es la defensa de mi vida, * ¿quién me hará temblar?', 'Cuando me asaltan los malvados * para devorar mi carne,'];
+  assert.deepEqual(S.omitirAnt(v26, 'El Señor es mi luz y mi salvación, ¿a quién temeré? †'),
+    { gris: ['El Señor es mi luz y mi salvación, * ¿a quién temeré?'], versos: v26.slice(1), ent: 0 });
+  // queda solo la segunda mitad: va con la terminación, sin entonación; la entonación, en el verso siguiente
+  const v96 = ['El Señor reina, la tierra goza, * se alegran las islas innumerables.', 'Tiniebla y nube lo rodean, * justicia y derecho sostienen su trono.'];
+  const o = S.omitirAnt(v96, 'El Señor reina, la tierra goza. †');
+  assert.deepEqual(o, { gris: ['El Señor reina, la tierra goza,'], versos: ['* se alegran las islas innumerables.', v96[1]], ent: 1 });
+  const pv = S.pautarVerso(o.versos[0], '4g', 'es', true);
+  assert.equal(pv.med, null); assert.ok(pv.ter.res.length);
+  assert.ok(/^\(c4\) se\(h\)/.test(S.gabcSalmo(o.versos, '4g', 'es', { entonarEn: 1 })));
+  // después de la flexa: queda un verso entero; con «Aleluia» en la antífona
+  const v64 = ['¡Oh Dios!, tú mereces un himno en Sión, † y a ti se te cumplen los votos, * porque tú escuchas las súplicas.'];
+  assert.deepEqual(S.omitirAnt(v64, '¡Oh Dios!, tú mereces un himno en Sión. Aleluia. †').versos, ['y a ti se te cumplen los votos, * porque tú escuchas las súplicas.']);
+  assert.equal(S.omitirAnt(v26, 'El Señor es mi luz y mi salvación, ¿a quién temeré?'), null);   // sin †
+  assert.equal(S.omitirAnt(v26, 'El Señor es mi luz. †'), null);                                // no coincide con un corte del verso
+});
+
+test('las antífonas con † de la base coinciden con el comienzo de su salmo', () => {
+  const comp = ctx.window.BASE.salmos, mal = [];
+  const ver = (ant, sid, donde) => { const s = SALMOS[sid] || comp[sid]; if (s && !S.omitirAnt(X.versosDe(s.texto).versos, ant)) mal.push(`${donde}: ${sid}`); };
+  for (const L of [ctx.window.LAUDES, ctx.window.VISPERAS])
+    for (const [sem, dias] of Object.entries(L.salterio)) for (const [d, e] of Object.entries(dias)) for (const g of (e && e.salmodia) || [])
+      if (/†\s*$/.test(g.ant)) ver(g.ant, g.salmo, `${sem} ${d}`);
+  for (const [d, e] of Object.entries(ctx.window.BASE.completas.salterio || {})) for (const g of (e && e.salmodia) || [])
+    if (/†\s*$/.test(g.ant)) ver(g.ant, g.salmos[0], `Completas ${d}`);
+  assert.deepEqual(mal, []);
 });

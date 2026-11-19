@@ -34,6 +34,9 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 /* ---------- Barra superior ---------- */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line);transition:transform .25s ease}
 .top.oculta{transform:translateY(-110%)}
+#main{-webkit-tap-highlight-color:transparent}
+.versos.omit{color:var(--muted)}
+.versos.omit .sg{color:inherit}
 .top-in{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:6px;padding-block:8px}
 .brand{font-family:var(--titulo);font-size:var(--f-titulo);text-align:center;line-height:1.1;margin:0;font-weight:400}
 .brand small{display:block;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin-top:2px}

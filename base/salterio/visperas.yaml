@@ -168,7 +168,7 @@ semana_1:
   miercoles:
     himno: Hora de la tarde
     salmodia:
-    - ant: El Señor es mi luz y mi salvación, ¿a quién temeré?
+    - ant: El Señor es mi luz y mi salvación, ¿a quién temeré? †
       salmo: salmo-26-i
     - ant: Tu rostro buscaré Señor, no me escondas tu rostro.
       salmo: salmo-26-ii
@@ -295,7 +295,7 @@ semana_2:
   domingo_1:
     himno: ¿Quién es éste que viene
     salmodia:
-    - ant: Lámpara es tu palabra para mis pasos, luz en mi sendero. Aleluia.
+    - ant: Lámpara es tu palabra para mis pasos, luz en mi sendero. Aleluia. †
       salmo: salmo-118-105-112
     - ant: Me saciarás de gozo en tu presencia, Señor. Aleluia.
       salmo: salmo-15

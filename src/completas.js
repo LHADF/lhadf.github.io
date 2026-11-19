@@ -168,7 +168,7 @@ function rubricaVale(et, nombre){
   if(/presbítero/.test(e)) return /presbítero/i.test(n);
   return false;
 }
-const conAleluia=t=>t.replace(/\s*$/,'').replace(/([^.!?»])$/,'$1.')+' Aleluia.';
+const conAleluia=t=>{ const c=/\s*†\s*$/.test(t); t=t.replace(/\s*†?\s*$/,''); return t.replace(/([^.!?»])$/,'$1.')+' Aleluia.'+(c?' †':''); };   // la † de la antífona, al final
 function conVariantes(o, nombre){
   if(!o || typeof o!=='object') return o;
   const out={...o};

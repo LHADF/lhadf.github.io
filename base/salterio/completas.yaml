@@ -48,7 +48,7 @@ miercoles:
   - ant: Sé tú, Señor, la roca de mi refugio, un baluarte donde me salve.
     salmos:
     - salmo-30-2-6
-  - ant: Desde lo hondo a ti grito, Señor.
+  - ant: Desde lo hondo a ti grito, Señor. †
     salmos:
     - salmo-129
   salmodia_pascua:
@@ -77,7 +77,7 @@ jueves:
 viernes:
   nombre: Viernes
   salmodia:
-  - ant: Señor, Dios mío, de día te pido auxilio, de noche grito en tu presencia.
+  - ant: Señor, Dios mío, de día te pido auxilio, de noche grito en tu presencia. †
     salmos:
     - salmo-87
   salmodia_pascua:

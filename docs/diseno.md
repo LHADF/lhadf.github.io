@@ -33,6 +33,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 - **Base:** la forma ordinaria, con cambios puntuales de la forma extraordinaria (ciertos himnos, antífonas y cánticos).
 - **Nombres de las horas y de sus partes:** los de la Liturgia de las Horas en español (Completas, Invocación inicial, Salmo 15, Cántico de Simeón, Antífona final de la Santísima Virgen…), aunque el texto vaya en latín.
 - **Título de la hora:** solo en la barra de arriba; no se repite en el cuerpo.
+- **Barra de arriba en la hora:** se esconde al bajar y vuelve al subir; tocar el texto la muestra o la esconde (no cuenta si se está seleccionando texto ni si se toca un botón o un desplegable). Tocar dos o tres veces seguidas no selecciona palabras; arrastrar o mantener apretado, sí.
 - **Modo de salmos y cánticos (Laudes y Vísperas):** uno por semana del salterio para las ferias y otro por domingo, el mismo para toda la hora y el cántico evangélico; se puede cambiar con el desplegable junto al título de cada salmo. Primer verso en partitura y los demás pautados (acento en negrita, preparatorias en cursiva). Detalle y reglas de acentuación: [salmodia.md](salmodia.md). El Breviario de 1960 sigue en los datos, pero no se muestra.
 
 - **Cruz (✠):** solo en el texto latino; nunca en la traducción. Va pegada a la palabra que sigue, con un espacio común antes.

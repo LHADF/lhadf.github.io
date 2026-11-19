@@ -171,7 +171,7 @@ semana_1:
       salmo: salmo-56
     - ant: «Mi pueblo se saciará de mis bienes», dice el Señor.
       salmo: cantico-jr-31-10-14
-    - ant: Grande es el Señor y muy digno de alabanza en la ciudad de nuestro Dios.
+    - ant: Grande es el Señor y muy digno de alabanza en la ciudad de nuestro Dios. †
       salmo: salmo-47
     lectura:
       ref: Is 66,1-2
@@ -253,7 +253,7 @@ semana_1:
       salmo: salmo-118-145-152
     - ant: Mi fuerza y mi poder es el Señor, él fue mi salvación.
       salmo: cantico-ex-15-1-4-8-13-17-18
-    - ant: Alabad al Señor, todas las naciones.
+    - ant: Alabad al Señor, todas las naciones. †
       salmo: salmo-116
     lectura:
       ref: 2Pe 1, 10-11
@@ -375,7 +375,7 @@ semana_2:
       salmo: salmo-42
     - ant: Protégenos, Señor, todos los días de nuestra vida.
       salmo: cantico-is-38-10-14-17-20
-    - ant: ¡Oh Dios!, tu mereces un himno en Sión.
+    - ant: ¡Oh Dios!, tú mereces un himno en Sión. †
       salmo: salmo-64
     lectura:
       ref: 1Ts 5, 4-5
@@ -416,7 +416,7 @@ semana_2:
       salmo: salmo-76
     - ant: Mi corazón se regocija por el Señor, que humilla y enaltece.
       salmo: cantico-1s-2-1-10
-    - ant: El Señor reina, la tierra goza.
+    - ant: El Señor reina, la tierra goza. †
       salmo: salmo-96
     lectura:
       ref: Rm 8, 35. 37
@@ -457,7 +457,7 @@ semana_2:
       salmo: salmo-79
     - ant: Anunciad a toda la tierra que el señor hizo proezas.
       salmo: cantico-is-12-1-6
-    - ant: Aclamad a Dios, nuestra fuerza.
+    - ant: Aclamad a Dios, nuestra fuerza. †
       salmo: salmo-80
     lectura:
       ref: Rm 14, 17-19
@@ -498,7 +498,7 @@ semana_2:
       salmo: salmo-50
     - ant: En tu juicio, Señor, acuérdate de la misericordia.
       salmo: cantico-ha-3-2-4-13a-15-19
-    - ant: Glorifica al Señor, Jerusalén.
+    - ant: Glorifica al Señor, Jerusalén. †
       salmo: salmo-147
     lectura:
       ref: Ef 2,13-16
@@ -581,7 +581,7 @@ semana_3:
       salmo: salmo-92
     - ant: Tú, Señor, eres alabado y ensalzado por los siglos. Aleluia.
       salmo: cantico-dn-3-57-88-56
-    - ant: Alabad al Señor en el cielo. Aleluia.
+    - ant: Alabad al Señor en el cielo. Aleluia. †
       salmo: salmo-148
     lectura:
       ref: Ez 37, 12b-14

@@ -202,6 +202,20 @@ def adf_y_comunes(hora, santoral):
             if hora == 'visperas' and LIB[n].get('visperas1'): pr['primeras'] = LIB[n]['visperas1']
             if pr: a['propio'] = pr
         out[n] = a
+    # Celebraciones con propio en Laudes pero sin entrada en esta hora (p. ej. memorias cuyas Vísperas el libro manda
+    # tomar del común: Santa Isabel de Hungría): el común que dice su santoral de Laudes (o adf.yaml, o el libro) y
+    # la oración de Laudes. Sin esto se rezaba la feria.
+    if hora in ('visperas', 'oficio'):
+        SaL = leer(os.path.join(B, 'santoral', 'laudes.yaml')) or {}
+        mapaL, _ = vincular_santoral(SaL)
+        mapaH, _ = vincular_santoral(santoral)
+        for n, k in mapaL.items():
+            if n in mapaH or (n in out and (out[n].get('como') or out[n].get('es') or out[n].get('pendiente'))): continue
+            c = (A.get(n) or {}).get('comun') or comun_de_texto(SaL[k].get('comun')) or (LIB.get(n) or {}).get('comun_libro')
+            if not c or c not in C: continue
+            a = dict(out.get(n) or {}, comun=c)
+            if SaL[k].get('oracion'): a['propio'] = {'oracion': SaL[k]['oracion'], **(a.get('propio') or {})}
+            out[n] = a
     return out, C
 
 

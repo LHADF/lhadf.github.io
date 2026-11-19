@@ -292,7 +292,7 @@ function acentoPrevio(t, a){
 const nota0=x=>String(x).replace(/[^a-mA-M]/g,'').slice(-1).toLowerCase();
 // Asigna notas a las sílabas de una mitad. E: parte del tono (parseParte). Devuelve {res:[{nota,rol}], regla}.
 // rol: 'int' (entonación), 'ten' (cuerda), 'prep' (preparatoria), 'acc' (acento), 'post' (después del acento), 'fin'
-function puntear(s, E, intonar, flexa, cadencia){
+function puntear(s, E, intonar, flexa, cadencia, lang){
   const n=s.length, res=new Array(n).fill(null); if(!n) return {res, regla:''};
   const t=clasificar(s);
   const ult=acentoFinal(t, cadencia, s);
@@ -321,9 +321,13 @@ function puntear(s, E, intonar, flexa, cadencia){
     }
     primero=p; fin=p-1;
   }
-  // Mitad corta con entonación (como Chant Tools): si la entonación y la cadencia no entran, va la entonación corta del modo
-  // y la mitad termina en la cuerda con punto («Ma-gní-fi-cat»: do, re-do, do-fa, fa.), sin cadencia
-  if(intonar && E.inton.length && (primero<0 || primero-E.prep.length < E.inton.length)){
+  // Mitad corta: la entonación y la cadencia no entran.
+  // En español (CRU, 19/11/2026) no hay entonación: empieza directo en la cuerda y hace la mediante («Bendito sea Dios»).
+  // En latín, como Chant Tools: la entonación corta del modo y la mitad termina en la cuerda con punto
+  // («Ma-gní-fi-cat»: do, re-do, do-fa, fa.), sin cadencia.
+  const corta = intonar && E.inton.length && (primero<0 || primero-E.prep.length < E.inton.length);
+  if(corta && lang==='es') intonar=false;
+  else if(corta){
     const ic=E.intonCorta||E.inton, r2=new Array(n);
     for(let i=0;i<n;i++) r2[i]= (i<n-1 && i<ic.length) ? {nota:ic[i], rol:'int'} : {nota:E.tenor, rol:'ten'};
     r2[n-1]={nota:E.tenor+'.', rol:'fin'};
@@ -355,7 +359,7 @@ function pautarVerso(verso, cod, lang, intonar){
   const T=tono(cod); if(!T) return null;
   const d=dividirVerso(String(verso).replace(/✠\s*/g,''));
   const mitad=(txt, E, into, flexa)=>{
-    if(txt==null) return null;
+    if(txt==null || (E===T.med && !txt.trim())) return null;   // verso que es solo la segunda mitad (antífona con †)
     const pals=palabras(txt.replace(/\+/g,'').trim(), lang);
     // Gloria: «por los siglos de los siglos. Amén.» El «Amén» se canta como llana (A-men), sin acento en «-mén» (CRU)
     if(lang==='es' && E===T.ter && /por los siglos de los siglos\.?\s+Amén\.?\s*$/i.test(txt)){
@@ -363,7 +367,7 @@ function pautarVerso(verso, cod, lang, intonar){
     }
     const s=plano(pals);
     // la flexa con entonación: la entonación del tono, y la cuerda hasta la flexa
-    const r=puntear(s, into&&flexa?{...E, inton:T.med.inton}:E, into, flexa, E===T.ter);
+    const r=puntear(s, into&&flexa?{...E, inton:T.med.inton}:E, into, flexa, E===T.ter, lang);
     return {pals, sils:s, res:r.res, regla:r.regla};
   };
   if(d.ter==null) return {tono:T, flex:null, med:null, ter:mitad(d.med, T.ter, intonar, false)};
@@ -440,17 +444,44 @@ function gabcVerso(pv, marcas){
   return s+gabcMitad(pv.ter,marcas)+' (::)';
 }
 // versos: los que van en la partitura. op: {entonarTodos: entonación en cada verso (cánticos evangélicos),
-// marcas: negrita y cursiva en la letra, desde: índice del primer verso (la entonación va solo en el verso 0)}
+// marcas: negrita y cursiva en la letra, desde: índice del primer verso, entonarEn: el verso con la entonación (0; 1 si el
+// primero es solo la segunda mitad, por una antífona con †)}
 function gabcSalmo(versos, cod, lang, op){
   op=op||{};
   const T=tono(cod); if(!T) return '';
   let g='('+T.clef+') ';
-  versos.forEach((v,i)=>{ const pv=pautarVerso(v,cod,lang, op.entonarTodos || (op.desde||0)+i===0); g+=(i?' ':'')+gabcVerso(pv, !!op.marcas); });
+  versos.forEach((v,i)=>{ const pv=pautarVerso(v,cod,lang, op.entonarTodos || (op.desde||0)+i===(op.entonarEn||0)); g+=(i?' ':'')+gabcVerso(pv, !!op.marcas); });
   return g;
 }
 
 function listaTonos(){ const l=[]; Object.keys(TONOS).forEach(t=>Object.keys(TONOS[t].ter).forEach(f=>l.push({cod:t+f, et:etiquetaTono(t+f), corta:etiquetaCorta(t+f)}))); return l; }
+// Antífona con † al final (como en el libro): el salmo empieza después de lo que la antífona ya dijo. Lo repetido queda
+// en gris y no se canta; si de ese verso queda solo la segunda mitad, va con la terminación y sin entonación, y la
+// entonación pasa al verso siguiente (CRU, 19/11/2026). Solo si la antífona coincide de verdad con el comienzo del salmo.
+const CRUZ_ANT=/\s*†\s*$/;
+const palabrasN=t=>String(t).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/\baleluia\b/g,'').match(/[a-zñ]+/g)||[];
+function omitirAnt(versos, ant){
+  if(!ant || !CRUZ_ANT.test(ant)) return null;
+  const a=palabrasN(ant.replace(CRUZ_ANT,'')).join(' '); if(!a) return null;
+  let acum=[];
+  for(let i=0;i<versos.length;i++){
+    const v=versos[i], re=/\s*[†*]\s*/g, bordes=[]; let m, desde=0;
+    while((m=re.exec(v))) bordes.push([m.index, re.lastIndex]);
+    bordes.push([v.length, v.length]);
+    for(const [ini,fin] of bordes){
+      acum=acum.concat(palabrasN(v.slice(desde,ini))); desde=fin;
+      const s=acum.join(' ');
+      if(s===a){
+        const resto=v.slice(fin).trim(), mitad=v.slice(ini,fin).includes('*');
+        const gris=versos.slice(0,i).concat([v.slice(0,ini).trim()]);
+        return {gris, versos:(resto?[(mitad?'* ':'')+resto]:[]).concat(versos.slice(i+1)), ent:(resto&&mitad)?1:0};
+      }
+      if(!(a+' ').startsWith(s+' ')) return null;
+    }
+  }
+  return null;
+}
 const API={CONFIG,TONOS,ROMANO,partes,tono,etiquetaTono,etiquetaCorta,silabasLatin,silabasEspanol,palabras,plano,clasificar,acentoFinal,acentoPrevio,
-           puntear,pautarVerso,renglonesVerso,htmlVerso,marcadoVerso,gabcVerso,gabcSalmo,dividirVerso,listaTonos,flexDe};
+           puntear,pautarVerso,renglonesVerso,htmlVerso,marcadoVerso,gabcVerso,gabcSalmo,dividirVerso,listaTonos,flexDe,CRUZ_ANT,omitirAnt};
 if(typeof module!=='undefined') module.exports=API; else root.Salmodia=API;
 })(this);

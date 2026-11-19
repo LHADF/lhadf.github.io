@@ -183,12 +183,20 @@ function selectorModo(sec){
 }
 // Devuelve las líneas (hemistiquios) de un verso, ya marcadas
 const ESTRIBILLO=/^R\.\s/;
+const CRUZ_ANT=SAL.CRUZ_ANT, omitirAnt=SAL.omitirAnt;   // antífona con † (salmodia.js)
+// La antífona de un salmo, si su † vale (el salmo que la usa empieza con ella)
+function cruzVale(antSec){
+  const t=antSec && antSec.t && antSec.t.es; if(!t || !CRUZ_ANT.test(t)) return false;
+  const sal=R().secciones.find(s=>s.k==='salmo' && s.ant===antSec.id);
+  return !!(sal && sal.es && sal.versos.es && omitirAnt(sal.versos.es, t));
+}
 function lineasVerso(v, modo, cod, lang, intonar){
   v=v.replace(/✠\s*/g,'');
   if(modo==='texto' || ESTRIBILLO.test(v)){
     const d=SAL.dividirVerso(v); const out=[];
     if(d.flex) out.push(`${esc(d.flex)}&nbsp;<span class="sg">†</span>`);
-    if(d.ter!=null){ const m=d.med.split(' ¶ ').map(esc); m[m.length-1]+='&nbsp;<span class="sg">*</span>'; out.push(...m, ...d.ter.split(' ¶ ').map(esc)); }   // « ¶ »: dos renglones en la misma mitad
+    if(d.ter!=null && !d.med) out.push(...d.ter.split(' ¶ ').map(esc));   // solo la segunda mitad (antífona con †)
+    else if(d.ter!=null){ const m=d.med.split(' ¶ ').map(esc); m[m.length-1]+='&nbsp;<span class="sg">*</span>'; out.push(...m, ...d.ter.split(' ¶ ').map(esc)); }   // « ¶ »: dos renglones en la misma mitad
     else out.push(...d.med.split(' ¶ ').map(esc));
     return out;
   }
@@ -205,9 +213,9 @@ function glosaVerso(latV, glV){
   if(a.flex!=null && b.flex==null && b.ter!=null){ out[0]=b.med; out[1]=''; }
   return out;
 }
-function versosHTML(versos, modo, cod, lang, desde, glosas){
+function versosHTML(versos, modo, cod, lang, desde, glosas, ent){
   return versos.map((v,i)=>{
-    const ls=lineasVerso(v,modo,cod,lang,(desde+i)===0);
+    const ls=lineasVerso(v,modo,cod,lang,(desde+i)===(ent||0));
     const gs=glosas?glosaVerso(v,glosas[i]):null;
     return `<p class="v">${ls.map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>${gs&&gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
   }).join('');
@@ -270,25 +278,28 @@ function salmoHTML(sal){
     if(sal.gloria) h+=`<div class="versos">${versosHTML(glP,canta?'pautado':'texto',cod,L,1,null)}</div>`;
     return h;
   }
+  // antífona con †: lo que repite la antífona, en gris y sin cantar; la entonación, en el primer verso entero que sigue
+  const aS=sal.es && keyP==='es' && antDe(sal.ant), om=aS ? omitirAnt(vP, txt(aS.t).p) : null, ent=om?om.ent:0;
+  if(om) h+=`<div class="versos omit" title="Lo dice la antífona">${om.gris.map(v=>`<p class="v">${lineasVerso(v,'texto').map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>`).join('')}</p>`).join('')}</div>`;
   // partitura
-  let todos=vP.concat(sal.gloria?glP:[]);
+  let todos=(om?om.versos:vP).concat(sal.gloria?glP:[]);
   const inter = S.lengua==='bi' && sal.inter ? sal.inter : null;
   const interTodos = inter ? inter.concat(sal.gloria?(r.gloriaInter||[]):[]) : null;
   // estribillo («R. …», cántico de 1 Tm 3, 16): no va en la partitura; si está antes del primer verso, va antes de ella
   const i0=Math.max(0, todos.findIndex(v=>!ESTRIBILLO.test(v)));
   if(canta && modo==='primer' && i0>0){ h+=`<div class="versos">${versosHTML(todos.slice(0,i0),'pautado',cod,L,1,null)}</div>`; todos=todos.slice(i0); }
   if(canta && (modo==='primer'||modo==='todos')){ // el primer verso (o todos) en partitura, con la entonación
-    const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,1);
-    const g=SAL.gabcSalmo(lista,cod,L,{marcas:true});   // acento en negrita y preparatorias en cursiva, como en el pautado
+    const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,1+ent);
+    const g=SAL.gabcSalmo(lista,cod,L,{marcas:true, entonarEn:ent});   // acento en negrita y preparatorias en cursiva, como en el pautado
     h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false, true);
     // traducción de los versos que van en partitura, debajo de ella
     if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
     if(modo==='todos') return h;
   }
-  const inicio=(canta&&modo==='primer')?1:0;
+  const inicio=(canta&&modo==='primer')?1+ent:0;
   const modoTxt=(canta&&modo!=='texto')?'pautado':'texto'; // sin canto: con * y †, sin pautas
   const resto=todos.slice(inicio);
-  h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null)}</div>`;
+  h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null,ent)}</div>`;
   return h;
 }
 
@@ -400,8 +411,8 @@ function antHTML(sec){
   if(!CANTA() && a.rec) return recitadoHTML(a.rec,'ant');
   if(S.canto && S.antGreg && a.gabc) return `<div class="ant-greg">${partituraHTML(a.gabc, a.glosa)}</div>`;
   if(BI() && a.il) return `<div class="ant il"><p><span class="n">${esc(a.n||'Ant.')}</span> ${interHTML(a.il)}</p></div>`;
-  const t=txt(a.t);
-  return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${a.es?'<b>':''}${marcas(t.p.replace(/ \* /,' '))}${a.es?'</b>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
+  const t=txt(a.t), cruz=!sec.rep && cruzVale(a), tp=t.p.replace(CRUZ_ANT,'');   // la † solo la primera vez, si vale
+  return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${a.es?'<b>':''}${marcas(tp.replace(/ \* /,' '))}${a.es?'</b>':''}${cruz?'&nbsp;<span class="sg">†</span>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
 }
 // Título corto para los botones: hasta ~24 letras, sin cortar en un artículo o preposición; «(solemne)» se conserva
 function corto(n){
@@ -841,6 +852,15 @@ document.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') cerrar(); });
 // Barras que se esconden al bajar y vuelven al subir
 let yAnt=0; window.addEventListener('scroll',()=>{ const y=window.scrollY; const bajar=y>yAnt && y>120; if(S.vista==='hora'){ $('#top').classList.toggle('oculta',bajar); } yAnt=y; },{passive:true});
+// En la hora, tocar el texto muestra u oculta la barra. No cuenta si se está seleccionando texto
+// ni si se toca algo que hace otra cosa (botones, enlaces, desplegables, hojas).
+$('#main').addEventListener('click',e=>{
+  if(S.vista!=='hora' || e.target.closest('a,button,select,input,label,summary,[data-act],[data-chg]')) return;
+  const sel=window.getSelection&&window.getSelection(); if(sel && !sel.isCollapsed) return;
+  $('#top').classList.toggle('oculta');
+});
+// Tocar dos o tres veces seguidas no selecciona palabras ni párrafos (arrastrar o mantener apretado sí selecciona).
+$('#main').addEventListener('mousedown',e=>{ if(e.detail>1 && S.vista==='hora') e.preventDefault(); });
 document.addEventListener('scroll',e=>{ const f=e.target; if(f.classList&&f.classList.contains('desliza')) f.classList.toggle('mas', f.scrollLeft+f.clientWidth<f.scrollWidth-2); },true);
 let _rz; window.addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(S.vista==='hora'){ ajustarGlosas($('#main')); pintar($('#main')); } },250); });
 
