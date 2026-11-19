@@ -46,8 +46,9 @@ Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás raz�
 - **Agudas:** en la mediante (y la flexa) no se juntan en una sílaba notas que irían en sílabas distintas: la última lleva la nota del acento y se omiten las que seguían (forma B del Liber). En la cadencia la última nunca lleva el acento (ver arriba). En la flexa, si el acento cae en la última, esa sílaba baja.
 - **Modos de dos acentos** (1, 3, 6 y 7 en la mediante; 5 y 7 en la terminación): período de 2 sílabas, 3 como máximo, como en el gregoriano latino y en Chant Tools (jgabc). El primer acento va en una fuerte a 2 sílabas, si no a 3; si el intervalo entre acentos es mayor, como último recurso en una neutra a 2 o a 3; si tampoco hay, a 2 aunque sea débil (acento ficticio, como hace Chant Tools: «in progénies **et** pro**gé**nies»).
 - **Flexa:** baja un grado desde la cuerda; desde do o desde fa (semitono), una tercera menor.
-- **Entonación:** en el primer verso de cada salmo; en el cántico evangélico, en cada verso. Si la mitad es corta, la cadencia tiene prioridad.
-- **Latín (cántico evangélico):** las mismas reglas; el acento sale de las tildes y los monosílabos átonos están en `ATONOS_LA`.
+- **Entonación:** en el primer verso de cada salmo; en el cántico evangélico, en cada verso.
+- **Mitad corta** (no alcanza para entonación y mediante), como Chant Tools: entonación corta del modo (2: `e fe eh`; 8: `g hg gj`; en los demás, la normal) y la última sílaba en la cuerda, sin cadencia. En español pasa solo con Ef 1, 3-10 «Bendito sea Dios, *» en los modos 1, 3, 4, 6 y 7 (a confirmar).
+- **Latín (cántico evangélico):** igual que Chant Tools (jgabc), comprobado con los 416 hemistiquios del Benedictus y el Magníficat en los 8 modos. El acento sale de las tildes (también en mayúscula: «Ísrael»); los monosílabos átonos están en `ATONOS_LA`. Silabeo de Solesmes: «gn», «sc» y «sp» van juntos y «st» no (Ma-gní-fi-cat, ví-sce-ra); la x va con la vocal siguiente, salvo el prefijo «ex-»; «eu» es diptongo solo al principio de palabra ante consonante que no sea m ni n, y en heu, ceu, seu, neu (e-um, e-ré-xit); las excepciones (red-emp-ti-ó-nem, in-i-mí-cis…) están en `EXCEPCIONES_LA`. «Óriens ex alto», con tilde.
 
 ## Lo que dice el Liber Usualis (1961, pp. 112-117)
 
