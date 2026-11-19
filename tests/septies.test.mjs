@@ -417,11 +417,13 @@ test('Oficio de lectura y Hora intermedia', () => {
   for (const h of ['Tercia', 'Sexta', 'Nona']) assert.ok(W[h].armar('2026-11-12', '').secciones.some(s => s.k === 'lectura'));
 });
 
-test('comunes: las «O bien» se alternan entre celebraciones del mismo común, y en Pascua va lo pascual', () => {
-  const X = ctx.window.Completas._, C = { a: { himno: 'H1', opciones: { himno: ['H2'] }, pascua: { ant: 'A, aleluia' }, ant: 'A' } };
-  assert.equal(X.comun(C, 'a', 'San X', false, 0).himno, 'H1');
-  assert.equal(X.comun(C, 'a', 'San X', false, 1).himno, 'H2');
-  assert.equal(X.comun(C, 'a', 'San X', false, 2).himno, 'H1');
+test('comunes: las «O bien» se alternan entre celebraciones del mismo común (el himno no: va el de sync y los otros como opción), y en Pascua va lo pascual', () => {
+  const X = ctx.window.Completas._, C = { a: { himno: 'H1', lectura: 'L1', opciones: { himno: ['H2'], lectura: ['L2'] }, pascua: { ant: 'A, aleluia' }, ant: 'A' } };
+  assert.equal(X.comun(C, 'a', 'San X', false, 0).lectura, 'L1');
+  assert.equal(X.comun(C, 'a', 'San X', false, 1).lectura, 'L2');
+  assert.equal(X.comun(C, 'a', 'San X', false, 2).lectura, 'L1');
+  for (const n of [0, 1, 2]) assert.equal(X.comun(C, 'a', 'San X', false, n).himno, 'H1');
+  assert.equal(JSON.stringify(X.himnosComun(C, 'a', 'San X', null, 'H1', { H1: [], H2: [] })), '["H2"]');
   assert.equal(X.comun(C, 'a', 'San X', true, 0).ant, 'A, aleluia');
   const fidel = LA.armar('2027-04-24', '');   // memoria en Pascua, del común de un mártir: responsorio pascual
   assert.match(JSON.stringify(fidel.secciones.find(s => s.k === 'resp').l.es), /[Aa]leluia/);
@@ -556,7 +558,7 @@ test('imágenes de la tarjeta del inicio', () => {
 
 // ---------- Himnos en gregoriano de Laudes y Vísperas (base/gregoriano/himnos.yaml) ----------
 test('himnos gregorianos de Laudes y Vísperas: opción después del himno en español, en sus días', () => {
-  const hg = (A, f) => { const o = A.armar(f, 'ARG').secciones.find(s => s.k === 'himno').opciones; assert.equal(o[0].lang, 'es'); return o[1] ? o[1].n : ''; };
+  const hg = (A, f) => { const o = A.armar(f, 'ARG').secciones.find(s => s.k === 'himno').opciones; assert.equal(o[0].lang, 'es'); const g = o.find(x => x.lang === 'la'); return g ? g.n : ''; };
   assert.equal(hg(VI, '2026-11-14'), 'Deus, Creátor ómnium');          // I Vísperas, domingo de la semana I
   assert.equal(hg(LA, '2026-11-15'), 'Ætérne rerum Cónditor');
   assert.equal(hg(VI, '2026-11-15'), 'Lucis Creátor óptime');
@@ -672,4 +674,14 @@ test('Comunes de los santos (botón del inicio): común, caso y grado; cualquier
   assert.match(ora(con({ g: 1, c: 0, grado: 'Memoria' }, '2026-12-05', 'laudes')[0]), /Verbo inefable/);
   // sin el modo, nada cambia
   assert.ok(!M.comun && LA.armar('2026-11-24', '').dia.titulo !== 'San N., obispo');
+});
+
+test('himnos de los comunes: el de sync primero y los otros como opción en la hora; San Juan XXIII, del común de pastores', () => {
+  const W = ctx.window, ops = r => r.secciones.find(s => s.k === 'himno').opciones.map(o => o.n);
+  // Santa Isabel de Hungría (19 de noviembre): Vísperas del común de santas mujeres
+  assert.equal(ops(VI.armar('2026-11-19', '')).join(' | '), 'Un amor casto y puro | Finísimo fue el lino con que ella');
+  const j = ['laudes', 'visperas'].map(h => ({ laudes: LA, visperas: VI }[h].armar('2027-10-11', '')));
+  assert.equal(j[0].dia.titulo, 'San Juan XXIII, papa');
+  assert.equal(ops(j[0])[0], 'Cristo, cabeza, rey de los pastores');
+  assert.equal(ops(j[1])[0], 'Cantemos al Señor con alegría');
 });

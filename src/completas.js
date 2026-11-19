@@ -136,10 +136,11 @@ function enPascua(o){
   return out;
 }
 // Las «opciones» de un común («O bien:») se alternan: la celebración n.º n del año que toma de ese común usa la opción n.
+// El himno no: va siempre el primero (el de sync) y los demás se ofrecen como opciones en la hora (himnosComun).
 function rotar(o, n){
   if(!o || typeof o!=='object') return o;
   const out={...o};
-  for(const [k,alt] of Object.entries(o.opciones||{})){ const l=[o[k], ...alt].filter(x=>x!=null); if(l.length) out[k]=l[(n||0)%l.length]; }
+  for(const [k,alt] of Object.entries(o.opciones||{})){ if(k==='himno') continue; const l=[o[k], ...alt].filter(x=>x!=null); if(l.length) out[k]=l[(n||0)%l.length]; }
   for(const k of ['primeras','tercia','sexta','nona']) if(o[k] && typeof o[k]==='object') out[k]=rotar(o[k], n);
   return out;
 }
@@ -589,6 +590,12 @@ function oracionElegida(oraciones, nombre, hora, t){
   M.alts=M.alts||{}; M.alts[k]={i, ops:ops.map(o=>({n:o.n, ver:vista(o.t)}))};
   return ops[i<0?0:i].t;
 }
+// Los himnos de un común para una hora: el primero (el de sync) y las otras opciones, que la hora ofrece como botones.
+// hs: los himnos de la hora (por título); sin el que ya va, ni los que la hora no tiene.
+function himnosComun(comunes, id, nombre, sub, actual, hs){
+  const l=opcionesComun(comunes, id, nombre, false, 'himno', sub).map(a=>a.t).filter(x=>typeof x==='string' && hs && hs[x]);
+  return l.includes(actual) ? l.filter(x=>x!==actual) : [];
+}
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

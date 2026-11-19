@@ -94,7 +94,9 @@ function propio(hora, fecha, region){
       for(const c of CAMPOS) if(PR[c]!=null) P[c]=PR[c];
       if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
       const HK=hora+(primeras?'1':'');   // clave de la hora para las elecciones del modo común
-      if(COM) X.elegirComun(P, CAMPOS, L.comunes, adf.comun, ref.n, ref.t==='Pascua', primeras?'primeras':null, HK);
+      if(COM) X.elegirComun(P, CAMPOS.filter(c=>c!=='himno'), L.comunes, adf.comun, ref.n, ref.t==='Pascua', primeras?'primeras':null, HK);
+      // el himno del común: los otros, como opción en la hora (no rotan)
+      if(!PR.himno && P.himno===C.himno) P._himnos=X.himnosComun(L.comunes, adf.comun, ref.n, primeras?'primeras':null, P.himno, L.himnos);
       const o=PR.oracion || (COM ? X.oracionElegida(C.oraciones||C0.oraciones, ref.n, HK, ref.t) : X.oracionComun(C.oraciones||C0.oraciones, ref.n, n));
       if(o) P.oracion=o;
       delete P.pendiente;
@@ -194,7 +196,9 @@ function armar(hora, fecha, region){
   const H=L.himnos[P.himno]||[];
   // El himno en español va primero; el gregoriano del día, como opción (la elección se recuerda: «greg» vale para todos los días que lo tienen)
   const HG=himnoGregoriano(hora, hoy, primeras, GL.himnos);
-  S.push({k:'himno', es:true, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}].concat(HG?[HG]:[])});
+  // Himno de un común: los otros del común, como opciones (la elección vale mientras se mira ese día)
+  const OH=(P._himnos||[]).map((n,i)=>({id:hora+'~'+(i+1), n, lang:'es', est:(L.himnos[n]||[]).map(e=>e.split('\n')), amen:''}));
+  S.push({k:'himno', es:true, efimera:OH.length>0, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}].concat(OH, HG?[HG]:[])});
 
   sec('salmodia','Salmodia');
   (P.salmodia||[]).forEach((g,gi)=>{
