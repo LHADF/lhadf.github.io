@@ -685,3 +685,11 @@ test('himnos de los comunes: el de sync primero y los otros como opción en la h
   assert.equal(ops(j[0])[0], 'Cristo, cabeza, rey de los pastores');
   assert.equal(ops(j[1])[0], 'Cantemos al Señor con alegría');
 });
+
+test('Santa María Magdalena: himnos propios (del libro en Laudes y Vísperas; la secuencia pascual en el Oficio)', () => {
+  const W = ctx.window, h = H => H.armar('2027-07-22', '').secciones.find(s => s.k === 'himno').opciones[0];
+  assert.equal(h(LA).n, 'Al levantarse la aurora');
+  assert.equal(h(VI).n, '«¿Qué viste en el huerto?');
+  assert.equal(h(W.Oficio).n, '«¿Qué has visto de camino');
+  for (const H of [LA, VI, W.Oficio]) assert.ok(h(H).est.length > 3);
+});
