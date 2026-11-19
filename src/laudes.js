@@ -40,7 +40,11 @@ function propio(hora, fecha, region){
   const fm=CP.masDias(fecha,1), man=(hora==='visperas' && CP.enRango(fm)) ? CP.diaCal(fm, region) : null;
   const calc=primeras=>{
     // Oficio de difuntos (botón del inicio): el día cualquiera, con todo del Oficio de difuntos (base/comunes/, «difuntos»)
-    const DIF=!!X.modo.difuntos, ref0=primeras?man:hoyC, ref=DIF?{...ref0, n:'Oficio de difuntos', g:'Oficio de difuntos', sol:false}:ref0, fRef=primeras?fm:fecha;
+    // Comunes de los santos (botón del inicio): el día cualquiera, como la celebración de un santo con todo del común elegido
+    // (también sus I Vísperas, si se eligen, el mismo día)
+    const DIF=!!X.modo.difuntos, COM=!DIF && X.modo.comun, ref0=(primeras&&!COM)?man:hoyC, fRef=(primeras&&!COM)?fm:fecha;
+    const ref=DIF?{...ref0, n:'Oficio de difuntos', g:'Oficio de difuntos', sol:false}
+      : COM?{...ref0, n:COM.nombre, g:COM.grado, sol:COM.grado==='Solemnidad', c:COM.color, oct:''} : ref0;
     const d=CP.deIso(fRef), dom=d.getDay()===0, dia=X.DIAS[d.getDay()];
     const P={}, capa=o=>{ if(o) for(const k of CAMPOS) if(o[k]!=null) P[k]=o[k]; };
     const I=primeras?' · I Vísperas':'';
@@ -60,10 +64,10 @@ function propio(hora, fecha, region){
     }
     const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia)||(TD&&TD.salmodia));
     let santo=null, nota='';
-    const adf=DIF ? {comun:'difuntos'} : (L.adf||{})[ref.n]||{};
-    const k=DIF ? null : (L.mapa[ref.n] || adf.como);   // «como»: celebración propia de ADF que toma todo de otra de la base
+    const adf=DIF ? {comun:'difuntos'} : COM ? {comun:COM.id} : (L.adf||{})[ref.n]||{};
+    const k=(DIF||COM) ? null : (L.mapa[ref.n] || adf.como);   // «como»: celebración propia de ADF que toma todo de otra de la base
     // «de»: celebración (nombre del calendario) de la que se toma lo que falte (San José obrero, del 19 de marzo)
-    const kd=(!DIF && adf.de && !adf.como) ? (L.mapa[adf.de] || (L.santoral[adf.de] ? adf.de : null)) : null;
+    const kd=(!DIF && !COM && adf.de && !adf.como) ? (L.mapa[adf.de] || (L.santoral[adf.de] ? adf.de : null)) : null;
     const pas=o=>ref.t==='Pascua' ? X.textosPascua(o) : o;   // tiempo pascual: con «Aleluia»
     const DE=kd ? pas(L.santoral[kd+I] || (primeras ? null : L.santoral[kd])) : null;
     const deTxt=adf.de ? X.deCelebracion(adf.de, L.santoral[kd]||L.santoral[k]) : '';
@@ -79,7 +83,7 @@ function propio(hora, fecha, region){
       santo={...DE, ...PR};
       nota=X.notaPropios(PR, deTxt);
     } else if((adf.comun && L.comunes && L.comunes[adf.comun]) || adf.propio){
-      const n=X.turno(L.adf, adf.comun, fRef, region);   // las «O bien» del común se alternan entre celebraciones
+      const n=COM ? 0 : X.turno(L.adf, adf.comun, fRef, region);   // las «O bien» del común se alternan entre celebraciones (en el modo común, se eligen)
       // Sin textos propios en la base: lo propio del libro (base/santoral/libro.yaml) y el resto del común (libro).
       // Memorias: salmos de la feria; fiestas y solemnidades, también los del común. En las I Vísperas, lo de las I Vísperas.
       // Oración: la propia; si no hay, la del común «en su defecto», con el nombre.
@@ -89,12 +93,14 @@ function propio(hora, fecha, region){
       if((mayor || C.salmodia_propia) && C.salmodia){ P.salmodia=C.salmodia; santo={salmodia:C.salmodia}; }   // (el Oficio de difuntos, siempre con sus salmos)
       for(const c of CAMPOS) if(PR[c]!=null) P[c]=PR[c];
       if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
-      const o=PR.oracion || X.oracionComun(C.oraciones||C0.oraciones, ref.n, n);
+      const HK=hora+(primeras?'1':'');   // clave de la hora para las elecciones del modo común
+      if(COM) X.elegirComun(P, CAMPOS, L.comunes, adf.comun, ref.n, ref.t==='Pascua', primeras?'primeras':null, HK);
+      const o=PR.oracion || (COM ? X.oracionElegida(C.oraciones||C0.oraciones, ref.n, HK, ref.t) : X.oracionComun(C.oraciones||C0.oraciones, ref.n, n));
       if(o) P.oracion=o;
       delete P.pendiente;
       // lo que falta (sin común): del día. Si está todo, sin nota.
       const todo=['himno','salmodia','lectura','responsorio',CE,'preces','oracion'].every(c=>PR[c]!=null);
-      nota = (adf.comun==='santa-maria-sabado' || DIF) ? ''
+      nota = (adf.comun==='santa-maria-sabado' || DIF || COM) ? ''
         : PR.oracion ? (todo ? '' : X.notaPropios(PR, C0.nombre ? `del ${C0.nombre}` : 'del día'))
         : `Textos del ${C0.nombre}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
     } else if(ref.n!==ref.fer){
@@ -111,9 +117,9 @@ function propio(hora, fecha, region){
     return {P, dia, nota, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
   };
   // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
-  const quiere = !X.modo.difuntos && !!(man && man.pv && !(hoyC.sol && !man.sol) && hoyC.t!=='Triduo');
+  const quiere = X.modo.comun ? !!X.modo.comun.primeras : !X.modo.difuntos && !!(man && man.pv && !(hoyC.sol && !man.sol) && hoyC.t!=='Triduo');
   let r=calc(quiere);
-  if(!r.completo && man && hoyC.t!=='Triduo'){   // sin textos para lo elegido: la otra posibilidad (hoy, o las I Vísperas de mañana si es domingo o solemnidad)
+  if(!r.completo && man && hoyC.t!=='Triduo' && !X.modo.comun){   // sin textos para lo elegido: la otra posibilidad (hoy, o las I Vísperas de mañana si es domingo o solemnidad)
     const otra = quiere ? calc(false) : ((man.dom||man.sol) ? calc(true) : null);
     if(otra && otra.completo){ if(quiere) otra.nota='Las I Vísperas de mañana todavía no tienen propio en la base: se rezan las del día.'; r=otra; }
   }

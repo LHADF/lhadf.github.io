@@ -28,7 +28,7 @@ function aplicarModo(kind, sec){
   else S.lengua = ((kind==='salmo'&&!(sec&&sec.cantico))||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
 }
 aplicarModo();
-function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,difuntos,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
+function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,difuntos,comunOn,comunPrim,comunElige,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
 let DH=null; // la hora abierta cuando no es Completas (Laudes o Vísperas)
 const MAYORES={laudes:'Laudes', visperas:'Visperas', oficio:'Oficio', tercia:'Tercia', sexta:'Sexta', nona:'Nona'};
 // Archivo de datos de cada hora (Tercia, Sexta y Nona comparten el de la Hora intermedia)
@@ -62,10 +62,13 @@ function fichasCal(){
 function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
   const MODO=CP._.modo;
-  MODO.difuntos=false; MODO.inv=undefined;
+  MODO.difuntos=false; MODO.comun=null; MODO.inv=undefined;
   D=CP.armar(S.fecha, SEL());
   // Oficio de difuntos (botón del inicio): las horas, con todo del Oficio de difuntos. Invitatorio de Laudes: se puede quitar.
   MODO.difuntos=!!S.difuntos;
+  // Comunes de los santos (botón del inicio): las horas como la celebración de un santo, con todo del común elegido.
+  // Lo elegido en «Otras opciones» (S.comunElige) vale mientras se reza; MODO.comun.alts junta las opciones de cada elemento.
+  MODO.comun = (S.comunOn && !S.difuntos) ? {...CP._.comunSantos({...(S.comunSel||{}), primeras:S.hora==='visperas' && !!S.comunPrim}), elige:S.comunElige||{}, alts:{}} : null;
   MODO.inv = (S.hora==='laudes' && S.invLaudes===false) ? false : undefined;
   DH = (MAYORES[S.hora] && cargada(S.hora)) ? window[MAYORES[S.hora]].armar(S.fecha, SEL(), {complementaria:!!S.compl}) : null;
   // Oficio de lectura unido a Laudes: después de las lecturas (y del Te Deum) siguen las Laudes desde la salmodia,
@@ -92,6 +95,7 @@ function cargarDia(){
     DH={...DH, unidas:true, secciones:[...V.slice(0,corte), ...C]};
   }
   if(DH && MODO.difuntos) DH={...DH, difuntos:true, dia:{...DH.dia, titulo:'Oficio de difuntos', grado:'', nota:''}};
+  if(DH && MODO.comun) DH={...DH, comun:true, alts:MODO.comun.alts, dia:{...DH.dia, titulo:MODO.comun.titulo, grado:MODO.comun.grado, nota:''}};
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
 cargarDia();
@@ -524,9 +528,52 @@ function marianaHTML(sec){
   return h;
 }
 
+// Comunes de los santos: debajo de cada elemento que tiene varias opciones (las «O bien» y variantes del libro), un botón
+// discreto para elegir cualquiera. Sección de la hora → elementos (claves de la base) que muestra.
+const CAMPOS_SEC={invitatorio:['inv_ant'], himno:['himno'], salmodia:['ant','versiculo'], lectura:['lectura','versiculo'], responsorio:['responsorio'],
+  cantico:['ant_benedictus','ant_magnificat'], preces:['preces'], padrenuestro:['padrenuestro_intro'], oracion:['oracion'],
+  lectura1:['lectura1'], 'lectura1-r':['resp1'], lectura2:['lectura2'], 'lectura2-r':['resp2']};
+const NOMBRE_CAMPO={inv_ant:'Antífona del invitatorio', himno:'Himno', ant:'Antífona', versiculo:'Versículo', lectura:'Lectura breve', responsorio:'Responsorio breve',
+  ant_benedictus:'Antífona del Benedictus', ant_magnificat:'Antífona del Magníficat', preces:'Preces', padrenuestro_intro:'Monición del Padre nuestro',
+  oracion:'Oración', lectura1:'Primera lectura', resp1:'Responsorio', lectura2:'Segunda lectura', resp2:'Responsorio'};
+function otrasHTML(r, id, vistas){
+  if(!r.alts || !id || /^c-/.test(id)) return '';
+  let hk=r.hora+(r.primeras?'1':'');
+  if(/^l-/.test(id)){ hk='laudes'; id=id.slice(2); }   // Oficio unido a Laudes
+  const ks=(CAMPOS_SEC[id]||[]).map(c=>hk+'|'+c).filter(k=>r.alts[k] && !vistas.has(k));
+  ks.forEach(k=>vistas.add(k));
+  return ks.map(k=>`<div class="otras"><button class="discreto" data-act="otras" data-v="${esc(k)}">Otras opciones${ks.length>1?' · '+esc(NOMBRE_CAMPO[k.split('|')[1]].toLowerCase()):''}</button></div>`).join('');
+}
+function hojaOtras(k){
+  const a=(R().alts||{})[k]; if(!a) return;
+  hoja(NOMBRE_CAMPO[k.split('|')[1]]||'Opciones', `<ul class="opc-lista">${a.ops.map((o,i)=>`<li><button data-act="eligeop" data-k="${esc(k)}" data-v="${i}" aria-pressed="${i===a.i}"><span class="n">${esc(o.n)}</span>${o.ver?`<span class="v">${esc(o.ver)}</span>`:''}</button></li>`).join('')}</ul>`);
+}
+// Hoja del botón del inicio: el común, el caso y el grado (desplegables) y las horas
+function hojaComunes(){
+  const L=CP._.COMUNES_SANTOS, sel=S.comunSel=Object.assign({g:0, c:0, grado:'Memoria'}, S.comunSel||{}), G=L[sel.g]||L[0];
+  const opt=(v,n,on)=>`<option value="${esc(String(v))}"${on?' selected':''}>${esc(n)}</option>`;
+  const nom=n=>{ const x=n.replace(/^Común de (la )?/,''); return x[0].toUpperCase()+x.slice(1); };
+  const sol=sel.grado==='Solemnidad';
+  const hs=[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'], ...(sol?[['visperas1','I Vísperas']]:[]), ['visperas', sol?'II Vísperas':'Vísperas']];
+  hoja('Comunes de los santos', `<p class="rub">Para celebrar a un santo que no está en el calendario, con los textos del común. Donde dice «N.», se dice el nombre.</p>
+    <div class="elige-comun">
+      <label><span>Común</span><select data-chg="comun" data-k="g">${L.map((x,i)=>opt(i, nom(x.n), i===sel.g)).join('')}</select></label>
+      ${G.casos.length>1?`<label><span>Para</span><select data-chg="comun" data-k="c">${G.casos.map((x,i)=>opt(i, x.n, i===sel.c)).join('')}</select></label>`:''}
+      <label><span>Grado</span><select data-chg="comun" data-k="grado">${['Memoria','Fiesta','Solemnidad'].map(x=>opt(x, x, x===sel.grado)).join('')}</select></label>
+    </div>
+    <ul class="horas">${hs.map(([id,n])=>`<li class="disp"><button data-act="abrircom" data-v="${id}"><span class="n">${n}</span><span class="h"></span><span class="chev">›</span></button></li>`).join('')}</ul>`);
+}
+document.addEventListener('change',e=>{
+  const sel=e.target.closest('select[data-chg="comun"]'); if(!sel) return;
+  const c=S.comunSel=Object.assign({g:0, c:0, grado:'Memoria'}, S.comunSel||{}), k=sel.dataset.k;
+  if(k==='g'){ c.g=+sel.value; c.c=0; } else if(k==='c') c.c=+sel.value; else c.grado=sel.value;
+  guardar(); hojaComunes();
+  const f=$(`#capa select[data-k="${k}"]`); if(f) f.focus({preventScroll:true});
+});
+
 function horaHTML(){
   _id=0; GAB.clear();
-  const r=R(); let h='';
+  const r=R(); let h='', secAct=null; const vistas=new Set();
   const sinNombre=S.hora==='completas' || r.primeras;   // Completas y I Vísperas: sin el nombre de la celebración
   h+=`<p class="dia-h">${sinNombre?(r.primeras?'I Vísperas · ':''):esc(r.dia.titulo)+' · '}${esc(r.dia.tiempo)}${r.dia.visperas&&!sinNombre?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
@@ -541,6 +588,7 @@ function horaHTML(){
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
+      h+=otrasHTML(r, secAct, vistas); secAct=sec.id;
       // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
       if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
       if(r.hora==='oficio' && (sec.id==='oracion'||sec.id==='l-laudes')) h+=`<div class="opciones unir"><button data-act="unirl" aria-pressed="${!!r.unidas}">Seguir con Laudes</button></div>`;
@@ -614,6 +662,7 @@ function horaHTML(){
     }
   });
   aplicarModo();
+  h+=otrasHTML(r, secAct, vistas);
   h+=`<p class="fin">✠</p>`;
   return h;
 }
@@ -725,6 +774,7 @@ function portadaHTML(){
       if(id==='visperas') n=nombreVisperas();
       return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
     <button class="discreto" data-act="difuntos">Oficio de difuntos</button>
+    <button class="discreto" data-act="comunes">Comunes de los santos</button>
     <p class="nota-proto">Versión de prueba: todas las horas, con el calendario ADF. Los textos y el santoral están en revisión; puede haber errores.</p>
   </div>`;
 }
@@ -805,9 +855,15 @@ document.addEventListener('click',e=>{
     case 'invtog': if(S.hora==='laudes') S.invLaudes=(S.invLaudes===false); else S.invOficio=!S.invOficio;
       { const sigue=()=>{ cargarDia(); guardar(); render(); };
         if(S.hora==='oficio' && S.invOficio && !cargada('laudes')) cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar el invitatorio.')); else sigue(); } break;
-    case 'abrirdif': case 'abrir': { if(a==='abrirdif'){ quitarCapa(); S.difuntos=true; } else S.difuntos=false;
-      const abrir=()=>{ S._marDia={}; S.hora=v||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
-      const faltan=[v, ...(v==='oficio'&&(S.unirLaudes||S.invOficio)?['laudes']:[])].filter(h=>MAYORES[h]&&!cargada(h));   // Oficio unido a Laudes (o con invitatorio): también Laudes
+    case 'comunes': hojaComunes(); break;
+    case 'otras': hojaOtras(v); break;
+    case 'eligeop': { S.comunElige={...(S.comunElige||{}), [b.dataset.k]:+v}; cerrar(); cargarDia(); refrescarHoja(); break; }
+    case 'abrircom': case 'abrirdif': case 'abrir': {
+      S.difuntos=a==='abrirdif'; S.comunOn=a==='abrircom'; S.comunPrim=v==='visperas1'; S.comunElige={};
+      if(a!=='abrir') quitarCapa();
+      const hv=v==='visperas1' ? 'visperas' : v;
+      const abrir=()=>{ S._marDia={}; S.hora=hv||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
+      const faltan=[hv, ...(hv==='oficio'&&(S.unirLaudes||S.invOficio)?['laudes']:[])].filter(h=>MAYORES[h]&&!cargada(h));   // Oficio unido a Laudes (o con invitatorio): también Laudes
       if(faltan.length){ toast('Cargando…'); Promise.all(faltan.map(cargarHora)).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.')); } else abrir();
       break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;

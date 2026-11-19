@@ -636,3 +636,40 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   const alberto = VI.armar('2027-11-17', '');
   assert.match(alberto.dia.nota || '', /doctores/i);
 });
+
+test('Comunes de los santos (botón del inicio): común, caso y grado; cualquier opción de cada elemento', () => {
+  const W = ctx.window, X = W.Completas._, M = X.modo;
+  const H = { laudes: LA, visperas: VI, oficio: W.Oficio, tercia: W.Tercia, sexta: W.Sexta, nona: W.Nona };
+  const ora = r => r.secciones.filter(s => s.k === 'prosa').pop().t.es;
+  const con = (sel, f, h, elige = {}) => { M.comun = { ...X.comunSantos(sel), elige, alts: {} }; const r = H[h].armar(f, ''); const a = M.comun.alts; M.comun = null; return [r, a]; };
+  // todos los comunes y casos, en tres grados y en cuatro tiempos: se arma, sin «[falta», sin nota y con «N.»
+  X.COMUNES_SANTOS.forEach((G, g) => G.casos.forEach((C, c) => {
+    for (const grado of ['Memoria', 'Fiesta', 'Solemnidad']) for (const f of ['2026-11-24', '2026-12-09', '2027-03-10', '2027-04-20']) for (const h of Object.keys(H)) {
+      const [r] = con({ g, c, grado }, f, h);
+      assert.ok(r && !JSON.stringify(r.secciones).includes('[falta'), `${G.n} · ${C.n} · ${grado} · ${f} · ${h}`);
+      assert.equal(r.dia.nota, '');
+    }
+  }));
+  // pastores, un obispo: su oración; las demás, a elección (cualquiera, sin rotar)
+  const [l, al] = con({ g: 4, c: 1, grado: 'Memoria' }, '2026-11-24', 'laudes');
+  assert.match(ora(l), /^Señor, tú que colocaste a san N\. en el número de los santos pastores/);
+  const ops = al['laudes|oracion'].ops; assert.ok(ops.length >= 5 && ops[al['laudes|oracion'].i].n === 'Para un santo obispo');
+  const [l2] = con({ g: 4, c: 1, grado: 'Memoria' }, '2026-11-24', 'laudes', { 'laudes|oracion': 0 });
+  assert.match(ora(l2), /^Dios todopoderoso y eterno, que quisiste que san N\., papa/);
+  // varias vírgenes: la antífona del Benedictus y la oración en plural; en femenino, «santa N.»
+  const [v, av] = con({ g: 6, c: 1, grado: 'Fiesta' }, '2026-11-24', 'laudes');
+  assert.equal(av['laudes|ant_benedictus'].ops[av['laudes|ant_benedictus'].i].n, 'Para varias santas vírgenes');
+  assert.match(ora(v), /santas vírgenes N\. y N\./);
+  const [o] = con({ g: 8, c: 2, grado: 'Fiesta' }, '2026-11-24', 'oficio');
+  assert.match(ora(o), /santa N\./); assert.ok(o.secciones.some(s => s.id === 'tedeum'));
+  // grado: memoria, salmos de la feria; fiesta, los del común; solemnidad, también I Vísperas
+  const sal = r => r.secciones.filter(s => s.k === 'salmo').map(s => s.id).join(' ');
+  assert.notEqual(sal(con({ g: 4, c: 1, grado: 'Memoria' }, '2026-11-24', 'laudes')[0]), sal(con({ g: 4, c: 1, grado: 'Fiesta' }, '2026-11-24', 'laudes')[0]));
+  const [i1] = con({ g: 4, c: 1, grado: 'Solemnidad', primeras: true }, '2026-11-24', 'visperas');
+  assert.ok(i1.primeras);
+  // tiempo pascual: con «Aleluia»; Virgen María en Adviento: la oración de Adviento
+  assert.match(con({ g: 4, c: 1, grado: 'Fiesta' }, '2027-04-20', 'laudes')[0].secciones.find(s => s.k === 'ant' && s.t).t.es, /Aleluia/);
+  assert.match(ora(con({ g: 1, c: 0, grado: 'Memoria' }, '2026-12-05', 'laudes')[0]), /Verbo inefable/);
+  // sin el modo, nada cambia
+  assert.ok(!M.comun && LA.armar('2026-11-24', '').dia.titulo !== 'San N., obispo');
+});

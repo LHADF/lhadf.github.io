@@ -115,6 +115,21 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
 .discreto{align-self:center;border:0;background:none;min-height:44px;padding:8px 12px;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
 .discreto.arriba{margin:0}
+/* Comunes de los santos: desplegables de la hoja, «Otras opciones» bajo cada elemento y su lista */
+.elige-comun{display:grid;gap:10px;margin:12px 0 18px}
+.elige-comun label{display:grid;grid-template-columns:5.5em 1fr;align-items:center;gap:10px}
+.elige-comun label>span{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.elige-comun select{font:inherit;font-family:var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:var(--r-1);padding:9px 10px;min-height:44px;width:100%}
+.elige-comun select:focus-visible{outline:2px solid var(--rubric);outline-offset:1px}
+.otras{display:flex;justify-content:flex-end;margin:-.4em 0 .4em}
+.otras .discreto{min-height:36px;padding:4px 2px}
+.opc-lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.opc-lista li{border-bottom:1px solid var(--line)}
+.opc-lista button{width:100%;display:grid;gap:3px;padding:12px 4px;border:0;background:none;text-align:left}
+.opc-lista .n{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.04em;color:var(--muted)}
+.opc-lista .v{font-family:var(--serif);color:var(--ink);line-height:1.4}
+.opc-lista button[aria-pressed="true"]{background:var(--rubric-soft);border-radius:var(--r-1);padding-inline:12px}
+.opc-lista button[aria-pressed="true"] .n{color:var(--rubric)}
 .orof-b{font-family:var(--serif);font-size:calc(var(--lec)*1rem);line-height:1.5}
 .orof-b h3{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--rubric);margin:1.6em 0 .7em}
 .orof-b h3:first-child{margin-top:0}

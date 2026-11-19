@@ -464,6 +464,131 @@ function deCelebracion(nombre, e){
   const f=/^(\d\d)-(\d\d)$/.exec((e&&e.fecha)||'');
   return 'de '+nombre+(f ? ` (${+f[2]} de ${MESES[+f[1]-1]})` : '');
 }
+/* ---------- Comunes de los santos (botón del inicio) ----------
+   Para celebrar a un santo que no está en el calendario: el común y el caso se eligen en dos desplegables; el grado, en
+   otro. Cada caso lleva un nombre genérico («San N., obispo») con el que el motor elige solo, como para cualquier
+   celebración, las variantes con rúbrica, el masculino o femenino y el singular o plural; en los textos queda «N.».
+   «or»: qué oración del común va primero (por su «para»). Las demás opciones de cada elemento se eligen en la hora. */
+const modo={};   // modos del inicio: difuntos, comun (y el invitatorio a elección)
+const COMUNES_SANTOS=[
+  {n:'Común de la dedicación de una iglesia', c:'Blanco', casos:[
+    {n:'En la iglesia dedicada', id:'dedicacion', nombre:'Dedicación de una iglesia', or:/misma iglesia/i},
+    {n:'Fuera de la iglesia dedicada', id:'dedicacion', nombre:'Dedicación de una iglesia', or:/fuera de la iglesia/i}]},
+  {n:'Común de la Santísima Virgen María', c:'Blanco', casos:[{n:'', id:'virgen-maria', nombre:'Santa María Virgen'}]},
+  {n:'Común de apóstoles', c:'Rojo', casos:[{n:'Un apóstol', id:'apostoles', nombre:'San N., apóstol'}, {n:'Varios apóstoles', id:'apostoles', nombre:'Santos N. y N., apóstoles'}]},
+  {n:'Común de mártires', c:'Rojo', casos:[
+    {n:'Un mártir', id:'un-martir', nombre:'San N., mártir'},
+    {n:'Una mártir', id:'un-martir', nombre:'Santa N., mártir', or:/mujer mártir/i},
+    {n:'Una virgen mártir', id:'un-martir', nombre:'Santa N., virgen y mártir', or:/mártir virgen/i},
+    {n:'Varios mártires', id:'varios-martires', nombre:'Santos N. y N., mártires'},
+    {n:'Varias vírgenes mártires', id:'varios-martires', nombre:'Santas N. y N., vírgenes y mártires', or:/mártires vírgenes/i},
+    {n:'Varias santas mujeres mártires', id:'varios-martires', nombre:'Santas N. y N., mártires', or:/santas mujeres/i}]},
+  {n:'Común de pastores', c:'Blanco', casos:[
+    {n:'Un papa', id:'pastores', nombre:'San N., papa', or:/papa/i},
+    {n:'Un obispo', id:'pastores', nombre:'San N., obispo', or:/obispo/i},
+    {n:'Un presbítero', id:'pastores', nombre:'San N., presbítero', or:/santo pastor/i},
+    {n:'Un fundador de una Iglesia', id:'pastores', nombre:'San N., obispo', or:/fundador/i},
+    {n:'Un misionero', id:'pastores', nombre:'San N., misionero', or:/misionero/i}]},
+  {n:'Común de doctores de la Iglesia', c:'Blanco', casos:[
+    {n:'Un doctor', id:'doctores', nombre:'San N., doctor de la Iglesia'},
+    {n:'Una doctora', id:'doctores', nombre:'Santa N., doctora de la Iglesia'}]},
+  {n:'Común de vírgenes', c:'Blanco', casos:[
+    {n:'Una virgen', id:'virgenes', nombre:'Santa N., virgen'},
+    {n:'Varias vírgenes', id:'virgenes', nombre:'Santas N. y N., vírgenes', or:/varias/i}]},
+  {n:'Común de santos varones', c:'Blanco', casos:[
+    {n:'Un santo', id:'santos-varones', nombre:'San N.'},
+    {n:'Varios santos', id:'santos-varones', nombre:'Santos N. y N.', or:/varios santos/i},
+    {n:'Un religioso', id:'religiosos', nombre:'San N., religioso', or:/religioso/i},
+    {n:'Un abad', id:'religiosos', nombre:'San N., abad', or:/abad/i},
+    {n:'Obras de misericordia', id:'caridad', nombre:'San N.', or:/misericordia|caritativ/i},
+    {n:'Un educador', id:'educadores', nombre:'San N., educador', or:/educador/i}]},
+  {n:'Común de santas mujeres', c:'Blanco', casos:[
+    {n:'Una santa', id:'santas-mujeres', nombre:'Santa N.'},
+    {n:'Varias santas', id:'santas-mujeres', nombre:'Santas N. y N.', or:/varias santas/i},
+    {n:'Una religiosa', id:'religiosos', nombre:'Santa N., religiosa', or:/religios/i},
+    {n:'Obras de misericordia', id:'caridad', nombre:'Santa N.', or:/misericordia|caritativ/i},
+    {n:'Una educadora', id:'educadores', nombre:'Santa N., educadora', or:/educador/i}]},
+];
+// Lo que pide el modo «común»: {g: índice del común, c: índice del caso, grado, primeras} → datos para el motor
+function comunSantos(sel){
+  const G=COMUNES_SANTOS[sel.g]||COMUNES_SANTOS[0], C=G.casos[sel.c]||G.casos[0];
+  return {...C, grupo:G.n, color:G.c, titulo:G.n+(C.n?': '+C.n.toLowerCase():''), grado:sel.grado||'Memoria', primeras:!!sel.primeras};
+}
+// Vista previa breve de un texto (para la lista de opciones)
+function vista(t){
+  const corta=s=>{ s=String(s||'').replace(/\s+/g,' ').trim(); if(s.length<=110) return s; const c=s.slice(0,110); return c.slice(0, c.lastIndexOf(' '))+'…'; };
+  if(t==null) return '';
+  if(typeof t==='string') return corta(t);
+  if(Array.isArray(t)) return vista(Array.isArray(t[0]) ? t[0][1] : t[0]);
+  if(t.titulo) return corta((t.ref?t.ref+' · ':'')+oracionCase(t.titulo));
+  if(t.vr) return vista(t.vr);
+  if(t.intro) return corta(t.intro+' '+(t.respuesta||''));
+  if(t.texto) return corta((t.ref?t.ref+' · ':'')+t.texto);
+  return '';
+}
+// Todas las opciones de un elemento del común (el texto principal, las «O bien» y las variantes del libro), con su rótulo.
+// sub: 'primeras' (si no lo trae, lo de siempre) o la hora menor ('tercia'…). Si el común no lo trae, el común del que hereda.
+function opcionesComun(comunes, id, nombre, pascua, campo, sub){
+  const c0=comunes && comunes[id]; if(!c0) return [];
+  const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||''));
+  const de=src=>{ const L=[], tiene=src && (src[campo]!=null || (src.opciones||{})[campo] || (src.variantes||{})[campo]);
+    if(!tiene) return L;
+    if(src[campo]!=null) L.push({n:'', t:src[campo], p:(src.pascua||{})[campo]});
+    for(const t of (src.opciones||{})[campo]||[]) L.push({n:'', t});
+    for(const v of (src.variantes||{})[campo]||[]){ const e=String(v.etiqueta||'').trim();
+      L.push({n:/^opcion/i.test(e) ? '' : e.replace(/:\s*$/,'').replace(/^O bien,?\s*/i,'').replace(/^./,x=>x.toUpperCase()), t:v.texto}); }
+    return L; };
+  let L=de(sub ? c0[sub] : c0);
+  if(!L.length && sub==='primeras') L=de(c0);
+  if(!L.length){ const h=(fem && c0.hereda_mujeres) || c0.hereda; return h ? opcionesComun(comunes, h, nombre, pascua, campo, sub) : []; }
+  // Las «opciones» que son el mismo texto en otra traducción (diferencias entre tomos: la misma cita, o casi las mismas
+  // palabras) no se ofrecen aparte, salvo que tengan rúbrica propia
+  const pals=x=>new Set(String(typeof x==='string' ? x : vista(x)).toLowerCase().match(/\p{L}+/gu)||[]);
+  const igual=(a,b)=>{ if(a.t&&b.t&&a.t.ref&&a.t.ref===b.t.ref) return true;
+    const A=pals(a.t), B=pals(b.t); let c=0; for(const w of A) if(B.has(w)) c++; return A.size && B.size && c/Math.max(A.size,B.size)>=0.6; };
+  const vistos=new Set(), out=[];
+  L.forEach(a=>{
+    const raw=conNombre({[campo]:a.t}, nombre)[campo];
+    const t=!pascua ? raw : a.p!=null ? conNombre({[campo]:a.p}, nombre)[campo] : textosPascua({[campo]:raw})[campo];
+    const k=JSON.stringify(t); if(vistos.has(k)) return; vistos.add(k);
+    if(!a.n && campo!=='himno' && out.some(b=>igual(b,a))) return;
+    out.push({n:a.n, t, raw});
+  });
+  let i=0; return out.map(a=>({...a, n:a.n || 'Opción '+(++i)}));
+}
+// Modo «común»: deja en P lo elegido para cada elemento que tiene opciones y anota las opciones para la app
+// (modo.comun.alts[hora|campo] = {i, ops}). Sin elección, queda lo que el motor eligió solo.
+function elegirComun(P, campos, comunes, id, nombre, pascua, sub, hora){
+  const M=modo.comun; if(!M) return;
+  M.alts=M.alts||{};
+  for(const c of campos){
+    if(P[c]==null) continue;
+    const L=opcionesComun(comunes, id, nombre, pascua, c, sub), j=JSON.stringify(P[c]);
+    let i=L.findIndex(a=>JSON.stringify(a.t)===j || JSON.stringify(a.raw)===j);
+    if(i<0 || L.length<2) continue;
+    L[i]={...L[i], t:P[c]};
+    const k=hora+'|'+c, e=(M.elige||{})[k];
+    if(e!=null && L[e]){ P[c]=L[e].t; i=e; }
+    M.alts[k]={i, ops:L.map(a=>({n:a.n, ver:vista(a.t)}))};
+  }
+}
+// La oración del común en el modo «común»: la del caso («or») o, si no hay, la que elige el motor (sin las de otro
+// tiempo: en el común de la Virgen, la de Adviento o la de Navidad solo en su tiempo); las demás, a elección.
+function oracionElegida(oraciones, nombre, hora, t){
+  const M=modo.comun; if(!M || !oraciones || !oraciones.length) return oracionComun(oraciones, nombre, 0);
+  const ok=oraciones.filter(o=>o.texto && o.texto.length>40);   // (no las truncas)
+  if(!ok.length) return oracionComun(oraciones, nombre, 0);
+  const tdo=o=>(/^tiempo de (\S+)/i.exec(o.para||'')||[])[1], ajena=o=>tdo(o) && tdo(o).toLowerCase()!==String(t||'').toLowerCase();
+  const propia=ok.find(o=>tdo(o) && !ajena(o)), porCaso=M.or && ok.find(o=>M.or.test(o.para||''));
+  const pre=propia || porCaso || null;
+  const ops=ok.map(o=>({n:!o.para ? '' : /^(tiempo|cuando)/i.test(o.para) ? o.para : 'Para '+o.para, t:oracionComun([o], nombre, 0)}));
+  const def=pre ? oracionComun([pre], nombre, 0) : oracionComun(ok.filter(o=>!ajena(o)), nombre, 0);
+  let i=ops.findIndex(o=>o.t===def), n=0; ops.forEach(o=>{ if(!o.n) o.n='Opción '+(++n); });
+  if(ops.length<2) return def;
+  const k=hora+'|oracion', e=(M.elige||{})[k]; if(e!=null && ops[e]) i=e;
+  M.alts=M.alts||{}; M.alts[k]={i, ops:ops.map(o=>({n:o.n, ver:vista(o.t)}))};
+  return ops[i<0?0:i].t;
+}
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo:{}, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
