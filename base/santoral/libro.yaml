@@ -3212,22 +3212,22 @@ Dedicación de las Basílicas de San Pedro y San Pablo:
   visperas:
     ant_magnificat: Los cuerpos de los santos fueron sepultados en paz, vive su fama por generaciones.
 Divino Niño Jesús:
-  fuente: 'Propio de ADF: «Liturgia de las horas del Divino Niño Jesús» (PDF de CRU, 2026). Solo I Vísperas, Laudes y II Vísperas.'
+  fuente: 'Propio de ADF: «Liturgia de las horas del Divino Niño Jesús» (PDF de CRU, 2026). Solo I Vísperas, Laudes y II Vísperas. Donde el PDF difiere de la Liturgia de las Horas que cita, va el texto de la Liturgia de las Horas (CRU, 19/11/2026).'
   oracion: Concédenos, oh Padre, reconocer y adorar tu gloria en la pobreza de tu Hijo hecho hombre, y adorar tu divina grandeza en la humildad de su infancia; haz que, acogiendo el reino de los cielos como hijos, obtengamos el premio prometido a los humildes de corazón. Por nuestro Señor Jesucristo.
   invitatorio:
     inv_ant: Venid a adorar al Niño que se nos ha dado, sobre cuyos hombros está el imperio.
   visperas1:
     himno: Reyes que venís por ellas
     salmodia:
-    - ant: 'El Rey de la paz viene en gloria: toda la tierra anhela ver su rostro.'
+    - ant: 'El Rey de la paz ha sido glorificado y toda la tierra desea contemplar su rostro.'
       salmo: salmo-112
     - ant: Aprended de mí, que soy manso y humilde de corazón.
       salmo: salmo-130
     - ant: Aquel que estaba desde el principio nos ha nacido en el tiempo, Dios de Dios, Luz de Luz.
       salmo: cantico-flp-2-6-11
     lectura:
-      ref: Hb 1, 1-3
-      texto: Después de haber hablado antiguamente a nuestros padres por medio de los profetas, en muchas ocasiones y de diversas maneras, ahora, en este tiempo final, Dios nos habló por medio de su Hijo, a quien constituyó heredero de todas las cosas y por quien hizo el mundo. Él es el resplandor de su gloria y la impronta de su ser. Él sostiene el universo con su Palabra poderosa, y después de realizar la purificación de los pecados, se sentó a la derecha del trono de Dios en lo más alto del cielo.
+      ref: Hb 1, 1-2
+      texto: A través de muchas etapas y de muchas maneras habló Dios en otro tiempo a nuestros antepasados por ministerio de los profetas; en estos tiempos, que son los últimos, nos ha hablado por medio de su Hijo, a quien ha constituido heredero de todas las cosas y por quien creó los mundos.
     responsorio:
     - - V
       - La Palabra se hizo carne y puso su morada entre nosotros.
@@ -3262,27 +3262,27 @@ Divino Niño Jesús:
     salmodia:
     - ant: 'Ha brotado un renuevo del tronco de Jesé, ha salido una estrella de la casa de Jacob: la Virgen ha dado a luz al Salvador; te alabamos, Dios nuestro.'
       salmo: salmo-62-2-9
-    - ant: El Niño crecía, lleno de fuerza y sabiduría, y la gracia de Dios estaba en él.
+    - ant: Jesús iba creciendo en sabiduría y en estatura, y la gracia de Dios estaba en él.
       salmo: cantico-dn-3-57-88-56
-    - ant: 'Viene tu luz, Jerusalén: la gloria del Señor se ha elevado sobre ti y las naciones caminan bajo tu luz.'
+    - ant: 'Llega tu luz, Jerusalén, y la gloria del Señor alborea sobre ti y caminarán las naciones a tu luz. Aleluia.'
       salmo: salmo-149
     lectura:
-      ref: Hb 1, 1-3
-      texto: Después de haber hablado antiguamente a nuestros padres por medio de los profetas, en muchas ocasiones y de diversas maneras, ahora, en este tiempo final, Dios nos habló por medio de su Hijo, a quien constituyó heredero de todas las cosas y por quien hizo el mundo. Él es el resplandor de su gloria y la impronta de su ser. Él sostiene el universo con su Palabra poderosa, y después de realizar la purificación de los pecados, se sentó a la derecha del trono de Dios en lo más alto del cielo.
+      ref: Hb 1, 1-2
+      texto: A través de muchas etapas y de muchas maneras habló Dios en otro tiempo a nuestros antepasados por ministerio de los profetas; en estos tiempos, que son los últimos, nos ha hablado por medio de su Hijo, a quien ha constituido heredero de todas las cosas y por quien creó los mundos.
     responsorio:
     - - V
-      - El Señor ha manifestado su salvación.
+      - El Señor revela su salvación.
     - - R
-      - El Señor ha manifestado su salvación.
+      - El Señor revela su salvación.
     - - V
-      - Ha revelado a todos los pueblos su amor.
+      - Que presentó ante todos los pueblos.
     - - R
       - Su salvación.
     - - V
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
-      - El Señor ha manifestado su salvación.
-    ant_benedictus: ¡Qué admirable intercambio! El Creador del género humano, tomando cuerpo y alma, nace de una virgen y, hecho hombre sin concurso de varón, nos da parte en su divinidad.
+      - El Señor revela su salvación.
+    ant_benedictus: ¡Qué admirable intercambio! El Creador del género humano, tomando cuerpo y alma, nace de una Virgen y, hecho hombre sin concurso de varón, nos hace participar de su divinidad.
     preces:
       intro: 'Glorifiquemos a Cristo, Palabra eterna del Padre, engendrado antes de los siglos y nacido por nosotros en el tiempo, y aclamémoslo, diciendo:'
       respuesta: Que se goce la tierra, Señor, ante tu venida.
@@ -3321,7 +3321,7 @@ Divino Niño Jesús:
       - Gloria al Padre, y al Hijo, y al Espíritu Santo.
     - - R
       - La Palabra se hizo carne y puso su morada entre nosotros.
-    ant_magnificat: 'Los magos, al ver la estrella, se dijeron: «Este es el signo del gran Rey; vayamos a buscarlo y ofrezcámosle nuestros dones: oro, incienso y mirra». Aleluia.'
+    ant_magnificat: 'Los magos, al ver la estrella, se dijeron: «Éste es el signo del gran Rey; vayamos a buscarlo y ofrezcámosle nuestros dones: oro, incienso y mirra.» Aleluia.'
     preces:
       intro: 'Bendigamos a Cristo, el «Dios-con-nosotros», a quien María concibió y dio a luz, y supliquémosle, diciendo:'
       respuesta: Hijo de la Virgen María, escúchanos.
@@ -3329,12 +3329,12 @@ Divino Niño Jesús:
       - - Tú que diste a María el gozo de la maternidad,
         - concede a todos los padres y madres de familia poder alegrarse en sus hijos.
       - - Rey pacífico, cuyo reino es justicia y paz,
-        - haz que busquemos siempre lo que lleva a la paz.
+        - haz que busquemos siempre lo que lleve a la paz.
       - - Tú que viniste para hacer del género humano el pueblo de Dios,
         - haz que todas las naciones alcancen la concordia mutua y vivan como una sola familia.
       - - Tú que al nacer en una familia fortaleciste los vínculos familiares,
         - haz que las familias vean crecer su unidad.
-      - - Tú que quisiste nacer en nuestro tiempo,
+      - - Tú que quisiste nacer en el tiempo,
         - concede a los difuntos nacer a tu eternidad.
     padrenuestro_intro: 'Hermanos, sintiéndonos todos hijos de Dios, digamos a nuestro Padre del cielo:'
 San Juan ante la Puerta Latina:
