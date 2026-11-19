@@ -80,7 +80,7 @@ dedicacion:
   inv_ant: Congregados en la casa de Dios, adoremos a Cristo, esposo de la Iglesia.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
-  himno: Quién podrá tanto alabarte
+  himno: Eres tú la mujer llena de gloria
   salmodia:
   - ant: Dichosa eres, María, porque de ti vino la salvación del mundo; tú que ahora vives ya en la gloria del Señor, intercede por nosotros ante tu Hijo.
     salmo: salmo-62-2-9
@@ -137,9 +137,8 @@ virgen-maria:
     texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Lucero del alba
     - Quién podrá tanto alabarte
-    - Eres tú la mujer llena de gloria
+    - Lucero del alba
     preces:
     - intro: 'Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:'
       respuesta: Que tu santa Madre, Señor, interceda por nosotros.
