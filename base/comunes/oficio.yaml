@@ -6,7 +6,7 @@
 # Desde ahora la base es la fuente: se corrige acá.
 dedicacion:
   nombre: Común de la dedicación de una iglesia
-  himno: No rechazaremos
+  himno: Nueva Jerusalén y ciudad santa
   salmodia:
   - ant: ¡Portones!, alzad los dinteles, levantaos, puertas antiguas.
     salmo: salmo-23
@@ -62,8 +62,8 @@ dedicacion:
       - 'Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
   opciones:
     himno:
+    - No rechazaremos
     - ¡Jerusalén, ciudad dichosa!
-    - Nueva Jerusalén y ciudad santa
     lectura2:
     - titulo: EDIFICACIÓN Y CONSAGRACIÓN DE LA CASA DE DIOS EN NOSOTROS
       texto: |-
@@ -193,7 +193,7 @@ dedicacion:
           - Y sus torres serán batidas con oro.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
-  himno: María, pureza en vuelo
+  himno: Lucero de la mañana
   salmodia:
   - ant: María ha recibido la bendición del Señor y la misericordia de Dios, su salvador.
     salmo: salmo-23
@@ -272,7 +272,7 @@ virgen-maria:
       - Por ti la bendición del Padre ha brillado sobre los hombres.
   opciones:
     himno:
-    - Lucero de la mañana
+    - María, pureza en vuelo
     lectura1:
     - titulo: POR LA FE, SOMOS HIJOS Y HEREDEROS DE DIOS
       texto: |-
@@ -701,7 +701,7 @@ santa-maria-sabado:
         - Su vida ínclita embellece a toda la Iglesia.
 apostoles:
   nombre: Común de apóstoles
-  himno: ¡Guardadnos en la fe y en la unidad
+  himno: Mensajeros de Dios
   salmodia:
   - ant: A toda la tierra alcanza su pregón y hasta los límites del orbe su lenguaje.
     salmo: salmo-18-a
@@ -736,7 +736,7 @@ apostoles:
       - En su momento se os sugerirá lo que tenéis que decir.
   opciones:
     himno:
-    - Mensajeros de Dios
+    - ¡Guardadnos en la fe y en la unidad
     - Voceros de Dios
   pascua:
     salmodia:
@@ -824,7 +824,7 @@ apostoles:
           - Porque todo cuanto me ha comunicado el Padre os lo he dado a conocer.
 varios-martires:
   nombre: 'Común de mártires: para varios mártires'
-  himno: Pléyade santa y noble de mártires insignes
+  himno: Testigos de amor
   salmodia:
   - ant: Los santos mártires derramaron su sangre por Cristo; por ello han conseguido el premio eterno.
     salmo: salmo-32-ii
@@ -893,7 +893,7 @@ varios-martires:
       - Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo.
   opciones:
     himno:
-    - Testigos de amor
+    - Pléyade santa y noble de mártires insignes
   pascua:
     versiculo:
     - - V
@@ -980,7 +980,7 @@ varios-martires:
           - Así seréis hijos de vuestro Padre celestial.
 un-martir:
   nombre: 'Común de mártires: para un mártir'
-  himno: Pléyade santa y noble de mártires insignes
+  himno: Testigos de amor
   salmodia:
   - ant: Todos os odiarán por mi nombre; pero el que persevere hasta el fin se salvará.
     salmo: salmo-2
@@ -1051,7 +1051,7 @@ un-martir:
       - Ahora me aguarda la corona merecida.
   opciones:
     himno:
-    - Testigos de amor
+    - Pléyade santa y noble de mártires insignes
   pascua:
     salmodia:
     - ant: Todos os odiarán por mi nombre; pero el que persevere hasta el fin se salvará. Aleluia.
@@ -1446,7 +1446,7 @@ doctores:
   nombre: Común de doctores de la Iglesia
   hereda: pastores
   hereda_mujeres: virgenes   # las doctoras (todas vírgenes): completadas por el común de vírgenes
-  himno: Vosotros sois luz del mundo
+  himno: Hondo saber de Dios fue vuestra ciencia
   lectura1:
     titulo: FELICIDAD DE LOS JUSTOS EN DIOS
     texto: |-
@@ -1501,7 +1501,7 @@ doctores:
       - Es como un padre de familia que va sacando del arca lo nuevo y lo antiguo.
   opciones:
     himno:
-    - Hondo saber de Dios fue vuestra ciencia
+    - Vosotros sois luz del mundo
     lectura2:
     - titulo: SOBRE LA TRANSMISIÓN DE LA REVELACIÓN DIVINA
       texto: |-
@@ -1722,7 +1722,7 @@ virgenes:
         - Se preocupan de los asuntos del Señor, consagrándose a ellos en cuerpo y alma.
 santos-varones:
   nombre: Común de santos varones
-  himno: Desde que mi voluntad
+  himno: Dichosos los que, oyendo la llamada
   salmodia:
   - ant: Te pidió vida y se la has concedido, Señor; lo has vestido de honor y majestad.
     salmo: salmo-20-2-8-14
@@ -1795,7 +1795,7 @@ santos-varones:
       - Toda bondad, justicia y verdad son fruto de la luz.
   opciones:
     himno:
-    - Dichosos los que, oyendo la llamada
+    - Desde que mi voluntad
     lectura1:
     - titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
       texto: |-
@@ -2020,7 +2020,7 @@ santos-varones:
           - Todos sois uno en Cristo Jesús.
 santas-mujeres:
   nombre: Común de santas mujeres
-  himno: La mujer fuerte
+  himno: Dichosa la mujer que ha conservado
   salmodia:
   - ant: Abre la boca con sabiduría y su lengua enseña con bondad.
     salmo: salmo-18-a
@@ -2093,7 +2093,7 @@ santas-mujeres:
       - Toda bondad, justicia y verdad son fruto de la luz.
   opciones:
     himno:
-    - Dichosa la mujer que ha conservado
+    - La mujer fuerte
     lectura1:
     - titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
       texto: |-

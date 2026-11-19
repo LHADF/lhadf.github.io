@@ -6,7 +6,7 @@
 # Desde ahora la base es la fuente: se corrige acá.
 dedicacion:
   nombre: Común de la dedicación de una iglesia
-  himno: Piedra angular y fundamento es Cristo
+  himno: El cielo y la tierra
   salmodia:
   - ant: Mi casa se llama casa de oración.
     salmo: salmo-62-2-9
@@ -53,7 +53,7 @@ dedicacion:
     texto: 'Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.'
   opciones:
     himno:
-    - El cielo y la tierra
+    - Piedra angular y fundamento es Cristo
   pascua:
     salmodia:
     - ant: Mi casa se llama casa de oración. Aleluia.
@@ -375,7 +375,7 @@ apostoles:
   inv_ant: Venid, adoremos al Señor, rey de los apóstoles.
 varios-martires:
   nombre: 'Común de mártires: para varios mártires'
-  himno: Éstos que van vestidos
+  himno: Testigos de la sangre
   salmodia:
   - ant: 'En medio de sus tormentos, los mártires de Cristo contemplaban su gloria y decían: «Ayúdanos, Señor.»'
     salmo: salmo-62-2-9
@@ -424,8 +424,8 @@ varios-martires:
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de las santas mártires N. y N. que obtengamos la fortaleza de vencer nuestras dificultades como ellas vencieron los tormentos del martirio. Por nuestro Señor Jesucristo.
   opciones:
     himno:
+    - Éstos que van vestidos
     - Testigos de amor
-    - Testigos de la sangre
   pascua:
     salmodia:
     - ant: 'En medio de sus tormentos, los mártires de Cristo contemplaban su gloria y decían: «Ayúdanos, Señor.» Aleluia.'
@@ -455,7 +455,7 @@ varios-martires:
   inv_ant: Venid, adoremos al Señor, rey de los mártires.
 un-martir:
   nombre: 'Común de mártires: para un mártir'
-  himno: Quien entrega su vida por amor
+  himno: Palabra del Señor ya rubricada
   salmodia:
   - ant: Te alabarán mis labios, Señor, porque tu gracia vale más que la vida.
     salmo: salmo-62-2-9
@@ -504,7 +504,7 @@ un-martir:
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de la santa mártir N. que obtengamos la fortaleza de vencer nuestras dificultades como ella venció los tormentos del martirio. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Palabra del Señor ya rubricada
+    - Quien entrega su vida por amor
   pascua:
     salmodia:
     - ant: Te alabarán mis labios, Señor, porque tu gracia vale más que la vida. Aleluia.
@@ -621,7 +621,7 @@ doctores:
   nombre: Común de doctores de la Iglesia
   hereda: pastores
   hereda_mujeres: virgenes   # las doctoras (todas vírgenes): completadas por el común de vírgenes
-  himno: Experiencia de Dios fue vuestra ciencia
+  himno: Para vosotros, el misterio del Padre
   lectura:
     ref: Sb 7, 13-14
     texto: 'Aprendí sin malicia, reparto sin envidia, y no me guardo sus riquezas. Porque es un tesoro inagotable para los hombres: los que lo adquieren se atraen la amistad de Dios, porque el don de su enseñanza los recomienda.'
@@ -642,9 +642,6 @@ doctores:
   oraciones:
   - para: ''
     texto: Tú, Señor, que concediste a san N. un conocimiento profundo de la sabiduría divina, concédenos, por su intercesión, ser siempre fieles a tu palabra y llevarla a la práctica en nuestra vida. Por nuestro Señor Jesucristo.
-  opciones:
-    himno:
-    - Para vosotros, el misterio del Padre
   pascua:
     responsorio:
     - - V
@@ -742,7 +739,7 @@ virgenes:
   inv_ant: Venid, adoremos al Señor, rey de las vírgenes.
 santos-varones:
   nombre: Común de santos varones
-  himno: Cantemos nuestra fe y, al confesarla
+  himno: Vosotros sois luz del mundo
   salmodia:
   - ant: El Señor les concedió una gloria eterna y su nombre no será nunca olvidado.
     salmo: salmo-62-2-9
@@ -807,7 +804,7 @@ santos-varones:
     texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de san N., podamos ser un día contados entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Vosotros sois luz del mundo
+    - Cantemos nuestra fe y, al confesarla
   pascua:
     salmodia:
     - ant: El Señor les concedió una gloria eterna y su nombre no será nunca olvidado. Aleluia.
@@ -868,7 +865,7 @@ santos-varones:
   inv_ant: Venid, adoremos al Señor, aclamemos al Dios admirable en sus santos.
 santas-mujeres:
   nombre: Común de santas mujeres
-  himno: Dichosas sois vosotras que guardasteis
+  himno: Finísimo fue el lino con que ella
   salmodia:
   - ant: Mi alma está unida a ti y tu diestra me sostiene.
     salmo: salmo-62-2-9
@@ -929,9 +926,6 @@ santas-mujeres:
     texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de santa N., podamos ser un día contados entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
   - para: un santo educador
     texto: Señor, tú elegiste entre tus fieles a santa N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
-  opciones:
-    himno:
-    - Finísimo fue el lino con que ella
   pascua:
     salmodia:
     - ant: Mi alma está unida a ti y tu diestra me sostiene. Aleluia.
@@ -943,9 +937,6 @@ santas-mujeres:
     ant_benedictus: El reino de los cielos se parece a un comerciante en perlas finas que, al encontrar una de gran valor, se va a vender todo lo que tiene y la compra. Aleluia.
     inv_ant: Venid, adoremos al Señor, aclamemos al Dios admirable en sus santas. Aleluia.
   variantes:
-    himno:
-    - etiqueta: 'opcion: 3'
-      texto: Dichosas sois vosotras que guardasteis
     responsorio:
     - etiqueta: 'Para varias santas:'
       texto:

@@ -6,7 +6,7 @@
 # Desde ahora la base es la fuente: se corrige acá.
 dedicacion:
   nombre: Común de la dedicación de una iglesia
-  himno: Nueva Jerusalén y ciudad santa
+  himno: Alta ciudad de piedras vivas
   salmodia:
   - ant: El Altísimo consagra su morada; teniendo a Dios en medio, no vacila.
     salmo: salmo-45
@@ -55,7 +55,7 @@ dedicacion:
     texto: 'Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.'
   opciones:
     himno:
-    - Alta ciudad de piedras vivas
+    - Nueva Jerusalén y ciudad santa
   pascua:
     salmodia:
     - ant: El Altísimo consagra su morada; teniendo a Dios en medio, no vacila. Aleluia.
@@ -149,7 +149,7 @@ dedicacion:
       ant_magnificat: Gozad con Jerusalén, todos los que la amáis, y alegraos por siempre más de su alegría. Aleluia.
 virgen-maria:
   nombre: Común de la Santísima Virgen María
-  himno: Todos te deben servir
+  himno: Salve, del mar Estrella
   salmodia:
   - ant: Alégrate, María, llena de gracia, el Señor está contigo.
     salmo: salmo-121
@@ -208,7 +208,7 @@ virgen-maria:
     texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Salve, del mar Estrella
+    - Todos te deben servir
     preces:
     - intro: 'Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:'
       respuesta: Que la llena de gracia interceda por nosotros. / Mira a la llena de gracia y escúchanos.
@@ -346,7 +346,7 @@ virgen-maria:
       ant_magnificat: El Señor ha mirado mi humillación y el Poderoso ha hecho obras grandes por mí. Aleluia.
 apostoles:
   nombre: Común de apóstoles
-  himno: Benditos son los pies de los que llegan
+  himno: ¡Columnas de la Iglesia, piedras vivas!
   salmodia:
   - ant: Vosotros sois los que habéis perseverado conmigo en mis pruebas.
     salmo: salmo-115
@@ -386,9 +386,6 @@ apostoles:
     - - Tú que quisiste que tu Hijo resucitara el primero de entre los muertos,
       - concede a todos los que son de Cristo resucitar con él, el día de su venida.
   padrenuestro_intro: 'Oremos ahora al Padre, como Jesús enseñó a los apóstoles:'
-  opciones:
-    himno:
-    - ¡Columnas de la Iglesia, piedras vivas!
   pascua:
     salmodia:
     - ant: Vosotros sois los que habéis perseverado conmigo en mis pruebas. Aleluia.
@@ -475,7 +472,7 @@ apostoles:
       ant_magnificat: No sois vosotros los que me habéis elegido, soy yo quien os he elegido; y os he destinado para que vayáis y deis fruto, y vuestro fruto dure. Aleluia.
 varios-martires:
   nombre: 'Común de mártires: para varios mártires'
-  himno: Espíritus sublimes, ¡oh mártires gloriosos!
+  himno: Espíritus sublimes
   salmodia:
   - ant: Los cuerpos de los santos fueron sepultados en paz, y su fama vive por generaciones.
     salmo: salmo-114
@@ -649,7 +646,7 @@ varios-martires:
             - porque has asociado a nuestros hermanos difuntos a tu muerte.
 un-martir:
   nombre: 'Común de mártires: para un mártir'
-  himno: Palabra del Señor ya rubricada
+  himno: Oh Dios, que eres el premio, la corona
   salmodia:
   - ant: El que quiera seguirme, que se niegue a sí mismo, cargue con su cruz y se venga conmigo.
     salmo: salmo-114
@@ -682,7 +679,7 @@ un-martir:
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de la santa mártir N. que obtengamos la fortaleza de vencer nuestras dificultades como ella venció los tormentos del martirio. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Oh Dios, que eres el premio, la corona
+    - Palabra del Señor ya rubricada
   pascua:
     salmodia:
     - ant: El que quiera seguirme, que se niegue a sí mismo, cargue con su cruz y se venga conmigo. Aleluia.
@@ -1356,7 +1353,7 @@ santos-varones:
   variantes:
     himno:
     - etiqueta: 'II Para un santo religioso:'
-      texto: Dichosos los que oísteis la llamada
+      texto: Dichosos los que, oyendo la llamada
     ant_magnificat:
     - etiqueta: 'Para varios santos:'
       texto: Se mantuvieron fieles hasta la muerte y recibieron del Señor la corona de la vida.
@@ -1451,7 +1448,7 @@ santos-varones:
         texto: Los ojos del Señor están puestos en sus fieles, en los que esperan en su misericordia.
 santas-mujeres:
   nombre: Común de santas mujeres
-  himno: Finísimo fue el lino con que ella
+  himno: Un amor casto y puro
   salmodia:
   - ant: Tu sierva, Señor, se regocijó con tu salvación.
     salmo: salmo-121
@@ -1516,7 +1513,7 @@ santas-mujeres:
     texto: Señor, tú elegiste entre tus fieles a santa N. para que mostrara a sus hermanos el camino que conduce a ti; concédenos que su ejemplo nos ayude a seguir a Jesucristo, nuestro Maestro, para que un día logremos alcanzar, junto con nuestros hermanos, la gloria de tu reino. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Un amor casto y puro
+    - Finísimo fue el lino con que ella
   pascua:
     salmodia:
     - ant: Tu sierva, Señor, se regocijó con tu salvación. Aleluia.
