@@ -59,7 +59,7 @@ test('reglas de CRU para el acento del metro (modos de un acento)', () => {
   assert.equal(acentoMetro('Señor, no me corrijas con ira'), 'i');                    // …fd
   assert.equal(acentoMetro('En la sentencia tendrás razón'), 'drás');                  // fdf: esdrújula
   assert.equal(acentoMetro('En su boca no hay sinceridad'), 'ce');                     // ndf: esdrújula suave
-  assert.equal(acentoMetro('en el trono que ha colocado para juzgar'), 'juz');         // nunca la aguda final, como en la cadencia (CRU, 20/11/2026)
+  assert.equal(acentoMetro('en el trono que ha colocado para juzgar'), 'gar');         // ddf con dos débiles: aguda suave
   assert.equal(acentoMetro('no tengo miedo a Dios'), 'a');                             // monosílabo fuerte final: la neutra de antes («ansia [de] ti»)
   assert.equal(acentoMetro('a cantar sus cánticos'), 'cán');                           // esdrújula
   for (const cod of ['2D', '4g', '5a', '8G']) assert.equal(acentoMetro('En su boca no hay sinceridad', cod), 'ce');
@@ -72,12 +72,13 @@ test('dos fuertes seguidas: la segunda manda y la primera es débil («¡oh Dios
   assert.equal(pautar('Te vio el mar, ¡oh Dios! * te vieron las aguas.', '8G').split(' | ')[0], 'Te vio el [mar], ¡oh Dios!');
 });
 
-test('mediante en español: nunca acento en la aguda final, en ningún modo (CRU, 20/11/2026)', () => {
+test('agudas en la mediante: con dos débiles antes, aguda sin juntar notas; con una neutra, la neutra (CRU, 20/11/2026)', () => {
   const ac = (v, cod) => { const h = S.pautarVerso(v, cod, 'es', false).med; return h.sils.filter((x, i) => h.res[i].rol === 'acc').map(x => x.t).join(' '); };
   for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
-    const um = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false).med.res.at(-1);
-    assert.notEqual(um.rol, 'acc', cod);
+    const T = S.tono(cod), um = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false).med.res.at(-1);
+    assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // la última lleva la nota del acento, sola
   }
+  assert.equal(ac('el camino que has de seguir, * y nada más.', '8G'), 'de');
   assert.equal(ac('Mi alma tiene ansia de ti, * mi carne tiene sed.', '3a'), 'an de');      // dos acentos: «[an]sia [de] ti»
   assert.equal(ac('Mi alma tiene ansia de ti, * mi carne tiene sed.', '8G'), 'de');
   assert.equal(ac('¿No fui yo, el Señor? * ¡No hay otro Dios fuera de mí!', '8G'), 'el');
@@ -214,7 +215,7 @@ test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', ()
         if (h.res.some(r => !r || !r.nota)) mal.push(`${id} ${cod}: sílaba sin nota: ${v}`);
         const acc = h.res.map((r, i) => r.rol === 'acc' ? i : -1).filter(i => i >= 0);
         if (k >= 3 && h.regla !== 'corta' && (!acc.length || acc.at(-1) < k - 3)) mal.push(`${id} ${cod}: acento fuera de las tres últimas: ${v}`);
-        if (acc.length && t[acc.at(-1)] === 'D' && h.regla !== 'sin F' && !/^ddf·/.test(h.regla)) mal.push(`${id} ${cod}: acento en débil: ${v}`);
+        if (acc.length && t[acc.at(-1)] === 'D' && h.regla !== 'sin F' && !/^ddf[· ]/.test(h.regla)) mal.push(`${id} ${cod}: acento en débil: ${v}`);
         if (h === pv.ter && k >= 2 && h.res[k - 1].rol === 'acc') mal.push(`${id} ${cod}: cadencia con acento en la última: ${v}`);
         if (h.sils.some(x => !/[aeiouáéíóúüy]/i.test(x.t))) mal.push(`${id}: sílaba sin vocal: ${v}`);
       }

@@ -257,7 +257,7 @@ function clasificar(s){
 }
 // Último acento de la mitad, mirando desde el final. En la cadencia (terminación) nunca va en la última sílaba
 // (CRU): «a quién temeré» se acentúa en «te»; se prefiere una neutra. En la mediante y la flexa sí, si hace falta.
-function acentoFinal(t, cadencia, s){
+function acentoFinal(t, cadencia, s, neutras){
   const n=t.length; if(n===0) return {p:-1,regla:''}; if(n===1) return {p:0,regla:'f'};
   if(t[n-1]==='F'){
     if(t[n-2]==='F') return {p:n-2, regla:'ff'};
@@ -270,7 +270,14 @@ function acentoFinal(t, cadencia, s){
       const postonica = s && s[n-4] && s[n-4].f && s[n-4].iw===s[n-3].iw;
       return postonica ? {p:n-2, regla:'ddf··'} : {p:n-3, regla:'ddf·'};
     }
-    return {p:n-1, regla:'ddf'};                    // aguda suave: «para juzgar»
+    // mediante en español: si la antepenúltima o la penúltima es de una palabra átona (ni acentuada ni claramente débil,
+    // como «de», «el», «a»), se acentúa esa y no la aguda final: «ansia de ti», «yo, el Señor», «miedo a Dios» (CRU, 20/11/2026)
+    if(neutras && s){
+      const neutra=i=>i>=0 && !s.some((x,j)=>x.iw===s[i].iw && t[j]==='F');
+      if(neutra(n-3)) return {p:n-3, regla:'ddf n'};
+      if(neutra(n-2)) return {p:n-2, regla:'ddf n'};
+    }
+    return {p:n-1, regla:'ddf'};                    // aguda suave, si las dos de antes son débiles: «para juzgar»
   }
   if(t[n-2]==='F') return {p:n-2, regla:'fd'};      // normal: «con ira»
   if(n>=3 && t[n-3]==='F') return {p:n-3, regla:'f··'};   // esdrújula: «cánticos»
@@ -295,8 +302,8 @@ const nota0=x=>String(x).replace(/[^a-mA-M]/g,'').slice(-1).toLowerCase();
 function puntear(s, E, intonar, flexa, cadencia, lang){
   const n=s.length, res=new Array(n).fill(null); if(!n) return {res, regla:''};
   const t=clasificar(s);
-  // nunca la aguda final (ddf), como en la cadencia: también en la flexa (CRU, 19/11/2026) y en la mediante, en español (20/11/2026)
-  const ult=acentoFinal(t, cadencia||flexa||lang==='es', s);
+  // nunca la aguda final (ddf) en la cadencia ni en la flexa (CRU, 19/11/2026); en la mediante, solo si hay una neutra antes (20/11/2026)
+  const ult=acentoFinal(t, cadencia||flexa, s, lang==='es');
   const pos=new Array(E.acc.length).fill(-1);
   pos[E.acc.length-1]=ult.p;
   for(let k=E.acc.length-2;k>=0;k--) pos[k]= pos[k+1]>=0 ? acentoPrevio(t,pos[k+1]) : -1;
