@@ -59,8 +59,8 @@ test('reglas de CRU para el acento del metro (modos de un acento)', () => {
   assert.equal(acentoMetro('Señor, no me corrijas con ira'), 'i');                    // …fd
   assert.equal(acentoMetro('En la sentencia tendrás razón'), 'drás');                  // fdf: esdrújula
   assert.equal(acentoMetro('En su boca no hay sinceridad'), 'ce');                     // ndf: esdrújula suave
-  assert.equal(acentoMetro('en el trono que ha colocado para juzgar'), 'gar');         // ddf: aguda suave
-  assert.equal(acentoMetro('no tengo miedo a Dios'), 'Dios');                          // monosílabo fuerte
+  assert.equal(acentoMetro('en el trono que ha colocado para juzgar'), 'juz');         // nunca la aguda final, como en la cadencia (CRU, 20/11/2026)
+  assert.equal(acentoMetro('no tengo miedo a Dios'), 'a');                             // monosílabo fuerte final: la neutra de antes («ansia [de] ti»)
   assert.equal(acentoMetro('a cantar sus cánticos'), 'cán');                           // esdrújula
   for (const cod of ['2D', '4g', '5a', '8G']) assert.equal(acentoMetro('En su boca no hay sinceridad', cod), 'ce');
 });
@@ -72,12 +72,15 @@ test('dos fuertes seguidas: la segunda manda y la primera es débil («¡oh Dios
   assert.equal(pautar('Te vio el mar, ¡oh Dios! * te vieron las aguas.', '8G').split(' | ')[0], 'Te vio el [mar], ¡oh Dios!');
 });
 
-test('agudas en la mediante: no se juntan en una sílaba notas de sílabas distintas', () => {
+test('mediante en español: nunca acento en la aguda final, en ningún modo (CRU, 20/11/2026)', () => {
+  const ac = (v, cod) => { const h = S.pautarVerso(v, cod, 'es', false).med; return h.sils.filter((x, i) => h.res[i].rol === 'acc').map(x => x.t).join(' '); };
   for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
-    const T = S.tono(cod), pv = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false);
-    const um = pv.med.res.at(-1);
-    assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // la última lleva la nota del acento, sola
+    const um = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false).med.res.at(-1);
+    assert.notEqual(um.rol, 'acc', cod);
   }
+  assert.equal(ac('Mi alma tiene ansia de ti, * mi carne tiene sed.', '3a'), 'an de');      // dos acentos: «[an]sia [de] ti»
+  assert.equal(ac('Mi alma tiene ansia de ti, * mi carne tiene sed.', '8G'), 'de');
+  assert.equal(ac('¿No fui yo, el Señor? * ¡No hay otro Dios fuera de mí!', '8G'), 'el');
 });
 
 test('cadencia: nunca acento en la última sílaba (CRU)', () => {
@@ -118,7 +121,7 @@ test('flexa: baja un tono, o una tercera menor desde do o fa; nunca acentúa la 
 
 test('modos de dos acentos: período de 2 sílabas, 3 como máximo (como Chant Tools en latín)', () => {
   // fuerte a 2 o a 3
-  assert.equal(pautar('No tengo miedo a Dios, * ni en su presencia.', '1g').split(' | ')[0], 'No tengo [mie]do a [Dios],');
+  assert.equal(pautar('No tengo miedo a Dios, * ni en su presencia.', '1g').split(' | ')[0], 'No tengo [mie]do [a] Dios,');
   assert.equal(pautar('El Señor da la muerte y la vida, * hunde en el abismo y levanta.', '7a').split(' | ')[0], 'El Señor da la muerte [y] la [vi]da,');
   // sin fuerte ni neutra a 2 o a 3: acento a 2 aunque sea débil (Chant Tools: «in progénies et progénies»)
   assert.equal(pautar('Gloria al Padre, y al Hijo, * y al Espíritu Santo.', '1g'), 'Gloria al Padre, [y] al [Hi]jo, | y al Espí_ri__tu_ [San]to.');
@@ -228,7 +231,7 @@ test('versos reales, pautados', () => {
   assert.equal(pautar("¡Oh Dios!, tú eres mi Dios, por ti madrugo, * mi alma está sedienta de ti;", '1g'),
     '¡Oh Dios!, tú eres mi Dios, por [ti] ma[dru]go, | mi alma está se_dien__ta_ [de] ti;');
   // Salmo 35 (miércoles I, Laudes): modo 2
-  assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo a [Dios], | ni en su _pre_[sen]cia.»');
+  assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo [a] Dios, | ni en su _pre_[sen]cia.»');
   assert.equal(pautar('acostado medita el crimen, † se obstina en el mal camino, * no rechaza la maldad.', '2D'),
     'acostado medita el [cri]men, | se obstina en el mal ca[mi]no, | no recha_za_ [la] maldad.');
   // Salmo 109 (domingos, Vísperas): modo 3 a

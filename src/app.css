@@ -198,8 +198,9 @@ b .k,.todos .k{font-weight:400}
 .v{margin:0 0 .55em}
 .v .h1{display:block;padding-left:2.2em;text-indent:-2.2em}
 .v .h2{display:block;padding-left:2.2em;text-indent:-1.1em}
+.v .h3{display:block;padding-left:2.2em;text-indent:0}   /* renglón que sigue en la misma mitad: como el quebrado por falta de ancho */
 /* Renglón que no entra en el ancho: lo que baja va más adentro que el renglón de la cadencia (dos sangrías) */
-.v .h1 *,.v .h2 *,.himno .ln *{text-indent:0}
+.v .h1 *,.v .h2 *,.v .h3 *,.himno .ln *{text-indent:0}
 .v .sg{color:var(--rubric);font-family:var(--serif);font-size:.95em}
 .v b{font-weight:600}
 .v b.ac,.sal-p svg.Exsurge tspan[style*="bold"]{font-weight:700!important}   /* acentos del modo en la salmodia (docs/diseno.md) */

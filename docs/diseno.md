@@ -5,7 +5,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 ## Ortotipografía
 
 - **En rojo:** rúbricas (además en cursiva), la letra capital inicial del gregoriano y el número de modo, los números de estrofa de los himnos, ℣, ℟, asterisco y cruz.
-- **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): lo que baja va más adentro que el renglón de la cadencia, como con dos sangrías (2,2 em; el renglón de la cadencia, 1,1 em). Sin guion ni otra marca. Vale para salmos, cánticos e himnos.
+- **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): lo que baja va más adentro que el renglón de la cadencia, como con dos sangrías (2,2 em; el renglón de la cadencia, 1,1 em). Sin guion ni otra marca. Vale para salmos, cánticos e himnos. El tercer renglón de una estrofa sin flexa cuyo primero termina en «:» va igual de adentro (`.v .h3`, CRU 20/11/2026).
 - **Partituras de himnos:** cada estrofa y el Amén empiezan renglón nuevo; el anterior termina con el custos de la nota siguiente y el pentagrama vacío hasta el final (en el GABC, `(::Z)`).
 - **Glifos propios** (fuente «Cantoral Signos»): ℣ y ℟ con trazo diagonal, cruz patada (✠) y asterisco de cinco pétalos.
 - **Latín:** *i* en lugar de *j*; ligaduras æ/œ; tildes de acento. Source Serif 4 no trae «ǽ» ni «Ǽ»: van en `src/assets/ae.css` (familia propia «Septies AE», nunca «Cantoral Signos»), armadas con la «æ» y la tilde de la misma fuente (`tools/fuente_ae.py`), para que no se vean más altas.
@@ -17,7 +17,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 
 - **Siempre interlineal** y en **verde** (`--glosa`).
 - **Literal, palabra por palabra**, bajo cada palabra latina; por frases o con otro orden solo cuando ir una por una confundiría. Es una traducción propia, no el español de la Liturgia de las Horas.
-- **El latín no se toca:** corre con espacios regulares; la traducción se acomoda. Cada traducción arranca bajo su palabra latina; si se encima con la de al lado, las del renglón se reparten en el espacio libre de los dos lados, lo menos lejos posible de su palabra (el anclaje cede), y **nunca se superponen**. Si ni así entran, el renglón se quiebra antes de la última palabra (`colocarGlosas` / `ajustarGlosas` en `src/app.js`, que se rehacen al cargar la letra, al cambiar el ancho o el tamaño y al volver a la app).
+- **El latín no se toca:** corre con espacios regulares; la traducción se acomoda. Cada traducción arranca bajo su palabra latina; si se encima con la de al lado, las del renglón se reparten en el espacio libre de los dos lados, lo menos lejos posible de su palabra (el anclaje cede), y **nunca se superponen**. Si ni así entran, el renglón se quiebra una sola vez, antes de la primera palabra cuya traducción ya no entra; la última palabra del versículo no baja sola, baja con la anterior (`colocarGlosas` / `ajustarGlosas` en `src/app.js`, que se rehacen al cargar la letra, al cambiar el ancho o el tamaño y al volver a la app).
 - **Preposiciones:** la preposición latina va traducida junto con la palabra que sigue, en un solo par («ad dandam = para dar», «in terra = en la tierra»), y esas dos palabras no se separan de renglón.
 - Salmos: un hemistiquio latino y debajo su traducción. Prosa (lecturas, oraciones, versículos, antífonas): grupos de palabras con su traducción debajo, que bajan juntos al cortar el renglón.
 

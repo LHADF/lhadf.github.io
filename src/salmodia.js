@@ -295,7 +295,8 @@ const nota0=x=>String(x).replace(/[^a-mA-M]/g,'').slice(-1).toLowerCase();
 function puntear(s, E, intonar, flexa, cadencia, lang){
   const n=s.length, res=new Array(n).fill(null); if(!n) return {res, regla:''};
   const t=clasificar(s);
-  const ult=acentoFinal(t, cadencia||flexa, s);   // en la flexa, como en la cadencia: nunca la última (CRU, 19/11/2026)
+  // nunca la aguda final (ddf), como en la cadencia: también en la flexa (CRU, 19/11/2026) y en la mediante, en español (20/11/2026)
+  const ult=acentoFinal(t, cadencia||flexa||lang==='es', s);
   const pos=new Array(E.acc.length).fill(-1);
   pos[E.acc.length-1]=ult.p;
   for(let k=E.acc.length-2;k>=0;k--) pos[k]= pos[k+1]>=0 ? acentoPrevio(t,pos[k+1]) : -1;
@@ -382,10 +383,13 @@ function pautarVerso(verso, cod, lang, intonar){
 /* ---------- Salidas ---------- */
 function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 // Renglones (HTML) de una mitad: acento en negrita, preparatorias en cursiva
+// Marca de un renglón que continúa la misma mitad (« ¶ »: sin flexa, como «Sabed que el Señor es Dios:»). La app lo pone más
+// adentro, como un renglón quebrado por falta de ancho (CRU, 20/11/2026).
+const SIGUE='\u0001';
 function renglonesMitad(h){
   const out=[]; let cur=''; let k=0;
   h.pals.forEach((p,iw)=>{
-    if(p.br && cur){ out.push(cur.trim()); cur=''; }
+    if(p.br && cur){ out.push(cur.trim()); cur=SIGUE; }   // renglón que sigue en la misma mitad («¶»): va más adentro
     cur+=esc(p.pre);
     p.sil.forEach(sy=>{ const r=h.res[k++]||{rol:'ten'}; let t=esc(sy.t);
       if(r.rol==='acc') t='<b class="ac">'+t+'</b>'; else if(r.rol==='prep') t='<i>'+t+'</i>';
@@ -404,7 +408,7 @@ function renglonesVerso(pv){
   L.push(...renglonesMitad(pv.ter));
   return L;
 }
-function htmlVerso(pv){ return renglonesVerso(pv).join('<br>'); }
+function htmlVerso(pv){ return renglonesVerso(pv).map(l=>l.replace(SIGUE,'')).join('<br>'); }
 // El verso con marcas de texto (**acento**, _preparatoria_), para los versos con interlineal
 function marcadoMitad(h){
   let out=[]; let k=0;
@@ -483,6 +487,6 @@ function omitirAnt(versos, ant){
   return null;
 }
 const API={CONFIG,TONOS,ROMANO,partes,tono,etiquetaTono,etiquetaCorta,silabasLatin,silabasEspanol,palabras,plano,clasificar,acentoFinal,acentoPrevio,
-           puntear,pautarVerso,renglonesVerso,htmlVerso,marcadoVerso,gabcVerso,gabcSalmo,dividirVerso,listaTonos,flexDe,CRUZ_ANT,omitirAnt};
+           puntear,pautarVerso,renglonesVerso,htmlVerso,marcadoVerso,gabcVerso,gabcSalmo,dividirVerso,listaTonos,flexDe,CRUZ_ANT,omitirAnt,SIGUE};
 if(typeof module!=='undefined') module.exports=API; else root.Salmodia=API;
 })(this);

@@ -77,11 +77,12 @@ cantico_evangelico:
   # Del segundo versículo en adelante, pautados en latín, con su traducción
   tono_cantico: 3a
   # Marcas escritas a mano, como en el libro de Completas ADF: **negrita** = acento, _cursiva_ = preparación.
+  # El modo 3 tiene mediante de dos acentos: los dos en negrita, como en Chant Tools (CRU, 20/11/2026).
   versos:
-    - quia vidérunt óculi **me**i * salutá_re_ **tu**um,
+    - quia vidérunt **ó**culi **me**i * salutá_re_ **tu**um,
     - '**quod** pa**rás**ti * ante fáciem ómnium po_pu_**ló**rum,'
-    - Lumen ad revelatiónem **génti**um, * et glóriam plebis tu_æ_ **Ís**rael.
-    - Glória Patri, et **Fíli**o, * et Spíritu_i_ **Sanc**to.
+    - Lumen ad revelati**ó**nem **génti**um, * et glóriam plebis tu_æ_ **Ís**rael.
+    - Glória **Pa**tri, et **Fíli**o, * et Spíritu_i_ **Sanc**to.
     - Sicut erat in princípio, et **nunc** et **sem**per, * et in sǽcula sæculó_rum_. **A**men.
   # Primer versículo, para Completas recitadas (cantadas, va en partitura)
   primer_verso: 'Nunc dimíttis servum **tu**um, **Dómi**ne, * secúndum verbum tuum _in_ **pa**ce:'

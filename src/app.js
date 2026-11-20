@@ -183,7 +183,9 @@ function tonoDe(sal){ if(sal.modo) return (S.tonos||{})[claveTono(sal)] || sal.m
 function selectorModo(sec){
   const cod=SAL.tono(tonoDe(sec)).cod, def=SAL.tono(sec.modo).cod;
   const op=t=>`<option value="${t.cod}"${t.cod===cod?' selected':''}>${esc(t.corta)}</option>`, L=SAL.listaTonos();
-  return `<label class="modo">Modo <select data-chg="tono" data-k="${esc(claveTono(sec))}" data-def="${def}" aria-label="Modo de la salmodia"><optgroup label="Del día">${L.filter(t=>t.cod===def).map(op).join('')}</optgroup><optgroup label="Otros modos">${L.filter(t=>t.cod!==def).map(op).join('')}</optgroup></select></label>`;
+  // arriba, los modos que se cantan en el salterio (por semana y domingo); los demás, en «Más modos» (CRU, 20/11/2026)
+  const USADOS=['1g','2D','3a','4g','5a','6F','7a','8G'], usados=USADOS.map(c=>L.find(t=>t.cod===c)).filter(Boolean);
+  return `<label class="modo">Modo <select data-chg="tono" data-k="${esc(claveTono(sec))}" data-def="${def}" aria-label="Modo de la salmodia"><optgroup label="Modos">${usados.map(op).join('')}</optgroup><optgroup label="Más modos">${L.filter(t=>!USADOS.includes(t.cod)).map(op).join('')}</optgroup></select></label>`;
 }
 // Devuelve las líneas (hemistiquios) de un verso, ya marcadas
 const ESTRIBILLO=/^R\.\s/;
@@ -194,14 +196,19 @@ function cruzVale(antSec){
   const sal=R().secciones.find(s=>s.k==='salmo' && s.ant===antSec.id);
   return !!(sal && sal.es && sal.versos.es && omitirAnt(sal.versos.es, t));
 }
+// Renglones de una mitad recitada: el que sigue en la misma mitad (« ¶ ») lleva la marca SAL.SIGUE (va más adentro)
+const renglonesT=t=>t.split(' ¶ ').map((x,i)=>(i?SAL.SIGUE:'')+esc(x));
+// Clase del renglón: h1 el primero, h2 los demás, h3 el que sigue en la misma mitad
+const claseRenglon=(l,k)=>String(l).startsWith(SAL.SIGUE)?'h3':(k?'h2':'h1');
+const sinSigue=l=>String(l).replace(SAL.SIGUE,'');
 function lineasVerso(v, modo, cod, lang, intonar){
   v=v.replace(/✠\s*/g,'');
   if(modo==='texto' || ESTRIBILLO.test(v)){
     const d=SAL.dividirVerso(v); const out=[];
     if(d.flex) out.push(`${esc(d.flex)}&nbsp;<span class="sg">†</span>`);
-    if(d.ter!=null && !d.med) out.push(...d.ter.split(' ¶ ').map(esc));   // solo la segunda mitad (antífona con †)
-    else if(d.ter!=null){ const m=d.med.split(' ¶ ').map(esc); m[m.length-1]+='&nbsp;<span class="sg">*</span>'; out.push(...m, ...d.ter.split(' ¶ ').map(esc)); }   // « ¶ »: dos renglones en la misma mitad
-    else out.push(...d.med.split(' ¶ ').map(esc));
+    if(d.ter!=null && !d.med) out.push(...renglonesT(d.ter));   // solo la segunda mitad (antífona con †)
+    else if(d.ter!=null){ const m=renglonesT(d.med); m[m.length-1]+='&nbsp;<span class="sg">*</span>'; out.push(...m, ...renglonesT(d.ter)); }   // « ¶ »: dos renglones en la misma mitad
+    else out.push(...renglonesT(d.med));
     return out;
   }
   return SAL.renglonesVerso(SAL.pautarVerso(v,cod,lang,intonar));
@@ -221,7 +228,7 @@ function versosHTML(versos, modo, cod, lang, desde, glosas, ent){
   return versos.map((v,i)=>{
     const ls=lineasVerso(v,modo,cod,lang,(desde+i)===(ent||0));
     const gs=glosas?glosaVerso(v,glosas[i]):null;
-    return `<p class="v">${ls.map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>${gs&&gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
+    return `<p class="v">${ls.map((l,k)=>`<span class="${claseRenglon(l,k)}">${sinSigue(l)}</span>${gs&&gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
   }).join('');
 }
 // Versos con marcas escritas a mano: **negrita** (acento) y _cursiva_ (preparación); * mediante, † flexa.
@@ -272,7 +279,7 @@ function salmoHTML(sal){
       // segundo renglón (mediante), «℟. Aleluia, aleluia» (terminación). En negrita, solo los acentos del modo.
       const vs=sal.aleluyas.flatMap(e=>[`Aleluia. † ${e[0]} * Aleluia.`, `${e[1]} * Aleluia, aleluia.`]);
       const lin=(v,i)=>{ const ls=SAL.renglonesVerso(SAL.pautarVerso(v,cod,'es',i===0));
-        return ls.map((l,k)=>`<p class="v">${k===ls.length-1?'<span class="k">℟.</span> ':''}${l}</p>`).join(''); };
+        return ls.map((l,k)=>`<p class="v">${k===ls.length-1?'<span class="k">℟.</span> ':''}${sinSigue(l)}</p>`).join(''); };
       if(modo==='primer'||modo==='todos') h+=partituraHTML(`name:salmo;\n%%\n${SAL.gabcSalmo(modo==='todos'?vs:vs.slice(0,1),cod,'es',{marcas:true})}`, null, false, true);
       const desde=(modo==='primer'||modo==='todos')?(modo==='todos'?vs.length:1):0;
       h+=`<div class="versos al19">${sal.aleluyas.map((e,k)=>{ const par=[2*k,2*k+1].filter(i=>i>=desde); return par.length?`<div class="est">${par.map(i=>lin(vs[i],i)).join('')}</div>`:''; }).join('')}</div>`;
@@ -286,7 +293,7 @@ function salmoHTML(sal){
   const aS=sal.es && keyP==='es' && antDe(sal.ant), om=aS ? omitirAnt(vP, txt(aS.t).p) : null;
   // la entonación: en el primer verso; con antífona igual al comienzo, en el siguiente; sin entonación si la base lo dice (Ef 1, «Bendito sea Dios», CRU)
   const ent=om ? om.ent : (sal.sinEnt ? -1 : 0), np=(om && om.ent) ? 2 : 1;
-  if(om) h+=`<div class="versos omit" title="Lo dice la antífona">${om.gris.map(v=>`<p class="v">${lineasVerso(v,'texto').map((l,k)=>`<span class="${k?'h2':'h1'}">${l}</span>`).join('')}</p>`).join('')}</div>`;
+  if(om) h+=`<div class="versos omit" title="Lo dice la antífona">${om.gris.map(v=>`<p class="v">${lineasVerso(v,'texto').map((l,k)=>`<span class="${claseRenglon(l,k)}">${sinSigue(l)}</span>`).join('')}</p>`).join('')}</div>`;
   // partitura
   let todos=(om?om.versos:vP).concat(sal.gloria?glP:[]);
   const inter = S.lengua==='bi' && sal.inter ? sal.inter : null;
@@ -359,14 +366,20 @@ function ajustarGlosas(raiz){
         const gap=.45*parseFloat(getComputedStyle(g.it[0]).fontSize);
         const m=g.it.map(t=>{ const r=t.getBoundingClientRect(); return {t,base:r.left,w:r.width,l:r.left}; });
         if(!colocarGlosas(m, izq, der, gap)){
-          if(m.length>1){ quebrar=m[m.length-1].t.parentElement; return; }
-          m[0].l=m[0].base;   // una sola traducción más larga que el renglón: se deja correr
+          // se quiebra una sola vez, antes de la primera palabra que ya no entra (no de a una desde el final:
+          // los saltos se acumularían y dejarían palabras solas en renglones con lugar)
+          let j=m.length-1; while(j>1 && !colocarGlosas(m.slice(0,j).map(o=>({base:o.base,w:o.w})), izq, der, gap)) j--;
+          if(gi===grupos.length-1 && j===m.length-1 && j>1) j--;   // la última palabra no baja sola: baja con la anterior
+          if(m.length>1){
+            const w=m[j].t.parentElement, nw=w.parentElement.classList.contains('nw')?w.parentElement:null;
+            if(!(nw && nw.contains(m[0].t))){ quebrar=nw||w; return; }
+          }
+          colocarGlosas(m, izq, Infinity, gap);   // no hay dónde quebrar (traducción más larga que el renglón): se deja correr sin encimarse
         }
         m.forEach(o=>{ if(Math.abs(o.l-o.base)>.5) o.t.style.left=(o.l-o.base)+'px'; });
       });
       if(!quebrar) break;
-      const w=quebrar.parentElement.classList.contains('nw')?quebrar.parentElement:quebrar;
-      const br=document.createElement('br'); br.className='ajuste'; w.parentNode.insertBefore(br,w);
+      const br=document.createElement('br'); br.className='ajuste'; quebrar.parentNode.insertBefore(br,quebrar);
     }
   }
   return listo;
