@@ -108,6 +108,10 @@ function propio(hora, fecha, region){
         : `Textos del ${C0.nombre}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
     } else if(ref.n!==ref.fer){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
+    // Celebración con propio en la base que toma textos del común (el santoral dice cuál): donde lo que trae es un texto del
+    // común (igual o casi), las otras opciones del común también se pueden elegir («Otras opciones»); lo propio de verdad, no
+    if(k && !DE && L.comunes){ const cid=X.comunDe((L.santoral[k]||{}).comun);
+      if(cid && L.comunes[cid]) X.elegirComun(P, ['lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'], L.comunes, cid, ref.n, ref.t==='Pascua', primeras?'primeras':null, hora+(primeras?'1':'')); }
     // Fiestas y solemnidades sin salmodia propia: la del común que indica el santoral (en las I Vísperas, la de sus I Vísperas);
     // si no hay común, salmos y antífonas del domingo de la I semana
     if(/^(Fiesta|Solemnidad)/.test(ref.g) && !(santo&&santo.salmodia) && !salmodiaPropia && !(dom && !k)){
@@ -159,7 +163,7 @@ function armar(hora, fecha, region){
   // y si se recita, solo al principio y al final de cada estrofa (rúbrica del libro)
   const aleluyas=t=>t.filter(e=>/\n/.test(e)).map(e=>e.split('\n').map(x=>x.trim()).filter(x=>x && !/aleluia/i.test(x)));
   const modo=modoDe(hoy, fRef);
-  const pas=X.pasion(fRef);   // tiempo de pasión: sin Gloria al final de salmos y cánticos ni en el responsorio breve
+  const pas=X.pasion(fRef, hoy.sol);   // tiempo de pasión: sin Gloria al final de salmos y cánticos ni en el responsorio breve
   const salmo=(sid, ant)=>{ const s=L.salmos[sid]; const v=X.versosDe(s.texto);
     if(/^cantico-ap-19-/.test(sid)) return {k:'salmo', es:true, id:sid, ant, modo, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:[]}, grupos:{es:[]}, aleluyas:aleluyas(s.texto), gloria:!pas, rubrica:pas?X.NO_GLORIA:''};
     return {k:'salmo', es:true, id:sid, ant, modo, sinEnt:!!s.sin_entonacion, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!pas && !SIN_GLORIA.includes(sid), rubrica:[s.rubrica_final||'', pas && !SIN_GLORIA.includes(sid) ? X.NO_GLORIA : ''].filter(Boolean).join(' ')}; };

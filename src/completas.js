@@ -40,14 +40,15 @@ function domPascua(y){
 // Tiempo de pasión: desde las I Vísperas del V domingo de Cuaresma hasta el Sábado Santo (el domingo de Pascua, ya no).
 // No se dice el Gloria al Padre al final de los salmos y cánticos (va la rúbrica) ni en el responsorio breve (de la
 // respuesta corta se pasa a la repetición final). f: el día del oficio (en las I Vísperas, el domingo).
-function pasion(f){
-  if(!f || modo.difuntos) return false;
+function pasion(f, sol){
+  if(!f || modo.difuntos || sol) return false;   // en las solemnidades se dice el Gloria
   const p=domPascua(+f.slice(0,4));
   return f>=masDias(p,-14) && f<masDias(p,0);
 }
 const NO_GLORIA='No se dice Gloria.';
 // Responsorio breve sin el «Gloria al Padre» (pares [V|R, texto])
-const sinGloriaResp=r=>Array.isArray(r) ? r.filter(x=>!(Array.isArray(x) && /^Gloria al Padre/.test(x[1]||''))) : r;
+// (en su lugar, la rúbrica: ['rub', «No se dice Gloria.»])
+const sinGloriaResp=r=>Array.isArray(r) ? r.map(x=>(Array.isArray(x) && /^Gloria al Padre/.test(x[1]||'')) ? ['rub', NO_GLORIA] : x) : r;
 // Versos de un cántico sin el Glória Patri y el Sicut erat (y su traducción, verso por verso)
 const esGloriaLa=v=>/^Gl[óo]ria Patri|^Sicut erat/.test(String(v).replace(/\*\*|_/g,''));
 // Ciclo dominical del año litúrgico (empieza el I Domingo de Adviento)
@@ -349,7 +350,8 @@ function armar(fecha, region){
   const J=C.salterio[el.juego];
   const pascua=hoy.t==='Pascua', cuaresma=hoy.t==='Cuaresma'||hoy.t==='Triduo';
   const tono=GR.tonos[el.juego]||'8G';
-  const pas=pasion(fecha)||pasion(masDias(fecha,1));   // (las del sábado anterior al V domingo de Cuaresma, después de sus I Vísperas)
+  // (las del sábado anterior al V domingo de Cuaresma, después de sus I Vísperas; no las de una solemnidad ni las que siguen a sus I Vísperas)
+  const pas=el.visperasDe ? pasion(masDias(fecha,1), el.visperasDe.sol) : pasion(fecha, hoy.sol);
   const S=[]; const sec=(id,t,extra)=>S.push({k:'sec',id,t,...extra});
 
   sec('inicio','Invocación inicial');
@@ -398,7 +400,7 @@ function armar(fecha, region){
     const rgg=rg && (pas ? {gabc:rg.gabc.replace(/<sp>V\/<\/sp>\.\s*Gl[óo]\([^]*?\(::\)\s*/, ''),
       glosa:rg.traduccion.filter((p,i,a)=>{ const g=a.findIndex(x=>/^Gl[óo]ria$/.test(x[0])), s=a.findIndex((x,j)=>j>g && /^Sancto\.$/.test(x[0])); return g<0 || s<0 || i<g || i>s; })}
       : {gabc:rg.gabc, glosa:rg.traduccion});
-    S.push({k:'resp', es:true, l:{es:pas?sinGloriaResp(rl):rl}, ...(rgg||{})});
+    S.push({k:'resp', es:true, l:{es:pas?sinGloriaResp(rl):rl}, ...(rgg||{}), ...(pas?{rub:NO_GLORIA}:{})});
   }
 
   sec('cantico','Cántico evangélico',{ref:'Lc 2, 29-32'});
@@ -592,6 +594,12 @@ function opcionesComun(comunes, id, nombre, pascua, campo, sub){
   });
   let i=0; return out.map(a=>({...a, n:a.n || 'Opción '+(++i)}));
 }
+// Parecido entre dos textos (0 a 1): palabras en común sobre las del más largo
+function parecido(a, b){
+  const pals=x=>new Set(JSON.stringify(x).toLowerCase().match(/\p{L}{3,}/gu)||[]);
+  const A=pals(a), B=pals(b); if(!A.size || !B.size) return 0;
+  let c=0; for(const w of A) if(B.has(w)) c++; return c/Math.max(A.size, B.size);
+}
 // Deja en P lo elegido para cada elemento del común que tiene opciones y anota las opciones para la app
 // (alts[hora|campo] = {i, ops}): en el modo «común» (modo.comun) y también en las celebraciones y el Oficio de difuntos
 // que toman del común, donde las «O bien» rotan (modo.opc: lo que eligió el motor, con el botón «Otras opciones»).
@@ -603,11 +611,16 @@ function elegirComun(P, campos, comunes, id, nombre, pascua, sub, hora){
     if(P[c]==null) continue;
     const L=opcionesComun(comunes, id, nombre, pascua, c, sub), j=JSON.stringify(P[c]);
     let i=L.findIndex(a=>JSON.stringify(a.t)===j || JSON.stringify(a.raw)===j);
+    // el texto de la celebración (sync) puede ser el del común con otra traducción o pequeñas diferencias: el más parecido
+    if(i<0){ let m=0; L.forEach((a,k)=>{ const x=parecido(a.t, P[c]); if(x>m){ m=x; i=k; } }); if(m<0.75) i=-1; }
     if(i<0 || L.length<2) continue;
     L[i]={...L[i], t:P[c]};
     const k=hora+'|'+c, e=(M.elige||{})[k];
     if(e!=null && L[e]){ P[c]=L[e].t; i=e; }
-    M.alts[k]={i, ops:L.map(a=>({n:a.n, ver:vista(a.t)}))};
+    // salmodia: las opciones difieren en algún salmo; el botón va debajo de la antífona de ese salmo
+    if(c==='salmodia'){ const dif=P[c].map((g,gi)=>gi).filter(gi=>L.some(a=>JSON.stringify((a.t||[])[gi])!==JSON.stringify(L[0].t[gi])));
+      M.alts[k]={i, dif, ops:L.map(a=>({n:a.n, ver:dif.map(gi=>{ const g=(a.t||[])[gi]||{}; return citaSalmo(g.salmo)+(g.ant?' · '+g.ant:''); }).join(' / ')}))};
+    } else M.alts[k]={i, ops:L.map(a=>({n:a.n, ver:vista(a.t)}))};
   }
 }
 // La oración del común en el modo «común»: la del caso («or») o, si no hay, la que elige el motor (sin las de otro
@@ -636,5 +649,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, pasion, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

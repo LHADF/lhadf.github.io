@@ -107,7 +107,7 @@ const oracion=(S, t)=>{ S.push({k:'sec', id:'oracion', t:'Oración'}); S.push({k
 const CAMPOS_O=['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2','oracion'];
 function armarOficio(fecha, sel){
   const L=window.OFICIO; if(!L || !CP.diaCal(fecha, sel)) return null;
-  PAS=X.pasion(fecha);
+  PAS=X.pasion(fecha, (CP.diaCal(fecha, sel)||{}).sol);
   const {P, ref, dom, k, C, PR, CS, santo, n, nota, comun}=capas(L, fecha, sel, CAMPOS_O, 'oficio');
   if(CS) for(const c of ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2']) if(!(santo&&santo[c]!=null) && CS[c]!=null) P[c]=CS[c];
   if(C){   // Común: memorias, himno y segunda lectura (la primera, de la feria); fiestas y solemnidades, todo
@@ -116,6 +116,8 @@ function armarOficio(fecha, sel){
     X.elegirComun(P, cs.filter(c=>c!=='salmodia' && c!=='himno' && !(PR&&PR[c]!=null)), L.comunes, comun, ref.n, ref.t==='Pascua', null, 'oficio');
     const o=(PR&&PR.oracion) ? null : X.oracionElegida(C.oraciones, ref.n, 'oficio', ref.t, n); if(o) P.oracion=o;
   }
+  // Celebración con propio en la base que toma del común (el santoral dice cuál): lo que es texto del común, con sus otras opciones
+  if(k && !C && L.comunes){ const cid=X.comunDe((L.santoral[k]||{}).comun); if(cid && L.comunes[cid]) X.elegirComun(P, ['versiculo','lectura2','resp2'], L.comunes, cid, ref.n, ref.t==='Pascua', null, 'oficio'); }
   if(PR) for(const c of [...CAMPOS_O]) if(PR[c]!=null) P[c]=PR[c];   // lo propio del libro: segunda lectura, oración…
   const otros=(C && !(PR&&PR.himno) && P.himno===C.himno) ? X.himnosComun(L.comunes, comun, ref.n, null, P.himno, L.himnos) : [];   // los otros himnos del común
   // Fiestas y solemnidades sin salmodia propia (ni en el tiempo, ni en el santoral, ni en el propio del libro, ni en el común): la del domingo de la I semana
@@ -154,7 +156,7 @@ function armarOficio(fecha, sel){
 const ids=s=>(s||[]).map(g=>g.salmo).join(' ');
 function armarMenor(hora, fecha, sel, opc){
   const L=window.INTERMEDIA; if(!L || !CP.diaCal(fecha, sel)) return null;
-  PAS=X.pasion(fecha);
+  PAS=X.pasion(fecha, (CP.diaCal(fecha, sel)||{}).sol);
   const H=L.horas[hora];
   const D=capas({salterio:L.salterio, tiempo:L.tiempo, santoral:L.santoral, mapa:L.mapa, adf:L.adf}, fecha, sel, ['salmodia','salmos']);
   const {P, ref, dom, k, C, PR, CS, M, santo, n, nota, comun}=capas({salterio:H.salterio, tiempo:H.tiempo, santoral:H.santoral, mapa:L.mapa, adf:L.adf, comunes:L.comunes, mayores:L.mayores}, fecha, sel, ['himno','ant','lectura','versiculo','oracion'], hora);

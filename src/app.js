@@ -537,10 +537,10 @@ function examenHTML(sec){
 }
 function respHTML(sec){
   // Cantado: en gregoriano (si hay melodía para el tiempo); recitado: en español
-  if(CANTA() && sec.gabc) return partituraHTML(sec.gabc, S.trad?sec.glosa:null);
+  if(CANTA() && sec.gabc) return partituraHTML(sec.gabc, S.trad?sec.glosa:null)+(sec.rub?`<p class="rub">${esc(sec.rub)}</p>`:'');
   const es=VES(); const la=sec.l.la, sp=sec.l[es]||sec.l.es79||sec.l.es;
   const P= S.lengua==='es'? sp : la; const Sx= S.lengua==='bi'? (sec.lit? sec.lit.map((x,i)=>[la[i][0],x]) : sp) : null;
-  return `<div class="vr">${P.map((x,i)=>`<p${x[0]==='V'?' class="pv"':''}><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${x[0]==='R'?'<b>'+marcas(x[1])+'</b>':marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
+  return `<div class="vr">${P.map((x,i)=>x[0]==='rub' ? `<p class="rub">${esc(x[1])}</p>` : `<p${x[0]==='V'?' class="pv"':''}><span class="k">${x[0]==='V'?'℣':'℟'}.</span> ${x[0]==='R'?'<b>'+marcas(x[1])+'</b>':marcas(x[1])}${Sx&&Sx[i]?`<span class="gl">${marcas(Sx[i][1])}</span>`:''}</p>`).join('')}</div>`;
 }
 function marianaHTML(sec){
   const ops=sec.opciones;
@@ -570,9 +570,16 @@ function otrasHTML(r, id, vistas){
   if(!r.alts || !id || /^c-/.test(id)) return '';
   let hk=r.hora+(r.primeras?'1':'');
   if(/^l-/.test(id)){ hk='laudes'; id=id.slice(2); }   // Oficio unido a Laudes
-  const ks=(CAMPOS_SEC[id]||[]).map(c=>hk+'|'+c).filter(k=>r.alts[k] && !vistas.has(k));
+  const ks=(CAMPOS_SEC[id]||[]).filter(c=>c!=='salmodia').map(c=>hk+'|'+c).filter(k=>r.alts[k] && !vistas.has(k));   // (la salmodia: debajo de la antífona del salmo que cambia)
   ks.forEach(k=>vistas.add(k));
   return ks.map(k=>`<div class="otras"><button class="discreto" data-act="otras" data-v="${esc(k)}">Otras opciones${ks.length>1?' · '+esc(NOMBRE_CAMPO[k.split('|')[1]].toLowerCase()):''}</button></div>`).join('');
+}
+// Salmodia con opciones (último salmo de Laudes de difuntos…): «Otras opciones» debajo de la antífona del salmo que cambia
+function otrasSalmoHTML(r, secId, sec){
+  if(!r.alts || !secId || !/^(l-)?salmodia$/.test(secId) || sec.rep) return '';
+  const m=/^a(\d+)$/.exec(sec.id||''); if(!m) return '';
+  const hk=/^l-/.test(secId) ? 'laudes' : r.hora+(r.primeras?'1':''), k=hk+'|salmodia', a=r.alts[k];
+  return a && (a.dif||[]).includes(+m[1]-1) ? `<div class="otras"><button class="discreto" data-act="otras" data-v="${esc(k)}">Otras opciones</button></div>` : '';
 }
 function hojaOtras(k){
   const a=(R().alts||{})[k]; if(!a) return;
@@ -603,7 +610,7 @@ document.addEventListener('change',e=>{
 
 function horaHTML(){
   _id=0; GAB.clear();
-  const r=R(); let h=''; const vistas=new Set();
+  const r=R(); let h='', secAct=null; const vistas=new Set();
   const sinNombre=S.hora==='completas' || r.primeras;   // Completas y I Vísperas: sin el nombre de la celebración
   h+=`<p class="dia-h">${sinNombre?(r.primeras?'I Vísperas · ':''):esc(r.dia.titulo)+' · '}${esc(r.dia.tiempo)}${r.dia.visperas&&!sinNombre?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
@@ -618,6 +625,7 @@ function horaHTML(){
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
+      secAct=sec.id;
       // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
       if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
       if(r.hora==='oficio' && (sec.id==='oracion'||sec.id==='l-laudes')) h+=`<div class="opciones unir"><button data-act="unirl" aria-pressed="${!!r.unidas}">Seguir con Laudes</button></div>`;
@@ -645,7 +653,7 @@ function horaHTML(){
       case 'invop': if(CANTA()) h+=`<div class="opciones" role="group" aria-label="Invitatorio">${[['greg','Gregoriano'],['es','En español']].map(([v,n])=>`<button data-act="invit" data-v="${v}" aria-pressed="${INV()===v}">${n}</button>`).join('')}</div>`; break;
       case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`
         +sec.estrofas.map(e=>partituraHTML(e.gabc, S.trad?e.glosa:null, false)).join(''); break;
-      case 'ant': h+=antHTML(sec); break;
+      case 'ant': h+=antHTML(sec)+otrasSalmoHTML(r, secAct, sec); break;
       case 'salmoinv':   // Salmo 94 del invitatorio: en estrofas, y «Venid, postrémonos por tierra» en versalitas
         h+=`<div class="salmo-h"><span class="t">${esc(cita(sec.titulo))}</span>${sec.lema?`<span class="lema">${esc(sec.lema)}</span>`:''}</div>`
           +`<div class="himno sin-num">${sec.estrofas.map(e=>`<p class="est">${e.map(l=>`<span class="ln">${esc(l).replace(/^(Venid, postrémonos por tierra)/i,'<span class="vers">$1</span>')}</span>`).join('')}</p>`).join('')}</div>`; break;
