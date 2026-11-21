@@ -28,7 +28,7 @@ function aplicarModo(kind, sec){
   else S.lengua = ((kind==='salmo'&&!(sec&&sec.cantico))||kind==='lectura') ? 'es' : (S.trad?'bi':'la');
 }
 aplicarModo();
-function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,difuntos,comunOn,comunPrim,comunElige,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
+function guardar(){ try{ const {lengua,canto,antGreg,fecha,_marDia,_varDia,_prep,_elige,difuntos,comunOn,comunPrim,comunElige,...g}=S; localStorage.setItem('septies',JSON.stringify(g)); }catch(e){} }
 let DH=null; // la hora abierta cuando no es Completas (Laudes o Vísperas)
 const MAYORES={laudes:'Laudes', visperas:'Visperas', oficio:'Oficio', tercia:'Tercia', sexta:'Sexta', nona:'Nona'};
 // Archivo de datos de cada hora (Tercia, Sexta y Nona comparten el de la Hora intermedia)
@@ -59,6 +59,7 @@ function fichasCal(){
   });
   return out;
 }
+const claveElige=()=>S.fecha+(S.difuntos?'|dif':'');
 function cargarDia(){
   if(!CP.enRango(S.fecha)) S.fecha=fechaHoy();
   const MODO=CP._.modo;
@@ -69,6 +70,9 @@ function cargarDia(){
   // Comunes de los santos (botón del inicio): las horas como la celebración de un santo, con todo del común elegido.
   // Lo elegido en «Otras opciones» (S.comunElige) vale mientras se reza; MODO.comun.alts junta las opciones de cada elemento.
   MODO.comun = (S.comunOn && !S.difuntos) ? {...CP._.comunSantos({...(S.comunSel||{}), primeras:S.hora==='visperas' && !!S.comunPrim}), elige:S.comunElige||{}, alts:{}} : null;
+  // Fuera del modo común, las «O bien» que rotan (y las demás opciones del común) también se pueden elegir: lo elegido
+  // (S._elige, por día y hora; no se guarda) vale mientras se mira ese día.
+  MODO.opc = MODO.comun ? null : {elige:(S._elige||{})[claveElige()]||{}, alts:{}};
   MODO.inv = (S.hora==='laudes' && S.invLaudes===false) ? false : undefined;
   DH = (MAYORES[S.hora] && cargada(S.hora)) ? window[MAYORES[S.hora]].armar(S.fecha, SEL(), {complementaria:!!S.compl}) : null;
   // Oficio de lectura unido a Laudes: después de las lecturas (y del Te Deum) siguen las Laudes desde la salmodia,
@@ -95,6 +99,7 @@ function cargarDia(){
     DH={...DH, unidas:true, secciones:[...V.slice(0,corte), ...C]};
   }
   if(DH && MODO.difuntos) DH={...DH, difuntos:true, dia:{...DH.dia, titulo:'Oficio de difuntos', grado:'', nota:''}};
+  if(DH && MODO.opc) DH={...DH, alts:MODO.opc.alts};
   if(DH && MODO.comun) DH={...DH, comun:true, alts:MODO.comun.alts, dia:{...DH.dia, titulo:MODO.comun.titulo, grado:MODO.comun.grado, nota:''}};
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
@@ -124,6 +129,10 @@ function nombreVersion(){
   if(S.lengua==='es') return '<b>'+esc(es.n)+'</b>';
   return '<b>Latín</b> · '+esc(es.n);
 }
+// Capitular (docs/diseno.md): la primera letra, grande y roja, a lo alto de dos renglones, como la del gregoriano.
+// Lecturas breves, himnos en español y cánticos evangélicos. No va si el texto empieza con ¡, ¿ u otro signo.
+const capiHTML=ch=>`<span class="capi">${esc(ch)}</span>`;
+function capiTxt(t){ const s=String(t||''), m=/^\p{L}/u.exec(s); return m ? capiHTML(m[0])+esc(s.slice(m[0].length)) : esc(s); }
 function marcas(s){ // ℣ ℟ * † ✠ en rojo
   return esc(s).replace(/✠/g,'<span class="cruz">✠</span>').replace(/ \* /g,' <span class="k">*</span> ').replace(/ † /g,' <span class="k">†</span> ');
 }
@@ -233,7 +242,7 @@ function versosHTML(versos, modo, cod, lang, desde, glosas, ent){
 }
 // Versos con marcas escritas a mano: **negrita** (acento) y _cursiva_ (preparación); * mediante, † flexa.
 // glosas: por versículo, pares «latín → español» palabra por palabra, en el orden del texto (el * y la † no llevan par)
-function versosMarcados(versos, glosas){
+function versosMarcados(versos, glosas, capi){   // capi: capitular en el primer verso (cántico evangélico sin partitura)
   // las marcas de la pauta de canto (**negrita**, _cursiva_) solo en el modo cantado; recitado, texto llano
   const m=t=>CANTA() ? esc(t).replace(/\*\*(.+?)\*\*/g,'<b class="ac">$1</b>').replace(/_(.+?)_/g,'<i>$1</i>') : esc(t.replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1'));
   return versos.map((v,i)=>{
@@ -253,7 +262,9 @@ function versosMarcados(versos, glosas){
     const hs2=hs.map((ws,hi)=>{ // el asterisco no baja solo de renglón: va pegado a la última palabra
       if(hi<mitades.length-1 && ws.length){ const u=ws.pop(); ws.push(`<span class="nw">${u}&nbsp;<span class="sg">*</span></span>`); }
       return ws.join(' '); });
-    return `<p class="v${pares?' il':''}">${hs2.map((h,n)=>`<span class="${n?'h2':'h1'}">${h}</span>`).join('')}</p>`;
+    let cap='';
+    if(capi && i===0 && !pares) hs2[0]=hs2[0].replace(/^((?:<[^>]+>)*)(\p{L})/u, (x,tags,ch)=>{ cap=ch; return tags; });
+    return `<p class="v${pares?' il':''}${cap?' capi-on':''}">${cap?capiHTML(cap):''}${hs2.map((h,n)=>`<span class="${n?'h2':'h1'}">${h}</span>`).join('')}</p>`;
   }).join('');
 }
 function salmoHTML(sal){
@@ -479,8 +490,11 @@ function himnoHTML(sec){
   if(!amen && est.length){ const u=est[est.length-1], l=u[u.length-1]||'', m=/^(.*?)\s*((?:am[eé]n[,.]?\s*)+)$/i.exec(l);
     if(m){ amen='Amén.'; const resto=m[1].trim(); est=est.slice(0,-1).concat([resto?u.slice(0,-1).concat([resto]):u.slice(0,-1)]).filter(e=>e.length); } }
   const numerar=est.length>1; const GL=(bi&&!usarTrad)?glosaLineas(est,o.glosa):null;
+  // himno en español: capitular en la primera estrofa (no en la continuación del Te Deum)
+  const capi=o.lang==='es' && !GL && o.id!=='tedeum2' && est.length && /^\p{L}/u.test(est[0][0]||'') && (est[0][0]||'').length>1;
   h+=`<div class="himno${numerar?'':' sin-num'}">`+est.map((e,ie)=>{
-    return `<p class="est">${numerar?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
+    const c=capi && ie===0;
+    return `<p class="est${c?' capi-on':''}">${numerar?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<2?' c':''}">${esc(c&&!il?l.slice([...l][0].length):l)}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
   return h;
 }
 // Invitatorio de los domingos del Tiempo Ordinario: gregoriano si se canta (salvo que se elija en español)
@@ -543,10 +557,10 @@ function marianaHTML(sec){
 
 // Comunes de los santos: debajo de cada elemento que tiene varias opciones (las «O bien» y variantes del libro), un botón
 // discreto para elegir cualquiera. Sección de la hora → elementos (claves de la base) que muestra.
-const CAMPOS_SEC={invitatorio:['inv_ant'], himno:['himno'], salmodia:['ant','versiculo'], lectura:['lectura','versiculo'], responsorio:['responsorio'],
+const CAMPOS_SEC={invitatorio:['inv_ant'], himno:['himno'], salmodia:['salmodia','ant','versiculo'], lectura:['lectura','versiculo'], responsorio:['responsorio'],
   cantico:['ant_benedictus','ant_magnificat'], preces:['preces'], padrenuestro:['padrenuestro_intro'], oracion:['oracion'],
   lectura1:['lectura1'], 'lectura1-r':['resp1'], lectura2:['lectura2'], 'lectura2-r':['resp2']};
-const NOMBRE_CAMPO={inv_ant:'Antífona del invitatorio', himno:'Himno', ant:'Antífona', versiculo:'Versículo', lectura:'Lectura breve', responsorio:'Responsorio breve',
+const NOMBRE_CAMPO={inv_ant:'Antífona del invitatorio', himno:'Himno', salmodia:'Salmodia', ant:'Antífona', versiculo:'Versículo', lectura:'Lectura breve', responsorio:'Responsorio breve',
   ant_benedictus:'Antífona del Benedictus', ant_magnificat:'Antífona del Magníficat', preces:'Preces', padrenuestro_intro:'Monición del Padre nuestro',
   oracion:'Oración', lectura1:'Primera lectura', resp1:'Responsorio', lectura2:'Segunda lectura', resp2:'Responsorio'};
 function otrasHTML(r, id, vistas){
@@ -586,7 +600,7 @@ document.addEventListener('change',e=>{
 
 function horaHTML(){
   _id=0; GAB.clear();
-  const r=R(); let h='', secAct=null; const vistas=new Set();
+  const r=R(); let h=''; const vistas=new Set();
   const sinNombre=S.hora==='completas' || r.primeras;   // Completas y I Vísperas: sin el nombre de la celebración
   h+=`<p class="dia-h">${sinNombre?(r.primeras?'I Vísperas · ':''):esc(r.dia.titulo)+' · '}${esc(r.dia.tiempo)}${r.dia.visperas&&!sinNombre?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
@@ -601,12 +615,12 @@ function horaHTML(){
   let pleg=null;
   r.secciones.forEach(sec=>{
     if(sec.k==='sec'){
-      h+=otrasHTML(r, secAct, vistas); secAct=sec.id;
       // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
       if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
       if(r.hora==='oficio' && (sec.id==='oracion'||sec.id==='l-laudes')) h+=`<div class="opciones unir"><button data-act="unirl" aria-pressed="${!!r.unidas}">Seguir con Laudes</button></div>`;
       pleg=sec.plegable?sec.id:null;
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
+      h+=otrasHTML(r, sec.id, vistas);   // «Otras opciones», justo debajo del título del elemento
       return;
     }
     if(sec.inv && sec.inv!==INV()) return;   // invitatorio: gregoriano o en español, según se eligió
@@ -623,7 +637,7 @@ function horaHTML(){
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
       case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+prosaHTML(sec.t, sec.amen, '', sec.il); break;
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
-      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p>${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${esc(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
+      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p class="lec-b">${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${capiTxt(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
       case 'invop': if(CANTA()) h+=`<div class="opciones" role="group" aria-label="Invitatorio">${[['greg','Gregoriano'],['es','En español']].map(([v,n])=>`<button data-act="invit" data-v="${v}" aria-pressed="${INV()===v}">${n}</button>`).join('')}</div>`; break;
       case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`
@@ -642,16 +656,17 @@ function horaHTML(){
         if(sec.modo && !sec.gabc && CANTA()){
           const cod=tonoDe(sec), lista=S.salmos==='todos'?sec.versos:S.salmos==='pautado'?[]:sec.versos.slice(0,1);
           h+=`<div class="salmo-h"><div class="cab"><span class="t">${esc(sec.titulo)}</span>${selectorModo(sec)}</div></div>`;
-          if(lista.length) h+=partituraHTML(`name:cantico;\n%%\n${SAL.gabcSalmo(lista,cod,'la',{entonarTodos:true, marcas:true})}`, S.trad&&sec.inter?lista.flatMap((v,i)=>sec.inter[i]||[]):null, false, true);
+          // con la capitular del gregoriano (en la partitura) o, si no hay partitura, en el primer verso
+          if(lista.length) h+=partituraHTML(`name:cantico;\n%%\n${SAL.gabcSalmo(lista,cod,'la',{entonarTodos:true, marcas:true})}`, S.trad&&sec.inter?lista.flatMap((v,i)=>sec.inter[i]||[]):null, true, true);
           const resto=sec.versos.slice(lista.length);
-          if(resto.length) h+=`<div class="versos${S.trad?' inter':''}">${versosMarcados(resto.map(v=>SAL.marcadoVerso(SAL.pautarVerso(v,cod,'la',true))),S.trad&&sec.inter?sec.inter.slice(lista.length):null)}</div>`;
+          if(resto.length) h+=`<div class="versos${S.trad?' inter':''}">${versosMarcados(resto.map(v=>SAL.marcadoVerso(SAL.pautarVerso(v,cod,'la',true))),S.trad&&sec.inter?sec.inter.slice(lista.length):null, !lista.length)}</div>`;
           break;
         }
         h+=`<div class="salmo-h"><span class="t">${esc(sec.titulo)}</span></div>`
-          +(!sec.gabc ? `<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`   // sin partitura (Benedictus): todo pautado
-            : CANTA() ? partituraHTML(sec.gabc, S.trad?sec.glosa:null, false, true)   // Nunc dimíttis: acentos del modo en 700, como el pautado
+          +(!sec.gabc ? `<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null,true)}</div>`   // sin partitura (Benedictus): todo pautado
+            : CANTA() ? partituraHTML(sec.gabc.replace(/initial-style:\s*0;?\n?/,''), S.trad?sec.glosa:null, true, true)   // Nunc dimíttis: acentos del modo en 700, como el pautado; capitular del gregoriano
               +`<div class="versos${S.trad?' inter':''}">${versosMarcados(sec.versos,S.trad?sec.inter:null)}</div>`
-            : `<div class="versos${S.trad?' inter':''}">${versosMarcados([sec.verso1,...sec.versos],S.trad?[sec.inter1,...sec.inter]:null)}</div>`); break;
+            : `<div class="versos${S.trad?' inter':''}">${versosMarcados([sec.verso1,...sec.versos],S.trad?[sec.inter1,...sec.inter]:null,true)}</div>`); break;
       case 'preces': {
         // Cada prece: flexa (†) en el corte del medio y asterisco (*) al final; la respuesta la dicen todos
         if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
@@ -675,7 +690,6 @@ function horaHTML(){
     }
   });
   aplicarModo();
-  h+=otrasHTML(r, secAct, vistas);
   h+=`<p class="fin">✠</p>`;
   return h;
 }
@@ -870,7 +884,10 @@ document.addEventListener('click',e=>{
         if(S.hora==='oficio' && S.invOficio && !cargada('laudes')) cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar el invitatorio.')); else sigue(); } break;
     case 'comunes': hojaComunes(); break;
     case 'otras': hojaOtras(v); break;
-    case 'eligeop': { S.comunElige={...(S.comunElige||{}), [b.dataset.k]:+v}; cerrar(); cargarDia(); refrescarHoja(); break; }
+    case 'eligeop': {
+      if(CP._.modo.comun) S.comunElige={...(S.comunElige||{}), [b.dataset.k]:+v};
+      else { const c=claveElige(); S._elige={...(S._elige||{}), [c]:{...((S._elige||{})[c]||{}), [b.dataset.k]:+v}}; }
+      cerrar(); cargarDia(); refrescarHoja(); break; }
     case 'abrircom': case 'abrirdif': case 'abrir': {
       S.difuntos=a==='abrirdif'; S.comunOn=a==='abrircom'; S.comunPrim=v==='visperas1'; S.comunElige={};
       if(a!=='abrir') quitarCapa();

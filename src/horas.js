@@ -8,6 +8,7 @@
 const CP=window.Completas, X=CP._;
 const NOMBRES={oficio:'Oficio de lectura', tercia:'Tercia', sexta:'Sexta', nona:'Nona'};
 const SIN_GLORIA=['cantico-dn-3-57-88-56'];
+let PAS=false;   // tiempo de pasión (X.pasion): los salmos, sin Gloria y con la rúbrica
 
 // Las partes del día, capa sobre capa
 const mayor=ref=>/^(Fiesta|Solemnidad)/.test(ref.g);
@@ -68,7 +69,7 @@ function invocacion(S, ref){
 }
 const salmo=(L, sid, ant)=>{ const s=L.salmos[sid]; if(!s) return {k:'aviso', t:`Falta el texto de ${sid}.`};
   const v=X.versosDe(s.texto);
-  return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!SIN_GLORIA.includes(sid), rubrica:s.rubrica_final||''}; };
+  return {k:'salmo', es:true, id:sid, ant, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!PAS && !SIN_GLORIA.includes(sid), rubrica:[s.rubrica_final||'', PAS && !SIN_GLORIA.includes(sid) ? X.NO_GLORIA : ''].filter(Boolean).join(' ')}; };
 function salmodia(S, L, sal, unica){
   S.push({k:'sec', id:'salmodia', t:'Salmodia'});
   if(unica){   // una antífona para los tres salmos: antes del primero y después del último
@@ -106,13 +107,14 @@ const oracion=(S, t)=>{ S.push({k:'sec', id:'oracion', t:'Oración'}); S.push({k
 const CAMPOS_O=['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2','oracion'];
 function armarOficio(fecha, sel){
   const L=window.OFICIO; if(!L || !CP.diaCal(fecha, sel)) return null;
+  PAS=X.pasion(fecha);
   const {P, ref, dom, k, C, PR, CS, santo, n, nota, comun}=capas(L, fecha, sel, CAMPOS_O, 'oficio');
   if(CS) for(const c of ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2']) if(!(santo&&santo[c]!=null) && CS[c]!=null) P[c]=CS[c];
   if(C){   // Común: memorias, himno y segunda lectura (la primera, de la feria); fiestas y solemnidades, todo
     const cs=(mayor(ref) || C.salmodia_propia) ? ['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2'] : ['himno','lectura2','resp2'];
     for(const c of cs) if(C[c]!=null) P[c]=C[c];
-    if(X.modo.comun) X.elegirComun(P, cs.filter(c=>c!=='salmodia' && c!=='himno'), L.comunes, X.modo.comun.id, ref.n, ref.t==='Pascua', null, 'oficio');
-    const o=X.modo.comun ? X.oracionElegida(C.oraciones, ref.n, 'oficio', ref.t) : X.oracionComun(C.oraciones, ref.n, n); if(o) P.oracion=o;
+    X.elegirComun(P, cs.filter(c=>c!=='salmodia' && c!=='himno' && !(PR&&PR[c]!=null)), L.comunes, comun, ref.n, ref.t==='Pascua', null, 'oficio');
+    const o=(PR&&PR.oracion) ? null : X.oracionElegida(C.oraciones, ref.n, 'oficio', ref.t, n); if(o) P.oracion=o;
   }
   if(PR) for(const c of [...CAMPOS_O]) if(PR[c]!=null) P[c]=PR[c];   // lo propio del libro: segunda lectura, oración…
   const otros=(C && !(PR&&PR.himno) && P.himno===C.himno) ? X.himnosComun(L.comunes, comun, ref.n, null, P.himno, L.himnos) : [];   // los otros himnos del común
@@ -152,6 +154,7 @@ function armarOficio(fecha, sel){
 const ids=s=>(s||[]).map(g=>g.salmo).join(' ');
 function armarMenor(hora, fecha, sel, opc){
   const L=window.INTERMEDIA; if(!L || !CP.diaCal(fecha, sel)) return null;
+  PAS=X.pasion(fecha);
   const H=L.horas[hora];
   const D=capas({salterio:L.salterio, tiempo:L.tiempo, santoral:L.santoral, mapa:L.mapa, adf:L.adf}, fecha, sel, ['salmodia','salmos']);
   const {P, ref, dom, k, C, PR, CS, M, santo, n, nota, comun}=capas({salterio:H.salterio, tiempo:H.tiempo, santoral:H.santoral, mapa:L.mapa, adf:L.adf, comunes:L.comunes, mayores:L.mayores}, fecha, sel, ['himno','ant','lectura','versiculo','oracion'], hora);
@@ -159,8 +162,8 @@ function armarMenor(hora, fecha, sel, opc){
   if(M && M.oracion && !(santo&&santo.oracion)) P.oracion=M.oracion;
   if((C || PR) && (mayor(ref) || (C && C.salmodia_propia))){   // fiestas y solemnidades (y el Oficio de difuntos) sin propio en la base: del libro (propio y común); la oración, la de Laudes
     for(const c of ['himno','ant','lectura','versiculo']){ if(C && C[hora] && C[hora][c]!=null) P[c]=C[hora][c]; if(PR && PR[hora] && PR[hora][c]!=null) P[c]=PR[hora][c]; }
-    if(C && X.modo.comun) X.elegirComun(P, ['ant','lectura','versiculo'], L.comunes, X.modo.comun.id, ref.n, ref.t==='Pascua', hora, hora);
-    const o=(PR&&PR.oracion) || (C&&(X.modo.comun ? X.oracionElegida(C.oraciones, ref.n, hora, ref.t) : X.oracionComun(C.oraciones, ref.n, n))); if(o) P.oracion=o;
+    if(C) X.elegirComun(P, ['ant','lectura','versiculo'], L.comunes, comun, ref.n, ref.t==='Pascua', hora, hora);
+    const o=(PR&&PR.oracion) || (C&&X.oracionElegida(C.oraciones, ref.n, hora, ref.t, n)); if(o) P.oracion=o;
   }
   // Salmodia del día: la del salterio, o los salmos que indiquen el tiempo o la celebración (con sus antífonas solo si son los mismos)
   let sal=D.P.salmodia||[];

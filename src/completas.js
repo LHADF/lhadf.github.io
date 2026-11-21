@@ -30,6 +30,26 @@ function diaCal(fecha, sel){
   for(let c=sel.cal; c; c=CAL.padres[c]){ const v=vs.find(v=>v.tipo==='r'&&v.siglas.includes(c)); if(v) return v.f; }   // el calendario preferido o el de su país
   return base;
 }
+// Domingo de Pascua (cómputo gregoriano)
+function domPascua(y){
+  const a=y%19, b=Math.floor(y/100), c=y%100, d=Math.floor(b/4), e=b%4, f=Math.floor((b+8)/25), g=Math.floor((b-f+1)/3);
+  const h=(19*a+b-d-g+15)%30, i=Math.floor(c/4), k=c%4, l=(32+2*e+2*i-h-k)%7, m=Math.floor((a+11*h+22*l)/451);
+  const mes=Math.floor((h+l-7*m+114)/31), dia=(h+l-7*m+114)%31+1;
+  return iso(new Date(y, mes-1, dia, 12));
+}
+// Tiempo de pasión: desde las I Vísperas del V domingo de Cuaresma hasta el Sábado Santo (el domingo de Pascua, ya no).
+// No se dice el Gloria al Padre al final de los salmos y cánticos (va la rúbrica) ni en el responsorio breve (de la
+// respuesta corta se pasa a la repetición final). f: el día del oficio (en las I Vísperas, el domingo).
+function pasion(f){
+  if(!f || modo.difuntos) return false;
+  const p=domPascua(+f.slice(0,4));
+  return f>=masDias(p,-14) && f<masDias(p,0);
+}
+const NO_GLORIA='No se dice Gloria.';
+// Responsorio breve sin el «Gloria al Padre» (pares [V|R, texto])
+const sinGloriaResp=r=>Array.isArray(r) ? r.filter(x=>!(Array.isArray(x) && /^Gloria al Padre/.test(x[1]||''))) : r;
+// Versos de un cántico sin el Glória Patri y el Sicut erat (y su traducción, verso por verso)
+const esGloriaLa=v=>/^Gl[óo]ria Patri|^Sicut erat/.test(String(v).replace(/\*\*|_/g,''));
 // Ciclo dominical del año litúrgico (empieza el I Domingo de Adviento)
 function ciclo(fecha){
   const d=deIso(fecha);
@@ -329,6 +349,7 @@ function armar(fecha, region){
   const J=C.salterio[el.juego];
   const pascua=hoy.t==='Pascua', cuaresma=hoy.t==='Cuaresma'||hoy.t==='Triduo';
   const tono=GR.tonos[el.juego]||'8G';
+  const pas=pasion(fecha)||pasion(masDias(fecha,1));   // (las del sábado anterior al V domingo de Cuaresma, después de sus I Vísperas)
   const S=[]; const sec=(id,t,extra)=>S.push({k:'sec',id,t,...extra});
 
   sec('inicio','Invocación inicial');
@@ -357,7 +378,7 @@ function armar(fecha, region){
     S.push({k:'ant', id, es:true, n: sal.length>1?`Ant. ${gi+1}`:'Ant.', t:{es:g.ant}, modo:tono});
     g.salmos.forEach(sid=>{
       const s=B.salmos[sid]; const v=versosDe(s.texto);
-      S.push({k:'salmo', es:true, id:sid, ant:id, titulo:{es:s.titulo}, lema:{es:oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:true});
+      S.push({k:'salmo', es:true, id:sid, ant:id, titulo:{es:s.titulo}, lema:{es:oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!pas, rubrica:pas?NO_GLORIA:''});
     });
     S.push({k:'ant', rep:id, es:true});
   });
@@ -372,7 +393,12 @@ function armar(fecha, region){
   } else {
     sec('responsorio','Responsorio breve');
     const rg = pascua ? null : GR.responsorio.ordinario;   // cantado: por ahora, el del Tiempo Ordinario
-    S.push({k:'resp', es:true, l:{es:pares(O.responsorio[pascua?'pascua':'ordinario'])}, ...(rg?{gabc:rg.gabc, glosa:rg.traduccion}:{})});
+    const rl=pares(O.responsorio[pascua?'pascua':'ordinario']);
+    // tiempo de pasión: sin el Gloria (en la partitura, el versículo «Glória Patri» y su traducción)
+    const rgg=rg && (pas ? {gabc:rg.gabc.replace(/<sp>V\/<\/sp>\.\s*Gl[óo]\([^]*?\(::\)\s*/, ''),
+      glosa:rg.traduccion.filter((p,i,a)=>{ const g=a.findIndex(x=>/^Gl[óo]ria$/.test(x[0])), s=a.findIndex((x,j)=>j>g && /^Sancto\.$/.test(x[0])); return g<0 || s<0 || i<g || i>s; })}
+      : {gabc:rg.gabc, glosa:rg.traduccion});
+    S.push({k:'resp', es:true, l:{es:pas?sinGloriaResp(rl):rl}, ...(rgg||{})});
   }
 
   sec('cantico','Cántico evangélico',{ref:'Lc 2, 29-32'});
@@ -380,8 +406,10 @@ function armar(fecha, region){
   const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva',true]]);
   S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
   S.push({k:'cantico', titulo:'Cántico de Simeón', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
-          tono:GR.cantico.tono, versos:GR.cantico.versos, inter:GR.cantico.traduccion_versos,
+          tono:GR.cantico.tono, versos:pas?GR.cantico.versos.filter(v=>!esGloriaLa(v)):GR.cantico.versos,
+          inter:pas&&GR.cantico.traduccion_versos?GR.cantico.traduccion_versos.filter((x,i)=>!esGloriaLa(GR.cantico.versos[i])):GR.cantico.traduccion_versos,
           verso1:GR.cantico.primer_verso, inter1:GR.cantico.traduccion});
+  if(pas) S.push({k:'rub', t:NO_GLORIA});
   S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
 
   sec('oracion','Oración');
@@ -515,12 +543,19 @@ function comunSantos(sel){
   const G=COMUNES_SANTOS[sel.g]||COMUNES_SANTOS[0], C=G.casos[sel.c]||G.casos[0];
   return {...C, grupo:G.n, color:G.c, titulo:G.n+(C.n?': '+C.n.toLowerCase():''), grado:sel.grado||'Memoria', primeras:!!sel.primeras};
 }
+// «salmo-62-2-9» → «Sal 62»; «cantico-is-38-10-14-17-20» → «Is 38»
+function citaSalmo(k){
+  const m=/^salmo-(\d+)(?:-([a-z]+))?/.exec(k||''); if(m) return 'Sal '+m[1]+(m[2]&&m[2].length<3?' '+m[2].toUpperCase():'');
+  const c=/^cantico-(\d?[a-z]+)-(\d+)/.exec(k||''); if(c) return c[1][0].toUpperCase()+c[1].slice(1)+' '+c[2];
+  return k||''; }
 // Vista previa breve de un texto (para la lista de opciones)
 function vista(t){
   const corta=s=>{ s=String(s||'').replace(/\s+/g,' ').trim(); if(s.length<=110) return s; const c=s.slice(0,110); return c.slice(0, c.lastIndexOf(' '))+'…'; };
   if(t==null) return '';
   if(typeof t==='string') return corta(t);
+  if(Array.isArray(t) && t[0] && t[0].salmo) return corta(t.map(g=>citaSalmo(g.salmo)).join(' · '));   // salmodia: sus salmos
   if(Array.isArray(t)) return vista(Array.isArray(t[0]) ? t[0][1] : t[0]);
+  if(t.preces && t.preces[0]) return corta(t.preces[0][0]);   // preces: la primera (la introducción suele ser la misma)
   if(t.titulo) return corta((t.ref?t.ref+' · ':'')+oracionCase(t.titulo));
   if(t.vr) return vista(t.vr);
   if(t.intro) return corta(t.intro+' '+(t.respuesta||''));
@@ -552,15 +587,17 @@ function opcionesComun(comunes, id, nombre, pascua, campo, sub){
     const raw=conNombre({[campo]:a.t}, nombre)[campo];
     const t=!pascua ? raw : a.p!=null ? conNombre({[campo]:a.p}, nombre)[campo] : textosPascua({[campo]:raw})[campo];
     const k=JSON.stringify(t); if(vistos.has(k)) return; vistos.add(k);
-    if(!a.n && campo!=='himno' && out.some(b=>igual(b,a))) return;
+    if(!a.n && campo!=='himno' && campo!=='salmodia' && out.some(b=>igual(b,a))) return;
     out.push({n:a.n, t, raw});
   });
   let i=0; return out.map(a=>({...a, n:a.n || 'Opción '+(++i)}));
 }
-// Modo «común»: deja en P lo elegido para cada elemento que tiene opciones y anota las opciones para la app
-// (modo.comun.alts[hora|campo] = {i, ops}). Sin elección, queda lo que el motor eligió solo.
+// Deja en P lo elegido para cada elemento del común que tiene opciones y anota las opciones para la app
+// (alts[hora|campo] = {i, ops}): en el modo «común» (modo.comun) y también en las celebraciones y el Oficio de difuntos
+// que toman del común, donde las «O bien» rotan (modo.opc: lo que eligió el motor, con el botón «Otras opciones»).
+// Sin elección, queda lo que el motor eligió solo.
 function elegirComun(P, campos, comunes, id, nombre, pascua, sub, hora){
-  const M=modo.comun; if(!M) return;
+  const M=modo.comun||modo.opc; if(!M || !id) return;
   M.alts=M.alts||{};
   for(const c of campos){
     if(P[c]==null) continue;
@@ -575,17 +612,19 @@ function elegirComun(P, campos, comunes, id, nombre, pascua, sub, hora){
 }
 // La oración del común en el modo «común»: la del caso («or») o, si no hay, la que elige el motor (sin las de otro
 // tiempo: en el común de la Virgen, la de Adviento o la de Navidad solo en su tiempo); las demás, a elección.
-function oracionElegida(oraciones, nombre, hora, t){
-  const M=modo.comun; if(!M || !oraciones || !oraciones.length) return oracionComun(oraciones, nombre, 0);
-  const ok=oraciones.filter(o=>o.texto && o.texto.length>40);   // (no las truncas)
-  if(!ok.length) return oracionComun(oraciones, nombre, 0);
+// Fuera del modo «común» (modo.opc), la que elige el motor en su turno (n) y las demás, en «Otras opciones».
+function oracionElegida(oraciones, nombre, hora, t, n){
+  const M=modo.comun||modo.opc; if(!M || !oraciones || !oraciones.length) return oracionComun(oraciones, nombre, n||0);
+  const ok=oraciones.filter(o=>o.texto && o.texto.length>40 && !/^\p{Ll}/u.test(o.texto));   // (no las truncas ni los restos de otra)
+  if(!ok.length) return oracionComun(oraciones, nombre, n||0);
   const tdo=o=>(/^tiempo de (\S+)/i.exec(o.para||'')||[])[1], ajena=o=>tdo(o) && tdo(o).toLowerCase()!==String(t||'').toLowerCase();
   const propia=ok.find(o=>tdo(o) && !ajena(o)), porCaso=M.or && ok.find(o=>M.or.test(o.para||''));
   const pre=propia || porCaso || null;
-  const ops=ok.map(o=>({n:!o.para ? '' : /^(tiempo|cuando)/i.test(o.para) ? o.para : 'Para '+o.para, t:oracionComun([o], nombre, 0)}));
-  const def=pre ? oracionComun([pre], nombre, 0) : oracionComun(ok.filter(o=>!ajena(o)), nombre, 0);
-  let i=ops.findIndex(o=>o.t===def), n=0; ops.forEach(o=>{ if(!o.n) o.n='Opción '+(++n); });
-  if(ops.length<2) return def;
+  const ops=ok.map(o=>({n:!o.para ? '' : /^(tiempo|cuando)/i.test(o.para) ? o.para : 'Para '+o.para, t:oracionComun([o], nombre, 0)}))
+    .filter((o,i,a)=>a.findIndex(x=>x.t===o.t)===i);   // (el libro repite alguna)
+  const def=!modo.comun ? oracionComun(oraciones, nombre, n||0) : pre ? oracionComun([pre], nombre, 0) : oracionComun(ok.filter(o=>!ajena(o)), nombre, 0);
+  let i=ops.findIndex(o=>o.t===def), j=0; ops.forEach(o=>{ if(!o.n) o.n='Opción '+(++j); });
+  if(ops.length<2 || i<0) return def;
   const k=hora+'|oracion', e=(M.elige||{})[k]; if(e!=null && ops[e]) i=e;
   M.alts=M.alts||{}; M.alts[k]={i, ops:ops.map(o=>({n:o.n, ver:vista(o.t)}))};
   return ops[i<0?0:i].t;
@@ -597,5 +636,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, pasion, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

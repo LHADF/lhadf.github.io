@@ -5,6 +5,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 ## Ortotipografía
 
 - **En rojo:** rúbricas (además en cursiva), la letra capital inicial del gregoriano y el número de modo, los números de estrofa de los himnos, ℣, ℟, asterisco y cruz.
+- **Capitular** (21/11/2026): también en las lecturas breves, los himnos en español y los cánticos evangélicos (en estos, como la del gregoriano): la primera letra, grande y roja, a lo alto de dos renglones. No va si el texto empieza con ¡ o ¿ (ni con otro signo).
 - **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): lo que baja va más adentro que el renglón de la cadencia, como con dos sangrías (2,2 em; el renglón de la cadencia, 1,1 em). Sin guion ni otra marca. Vale para salmos, cánticos e himnos. El tercer renglón de una estrofa sin flexa cuyo primero termina en «:» va igual de adentro (`.v .h3`, CRU 20/11/2026).
 - **Partituras de himnos:** cada estrofa y el Amén empiezan renglón nuevo; el anterior termina con el custos de la nota siguiente y el pentagrama vacío hasta el final (en el GABC, `(::Z)`).
 - **Glifos propios** (fuente «Cantoral Signos»): ℣ y ℟ con trazo diagonal, cruz patada (✠) y asterisco de cinco pétalos.

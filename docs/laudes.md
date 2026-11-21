@@ -77,3 +77,9 @@ Orden de trabajo: 1) carga única desde sync a `base/` (salterio de cuatro seman
 ## Salmodia cantada en español (18/11/2026)
 
 Modo por semana del salterio y por domingo, pautado y primer verso en partitura en Laudes y Vísperas, con desplegable para cambiar el modo; el cántico evangélico en el mismo modo con entonación en cada verso. Reglas de silabeo y acentuación de CRU: [salmodia.md](salmodia.md).
+
+## Cambios del 21/11/2026 (valen para todas las horas)
+
+- **«Otras opciones».** Va justo debajo del título del elemento (no al final). Además del modo «Comunes de los santos», aparece en las celebraciones y en el Oficio de difuntos que toman del común: lo que tocó en la rotación de las «O bien» queda marcado y se puede elegir otra opción (preces del común de la Virgen, último salmo de Laudes de difuntos, oración del común…). Lo elegido vale mientras se mira ese día (`S._elige`, no se guarda). Motor: `modo.opc` en `elegirComun` y `oracionElegida` (`src/completas.js`).
+- **Capitular.** Lecturas breves, himnos en español (no la continuación del Te Deum) y cánticos evangélicos llevan la primera letra grande y roja, a lo alto de dos renglones, como el gregoriano. Cantados, el cántico evangélico (también el Nunc dimíttis) la lleva en la partitura; sin partitura, en el texto. No va si el texto empieza con ¡, ¿ u otro signo, ni con traducción interlineal.
+- **Tiempo de pasión** (desde las I Vísperas del V domingo de Cuaresma hasta el Sábado Santo; `pasion()` en `src/completas.js`): no se dice el Gloria al Padre al final de los salmos, cánticos (también el Salmo 94 del invitatorio y el cántico evangélico) ni en el responsorio breve. Salmos y cánticos llevan la rúbrica «No se dice Gloria.»; el responsorio breve pasa de la respuesta corta a la repetición final (en Completas cantadas, la partitura sin el versículo *Glória Patri*). El Gloria de la invocación inicial se dice. No se aplica al Oficio de difuntos.

@@ -94,10 +94,11 @@ function propio(hora, fecha, region){
       for(const c of CAMPOS) if(PR[c]!=null) P[c]=PR[c];
       if(PR.salmodia){ P.salmodia=PR.salmodia; santo={salmodia:PR.salmodia}; }
       const HK=hora+(primeras?'1':'');   // clave de la hora para las elecciones del modo común
-      if(COM) X.elegirComun(P, CAMPOS.filter(c=>c!=='himno'), L.comunes, adf.comun, ref.n, ref.t==='Pascua', primeras?'primeras':null, HK);
+      // las opciones de cada elemento (en el modo común, a elegir; si no, lo que tocó en la rotación y las demás en «Otras opciones»)
+      X.elegirComun(P, [...CAMPOS.filter(c=>c!=='himno' && PR[c]==null), ...(P.salmodia===C.salmodia && !PR.salmodia ? ['salmodia'] : [])], L.comunes, adf.comun, ref.n, ref.t==='Pascua', primeras?'primeras':null, HK);
       // el himno del común: los otros, como opción en la hora (no rotan)
       if(!PR.himno && P.himno===C.himno) P._himnos=X.himnosComun(L.comunes, adf.comun, ref.n, primeras?'primeras':null, P.himno, L.himnos);
-      const o=PR.oracion || (COM ? X.oracionElegida(C.oraciones||C0.oraciones, ref.n, HK, ref.t) : X.oracionComun(C.oraciones||C0.oraciones, ref.n, n));
+      const o=PR.oracion || X.oracionElegida(C.oraciones||C0.oraciones, ref.n, HK, ref.t, n);
       if(o) P.oracion=o;
       delete P.pendiente;
       // lo que falta (sin común): del día. Si está todo, sin nota.
@@ -158,9 +159,10 @@ function armar(hora, fecha, region){
   // y si se recita, solo al principio y al final de cada estrofa (rúbrica del libro)
   const aleluyas=t=>t.filter(e=>/\n/.test(e)).map(e=>e.split('\n').map(x=>x.trim()).filter(x=>x && !/aleluia/i.test(x)));
   const modo=modoDe(hoy, fRef);
+  const pas=X.pasion(fRef);   // tiempo de pasión: sin Gloria al final de salmos y cánticos ni en el responsorio breve
   const salmo=(sid, ant)=>{ const s=L.salmos[sid]; const v=X.versosDe(s.texto);
-    if(/^cantico-ap-19-/.test(sid)) return {k:'salmo', es:true, id:sid, ant, modo, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:[]}, grupos:{es:[]}, aleluyas:aleluyas(s.texto), gloria:true, rubrica:''};
-    return {k:'salmo', es:true, id:sid, ant, modo, sinEnt:!!s.sin_entonacion, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!SIN_GLORIA.includes(sid), rubrica:s.rubrica_final||''}; };
+    if(/^cantico-ap-19-/.test(sid)) return {k:'salmo', es:true, id:sid, ant, modo, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:[]}, grupos:{es:[]}, aleluyas:aleluyas(s.texto), gloria:!pas, rubrica:pas?X.NO_GLORIA:''};
+    return {k:'salmo', es:true, id:sid, ant, modo, sinEnt:!!s.sin_entonacion, titulo:{es:s.titulo}, lema:{es:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!pas && !SIN_GLORIA.includes(sid), rubrica:[s.rubrica_final||'', pas && !SIN_GLORIA.includes(sid) ? X.NO_GLORIA : ''].filter(Boolean).join(' ')}; };
 
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.
   // Todos los días se empieza con «Dómine, lábia mea apéries»; el invitatorio (antífona y Salmo 94), solo los domingos.
@@ -181,7 +183,8 @@ function armar(hora, fecha, region){
     const s94=L.ordinario.invitatorio.salmo;
     S.push({k:'salmoinv', id:'salmo-94', titulo:s94.titulo, lema:X.oracionCase(s94.subtitulo||''),
             estrofas:s94.texto.map(e=>e.split('\n').map(x=>x.trim()).filter(Boolean))
-              .concat([['Gloria al Padre, y al Hijo, y al Espíritu Santo.', 'Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.']]), ...inv});
+              .concat(pas ? [] : [['Gloria al Padre, y al Hijo, y al Espíritu Santo.', 'Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.']]), ...inv});
+    if(pas) S.push({k:'rub', t:X.NO_GLORIA, ...inv});
     S.push({k:'ant', rep:'ai', es:true, ...inv});
   }
 
@@ -217,13 +220,15 @@ function armar(hora, fecha, region){
     S.push({k:'ant', id:'rb', es:true, n:'Ant.', t:{es:P.en_lugar_del_responsorio}});
   } else {
     sec('responsorio','Responsorio breve');
-    S.push({k:'resp', es:true, l:{es:P.responsorio}});
+    S.push({k:'resp', es:true, l:{es:pas ? X.sinGloriaResp(P.responsorio) : P.responsorio}});
   }
 
   sec('cantico','Cántico evangélico',{ref:GL.cantico.ref});
   const BN=GL.cantico;
   S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}});
-  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo, titulo:BN.titulo, versos:BN.versos, inter:BN.traduccion_versos});
+  const bnv=pas ? BN.versos.filter(v=>!X.esGloriaLa(v)) : BN.versos, bni=pas&&BN.traduccion_versos ? BN.traduccion_versos.filter((x,i)=>!X.esGloriaLa(BN.versos[i])) : BN.traduccion_versos;
+  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo, titulo:BN.titulo, versos:bnv, inter:bni});
+  if(pas) S.push({k:'rub', t:X.NO_GLORIA});
   S.push({k:'ant', rep:'ab', es:true});
 
   sec('preces','Preces');

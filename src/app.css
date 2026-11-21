@@ -115,14 +115,15 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
 .discreto{align-self:center;border:0;background:none;min-height:44px;padding:8px 12px;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
 .discreto.arriba{margin:0}
-/* Comunes de los santos: desplegables de la hoja, «Otras opciones» bajo cada elemento y su lista */
+/* Comunes de los santos: desplegables de la hoja; «Otras opciones» (también en las «O bien» que rotan) y su lista */
 .elige-comun{display:grid;gap:10px;margin:12px 0 18px}
 .elige-comun label{display:grid;grid-template-columns:5.5em 1fr;align-items:center;gap:10px}
 .elige-comun label>span{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .elige-comun select{font:inherit;font-family:var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:var(--r-1);padding:9px 10px;min-height:44px;width:100%}
 .elige-comun select:focus-visible{outline:2px solid var(--rubric);outline-offset:1px}
-.otras{display:flex;justify-content:flex-end;margin:-.4em 0 .4em}
-.otras .discreto{min-height:36px;padding:4px 2px}
+/* «Otras opciones»: justo debajo del título del elemento, alineado con él */
+.otras{display:flex;justify-content:flex-start;margin:-1.1em 0 .9em}
+.otras .discreto{min-height:36px;padding:4px 0}
 .opc-lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .opc-lista li{border-bottom:1px solid var(--line)}
 .opc-lista button{width:100%;display:grid;gap:3px;padding:12px 4px;border:0;background:none;text-align:left}
@@ -196,6 +197,10 @@ b .k,.todos .k{font-weight:400}
 .salmo-h .modo select:focus-visible{outline:2px solid var(--rubric);outline-offset:1px}
 .versos{margin:0 0 .4em}
 .v{margin:0 0 .55em}
+/* Capitular (lecturas breves, himnos en español, cánticos evangélicos sin partitura): grande y roja, a lo alto de dos renglones,
+   como la del gregoriano. Los renglones que tiene al lado van sin sangría francesa. */
+.capi{float:left;font-family:var(--serif);font-weight:400;font-style:normal;color:var(--rubric);font-size:3.35em;line-height:.8;margin:.09em .07em 0 -.02em;font-variation-settings:'opsz' 60}
+.v.capi-on .h1,.v.capi-on .h2,.himno .est .ln.c{padding-left:0;text-indent:0}
 .v .h1{display:block;padding-left:2.2em;text-indent:-2.2em}
 .v .h2{display:block;padding-left:2.2em;text-indent:-1.1em}
 .v .h3{display:block;padding-left:2.2em;text-indent:0}   /* renglón que sigue en la misma mitad: como el quebrado por falta de ancho */
