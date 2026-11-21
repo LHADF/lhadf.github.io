@@ -131,9 +131,9 @@ function nombreVersion(){
 }
 // Capitular (docs/diseno.md): la primera letra, grande y roja, a lo alto de dos renglones, como la del gregoriano.
 // Lecturas breves, himnos en español y cánticos evangélicos. No va si el texto empieza con ¡, ¿ u otro signo.
-// Sinalefas de los himnos en español (base/himnos: «‿» entre las palabras que se unen; tools/sinalefas.py): un arco fino
-// dibujado, que no depende de la fuente (el carácter queda para copiar)
-const sinalefas=h=>h.replace(/‿/g,'<span class="sin">‿</span>');
+// Sinalefas de los himnos en español (base/himnos: «‿» entre las palabras que se unen; tools/sinalefas.py): la vocal
+// final que se une a la palabra siguiente va en cursiva, y entre las palabras, un espacio común
+const sinalefas=h=>h.replace(/(\p{L})([^\p{L}\s<]*)‿/gu,'<i class="sin">$1</i>$2 ').replace(/‿/g,' ');
 const capiHTML=ch=>`<span class="capi">${esc(ch)}</span>`;
 function capiTxt(t){ const s=String(t||''), m=/^\p{L}/u.exec(s); return m ? capiHTML(m[0])+esc(s.slice(m[0].length)) : esc(s); }
 function marcas(s){ // ℣ ℟ * † ✠ en rojo
