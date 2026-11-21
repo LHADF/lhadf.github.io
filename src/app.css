@@ -201,6 +201,8 @@ b .k,.todos .k{font-weight:400}
    como la del gregoriano. Los renglones que tiene al lado van sin sangría francesa. */
 .capi{float:left;font-family:var(--serif);font-weight:400;font-style:normal;color:var(--rubric);font-size:3.35em;line-height:.8;margin:.09em .07em 0 -.02em;font-variation-settings:'opsz' 60}
 .v.capi-on .h1,.v.capi-on .h2,.himno .est .ln.c{padding-left:0;text-indent:0}
+/* Sinalefa de los himnos: arco fino entre las palabras que se unen (el carácter «‿» queda transparente, para copiar) */
+.sin{display:inline-block;width:.46em;height:.34em;margin:0 .02em;vertical-align:-.2em;overflow:hidden;color:transparent;border-bottom:.085em solid var(--ink2,#555);border-radius:0 0 50% 50%;text-indent:0;user-select:all}
 .v .h1{display:block;padding-left:2.2em;text-indent:-2.2em}
 .v .h2{display:block;padding-left:2.2em;text-indent:-1.1em}
 .v .h3{display:block;padding-left:2.2em;text-indent:0}   /* renglón que sigue en la misma mitad: como el quebrado por falta de ancho */

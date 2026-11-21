@@ -131,6 +131,9 @@ function nombreVersion(){
 }
 // Capitular (docs/diseno.md): la primera letra, grande y roja, a lo alto de dos renglones, como la del gregoriano.
 // Lecturas breves, himnos en español y cánticos evangélicos. No va si el texto empieza con ¡, ¿ u otro signo.
+// Sinalefas de los himnos en español (base/himnos: «‿» entre las palabras que se unen; tools/sinalefas.py): un arco fino
+// dibujado, que no depende de la fuente (el carácter queda para copiar)
+const sinalefas=h=>h.replace(/‿/g,'<span class="sin">‿</span>');
 const capiHTML=ch=>`<span class="capi">${esc(ch)}</span>`;
 function capiTxt(t){ const s=String(t||''), m=/^\p{L}/u.exec(s); return m ? capiHTML(m[0])+esc(s.slice(m[0].length)) : esc(s); }
 function marcas(s){ // ℣ ℟ * † ✠ en rojo
@@ -494,7 +497,7 @@ function himnoHTML(sec){
   const capi=o.lang==='es' && !GL && o.id!=='tedeum2' && est.length && /^\p{L}/u.test(est[0][0]||'') && (est[0][0]||'').length>1;
   h+=`<div class="himno${numerar?'':' sin-num'}">`+est.map((e,ie)=>{
     const c=capi && ie===0;
-    return `<p class="est${c?' capi-on':''}">${numerar?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<2?' c':''}">${esc(c&&!il?l.slice([...l][0].length):l)}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
+    return `<p class="est${c?' capi-on':''}">${numerar?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<2?' c':''}">${sinalefas(esc(c&&!il?l.slice([...l][0].length):l))}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
   return h;
 }
 // Invitatorio de los domingos del Tiempo Ordinario: gregoriano si se canta (salvo que se elija en español)

@@ -1,0 +1,210 @@
+# Sinalefas de los himnos en español
+
+Las sinalefas de los himnos en español van marcadas en `base/himnos/` con «‿» (`tools/sinalefas.py`, 21/11/2026).
+Este informe lista los versos en los que **no** se marcó una sinalefa posible (hiato), porque la medida del himno lo
+pide: la segunda vocal tónica («su Hijo», «la hora»), una pausa, o la cesura de los alejandrinos (7+7) y dodecasílabos
+(6+6). Para corregir un verso, se edita a mano en `base/himnos/`.
+
+- **CUANDO LA LUZ DEL SOL ES YA PONIENTE** (completas.yaml): «de pecadora en justa, e ilumina» — sin sinalefa en «justa, e»
+- **CUANDO LLEGÓ EL INSTANTE DE TU MUERTE** (completas.yaml): «mas no eras tú el hombre derribado,» — sin sinalefa en «no eras»
+- **CUANDO LA LUZ DEL SOL ES YA PONIENTE** (completas.yaml): «de pecadora en justa, e ilumina» — sin sinalefa en «justa, e»
+- **Alfarero del hombre, mano trabajadora** (laudes.yaml): «De mañana te busco, hecho de luz concreta,» — sin sinalefa en «busco, hecho»
+- **Alfarero del hombre, mano trabajadora** (laudes.yaml): «El árbol toma cuerpo, y el agua melodía;» — sin sinalefa en «cuerpo, y»
+- **Ayer, alba en el alba, subiste presurosa** (laudes.yaml): «porque tú eres la escala ante el Hijo del Padre:» — sin sinalefa en «escala ante»
+- **Ayer, alba en el alba, subiste presurosa** (laudes.yaml): «eres vínculo y nudo, eres tilma, eres casa.» — sin sinalefa en «nudo, eres»
+- **Cabeza y Cuerpo, Cristo forma un todo** (laudes.yaml): «Una y otra son madres y son vírgenes,» — sin sinalefa en «y otra»
+- **Cabeza y Cuerpo, Cristo forma un todo** (laudes.yaml): «ninguna sin la otra por entero.» — sin sinalefa en «la otra»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «abramos nuestro espíritu a su infinito amor.» — sin sinalefa en «espíritu a»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «abramos nuestro espíritu a su infinito amor.» — sin sinalefa en «espíritu a»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «abramos nuestro espíritu a su infinito amor.» — sin sinalefa en «espíritu a»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «si el alma se acongoja en noche y turbación,» — sin sinalefa en «acongoja en»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «abramos nuestro espíritu a su infinito amor.» — sin sinalefa en «espíritu a»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «Recibe, Padre santo, el ruego y la alabanza,» — sin sinalefa en «santo, el»
+- **Cantemos al Señor con indecible gozo** (laudes.yaml): «abramos nuestro espíritu a su infinito amor. Amén.» — sin sinalefa en «espíritu a»
+- **Contigo sube el mundo cuando subes** (laudes.yaml): «vivo está, ¡oh Jesús glorificado!» — sin sinalefa en «está, ¡oh»
+- **Contigo sube el mundo cuando subes** (laudes.yaml): «En ti, Dios fuerte, Hijo primogénito,» — sin sinalefa en «fuerte, Hijo»
+- **Creador sempiterno de las cosas** (laudes.yaml): «así como su Hijo Jesucristo,» — sin sinalefa en «su Hijo»
+- **Crece la luz bajo tu hermosa mano** (laudes.yaml): «el soplo de tu Hijo,» — sin sinalefa en «tu Hijo,»
+- **Cristo, el Señor** (laudes.yaml): «Cristo, el Señor,» — sin sinalefa en «Cristo, el»
+- **Cuando el gallo, tres veces** (laudes.yaml): ««¿Me amas más que éstos?»» — sin sinalefa en ««¿Me amas», «que éstos?»»
+- **Dejado ya el descanso de la noche** (laudes.yaml): «acoge por tu Hijo la oración» — sin sinalefa en «tu Hijo»
+- **Dieron muerte al Heredero** (laudes.yaml): «y en la hora de la muerte» — sin sinalefa en «la hora»
+- **Edificaste una torre** (laudes.yaml): «Y la viña no dio uvas,» — sin sinalefa en «dio uvas,»
+- **El pueblo que fue cautivo** (laudes.yaml): «¡Gloria, alabanza y honor!» — sin sinalefa en «¡Gloria, alabanza»
+- **El pueblo que fue cautivo** (laudes.yaml): «Gritad: «¡Hosanna!», y haceos» — sin sinalefa en ««¡Hosanna!», y»
+- **Emprenda la esperanza raudo vuelo** (laudes.yaml): «acaban hoy su canto en melodías puras» — sin sinalefa en «canto en»
+- **Emprenda la esperanza raudo vuelo** (laudes.yaml): «retorna jubiloso al seno de tu Padre,» — sin sinalefa en «jubiloso al»
+- **En el nombre del Padre, del Hijo y del Espíritu** (laudes.yaml): «salimos de la noche y estrenamos la aurora;» — sin sinalefa en «noche y»
+- **En el nombre del Padre, del Hijo y del Espíritu** (laudes.yaml): «Tu mano acerca el fuego a la tierra sombría,» — sin sinalefa en «fuego a»
+- **En el nombre del Padre, del Hijo y del Espíritu** (laudes.yaml): «silabeas el alba igual que una palabra,» — sin sinalefa en «alba igual»
+- **En el nombre del Padre, del Hijo y del Espíritu** (laudes.yaml): «Regresa, desde el sueño, el hombre a su memoria,» — sin sinalefa en «sueño, el»
+- **En el nombre del Padre, del Hijo y del Espíritu** (laudes.yaml): «le confías la tierra, y a la tarde la encuentras» — sin sinalefa en «tierra, y»
+- **Es la Pascua real, no ya la sombra** (laudes.yaml): «Oh gozo universal, Dios se hizo hombre» — sin sinalefa en «se hizo»
+- **Es verdad que las luces del alba** (laudes.yaml): «del día de hoy» — sin sinalefa en «de hoy»
+- **Escuchen qué cosa y cosa** (laudes.yaml): «y a su Hijo Dios respeta;» — sin sinalefa en «su Hijo»
+- **Estás aquí, Señor, bien lo proclaman** (laudes.yaml): «estar cerca de ti, porque te aman» — sin sinalefa en «te aman»
+- **Finísimo fue el lino con que ella** (laudes.yaml): «Finísimo fue el lino con que ella» — sin sinalefa en «que ella»
+- **Gloriosa aurora de este nuevo día** (laudes.yaml): «de ser junto a tu Hijo eternamente» — sin sinalefa en «tu Hijo»
+- **Hoy desciende el Espíritu de fuego** (laudes.yaml): «Dios baja al Sinaí, y en llamarada» — sin sinalefa en «Sinaí, y»
+- **Lucero del alba** (laudes.yaml): «luz de mi alma,» — sin sinalefa en «mi alma,»
+- **Nacidos de la luz, hijos del día** (laudes.yaml): «que nos legó en su Hijo muy amado.» — sin sinalefa en «su Hijo»
+- **Nacidos de la luz, hijos del día** (laudes.yaml): «por medio de su Hijo Jesucristo,» — sin sinalefa en «su Hijo»
+- **No lloréis, mis ojos** (laudes.yaml): «O es fuego o es frío» — sin sinalefa en «O es»
+- **Oh sol de salvación, oh Jesucristo** (laudes.yaml): «ha de manar desde hoy perenne llanto,» — sin sinalefa en «desde hoy»
+- **Oye turbado el tirano** (laudes.yaml): «Y, en golpe de odio y espada,» — sin sinalefa en «de odio»
+- **Oye turbado el tirano** (laudes.yaml): «Danos, por tu Hijo amado,» — sin sinalefa en «tu Hijo»
+- **Palabra del Señor ya rubricada** (laudes.yaml): «que, en vida y muerte, el justo en Cristo halla.» — sin sinalefa en «Cristo halla.»
+- **Pureza inmaculada** (laudes.yaml): «tú eres la alegría,» — sin sinalefa en «tú eres»
+- **Que hoy bajó Dios a la tierra** (laudes.yaml): «de dominio con su Hijo,» — sin sinalefa en «su Hijo,»
+- **Salve divina María** (laudes.yaml): «Como Hija, Madre y Esposa» — sin sinalefa en «Como Hija,»
+- **Salve, atleta victorioso** (laudes.yaml): «a su Hijo Jesucristo» — sin sinalefa en «su Hijo»
+- **Sin dejar la derecha de su Padre** (laudes.yaml): «a fin de alimentar en cuerpo y alma» — sin sinalefa en «y alma»
+- **Sólo la Niña aquella, la Niña inmaculada** (laudes.yaml): «sólo esa Niña bella al cielo fue elevada.» — sin sinalefa en «bella al»
+- **Te damos gracias, Señor** (laudes.yaml): «porque has depuesto la ira» — sin sinalefa en «porque has»
+- **Tú, Cefas, eres Pedro y eres roca** (laudes.yaml): «Tú, Cefas, eres Pedro y eres roca,» — sin sinalefa en «y eres»
+- **Un tan hermoso Doncel** (laudes.yaml): «Es un Niño en quien se halla» — sin sinalefa en «se halla»
+- **Varón feliz de méritos excelsos** (laudes.yaml): «a ti, Dios trino y uno, te celebra,» — sin sinalefa en «y uno,»
+- **Veisme aquí, mi dulce Amor** (laudes.yaml): «mi cuerpo, mi vida y alma,» — sin sinalefa en «y alma,»
+- **Veisme aquí, mi dulce Amor** (laudes.yaml): «sólo hallo paz aquí.» — sin sinalefa en «sólo hallo»
+- **Veisme aquí, mi dulce Amor** (laudes.yaml): «Si queréis que esté holgando,» — sin sinalefa en «esté holgando,»
+- **Velaron las estrellas el sueño de su muerte** (laudes.yaml): «es hoy el nuevo día en que el Señor actuó.» — sin sinalefa en «día en»
+- **Velaron las estrellas el sueño de su muerte** (laudes.yaml): «el Cristo siempre vivo es hoy nuestro blasón.» — sin sinalefa en «vivo es»
+- **Velaron las estrellas el sueño de su muerte** (laudes.yaml): «del día y la victoria en que el Señor actuó.» — sin sinalefa en «victoria en»
+- **Vienes del trono de David profeta** (laudes.yaml): «al Hijo de quien eres sierva e hija;» — sin sinalefa en «e hija;»
+- **Vosotros, que escuchasteis la llamada** (laudes.yaml): «abrid nuestro vivir y nuestra alma» — sin sinalefa en «nuestra alma»
+- **Vosotros, que escuchasteis la llamada** (laudes.yaml): «de vivir junto a él la vida eterna. Amén.» — sin sinalefa en «a él»
+- **«¿Qué será este niño?», decía la gente** (laudes.yaml): «porque ella era el arca donde estaba él.» — sin sinalefa en «porque ella»
+- **«¿Qué será este niño?», decía la gente** (laudes.yaml): ««Y tú serás, niño, quien marche ante él;» — sin sinalefa en «ante él;»
+- **Quién podrá tanto alabarte** (laudes.yaml): «¡Oh Madre de Dios y hombre!» — sin sinalefa en «y hombre!»
+- **Quiero seguirte a ti, flor de las flores** (laudes.yaml): «mi esperanza está en ti, hora tras hora;» — sin sinalefa en «ti, hora»
+- **Quiero seguirte a ti, flor de las flores** (laudes.yaml): «Gloria al Padre, y al Hijo,» — sin sinalefa en «Padre, y»
+- **Tú eres toda hermosa** (laudes.yaml): «Tú eres toda hermosa,» — sin sinalefa en «Tú eres»
+- **Tú eres toda hermosa** (laudes.yaml): «tú eres de Dios gloria,» — sin sinalefa en «tú eres»
+- **Tú eres toda hermosa** (laudes.yaml): «la obra de su amor.» — sin sinalefa en «la obra»
+- **Éstos que van vestidos** (laudes.yaml): «han salido del fuego y han buscado el frescor.» — sin sinalefa en «fuego y»
+- **Éstos que van vestidos** (laudes.yaml): «Gloria al Padre, y al Hijo, y al Espíritu Santo.» — sin sinalefa en «y al»
+- **Cantan a tu gloria, Cristo Sacerdote** (laudes.yaml): «a ti que por amor te hiciste hombre» — sin sinalefa en «hiciste hombre»
+- **Déjame, Señor, así** (laudes.yaml): «mientras la brisa en la era» — sin sinalefa en «la era»
+- **Juan, que en el pecho del Señor sagrado** (laudes.yaml): «el mundo, escribiste de tu mano;» — sin sinalefa en «mundo, escribiste»
+- **Lucero del alba, luz de mi alma** (laudes.yaml): «luz de mi alma,» — sin sinalefa en «mi alma,»
+- **Oh Jesús, que en tu cruz has demostrado** (nona.yaml): «nuestra parte en tu obra salvadora,» — sin sinalefa en «tu obra»
+- **Oh Jesús, que en tu cruz has demostrado** (nona.yaml): «Gracias, Padre, a ti porque nos llamas,» — sin sinalefa en «Padre, a»
+- **Ojos de aquel publicano** (nona.yaml): «por el honor de tu Hijo. Amén.» — sin sinalefa en «tu Hijo.»
+- **A caminar sin ti, Señor, no atino** (oficio.yaml): «hay un poco de vino y un alero» — sin sinalefa en «vino y»
+- **A ti, José, patriarca y artesano** (oficio.yaml): «de honra al trabajo, y de hacer la vida» — sin sinalefa en «de honra»
+- **Alégrese tierra y cielo** (oficio.yaml): «Della hizo el Verbo cielo,» — sin sinalefa en «Della hizo»
+- **Con entrega, Señor, a ti venimos** (oficio.yaml): «Gloria a ti, Padre nuestro, y a tu Hijo,» — sin sinalefa en «tu Hijo,», «nuestro, y»
+- **Con gozo el corazón cante la vida** (oficio.yaml): «que fluye en todo ser que en él fue hecho» — sin sinalefa en «fue hecho»
+- **Custodio virgen de la Virgen Madre** (oficio.yaml): «como a él, al Padre y al Amor divino» — sin sinalefa en «a él,»
+- **De la raíz de Jesé** (oficio.yaml): «muere la muerte, y huyó» — sin sinalefa en «muerte, y»
+- **De luz nueva se viste la tierra** (oficio.yaml): «de su carne se ha revestido.» — sin sinalefa en «se ha»
+- **De luz nueva se viste la tierra** (oficio.yaml): «el Espíritu ha descendido» — sin sinalefa en «Espíritu ha»
+- **De un Dios que se encarnó muestra el misterio** (oficio.yaml): «Comienza hoy, Jesús, tu nuevo imperio» — sin sinalefa en «Comienza hoy,»
+- **De un Dios que se encarnó muestra el misterio** (oficio.yaml): «y antes que el mundo, ya eternamente,» — sin sinalefa en «y antes»
+- **Dichosos los que, oyendo la llamada** (oficio.yaml): «para servirle a él con fortaleza,» — sin sinalefa en «a él»
+- **El pecado del hombre ha dado muerte** (oficio.yaml): «Luz que brilla en lo alto, y reverbera» — sin sinalefa en «lo alto,»
+- **En el principio, tu Palabra** (oficio.yaml): «Como una espada de fuego,» — sin sinalefa en «Como una»
+- **En el principio, tu palabra** (oficio.yaml): «Como una espada de fuego,» — sin sinalefa en «Como una»
+- **Eres mujer de casa y, además, peregrina** (oficio.yaml): «Eres mujer de casa y, además, peregrina,» — sin sinalefa en «y, además,»
+- **Esta mujer no quiso** (oficio.yaml): «y se llenó de hijos,» — sin sinalefa en «de hijos,»
+- **Hoy dos extremos se han visto** (oficio.yaml): ««Aqueste es mi Hijo amado,» — sin sinalefa en «mi Hijo»
+- **La Palabra de Dios crucificada** (oficio.yaml): «es testigo fiel de su elocuencia,» — sin sinalefa en «su elocuencia,»
+- **La noche estaba del silencio en medio** (oficio.yaml): «de la dichosa hora el punto, cuando» — sin sinalefa en «dichosa hora»
+- **La noche estaba del silencio en medio** (oficio.yaml): «virgen y madre se mostró a la hora.» — sin sinalefa en «la hora.»
+- **Madre de la Divina Providencia** (oficio.yaml): «Padre, Hijo y Espíritu de amor,» — sin sinalefa en «Padre, Hijo»
+- **Me ha calentado el sol ya tantos años** (oficio.yaml): «Una nube vendrá y acaso borre» — sin sinalefa en «vendrá y»
+- **Oh Rey perpetuo de los elegidos** (oficio.yaml): «y hoy del fondo de la tumba naces;» — sin sinalefa en «y hoy»
+- **Palabra del Señor ya rubricada** (oficio.yaml): «que, en vida y muerte, el justo en Cristo halla.» — sin sinalefa en «Cristo halla.»
+- **Poner al Hijo en cruz, abierto el seno** (oficio.yaml): «y el que tengo de hombre me pusiera» — sin sinalefa en «de hombre»
+- **Por la lanza en su costado** (oficio.yaml): «Sangre y agua del abismo» — sin sinalefa en «y agua»
+- **Primicias son del sol de su Palabra** (oficio.yaml): «y su presencia es la que ilumina.» — sin sinalefa en «presencia es»
+- **Profeta de soledades** (oficio.yaml): «santificó el desierto.» — sin sinalefa en «santificó el»
+- **Pues busco, debo encontrar** (oficio.yaml): «volando detrás de él.» — sin sinalefa en «de él.»
+- **Que doblen las campanas jubilosas** (oficio.yaml): «su destino, su última verdad.» — sin sinalefa en «su última»
+- **Señor, tú que llamaste** (oficio.yaml): «al mundo de los hombres a tu Hijo,» — sin sinalefa en «tu Hijo,»
+- **Tú eres toda hermosa** (oficio.yaml): «Tú eres toda hermosa,» — sin sinalefa en «Tú eres»
+- **Tú eres toda hermosa** (oficio.yaml): «tú eres de Dios gloria,» — sin sinalefa en «tú eres»
+- **Tú eres toda hermosa** (oficio.yaml): «la obra de su amor.» — sin sinalefa en «la obra»
+- **Vivo sin vivir en mí** (oficio.yaml): «y si es dulce el amor,» — sin sinalefa en «si es»
+- **¡Oh Redentor, oh Cristo** (oficio.yaml): «la hostia de tu cuerpo» — sin sinalefa en «la hostia»
+- **¡Triste de mí que he cruzado** (oficio.yaml): «en la hora de mi muerte!» — sin sinalefa en «la hora»
+- **«¿Quién como Dios?», fue el grito de victoria** (oficio.yaml): «que se nos dio por guía y emisario» — sin sinalefa en «guía y»
+- **«¿Quién como Dios?», fue el grito de victoria** (oficio.yaml): «en los designios que designa él!» — sin sinalefa en «designa él!»
+- **«¿Quién como Dios?», fue el grito de victoria** (oficio.yaml): «de un mundo que está enfermo y es mortal. Amén.» — sin sinalefa en «está enfermo»
+- **¿Por qué bajaste a nosotros?** (oficio.yaml): «nos envió a su propio Hijo.» — sin sinalefa en «propio Hijo.»
+- **¿Quién es este viajero** (oficio.yaml): «timbre de gloria, único.» — sin sinalefa en «gloria, único.»
+- **¿Quién es éste viajero** (oficio.yaml): «timbre de gloria, único.» — sin sinalefa en «gloria, único.»
+- **¿Y dejas, Pastor santo** (oficio.yaml): «tu grey en este valle hondo, oscuro,» — sin sinalefa en «valle hondo,»
+- **¿Y dejas, Pastor santo** (oficio.yaml): «Y a este mar turbado» — sin sinalefa en «a este»
+- **Ruega por nosotros, amorosa Madre** (oficio.yaml): «Madre de mi alma,» — sin sinalefa en «mi alma,»
+- **¡Jerusalén, ciudad dichosa!** (oficio.yaml): «al Padre, al Hijo y al Paráclito.» — sin sinalefa en «Padre, al»
+- **Llena de rosas mi herida** (oficio.yaml): «ven a mí en la última hora,» — sin sinalefa en «última hora,»
+- **¿Cuándo, Señor, tendré el gozo de verte?** (oficio.yaml): «Padre mío, ¿me has abandonado?» — sin sinalefa en «¿me has»
+- **Amargo es el recuerdo de la muerte** (oficio.yaml): «No se oiga ya más el triste llanto;» — sin sinalefa en «se oiga»
+- **El pan de cada día** (sexta.yaml): «dánoslo hoy, Señor, a manos llenas;» — sin sinalefa en «dánoslo hoy,»
+- **Este mundo del hombre en que él se afana** (sexta.yaml): «un nuevo cielo y una nueva tierra» — sin sinalefa en «y una»
+- **Este mundo del hombre, en que él se afana** (sexta.yaml): «un nuevo cielo y una nueva tierra» — sin sinalefa en «y una»
+- **Jesús, contigo iremos al desierto** (sexta.yaml): «que alimentó tu alma silenciosa.» — sin sinalefa en «tu alma»
+- **¡Misterio en el Calvario** (sexta.yaml): «Al fin viene la hora» — sin sinalefa en «la hora»
+- **Al Señor confesamos, ¡aleluia!** (tercia.yaml): «En la hora de tercia a la mañana» — sin sinalefa en «la hora»
+- **Como el fuego calcina** (tercia.yaml): «y hay flor y fruto en la rama,» — sin sinalefa en «y hay»
+- **Como el fuego calcina** (tercia.yaml): «los caminos de éxodo» — sin sinalefa en «de éxodo»
+- **El trabajo, Señor, de cada día** (tercia.yaml): «Paciente y larga es nuestra tarea» — sin sinalefa en «Paciente y», «larga es»
+- **Espíritu de Dios, la tierra llenas** (tercia.yaml): «infunde en todo hombre la fuerza de la cruz.» — sin sinalefa en «todo hombre»
+- **Oh Santo Espíritu, que con el Padre** (tercia.yaml): «tú que reinas sin tiempo con tu Hijo» — sin sinalefa en «tu Hijo»
+- **Alta ciudad de piedras vivas** (visperas.yaml): «morada de Dios Trino y Uno.» — sin sinalefa en «y Uno.»
+- **Cabeza y Cuerpo, Cristo forma un todo** (visperas.yaml): «Una y otra son madres y son vírgenes,» — sin sinalefa en «y otra»
+- **Cabeza y Cuerpo, Cristo forma un todo** (visperas.yaml): «ninguna sin la otra por entero.» — sin sinalefa en «la otra»
+- **Calor de Dios en sangre redentora** (visperas.yaml): «Conózcate, oh Cristo, en esta hora» — sin sinalefa en «Conózcate, oh», «esta hora»
+- **Cantad y alabad al Señor** (visperas.yaml): «Hijo del Padre, hecho hombre:» — sin sinalefa en «Padre, hecho»
+- **Cantarán, llorarán razas y hombres** (visperas.yaml): «Cantarán, llorarán razas y hombres,» — sin sinalefa en «y hombres,»
+- **Cantemos al Señor con alegría** (visperas.yaml): «en la entrega y amor de este otro cristo.» — sin sinalefa en «de este»
+- **Como el niño que no sabe dormirse** (visperas.yaml): «Tú endulzarás mi última amargura,» — sin sinalefa en «mi última»
+- **Cristo, el Señor** (visperas.yaml): «Cristo, el Señor,» — sin sinalefa en «Cristo, el»
+- **Cuando, Señor, el día ya declina** (visperas.yaml): «Que tu amor, Padre santo, haga fuerte» — sin sinalefa en «santo, haga»
+- **Cuando, Señor, el día ya declina** (visperas.yaml): «nuestro amor, nuestra fe en tu Hijo amado;» — sin sinalefa en «tu Hijo»
+- **Cuando, Señor, el día ya declina** (visperas.yaml): «que la hora suprema de la muerte» — sin sinalefa en «la hora»
+- **De una Virgen hermosa** (visperas.yaml): «que ha deseado.»» — sin sinalefa en «que ha»
+- **El cielo se maravilla** (visperas.yaml): «hizo vuestro hijo y Dios» — sin sinalefa en «vuestro hijo»
+- **En la Cena del Cordero** (visperas.yaml): «en mi alma se ha encerrado. Amén.» — sin sinalefa en «se ha»
+- **En la cumbre del monte** (visperas.yaml): «Cristo, Dios y hombre.» — sin sinalefa en «y hombre.»
+- **Enfría, Señor, mi boca** (visperas.yaml): «remite, Señor, mi ansia;» — sin sinalefa en «mi ansia;»
+- **Entonad un canto** (visperas.yaml): «Haciéndose hombre,» — sin sinalefa en «Haciéndose hombre,»
+- **Es la Pascua real, no ya la sombra** (visperas.yaml): «Oh gozo universal, Dios se hizo hombre» — sin sinalefa en «se hizo»
+- **Feliz quien ha escuchado la llamada** (visperas.yaml): «para servirlo a él con fortaleza,» — sin sinalefa en «a él»
+- **Felíz quién ha escuchado la llamada** (visperas.yaml): «para servirlo a él con fortaleza,» — sin sinalefa en «a él»
+- **Felíz quién ha escuchado la llamada** (visperas.yaml): «que junto con tu Hijo Jesucristo» — sin sinalefa en «tu Hijo»
+- **Hoy nace el sol divinal** (visperas.yaml): «y se hace hombre mortal.» — sin sinalefa en «se hace»
+- **Insigne defensor de nuestra causa** (visperas.yaml): «llegados a Emaús, tu Hijo amado» — sin sinalefa en «tu Hijo»
+- **La hermosa luz de eternidad inunda** (visperas.yaml): «sean al Padre, al Hijo y al Espíritu» — sin sinalefa en «Padre, al»
+- **Las banderas reales se adelantan** (visperas.yaml): «derramó sangre y agua en abundancia» — sin sinalefa en «y agua»
+- **Las banderas reales se adelantan** (visperas.yaml): «A ti, que eres la única esperanza,» — sin sinalefa en «la única»
+- **Mármol con sangre, tu frente** (visperas.yaml): «Amor quema, amor hiende» — sin sinalefa en «quema, amor»
+- **Mármol con sangre, tu frente** (visperas.yaml): «carne y alma, pecho y labio.» — sin sinalefa en «y alma,»
+- **Norabuena vengáis al mundo** (visperas.yaml): «no hay hora buena.» — sin sinalefa en «no hay»
+- **Norabuena vengáis al mundo** (visperas.yaml): «no hay hora buena.» — sin sinalefa en «no hay»
+- **Norabuena vengáis al mundo** (visperas.yaml): «no hay hora buena.» — sin sinalefa en «no hay»
+- **Nos dijeron de noche** (visperas.yaml): «nadie supo la hora» — sin sinalefa en «la hora»
+- **Patriarcas que fuisteis la semilla** (visperas.yaml): «al que es fuente de vida y hermosura» — sin sinalefa en «que es»
+- **Publica, lengua, y canta** (visperas.yaml): «ose lo que él no osa,» — sin sinalefa en «que él»
+- **Reina del libro de la vieja alianza** (visperas.yaml): «con sangre y con estrellas, de tu Hijo,» — sin sinalefa en «tu Hijo,»
+- **Señor, la luz del día ya se apaga** (visperas.yaml): «por eso hacia ti nos dirigimos» — sin sinalefa en «eso hacia»
+- **Señor, la luz del día ya se apaga** (visperas.yaml): «que, junto con tu Hijo Jesucristo,» — sin sinalefa en «tu Hijo»
+- **Señor, tú eres mi paz y mi consuelo** (visperas.yaml): «y, ante las sombras de la noche oscura,» — sin sinalefa en «y, ante»
+- **Señor, tú eres mi paz y mi consuelo** (visperas.yaml): «muy dentro de mi alma tu esperanza» — sin sinalefa en «mi alma»
+- **Señor, tú eres mi paz y mi consuelo** (visperas.yaml): «conduce nuestra senda hacia tu encuentro. Amén.» — sin sinalefa en «senda hacia»
+- **Señor, tú eres mi paz y mi consuelo** (visperas.yaml): «formar ese nombre, y el mar no penetra» — sin sinalefa en «nombre, y»
+- **Te bendecimos, Cristo, en esta noche** (visperas.yaml): «A la noche y al día has ordenado» — sin sinalefa en «día has»
+- **Tú eres toda hermosa** (visperas.yaml): «Tú eres toda hermosa,» — sin sinalefa en «Tú eres»
+- **Tú eres toda hermosa** (visperas.yaml): «tú eres de Dios gloria,» — sin sinalefa en «tú eres»
+- **Tú eres toda hermosa** (visperas.yaml): «la obra de su amor.» — sin sinalefa en «la obra»
+- **Verbo de Dios, eterna luz divina** (visperas.yaml): «en el seno de Virgen, hecha Hijo.» — sin sinalefa en «hecha Hijo.»
+- **Vivo sin vivir en mí** (visperas.yaml): «Sácame de esta muerte,» — sin sinalefa en «de esta»
+- **Vivo sin vivir en mí** (visperas.yaml): «puso en mí este letrero:» — sin sinalefa en «mí este»
+- **«No, yo no dejo la tierra** (visperas.yaml): «ya es vuelta y es cercanía.» — sin sinalefa en «ya es»
+- **«No, yo no dejo la tierra** (visperas.yaml): «conmigo, a su derecha.» — sin sinalefa en «conmigo, a»
+- **Ésta es la hora para el buen amigo** (visperas.yaml): «Ésta es la hora para el buen amigo,» — sin sinalefa en «la hora»
+- **Finísimo fue el lino con que ella** (visperas.yaml): «Finísimo fue el lino con que ella» — sin sinalefa en «que ella»
+- **¡Líbrame de esta carne de pecado** (visperas.yaml): «Vivo en la fe, y el alma no se atreve» — sin sinalefa en «fe, y»
+- **¡Líbrame de esta carne de pecado** (visperas.yaml): «Gloria al Padre, y al Hijo, y al Espíritu,» — sin sinalefa en «Padre, y», «Hijo, y»
+- **Dichosos los que, oyendo la llamada** (visperas.yaml): «para servirle a él con fortaleza,» — sin sinalefa en «a él»
