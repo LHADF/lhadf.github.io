@@ -693,7 +693,7 @@ function horaHTML(){
         if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
         h+=`<p>${esc(sec.intro)}</p><div class="vr"><p class="todos"><span class="k">℟.</span> ${esc(sec.respuesta)}</p></div>`
           // después de cada prece, la respuesta (la dicen todos)
-          +`<div class="preces">${sec.preces.map(([a,b])=>(b ? `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`
+          +`<div class="preces">${sec.preces.map(pr=>CP._.marcarPrece(pr)).map(([a,b])=>(b ? `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`
               : `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">*</span></span></p>`)   // prece sin corte
               +`<div class="vr"><p class="todos"><span class="k">℟.</span> ${esc(sec.respuesta)}</p></div>`).join('')}</div>`
 ; break; }

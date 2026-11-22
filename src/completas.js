@@ -63,6 +63,39 @@ function marcarLectura(texto){
   return [...trozos, {t:t.slice(met.p+1), sg:''}];
 }
 
+// Flexa de una prece (docs/laudes.md): en lo posible, después de la invocación o el título conmemorativo y antes del
+// pedido («Tú que subiste a Jerusalén…, † conduce a tu Iglesia…»). Si no hay esa estructura clara (o la invocación es muy
+// breve: «Señor,»), lo más cerca de la mitad, donde se divide una idea (coma, punto y coma, dos puntos); si no, como
+// viene de la base. Recibe y devuelve [antes de la flexa, después].
+const PEDIDOS=new Set(('haz concede da dales danos ayuda ayúdanos guarda libra protege conduce atrae ilumina purifica santifica recibe acoge '
+  +'perdona enseña mira escucha envía infunde aumenta fortalece renueva socorre consuela sostén sana bendice derrama llena colma mantén une '
+  +'reúne dirige ten muestra despierta inspira otorga aleja defiende visita acuérdate acompaña glorifica admite introduce lleva abre enciende '
+  +'transforma cuida preserva salva multiplica suscita no que asiste ampara favorece sé fortifica levanta perfecciona robustece custodia '
+  +'atiende vela confirma inflama libera consagra purifícanos santifícanos prepara dispón dígnate permite haced trae otorga reconforta alienta '
+  +'derrama infunde revístenos viste aparta apártanos desata rompe hazlos haznos hazles conserva guía orienta reanima').split(' '));
+const esPedido=w=>{ const x=w.toLowerCase().replace(/[^a-záéíóúüñ]/g,''); return PEDIDOS.has(x) || /^[a-zñ]*[áéíóú][a-zñ]*(nos|les|los|las|lo|la|le|me|te|se)$/.test(x) && x.length>5 && !/[aá]ndo|[ie][eé]ndo|éndo/.test(x); };   // (no los gerundios: «resucitándolo»)
+function marcarPrece(par){
+  const [a,b]=par; if(!b) return par;
+  const t=a+' '+b, ws=t.split(' ');
+  // 1) invocación + pedido: la primera coma seguida de un verbo de pedido
+  let pos=0;
+  for(let i=0;i<ws.length-1;i++){
+    pos+=ws[i].length+1;
+    if(/,$/.test(ws[i]) && esPedido(ws[i+1]) && !/^(no|que)$/i.test(ws[i+1].replace(/[^\p{L}]/gu,''))){
+      const ini=t.slice(0,pos-1), fin=t.slice(pos);
+      if(ini.length>=14 && fin.length>=20) return [ini, fin];
+      break;
+    }
+  }
+  // 2) sin esa estructura: la división de la base, si está cerca de la mitad; si no, la coma (o ; :) más cercana a la mitad
+  const m=t.length/2, cerca=x=>Math.abs(x-m)<t.length*0.2;
+  if(cerca(a.length)) return par;
+  let mejor=-1;
+  for(let i=0;i<t.length;i++) if(/[,;:]/.test(t[i]) && t[i+1]===' ' && !/(?:^|\s)(?:que|de|del|y|e|o|a|al|el|la|los|las|en|con|por|para)$/i.test(t.slice(Math.max(0,i-8),i))
+    && (mejor<0 || Math.abs(i-m)<Math.abs(mejor-m))) mejor=i;
+  return mejor>0 && Math.abs(mejor-m)<Math.abs(a.length-m) ? [t.slice(0,mejor+1), t.slice(mejor+2)] : par;
+}
+
 // Domingo de Pascua (cómputo gregoriano)
 function domPascua(y){
   const a=y%19, b=Math.floor(y/100), c=y%100, d=Math.floor(b/4), e=b%4, f=Math.floor((b+8)/25), g=Math.floor((b-f+1)/3);
@@ -684,5 +717,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
