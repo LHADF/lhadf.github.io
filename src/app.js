@@ -136,6 +136,10 @@ function nombreVersion(){
 const sinalefas=h=>h.replace(/(\p{L})([^\p{L}\s<]*)‿/gu,'<i class="sin">$1</i>$2 ').replace(/‿/g,' ');
 const capiHTML=ch=>`<span class="capi">${esc(ch)}</span>`;
 function capiTxt(t){ const s=String(t||''), m=/^\p{L}/u.exec(s); return m ? capiHTML(m[0])+esc(s.slice(m[0].length)) : esc(s); }
+// Lectura breve con capitular y con la flexa (†) y el metro (*) para salmodiarla (CP._.marcarLectura)
+function lecturaMarcada(p){
+  return CP._.marcarLectura(p).map((x,i)=>(i?esc(x.t):capiTxt(x.t))+(x.sg?`&nbsp;<span class="sg">${x.sg}</span>`:'')).join(' ');
+}
 function marcas(s){ // ℣ ℟ * † ✠ en rojo
   return esc(s).replace(/✠/g,'<span class="cruz">✠</span>').replace(/ \* /g,' <span class="k">*</span> ').replace(/ † /g,' <span class="k">†</span> ');
 }
@@ -648,7 +652,7 @@ function horaHTML(){
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
       case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+prosaHTML(sec.t, sec.amen, '', sec.il); break;
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
-      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p class="lec-b">${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${capiTxt(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
+      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p class="lec-b">${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${lecturaMarcada(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
       case 'invop': if(CANTA()) h+=`<div class="opciones" role="group" aria-label="Invitatorio">${[['greg','Gregoriano'],['es','En español']].map(([v,n])=>`<button data-act="invit" data-v="${v}" aria-pressed="${INV()===v}">${n}</button>`).join('')}</div>`; break;
       case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`

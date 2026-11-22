@@ -30,6 +30,39 @@ function diaCal(fecha, sel){
   for(let c=sel.cal; c; c=CAL.padres[c]){ const v=vs.find(v=>v.tipo==='r'&&v.siglas.includes(c)); if(v) return v.f; }   // el calendario preferido o el de su país
   return base;
 }
+// Lectura breve para salmodiar (docs/horas.md): «*» (metro) y «†» (flexa), como en los salmos.
+// Metro: en un punto fuerte (. ; : ! ?) lo más cerca de la mitad; si no hay ninguno cerca, en una coma (donde se cierra
+// una idea). Flexa: igual, en la primera parte, lo más cerca de su mitad, pero nunca en dos puntos; si la primera parte
+// es muy breve o no tiene dónde, sin flexa. Si la base ya trae « * » o « † », manda lo marcado.
+// Devuelve [{t, sg}] (los trozos y el signo que va después de cada uno, '' en el último).
+function marcarLectura(texto){
+  const t=String(texto||'').trim();
+  if(/ [*†] /.test(t)) return t.split(/ ([*†]) /).reduce((a,x,i)=>{ if(i%2) a[a.length-1].sg=x; else a.push({t:x, sg:''}); return a; }, []);
+  // cortes posibles: después de un signo (y de comillas o paréntesis que cierran), antes de un espacio, fuera de paréntesis
+  const cortes=[]; let par=0, cita=0;
+  const atona=/(?:^|[\s«(—])(?:que|de|del|y|e|o|u|a|al|el|la|lo|los|las|en|con|por|para|si|ni|se|su|sus|mi|tu)$/i;
+  for(let i=0;i<t.length;i++){
+    const c=t[i]; if(c==='(') par++; else if(c===')') par=Math.max(0,par-1);
+    if(c==='«') cita++; else if(c==='»') cita=Math.max(0,cita-1);
+    if(par || !/[.;:!?,]/.test(c)) continue;
+    if(c===',' && (cita || atona.test(t.slice(Math.max(0,i-8),i)))) continue;   // ni comas dentro de una cita ni detrás de «que», «de», «e»…
+    let j=i+1; while(j<t.length && /[»”"’)]/.test(t[j])) j++;
+    if(t[j]!==' ' || j>=t.length-1) continue;
+    if(c==='.' && /\b(?:[A-Z]|cf|Sr|Mt|Mc|Lc|Jn|vv?)\.$/.test(t.slice(Math.max(0,i-3),i+1))) continue;   // abreviaturas
+    cortes.push({p:j, fuerte:c!==',', dos:c===':'});
+  }
+  const elegir=(a,b,sinDos)=>{   // el corte más cercano a la mitad de [a,b): fuerte en el tramo central; si no, coma; si no, fuerte
+    const m=(a+b)/2, L=b-a, en=c=>c.p>a+L*0.25 && c.p<b-L*0.25, cs=cortes.filter(c=>c.p>a && c.p<b && !(sinDos&&c.dos));
+    const cerca=(xs)=>xs.sort((x,y)=>Math.abs(x.p-m)-Math.abs(y.p-m))[0];
+    return cerca(cs.filter(c=>c.fuerte&&en(c))) || cerca(cs.filter(c=>!c.fuerte&&en(c))) || cerca(cs.filter(c=>c.fuerte && c.p>a+L*0.15 && c.p<b-L*0.15));
+  };
+  const met=t.length>=50 && elegir(0,t.length,false);
+  if(!met) return [{t, sg:''}];
+  const fl=met.p>=70 && elegir(0,met.p,true);
+  const trozos=fl ? [{t:t.slice(0,fl.p), sg:'†'},{t:t.slice(fl.p+1,met.p), sg:'*'}] : [{t:t.slice(0,met.p), sg:'*'}];
+  return [...trozos, {t:t.slice(met.p+1), sg:''}];
+}
+
 // Domingo de Pascua (cómputo gregoriano)
 function domPascua(y){
   const a=y%19, b=Math.floor(y/100), c=y%100, d=Math.floor(b/4), e=b%4, f=Math.floor((b+8)/25), g=Math.floor((b-f+1)/3);
@@ -651,5 +684,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
