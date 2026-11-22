@@ -82,12 +82,21 @@ function marcarPrece(par){
   for(let i=0;i<ws.length-1;i++){
     pos+=ws[i].length+1;
     if(/,$/.test(ws[i]) && esPedido(ws[i+1]) && !/^(no|que)$/i.test(ws[i+1].replace(/[^\p{L}]/gu,''))){
-      const ini=t.slice(0,pos-1), fin=t.slice(pos);
+      let ini=t.slice(0,pos-1), fin=t.slice(pos);
+      // «…, por intercesión de san José, ayúdanos…»: la intercesión va con el pedido (la flexa, antes)
+      const pi=ini.search(/,\s+por (?:la )?intercesi[oó]n\b[^,]*,$/i);
+      if(pi>=14){ fin=ini.slice(pi+1).trim()+' '+fin; ini=ini.slice(0,pi+1); }
       if(ini.length>=14 && fin.length>=20) return [ini, fin];
       break;
     }
   }
-  // 2) sin esa estructura: la división de la base, si está cerca de la mitad; si no, la coma (o ; :) más cercana a la mitad
+  // 2) empieza con el pedido y sigue otro coordinado («Haz, Señor, que recordemos…, recibida en el bautismo, † y que
+  //    vivamos…»): la flexa, antes del segundo pedido
+  if(esPedido(ws[0])){
+    const k=t.search(/,\s+y (?:que\b|\S+)/);
+    if(k>=20){ const sig=t.slice(k+1).trim().split(' ')[1]||''; if(/^que$/i.test(sig) || esPedido(sig)) return [t.slice(0,k+1), t.slice(k+2)]; }
+  }
+  // 3) sin esa estructura: la división de la base, si está cerca de la mitad; si no, la coma (o ; :) más cercana a la mitad
   const m=t.length/2, cerca=x=>Math.abs(x-m)<t.length*0.2;
   if(cerca(a.length)) return par;
   let mejor=-1;
