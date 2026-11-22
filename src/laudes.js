@@ -185,7 +185,7 @@ function armar(hora, fecha, region){
     S.push({k:'ant', id:'ai', es:true, n:'Ant.', t:{es:P.inv_ant}, ...inv});
     // Salmo 94 en estrofas, sin asteriscos ni cruces (no se salmodia): las cinco del salmo y el Gloria
     const s94=L.ordinario.invitatorio.salmo;
-    S.push({k:'salmoinv', id:'salmo-94', titulo:s94.titulo, lema:X.oracionCase(s94.subtitulo||''),
+    S.push({k:'salmoinv', id:'salmo-94', titulo:s94.titulo, lema:X.oracionCase(s94.subtitulo||''), ant:P.inv_ant,
             estrofas:s94.texto.map(e=>e.split('\n').map(x=>x.trim()).filter(Boolean))
               .concat(pas ? [] : [['Gloria al Padre, y al Hijo, y al Espíritu Santo.', 'Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.']]), ...inv});
     if(pas) S.push({k:'rub', t:X.NO_GLORIA, ...inv});

@@ -654,9 +654,15 @@ function horaHTML(){
       case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`
         +sec.estrofas.map(e=>partituraHTML(e.gabc, S.trad?e.glosa:null, false)).join(''); break;
       case 'ant': h+=antHTML(sec)+otrasSalmoHTML(r, secAct, sec); break;
-      case 'salmoinv':   // Salmo 94 del invitatorio: en estrofas, y «Venid, postrémonos por tierra» en versalitas
+      case 'salmoinv': {   // Salmo 94 del invitatorio: en estrofas, con capitular, «Venid, postrémonos por tierra» en versalitas
+        // y la antífona repetida después de cada estrofa (después de la última, la repetición que sigue al salmo)
+        const antRep=sec.ant ? `<div class="ant"><p><span class="n">Ant.</span><b>${marcas(sec.ant.replace(/ \* /,' '))}</b></p></div>` : '';
+        const ln=(l,c)=>`<span class="ln${c?' c':''}">${esc(l).replace(/^(Venid, postrémonos por tierra)/i,'<span class="vers">$1</span>')}</span>`;
         h+=`<div class="salmo-h"><span class="t">${esc(cita(sec.titulo))}</span>${sec.lema?`<span class="lema">${esc(sec.lema)}</span>`:''}</div>`
-          +`<div class="himno sin-num">${sec.estrofas.map(e=>`<p class="est">${e.map(l=>`<span class="ln">${esc(l).replace(/^(Venid, postrémonos por tierra)/i,'<span class="vers">$1</span>')}</span>`).join('')}</p>`).join('')}</div>`; break;
+          +`<div class="himno sin-num">${sec.estrofas.map((e,ie)=>{
+              const cap=ie===0 && /^\p{L}/u.test(e[0]||'') ? [...e[0]][0] : '';
+              return `<p class="est${cap?' capi-on':''}">${cap?capiHTML(cap):''}${e.map((l,il)=>ln(cap&&!il?l.slice(cap.length):l, cap&&il<2)).join('')}</p>`
+                +(ie<sec.estrofas.length-1?antRep:''); }).join('')}</div>`; break; }
       case 'salmo': h+=salmoHTML(sec)+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;
@@ -682,8 +688,10 @@ function horaHTML(){
         // Cada prece: flexa (†) en el corte del medio y asterisco (*) al final; la respuesta la dicen todos
         if(sec.renglones){ h+=sec.renglones.map(t=>`<p>${esc(t)}</p>`).join(''); break; }
         h+=`<p>${esc(sec.intro)}</p><div class="vr"><p class="todos"><span class="k">℟.</span> ${esc(sec.respuesta)}</p></div>`
-          +`<div class="preces">${sec.preces.map(([a,b])=>b ? `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`
-              : `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">*</span></span></p>`).join('')}</div>`   // prece sin corte
+          // después de cada prece, la respuesta (la dicen todos)
+          +`<div class="preces">${sec.preces.map(([a,b])=>(b ? `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">†</span></span><span class="pb">${esc(b)}&nbsp;<span class="sg">*</span></span></p>`
+              : `<p><span class="pa">${esc(a)}&nbsp;<span class="sg">*</span></span></p>`)   // prece sin corte
+              +`<div class="vr"><p class="todos"><span class="k">℟.</span> ${esc(sec.respuesta)}</p></div>`).join('')}</div>`
 ; break; }
       case 'pater':
         { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita). Un renglón por frase.
