@@ -196,6 +196,10 @@ himno:
 # Respuesta a la lectura breve
 lectura_respuesta:
   - Deo grátias. = Demos gracias a Dios.
+# …y palabra por palabra, para la traducción interlineal (como en el Benedicámus de horas.yaml)
+lectura_respuesta_glosa:
+  - Deo = [Demos] a Dios
+  - grátias. = gracias.
 
 # Responsorio breve cantado (opción). Por ahora, el del Tiempo Ordinario (fuera de Pascua, Triduo y Octavas).
 responsorio:

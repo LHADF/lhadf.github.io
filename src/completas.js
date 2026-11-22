@@ -464,7 +464,7 @@ function armar(fecha, region){
 
   sec('lectura','Lectura breve',{ref:J.lectura.ref});
   S.push({k:'lectura', es:true, t:{es:J.lectura.texto}});
-  S.push({k:'deo', t:GR.lectura_respuesta[0][0]});   // ℟. Deo grátias (la dicen todos)
+  S.push({k:'deo', t:GR.lectura_respuesta[0][0], il:GR.lectura_respuesta_glosa, tr:GR.lectura_respuesta[0][1]});   // ℟. Deo grátias (la dicen todos)
 
   if(el.especial){
     sec('responsorio','En lugar del responsorio breve');

@@ -670,7 +670,9 @@ function horaHTML(){
       case 'salmo': h+=salmoHTML(sec)+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;
-      case 'deo': h+=`<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b></p></div>`; break;
+      case 'deo':   // ℟. Deo grátias, con su traducción (interlineal, palabra por palabra; si no, debajo)
+        h+= S.trad&&sec.il ? `<div class="vr il"><p><span class="k">℟.</span> <b class="segs">${interHTML(sec.il)}</b></p></div>`
+          : `<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b>${sec.tr?`<span class="gl">${esc(sec.tr)}</span>`:''}</p></div>`; break;
       case 'examen': h+=examenHTML(sec); break;
       case 'cantico':
         // Laudes y Vísperas, cantado: el Benedictus o el Magníficat en el modo del día, con la entonación en cada verso

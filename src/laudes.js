@@ -217,7 +217,7 @@ function armar(hora, fecha, region){
 
   sec('lectura','Lectura breve',{ref:P.lectura.ref});
   S.push({k:'lectura', es:true, t:{es:P.lectura.texto}});
-  S.push({k:'deo', t:GR.lectura_respuesta[0][0]});
+  S.push({k:'deo', t:GR.lectura_respuesta[0][0], il:GR.lectura_respuesta_glosa, tr:GR.lectura_respuesta[0][1]});
 
   if(P.en_lugar_del_responsorio){
     sec('responsorio','En lugar del responsorio breve');

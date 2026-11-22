@@ -77,6 +77,7 @@ def main():
                             'primer_verso': ce['primer_verso']},
                 'himno': {'titulo': G['himno']['titulo'], 'gabc': gabc(G['himno']['partitura']), 'traduccion': pares(G['himno']['traduccion'])},
                 'lectura_respuesta': pares(G['lectura_respuesta']),
+                'lectura_respuesta_glosa': pares(G['lectura_respuesta_glosa']),
                 'responsorio': {k: {'gabc': gabc(v['partitura']), 'traduccion': pares(v['traduccion'])} for k, v in G['responsorio'].items()},
                 'marianas': {k: {'titulo': v['titulo'], 'gabc': gabc(v['partitura']), 'cortes': v.get('cortes'), 'traduccion': pares(v['traduccion'])} for k, v in G['marianas'].items()},
                 'conclusion': {'gabc': gabc(co['partitura']), 'traduccion': pares(co['traduccion'])},
