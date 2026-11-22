@@ -322,8 +322,10 @@ function eleccion(hoy, man){
     if(hoy.dom) return {juego:'domingo', oracion:'solemnidad', solemne:true};
     return {juego: deIso(hoy.fecha).getDate()%2===0?'sabado':'domingo', oracion:'solemnidad', solemne:true};
   }
-  if(man && man.pv) return {juego:'sabado', oracion: man.sol?'solemnidad':'juego', solemne:true, visperasDe:man};
-  if(solemneDia(hoy)) return {juego:'domingo', oracion: hoy.sol?'solemnidad':'juego', solemne:true};
+  // La oración propia de las solemnidades, solo si no caen en domingo (Cristo Rey, Trinidad…: la del domingo)
+  const esDom=d=>d.dom || deIso(d.fecha).getDay()===0;
+  if(man && man.pv) return {juego:'sabado', oracion: man.sol && !esDom(man) ? 'solemnidad' : 'juego', solemne:true, visperasDe:man};
+  if(solemneDia(hoy)) return {juego:'domingo', oracion: hoy.sol && !esDom(hoy) ? 'solemnidad' : 'juego', solemne:true};
   return {juego: DIAS[deIso(hoy.fecha).getDay()], oracion:'juego', solemne:false};
 }
 

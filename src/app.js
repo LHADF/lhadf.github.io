@@ -12,7 +12,7 @@ try{ const g=JSON.parse(localStorage.getItem('septies')||'null'); if(g){ S=Objec
   if(g.cal==null) S.cal=g.region==='PGY'?'PGY':''; delete S.region;   // antes se elegía país en Opciones; ahora, calendario en el inicio
   if(g.zoom==null) S.zoom=(g.lec||1.2)/1.2*({g:1.15,mg:1.3,max:1.5}[g.esc]||1);   // antes había dos controles (texto y aplicación): se unifican
   S.zoom=Math.min(2,Math.max(.8,Math.round(S.zoom*10)/10)); delete S.lec; delete S.esc; } }catch(e){}
-if(S.salmos==='texto') S.salmos='primer';
+if(S.salmos!=='primer') S.salmos='primer';   // ya no hay opción para cambiarlo: un valor viejo guardado («sin partitura») dejaba los salmos sin partitura
 if(S.theme!=='dark') S.theme='light'; // claro por defecto; oscuro solo si se elige
 // Reinicio único (como en el Cantoral): todos vuelven a claro una vez; si después eligen oscuro, se respeta
 try{ if(!localStorage.getItem('temaClaro2026')){ S.theme='light'; localStorage.setItem('temaClaro2026','1'); guardar(); } }catch(e){}
