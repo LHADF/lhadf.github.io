@@ -564,6 +564,574 @@ uso:
   hora: tercia
   himno: qui-lacrimatus-lazarum
   nota: 'Si se rezan las tres Horas: Tercia, estrofas 1, 4 y 5; Sexta, 2, 4 y 5; Nona, 3, 4 y 5 (rúbrica del libro).'
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: domingo'
+  hora: visperas1
+  himno: deus-creator-omnium
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: domingo'
+  hora: visperas1
+  himno: dies-aetasque-ceteris
+  nota: Si se prefiere (rúbrica del libro).
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: domingo'
+  hora: oficio
+  himno: primo-dierum-omnium
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: domingo'
+  hora: oficio
+  himno: dies-aetasque-ceteris
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: domingo'
+  hora: laudes
+  himno: aeterne-rerum-conditor
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: domingo'
+  hora: visperas
+  himno: lucis-creator-optime
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: lunes'
+  hora: oficio
+  himno: somno-refectis-artubus
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: lunes'
+  hora: oficio
+  himno: aeterna-lux-divinitas
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: lunes'
+  hora: laudes
+  himno: splendor-paternae-gloriae
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: lunes'
+  hora: visperas
+  himno: immense-caeli-conditor
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: martes'
+  hora: oficio
+  himno: consors-paterni-luminis
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: martes'
+  hora: oficio
+  himno: o-sacrosancta-trinitas
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: martes'
+  hora: laudes
+  himno: pergrata-mundo-nuntiat
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: martes'
+  hora: visperas
+  himno: telluris-ingens-conditor
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: miércoles'
+  hora: oficio
+  himno: rerum-creator-optime
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: miércoles'
+  hora: oficio
+  himno: scientiarum-domino
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: miércoles'
+  hora: laudes
+  himno: nox-et-tenebrae-et-nubila
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: miércoles'
+  hora: visperas
+  himno: caeli-deus-sanctissime
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: jueves'
+  hora: oficio
+  himno: nox-atra-rerum-contegit
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: jueves'
+  hora: oficio
+  himno: christe-precamur-adnuas
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: jueves'
+  hora: laudes
+  himno: sol-ecce-surgit-igneus
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: jueves'
+  hora: visperas
+  himno: magnae-deus-potentiae
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: viernes'
+  hora: oficio
+  himno: tu-trinitatis-unitas
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: viernes'
+  hora: oficio
+  himno: adesto-christe-cordibus
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: viernes'
+  hora: laudes
+  himno: aeterna-caeli-gloria
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: viernes'
+  hora: visperas
+  himno: plasmator-hominis-deus
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: sábado'
+  hora: oficio
+  himno: summae-deus-clementiae
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: sábado'
+  hora: oficio
+  himno: auctor-perennis-gloriae
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas I y III: sábado'
+  hora: laudes
+  himno: aurora-iam-spargit-polum
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: domingo'
+  hora: visperas1
+  himno: rerum-deus-fons-omnium
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: domingo'
+  hora: visperas1
+  himno: salve-dies-dierum-gloria
+  nota: Si se prefiere (rúbrica del libro).
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: domingo'
+  hora: oficio
+  himno: mediae-noctis-tempus-est
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: domingo'
+  hora: oficio
+  himno: salve-dies-dierum-gloria
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: domingo'
+  hora: laudes
+  himno: ecce-iam-noctis-tenuatur-umbra
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: domingo'
+  hora: visperas
+  himno: o-lux-beata-trinitas
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: lunes'
+  hora: oficio
+  himno: ipsum-nunc-nobis-tempus-est
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: lunes'
+  hora: oficio
+  himno: vita-sanctorum-via-spes-salusque
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: lunes'
+  hora: laudes
+  himno: lucis-largitor-splendide
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: lunes'
+  hora: visperas
+  himno: luminis-fons-lux-et-origo-lucis
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: martes'
+  hora: oficio
+  himno: nocte-surgentes-vigilemus-omnes
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: martes'
+  hora: oficio
+  himno: ad-preces-nostras-deitatis-aures
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: martes'
+  hora: laudes
+  himno: aeterne-lucis-conditor
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: martes'
+  hora: visperas
+  himno: sator-princepsque-temporum
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: miércoles'
+  hora: oficio
+  himno: o-sator-rerum-reparator-aevi
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: miércoles'
+  hora: oficio
+  himno: christe-lux-vera-bonitas-et-vita
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: miércoles'
+  hora: laudes
+  himno: fulgentis-auctor-aetheris
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: miércoles'
+  hora: visperas
+  himno: sol-ecce-lentus-occidens
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: jueves'
+  hora: oficio
+  himno: ales-diei-nuntius
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: jueves'
+  hora: oficio
+  himno: amoris-sensus-erige
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: jueves'
+  hora: laudes
+  himno: iam-lucis-orto-sidere
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: jueves'
+  hora: visperas
+  himno: deus-qui-claro-lumine
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: viernes'
+  hora: oficio
+  himno: galli-cantu-mediante
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: viernes'
+  hora: oficio
+  himno: adesto-rerum-conditor
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: viernes'
+  hora: laudes
+  himno: deus-qui-caeli-lumen-es
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: viernes'
+  hora: visperas
+  himno: horis-peractis-undecim
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: sábado'
+  hora: oficio
+  himno: lux-aeterna-lumen-potens
+  nota: De noche o de madrugada.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: sábado'
+  hora: oficio
+  himno: deus-de-nullo-veniens
+  nota: De día.
+- grupo: Tiempo Ordinario
+  seccion: 'Semanas II y IV: sábado'
+  hora: laudes
+  himno: diei-luce-reddita
+- grupo: Solemnidades del Señor
+  seccion: La Santísima Trinidad
+  hora: visperas
+  himno: immensa-et-una-trinitas
+- grupo: Solemnidades del Señor
+  seccion: La Santísima Trinidad
+  hora: oficio
+  himno: te-patrem-summum-genitumque-verbum
+- grupo: Solemnidades del Señor
+  seccion: La Santísima Trinidad
+  hora: laudes
+  himno: trinitas-summo-solio-coruscans
+- grupo: Solemnidades del Señor
+  seccion: El Santísimo Cuerpo y Sangre de Cristo
+  hora: visperas
+  himno: pange-lingua-gloriosi-corporis
+- grupo: Solemnidades del Señor
+  seccion: El Santísimo Cuerpo y Sangre de Cristo
+  hora: oficio
+  himno: sacris-sollemniis-iuncta-sint-gaudia
+- grupo: Solemnidades del Señor
+  seccion: El Santísimo Cuerpo y Sangre de Cristo
+  hora: laudes
+  himno: verbum-supernum-prodiens-nec-patris
+- grupo: Solemnidades del Señor
+  seccion: El Sagrado Corazón de Jesús
+  hora: visperas
+  himno: auctor-beate-saeculi
+- grupo: Solemnidades del Señor
+  seccion: El Sagrado Corazón de Jesús
+  hora: oficio
+  himno: cor-arca-legem-continens
+- grupo: Solemnidades del Señor
+  seccion: El Sagrado Corazón de Jesús
+  hora: laudes
+  himno: iesu-auctor-clementiae
+- grupo: Solemnidades del Señor
+  seccion: Jesucristo, sumo y eterno sacerdote
+  hora: visperas
+  himno: aeterne-christe-pontifex
+- grupo: Solemnidades del Señor
+  seccion: Jesucristo, sumo y eterno sacerdote
+  hora: oficio
+  himno: pontifex-iesu-mediator-une
+- grupo: Solemnidades del Señor
+  seccion: Jesucristo, sumo y eterno sacerdote
+  hora: laudes
+  himno: concinunt-caeli-parilique-tellus
+- grupo: Propio de los santos
+  seccion: San Andrés, apóstol (30 de noviembre)
+  hora: oficio
+  himno: captator-olim-piscium
+  nota: El libro trae solo este himno (¿para las tres Horas?).
+- grupo: Propio de los santos
+  seccion: San Ambrosio, obispo y doctor (7 de diciembre)
+  hora: oficio
+  himno: fortem-piumque-praesulem
+  nota: El libro trae solo este himno.
+- grupo: Propio de los santos
+  seccion: La Inmaculada Concepción (8 de diciembre)
+  hora: visperas
+  himno: praeclara-custos-virginum
+- grupo: Propio de los santos
+  seccion: La Inmaculada Concepción (8 de diciembre)
+  hora: oficio
+  himno: te-dicimus-praeconio
+- grupo: Propio de los santos
+  seccion: La Inmaculada Concepción (8 de diciembre)
+  hora: laudes
+  himno: in-plausu-grati-carminis
+- grupo: Propio de los santos
+  seccion: San Esteban, protomártir (26 de diciembre)
+  hora: oficio
+  himno: festum-celebre-martyris
+- grupo: Propio de los santos
+  seccion: San Esteban, protomártir (26 de diciembre)
+  hora: laudes
+  himno: christus-est-vita-veniens-in-orbem
+- grupo: Propio de los santos
+  seccion: San Juan, apóstol y evangelista (27 de diciembre)
+  hora: oficio
+  himno: virginis-virgo-venerande-custos
+- grupo: Propio de los santos
+  seccion: San Juan, apóstol y evangelista (27 de diciembre)
+  hora: laudes
+  himno: cohors-beata-seraphim
+- grupo: Propio de los santos
+  seccion: Los Santos Inocentes (28 de diciembre)
+  hora: oficio
+  himno: hymnum-canentes-martyrum
+- grupo: Propio de los santos
+  seccion: Los Santos Inocentes (28 de diciembre)
+  hora: laudes
+  himno: audit-tyrannus-anxius
+- grupo: Propio de los santos
+  seccion: Santa Inés, virgen y mártir (21 de enero)
+  hora: oficio
+  himno: igne-divini-radians-amoris
+- grupo: Propio de los santos
+  seccion: Santa Inés, virgen y mártir (21 de enero)
+  hora: laudes
+  himno: agnes-beatae-virginis
+  nota: Laudes y Vísperas.
+- grupo: Propio de los santos
+  seccion: La Conversión de san Pablo (25 de enero)
+  hora: oficio
+  himno: pressi-malorum-pondere
+- grupo: Propio de los santos
+  seccion: La Conversión de san Pablo (25 de enero)
+  hora: laudes
+  himno: doctor-egregie-paule-mores-instrue
+- grupo: Propio de los santos
+  seccion: La Conversión de san Pablo (25 de enero)
+  hora: visperas
+  himno: excelsam-pauli-gloriam
+- grupo: Propio de los santos
+  seccion: La Presentación del Señor (2 de febrero)
+  hora: oficio
+  himno: legis-sacratae-sanctis-caeremoniis
+  nota: Si se prefiere, «Quod chorus vatum» (rúbrica del libro).
+- grupo: Propio de los santos
+  seccion: La Presentación del Señor (2 de febrero)
+  hora: laudes
+  himno: adorna-sion-thalamum
+- grupo: Propio de los santos
+  seccion: La Presentación del Señor (2 de febrero)
+  hora: visperas
+  himno: quod-chorus-vatum-venerandus-olim
+- grupo: Propio de los santos
+  seccion: La Cátedra de san Pedro (22 de febrero)
+  hora: visperas
+  himno: divina-vox-te-deligit
+- grupo: Propio de los santos
+  seccion: La Cátedra de san Pedro (22 de febrero)
+  hora: oficio
+  himno: iam-bone-pastor-petre-clemens-accipe
+- grupo: Propio de los santos
+  seccion: La Cátedra de san Pedro (22 de febrero)
+  hora: laudes
+  himno: petrus-beatus-catenarum-laqueos
+- grupo: Propio de los santos
+  seccion: San José, esposo de la Virgen María (19 de marzo)
+  hora: visperas
+  himno: te-ioseph-celebrent-agmina-caelitum
+- grupo: Propio de los santos
+  seccion: San José, esposo de la Virgen María (19 de marzo)
+  hora: oficio
+  himno: iste-quem-laeti-colimus-fideles
+- grupo: Propio de los santos
+  seccion: San José, esposo de la Virgen María (19 de marzo)
+  hora: laudes
+  himno: caelitum-ioseph-decus-atque-nostrae
+- grupo: Propio de los santos
+  seccion: La Anunciación del Señor (25 de marzo)
+  hora: visperas1
+  himno: agnoscat-omne-saeculum
+  nota: 'II Vísperas: «Ave, maris stella» (rúbrica del libro).'
+- grupo: Propio de los santos
+  seccion: La Anunciación del Señor (25 de marzo)
+  hora: oficio
+  himno: iam-caeca-vis-mortalium
+- grupo: Propio de los santos
+  seccion: La Anunciación del Señor (25 de marzo)
+  hora: laudes
+  himno: o-lux-salutis-nuntia
+- grupo: Propio de los santos
+  seccion: San Marcos, evangelista (25 de abril)
+  hora: oficio
+  himno: o-vir-beate-apostolis
+- grupo: Propio de los santos
+  seccion: San Marcos, evangelista (25 de abril)
+  hora: laudes
+  himno: mentibus-laetis-tua-festa-marce
+  nota: Laudes y Vísperas.
+- grupo: Propio de los santos
+  seccion: San Isidoro, obispo y doctor (26 de abril)
+  hora: laudes
+  himno: gaude-fidelis-concio
+  nota: Laudes y Vísperas.
+- grupo: Propio de los santos
+  seccion: Santa Catalina de Siena (29 de abril)
+  hora: oficio
+  himno: virgo-prudentum-comitata-coetum
+- grupo: Propio de los santos
+  seccion: Santa Catalina de Siena (29 de abril)
+  hora: laudes
+  himno: te-catharina-maximis
+- grupo: Propio de los santos
+  seccion: San José obrero (1 de mayo)
+  hora: oficio
+  himno: te-pater-ioseph-opifex-colende
+- grupo: Propio de los santos
+  seccion: San José obrero (1 de mayo)
+  hora: laudes
+  himno: aurora-solis-nuntia
+  nota: 'Vísperas: «Te, Ioseph, celebrent» (rúbrica del libro).'
+- grupo: Propio de los santos
+  seccion: San Felipe y Santiago, apóstoles (3 de mayo)
+  hora: oficio
+  himno: philippe-summae-honoribus
+  nota: 'Laudes: «Claro paschali gaudio»; Vísperas: «Tristes erant Apostoli» (rúbrica del libro).'
+- grupo: Propio de los santos
+  seccion: San Matías, apóstol (14 de mayo)
+  hora: oficio
+  himno: matthia-sacratissimo
+  nota: Oficio de lectura y Laudes.
+- grupo: Propio de los santos
+  seccion: La Visitación de la Virgen María (31 de mayo)
+  hora: oficio
+  himno: veni-praecelsa-domina
+- grupo: Propio de los santos
+  seccion: La Visitación de la Virgen María (31 de mayo)
+  hora: laudes
+  himno: veniens-mater-inclita
+- grupo: Propio de los santos
+  seccion: La Visitación de la Virgen María (31 de mayo)
+  hora: visperas
+  himno: concito-gressu-petis-alta-montis
+- grupo: Propio de los santos
+  seccion: San Bernabé, apóstol (11 de junio)
+  hora: oficio
+  himno: o-vir-beate-apostolis
+- grupo: Propio de los santos
+  seccion: San Bernabé, apóstol (11 de junio)
+  hora: laudes
+  himno: barnabae-clarum-colimus-tropaeum
+  nota: Laudes y Vísperas.
+- grupo: Propio de los santos
+  seccion: La Natividad de san Juan Bautista (24 de junio)
+  hora: visperas
+  himno: ut-queant-laxis-resonare-fibris
+- grupo: Propio de los santos
+  seccion: La Natividad de san Juan Bautista (24 de junio)
+  hora: oficio
+  himno: antra-deserti-teneris-sub-annis
+- grupo: Propio de los santos
+  seccion: La Natividad de san Juan Bautista (24 de junio)
+  hora: laudes
+  himno: o-nimis-felix-meritique-celsi
+- grupo: Propio de los santos
+  seccion: San Pedro y San Pablo, apóstoles (29 de junio)
+  hora: visperas1
+  himno: aurea-luce-et-decore-roseo
+- grupo: Propio de los santos
+  seccion: San Pedro y San Pablo, apóstoles (29 de junio)
+  hora: oficio
+  himno: felix-per-omnes-festum-mundi-cardines
+- grupo: Propio de los santos
+  seccion: San Pedro y San Pablo, apóstoles (29 de junio)
+  hora: laudes
+  himno: apostolorum-passio
+- grupo: Propio de los santos
+  seccion: San Pedro y San Pablo, apóstoles (29 de junio)
+  hora: visperas
+  himno: o-roma-felix-quae-tantorum-principum
+- grupo: Propio de los santos
+  seccion: Santo Tomás, apóstol (3 de julio)
+  hora: laudes
+  himno: qui-luce-splendes-ordinis
+  nota: El libro trae solo este himno.
+- grupo: Propio de los santos
+  seccion: San Benito, abad (11 de julio)
+  hora: oficio
+  himno: inter-aeternas-superum-coronas
+  nota: Oficio de lectura y Vísperas.
+- grupo: Propio de los santos
+  seccion: San Benito, abad (11 de julio)
+  hora: laudes
+  himno: legifer-prudens-venerande-doctor
+- grupo: Propio de los santos
+  seccion: Santa María Magdalena (22 de julio)
+  hora: oficio
+  himno: magdalae-sidus-mulier-beata
+  nota: Oficio de lectura y Vísperas.
+- grupo: Propio de los santos
+  seccion: Santa María Magdalena (22 de julio)
+  hora: laudes
+  himno: aurora-surgit-lucida
+- grupo: Propio de los santos
+  seccion: Santiago, apóstol (25 de julio)
+  hora: laudes
+  himno: te-nostra-laetis-laudibus
+  nota: El libro trae solo este himno.
+- grupo: Propio de los santos
+  seccion: San Joaquín y santa Ana (26 de julio)
+  hora: oficio
+  himno: dum-tuas-festo-pater-o-colende
+  nota: Oficio de lectura y Vísperas.
+- grupo: Propio de los santos
+  seccion: San Joaquín y santa Ana (26 de julio)
+  hora: laudes
+  himno: nocti-succedit-lucifer
+- grupo: Propio de los santos
+  seccion: Santa Marta (29 de julio)
+  hora: oficio
+  himno: te-gratulantes-pangimus
+  nota: Oficio de lectura y Vísperas.
+- grupo: Propio de los santos
+  seccion: Santa Marta (29 de julio)
+  hora: laudes
+  himno: quas-tibi-laudes-ferimusque-vota
+- grupo: Propio de los santos
+  seccion: San Ignacio de Loyola (31 de julio)
+  hora: laudes
+  himno: magnae-cohortis-principem
+  nota: Laudes y Vísperas.
 himnos:
   conditor-alme-siderum:
     incipit: Cónditor alme síderum,
@@ -641,92 +1209,34 @@ himnos:
       corpus:
       - tætram noctis calíginem
   verbum-supernum-prodiens:
-    incipit: Verbum supérnum pródiens,
+    incipit: Verbum supérnum, pródiens
     estrofas:
-    - - Verbum supérnum pródiens,
+    - - Verbum supérnum, pródiens
       - e Patris ætérni sinu,
-      - qui natus orbi súbvenis
+      - qui natus orbi súbvenis,
       - 'cursu declívi témporis:'
-    - - Illúmina nunc péctora
+    - - Ilumina nunc péctora,
       - tuóque amóre cóncrema;
-      - ut cor cadúca déserens
-      - cæli volúptas ímpleat.
-    - - Ut, cum tribúnal Iúdicis
-      - damnábit igni nóxios,
-      - et vox amíca débitum
-      - vocábit ad cælum pios;
-    - - Non esca flammárum nigros
-      - volvámur inter túrbines,
-      - vultu Dei sed cómpotes
-      - cæli fruámur gáudiis.
-    - - Patri, simúlque Fílio,
-      - tibíque, Sancte Spíritus,
-      - sicut fuit, sit iúgiter
-      - sæclum per omne glória.
-    amen: true
-    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Verbum supernum prodiens a.txt
-    coincidencia_libro: 0.2
-    libro:
-    - tomo 1, p. 1064
-    diferencias:
-    - tipo: variante del libro
-      libro:
-      - e Patris aeterni sinu,
-      corpus:
-      - a Patre lumen éxiens,
-      va:
-      - e Patris ætérni sinu,
-    - tipo: errata del PDF
-      libro:
-      - Ilumina nunc pectora,
-      corpus:
-      - Illúmina nunc péctora
-    - tipo: variante del libro
-      libro:
-      - Ut cor caduca deserens
-      - Caeli voluptas impleat.
-      - Ut, cum tribunal Judicis
-      - Damnabit igni noxios,
-      - Et vox amica debitum
-      - Vocabit ad caelum pios;
-      - Non esca flammarum nigros
-      - Volvamur inter turbines,
-      - Vultu Dei sed compotes
-      - Caeli fruamur gaudiis.
-      - Patri, simulque Filio,
-      - Tibique, Sancte Spiritus,
-      - Sicut fuit, sit jugiter
-      - Saeclum per omne gloria.
-      corpus:
-      - audíta per præcónia
-      - sint pulsa tandem lúbrica.
-      - Iudéxque cum post áderis
-      - rimári facta péctoris,
-      - reddens vicem pro ábditis
-      - iustísque regnum pro bonis,
-      - Non demum artémur malis
-      - pro qualitáte críminis,
-      - sed cum beátis cómpotes
-      - simus perénnes cǽlites.
-      - Sit, Christe, rex piíssime,
-      - tibi Patríque glória
-      - cum Spíritu Paráclito,
-      - in sempitérna sǽcula.
-      va:
       - Ut cor cadúca déserens
       - Cæli volúptas ímpleat.
-      - Ut, cum tribúnal Iúdicis
-      - Damnabit igni noxios,
+    - - Ut, cum tribúnal Iúdicis
+      - Damnábit igni nóxios,
       - Et vox amíca débitum
-      - Vocabit ad cælum pios;
-      - Non esca flammarum nigros
-      - Volvamur inter turbines,
+      - Vocábit ad cælum pios;
+    - - Non esca flammárum nigros
+      - Volvámur inter túrbines,
       - Vultu Dei sed cómpotes
       - Cæli fruámur gáudiis.
-      - Patri, simúlque Fílio,
+    - - Patri, simúlque Fílio,
       - Tibíque, Sancte Spíritus,
       - Sicut fuit, sit iúgiter
       - Sæclum per omne glória.
+    amen: true
+    fuente_texto: null
+    coincidencia_libro: 1.0
+    libro:
+    - tomo 1, p. 1064
+    diferencias: []
   vox-clara-ecce-intonat:
     incipit: Vox clara ecce íntonat,
     estrofas:
@@ -3794,7 +4304,7 @@ himnos:
     - tomo 1, p. 1103
     diferencias: []
   inclitus-rector-pater-atque-prudens:
-    incipit: Inclitus rector pater atque prudens,
+    incipit: Ínclitus rector pater atque prudens,
     estrofas:
     - - Ínclitus rector pater atque prudens,
       - cuius insígnem cólimus triúmphum,
@@ -4089,7 +4599,7 @@ himnos:
     - tomo 3, p. 4424
     diferencias: []
   inclitos-christi-famulos-canamus:
-    incipit: Inclitos Christi fámulos canámus,
+    incipit: Ínclitos Christi fámulos canámus,
     estrofas:
     - - Ínclitos Christi fámulos canámus,
       - quos, fide claros nitidísque gestis,
@@ -4662,3 +5172,4041 @@ himnos:
         - ex hoc proféctos sǽculo,
         - ut ubi mors iam déerit
         - te vitæ canant príncipem.
+  deus-creator-omnium:
+    incipit: Deus, creátor ómnium
+    estrofas:
+    - - Deus, creátor ómnium
+      - políque rector, véstiens
+      - diem decóro lúmine,
+      - noctem sopóris grátia,
+    - - Artus solútos ut quies
+      - reddat labóris úsui
+      - mentésque fessas állevet
+      - luctúsque solvat ánxios,
+    - - Grates perácto iam die
+      - et noctis exórtu preces,
+      - voti reos ut ádiuves,
+      - hymnum canéntes sólvimus.
+    - - Te cordis ima cóncinant,
+      - te vox canóra cóncrepet,
+      - te díligat castus amor,
+      - te mens adóret sóbria,
+    - - Ut cum profúnda cláuserit
+      - diem calígo nóctium,
+      - fides ténebras nésciat
+      - et nox fide relúceat.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Deus creator omnium.txt
+    coincidencia_libro: 0.83
+    libro:
+    - tomo 3, p. 4349
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - Praesta, Pater piissime,
+      - Patrique compar Unice,
+      - cum Spiritu Paraclito
+      - regnans per omne saeculum.
+      corpus:
+      - Christum rogámus et Patrem,
+      - Christi Patrísque Spíritum;
+      - unum potens per ómnia,
+      - fove precántes, Trínitas.
+      va:
+      - Præsta, Pater piíssime,
+      - Patríque compar Unice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+  dies-aetasque-ceteris:
+    incipit: Dies ætásque céteris
+    estrofas:
+    - - Dies ætásque céteris
+      - octáva splendet sánctior
+      - in te quam, Iesu, cónsecras,
+      - primítiæ surgéntium.
+    - - Tu tibi nostras ánimas
+      - nunc primo conresúscita;
+      - tibi consúrgant córpora
+      - secúnda morte líbera.
+    - - Tibíque mox in núbibus,
+      - Christe, ferámur óbviam
+      - 'tecum victúri pérpetim:'
+      - tu vita, resurréctio.
+    - - Cuius vidéntes fáciem,
+      - configurémur glóriæ;
+      - te cognoscámus sicut es,
+      - lux vera et suávitas.
+    - - Regnum, cum Patri tráditos,
+      - plenos septéno chrísmate,
+      - in temet nos lætíficas,
+      - consúmmet Sancta Trínitas.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Dies aetasque ceteris.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6217
+    diferencias: []
+  primo-dierum-omnium:
+    incipit: Primo diérum ómnium,
+    estrofas:
+    - - Primo diérum ómnium,
+      - quo mundus exstat cónditus
+      - vel quo resúrgens cónditor
+      - nos, morte victa, líberat,
+    - - Pulsis procul torpóribus,
+      - surgámus omnes ócius,
+      - et nocte quærámus pium,
+      - sicut Prophétam nóvimus,
+    - - Nostras preces ut áudiat
+      - suámque dextram pórrigat,
+      - et hic piátos sórdibus
+      - reddat polórum sédibus,
+    - - Ut, quique sacratíssimo
+      - huius diéi témpore
+      - horis quiétis psállimus,
+      - donis beátis múneret.
+    - - Deo Patri sit glória
+      - eiúsque soli Fílio
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Primo dierum omnium.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6217
+    diferencias: []
+  aeterne-rerum-conditor:
+    incipit: Ætérne rerum cónditor,
+    estrofas:
+    - - Ætérne rerum cónditor,
+      - noctem diémque qui regis,
+      - et témporum das témpora
+      - ut álleves fastídium,
+    - - Præco diéi iam sonat,
+      - noctis profúndæ pérvigil,
+      - noctúrna lux viántibus
+      - a nocte noctem ségregans.
+    - - Hoc excitátus lúcifer
+      - solvit polum calígine;
+      - hoc omnis errónum chorus
+      - vias nocéndi déserit.
+    - - Hoc nauta vires cólligit
+      - pontíque mitéscunt freta;
+      - hoc, ipse Petra Ecclésiæ,
+      - canénte, culpam díluit.
+    - - Iesu, labántes réspice
+      - et nos vidéndo córrige;
+      - si réspicis, lapsus cadunt
+      - fletúque culpa sólvitur.
+    - - Tu, lux, refúlge sénsibus
+      - mentísque somnum díscute;
+      - te nostra vox primum sonet
+      - et vota solvámus tibi.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aeterne rerum conditor.txt
+    coincidencia_libro: 0.93
+    libro:
+    - tomo 3, p. 4351
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - hoc, ipsa Petra ecclesiae,
+      corpus:
+      - hoc, ipse Petra Ecclésiæ,
+  lucis-creator-optime:
+    incipit: Lucis creátor óptime,
+    estrofas:
+    - - Lucis creátor óptime,
+      - lucem diérum próferens,
+      - primórdiis lucis novæ
+      - mundi parans oríginem;
+    - - Qui mane iunctum vésperi
+      - 'diem vocári prǽcipis:'
+      - tætrum chaos illábitur;
+      - audi preces cum flétibus.
+    - - Ne mens graváta crímine
+      - vitæ sit exsul múnere,
+      - dum nil perénne cógitat
+      - seséque culpis ílligat.
+    - - Cælórum pulset íntimum,
+      - vitále tollat prǽmium;
+      - vitémus omne nóxium,
+      - purgémus omne péssimum.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Lucis creator optime.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4354
+    - tomo 4, p. 6221
+    diferencias: []
+  somno-refectis-artubus:
+    incipit: Somno reféctis ártubus,
+    estrofas:
+    - - Somno reféctis ártubus,
+      - 'spreto cubíli, súrgimus:'
+      - nobis, Pater, canéntibus
+      - adésse te depóscimus.
+    - - Te lingua primum cóncinat,
+      - te mentis ardor ámbiat,
+      - ut áctuum sequéntium
+      - tu, sancte, sis exórdium.
+    - - Cedant ténebræ lúmini
+      - et nox diúrno síderi,
+      - ut culpa, quam nox íntulit,
+      - lucis labáscat múnere.
+    - - Precámur idem súpplices
+      - noxas ut omnes ámputes,
+      - et ore te canéntium
+      - laudéris in perpétuum.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Somno refectis artubus.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 4, p. 6222
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - ne ore te canentium
+      corpus:
+      - et ore te canéntium
+      va:
+      - ne ore te canéntium
+  aeterna-lux-divinitas:
+    incipit: Ætérna lux, divínitas,
+    estrofas:
+    - - Ætérna lux, divínitas,
+      - in unitáte Trínitas,
+      - te confitémur débiles,
+      - te deprecámur súpplices.
+    - - Summum Paréntem crédimus
+      - Natúmque Patris únicum,
+      - et caritátis vínculum
+      - qui iungit illos Spíritum.
+    - - O véritas, o cáritas,
+      - o finis et felícitas,
+      - speráre fac et crédere,
+      - amáre fac et cónsequi.
+    - - Qui finis et exórdium
+      - rerúmque fons es ómnium,
+      - tu solus es solácium,
+      - tu certa spes credéntium.
+    - - Qui cuncta solus éfficis
+      - cunctísque solus súfficis,
+      - tu sola lux es ómnibus
+      - et prǽmium sperántibus.
+    - - Christum rogámus et Patrem,
+      - Christi Patrísque Spíritum;
+      - unum potens per ómnia,
+      - fove precántes, Trínitas.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aeterna lux divinitas.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6222
+    diferencias: []
+  splendor-paternae-gloriae:
+    incipit: Splendor patérnæ glóriæ,
+    estrofas:
+    - - Splendor patérnæ glóriæ,
+      - de luce lucem próferens,
+      - lux lucis et fons lúminis,
+      - diem dies illúminans,
+    - - Verúsque sol, illábere
+      - micans nitóre pérpeti,
+      - iubárque Sancti Spíritus
+      - infúnde nostris sénsibus.
+    - - Votis vocémus et Patrem,
+      - Patrem perénnis glóriæ,
+      - Patrem poténtis grátiæ,
+      - culpam reléget lúbricam.
+    - - Infórmet actus strénuos,
+      - dentem retúndat ínvidi,
+      - casus secúndet ásperos,
+      - donet geréndi grátiam.
+    - - Mentem gubérnet et regat
+      - casto, fidéli córpore;
+      - fides calóre férveat,
+      - fraudis venéna nésciat.
+    - - Christúsque nobis sit cibus,
+      - potúsque noster sit fides;
+      - læti bibámus sóbriam
+      - ebrietátem Spíritus.
+    - - Lætus dies hic tránseat;
+      - pudor sit ut dilúculum,
+      - fides velut merídies,
+      - crepúsculum mens nésciat.
+    - - Auróra cursus próvehit;
+      - Auróra totus pródeat,
+      - in Patre totus Fílius
+      - et totus in Verbo Pater.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Splendor paternae gloriae.txt
+    coincidencia_libro: 0.97
+    libro:
+    - tomo 3, p. 4356
+    - tomo 4, p. 6223
+    diferencias: []
+  immense-caeli-conditor:
+    incipit: Imménse cæli cónditor,
+    estrofas:
+    - - Imménse cæli cónditor,
+      - qui, mixta ne confúnderent,
+      - aquæ fluénta dívidens,
+      - cælum dedísti límitem,
+    - - Firmans locum cæléstibus
+      - simúlque terræ rívulis,
+      - ut unda flammas témperet,
+      - 'terræ solum ne díssipet:'
+    - - Infúnde nunc, piíssime,
+      - donum perénnis grátiæ,
+      - fraudis novæ ne cásibus
+      - nos error átterat vetus.
+    - - Lucem fides invéniat,
+      - sic lúminis iubar ferat;
+      - hæc vana cuncta térreat,
+      - hanc falsa nulla cómprimant.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Immense caeli conditor.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4357
+    - tomo 4, p. 6224
+    diferencias: []
+  consors-paterni-luminis:
+    incipit: Consors patérni lúminis,
+    estrofas:
+    - - Consors patérni lúminis,
+      - lux ipse lucis et dies,
+      - 'noctem canéndo rúmpimus:'
+      - assíste postulántibus.
+    - - Aufer ténebras méntium,
+      - fuga catérvas dǽmonum,
+      - expélle somnoléntiam
+      - ne pigritántes óbruat.
+    - - Sic, Christe, nobis ómnibus
+      - indúlgeas credéntibus,
+      - ut prosit exorántibus
+      - quod præcinéntes psállimus.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Consors paterni luminis.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6225
+    diferencias: []
+  o-sacrosancta-trinitas:
+    incipit: O sacrosáncta Trínitas,
+    estrofas:
+    - - O sacrosáncta Trínitas,
+      - quæ cuncta condens órdinas,
+      - diem labóri députans
+      - noctem quiéti dédicas,
+    - - Te mane, simul véspere,
+      - te nocte ac die cánimus;
+      - in tua nos tu glória
+      - per cuncta serva témpora.
+    - - Nos ádsumus te cérnui
+      - en adorántes fámuli;
+      - vota precésque súpplicum
+      - hymnis adiúnge cǽlitum.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O Sacrosancta Trinitas.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6225
+    diferencias: []
+  pergrata-mundo-nuntiat:
+    incipit: Pergráta mundo núntiat
+    estrofas:
+    - - Pergráta mundo núntiat
+      - auróra solis spícula,
+      - res et colóre véstiens
+      - iam cuncta dat nitéscere.
+    - - Qui sol per ævum prǽnites,
+      - o Christe, nobis vívidus,
+      - ad te canéntes vértimur,
+      - te gestiéntes pérfrui.
+    - - Tu Patris es sciéntia
+      - Verbúmque per quod ómnia
+      - miro refúlgent órdine
+      - mentésque nostras áttrahunt.
+    - - Da lucis ut nos fílii
+      - sic ambulémus ímpigri,
+      - ut Patris usque grátiam
+      - mores et actus éxprimant.
+    - - Sincéra præsta ut prófluant
+      - ex ore nostro iúgiter,
+      - et veritátis dúlcibus
+      - ut excitémur gáudiis.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Pergrata mundo nuntiat.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4358
+    - tomo 4, p. 6226
+    diferencias: []
+  telluris-ingens-conditor:
+    incipit: Tellúris ingens cónditor,
+    estrofas:
+    - - Tellúris ingens cónditor,
+      - mundi solum qui éruens,
+      - pulsis aquæ moléstiis,
+      - terram dedísti immóbilem,
+    - - Ut germen aptum próferens,
+      - fulvis decóra flóribus,
+      - fecúnda fructu sísteret
+      - 'pastúmque gratum rédderet:'
+    - - Mentis perústæ vúlnera
+      - munda viróre grátiæ,
+      - ut facta fletu díluat
+      - motúsque pravos átterat,
+    - - Iussis tuis obtémperet,
+      - nullis malis appróximet,
+      - bonis repléri gáudeat
+      - et mortis actum nésciat.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Telluris ingens conditor.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4359
+    - tomo 4, p. 6226
+    diferencias: []
+  rerum-creator-optime:
+    incipit: Rerum creátor óptime
+    estrofas:
+    - - Rerum creátor óptime
+      - rectórque noster, réspice;
+      - nos a quiéte nóxia
+      - mersos sopóre líbera.
+    - - Te, sancte Christe, póscimus;
+      - ignósce tu crimínibus,
+      - ad confiténdum súrgimus
+      - morásque noctis rúmpimus.
+    - - Mentes manúsque tóllimus,
+      - Prophéta sicut nóctibus
+      - nobis geréndum prǽcipit
+      - Paulúsque gestis cénsuit.
+    - - Vides malum quod géssimus;
+      - occúlta nostra pándimus,
+      - preces geméntes fúndimus;
+      - dimítte quod peccávimus.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Rerum creator optime.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6227
+    diferencias: []
+  scientiarum-domino:
+    incipit: Scientiárum Dómino,
+    estrofas:
+    - - Scientiárum Dómino,
+      - sit tibi iubilátio,
+      - qui nostra vides íntima
+      - tuáque foves grátia.
+    - - Qui bonum, pastor óptime,
+      - dum servas, quæris pérditum,
+      - in páscuis ubérrimis
+      - nos iunge piis grégibus,
+    - - Ne terror iræ iúdicis
+      - nos hædis iungat réprobis,
+      - sed simus temet iúdice
+      - oves ætérnæ páscuæ.
+    - - Tibi, Redémptor, glória,
+      - honor, virtus, victória,
+      - regnánti super ómnia
+      - per sæculórum sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Scientiarum Domino.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6227
+    diferencias: []
+  nox-et-tenebrae-et-nubila:
+    incipit: Nox et ténebræ et núbila,
+    estrofas:
+    - - Nox et ténebræ et núbila,
+      - confúsa mundi et túrbida,
+      - 'lux intrat, albéscit polus:'
+      - Christus venit; discédite.
+    - - Calígo terræ scínditur
+      - percússa solis spículo,
+      - rebúsque iam color redit
+      - vultu niténtis síderis.
+    - - Sic nostra mox obscúritas
+      - fraudísque pectus cónscium,
+      - ruptis retéctum núbibus,
+      - regnánte palléscet Deo.
+    - - Te, Christe, solum nóvimus,
+      - te mente pura et símplici
+      - rogáre curváto genu
+      - flendo et canéndo díscimus.
+    - - Inténde nostris sénsibus
+      - 'vitámque totam díspice:'
+      - sunt multa fucis íllita
+      - quæ luce purgéntur tua.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Nox et tenebrae.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4361
+    - tomo 4, p. 6228
+    diferencias: []
+  caeli-deus-sanctissime:
+    incipit: Cæli Deus Sanctíssime,
+    estrofas:
+    - - Cæli Deus Sanctíssime,
+      - qui lúcidum centrum poli
+      - candóre pingis ígneo
+      - augens decóro lúmine,
+    - - Quarto die qui flámmeam
+      - solis rotam constítuens,
+      - lunæ minístras órdini
+      - vagos recúrsus síderum,
+    - - Ut nóctibus vel lúmini
+      - diremptiónis términum,
+      - primórdiis et ménsium
+      - 'signum dares notíssimum:'
+    - - Illúmina cor hóminum,
+      - abstérge sordes méntium,
+      - resólve culpæ vínculum,
+      - evérte moles críminum.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Caeli Deus Sanctissime.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 3, p. 4361
+    - tomo 4, p. 6229
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - augens decori lumina,
+      corpus:
+      - augens decóro lúmine,
+  nox-atra-rerum-contegit:
+    incipit: Nox atra rerum cóntegit
+    estrofas:
+    - - Nox atra rerum cóntegit
+      - 'terræ colóres ómnium:'
+      - nos confiténtes póscimus
+      - te, iuste iudex córdium,
+    - - Ut áuferas piácula
+      - sordésque mentis ábluas,
+      - donésque, Christe, grátiam
+      - ut arceántur crímina.
+    - - Mens, ecce, torpet ímpia,
+      - quam culpa mordet nóxia;
+      - obscúra gestit tóllere
+      - et te, Redémptor, quǽrere.
+    - - Repélle tu calíginem
+      - intrínsecus quam máxime,
+      - ut in beáto gáudeat
+      - se collocári lúmine.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Nox atra rerum.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 4, p. 6229
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - cum Spiritu Sancto Paraclito,
+      corpus:
+      - cum Spíritu Paráclito,
+      va:
+      - cum Spíritu Sancto Paráclito,
+  christe-precamur-adnuas:
+    incipit: Christe, precámur ádnuas
+    estrofas:
+    - - Christe, precámur ádnuas
+      - orántibus servis tuis,
+      - iníquitas hæc sǽculi
+      - ne nostram captívet fidem.
+    - - Non cogitémus ímpie,
+      - invideámus némini,
+      - læsi non reddámus vicem,
+      - vincámus in bono malum.
+    - - Absit nostris e córdibus
+      - ira, dolus, supérbia;
+      - absístat avarítia,
+      - malórum radix ómnium.
+    - - Consérvet pacis fœ́dera
+      - non simuláta cáritas;
+      - sit illibáta cástitas
+      - credulitáte pérpeti.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christe precamur adnuas.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6230
+    diferencias: []
+  sol-ecce-surgit-igneus:
+    incipit: 'Sol ecce surgit ígneus:'
+    estrofas:
+    - - 'Sol ecce surgit ígneus:'
+      - piget, pudéscit, pǽnitet,
+      - nec teste quisquam lúmine
+      - peccáre constánter potest.
+    - - Tandem facéssat cǽcitas,
+      - quæ nosmet in præceps diu
+      - lapsos sinístris gréssibus
+      - erróre traxit dévio.
+    - - Hæc lux serénum cónferat
+      - purósque nos præstet sibi;
+      - nihil loquámur súbdolum,
+      - volvámus obscúrum nihil.
+    - - Sic tota decúrrat dies,
+      - ne lingua mendax, ne manus
+      - oculíve peccent lúbrici,
+      - ne noxa corpus ínquinet.
+    - - Speculátor astat désuper,
+      - qui nos diébus ómnibus
+      - actúsque nostros próspicit
+      - a luce prima in vésperum.
+    - - Deo Patri sit glória
+      - eiúsque soli Fílio
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Sol ecce surgit.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4363
+    - tomo 4, p. 6230
+    diferencias: []
+  magnae-deus-potentiae:
+    incipit: Magnæ Deus poténtiæ,
+    estrofas:
+    - - Magnæ Deus poténtiæ,
+      - qui ex aquis ortum genus
+      - partim remíttis gúrgiti,
+      - partim levas in áera,
+    - - Demérsa lymphis ímprimens,
+      - subvécta cælis írrogans,
+      - ut, stirpe una pródita,
+      - 'divérsa répleant loca:'
+    - - Largíre cunctis sérvulis,
+      - quos mundat unda sánguinis,
+      - nescíre lapsus críminum
+      - nec ferre mortis tǽdium,
+    - - Ut culpa nullum déprimat,
+      - nullum levet iactántia,
+      - elísa mens ne cóncidat,
+      - eláta mens ne córruat.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Magnae Deus potentiae.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4363
+    - tomo 4, p. 6231
+    diferencias: []
+  tu-trinitatis-unitas:
+    incipit: Tu, Trinitátis Únitas,
+    estrofas:
+    - - Tu, Trinitátis Únitas,
+      - orbem poténter qui regis,
+      - atténde laudum cántica
+      - quæ excubántes psállimus.
+    - - Nam léctulo consúrgimus
+      - noctis quiéto témpore,
+      - ut flagitémus vúlnerum
+      - a te medélam ómnium,
+    - - Quo, fraude quicquid dǽmonum
+      - in nóctibus delíquimus,
+      - abstérgat illud cǽlitus
+      - tuæ potéstas glóriæ.
+    - - Te corde fido quǽsumus,
+      - reple tuo nos lúmine,
+      - per quod diérum círculis
+      - nullis ruámus áctibus.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Tu Trinitatis Unitas.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6232
+    diferencias: []
+  adesto-christe-cordibus:
+    incipit: Adésto, Christe, córdibus,
+    estrofas:
+    - - Adésto, Christe, córdibus,
+      - celsa redémptis cáritas;
+      - infúnde nostris férvidos
+      - fletus, rogámus, vócibus.
+    - - Ad te preces, piíssime
+      - Iesu, fide profúndimus;
+      - dimítte, Christe, quǽsumus,
+      - factis malum quod fécimus.
+    - - Sanctæ crucis signáculo,
+      - tuo sacráto córpore,
+      - defénde nos ut fílios
+      - omnes, rogámus, úndique.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Adesto Christe cordibus.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6232
+    diferencias: []
+  aeterna-caeli-gloria:
+    incipit: Ætérna cæli glória,
+    estrofas:
+    - - Ætérna cæli glória,
+      - beáta spes mortálium,
+      - celsi Paréntis Únice
+      - castǽque proles Vírginis,
+    - - Da déxteram surgéntibus,
+      - exsúrgat et mens sóbria
+      - flagrans et in laudem Dei
+      - grates repéndat débitas.
+    - - Ortus refúlget lúcifer
+      - ipsámque lucem núntiat,
+      - cadit calígo nóctium,
+      - lux sancta nos illúminet,
+    - - Manénsque nostris sénsibus
+      - noctem repéllat sǽculi
+      - omníque fine témporis
+      - purgáta servet péctora.
+    - - Quæsíta iam primum fides
+      - radícet altis sénsibus,
+      - secúnda spes congáudeat;
+      - tunc maior exstat cáritas.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aeterna caeli gloria.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4365
+    - tomo 4, p. 6233
+    diferencias: []
+  plasmator-hominis-deus:
+    incipit: Plasmátor hóminis, Deus,
+    estrofas:
+    - - Plasmátor hóminis, Deus,
+      - qui, cuncta solus órdinans,
+      - humum iubes prodúcere
+      - reptántis et feræ genus;
+    - - Qui magna rerum córpora,
+      - dictu iubéntis vívida,
+      - ut sérviant per órdinem
+      - 'subdens dedísti hómini:'
+    - - Repélle a servis tuis
+      - quicquid per immundítiam
+      - aut móribus se súggerit,
+      - aut áctibus se intérserit.
+    - - Da gaudiórum prǽmia,
+      - da gratiárum múnera;
+      - dissólve litis víncula,
+      - astrínge pacis fœ́dera.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Plasmator hominis Deus.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4366
+    - tomo 4, p. 6233
+    diferencias: []
+  summae-deus-clementiae:
+    incipit: Summæ Deus cleméntiæ
+    estrofas:
+    - - Summæ Deus cleméntiæ
+      - mundíque factor máchinæ,
+      - qui trinus almo númine
+      - unúsque firmas ómnia,
+    - - Nostros piis cum cánticis
+      - fletus benígne súscipe,
+      - quo corde puro sórdibus
+      - te perfruámur lárgius.
+    - - Lumbos adúre cóngruis
+      - tu caritátis ígnibus,
+      - accíncti ut adsint pérpetim
+      - tuísque prompti advéntibus,
+    - - Ut, quique horas nóctium
+      - nunc concinéndo rúmpimus,
+      - donis beátæ pátriæ
+      - ditémur omnes áffatim.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Summae Deus clementiae.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6234
+    diferencias: []
+  auctor-perennis-gloriae:
+    incipit: Auctor perénnis glóriæ,
+    estrofas:
+    - - Auctor perénnis glóriæ,
+      - qui septifórmis grátiæ
+      - das Spíritum credéntibus,
+      - assíste mitis ómnibus.
+    - - Expélle morbos córporum,
+      - mentis repélle scándalum,
+      - exscínde vires críminum,
+      - fuga dolóres córdium.
+    - - Serénas mentes éffice,
+      - opus honéstum pérfice,
+      - preces orántium áccipe,
+      - vitam perénnem tríbue.
+    - - Septem diérum cúrsibus
+      - nunc tempus omne dúcitur;
+      - octávus ille últimus
+      - dies erit iudícii,
+    - - In quo, Redémptor, quǽsumus,
+      - ne nos in ira árguas,
+      - sed a sinístra líbera,
+      - ad déxteram nos cólloca,
+    - - Ut, cum preces suscéperis
+      - clemens tuárum plébium,
+      - reddámus omnes glóriam
+      - trino Deo per sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Auctor perennis gloriae.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 4, p. 6235
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - preces orantum accipe,
+      corpus:
+      - preces orántium áccipe,
+  aurora-iam-spargit-polum:
+    incipit: Auróra iam spargit polum,
+    estrofas:
+    - - Auróra iam spargit polum,
+      - terris dies illábitur,
+      - 'lucis resúltat spículum:'
+      - discédat omne lúbricum.
+    - - Iam vana noctis décidant,
+      - mentis reátus súbruat,
+      - quicquid ténebris hórridum
+      - nox áttulit culpæ, cadat,
+    - - Ut mane illud últimum,
+      - quod præstolámur cérnui,
+      - in lucem nobis éffluat,
+      - dum hoc canóre cóncrepat.
+    - - Deo Patri sit glória
+      - eiúsque soli Fílio
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aurora iam spargit.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 3, p. 4367
+    - tomo 4, p. 6235
+    diferencias: []
+  rerum-deus-fons-omnium:
+    incipit: Rerum, Deus, fons ómnium,
+    estrofas:
+    - - Rerum, Deus, fons ómnium,
+      - qui, rebus actis ómnibus,
+      - totíus orbis ámbitum
+      - censu replésti múnerum,
+    - - Ac, mole tanta cóndita,
+      - tandem quiétem díceris
+      - sumpsísse, dans labóribus
+      - 'ut nos levémur grátius:'
+    - - Concéde nunc mortálibus
+      - deflére vitæ crímina,
+      - instáre iam virtútibus
+      - et munerári prósperis,
+    - - Ut cum treméndi iúdicis
+      - horror suprémus cœ́perit,
+      - lætémur omnes ínvicem
+      - pacis repléti múnere.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Rerum Deus fons.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6236
+    diferencias: []
+  salve-dies-dierum-gloria:
+    incipit: Salve dies, diérum glória,
+    estrofas:
+    - - Salve dies, diérum glória,
+      - dies felix Christi victória,
+      - dies digna iugi lætítia,
+      - dies prima.
+    - - Lux divína cæcis irrádiat,
+      - in qua Christus inférnum spóliat,
+      - mortem vincit et reconcíliat
+      - summis ima.
+    - - Sempitérni regis senténtia
+      - sub peccáto conclúsit ómnia;
+      - ut infírmis supérna grátia
+      - subveníret,
+    - - Dei virtus et sapiéntia
+      - temperávit iram cleméntia,
+      - cum iam mundus in præcipítia
+      - totus iret.
+    - - Resurréxit liber ab ínferis
+      - restaurátor humáni géneris,
+      - ovem suam repórtans úmeris
+      - ad supérna.
+    - - Angelórum pax fit et hóminum,
+      - plenitúdo succréscit órdinum,
+      - triumphántem laus decet Dóminum,
+      - laus ætérna.
+    - - Harmoníæ cæléstis pátriæ
+      - vox concórdet matris Ecclésiæ,
+      - «Allelúia» frequéntet hódie
+      - plebs fidélis.
+    - - Triumpháto mortis império,
+      - triumpháli fruámur gáudio;
+      - in terra pax, et iubilátio
+      - sit in cælis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Salve dies dierum.txt
+    coincidencia_libro: 0.97
+    libro:
+    - tomo 4, p. 6237
+    diferencias: []
+  mediae-noctis-tempus-est:
+    incipit: Médiæ noctis tempus est;
+    estrofas:
+    - - Médiæ noctis tempus est;
+      - prophética vox ádmonet
+      - dicámus laudes ut Deo
+      - Patri semper ac Fílio,
+    - - 'Sancto quoque Spirítui:'
+      - perfécta enim Trínitas
+      - uniúsque substántiæ
+      - laudánda nobis semper est.
+    - - Terrórem tempus hoc habet,
+      - quo, cum vastátor ángelus
+      - Ægýpto mortem íntulit,
+      - delévit primogénita.
+    - - Hæc iustis hora salus est,
+      - quos tunc ibídem ángelus
+      - ausus puníre non erat,
+      - signum formídans sánguinis.
+    - - Ægýptus flebat fórtiter
+      - tantórum diro fúnere;
+      - solus gaudébat Israel
+      - agni protéctus sánguine.
+    - - 'Nos verus Israel sumus:'
+      - lætámur in te, Dómine,
+      - hostem spernéntes et malum,
+      - Christi defénsi sánguine.
+    - - Dignos nos fac, rex óptime,
+      - futúri regni glória,
+      - ut mereámur láudibus
+      - ætérnis te concínere.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Mediae noctis tempus.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6236
+    diferencias: []
+  ecce-iam-noctis-tenuatur-umbra:
+    incipit: Ecce iam noctis tenuátur umbra,
+    estrofas:
+    - - Ecce iam noctis tenuátur umbra,
+      - lucis auróra rútilans corúscat;
+      - nísibus totis rogitémus omnes
+      - cunctipoténtem,
+    - - Ut Deus, nostri miserátus, omnem
+      - pellat angórem, tríbuat salútem,
+      - donet et nobis pietáte patris
+      - regna polórum.
+    - - Præstet hoc nobis Déitas Beáta
+      - Patris ac Nati, paritérque Sancti
+      - Spíritus, cuius résonat per omnem
+      - glória mundum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Ecce iam noctis.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 4, p. 6238
+    diferencias: []
+  o-lux-beata-trinitas:
+    incipit: O lux, Beáta Trínitas
+    estrofas:
+    - - O lux, Beáta Trínitas
+      - et principális Únitas,
+      - 'iam sol recédit ígneus:'
+      - infúnde lumen córdibus.
+    - - Te mane laudum cármine,
+      - te deprecémur véspere;
+      - te nostra supplex glória
+      - per cuncta laudet sǽcula.
+    - - Christum rogámus et Patrem,
+      - Christi Patrísque Spíritum;
+      - unum potens per ómnia,
+      - fove precántes, Trínitas.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O lux Beata Trinitas.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 4, p. 6238
+    diferencias: []
+  ipsum-nunc-nobis-tempus-est:
+    incipit: Ipsum nunc nobis tempus est
+    estrofas:
+    - - Ipsum nunc nobis tempus est
+      - quo voce evangélica
+      - ventúrus sponsus créditur,
+      - regni cæléstis cónditor.
+    - - Occúrrunt sanctæ vírgines
+      - óbviam tunc advéntui,
+      - gestántes claras lámpadas,
+      - magno lætántes gáudio.
+    - - Stultæ vero quæ rémanent
+      - exstínctas habent lámpadas,
+      - frustra pulsántes iánuam,
+      - clausa iam regni régia.
+    - - Nunc vigilémus sóbrii
+      - gestántes mentes spléndidas,
+      - ut veniénti Dómino
+      - digni currámus óbviam.
+    - - Dignos nos fac, rex óptime,
+      - futúri regni glória,
+      - ut mereámur láudibus
+      - ætérnis te concínere.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Ipsum nunc nobis.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6239
+    diferencias: []
+  vita-sanctorum-via-spes-salusque:
+    incipit: Vita sanctórum, via, spes salúsque,
+    estrofas:
+    - - Vita sanctórum, via, spes salúsque,
+      - Christe, largítor probitátis atque
+      - cónditor pacis, tibi voce, sensu
+      - 'pángimus hymnum:'
+    - - Cuius est virtus manifésta totum
+      - quod pii possunt, quod habent, quod ore,
+      - corde vel factis cúpiunt, amóris
+      - igne flagrántes.
+    - - Témporum pacem, fídei tenórem,
+      - lánguidis curam veniámque lapsis,
+      - ómnibus præsta páriter beátæ
+      - múnera vitæ.
+    - - Æqua laus summum célebret Paréntem
+      - teque, Salvátor, pie rex, per ævum;
+      - Spíritus Sancti résonet per omnem
+      - glória mundum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Vita sanctorum via.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6239
+    diferencias: []
+  lucis-largitor-splendide:
+    incipit: Lucis largítor spléndide,
+    estrofas:
+    - - Lucis largítor spléndide,
+      - cuius seréno lúmine
+      - post lapsa noctis témpora
+      - dies refúsus pánditur,
+    - - Tu verus mundi lúcifer,
+      - non is qui parvi síderis
+      - ventúræ lucis núntius
+      - angústo fulget lúmine,
+    - - Sed toto sole clárior,
+      - lux ipse totus et dies,
+      - intérna nostri péctoris
+      - illúminans præcórdia.
+    - - Evíncat mentis cástitas
+      - quæ caro cupit árrogans,
+      - sanctúmque puri córporis
+      - delúbrum servet Spíritus.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Lucis largitor splendide.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6240
+    diferencias: []
+  luminis-fons-lux-et-origo-lucis:
+    incipit: Lúminis fons, lux et orígo lucis,
+    estrofas:
+    - - Lúminis fons, lux et orígo lucis,
+      - tu pius nostris précibus favéto,
+      - luxque, peccáti ténebris fugátis,
+      - nos tua adórnet.
+    - - Ecce transáctus labor est diéi,
+      - teque nos tuti sumus adnuénte;
+      - en tibi grates ágimus libéntes
+      - tempus in omne.
+    - - 'Solis abscéssus ténebras redúxit:'
+      - ille sol nobis rádiet corúscus
+      - luce qui fulva fovet angelórum
+      - ágmina sancta.
+    - - Quas dies culpas hodiérna texit,
+      - Christus deléto pius atque mitis,
+      - pectus et puro rútilet nitóre
+      - témpore noctis.
+    - - Laus tibi Patri, decus atque Nato,
+      - Flámini Sancto párilis potéstas,
+      - cuncta qui sceptro régitis suprémo
+      - omne per ævum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Luminis fons lux.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6241
+    diferencias: []
+  nocte-surgentes-vigilemus-omnes:
+    incipit: Nocte surgéntes vigilémus omnes,
+    estrofas:
+    - - Nocte surgéntes vigilémus omnes,
+      - semper in psalmis meditémur atque
+      - víribus totis Dómino canámus
+      - dúlciter hymnos,
+    - - Ut, pio regi páriter canéntes,
+      - cum suis sanctis mereámur aulam
+      - íngredi cæli, simul et beátam
+      - dúcere vitam.
+    - - Præstet hoc nobis Déitas Beáta
+      - Patris ac Nati, paritérque Sancti
+      - Spíritus, cuius résonat per omnem
+      - glória mundum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Nocte surgentes vigilemus.txt
+    coincidencia_libro: 1.0
+    libro: []
+    diferencias: []
+  ad-preces-nostras-deitatis-aures:
+    incipit: Ad preces nostras deitátis aures,
+    estrofas:
+    - - Ad preces nostras deitátis aures,
+      - Deus, inclína pietáte sola;
+      - súpplicum vota súscipe, precámur
+      - fámuli tui.
+    - - Réspice clemens sólio de sancto
+      - vultu seréno, lámpadas illústra
+      - ólei nostri, ténebras depélle
+      - péctore cunctas.
+    - - Crímina laxa pietáte multa,
+      - áblue sordes, víncula disrúmpe,
+      - parce peccátis, réleva iacéntes
+      - déxtera tua.
+    - - Glória Deo sit ætérno Patri,
+      - sit tibi semper, Genitóris Nate,
+      - cum quo per cuncta Spíritus æquális
+      - sǽcula regnat.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Ad preces nostras.txt
+    coincidencia_libro: 1.0
+    libro: []
+    diferencias: []
+  aeterne-lucis-conditor:
+    incipit: Ætérne lucis cónditor,
+    estrofas:
+    - - Ætérne lucis cónditor,
+      - lux ipse totus et dies,
+      - noctem nec ullam séntiens
+      - natúra lucis pérpeti,
+    - - Iam cedit pallens próximo
+      - diéi nox advéntui,
+      - obtúndens lumen síderum
+      - adest et clarus lúcifer.
+    - - Iam stratis læti súrgimus
+      - grates canéntes et tuas,
+      - quod cæcam noctem vícerit
+      - revéctans rursus sol diem.
+    - - Te nunc, ne carnis gáudia
+      - blandis subrépant ǽstibus,
+      - dolis ne cedat sǽculi
+      - mens nostra, sancte, quǽsumus.
+    - - Ira ne rixas próvocet,
+      - gulam ne venter íncitet,
+      - opum pervértat ne famis,
+      - turpis ne luxus óccupet,
+    - - Sed firma mente sóbrii,
+      - casto manéntes córpore
+      - totum fidéli spíritu
+      - Christo ducámus hunc diem.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aeterne lucis conditor.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6242
+    diferencias: []
+  sator-princepsque-temporum:
+    incipit: Sator princépsque témporum,
+    estrofas:
+    - - Sator princépsque témporum,
+      - clarum diem labóribus
+      - noctémque qui sopóribus
+      - fixo distínguis órdine,
+    - - Mentem tu castam dírige,
+      - obscúra ne siléntia
+      - ad dira cordis vúlnera
+      - telis patéscant ínvidi.
+    - - Vacent ardóre péctora,
+      - faces nec ullas pérferant,
+      - quæ nostro hæréntes sénsui
+      - mentis vigórem sáucient.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - Cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Sator princepsque temporum.txt
+    coincidencia_libro: 0.88
+    libro:
+    - tomo 4, p. 6243
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - obsura ne silentia
+      corpus:
+      - obscúra ne siléntia
+  o-sator-rerum-reparator-aevi:
+    incipit: O sator rerum, reparátor ævi,
+    estrofas:
+    - - O sator rerum, reparátor ævi,
+      - Christe, rex regum, metuénde censor,
+      - tu preces nostras paritérque laudes
+      - súscipe clemens.
+    - - Noctis en cursu tibi vota laudum
+      - pángimus; præsta tibi sint ut apta,
+      - nosque concéntu réfove perénni,
+      - lúminis auctor.
+    - - Da dies nobis probitáte faustos
+      - mortis ignáram tribuéndo vitam,
+      - semper ut nostros tua sit per actus
+      - glória perpes.
+    - - Ure cor nostrum, pius ure lumbos
+      - igne divíno vigilésque nos fac,
+      - semper ardéntes mánibus lucérnas
+      - ut teneámus.
+    - - Æqua laus summum célebret Paréntem
+      - teque, Salvátor, pie rex, per ævum;
+      - Spíritus Sancti résonet per omnem
+      - glória mundum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O sator rerum.txt
+    coincidencia_libro: 1.0
+    libro: []
+    diferencias: []
+  christe-lux-vera-bonitas-et-vita:
+    incipit: Christe, lux vera, bónitas et vita,
+    estrofas:
+    - - Christe, lux vera, bónitas et vita,
+      - gáudium mundi, píetas imménsa,
+      - qui nos a morte vívido salvásti
+      - sánguine tuo,
+    - - Insere tuum, pétimus, amórem
+      - méntibus nostris, fídei refúnde
+      - lumen ætérnum, caritátis auge
+      - dilectiónem.
+    - - Procul a nobis pérfidus absístat
+      - Satan, a tuis víribus confráctus;
+      - Sanctus assístat Spíritus, a tua
+      - sede demíssus.
+    - - Glória Deo sit ætérno Patri,
+      - sit tibi semper, Genitóris Nate,
+      - cum quo per cuncta Spíritus æquális
+      - sǽcula regnat.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christe lux vera.txt
+    coincidencia_libro: 1.0
+    libro: []
+    diferencias: []
+  fulgentis-auctor-aetheris:
+    incipit: Fulgéntis auctor ǽtheris,
+    estrofas:
+    - - Fulgéntis auctor ǽtheris,
+      - qui lunam lumen nóctibus,
+      - solem diérum cúrsibus
+      - certo fundásti trámite,
+    - - Nox atra iam depéllitur,
+      - mundi nitor renáscitur,
+      - novúsque iam mentis vigor
+      - dulces in actus érigit.
+    - - Laudes sonáre iam tuas
+      - dies relátus ádmonet,
+      - vultúsque cæli blándior
+      - nostra serénat péctora.
+    - - Vitémus omne lúbricum,
+      - declínet prava spíritus,
+      - vitam facta non ínquinent,
+      - linguam culpa non ímplicet;
+    - - Sed, sol diem dum cónficit,
+      - fides profúnda férveat,
+      - spes ad promíssa próvocet,
+      - Christo coniúngat cáritas.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Fulgentis auctor aetheris.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 4, p. 6244
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - Praesta, Peter piissime,
+      corpus:
+      - Præsta, Pater piíssime,
+  sol-ecce-lentus-occidens:
+    incipit: Sol, ecce, lentus óccidens
+    estrofas:
+    - - Sol, ecce, lentus óccidens
+      - montes et arva et ǽquora
+      - mæstus relínquit, ínnovat
+      - sed lucis omen crástinæ,
+    - - Mirántibus mortálibus
+      - sic te, Creátor próvide,
+      - leges vicésque témporum
+      - umbris dedísse et lúmini.
+    - - Ac dum, ténebris ǽthera
+      - siléntio preméntibus,
+      - vigor labórum déficit,
+      - quies cupíta quǽritur,
+    - - Spe nos fidéque dívites
+      - tui beámur lúmine
+      - Verbi, quod est a sǽculis
+      - splendor patérnæ glóriæ.
+    - - Est ille sol qui nésciat
+      - ortum vel umquam vésperum;
+      - quo terra gestit cóntegi,
+      - quo cæli in ævum iúbilant.
+    - - Hac nos seréna pérpetim
+      - da luce tandem pérfrui,
+      - cum Nato et almo Spíritu
+      - tibi novántes cántica.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Sol ecce lentus.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6245
+    diferencias: []
+  ales-diei-nuntius:
+    incipit: Ales diéi núntius
+    estrofas:
+    - - Ales diéi núntius
+      - lucem propínquam prǽcinit;
+      - nos excitátor méntium
+      - iam Christus ad vitam vocat.
+    - - «Auférte –clamat– léctulos
+      - ægros, sopóros, désides;
+      - castíque, recti ac sóbrii
+      - vigiláte; iam sum próximus».
+    - - Ut, cum corúscis flátibus
+      - auróra cælum spárserit,
+      - omnes labóre exércitos
+      - confírmet ad spem lúminis,
+    - - Iesum ciámus vócibus
+      - flentes, precántes, sóbrii;
+      - inténta supplicátio
+      - dormíre cor mundum vetat.
+    - - Tu, Christe, somnum dísice,
+      - tu rumpe noctis víncula,
+      - tu solve peccátum vetus
+      - novúmque lumen íngere.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Ales diei nuntius.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6246
+    diferencias: []
+  amoris-sensus-erige:
+    incipit: Amóris sensus érige
+    estrofas:
+    - - Amóris sensus érige
+      - ad te, largítor véniæ,
+      - ut fias clemens córdibus
+      - purgátis inde sórdibus.
+    - - Extérni huc advénimus
+      - et éxsules ingémimus;
+      - tu portus es et pátria,
+      - ad vitæ duc nos átria.
+    - - Felix quæ sitit cáritas
+      - te fontem vitæ, o Véritas;
+      - beáti valde óculi
+      - te speculántis pópuli.
+    - - Grandis est tibi glória
+      - tuæ laudis memória,
+      - quam sine fine célebrant
+      - qui cor ab imis élevant.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Amoris sensus erige.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6246
+    diferencias: []
+  iam-lucis-orto-sidere:
+    incipit: Iam lucis orto sídere
+    estrofas:
+    - - Iam lucis orto sídere
+      - Deum precémur súpplices,
+      - ut in diúrnis áctibus
+      - nos servet a nocéntibus.
+    - - Linguam refrénans témperet,
+      - ne litis horror ínsonet;
+      - visum fovéndo cóntegat,
+      - ne vanitátes háuriat.
+    - - Sint pura cordis íntima,
+      - absístat et vecórdia;
+      - carnis terat supérbiam
+      - potus cibíque párcitas;
+    - - Ut, cum dies abscésserit
+      - noctémque sors redúxerit,
+      - mundi per abstinéntiam
+      - ipsi canámus glóriam.
+    - - Deo Patri sit glória
+      - eiúsque soli Fílio
+      - cum Spíritu Paráclito,
+      - nunc et per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iam lucis orto.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 4, p. 6247
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - Linguam refraenans temperet,
+      corpus:
+      - Linguam refrénans témperet,
+    - tipo: variante del libro
+      libro:
+      - nunc et per omne saeculum.
+      corpus:
+      - in sempitérna sǽcula.
+      va:
+      - nunc et per omne sǽculum.
+  deus-qui-claro-lumine:
+    incipit: Deus, qui claro lúmine
+    estrofas:
+    - - Deus, qui claro lúmine
+      - diem fecísti, Dómine,
+      - tuam rogámus glóriam
+      - dum pronus dies vólvitur.
+    - - Iam sol urgénte véspero
+      - occásum suum gráditur,
+      - mundum conclúdens ténebris,
+      - suum obsérvans órdinem.
+    - - Tu vero, excélse Dómine,
+      - precántes tuos fámulos
+      - diúrno lassos ópere
+      - ne sinas umbris ópprimi,
+    - - Ut non fuscátis méntibus
+      - dies abscédat sǽculi,
+      - sed tua tecti grátia
+      - cernámus lucem prósperam.
+    - - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Deus qui claro.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 4, p. 6248
+    diferencias: []
+  galli-cantu-mediante:
+    incipit: Galli cantu mediánte
+    estrofas:
+    - - Galli cantu mediánte
+      - noctis iam calíginem
+      - et profúndæ noctis atram
+      - levánte formídinem,
+      - Deus alme, te rogámus
+      - supplicésque póscimus.
+    - - Vigil, potens, lux venísti
+      - atque custos hóminum,
+      - dum tenérent simul cuncta
+      - médium siléntium,
+      - rédderent necnon mortálem
+      - mórtui effígiem,
+    - - Excitáres quo nos, Christe,
+      - de somno malítiæ,
+      - atque gratis liberáres
+      - noctúrno de cárcere,
+      - redderésque nobis lucem
+      - vitæ semper cómitem.
+    - - Honor Patri sit ac tibi,
+      - Sancto sit Spirítui,
+      - Deo trino sed et uni,
+      - paci, vitæ, lúmini,
+      - nómini præ cunctis dulci
+      - divinóque númini.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Galli cantu mediante.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6248
+    diferencias: []
+  adesto-rerum-conditor:
+    incipit: Adésto, rerum cónditor,
+    estrofas:
+    - - Adésto, rerum cónditor,
+      - patérnæ lucis glória,
+      - cuius amóta grátia
+      - nostra pavéscunt péctora,
+    - - Tuóque plena Spíritu,
+      - secum Deum gestántia,
+      - nil rapiéntis pérfidi
+      - diris patéscant fráudibus,
+    - - Ut inter actus sǽculi,
+      - vitæ quos usus éxigit,
+      - omni caréntes crímine
+      - tuis vivámus légibus.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Adesto rerum conditor.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6249
+    diferencias: []
+  deus-qui-caeli-lumen-es:
+    incipit: Deus, qui cæli lumen es
+    estrofas:
+    - - Deus, qui cæli lumen es
+      - satórque lucis, qui polum
+      - patérno fultum bráchio
+      - præclára pandis déxtera,
+    - - Auróra stellas iam tegit
+      - rubrum sustóllens gúrgitem,
+      - uméctis atque flátibus
+      - terram baptízans róribus.
+    - - Iam noctis umbra línquitur,
+      - polum calígo déserit,
+      - typúsque Christi, lúcifer
+      - diem sopítum súscitat.
+    - - Dies diérum tu, Deus,
+      - lucísque lumen ipse es,
+      - Unum potens per ómnia,
+      - potens in unum Trínitas.
+    - - Te nunc, Salvátor, quǽsumus
+      - tibíque genu fléctimus,
+      - Patrem cum Sancto Spíritu
+      - totis laudántes vócibus.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Deus qui caeli.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 4, p. 6249
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - paterno fultum bracchio
+      corpus:
+      - patérno fultum bráchio
+  horis-peractis-undecim:
+    incipit: Horis peráctis úndecim
+    estrofas:
+    - - Horis peráctis úndecim
+      - ruit dies in vésperum;
+      - solvámus omnes débitum
+      - mentis libénter cánticum.
+    - - Labor diúrnus tránsiit
+      - quo, Christe, nos condúxeras;
+      - da iam colónis víneæ
+      - promíssa dona glóriæ.
+    - - Mercéde quos nunc ádvocas,
+      - quos ad futúrum múneras,
+      - nos in labóre ádiuva
+      - et post labórem récrea.
+    - - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Horis peractis undecim.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6250
+    diferencias: []
+  lux-aeterna-lumen-potens:
+    incipit: Lux ætérna, lumen potens,
+    estrofas:
+    - - Lux ætérna, lumen potens,
+      - dies indefíciens,
+      - debellátor atræ noctis,
+      - reparátor lúminis,
+      - destructórque tenebrárum,
+      - 'illustrátor méntium:'
+    - - Quo nascénte suscitámur,
+      - quo vocante súrgimus;
+      - faciénte quo beáti,
+      - quo linquénte míseri;
+      - quo a morte liberáti,
+      - quo sumus perlúcidi;
+    - - Mortis quo victóres facti,
+      - noctis atque sǽculi;
+      - ergo nobis, rex ætérne,
+      - lucem illam tríbue,
+      - quæ fuscátur nulla nocte,
+      - solo gaudens lúmine.
+    - - Honor Patri sit ac tibi,
+      - Sancto sit Spirítui,
+      - Deo trino sed et uni,
+      - paci, vitæ, lúmini,
+      - nómini præ cunctis dulci
+      - divinóque númini.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Lux aeterna lumen.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 4, p. 6250
+    diferencias: []
+  deus-de-nullo-veniens:
+    incipit: Deus de nullo véniens,
+    estrofas:
+    - - Deus de nullo véniens,
+      - Deus de Deo pródiens,
+      - Deus ab his progrédiens,
+      - in nos veni subvéniens.
+    - - Tu nostrum desidérium,
+      - tu sis amor et gáudium;
+      - in te nostra cupíditas
+      - et sit in te iucúnditas.
+    - - Pater, cunctórum Dómine,
+      - cum Génito de Vírgine,
+      - intus et in circúitu
+      - nos rege Sancto Spíritu.
+    - - Meménto, Sancta Trínitas,
+      - quod tua fecit bónitas,
+      - creándo prius hóminem,
+      - recreándo per sánguinem.
+    - - Nam quos creávit Únitas,
+      - redémit Christi cáritas;
+      - patiéndo tunc díligens,
+      - nunc díligat nos éligens.
+    - - Tríadi sanctæ gáudium,
+      - pax, virtus et impérium,
+      - decus, omnipoténtia,
+      - laus, honor, reveréntia.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Deus de nullo.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 4, p. 6251
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - Deus ab his pregrediens,
+      corpus:
+      - Deus ab his progrédiens,
+  diei-luce-reddita:
+    incipit: Diéi luce réddita,
+    estrofas:
+    - - Diéi luce réddita,
+      - lætis gratísque vócibus
+      - Dei canámus glóriam,
+      - Christi faténtes grátiam.
+    - - Per quem creátor ómnium
+      - diem noctémque cóndidit,
+      - ætérna lege sánciens
+      - ut semper succédant sibi.
+    - - Tu vera lux fidélium,
+      - quem lex vetérna non tenet,
+      - noctis nec ortu súccidens,
+      - ætérno fulgens lúmine.
+    - - Præsta, Pater ingénite,
+      - totum ducámus iúgiter
+      - Christo placéntes hunc diem
+      - Sancto repléti Spíritu.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Diei luce reddita.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 4, p. 6252
+    diferencias: []
+  immensa-et-una-trinitas:
+    incipit: Imménsa et una, Trínitas,
+    estrofas:
+    - - Imménsa et una, Trínitas,
+      - cuius potéstas ómnia
+      - facit regítque témpora
+      - et exstat ante sǽcula,
+    - - Tu sola pleno súfficis
+      - tibi beáta gáudio;
+      - tu pura, simplex, próvida
+      - cælos et orbem cóntines.
+    - - Omnis, Pater, fons grátiæ,
+      - Lumen patérnæ glóriæ,
+      - Sancte utriúsque Spíritus
+      - intermináta cáritas,
+    - - Ex te supréma orígine,
+      - Trias benígna, prófluit
+      - creáta quicquid sústinet,
+      - quicquid decóre pérficit.
+    - - Quos et coróna múneras
+      - adoptiónis íntimæ,
+      - nos templa fac niténtia
+      - tibi placére iúgiter.
+    - - O viva lux, nos ángelis
+      - da iungi in aula cǽlica,
+      - ut grati amóris láudibus
+      - te concinámus pérpetim.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Immensa et una.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4343
+    - tomo 4, p. 6209
+    diferencias: []
+  te-patrem-summum-genitumque-verbum:
+    incipit: Te Patrem summum genitúmque Verbum
+    estrofas:
+    - - Te Patrem summum genitúmque Verbum
+      - Flamen ac Sanctum Dóminum faténtur
+      - únicum, quotquot paradísi amœ́nus
+      - hortus adúnat.
+    - - Quam modis miris, Trias alma, vivas
+      - pércipit nemo, tamen usque in ævum
+      - cǽlites vultu sátias, alácri
+      - voce canéntes.
+    - - Te canunt mundi statuísse molem,
+      - Lúmine ætérno régere univérsa,
+      - ígnibus celsi refovére Amóris
+      - corda tuórum.
+    - - Mente permísti súperum catérvis,
+      - iam choris illis sociámus hymnos,
+      - qui tua optámus fore sempitérna
+      - pace beáti.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te Patrem summum.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 3, p. 4343
+    - tomo 4, p. 6210
+    diferencias: []
+  trinitas-summo-solio-coruscans:
+    incipit: Trínitas, summo sólio corúscans,
+    estrofas:
+    - - Trínitas, summo sólio corúscans,
+      - glóriæ carmen tibi sit perénne,
+      - quæ tenes nostri veheménti amóre
+      - péctoris ima.
+    - - Cónditor rerum, Pater, alma virtus,
+      - quos tuæ vitæ facis atque formæ
+      - esse consórtes, fídei fac usque
+      - dona meréri.
+    - - Candor ætérnæ speculúmque lucis,
+      - Nate, quos dicis sociásque fratres,
+      - pálmites viti tibi nos inésse
+      - da viridántes.
+    - - Cáritas, ignis, píetas, poténti
+      - lúmine ac blando móderans creáta,
+      - Spíritus, mentem rénova, fovéto
+      - íntima cordis.
+    - - Hospes o dulcis, Trias obsecránda,
+      - nos tibi iugi fac amóre nexos,
+      - pérpetes donec modulémur hymnos
+      - teque fruámur.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Trinitas summo solio.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4344
+    - tomo 4, p. 6210
+    diferencias: []
+  pange-lingua-gloriosi-corporis:
+    incipit: Pange, lingua, gloriósi
+    estrofas:
+    - - Pange, lingua, gloriósi
+      - córporis mystérium,
+      - sanguinísque pretiósi,
+      - quem in mundi prétium
+      - fructus ventris generósi
+      - Rex effúdit géntium.
+    - - Nobis datus, nobis natus
+      - ex intácta Vírgine,
+      - et in mundo conversátus,
+      - sparso verbi sémine,
+      - sui moras incolátus
+      - miro clausit órdine.
+    - - In suprémæ nocte cenæ
+      - recúmbens cum frátribus,
+      - observáta lege plene
+      - cibis in legálibus,
+      - cibum turbæ duodénæ
+      - se dat suis mánibus.
+    - - Verbum caro panem verum
+      - verbo carnem éfficit,
+      - fitque sanguis Christi merum,
+      - et, si sensus déficit,
+      - ad firmándum cor sincérum
+      - sola fides súfficit.
+    - - Tantum ergo sacraméntum
+      - venerémur cérnui,
+      - et antíquum documéntum
+      - novo cedat rítui;
+      - præstet fides suppleméntum
+      - sénsuum deféctui.
+    - - Genitóri Genitóque
+      - laus et iubilátio,
+      - salus, honor, virtus quoque
+      - sit et benedíctio;
+      - procedénti ab utróque
+      - compar sit laudátio.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Pange lingua gloriosi corporis.txt
+    coincidencia_libro: 0.97
+    libro:
+    - tomo 3, p. 4344
+    - tomo 4, p. 6211
+    diferencias: []
+  sacris-sollemniis-iuncta-sint-gaudia:
+    incipit: Sacris sollémniis iuncta sint gáudia,
+    estrofas:
+    - - Sacris sollémniis iuncta sint gáudia,
+      - et ex præcórdiis sonent præcónia;
+      - recédant vétera, nova sint ómnia,
+      - corda, voces et ópera.
+    - - Noctis recólitur cena novíssima,
+      - qua Christus créditur agnum et ázyma
+      - dedísse frátribus iuxta legítima
+      - priscis indúlta pátribus.
+    - - Dedit fragílibus córporis férculum,
+      - dedit et trístibus sánguinis póculum,
+      - 'dicens: «Accípite quod trado vásculum;'
+      - omnes ex eo bíbite».
+    - - Sic sacrifícium istud instítuit,
+      - cuius offícium commítti vóluit
+      - solis presbýteris, quibus sic cóngruit,
+      - ut sumant et dent céteris.
+    - - Panis angélicus fit panis hóminum;
+      - dat panis cǽlicus figúris términum.
+      - 'O res mirábilis: mandúcat Dóminum'
+      - servus pauper et húmilis.
+    - - Te, trina Déitas únaque, póscimus;
+      - 'sic nos tu vísitas sicut te cólimus:'
+      - per tuas sémitas duc nos quo téndimus
+      - ad lucem quam inhábitas.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Sacris sollemniis iuncta.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4345
+    - tomo 4, p. 6212
+    diferencias: []
+  verbum-supernum-prodiens-nec-patris:
+    incipit: Verbum supérnum pródiens
+    estrofas:
+    - - Verbum supérnum pródiens
+      - nec Patris linquens déxteram,
+      - ad opus suum éxiens
+      - venit ad vitæ vésperam.
+    - - In mortem a discípulo
+      - suis tradéndus ǽmulis,
+      - prius in vitæ férculo
+      - se trádidit discípulis.
+    - - Quibus sub bina spécie
+      - carnem dedit et sánguinem,
+      - ut dúplicis substántiæ
+      - totum cibáret hóminem.
+    - - Se nascens dedit sócium,
+      - convéscens in edúlium,
+      - se móriens in prétium,
+      - se regnans dat in prǽmium.
+    - - O salutáris hóstia,
+      - quæ cæli pandis óstium,
+      - 'bella premunt hostília:'
+      - da robur, fer auxílium.
+    - - Uni trinóque Dómino
+      - sit sempitérna glória,
+      - qui vitam sine término
+      - nobis donet in pátria.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Verbum supernum prodiens nec.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4346
+    - tomo 4, p. 6212
+    diferencias: []
+  auctor-beate-saeculi:
+    incipit: Auctor beáte sǽculi,
+    estrofas:
+    - - Auctor beáte sǽculi,
+      - Christe, Redémptor ómnium,
+      - lumen Patris de lúmine
+      - 'Deúsque verus de Deo:'
+    - - Amor coégit te tuus
+      - mortále corpus súmere,
+      - ut, novus Adam, rédderes
+      - 'quod vetus ille abstúlerat:'
+    - - Ille amor, almus ártifex
+      - terræ marísque et síderum,
+      - erráta patrum míserans
+      - et nostra rumpens víncula.
+    - - Non corde discédat tuo
+      - 'vis illa amóris íncliti:'
+      - hoc fonte gentes háuriant
+      - remissiónis grátiam.
+    - - Ad hoc acérbam lánceam
+      - passúmque ad hoc est vúlnera,
+      - ut nos laváret sórdibus
+      - unda fluénte et sánguine.
+    - - Iesu, tibi sit glória,
+      - qui corde fundis grátiam,
+      - cum Patre et almo Spíritu
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Auctor beate saeculi.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4347
+    - tomo 4, p. 6213
+    diferencias: []
+  cor-arca-legem-continens:
+    incipit: Cor, arca legem cóntinens
+    estrofas:
+    - - Cor, arca legem cóntinens
+      - non servitútis véteris,
+      - sed grátiæ, sed véniæ,
+      - sed et misericórdiæ;
+    - - Cor, sanctuárium novi
+      - intemerátum fœ́deris,
+      - templum vetústo sánctius
+      - 'velúmque scisso utílius:'
+    - - Te vulnerátum cáritas
+      - ictu paténti vóluit,
+      - amóris invisíbilis
+      - ut venerémur vúlnera.
+    - - Hoc sub amóris sýmbolo
+      - passus cruénta et mýstica,
+      - utrúmque sacrifícium
+      - Christus sacérdos óbtulit.
+    - - Quis non amántem rédamet?
+      - quis non redémptus díligat
+      - et caritáte iúgiter
+      - hærére Christo géstiat?
+    - - Iesu, tibi sit glória,
+      - qui corde fundis grátiam,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Cor arca legem.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4347
+    - tomo 4, p. 6214
+    diferencias: []
+  iesu-auctor-clementiae:
+    incipit: Iesu, auctor cleméntiæ,
+    estrofas:
+    - - Iesu, auctor cleméntiæ,
+      - totíus spes lætítiæ,
+      - dulcóris fons et grátiæ,
+      - 'veræ cordis delíciæ:'
+    - - Iesu, spes pæniténtibus,
+      - quam pius es peténtibus,
+      - quam bonus te quæréntibus;
+      - sed quid inveniéntibus?
+    - - Tua, Iesu, diléctio,
+      - grata mentis reféctio,
+      - replet sine fastídio,
+      - dans famem desidério.
+    - - O Iesu dilectíssime,
+      - spes suspirántis ánimæ,
+      - te quærunt piæ lácrimæ,
+      - te clamor mentis íntimæ.
+    - - Mane nobíscum, Dómine,
+      - mane novum cum lúmine,
+      - pulsa noctis calígine
+      - mundum replens dulcédine.
+    - - Iesu, summa benígnitas,
+      - mira cordis iucúnditas,
+      - incomprehénsa bónitas,
+      - tua nos stringit cáritas.
+    - - Iesu, flos Matris vírginis,
+      - amor nostræ dulcédinis,
+      - laus tibi sine términis,
+      - regnum beatitúdinis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iesu auctor clementiae.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4348
+    - tomo 4, p. 6214
+    diferencias: []
+  aeterne-christe-pontifex:
+    incipit: Ætérne, Christe, póntifex
+    estrofas:
+    - - Ætérne, Christe, póntifex
+      - novi sacérdos fœderis,
+      - te nostra vota cóndecent,
+      - te grati amóris cántica.
+    - - E Patris aula pródiens,
+      - nostri misértus crímina,
+      - venis in alvum Vírginis,
+      - egénus atque obœdiens.
+    - - Delens vetústa et ómnia,
+      - in lumen aptans grátiæ,
+      - a Patre digne ac Spíritu
+      - princeps sacérdos úngeris.
+    - - Tu pura solus hóstia,
+      - amóre fundis sánguinem,
+      - donas amóre ut fílii
+      - iam pace Patris gáudeant.
+    - - Nostræ salúti iúgiter
+      - te das in aris víctimam;
+      - throno suprémo et ássides
+      - perfécte ut unus ímpetres.
+    - - Sit, Christe, summe póntifex
+      - tibi Patríque glória,
+      - qui vivis, offers, ímperas
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: null
+    coincidencia_libro: 1.0
+    libro:
+    - tomo 3, p. 4393
+    diferencias: []
+  pontifex-iesu-mediator-une:
+    incipit: Póntifex Iesu, mediátor une
+    estrofas:
+    - - Póntifex Iesu, mediátor une
+      - ad thronum Patris precibúsque fautor
+      - iure conclámat, celebrátque nostrum
+      - te genus omne.
+    - - Spíritu factus grémio puéllæ
+      - tu puer, cuius tenet ulna mundum,
+      - natus es nobis bene digna sola
+      - hóstia laudis.
+    - - Te sacerdótem Pater ipse sancti
+      - gáudii donis oleóque inúnxit
+      - summa maiéstas sibi ut usque ferret
+      - culmen honóris.
+    - - Carne mortáli, Deus alte, sumpta
+      - sánguinis præbens decus et lavácrum,
+      - iusta pro nostræ prétia obtulísti
+      - crímine mortis.
+    - - Christe, qui ligno crucis elevátus
+      - cuncta traxísti, corda amóre figens,
+      - fac tibi, Patri, Paracléto in ævum
+      - cántica demus.
+    amen: true
+    fuente_texto: null
+    coincidencia_libro: 1.0
+    libro:
+    - tomo 3, p. 4391
+    diferencias: []
+  concinunt-caeli-parilique-tellus:
+    incipit: Cóncinunt cæli parilíque tellus
+    estrofas:
+    - - Cóncinunt cæli parilíque tellus
+      - laude te, nostri géneris Redémptor,
+      - Christe, te Patri pérhibens piáclum
+      - Ipse sacérdos.
+    - - Tu libens, Iesu, voluísti ad atræ
+      - mortis angórem placidúsque ferri,
+      - pérditis nobis iter ut patéret
+      - portáque cæli.
+    - - Sacra tu delens veterúmque ritus
+      - ac prophetárum moniménta adímplens
+      - iam cum summis novo amóre iungens
+      - fœdus inísti.
+    - - Fœderis tanti miserátus auctor,
+      - te cibum vitæ tribuísti, ad aras
+      - pignus ut pacis pius immoláres
+      - tu sacer unus.
+    - - Christe, qui ligno crucis elevátus
+      - cuncta traxísti, corda amóre figens,
+      - fac tibi, Patri, Paracléto in ævum
+      - cántica demus.
+    amen: true
+    fuente_texto: null
+    coincidencia_libro: 1.0
+    libro:
+    - tomo 3, p. 4392
+    diferencias: []
+  captator-olim-piscium:
+    incipit: Captátor olim píscium,
+    estrofas:
+    - - Captátor olim píscium,
+      - iam nunc piscátor hóminum,
+      - tuis, Andréa, rétibus
+      - mundi nos rape flúctibus.
+    - - Germánus Petri córpore
+      - nec mortis dispar órdine;
+      - quos una caro génuit,
+      - crux cælo fratres édidit.
+    - - O germen venerábile,
+      - o par coróna glóriæ!
+      - Ecclésiæ patres pii
+      - crucis sunt æque fílii.
+    - - Ad Iesum fratri prǽvius
+      - indéxque vitæ strénuus,
+      - et nobis esto míseris
+      - beáti dux itíneris.
+    - - Fratris comes egrégius,
+      - Ecclésias impénsius
+      - da caritáte exércitas
+      - pastóri Petro súbditas.
+    - - Vir Christo dilectíssime,
+      - amóre fac nos cúrrere,
+      - ut læti adépti pátriam
+      - Deo canámus glóriam.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Captator olim piscium.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 1, p. 1083
+    diferencias: []
+  fortem-piumque-praesulem:
+    incipit: Fortem piúmque prǽsulem
+    estrofas:
+    - - Fortem piúmque prǽsulem
+      - canámus omnes, túrbidas
+      - qui fluctuántis sǽculi
+      - terris procéllas éxpulit.
+    - - Non sceptra concússus timet,
+      - non imperántem féminam,
+      - templóque, clausis póstibus,
+      - arcet cruéntum cǽsarem.
+    - - Arcána sacræ páginæ
+      - altus magíster éxplicat;
+      - divína pandens dógmata,
+      - mira nitet facúndia.
+    - - Fide ciénte spíritum,
+      - præclára fundit cármina;
+      - fide coǽquans mártyres,
+      - depréndit artus mártyrum.
+    - - Iam nunc furéntem tártari
+      - lupum flagéllo súbmove;
+      - sciéntiæ nos lúmine
+      - fove, tuére iúgiter.
+    - - Sit Trinitáti glória,
+      - quam, te rogánte próspere,
+      - hymnis in aula cǽlica
+      - laudémus usque in sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Fortem piumque praesulem.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 1, p. 1084
+    diferencias: []
+  praeclara-custos-virginum:
+    incipit: Præclára custos vírginum
+    estrofas:
+    - - Præclára custos vírginum
+      - Deíque mater ínnuba,
+      - cæléstis aulæ iánua,
+      - spes nostra, cæli gáudium;
+    - - Inter rubéta lílium,
+      - colúmba formosíssima,
+      - e stirpe virga gérminans
+      - nostro medélam vúlneri;
+    - - Turris dracóni impérvia,
+      - amíca stella náufragis,
+      - defénde nos a fráudibus
+      - tuáque luce dírige.
+    - - Erróris umbras díscute,
+      - syrtes dolósas ámove,
+      - fluctus tot inter, déviis
+      - tutam reclúde sémitam.
+    - - Quæ labe nostræ oríginis
+      - intácta splendes única,
+      - serpéntis artes ǽmuli
+      - elúde vindex ínclita.
+    - - Patri sit et Paráclito
+      - tuóque Nato glória,
+      - qui sanctitátis únicæ
+      - te munerárunt grátia.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Praeclara custos virginum.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 1, p. 1084
+    diferencias: []
+  te-dicimus-praeconio:
+    incipit: Te dícimus præcónio,
+    estrofas:
+    - - Te dícimus præcónio,
+      - mater Dei puríssima;
+      - nostris benígna láudibus
+      - tuam repénde grátiam.
+    - - Sontes Adámi pósteri
+      - infécta proles gígnimur;
+      - labis patérnæ néscia
+      - tu sola, Virgo, créderis.
+    - - Caput dracónis ínvidi
+      - tu cónteris vestígio,
+      - gerísque sola glóriam
+      - intaminátæ oríginis.
+    - - Nostræ decus propáginis,
+      - quæ tollis Evæ oppróbrium,
+      - tu nos tuére súpplices,
+      - tu nos labántes érige.
+    - - Serpéntis antíqui potens
+      - astus retúnde et ímpetus,
+      - ut cǽlitum perénnibus
+      - per te fruámur gáudiis.
+    - - Patri sit et Paráclito
+      - tuóque Nato glória,
+      - qui sanctitátis únicæ
+      - te munerárunt grátia.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te dicimus praeconio.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 1, p. 1085
+    diferencias: []
+  in-plausu-grati-carminis:
+    incipit: In plausu grati cárminis
+    estrofas:
+    - - In plausu grati cárminis
+      - adsit nova lætítia,
+      - dum Dei matris Vírginis
+      - sumit vita princípia.
+    - - María, mundi glória,
+      - lucis ætérnæ fília,
+      - te præservávit Fílius
+      - ab omni labe pénitus.
+    - - Originális mácula
+      - cuncta respérsit sǽcula;
+      - sola post Natum vítiis
+      - numquam contácta díceris.
+    - - Caput serpéntis cállidi
+      - tuo pede contéritur;
+      - fastus gigántis pérfidi
+      - David funda devíncitur.
+    - - Colúmba mitis, húmilis,
+      - fers, carens felle críminis,
+      - signum Dei cleméntiæ,
+      - ramum viréntis grátiæ.
+    - - Patri sit et Paráclito
+      - tuóque Nato glória,
+      - qui sanctitátis únicæ
+      - te munerárunt grátia.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/In plausu grati.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 1, p. 1085
+    diferencias: []
+  festum-celebre-martyris:
+    incipit: Festum celébre mártyris
+    estrofas:
+    - - Festum celébre mártyris
+      - digne colámus Stéphani,
+      - qui primus in certámine
+      - palma nitet victóriæ.
+    - - Martyr fidélis, cómminus
+      - falsis renítens téstibus,
+      - Iesu vidébat glóriam,
+      - stantis Patris ad déxteram.
+    - - Nunc te precámur, ínclite,
+      - succúrre, martyr, cóncite;
+      - nobis rogátus ímpetra
+      - cæli ut patéscat régia.
+    - - Lotus cruóris flúmine,
+      - splendéscis alto lúmine;
+      - nostri memor nunc súpplica
+      - tecum fruámur glória.
+    - - Præstet favens hæc múnera
+      - natus Puer de Vírgine,
+      - cum Patre et almo Spíritu
+      - regnans per omne sǽculum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Festum celebre martyris.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 1, p. 1086
+    diferencias: []
+  christus-est-vita-veniens-in-orbem:
+    incipit: Christus est vita véniens in orbem,
+    estrofas:
+    - - Christus est vita véniens in orbem,
+      - qui ferens vulnus removénsque mortem,
+      - ad Patris dextram repeténdo, regnat
+      - sede supérna.
+    - - Hunc sequens primus Stéphanus miníster
+      - sortis illátæ título est decórus,
+      - quam dedit spirans Dómini benígnus
+      - Spíritus illi.
+    - - Sáxeo nimbo lapidátus instat,
+      - sústinet mortis rábiem profánam,
+      - hóstibus quærit véniam misértus
+      - péctore grato.
+    - - Quǽsumus flentes, benedícte prime
+      - 'martyr et civis sociáte iustis:'
+      - cǽlitus, claræ regiónis heres,
+      - mitte favóres.
+    - - Glóriæ laudes Tríadi Beátæ
+      - mártyrum læti cómites canámus,
+      - quæ dedit primas Stéphano ex agóne
+      - ferre corónas.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christus est vita.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 1, p. 1087
+    diferencias: []
+  virginis-virgo-venerande-custos:
+    incipit: Vírginis virgo veneránde custos,
+    estrofas:
+    - - Vírginis virgo veneránde custos,
+      - præco qui Verbi cóleris fidélis,
+      - terge servórum fácinus tuórum,
+      - sancte Ioánnes.
+      - Fonte prorúmpens flúvius perénni
+    - - curris, aréntis satiátor orbis;
+      - hausit ex pleno, modo quod propínat,
+      - péctore pectus.
+      - Tu, decus mundi iubar atque cæli,
+      - ímpetra nostris véniam ruínis;
+    - - da sacraméntum penetráre summum,
+      - quod docuísti.
+      - Patris arcánum speculándo Verbum
+      - grátiam fundis fídei per orbem;
+      - nos ad ætérnam spéciem fruéndam,
+    - - dux bone, transfer.
+      - Sit decus summo sine fine Christo,
+      - sancta quem virgo génuit María,
+      - qui Patri compar Flaminíque Sancto
+      - regnat in ævum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Virginis virgo venerande.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 1, p. 1087
+    diferencias: []
+  cohors-beata-seraphim:
+    incipit: Cohors beáta Séraphim
+    estrofas:
+    - - Cohors beáta Séraphim
+      - quem Christus arcte díligit
+      - laudet, chorúsque cánticis
+      - noster resúltet ǽmulis.
+    - - Hic discit, almus édocet
+      - hic unde Verbum pródeat,
+      - sinúmque matris ímpleat,
+      - sinum Patris non déserens.
+    - - Felix Ioánnes, déligit
+      - et te Magíster próvidus,
+      - ut clara Thabor lúmina
+      - hortíque cernas tǽdia.
+    - - Tu, raptus in sublímia,
+      - arcána cæli cónspicis,
+      - Agni sed et mystéria
+      - Ecclesiǽque pércipis.
+    - - O digne fili Vírgine,
+      - succéssor alti nóminis,
+      - nos adde Matri fílios,
+      - nos conde Christi in péctore.
+    - - Verbo sit ingens glória,
+      - caro quod est et créditur,
+      - cum Patre et almo Spíritu
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Cohors beata Seraphim.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 1, p. 1088
+    diferencias: []
+  hymnum-canentes-martyrum:
+    incipit: Hymnum canéntes mártyrum
+    estrofas:
+    - - Hymnum canéntes mártyrum
+      - dicámus Innocéntium,
+      - quos terra deflens pérdidit,
+      - gaudens sed æthra súscipit;
+    - - Quos rex perémit ímpius,
+      - pius sed Auctor cólligit,
+      - secum beátos cóllocans
+      - in luce regni pérpetis.
+    - - Præclára Christo splénduit
+      - mors ínnocens fidélium;
+      - cælis ferébant ángeli
+      - bimos et infra párvulos.
+    - - O quam beáta cívitas,
+      - in qua Redémptor náscitur,
+      - natóque primæ mártyrum
+      - in qua dicántur hóstiæ!
+    - - Astant niténtes fúlgidis
+      - eius throno nunc véstibus,
+      - stolas suas qui láverant
+      - Agni rubéntes sánguine.
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Hymnum canentes martyrum.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 1, p. 1089
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - notque primae martyrum
+      corpus:
+      - natóque primæ mártyrum
+  audit-tyrannus-anxius:
+    incipit: Audit tyránnus ánxius
+    estrofas:
+    - - Audit tyránnus ánxius
+      - adésse regum príncipem,
+      - qui nomen Israel regat
+      - teneátque David régiam.
+    - - 'Exclámat amens núntio:'
+      - «Succéssor instat, péllimur;
+      - satélles, i, ferrum rape,
+      - perfúnde cunas sánguine!».
+    - - Quo próficit tantum nefas?
+      - Quid crimen Heródem iuvat?
+      - Unus tot inter fúnera
+      - impúne Christus tóllitur.
+    - - Salvéte, flores mártyrum,
+      - quos lucis ipso in límine
+      - Christi insecútor sústulit
+      - ceu turbo nascéntes rosas.
+    - - Vos prima Christi víctima,
+      - grex immolatórum tener,
+      - aram sub ipsum símplices
+      - palma et corónis lúditis.
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Audit tyrannus anxius.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 1, p. 1089
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - aram sub ipsam simplices
+      corpus:
+      - aram sub ipsum símplices
+  igne-divini-radians-amoris:
+    incipit: Igne divíni rádians amóris
+    estrofas:
+    - - Igne divíni rádians amóris
+      - córporis sexum superávit Agnes,
+      - et super carnem potuére carnis
+      - claustra pudícæ.
+    - - Spíritum celsæ cápiunt cohórtes
+      - cándidum, cæli super astra tollunt;
+      - iúngitur Sponsi thálamis pudíca
+      - sponsa beátis.
+    - - Virgo, nunc nostræ miserére sortis
+      - et, tuum quisquis célebrat tropǽum,
+      - ímpetret sibi véniam reátus
+      - atque salútem.
+    - - Redde pacátum pópulo precánti
+      - príncipem cæli dominúmque terræ,
+      - donet ut pacem pius et quiétæ
+      - témpora vitæ.
+    - - Láudibus mitem celebrémus Agnum,
+      - casta quem sponsum sibi legit Agnes,
+      - astra qui cæli moderátur atque
+      - cuncta gubérnat.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Igne divini radians.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4383
+    diferencias: []
+  agnes-beatae-virginis:
+    incipit: Agnes beátæ vírginis
+    estrofas:
+    - - Agnes beátæ vírginis
+      - natális est, quo spíritum
+      - cælo refúdit débitum,
+      - pio sacráta sánguine.
+    - - Matúra martýrio fuit
+      - matúra nondum núptiis;
+      - prodíre quis nuptum putet,
+      - sic læta vultu dúcitur.
+    - - Aras nefándi núminis
+      - adolére tædis cógitur;
+      - 'respóndet: «Haud tales faces'
+      - sumpsére Christi vírgines.
+    - - Hic ignis extínguit fidem,
+      - hæc flamma lumen éripit;
+      - hic, hic feríte, ut prófluo
+      - cruóre restínguam focos».
+    - - Percússa quam pompam tulit!
+      - Nam veste se totam tegens,
+      - terram genu flexo petit
+      - lapsu verecúndo cadens.
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Agnes beatae virginis.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 3, p. 4384
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - Hic ignis exstinguit fidem,
+      corpus:
+      - Hic ignis extínguit fidem,
+  pressi-malorum-pondere:
+    incipit: Pressi malórum póndere
+    estrofas:
+    - - Pressi malórum póndere
+      - te, Paule, adímus súpplices,
+      - qui certa largus désuper
+      - dabis salútis pígnora.
+    - - Nam tu beáto cóncitus
+      - divíni amóris ímpetu,
+      - quos insecútor óderas,
+      - defénsor inde amplécteris.
+    - - Amóris, eia, prístini
+      - ne sis, precámur, ímmemor,
+      - et nos supérnæ lánguidos
+      - in spem redúcas grátiæ.
+    - - Te deprecánte flóreat
+      - ignára damni cáritas,
+      - quam nulla turbent iúrgia
+      - nec ullus error sáuciet.
+    - - O grata cælo víctima,
+      - te, lux amórque Géntium,
+      - o Paule, clarum víndicem,
+      - nos te patrónum póscimus.
+    - - Laus Trinitáti, cántica
+      - sint sempitérnæ glóriæ,
+      - quæ nos boni certáminis
+      - tecum corónet prǽmiis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Pressi malorum pondere.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 3, p. 4384
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - dabit salutis pignora.
+      corpus:
+      - dabis salútis pígnora.
+  doctor-egregie-paule-mores-instrue:
+    incipit: Doctor egrégie, Paule, mores ínstrue
+    estrofas:
+    - - Doctor egrégie, Paule, mores ínstrue
+      - et mente polum nos transférre sátage,
+      - donec perféctum largiátur plénius,
+      - evacuáto quod ex parte gérimus.
+    - - Sit Trinitáti sempitérna glória,
+      - honor, potéstas atque iubilátio,
+      - in unitáte, cui manet impérium
+      - ex tunc et modo per ætérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iam bone pastor.txt
+    coincidencia_libro: 0.88
+    libro:
+    - tomo 3, p. 4385
+    diferencias: []
+  excelsam-pauli-gloriam:
+    incipit: Excélsam Pauli glóriam
+    estrofas:
+    - - Excélsam Pauli glóriam
+      - concélebret Ecclésia,
+      - quem mire sibi apóstolum
+      - ex hoste fecit Dóminus.
+    - - Quibus succénsus ǽstibus
+      - in Christi nomen sǽviit,
+      - exársit his impénsius
+      - amórem Christi prǽdicans.
+    - - O magnum Pauli méritum!
+      - Cælum conscéndit tértium,
+      - audit verba mystérii
+      - quæ nullus audet éloqui.
+    - - Dum verbi spargit sémina,
+      - seges surgit ubérrima;
+      - sic cæli replent hórreum
+      - bonórum fruges óperum.
+    - - Micántis more lámpadis
+      - perfúndit orbem rádiis;
+      - fugat errórum ténebras,
+      - ut sola regnet véritas.
+    - - Christo sit omnis glória,
+      - cum Patre et almo Spíritu,
+      - qui dedit vas tam fúlgidum
+      - electiónis géntibus.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Excelsam Pauli gloriam.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 3, p. 4385
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - quae nullis audet eloqui.
+      corpus:
+      - quæ nullus audet éloqui.
+  legis-sacratae-sanctis-caeremoniis:
+    incipit: Legis sacrátæ sanctis cæremóniis
+    estrofas:
+    - - Legis sacrátæ sanctis cæremóniis
+      - subiéctus omnis cálamo Mosáico
+      - dignátur esse, qui regit perfúlgidos
+      - in arce Patris órdines angélicos,
+      - cælúmque, terram fundávit ac mária.
+    - - Mater Beáta carnis sub velámine
+      - Deum ferébat úmeris castíssimis,
+      - dúlcia strictis óscula sub lábiis
+      - Deíque veri hominísque imprésserat
+      - ori, iubénte quo sunt cuncta cóndita.
+    - - Hic lumen ardens géntium in óculis,
+      - glória plebis Israélis gérminis;
+      - pósitus hic est in ruínam scándali
+      - et in salútem populórum ómnium,
+      - donec secréta reveléntur córdium.
+    - - Glória Patri per imménsa sǽcula,
+      - sit tibi, Nate, decus et impérium,
+      - 'honor, potéstas Sanctóque Spirítui:'
+      - sit Trinitáti salus indivídua
+      - per infiníta sæculórum sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Legis sacratae sanctis.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4386
+    diferencias: []
+  adorna-sion-thalamum:
+    incipit: Adórna, Sion, thálamum,
+    estrofas:
+    - - Adórna, Sion, thálamum,
+      - quæ præstoláris Dóminum;
+      - sponsum et sponsam súscipe
+      - vigil fídei lúmine.
+    - - Beáte senex, própera,
+      - promíssa comple gáudia
+      - et revelándum géntibus
+      - revéla lumen ómnibus.
+    - - Paréntes Christum déferunt,
+      - in templo templum ófferunt;
+      - legi parére vóluit
+      - qui legi nihil débuit.
+    - - Offer, beáta, párvulum,
+      - tuum et Patris únicum;
+      - offer per quem offérimur,
+      - prétium quo redímimur.
+    - - Procéde, virgo régia,
+      - profer Natum cum hóstia;
+      - monet omnes ad gáudium
+      - qui venit salus ómnium.
+    - - Iesu, tibi sit glória,
+      - qui te revélas géntibus,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Adorna Sion thalamum.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4386
+    diferencias: []
+  quod-chorus-vatum-venerandus-olim:
+    incipit: Quod chorus vatum venerándus olim
+    estrofas:
+    - - Quod chorus vatum venerándus olim
+      - Spíritu Sancto cécinit replétus,
+      - in Dei factum genetríce constat
+      - esse María.
+    - - Hæc Deum cæli Dominúmque terræ
+      - virgo concépit peperítque virgo,
+      - atque post partum méruit manére
+      - invioláta.
+    - - Quem senex iustus Símeon in ulnis
+      - in domo sumpsit Dómini, gavísus
+      - ob quod optátum próprio vidéret
+      - lúmine Christum.
+    - - Tu libens votis, pétimus, precántum,
+      - regis ætérni génetrix, favéto,
+      - clara quæ fundis Géniti benígni
+      - múnera lucis.
+    - - Christe, qui lumen Patris es supérni,
+      - qui Patris nobis réseras profúnda,
+      - nos fac ætérnæ tibi ferre laudes
+      - lucis in aula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Quod chorus vatum.txt
+    coincidencia_libro: 0.85
+    libro:
+    - tomo 3, p. 4387
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - in Dei factum genitrice constat
+      corpus:
+      - in Dei factum genetríce constat
+    - tipo: errata del PDF
+      libro:
+      - nos fac aeterne tibi ferre laudes
+      corpus:
+      - nos fac ætérnæ tibi ferre laudes
+  divina-vox-te-deligit:
+    incipit: Divína vox te déligit,
+    estrofas:
+    - - Divína vox te déligit,
+      - piscátor, ac pro rétibus
+      - remísque qua tu glória
+      - cæli refúlges clávibus!
+    - - Tenax amóris próferens
+      - ac dulce testimónium,
+      - omnes amor quos láverat
+      - oves regéndas áccipis.
+    - - Lapsus, supérno róbore
+      - tu petra stas Ecclésiæ,
+      - qua splendet illa sǽculis
+      - nullis subácta víribus.
+    - - Tu, Petre, Christi oráculo
+      - luces magíster ómnium,
+      - fratrésque firmas, próvidus
+      - tu verba vitæ núntias.
+    - - Gregem fac unum, próspera
+      - lætis in ævum frúctibus,
+      - salvúmque ab hostis ímpetu
+      - ad lucis adduc pábula.
+    - - Sit summa Christo glória,
+      - qui nos tuis suffrágiis
+      - intráre cæli iánuam
+      - det in supérna gáudia.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Divina vox te.txt
+    coincidencia_libro: 0.88
+    libro:
+    - tomo 2, p. 2733
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - qui nos tuis suffragiis
+      - intrare caeli ianuam
+      - det in superna gaudia.
+      corpus:
+      - qui nos det aulæ cǽlicæ
+      - intráre per te iánuam
+      - in sempitérna gáudia.
+      va:
+      - qui nos tuis suffrágiis
+      - intráre cæli iánuam
+      - det in supérna gáudia.
+  iam-bone-pastor-petre-clemens-accipe:
+    incipit: Iam, bone pastor, Petre, clemens áccipe
+    estrofas:
+    - - Iam, bone pastor, Petre, clemens áccipe
+      - vota precántum, et peccáti víncula
+      - resólve, tibi potestáte trádita,
+      - qua cunctis cælum verbo claudis, áperis.
+    - - Sit Trinitáti sempitérna glória,
+      - honor, potéstas atque iubilátio,
+      - in unitáte, cui manet impérium
+      - ex tunc et modo per ætérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iam bone pastor.txt
+    coincidencia_libro: 0.88
+    libro:
+    - tomo 2, p. 2733
+    diferencias: []
+  petrus-beatus-catenarum-laqueos:
+    incipit: Petrus beátus catenárum láqueos
+    estrofas:
+    - - Petrus beátus catenárum láqueos
+      - Christo iubénte rupit mirabíliter;
+      - custos ovílis et doctor Ecclésiæ,
+      - pastórque gregis, conservátor óvium
+      - arcet lupórum truculéntam rábiem.
+    - - Quodcúmque vinclis super terram strínxeris,
+      - erit in astris religátum fórtiter,
+      - et quod resólvis in terris arbítrio,
+      - erit solútum super cæli rádium;
+      - in fine mundi iudex eris sǽculi.
+    - - Glória Patri per imménsa sǽcula,
+      - sit tibi, Nate, decus et impérium,
+      - honor, potéstas Sanctóque Spirítui;
+      - sit Trinitáti salus indivídua
+      - per infiníta sæculórum sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Petrus beatus catenarum.txt
+    coincidencia_libro: 0.67
+    libro:
+    - tomo 2, p. 2733
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - Quodcumque vinclis super terram strinxeris,
+      corpus:
+      - Quodcúmque vinclis super terram strínxerit,
+    - tipo: errata del PDF
+      libro:
+      - et quod resolvis in terris arbitrio,
+      - erit solutum super coeli radium;
+      - in fine mundi iudex eris saeculi.
+      corpus:
+      - et quod resólvit in terris arbítrio,
+      - erit solútum super cæli rádium;
+      - in fine mundi iudex erit sǽculi.
+  te-ioseph-celebrent-agmina-caelitum:
+    incipit: Te, Ioseph, célebrent ágmina cǽlitum,
+    estrofas:
+    - - Te, Ioseph, célebrent ágmina cǽlitum,
+      - te cuncti résonent christíadum chori,
+      - qui, clarus méritis, iunctus es ínclitæ
+      - casto fœ́dere Vírgini.
+    - - Almo cum túmidam gérmine cóniugem
+      - admírans dúbio tángeris ánxius,
+      - afflátu súperi Fláminis ángelus
+      - concéptum púerum docet.
+    - - Tu natum Dóminum stringis, ad éxteras
+      - Ægýpti prófugum tu séqueris plagas;
+      - amíssum Sólymis quæris et ínvenis,
+      - miscens gáudia flétibus.
+    - - Eléctos réliquos mors pia cónsecrat
+      - palmámque eméritos glória súscipit;
+      - tu vivens, súperis par, frúeris Deo,
+      - mira sorte beátior.
+    - - Nobis, summa Trias, parce precántibus;
+      - da Ioseph méritis sídera scándere,
+      - ut tandem líceat nos tibi pérpetim
+      - gratum prómere cánticum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te Ioseph celebrent.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2734
+    diferencias: []
+  iste-quem-laeti-colimus-fideles:
+    incipit: Iste, quem læti cólimus, fidéles,
+    estrofas:
+    - - Iste, quem læti cólimus, fidéles,
+      - cuius excélsos cánimus triúmphos,
+      - hac die Ioseph méruit perénnis
+      - gáudia vitæ.
+    - - O nimis felix, nimis o beátus,
+      - cuius extrémam vígiles ad horam
+      - Christus et Virgo simul astitérunt
+      - ore seréno.
+    - - Iustus insígnis, láqueo solútus
+      - carnis, ad sedes plácido sopóre
+      - migrat ætérnas, rutilísque cingit
+      - témpora sertis.
+    - - Ergo regnántem flagitémus omnes,
+      - adsit ut nobis, veniámque nostris
+      - óbtinens culpis, tríbuat supérnæ
+      - múnera pacis.
+    - - Sint tibi plausus, tibi sint honóres,
+      - trine qui regnas Deus, et corónas
+      - áureas servo tríbuis fidéli
+      - omne per ævum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iste quem laeti.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2735
+    diferencias: []
+  caelitum-ioseph-decus-atque-nostrae:
+    incipit: Cǽlitum, Ioseph, decus atque nostræ
+    estrofas:
+    - - Cǽlitum, Ioseph, decus atque nostræ
+      - certa spes vitæ columénque mundi,
+      - quas tibi læti cánimus, benígnus
+      - súscipe laudes.
+    - - Te, satum David, státuit Creátor
+      - Vírginis sponsum, voluítque Verbi
+      - te patrem dici, dedit et minístrum
+      - esse salútis.
+    - - Tu Redemptórem stábulo iacéntem,
+      - quem chorus vatum cécinit futúrum,
+      - áspicis gaudens, sociúsque matris
+      - primus adóras.
+    - - Rex Deus regum, dominátor orbis,
+      - cuius ad nutum tremit inferórum
+      - turba, cui pronus famulátur æther,
+      - se tibi subdit.
+    - - Laus sit excélsæ Tríadi perénnis,
+      - quæ, tibi insígnes tríbuens honóres,
+      - det tuis nobis méritis beátæ
+      - gáudia vitæ.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Caelitum Ioseph decus.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2735
+    diferencias: []
+  agnoscat-omne-saeculum:
+    incipit: Agnóscat omne sǽculum
+    estrofas:
+    - - Agnóscat omne sǽculum
+      - venísse vitæ prǽmium;
+      - post hostis ásperi iugum
+      - appáruit redémptio.
+    - - Isaías quæ prǽcinit
+      - compléta sunt in Vírgine;
+      - annuntiávit Ángelus,
+      - Sanctus replévit Spíritus.
+    - - María ventre cóncipit
+      - verbi fidélis sémine;
+      - quem totus orbis non capit,
+      - portant puéllæ víscera.
+    - - Adam vetus quod pólluit,
+      - Adam novus hoc ábluit;
+      - tumens quod ille déicit,
+      - humíllimus hic érigit.
+    - - Christo sit omnis glória,
+      - Dei Paréntis Fílio,
+      - quem Virgo felix cóncipit
+      - Sancti sub umbra Spíritus.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Agnoscat omne saeculum.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2736
+    diferencias: []
+  iam-caeca-vis-mortalium:
+    incipit: Iam cæca vis mortálium
+    estrofas:
+    - - Iam cæca vis mortálium
+      - vénerans inánes nǽnias,
+      - vel æra vel saxa álgida
+      - vel ligna credébat Deum.
+    - - Hæc dum sequúntur pérfidi,
+      - prædónis in ius vénerant
+      - et mancipátam fúmido
+      - vitam baráthro immérserant.
+    - - Stragem sed istam non tulit
+      - Christus cadéntum géntium;
+      - impúne ne forsan sui
+      - Patris períret fábrica,
+    - - Mortále corpus índuit
+      - ut, excitáto córpore,
+      - mortis caténam frángeret
+      - hominémque portáret Patri.
+    - - Hic ille natális dies,
+      - quo te Creátor árduus
+      - spirávit et limo índidit,
+      - Sermóne carnem glútinans.
+    - - O quanta rerum gáudia
+      - alvus pudíca cóntinet,
+      - ex qua novéllum sǽculum
+      - procédit et lux áurea!
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iam caeca vis.txt
+    coincidencia_libro: 0.93
+    libro:
+    - tomo 2, p. 2736
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - 'vitam barathro inmerserant:'
+      corpus:
+      - vitam baráthro immérserant.
+  o-lux-salutis-nuntia:
+    incipit: O lux, salútis núntia,
+    estrofas:
+    - - O lux, salútis núntia,
+      - qua Vírgini fert Ángelus
+      - complénda mox orácula
+      - et cara terris gáudia.
+    - - Qui Patris ætérno sinu
+      - ætérna Proles náscitur,
+      - obnóxius fit témpori
+      - matrémque in orbe séligit.
+    - - Nobis piándis víctima
+      - nostros se in artus cólligit,
+      - ut innocénti sánguine
+      - scelus nocéntum díluat.
+    - - Concépta carne Véritas,
+      - umbráta velo Vírginis,
+      - puris vidénda méntibus,
+      - imple tuo nos lúmine.
+    - - Et quæ modésto péctore
+      - te dicis ancíllam Dei,
+      - regína nunc cæléstium,
+      - patróna sis fidélium.
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O lux salutis.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 2, p. 2737
+    diferencias: []
+  o-vir-beate-apostolis:
+    incipit: O vir beáte, Apóstolis
+    estrofas:
+    - - O vir beáte, Apóstolis
+      - comes labórum sédule
+      - adiútor atque múneris,
+      - laudes precésque súscipe.
+    - - Christi per illos núntios
+      - exórta sunt lætíssima
+      - et veritátis sǽcula
+      - et pacis atque gáudii.
+    - - Assúmptus et tu cǽlitus
+      - ad tanta consors póndera,
+      - compar nitéscis glória
+      - potentiáque prómines.
+    - - Tu, seminátor lúminis,
+      - fac sole Christi vívido
+      - virére ubíque gérmina
+      - cæli replénda ad hórrea.
+    - - Simúlque cum primóribus
+      - summo astitúrus Iúdici,
+      - da nostra solvi débita,
+      - nos da fovéri grátia.
+    - - Christo sit omnis glória
+      - cum Patre et almo Spíritu
+      - quorum beáti lúmine,
+      - simul fruémur gáudiis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O vir beate.txt
+    coincidencia_libro: 0.79
+    libro:
+    - tomo 2, p. 2738
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - comes laborum dedite
+      corpus:
+      - comes labórum sédule
+      va:
+      - comes labórum dedite
+    - tipo: variante del libro
+      libro:
+      - Christo sit omnis gloria
+      - cum Patre et almo Spiritu
+      - quorum beati lumine,
+      - simul fruemur gaudiis.
+      corpus:
+      - Sit Trinitáti glória,
+      - quæ præstet in cæléstibus
+      - nos eius omni témpore
+      - gaudére tecum prǽmiis.
+      va:
+      - Christo sit omnis glória
+      - cum Patre et almo Spíritu
+      - quorum beáti lúmine,
+      - simul fruémur gáudiis.
+  mentibus-laetis-tua-festa-marce:
+    incipit: Méntibus lætis tua festa, Marce,
+    estrofas:
+    - - Méntibus lætis tua festa, Marce,
+      - atque pergrátis celebrámus omnes,
+      - magna qui Christi tribuísse plebi
+      - te memorámus.
+    - - Matris exémplis, vénerans amóre
+      - férvido Petrum, séqueris fidélis,
+      - verba de Christi lábiis ab ipso
+      - hausta recóndis.
+    - - Spíritu accénsus, módico libéllo
+      - mira tu summi réseras Magístri
+      - gesta, tu narras quibus et loquélis
+      - ínstruat orbem.
+    - - Carus et Paulo, studiósus eius
+      - cordis ardóres ímitans, labóras,
+      - multa pro Iesu páteris, cruórem
+      - fundis amánter.
+    - - Laus, honor Christo, decus atque virtus,
+      - cuius et testes valeámus esse,
+      - ac, tuis escis recreáti, in ævum
+      - cérnere vultum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Mentibus laetis tua.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 2, p. 2738
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - ac, tuis escis recrati, in aevum
+      corpus:
+      - ac, tuis escis recreáti, in ævum
+  gaude-fidelis-concio:
+    incipit: Gaude, fidélis cóncio,
+    estrofas:
+    - - Gaude, fidélis cóncio,
+      - et bénedic Altíssimo
+      - in die hac lætítiæ,
+      - qua confert dona grátiæ.
+    - - Nam doctor hic sanctíssimus,
+      - cuius nunc festum cólimus,
+      - lumen fuit in pópulo
+      - exémplar toti sǽculo.
+    - - Inténde, doctor, précibus
+      - quas actu ad te fúndimus;
+      - stantes ne cadant róbora,
+      - lapsos ut surgant ádiuva.
+    - - Erróris pelle núbilum
+      - per lucis tuæ rádium;
+      - fac Deum semper cólere
+      - et spem in ipsum pónere.
+    - - Laus Trinitáti débita,
+      - honor, potéstas, glória,
+      - quæ sua ex cleméntia
+      - præstat salútis prǽmia.
+    amen: true
+    fuente_texto: null
+    coincidencia_libro: 1.0
+    libro:
+    - tomo 2, p. 2739
+    diferencias: []
+  virgo-prudentum-comitata-coetum:
+    incipit: Virgo prudéntum comitáta cœtum
+    estrofas:
+    - - Virgo prudéntum comitáta cœtum
+      - óbviam sponso véniens paráta,
+      - noctis horréndæ rémovet ténebras
+      - lámpade pura.
+    - - Ille fulgéntem nítidis lapíllis
+      - ánulum miri tríbuit decóris
+      - 'vírgini dicens: «Tibi trado sancti'
+      - pignus amóris».
+    - - Mota flagrántis stímulo calóris
+      - mentis excéssu rápitur frequénti,
+      - fixa dum portat Catharína membris
+      - vúlnera Christi.
+    - - Unde ter felix quater et beáta
+      - in sinu sponsi requiévit almi,
+      - inter illústres ánimas reláta
+      - lux nova cæli.
+    - - Sit Deus cæli résidens in arce,
+      - trinus et simplex benedíctus ille,
+      - qui potens totum stábili gubérnat
+      - órdine mundum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Virgo prudentum comitata.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 2, p. 2740
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - qui pontens totum stabili gubernat
+      corpus:
+      - qui potens totum stábili gubérnat
+  te-catharina-maximis:
+    incipit: Te, Catharína, máximis
+    estrofas:
+    - - Te, Catharína, máximis
+      - nunc venerámur láudibus,
+      - cunctæ lumen Ecclésiæ,
+      - sertis ornáta plúrimis.
+    - - Magnis aucta virtútibus
+      - et vita florens ínclita,
+      - húmili mente ac strénua
+      - per crucis pergis trámitem.
+    - - Stella vidéris pópulis
+      - salúbris pacis núntia;
+      - mores restáuras óptimos,
+      - feróces mulces ánimos.
+    - - Sancto compúlsa Spíritu,
+      - igníta verba lóqueris,
+      - quæ lucem sapiéntiæ,
+      - æstus amóris íngerunt.
+    - - Tuis confísos précibus,
+      - virgo dilécta Dómino,
+      - nos caritáte cóncitos
+      - fac Sponsi regna quǽrere.
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te Catharina maximis.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 2, p. 2740
+    diferencias: []
+  te-pater-ioseph-opifex-colende:
+    incipit: Te, pater Ioseph, ópifex colénde,
+    estrofas:
+    - - Te, pater Ioseph, ópifex colénde,
+      - Názaræ felix látitans in umbra,
+      - vócibus lætis humilíque cuncti
+      - corde canámus.
+    - - Régiam stirpem tenuémque victum
+      - mente fers æqua tacitúsque portas,
+      - sacra dum multo mánuum labóre
+      - pígnora nutris.
+    - - O faber, sanctum spéculum fabrórum,
+      - quanta das plebi documénta vitæ,
+      - ut labor sudans ut et officína
+      - sanctificétur.
+    - - Qui carent escis, míseros fovéto;
+      - témpera effrénos perimásque lites;
+      - mýsticus Christus pátriæ sub umbræ
+      - tégmine crescat.
+    - - Qui Deus trinus simul unus exstas,
+      - qui pater cunctis opiféxque rerum,
+      - fac patrem Ioseph imitémur actu,
+      - morte imitémur.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te pater Ioseph.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2741
+    diferencias: []
+  aurora-solis-nuntia:
+    incipit: Auróra solis núntia,
+    estrofas:
+    - - Auróra solis núntia,
+      - mundi labóres éxcitans,
+      - fabri sonóram málleo
+      - domum salútat Názaræ.
+    - - Salve, caput domésticum,
+      - sub quo supérnus Artifex,
+      - sudóre salso róridus,
+      - exércet artem pátriam.
+    - - Altis locátus sédibus
+      - celsǽque Sponsæ próximus,
+      - adésto nunc cliéntibus,
+      - quos vexat indigéntia.
+    - - Absíntque vis et iúrgia,
+      - fraus omnis a mercédibus,
+      - victus cibíque cópiam
+      - mensúret una párcitas.
+    - - Sit Trinitáti glória,
+      - quæ, te precánte, iúgiter
+      - in pace nostros ómnium
+      - gressus viámque dírigat.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aurora solis nuntia.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2741
+    diferencias: []
+  philippe-summae-honoribus:
+    incipit: Philíppe, summæ honóribus
+    estrofas:
+    - - Philíppe, summæ honóribus
+      - vocatiónis énitens,
+      - cum cive Petro príncipe
+      - qua mente Christum díligis!
+    - - At ipse amóris íntima
+      - tibi repéndit pígnora,
+      - tibíque Patris dísserit
+      - suǽque vitæ dógmata.
+    - - Nec te minus compléctitur,
+      - Iacóbe, Christi cáritas,
+      - qui frater eius díceris
+      - sed et colúmna Ecclésiæ.
+    - - Almæ Sion qui prǽsides
+      - primus gregi claríssimo,
+      - nos usque scriptis próvidis
+      - verbum salútis édoces.
+    - - O vos, beáti, nóbili
+      - Iesum proféssi sánguine,
+      - spe nos fidéque cúrrere
+      - date in supérnam pátriam,
+    - - Ut, quando mansiónibus
+      - iam Patris immorábimur,
+      - simul canámus pérpetim
+      - in Trinitátis glóriam.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Philippe summae honoribus.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 2, p. 2742
+    diferencias: []
+  matthia-sacratissimo:
+    incipit: Matthía, sacratíssimo
+    estrofas:
+    - - Matthía, sacratíssimo
+      - Apostolórum cœ́tui
+      - quam miro tu consílio
+      - ascríptus es divínitus!
+    - - Abscésserat discípulus,
+      - tristi miser suspéndio
+      - magni gradum fastígii
+      - Christíque amórem dénegans.
+    - - En Christi te diléctio
+      - ad eius transfert glóriam,
+      - Petri movénte lábia
+      - sortésque Sancto Spíritu.
+    - - Tanto dicátus múneri,
+      - lucem revélas géntibus
+      - ad mortem usque, strénuus
+      - Iesum conféssus sánguine.
+    - - Da nos, beáte Apóstole,
+      - lætis promptísque córdibus
+      - almus quascúmque Spíritus
+      - vias demónstrat, pérsequi.
+    - - Sit Trinitáti glória,
+      - quæ nobis ad cæléstia
+      - per te concédat scándere
+      - hymnósque ætérnos dícere.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Matthia sacratissimo.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 2, p. 2743
+    diferencias: []
+  veni-praecelsa-domina:
+    incipit: Veni, præcélsa Dómina;
+    estrofas:
+    - - Veni, præcélsa Dómina;
+      - María, tu nos vísita,
+      - quæ iam cognátæ dómui
+      - tantum portásti gáudii.
+    - - Veni, iuvámen sǽculi,
+      - sordes aufer piáculi,
+      - ac visitándo pópulum
+      - pœnæ tolle perículum.
+    - - Veni, stella, lux márium,
+      - infúnde pacis rádium;
+      - rege quodcúmque dévium,
+      - da vitam innocéntium.
+    - - Veni, precámur, vísites
+      - nobísque vires róbores
+      - virtúte sacri ímpetus,
+      - ne fluctuétur ánimus.
+    - - Veni, virga regálium,
+      - reduc fluctus errántium
+      - ad unitátem fídei,
+      - in qua salvántur cǽlici.
+    - - Veni, tecúmque Fílium
+      - laudémus in perpétuum,
+      - cum Patre et Sancto Spíritu,
+      - qui nobis dent auxílium.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Veni praecelsa Domina.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 2, p. 2743
+    diferencias:
+    - tipo: errata del PDF
+      libro:
+      - quae iam cognate domui
+      corpus:
+      - quæ iam cognátæ dómui
+  veniens-mater-inclita:
+    incipit: Véniens, mater ínclita,
+    estrofas:
+    - - Véniens, mater ínclita,
+      - cum Sancti dono Spíritus,
+      - nos ut Ioánnem vísita
+      - in huius carnis sédibus.
+    - - Procéde, portans párvulum,
+      - ut mundus possit crédere
+      - et tuæ laudis títulum
+      - omnes sciant extóllere.
+    - - Salúta nunc Ecclésiam,
+      - ut tuam vocem áudiens
+      - exsúrgat in lætítia,
+      - advéntum Christi séntiens.
+    - - María, levans óculos,
+      - 'vide credéntes pópulos:'
+      - te quærunt piis méntibus,
+      - his opem feres ómnibus.
+    - - O veræ spes lætítiæ,
+      - nostræ portus misériæ,
+      - nos iunge cæli cúriæ
+      - ornátos stola glóriæ.
+    - - Tecum, Virgo, magníficat
+      - ánima nostra Dóminum,
+      - qui laude te nobílitat
+      - et hóminum et cǽlitum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Veniens mater inclita.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 2, p. 2744
+    diferencias: []
+  concito-gressu-petis-alta-montis:
+    incipit: Cóncito gressu petis alta montis,
+    estrofas:
+    - - Cóncito gressu petis alta montis,
+      - Virgo, quam matrem Deus ipse fecit,
+      - ut seni matri studiósi amóris
+      - pígnora promas.
+    - - Cum salutántis capit illa vocem,
+      - ábditus gestit puer exsilíre,
+      - te parens dicit dóminam, salútat
+      - teque beátam.
+    - - Ipsa prædícis fore te beátam
+      - Spíritu fervens pénitus loquénte,
+      - ac Deum cantu célebras amœ́no
+      - magna operántem.
+    - - Teque felícem pópuli per orbem
+      - semper, o mater, récitant ovántes
+      - atque te credunt Dómini favórum
+      - esse minístram.
+    - - Quæ, ferens Christum, nova semper affers
+      - dona, tu nobis fer opes salútis,
+      - qui pie tecum Tríadem supérnam
+      - magnificámus.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Concito gressu petis.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 2, p. 2745
+    diferencias: []
+  barnabae-clarum-colimus-tropaeum:
+    incipit: Bárnabæ clarum cólimus tropǽum,
+    estrofas:
+    - - Bárnabæ clarum cólimus tropǽum,
+      - quo micat celsus mérita coróna,
+      - multa pro Christi veheménter usque
+      - passus honóre.
+    - - Abdicans agro, generósus urget
+      - ut, fide vivax ope caritátis,
+      - nóminis plebes nova christiáni
+      - læta viréscat.
+    - - Quam libens noscit, petit atque defert
+      - máximum Paulum, sócio labóre
+      - Spíritus nutu péragrans fidélis
+      - lítora multa!
+    - - Nil sibi parcit cupidúsque Christo
+      - plúrimos affert, bonus atque pascit,
+      - donec effúso rútila probátur
+      - sánguine palma.
+    - - Da, Deus, tanto fámulo rogánte,
+      - nos sequi fortes iter ad salútem,
+      - ut domo ætérna tibi concinámus
+      - cántica laudis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Barnabae clarum colimus.txt
+    coincidencia_libro: 0.9
+    libro:
+    - tomo 2, p. 2746
+    - tomo 3, p. 4394
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - passus honore.
+      corpus:
+      - passus amóre.
+      va:
+      - passus honóre.
+  ut-queant-laxis-resonare-fibris:
+    incipit: Ut queant laxis resonáre fibris
+    estrofas:
+    - - Ut queant laxis resonáre fibris
+      - mira gestórum fámuli tuórum,
+      - solve pollúti lábii reátum,
+      - sancte Ioánnes.
+    - - Núntius cælo véniens suprémo,
+      - te patri magnum fore nascitúrum,
+      - nomen et vitæ sériem geréndæ
+      - órdine promit.
+    - - Ille promíssi dúbius supérni
+      - pérdidit promptæ módulos loquélæ;
+      - sed reformásti génitus perémptæ
+      - órgana vocis.
+    - - Ventris obstrúso pósitus cubíli
+      - sénseras regem thálamo manéntem;
+      - hinc parens nati méritis utérque
+      - ábdita pandit.
+    - - Láudibus cives célebrant supérni
+      - te, Deus simplex paritérque trine;
+      - 'súpplices ac nos véniam precámur:'
+      - parce redémptis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Ut queant laxis.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4394
+    diferencias: []
+  antra-deserti-teneris-sub-annis:
+    incipit: Antra desérti téneris sub annis,
+    estrofas:
+    - - Antra desérti téneris sub annis,
+      - cívium turmas fúgiens, petísti,
+      - ne levi saltem maculáre vitam
+      - fámine posses.
+    - - Prǽbuit hirtum tégimen camélus
+      - ártubus sacris, stróphium bidéntes,
+      - cui latex haustum, sociáta pastum
+      - mella locústis.
+    - - Céteri tantum cecinére vatum
+      - corde præságo iubar affutúrum;
+      - tu quidem mundi scelus auferéntem
+      - índice prodis.
+    - - Non fuit vasti spátium per orbis
+      - sánctior quisquam génitus Ioánne,
+      - qui nefas sæcli méruit lavántem
+      - tíngere lymphis.
+    - - Láudibus cives célebrant supérni
+      - te, Deus simplex paritérque trine;
+      - 'súpplices ac nos véniam precámur:'
+      - parce redémptis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Antra deserti teneris.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4395
+    diferencias: []
+  o-nimis-felix-meritique-celsi:
+    incipit: O nimis felix meritíque celsi,
+    estrofas:
+    - - O nimis felix meritíque celsi,
+      - nésciens labem nívei pudóris,
+      - prǽpotens martyr eremíque cultor,
+      - máxime vatum.
+    - - Nunc potens nostri méritis opímis
+      - péctoris duros lápides repélle,
+      - ásperum planans iter, et refléxos
+      - dírige calles,
+    - - Ut pius mundi sator et redémptor,
+      - méntibus pulsa mácula polítis,
+      - rite dignétur véniens sacrátos
+      - pónere gressus.
+    - - Láudibus cives célebrant supérni
+      - te, Deus simplex paritérque trine;
+      - 'súpplices ac nos véniam precámur:'
+      - parce redémptis.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O nimis felix.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 3, p. 4396
+    diferencias: []
+  aurea-luce-et-decore-roseo:
+    incipit: Aurea luce et decóre róseo,
+    estrofas:
+    - - Aurea luce et decóre róseo,
+      - lux lucis, omne perfudísti sǽculum,
+      - décorans cælos ínclito martýrio
+      - hac sacra die, quæ dat reis véniam.
+    - - Iánitor cæli, doctor orbis páriter,
+      - iúdices sæcli, vera mundi lúmina,
+      - per crucem alter, alter ense triúmphans,
+      - vitæ senátum laureáti póssident.
+    - - O Roma felix, quæ tantórum príncipum
+      - es purpuráta pretióso sánguine,
+      - non laude tua, sed ipsórum méritis
+      - excéllis omnem mundi pulchritúdinem.
+    - - Olívæ binæ pietátis únicæ,
+      - fide devótos, spe robústos máxime,
+      - fonte replétos caritátis géminæ
+      - post mortem carnis impetráte vívere.
+    - - Sit Trinitáti sempitérna glória,
+      - honor, potéstas atque iubilátio,
+      - in unitáte, cui manet impérium
+      - ex tunc et modo per ætérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aurea luce et.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4396
+    diferencias: []
+  felix-per-omnes-festum-mundi-cardines:
+    incipit: Felix per omnes festum mundi cárdines
+    estrofas:
+    - - Felix per omnes festum mundi cárdines
+      - apostolórum præpóllet alácriter,
+      - Petri beáti, Pauli sacratíssimi,
+      - quos Christus almo consecrávit sánguine,
+      - ecclesiárum deputávit príncipes.
+    - - Hi sunt olívæ duæ coram Dómino
+      - et candelábra luce radiántia,
+      - præclára cæli duo luminária;
+      - fórtia solvunt peccatórum víncula
+      - portásque cæli réserant fidélibus.
+    - - Glória Patri per imménsa sǽcula,
+      - sit tibi, Nate, decus et impérium,
+      - honor, potéstas Sanctóque Spirítui;
+      - sit Trinitáti salus indivídua
+      - per infiníta sæculórum sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Felix per omnes.txt
+    coincidencia_libro: 0.93
+    libro:
+    - tomo 3, p. 4397
+    diferencias: []
+  apostolorum-passio:
+    incipit: Apostolórum pássio
+    estrofas:
+    - - Apostolórum pássio
+      - diem sacrávit sǽculi,
+      - Petri triúmphum nóbilem,
+      - Pauli corónam prǽferens.
+    - - Coniúnxit æquáles viros
+      - cruor triumphális necis;
+      - Deum secútos prǽsulem
+      - Christi coronávit fides.
+    - - Primus Petrus apóstolus;
+      - nec Paulus impar grátia,
+      - electiónis vas sacræ
+      - Petri adæquávit fidem.
+    - - Verso crucis vestígio
+      - Simon, honórem dans Deo,
+      - suspénsus ascéndit, dati
+      - non ímmemor oráculi.
+    - - Hinc Roma celsum vérticem
+      - devotiónis éxtulit,
+      - fundáta tali sánguine
+      - et vate tanto nóbilis.
+    - - Huc ire quis mundum putet,
+      - 'concúrrere plebem poli:'
+      - elécta géntium caput,
+      - sedes magístri géntium.
+    - - Horum, Redémptor, quǽsumus,
+      - ut príncipum consórtio
+      - iungas precántes sérvulos
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Apostolorum passio.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4397
+    diferencias: []
+  o-roma-felix-quae-tantorum-principum:
+    incipit: O Roma felix, quæ tantórum príncipum
+    estrofas:
+    - - O Roma felix, quæ tantórum príncipum
+      - es purpuráta pretióso sánguine!
+      - Excéllis omnem mundi pulchritúdinem
+      - non laude tua, sed sanctórum méritis,
+      - quos cruentátis iugulásti gládiis.
+    - - Vos ergo modo, gloriósi mártyres,
+      - Petre beáte, Paule, mundi lílium,
+      - cæléstis aulæ triumpháles mílites,
+      - précibus almis vestris nos ab ómnibus
+      - muníte malis, ferte super ǽthera.
+    - - Glória Patri per imménsa sǽcula,
+      - sit tibi, Nate, decus et impérium,
+      - honor, potéstas Sanctóque Spirítui;
+      - sit Trinitáti salus indivídua
+      - per infiníta sæculórum sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O Roma felix.txt
+    coincidencia_libro: 0.93
+    libro:
+    - tomo 3, p. 4398
+    diferencias: []
+  qui-luce-splendes-ordinis:
+    incipit: Qui luce splendes órdinis
+    estrofas:
+    - - Qui luce splendes órdinis
+      - apostolórum máxima,
+      - Thoma, benígnus áccipe
+      - laudes tibi quas pángimus.
+    - - Te lúcidis in sédibus
+      - amóre Christus cóllocat;
+      - amóre promptus éxpetis
+      - tu pro Magístro cómmori.
+    - - Te torquet et diléctio
+      - narrántibus cum frátribus
+      - vis certus esse, vísere,
+      - palpáre Iesu vúlnera.
+    - - Quantóque cordis gáudio
+      - ipsum misértum cónspicis,
+      - Deúmque dicis crédulus,
+      - fervóre adórans péctoris!
+    - - Nobísque qui non vídimus
+      - per te fides fit ácrior,
+      - fit æstus et poténtior
+      - quo Christi amórem quǽrimus.
+    - - Christo sit omnis glória,
+      - qui te rogánte prǽbeat
+      - nobis fide ambulántibus
+      - ipsum vidére pérpetim.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Qui luce splendes.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4398
+    diferencias: []
+  inter-aeternas-superum-coronas:
+    incipit: Inter ætérnas súperum corónas,
+    estrofas:
+    - - Inter ætérnas súperum corónas,
+      - quas sacro partas cólimus triúmpho,
+      - émicas celsis méritis corúscus,
+      - o Benedícte!
+    - - Sancta te compsit púerum senéctus,
+      - nil sibi de te rápuit volúptas,
+      - áruit mundi tibi flos, ad alta
+      - mente leváto.
+    - - Hinc fuga lapsus pátriam, paréntes
+      - déseris, fervens némorum colónus;
+      - inde conscríbis documénta vitæ
+      - pulchra beátæ.
+    - - Iam docens omnes pópulos subésse
+      - légibus tandem placitísque Christi,
+      - fac tuis cuncti précibus petámus
+      - cǽlica semper.
+    - - Cláritas Patri genitǽque Proli,
+      - Flámini Sancto decus atque cultus,
+      - grátia quorum tibi tanta laudis
+      - glória lucet.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Inter aeternas superum.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4399
+    diferencias: []
+  legifer-prudens-venerande-doctor:
+    incipit: Légifer prudens, veneránde doctor,
+    estrofas:
+    - - Légifer prudens, veneránde doctor,
+      - qui nites celsis méritis per orbem,
+      - dénuo comple, Benedícte, mundum
+      - lúmine Christi.
+    - - Flóruit per te novus atque miro
+      - géntium nexu sociátus ordo;
+      - iúribus sacris tua vox subégit
+      - dúlciter omnes.
+    - - Líberos Iesu paritérque servos
+      - régula magna statuísti alúmnos,
+      - quos amor fotus précibus revínxit
+      - et labor unus.
+    - - Iamque fratérne, duce te, labórent,
+      - mútuo certent pópuli favóre,
+      - gáudeant pacis refovére semper
+      - dona beátæ.
+    - - Cláritas Patri genitǽque Proli,
+      - Flámini Sancto decus atque cultus,
+      - grátia quorum tibi tanta laudis
+      - glória lucet.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Legifer prudens venerande.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4399
+    diferencias: []
+  magdalae-sidus-mulier-beata:
+    incipit: Mágdalæ sidus, múlier beáta,
+    estrofas:
+    - - Mágdalæ sidus, múlier beáta,
+      - te pio cultu venerámur omnes,
+      - quam sibi Christus sociávit arcti
+      - fœ́dere amóris.
+    - - Cum tibi illíus pátefit potéstas
+      - dǽmonum vires ábigens treménda,
+      - tu fide gaudes potióre necti
+      - grata medénti.
+    - - Hæret hinc urgens tibi caritátis
+      - vis ut insístas pédibus Magístri,
+      - férvidis illum comitáta semper
+      - sédula curis.
+    - - Tuque complóras Dóminum, crucíque
+      - ímpetu flagrans pietátis astas;
+      - membra tu terges studiósa et ungis
+      - danda sepúlcro.
+    - - Quos amor Christi péperit, triúmphis
+      - nos fac adiúngi sócios per ævum,
+      - atque Dilécto simul affluénter
+      - pángere laudes.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Magdalae sidus mulier.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4400
+    diferencias: []
+  aurora-surgit-lucida:
+    incipit: Auróra surgit lúcida
+    estrofas:
+    - - Auróra surgit lúcida
+      - Christi triúmphos áfferens,
+      - cum corpus eius vísere,
+      - María, vis et úngere.
+    - - Anhéla curris; ángelus
+      - at ecce lætus prǽdocet
+      - mortis refráctis póstibus
+      - redísse quem desíderas.
+    - - Sed te manet iucúndius
+      - intácti amóris prǽmium,
+      - cum, voce pulsans vílicum,
+      - tuum Magístrum cónspicis.
+    - - Quæ cum dolénti Vírgine
+      - hæsísti acérbo stípiti,
+      - tu prima vivi ab ínferis
+      - es testis atque núntia.
+    - - O flos venúste Mágdalæ,
+      - o Christi amóre sáucia,
+      - tu caritátis ígnibus
+      - fac nostra corda férveant.
+    - - Da, Christe, tantæ sérvulæ
+      - dilectiónem pérsequi,
+      - et nos ut in cæléstibus
+      - tibi canámus glóriam.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aurora surgit lucida.txt
+    coincidencia_libro: 0.92
+    libro:
+    - tomo 3, p. 4400
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - et nos tu in caeléstibus
+      corpus:
+      - et nos ut in cæléstibus
+      va:
+      - et nos tu in cæléstibus
+  te-nostra-laetis-laudibus:
+    incipit: Te nostra lætis láudibus,
+    estrofas:
+    - - Te nostra lætis láudibus,
+      - Iacóbe, tollunt cántica,
+      - quem Christus arte ex rétium
+      - ad tanta vexit cúlmina.
+    - - Ipso vocánte, cóncitus
+      - cum fratre linquis ómnia,
+      - ipsíus et fis nóminis
+      - verbíque præco férvidus.
+    - - Testis poténtis déxteræ
+      - præclárus alta cónspicis,
+      - in monte celsam glóriam,
+      - tristes in horto angústias.
+    - - Qui promptus exstas, póscitur
+      - cum passiónis póculum,
+      - tu primus ex apóstolis
+      - pro Christi amóre plécteris.
+    - - Iesu fidélis ássecla
+      - satórque lucis cǽlicæ,
+      - mentes fide claréscere,
+      - da spe fovéri péctora.
+    - - Christi sequi da sédulos
+      - præcépta nos in sǽculo,
+      - hymnos ut olim glóriæ
+      - fundámus illi pérpetim.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te nostra laetis.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4401
+    diferencias: []
+  dum-tuas-festo-pater-o-colende:
+    incipit: Dum tuas festo, pater o colénde,
+    estrofas:
+    - - Dum tuas festo, pater o colénde,
+      - cántico laudes habet hæc coróna,
+      - vocis ac mentis, Ióachim, benígne
+      - áccipe munus.
+    - - Longa te regum séries avórum
+      - Ábrahæ prolem tulit atque David;
+      - clárior mundi dómina corúscas
+      - prole María.
+    - - Sic tuum germen benedícta ab Anna
+      - éditum, patrum repetíta vota
+      - implet, et mæsto próperat reférre
+      - gáudia mundo.
+    - - Laus tibi, Prolis Pater increátæ;
+      - laus tibi, summi Súboles Paréntis;
+      - summa laus, compar, tibi sit per omne,
+      - Spíritus, ævum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Dum tuas festo.txt
+    coincidencia_libro: 0.94
+    libro:
+    - tomo 3, p. 4402
+    diferencias: []
+  nocti-succedit-lucifer:
+    incipit: Nocti succédit lúcifer,
+    estrofas:
+    - - Nocti succédit lúcifer,
+      - quem mox auróra séquitur,
+      - solis ortum prænúntians
+      - mundum lustrántis lúmine.
+    - - Christus sol est iustítiæ,
+      - auróra Mater grátiæ,
+      - quam, Anna, præis rútilans
+      - legis propéllens ténebras.
+    - - Anna, radix ubérrima,
+      - arbor tu salutífera,
+      - virgam prodúcens flóridam
+      - quæ Christum nobis áttulit.
+    - - O matris Christi génetrix
+      - tuque parens sanctíssime,
+      - natæ favénte mérito,
+      - nobis rogáte véniam.
+    - - Iesu, tibi sit glória,
+      - qui natus es de Vírgine,
+      - cum Patre et almo Spíritu,
+      - in sempitérna sǽcula.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Nocti succedit lucifer.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4402
+    diferencias: []
+  te-gratulantes-pangimus:
+    incipit: Te gratulántes pángimus,
+    estrofas:
+    - - Te gratulántes pángimus,
+      - Martha, beáta múlier,
+      - quæ meruísti sǽpius
+      - Christum domi recípere.
+    - - Tantum libénter hóspitem
+      - curis ornábas sédulis,
+      - in plúrima sollícita
+      - amóris dulci stímulo.
+    - - Pascis dum læta Dóminum,
+      - soror ac frater ávide
+      - possunt ab illo grátiæ
+      - vitǽque cibum súmere.
+    - - Captúro mortis trámitem
+      - dante soróre arómata,
+      - extrémi tu servítii
+      - vigil donásti múnera.
+    - - Magístri felix hóspita,
+      - corda fac nostra férveant,
+      - ut illi gratæ iúgiter
+      - sint sedes amicítiæ.
+    - - Sit Trinitáti glória,
+      - quæ nos in domum cǽlicam
+      - admítti tandem tríbuat
+      - tecúmque laudes cánere.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te gratulantes pangimus.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4403
+    diferencias: []
+  quas-tibi-laudes-ferimusque-vota:
+    incipit: Quas tibi laudes ferimúsque vota,
+    estrofas:
+    - - Quas tibi laudes ferimúsque vota,
+      - nos tuis possint méritis iuváre,
+      - Martha, quam mire sibi corde iungit
+      - Christus amíco.
+    - - Te frequens visit Dóminus tuáque
+      - in domo degit plácida quiéte
+      - ac tuis verbis studiísque lætans
+      - teque minístra.
+    - - Tu prior fratrem quéreris perísse,
+      - cumque germána lacrimáta multum,
+      - áspicis vitæ súbita Magístri
+      - voce redíre.
+    - - Quæ fide prompta stábilem fatéris
+      - spem resurgéndi, Dómino probánte,
+      - ímpetra nobis cúpide in perénne
+      - pérgere regnum.
+    - - Laus Deo Patri, Genitóque virtus,
+      - Flámini Sancto párilis potéstas,
+      - glóriam quorum pétimus per ævum
+      - cérnere tecum.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Quas tibi laudes.txt
+    coincidencia_libro: 0.95
+    libro:
+    - tomo 3, p. 4403
+    diferencias: []
+  magnae-cohortis-principem:
+    incipit: Magnæ cohórtis príncipem
+    estrofas:
+    - - Magnæ cohórtis príncipem
+      - Ignátium laus cóncinat,
+      - clarum loquélis, áctibus
+      - ducem ciéntem mílites.
+    - - Regi suprémo cǽlitum
+      - amóre vinctus único,
+      - eius fovénda glória
+      - nil cénsuit iucúndius.
+    - - Hinc se suósque dévovet,
+      - urgéntis instar ágminis,
+      - ut iura Christi víndicet,
+      - erróris umbras díssipet.
+    - - Sancto monénte Spíritu,
+      - certam salútis sémitam
+      - scrutátor altus sǽculis
+      - doctórque prudens dénotat.
+    - - Suis alúmnis díssita
+      - missis in orbis lítora,
+      - Ecclésiam quot éxpetit
+      - frondére lætam géntibus!
+    - - Sit Trinitáti glória,
+      - quæ nos det huius mílitis
+      - exémpla fortes pérsequi
+      - in Christi honórem pérpetim.
+    amen: true
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Magnae cohortis principem.txt
+    coincidencia_libro: 0.96
+    libro:
+    - tomo 3, p. 4404
+    diferencias: []

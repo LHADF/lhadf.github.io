@@ -158,6 +158,137 @@ USO = [
     ('Comunes', 'Oficio de difuntos', 'laudes', 'Spes Christe nostrae veniae', 'La estrofa 4 cambia: por un difunto («Sed et qui frater»), por una difunta («Sed et quae soror»), por varios («Sed et qui fratres»).'),
     ('Comunes', 'Oficio de difuntos', 'visperas', 'Immensae rex potentiae', 'La estrofa 4 cambia: «Tuumque voca famulum», «Tuamque voca famulam», «Fratres et omnes advoca».'),
     ('Comunes', 'Oficio de difuntos', 'tercia', 'Qui lacrimatus Lazarum', 'Si se rezan las tres Horas: Tercia, estrofas 1, 4 y 5; Sexta, 2, 4 y 5; Nona, 3, 4 y 5 (rúbrica del libro).'),
+    # ---------- Segunda etapa: Tiempo Ordinario (tomos III y IV), solemnidades del Señor y Propio de los santos ----------
+    ('Tiempo Ordinario', 'Semanas I y III: domingo', 'visperas1', 'Deus creator omnium', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: domingo', 'visperas1', 'Dies aetasque ceteris', 'Si se prefiere (rúbrica del libro).'),
+    ('Tiempo Ordinario', 'Semanas I y III: domingo', 'oficio', 'Primo dierum omnium', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: domingo', 'oficio', 'Dies aetasque ceteris', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: domingo', 'laudes', 'Aeterne rerum conditor', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: domingo', 'visperas', 'Lucis creator optime', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: lunes', 'oficio', 'Somno refectis artubus', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: lunes', 'oficio', 'Aeterna lux divinitas', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: lunes', 'laudes', 'Splendor paternae gloriae', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: lunes', 'visperas', 'Immense caeli conditor', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: martes', 'oficio', 'Consors paterni luminis', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: martes', 'oficio', 'O sacrosancta Trinitas', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: martes', 'laudes', 'Pergrata mundo nuntiat', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: martes', 'visperas', 'Telluris ingens conditor', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: miércoles', 'oficio', 'Rerum creator optime', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: miércoles', 'oficio', 'Scientiarum Domino', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: miércoles', 'laudes', 'Nox et tenebrae et nubila', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: miércoles', 'visperas', 'Caeli Deus sanctissime', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: jueves', 'oficio', 'Nox atra rerum contegit', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: jueves', 'oficio', 'Christe precamur adnuas', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: jueves', 'laudes', 'Sol ecce surgit igneus', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: jueves', 'visperas', 'Magnae Deus potentiae', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: viernes', 'oficio', 'Tu Trinitatis Unitas', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: viernes', 'oficio', 'Adesto Christe cordibus', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: viernes', 'laudes', 'Aeterna caeli gloria', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: viernes', 'visperas', 'Plasmator hominis Deus', ''),
+    ('Tiempo Ordinario', 'Semanas I y III: sábado', 'oficio', 'Summae Deus clementiae', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas I y III: sábado', 'oficio', 'Auctor perennis gloriae', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas I y III: sábado', 'laudes', 'Aurora iam spargit polum', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: domingo', 'visperas1', 'Rerum Deus fons omnium', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: domingo', 'visperas1', 'Salve dies dierum gloria', 'Si se prefiere (rúbrica del libro).'),
+    ('Tiempo Ordinario', 'Semanas II y IV: domingo', 'oficio', 'Mediae noctis tempus est', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: domingo', 'oficio', 'Salve dies dierum gloria', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: domingo', 'laudes', 'Ecce iam noctis tenuatur umbra', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: domingo', 'visperas', 'O lux beata Trinitas', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: lunes', 'oficio', 'Ipsum nunc nobis tempus est', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: lunes', 'oficio', 'Vita sanctorum via spes salusque', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: lunes', 'laudes', 'Lucis largitor splendide', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: lunes', 'visperas', 'Luminis fons lux et origo lucis', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: martes', 'oficio', 'Nocte surgentes vigilemus omnes', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: martes', 'oficio', 'Ad preces nostras deitatis aures', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: martes', 'laudes', 'Aeterne lucis conditor', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: martes', 'visperas', 'Sator princepsque temporum', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: miércoles', 'oficio', 'O sator rerum reparator aevi', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: miércoles', 'oficio', 'Christe lux vera bonitas et vita', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: miércoles', 'laudes', 'Fulgentis auctor aetheris', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: miércoles', 'visperas', 'Sol ecce lentus occidens', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: jueves', 'oficio', 'Ales diei nuntius', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: jueves', 'oficio', 'Amoris sensus erige', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: jueves', 'laudes', 'Iam lucis orto sidere', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: jueves', 'visperas', 'Deus qui claro lumine', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: viernes', 'oficio', 'Galli cantu mediante', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: viernes', 'oficio', 'Adesto rerum conditor', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: viernes', 'laudes', 'Deus qui caeli lumen es', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: viernes', 'visperas', 'Horis peractis undecim', ''),
+    ('Tiempo Ordinario', 'Semanas II y IV: sábado', 'oficio', 'Lux aeterna lumen potens', 'De noche o de madrugada.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: sábado', 'oficio', 'Deus de nullo veniens', 'De día.'),
+    ('Tiempo Ordinario', 'Semanas II y IV: sábado', 'laudes', 'Diei luce reddita', ''),
+    ('Solemnidades del Señor', 'La Santísima Trinidad', 'visperas', 'Immensa et una Trinitas', ''),
+    ('Solemnidades del Señor', 'La Santísima Trinidad', 'oficio', 'Te Patrem summum genitumque Verbum', ''),
+    ('Solemnidades del Señor', 'La Santísima Trinidad', 'laudes', 'Trinitas summo solio coruscans', ''),
+    ('Solemnidades del Señor', 'El Santísimo Cuerpo y Sangre de Cristo', 'visperas', 'Pange lingua gloriosi corporis', ''),
+    ('Solemnidades del Señor', 'El Santísimo Cuerpo y Sangre de Cristo', 'oficio', 'Sacris sollemniis iuncta sint gaudia', ''),
+    ('Solemnidades del Señor', 'El Santísimo Cuerpo y Sangre de Cristo', 'laudes', 'Verbum supernum prodiens nec Patris', ''),
+    ('Solemnidades del Señor', 'El Sagrado Corazón de Jesús', 'visperas', 'Auctor beate saeculi', ''),
+    ('Solemnidades del Señor', 'El Sagrado Corazón de Jesús', 'oficio', 'Cor arca legem continens', ''),
+    ('Solemnidades del Señor', 'El Sagrado Corazón de Jesús', 'laudes', 'Iesu auctor clementiae', ''),
+    ('Solemnidades del Señor', 'Jesucristo, sumo y eterno sacerdote', 'visperas', 'Aeterne Christe pontifex', ''),
+    ('Solemnidades del Señor', 'Jesucristo, sumo y eterno sacerdote', 'oficio', 'Pontifex Iesu mediator une', ''),
+    ('Solemnidades del Señor', 'Jesucristo, sumo y eterno sacerdote', 'laudes', 'Concinunt caeli parilique tellus', ''),
+    ('Propio de los santos', 'San Andrés, apóstol (30 de noviembre)', 'oficio', 'Captator olim piscium', 'El libro trae solo este himno (¿para las tres Horas?).'),
+    ('Propio de los santos', 'San Ambrosio, obispo y doctor (7 de diciembre)', 'oficio', 'Fortem piumque praesulem', 'El libro trae solo este himno.'),
+    ('Propio de los santos', 'La Inmaculada Concepción (8 de diciembre)', 'visperas', 'Praeclara custos virginum', ''),
+    ('Propio de los santos', 'La Inmaculada Concepción (8 de diciembre)', 'oficio', 'Te dicimus praeconio', ''),
+    ('Propio de los santos', 'La Inmaculada Concepción (8 de diciembre)', 'laudes', 'In plausu grati carminis', ''),
+    ('Propio de los santos', 'San Esteban, protomártir (26 de diciembre)', 'oficio', 'Festum celebre martyris', ''),
+    ('Propio de los santos', 'San Esteban, protomártir (26 de diciembre)', 'laudes', 'Christus est vita veniens in orbem', ''),
+    ('Propio de los santos', 'San Juan, apóstol y evangelista (27 de diciembre)', 'oficio', 'Virginis virgo venerande custos', ''),
+    ('Propio de los santos', 'San Juan, apóstol y evangelista (27 de diciembre)', 'laudes', 'Cohors beata Seraphim', ''),
+    ('Propio de los santos', 'Los Santos Inocentes (28 de diciembre)', 'oficio', 'Hymnum canentes martyrum', ''),
+    ('Propio de los santos', 'Los Santos Inocentes (28 de diciembre)', 'laudes', 'Audit tyrannus anxius', ''),
+    ('Propio de los santos', 'Santa Inés, virgen y mártir (21 de enero)', 'oficio', 'Igne divini radians amoris', ''),
+    ('Propio de los santos', 'Santa Inés, virgen y mártir (21 de enero)', 'laudes', 'Agnes beatae virginis', 'Laudes y Vísperas.'),
+    ('Propio de los santos', 'La Conversión de san Pablo (25 de enero)', 'oficio', 'Pressi malorum pondere', ''),
+    ('Propio de los santos', 'La Conversión de san Pablo (25 de enero)', 'laudes', 'Doctor egregie Paule mores instrue', ''),
+    ('Propio de los santos', 'La Conversión de san Pablo (25 de enero)', 'visperas', 'Excelsam Pauli gloriam', ''),
+    ('Propio de los santos', 'La Presentación del Señor (2 de febrero)', 'oficio', 'Legis sacratae sanctis caeremoniis', 'Si se prefiere, «Quod chorus vatum» (rúbrica del libro).'),
+    ('Propio de los santos', 'La Presentación del Señor (2 de febrero)', 'laudes', 'Adorna Sion thalamum', ''),
+    ('Propio de los santos', 'La Presentación del Señor (2 de febrero)', 'visperas', 'Quod chorus vatum venerandus olim', ''),
+    ('Propio de los santos', 'La Cátedra de san Pedro (22 de febrero)', 'visperas', 'Divina vox te deligit', ''),
+    ('Propio de los santos', 'La Cátedra de san Pedro (22 de febrero)', 'oficio', 'Iam bone pastor Petre clemens accipe', ''),
+    ('Propio de los santos', 'La Cátedra de san Pedro (22 de febrero)', 'laudes', 'Petrus beatus catenarum laqueos', ''),
+    ('Propio de los santos', 'San José, esposo de la Virgen María (19 de marzo)', 'visperas', 'Te Ioseph celebrent agmina caelitum', ''),
+    ('Propio de los santos', 'San José, esposo de la Virgen María (19 de marzo)', 'oficio', 'Iste quem laeti colimus fideles', ''),
+    ('Propio de los santos', 'San José, esposo de la Virgen María (19 de marzo)', 'laudes', 'Caelitum Ioseph decus atque nostrae', ''),
+    ('Propio de los santos', 'La Anunciación del Señor (25 de marzo)', 'visperas1', 'Agnoscat omne saeculum', 'II Vísperas: «Ave, maris stella» (rúbrica del libro).'),
+    ('Propio de los santos', 'La Anunciación del Señor (25 de marzo)', 'oficio', 'Iam caeca vis mortalium', ''),
+    ('Propio de los santos', 'La Anunciación del Señor (25 de marzo)', 'laudes', 'O lux salutis nuntia', ''),
+    ('Propio de los santos', 'San Marcos, evangelista (25 de abril)', 'oficio', 'O vir beate Apostolis', ''),
+    ('Propio de los santos', 'San Marcos, evangelista (25 de abril)', 'laudes', 'Mentibus laetis tua festa Marce', 'Laudes y Vísperas.'),
+    ('Propio de los santos', 'San Isidoro, obispo y doctor (26 de abril)', 'laudes', 'Gaude fidelis concio', 'Laudes y Vísperas.'),
+    ('Propio de los santos', 'Santa Catalina de Siena (29 de abril)', 'oficio', 'Virgo prudentum comitata coetum', ''),
+    ('Propio de los santos', 'Santa Catalina de Siena (29 de abril)', 'laudes', 'Te Catharina maximis', ''),
+    ('Propio de los santos', 'San José obrero (1 de mayo)', 'oficio', 'Te pater Ioseph opifex colende', ''),
+    ('Propio de los santos', 'San José obrero (1 de mayo)', 'laudes', 'Aurora solis nuntia', 'Vísperas: «Te, Ioseph, celebrent» (rúbrica del libro).'),
+    ('Propio de los santos', 'San Felipe y Santiago, apóstoles (3 de mayo)', 'oficio', 'Philippe summae honoribus', 'Laudes: «Claro paschali gaudio»; Vísperas: «Tristes erant Apostoli» (rúbrica del libro).'),
+    ('Propio de los santos', 'San Matías, apóstol (14 de mayo)', 'oficio', 'Matthia sacratissimo', 'Oficio de lectura y Laudes.'),
+    ('Propio de los santos', 'La Visitación de la Virgen María (31 de mayo)', 'oficio', 'Veni praecelsa Domina', ''),
+    ('Propio de los santos', 'La Visitación de la Virgen María (31 de mayo)', 'laudes', 'Veniens mater inclita', ''),
+    ('Propio de los santos', 'La Visitación de la Virgen María (31 de mayo)', 'visperas', 'Concito gressu petis alta montis', ''),
+    ('Propio de los santos', 'San Bernabé, apóstol (11 de junio)', 'oficio', 'O vir beate Apostolis', ''),
+    ('Propio de los santos', 'San Bernabé, apóstol (11 de junio)', 'laudes', 'Barnabae clarum colimus tropaeum', 'Laudes y Vísperas.'),
+    ('Propio de los santos', 'La Natividad de san Juan Bautista (24 de junio)', 'visperas', 'Ut queant laxis resonare fibris', ''),
+    ('Propio de los santos', 'La Natividad de san Juan Bautista (24 de junio)', 'oficio', 'Antra deserti teneris sub annis', ''),
+    ('Propio de los santos', 'La Natividad de san Juan Bautista (24 de junio)', 'laudes', 'O nimis felix meritique celsi', ''),
+    ('Propio de los santos', 'San Pedro y San Pablo, apóstoles (29 de junio)', 'visperas1', 'Aurea luce et decore roseo', ''),
+    ('Propio de los santos', 'San Pedro y San Pablo, apóstoles (29 de junio)', 'oficio', 'Felix per omnes festum mundi cardines', ''),
+    ('Propio de los santos', 'San Pedro y San Pablo, apóstoles (29 de junio)', 'laudes', 'Apostolorum passio', ''),
+    ('Propio de los santos', 'San Pedro y San Pablo, apóstoles (29 de junio)', 'visperas', 'O Roma felix quae tantorum principum', ''),
+    ('Propio de los santos', 'Santo Tomás, apóstol (3 de julio)', 'laudes', 'Qui luce splendes ordinis', 'El libro trae solo este himno.'),
+    ('Propio de los santos', 'San Benito, abad (11 de julio)', 'oficio', 'Inter aeternas superum coronas', 'Oficio de lectura y Vísperas.'),
+    ('Propio de los santos', 'San Benito, abad (11 de julio)', 'laudes', 'Legifer prudens venerande doctor', ''),
+    ('Propio de los santos', 'Santa María Magdalena (22 de julio)', 'oficio', 'Magdalae sidus mulier beata', 'Oficio de lectura y Vísperas.'),
+    ('Propio de los santos', 'Santa María Magdalena (22 de julio)', 'laudes', 'Aurora surgit lucida', ''),
+    ('Propio de los santos', 'Santiago, apóstol (25 de julio)', 'laudes', 'Te nostra laetis laudibus', 'El libro trae solo este himno.'),
+    ('Propio de los santos', 'San Joaquín y santa Ana (26 de julio)', 'oficio', 'Dum tuas festo pater o colende', 'Oficio de lectura y Vísperas.'),
+    ('Propio de los santos', 'San Joaquín y santa Ana (26 de julio)', 'laudes', 'Nocti succedit lucifer', ''),
+    ('Propio de los santos', 'Santa Marta (29 de julio)', 'oficio', 'Te gratulantes pangimus', 'Oficio de lectura y Vísperas.'),
+    ('Propio de los santos', 'Santa Marta (29 de julio)', 'laudes', 'Quas tibi laudes ferimusque vota', ''),
+    ('Propio de los santos', 'San Ignacio de Loyola (31 de julio)', 'laudes', 'Magnae cohortis principem', 'Laudes y Vísperas.'),
 ]
 
 # Donde el libro trae otra doxología que *Te decet hymnus*, va la del libro (con tildes puestas a mano) y se anota.
@@ -175,9 +306,23 @@ ACENTO_MANO = {'Abrahæ': 'Ábrahæ', 'Angeli': 'Ángeli', 'Angelus': 'Ángelus'
                'prænites': 'prǽnites', 'turbines': 'túrbines', 'Vocabit': 'Vocábit', 'vocabit': 'vocábit',
                'Volvamur': 'Volvámur', 'volvamur': 'volvámur', 'noxios': 'nóxios'}
 
-LINEA_MANO = {'Corda replet, linguas ditat,': 'corda replet, linguas ditat,'}   # correcciones puntuales
+LINEA_MANO = {'Corda replet, linguas ditat,': 'corda replet, linguas ditat,',   # correcciones puntuales
+              # segunda etapa: erratas del libro que la comparación tomó por variantes (se queda el corpus)
+              'ne ore te canéntium': 'et ore te canéntium', 'cum Spíritu Sancto Paráclito,': 'cum Spíritu Paráclito,',
+              'comes labórum dedite': 'comes labórum sédule', 'et nos tu in cæléstibus': 'et nos ut in cæléstibus',
+              # variantes del libro que la comparación tomó por erratas (va el libro: Pedro, en segunda persona)
+              'Quodcúmque vinclis super terram strínxerit,': 'Quodcúmque vinclis super terram strínxeris,',
+              'et quod resólvit in terris arbítrio,': 'et quod resólvis in terris arbítrio,', 'in fine mundi iudex erit sǽculi.': 'in fine mundi iudex eris sǽculi.',
+              # textos que no están en el corpus (del libro): tildes y erratas
+              'Nam doctor hic sanctissimus,': 'Nam doctor hic sanctíssimus,', 'exémplar totu sǽculo.': 'exémplar toti sǽculo.',
+              'fac Deum Semper cólere': 'fac Deum semper cólere', 'honor, potéstas, Glória,': 'honor, potéstas, glória,',
+              'sánguinis prebens decus et lavácrum,': 'sánguinis præbens decus et lavácrum,',
+              'Erróris pelle nubilum': 'Erróris pelle núbilum', 'O Sacrosáncta Trínitas,': 'O sacrosáncta Trínitas,'}
+# Himnos del corpus de los que el libro toma algunas estrofas (índices): «Iam, bone pastor» (Cátedra de san Pedro) y
+# «Doctor egrégie» (Conversión de san Pablo) son estrofas de un mismo himno, con la doxología
+SELECCION = {'iam-bone-pastor-petre-clemens-accipe': [0, 2], 'doctor-egregie-paule-mores-instrue': [1, 2]}
 
-ESTROFA_FIJA = {'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5],
+ESTROFA_FIJA = {'iam-bone-pastor-petre-clemens-accipe': 4, 'doctor-egregie-paule-mores-instrue': 4, 'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5],
                 'vir-celse-forma-fulgida': 4, 'christe-pastorum-caput-atque-princeps': 4, 'inclitus-rector-pater-atque-prudens': 4,
                 'qui-vivis-ante-saecula': 4}   # (secuencia: estrofas desiguales)   # estrofas de seis versos (el libro y el corpus no las separan)
 
@@ -308,10 +453,14 @@ def main():
         ck, pm = mejor_corpus(C, lineas_libro or [incipit])
         pm = max(0, round(pm + 0.001 * len(ck or ''), 2))
         texto = C.get(ck, [])
+        if pm < 0.5 and lib:   # no está en el corpus (Jesucristo, sumo y eterno sacerdote: fiesta propia de España): el texto del libro
+            ck, pm = None, 1.0
+            texto = [con_tildes(l, DIC) for e in lib[2] for l in e if l.strip()]
+            ESTROFAS['__libro__'] = [len([l for l in e if l.strip()]) for e in lib[2]]
         clave = re.sub(r'[^a-z]+', '-', norm(incipit))[:40].strip('-')
         if clave not in himnos:
             # estrofas: como las del libro (cantidad de versos de cada una); si no coinciden, de a 4
-            largos = ESTROFAS.get(ck) or ([len(e) for e in lib[2]] if lib else [])
+            largos = (ESTROFAS.get('__libro__') if ck is None else ESTROFAS.get(ck)) or ([len(e) for e in lib[2]] if lib else [])
             amen = texto and re.search(r'\s*Amen\.?$', texto[-1])
             cuerpo = texto[:-1] + [re.sub(r'\s*Amen\.?$', '', texto[-1])] if amen else texto
             if sum(largos) == len(cuerpo) and len(set(largos)) > 1:
@@ -372,6 +521,9 @@ def main():
             est = [[re.sub(r"[A-Za-zÀ-ÿǼǽæœÆŒ]+", lambda m: ACENTO_MANO.get(m.group(0), m.group(0)), l) for l in e] for e in est]
             est = [[re.sub(r'"([^"]*)"', r'«\1»', l) for l in e] for e in est]   # comillas latinas
             est = [[LINEA_MANO.get(l, l) for l in e] for e in est]
+            if clave in SELECCION:
+                est = [est[i] for i in SELECCION[clave]]
+                dif = [x for x in dif if x['libro']]
             # mayúscula solo al comienzo del himno, de una oración o de un nombre (el libro de este himno la pone en cada verso)
             plano = [l for e in est for l in e]
             if sum(1 for l in plano[1:] if l[:1].isupper()) > 0.8 * (len(plano) - 1):
@@ -396,7 +548,7 @@ def main():
                         if [norm(x) for x in tramo] != [norm(x) for x in e]:
                             var[caso][k_e] = tramo
             himnos[clave] = {
-                'incipit': cuerpo[0] if cuerpo else incipit,
+                'incipit': est[0][0] if est and est[0] else incipit,
                 'estrofas': est,
                 'amen': bool(amen),
                 'fuente_texto': f'latin-ecclesiastic-accents, corpus/hymns/{ck}.txt' if ck else None,
