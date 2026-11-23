@@ -502,9 +502,6 @@ un-martir:
     texto: Tú, Señor, que nos alegras hoy con la fiesta anual de santa N., concédenos la ayuda de sus méritos, ya que has querido iluminarnos con el ejemplo de su virginidad y de su fortaleza. Por nuestro Señor Jesucristo.
   - para: una mujer mártir
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de la santa mártir N. que obtengamos la fortaleza de vencer nuestras dificultades como ella venció los tormentos del martirio. Por nuestro Señor Jesucristo.
-  opciones:
-    himno:
-    - Quien entrega su vida por amor
   pascua:
     salmodia:
     - ant: Te alabarán mis labios, Señor, porque tu gracia vale más que la vida. Aleluia.
