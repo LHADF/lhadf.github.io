@@ -341,6 +341,7 @@ def main():
                 est[-1] = DOXOLOGIA_LIBRO[clave]
                 dif = [x for x in dif if x['tipo'] not in ('texto distinto', 'variante del libro') or not set(x['corpus']) & set(ultima_corpus)] + [{'tipo': 'doxología del libro', 'libro': est[-1], 'corpus': ultima_corpus}]
             est = [[re.sub(r"[A-Za-zÀ-ÿǼǽæœÆŒ]+", lambda m: ACENTO_MANO.get(m.group(0), m.group(0)), l) for l in e] for e in est]
+            est = [[re.sub(r'"([^"]*)"', r'«\1»', l) for l in e] for e in est]   # comillas latinas
             # mayúscula solo al comienzo del himno, de una oración o de un nombre (el libro de este himno la pone en cada verso)
             plano = [l for e in est for l in e]
             if sum(1 for l in plano[1:] if l[:1].isupper()) > 0.8 * (len(plano) - 1):
