@@ -175,7 +175,9 @@ ACENTO_MANO = {'Abrahæ': 'Ábrahæ', 'Angeli': 'Ángeli', 'Angelus': 'Ángelus'
                'prænites': 'prǽnites', 'turbines': 'túrbines', 'Vocabit': 'Vocábit', 'vocabit': 'vocábit',
                'Volvamur': 'Volvámur', 'volvamur': 'volvámur', 'noxios': 'nóxios'}
 
-ESTROFA_FIJA = {'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4}   # estrofas de seis versos (el libro y el corpus no las separan)
+LINEA_MANO = {'Corda replet, linguas ditat,': 'corda replet, linguas ditat,'}   # correcciones puntuales
+
+ESTROFA_FIJA = {'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5]}   # (secuencia: estrofas desiguales)   # estrofas de seis versos (el libro y el corpus no las separan)
 
 HORAS = {'visperas1': 'I Vísperas', 'visperas': 'Vísperas', 'completas': 'Completas', 'oficio': 'Oficio de lectura',
          'laudes': 'Laudes', 'tercia': 'Tercia', 'sexta': 'Sexta', 'nona': 'Nona'}
@@ -296,7 +298,8 @@ def main():
                 n = len(cuerpo) // ne if ne and len(cuerpo) % ne == 0 else (max(set(largos), key=largos.count) if largos else 4)
                 largos = [n] * (len(cuerpo) // n) + ([len(cuerpo) % n] if len(cuerpo) % n else [])
             if clave in ESTROFA_FIJA:
-                largos = [ESTROFA_FIJA[clave]] * (len(cuerpo) // ESTROFA_FIJA[clave])
+                f = ESTROFA_FIJA[clave]
+                largos = f if isinstance(f, list) else [f] * (len(cuerpo) // f)
             est, i = [], 0
             for n in largos:
                 est.append(cuerpo[i:i + n]); i += n
@@ -342,6 +345,7 @@ def main():
                 dif = [x for x in dif if x['tipo'] not in ('texto distinto', 'variante del libro') or not set(x['corpus']) & set(ultima_corpus)] + [{'tipo': 'doxología del libro', 'libro': est[-1], 'corpus': ultima_corpus}]
             est = [[re.sub(r"[A-Za-zÀ-ÿǼǽæœÆŒ]+", lambda m: ACENTO_MANO.get(m.group(0), m.group(0)), l) for l in e] for e in est]
             est = [[re.sub(r'"([^"]*)"', r'«\1»', l) for l in e] for e in est]   # comillas latinas
+            est = [[LINEA_MANO.get(l, l) for l in e] for e in est]
             # mayúscula solo al comienzo del himno, de una oración o de un nombre (el libro de este himno la pone en cada verso)
             plano = [l for e in est for l in e]
             if sum(1 for l in plano[1:] if l[:1].isupper()) > 0.8 * (len(plano) - 1):
