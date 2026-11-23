@@ -175,7 +175,7 @@ ACENTO_MANO = {'Abrahæ': 'Ábrahæ', 'Angeli': 'Ángeli', 'Angelus': 'Ángelus'
                'prænites': 'prǽnites', 'turbines': 'túrbines', 'Vocabit': 'Vocábit', 'vocabit': 'vocábit',
                'Volvamur': 'Volvámur', 'volvamur': 'volvámur', 'noxios': 'nóxios'}
 
-ESTROFA_FIJA = {'angularis-fundamentum': 6}   # estrofas de seis versos (el libro y el corpus no las separan)
+ESTROFA_FIJA = {'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4}   # estrofas de seis versos (el libro y el corpus no las separan)
 
 HORAS = {'visperas1': 'I Vísperas', 'visperas': 'Vísperas', 'completas': 'Completas', 'oficio': 'Oficio de lectura',
          'laudes': 'Laudes', 'tercia': 'Tercia', 'sexta': 'Sexta', 'nona': 'Nona'}
