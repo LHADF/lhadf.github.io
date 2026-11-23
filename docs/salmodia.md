@@ -27,7 +27,7 @@ El mismo modo para todos los salmos y cánticos de la hora y para el cántico ev
 - Sin sinalefa ni elisiones: cada sílaba lleva su nota.
 - qu y gu (con u muda) son una consonante: POR-que, ex-qui-SI-tos. ch, ll y rr, también.
 - «Aleluia»: a-le-LU-ia (la i entre vocales es consonante). «Sión»: Si-ÓN, aguda de dos sílabas; «guió»: gui-Ó (lista `EXCEPCIONES`: «dió», grafía antigua, sigue siendo una sílaba).
-- Monosílabos átonos: los de `ATONOS` (artículos, preposiciones, conjunciones, pronombres átonos, posesivos antepuestos). Las palabras de dos o más sílabas llevan siempre su acento («pa-» de «para» es fuerte).
+- Monosílabos átonos: los de `ATONOS`, según lo que la gramática considera más débil (CRU, 22/11/2026): artículos, preposiciones, conjunciones, relativos, pronombres átonos, posesivos antepuestos, «san», «don», «fray», «sor», «tan», los auxiliares «he», «has», «ha», «han» («que has **de** seguir»), las formas copulativas «es», «soy», «son» y la interjección «oh». Los demás verbos, los adverbios («no», «ya», «más»), los sustantivos, los adjetivos («gran») y los pronombres tónicos son fuertes. Las palabras de dos o más sílabas llevan siempre su acento («pa-» de «para» es fuerte).
 
 ## Acento (reglas de CRU)
 
@@ -39,9 +39,16 @@ Tipos de sílaba: **F** (fuerte: la acentuada de su palabra), **D** (débil: inm
 4. Evitar en lo posible acentuar la última.
 5. Período de 2 a 3 sílabas por acento.
 
-Finales: …fd, acento normal («con ira»); …fdf, esdrújula («tendrás razón»); …ndf, esdrújula suave («sinceridad»); …ddf: en la mediante, si la antepenúltima o la penúltima es de una palabra átona (neutra: ni acentuada ni claramente débil, como «de», «el», «a»), se acentúa esa («ansia **de** ti», «yo, **el** Señor», «miedo **a** Dios»); si las dos son claramente débiles (de la misma palabra que un acento), aguda suave («para juz**gar**») (CRU, 20/11/2026). En la cadencia y la flexa, nunca la aguda (ver abajo). Dos fuertes seguidas: la segunda manda y la primera es débil (CRU): «¡oh Dios!» tiene fuerte «Dios» y débil «oh»; «mar, ¡oh Dios!» queda F D F. Monosílabo fuerte al final: igual que cualquier aguda.
+Finales (posiciones desde el final: −1 la última): −2 F o N → −2 (…fd, «con ira»); −2 D y −3 F o N → −3 (…fdf, «tendrás razón»; …ndf, «sinceridad»); nunca antes de −3.
 
-**Nunca en la última sílaba: en la cadencia (CRU, 18/11/2026) y en la flexa (19/11/2026).** Donde caería en una aguda (…ddf), se acentúa la antepenúltima («a quién **te**meré», «bendecid **al** Señor»), salvo que sea la sílaba que sigue al acento de su propia palabra: entonces la penúltima («sedienta **de** ti», «se exalta **por** Dios»). Así la cadencia termina siempre en la nota final del modo. En los modos de dos acentos (1, 3, 6, 7), con la neutra de la mediante el primer acento va en su lugar de siempre: «[**an**]sia [**de**] ti». En el Gloria, «Amén» se canta como llana: «de los *si*glos. **A**mén».
+**…ddf en la mediante (CRU, 22/11/2026):**
+- Si un pronombre tónico (yo, tú, él, mí, ti, sí) en −1 o −4, tomado como neutro, deja una neutra en −3 o −2, se acentúa esa: «¿No fui yo, **el** Señor?», «ansia **de** ti», «confío **en** ti».
+- Si no: en los modos de un acento en la mediante (2, 4, 5, 8, 6 alt.), la aguda («para juz**gar**», «bendecid al Se**ñor**», «miedo a **Dios**»); en los de dos acentos (1, 3, 6, 7), −2, aunque sea débil («**pa**ra **juz**gar», «servid al Se**ñor** con **te**mor»).
+- Mitad de dos sílabas con la última fuerte: en los modos de un acento la aguda («Se**ñor**»); en los de dos, la primera, sin segundo acento.
+
+**Dos fuertes seguidas** (CRU, 22/11/2026): las dos quedan fuertes y se prefiere la acentuación grave, en la mediante, la cadencia y la flexa: «Se**ñor** Dios». (Antes la segunda mandaba y la primera era débil.) En latín sigue mandando la segunda, como en Chant Tools.
+
+**Nunca en la última sílaba: en la cadencia (CRU, 18/11/2026) y en la flexa (19/11/2026).** Donde caería en una aguda (…ddf), se acentúa la antepenúltima («a quién **te**meré», «bendecid **al** Señor»), salvo que sea la sílaba que sigue al acento de su propia palabra: entonces la penúltima («sedienta **de** ti», «se exalta **por** Dios»). Así la cadencia termina siempre en la nota final del modo. En el Gloria, «Amén» se canta como llana: «de los *si*glos. **A**mén».
 
 - **Agudas:** en la mediante (español y latín), cuando la aguda lleva el acento, no se juntan en una sílaba notas que irían en sílabas distintas: la última lleva la nota del acento y se omiten las que seguían (forma B del Liber). En la cadencia y la flexa en español la última nunca lleva el acento (ver arriba). En la flexa latina, si el acento cae en la última, esa sílaba baja.
 - **Modos de dos acentos** (1, 3, 6 y 7 en la mediante; 5 y 7 en la terminación): período de 2 sílabas, 3 como máximo, como en el gregoriano latino y en Chant Tools (jgabc). El primer acento va en una fuerte a 2 sílabas, si no a 3; si el intervalo entre acentos es mayor, como último recurso en una neutra a 2 o a 3; si tampoco hay, a 2 aunque sea débil (acento ficticio, como hace Chant Tools: «in progénies **et** pro**gé**nies»).

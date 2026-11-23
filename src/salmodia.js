@@ -161,7 +161,7 @@ const VOC_ES='aeiouáéíóúü';
 const INSEP=/^(bl|br|cl|cr|dr|fl|fr|gl|gr|kl|kr|pl|pr|tr|tl)$/;
 // Monosílabos átonos (artículos, preposiciones, conjunciones, pronombres átonos, posesivos antepuestos).
 // Las palabras de dos o más sílabas llevan siempre su acento («pa-» de «para» es fuerte).
-const ATONOS=new Set(['el','la','lo','los','las','le','les','un','de','del','a','al','en','con','por','sin','so','tras','y','e','o','u','ni','que','si','me','te','se','nos','os','mi','mis','tu','tus','su','sus','cual','quien','cuan','pues','mas','aun','san']);
+const ATONOS=new Set(['oh','es','soy','son','he','has','ha','han','don','fray','sor','tan','el','la','lo','los','las','le','les','un','de','del','a','al','en','con','por','sin','so','tras','y','e','o','u','ni','que','si','me','te','se','nos','os','mi','mis','tu','tus','su','sus','cual','quien','cuan','pues','mas','aun','san']);
 // Palabras que se dividen distinto de lo que da la regla. «Sión» es aguda de dos sílabas (Si-ón), y «guió», gui-ó;
 // en cambio «dió» (grafía antigua) es una sola sílaba, así que no hay una regla general para la tilde en el diptongo.
 const EXCEPCIONES={'sión':{cortes:[2],acc:1}, 'sion':{cortes:[2],acc:1}, 'guió':{cortes:[3],acc:1}, 'guio':{cortes:[3],acc:1}};
@@ -249,35 +249,45 @@ function plano(pals){
 // la de una palabra átona («ma-» de «majestad», «de» en «estrado de tus pies»). Las neutras se acentúan como último recurso.
 // (CONFIG.atonasDebiles=true: las palabras átonas cuentan siempre como débiles; lectura descartada por CRU, para comparar)
 const CONFIG={atonasDebiles:false};
-// Dos fuertes seguidas: la segunda manda y la primera es débil («¡oh Dios!»: fuerte «Dios», débil «oh») (CRU).
-function clasificar(s){
-  const f=new Array(s.length).fill(false);   // de derecha a izquierda: «mar, ¡oh Dios!» → mar fuerte, oh débil, Dios fuerte
-  for(let i=s.length-1;i>=0;i--) f[i]= !!s[i].f && !f[i+1];
+// Dos fuertes seguidas: en español quedan las dos fuertes y se prefiere la acentuación grave («Señor Dios» → «ñor»),
+// en la mediante, la cadencia y la flexa (CRU, 22/11/2026; antes la segunda mandaba y la primera era débil).
+// En latín sigue mandando la segunda, como en Chant Tools.
+function clasificar(s, lang){
+  const f=new Array(s.length).fill(false);
+  if(lang==='es') s.forEach((x,i)=>{ f[i]=!!x.f; });
+  else for(let i=s.length-1;i>=0;i--) f[i]= !!s[i].f && !f[i+1];
   return s.map((x,i)=> f[i] ? 'F' : ((CONFIG.atonasDebiles && x.atona) || f[i-1] || f[i+1]) ? 'D' : 'N');
 }
-// Último acento de la mitad, mirando desde el final. En la cadencia (terminación) nunca va en la última sílaba
-// (CRU): «a quién temeré» se acentúa en «te»; se prefiere una neutra. En la mediante y la flexa sí, si hace falta.
-function acentoFinal(t, cadencia, s, neutras){
+// Pronombres tónicos que según el contexto pueden contar como neutros (CRU, 22/11/2026)
+const AMBIGUOS=new Set(['yo','tú','él','mí','ti','sí']);
+// Último acento de la mitad, mirando desde el final (CRU):
+//  −2 F o N → −2; −2 D y −3 F o N → −3; nunca antes de −3.
+//  Caso ddf (aguda con dos débiles antes):
+//   · cadencia y flexa: nunca la última; la antepenúltima («a quién temeré», «bendecid al Señor»), o la penúltima si la
+//     antepenúltima sigue al acento de su propia palabra («sedienta de ti», «se exalta por Dios»);
+//   · mediante en español (22/11/2026): si un pronombre tónico en −1 o −4, tomado como neutro, deja una neutra en −3 o −2,
+//     el acento va ahí («¿No fui yo, el Señor?», «ansia de ti»); si no, en los modos de un acento la aguda
+//     («para juzgar», «bendecid al Señor»), y en los de dos acentos −2, aunque sea débil («servid al Señor con temor»).
+function acentoFinal(t, cadencia, s, es, dos){
   const n=t.length; if(n===0) return {p:-1,regla:''}; if(n===1) return {p:0,regla:'f'};
   if(t[n-1]==='F'){
     if(t[n-2]==='F') return {p:n-2, regla:'ff'};
-    if(n<3) return cadencia? {p:n-2, regla:'df·'} : {p:n-1, regla:'df'};
+    if(n<3) return (cadencia||dos)? {p:n-2, regla:'df·'} : {p:n-1, regla:'df'};
     if(t[n-3]==='F') return {p:n-3, regla:'fdf'};   // esdrújula: «tendrás razón»
     if(t[n-3]==='N') return {p:n-3, regla:'ndf'};   // esdrújula suave: «sinceridad»
     if(cadencia){
-      // cadencia: en la antepenúltima («a quién temeré», «bendecid al Señor»), salvo que sea la sílaba que sigue al acento
-      // de su propia palabra: entonces en la penúltima («sedienta de ti», «se exalta por Dios») (CRU)
       const postonica = s && s[n-4] && s[n-4].f && s[n-4].iw===s[n-3].iw;
       return postonica ? {p:n-2, regla:'ddf··'} : {p:n-3, regla:'ddf·'};
     }
-    // mediante en español: si la antepenúltima o la penúltima es de una palabra átona (ni acentuada ni claramente débil,
-    // como «de», «el», «a»), se acentúa esa y no la aguda final: «ansia de ti», «yo, el Señor», «miedo a Dios» (CRU, 20/11/2026)
-    if(neutras && s){
-      const neutra=i=>i>=0 && !s.some((x,j)=>x.iw===s[i].iw && t[j]==='F');
-      if(neutra(n-3)) return {p:n-3, regla:'ddf n'};
-      if(neutra(n-2)) return {p:n-2, regla:'ddf n'};
+    if(es && s){
+      for(const k of [n-1, n-4]){
+        if(k<0 || !s[k].mono || !AMBIGUOS.has(s[k].t.toLowerCase().replace(/[^a-záéíóúüñ]/g,''))) continue;
+        const t2=clasificar(s.map((x,i)=> i===k ? {...x, f:false} : x), 'es');
+        if(t2[n-3]==='N') return {p:n-3, regla:'ddf n'};
+        if(t2[n-2]==='N') return {p:n-2, regla:'ddf n'};
+      }
     }
-    return {p:n-1, regla:'ddf'};                    // aguda suave, si las dos de antes son débiles: «para juzgar»
+    return dos ? {p:n-2, regla:'ddf··'} : {p:n-1, regla:'ddf'};   // dos acentos: −2; uno: aguda suave
   }
   if(t[n-2]==='F') return {p:n-2, regla:'fd'};      // normal: «con ira»
   if(n>=3 && t[n-3]==='F') return {p:n-3, regla:'f··'};   // esdrújula: «cánticos»
@@ -301,9 +311,9 @@ const nota0=x=>String(x).replace(/[^a-mA-M]/g,'').slice(-1).toLowerCase();
 // rol: 'int' (entonación), 'ten' (cuerda), 'prep' (preparatoria), 'acc' (acento), 'post' (después del acento), 'fin'
 function puntear(s, E, intonar, flexa, cadencia, lang){
   const n=s.length, res=new Array(n).fill(null); if(!n) return {res, regla:''};
-  const t=clasificar(s);
-  // nunca la aguda final (ddf) en la cadencia ni en la flexa (CRU, 19/11/2026); en la mediante, solo si hay una neutra antes (20/11/2026)
-  const ult=acentoFinal(t, cadencia||flexa, s, lang==='es');
+  const t=clasificar(s, lang);
+  // nunca la aguda final (ddf) en la cadencia ni en la flexa (CRU, 19/11/2026); la mediante, según los acentos del modo (22/11/2026)
+  const ult=acentoFinal(t, cadencia||flexa, s, lang==='es', lang==='es' && !cadencia && !flexa && E.acc.length>1);
   const pos=new Array(E.acc.length).fill(-1);
   pos[E.acc.length-1]=ult.p;
   for(let k=E.acc.length-2;k>=0;k--) pos[k]= pos[k+1]>=0 ? acentoPrevio(t,pos[k+1]) : -1;

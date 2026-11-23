@@ -47,7 +47,7 @@ test('silabeo español: qu y gu, Aleluia, Sión, hiatos y diptongos', () => {
 });
 
 test('sílabas fuertes, débiles y neutras', () => {
-  const tipos = t => S.clasificar(S.plano(S.palabras(t, 'es'))).join('');
+  const tipos = t => S.clasificar(S.plano(S.palabras(t, 'es')), 'es').join('');
   assert.equal(tipos('majestad'), 'NDF');
   assert.equal(tipos('Señor'), 'DF');
   assert.equal(tipos('sinceridad'), 'NNDF');
@@ -60,24 +60,29 @@ test('reglas de CRU para el acento del metro (modos de un acento)', () => {
   assert.equal(acentoMetro('En la sentencia tendrás razón'), 'drás');                  // fdf: esdrújula
   assert.equal(acentoMetro('En su boca no hay sinceridad'), 'ce');                     // ndf: esdrújula suave
   assert.equal(acentoMetro('en el trono que ha colocado para juzgar'), 'gar');         // ddf con dos débiles: aguda suave
-  assert.equal(acentoMetro('no tengo miedo a Dios'), 'a');                             // monosílabo fuerte final: la neutra de antes («ansia [de] ti»)
+  assert.equal(acentoMetro('no tengo miedo a Dios'), 'Dios');                          // ddf: sustantivo, siempre fuerte: aguda (CRU, 22/11/2026)
   assert.equal(acentoMetro('a cantar sus cánticos'), 'cán');                           // esdrújula
   for (const cod of ['2D', '4g', '5a', '8G']) assert.equal(acentoMetro('En su boca no hay sinceridad', cod), 'ce');
 });
 
-test('dos fuertes seguidas: la segunda manda y la primera es débil («¡oh Dios!»)', () => {
-  const tipos = t => S.clasificar(S.plano(S.palabras(t, 'es'))).join('');
-  assert.equal(tipos('¡oh Dios!'), 'DF');
-  assert.equal(tipos('mar, ¡oh Dios!'), 'FDF');
-  assert.equal(pautar('Te vio el mar, ¡oh Dios! * te vieron las aguas.', '8G').split(' | ')[0], 'Te vio el [mar], ¡oh Dios!');
+test('dos fuertes seguidas: las dos fuertes, acentuación grave (CRU, 22/11/2026)', () => {
+  const tipos = t => S.clasificar(S.plano(S.palabras(t, 'es')), 'es').join('');
+  assert.equal(tipos('Señor Dios'), 'DFF');
+  assert.equal(pautar('Señor Dios, * te alabamos.', '8G').split(' | ')[0], 'Se[ñor] Dios,');
+  assert.equal(pautar('Te alabamos, * Señor Dios.', '8G').split(' | ')[1], '_Se_[ñor] Dios.');   // también en la cadencia
+  assert.deepEqual(S.clasificar(S.plano(S.palabras('mar, oh Deus', 'la')), 'la'), ['F', 'D', 'F', 'D']);   // en latín manda la segunda
 });
 
-test('agudas en la mediante: con dos débiles antes, aguda sin juntar notas; con una neutra, la neutra (CRU, 20/11/2026)', () => {
+test('agudas en la mediante (CRU, 22/11/2026): un acento, la aguda sin juntar notas; dos acentos, −2; pronombre tónico como neutro', () => {
   const ac = (v, cod) => { const h = S.pautarVerso(v, cod, 'es', false).med; return h.sils.filter((x, i) => h.res[i].rol === 'acc').map(x => x.t).join(' '); };
   for (const cod of ['1g', '2D', '3a', '4g', '5a', '6F', '7a', '8G']) {
     const T = S.tono(cod), um = S.pautarVerso('para juzgar * y nada más.', cod, 'es', false).med.res.at(-1);
-    assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // la última lleva la nota del acento, sola
+    if (T.med.acc.length > 1) { assert.equal(ac('para juzgar * y nada más.', cod), 'pa juz', cod); continue; }   // dos acentos: −2
+    assert.equal(um.rol, 'acc'); assert.equal(um.nota, T.med.acc.at(-1).n, cod);   // un acento: la última, con la nota del acento, sola
   }
+  assert.equal(ac('servid al Señor con temor, * y nada más.', '8G'), 'mor');
+  assert.equal(ac('servid al Señor con temor, * y nada más.', '3a'), 'ñor te');
+  assert.equal(ac('confío en ti, * y nada más.', '8G'), 'en');                 // pronombre tónico tomado como neutro
   assert.equal(ac('el camino que has de seguir, * y nada más.', '8G'), 'de');
   assert.equal(ac('Mi alma tiene ansia de ti, * mi carne tiene sed.', '3a'), 'an de');      // dos acentos: «[an]sia [de] ti»
   assert.equal(ac('Mi alma tiene ansia de ti, * mi carne tiene sed.', '8G'), 'de');
@@ -211,7 +216,7 @@ test('todos los salmos y cánticos de Laudes y Vísperas, en los ocho modos', ()
     for (const cod of MODOS) vs.forEach((v, i) => {
       const pv = S.pautarVerso(v, cod, 'es', i === 0); n++;
       for (const h of [pv.flex, pv.med, pv.ter].filter(Boolean)) {
-        const k = h.res.length, t = S.clasificar(h.sils);
+        const k = h.res.length, t = S.clasificar(h.sils, 'es');
         if (h.res.some(r => !r || !r.nota)) mal.push(`${id} ${cod}: sílaba sin nota: ${v}`);
         const acc = h.res.map((r, i) => r.rol === 'acc' ? i : -1).filter(i => i >= 0);
         if (k >= 3 && h.regla !== 'corta' && (!acc.length || acc.at(-1) < k - 3)) mal.push(`${id} ${cod}: acento fuera de las tres últimas: ${v}`);
@@ -232,7 +237,7 @@ test('versos reales, pautados', () => {
   assert.equal(pautar("¡Oh Dios!, tú eres mi Dios, por ti madrugo, * mi alma está sedienta de ti;", '1g'),
     '¡Oh Dios!, tú eres mi Dios, por [ti] ma[dru]go, | mi alma está se_dien__ta_ [de] ti;');
   // Salmo 35 (miércoles I, Laudes): modo 2
-  assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo [a] Dios, | ni en su _pre_[sen]cia.»');
+  assert.equal(pautar('«No tengo miedo a Dios, * ni en su presencia.»', '2D'), '«No tengo miedo a [Dios], | ni en su _pre_[sen]cia.»');
   assert.equal(pautar('acostado medita el crimen, † se obstina en el mal camino, * no rechaza la maldad.', '2D'),
     'acostado medita el [cri]men, | se obstina en el mal ca[mi]no, | no recha_za_ [la] maldad.');
   // Salmo 109 (domingos, Vísperas): modo 3 a
