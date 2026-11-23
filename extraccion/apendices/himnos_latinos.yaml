@@ -563,7 +563,7 @@ uso:
   seccion: Oficio de difuntos
   hora: tercia
   himno: qui-lacrimatus-lazarum
-  nota: 'Hora intermedia: el libro da estrofas para repartir entre Tercia, Sexta y Nona.'
+  nota: 'Si se rezan las tres Horas: Tercia, estrofas 1, 4 y 5; Sexta, 2, 4 y 5; Nona, 3, 4 y 5 (rúbrica del libro).'
 himnos:
   conditor-alme-siderum:
     incipit: Cónditor alme síderum,
@@ -3319,6 +3319,18 @@ himnos:
       - rex, Christe, bone caelitus.
       corpus:
       - rex, Christe, bone cǽlitum.
+    variantes:
+      mujeres:
+        1:
+        - Hæ sunt quos rétinens mundus inhórruit,
+        - ipsum nam stérili flore peráridum
+        - sprevére pénitus teque secútæ sunt,
+        - rex, Christe, bone cǽlitum.
+        2:
+        - Hæ pro te fúrias sǽvaque sústinent;
+        - non murmur résonat, non querimónia,
+        - sed corde tácito mens bene cónscia
+        - consérvat patiéntiam.
   rex-gloriose-martyrum:
     incipit: Rex glorióse mártyrum,
     estrofas:
@@ -3425,6 +3437,18 @@ himnos:
       - quod cordis arca crédidit,
       - Christum sequéndo répperit
       - effusióne sánguinis.
+    variantes:
+      mujer:
+        1:
+        - Hæc testis ore prótulit
+        - quod cordis arca crédidit,
+        - Christum sequéndo répperit
+        - effusióne sánguinis.
+        2:
+        - Hæc nempe mundi gáudia
+        - et blandiménta nóxia
+        - cadúca rite députans,
+        - pervénit ad cæléstia.
   beate-martyr-prospera:
     incipit: Beáte martyr, próspera
     estrofas:
@@ -3458,6 +3482,13 @@ himnos:
     libro:
     - tomo 1, p. 1098
     diferencias: []
+    variantes:
+      mujer:
+        0:
+        - Beáta martyr, próspera
+        - diem triumphálem tuum,
+        - quo sánguinis merces tibi
+        - coróna vincénti datur.
   martyr-dei-qui-unicum:
     incipit: Martyr Dei, qui únicum
     estrofas:
@@ -3483,6 +3514,13 @@ himnos:
     libro:
     - tomo 1, p. 1100
     diferencias: []
+    variantes:
+      mujer:
+        0:
+        - Martyr Dei, quæ únicum
+        - Patris sequéndo Fílium
+        - victis triúmphas hóstibus,
+        - victrix fruens cæléstibus,
   virginis-proles-opifexque-matris:
     incipit: Vírginis Proles opiféxque Matris,
     estrofas:
@@ -3582,7 +3620,7 @@ himnos:
       - virtútis, hymnum súscipe,
       - qui iure dum te prǽdicat,
       - Dei canit magnália.
-      - Qui sempitérnus Póntifex
+    - - Qui sempitérnus Póntifex
       - stirpem Deo mortálium
       - revínxit, atque réddidit
       - paci novo nos fœ́dere,
@@ -3590,7 +3628,7 @@ himnos:
       - sui minístrum múneris,
       - Patri datúrum glóriam
       - eiúsque vitam plébibus.
-      - Virtúte factus dítior
+    - - Virtúte factus dítior
       - te consecrántis Spíritus,
       - præsul, salútis pínguia
       - tu tradidísti pábula.
@@ -3598,7 +3636,7 @@ himnos:
       - sanctæ meménto Ecclésiæ,
       - oves ut omnes páscua
       - Christi petant felícia.
-      - Sit Trinitáti glória,
+    - - Sit Trinitáti glória,
       - quæ sancti honóris múnia
       - tibi minístro sédulo
       - dignis corónat gáudiis.
@@ -3623,6 +3661,19 @@ himnos:
       - quæ sancti honóris múnia
       - tibi minístro sédulo
       - dignis corónat gáudiis.
+    variantes:
+      presbitero:
+        3:
+        - Regális huius cúlminis
+        - adéptus altitúdinem,
+        - verbo fuísti et móribus
+        - doctor, sacérdos, hóstia.
+      papa:
+        3:
+        - Tu Petri ovíle cǽlitus
+        - sumptis regébas clávibus,
+        - gregémque verbo grátiæ,
+        - puris fovébas áctibus.
   sacrata-nobis-gaudia:
     incipit: Sacráta nobis gáudia
     estrofas:
@@ -3659,19 +3710,19 @@ himnos:
       - géstiens huius celebráre festum,
       - débitas sacro pia turba psallit
       - cármine laudes,
-      - Hunc tibi eléctum fáciens minístrum
+    - - Hunc tibi eléctum fáciens minístrum
       - ac sacerdótem sócians, dedísti
       - dux ut astáret pópulo fidélis
       - ac bonus altor.
-      - Hic gregis ductor fuit atque forma,
+    - - Hic gregis ductor fuit atque forma,
       - lux erat cæco, mísero levámen,
       - próvidus cunctis pater omnibúsque
       - ómnia factus.
-      - Christe, qui sanctis méritam corónam
+    - - Christe, qui sanctis méritam corónam
       - reddis in cælis, dócili magístrum
       - fac sequi vita, similíque tandem
       - fine potíri.
-      - Æqua laus summum célebret Paréntem
+    - - Æqua laus summum célebret Paréntem
       - teque, Salvátor, pie rex, per ævum;
       - Spíritus Sancti résonet per omnem
       - glória mundum.
@@ -3700,6 +3751,19 @@ himnos:
       - teque, Salvátor, pie rex, per ævum;
       - Spíritus Sancti résonet per omnem
       - glória mundum.
+    variantes:
+      obispo:
+        1:
+        - Strénuum bello púgilem supérni
+        - chrísmatis pleno tuus unxit intus
+        - Spíritus dono, posuítque sanctam
+        - páscere gentem.
+      papa:
+        1:
+        - Quas oves Petro déderas, ovíle
+        - orbis ut totus fíeret sacrátum,
+        - hic tuo nutu pósitus suprémo
+        - cúlmine rexit.
   dum-sacerdotum-celebrant-fideles:
     incipit: Dum sacerdótum célebrant fidéles
     estrofas:
@@ -3736,15 +3800,15 @@ himnos:
       - cuius insígnem cólimus triúmphum,
       - iste conféssor sine fine lætus
       - regnat in astris.
-      - Qui sacerdótis, ducis ac magístri
+    - - Qui sacerdótis, ducis ac magístri
       - munus insúmpsit pópulis sacrátum,
       - præsul et vitæ sápiens parávit
       - dona beátæ.
-      - Nunc eum nisu rogitémus omnes,
+    - - Nunc eum nisu rogitémus omnes,
       - ábluat nostrum pius ut reátum,
       - et sua ducat prece nos ad alta
       - cúlmina cæli.
-      - Sit Deo soli decus et potéstas,
+    - - Sit Deo soli decus et potéstas,
       - laus in excélsis, honor ac perénnis,
       - qui suis totum móderans gubérnat
       - légibus orbem.
@@ -3769,6 +3833,19 @@ himnos:
       - laus in excélsis, honor ac perénnis,
       - qui suis totum móderans gubérnat
       - légibus orbem.
+    variantes:
+      presbitero:
+        1:
+        - Ipse dux clarus fuit et magíster,
+        - éxhibens sacræ documénta vitæ
+        - ac Deo semper sátagens placére
+        - péctore mundo.
+      papa:
+        1:
+        - Qui Petri summa cáthedra resídens,
+        - præsul imménsi gregis et magíster,
+        - regna per claves Dómini poténter
+        - cǽlica pandit.
   hi-sacerdotes-domini-sacrati:
     incipit: Hi sacerdótes Dómini sacráti,
     estrofas:
@@ -4319,6 +4396,23 @@ himnos:
       - in terris sibi deditus [dedita],
       corpus:
       - in terris tibi déditus,
+    variantes:
+      mujer:
+        0:
+        - Læti coléntes fámulam
+        - quæ te perfécte cóluit,
+        - tibi gratánter, Dómine,
+        - amóris hymnum prómimus.
+        2:
+        - Tibi se vovit súbditam
+        - humilitáte obœ́diens,
+        - Christi, carnis mundítie,
+        - sponsi æmulátrix vírginum.
+        4:
+        - His caritátis vínculis
+        - in terris sibi dédita,
+        - líbera ad astra iúgiter
+        - triumphatúra pródiit.
   o-redemptoris-pietas-colenda:
     incipit: O redemptóris píetas colénda,
     estrofas:
@@ -4357,11 +4451,11 @@ himnos:
       - vitǽque fons es únicus,
       - nos, Deus, morti obnóxios
       - culpǽque reos áspice.
-      - Peccánti, Pater, hómini
+    - - Peccánti, Pater, hómini
       - pœnam sanxísti intéritum,
-    - - ut, pulvis datus púlveri,
+      - ut, pulvis datus púlveri,
       - se súbderet piáculum.
-      - Vitále sed spiráculum
+    - - Vitále sed spiráculum
       - quod indidísti próvidus,
       - æternitátis pérmanet
       - germen immarcescíbile.
@@ -4369,11 +4463,11 @@ himnos:
       - revirescémus, Dómine,
       - primúsque resurgéntium
       - ad te nos Christus rápiet.
-      - Hoc vitæ regno pérfrui
+    - - Hoc vitæ regno pérfrui
       - defúnctum præsta fámulum,
-    - - quem Christi fides ímbuit,
+      - quem Christi fides ímbuit,
       - quem almus unxit Spíritus.
-      - Hoc regnum nobis própera
+    - - Hoc regnum nobis própera
       - e terris cum cessérimus,
       - ut concinámus ómnium
       - te finem, te princípium.
@@ -4397,6 +4491,19 @@ himnos:
       - e terris cum cessérimus,
       - ut concinámus ómnium
       - te finem, te princípium.
+    variantes:
+      una:
+        4:
+        - Hoc vitæ regno pérfrui
+        - defúnctam præsta fámulam,
+        - quam Christi fides ímbuit,
+        - quam almus unxit Spíritus.
+      varios:
+        4:
+        - Hoc vitæ regno pérfrui
+        - da fratres in te mórtuos,
+        - quos Christi fides ímbuit,
+        - quos almus unxit Spíritus.
   spes-christe-nostrae-veniae:
     incipit: Spes, Christe, nostræ véniæ,
     estrofas:
@@ -4445,6 +4552,19 @@ himnos:
       - nunc dormit pacis réquie,
       - iam te beánte vígilet
       - tibíque laudes réferat.
+    variantes:
+      una:
+        5:
+        - Sed et quæ soror córpore
+        - nunc dormit pacis réquie,
+        - iam te beánte vígilet
+        - tibíque laudes réferat.
+      varios:
+        5:
+        - Sed et qui fratres córpore
+        - nunc somno pacis dórmiunt,
+        - iam te beánte vígilent
+        - tibíque laudes réferant.
   immensae-rex-potentiae:
     incipit: Imménsæ rex poténtiæ,
     estrofas:
@@ -4488,6 +4608,19 @@ himnos:
       - qui nunc exútus córpore
       - in regna Patris ínhiat,
       - ut te colláudet pérpetim.
+    variantes:
+      una:
+        5:
+        - Tuámque voca fámulam,
+        - quæ nunc exúta córpore
+        - in regna Patris ínhiat,
+        - ut te colláudet pérpetim.
+      varios:
+        5:
+        - Fratres et omnes ádvoca,
+        - qui nunc exúti córpore
+        - in regna Patris ínhiant,
+        - ut te colláudent pérpetim.
   qui-lacrimatus-lazarum:
     incipit: Qui lacrimátus Lázarum
     estrofas:
@@ -4516,3 +4649,16 @@ himnos:
     coincidencia_libro: 1.0
     libro: []
     diferencias: []
+    variantes:
+      una:
+        4:
+        - Tuámque voca fámulam,
+        - ex hoc proféctam sǽculo,
+        - ut ubi mors iam déerit
+        - te vitæ canat príncipem.
+      varios:
+        4:
+        - Tuósque voca fámulos,
+        - ex hoc proféctos sǽculo,
+        - ut ubi mors iam déerit
+        - te vitæ canant príncipem.

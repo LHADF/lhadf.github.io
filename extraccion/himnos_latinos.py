@@ -157,7 +157,7 @@ USO = [
     ('Comunes', 'Oficio de difuntos', 'oficio', 'Qui vivis ante saecula', 'La estrofa 4 cambia: por un difunto, por una difunta, por varios.'),
     ('Comunes', 'Oficio de difuntos', 'laudes', 'Spes Christe nostrae veniae', 'La estrofa 4 cambia: por un difunto («Sed et qui frater»), por una difunta («Sed et quae soror»), por varios («Sed et qui fratres»).'),
     ('Comunes', 'Oficio de difuntos', 'visperas', 'Immensae rex potentiae', 'La estrofa 4 cambia: «Tuumque voca famulum», «Tuamque voca famulam», «Fratres et omnes advoca».'),
-    ('Comunes', 'Oficio de difuntos', 'tercia', 'Qui lacrimatus Lazarum', 'Hora intermedia: el libro da estrofas para repartir entre Tercia, Sexta y Nona.'),
+    ('Comunes', 'Oficio de difuntos', 'tercia', 'Qui lacrimatus Lazarum', 'Si se rezan las tres Horas: Tercia, estrofas 1, 4 y 5; Sexta, 2, 4 y 5; Nona, 3, 4 y 5 (rúbrica del libro).'),
 ]
 
 # Donde el libro trae otra doxología que *Te decet hymnus*, va la del libro (con tildes puestas a mano) y se anota.
@@ -177,7 +177,33 @@ ACENTO_MANO = {'Abrahæ': 'Ábrahæ', 'Angeli': 'Ángeli', 'Angelus': 'Ángelus'
 
 LINEA_MANO = {'Corda replet, linguas ditat,': 'corda replet, linguas ditat,'}   # correcciones puntuales
 
-ESTROFA_FIJA = {'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5]}   # (secuencia: estrofas desiguales)   # estrofas de seis versos (el libro y el corpus no las separan)
+ESTROFA_FIJA = {'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5],
+                'vir-celse-forma-fulgida': 4, 'christe-pastorum-caput-atque-princeps': 4, 'inclitus-rector-pater-atque-prudens': 4,
+                'qui-vivis-ante-saecula': 4}   # (secuencia: estrofas desiguales)   # estrofas de seis versos (el libro y el corpus no las separan)
+
+# Estrofas que cambian según el caso (la app elige): de otro archivo del corpus (se toman las estrofas que difieren)
+# o a mano, del libro (índice de estrofa → versos). El texto principal es el primero que se nombra en la nota del uso.
+VARIANTES = {
+    'vir-celse-forma-fulgida': {'presbitero': 'Vir celse forma 1', 'papa': 'Vir celse forma 2'},                 # principal: obispo
+    'christe-pastorum-caput-atque-princeps': {'obispo': 'Christe pastorum caput 1', 'papa': 'Christe pastorum caput 2'},   # principal: presbítero
+    'inclitus-rector-pater-atque-prudens': {'presbitero': 'Inclitus rector pater 1', 'papa': 'Inclitus rector pater 2'},   # principal: obispo
+    'deus-tuorum-militum': {'mujer': 'Deus tuorum militum (pro una martyre)'},
+    'martyr-dei-qui-unicum': {'mujer': 'Martyr Dei quae'},
+    'sanctorum-meritis-inclita-gaudia': {'mujeres': 'Sanctorum meritis inclita (feminine)'},
+    'qui-vivis-ante-saecula': {'una': 'Qui vivis ante (pro una defuncta)', 'varios': 'Qui vivis ante (pro pluribus defunctis)'},
+    'qui-lacrimatus-lazarum': {'una': 'Qui lacrimatus Lazarum (pro una defuncta)', 'varios': 'Qui lacrimatus Lazarum (pro pluribus defunctis)'},
+    'beate-martyr-prospera': {'mujer': {0: ['Beáta martyr, próspera', 'diem triumphálem tuum,', 'quo sánguinis merces tibi', 'coróna vincénti datur.']}},
+    'spes-christe-nostrae-veniae': {
+        'una': {5: ['Sed et quæ soror córpore', 'nunc dormit pacis réquie,', 'iam te beánte vígilet', 'tibíque laudes réferat.']},
+        'varios': {5: ['Sed et qui fratres córpore', 'nunc somno pacis dórmiunt,', 'iam te beánte vígilent', 'tibíque laudes réferant.']}},
+    'immensae-rex-potentiae': {
+        'una': {5: ['Tuámque voca fámulam,', 'quæ nunc exúta córpore', 'in regna Patris ínhiat,', 'ut te colláudet pérpetim.']},
+        'varios': {5: ['Fratres et omnes ádvoca,', 'qui nunc exúti córpore', 'in regna Patris ínhiant,', 'ut te colláudent pérpetim.']}},
+    'laeti-colentes-famulum': {'mujer': {
+        0: ['Læti coléntes fámulam', 'quæ te perfécte cóluit,', 'tibi gratánter, Dómine,', 'amóris hymnum prómimus.'],
+        2: ['Tibi se vovit súbditam', 'humilitáte obœ́diens,', 'Christi, carnis mundítie,', 'sponsi æmulátrix vírginum.'],
+        4: ['His caritátis vínculis', 'in terris sibi dédita,', 'líbera ad astra iúgiter', 'triumphatúra pródiit.']}},
+}
 
 HORAS = {'visperas1': 'I Vísperas', 'visperas': 'Vísperas', 'completas': 'Completas', 'oficio': 'Oficio de lectura',
          'laudes': 'Laudes', 'tercia': 'Tercia', 'sexta': 'Sexta', 'nona': 'Nona'}
@@ -356,6 +382,19 @@ def main():
                             e[j] = l[0].lower() + l[1:]
                         prev = e[j]
                         l = e[j]
+            var = {}
+            for caso, src in VARIANTES.get(clave, {}).items():
+                if isinstance(src, dict):
+                    var[caso] = {i: v for i, v in src.items()}
+                else:
+                    otro = C[src]
+                    if amen and otro and otro[-1].endswith('Amen.'):
+                        otro = otro[:-1] + [re.sub(r'\s*Amen\.?$', '', otro[-1])]
+                    i0, var[caso] = 0, {}
+                    for k_e, e in enumerate(est):
+                        tramo = otro[i0:i0 + len(e)]; i0 += len(e)
+                        if [norm(x) for x in tramo] != [norm(x) for x in e]:
+                            var[caso][k_e] = tramo
             himnos[clave] = {
                 'incipit': cuerpo[0] if cuerpo else incipit,
                 'estrofas': est,
@@ -364,6 +403,7 @@ def main():
                 'coincidencia_libro': round(pm, 2),
                 'libro': sorted({f"tomo {f['tomo']}, p. {f['pdf']}" for f in lib[3]}) if lib else [],
                 'diferencias': dif,
+                **({'variantes': var} if var else {}),
             }
         uso.append({'grupo': grupo, 'seccion': seccion, 'hora': hora, 'himno': clave, **({'nota': nota} if nota else {})})
     out = {'leeme': 'Himnos latinos del Apéndice IV (tiempo y comunes), para revisar antes de pasarlos a la base. '
