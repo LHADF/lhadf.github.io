@@ -214,9 +214,12 @@ for k, h in HLat.items():
     for c, v in (h.get('variantes') or {}).items():
         for i, e in v.items():
             falta(1 <= int(i) <= len(n) and _versos(e, f'himnos/latinos.yaml · {k} · {c}') == n[int(i) - 1], f'himnos/latinos.yaml · {k} · {c}: la estrofa {i} no corresponde')
+_TD = leer(os.path.join(B, 'ordinario', 'oficio.yaml')).get('te_deum_latin') or {}
+for parte in ('texto', 'final'):
+    for e in _TD.get(parte) or []: _versos(e, f'ordinario/oficio.yaml · te_deum_latin · {parte}')
 HC = leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml'))
-for g in ('tiempo', 'celebraciones', 'comunes'):
-    for t, horas in HC[g].items():
+for g in ('tiempo', 'celebraciones', 'comunes', 'propios'):
+    for t, horas in HC.get(g, {}).items():
         for h, v in horas.items():
             falta(h in ('visperas', 'visperas1', 'completas', 'oficio', 'laudes', 'tercia', 'sexta', 'nona'), f'himnos/latinos_cuando.yaml · {t}: hora desconocida «{h}»')
             for x in (v if isinstance(v, list) else [v]): falta(x in HLat, f'himnos/latinos_cuando.yaml · {t} · {h}: «{x}» no está en latinos.yaml')

@@ -481,10 +481,10 @@ function himnoHTML(sec){
   const mem=S.himno[ops[0].id], recordada=/^(lat|greg)/.test(mem||'') && (ops.find(x=>x.id===mem) || (/^lat/.test(mem) && ops.find(x=>x.id==='lat')));
   const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})['h:'+ops[0].id])||recordada||def) : (recordada||elegida(sec,'himno',def));
   let h='';
-  if(ops.length>1) h+=botonesHTML('himno', ops[0].id, ops, o, sec.efimera, 'Himno');
+  if(ops.length>1 && !sec.sinBotones) h+=botonesHTML('himno', ops[0].id, ops, o, sec.efimera, 'Himno');
   // Himno latino recitado: cada verso con su traducción literal debajo (si la traducción está activa)
   if(o.lat){
-    const gl=t=>S.trad?`<span class="gl">${esc(t)}</span>`:'', num=o.est.length>1;
+    const gl=t=>S.trad?`<span class="gl">${esc(t)}</span>`:'', num=o.est.length>1 && o.num!==false;
     return h+`<div class="himno lat${num?'':' sin-num'}">`+o.est.map((e,ie)=>`<p class="est">${num?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${gl(o.lit[ie][il])}`).join('')}</p>`).join('')
       +(o.amen?`<p class="est amen-fin"><b>${esc(o.amen)}</b>${gl('Amén.')}</p>`:'')+'</div>'+(o.rub?`<p class="rub">${esc(o.rub)}</p>`:'');
   }

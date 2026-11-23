@@ -72,6 +72,45 @@ te_deum:
   - |-
     A ti, Señor, me acojo,
     no quede yo nunca defraudado.
+te_deum_latin:
+  # Te Deum en latín (Apéndice IV del libro; tildes, æ y división del corpus «latin-ecclesiastic-accents», CC0), para
+  # rezarlo recitado como opción: cada renglón «latín = traducción literal». «final»: lo que puede omitirse.
+  titulo: Te Deum laudámus
+  texto:
+  - |-
+    Te Deum laudámus: te Dóminum confitémur. = A ti, oh Dios, te alabamos; a ti, Señor, te confesamos.
+    Te ætérnum Patrem, omnis terra venerátur. = A ti, Padre eterno, te venera toda la tierra.
+    Tibi omnes ángeli, tibi cæli et univérsæ potestátes: = A ti todos los ángeles, a ti los cielos y todas las potestades;
+    tibi chérubim et séraphim incessábili voce proclámant: = a ti los querubines y serafines te aclaman con voz incesante:
+    Sanctus, Sanctus, Sanctus Dóminus Deus Sábaoth. = Santo, Santo, Santo es el Señor, Dios de los ejércitos.
+    Pleni sunt cæli et terra maiestátis glóriæ tuæ. = Llenos están el cielo y la tierra de la majestad de tu gloria.
+  - |-
+    Te gloriósus Apostolórum chorus, = A ti te alaba el glorioso coro de los Apóstoles,
+    te prophetárum laudábilis númerus, = a ti el número digno de alabanza de los profetas,
+    te mártyrum candidátus laudat exércitus. = a ti te alaba el ejército vestido de blanco de los mártires.
+    Te per orbem terrárum sancta confitétur Ecclésia, = A ti, por todo el orbe de la tierra, te confiesa la santa Iglesia:
+    Patrem imménsæ maiestátis; = Padre de inmensa majestad;
+    venerándum tuum verum et únicum Fílium; = a tu venerable Hijo, verdadero y único;
+    Sanctum quoque Paráclitum Spíritum. = y también al Espíritu Santo Paráclito.
+    Tu rex glóriæ, Christe. = Tú eres el rey de la gloria, Cristo.
+    Tu Patris sempitérnus es Fílius. = Tú eres el Hijo eterno del Padre.
+    Tu, ad liberándum susceptúrus hóminem, non horruísti Vírginis úterum. = Tú, para librar al hombre que ibas a asumir, no rehusaste el seno de la Virgen.
+    Tu, devícto mortis acúleo, aperuísti credéntibus regna cælórum. = Tú, vencido el aguijón de la muerte, abriste a los creyentes el reino de los cielos.
+  - |-
+    Tu ad déxteram Dei sedes, in glória Patris. = Tú estás sentado a la derecha de Dios, en la gloria del Padre.
+    Iudex créderis esse ventúrus. = Creemos que has de venir como juez.
+    Te ergo quǽsumus, tuis fámulis súbveni, quos pretióso sánguine redemísti. = Te pedimos, pues, que socorras a tus siervos, a quienes redimiste con tu preciosa sangre.
+    Ætérna fac cum sanctis tuis in glória numerári. = Haz que en la gloria eterna seamos contados con tus santos.
+  final:
+  - |-
+    Salvum fac pópulum tuum, Dómine, et bénedic hereditáti tuæ. = Salva a tu pueblo, Señor, y bendice tu heredad.
+    Et rege eos, et extólle illos usque in ætérnum. = Y gobiérnalos y ensálzalos por siempre.
+    Per síngulos dies benedícimus te; = Cada día te bendecimos
+    et laudámus nomen tuum in sǽculum, et in sǽculum sǽculi. = y alabamos tu nombre por siempre, por los siglos de los siglos.
+    Dignáre, Dómine, die isto sine peccáto nos custodíre. = Dígnate, Señor, guardarnos en este día sin pecado.
+    Miserére nostri, Dómine, miserére nostri. = Ten piedad de nosotros, Señor, ten piedad de nosotros.
+    Fiat misericórdia tua, Dómine, super nos, quemádmodum sperávimus in te. = Que tu misericordia, Señor, venga sobre nosotros, como lo esperamos de ti.
+    In te, Dómine, sperávi: non confúndar in ætérnum. = En ti, Señor, esperé: no quede yo confundido para siempre.
 conclusion:
 - V: Bendigamos al Señor.
 - R: Demos gracias a Dios.

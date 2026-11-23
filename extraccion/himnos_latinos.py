@@ -322,7 +322,7 @@ LINEA_MANO = {'Corda replet, linguas ditat,': 'corda replet, linguas ditat,',   
 # «Doctor egrégie» (Conversión de san Pablo) son estrofas de un mismo himno, con la doxología
 SELECCION = {'iam-bone-pastor-petre-clemens-accipe': [0, 2], 'doctor-egregie-paule-mores-instrue': [1, 2]}
 
-ESTROFA_FIJA = {'iam-bone-pastor-petre-clemens-accipe': 4, 'doctor-egregie-paule-mores-instrue': 4, 'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5],
+ESTROFA_FIJA = {'virginis-virgo-venerande-custos': 4, 'iam-bone-pastor-petre-clemens-accipe': 4, 'doctor-egregie-paule-mores-instrue': 4, 'angularis-fundamentum': 6, 'fit-porta-christi-pervia': 4, 'lux-iucunda-lux-insignis': [6, 4, 4, 5, 5],
                 'vir-celse-forma-fulgida': 4, 'christe-pastorum-caput-atque-princeps': 4, 'inclitus-rector-pater-atque-prudens': 4,
                 'qui-vivis-ante-saecula': 4}   # (secuencia: estrofas desiguales)   # estrofas de seis versos (el libro y el corpus no las separan)
 

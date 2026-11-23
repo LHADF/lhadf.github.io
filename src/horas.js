@@ -146,9 +146,13 @@ function armarOficio(fecha, sel){
   if(teDeum){
     const TD=L.ordinario.te_deum;
     S.push({k:'sec', id:'tedeum', t:'Te Deum'});
-    S.push({k:'himno', es:true, opciones:[{id:'tedeum', n:'Te Deum', lang:'es', est:TD.texto.map(e=>e.split('\n')), amen:''}]});
+    // En latín (opción recitada, como los himnos latinos): cada renglón «latín = traducción literal». Las dos partes
+    // tienen la misma clave de elección («tedeum»): lo que se elige en la primera vale para la segunda.
+    const TL=L.ordinario.te_deum_latin, lat=x=>{ const e=x.map(t=>t.split('\n').map(l=>l.split(' = ')));
+      return {id:'lat', n:TL.titulo, lang:'la', lat:true, est:e.map(a=>a.map(p=>p[0])), lit:e.map(a=>a.map(p=>p[1]||'')), amen:'', num:false}; };
+    S.push({k:'himno', es:true, opciones:[{id:'tedeum', n:'Te Deum', lang:'es', est:TD.texto.map(e=>e.split('\n')), amen:''}].concat(TL?[lat(TL.texto)]:[])});
     S.push({k:'rub', t:TD.rubrica_final});
-    S.push({k:'himno', es:true, opciones:[{id:'tedeum2', n:'Te Deum', lang:'es', est:TD.final.map(e=>e.split('\n')), amen:''}]});
+    S.push({k:'himno', es:true, sinBotones:true, opciones:[{id:'tedeum', n:'Te Deum', lang:'es', est:TD.final.map(e=>e.split('\n')), amen:''}].concat(TL?[lat(TL.final)]:[])});
   }
   oracion(S, P.oracion);
   conclusion(S, L);

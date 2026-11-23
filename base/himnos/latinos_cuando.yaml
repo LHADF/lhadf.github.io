@@ -104,6 +104,76 @@ tiempo:
     sexta: venite-servi-supplices
     nona: haec-hora-quae-resplenduit
 
+  # Tiempo Ordinario (segunda etapa, 23/11/2026). Según la semana del salterio: I y III («impar»), II y IV («par»); por día
+  # (_0 domingo … _6 sábado). Oficio de lectura: primero el himno para rezarlo de día y después el de noche o de
+  # madrugada (ver «rotulos»). El sábado no tiene Vísperas propias: son las I Vísperas del domingo.
+  ordinario_impar:       # Completas y Hora intermedia, todos los días
+    completas: [te-lucis-ante-terminum, christe-qui-splendor-et-dies]
+    tercia: [nunc-sancte-nobis-spiritus, certum-tenentes-ordinem]
+    sexta: [rector-potens-verax-deus, dicamus-laudes-domino]
+    nona: [rerum-deus-tenax-vigor, ternis-horarum-terminis]
+  ordinario_impar_0:
+    visperas1: [deus-creator-omnium, dies-aetasque-ceteris]
+    oficio: [dies-aetasque-ceteris, primo-dierum-omnium]
+    laudes: aeterne-rerum-conditor
+    visperas: lucis-creator-optime
+  ordinario_impar_1:
+    oficio: [aeterna-lux-divinitas, somno-refectis-artubus]
+    laudes: splendor-paternae-gloriae
+    visperas: immense-caeli-conditor
+  ordinario_impar_2:
+    oficio: [o-sacrosancta-trinitas, consors-paterni-luminis]
+    laudes: pergrata-mundo-nuntiat
+    visperas: telluris-ingens-conditor
+  ordinario_impar_3:
+    oficio: [scientiarum-domino, rerum-creator-optime]
+    laudes: nox-et-tenebrae-et-nubila
+    visperas: caeli-deus-sanctissime
+  ordinario_impar_4:
+    oficio: [christe-precamur-adnuas, nox-atra-rerum-contegit]
+    laudes: sol-ecce-surgit-igneus
+    visperas: magnae-deus-potentiae
+  ordinario_impar_5:
+    oficio: [adesto-christe-cordibus, tu-trinitatis-unitas]
+    laudes: aeterna-caeli-gloria
+    visperas: plasmator-hominis-deus
+  ordinario_impar_6:
+    oficio: [auctor-perennis-gloriae, summae-deus-clementiae]
+    laudes: aurora-iam-spargit-polum
+  ordinario_par:       # Completas y Hora intermedia, todos los días
+    completas: [christe-qui-splendor-et-dies, te-lucis-ante-terminum]
+    tercia: [certum-tenentes-ordinem, nunc-sancte-nobis-spiritus]
+    sexta: [dicamus-laudes-domino, rector-potens-verax-deus]
+    nona: [ternis-horarum-terminis, rerum-deus-tenax-vigor]
+  ordinario_par_0:
+    visperas1: [rerum-deus-fons-omnium, salve-dies-dierum-gloria]
+    oficio: [salve-dies-dierum-gloria, mediae-noctis-tempus-est]
+    laudes: ecce-iam-noctis-tenuatur-umbra
+    visperas: o-lux-beata-trinitas
+  ordinario_par_1:
+    oficio: [vita-sanctorum-via-spes-salusque, ipsum-nunc-nobis-tempus-est]
+    laudes: lucis-largitor-splendide
+    visperas: luminis-fons-lux-et-origo-lucis
+  ordinario_par_2:
+    oficio: [ad-preces-nostras-deitatis-aures, nocte-surgentes-vigilemus-omnes]
+    laudes: aeterne-lucis-conditor
+    visperas: sator-princepsque-temporum
+  ordinario_par_3:
+    oficio: [christe-lux-vera-bonitas-et-vita, o-sator-rerum-reparator-aevi]
+    laudes: fulgentis-auctor-aetheris
+    visperas: sol-ecce-lentus-occidens
+  ordinario_par_4:
+    oficio: [amoris-sensus-erige, ales-diei-nuntius]
+    laudes: iam-lucis-orto-sidere
+    visperas: deus-qui-claro-lumine
+  ordinario_par_5:
+    oficio: [adesto-rerum-conditor, galli-cantu-mediante]
+    laudes: deus-qui-caeli-lumen-es
+    visperas: horis-peractis-undecim
+  ordinario_par_6:
+    oficio: [deus-de-nullo-veniens, lux-aeterna-lumen-potens]
+    laudes: diei-luce-reddita
+
 # Celebraciones del tiempo, por su nombre en el Ordo: lo que traen reemplaza a lo del tramo del tiempo
 celebraciones:
   Sagrada Familia de Jesús, María y José:
@@ -237,3 +307,87 @@ comunes:
     tercia: qui-lacrimatus-lazarum
     sexta: qui-lacrimatus-lazarum
     nona: qui-lacrimatus-lazarum
+
+# Propios (segunda etapa, 23/11/2026): solemnidades del Señor y santos que trae el Apéndice IV, por su nombre en el
+# Ordo. Mandan sobre el común y el tiempo en las horas que traen. Donde el libro da un solo himno (san Andrés, san
+# Ambrosio, santo Tomás, Santiago), va en las tres Horas; «Oficio de lectura y Vísperas» o «Laudes y Vísperas», en las dos.
+propios:
+  Santísima Trinidad:
+    visperas: immensa-et-una-trinitas
+    oficio: te-patrem-summum-genitumque-verbum
+    laudes: trinitas-summo-solio-coruscans
+  Santísimo Cuerpo y Sangre de Cristo:
+    visperas: pange-lingua-gloriosi-corporis
+    oficio: sacris-sollemniis-iuncta-sint-gaudia
+    laudes: verbum-supernum-prodiens-nec-patris
+  Sagrado Corazón de Jesús:
+    visperas: auctor-beate-saeculi
+    oficio: cor-arca-legem-continens
+    laudes: iesu-auctor-clementiae
+  Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:
+    visperas: aeterne-christe-pontifex
+    oficio: pontifex-iesu-mediator-une
+    laudes: concinunt-caeli-parilique-tellus
+  San Andrés, apóstol: {visperas: captator-olim-piscium, oficio: captator-olim-piscium, laudes: captator-olim-piscium}
+  San Ambrosio, obispo y doctor de la Iglesia: {visperas: fortem-piumque-praesulem, oficio: fortem-piumque-praesulem, laudes: fortem-piumque-praesulem}
+  Inmaculada Concepción de la Santísima Virgen María:
+    visperas: praeclara-custos-virginum
+    oficio: te-dicimus-praeconio
+    laudes: in-plausu-grati-carminis
+  San Esteban, protomártir: {oficio: festum-celebre-martyris, laudes: christus-est-vita-veniens-in-orbem}
+  San Juan, apóstol y evangelista: {oficio: virginis-virgo-venerande-custos, laudes: cohors-beata-seraphim}
+  Santos Inocentes, mártires: {oficio: hymnum-canentes-martyrum, laudes: audit-tyrannus-anxius}
+  Santa Inés, virgen y mártir: {oficio: igne-divini-radians-amoris, laudes: agnes-beatae-virginis, visperas: agnes-beatae-virginis}
+  Conversión de san Pablo, apóstol:
+    oficio: pressi-malorum-pondere
+    laudes: doctor-egregie-paule-mores-instrue
+    visperas: excelsam-pauli-gloriam
+  Presentación del Señor en el Templo y Purificación de la Virgen María:
+    oficio: [legis-sacratae-sanctis-caeremoniis, quod-chorus-vatum-venerandus-olim]
+    laudes: adorna-sion-thalamum
+    visperas: quod-chorus-vatum-venerandus-olim
+  Cátedra de san Pedro:
+    visperas: divina-vox-te-deligit
+    oficio: iam-bone-pastor-petre-clemens-accipe
+    laudes: petrus-beatus-catenarum-laqueos
+  San José, esposo de la bienaventurada Virgen María:
+    visperas: te-ioseph-celebrent-agmina-caelitum
+    oficio: iste-quem-laeti-colimus-fideles
+    laudes: caelitum-ioseph-decus-atque-nostrae
+  Anunciación del Señor:
+    visperas1: agnoscat-omne-saeculum
+    visperas: ave-maris-stella
+    oficio: iam-caeca-vis-mortalium
+    laudes: o-lux-salutis-nuntia
+  San Marcos, evangelista: {oficio: o-vir-beate-apostolis, laudes: mentibus-laetis-tua-festa-marce, visperas: mentibus-laetis-tua-festa-marce}
+  Santa Catalina de Siena, virgen y doctora de la Iglesia: {oficio: virgo-prudentum-comitata-coetum, laudes: te-catharina-maximis, visperas: te-catharina-maximis}
+  San José, obrero: {oficio: te-pater-ioseph-opifex-colende, laudes: aurora-solis-nuntia, visperas: te-ioseph-celebrent-agmina-caelitum}
+  Santos Felipe y Santiago el Menor, apóstoles: {oficio: philippe-summae-honoribus, laudes: claro-paschali-gaudio, visperas: tristes-erant-apostoli}
+  San Matías, apóstol: {oficio: matthia-sacratissimo, laudes: matthia-sacratissimo}
+  Visitación de la Bienaventurada Virgen María:
+    oficio: veni-praecelsa-domina
+    laudes: veniens-mater-inclita
+    visperas: concito-gressu-petis-alta-montis
+  San Bernabé, apóstol: {oficio: o-vir-beate-apostolis, laudes: barnabae-clarum-colimus-tropaeum, visperas: barnabae-clarum-colimus-tropaeum}
+  Nacimiento de san Juan Bautista:
+    visperas: ut-queant-laxis-resonare-fibris
+    oficio: antra-deserti-teneris-sub-annis
+    laudes: o-nimis-felix-meritique-celsi
+  Santos Pedro y Pablo, apóstoles:
+    visperas1: aurea-luce-et-decore-roseo
+    visperas: o-roma-felix-quae-tantorum-principum
+    oficio: felix-per-omnes-festum-mundi-cardines
+    laudes: apostolorum-passio
+  Santo Tomás, apóstol: {visperas: qui-luce-splendes-ordinis, oficio: qui-luce-splendes-ordinis, laudes: qui-luce-splendes-ordinis}
+  San Benito de Nursia, abad: {oficio: inter-aeternas-superum-coronas, visperas: inter-aeternas-superum-coronas, laudes: legifer-prudens-venerande-doctor}
+  Tránsito de san Benito, abad: {oficio: inter-aeternas-superum-coronas, visperas: inter-aeternas-superum-coronas, laudes: legifer-prudens-venerande-doctor}
+  Santa María Magdalena, penitente: {oficio: magdalae-sidus-mulier-beata, visperas: magdalae-sidus-mulier-beata, laudes: aurora-surgit-lucida}
+  Santiago, apóstol: {visperas: te-nostra-laetis-laudibus, oficio: te-nostra-laetis-laudibus, laudes: te-nostra-laetis-laudibus}
+  Santos Joaquín y Ana, padres de la Santísima Virgen María: {oficio: dum-tuas-festo-pater-o-colende, visperas: dum-tuas-festo-pater-o-colende, laudes: nocti-succedit-lucifer}
+  Santa Marta, virgen: {oficio: te-gratulantes-pangimus, visperas: te-gratulantes-pangimus, laudes: quas-tibi-laudes-ferimusque-vota}
+  San Ignacio de Loyola, presbítero: {laudes: magnae-cohortis-principem, visperas: magnae-cohortis-principem}
+
+# Rótulo que se agrega al nombre del himno en el Oficio de lectura del Tiempo Ordinario
+rotulos:
+  de día: [aeterna-lux-divinitas, o-sacrosancta-trinitas, scientiarum-domino, christe-precamur-adnuas, adesto-christe-cordibus, auctor-perennis-gloriae, vita-sanctorum-via-spes-salusque, ad-preces-nostras-deitatis-aures, christe-lux-vera-bonitas-et-vita, amoris-sensus-erige, adesto-rerum-conditor, deus-de-nullo-veniens, dies-aetasque-ceteris, salve-dies-dierum-gloria]
+  de noche: [somno-refectis-artubus, consors-paterni-luminis, rerum-creator-optime, nox-atra-rerum-contegit, tu-trinitatis-unitas, summae-deus-clementiae, ipsum-nunc-nobis-tempus-est, nocte-surgentes-vigilemus-omnes, o-sator-rerum-reparator-aevi, ales-diei-nuntius, galli-cantu-mediante, lux-aeterna-lumen-potens, primo-dierum-omnium, mediae-noctis-tempus-est]

@@ -240,7 +240,7 @@ def himnos_latinos(*horas):
     H = leer(os.path.join(B, 'himnos', 'latinos.yaml'))['himnos']
     C = leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml'))
     usados = set()
-    for tabla in (*C['tiempo'].values(), *C['celebraciones'].values(), *C['comunes'].values()):
+    for tabla in (*C['tiempo'].values(), *C['celebraciones'].values(), *C['comunes'].values(), *C.get('propios', {}).values()):
         for h, v in tabla.items():
             if h.rstrip('1') in horas: usados |= set(v if isinstance(v, list) else [v])
     for k in usados: assert k in H, f'latinos_cuando.yaml: falta el himno «{k}» en latinos.yaml'

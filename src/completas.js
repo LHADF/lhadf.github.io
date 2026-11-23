@@ -738,7 +738,10 @@ function himnosLatinos(hora, ref, o){
   const de=t=>{ if(!t) return null; const v=(o.primeras && t[hora+'1']) || t[hora]; return v==null ? null : [].concat(v); };
   const nombre=String(ref.n||''), plural=/^(santos|santas|beatos|beatas)\b|y compañer/i.test(nombre), fem=/^(Santa|Santas|Beata|Beatas)\b/.test(nombre);
   let lista=null, casos=[''];
-  if(o.comun){
+  // Propios del santo o de la solemnidad (segunda etapa): mandan sobre el común y el tiempo en las horas que traen
+  const pr=(C.propios||{})[nombre];
+  if(pr && de(pr) && hora!=='completas') lista=de(pr);
+  else if(o.comun){
     let c=o.comun;
     if(c==='difuntos') casos = ref.n==='Todos los Fieles Difuntos' ? ['varios'] : ['', 'una', 'varios'];
     if(c==='caridad' || c==='educadores' || (c==='religiosos' && plural)) c = fem ? 'santas-mujeres' : 'santos-varones';
@@ -758,6 +761,9 @@ function himnosLatinos(hora, ref, o){
     else if(ref.t==='Cuaresma') t = ref.sem>=6 ? 'semana_santa' : hora==='completas' ? ((ref.sal||1)%2 ? 'cuaresma_completas_impar' : 'cuaresma_completas_par')
       : ref.dom ? 'cuaresma_domingo' : ref.sem===5 ? 'cuaresma_semana_5' : 'cuaresma_feria';
     else if(ref.t==='Triduo') t='semana_santa';
+    else if(ref.t==='Ordinario'){   // por la semana del salterio (I y III, II y IV) y el día
+      const par=!((ref.sal||1)%2) ? 'par' : 'impar', dia=new Date(f+'T12:00:00Z').getUTCDay();
+      t = C.tiempo['ordinario_'+par+'_'+dia] && de(C.tiempo['ordinario_'+par+'_'+dia]) ? 'ordinario_'+par+'_'+dia : 'ordinario_'+par; }
     else if(ref.t==='Pascua'){ const asc=masDias(domPascua(y), 39);
       t = ref.n==='Ascensión del Señor' ? 'ascension' : f>asc ? (ref.dom ? 'ascension' : 'ascension_ferias') : (ref.oct || ref.dom) ? 'pascua' : 'pascua_ferias'; }
     lista = de(C.celebraciones[ref.n]) || de(C.tiempo[t]);
@@ -769,7 +775,8 @@ function himnosLatinos(hora, ref, o){
     const v=(c && h.variantes && h.variantes[c]) || {};
     const est=h.estrofas.map((e,i)=>v[i]||e);
     const tit = v[0] ? v[0][0][0].replace(/[,;:.]+$/,'') : h.titulo;   // si cambia la primera estrofa («Beáta martyr»), su primer verso
-    out.push({id:'lat'+(out.length?out.length+1:''), n:tit+(SUF[c]||'')+(o.greg && norm(o.greg)===norm(tit) ? ' (recitado)' : ''), lang:'la', lat:true,
+    const rot = hora==='oficio' && Object.keys(C.rotulos||{}).find(r=>(C.rotulos[r]||[]).includes(k));
+    out.push({id:'lat'+(out.length?out.length+1:''), n:tit+(rot?' ('+rot+')':'')+(SUF[c]||'')+(o.greg && norm(o.greg)===norm(tit) ? ' (recitado)' : ''), lang:'la', lat:true,
               est:est.map(e=>e.map(p=>p[0])), lit:est.map(e=>e.map(p=>p[1])), amen:h.amen?'Amen.':'', rub:k==='qui-lacrimatus-lazarum'?RUB_LAZARO:''});
   }
   return out;

@@ -710,7 +710,15 @@ test('himnos latinos: opción recitada después del español y del gregoriano, d
   assert.equal(n(VI, '2027-04-01'), 'Ad cenam Agni próvidi');                           // Octava
   assert.equal(n(LA, '2027-05-08'), 'Optátus votis ómnium');                            // después de la Ascensión
   assert.equal(n(VI, '2027-05-15'), 'Veni, creátor Spíritus (recitado)');               // I Vísperas de Pentecostés, con el gregoriano
-  assert.equal(n(LA, '2026-11-20'), '');                                                // ferias del Tiempo Ordinario: todavía no
+  // segunda etapa: Tiempo Ordinario (semana del salterio y día), solemnidades del Señor y propios de santos
+  assert.equal(n(LA, '2026-11-20'), 'Ætérna cæli glória');                              // viernes, semana I/III
+  assert.equal(n(W.Oficio, '2027-06-27'), 'Dies ætásque céteris (de día) / Primo diérum ómnium (de noche)');
+  assert.equal(n(VI, '2027-06-28'), 'Aurea luce et decóre róseo');                        // I Vísperas de san Pedro y san Pablo
+  assert.equal(n(LA, '2026-11-30'), 'Captátor olim píscium');                             // san Andrés: el mismo himno en las tres Horas
+  assert.equal(n(VI, '2028-06-11'), 'Imménsa et una, Trínitas');
+  // Te Deum en latín: opción en las dos partes, con la misma clave de elección y traducción en cada renglón
+  const td = W.Oficio.armar('2027-06-27', '').secciones.filter(x => x.k === 'himno' && x.opciones[0].id === 'tedeum');
+  assert.equal(td.length, 2); assert.ok(td.every(x => x.opciones.some(o => o.id === 'lat' && o.lit.flat().every(Boolean))));
   assert.equal(n(LA, '2026-11-10'), 'Doctor ætérnus cóleris piúsque');                 // San León Magno: del común de doctores
   // Completas: del tiempo (Cuaresma, según la semana)
   const nc = f => CP.armar(f, '').secciones.find(s => s.k === 'himno').opciones.filter(o => o.lat).map(o => o.n).join(' / ');
