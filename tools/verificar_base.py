@@ -2,7 +2,7 @@
 
 Uso: python3 tools/verificar_base.py
 """
-import glob, os, sys
+import glob, os, re, sys
 
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, os.path.join(RAIZ, 'tools', 'importar'))
@@ -199,6 +199,28 @@ for k, r in enumerate(cal['dias']):
 falta(not sin_propio, f'tiempo/laudes.yaml: {len(sin_propio)} días del calendario sin oración propia: {sorted(sin_propio)}')
 
 for x in sorted(pendientes): print('Pendiente (Laudes):', x)
+# Himnos latinos recitados: cada verso con su traducción literal; latín con i; lo que nombra latinos_cuando.yaml existe
+HLat = leer(os.path.join(B, 'himnos', 'latinos.yaml'))['himnos']
+def _versos(t, donde):
+    vs = t.split('\n')
+    for l in vs:
+        la, _, es = l.partition(' = ')
+        falta(la.strip() and es.strip(), f'{donde}: verso sin traducción literal («latín = español»): «{l}»')
+        falta(not re.search(r'[jJ]', la), f'{donde}: latín con j: «{la}»')
+    return len(vs)
+for k, h in HLat.items():
+    falta(h.get('titulo') and h.get('estrofas'), f'himnos/latinos.yaml · {k}: falta el título o las estrofas')
+    n = [_versos(e, f'himnos/latinos.yaml · {k}') for e in h.get('estrofas') or []]
+    for c, v in (h.get('variantes') or {}).items():
+        for i, e in v.items():
+            falta(1 <= int(i) <= len(n) and _versos(e, f'himnos/latinos.yaml · {k} · {c}') == n[int(i) - 1], f'himnos/latinos.yaml · {k} · {c}: la estrofa {i} no corresponde')
+HC = leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml'))
+for g in ('tiempo', 'celebraciones', 'comunes'):
+    for t, horas in HC[g].items():
+        for h, v in horas.items():
+            falta(h in ('visperas', 'visperas1', 'completas', 'oficio', 'laudes', 'tercia', 'sexta', 'nona'), f'himnos/latinos_cuando.yaml · {t}: hora desconocida «{h}»')
+            for x in (v if isinstance(v, list) else [v]): falta(x in HLat, f'himnos/latinos_cuando.yaml · {t} · {h}: «{x}» no está en latinos.yaml')
+
 if errores:
     print('La base tiene problemas:'); [print(' -', e) for e in errores]; sys.exit(1)
 print(f'Base correcta: {len(salmos)} salmos y cánticos, Completas completas; Laudes: salterio de 4 semanas, {len(TL)} días con propio del tiempo, {len(SaL)} celebraciones; Vísperas: {len(TV)} días con propio, {len(SaV)} celebraciones.')

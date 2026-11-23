@@ -98,6 +98,7 @@ function propio(hora, fecha, region){
       X.elegirComun(P, [...CAMPOS.filter(c=>c!=='himno' && PR[c]==null), ...(P.salmodia===C.salmodia && !PR.salmodia ? ['salmodia'] : [])], L.comunes, adf.comun, ref.n, ref.t==='Pascua', primeras?'primeras':null, HK);
       // el himno del común: los otros, como opción en la hora (no rotan)
       if(!PR.himno && P.himno===C.himno) P._himnos=X.himnosComun(L.comunes, adf.comun, ref.n, primeras?'primeras':null, P.himno, L.himnos);
+      if(!PR.himno && P.himno===C.himno) P._comunLat=adf.comun;   // el himno latino, también del común
       const o=PR.oracion || X.oracionElegida(C.oraciones||C0.oraciones, ref.n, HK, ref.t, n);
       if(o) P.oracion=o;
       delete P.pendiente;
@@ -110,6 +111,7 @@ function propio(hora, fecha, region){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
     // Celebración con propio en la base que toma textos del común (el santoral dice cuál): donde lo que trae es un texto del
     // común (igual o casi), las otras opciones del común también se pueden elegir («Otras opciones»); lo propio de verdad, no
+    if(k && !DE && L.comunes && P.himno && !P._comunLat) P._comunLat=X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores']);
     if(k && !DE && L.comunes){ const cid=X.comunDe((L.santoral[k]||{}).comun);
       if(cid && L.comunes[cid]) X.elegirComun(P, ['lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'], L.comunes, cid, ref.n, ref.t==='Pascua', primeras?'primeras':null, hora+(primeras?'1':'')); }
     // Fiestas y solemnidades sin salmodia propia: la del común que indica el santoral (en las I Vísperas, la de sus I Vísperas);
@@ -205,7 +207,9 @@ function armar(hora, fecha, region){
   const HG=himnoGregoriano(hora, hoy, primeras, GL.himnos);
   // Himno de un común: los otros del común, como opciones (la elección vale mientras se mira ese día)
   const OH=(P._himnos||[]).map((n,i)=>({id:hora+'~'+(i+1), n, lang:'es', est:(L.himnos[n]||[]).map(e=>e.split('\n')), amen:''}));
-  S.push({k:'himno', es:true, efimera:OH.length>0, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}].concat(OH, HG?[HG]:[])});
+  // Himno latino recitado (base/himnos/latinos.yaml): del común, si el himno en español es del común; si no, del tiempo
+  const HL=X.himnosLatinos(hora, hoy, {hs:L.latinos, comun:P._comunLat, primeras, greg:HG&&HG.n});
+  S.push({k:'himno', es:true, efimera:OH.length>0, opciones:[{id:hora, n:P.himno, lang:'es', est:H.map(e=>e.split('\n')), amen:''}].concat(OH, HG?[HG]:[], HL)});
 
   sec('salmodia','Salmodia');
   (P.salmodia||[]).forEach((g,gi)=>{

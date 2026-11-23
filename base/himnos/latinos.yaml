@@ -1,0 +1,3721 @@
+# Himnos latinos de la Liturgia de las Horas (Apéndice IV del libro), para rezarlos recitados.
+# Texto: Te decet hymnus (A. Lentini, 1984), del corpus «latin-ecclesiastic-accents» (proyecto Gregorio, CC0);
+# donde el libro trae otro texto, el del libro. Latín con i, æ y œ.
+# Cada renglón: «verso latino = traducción literal del verso». Cada estrofa, un elemento de la lista.
+# amen: el himno termina con «Amen.» (traducción: «Amén.»).
+# variantes: estrofas que cambian según el caso (número de estrofa, desde 1): papa, obispo, presbitero (pastores);
+#   mujer, mujeres (mártires, religiosas); una, varios (difuntos). Sin variante, el texto principal.
+# Cuándo va cada himno: latinos_cuando.yaml.
+
+himnos:
+  conditor-alme-siderum:
+    titulo: Cónditor alme síderum
+    amen: true
+    estrofas:
+    - |-
+      Cónditor alme síderum, = Creador bondadoso de los astros,
+      ætérna lux credéntium, = luz eterna de los creyentes,
+      Christe, redémptor ómnium, = Cristo, redentor de todos,
+      exáudi preces súpplicum. = escucha las súplicas de los que te imploran.
+    - |-
+      Qui cóndolens intéritu = Tú que, compadecido de que por la ruina
+      mortis períre sǽculum, = de la muerte pereciera el mundo,
+      salvásti mundum lánguidum, = salvaste al mundo enfermo,
+      donans reis remédium, = dando a los culpables el remedio,
+    - |-
+      Vergénte mundi véspere, = al declinar la tarde del mundo,
+      uti sponsus de thálamo, = como el esposo de la cámara nupcial,
+      egréssus honestíssima = saliste del honestísimo
+      Vírginis matris cláusula. = claustro de la Virgen madre.
+    - |-
+      Cuius forti poténtiæ = Ante cuyo fuerte poder
+      genu curvántur ómnia; = se doblan todas las rodillas;
+      cæléstia, terréstria = las cosas del cielo y de la tierra
+      nutu faténtur súbdita. = con una señal se confiesan sometidas.
+    - |-
+      Te, Sancte, fide quǽsumus, = A ti, Santo, con fe te pedimos,
+      ventúre iudex sǽculi, = juez que has de venir al fin del mundo:
+      consérva nos in témpore = guárdanos en el tiempo [presente]
+      hostis a telo pérfidi. = del dardo del enemigo pérfido.
+    - |-
+      Sit, Christe, rex piíssime, = Sea, Cristo, rey piadosísimo,
+      tibi Patríque glória = a ti y al Padre la gloria
+      cum Spíritu Paráclito, = con el Espíritu Paráclito
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  te-lucis-ante-terminum:
+    titulo: Te lucis ante términum
+    amen: true
+    estrofas:
+    - |-
+      Te lucis ante términum, = A ti, antes del término de la luz,
+      rerum creátor, póscimus, = creador de las cosas, te pedimos
+      ut sólita cleméntia = que, con tu acostumbrada clemencia,
+      sis præsul et custódia. = seas protector y custodia.
+    - |-
+      Te corda nostra sómnient, = Que nuestros corazones sueñen contigo,
+      te per sopórem séntiant, = que te sientan durante el sueño,
+      tuámque semper glóriam = y que siempre tu gloria
+      vicína luce cóncinant. = canten al acercarse la luz.
+    - |-
+      Vitam salúbrem tríbue, = Concede una vida saludable,
+      nostrum calórem réfice = reanima nuestro ardor,
+      tætram noctis calíginem = [y que] la tenebrosa oscuridad de la noche
+      tua collústret cláritas. = la ilumine tu claridad.
+    - |-
+      Præsta, Pater omnípotens, = Concédelo, Padre omnipotente,
+      per Iesum Christum Dóminum, = por Jesucristo, el Señor,
+      qui tecum in perpétuum = que contigo por siempre
+      regnat cum Sancto Spíritu. = reina con el Espíritu Santo.
+  verbum-supernum-prodiens:
+    titulo: Verbum supérnum pródiens
+    amen: true
+    estrofas:
+    - |-
+      Verbum supérnum pródiens, = Verbo celestial que procedes
+      e Patris ætérni sinu, = del seno del Padre eterno,
+      qui natus orbi súbvenis = que, nacido, socorres al mundo
+      cursu declívi témporis: = en el curso declinante del tiempo:
+    - |-
+      Illúmina nunc péctora = ilumina ahora los corazones
+      tuóque amóre cóncrema; = y abrásalos con tu amor,
+      ut cor cadúca déserens = para que el corazón, dejando lo caduco,
+      cæli volúptas ímpleat. = se llene del gozo del cielo.
+    - |-
+      Ut, cum tribúnal Iúdicis = Para que, cuando el tribunal del Juez
+      damnábit igni nóxios, = condene al fuego a los culpables
+      et vox amíca débitum = y la voz amiga, como es debido,
+      vocábit ad cælum pios; = llame al cielo a los piadosos,
+    - |-
+      Non esca flammárum nigros = no seamos, como pasto de las llamas,
+      volvámur inter túrbines, = arrastrados entre negros torbellinos,
+      vultu Dei sed cómpotes = sino que, admitidos a [ver] el rostro de Dios,
+      cæli fruámur gáudiis. = gocemos de las alegrías del cielo.
+    - |-
+      Patri, simúlque Fílio, = Al Padre, y a la vez al Hijo,
+      tibíque, Sancte Spíritus, = y a ti, Espíritu Santo,
+      sicut fuit, sit iúgiter = como fue, sea por siempre
+      sæclum per omne glória. = por todos los siglos la gloria.
+  vox-clara-ecce-intonat:
+    titulo: Vox clara ecce íntonat
+    amen: true
+    estrofas:
+    - |-
+      Vox clara ecce íntonat, = He aquí que resuena una voz clara
+      obscúra quæque íncrepat: = que reprende todo lo oscuro:
+      procul fugéntur sómnia; = huyan lejos los sueños;
+      ab æthre Christus prómicat. = desde lo alto resplandece Cristo.
+    - |-
+      Mens iam resúrgat tórpida = Levántese ya la mente adormecida,
+      quæ sorde exstat sáucia = que yace herida por la suciedad;
+      sidus refúlget iam novum, = brilla ya un astro nuevo,
+      ut tollat omne nóxium. = para quitar todo lo dañino.
+    - |-
+      E sursum Agnus míttitur = De lo alto es enviado el Cordero
+      laxáre gratis débitum; = para perdonar gratuitamente la deuda;
+      omnes pro indulgéntia = todos, para [obtener] el perdón,
+      vocem demus cum lácrimis, = elevemos la voz con lágrimas,
+    - |-
+      Secúndo ut cum fúlserit = para que, cuando brille por segunda vez
+      mundúmque horror cínxerit, = y el espanto rodee al mundo,
+      non pro reátu púniat, = no castigue [nuestra] culpa,
+      sed nos pius tunc prótegat. = sino que entonces, piadoso, nos proteja.
+    - |-
+      Summo Parénti glória = Al Padre altísimo [sea] la gloria,
+      Natóque sit victória, = y al Hijo sea la victoria,
+      et Flámini laus débita = y al Espíritu la alabanza debida,
+      per sæculórum sǽcula. = por los siglos de los siglos.
+  nunc-sancte-nobis-spiritus:
+    titulo: Nunc, Sancte, nobis, Spíritus
+    amen: true
+    estrofas:
+    - |-
+      Nunc, Sancte, nobis, Spíritus, = Ahora, Espíritu Santo,
+      unum Patri cum Fílio, = uno con el Padre y el Hijo,
+      dignáre promptus íngeri = dígnate, solícito, entrar en nosotros,
+      nostro refúsus péctori. = derramado en nuestro pecho.
+    - |-
+      Os, lingua, mens, sensus, vigor = Boca, lengua, mente, sentidos, fuerzas
+      confessiónem pérsonent, = hagan resonar la alabanza;
+      flamméscat igne cáritas, = inflámese en fuego la caridad,
+      accéndat ardor próximos. = encienda su ardor a los prójimos.
+    - |-
+      Præsta, Pater piíssime, = Concédelo, Padre piadosísimo,
+      Patríque compar Únice, = y tú, Único igual al Padre,
+      cum Spíritu Paráclito = con el Espíritu Paráclito,
+      regnans per omne sǽculum. = que reinas por todos los siglos.
+  rector-potens-verax-deus:
+    titulo: Rector potens, verax Deus
+    amen: true
+    estrofas:
+    - |-
+      Rector potens, verax Deus, = Gobernante poderoso, Dios veraz,
+      qui témperas rerum vices, = que regulas las vicisitudes de las cosas,
+      splendóre mane ínstruis = que adornas la mañana con resplandor
+      et ígnibus merídiem, = y con fuegos el mediodía:
+    - |-
+      Exstíngue flammas lítium, = apaga las llamas de las discordias,
+      aufer calórem nóxium, = quita el calor dañino,
+      confer salútem córporum, = concede la salud de los cuerpos
+      verámque pacem córdium. = y la verdadera paz de los corazones.
+    - |-
+      Præsta, Pater piíssime, = Concédelo, Padre piadosísimo,
+      Patríque compar Únice, = y tú, Único igual al Padre,
+      cum Spíritu Paráclito = con el Espíritu Paráclito,
+      regnans per omne sǽculum. = que reinas por todos los siglos.
+  rerum-deus-tenax-vigor:
+    titulo: Rerum, Deus, tenax vigor
+    amen: true
+    estrofas:
+    - |-
+      Rerum, Deus, tenax vigor, = Dios, fuerza que sostiene las cosas,
+      immótus in te pérmanens, = que permaneces inmóvil en ti mismo
+      lucis diúrnæ témpora = y determinas los tiempos de la luz del día
+      succéssibus detérminans, = en su sucesión:
+    - |-
+      Largíre lumen véspere, = concede luz en la tarde,
+      quo vita nusquam décidat, = para que la vida nunca decaiga,
+      sed prǽmium mortis sacræ = sino que, como premio de una santa muerte,
+      perénnis instet glória. = nos aguarde la gloria perenne.
+    - |-
+      Præsta, Pater piíssime, = Concédelo, Padre piadosísimo,
+      Patríque compar Únice, = y tú, Único igual al Padre,
+      cum Spíritu Paráclito = con el Espíritu Paráclito,
+      regnans per omne sǽculum. = que reinas por todos los siglos.
+  verbum-salutis-omnium:
+    titulo: Verbum salútis ómnium
+    amen: true
+    estrofas:
+    - |-
+      Verbum salútis ómnium, = Al Verbo, salvación de todos,
+      Patris ab ore pródiens, = que procede de la boca del Padre,
+      Virgo beáta, súscipe = Virgen bienaventurada, recíbelo
+      casto, María, víscere. = en tu seno casto, María.
+    - |-
+      Te nunc illústrat cǽlitus = A ti ahora te ilumina desde el cielo
+      umbra fecúndi Spíritus, = la sombra del Espíritu fecundo,
+      gestes ut Christum Dóminum, = para que lleves a Cristo, el Señor,
+      æquálem Patri Fílium. = el Hijo igual al Padre.
+    - |-
+      Hæc est sacráti iánua = Esta es la puerta del templo sagrado,
+      templi seráta iúgiter, = cerrada para siempre,
+      soli suprémo Príncipi = que solo al Príncipe supremo
+      pandens beáta límina. = abre los umbrales dichosos.
+    - |-
+      Olim promíssus vátibus, = Prometido antiguamente por los profetas,
+      natus ante lucíferum, = nacido antes del lucero,
+      quem Gábriel annúntiat, = el que Gabriel anuncia,
+      terris descéndit Dóminus. = el Señor desciende a la tierra.
+    - |-
+      Læténtur simul ángeli, = Alégrense a una los ángeles,
+      omnes exsúltent pópuli: = exulten todos los pueblos:
+      excélsus venit húmilis = el excelso viene humilde
+      salváre quod períerat. = a salvar lo que se había perdido.
+    - |-
+      Sit, Christe, rex piíssime, = Sea, Cristo, rey piadosísimo,
+      tibi Patríque glória = a ti y al Padre la gloria
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  christe-qui-splendor-et-dies:
+    titulo: Christe, qui, splendor et dies
+    amen: true
+    estrofas:
+    - |-
+      Christe, qui, splendor et dies, = Cristo, que, esplendor y día,
+      noctis tenébras détegis, = descubres las tinieblas de la noche
+      lucísque lumen créderis, = y eres creído luz de la luz,
+      lumen beátis prǽdicans, = y anuncias la luz a los bienaventurados:
+    - |-
+      Precámur, sancte Dómine, = te rogamos, santo Señor,
+      hac nocte nos custódias; = que esta noche nos guardes;
+      sit nobis in te réquies, = que nuestro descanso esté en ti,
+      quiétas horas tríbue. = concédenos horas tranquilas.
+    - |-
+      Somno si dantur óculi, = Si a los ojos se les da el sueño,
+      cor semper ad te vígilet; = que el corazón vele siempre por ti;
+      tuáque dextra prótegas = y con tu diestra protege
+      fidéles, qui te díligunt. = a los fieles que te aman.
+    - |-
+      Defénsor noster, áspice, = Defensor nuestro, míranos,
+      insidiántes réprime, = reprime a los que nos acechan,
+      gubérna tuos fámulos, = gobierna a tus siervos,
+      quos sánguine mercátus es. = a los que compraste con tu sangre.
+    - |-
+      Sit, Christe, rex piíssime, = Sea, Cristo, rey piadosísimo,
+      tibi Patríque glória, = a ti y al Padre la gloria,
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  veni-redemptor-gentium:
+    titulo: Veni, redémptor géntium
+    amen: true
+    estrofas:
+    - |-
+      Veni, redémptor géntium, = Ven, redentor de las naciones,
+      osténde partum Vírginis; = muestra el parto de la Virgen;
+      mirétur omne sǽculum: = admírese todo el mundo:
+      talis decet partus Deo. = tal parto conviene a Dios.
+    - |-
+      Non ex viríli sémine, = No de semilla de varón,
+      sed mýstico spirámine = sino por soplo misterioso,
+      Verbum Dei factum est caro = el Verbo de Dios se hizo carne
+      fructúsque ventris flóruit. = y floreció el fruto del vientre.
+    - |-
+      Alvus tuméscit Vírginis, = Se hincha el seno de la Virgen,
+      claustrum pudóris pérmanet, = permanece el claustro del pudor,
+      vexílla virtútum micant, = brillan los estandartes de las virtudes,
+      versátur in templo Deus. = Dios habita en [su] templo.
+    - |-
+      Procédat e thálamo suo, = Salga de su tálamo,
+      pudóris aula régia, = el palacio real del pudor,
+      géminæ gigas substántiæ = el gigante de doble sustancia,
+      alácris ut currat viam. = para correr ágil su camino.
+    - |-
+      Æquális ætérno Patri, = Igual al Padre eterno,
+      carnis tropǽo cíngere, = cíñete el trofeo de la carne,
+      infírma nostri córporis = fortaleciendo lo débil de nuestro cuerpo
+      virtúte firmans pérpeti. = con tu fuerza perpetua.
+    - |-
+      Præsépe iam fulget tuum = Ya brilla tu pesebre
+      luménque nox spirat novum, = y la noche exhala una luz nueva,
+      quod nulla nox intérpolet = que ninguna noche interrumpa
+      fidéque iugi lúceat. = y que brille con fe continua.
+    - |-
+      Glória tibi, Dómine, = Gloria a ti, Señor,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et Sancto Spíritu, = con el Padre y el Espíritu Santo,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  magnis-prophetae-vocibus:
+    titulo: Magnis prophétæ vócibus
+    amen: true
+    estrofas:
+    - |-
+      Magnis prophétæ vócibus = Con grandes voces los profetas
+      veníre Christum núntiant, = anuncian que Cristo viene,
+      lætæ salútis prǽvia, = precursora de la feliz salvación,
+      qua nos redémit, grátia. = la gracia con que nos redimió.
+    - |-
+      Hinc mane nostrum prómicat = Por eso brilla nuestra mañana
+      et corda læta exǽstuant, = y los corazones arden de alegría,
+      cum vox fidélis pérsonat = cuando resuena la voz fiel,
+      prænuntiátrix glóriæ. = mensajera de la gloria.
+    - |-
+      Advéntus hic primus fuit, = Esta fue la primera venida,
+      puníre quo non sǽculum = en la que no vino a castigar
+      venit, sed ulcus térgere, = al mundo, sino a limpiar la herida,
+      salvándo quod períerat. = salvando lo que se había perdido.
+    - |-
+      At nos secúndus prǽmonet = Pero la segunda nos advierte
+      adésse Christum iánuis, = que Cristo está a las puertas
+      sanctis corónas réddere = para dar coronas a los santos
+      cælíque regna pándere. = y abrir los reinos del cielo.
+    - |-
+      Ætérna lux promíttitur = Se promete una luz eterna
+      sidúsque salvans prómitur; = y se muestra un astro que salva;
+      iam nos iubar præfúlgidum = ya un resplandor brillantísimo
+      ad ius vocat cæléstium. = nos llama al derecho de los habitantes del cielo.
+    - |-
+      Te, Christe, solum quǽrimus = A ti solo, Cristo, buscamos
+      vidére, sicut es Deus, = ver, como eres, Dios,
+      ut perpes hæc sit vísio = para que esta visión sea perpetua,
+      perénne laudis cánticum. = cántico de alabanza perenne.
+  certum-tenentes-ordinem:
+    titulo: Certum tenéntes órdinem
+    amen: true
+    estrofas:
+    - |-
+      Certum tenéntes órdinem, = Guardando el orden establecido,
+      pio poscámus péctore = pidamos con corazón piadoso,
+      hora diéi tértia = en la hora tercera del día,
+      trinæ virtútis glóriam, = la gloria del poder trino,
+    - |-
+      Ut simus habitáculum = para que seamos morada
+      illi Sancto Spirítui, = de aquel Espíritu Santo
+      qui quondam in apóstolis = que en otro tiempo, a los apóstoles,
+      hac hora distribútus est. = a esta hora les fue repartido.
+    - |-
+      Hoc gradiénte órdine, = Avanzando con este orden,
+      ornávit cuncta spléndide = adornó todo espléndidamente
+      regni cæléstis cónditor = el creador del reino celestial
+      ad nostra ætérna prǽmia. = para nuestros premios eternos.
+    - |-
+      Deo Patri sit glória = A Dios Padre sea la gloria
+      eiúsque soli Fílio = y a su único Hijo,
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  dicamus-laudes-domino:
+    titulo: Dicámus laudes Dómino
+    amen: true
+    estrofas:
+    - |-
+      Dicámus laudes Dómino = Digamos alabanzas al Señor
+      fervénte prompti spíritu; = con espíritu ferviente y dispuesto;
+      hora volúta séxies = la hora sexta, que ha llegado,
+      nos ad orándum próvocat. = nos invita a orar.
+    - |-
+      In hac enim fidélibus = Porque en ella a los fieles
+      veræ salútis glória, = la gloria de la verdadera salvación,
+      beáti Agni hóstia, = la víctima del Cordero bienaventurado,
+      crucis virtúte rédditur. = por la fuerza de la cruz les es devuelta.
+    - |-
+      Cuius luce claríssima = Ante su luz clarísima
+      tenébricat merídies; = se oscurece el mediodía;
+      sumámus toto péctore = tomemos con todo el corazón
+      tanti splendóris grátiam. = la gracia de tan gran esplendor.
+    - |-
+      Deo Patri sit glória = A Dios Padre sea la gloria
+      eiúsque soli Fílio = y a su único Hijo,
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  ternis-horarum-terminis:
+    titulo: Ternis horárum términis
+    amen: true
+    estrofas:
+    - |-
+      Ternis horárum términis = Cumplidos tres plazos de horas,
+      volútis, dante Dómino, = por don del Señor,
+      trinum perfécte et únicum = al que es perfectamente trino y uno
+      ipsum devóti psállimus. = le cantamos salmos con devoción.
+    - |-
+      Sacrum Dei mystérium = Guardando con corazón puro
+      puro tenéntes péctore, = el sagrado misterio de Dios,
+      Petri magístri régula = según la regla del maestro Pedro,
+      signo salútis pródita, = transmitida con la señal de salvación,
+    - |-
+      Et nos psallámus spíritu, = salmodiemos también nosotros con el espíritu,
+      hæréntes sic apóstolis, = unidos así a los apóstoles,
+      ut plantas adhuc débiles = para que a las plantas aún débiles
+      Christi virtúte dírigant. = las dirijan con el poder de Cristo.
+    - |-
+      Deo Patri sit glória = A Dios Padre sea la gloria
+      eiúsque soli Fílio = y a su único Hijo,
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  christe-redemptor-omnium-ex-patre:
+    titulo: Christe, redémptor ómnium
+    amen: true
+    estrofas:
+    - |-
+      Christe, redémptor ómnium, = Cristo, redentor de todos,
+      ex Patre, Patris Únice, = Unigénito del Padre, [nacido] del Padre,
+      solus ante princípium = el único nacido antes del principio
+      natus ineffabíliter, = de modo inefable:
+    - |-
+      Tu lumen, tu splendor Patris, = tú, luz, tú, resplandor del Padre,
+      tu spes perénnis ómnium, = tú, esperanza perenne de todos,
+      inténde quas fundunt preces = atiende las súplicas que elevan
+      tui per orbem sérvuli. = tus siervos por el mundo.
+    - |-
+      Salútis auctor, récole = Autor de la salvación, recuerda
+      quod nostri quondam córporis, = que en otro tiempo, de nuestro cuerpo,
+      ex illibáta Vírgine = naciendo de la Virgen intacta,
+      nascéndo, formam súmpseris. = tomaste la forma.
+    - |-
+      Hic præsens testátur dies, = Este día presente atestigua,
+      currens per anni círculum, = al recorrer el ciclo del año,
+      quod solus a sede Patris = que solo tú, desde el trono del Padre,
+      mundi salus advéneris; = viniste como salvación del mundo.
+    - |-
+      Hunc cælum, terra, hunc mare, = A este, el cielo, la tierra, a este el mar,
+      hunc omne quod in eis est, = a este todo lo que hay en ellos,
+      auctórem advéntus tui = como autor de tu venida,
+      laudat exsúltans cántico. = lo alaba exultante con un cántico.
+    - |-
+      Nos quoque, qui sancto tuo = También nosotros, que con tu santa
+      redémpti sumus sánguine, = sangre fuimos redimidos,
+      ob diem natális tui = por el día de tu nacimiento
+      hymnum novum concínimus. = cantamos un himno nuevo.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  candor-aeternae-deitatis-alme:
+    titulo: Candor ætérnæ Deitátis alme
+    amen: true
+    estrofas:
+    - |-
+      Candor ætérnæ Deitátis alme, = Resplandor bondadoso de la eterna Divinidad,
+      Christe, tu lumen, vénia atque vita = Cristo, tú, luz, perdón y vida,
+      ádvenis, morbis hóminum medéla, = vienes, remedio de las enfermedades de los hombres,
+      porta salútis. = puerta de salvación.
+    - |-
+      Íntonat terræ chorus angelórum = El coro de los ángeles entona a la tierra
+      cǽlicum carmen, nova sæcla dicens, = un canto celestial, anunciando tiempos nuevos,
+      glóriam Patri, generíque nostro = gloria al Padre, y a nuestro linaje
+      gáudia pacis. = los gozos de la paz.
+    - |-
+      Qui iaces parvus dóminans et orbi, = Tú que yaces pequeño y reinas también sobre el mundo,
+      Vírginis fructus sine labe sanctæ, = fruto de la Virgen santa sin mancha,
+      Christe, iam mundo potiáris omni, = Cristo, poséelo ya todo el mundo,
+      semper amándus. = siempre digno de ser amado.
+    - |-
+      Násceris cælos pátriam datúrus, = Naces para darnos el cielo como patria,
+      unus e nobis, caro nostra factus; = uno de nosotros, hecho carne nuestra;
+      ínnova mentes, trahe caritátis = renueva las mentes, atrae los corazones
+      péctora vinclis. = con los lazos de la caridad.
+    - |-
+      Cœtus exsúltans canit ecce noster, = He aquí que nuestra asamblea, exultante, canta,
+      ángelis læto sociátus ore, = unida a los ángeles con boca alegre,
+      et Patri tecum parilíque Amóri = al Padre contigo y al Amor igual [a ambos]
+      cántica laudis. = cánticos de alabanza.
+  a-solis-ortus-cardine:
+    titulo: A solis ortus cárdine
+    amen: true
+    estrofas:
+    - |-
+      A solis ortus cárdine = Desde el punto donde sale el sol
+      adúsque terræ límitem = hasta el límite de la tierra
+      Christum canámus príncipem, = cantemos a Cristo príncipe,
+      natum María Vírgine. = nacido de María Virgen.
+    - |-
+      Beátus auctor sǽculi = El bienaventurado autor del mundo
+      servíle corpus índuit, = se revistió de un cuerpo de siervo,
+      ut carne carnem líberans = para, liberando la carne con la carne,
+      non pérderet quod cóndidit. = no perder lo que había creado.
+    - |-
+      Clausæ paréntis víscera = En las entrañas de la madre intacta
+      cæléstis intrat grátia; = entra la gracia del cielo;
+      venter puéllæ báiulat = el vientre de la doncella lleva
+      secréta quæ non nóverat. = un secreto que no conocía.
+    - |-
+      Domus pudíci péctoris = La casa del pecho pudoroso
+      templum repénte fit Dei; = se vuelve de repente templo de Dios;
+      intácta nésciens virum = intacta, sin conocer varón,
+      verbo concépit Fílium. = concibió por la palabra un Hijo.
+    - |-
+      Eníxa est puérpera = Dio a luz la parturienta
+      quem Gábriel prædíxerat, = al que Gabriel había predicho,
+      quem matris alvo géstiens = al que Juan, saltando en el seno de su madre,
+      clausus Ioánnes sénserat. = encerrado, había percibido.
+    - |-
+      Feno iacére pértulit, = Soportó yacer en el heno,
+      præsépe non abhórruit, = no rehusó el pesebre,
+      parvóque lacte pastus est = y con un poco de leche se alimentó
+      per quem nec ales ésurit. = aquel por quien ni el ave pasa hambre.
+    - |-
+      Gaudet chorus cæléstium = Se alegra el coro de los habitantes del cielo
+      et ángeli canunt Deum, = y los ángeles cantan a Dios,
+      palámque fit pastóribus = y se manifiesta a los pastores
+      pastor, creátor ómnium. = el pastor, creador de todas las cosas.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  hostis-herodes-impie:
+    titulo: Hostis Heródes ímpie
+    amen: true
+    estrofas:
+    - |-
+      Hostis Heródes ímpie, = Herodes, enemigo impío,
+      Christum veníre quid times? = ¿por qué temes que venga Cristo?
+      Non éripit mortália = No arrebata los reinos mortales
+      qui regna dat cæléstia. = el que da los reinos celestiales.
+    - |-
+      Ibant magi, qua vénerant = Iban los magos por donde habían venido,
+      stellam sequéntes prǽviam, = siguiendo la estrella que los precedía;
+      lumen requírunt lúmine, = buscan la luz con la luz,
+      Deum faténtur múnere. = confiesan a Dios con un don.
+    - |-
+      Lavácra puri gúrgitis = Las aguas del baño puro
+      cæléstis Agnus áttigit; = tocó el Cordero celestial;
+      peccáta quæ non détulit = los pecados que no tenía
+      nos abluéndo sústulit. = los quitó lavándonos.
+    - |-
+      Novum genus poténtiæ: = Un nuevo género de poder:
+      aquæ rubéscunt hýdriæ, = las tinajas de agua enrojecen,
+      vinúmque iussa fúndere = y el agua, mandada a derramar vino,
+      mutávit unda oríginem. = cambió su origen.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui te revélas géntibus, = que te revelas a las naciones,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  magi-videntes-parvulum:
+    titulo: Magi vidéntes párvulum
+    amen: true
+    estrofas:
+    - |-
+      Magi vidéntes párvulum = Los magos, viendo al niño,
+      eóa promunt múnera, = sacan los dones de oriente
+      stratíque votis ófferunt = y, postrados, ofrecen en homenaje
+      tus, myrrham et aurum régium. = incienso, mirra y oro real.
+    - |-
+      Agnósce clara insígnia = Reconoce las claras insignias
+      virtútis ac regni tui, = de tu poder y de tu reino,
+      Puer, cui trinam Pater = Niño, a quien el Padre
+      prædestinávit índolem: = predestinó una triple condición:
+    - |-
+      Regem Deúmque annúntiant = Rey y Dios lo anuncian
+      thesáurus et fragrans odor = el tesoro y el aroma fragante
+      turis Sabǽi, at mýrrheus = del incienso de Saba, pero el polvo
+      pulvis sepúlcrum prǽdocet. = de mirra preanuncia el sepulcro.
+    - |-
+      O sola magnárum úrbium = ¡Oh Belén, la única mayor
+      maior Bethlem, cui cóntigit = que las grandes ciudades, a quien tocó
+      ducem salútis cǽlitus = engendrar, encarnado desde el cielo,
+      incorporátum gígnere! = al guía de la salvación!
+    - |-
+      Hunc et prophétis téstibus = A este, con los profetas como testigos
+      isdémque signatóribus = y como signatarios ellos mismos,
+      testátor et sator iubet = el testador y creador manda
+      adíre regnum et cérnere: = entrar en posesión del reino y verlo:
+    - |-
+      Regnum quod ambit ómnia = el reino que abarca todas las cosas,
+      dia et marína et térrea = las celestes, las del mar y las de la tierra,
+      a solis ortu ad éxitum = desde la salida del sol hasta el ocaso,
+      et tártara et cælum supra. = y el abismo y el cielo arriba.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui te revélas géntibus, = que te revelas a las naciones,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  quicumque-christum-quaeritis:
+    titulo: Quicúmque Christum quǽritis
+    amen: true
+    estrofas:
+    - |-
+      Quicúmque Christum quǽritis, = Todos los que buscáis a Cristo,
+      óculos in altum tóllite: = levantad los ojos a lo alto:
+      illic licébit vísere = allí se podrá ver
+      signum perénnis glóriæ. = la señal de la gloria perenne.
+    - |-
+      Hæc stella, quæ solis rotam = Esta estrella, que a la rueda del sol
+      vincit decóre ac lúmine, = vence en belleza y en luz,
+      venísse terris núntiat = anuncia que ha venido a la tierra
+      cum carne terréstri Deum. = Dios con carne terrena.
+    - |-
+      En, Pérsici ex orbis sinu, = He aquí que, desde el seno del mundo persa,
+      sol unde sumit iánuam, = de donde el sol toma su puerta,
+      cernunt períti intérpretes = la ven los magos, intérpretes expertos,
+      regále vexíllum magi. = [como] estandarte real.
+    - |-
+      «Quis iste tantus —ínquiunt— = «¿Quién es este tan grande —dicen—,
+      regnátor astris ímperans, = soberano que manda a los astros,
+      quem sic tremunt cæléstia, = ante quien así tiemblan las cosas celestes,
+      cui lux et æthra insérviunt? = a quien sirven la luz y el éter?
+    - |-
+      Illústre quiddam cérnimus = Vemos algo ilustre
+      quod nésciat finem pati, = que no conoce sufrir un fin,
+      sublíme, celsum, intérminum, = sublime, excelso, sin término,
+      antíquius cælo et chao. = más antiguo que el cielo y el caos.
+    - |-
+      Hic ille rex est géntium = Este es el rey de las naciones
+      populíque rex Iudáici, = y rey del pueblo judío,
+      promíssus Ábrahæ patri = prometido al padre Abraham
+      eiúsque in ævum sémini». = y a su descendencia para siempre».
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui te revélas géntibus, = que te revelas a las naciones,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  o-lux-beata-caelitum:
+    titulo: O lux beáta cǽlitum
+    amen: true
+    estrofas:
+    - |-
+      O lux beáta cǽlitum = Oh luz bienaventurada de los habitantes del cielo
+      et summa spes mortálium, = y suma esperanza de los mortales,
+      Iesu, cui doméstica = Jesús, a quien, al nacer, el amor
+      arrísit orto cáritas; = de un hogar te sonrió;
+    - |-
+      María, dives grátia, = María, rica en gracia,
+      o sola quæ casto potes = oh tú, la única que puedes
+      fovére Iesum péctore, = abrigar a Jesús en tu casto pecho,
+      cum lacte donans óscula; = dándole besos con la leche;
+    - |-
+      Tuque ex vetústis pátribus = y tú, elegido entre los antiguos padres
+      delécte custos Vírginis, = como custodio de la Virgen,
+      dulci patris quem nómine = a quien con el dulce nombre de padre
+      divína Proles ínvocat: = invoca la Prole divina:
+    - |-
+      De stirpe Iesse nóbili = nacidos de la noble estirpe de Jesé
+      nati in salútem géntium, = para la salvación de las naciones,
+      audíte nos, qui súpplices = escuchadnos a nosotros, que suplicantes
+      ex corde vota fúndimus. = derramamos de corazón nuestros votos.
+    - |-
+      Qua vestra sedes flóruit = Que la gracia de toda virtud
+      virtútis omnis grátia, = con que floreció vuestra casa
+      hanc detur in domésticis = se nos conceda poder reproducirla
+      reférre posse móribus. = en las costumbres de nuestros hogares.
+    - |-
+      Iesu, tuis obœ́diens = Jesús, que te hiciste obediente
+      qui factus es paréntibus, = a tus padres,
+      cum Patre summo ac Spíritu = con el Padre altísimo y el Espíritu,
+      semper tibi sit glória. = a ti sea siempre la gloria.
+  dulce-fit-nobis-memorare-parvum:
+    titulo: Dulce fit nobis memoráre parvum
+    amen: true
+    estrofas:
+    - |-
+      Dulce fit nobis memoráre parvum = Nos resulta dulce recordar la pequeña
+      Názaræ tectum tenuémque cultum; = casa de Nazaret y su pobre vida;
+      éxpedit Iesu tácitam reférre = conviene contar en verso
+      cármine vitam. = la vida oculta de Jesús.
+    - |-
+      Arte qua Ioseph húmili excoléndus, = En el oficio humilde en que José lo ha de formar,
+      ábdito Iesus iuvenéscit ævo, = Jesús crece en una edad escondida,
+      seque fabrílis sócium labóris = y como compañero del trabajo de artesano
+      ádicit ultro. = se ofrece por sí mismo.
+    - |-
+      Ássidet nato pia mater almo, = Se sienta junto a su Hijo la madre piadosa,
+      ássidet sponso bona nupta, felix = se sienta junto a su esposo la buena esposa, feliz
+      si potest curas releváre lassis = si puede aliviar las preocupaciones de los cansados
+      múnere amíco. = con su servicio amistoso.
+    - |-
+      O neque expértes óperæ et labóris, = Oh vosotros, que no fuisteis ajenos a la tarea y al trabajo
+      nec mali ignári, míseros iuváte; = ni ignorantes del mal, ayudad a los desdichados;
+      quotquot implórant cólumen, benígno = a cuantos imploran vuestro amparo,
+      cérnite vultu. = miradlos con rostro benigno.
+    - |-
+      Sit tibi, Iesu, decus atque virtus, = Sea a ti, Jesús, el honor y el poder,
+      sancta qui vitæ documénta præbes, = que nos das santas enseñanzas de vida,
+      quique cum summo Genitóre et almo = y que con el sumo Padre y el Espíritu
+      Flámine regnas. = bondadoso reinas.
+  christe-splendor-patris:
+    titulo: Christe, splendor Patris
+    amen: true
+    estrofas:
+    - |-
+      Christe, splendor Patris, = Cristo, esplendor del Padre,
+      Dei mater Virgo, = Virgen, madre de Dios,
+      Ioseph, tam sacrórum = José, guardián
+      pígnorum servátor, = de prendas tan sagradas:
+    - |-
+      Nitet vestra domus = brilla vuestra casa
+      flóribus virtútum, = con las flores de las virtudes,
+      unde gratiárum = de donde mana
+      fons prománat ipse. = la fuente misma de las gracias.
+    - |-
+      Ángeli stupéntes = Los ángeles, asombrados,
+      Natum Dei cernunt = ven al Hijo de Dios
+      servi forma indútum = revestido de la forma de siervo,
+      servis famulántem. = sirviendo a sus siervos.
+    - |-
+      Imus præes, Ioseph, = Tú, José, el último, presides,
+      humilísque iubes; = y, humilde, mandas;
+      iubes et María = mandas también a María,
+      et utríque servis. = y a ambos sirves.
+    - |-
+      Cunctis præstant aulis = Supera a todos los palacios
+      hæc egéna sæpta, = este pobre recinto,
+      salus unde cœpit = donde comenzó la salvación
+      géneris humáni. = del género humano.
+    - |-
+      Iesu, Mater, Ioseph, = Jesús, Madre, José,
+      mansiónis vestræ = concedednos, en nuestras casas,
+      nostras date sedes = gozar de los santos dones
+      donis frui sanctis. = de vuestra morada.
+    - |-
+      Tibi laudes, Christe, = A ti las alabanzas, Cristo,
+      spem qui nobis præbes, = que nos das la esperanza
+      tuos per paréntes = de llegar, por medio de tus padres,
+      cæli adíre domum. = a la casa del cielo.
+  corde-natus-ex-parentis:
+    titulo: Corde natus ex Paréntis
+    amen: true
+    estrofas:
+    - |-
+      Corde natus ex Paréntis = Nacido del corazón del Padre
+      ante mundi exórdium, = antes del comienzo del mundo,
+      Alpha et Ómega vocátus, = llamado Alfa y Omega,
+      ipse fons et cláusula = él mismo fuente y término
+      ómnium quæ sunt, fuérunt = de todo lo que es, lo que fue
+      quæque post futúra sunt. = y lo que será después.
+    - |-
+      Córporis formam cadúci, = De un cuerpo caduco la forma,
+      membra morti obnóxia = miembros sujetos a la muerte,
+      índuit, ne gens períret = tomó, para que no pereciera el linaje
+      primoplásti ex gérmine, = nacido del primer hombre,
+      mérserat quam lex profúndo = al que una ley de culpa había hundido
+      noxiális tártaro. = en el profundo abismo.
+    - |-
+      O beátus ortus ille, = ¡Oh bienaventurado aquel nacimiento,
+      Virgo cum puérpera = cuando la Virgen parturienta,
+      édidit nostram salútem = fecunda por el Espíritu Santo,
+      feta Sancto Spíritu, = dio a luz a nuestra salvación,
+      et puer redémptor orbis = y el niño redentor del mundo
+      os sacrátum prótulit. = mostró su rostro sagrado!
+    - |-
+      Ecce, quem vates vetústis = He aquí al que los profetas en siglos antiguos
+      concinébant sǽculis, = cantaban a una,
+      quem prophetárum fidéles = al que las páginas fieles de los profetas
+      páginæ spopónderant, = habían prometido:
+      émicat promíssus olim: = brilla el prometido de antaño;
+      cuncta colláudent eum! = ¡que todas las cosas lo alaben!
+    - |-
+      Glóriam Patri melódis = Gloria al Padre con voces
+      personémus vócibus; = melodiosas hagamos resonar;
+      glóriam Christo canámus, = gloria a Cristo cantemos,
+      matre nato vírgine, = nacido de madre virgen,
+      inclitóque sempitérnam = y gloria sempiterna
+      glóriam Paráclito. = al ínclito Paráclito.
+  radix-iesse-floruit:
+    titulo: Radix Iesse iam flóruit
+    amen: true
+    estrofas:
+    - |-
+      Radix Iesse iam flóruit = La raíz de Jesé ya ha florecido
+      et virga fructum édidit; = y la vara ha dado su fruto;
+      fecúnda partum prótulit = la fecunda ha dado a luz un hijo
+      et virgo mater pérmanet. = y la virgen permanece madre.
+    - |-
+      Præsǽpe poni pértulit = Soportó que lo pusieran en un pesebre
+      qui lucis auctor éxstitit; = el que fue autor de la luz;
+      cum Patre cælos cóndidit, = con el Padre creó los cielos,
+      sub matre pannos índuit. = bajo la madre se vistió de pañales.
+    - |-
+      Legem dedit qui sǽculo, = El que dio la ley al mundo,
+      cuius decem præcépta sunt, = cuyos preceptos son diez,
+      dignándo factus est homo = dignándose, se hizo hombre
+      sub legis esse vínculo. = para estar sujeto al vínculo de la ley.
+    - |-
+      Iam lux salúsque náscitur, = Ya nacen la luz y la salvación,
+      nox díffugit, mors víncitur; = la noche huye, la muerte es vencida;
+      veníte, gentes, crédite: = venid, naciones, creed:
+      Deum María prótulit. = María dio a luz a Dios.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  fit-porta-christi-pervia:
+    titulo: Fit porta Christi pérvia
+    amen: true
+    estrofas:
+    - |-
+      Fit porta Christi pérvia = La puerta se hace transitable para Cristo,
+      omni reférta grátia, = llena de toda gracia,
+      transítque rex, et pérmanet = y pasa el rey, y permanece
+      clausa, ut fuit, per sǽcula. = cerrada, como estaba, por los siglos.
+    - |-
+      Summi Paréntis Fílius = El Hijo del sumo Padre
+      procéssit aula Vírginis, = salió del palacio de la Virgen,
+      sponsus, redémptor, cónditor, = esposo, redentor, creador,
+      suæ gigas Ecclésiæ: = gigante de su Iglesia.
+    - |-
+      Honor matris et gáudium, = Honor y gozo de su madre,
+      imménsa spes credéntium, = inmensa esperanza de los creyentes,
+      lapis de monte véniens = piedra que viene del monte
+      mundúmque replens grátia. = y llena el mundo de gracia.
+    - |-
+      Exsúltet omnis ánima, = Exulte toda alma,
+      quod nunc salvátor géntium = porque ahora el salvador de las naciones,
+      advénit mundi Dóminus = el Señor del mundo, ha venido
+      redímere quos cóndidit. = a redimir a los que creó.
+    - |-
+      Christo sit omnis glória, = A Cristo sea toda la gloria,
+      quem Pater Deum génuit, = a quien el Padre engendró Dios,
+      quem Virgo mater édidit = a quien la Virgen madre dio a luz,
+      fecúnda Sancto Spíritu. = fecunda por el Espíritu Santo.
+  a-patre-unigenite:
+    titulo: A Patre Unigénite
+    amen: true
+    estrofas:
+    - |-
+      A Patre Unigénite, = Unigénito del Padre,
+      ad nos venis per Vírginem, = vienes a nosotros por la Virgen,
+      baptísmi rore cónsecrans = consagrando a todos con el rocío del bautismo,
+      cunctos, fide regénerans. = regenerándolos por la fe.
+    - |-
+      De cælo celsus pródiens = Saliendo, excelso, del cielo,
+      éxcipis formam hóminis, = tomas la forma del hombre,
+      factúram morte rédimens, = redimiendo con la muerte a tu criatura,
+      gáudia vitæ lárgiens. = concediendo los gozos de la vida.
+    - |-
+      Hoc te, Redémptor, quǽsumus: = Esto te pedimos, Redentor:
+      illábere propítius, = desciende propicio [sobre nosotros]
+      clarúmque nostris córdibus = y da a nuestros corazones
+      lumen præbe deíficum. = la clara luz divina.
+    - |-
+      Mane nobíscum, Dómine, = Quédate con nosotros, Señor,
+      noctem obscúram rémove, = aparta la noche oscura,
+      omne delíctum áblue, = lava todo delito,
+      pie medélam tríbue. = concede, piadoso, el remedio.
+    - |-
+      O Christe, vita, véritas, = Oh Cristo, vida, verdad,
+      tibi sit omnis glória, = a ti sea toda la gloria,
+      quem Patris atque Spíritus = a quien el esplendor del Padre y del Espíritu
+      splendor revélat cǽlitus. = revela desde el cielo.
+  implente-munus-debitum:
+    titulo: Implénte munus débitum
+    amen: true
+    estrofas:
+    - |-
+      Implénte munus débitum = Cumpliendo el oficio debido
+      Ioánne, rerum cónditor = Juan, el creador de las cosas,
+      Iordáne mersus hac die = sumergido en el Jordán en este día,
+      aquam lavándo díluit, = purificó el agua al lavarse.
+    - |-
+      Non ipse mundári volens = No quería él ser purificado,
+      de ventre natus Vírginis, = nacido del seno de la Virgen,
+      peccáta sed mortálium = sino quitar los pecados de los mortales
+      suo lavácro tóllere. = con su propio baño.
+    - |-
+      Dicénte Patre quod «meus = Diciendo el Padre: «Este
+      diléctus hic est Fílius», = es mi Hijo amado»,
+      suménte Sancto Spíritu = y tomando el Espíritu Santo
+      formam colúmbæ cǽlitus, = forma de paloma desde el cielo,
+    - |-
+      Hoc mýstico sub nómine = bajo este nombre misterioso
+      micat salus Ecclésiæ; = brilla la salvación de la Iglesia;
+      Persóna trina cómmanet = la Persona trina permanece
+      unus Deus per ómnia. = un solo Dios en todo.
+    - |-
+      O Christe, vita, véritas, = Oh Cristo, vida, verdad,
+      tibi sit omnis glória, = a ti sea toda la gloria,
+      quem Patris atque Spíritus = a quien el esplendor del Padre y del Espíritu
+      splendor revélat cǽlitus. = revela desde el cielo.
+  iesus-refulsit-omnium:
+    titulo: Iesus refúlsit ómnium
+    amen: true
+    estrofas:
+    - |-
+      Iesus refúlsit ómnium = Jesús ha resplandecido, piadoso redentor
+      pius redémptor géntium; = de todas las naciones;
+      totum genus fidélium = que todo el linaje de los fieles
+      laudis celébret cánticum. = celebre un cántico de alabanza.
+    - |-
+      Denis ter ævi círculis = Viviendo ya tres decenas de años
+      iam parte vivens córporis, = en la condición del cuerpo,
+      lympham petit baptísmatis = pide el agua del bautismo,
+      cunctis carens contágiis. = libre de todo contagio.
+    - |-
+      Felix Ioánnes mérgere = Feliz Juan tiembla de sumergir
+      illum treméscit flúmine, = en el río a aquel
+      potest suo qui sánguine = que puede con su sangre
+      peccáta mundi térgere. = lavar los pecados del mundo.
+    - |-
+      Vox ergo Prolem de polis = Entonces la voz del Padre excelso,
+      testátur excélsi Patris, = desde el cielo, da testimonio de su Hijo,
+      fluítque virtus Spíritus = y fluye la fuerza del Espíritu
+      sancti datrix charísmatis. = Santo, dador del carisma.
+    - |-
+      Nos, Christe, voce súpplici = Nosotros, Cristo, con voz suplicante
+      precámur, omnes prótege, = te rogamos: protégenos a todos
+      ac mente fac nitéscere = y haz que brillemos en la mente
+      tibíque mundos vívere. = y vivamos puros para ti.
+    - |-
+      O Christe, vita, véritas, = Oh Cristo, vida, verdad,
+      tibi sit omnis glória, = a ti sea toda la gloria,
+      quem Patris atque Spíritus = a quien el esplendor del Padre y del Espíritu
+      splendor revélat cǽlitus. = revela desde el cielo.
+  audi-benigne-conditor:
+    titulo: Audi, benígne Cónditor
+    amen: true
+    estrofas:
+    - |-
+      Audi, benígne Cónditor, = Escucha, Creador benigno,
+      nostras preces cum flétibus, = nuestras súplicas con llanto,
+      sacráta in abstinéntia = derramadas en el sagrado
+      fusas quadragenária. = ayuno de cuarenta días.
+    - |-
+      Scrutátor alme córdium, = Escrutador bondadoso de los corazones,
+      infírma tu scis vírium; = tú conoces la debilidad de las fuerzas;
+      ad te revérsis éxhibe = a los que vuelven a ti muéstrales
+      remissiónis grátiam. = la gracia del perdón.
+    - |-
+      Multum quidem peccávimus, = Mucho, en verdad, hemos pecado,
+      sed parce confiténtibus, = pero perdona a los que confiesan,
+      tuíque laude nóminis = y para alabanza de tu nombre
+      confer medélam lánguidis. = da remedio a los enfermos.
+    - |-
+      Sic corpus extra cónteri = Concede que así el cuerpo por fuera
+      dona per abstinéntiam, = se domine por la abstinencia,
+      ieiúnet ut mens sóbria = para que la mente sobria ayune
+      a labe prorsus críminum. = del todo de la mancha de los pecados.
+    - |-
+      Præsta, Beáta Trínitas, = Concédelo, bienaventurada Trinidad,
+      concéde, simplex Únitas, = otórgalo, Unidad simple,
+      ut fructuósa sint tuis = que sean fructuosos para los tuyos
+      hæc parcitátis múnera. = estos dones del ayuno.
+  ex-more-docti-mystico:
+    titulo: Ex more docti mýstico
+    amen: true
+    estrofas:
+    - |-
+      Ex more docti mýstico = Instruidos por la costumbre mística,
+      servémus abstinéntiam, = guardemos la abstinencia
+      deno diérum círculo = en el ciclo bien conocido de diez días
+      ducto quater notíssimo. = repetido cuatro veces.
+    - |-
+      Lex et prophétæ prímitus = La ley y los profetas primero
+      hanc prætulérunt, póstmodum = la anunciaron; después
+      Christus sacrávit, ómnium = Cristo la consagró, de todos
+      rex atque factor témporum. = los tiempos rey y creador.
+    - |-
+      Utámur ergo párcius = Usemos, pues, con más moderación
+      verbis, cibis et pótibus, = las palabras, la comida y la bebida,
+      somno, iocis et árctius = el sueño, las bromas, y más estrictamente
+      perstémus in custódia. = perseveremos en la vigilancia.
+    - |-
+      Vitémus autem péssima = Evitemos además los males peores,
+      quæ súbruunt mentes vagas, = que arruinan las mentes inconstantes,
+      nullúmque demus cállido = y no demos al astuto
+      hosti locum tyránnidis. = enemigo lugar para su tiranía.
+    - |-
+      Præsta, Beáta Trínitas, = Concédelo, bienaventurada Trinidad,
+      concéde, simplex Únitas, = otórgalo, Unidad simple,
+      ut fructuósa sint tuis = que sean fructuosos para los tuyos
+      hæc parcitátis múnera. = estos dones del ayuno.
+  precemur-omnes-cernui:
+    titulo: Precémur omnes cérnui
+    amen: true
+    estrofas:
+    - |-
+      Precémur omnes cérnui, = Oremos todos postrados,
+      clamémus atque sínguli, = clamemos cada uno,
+      plorémus ante iúdicem, = lloremos ante el juez,
+      flectámus iram víndicem: = aplaquemos la ira vengadora.
+    - |-
+      Nostris malis offéndimus = Con nuestros males hemos ofendido
+      tuam, Deus, cleméntiam; = tu clemencia, oh Dios;
+      effúnde nobis désuper, = derrama sobre nosotros desde lo alto,
+      remíssor, indulgéntiam. = tú que perdonas, la indulgencia.
+    - |-
+      Meménto quod sumus tui, = Recuerda que somos, aunque frágiles,
+      licet cadúci, plásmatis; = obra de tus manos;
+      ne des honórem nóminis = no des el honor de tu nombre,
+      tui, precámur, álteri. = te rogamos, a otro.
+    - |-
+      Laxa malum quod fécimus, = Perdona el mal que hicimos,
+      auge bonum quod póscimus, = aumenta el bien que pedimos,
+      placére quo tandem tibi = para que al fin podamos agradarte
+      possímus hic et pérpetim. = aquí y para siempre.
+    - |-
+      Præsta, Beáta Trínitas, = Concédelo, bienaventurada Trinidad,
+      concéde, simplex Únitas, = otórgalo, Unidad simple,
+      ut fructuósa sint tuis = que sean fructuosos para los tuyos
+      hæc parcitátis múnera. = estos dones del ayuno.
+  iesu-quadragenariae:
+    titulo: Iesu, quadragenáriæ
+    amen: true
+    estrofas:
+    - |-
+      Iesu, quadragenáriæ = Jesús, que consagraste
+      dicátor abstinéntiæ, = la abstinencia de cuarenta días,
+      qui ob salútem méntium = que por la salvación de las almas
+      præcéperas ieiúnium, = habías mandado el ayuno:
+    - |-
+      Adésto nunc Ecclésiæ, = asiste ahora a la Iglesia,
+      adésto pæniténtiæ, = asiste a la penitencia
+      qua supplicámus cérnui = con la que, postrados, suplicamos
+      peccáta nostra dílui. = que nuestros pecados sean lavados.
+    - |-
+      Tu retroácta crímina = Tú, los crímenes pasados
+      tua remítte grátia = perdónalos con tu gracia,
+      et a futúris ádhibe = y contra los futuros pon
+      custódiam mitíssime, = tu custodia, oh mansísimo,
+    - |-
+      Ut, expiáti ánnuis = para que, purificados por los actos
+      compunctiónis áctibus, = anuales de compunción,
+      tendámus ad paschália = tendamos a los gozos pascuales,
+      digne colénda gáudia. = que han de celebrarse dignamente.
+    - |-
+      Te rerum univérsitas, = Que el universo de las cosas te adore,
+      clemens, adóret, Trínitas, = clemente Trinidad,
+      et nos novi per véniam = y nosotros, renovados por el perdón,
+      novum canámus cánticum. = cantemos un cántico nuevo.
+  nunc-tempus-acceptabile:
+    titulo: Nunc tempus acceptábile
+    amen: true
+    estrofas:
+    - |-
+      Nunc tempus acceptábile = Ahora brilla el tiempo favorable,
+      fulget datum divínitus, = dado por Dios,
+      ut sanet orbem lánguidum = para que sane al mundo enfermo
+      medéla parsimóniæ. = el remedio de la sobriedad.
+    - |-
+      Christi decóro lúmine = Con la hermosa luz de Cristo
+      dies salútis émicat, = resplandece el día de la salvación,
+      dum corda culpis sáucia = mientras la abstinencia reforma
+      refórmat abstinéntia. = los corazones heridos por las culpas.
+    - |-
+      Hanc mente nos et córpore, = Haz, oh Dios, que la guardemos
+      Deus, tenére pérfice, = con la mente y con el cuerpo,
+      ut appetámus próspero = para que deseemos, con un feliz
+      perénne pascha tránsitu. = tránsito, la Pascua perenne.
+    - |-
+      Te rerum univérsitas, = Que el universo de las cosas te adore,
+      clemens, adóret, Trínitas, = clemente Trinidad,
+      et nos novi per véniam = y nosotros, renovados por el perdón,
+      novum canámus cánticum. = cantemos un cántico nuevo.
+  iam-christe-sol-iustitiae:
+    titulo: Iam, Christe, sol iustítiæ
+    amen: true
+    estrofas:
+    - |-
+      Iam, Christe, sol iustítiæ, = Ya, Cristo, sol de justicia,
+      mentis dehíscant ténebræ, = ábranse las tinieblas de la mente,
+      virtútum ut lux rédeat, = para que vuelva la luz de las virtudes,
+      terris diem cum réparas. = cuando devuelves el día a la tierra.
+    - |-
+      Dans tempus acceptábile = Al dar el tiempo favorable,
+      et pǽnitens cor tríbue, = concede también un corazón penitente,
+      convértat ut benígnitas = para que convierta la benignidad
+      quos longa suffert píetas; = a los que soporta tu larga piedad;
+    - |-
+      Quiddámque pæniténtiæ = y concede llevar algo de penitencia
+      da ferre, quo fit démptio, = por la que se obtenga el perdón
+      maióre tuo múnere, = con tu don mayor,
+      culpárum quamvis grándium. = aunque las culpas sean grandes.
+    - |-
+      Dies venit, dies tua, = Viene el día, tu día,
+      per quam reflórent ómnia; = por el que todo vuelve a florecer;
+      lætémur in hac ut tuæ = alegrémonos en él, como devueltos
+      per hanc redúcti grátiæ. = por él a tu gracia.
+    - |-
+      Te rerum univérsitas, = Que el universo de las cosas te adore,
+      clemens, adóret, Trínitas, = clemente Trinidad,
+      et nos novi per véniam = y nosotros, renovados por el perdón,
+      novum canámus cánticum. = cantemos un cántico nuevo.
+  dei-fide-qua-vivimus:
+    titulo: Dei fide, qua vívimus
+    amen: true
+    estrofas:
+    - |-
+      Dei fide, qua vívimus, = Con la fe de Dios, por la que vivimos,
+      qua spe perénni crédimus, = con la que creemos en la esperanza perenne,
+      per caritátis grátiam = por la gracia de la caridad
+      Christi canámus glóriam, = cantemos la gloria de Cristo,
+    - |-
+      Qui ductus hora tértia = que, conducido a la hora tercia
+      ad passiónis hóstiam, = al sacrificio de la pasión,
+      crucis ferens suspéndia = soportando el suplicio de la cruz,
+      ovem redúxit pérditam. = devolvió la oveja perdida.
+    - |-
+      Precémur ergo súbditi, = Roguemos, pues, sometidos [a él],
+      redemptióne líberi, = libres por la redención,
+      ut éruat a sǽculo = que arranque del mundo
+      quos solvit a chirógrapho. = a los que libró del documento [de la deuda].
+    - |-
+      Christum rogámus et Patrem, = A Cristo rogamos y al Padre,
+      Christi Patrísque Spíritum; = al Espíritu de Cristo y del Padre;
+      unum potens per ómnia, = Trinidad, una y poderosa en todo,
+      fove precántes, Trínitas. = favorece a los que te suplican.
+  qua-christus-hora-sitiit:
+    titulo: Qua Christus hora sítiit
+    amen: true
+    estrofas:
+    - |-
+      Qua Christus hora sítiit = La hora en que Cristo tuvo sed
+      crucem vel in qua súbiit, = o en la que subió a la cruz,
+      quos præstat in hac psállere = a los que concede salmodiar en ella
+      ditet siti iustítiæ. = los enriquezca con sed de justicia.
+    - |-
+      Simul sit his esúries, = Que tengan también hambre,
+      quam ipse de se sátiet, = que él mismo sacie de sí,
+      crimen sit ut fastídium = para que el pecado les cause hastío
+      virtúsque desidérium. = y la virtud, deseo.
+    - |-
+      Charísma Sancti Spíritus = Que el carisma del Espíritu Santo
+      sic ínfluat psalléntibus, = se derrame así sobre los que salmodian,
+      ut carnis æstus frígeat = que el ardor de la carne se enfríe
+      et mentis algor férveat. = y el frío de la mente arda.
+    - |-
+      Christum rogámus et Patrem, = A Cristo rogamos y al Padre,
+      Christi Patrísque Spíritum; = al Espíritu de Cristo y del Padre;
+      unum potens per ómnia, = Trinidad, una y poderosa en todo,
+      fove precántes, Trínitas. = favorece a los que te suplican.
+  ternis-ter-horis-numerus:
+    titulo: Ternis ter horis númerus
+    amen: true
+    estrofas:
+    - |-
+      Ternis ter horis númerus = El número de tres veces tres horas
+      nobis sacrátus pánditur, = se nos abre consagrado,
+      sanctóque Iesu nómine = y en el santo nombre de Jesús
+      munus precémur véniæ. = pidamos el don del perdón.
+    - |-
+      Latrónis, en, conféssio = He aquí que la confesión del ladrón
+      Christi merétur grátiam; = merece la gracia de Cristo;
+      laus nostra vel devótio = que nuestra alabanza y nuestra devoción
+      mercétur indulgéntiam. = obtengan la indulgencia.
+    - |-
+      Mors per crucem nunc ínterit = La muerte perece ahora por la cruz
+      et post ténebras lux redit; = y tras las tinieblas vuelve la luz;
+      horror dehíscat críminum, = que se disipe el horror de los pecados,
+      splendor nitéscat méntium. = que brille el esplendor de las almas.
+    - |-
+      Christum rogámus et Patrem, = A Cristo rogamos y al Padre,
+      Christi Patrísque Spíritum; = al Espíritu de Cristo y del Padre;
+      unum potens per ómnia, = Trinidad, una y poderosa en todo,
+      fove precántes, Trínitas. = favorece a los que te suplican.
+  vexilla-regis-prodeunt:
+    titulo: Vexílla regis pródeunt
+    amen: true
+    estrofas:
+    - |-
+      Vexílla regis pródeunt, = Avanzan los estandartes del rey,
+      fulget crucis mystérium, = brilla el misterio de la cruz,
+      quo carne carnis cónditor = en la que con la carne el creador de la carne
+      suspénsus est patíbulo; = fue colgado en el patíbulo;
+    - |-
+      Quo, vulnerátus ínsuper = en la que, herido además
+      mucróne diro lánceæ, = por la punta cruel de la lanza,
+      ut nos laváret crímine, = para lavarnos del pecado
+      manávit unda et sánguine. = manó agua y sangre.
+    - |-
+      Arbor decóra et fúlgida, = ¡Árbol hermoso y resplandeciente,
+      ornáta regis púrpura, = adornado con la púrpura del rey,
+      elécta digno stípite = elegido para tocar con tu digno tronco
+      tam sancta membra tángere! = miembros tan santos!
+    - |-
+      Beáta, cuius bráchiis = Dichoso, de cuyos brazos
+      sæcli pepéndit prétium; = colgó el precio del mundo;
+      statéra facta est córporis = se hizo balanza del cuerpo
+      prædam tulítque tártari. = y arrebató la presa al abismo.
+    - |-
+      Salve, ara, salve, víctima, = ¡Salve, altar; salve, víctima,
+      de passiónis glória; = por la gloria de la pasión,
+      qua Vita mortem pértulit = en la que la Vida soportó la muerte
+      et morte vitam réddidit! = y con la muerte devolvió la vida!
+    - |-
+      O crux, ave, spes única! = ¡Oh cruz, salve, esperanza única!
+      in hac triúmphi glória = En esta gloria del triunfo
+      piis adáuge grátiam = aumenta a los piadosos la gracia
+      reísque dele crímina. = y borra los crímenes a los culpables.
+    - |-
+      Te, fons salútis, Trínitas, = A ti, fuente de salvación, Trinidad,
+      colláudet omnis spíritus; = te alabe todo espíritu;
+      quos per crucis mystérium = a los que salvas por el misterio de la cruz,
+      salvas, fove per sǽcula. = protégelos por los siglos.
+  pange-lingua-gloriosi-proelium:
+    titulo: Pange, lingua, gloriósi
+    amen: true
+    estrofas:
+    - |-
+      Pange, lingua, gloriósi = Canta, lengua, el combate
+      prœ́lium certáminis, = de la gloriosa lucha,
+      et super crucis tropǽo = y sobre el trofeo de la cruz
+      dic triúmphum nóbilem, = proclama el noble triunfo,
+      quáliter redémptor orbis = cómo el redentor del mundo,
+      immolátus vícerit. = inmolado, venció.
+    - |-
+      De paréntis protoplásti = Del engaño del primer padre
+      fraude factor cóndolens, = compadecido el creador,
+      quando pomi noxiális = cuando, al morder el fruto dañino,
+      morte morsu córruit, = cayó en la muerte,
+      ipse lignum tunc notávit, = él mismo señaló entonces el árbol
+      damna ligni ut sólveret. = para reparar los daños del árbol.
+    - |-
+      Hoc opus nostræ salútis = Esta obra de nuestra salvación
+      ordo depopóscerat, = la había exigido el orden [divino],
+      multifórmis perditóris = para burlar con arte el arte
+      arte ut artem fálleret, = del traidor de mil formas
+      et medélam ferret inde, = y traer el remedio de donde
+      hostis unde lǽserat. = el enemigo había herido.
+    - |-
+      Quando venit ergo sacri = Cuando llegó, pues, la plenitud
+      plenitúdo témporis, = del tiempo sagrado,
+      missus est ab arce Patris = fue enviado desde el alcázar del Padre
+      Natus, orbis cónditor, = el Hijo, creador del mundo,
+      atque ventre virgináli = y del seno virginal
+      carne factus pródiit. = salió hecho carne.
+    - |-
+      Lustra sex qui iam perácta = Cumplidos ya seis lustros,
+      tempus implens córporis, = completando el tiempo de su vida corporal,
+      se volénte, natus ad hoc, = por su voluntad, nacido para esto,
+      passióni déditus, = entregado a la pasión,
+      agnus in crucis levátur = el cordero es levantado en la cruz
+      immolándus stípite. = para ser inmolado en el madero.
+    - |-
+      Æqua Patri Filióque, = Igual al Padre y al Hijo,
+      ínclito Paráclito, = al ínclito Paráclito,
+      sempitérna sit Beátæ = sea a la bienaventurada Trinidad
+      Trinitáti glória, = la gloria sempiterna,
+      cuius alma nos redémit = cuya gracia bondadosa nos redimió
+      atque servat grátia. = y nos conserva.
+  en-acetum-fel-arundo:
+    titulo: En acétum, fel, arúndo
+    amen: true
+    estrofas:
+    - |-
+      En acétum, fel, arúndo, = He aquí el vinagre, la hiel, la caña,
+      sputa, clavi, láncea; = los salivazos, los clavos, la lanza;
+      mite corpus perforátur, = es perforado el cuerpo manso,
+      sanguis, unda prófluit; = fluyen sangre y agua;
+      terra, pontus, astra, mundus = ¡la tierra, el mar, los astros, el mundo,
+      quo lavántur flúmine! = con qué río son lavados!
+    - |-
+      Crux fidélis, inter omnes = ¡Cruz fiel, entre todos
+      arbor una nóbilis! = el único árbol noble!
+      Nulla talem silva profert = Ningún bosque produce otro igual
+      flore, fronde, gérmine. = en flor, en hoja, en fruto.
+      Dulce lignum, dulci clavo = ¡Dulce leño, que con dulce clavo
+      dulce pondus sústinens! = sostienes un dulce peso!
+    - |-
+      Flecte ramos, arbor alta, = Dobla tus ramas, árbol alto,
+      tensa laxa víscera, = afloja tus entrañas tensas,
+      et rigor lentéscat ille = y que se ablande aquella rigidez
+      quem dedit natívitas, = que te dio la naturaleza,
+      ut supérni membra regis = para que los miembros del rey celestial
+      miti tendas stípite. = los extiendas en un tronco blando.
+    - |-
+      Sola digna tu fuísti = Solo tú fuiste digno
+      ferre sæcli prétium, = de llevar el precio del mundo
+      atque portum præparáre = y de preparar, como un navegante,
+      nauta mundo náufrago, = el puerto al mundo náufrago,
+      quem sacer cruor perúnxit = tú, a quien ungió la sangre sagrada
+      fusus Agni córpore. = derramada del cuerpo del Cordero.
+    - |-
+      Æqua Patri Filióque, = Igual al Padre y al Hijo,
+      ínclito Paráclito, = al ínclito Paráclito,
+      sempitérna sit Beátæ = sea a la bienaventurada Trinidad
+      Trinitáti glória, = la gloria sempiterna,
+      cuius alma nos redémit = cuya gracia bondadosa nos redimió
+      atque servat grátia. = y nos conserva.
+  celsae-salutis-gaudia:
+    titulo: Celsæ salútis gáudia
+    amen: true
+    estrofas:
+    - |-
+      Celsæ salútis gáudia = Los gozos de la excelsa salvación
+      mundus fidélis iúbilet: = celebre con júbilo el mundo fiel:
+      Iesus, redémptor ómnium, = Jesús, redentor de todos,
+      mortis perémit príncipem. = aniquiló al príncipe de la muerte.
+    - |-
+      Palmæ et olívæ súrculos = Llevando por el camino ramos
+      cœtus viándo déferens, = de palma y de olivo, la multitud
+      «Hosánna David fílio» = «Hosanna al hijo de David»
+      claris frequéntat vócibus. = repite con voces claras.
+    - |-
+      Nos ergo summo príncipi = Nosotros, pues, al príncipe supremo
+      currámus omnes óbviam; = corramos todos al encuentro;
+      melos canéntes glóriæ, = cantando melodías de gloria,
+      palmas gerámus gáudii. = llevemos palmas de alegría.
+    - |-
+      Cursúsque nostros lúbricos = Y que nuestros pasos vacilantes
+      donis beátis súblevet, = los levante con dones felices,
+      grates ut omni témpore = para que en todo tiempo
+      ipso ferámus débitas. = le demos las gracias debidas.
+    - |-
+      Deo Patri sit glória = A Dios Padre sea la gloria
+      eiúsque soli Fílio = y a su único Hijo,
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  o-memoriale-mortis-domini:
+    titulo: O memoriále mortis Dómini
+    amen: true
+    estrofas:
+    - |-
+      O memoriále mortis Dómini, = Oh memorial de la muerte del Señor,
+      panis vivus vitam præstans hómini, = pan vivo que das la vida al hombre,
+      præsta meæ menti de te vívere = concede a mi mente vivir de ti
+      et te illi semper dulce sápere. = y que siempre le sepas dulce.
+    - |-
+      Pie pelicáne, Iesu Dómine, = Piadoso pelícano, Señor Jesús,
+      me immúndum munda tuo sánguine, = límpiame a mí, impuro, con tu sangre,
+      cuius una stilla salvum fácere = de la que una sola gota puede salvar
+      totum mundum quit ab omni scélere. = al mundo entero de todo crimen.
+    - |-
+      Te cum reveláta cernam fácie = Cuando te vea con el rostro descubierto,
+      visu tandem lætus tuæ glóriæ, = alegre al fin con la visión de tu gloria,
+      Patri, tibi laudes et Spirítui = al Padre, a ti y al Espíritu las alabanzas
+      dicam beatórum iunctus cœ́tui. = diré, unido a la asamblea de los bienaventurados.
+  salva-redemptor-plasma-tuum-nobile:
+    titulo: Salva, Redémptor, plasma tuum nóbile
+    amen: true
+    estrofas:
+    - |-
+      Salva, Redémptor, plasma tuum nóbile, = Salva, Redentor, a tu noble criatura,
+      signátum sancto vultus tui lúmine, = marcada con la santa luz de tu rostro;
+      ne lacerári sinas fraude dǽmonum, = no permitas que la desgarre el engaño de los demonios,
+      propter quod mortis exsolvísti prétium. = por la cual pagaste el precio de la muerte.
+    - |-
+      Dole captívos esse tuos sérvulos, = Duélete de que tus siervos estén cautivos,
+      absólve reos, compedítos érige, = absuelve a los culpables, levanta a los encadenados,
+      et quos cruóre redemísti próprio, = y a los que redimiste con tu propia sangre,
+      rex bone, tecum fac gaudére pérpetim. = rey bueno, haz que se gocen contigo para siempre.
+  crux-mundi-benedictio:
+    titulo: Crux, mundi benedíctio
+    amen: true
+    estrofas:
+    - |-
+      Crux, mundi benedíctio, = Cruz, bendición del mundo,
+      spes cértaque redémptio, = esperanza y redención segura,
+      olim gehénnæ báiula, = en otro tiempo portadora del infierno,
+      nunc clara cæli iánua, = ahora clara puerta del cielo:
+    - |-
+      In te levátur hóstia = en ti es levantada la víctima
+      ad se qui traxit ómnia, = que atrajo hacia sí todas las cosas,
+      quam mundi princeps ímpetit = a la que ataca el príncipe del mundo
+      suúmque nihil ínvenit. = y no encuentra nada suyo.
+    - |-
+      Patri, tibi, Paráclito = Al Padre, a ti y al Paráclito
+      sit æqua, Iesu, glória, = sea igual gloria, Jesús,
+      qui nos crucis victória = que nos concedes gozar
+      concédis usque pérfrui. = siempre de la victoria de la cruz.
+  per-crucem-christe-quaesumus:
+    titulo: Per crucem, Christe, quǽsumus
+    amen: true
+    estrofas:
+    - |-
+      Per crucem, Christe, quǽsumus, = Por la cruz, Cristo, te pedimos:
+      ad vitæ transfer prǽmium = lleva al premio de la vida
+      quos ligni fixus stípite = a los que, clavado en el madero,
+      dignátus es redímere. = te dignaste redimir.
+    - |-
+      Tuæ legis artículus = Un artículo de tu ley
+      vetus cassat chirógraphum; = anula el antiguo documento [de la deuda];
+      antíqua perit sérvitus, = perece la antigua servidumbre,
+      vera libértas rédditur. = se devuelve la verdadera libertad.
+    - |-
+      Patri, tibi, Paráclito = Al Padre, a ti y al Paráclito
+      sit æqua, Iesu, glória, = sea igual gloria, Jesús,
+      qui nos crucis victória = que nos concedes gozar
+      concédis usque pérfrui. = siempre de la victoria de la cruz.
+  christe-caelorum-domine:
+    titulo: Christe, cælórum Dómine
+    amen: true
+    estrofas:
+    - |-
+      Christe, cælórum Dómine, = Cristo, Señor de los cielos,
+      mundi salvátor máxime, = salvador supremo del mundo,
+      qui crucis omnes múnere = que con el don de la cruz
+      mortis solvísti légibus, = libraste a todos de las leyes de la muerte:
+    - |-
+      Te nunc orántes póscimus, = orando ahora, te pedimos
+      tua consérves múnera, = que conserves tus dones,
+      quæ sacra per mystéria = que por los sagrados misterios
+      cunctis donásti géntibus. = diste a todas las naciones.
+    - |-
+      Tu agnus mitis, ínnocens, = Tú, cordero manso, inocente,
+      oblátus terræ víctima, = ofrecido como víctima de la tierra,
+      sanctórum vestes ómnium = lavaste con tu sangre
+      tuo lavásti sánguine. = las vestiduras de todos los santos.
+    - |-
+      Quos redemísti prétio = A los que redimiste con el precio
+      tui sacráti córporis, = de tu cuerpo sagrado,
+      cælo resúrgens ádvehis = resucitando los llevas al cielo,
+      ubi te laudant pérpetim. = donde te alaban para siempre.
+    - |-
+      Quorum nos addas número, = Que nos agregues a su número,
+      te deprecámur, Dómine, = te suplicamos, Señor,
+      qui Patri nos ex ómnibus = tú que de entre todos los pueblos
+      fecísti regnum pópulis. = nos hiciste un reino para el Padre.
+  tibi-redemptor-omnium:
+    titulo: Tibi, Redémptor ómnium
+    amen: true
+    estrofas:
+    - |-
+      Tibi, Redémptor ómnium, = A ti, Redentor de todos,
+      hymnum defléntes cánimus; = te cantamos un himno entre lágrimas;
+      ignósce nobis, Dómine, = perdónanos, Señor,
+      ignósce confiténtibus. = perdona a los que confiesan.
+    - |-
+      Qui vires hostis véteris = Tú que quebrantas por la cruz
+      per crucem mortis cónteris, = las fuerzas del antiguo enemigo de la muerte,
+      qua nos vexíllum fídei, = [cruz] que llevamos como estandarte de la fe,
+      fronte signáti, férimus, = marcados en la frente,
+    - |-
+      Illum a nobis iúgiter = dígnate rechazarlo
+      repéllere dignáveris, = continuamente de nosotros,
+      ne possit umquam lǽdere = para que nunca pueda dañar
+      redémptos tuo sánguine. = a los redimidos con tu sangre.
+    - |-
+      Qui propter nos ad ínferos = Tú que por nosotros a los infiernos
+      descéndere dignátus es, = te dignaste descender,
+      ut mortis debitóribus = para dar a los deudores de la muerte
+      vitæ donáres múnera, = los dones de la vida,
+    - |-
+      Tu es qui certo témpore = tú eres quien, en el tiempo fijado,
+      datúrus finem sǽculo, = al poner fin al mundo,
+      iustus cunctórum mérita = justo remunerador, establecerás
+      remunerátor státues. = los méritos de todos.
+    - |-
+      Te ergo, Christe, quǽsumus, = Te pedimos, pues, Cristo,
+      ut nostra cures vúlnera, = que cures nuestras heridas,
+      qui es cum Patre et Spíritu = tú que con el Padre y el Espíritu
+      laudándus in perpétuum. = eres digno de alabanza para siempre.
+  auctor-salutis-unice:
+    titulo: Auctor salútis únice
+    amen: true
+    estrofas:
+    - |-
+      Auctor salútis únice, = Único autor de la salvación,
+      mundi redémptor ínclite, = ínclito redentor del mundo,
+      rex, Christe, nobis ánnue = rey, Cristo, concédenos
+      crucis fecúndæ glóriam. = la gloria de la cruz fecunda.
+    - |-
+      Tu morte mortem díruens = Tú, destruyendo con la muerte la muerte
+      vitámque vita lárgiens, = y dando la vida con la vida,
+      mortis minístrum súbdolum = habías vencido al astuto
+      devíceras diábolum. = ministro de la muerte, el diablo.
+    - |-
+      Piis amóris ártibus = Por las piadosas artes del amor
+      somno sepúlcri tráditus, = entregado al sueño del sepulcro,
+      sedes reclúdis ínferi = abres las moradas del infierno
+      patrésque dicis líberos. = y declaras libres a los padres.
+    - |-
+      Nunc in Paréntis déxtera = Ahora, víctima sagrada que brillas
+      sacráta fulgens víctima, = a la derecha del Padre,
+      audi, precámur, vívido = escucha, te rogamos, a los redimidos
+      tuo redémptos sánguine, = con tu sangre vivificante,
+    - |-
+      Quo te diébus ómnibus = para que, siguiéndote todos los días
+      puris sequéntes móribus, = con costumbres puras,
+      advérsus omnes ímpetus = contra todos los asaltos
+      crucis ferámus lábarum. = llevemos el lábaro de la cruz.
+    - |-
+      Patri, tibi, Paráclito = Al Padre, a ti y al Paráclito
+      sit æqua, Iesu, glória, = sea igual gloria, Jesús,
+      qui nos crucis victória = que nos concedes gozar
+      concédis usque pérfrui. = siempre de la victoria de la cruz.
+  ad-cenam-agni-providi:
+    titulo: Ad cenam Agni próvidi
+    amen: true
+    estrofas:
+    - |-
+      Ad cenam Agni próvidi, = Preparados para la cena del Cordero,
+      stolis salútis cándidi, = blancos con las vestiduras de la salvación,
+      post tránsitum maris Rubri = después del paso del mar Rojo
+      Christo canámus príncipi. = cantemos a Cristo, nuestro príncipe.
+    - |-
+      Cuius corpus sanctíssimum = Su cuerpo santísimo,
+      in ara crucis tórridum, = abrasado en el altar de la cruz,
+      sed et cruórem róseum = y también su sangre rosada
+      gustándo, Deo vívimus. = gustando, vivimos para Dios.
+    - |-
+      Protécti paschæ véspero = Protegidos en la tarde de la Pascua
+      a devastánte ángelo, = del ángel exterminador,
+      de Pharaónis áspero = del duro imperio del Faraón
+      sumus erépti império. = hemos sido arrancados.
+    - |-
+      Iam pascha nostrum Christus est, = Ya Cristo es nuestra Pascua,
+      agnus occísus ínnocens; = cordero inocente inmolado;
+      sinceritátis ázyma = él, como ázimo de sinceridad,
+      qui carnem suam óbtulit. = ofreció su carne.
+    - |-
+      O vera, digna hóstia, = ¡Oh víctima verdadera y digna,
+      per quam frangúntur tártara, = por la que se quebranta el abismo,
+      captíva plebs redímitur, = el pueblo cautivo es redimido
+      reddúntur vitæ prǽmia! = y se devuelven los premios de la vida!
+    - |-
+      Consúrgit Christus túmulo, = Se levanta Cristo del sepulcro,
+      victor redit de bárathro, = vuelve vencedor del abismo,
+      tyránnum trudens vínculo = empujando al tirano encadenado
+      et paradísum réserans. = y abriendo el paraíso.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  o-rex-aeterne-domine:
+    titulo: O rex ætérne, Dómine
+    amen: true
+    estrofas:
+    - |-
+      O rex ætérne, Dómine, = Oh rey eterno, Señor,
+      semper cum Patre Fílius, = Hijo siempre con el Padre,
+      iuxta tuam imáginem = según tu imagen
+      Adam plasmásti hóminem. = formaste al hombre Adán.
+    - |-
+      Quem diábolus decéperat = Al que el diablo había engañado,
+      hostis humáni géneris, = enemigo del género humano,
+      eius et formam córporis = de él también la forma del cuerpo
+      sumpsísti tu de Vírgine, = tomaste tú de la Virgen,
+    - |-
+      Ut nos Deo coniúngeres = para unirnos a Dios
+      per carnis contubérnium, = por la convivencia de la carne,
+      datúrus in baptísmate, = para darnos en el bautismo,
+      Redémptor, indulgéntiam. = Redentor, el perdón.
+    - |-
+      Tu crucem propter hóminem = Tú, por el hombre, la cruz
+      suscípere dignátus es; = te dignaste tomar;
+      dedísti tuum sánguinem = diste tu sangre
+      nostræ salútis prétium. = como precio de nuestra salvación.
+    - |-
+      Tu surrexísti, glóriam = Tú resucitaste, recibiendo
+      a Patre sumens débitam; = del Padre la gloria debida;
+      per te et nos resúrgere = por ti también nosotros resucitaremos,
+      devóta mente crédimus. = lo creemos con mente devota.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  iesu-redemptor-saeculi:
+    titulo: Iesu, redémptor sǽculi
+    amen: true
+    estrofas:
+    - |-
+      Iesu, redémptor sǽculi, = Jesús, redentor del mundo,
+      Verbum Patris altíssimi, = Verbo del Padre altísimo,
+      lux lucis invisíbilis, = luz de la luz invisible,
+      custos tuórum pérvigil: = guardián siempre en vela de los tuyos:
+    - |-
+      Tu fabricátor ómnium = tú, artífice de todas las cosas
+      discrétor atque témporum, = y ordenador de los tiempos,
+      fessa labóre córpora = a los cuerpos cansados por el trabajo
+      noctis quiéte récrea. = recréalos con el descanso de la noche.
+    - |-
+      Qui frangis ima tártara, = Tú que quebrantas el profundo abismo,
+      tu nos ab hoste líbera, = líbranos del enemigo,
+      ne váleat sedúcere = para que no pueda seducir
+      tuo redémptos sánguine, = a los redimidos con tu sangre,
+    - |-
+      Ut, dum graváti córpore = para que, mientras, cargados con el cuerpo,
+      brevi manémus témpore, = permanecemos un breve tiempo,
+      sic caro nostra dórmiat = nuestra carne duerma de tal modo
+      ut mens sopórem nésciat. = que la mente no conozca el sopor.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  hic-est-dies-verus-dei:
+    titulo: Hic est dies verus Dei
+    amen: true
+    estrofas:
+    - |-
+      Hic est dies verus Dei, = Este es el verdadero día de Dios,
+      sancto serénus lúmine, = sereno con la santa luz,
+      quo díluit sanguis sacer = en el que la sangre sagrada lavó
+      probrósa mundi crímina. = los vergonzosos crímenes del mundo.
+    - |-
+      Fidem refúndit pérditis = Devuelve la fe a los perdidos
+      cæcósque visu illúminat; = e ilumina con la vista a los ciegos;
+      quem non gravi solvit metu = ¿a quién no libra de un grave temor
+      latrónis absolútio? = la absolución del ladrón?
+    - |-
+      Opus stupent et ángeli, = Se asombran de la obra también los ángeles,
+      pœnam vidéntes córporis = viendo el castigo del cuerpo
+      Christóque adhæréntem reum = y al culpable, unido a Cristo,
+      vitam beátam cárpere. = alcanzar la vida bienaventurada.
+    - |-
+      Mystérium mirábile, = Misterio admirable:
+      ut ábluat mundi luem, = que, para lavar la mancha del mundo,
+      peccáta tollat ómnium = quite los pecados de todos
+      carnis vítia mundans caro, = la carne, purificando los vicios de la carne.
+    - |-
+      Quid hoc potest sublímius, = ¿Qué puede haber más sublime que esto:
+      ut culpa quærat grátiam, = que la culpa busque la gracia,
+      metúmque solvat cáritas = que la caridad disipe el temor
+      reddátque mors vitam novam? = y que la muerte devuelva una vida nueva?
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  laetare-caelum-desuper:
+    titulo: Lætáre, cælum, désuper
+    amen: true
+    estrofas:
+    - |-
+      Lætáre, cælum, désuper, = Alégrate, cielo, desde lo alto,
+      appláude, tellus ac mare: = aplaudan la tierra y el mar:
+      Christus resúrgens post crucem = Cristo, resucitando después de la cruz,
+      vitam dedit mortálibus. = dio la vida a los mortales.
+    - |-
+      Iam tempus accéptum redit, = Ya vuelve el tiempo favorable,
+      dies salútis cérnitur, = se ve el día de la salvación,
+      quo mundus Agni sánguine = en el que el mundo, por la sangre del Cordero,
+      refúlsit a calígine. = resplandeció [saliendo] de la oscuridad.
+    - |-
+      Mors illa, mortis pássio, = Aquella muerte, pasión de la muerte,
+      est críminis remíssio; = es el perdón del pecado;
+      illǽsa virtus pérmanet, = el poder permanece intacto;
+      victus dedit victóriam. = el vencido dio la victoria.
+    - |-
+      Nostræ fuit gustus spei = Esta fue una prueba anticipada de nuestra esperanza,
+      hic, ut fidéles créderent = para que los fieles creyeran
+      se posse post resúrgere, = que podrán después resucitar
+      vitam beátam súmere. = y alcanzar la vida bienaventurada.
+    - |-
+      Nunc ergo pascha cándidum = Ahora, pues, la Pascua luminosa,
+      causa bonórum tálium = causa de tales bienes,
+      colámus omnes strénue = celebrémosla todos con empeño,
+      tanto repléti múnere. = llenos de tan gran don.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  aurora-lucis-rutilat:
+    titulo: Auróra lucis rútilat
+    amen: true
+    estrofas:
+    - |-
+      Auróra lucis rútilat, = La aurora de la luz resplandece,
+      cælum resúltat láudibus, = el cielo resuena de alabanzas,
+      mundus exsúltans iúbilat, = el mundo exultante se regocija,
+      gemens inférnus úlulat, = el infierno gime y aúlla,
+    - |-
+      Cum rex ille fortíssimus, = cuando aquel rey fortísimo,
+      mortis confráctis víribus, = quebrantadas las fuerzas de la muerte,
+      pede concúlcans tártara = pisoteando con su pie el abismo,
+      solvit caténa míseros. = libra de la cadena a los desdichados.
+    - |-
+      Ille, quem clausum lápide = Aquel a quien, encerrado bajo la piedra,
+      miles custódit ácriter, = el soldado custodia con rigor,
+      triúmphans pompa nóbili, = triunfando con noble cortejo,
+      victor surgit de fúnere. = se levanta vencedor del sepulcro.
+    - |-
+      Inférni iam gemítibus = Ya acabados los gemidos
+      solútis et dolóribus, = y los dolores del infierno,
+      quia surréxit Dóminus = porque resucitó el Señor,
+      respléndens clamat ángelus. = clama el ángel resplandeciente.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  chorus-novae-ierusalem:
+    titulo: Chorus novæ Ierúsalem
+    amen: true
+    estrofas:
+    - |-
+      Chorus novæ Ierúsalem = El coro de la nueva Jerusalén
+      hymni novam dulcédinem = entone la nueva dulzura del himno,
+      promat, colens cum sóbriis = celebrando con gozos sobrios
+      paschále festum gáudiis, = la fiesta pascual,
+    - |-
+      Quo Christus invíctus leo, = en la que Cristo, león invicto,
+      dracóne surgens óbruto, = levantándose tras aplastar al dragón,
+      dum voce viva pérsonat, = mientras resuena su voz viva,
+      a morte functos éxcitat. = despierta de la muerte a los difuntos.
+    - |-
+      Quam devorárat ímprobus, = La presa que había devorado,
+      prædam refúndit tártarus; = el malvado abismo la devuelve;
+      captivitáte líbera = libres de la cautividad,
+      Iesum sequúntur ágmina. = las multitudes siguen a Jesús.
+    - |-
+      Triúmphat ille spléndide = Él triunfa espléndidamente
+      et dignus amplitúdine, = y, digno de su grandeza,
+      soli políque pátriam = de la tierra y del cielo hace una sola patria,
+      unam facit rem públicam. = una sola república.
+    - |-
+      Ipsum canéndo súpplices = Cantándole, como soldados,
+      Regem precémur mílites, = supliquemos al Rey
+      ut in suo claríssimo = que en su clarísimo palacio
+      nos órdinet palátio. = nos dé un lugar.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  iam-surgit-hora-tertia:
+    titulo: Iam surgit hora tértia
+    amen: true
+    estrofas:
+    - |-
+      Iam surgit hora tértia, = Ya llega la hora tercia,
+      qua Christus ascéndit crucem; = en la que Cristo subió a la cruz;
+      nil ínsolens mens cógitet, = que la mente no piense nada soberbio,
+      inténdat afféctum precis. = que dirija su afecto a la oración.
+    - |-
+      Qui corde Christum súscipit, = Quien recibe a Cristo en su corazón
+      innóxium sensum gerit = tiene un sentir inocente
+      votísque præstat sédulis = y con votos constantes consigue
+      Sanctum meréri Spíritum. = merecer el Espíritu Santo.
+    - |-
+      Hæc hora, quæ finem dedit = Esta es la hora que puso fin
+      diri vetérno críminis; = al antiguo letargo del cruel pecado;
+      hinc iam beáta témpora = desde aquí comenzaron ya los tiempos dichosos
+      cœpére Christi grátia. = por la gracia de Cristo.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  venite-servi-supplices:
+    titulo: Veníte, servi, súpplices
+    amen: true
+    estrofas:
+    - |-
+      Veníte, servi, súpplices, = Venid, siervos, suplicantes,
+      et mente et ore extóllite = y con la mente y con la boca ensalzad
+      dignis beátum láudibus = con alabanzas dignas
+      nomen Dei cum cántico. = el nombre bienaventurado de Dios, con un cántico.
+    - |-
+      Hoc namque tempus illud est, = Porque este es aquel tiempo
+      quo sæculórum iúdicem = en que al juez de los siglos
+      iniústa morti trádidit = entregó a la muerte
+      mortálium senténtia. = la sentencia injusta de los mortales.
+    - |-
+      Et nos amóre débito, = Y nosotros, con el amor debido,
+      timóre iusto súbditi, = sometidos con justo temor,
+      advérsus omnes ímpetus = contra todos los asaltos
+      quos sævus hostis íncutit, = que lanza el enemigo cruel,
+    - |-
+      Unum rogémus et Patrem = roguemos al único [Dios], Padre,
+      Deum regémque Fílium = y al Hijo, Dios y rey,
+      simúlque Sanctum Spíritum, = y a la vez al Espíritu Santo,
+      in Trinitáte Dóminum. = Señor en la Trinidad.
+  haec-hora-quae-resplenduit:
+    titulo: Hæc hora, quæ resplénduit
+    amen: true
+    estrofas:
+    - |-
+      Hæc hora, quæ resplénduit = Esta es la hora que resplandeció
+      crucísque solvit núbila, = y disipó las nubes de la cruz,
+      mundum ténebris éxuens, = despojando al mundo de las tinieblas,
+      reddens seréna lúmina. = devolviendo la luz serena.
+    - |-
+      Hæc hora, qua resúscitans = Esta es la hora en que, resucitando
+      Iesus sepúlcris córpora, = Jesús los cuerpos de los sepulcros,
+      prodíre mortis líbera = les mandó salir libres de la muerte,
+      iussit refúso spíritu. = devuelto el espíritu.
+    - |-
+      Nováta sæcla crédimus = Creemos que los siglos renovados,
+      mortis solútis légibus, = rotas las leyes de la muerte,
+      vitæ beátæ múnera = corren un curso perenne
+      cursum perénnem cúrrere. = de dones de la vida bienaventurada.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui morte victa prǽnites, = que, vencida la muerte, resplandeces,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  iesu-nostra-redemptio:
+    titulo: Iesu, nostra redémptio
+    amen: true
+    estrofas:
+    - |-
+      Iesu, nostra redémptio = Jesús, nuestra redención,
+      amor et desidérium, = amor y deseo,
+      Deus creátor ómnium, = Dios creador de todas las cosas,
+      homo in fine témporum, = hombre al final de los tiempos:
+    - |-
+      Quæ te vicit cleméntia, = ¿qué clemencia te venció
+      ut ferres nostra crímina, = para que cargaras con nuestros pecados,
+      crudélem mortem pátiens, = padeciendo una muerte cruel
+      ut nos a morte tólleres; = para arrancarnos de la muerte,
+    - |-
+      Inférni claustra pénetrans, = penetrando los cerrojos del infierno,
+      tuos captívos rédimens; = redimiendo a tus cautivos,
+      victor triúmpho nóbili = vencedor con noble triunfo,
+      ad dextram Patris résidens? = sentado a la derecha del Padre?
+    - |-
+      Ipsa te cogat píetas, = Que esa misma piedad te mueva
+      ut mala nostra súperes = a vencer nuestros males
+      parcéndo, et voti cómpotes = perdonando, y, cumplido nuestro deseo,
+      nos tuo vultu sáties. = a saciarnos con tu rostro.
+    - |-
+      Tu esto nostrum gáudium, = Sé tú nuestro gozo,
+      qui es futúrus prǽmium; = tú que serás nuestro premio;
+      sit nostra in te glória = sea nuestra gloria en ti
+      per cuncta semper sǽcula. = siempre, por todos los siglos.
+  aeterne-rex-altissime:
+    titulo: Ætérne rex altíssime
+    amen: true
+    estrofas:
+    - |-
+      Ætérne rex altíssime, = Rey eterno y altísimo,
+      redémptor et fidélium, = redentor también de los fieles,
+      quo mors solúta déperit, = por quien la muerte, deshecha, perece
+      datur triúmphus grátiæ, = y se da el triunfo de la gracia:
+    - |-
+      Scandis tribúnal déxteræ = subes al tribunal de la derecha
+      Patris tibíque cǽlitus = del Padre, y desde el cielo se te
+      fertur potéstas ómnium, = confiere el poder sobre todas las cosas,
+      quæ non erat humánitus, = que no tenías en lo humano,
+    - |-
+      Ut trina rerum máchina = para que la triple estructura de las cosas
+      cæléstium, terréstrium = de lo celeste, de lo terrestre
+      et inferórum cóndita, = y de lo infernal, creada,
+      flectat genu iam súbdita. = doble ya, sometida, la rodilla.
+    - |-
+      Tremunt vidéntes ángeli = Tiemblan los ángeles al ver
+      versam vicem mortálium; = cambiada la suerte de los mortales;
+      culpat caro, purgat caro, = la carne peca, la carne purifica,
+      regnat caro Verbum Dei. = reina la carne, Verbo de Dios.
+    - |-
+      Tu, Christe, nostrum gáudium, = Tú, Cristo, gozo nuestro,
+      manens perénne prǽmium, = que permaneces como premio perenne,
+      mundi regis qui fábricam, = que gobiernas la fábrica del mundo,
+      mundána vincens gáudia. = venciendo los gozos mundanos:
+    - |-
+      Hinc te precántes quǽsumus, = por eso, suplicantes, te pedimos:
+      ignósce culpis ómnibus = perdona todas nuestras culpas
+      et corda sursum súbleva = y levanta los corazones hacia lo alto,
+      ad te supérna grátia, = hacia ti, con la gracia celestial,
+    - |-
+      Ut, cum rubénte cœ́peris = para que, cuando comiences a brillar,
+      clarére nube iúdicis, = juez, en la nube rojiza,
+      pœnas repéllas débitas, = apartes las penas merecidas
+      reddas corónas pérditas. = y devuelvas las coronas perdidas.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui scandis ad cæléstia, = que subes a lo celestial,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  optatus-votis-omnium:
+    titulo: Optátus votis ómnium
+    amen: true
+    estrofas:
+    - |-
+      Optátus votis ómnium = Deseado por los votos de todos,
+      sacrátus illúxit dies, = ha amanecido el día sagrado
+      quo Christus, mundi spes, Deus, = en que Cristo, esperanza del mundo, Dios,
+      conscéndit cælos árduos. = subió a los altos cielos,
+    - |-
+      Magni triúmphum prœ́lii, = el triunfo del gran combate,
+      mundi perémpto príncipe, = aniquilado el príncipe del mundo,
+      Patris præséntans vúltibus = presentando a la mirada del Padre
+      victrícis carnis glóriam. = la gloria de la carne vencedora.
+    - |-
+      In nube fertur lúcida = Es llevado en una nube luminosa
+      et spem facit credéntibus, = y da esperanza a los creyentes,
+      iam paradísum réserans = abriendo ya el paraíso
+      quem protoplásti cláuserant. = que los primeros padres habían cerrado.
+    - |-
+      O grande cunctis gáudium, = ¡Oh gran gozo para todos:
+      quod partus nostræ Vírginis, = que el Hijo de nuestra Virgen,
+      post sputa, flagra, post crucem = después de los salivazos, los azotes, después de la cruz,
+      patérnæ sedi iúngitur. = se une al trono del Padre!
+    - |-
+      Agámus ergo grátias = Demos, pues, gracias
+      nostræ salútis víndici, = al vengador de nuestra salvación,
+      nostrum quod corpus véxerit = porque llevó nuestro cuerpo
+      sublíme ad cæli régiam. = a lo alto, al palacio del cielo.
+    - |-
+      Sit nobis cum cæléstibus = Que sea para nosotros con los del cielo
+      commúne manens gáudium: = un gozo común y permanente:
+      illis, quod semet óbtulit, = para ellos, porque se les ofreció;
+      nobis, quod se non ábstulit. = para nosotros, porque no se nos quitó.
+    - |-
+      Nunc, Christe, scandens ǽthera = Ahora, Cristo, que subes al cielo,
+      ad te cor nostrum súbleva, = eleva hacia ti nuestro corazón,
+      tuum Patrísque Spíritum = enviándonos desde el cielo
+      emíttens nobis cǽlitus. = tu Espíritu y el del Padre.
+  veni-creator-spiritus:
+    titulo: Veni, creátor Spíritus
+    amen: true
+    estrofas:
+    - |-
+      Veni, creátor Spíritus, = Ven, Espíritu creador,
+      mentes tuórum vísita, = visita las mentes de los tuyos,
+      imple supérna grátia, = llena de la gracia de lo alto
+      quæ tu creásti, péctora. = los corazones que tú creaste.
+    - |-
+      Qui díceris Paráclitus, = Tú que eres llamado Paráclito,
+      donum Dei altíssimi, = don del Dios altísimo,
+      fons vivus, ignis, cáritas = fuente viva, fuego, caridad
+      et spiritális únctio. = y unción espiritual.
+    - |-
+      Tu septifórmis múnere, = Tú, septiforme en tus dones,
+      dextræ Dei tu dígitus, = tú, dedo de la diestra de Dios,
+      tu rite promíssum Patris = tú, el prometido solemnemente por el Padre,
+      sermóne ditans gúttura. = que enriqueces las gargantas con la palabra.
+    - |-
+      Accénde lumen sénsibus, = Enciende tu luz en los sentidos,
+      infúnde amórem córdibus, = infunde amor en los corazones,
+      infírma nostri córporis, = fortaleciendo lo débil de nuestro cuerpo
+      virtúte firmans pérpeti. = con tu fuerza perpetua.
+    - |-
+      Hostem repéllas lóngius = Aleja más y más al enemigo
+      pacémque dones prótinus; = y danos pronto la paz;
+      ductóre sic te prǽvio = yendo tú así delante como guía,
+      vitémus omne nóxium. = evitemos todo lo dañino.
+    - |-
+      Per te sciámus da Patrem = Concédenos conocer por ti al Padre
+      noscámus atque Fílium, = y conocer también al Hijo,
+      te utriúsque Spíritum = y en ti, Espíritu de ambos,
+      credámus omni témpore. = creamos en todo tiempo.
+  lux-iucunda-lux-insignis:
+    titulo: Lux iucúnda, lux insígnis
+    amen: true
+    estrofas:
+    - |-
+      Lux iucúnda, lux insígnis, = Luz alegre, luz insigne,
+      qua de throno missus ignis = en la que, enviado desde el trono, el fuego
+      in Christi discípulos, = [vino] sobre los discípulos de Cristo:
+      corda replet, linguas ditat, = llena los corazones, enriquece las lenguas,
+      ad concórdes nos invítat = nos invita a melodías concordes
+      cordis, linguæ módulos. = del corazón y de la lengua.
+    - |-
+      Consolátor alme, veni, = Consolador bondadoso, ven,
+      linguas rege, corda leni: = gobierna las lenguas, suaviza los corazones:
+      nihil fellis aut venéni = nada de hiel ni de veneno
+      sub tua præséntia. = en tu presencia.
+    - |-
+      Nova facti creatúra, = Hechos una nueva criatura,
+      te laudámus mente pura, = te alabamos con mente pura,
+      grátiæ nunc, sed natúra = ahora hijos de la gracia, pero por naturaleza
+      prius iræ fílii. = antes hijos de la ira.
+    - |-
+      Tu qui dator es et donum, = Tú que eres dador y don,
+      nostri cordis omne bonum, = todo el bien de nuestro corazón,
+      cor ad laudem redde pronum, = haz el corazón inclinado a la alabanza,
+      nostræ linguæ formans sonum = formando el sonido de nuestra lengua
+      in tua præcónia. = para tus alabanzas.
+    - |-
+      Tu nos purges a peccátis, = Purifícanos de los pecados,
+      auctor ipse pietátis, = tú, autor mismo de la piedad,
+      et in Christo renovátis = y a nosotros, renovados en Cristo,
+      da perféctæ novitátis = danos los plenos gozos
+      plena nobis gáudia. = de la perfecta novedad.
+  beata-nobis-gaudia:
+    titulo: Beáta nobis gáudia
+    amen: true
+    estrofas:
+    - |-
+      Beáta nobis gáudia = Gozos bienaventurados
+      anni redúxit órbita, = nos ha traído el curso del año,
+      cum Spíritus Paráclitus = cuando el Espíritu Paráclito
+      effúlsit in discípulos. = brilló sobre los discípulos.
+    - |-
+      Ignis vibránte lúmine = El fuego, con luz vibrante,
+      linguæ figúram détulit, = tomó la forma de lengua,
+      verbis ut essent próflui = para que fueran abundantes en palabras
+      et caritáte férvidi. = y fervientes en caridad.
+    - |-
+      Linguis loquúntur ómnium; = Hablan las lenguas de todos;
+      turbæ pavent gentílium, = se espantan las multitudes de los gentiles,
+      musto madére députant, = juzgan que están ebrios de mosto
+      quos Spíritus repléverat. = los que el Espíritu había llenado.
+    - |-
+      Patráta sunt hæc mýstice = Esto se cumplió místicamente
+      Paschæ perácto témpore, = acabado el tiempo de la Pascua,
+      sacro diérum número, = en el número sagrado de los días,
+      quo lege fit remíssio. = en que por la ley se hace la remisión.
+    - |-
+      Te nunc, Deus piíssime, = A ti ahora, Dios piadosísimo,
+      vultu precámur cérnuo: = te rogamos con el rostro inclinado:
+      illápsa nobis cǽlitus = concédenos los dones
+      largíre dona, o Spíritus. = que bajaron del cielo, oh Espíritu.
+    - |-
+      Dudum sacráta péctora = En otro tiempo llenaste con tu gracia
+      tua replésti grátia; = los corazones consagrados;
+      dimítte nunc peccámina = perdona ahora los pecados
+      et da quiéta témpora. = y danos tiempos tranquilos.
+    - |-
+      Per te sciámus da Patrem = Concédenos conocer por ti al Padre
+      noscámus atque Fílium, = y conocer también al Hijo,
+      te utriúsque Spíritum = y en ti, Espíritu de ambos,
+      credámus omni témpore. = creamos en todo tiempo.
+  iam-christus-astra-ascenderat:
+    titulo: Iam Christus astra ascénderat
+    amen: true
+    estrofas:
+    - |-
+      Iam Christus astra ascénderat, = Ya Cristo había subido a los astros,
+      regréssus unde vénerat, = volviendo de donde había venido,
+      promíssa Patris múnera, = para dar el don prometido del Padre,
+      Sanctum datúrus Spíritum, = el Espíritu Santo,
+    - |-
+      Cum hora felix tértia = cuando la feliz hora tercia
+      repénte mundo íntonat, = de repente resuena en el mundo,
+      Apóstolis orántibus = anunciando a los apóstoles en oración
+      Deum venísse núntians. = que Dios había venido.
+    - |-
+      De Patris ergo lúmine = De la luz del Padre, pues,
+      decórus ignis almus est, = es el fuego hermoso y bondadoso
+      qui fida Christi péctora = que llena los corazones fieles a Cristo
+      calóre verbi cómpleat. = con el calor de la palabra.
+    - |-
+      Descénde, Sancte Spíritus, = Desciende, Espíritu Santo,
+      ad nostra corda altária = a nuestros corazones, altares;
+      orna tibi virtútibus, = adórnalos para ti con virtudes
+      tibíque templa dédica. = y conságralos como templos para ti.
+    - |-
+      Per te sciámus da Patrem = Concédenos conocer por ti al Padre
+      noscámus atque Fílium, = y conocer también al Hijo,
+      te utriúsque Spíritum = y en ti, Espíritu de ambos,
+      credámus omni témpore. = creamos en todo tiempo.
+  urbs-ierusalem-beata:
+    titulo: Urbs Ierúsalem beáta
+    amen: true
+    estrofas:
+    - |-
+      Urbs Ierúsalem beáta, = Ciudad de Jerusalén bienaventurada,
+      dicta pacis vísio, = llamada visión de paz,
+      quæ constrúitur in cælis = que se construye en los cielos
+      vivis ex lapídibus, = con piedras vivas,
+      angelísque coronáta = y coronada por los ángeles
+      sicut sponsa cómite, = como una esposa por su cortejo:
+    - |-
+      Nova véniens e cælo, = nueva, viniendo del cielo,
+      nuptiáli thálamo = preparada para la cámara nupcial,
+      præparáta, ut intácta = para unirse intacta
+      copulétur Dómino. = al Señor.
+      Platéæ et muri eius = Sus plazas y sus muros
+      ex auro puríssimo; = son de oro purísimo;
+    - |-
+      Portæ nitent margarítis = las puertas brillan con perlas,
+      ádytis paténtibus, = con los santuarios abiertos,
+      et virtúte meritórum = y por la fuerza de los méritos
+      illuc introdúcitur = es introducido allí
+      omnis qui ob Christi nomen = todo el que por el nombre de Cristo
+      hic in mundo prémitur. = es oprimido aquí en el mundo.
+    - |-
+      Tunsiónibus, pressúris = Pulidas por golpes y presiones,
+      expolíti lápides = las piedras
+      suis coaptántur locis = se ajustan en su lugar
+      per manum artíficis; = por la mano del artífice;
+      disponúntur permansúri = se disponen para permanecer
+      sacris ædifíciis. = en los edificios sagrados.
+    - |-
+      Glória et honor Deo = Gloria y honor a Dios
+      usquequáque altíssimo, = altísimo en todas partes,
+      una Patri Filióque = a la vez al Padre y al Hijo
+      atque Sancto Flámini, = y al Espíritu Santo,
+      quibus laudes et potéstas = a quienes las alabanzas y el poder
+      per ætérna sǽcula. = por los siglos eternos.
+  christe-cunctorum-dominator-alme:
+    titulo: Christe, cunctórum dominátor alme
+    amen: true
+    estrofas:
+    - |-
+      Christe, cunctórum dominátor alme, = Cristo, soberano bondadoso de todas las cosas,
+      plebs tibi supplex résonet in aula, = que tu pueblo suplicante resuene en el templo,
+      ánnuo cuius rédeunt colénda = cuyas fiestas, que han de celebrarse, vuelven
+      témpore festa. = cada año.
+    - |-
+      Hic locus nempe vocitátur aula = Este lugar, en efecto, es llamado palacio
+      regis imménsi nitidíque cæli = del rey inmenso, y del cielo resplandeciente
+      porta, quæ vitæ pátriam peténtes = puerta, que a todos los que buscan la patria de la vida
+      áccipit omnes. = recibe.
+    - |-
+      Hæc tuam plebem sacra cogit ædes, = Esta casa sagrada reúne a tu pueblo,
+      hæc sacraméntis pia ditat usque, = esta, piadosa, lo enriquece siempre con los sacramentos,
+      cǽlicis escis alit in perénnis = lo alimenta con manjares celestiales para los dones
+      múnera vitæ. = de la vida perenne.
+    - |-
+      Quǽsumus ergo, Deus, ut seréno = Te pedimos, pues, oh Dios, que con rostro sereno
+      ádnuas vultu fámulos gubérnans, = asientas, gobernando a tus siervos,
+      qui tui summo célebrant amóre = que con sumo amor celebran
+      gáudia templi. = los gozos de tu templo.
+    - |-
+      Æqua laus summum célebret Paréntem = Que una alabanza igual celebre al Padre altísimo
+      teque, Salvátor, pie rex, per ævum; = y a ti, Salvador, rey piadoso, por siempre;
+      Spíritus Sancti résonet per omnem = que la gloria del Espíritu Santo resuene
+      glória mundum. = por todo el mundo.
+  angularis-fundamentum:
+    titulo: Anguláris fundaméntum
+    amen: true
+    estrofas:
+    - |-
+      Anguláris fundaméntum = Como fundamento angular
+      lapis Christus missus est, = ha sido puesta la piedra, Cristo,
+      qui paríetum compáge = que en la trabazón de las paredes
+      in utróque néctitur, = se une a ambos lados;
+      quem Sion sancta suscépit, = a quien recibió la santa Sion,
+      in quo credens pérmanet. = en quien permanece el creyente.
+    - |-
+      Omnis illa Deo sacra = Toda aquella ciudad sagrada
+      et dilécta cívitas, = y amada por Dios,
+      plena módulis in laude = llena de melodías en la alabanza
+      et canóre iúbilo, = y de canto jubiloso,
+      trinum Deum unicúmque = al Dios trino y uno
+      cum fervóre prǽdicat. = proclama con fervor.
+    - |-
+      Hoc in templo, summe Deus, = A este templo, Dios altísimo,
+      exorátus ádveni, = ven, invocado,
+      et cleménti bonitáte = y con bondad clemente
+      precum vota súscipe; = recibe los votos de las súplicas;
+      largam benedictiónem = derrama aquí continuamente
+      hic infúnde iúgiter. = una abundante bendición.
+    - |-
+      Hic promereántur omnes = Que aquí merezcan todos
+      petíta acquírere = obtener lo que pidan
+      et adépta possidére = y poseer lo alcanzado
+      cum sanctis perénniter, = con los santos para siempre,
+      paradísum introíre = y entrar en el paraíso,
+      transláti in réquiem. = trasladados al descanso.
+    - |-
+      Glória et honor Deo = Gloria y honor a Dios
+      usquequáque altíssimo, = altísimo en todas partes,
+      una Patri Filióque = a la vez al Padre y al Hijo
+      atque Sancto Flámini, = y al Espíritu Santo,
+      quibus laudes et potéstas = a quienes las alabanzas y el poder
+      per ætérna sǽcula. = por los siglos eternos.
+  maria-quae-mortalium:
+    titulo: María, quæ mortálium
+    amen: true
+    estrofas:
+    - |-
+      María, quæ mortálium = María, que recibes con amor
+      preces amánter éxcipis, = las súplicas de los mortales,
+      rogámus ecce súpplices, = he aquí que te rogamos suplicantes:
+      nobis adésto pérpetim. = asístenos siempre.
+    - |-
+      Adésto, si nos críminum = Asístenos, si la horrible cadena
+      caténa stringit hórrida; = de los pecados nos aprieta;
+      cito resólve cómpedes = desata pronto los grillos
+      quæ corda culpis ílligant. = que atan los corazones con las culpas.
+    - |-
+      Succúrre, si nos sǽculi = Socórrenos, si la imagen engañosa
+      fallax imágo péllicit, = del mundo nos seduce,
+      ne mens salútis trámitem, = para que la mente no abandone el camino
+      oblíta cæli, déserat. = de la salvación, olvidada del cielo.
+    - |-
+      Succúrre, si vel córpori = Socórrenos, si una suerte adversa
+      advérsa sors impéndeat; = amenaza también al cuerpo;
+      fac sint quiéta témpora, = haz que los tiempos sean tranquilos,
+      ætérnitas dum lúceat. = mientras brilla la eternidad.
+    - |-
+      Tuis et esto fíliis = Y sé para tus hijos
+      tutéla mortis témpore, = amparo en la hora de la muerte,
+      ut, te iuvánte, cónsequi = para que, con tu ayuda, se nos conceda
+      perénne detur prǽmium. = alcanzar el premio perenne.
+    - |-
+      Patri sit et Paráclito = Gloria sea al Padre y al Paráclito
+      tuóque Nato glória, = y a tu Hijo,
+      qui veste te mirábili = que te rodearon con el admirable
+      circumdedérunt grátiæ. = vestido de la gracia.
+  quem-terra-pontus-aethera:
+    titulo: Quem terra, pontus, ǽthera
+    amen: true
+    estrofas:
+    - |-
+      Quem terra, pontus, ǽthera = Al que la tierra, el mar y el cielo
+      colunt, adórant, prǽdicant = veneran, adoran y proclaman,
+      trinam regéntem máchinam, = el que rige la triple estructura [del mundo],
+      claustrum Maríæ báiulat. = lo lleva el seno de María.
+    - |-
+      Cui luna, sol et ómnia = Aquel a quien la luna, el sol y todas las cosas
+      desérviunt per témpora, = sirven a través de los tiempos,
+      perfúsa cæli grátia = inundadas por la gracia del cielo,
+      gestant puéllæ víscera. = lo llevan las entrañas de una doncella.
+    - |-
+      Beáta mater múnere, = Madre dichosa por el don [recibido],
+      cuius, supérnus ártifex, = en cuyo seno, como en un arca,
+      mundum pugíllo cóntinens, = quedó encerrado el artífice celestial,
+      ventris sub arca clausus est. = que contiene el mundo en su puño.
+    - |-
+      Beáta cæli núntio, = Dichosa por el mensaje del cielo,
+      fecúnda Sancto Spíritu, = fecunda por el Espíritu Santo,
+      desiderátus géntibus = por cuyo seno fue dado a luz
+      cuius per alvum fusus est. = el deseado de las naciones.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  o-gloriosa-domina:
+    titulo: O gloriósa dómina
+    amen: true
+    estrofas:
+    - |-
+      O gloriósa dómina, = Oh gloriosa señora,
+      excélsa super sídera, = excelsa sobre los astros,
+      qui te creávit próvide, = al que te creó con providencia
+      lactas sacráto úbere. = lo amamantas con tu pecho sagrado.
+    - |-
+      Quod Eva tristis ábstulit, = Lo que la triste Eva quitó,
+      tu reddis almo gérmine; = tú lo devuelves con tu fruto bondadoso;
+      intrent ut astra flébiles, = para que los que lloran entren en los astros,
+      sternis benígna sémitam. = benigna, preparas el camino.
+    - |-
+      Tu regis alti iánua = Tú eres la entrada del rey altísimo
+      et porta lucis fúlgida; = y la puerta resplandeciente de la luz;
+      vitam datam per Vírginem, = la vida dada por la Virgen,
+      gentes redémptæ, pláudite. = pueblos redimidos, aplaudidla.
+    - |-
+      Patri sit et Paráclito = Gloria sea al Padre y al Paráclito
+      tuóque Nato glória, = y a tu Hijo,
+      qui veste te mirábili = que te rodearon con el admirable
+      circumdedérunt grátiæ. = vestido de la gracia.
+  ave-maris-stella:
+    titulo: Ave, maris stella
+    amen: true
+    estrofas:
+    - |-
+      Ave, maris stella, = Salve, estrella del mar,
+      Dei mater alma, = madre bondadosa de Dios,
+      atque semper virgo, = y siempre virgen,
+      felix cæli porta. = feliz puerta del cielo.
+    - |-
+      Sumens illud «Ave» = Recibiendo aquel «Ave»
+      Gabriélis ore, = de la boca de Gabriel,
+      funda nos in pace, = afiánzanos en la paz,
+      mutans Evæ nomen. = cambiando el nombre de Eva.
+    - |-
+      Solve vincla reis, = Desata las cadenas de los culpables,
+      profer lumen cæcis, = da luz a los ciegos,
+      mala nostra pelle, = aleja nuestros males,
+      bona cuncta posce. = pide para nosotros todos los bienes.
+    - |-
+      Monstra te esse matrem, = Muestra que eres madre;
+      sumat per te precem = que reciba por ti nuestra súplica
+      qui pro nobis natus = el que, nacido por nosotros,
+      tulit esse tuus. = aceptó ser tuyo.
+    - |-
+      Virgo singuláris, = Virgen singular,
+      inter omnes mitis, = mansa entre todas,
+      nos culpis solútos = a nosotros, libres de culpas,
+      mites fac et castos. = haznos mansos y castos.
+    - |-
+      Vitam præsta puram, = Concede una vida pura,
+      iter para tutum, = prepara un camino seguro,
+      ut vidéntes Iesum = para que, viendo a Jesús,
+      semper collætémur. = nos alegremos siempre juntos.
+    - |-
+      Sit laus Deo Patri, = Alabanza a Dios Padre,
+      summo Christo decus, = honor a Cristo altísimo,
+      Spirítui Sancto = al Espíritu Santo
+      honor, tribus unus. = honra, a los tres, uno solo.
+  o-virgo-mater-filia:
+    titulo: O virgo mater, fília
+    amen: true
+    estrofas:
+    - |-
+      O virgo mater, fília = Oh virgen madre, hija
+      tui beáta Fílii, = de tu Hijo, bienaventurada,
+      sublímis et humíllima = sublime y humildísima
+      præ creatúris ómnibus. = más que todas las criaturas.
+    - |-
+      Divíni tu consílii = Tú eres el término fijado desde siempre
+      fixus ab ævo términus, = del designio divino,
+      tu decus et fastígium = tú, el honor y la cumbre más alta
+      natúræ nostræ máximum: = de nuestra naturaleza:
+    - |-
+      Quam sic prompsísti nóbilem = tú la ennobleciste de tal modo
+      ut summus eius cónditor = que su supremo creador
+      in ipsa per te fíeret = se hiciera, por ti, en ella misma,
+      arte miránda cónditus. = con arte admirable, criatura.
+    - |-
+      In útero virgíneo = En el seno virginal
+      amor revíxit ígneus, = revivió el amor ardiente,
+      cuius calóre gérminant = por cuyo calor germinan
+      flores in terra cǽlici. = en la tierra flores del cielo.
+    - |-
+      Patri sit et Paráclito = Gloria sea al Padre y al Paráclito
+      tuóque Nato glória, = y a tu Hijo,
+      qui veste te mirábili = que te rodearon con el admirable
+      circumdedérunt grátiæ. = vestido de la gracia.
+  quae-caritatis-fulgidum:
+    titulo: Quæ caritátis fúlgidum
+    amen: true
+    estrofas:
+    - |-
+      Quæ caritátis fúlgidum = Tú que eres, Virgen, para los del cielo
+      es astrum, Virgo, súperis, = el astro resplandeciente de la caridad,
+      spei nobis mortálibus = para nosotros, los mortales, eres de la esperanza
+      fons vivax es et prófluus. = fuente viva y abundante.
+    - |-
+      Sic vales, celsa Dómina, = Tanto puedes, excelsa Señora,
+      in Nati cor piíssimi, = ante el corazón de tu Hijo piadosísimo,
+      ut qui fidénter póstulat, = que quien pide con confianza
+      per te secúrus ímpetret. = obtiene seguro por ti.
+    - |-
+      Opem tua benígnitas = Tu benignidad no solo
+      non solum fert poscéntibus, = da ayuda a los que la piden,
+      sed et libénter sǽpius = sino que muchas veces, gustosa,
+      precántum vota prǽvenit. = se adelanta a los deseos de los que ruegan.
+    - |-
+      In te misericórdia, = En ti la misericordia,
+      in te magnificéntia; = en ti la magnificencia;
+      tu bonitátis cúmulas = tú reúnes en ti todo lo bueno
+      quicquid creáta póssident. = que poseen las criaturas.
+    - |-
+      Patri sit et Paráclito = Gloria sea al Padre y al Paráclito
+      tuóque Nato glória, = y a tu Hijo,
+      qui veste te mirábili = que te rodearon con el admirable
+      circumdedérunt grátiæ. = vestido de la gracia.
+  exsultet-caelum-laudibus:
+    titulo: Exsúltet cælum láudibus
+    amen: true
+    estrofas:
+    - |-
+      Exsúltet cælum láudibus, = Exulte el cielo con alabanzas,
+      resúltet terra gáudiis: = resuene la tierra de gozo:
+      Apostolórum glóriam = la gloria de los apóstoles
+      sacra canunt sollémnia. = cantan las sagradas solemnidades.
+    - |-
+      Vos, sæcli iusti iúdices = Vosotros, jueces justos del mundo
+      et vera mundi lúmina, = y verdaderas luces de la tierra,
+      votis precámur córdium, = os rogamos con los votos del corazón:
+      audíte preces súpplicum. = escuchad las súplicas de los que os imploran.
+    - |-
+      Qui cælum verbo cláuditis = Vosotros, que con la palabra cerráis el cielo
+      serásque eius sólvitis, = y abrís sus cerrojos,
+      nos a peccátis ómnibus = desatadnos de todos los pecados
+      sólvite iussu, quǽsumus. = con vuestro mandato, os pedimos.
+    - |-
+      Quorum præcépto súbditur = Vosotros, a cuyo mandato están sometidas
+      salus et languor ómnium, = la salud y la enfermedad de todos,
+      sanáte ægros móribus, = sanad a los enfermos de costumbres,
+      nos reddéntes virtútibus, = devolviéndonos a las virtudes,
+    - |-
+      Ut, cum iudex advénerit = para que, cuando venga como juez
+      Christus in fine sǽculi, = Cristo al fin del mundo,
+      nos sempitérni gáudii = nos haga partícipes
+      fáciat esse cómpotes. = del gozo sempiterno.
+    - |-
+      Deo sint laudes glóriæ, = A Dios sean las alabanzas de la gloria,
+      qui dat nos evangélicis = que nos concede ser instruidos por vosotros
+      per vos doctrínis ínstrui = en las enseñanzas del Evangelio
+      et prósequi cæléstia. = y alcanzar las cosas celestiales.
+  o-sempiternae-curiae:
+    titulo: O sempitérnæ cúriæ
+    amen: true
+    estrofas:
+    - |-
+      O sempitérnæ cúriæ = Oh príncipes de la corte eterna
+      regis suprémi príncipes, = del rey supremo,
+      quos ipse Iesus édocens = a quienes Jesús mismo, instruyéndoos,
+      donávit orbi Apóstolos, = dio al mundo como apóstoles:
+    - |-
+      Supérna vos Ierúsalem, = la Jerusalén celestial,
+      lucérna cuius Agnus est, = cuya lámpara es el Cordero,
+      gemmas micántes póssidet, = os posee como gemas brillantes,
+      præclára vos fundámina. = como cimientos preclaros.
+    - |-
+      Vos et celébrat grátulans = Y os celebra, gozosa,
+      nunc sponsa Christi Ecclésia, = la Iglesia, esposa de Cristo,
+      quam sermo vester éxciit, = a la que vuestra palabra despertó,
+      quam consecrástis sánguine. = a la que consagrasteis con vuestra sangre.
+    - |-
+      Cadéntibus cum sǽculis = Cuando, al caer los siglos,
+      iudex Redémptor séderit, = el Redentor se siente como juez,
+      qua laude vos sedébitis, = ¡con qué alabanza os sentaréis,
+      senátus altæ glóriæ! = senado de la alta gloria!
+    - |-
+      Nos ergo vestra iúgiter = Que, pues, vuestra oración
+      prex adiuvándo róboret, = nos fortalezca siempre ayudándonos,
+      fudístis ut quæ sémina = para que las semillas que esparcisteis
+      in grana cæli flóreant. = florezcan en granos del cielo.
+    - |-
+      Ætérna Christo glória, = Gloria eterna a Cristo,
+      qui fecit esse núntios = que os hizo mensajeros
+      vos Patris, atque Spíritus = del Padre, y os llenó del Espíritu
+      replévit almo númine. = con su poder bondadoso.
+  tristes-erant-apostoli:
+    titulo: Tristes erant Apóstoli
+    amen: true
+    estrofas:
+    - |-
+      Tristes erant Apóstoli = Estaban tristes los apóstoles
+      de nece sui Dómini, = por la muerte de su Señor,
+      quem morte crudelíssima = a quien con la muerte más cruel
+      sævi damnárant ímpii. = habían condenado los impíos feroces.
+    - |-
+      Sermóne blando Ángelus = Con palabra amable el ángel
+      prædíxit muliéribus: = predijo a las mujeres:
+      «In Galilǽa Dóminus = «En Galilea el Señor
+      vidéndus est quantócius». = ha de ser visto cuanto antes».
+    - |-
+      Illæ dum pergunt cóncitæ = Mientras ellas van presurosas
+      Apóstolis hoc dícere, = a decir esto a los apóstoles,
+      vidéntes eum vívere, = viéndolo vivo,
+      ósculant pedes Dómini. = besan los pies del Señor.
+    - |-
+      Quo ágnito, discípuli = Sabido esto, los discípulos
+      in Galilǽa própere = van rápidamente a Galilea
+      pergunt vidére fáciem = para ver el rostro
+      desiderátam Dómini. = deseado del Señor.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium, = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Sit, Christe, tibi glória, = Gloria a ti, Cristo,
+      qui regno mortis óbruto, = que, destruido el reino de la muerte,
+      pandísti per Apóstolos = abriste por los apóstoles
+      vitæ lucísque sémitas. = los caminos de la vida y de la luz.
+  claro-paschali-gaudio:
+    titulo: Claro pascháli gáudio
+    amen: true
+    estrofas:
+    - |-
+      Claro pascháli gáudio = Con claro gozo pascual
+      sol mundo nitet rádio = brilla el sol para el mundo con su rayo,
+      Cum Christum iam Apóstoli = cuando los apóstoles ven ya a Cristo
+      visu cernunt corpóreo. = con la vista del cuerpo.
+    - |-
+      Osténsa sibi vúlnera = Mostradas a ellos las heridas
+      in Christi carne fúlgida = resplandecientes en la carne de Cristo,
+      resurrexísse Dóminum = que el Señor ha resucitado
+      voce faténtur pública. = lo confiesan con voz pública.
+    - |-
+      Rex, Christe, clementíssime, = Rey, Cristo, clementísimo,
+      tu corda nostra pósside = posee tú nuestros corazones,
+      ut tibi laudes débitas = para que te demos las alabanzas debidas
+      reddámus omni témpore. = en todo tiempo.
+    - |-
+      Esto perénne méntibus = Sé para nuestras almas, Jesús,
+      paschále, Iesu, gáudium, = el gozo pascual perenne,
+      et nos renátos grátiæ = y a nosotros, renacidos a la gracia,
+      tuis triúmphis ággrega. = únenos a tus triunfos.
+    - |-
+      Sit, Christe, tibi glória, = Gloria a ti, Cristo,
+      qui regno mortis óbruto, = que, destruido el reino de la muerte,
+      pandísti per Apóstolos = abriste por los apóstoles
+      vitæ lucísque sémitas. = los caminos de la vida y de la luz.
+  sanctorum-meritis-inclita-gaudia:
+    titulo: Sanctórum méritis ínclita gáudia
+    amen: true
+    estrofas:
+    - |-
+      Sanctórum méritis ínclita gáudia = Los gozos ínclitos por los méritos de los santos
+      pangámus, sócii, géstaque fórtia; = cantemos, compañeros, y sus hazañas valerosas;
+      nam gliscit ánimus prómere cántibus = pues el alma arde por celebrar con cantos
+      victórum genus óptimum. = al linaje excelente de los vencedores.
+    - |-
+      Hi sunt quos rétinens mundus inhórruit, = Estos son los que el mundo, reteniéndolos, aborreció,
+      ipsum nam stérili flore peráridum = pues lo despreciaron del todo, árido con su flor
+      sprevére pénitus teque secúti sunt, = estéril, y te siguieron a ti,
+      rex, Christe, bone cǽlitum. = Cristo, buen rey de los del cielo.
+    - |-
+      Hi pro te fúrias sǽvaque sústinent; = Estos soportan por ti furias y crueldades;
+      non murmur résonat, non querimónia, = no resuena un murmullo, ni una queja,
+      sed corde tácito mens bene cónscia = sino que, con corazón callado, el alma bien consciente
+      consérvat patiéntiam. = conserva la paciencia.
+    - |-
+      Quæ vox, quæ póterit lingua retéxere = ¿Qué voz, qué lengua podrá contar
+      quæ tu martýribus múnera prǽparas? = los dones que preparas a los mártires?
+      Rubri nam flúido sánguine láureis = Pues, rojos de sangre que corre, con laureles
+      ditántur bene fúlgidis. = bien resplandecientes se enriquecen.
+    - |-
+      Te, trina Déitas únaque, póscimus, = Te pedimos, Divinidad trina y una,
+      ut culpas ábluas, nóxia súbtrahas, = que laves las culpas, quites lo dañino,
+      des pacem fámulis, nos quoque glóriam = des la paz a tus siervos, y a nosotros también, la gloria
+      per cuncta tibi sǽcula. = por todos los siglos a ti.
+    variantes:
+      mujeres:
+        2: |-
+          Hæ sunt quos rétinens mundus inhórruit, = Estas son las que el mundo, reteniéndolas, aborreció,
+          ipsum nam stérili flore peráridum = pues lo despreciaron del todo, árido con su flor
+          sprevére pénitus teque secútæ sunt, = estéril, y te siguieron a ti,
+          rex, Christe, bone cǽlitum. = Cristo, buen rey de los del cielo.
+        3: |-
+          Hæ pro te fúrias sǽvaque sústinent; = Estas soportan por ti furias y crueldades;
+          non murmur résonat, non querimónia, = no resuena un murmullo, ni una queja,
+          sed corde tácito mens bene cónscia = sino que, con corazón callado, el alma bien consciente
+          consérvat patiéntiam. = conserva la paciencia.
+  rex-gloriose-martyrum:
+    titulo: Rex glorióse mártyrum
+    amen: true
+    estrofas:
+    - |-
+      Rex glorióse mártyrum, = Rey glorioso de los mártires,
+      coróna confiténtium, = corona de los confesores,
+      qui respuéntes térrea = que a los que rechazan lo terreno
+      perdúcis ad cæléstia, = los conduces a lo celestial:
+    - |-
+      Aurem benígnam prótinus = presta pronto tu oído benigno
+      appóne nostris vócibus; = a nuestras voces;
+      tropǽa sacra pángimus, = cantamos los sagrados trofeos,
+      ignósce quod delíquimus. = perdona lo que hemos pecado.
+    - |-
+      Tu vincis in martýribus = Tú vences en los mártires,
+      parcéndo confessóribus; = perdonando a los confesores;
+      tu vince nostra crímina = vence tú nuestros crímenes,
+      donándo indulgéntiam. = dándonos la indulgencia.
+    - |-
+      Præsta, Pater piíssime, = Concédelo, Padre piadosísimo,
+      Patríque compar Únice, = y tú, Único igual al Padre,
+      cum Spíritu Paráclito = con el Espíritu Paráclito,
+      regnans per omne sǽculum. = que reinas por todos los siglos.
+  aeterna-christi-munera:
+    titulo: Ætérna Christi múnera
+    amen: true
+    estrofas:
+    - |-
+      Ætérna Christi múnera = Los dones eternos de Cristo
+      et mártyrum victórias, = y las victorias de los mártires,
+      laudes feréntes débitas, = ofreciendo las alabanzas debidas,
+      lætis canámus méntibus. = cantemos con almas alegres.
+    - |-
+      Ecclesiárum príncipes, = Príncipes de las iglesias,
+      belli triumpháles duces, = jefes triunfadores de la guerra,
+      cæléstis aulæ mílites = soldados del palacio celestial
+      et vera mundi lúmina. = y verdaderas luces del mundo.
+    - |-
+      Terróre victo sǽculi = Vencido el terror del mundo
+      pœnísque spretis córporis, = y despreciadas las penas del cuerpo,
+      mortis sacræ compéndio = por el atajo de una muerte santa
+      lucem beátam póssident. = poseen la luz bienaventurada.
+    - |-
+      Tortóris insáni manu = Por la mano del verdugo enloquecido
+      sanguis sacrátus fúnditur, = es derramada la sangre sagrada,
+      sed pérmanent immóbiles = pero permanecen inmóviles
+      vitæ perénnis grátia. = por la gracia de la vida perenne.
+    - |-
+      Devóta sanctórum fides, = La fe devota de los santos,
+      invícta spes credéntium, = la esperanza invicta de los creyentes,
+      perfécta Christi cáritas = la caridad perfecta de Cristo
+      mundi triúmphat príncipem. = triunfa del príncipe del mundo.
+    - |-
+      In his patérna glória, = En ellos [está] la gloria del Padre,
+      in his volúntas Spíritus, = en ellos la voluntad del Espíritu,
+      exsúltat in his Fílius, = exulta en ellos el Hijo,
+      cælum replétur gáudio. = el cielo se llena de gozo.
+    - |-
+      Te nunc, Redémptor, quǽsumus, = Ahora, Redentor, te pedimos
+      ut mártyrum consórtio = que a la compañía de los mártires
+      iungas precántes sérvulos = unas a tus siervos que te suplican,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  deus-tuorum-militum:
+    titulo: Deus, tuórum mílitum
+    amen: true
+    estrofas:
+    - |-
+      Deus, tuórum mílitum = Oh Dios, herencia, corona y premio
+      sors et coróna, prǽmium, = de tus soldados,
+      laudes canéntes mártyris = a los que cantan las alabanzas del mártir
+      absólve nexu críminis. = desátalos del lazo del pecado.
+    - |-
+      Hic testis ore prótulit = Este testigo proclamó con la boca
+      quod cordis arca crédidit, = lo que creyó en el arca del corazón;
+      Christum sequéndo répperit = siguiendo a Cristo, lo encontró
+      effusióne sánguinis. = con el derramamiento de su sangre.
+    - |-
+      Hic nempe mundi gáudia = Este, en efecto, considerando con razón
+      et blandiménta nóxia = caducos los gozos del mundo
+      cadúca rite députans, = y sus halagos dañinos,
+      pervénit ad cæléstia. = llegó a lo celestial.
+    - |-
+      Pœnas cucúrrit fórtiter = Corrió valerosamente a las penas
+      et sústulit viríliter; = y las soportó con fortaleza;
+      pro te refúndens sánguinem, = derramando por ti su sangre,
+      ætérna dona póssidet. = posee los dones eternos.
+    - |-
+      Ob hoc precátu súpplici = Por esto, con súplica humilde,
+      te póscimus, piíssime; = te pedimos, oh piadosísimo:
+      in hoc triúmpho mártyris = en este triunfo del mártir
+      dimítte noxam sérvulis, = perdona la culpa a tus siervos,
+    - |-
+      Ut consequámur múneris = para que alcancemos también
+      ipsíus et consórtia, = la participación de su premio
+      lætémur ac perénniter = y nos alegremos para siempre,
+      iuncti polórum sédibus. = unidos en las moradas del cielo.
+    - |-
+      Laus et perénnis glória = Alabanza y gloria perenne
+      tibi, Pater, cum Fílio, = a ti, Padre, con el Hijo,
+      Sancto simul Paráclito = y a la vez al Santo Paráclito,
+      in sæculórum sǽcula. = por los siglos de los siglos.
+    variantes:
+      mujer:
+        2: |-
+          Hæc testis ore prótulit = Esta testigo proclamó con la boca
+          quod cordis arca crédidit, = lo que creyó en el arca del corazón;
+          Christum sequéndo répperit = siguiendo a Cristo, lo encontró
+          effusióne sánguinis. = con el derramamiento de su sangre.
+        3: |-
+          Hæc nempe mundi gáudia = Esta, en efecto, considerando con razón
+          et blandiménta nóxia = caducos los gozos del mundo
+          cadúca rite députans, = y sus halagos dañinos,
+          pervénit ad cæléstia. = llegó a lo celestial.
+  beate-martyr-prospera:
+    titulo: Beáte martyr, próspera
+    amen: true
+    estrofas:
+    - |-
+      Beáte martyr, próspera = Bienaventurado mártir, haz próspero
+      diem triumphálem tuum, = tu día triunfal,
+      quo sánguinis merces tibi = en el que, como recompensa de tu sangre,
+      coróna vincénti datur. = se te da la corona al vencer.
+    - |-
+      Hic te ex ténebris sǽculi, = Este día te sacó de las tinieblas del mundo,
+      tortóre victo et iúdice, = vencidos el verdugo y el juez,
+      evéxit ad cælum dies = y te llevó al cielo,
+      Christóque ovántem réddidit. = y te devolvió, triunfante, a Cristo.
+    - |-
+      Nunc angelórum párticeps = Ahora, compañero de los ángeles,
+      collúces insígni stola, = brillas con la insigne vestidura
+      quam testis indomábilis = que, testigo indomable,
+      rivis cruóris láveras. = habías lavado con ríos de sangre.
+    - |-
+      Adésto nunc et óbsecra, = Asístenos ahora y suplica
+      placátus ut Christus suis = que Cristo, aplacado, a los suyos
+      inclínet aurem prósperam, = incline su oído propicio
+      noxas nec omnes ímputet. = y no les impute todas las culpas.
+    - |-
+      Paulísper huc illábere = Desciende aquí un momento,
+      Christi favórem déferens, = trayendo el favor de Cristo,
+      sensus graváti ut séntiant = para que los sentidos agobiados sientan
+      levámen indulgéntiæ. = el alivio del perdón.
+    - |-
+      Honor Patri cum Fílio = Honor al Padre con el Hijo
+      et Spíritu Paráclito, = y al Espíritu Paráclito,
+      qui te coróna pérpeti = que te ciñen con corona perpetua
+      cingunt in aula glóriæ. = en el palacio de la gloria.
+    variantes:
+      mujer:
+        1: |-
+          Beáta martyr, próspera = Bienaventurada mártir, haz próspero
+          diem triumphálem tuum, = tu día triunfal,
+          quo sánguinis merces tibi = en el que, como recompensa de tu sangre,
+          coróna vincénti datur. = se te da la corona al vencer.
+  martyr-dei-qui-unicum:
+    titulo: Martyr Dei, qui únicum
+    amen: true
+    estrofas:
+    - |-
+      Martyr Dei, qui únicum = Mártir de Dios, que, siguiendo
+      Patris sequéndo Fílium = al Hijo único del Padre,
+      victis triúmphas hóstibus, = triunfas sobre los enemigos vencidos,
+      victor fruens cæléstibus, = vencedor que gozas de lo celestial:
+    - |-
+      Tui precátus múnere = por el don de tu súplica
+      nostrum reátum dílue, = lava nuestra culpa,
+      arcens mali contágium, = apartando el contagio del mal,
+      vitæ repéllens tǽdium. = alejando el hastío de la vida.
+    - |-
+      Solúta sunt iam víncula = Ya están desatadas las cadenas
+      tui sacráti córporis; = de tu cuerpo sagrado;
+      nos solve vinclis sǽculi = desátanos de las cadenas del mundo
+      amóre Fílii Dei. = por amor del Hijo de Dios.
+    - |-
+      Honor Patri cum Fílio = Honor al Padre con el Hijo
+      et Spíritu Paráclito, = y al Espíritu Paráclito,
+      qui te coróna pérpeti = que te ciñen con corona perpetua
+      cingunt in aula glóriæ. = en el palacio de la gloria.
+    variantes:
+      mujer:
+        1: |-
+          Martyr Dei, quæ únicum = Mártir de Dios, que, siguiendo
+          Patris sequéndo Fílium = al Hijo único del Padre,
+          victis triúmphas hóstibus, = triunfas sobre los enemigos vencidos,
+          victrix fruens cæléstibus, = vencedora que gozas de lo celestial:
+  virginis-proles-opifexque-matris:
+    titulo: Vírginis Proles opiféxque Matris
+    amen: true
+    estrofas:
+    - |-
+      Vírginis Proles opiféxque Matris, = Hijo de la Virgen y creador de tu Madre,
+      Virgo quem gessit peperítque Virgo, = a quien llevó y dio a luz una Virgen,
+      vírginis festum cánimus tropǽum: = cantamos el trofeo festivo de una virgen:
+      áccipe votum. = recibe nuestro voto.
+    - |-
+      Hæc tua virgo, dúplici beáta = Esta virgen tuya, dichosa por doble
+      sorte dum gestit frágilem domáre = suerte, mientras se alegra de dominar
+      córporis sexum, dómuit cruéntum = la frágil condición del cuerpo, dominó con su cuerpo
+      córpore sæclum. = al mundo sangriento.
+    - |-
+      Inde nec mortem nec amíca mortis = Por eso, sin temer ni la muerte ni los crueles
+      sæva pœnárum génera pavéscens, = géneros de tormentos, amigos de la muerte,
+      sánguine fuso méruit sacrátum = derramando su sangre, mereció subir
+      scándere cælum. = al cielo sagrado.
+    - |-
+      Huius obténtu, Deus alme, nostris = Por su intercesión, Dios bondadoso,
+      parce iam culpis, vítiis revúlsis, = perdona ya nuestras culpas, arrancados los vicios,
+      quo tibi puri résonet per ævum = para que resuene para ti por siempre el himno
+      péctoris hymnus. = de un corazón puro.
+  o-christe-flos-convallium:
+    titulo: O Christe, flos convállium
+    amen: true
+    estrofas:
+    - |-
+      O Christe, flos convállium, = Oh Cristo, flor de los valles,
+      te láudibus extóllimus, = te ensalzamos con alabanzas,
+      quod hanc ornásti vírginem = porque adornaste a esta virgen
+      palmis quoque martýrii. = también con las palmas del martirio.
+    - |-
+      Hæc prudens, fortis, sápiens, = Ella, prudente, fuerte, sabia,
+      fidem proféssa, líbere, = habiendo confesado libremente la fe,
+      pro te dira supplícia = por ti recibió crueles suplicios
+      excépit impertérrita. = sin temor.
+    - |-
+      Sic spreto mundi príncipe, = Así, despreciado el príncipe del mundo,
+      tuo ditáta múnere, = enriquecida con tu don,
+      cruénto parta prœ́lio, = conquistados en un combate sangriento,
+      ætérna tulit prǽmia. = obtuvo los premios eternos.
+    - |-
+      Huius, Redémptor, méritis = Por sus méritos, Redentor,
+      nos pius adde sócios, = piadoso, únenos [a ella] como compañeros,
+      ut, mente pura, frúctibus = para que con mente pura gocemos
+      tui fruámur sánguinis. = de los frutos de tu sangre.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  o-castitatis-signifer:
+    titulo: O castitátis sígnifer
+    amen: true
+    estrofas:
+    - |-
+      O castitátis sígnifer = Oh abanderado de la castidad
+      et fortitúdo mártyrum, = y fortaleza de los mártires,
+      utrísque reddens prǽmia, = que das a ambos sus premios,
+      audi benígnus súpplices. = escucha benigno a los que te suplican.
+    - |-
+      Hæc virgo magni péctoris, = Esta virgen de gran corazón,
+      beáta sorte dúplici = dichosa por doble suerte
+      bináque palma nóbilis, = y noble por doble palma,
+      hic tóllitur præcóniis. = es ensalzada aquí con alabanzas.
+    - |-
+      Hæc te fatéri pértinax, = Ella, obstinada en confesarte,
+      tortóris acre bráchium = armó con valor contra sí
+      armávit in se strénue = el brazo cruel del verdugo
+      tibíque fudit spíritum. = y entregó por ti su espíritu.
+    - |-
+      Sic sæviéntis vúlnera = Así, enseñando a vencer las heridas
+      et blandiéntis víncere = del mundo cuando se ensaña
+      mundi docens illécebram, = y su seducción cuando halaga,
+      fidem docet nos íntegram. = nos enseña la fe íntegra.
+    - |-
+      Huius favóre débita = Por su favor, perdónanos
+      nobis remíttas ómnia, = todas nuestras deudas,
+      foménta tollens críminum = quitando lo que alimenta los pecados
+      tuámque subdens grátiam. = y concediéndonos tu gracia.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  vir-celse-forma-fulgida:
+    titulo: Vir celse, forma fúlgida
+    amen: true
+    estrofas:
+    - |-
+      Vir celse, forma fúlgida = Varón excelso, imagen resplandeciente
+      virtútis, hymnum súscipe, = de la virtud, recibe el himno
+      qui iure dum te prǽdicat, = que, mientras te alaba con justicia,
+      Dei canit magnália. = canta las maravillas de Dios.
+    - |-
+      Qui sempitérnus Póntifex = El Pontífice sempiterno,
+      stirpem Deo mortálium = que reunió con Dios el linaje
+      revínxit, atque réddidit = de los mortales y nos devolvió
+      paci novo nos fœ́dere, = a la paz con una nueva alianza,
+    - |-
+      Te fecit ipse próvidus = él mismo, previsor, te hizo
+      sui minístrum múneris, = ministro de su oficio,
+      Patri datúrum glóriam = para dar gloria al Padre
+      eiúsque vitam plébibus. = y su vida a los pueblos.
+    - |-
+      Virtúte factus dítior = Enriquecido con la fuerza
+      te consecrántis Spíritus, = del Espíritu que te consagró,
+      præsul, salútis pínguia = como obispo diste
+      tu tradidísti pábula. = los pastos abundantes de la salvación.
+    - |-
+      Locátus in cæléstibus, = Colocado en el cielo,
+      sanctæ meménto Ecclésiæ, = acuérdate de la santa Iglesia,
+      oves ut omnes páscua = para que todas las ovejas busquen
+      Christi petant felícia. = los pastos dichosos de Cristo.
+    - |-
+      Sit Trinitáti glória, = Gloria a la Trinidad,
+      quæ sancti honóris múnia = que corona con gozos dignos
+      tibi minístro sédulo = a ti, su ministro diligente,
+      dignis corónat gáudiis. = los oficios del santo ministerio.
+    variantes:
+      presbitero:
+        4: |-
+          Regális huius cúlminis = Habiendo alcanzado la altura
+          adéptus altitúdinem, = de esta cumbre real,
+          verbo fuísti et móribus = fuiste con la palabra y las costumbres
+          doctor, sacérdos, hóstia. = doctor, sacerdote, víctima.
+      papa:
+        4: |-
+          Tu Petri ovíle cǽlitus = Tú regías el redil de Pedro
+          sumptis regébas clávibus, = con las llaves recibidas del cielo,
+          gregémque verbo grátiæ, = y al rebaño, con la palabra de la gracia
+          puris fovébas áctibus. = y con acciones puras, lo cuidabas.
+  sacrata-nobis-gaudia:
+    titulo: Sacráta nobis gáudia
+    amen: true
+    estrofas:
+    - |-
+      Sacráta nobis gáudia = Gozos sagrados
+      dies redúxit ánnua, = nos ha traído el día anual,
+      laudántur in qua débito = en el que se alaba con el debido
+      cultu duces ovílium. = culto a los guías de los rebaños.
+    - |-
+      En pro gregis custódia = He aquí que por la custodia del rebaño
+      nullos labóres néglegunt, = no descuidan ningún trabajo,
+      tutántur illum, sánius = lo protegen, dándole
+      impertiéntes pábulum. = un pasto más sano.
+    - |-
+      Arcent lupos e fínibus, = Alejan a los lobos de sus confines,
+      procul latrónes éxigunt, = echan lejos a los ladrones,
+      replent oves pinguédine, = llenan de abundancia a las ovejas,
+      ovíle numquam déserunt. = nunca abandonan el redil.
+    - |-
+      Tot nunc potíti gáudiis, = Ahora que gozáis de tantos gozos,
+      gregum duces sanctíssimi, = santísimos guías de los rebaños,
+      nobis rogáte grátiam = pedid para nosotros la gracia
+      apud tribúnal iúdicis. = ante el tribunal del juez.
+    - |-
+      Ætérne, Christe, póntifex, = Cristo, pontífice eterno,
+      tibi sit æqua glória = a ti sea igual gloria
+      cum Patre et almo Spíritu = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  christe-pastorum-caput-atque-princeps:
+    titulo: Christe, pastórum caput atque princeps
+    amen: true
+    estrofas:
+    - |-
+      Christe, pastórum caput atque princeps, = Cristo, cabeza y príncipe de los pastores,
+      géstiens huius celebráre festum, = deseosa de celebrar la fiesta de este,
+      débitas sacro pia turba psallit = la multitud piadosa canta las alabanzas debidas
+      cármine laudes, = con un canto sagrado.
+    - |-
+      Hunc tibi eléctum fáciens minístrum = A este, haciéndolo tu ministro elegido
+      ac sacerdótem sócians, dedísti = y asociándolo al sacerdocio, lo diste
+      dux ut astáret pópulo fidélis = para que asistiera al pueblo como guía fiel
+      ac bonus altor. = y buen sustentador.
+    - |-
+      Hic gregis ductor fuit atque forma, = Este fue guía y modelo del rebaño,
+      lux erat cæco, mísero levámen, = era luz para el ciego, alivio para el desdichado,
+      próvidus cunctis pater omnibúsque = padre previsor para todos, y para todos
+      ómnia factus. = se hizo todo.
+    - |-
+      Christe, qui sanctis méritam corónam = Cristo, que a los santos das en el cielo
+      reddis in cælis, dócili magístrum = la corona merecida, haz que, dóciles, sigamos
+      fac sequi vita, similíque tandem = al maestro en la vida y que al fin alcancemos
+      fine potíri. = un fin semejante.
+    - |-
+      Æqua laus summum célebret Paréntem = Que una alabanza igual celebre al Padre altísimo
+      teque, Salvátor, pie rex, per ævum; = y a ti, Salvador, rey piadoso, por siempre;
+      Spíritus Sancti résonet per omnem = que la gloria del Espíritu Santo resuene
+      glória mundum. = por todo el mundo.
+    variantes:
+      obispo:
+        2: |-
+          Strénuum bello púgilem supérni = Al valiente luchador, tu Espíritu
+          chrísmatis pleno tuus unxit intus = lo ungió por dentro con el don pleno del crisma
+          Spíritus dono, posuítque sanctam = celestial, y lo puso para apacentar
+          páscere gentem. = al pueblo santo.
+      papa:
+        2: |-
+          Quas oves Petro déderas, ovíle = Las ovejas que habías dado a Pedro, para que
+          orbis ut totus fíeret sacrátum, = todo el mundo llegara a ser un redil sagrado,
+          hic tuo nutu pósitus suprémo = este, puesto por tu voluntad en la cumbre
+          cúlmine rexit. = suprema, las gobernó.
+  dum-sacerdotum-celebrant-fideles:
+    titulo: Dum sacerdótum célebrant fidéles
+    amen: true
+    estrofas:
+    - |-
+      Dum sacerdótum célebrant fidéles = Mientras los fieles celebran las fiestas
+      festa sollémni veneránda cultu, = de los sacerdotes, dignas de veneración con culto solemne,
+      in tuas laudes honor hic redúndat, = este honor redunda en tu alabanza,
+      summe Sacérdos. = Sacerdote supremo.
+    - |-
+      Cuius ex dono potuére patres = Por tu don pudieron los padres
+      sémitas lucis pópulos docére, = enseñar a los pueblos los caminos de la luz,
+      móribus sanctis régere atque verbo = regirlos con santas costumbres y apacentarlos
+      páscere vitæ. = con la palabra de vida.
+    - |-
+      Sed nec advérsis póterant movéri = Pero tampoco las adversidades podían apartarlos
+      a tuæ certo fídei tenóre, = del curso firme de tu fe,
+      quos futurórum rata præmiórum = pues los animaba la esperanza cierta
+      spes animábat. = de los premios futuros.
+    - |-
+      Unde post vitæ frágilis labóres = Por eso, después de los trabajos de la frágil vida,
+      rite decúrsos, pátrias adépti = debidamente recorridos, alcanzadas las moradas
+      cǽlitus sedes, sólida beáti = de la patria celestial, gozan dichosos
+      pace fruúntur. = de una paz firme.
+    - |-
+      Glóriæ summum decus atque laudis, = Que el sumo honor de la gloria y de la alabanza,
+      rex, tibi, regum, Déitas perénnis, = a ti, Rey de reyes, Divinidad perenne,
+      quicquid est rerum célebret per omne = lo celebre todo lo que existe, por todo
+      tempus et ævum. = tiempo y edad.
+  inclitus-rector-pater-atque-prudens:
+    titulo: Ínclitus rector pater atque prudens
+    amen: true
+    estrofas:
+    - |-
+      Ínclitus rector pater atque prudens, = Ínclito pastor, padre y prudente,
+      cuius insígnem cólimus triúmphum, = cuyo insigne triunfo celebramos,
+      iste conféssor sine fine lætus = este confesor, alegre sin fin,
+      regnat in astris. = reina en los astros.
+    - |-
+      Qui sacerdótis, ducis ac magístri = Él asumió el oficio sagrado de sacerdote,
+      munus insúmpsit pópulis sacrátum, = guía y maestro, para los pueblos,
+      præsul et vitæ sápiens parávit = y como obispo sabio preparó los dones
+      dona beátæ. = de la vida dichosa.
+    - |-
+      Nunc eum nisu rogitémus omnes, = Roguémosle ahora todos con empeño
+      ábluat nostrum pius ut reátum, = que, piadoso, lave nuestra culpa
+      et sua ducat prece nos ad alta = y con su súplica nos lleve a las altas
+      cúlmina cæli. = cumbres del cielo.
+    - |-
+      Sit Deo soli decus et potéstas, = Sea a Dios solo el honor y el poder,
+      laus in excélsis, honor ac perénnis, = la alabanza en las alturas, el honor perenne,
+      qui suis totum móderans gubérnat = que, moderándolo todo, gobierna el mundo
+      légibus orbem. = con sus leyes.
+    variantes:
+      presbitero:
+        2: |-
+          Ipse dux clarus fuit et magíster, = Él fue guía ilustre y maestro,
+          éxhibens sacræ documénta vitæ = mostrando las enseñanzas de una vida santa
+          ac Deo semper sátagens placére = y esforzándose siempre por agradar a Dios
+          péctore mundo. = con corazón puro.
+      papa:
+        2: |-
+          Qui Petri summa cáthedra resídens, = Sentado en la cátedra suprema de Pedro,
+          præsul imménsi gregis et magíster, = pastor y maestro de un rebaño inmenso,
+          regna per claves Dómini poténter = con poder abre, por las llaves del Señor,
+          cǽlica pandit. = los reinos del cielo.
+  hi-sacerdotes-domini-sacrati:
+    titulo: Hi sacerdótes Dómini sacráti
+    amen: true
+    estrofas:
+    - |-
+      Hi sacerdótes Dómini sacráti, = Estos sacerdotes consagrados al Señor,
+      consecratóres Dómini fidéles = fieles consagradores del Señor,
+      atque pastóres pópuli fuére = fueron también pastores del pueblo
+      ímpigro amóre. = con amor diligente.
+    - |-
+      Namque suscéptæ benedictiónis = Pues, guardando los dones de la bendición
+      dona servántes, studuére, lumbos = recibida, se esforzaron, con la cintura
+      fórtiter cincti, mánibus corúscas = fuertemente ceñida, por llevar en las manos
+      ferre lucérnas. = lámparas brillantes.
+    - |-
+      Sicque suspénsi vigilésque, quando = Y así, atentos y en vela, cuando
+      iánuam pulsans Dóminus veníret, = el Señor viniera llamando a la puerta,
+      obviavérunt properánti alácres = le salieron al encuentro, prontos
+      pándere limen. = a abrirle la entrada.
+    - |-
+      Glóriæ summum decus atque laudis, = Que el sumo honor de la gloria y de la alabanza,
+      rex, tibi, regum, Déitas perénnis, = a ti, Rey de reyes, Divinidad perenne,
+      quicquid est rerum célebret per omne = lo celebre todo lo que existe, por todo
+      tempus et ævum. = tiempo y edad.
+  aeterne-sol-qui-lumine:
+    titulo: Ætérne sol, qui lúmine
+    amen: true
+    estrofas:
+    - |-
+      Ætérne sol, qui lúmine = Sol eterno, que con tu luz
+      creáta comples ómnia, = llenas todo lo creado,
+      supréma lux et méntium, = luz suprema también de las mentes,
+      te corda nostra cóncinunt. = te cantan nuestros corazones.
+    - |-
+      Tuo fovénte Spíritu, = Con el aliento de tu Espíritu,
+      hic viva luminária = aquí brillaron luminarias vivas
+      fulsére, per quæ sǽculis = por las que a través de los siglos
+      patent salútis sémitæ. = se abren los caminos de la salvación.
+    - |-
+      Quod verba missa cǽlitus, = Lo que las palabras enviadas del cielo,
+      natíva mens quod éxhibet, = lo que la mente por naturaleza muestra,
+      per hos minístros grátiæ = por estos ministros de la gracia
+      novo nitóre cláruit. = brilló con nuevo resplandor.
+    - |-
+      Horum corónæ párticeps, = Partícipe de su corona,
+      doctrína honéstus lúcida, = honrado por una doctrina luminosa,
+      hic vir beátus splénduit = brilló aquí este varón bienaventurado
+      quem prædicámus láudibus. = que proclamamos con alabanzas.
+    - |-
+      Ipso favénte, quǽsumus, = Con su favor, te pedimos,
+      nobis, Deus, percúrrere = concédenos, oh Dios, recorrer
+      da veritátis trámitem, = el camino de la verdad,
+      possímus ut te cónsequi. = para que podamos alcanzarte.
+    - |-
+      Præsta, Pater piíssime, = Concédelo, Padre piadosísimo,
+      Patríque compar Únice, = y tú, Único igual al Padre,
+      cum Spíritu Paráclito = con el Espíritu Paráclito,
+      regnans per omne sǽculum. = que reinas por todos los siglos.
+  doctor-aeternus-coleris-piusque:
+    titulo: Doctor ætérnus cóleris piúsque
+    amen: true
+    estrofas:
+    - |-
+      Doctor ætérnus cóleris piúsque, = Eres venerado como doctor eterno y piadoso,
+      Christe, qui leges áperis salútis, = Cristo, que abres las leyes de la salvación,
+      verba qui vitæ mérito putáris = tú, de quien con razón se piensa que solo
+      solus habére. = tienes palabras de vida.
+    - |-
+      Teque clamámus, bone Pastor orbis, = Y te aclamamos, buen Pastor del mundo,
+      cǽlitus semper solidásse Sponsæ = porque desde el cielo afirmaste siempre
+      verba, constánter quibus illa mundo = las palabras de tu Esposa, para que ella
+      lumen adésset. = fuera siempre luz para el mundo.
+    - |-
+      Ipse quin præbes fámulos corúscos, = Más aún, nos das servidores brillantes,
+      áureas stellas velut emicántes, = como estrellas de oro que resplandecen,
+      certa qui nobis réserent beátæ = que nos abran las enseñanzas seguras
+      dógmata vitæ. = de la vida dichosa.
+    - |-
+      Unde te laudes récinant, Magíster, = Por eso te cantan alabanzas, Maestro,
+      Spíritus fundis bona qui stupénda = porque derramas bienes asombrosos del Espíritu
+      ore doctórum, tua quo poténter = por boca de los doctores, por los que poderosamente
+      lux patet alma. = se muestra tu luz bondadosa.
+    - |-
+      Quique nunc iustus celebrátur, instet = Y el justo que ahora es celebrado, insista
+      ut tuam plebem per amœ́na lucis = para que concedas a tu pueblo avanzar por las delicias
+      des gradi, donec tibi dicat hymnos = de la luz, hasta que te diga himnos
+      lúmine pleno. = en la luz plena.
+  iesu-corona-virginum:
+    titulo: Iesu, coróna vírginum
+    amen: true
+    estrofas:
+    - |-
+      Iesu, coróna vírginum, = Jesús, corona de las vírgenes,
+      quem Mater illa cóncipit = a quien concibió aquella Madre
+      quæ sola virgo párturit, = que sola, virgen, dio a luz,
+      hæc vota clemens áccipe, = recibe, clemente, estos votos.
+    - |-
+      Qui pascis inter lília = Tú que te apacientas entre los lirios,
+      sæptus choréis vírginum, = rodeado de coros de vírgenes,
+      sponsus decórus glória = esposo hermoso en la gloria,
+      sponsísque reddens prǽmia. = que das a tus esposas los premios.
+    - |-
+      Quocúmque pergis, vírgines = Adondequiera que vas, las vírgenes
+      sequúntur, atque láudibus = te siguen y con alabanzas
+      post te canéntes cúrsitant = corren tras de ti cantando
+      hymnósque dulces pérsonant. = y entonan dulces himnos.
+    - |-
+      Te deprecámur, lárgius = Te suplicamos que aumentes
+      nostris adáuge méntibus = generosamente en nuestras mentes
+      nescíre prorsus ómnia = el no conocer en absoluto ninguna
+      corruptiónis vúlnera. = herida de la corrupción.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  dulci-depromat-carmine:
+    titulo: Dulci deprómat cármine
+    amen: true
+    estrofas:
+    - |-
+      Dulci deprómat cármine = Con dulce canto
+      devóta plebs sollémnia, = celebre el pueblo devoto esta solemnidad,
+      dum in cælórum cúlmine = mientras en la cumbre de los cielos
+      hæc virgo micat glória. = brilla esta virgen en la gloria.
+    - |-
+      Virgo, quæ Christi láudibus = La virgen que ya con valentía
+      vacávit iam viríliter, = se dedicó a las alabanzas de Cristo
+      sanctórum nunc agmínibus = ahora se une felizmente
+      coniúngitur felíciter. = a las filas de los santos.
+    - |-
+      Vicit per pudicítiam = Venció por la pureza
+      infírmæ carnis vítium; = el vicio de la carne débil;
+      sprevit mundi blandítiam = despreció los halagos del mundo
+      Christi sequens vestígium. = siguiendo las huellas de Cristo.
+    - |-
+      Per hanc nos, Christe, dírige = Por ella, Cristo, dirígenos,
+      servans a cunctis hóstibus; = guardándonos de todos los enemigos;
+      culpárum lapsus córrige = corrige las caídas de nuestras culpas,
+      nos ímbuens virtútibus. = impregnándonos de virtudes.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu, = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  gaudentes-festum-colimus:
+    titulo: Gaudéntes festum cólimus
+    amen: true
+    estrofas:
+    - |-
+      Gaudéntes festum cólimus = Gozosos celebramos la fiesta
+      sanctárum Christi vírginum, = de las santas vírgenes de Cristo,
+      quæ puro corde Dóminum = que con corazón puro siguieron
+      secútæ sunt in láudibus. = al Señor entre alabanzas.
+    - |-
+      O castitátis lílium, = Oh lirio de la castidad,
+      rex vírginum sanctíssime, = rey santísimo de las vírgenes,
+      tu, custos pudicítiæ, = tú, guardián de la pureza,
+      fraudes repélle dǽmonum. = rechaza los engaños de los demonios.
+    - |-
+      Qui castis in viscéribus = Tú que en las entrañas castas
+      placáris clementíssime, = te complaces, clementísimo,
+      nostros reátus dílue, = lava nuestras culpas,
+      dimíttens quæ peccávimus. = perdonando lo que hemos pecado.
+    - |-
+      Grates precántes ágimus; = Suplicantes, te damos gracias;
+      errámus, viam dírige; = erramos: dirige el camino;
+      tu, pater indulgéntiæ, = tú, padre de la indulgencia,
+      nobis succúrre, quǽsumus. = socórrenos, te pedimos.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui natus es de Vírgine, = que naciste de la Virgen,
+      cum Patre et almo Spíritu = con el Padre y el Espíritu bondadoso,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  aptata-virgo-lampade:
+    titulo: Aptáta, virgo, lámpade
+    amen: true
+    estrofas:
+    - |-
+      Aptáta, virgo, lámpade = Con la lámpara preparada, virgen,
+      ad núptias ingréssa es = entraste a las bodas
+      ætérni regis glóriæ, = del rey eterno de la gloria,
+      quem laudant turbæ cǽlicæ. = a quien alaban las multitudes del cielo.
+    - |-
+      Grata convíva súperis, = Grata comensal de los del cielo,
+      cælésti sponso iúngeris = te unes al esposo celestial
+      ampléxu casti fœ́deris, = en el abrazo de una alianza casta,
+      pudóris dives méritis. = rica en los méritos de la pureza.
+    - |-
+      Normam vivéndi ínstrue, = Instrúyenos en la norma de vida,
+      nos prece tua cónfove, = favorécenos con tu súplica,
+      possímus ut resístere = para que podamos resistir
+      hostis nostri versútiæ. = las astucias de nuestro enemigo.
+    - |-
+      Exémplar vitæ vírginum, = Modelo de vida de las vírgenes,
+      María roget Fílium, = María ruegue a su Hijo
+      ut eius adiutórium = que su auxilio
+      nos iuvet per exsílium. = nos ayude durante el destierro.
+    - |-
+      Sit Deitáti glória = Gloria sea a la Divinidad
+      per infiníta sǽcula = por los siglos infinitos
+      pro vírginis victória, = por la victoria de la virgen,
+      qua gaudet cæli cúria. = con la que se alegra la corte del cielo.
+  iesu-redemptor-omnium-perpes-corona:
+    titulo: Iesu, redémptor ómnium
+    amen: true
+    estrofas:
+    - |-
+      Iesu, redémptor ómnium, = Jesús, redentor de todos,
+      perpes coróna cǽlitum, = corona perpetua de los del cielo,
+      in hac die cleméntius = en este día, con más clemencia,
+      nostris favéto vócibus, = favorece nuestras voces,
+    - |-
+      Sacri tui qua nóminis = [día] en que el bondadoso confesor
+      conféssor almus cláruit, = de tu sagrado nombre brilló,
+      cuius celébrat ánnua = cuya solemnidad anual
+      devóta plebs sollémnia. = celebra el pueblo devoto.
+    - |-
+      Per illa quæ sunt sǽculi = Por las cosas del mundo
+      gressu seréno tránsiit, = pasó con paso sereno,
+      tibi fidélis iúgiter = fiel a ti continuamente,
+      iter salútis pérsequens. = siguiendo el camino de la salvación.
+    - |-
+      At rite mundi gáudiis = Y, con razón, no aplicando el corazón
+      non cor cadúcis ápplicans, = a los gozos caducos del mundo,
+      cum ángelis cæléstibus = alegre con los ángeles del cielo
+      lætus potítur prǽmiis. = goza de los premios.
+    - |-
+      Huius benígnus ánnue = Concédenos, benigno,
+      nobis sequi vestígia; = seguir sus huellas;
+      huius precátu sérvulis = por su súplica, a tus siervos
+      dimítte noxam críminis. = perdónales la culpa del pecado.
+    - |-
+      Sit, Christe, rex piíssime, = Sea, Cristo, rey piadosísimo,
+      tibi Patríque glória = a ti y al Padre la gloria
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  inclitos-christi-famulos-canamus:
+    titulo: Ínclitos Christi fámulos canámus
+    amen: true
+    estrofas:
+    - |-
+      Ínclitos Christi fámulos canámus, = Cantemos a los ínclitos siervos de Cristo,
+      quos, fide claros nitidísque gestis, = a quienes, ilustres por la fe y por obras resplandecientes,
+      hac die tellus sociáta cælo = en este día la tierra, unida al cielo,
+      láudibus ornat. = adorna con alabanzas.
+    - |-
+      Quippe qui mites, húmiles, pudíci, = Porque, mansos, humildes, pudorosos,
+      nésciam culpæ coluére vitam, = llevaron una vida que no conoció la culpa,
+      donec e terris ánimus volávit = hasta que el alma voló de la tierra,
+      liber ad astra. = libre, a los astros.
+    - |-
+      Inde iam gaudent míseris adésse, = Por eso ya se alegran de asistir a los desdichados,
+      fléntium tergunt lácrimas, medéntur = enjugan las lágrimas de los que lloran, curan
+      méntium plagis, vitiáta reddunt = las heridas de las almas, devuelven la salud
+      membra salúti. = a los miembros dañados.
+    - |-
+      Nostra laus ergo résonet benígnis = Resuene, pues, nuestra alabanza a estos
+      his Dei servis referátque grates, = benignos siervos de Dios, y les dé gracias,
+      qui pia pergant ope nos iuváre = para que sigan ayudándonos con su piadoso auxilio
+      rebus in arctis. = en las estrecheces.
+    - |-
+      Sit Deo soli decus et potéstas, = Sea a Dios solo el honor y el poder,
+      laus in excélsis honor ac perénnis, = la alabanza en las alturas, el honor perenne,
+      qui suis totum móderans gubérnat = que, moderándolo todo, gobierna el mundo
+      légibus orbem. = con sus leyes.
+  iesu-corona-celsior:
+    titulo: Iesu, coróna célsior
+    amen: true
+    estrofas:
+    - |-
+      Iesu, coróna célsior = Jesús, corona más excelsa
+      et véritas sublímior, = y verdad más sublime,
+      qui confiténti sérvulo = que al siervo que te confiesa
+      reddis perénne prǽmium, = le das el premio perenne:
+    - |-
+      Da supplicánti cœ́tui, = da a la asamblea que te suplica,
+      huius rogátu cǽlitis, = por el ruego de este santo del cielo,
+      remissiónem críminum = la remisión de los pecados,
+      rumpéndo nexum vínculi. = rompiendo el lazo de la cadena.
+    - |-
+      Nil vanitátis díligens, = No amando nada vano,
+      terréna sic exércuit, = se ocupó de lo terreno de tal modo
+      ut mente tota férvidus = que, ferviente con toda el alma,
+      tibi placéret únice. = te agradaba solo a ti.
+    - |-
+      Te, Christe, rex piíssime, = Confesándote aquí continuamente
+      hic confiténdo iúgiter, = a ti, Cristo, rey piadosísimo,
+      calcávit hostem fórtiter = pisoteó con valentía al enemigo
+      supérbum ac satéllitem. = soberbio y a su secuaz.
+    - |-
+      Virtúte clarus et fide, = Ilustre en la virtud y en la fe,
+      oratióni sédulus = asiduo en la oración
+      ac membra servans sóbria, = y guardando sobrios sus miembros,
+      dapes supérnas óbtinet. = obtiene los manjares del cielo.
+    - |-
+      Deo Patri sit glória = A Dios Padre sea la gloria
+      tibíque soli Fílio = y a ti, su único Hijo,
+      cum Spíritu Paráclito, = con el Espíritu Paráclito,
+      in sempitérna sǽcula. = por los siglos sempiternos.
+  beata-caeli-gaudia:
+    titulo: Beáta cæli gáudia
+    amen: true
+    estrofas:
+    - |-
+      Beáta cæli gáudia, = Los gozos dichosos del cielo,
+      confessiónis prǽmium, = premio de la confesión [de la fe],
+      Christi o fidéles ásseclæ, = oh fieles seguidores de Cristo,
+      iam possidétis áffatim. = ya los poseéis en abundancia.
+    - |-
+      Laudes benígnis áuribus = Escuchad con oídos benignos
+      audíte, quas effúndimus = las alabanzas que os dirigimos
+      nos éxsules de pátria = nosotros, desterrados de la patria,
+      vobis sacráto cántico. = con un canto sagrado.
+    - |-
+      Amóre Christi pérciti = Impulsados por el amor de Cristo
+      crucem tulístis ásperam, = llevasteis la cruz áspera,
+      obœdiéntes, ímpigri = obedientes, diligentes
+      et caritáte férvidi. = y fervientes de caridad.
+    - |-
+      Sprevístis artes dǽmonum = Despreciasteis las artes de los demonios
+      fallaciásque sǽculi; = y los engaños del mundo;
+      Christum faténdo móribus = confesando a Cristo con las costumbres,
+      migrástis inter sídera. = emigrasteis entre los astros.
+    - |-
+      Iam nunc potíti glória = Ya que gozáis de la gloria,
+      adéste votis ómnium = asistid a los votos de todos
+      ardénter exoptántium = los que desean ardientemente
+      exémpla vestra prósequi. = seguir vuestros ejemplos.
+    - |-
+      Sit Trinitáti glória, = Gloria a la Trinidad,
+      quæ pro sua cleméntia = que, por su clemencia
+      vobísque suffragántibus = y con vuestra intercesión,
+      nos ducat ad cæléstia. = nos lleve a lo celestial.
+  fortem-virili-pectore:
+    titulo: Fortem viríli péctore
+    amen: true
+    estrofas:
+    - |-
+      Fortem viríli péctore = A la mujer fuerte, de pecho varonil,
+      laudémus omnes féminam, = alabemos todos,
+      quæ sanctitátis glória = que por la gloria de la santidad
+      ubíque fulget ínclita. = brilla ínclita en todas partes.
+    - |-
+      Hæc sancto amóre sáucia, = Ella, herida por el santo amor,
+      huius cadúca sǽculi = mientras pisotea lo caduco
+      dum calcat, ad cæléstia = de este mundo, recorrió el arduo
+      iter perégit árduum. = camino hacia lo celestial.
+    - |-
+      Carnem domans ieiúniis, = Dominando la carne con ayunos
+      dulcíque mentem pábulo = y alimentando la mente con el dulce
+      oratiónis nútriens, = alimento de la oración,
+      cæli potítur gáudiis. = goza de los gozos del cielo.
+    - |-
+      Rex Christe, virtus fórtium, = Rey Cristo, fuerza de los fuertes,
+      qui magna solus éfficis, = que solo haces grandes cosas,
+      huius precátu, quǽsumus, = por su ruego, te pedimos,
+      audi benígnus súpplices. = escucha benigno a los que te suplican.
+    - |-
+      Iesu, tibi sit glória, = Jesús, a ti sea la gloria,
+      qui nos beátæ sérvulæ = que nos concedes esperar la intercesión
+      speráre das suffrágia = de tu bienaventurada sierva
+      et sempitérna prǽmia. = y los premios sempiternos.
+  christe-cunctorum-sator-et-redemptor:
+    titulo: Christe, cunctórum sator et redémptor
+    amen: true
+    estrofas:
+    - |-
+      Christe, cunctórum sator et redémptor, = Cristo, creador y redentor de todas las cosas,
+      síderum, terræ, maris atque rector, = gobernante de los astros, de la tierra y del mar,
+      ómnium laudes tibi personántum = perdona la culpa de todos
+      solve reátum, = los que te cantan alabanzas,
+    - |-
+      Vase qui gemmas frágili recóndis, = tú que guardas gemas en un vaso frágil,
+      víribus fluxas ánimo pudícas = haciendo de mujeres débiles en fuerzas
+      féminas reddens faciénsque claros = almas pudorosas, y haciéndolas llevar
+      ferre triúmphos. = ilustres triunfos.
+    - |-
+      Quas et in sensu téneras vidémus, = A las que vemos tiernas en el sentir,
+      prærogatíva mériti corónas, = las coronas con el privilegio del mérito,
+      íncolas regni facis et perénnes = y las haces moradoras perennes
+      esse supérni. = del reino celestial.
+    - |-
+      Sit Patri summo decus atque virtus, = Sea al Padre altísimo el honor y el poder,
+      laus tibi Nato celebrísque cultus, = la alabanza a ti, el Hijo, y un culto solemne,
+      Flámini Sancto párilis potéstas = al Espíritu Santo un poder igual,
+      nunc et in ævum. = ahora y por siempre.
+  haec-femina-laudabilis:
+    titulo: Hæc fémina laudábilis
+    amen: true
+    estrofas:
+    - |-
+      Hæc fémina laudábilis = Esta mujer digna de alabanza
+      et honoráta méritis, = y honrada por sus méritos,
+      ut sanctis pollet móribus, = así como sobresale por sus santas costumbres,
+      triúmphat sic cum ángelis. = así triunfa con los ángeles.
+    - |-
+      Ex corde devotíssimo = Con un corazón devotísimo,
+      orans Deum cum lácrimis, = orando a Dios con lágrimas,
+      vigíliis, ieiúniis = se mantenía en vigilias
+      hærébat hæc assíduis. = y ayunos asiduos.
+    - |-
+      Contémnens mundi glóriam = Despreciando la gloria del mundo
+      ac mente semper íntegra, = y con la mente siempre íntegra,
+      perféctam post iustítiam = después de una justicia perfecta
+      migrávit super sídera. = emigró sobre los astros.
+    - |-
+      Quæ sanctitátis áctibus = La que con actos de santidad
+      sua ditávit límina, = enriqueció su casa
+      lætátur nunc perpétuis = se alegra ahora con los premios perpetuos
+      cæléstis ædis prǽmiis. = de la morada celestial.
+    - |-
+      Laus uni ac trino Dómino, = Alabanza al Señor uno y trino,
+      qui nos eius precátibus, = que por sus súplicas,
+      perácto vitæ término, = acabado el término de la vida,
+      coniúngat cæli cívibus. = nos una a los ciudadanos del cielo.
+  hae-feminae-laudabiles:
+    titulo: Hæ féminæ laudábiles
+    amen: true
+    estrofas:
+    - |-
+      Hæ féminæ laudábiles = Estas mujeres dignas de alabanza
+      et honorátæ méritis, = y honradas por sus méritos,
+      ut sanctis pollent móribus, = así como sobresalen por sus santas costumbres,
+      triúmphant sic cum ángelis. = así triunfan con los ángeles.
+    - |-
+      Ex corde devotíssimo = Con un corazón devotísimo,
+      in fletu orántes Dóminum, = orando al Señor entre lágrimas,
+      vigíliis, ieiúniis = se mantenían en vigilias
+      hærébant istæ assíduis. = y ayunos asiduos.
+    - |-
+      Spernéntes mundi glóriam = Despreciando la gloria del mundo
+      ac mente semper íntegra, = y con la mente siempre íntegra,
+      perféctam post iustítiam = después de una justicia perfecta
+      migrárunt super sídera. = emigraron sobre los astros.
+    - |-
+      Quæ sanctitátis áctibus = Las que con actos de santidad
+      sua ditárunt límina, = enriquecieron sus casas
+      lætántur nunc perpétuis = se alegran ahora con los premios perpetuos
+      cæléstis ædis prǽmiis. = de la morada celestial.
+    - |-
+      Laus uni ac trino Dómino, = Alabanza al Señor uno y trino,
+      qui nos eárum précibus, = que por sus súplicas,
+      perácto vitæ término, = acabado el término de la vida,
+      coniúngat cæli cívibus. = nos una a los ciudadanos del cielo.
+  nobilem-christi-famulam-diserta:
+    titulo: Nóbilem Christi fámulam disérta
+    amen: true
+    estrofas:
+    - |-
+      Nóbilem Christi fámulam disérta = A la noble sierva de Cristo, con voz
+      voce cantémus, decus æmulátam = elocuente cantemos, que imitó la gloria
+      féminæ fortis, sacra cui profúdit = de la mujer fuerte, a quien la página sagrada
+      página laudes. = prodigó alabanzas.
+    - |-
+      Cui fides vivax, pia spes amórque = En ella, la fe viva, la esperanza piadosa y el amor
+      in Deum fervens, óperum bonórum = ferviente a Dios, raíz fecunda
+      fértilis radix, amor unde fratrum = de buenas obras, de donde el amor a los hermanos
+      náscitur ultro. = nace espontáneamente.
+    - |-
+      Motus illíus méritis, remítte, = Movido por sus méritos, perdona,
+      sóntibus nobis scelus omne, Iesu, = Jesús, a nosotros, culpables, todo pecado,
+      ut tibi puro resonémus æquas = para que con pecho puro te cantemos
+      péctore laudes. = las alabanzas debidas.
+    - |-
+      Sit Patri summo decus atque virtus, = Sea al Padre altísimo el honor y el poder,
+      laus tibi Nato celebrísque cultus, = la alabanza a ti, el Hijo, y un culto solemne,
+      Flámini Sancto párilis potéstas = al Espíritu Santo un poder igual,
+      nunc et in ævum. = ahora y por siempre.
+  nobiles-christi-famulas-diserta:
+    titulo: Nóbiles Christi fámulas disérta
+    amen: true
+    estrofas:
+    - |-
+      Nóbiles Christi fámulas disérta = A las nobles siervas de Cristo, con voz
+      voce cantémus, decus æmulátas = elocuente cantemos, que imitaron la gloria
+      féminæ fortis, sacra cui profúdit = de la mujer fuerte, a quien la página sagrada
+      página laudes. = prodigó alabanzas.
+    - |-
+      Non eas mundus láqueis revíncit, = No las atrapa el mundo con sus lazos
+      iussa quæ Patris súbeunt voléntes, = a ellas, que cumplen gustosas los mandatos del Padre,
+      ut bonum Christi sátagant ubíque = para esforzarse por esparcir por todas partes
+      spárgere odórem. = el buen olor de Cristo.
+    - |-
+      Edómant corpus, precibúsque mentem = Dominan el cuerpo, y alimentan la mente
+      nútriunt sanctis; peritúra temnunt = con santas oraciones; desprecian las ganancias
+      lucra, ut inquírant sibi permanéntis = perecederas, para buscar para sí los premios
+      prǽmia vitæ. = de la vida que permanece.
+    - |-
+      Sit Deo soli decus et potéstas, = Sea a Dios solo el honor y el poder,
+      laus in excélsis honor ac perénnis, = la alabanza en las alturas, el honor perenne,
+      qui suis totum móderans gubérnat = que, moderándolo todo, gobierna el mundo
+      légibus orbem. = con sus leyes.
+  laeti-colentes-famulum:
+    titulo: Læti coléntes fámulum
+    amen: true
+    estrofas:
+    - |-
+      Læti coléntes fámulum = Alegres, venerando al siervo
+      qui te perfécte cóluit, = que te sirvió perfectamente,
+      tibi gratánter, Dómine, = te ofrecemos con gratitud, Señor,
+      amóris hymnum prómimus. = un himno de amor.
+    - |-
+      Christi fidélis ássecla, = Fiel seguidor de Cristo,
+      ultro relíquit gáudia = dejó por propia voluntad todos los gozos
+      cuncta quæ mundus éxhibet = que el mundo ofrece
+      fugáces atque cópias. = y las riquezas fugaces.
+    - |-
+      Tibi se vovit súbditum = Se consagró a ti como súbdito,
+      humilitáte obœ́diens, = obediente con humildad,
+      Christi, carnis mundítie, = imitador, por la pureza de la carne,
+      sponsi æmulátor vírginum. = de las vírgenes de Cristo, el esposo.
+    - |-
+      Tibi placére géstiit = Ansió agradarte
+      tibíque adhǽsit únice, = y se unió solo a ti,
+      mentem, verba vel ópera = alimentando su mente, sus palabras y sus obras
+      amóris fovens ígnibus. = con los fuegos del amor.
+    - |-
+      His caritátis vínculis = Entregado a ti en la tierra
+      in terris tibi déditus, = con estos lazos de caridad,
+      liber ad astra iúgiter = salió libre hacia los astros
+      triumphatúrus pródiit. = para triunfar para siempre.
+    - |-
+      Eius exémplis éxcitos = A nosotros, movidos por sus ejemplos,
+      da gradi nos alácriter, = concédenos avanzar con presteza,
+      ut te cum Nato et Spíritu = para alabarte, con el Hijo y el Espíritu,
+      laudémus hymnis cǽlicis. = con himnos celestiales.
+    variantes:
+      mujer:
+        1: |-
+          Læti coléntes fámulam = Alegres, venerando a la sierva
+          quæ te perfécte cóluit, = que te sirvió perfectamente,
+          tibi gratánter, Dómine, = te ofrecemos con gratitud, Señor,
+          amóris hymnum prómimus. = un himno de amor.
+        3: |-
+          Tibi se vovit súbditam = Se consagró a ti como súbdita,
+          humilitáte obœ́diens, = obediente con humildad,
+          Christi, carnis mundítie, = imitadora, por la pureza de la carne,
+          sponsi æmulátrix vírginum. = de las vírgenes de Cristo, el esposo.
+        5: |-
+          His caritátis vínculis = Entregada a ti en la tierra
+          in terris sibi dédita, = con estos lazos de caridad,
+          líbera ad astra iúgiter = salió libre hacia los astros
+          triumphatúra pródiit. = para triunfar para siempre.
+  o-redemptoris-pietas-colenda:
+    titulo: O redemptóris píetas colénda
+    amen: true
+    estrofas:
+    - |-
+      O redemptóris píetas colénda, = ¡Oh piedad del Redentor, digna de veneración,
+      quæ Patri exóptans hómines dicári, = que, deseando consagrar los hombres al Padre,
+      Spíritus miro varióque ducis = conduces los corazones con la admirable y variada
+      péctora nutu! = inspiración del Espíritu!
+    - |-
+      Quos tua lympha facis esse natos = A los que con tu agua haces nacer
+      ex Deo vero, nova vis in illis = del Dios verdadero, una fuerza nueva en ellos
+      grátiam crebro dare caritátis = da con frecuencia, como gracia, gérmenes
+      gérmina, Christe. = de caridad, Cristo.
+    - |-
+      Tu vocas: currunt álacres vocáti, = Tú llamas: corren ágiles los llamados,
+      ábdicant cunctis, duce te voléntes, = renuncian a todo, queriendo, contigo como guía,
+      calle regáli crucis, usque solum = por el camino real de la cruz, buscar
+      quǽrere Patrem. = solo al Padre.
+    - |-
+      Cǽlitus fervens ita sanctus iste = Ferviente desde el cielo, este santo
+      víribus totis tibi amánter hæsit, = se unió así a ti con amor, con todas sus fuerzas,
+      atque virtútum cúpiit tenére = y deseó alcanzar las alegres
+      cúlmina læta. = cumbres de las virtudes.
+    - |-
+      Laus Patri summo, tibi, Christe princeps, = Alabanza al Padre altísimo, a ti, Cristo príncipe,
+      Flámini Sancto párilis resúltet, = y resuene igual al Espíritu Santo,
+      parva qui danti, bona corde magno = que al que da poco le devolvéis, con gran corazón,
+      céntupla fertis. = bienes centuplicados.
+  qui-vivis-ante-saecula:
+    titulo: Qui vivis ante sǽcula
+    amen: true
+    estrofas:
+    - |-
+      Qui vivis ante sǽcula = Tú que vives antes de los siglos
+      vitǽque fons es únicus, = y eres la única fuente de la vida,
+      nos, Deus, morti obnóxios = a nosotros, oh Dios, sujetos a la muerte
+      culpǽque reos áspice. = y reos de culpa, míranos.
+    - |-
+      Peccánti, Pater, hómini = Al hombre que pecó, Padre,
+      pœnam sanxísti intéritum, = le impusiste como pena la muerte,
+      ut, pulvis datus púlveri, = para que, polvo devuelto al polvo,
+      se súbderet piáculum. = se sometiera a la expiación.
+    - |-
+      Vitále sed spiráculum = Pero el soplo vital
+      quod indidísti próvidus, = que infundiste con providencia
+      æternitátis pérmanet = permanece como germen
+      germen immarcescíbile. = imperecedero de eternidad.
+    - |-
+      Hæc spes, hoc est solácium: = Esta es la esperanza, este el consuelo:
+      revirescémus, Dómine, = reverdeceremos, Señor,
+      primúsque resurgéntium = y Cristo, el primero de los que resucitan,
+      ad te nos Christus rápiet. = nos llevará hacia ti.
+    - |-
+      Hoc vitæ regno pérfrui = Concede gozar de este reino de la vida
+      defúnctum præsta fámulum, = a tu siervo difunto,
+      quem Christi fides ímbuit, = a quien la fe de Cristo impregnó,
+      quem almus unxit Spíritus. = a quien ungió el Espíritu bondadoso.
+    - |-
+      Hoc regnum nobis própera = Apresura este reino para nosotros,
+      e terris cum cessérimus, = cuando hayamos dejado la tierra,
+      ut concinámus ómnium = para que cantemos que tú eres
+      te finem, te princípium. = el fin y el principio de todas las cosas.
+    variantes:
+      una:
+        5: |-
+          Hoc vitæ regno pérfrui = Concede gozar de este reino de la vida
+          defúnctam præsta fámulam, = a tu sierva difunta,
+          quam Christi fides ímbuit, = a quien la fe de Cristo impregnó,
+          quam almus unxit Spíritus. = a quien ungió el Espíritu bondadoso.
+      varios:
+        5: |-
+          Hoc vitæ regno pérfrui = Concede gozar de este reino de la vida
+          da fratres in te mórtuos, = a los hermanos muertos en ti,
+          quos Christi fides ímbuit, = a quienes la fe de Cristo impregnó,
+          quos almus unxit Spíritus. = a quienes ungió el Espíritu bondadoso.
+  spes-christe-nostrae-veniae:
+    titulo: Spes, Christe, nostræ véniæ
+    amen: true
+    estrofas:
+    - |-
+      Spes, Christe, nostræ véniæ, = Cristo, esperanza de nuestro perdón,
+      tu vita, resurréctio; = tú, vida y resurrección;
+      ad te sunt corda et óculi = a ti se dirigen los corazones y los ojos
+      cum mortis dolor íngruit. = cuando acecha el dolor de la muerte.
+    - |-
+      Tu quoque mortis tǽdia = Tú también, habiendo padecido el hastío
+      passus dirósque stímulos, = de la muerte y sus crueles aguijones,
+      Patri, inclináto cápite, = inclinando la cabeza, al Padre
+      mitis dedísti spíritum. = entregaste manso el espíritu.
+    - |-
+      Vere nostros excípiens = Tomando verdaderamente sobre ti
+      languóres, pastor míserens, = nuestras dolencias, pastor compasivo,
+      tecum donásti cómpati = nos concediste padecer contigo
+      Patrísque in sinu cómmori. = y morir contigo en el seno del Padre.
+    - |-
+      Apértis pendens bráchiis, = Colgado con los brazos abiertos,
+      in cor transfíxum pértrahis = atraes a tu corazón traspasado
+      quos moritúros ággravat = a los que, a punto de morir, agobia
+      morbus vel mæror ánxius. = la enfermedad o la angustiosa tristeza.
+    - |-
+      Qui portis fractis ínferi = Tú que, rotas las puertas del infierno,
+      victor pandísti cǽlicas, = abriste vencedor las del cielo,
+      nos nunc doléntes érige, = levántanos ahora en el dolor,
+      post óbitum vivífica. = vivifícanos después de la muerte.
+    - |-
+      Sed et qui frater córpore = Y también el hermano que en el cuerpo
+      nunc dormit pacis réquie, = duerme ahora en el descanso de la paz,
+      iam te beánte vígilet = que, dichoso por ti, despierte ya
+      tibíque laudes réferat. = y te tribute alabanzas.
+    variantes:
+      una:
+        6: |-
+          Sed et quæ soror córpore = Y también la hermana que en el cuerpo
+          nunc dormit pacis réquie, = duerme ahora en el descanso de la paz,
+          iam te beánte vígilet = que, dichosa por ti, despierte ya
+          tibíque laudes réferat. = y te tribute alabanzas.
+      varios:
+        6: |-
+          Sed et qui fratres córpore = Y también los hermanos que en el cuerpo
+          nunc somno pacis dórmiunt, = duermen ahora el sueño de la paz,
+          iam te beánte vígilent = que, dichosos por ti, despierten ya
+          tibíque laudes réferant. = y te tributen alabanzas.
+  immensae-rex-potentiae:
+    titulo: Imménsæ rex poténtiæ
+    amen: true
+    estrofas:
+    - |-
+      Imménsæ rex poténtiæ, = Rey de poder inmenso,
+      Christe, tu Patris glóriam = Cristo, tú, procurando la gloria del Padre
+      nostrúmque decus móliens, = y nuestro honor,
+      mortis fregísti iácula. = quebraste los dardos de la muerte.
+    - |-
+      Infírma nostra súbiens = Tomando sobre ti nuestras debilidades
+      magnúmque petens prœ́lium, = y entrando en un gran combate,
+      mortem qua serpens vícerat, = la muerte con la que la serpiente había vencido
+      victor calcásti móriens. = la pisoteaste, vencedor, al morir.
+    - |-
+      Surgens fortis e túmulo, = Resucitando fuerte del sepulcro,
+      pascháli nos mystério = por el misterio pascual
+      peccáto rursus mórtuos = a nosotros, muertos de nuevo por el pecado,
+      ad vitam semper ínnovas. = nos renuevas siempre para la vida.
+    - |-
+      Vitam largíre grátiæ, = Concede la vida de la gracia,
+      ut, sponsus cum redíeris, = para que, cuando vuelvas como esposo,
+      ornáta nos cum lámpade = nos encuentres ya preparados para el cielo,
+      iam promptos cælo invénias. = con la lámpara adornada.
+    - |-
+      In lucem nos et réquiem = En la luz y en el descanso
+      serénus iudex áccipe, = recíbenos, juez sereno,
+      quos fides Sanctæ Tríadi = a los que la fe y la caridad
+      devínxit atque cáritas. = unieron a la Santa Trinidad.
+    - |-
+      Tuúmque voca fámulum, = Y llama a tu siervo,
+      qui nunc exútus córpore = que ahora, despojado del cuerpo,
+      in regna Patris ínhiat, = anhela el reino del Padre,
+      ut te colláudet pérpetim. = para que te alabe para siempre.
+    variantes:
+      una:
+        6: |-
+          Tuámque voca fámulam, = Y llama a tu sierva,
+          quæ nunc exúta córpore = que ahora, despojada del cuerpo,
+          in regna Patris ínhiat, = anhela el reino del Padre,
+          ut te colláudet pérpetim. = para que te alabe para siempre.
+      varios:
+        6: |-
+          Fratres et omnes ádvoca, = Y llama a todos los hermanos,
+          qui nunc exúti córpore = que ahora, despojados del cuerpo,
+          in regna Patris ínhiant, = anhelan el reino del Padre,
+          ut te colláudent pérpetim. = para que te alaben para siempre.
+  qui-lacrimatus-lazarum:
+    titulo: Qui lacrimátus Lázarum
+    amen: true
+    estrofas:
+    - |-
+      Qui lacrimátus Lázarum = Tú que lloraste a Lázaro
+      geménsque cum soróribus, = y gemiste con sus hermanas,
+      ipsum fecísti prǽpotens = e hiciste, poderoso,
+      illárum reddi stúdiis: = que él les fuera devuelto por sus ruegos;
+    - |-
+      Qui petivísti sóntibus = tú que pediste, benigno,
+      benígnus indulgéntiam, = el perdón para los culpables,
+      ac verba miserántia = y dijiste palabras de misericordia
+      dixísti pœnæ sócio: = al compañero de suplicio;
+    - |-
+      Qui, móriens, discípulo = tú que, al morir, al discípulo
+      matrem donásti Vírginem, = le diste por madre a la Virgen,
+      tuórum quæ fidélium = para que asistiera a tus fieles
+      agóni adésset último: = en su última agonía:
+    - |-
+      Da nobis, Christe Dómine, = concédenos, Cristo Señor,
+      tuo redémptis sánguine, = a los redimidos con tu sangre,
+      duræ mortis tristítiam = que la tristeza de la dura muerte
+      in vitæ verti gáudium. = se convierta en gozo de la vida.
+    - |-
+      Tuúmque voca fámulum, = Y llama a tu siervo,
+      ex hoc proféctum sǽculo, = partido de este mundo,
+      ut ubi mors iam déerit = para que, donde ya no habrá muerte,
+      te vitæ canat príncipem. = te cante como príncipe de la vida.
+    variantes:
+      una:
+        5: |-
+          Tuámque voca fámulam, = Y llama a tu sierva,
+          ex hoc proféctam sǽculo, = partida de este mundo,
+          ut ubi mors iam déerit = para que, donde ya no habrá muerte,
+          te vitæ canat príncipem. = te cante como príncipe de la vida.
+      varios:
+        5: |-
+          Tuósque voca fámulos, = Y llama a tus siervos,
+          ex hoc proféctos sǽculo, = partidos de este mundo,
+          ut ubi mors iam déerit = para que, donde ya no habrá muerte,
+          te vitæ canant príncipem. = te canten como príncipe de la vida.

@@ -15,6 +15,8 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 - **Himnos:** estrofas numeradas «1.», «2.», con línea en blanco entre estrofas. En un himno con estrofas numeradas, el bloque sin número es el estribillo: cursiva y con ℟. Himno sin ninguna estrofa numerada: texto normal, sin cursiva y sin ℟.
 - **Polifonías:** una frase por línea, con traducción interlineal. Indicaciones entre corchetes en el original ([Coro]) y en rojo en la app.
 
+- **Himnos latinos recitados:** cada verso latino con su traducción literal debajo (en cursiva, color de la glosa) si la traducción está activa; estrofas numeradas; «Amen.» en negrita, con «Amén.» debajo. Sin capitular.
+
 ## Traducción
 
 - **Siempre interlineal** y en **verde** (`--glosa`).

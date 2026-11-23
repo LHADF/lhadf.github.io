@@ -69,6 +69,7 @@ def main():
             'salterio': leer(os.path.join(B, 'salterio', 'completas.yaml')),
             'tiempo': leer(os.path.join(B, 'tiempo', 'completas-triduo-octava.yaml')),
             'himnos': leer(os.path.join(B, 'himnos', 'completas.yaml')),
+            'latinos': himnos_latinos('completas'),
             'gregoriano': {
                 'invocacion': {'solemne': gabc(inv['solemne']), 'festivo': gabc(inv['festivo']), 'ferial': gabc(inv['ferial']), 'cortes_gloria': inv['cortes_gloria'], 'traduccion': pares(inv['traduccion']), 'laus': pares(inv['laus'])},
                 'antifona': {'gabc': gabc(ce['antifona']), 'repeticion': repeticion(gabc(ce['antifona'])), 'traduccion': pares(ce['traduccion_antifona'])},
@@ -85,6 +86,7 @@ def main():
             },
         },
         'marianas': leer(os.path.join(B, 'ordinario', 'antifonas-marianas.yaml')),
+        'latinos_cuando': leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml')),
         'oraciones': oraciones_oficio(),
         'salmos': {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in USADOS},
     }
@@ -162,7 +164,7 @@ def laudes():
     mapa, sin = vincular_santoral(SaL)
     bn = GL['benedictus']
     datos = {
-        'salterio': SL, 'tiempo': TL, 'santoral': SaL, 'himnos': HL, 'ordinario': OL, 'salmos': salmos,
+        'salterio': SL, 'tiempo': TL, 'santoral': SaL, 'himnos': HL, 'latinos': himnos_latinos('laudes'), 'ordinario': OL, 'salmos': salmos,
         'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('laudes', SaL)[0], 'comunes': adf_y_comunes('laudes', SaL)[1],
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
@@ -232,6 +234,28 @@ def salmos_comunes(hora):
     return {g['salmo'] for p in partes for g in (p.get('salmodia') or [])} | {s for c in C.values() for s in (c.get('salmos') or [])}   # (Oficio de difuntos: salmos propios de la Hora intermedia)
 
 
+def himnos_latinos(*horas):
+    """Himnos latinos recitados (base/himnos/latinos.yaml) de estas horas, según latinos_cuando.yaml: título, estrofas en
+    pares [latín, traducción literal] por verso, Amén y estrofas variantes por caso ({caso: {índice desde 0: estrofa}})."""
+    H = leer(os.path.join(B, 'himnos', 'latinos.yaml'))['himnos']
+    C = leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml'))
+    usados = set()
+    for tabla in (*C['tiempo'].values(), *C['celebraciones'].values(), *C['comunes'].values()):
+        for h, v in tabla.items():
+            if h.rstrip('1') in horas: usados |= set(v if isinstance(v, list) else [v])
+    for k in usados: assert k in H, f'latinos_cuando.yaml: falta el himno «{k}» en latinos.yaml'
+    def est(t):
+        out = []
+        for l in t.split('\n'):
+            la, _, es = l.partition(' = ')
+            assert la.strip() and es.strip(), f'himnos/latinos.yaml: verso sin traducción: «{l}»'
+            out.append([la.strip(), es.strip()])
+        return out
+    return {k: {'titulo': h['titulo'], 'amen': bool(h.get('amen')), 'estrofas': [est(e) for e in h['estrofas']],
+                **({'variantes': {c: {int(i) - 1: est(e) for i, e in v.items()} for c, v in h['variantes'].items()}} if h.get('variantes') else {})}
+            for k, h in H.items() if k in usados}
+
+
 def himnos_gregorianos(hora):
     """Himnos en gregoriano de esta hora (base/gregoriano/himnos.yaml): cuándo va cada uno, partitura y traducción por frases
     (estrofas → versos → pares «latín = español»)."""
@@ -262,7 +286,7 @@ def visperas():
     usados = {g['salmo'] for capa in ([e for w in SV.values() for e in w.values()], TV.values(), SaV.values()) for e in capa for g in (e.get('salmodia') or [])} | salmos_comunes('visperas')
     salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
     mapa, sin = vincular_santoral(SaV)
-    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'comunes': adf_y_comunes('visperas', SaV)[1],
+    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'latinos': himnos_latinos('visperas'), 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'comunes': adf_y_comunes('visperas', SaV)[1],
              'gregoriano': {**comunes_latin(GL), 'himnos': himnos_gregorianos('visperas'),
                             'cantico': {'titulo': MG['titulo'], 'ref': MG['ref'], 'versos': MG['versos'], 'traduccion_versos': [pares(v) for v in MG['traduccion_versos']]}}}
     destino = os.path.join(RAIZ, 'src', 'carga', 'visperas.js')
@@ -290,7 +314,7 @@ def oficio():
     HO, OO, GH = leer(os.path.join(B, 'himnos', 'oficio.yaml')), leer(os.path.join(B, 'ordinario', 'oficio.yaml')), leer(os.path.join(B, 'gregoriano', 'horas.yaml'))
     mapa, sin = vincular_santoral(SaO)
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
-    datos = {'salterio': SO, 'tiempo': TO, 'santoral': SaO, 'himnos': HO, 'ordinario': OO,
+    datos = {'salterio': SO, 'tiempo': TO, 'santoral': SaO, 'himnos': HO, 'latinos': himnos_latinos('oficio'), 'ordinario': OO,
              'salmos': _salmos(_usados([e for w in SO.values() for e in w.values()], TO.values(), SaO.values()) | salmos_comunes('oficio')),
              'mapa': mapa, 'adf': adf_y_comunes('oficio', SaO)[0], 'comunes': adf_y_comunes('oficio', SaO)[1],
              'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
@@ -308,7 +332,7 @@ def intermedia():
     mapa, sin = vincular_santoral(todos)
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
     comp = [g for c in OI['complementaria'].values() for g in c]
-    datos = {'salterio': SI, 'tiempo': TI, 'santoral': SaI, 'horas': horas, 'complementaria': OI['complementaria'],
+    datos = {'salterio': SI, 'tiempo': TI, 'santoral': SaI, 'horas': horas, 'latinos': himnos_latinos('tercia', 'sexta', 'nona'), 'complementaria': OI['complementaria'],
              'salmos': _salmos(_usados([e for w in SI.values() for e in w.values()], TI.values(), SaI.values(), [{'salmodia': comp}]) | salmos_comunes('intermedia')),
              'mapa': mapa, 'adf': adf_y_comunes('intermedia', todos)[0], 'comunes': adf_y_comunes('intermedia', todos)[1],
              'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}, 'mayores': mayores_sin_intermedia(mapa)}

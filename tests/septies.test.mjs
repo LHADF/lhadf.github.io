@@ -558,7 +558,7 @@ test('imágenes de la tarjeta del inicio', () => {
 
 // ---------- Himnos en gregoriano de Laudes y Vísperas (base/gregoriano/himnos.yaml) ----------
 test('himnos gregorianos de Laudes y Vísperas: opción después del himno en español, en sus días', () => {
-  const hg = (A, f) => { const o = A.armar(f, 'ARG').secciones.find(s => s.k === 'himno').opciones; assert.equal(o[0].lang, 'es'); const g = o.find(x => x.lang === 'la'); return g ? g.n : ''; };
+  const hg = (A, f) => { const o = A.armar(f, 'ARG').secciones.find(s => s.k === 'himno').opciones; assert.equal(o[0].lang, 'es'); const g = o.find(x => x.lang === 'la' && x.gabc); return g ? g.n : ''; };
   assert.equal(hg(VI, '2026-11-14'), 'Deus, Creátor ómnium');          // I Vísperas, domingo de la semana I
   assert.equal(hg(LA, '2026-11-15'), 'Ætérne rerum Cónditor');
   assert.equal(hg(VI, '2026-11-15'), 'Lucis Creátor óptime');
@@ -677,7 +677,7 @@ test('Comunes de los santos (botón del inicio): común, caso y grado; cualquier
 });
 
 test('himnos de los comunes: el de sync primero y los otros como opción en la hora; San Juan XXIII, del común de pastores', () => {
-  const W = ctx.window, ops = r => r.secciones.find(s => s.k === 'himno').opciones.map(o => o.n);
+  const W = ctx.window, ops = r => r.secciones.find(s => s.k === 'himno').opciones.filter(o => o.lang === 'es').map(o => o.n);
   // Santa Isabel de Hungría (19 de noviembre): Vísperas del común de santas mujeres
   assert.equal(ops(VI.armar('2026-11-19', '')).join(' | '), 'Un amor casto y puro | Finísimo fue el lino con que ella');
   const j = ['laudes', 'visperas'].map(h => ({ laudes: LA, visperas: VI }[h].armar('2027-10-11', '')));
@@ -692,4 +692,41 @@ test('Santa María Magdalena: himnos propios (del libro en Laudes y Vísperas; l
   assert.equal(h(VI).n, '«¿Qué viste en el huerto?');
   assert.equal(h(W.Oficio).n, '«¿Qué has visto de camino');
   for (const H of [LA, VI, W.Oficio]) assert.ok(h(H).est.length > 3);
+});
+
+// ---------- Himnos latinos recitados (base/himnos/latinos.yaml y latinos_cuando.yaml) ----------
+test('himnos latinos: opción recitada después del español y del gregoriano, del tiempo o del común, con el caso', () => {
+  const W = ctx.window, X = CP._;
+  const lat = (A, f) => A.armar(f, '').secciones.find(s => s.k === 'himno').opciones.filter(o => o.lat);
+  const n = (A, f) => lat(A, f).map(o => o.n).join(' / ');
+  assert.equal(n(LA, '2026-12-02'), 'Vox clara ecce íntonat');                          // Adviento, hasta el 16
+  assert.equal(n(VI, '2026-12-18'), 'Verbum salútis ómnium');                           // desde el 17
+  assert.equal(n(VI, '2026-11-28'), 'Cónditor alme síderum');                           // I Vísperas: queda también el gregoriano
+  assert.ok(VI.armar('2026-11-28', '').secciones.find(s => s.k === 'himno').opciones.some(o => o.id === 'greg'));
+  assert.equal(n(VI, '2027-01-05'), 'Hostis Heródes ímpie');                            // I Vísperas de la Epifanía
+  assert.equal(n(LA, '2027-03-15'), 'Iam, Christe, sol iustítiæ / En acétum, fel, arúndo');   // V semana: también los de Semana Santa
+  assert.equal(n(W.Tercia, '2027-03-26'), 'Salva, Redémptor, plasma tuum nóbile');
+  assert.equal(n(VI, '2027-04-06'), 'Ad cenam Agni próvidi / O rex ætérne, Dómine');    // ferias de Pascua: «si se prefiere»
+  assert.equal(n(VI, '2027-04-01'), 'Ad cenam Agni próvidi');                           // Octava
+  assert.equal(n(LA, '2027-05-08'), 'Optátus votis ómnium');                            // después de la Ascensión
+  assert.equal(n(VI, '2027-05-15'), 'Veni, creátor Spíritus (recitado)');               // I Vísperas de Pentecostés, con el gregoriano
+  assert.equal(n(LA, '2026-11-20'), '');                                                // ferias del Tiempo Ordinario: todavía no
+  assert.equal(n(LA, '2026-11-10'), 'Doctor ætérnus cóleris piúsque');                 // San León Magno: del común de doctores
+  // Completas: del tiempo (Cuaresma, según la semana)
+  const nc = f => CP.armar(f, '').secciones.find(s => s.k === 'himno').opciones.filter(o => o.lat).map(o => o.n).join(' / ');
+  assert.equal(nc('2027-02-15'), 'Te lucis ante términum (recitado)');
+  assert.equal(nc('2027-02-22'), 'Christe, qui, splendor et dies');
+  // comunes: pastores (papa), mártir (una santa), difuntos (una difunta o varios)
+  const p = lat(VI, '2027-10-11')[0];
+  assert.equal(p.n, 'Vir celse, forma fúlgida'); assert.equal(p.est[3][0], 'Tu Petri ovíle cǽlitus');
+  assert.equal(p.est.length, p.lit.length); assert.ok(p.est.every((e, i) => e.length === p.lit[i].length && p.lit[i].every(Boolean)));
+  assert.equal(p.amen, 'Amen.');
+  assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum');   // una virgen mártir; después, el de un mártir en femenino
+  assert.equal(lat(LA, '2027-11-22')[1].est[0][3], 'victrix fruens cæléstibus,');
+  assert.equal(n(VI, '2027-11-02'), 'Imménsæ rex poténtiæ (varios difuntos)');
+  X.modo.difuntos = true;
+  try {
+    assert.equal(n(LA, '2027-06-15'), 'Spes, Christe, nostræ véniæ / Spes, Christe, nostræ véniæ (una difunta) / Spes, Christe, nostræ véniæ (varios difuntos)');
+    assert.ok(/Tercia, estrofas 1, 4 y 5/.test(lat(W.Tercia, '2027-06-15')[0].rub));
+  } finally { X.modo.difuntos = false; }
 });

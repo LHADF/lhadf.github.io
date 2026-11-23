@@ -9,6 +9,8 @@
 
 ## Decisiones
 
+- **Himnos latinos recitados:** como en Laudes y Vísperas (`docs/laudes.md`). En la Hora intermedia, el del tiempo también en las memorias.
+
 - **Invocación:** «Deus in adiutórium» con el tono del día (solemne, festivo, ferial; «Laus tibi, Christe» en Cuaresma). Conclusión: «Benedicámus Dómino» / «Deo grátias».
 - **Te Deum:** domingos fuera de Cuaresma, solemnidades, fiestas y octavas de Navidad y de Pascua.
 - **Fiestas y solemnidades sin salmodia propia:** en el Oficio, la del domingo de la I semana.

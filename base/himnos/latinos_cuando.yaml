@@ -1,0 +1,239 @@
+# Cuándo va cada himno latino (base/himnos/latinos.yaml), como opción recitada después del himno en español (y del gregoriano,
+# si hay). Del Apéndice IV del libro; primera etapa: tiempos litúrgicos, comunes y Oficio de difuntos.
+# Horas: visperas (I y II Vísperas), visperas1 (solo las I), completas, oficio, laudes, tercia, sexta, nona.
+# Valor: un himno o una lista (el primero es la opción «latín»; los demás, más opciones, como los «si se prefiere» del libro).
+# La app elige la tabla (src/completas.js, himnosLatinos): la celebración del tiempo por su nombre y, si no trae esa hora,
+# el tramo del tiempo; en las celebraciones que toman el himno del común, la tabla del común.
+
+tiempo:
+  adviento:          # hasta el 16 de diciembre
+    visperas: conditor-alme-siderum
+    completas: te-lucis-ante-terminum
+    oficio: verbum-supernum-prodiens
+    laudes: vox-clara-ecce-intonat
+    tercia: nunc-sancte-nobis-spiritus
+    sexta: rector-potens-verax-deus
+    nona: rerum-deus-tenax-vigor
+  adviento_17:       # desde el 17 de diciembre
+    visperas: verbum-salutis-omnium
+    completas: christe-qui-splendor-et-dies
+    oficio: veni-redemptor-gentium
+    laudes: magnis-prophetae-vocibus
+    tercia: certum-tenentes-ordinem
+    sexta: dicamus-laudes-domino
+    nona: ternis-horarum-terminis
+  navidad:           # de la Natividad al 5 de enero
+    visperas: christe-redemptor-omnium-ex-patre
+    completas: te-lucis-ante-terminum
+    oficio: candor-aeternae-deitatis-alme
+    laudes: a-solis-ortus-cardine
+    tercia: nunc-sancte-nobis-spiritus
+    sexta: rector-potens-verax-deus
+    nona: rerum-deus-tenax-vigor
+  epifania:          # desde la Epifanía (y sus I Vísperas) hasta el Bautismo
+    visperas: hostis-herodes-impie
+    completas: christe-qui-splendor-et-dies
+    oficio: magi-videntes-parvulum
+    laudes: quicumque-christum-quaeritis
+    tercia: certum-tenentes-ordinem
+    sexta: dicamus-laudes-domino
+    nona: ternis-horarum-terminis
+  cuaresma_domingo:
+    visperas: audi-benigne-conditor
+    oficio: ex-more-docti-mystico
+    laudes: precemur-omnes-cernui
+    tercia: dei-fide-qua-vivimus
+    sexta: qua-christus-hora-sitiit
+    nona: ternis-ter-horis-numerus
+  cuaresma_feria:
+    visperas: iesu-quadragenariae
+    oficio: nunc-tempus-acceptabile
+    laudes: iam-christe-sol-iustitiae
+    tercia: dei-fide-qua-vivimus
+    sexta: qua-christus-hora-sitiit
+    nona: ternis-ter-horis-numerus
+  # Ferias de la V semana de Cuaresma: también los de Semana Santa (rúbrica del libro, p. 2713)
+  cuaresma_semana_5:
+    visperas: [iesu-quadragenariae, vexilla-regis-prodeunt]
+    oficio: [nunc-tempus-acceptabile, pange-lingua-gloriosi-proelium]
+    laudes: [iam-christe-sol-iustitiae, en-acetum-fel-arundo]
+    tercia: dei-fide-qua-vivimus
+    sexta: qua-christus-hora-sitiit
+    nona: ternis-ter-horis-numerus
+  # Completas de Cuaresma, según la semana del salterio: I y III, Te lucis; II y IV, Christe, qui splendor
+  cuaresma_completas_impar: {completas: te-lucis-ante-terminum}
+  cuaresma_completas_par: {completas: christe-qui-splendor-et-dies}
+  semana_santa:      # del Domingo de Ramos al Sábado Santo (lo que no cambia por día)
+    visperas: vexilla-regis-prodeunt
+    completas: christe-qui-splendor-et-dies
+    oficio: pange-lingua-gloriosi-proelium
+    laudes: en-acetum-fel-arundo
+    tercia: dei-fide-qua-vivimus
+    sexta: qua-christus-hora-sitiit
+    nona: ternis-ter-horis-numerus
+  pascua:            # hasta la Ascensión (Octava y domingos)
+    visperas: ad-cenam-agni-providi
+    completas: iesu-redemptor-saeculi
+    oficio: hic-est-dies-verus-dei
+    laudes: aurora-lucis-rutilat
+    tercia: iam-surgit-hora-tertia
+    sexta: venite-servi-supplices
+    nona: haec-hora-quae-resplenduit
+  pascua_ferias:     # ferias después de la Octava, hasta la Ascensión: «si se prefiere», los segundos
+    visperas: [ad-cenam-agni-providi, o-rex-aeterne-domine]
+    completas: iesu-redemptor-saeculi
+    oficio: [hic-est-dies-verus-dei, laetare-caelum-desuper]
+    laudes: [aurora-lucis-rutilat, chorus-novae-ierusalem]
+    tercia: iam-surgit-hora-tertia
+    sexta: venite-servi-supplices
+    nona: haec-hora-quae-resplenduit
+  ascension:         # la Ascensión y el domingo siguiente
+    visperas: iesu-nostra-redemptio
+    completas: iesu-redemptor-saeculi
+    oficio: aeterne-rex-altissime
+    laudes: optatus-votis-omnium
+    tercia: iam-surgit-hora-tertia
+    sexta: venite-servi-supplices
+    nona: haec-hora-quae-resplenduit
+  ascension_ferias:  # ferias después de la Ascensión
+    visperas: veni-creator-spiritus
+    completas: iesu-redemptor-saeculi
+    oficio: aeterne-rex-altissime
+    laudes: optatus-votis-omnium
+    tercia: iam-surgit-hora-tertia
+    sexta: venite-servi-supplices
+    nona: haec-hora-quae-resplenduit
+
+# Celebraciones del tiempo, por su nombre en el Ordo: lo que traen reemplaza a lo del tramo del tiempo
+celebraciones:
+  Sagrada Familia de Jesús, María y José:
+    visperas: o-lux-beata-caelitum
+    oficio: dulce-fit-nobis-memorare-parvum
+    laudes: christe-splendor-patris
+  Santa María, Madre de Dios:
+    visperas: corde-natus-ex-parentis
+    oficio: radix-iesse-floruit
+    laudes: fit-porta-christi-pervia
+  Bautismo del Señor:
+    visperas1: a-patre-unigenite
+    visperas: implente-munus-debitum
+    oficio: implente-munus-debitum
+    laudes: iesus-refulsit-omnium
+  # El libro da «Celsæ salútis gáudia» para la Hora intermedia; para las otras Horas, los de Cuaresma
+  Domingo de Ramos en la Pasión del Señor:
+    tercia: [celsae-salutis-gaudia, dei-fide-qua-vivimus]
+    sexta: [celsae-salutis-gaudia, qua-christus-hora-sitiit]
+    nona: [celsae-salutis-gaudia, ternis-ter-horis-numerus]
+  Jueves Santo:
+    visperas: o-memoriale-mortis-domini
+  Viernes Santo de la Pasión del Señor:
+    tercia: salva-redemptor-plasma-tuum-nobile
+    sexta: crux-mundi-benedictio
+    nona: per-crucem-christe-quaesumus
+  Sábado Santo:
+    oficio: christe-caelorum-domine
+    laudes: tibi-redemptor-omnium
+    visperas: auctor-salutis-unice
+    tercia: salva-redemptor-plasma-tuum-nobile
+    sexta: crux-mundi-benedictio
+    nona: per-crucem-christe-quaesumus
+  Domingo de Pentecostés:
+    visperas: veni-creator-spiritus
+    oficio: lux-iucunda-lux-insignis
+    laudes: beata-nobis-gaudia
+    tercia: iam-christus-astra-ascenderat
+
+# Celebraciones que son del tiempo aunque su nombre no sea el de la feria
+del_tiempo:
+  - Natividad del Señor
+  - Sagrada Familia de Jesús, María y José
+  - Santa María, Madre de Dios
+  - Epifanía del Señor
+  - Bautismo del Señor
+  - Domingo de Ramos en la Pasión del Señor
+  - Ascensión del Señor
+  - Domingo de Pentecostés
+
+# Comunes (clave de base/comunes/). «_varios»: para varios santos (o varias santas); «_varias»: para varias santas.
+# una-martir: para una santa mártir o virgen mártir (después, el del común de un mártir, en femenino).
+# Religiosos, caridad y educadores, doctores: ver himnosLatinos.
+comunes:
+  dedicacion:
+    visperas: urbs-ierusalem-beata
+    oficio: christe-cunctorum-dominator-alme
+    laudes: angularis-fundamentum
+  virgen-maria:
+    visperas1: maria-quae-mortalium
+    visperas: ave-maris-stella
+    oficio: quem-terra-pontus-aethera
+    laudes: o-gloriosa-domina
+  santa-maria-sabado:
+    oficio: [o-virgo-mater-filia, o-gloriosa-domina, ave-maris-stella]
+    laudes: quae-caritatis-fulgidum
+  apostoles:
+    visperas: exsultet-caelum-laudibus
+    oficio: o-sempiternae-curiae
+    laudes: o-sempiternae-curiae
+  apostoles_pascua:
+    visperas: tristes-erant-apostoli
+    oficio: o-sempiternae-curiae
+    laudes: claro-paschali-gaudio
+  varios-martires:
+    visperas: sanctorum-meritis-inclita-gaudia
+    oficio: rex-gloriose-martyrum
+    laudes: aeterna-christi-munera
+  un-martir:
+    visperas: deus-tuorum-militum
+    oficio: beate-martyr-prospera
+    laudes: martyr-dei-qui-unicum
+  una-martir:
+    visperas: [virginis-proles-opifexque-matris, deus-tuorum-militum]
+    oficio: [o-christe-flos-convallium, beate-martyr-prospera]
+    laudes: [o-castitatis-signifer, martyr-dei-qui-unicum]
+  pastores:
+    visperas: vir-celse-forma-fulgida
+    oficio: christe-pastorum-caput-atque-princeps
+    laudes: inclitus-rector-pater-atque-prudens
+  pastores_varios:
+    visperas: sacrata-nobis-gaudia
+    oficio: dum-sacerdotum-celebrant-fideles
+    laudes: hi-sacerdotes-domini-sacrati
+  doctores:
+    visperas: aeterne-sol-qui-lumine
+    oficio: aeterne-sol-qui-lumine
+    laudes: doctor-aeternus-coleris-piusque
+  virgenes:
+    visperas: iesu-corona-virginum
+    oficio: dulci-depromat-carmine
+    laudes: aptata-virgo-lampade
+  virgenes_varias:
+    visperas: iesu-corona-virginum
+    oficio: gaudentes-festum-colimus
+    laudes: iesu-corona-virginum
+  santos-varones:
+    visperas: iesu-redemptor-omnium-perpes-corona
+    oficio: iesu-redemptor-omnium-perpes-corona
+    laudes: iesu-corona-celsior
+  santos-varones_varios:
+    visperas: inclitos-christi-famulos-canamus
+    oficio: inclitos-christi-famulos-canamus
+    laudes: beata-caeli-gaudia
+  santas-mujeres:
+    visperas: [fortem-virili-pectore, christe-cunctorum-sator-et-redemptor]
+    oficio: haec-femina-laudabilis
+    laudes: nobilem-christi-famulam-diserta
+  santas-mujeres_varias:
+    visperas: christe-cunctorum-sator-et-redemptor
+    oficio: hae-feminae-laudabiles
+    laudes: nobiles-christi-famulas-diserta
+  religiosos:
+    visperas: laeti-colentes-famulum
+    oficio: laeti-colentes-famulum
+    laudes: o-redemptoris-pietas-colenda
+  difuntos:
+    visperas: immensae-rex-potentiae
+    oficio: qui-vivis-ante-saecula
+    laudes: spes-christe-nostrae-veniae
+    tercia: qui-lacrimatus-lazarum
+    sexta: qui-lacrimatus-lazarum
+    nona: qui-lacrimatus-lazarum

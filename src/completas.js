@@ -448,7 +448,8 @@ function armar(fecha, region){
   sec('himno','Himno');
   const pool = pascua?'pascua': cuaresma?'cuaresma': (hoy.t==='Adviento'||hoy.t==='Navidad')?'adviento_navidad':'ordinario';
   // Domingos y solemnidades: siempre abre en el Te lucis; los demás días, el primer himno del tiempo (o el último elegido)
-  S.push({k:'himno', es:true, efimera:el.solemne, def: el.solemne?'telucis':pool+'-0', opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion, rec:enVersos(recitado(GR.himno.traduccion, [['','Te'],['','Procul'],['','Præsta,']]), ['Te','Rerum','Ut','Sis','Procul','Et','Hostémque','Ne','Præsta,','Patríque','Cum','Regnans'])}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})))});
+  S.push({k:'himno', es:true, efimera:el.solemne, def: el.solemne?'telucis':pool+'-0', opciones:[{id:'telucis', n:GR.himno.titulo, lang:'la', gabc:GR.himno.gabc, glosa:GR.himno.traduccion, rec:enVersos(recitado(GR.himno.traduccion, [['','Te'],['','Procul'],['','Præsta,']]), ['Te','Rerum','Ut','Sis','Procul','Et','Hostémque','Ne','Præsta,','Patríque','Cum','Regnans'])}].concat(C.himnos[pool].map((h,i)=>({id:pool+'-'+i, n:oracionCase(h.titulo), lang:'es', est:h.texto.map(e=>e.split('\n')), amen:''})),
+    himnosLatinos('completas', el.visperasDe||hoy, {hs:C.latinos, tiempo:true, greg:GR.himno.titulo}))});
 
   sec('salmodia','Salmodia');
   const sal=pascua?J.salmodia_pascua:J.salmodia; let na=0;
@@ -719,6 +720,60 @@ function oracionElegida(oraciones, nombre, hora, t, n){
   M.alts=M.alts||{}; M.alts[k]={i, ops:ops.map(o=>({n:o.n, ver:vista(o.t)}))};
   return ops[i<0?0:i].t;
 }
+// Himnos latinos recitados (base/himnos/latinos.yaml; cuándo va cada uno: latinos_cuando.yaml), como opciones después del
+// himno en español y del gregoriano. ref: el día del oficio (en las I Vísperas, mañana). o: {hs: himnos latinos de la hora,
+// comun: clave del común si el himno en español es del común, primeras, tiempo: true/false si la hora sabe si su himno es
+// del tiempo (si no, por el nombre de la celebración), greg: título del gregoriano del día}. Devuelve las opciones (ids
+// «lat», «lat2»…), con las estrofas del caso (papa, obispo, presbítero; una santa o varias; una difunta o varios).
+// El común (de cids, en orden) que trae este himno en español, en cualquier hora o variante: para las celebraciones con
+// propio en la base cuyo himno es el del común que indica su santoral (el himno latino, entonces, también del común)
+function comunDelHimno(comunes, himno, cids){
+  const tiene=o=>o && typeof o==='object' && Object.entries(o).some(([k,v])=> (k==='himno' && [].concat(v).includes(himno)) || (typeof v==='object' && tiene(v)));
+  return (cids||[]).find(c=>c && comunes && tiene(comunes[c])) || null;
+}
+const RUB_LAZARO='Si se rezan las tres Horas: Tercia, estrofas 1, 4 y 5; Sexta, 2, 4 y 5; Nona, 3, 4 y 5.';
+function himnosLatinos(hora, ref, o){
+  const C=B.latinos_cuando, hs=(o&&o.hs)||{}; o=o||{};
+  if(!C || !ref) return [];
+  const de=t=>{ if(!t) return null; const v=(o.primeras && t[hora+'1']) || t[hora]; return v==null ? null : [].concat(v); };
+  const nombre=String(ref.n||''), plural=/^(santos|santas|beatos|beatas)\b|y compañer/i.test(nombre), fem=/^(Santa|Santas|Beata|Beatas)\b/.test(nombre);
+  let lista=null, casos=[''];
+  if(o.comun){
+    let c=o.comun;
+    if(c==='difuntos') casos = ref.n==='Todos los Fieles Difuntos' ? ['varios'] : ['', 'una', 'varios'];
+    if(c==='caridad' || c==='educadores' || (c==='religiosos' && plural)) c = fem ? 'santas-mujeres' : 'santos-varones';
+    if(c==='doctores' && fem) c='virgenes';   // doctoras: los de vírgenes (el de doctores habla de un varón)
+    if(c==='un-martir' && fem) c='una-martir';
+    if(c==='apostoles' && ref.t==='Pascua') c='apostoles_pascua';
+    lista = (plural && de(C.comunes[c+(fem?'_varias':'_varios')])) || de(C.comunes[c]);
+    if(c!=='difuntos') casos=[ /\bpapa\b/i.test(nombre) ? 'papa' : /\bobispo/i.test(nombre) ? 'obispo' : /presbítero|sacerdote/i.test(nombre) ? 'presbitero'
+      : fem ? (plural ? 'mujeres' : 'mujer') : '' ];
+  } else {
+    const delTiempo = o.tiempo!=null ? o.tiempo : (ref.n===ref.fer || ref.t==='Triduo' || (C.del_tiempo||[]).includes(ref.n));
+    if(!delTiempo) return [];
+    const f=ref.fecha||'', md=f.slice(5), y=+f.slice(0,4);
+    let t=null;
+    if(ref.t==='Adviento') t = md>='12-17' ? 'adviento_17' : 'adviento';
+    else if(ref.t==='Navidad') t = (md>='12-01' || md<='01-05') ? 'navidad' : 'epifania';
+    else if(ref.t==='Cuaresma') t = ref.sem>=6 ? 'semana_santa' : hora==='completas' ? ((ref.sal||1)%2 ? 'cuaresma_completas_impar' : 'cuaresma_completas_par')
+      : ref.dom ? 'cuaresma_domingo' : ref.sem===5 ? 'cuaresma_semana_5' : 'cuaresma_feria';
+    else if(ref.t==='Triduo') t='semana_santa';
+    else if(ref.t==='Pascua'){ const asc=masDias(domPascua(y), 39);
+      t = ref.n==='Ascensión del Señor' ? 'ascension' : f>asc ? (ref.dom ? 'ascension' : 'ascension_ferias') : (ref.oct || ref.dom) ? 'pascua' : 'pascua_ferias'; }
+    lista = de(C.celebraciones[ref.n]) || de(C.tiempo[t]);
+  }
+  const out=[], norm=x=>String(x||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-zæœ ]/g,'').trim();
+  const SUF={una:' (una difunta)', varios:' (varios difuntos)'};
+  for(const k of lista||[]) for(const c of casos){
+    const h=hs[k]; if(!h) continue;
+    const v=(c && h.variantes && h.variantes[c]) || {};
+    const est=h.estrofas.map((e,i)=>v[i]||e);
+    const tit = v[0] ? v[0][0][0].replace(/[,;:.]+$/,'') : h.titulo;   // si cambia la primera estrofa («Beáta martyr»), su primer verso
+    out.push({id:'lat'+(out.length?out.length+1:''), n:tit+(SUF[c]||'')+(o.greg && norm(o.greg)===norm(tit) ? ' (recitado)' : ''), lang:'la', lat:true,
+              est:est.map(e=>e.map(p=>p[0])), lit:est.map(e=>e.map(p=>p[1])), amen:h.amen?'Amen.':'', rub:k==='qui-lacrimatus-lazarum'?RUB_LAZARO:''});
+  }
+  return out;
+}
 // Los himnos de un común para una hora: el primero (el de sync) y las otras opciones, que la hora ofrece como botones.
 // hs: los himnos de la hora (por título); sin el que ya va, ni los que la hora no tiene.
 function himnosComun(comunes, id, nombre, sub, actual, hs){
@@ -726,5 +781,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

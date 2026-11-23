@@ -476,9 +476,18 @@ function himnoHTML(sec){
   const ops=sec.opciones;
   const def= sec.def ? (ops.find(o=>o.id===sec.def)||ops[0]) : sec.es ? ops[0] : (ops.find(o=>o.lang===(S.lengua==='es'?VES():'la')) || ops[0]);
   // efímera (domingos y solemnidades): la elección vale solo mientras se mira ese día
-  const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})['h:'+ops[0].id])||def) : elegida(sec,'himno',def);
+  // El latín (recitado, «lat…») y el gregoriano («greg») se recuerdan para todos los días que los tienen, también en los
+  // que la elección es efímera; si el día no tiene el segundo latino elegido, el primero.
+  const mem=S.himno[ops[0].id], recordada=/^(lat|greg)/.test(mem||'') && (ops.find(x=>x.id===mem) || (/^lat/.test(mem) && ops.find(x=>x.id==='lat')));
+  const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})['h:'+ops[0].id])||recordada||def) : (recordada||elegida(sec,'himno',def));
   let h='';
   if(ops.length>1) h+=botonesHTML('himno', ops[0].id, ops, o, sec.efimera, 'Himno');
+  // Himno latino recitado: cada verso con su traducción literal debajo (si la traducción está activa)
+  if(o.lat){
+    const gl=t=>S.trad?`<span class="gl">${esc(t)}</span>`:'', num=o.est.length>1;
+    return h+`<div class="himno lat${num?'':' sin-num'}">`+o.est.map((e,ie)=>`<p class="est">${num?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${gl(o.lit[ie][il])}`).join('')}</p>`).join('')
+      +(o.amen?`<p class="est amen-fin"><b>${esc(o.amen)}</b>${gl('Amén.')}</p>`:'')+'</div>'+(o.rub?`<p class="rub">${esc(o.rub)}</p>`:'');
+  }
   if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'estrofas');
   if(S.canto && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
   // Traducción anclada: cada par se ubica en la línea donde aparece su primera palabra latina, en orden
@@ -945,7 +954,10 @@ document.addEventListener('click',e=>{
     case 'trad': S.trad=!S.trad; guardar(); refrescarHoja(reabrir); break;   // el cambio se ve al instante: sin aviso
     case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'sin partitura',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
     case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
-    case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v; refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
+    case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v;
+        // el latín y el gregoriano se recuerdan también desde un día con la elección efímera; otro himno lo olvida
+        if(/^(lat|greg)/.test(v)) S.himno[b.dataset.k]=v; else if(/^(lat|greg)/.test(S.himno[b.dataset.k]||'')) delete S.himno[b.dataset.k];
+        guardar(); refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
     case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
     case 'concl': if(S.concl===v) break; S.concl=v; cambio('Conclusión: '+b.textContent.toLowerCase()); break;
     case 'invit': if(INV()===v) break; S.invit=v; cambio('Invitatorio: '+(v==='greg'?'gregoriano':'en español')); break;
