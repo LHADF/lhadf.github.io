@@ -239,7 +239,6 @@ uso:
   seccion: Sábado Santo
   hora: oficio
   himno: christe-caelorum-domine
-  nota: 'A confirmar: el orden de páginas lo pone entre la Nona del Viernes Santo y la rúbrica del Sábado Santo.'
 - grupo: Semana Santa
   seccion: Sábado Santo
   hora: laudes
@@ -309,7 +308,7 @@ uso:
   seccion: Después de la Ascensión
   hora: visperas
   himno: veni-creator-spiritus
-  nota: 'A confirmar: el libro lo pone después de la Ascensión, con la rúbrica «Para el Oficio de lectura, himno Aeterne rex altissime; para las Laudes, Optatus votis omnium».'
+  nota: Ferias después de la Ascensión; Oficio de lectura, «Ætérne rex altíssime»; Laudes, «Optatus votis ómnium» (rúbrica del libro).
 - grupo: Tiempo pascual
   seccion: Domingo de Pentecostés
   hora: visperas
@@ -533,16 +532,16 @@ uso:
   hora: laudes
   himno: nobiles-christi-famulas-diserta
 - grupo: Comunes
-  seccion: Religiosos (a confirmar)
+  seccion: Santos religiosos
   hora: visperas
   himno: laeti-colentes-famulum
-  nota: 'El libro lo trae después de santas mujeres, para Vísperas y Oficio de lectura, sin título propio en la extracción. Para una religiosa: «famulam».'
+  nota: 'Vísperas y Oficio de lectura. Para una religiosa: «famulam».'
 - grupo: Comunes
-  seccion: Religiosos (a confirmar)
+  seccion: Santos religiosos
   hora: oficio
   himno: laeti-colentes-famulum
 - grupo: Comunes
-  seccion: Religiosos (a confirmar)
+  seccion: Santos religiosos
   hora: laudes
   himno: o-redemptoris-pietas-colenda
 - grupo: Comunes
@@ -622,7 +621,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Te lucis ante.txt
     coincidencia_libro: 0.75
     libro:
-    - tomo 2, p. 2709
+    - tomo 1, p. 1063
     diferencias:
     - tipo: variante del libro
       libro:
@@ -642,39 +641,92 @@ himnos:
       corpus:
       - tætram noctis calíginem
   verbum-supernum-prodiens:
-    incipit: Verbum supérnum pródiens
+    incipit: Verbum supérnum pródiens,
     estrofas:
-    - - Verbum supérnum pródiens
-      - nec Patris linquens déxteram,
-      - ad opus suum éxiens
-      - venit ad vitæ vésperam.
-    - - In mortem a discípulo
-      - suis tradéndus ǽmulis,
-      - prius in vitæ férculo
-      - se trádidit discípulis.
-    - - Quibus sub bina spécie
-      - carnem dedit et sánguinem,
-      - ut dúplicis substántiæ
-      - totum cibáret hóminem.
-    - - Se nascens dedit sócium,
-      - convéscens in edúlium,
-      - se móriens in prétium,
-      - se regnans dat in prǽmium.
-    - - O salutáris hóstia,
-      - quæ cæli pandis óstium,
-      - 'bella premunt hostília:'
-      - da robur, fer auxílium.
-    - - Uni trinóque Dómino
-      - sit sempitérna glória,
-      - qui vitam sine término
-      - nobis donet in pátria.
+    - - Verbum supérnum pródiens,
+      - e Patris ætérni sinu,
+      - qui natus orbi súbvenis
+      - 'cursu declívi témporis:'
+    - - Illúmina nunc péctora
+      - tuóque amóre cóncrema;
+      - ut cor cadúca déserens
+      - cæli volúptas ímpleat.
+    - - Ut, cum tribúnal Iúdicis
+      - damnábit igni nóxios,
+      - et vox amíca débitum
+      - vocábit ad cælum pios;
+    - - Non esca flammárum nigros
+      - volvámur inter túrbines,
+      - vultu Dei sed cómpotes
+      - cæli fruámur gáudiis.
+    - - Patri, simúlque Fílio,
+      - tibíque, Sancte Spíritus,
+      - sicut fuit, sit iúgiter
+      - sæclum per omne glória.
     amen: true
-    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Verbum supernum prodiens nec.txt
-    coincidencia_libro: 0.96
+    fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Verbum supernum prodiens a.txt
+    coincidencia_libro: 0.2
     libro:
-    - tomo 3, p. 4346
-    - tomo 4, p. 6212
-    diferencias: []
+    - tomo 1, p. 1064
+    diferencias:
+    - tipo: variante del libro
+      libro:
+      - e Patris aeterni sinu,
+      corpus:
+      - a Patre lumen éxiens,
+      va:
+      - e Patris ætérni sinu,
+    - tipo: errata del PDF
+      libro:
+      - Ilumina nunc pectora,
+      corpus:
+      - Illúmina nunc péctora
+    - tipo: variante del libro
+      libro:
+      - Ut cor caduca deserens
+      - Caeli voluptas impleat.
+      - Ut, cum tribunal Judicis
+      - Damnabit igni noxios,
+      - Et vox amica debitum
+      - Vocabit ad caelum pios;
+      - Non esca flammarum nigros
+      - Volvamur inter turbines,
+      - Vultu Dei sed compotes
+      - Caeli fruamur gaudiis.
+      - Patri, simulque Filio,
+      - Tibique, Sancte Spiritus,
+      - Sicut fuit, sit jugiter
+      - Saeclum per omne gloria.
+      corpus:
+      - audíta per præcónia
+      - sint pulsa tandem lúbrica.
+      - Iudéxque cum post áderis
+      - rimári facta péctoris,
+      - reddens vicem pro ábditis
+      - iustísque regnum pro bonis,
+      - Non demum artémur malis
+      - pro qualitáte críminis,
+      - sed cum beátis cómpotes
+      - simus perénnes cǽlites.
+      - Sit, Christe, rex piíssime,
+      - tibi Patríque glória
+      - cum Spíritu Paráclito,
+      - in sempitérna sǽcula.
+      va:
+      - Ut cor cadúca déserens
+      - Cæli volúptas ímpleat.
+      - Ut, cum tribúnal Iúdicis
+      - Damnabit igni noxios,
+      - Et vox amíca débitum
+      - Vocabit ad cælum pios;
+      - Non esca flammarum nigros
+      - Volvamur inter turbines,
+      - Vultu Dei sed cómpotes
+      - Cæli fruámur gáudiis.
+      - Patri, simúlque Fílio,
+      - Tibíque, Sancte Spíritus,
+      - Sicut fuit, sit iúgiter
+      - Sæclum per omne glória.
   vox-clara-ecce-intonat:
     incipit: Vox clara ecce íntonat,
     estrofas:
@@ -720,8 +772,7 @@ himnos:
       - confessiónem pérsonent,
       - flamméscat igne cáritas,
       - accéndat ardor próximos.
-    - &id001
-      - Præsta, Pater piíssime,
+    - - Præsta, Pater piíssime,
       - Patríque compar Únice,
       - cum Spíritu Paráclito
       - regnans per omne sǽculum.
@@ -732,7 +783,11 @@ himnos:
     - tomo 1, p. 1065
     diferencias:
     - tipo: doxología del libro
-      libro: *id001
+      libro:
+      - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
       corpus:
       - Per te sciámus da Patrem,
       - noscámus atque Fílium,
@@ -750,7 +805,7 @@ himnos:
       - confer salútem córporum,
       - verámque pacem córdium.
     - - Præsta, Pater piíssime,
-      - Patríque compar Unice,
+      - Patríque compar Únice,
       - cum Spíritu Paráclito
       - regnans per omne sǽculum.
     amen: true
@@ -765,6 +820,17 @@ himnos:
       - Extingue flammas litium,
       corpus:
       - Exstíngue flammas lítium,
+    - tipo: doxología del libro
+      libro:
+      - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+      corpus:
+      - Præsta, Pater piíssime,
+      - Patríque compar Unice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
   rerum-deus-tenax-vigor:
     incipit: Rerum, Deus, tenax vigor,
     estrofas:
@@ -777,7 +843,7 @@ himnos:
       - sed prǽmium mortis sacræ
       - perénnis instet glória.
     - - Præsta, Pater piíssime,
-      - Patríque compar Unice,
+      - Patríque compar Únice,
       - cum Spíritu Paráclito
       - regnans per omne sǽculum.
     amen: true
@@ -796,6 +862,17 @@ himnos:
       va:
       - Largíre lumen véspere,
       - Quo vita nusquam décidat,
+    - tipo: doxología del libro
+      libro:
+      - Præsta, Pater piíssime,
+      - Patríque compar Únice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
+      corpus:
+      - Præsta, Pater piíssime,
+      - Patríque compar Unice,
+      - cum Spíritu Paráclito
+      - regnans per omne sǽculum.
   verbum-salutis-omnium:
     incipit: Verbum salútis ómnium,
     estrofas:
@@ -856,7 +933,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christe qui splendor.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2709
+    - tomo 1, p. 1067
     diferencias: []
   veni-redemptor-gentium:
     incipit: Veni, redémptor géntium,
@@ -885,8 +962,7 @@ himnos:
       - luménque nox spirat novum,
       - quod nulla nox intérpolet
       - fidéque iugi lúceat.
-    - &id002
-      - Glória tibi, Dómine,
+    - - Glória tibi, Dómine,
       - qui natus es de Vírgine,
       - cum Patre et Sancto Spíritu,
       - in sempitérna sǽcula.
@@ -926,7 +1002,11 @@ himnos:
       corpus:
       - quod nulla nox intérpolet
     - tipo: doxología del libro
-      libro: *id002
+      libro:
+      - Glória tibi, Dómine,
+      - qui natus es de Vírgine,
+      - cum Patre et Sancto Spíritu,
+      - in sempitérna sǽcula.
       corpus:
       - Sit, Christe, rex piíssime,
       - tibi Patríque glória
@@ -1054,7 +1134,7 @@ himnos:
     incipit: Christe, redémptor ómnium,
     estrofas:
     - - Christe, redémptor ómnium,
-      - ex Patre, Patris Unice,
+      - ex Patre, Patris Únice,
       - solus ante princípium
       - natus ineffabíliter,
     - - Tu lumen, tu splendor Patris,
@@ -1094,7 +1174,7 @@ himnos:
       - Christe, tu lumen, vénia atque vita
       - ádvenis, morbis hóminum medéla,
       - porta salútis.
-    - - Intonat terræ chorus angelórum
+    - - Íntonat terræ chorus angelórum
       - cǽlicum carmen, nova sæcla dicens,
       - glóriam Patri, generíque nostro
       - gáudia pacis.
@@ -1248,7 +1328,7 @@ himnos:
       - antíquius cælo et chao.
     - - Hic ille rex est géntium
       - populíque rex Iudáici,
-      - promíssus Abrahæ patri
+      - promíssus Ábrahæ patri
       - eiúsque in ævum sémini».
     - - Iesu, tibi sit glória,
       - qui te revélas géntibus,
@@ -1304,7 +1384,7 @@ himnos:
       - ábdito Iesus iuvenéscit ævo,
       - seque fabrílis sócium labóris
       - ádicit ultro.
-    - - Assidet nato pia mater almo,
+    - - Ássidet nato pia mater almo,
       - ássidet sponso bona nupta, felix
       - si potest curas releváre lassis
       - múnere amíco.
@@ -1333,7 +1413,7 @@ himnos:
       - flóribus virtútum,
       - unde gratiárum
       - fons prománat ipse.
-    - - Angeli stupéntes
+    - - Ángeli stupéntes
       - Natum Dei cernunt
       - servi forma indútum
       - servis famulántem.
@@ -1364,7 +1444,7 @@ himnos:
     estrofas:
     - - Corde natus ex Paréntis
       - ante mundi exórdium,
-      - Alpha et Omega vocátus,
+      - Alpha et Ómega vocátus,
       - ipse fons et cláusula
       - ómnium quæ sunt, fuérunt
       - quæque post futúra sunt.
@@ -1587,7 +1667,7 @@ himnos:
       - ieiúnet ut mens sóbria
       - a labe prorsus críminum.
     - - Præsta, Beáta Trínitas,
-      - concéde, simplex Unitas,
+      - concéde, simplex Únitas,
       - ut fructuósa sint tuis
       - hæc parcitátis múnera.
     amen: true
@@ -1616,7 +1696,7 @@ himnos:
       - nullúmque demus cállido
       - hosti locum tyránnidis.
     - - Præsta, Beáta Trínitas,
-      - concéde, simplex Unitas,
+      - concéde, simplex Únitas,
       - ut fructuósa sint tuis
       - hæc parcitátis múnera.
     amen: true
@@ -1645,7 +1725,7 @@ himnos:
       - placére quo tandem tibi
       - possímus hic et pérpetim.
     - - Præsta, Beáta Trínitas,
-      - concéde, simplex Unitas,
+      - concéde, simplex Únitas,
       - ut fructuósa sint tuis
       - hæc parcitátis múnera.
     amen: true
@@ -2270,7 +2350,7 @@ himnos:
       - sic caro nostra dórmiat
       - ut mens sopórem nésciat.
     - - Iesu, tibi sit glória,
-      - qui morte victa prænites,
+      - qui morte victa prǽnites,
       - cum Patre et almo Spíritu,
       - in sempitérna sǽcula.
     amen: true
@@ -2810,8 +2890,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Urbs Ierusalem beata.txt
     coincidencia_libro: 0.97
     libro:
-    - tomo 2, p. 2747
-    - tomo 3, p. 4405
+    - tomo 1, p. 1090
     diferencias: []
   christe-cunctorum-dominator-alme:
     incipit: Christe, cunctórum dominátor alme,
@@ -2840,8 +2919,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christe cunctorum dominator.txt
     coincidencia_libro: 0.9
     libro:
-    - tomo 2, p. 2747
-    - tomo 3, p. 4405
+    - tomo 1, p. 1091
     diferencias:
     - tipo: errata del PDF
       libro:
@@ -2883,10 +2961,9 @@ himnos:
       - per ætérna sǽcula.
     amen: true
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Angularis fundamentum.txt
-    coincidencia_libro: 0.94
+    coincidencia_libro: 0.97
     libro:
-    - tomo 2, p. 2748
-    - tomo 3, p. 4406
+    - tomo 1, p. 1091
     diferencias: []
   maria-quae-mortalium:
     incipit: María, quæ mortálium
@@ -2919,8 +2996,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Maria quae mortalium.txt
     coincidencia_libro: 0.96
     libro:
-    - tomo 2, p. 2749
-    - tomo 3, p. 4407
+    - tomo 1, p. 1092
     diferencias: []
   quem-terra-pontus-aethera:
     incipit: Quem terra, pontus, ǽthera
@@ -2949,8 +3025,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Quem terra pontus.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2749
-    - tomo 3, p. 4407
+    - tomo 1, p. 1093
     diferencias: []
   o-gloriosa-domina:
     incipit: O gloriósa dómina,
@@ -2975,8 +3050,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O gloriosa domina.txt
     coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2750
-    - tomo 3, p. 4408
+    - tomo 1, p. 1093
     diferencias: []
   ave-maris-stella:
     incipit: Ave, maris stella,
@@ -3011,10 +3085,9 @@ himnos:
       - honor, tribus unus.
     amen: true
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Ave maris stella.txt
-    coincidencia_libro: 0.93
+    coincidencia_libro: 0.96
     libro:
-    - tomo 2, p. 2750
-    - tomo 3, p. 4408
+    - tomo 1, p. 1094
     diferencias: []
   o-virgo-mater-filia:
     incipit: O virgo mater, fília
@@ -3105,8 +3178,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Exsultet caelum laudibus.txt
     coincidencia_libro: 0.96
     libro:
-    - tomo 2, p. 2751
-    - tomo 3, p. 4410
+    - tomo 1, p. 1094
     diferencias: []
   o-sempiternae-curiae:
     incipit: O sempitérnæ cúriæ
@@ -3139,7 +3211,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O sempiterne curiae.txt
     coincidencia_libro: 0.92
     libro:
-    - tomo 3, p. 4411
+    - tomo 1, p. 1095
     diferencias:
     - tipo: errata del PDF
       libro:
@@ -3153,7 +3225,7 @@ himnos:
       - de nece sui Dómini,
       - quem morte crudelíssima
       - sævi damnárant ímpii.
-    - - Sermóne blando Angelus
+    - - Sermóne blando Ángelus
       - 'prædíxit muliéribus:'
       - «In Galilǽa Dóminus
       - vidéndus est quantócius».
@@ -3240,8 +3312,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Sanctorum meritis inclita (masculine).txt
     coincidencia_libro: 0.9
     libro:
-    - tomo 2, p. 2753
-    - tomo 3, p. 4412
+    - tomo 1, p. 1096
     diferencias:
     - tipo: errata del PDF
       libro:
@@ -3264,15 +3335,14 @@ himnos:
       - tu vince nostra crímina
       - donándo indulgéntiam.
     - - Præsta, Pater piíssime,
-      - Patríque compar Unice,
+      - Patríque compar Únice,
       - cum Spíritu Paráclito
       - regnans per omne sǽculum.
     amen: true
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Rex gloriose martyrum.txt
     coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2754
-    - tomo 3, p. 4412
+    - tomo 1, p. 1096
     diferencias: []
   aeterna-christi-munera:
     incipit: Ætérna Christi múnera
@@ -3309,8 +3379,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aeterna Christi munera.txt
     coincidencia_libro: 0.96
     libro:
-    - tomo 2, p. 2754
-    - tomo 3, p. 4413
+    - tomo 1, p. 1097
     diferencias: []
   deus-tuorum-militum:
     incipit: Deus, tuórum mílitum
@@ -3347,8 +3416,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Deus tuorum militum (pro uno martyre).txt
     coincidencia_libro: 0.96
     libro:
-    - tomo 2, p. 2755
-    - tomo 3, p. 4413
+    - tomo 1, p. 1097
     diferencias:
     - tipo: texto distinto
       libro: []
@@ -3388,8 +3456,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Beate martyr prospera.txt
     coincidencia_libro: 0.96
     libro:
-    - tomo 2, p. 2756
-    - tomo 3, p. 4414
+    - tomo 1, p. 1098
     diferencias: []
   martyr-dei-qui-unicum:
     incipit: Martyr Dei, qui únicum
@@ -3414,8 +3481,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Martyr Dei qui.txt
     coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2757
-    - tomo 3, p. 4416
+    - tomo 1, p. 1100
     diferencias: []
   virginis-proles-opifexque-matris:
     incipit: Vírginis Proles opiféxque Matris,
@@ -3440,8 +3506,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Virginis Proles opifexque.txt
     coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2756
-    - tomo 3, p. 4414
+    - tomo 1, p. 1098
     diferencias: []
   o-christe-flos-convallium:
     incipit: O Christe, flos convállium,
@@ -3470,8 +3535,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O Christe flos.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2757
-    - tomo 3, p. 4415
+    - tomo 1, p. 1099
     diferencias: []
   o-castitatis-signifer:
     incipit: O castitátis sígnifer
@@ -3502,10 +3566,9 @@ himnos:
       - in sempitérna sǽcula.
     amen: true
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/O castitatis signifer.txt
-    coincidencia_libro: 0.88
+    coincidencia_libro: 0.92
     libro:
-    - tomo 2, p. 2758
-    - tomo 3, p. 4416
+    - tomo 1, p. 1100
     diferencias:
     - tipo: errata del PDF
       libro:
@@ -3543,8 +3606,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Vir celse forma.txt
     coincidencia_libro: 1.0
     libro:
-    - tomo 2, p. 2758
-    - tomo 3, p. 4417
+    - tomo 1, p. 1101
     diferencias:
     - tipo: texto distinto
       libro: []
@@ -3588,8 +3650,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Sacrata nobis gaudia.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2759
-    - tomo 3, p. 4418
+    - tomo 1, p. 1102
     diferencias: []
   christe-pastorum-caput-atque-princeps:
     incipit: Christe, pastórum caput atque princeps,
@@ -3618,8 +3679,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christe pastorum caput.txt
     coincidencia_libro: 1.0
     libro:
-    - tomo 2, p. 2760
-    - tomo 3, p. 4418
+    - tomo 1, p. 1102
     diferencias:
     - tipo: texto distinto
       libro: []
@@ -3667,13 +3727,12 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Dum sacerdotum celebrant.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2761
-    - tomo 3, p. 4419
+    - tomo 1, p. 1103
     diferencias: []
   inclitus-rector-pater-atque-prudens:
     incipit: Inclitus rector pater atque prudens,
     estrofas:
-    - - Inclitus rector pater atque prudens,
+    - - Ínclitus rector pater atque prudens,
       - cuius insígnem cólimus triúmphum,
       - iste conféssor sine fine lætus
       - regnat in astris.
@@ -3693,8 +3752,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Inclitus rector pater.txt
     coincidencia_libro: 1.0
     libro:
-    - tomo 2, p. 2762
-    - tomo 3, p. 4420
+    - tomo 1, p. 1104
     diferencias:
     - tipo: texto distinto
       libro: []
@@ -3732,10 +3790,9 @@ himnos:
       - tempus et ævum.
     amen: true
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Hi sacerdotes Domini.txt
-    coincidencia_libro: 0.88
+    coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2762
-    - tomo 3, p. 4421
+    - tomo 1, p. 1104
     diferencias: []
   aeterne-sol-qui-lumine:
     incipit: Ætérne sol, qui lúmine
@@ -3761,7 +3818,7 @@ himnos:
       - da veritátis trámitem,
       - possímus ut te cónsequi.
     - - Præsta, Pater piíssime,
-      - Patríque compar Unice,
+      - Patríque compar Únice,
       - cum Spíritu Paráclito
       - regnans per omne sǽculum.
     amen: true
@@ -3830,8 +3887,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Iesu corona virginum.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2764
-    - tomo 3, p. 4422
+    - tomo 1, p. 1106
     diferencias: []
   dulci-depromat-carmine:
     incipit: Dulci deprómat cármine
@@ -3860,8 +3916,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Dulci depromat carmine.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2765
-    - tomo 3, p. 4423
+    - tomo 1, p. 1107
     diferencias: []
   gaudentes-festum-colimus:
     incipit: Gaudéntes festum cólimus
@@ -3890,8 +3945,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Gaudentes festum colimus.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2765
-    - tomo 3, p. 4423
+    - tomo 1, p. 1107
     diferencias: []
   aptata-virgo-lampade:
     incipit: Aptáta, virgo, lámpade
@@ -3920,8 +3974,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Aptata virgo lampade.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2766
-    - tomo 3, p. 4424
+    - tomo 1, p. 1108
     diferencias: []
   iesu-redemptor-omnium-perpes-corona:
     incipit: Iesu, redémptor ómnium,
@@ -3961,7 +4014,7 @@ himnos:
   inclitos-christi-famulos-canamus:
     incipit: Inclitos Christi fámulos canámus,
     estrofas:
-    - - Inclitos Christi fámulos canámus,
+    - - Ínclitos Christi fámulos canámus,
       - quos, fide claros nitidísque gestis,
       - hac die tellus sociáta cælo
       - láudibus ornat.
@@ -4086,8 +4139,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Fortem virili pectore.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2769
-    - tomo 3, p. 4427
+    - tomo 1, p. 1111
     diferencias: []
   christe-cunctorum-sator-et-redemptor:
     incipit: Christe, cunctórum sator et redémptor,
@@ -4112,8 +4164,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Christe cunctorum sator.txt
     coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2769
-    - tomo 3, p. 4427
+    - tomo 1, p. 1112
     diferencias: []
   haec-femina-laudabilis:
     incipit: Hæc fémina laudábilis
@@ -4142,8 +4193,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Haec femina laudabilis.txt
     coincidencia_libro: 0.95
     libro:
-    - tomo 2, p. 2770
-    - tomo 3, p. 4428
+    - tomo 1, p. 1112
     diferencias: []
   hae-feminae-laudabiles:
     incipit: Hæ féminæ laudábiles
@@ -4172,8 +4222,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Hae feminae laudabiles.txt
     coincidencia_libro: 0.9
     libro:
-    - tomo 2, p. 2770
-    - tomo 3, p. 4428
+    - tomo 1, p. 1113
     diferencias:
     - tipo: errata del PDF
       libro:
@@ -4203,8 +4252,7 @@ himnos:
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Nobilem Christi famulam.txt
     coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2771
-    - tomo 3, p. 4429
+    - tomo 1, p. 1113
     diferencias: []
   nobiles-christi-famulas-diserta:
     incipit: Nóbiles Christi fámulas disérta
@@ -4217,7 +4265,7 @@ himnos:
       - iussa quæ Patris súbeunt voléntes,
       - ut bonum Christi sátagant ubíque
       - spárgere odórem.
-    - - Edomant corpus, precibúsque mentem
+    - - Edómant corpus, precibúsque mentem
       - nútriunt sanctis; peritúra temnunt
       - lucra, ut inquírant sibi permanéntis
       - prǽmia vitæ.
@@ -4227,10 +4275,9 @@ himnos:
       - légibus orbem.
     amen: true
     fuente_texto: latin-ecclesiastic-accents, corpus/hymns/Nobiles Christi famulas.txt
-    coincidencia_libro: 0.88
+    coincidencia_libro: 0.94
     libro:
-    - tomo 2, p. 2771
-    - tomo 3, p. 4429
+    - tomo 1, p. 1114
     diferencias: []
   laeti-colentes-famulum:
     incipit: Læti coléntes fámulum

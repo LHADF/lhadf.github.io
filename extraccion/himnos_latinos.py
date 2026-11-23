@@ -80,7 +80,7 @@ USO = [
     ('Semana Santa', 'Viernes Santo', 'tercia', 'Salva Redemptor plasma tuum nobile', ''),
     ('Semana Santa', 'Viernes Santo', 'sexta', 'Crux mundi benedictio', ''),
     ('Semana Santa', 'Viernes Santo', 'nona', 'Per crucem Christe quaesumus', ''),
-    ('Semana Santa', 'Sábado Santo', 'oficio', 'Christe caelorum Domine', 'A confirmar: el orden de páginas lo pone entre la Nona del Viernes Santo y la rúbrica del Sábado Santo.'),
+    ('Semana Santa', 'Sábado Santo', 'oficio', 'Christe caelorum Domine', ''),
     ('Semana Santa', 'Sábado Santo', 'laudes', 'Tibi Redemptor omnium', 'Tercia, Sexta y Nona: como el Viernes Santo (rúbrica del libro).'),
     ('Semana Santa', 'Sábado Santo', 'visperas', 'Auctor salutis unice', ''),
     # ---------- Pascua (tomo II, pp. 2720-2732) ----------
@@ -97,7 +97,7 @@ USO = [
     ('Tiempo pascual', 'La Ascensión del Señor (y hasta Pentecostés)', 'visperas', 'Iesu nostra redemptio', ''),
     ('Tiempo pascual', 'La Ascensión del Señor (y hasta Pentecostés)', 'oficio', 'Aeterne rex altissime', ''),
     ('Tiempo pascual', 'La Ascensión del Señor (y hasta Pentecostés)', 'laudes', 'Optatus votis omnium', ''),
-    ('Tiempo pascual', 'Después de la Ascensión', 'visperas', 'Veni creator Spiritus', 'A confirmar: el libro lo pone después de la Ascensión, con la rúbrica «Para el Oficio de lectura, himno Aeterne rex altissime; para las Laudes, Optatus votis omnium».'),
+    ('Tiempo pascual', 'Después de la Ascensión', 'visperas', 'Veni creator Spiritus', 'Ferias después de la Ascensión; Oficio de lectura, «Ætérne rex altíssime»; Laudes, «Optatus votis ómnium» (rúbrica del libro).'),
     ('Tiempo pascual', 'Domingo de Pentecostés', 'visperas', 'Veni creator Spiritus', ''),
     ('Tiempo pascual', 'Domingo de Pentecostés', 'oficio', 'Lux iucunda lux insignis', ''),
     ('Tiempo pascual', 'Domingo de Pentecostés', 'laudes', 'Beata nobis gaudia', ''),
@@ -151,9 +151,9 @@ USO = [
     ('Comunes', 'Santas mujeres (varias)', 'oficio', 'Hae feminae laudabiles', ''),
     ('Comunes', 'Santas mujeres', 'laudes', 'Nobilem Christi famulam diserta', ''),
     ('Comunes', 'Santas mujeres (varias)', 'laudes', 'Nobiles Christi famulas diserta', ''),
-    ('Comunes', 'Religiosos (a confirmar)', 'visperas', 'Laeti colentes famulum', 'El libro lo trae después de santas mujeres, para Vísperas y Oficio de lectura, sin título propio en la extracción. Para una religiosa: «famulam».'),
-    ('Comunes', 'Religiosos (a confirmar)', 'oficio', 'Laeti colentes famulum', ''),
-    ('Comunes', 'Religiosos (a confirmar)', 'laudes', 'O Redemptoris pietas colenda', ''),
+    ('Comunes', 'Santos religiosos', 'visperas', 'Laeti colentes famulum', 'Vísperas y Oficio de lectura. Para una religiosa: «famulam».'),
+    ('Comunes', 'Santos religiosos', 'oficio', 'Laeti colentes famulum', ''),
+    ('Comunes', 'Santos religiosos', 'laudes', 'O Redemptoris pietas colenda', ''),
     ('Comunes', 'Oficio de difuntos', 'oficio', 'Qui vivis ante saecula', 'La estrofa 4 cambia: por un difunto, por una difunta, por varios.'),
     ('Comunes', 'Oficio de difuntos', 'laudes', 'Spes Christe nostrae veniae', 'La estrofa 4 cambia: por un difunto («Sed et qui frater»), por una difunta («Sed et quae soror»), por varios («Sed et qui fratres»).'),
     ('Comunes', 'Oficio de difuntos', 'visperas', 'Immensae rex potentiae', 'La estrofa 4 cambia: «Tuumque voca famulum», «Tuamque voca famulam», «Fratres et omnes advoca».'),
@@ -163,8 +163,17 @@ USO = [
 # Donde el libro trae otra doxología que *Te decet hymnus*, va la del libro (con tildes puestas a mano) y se anota.
 DOXOLOGIA_LIBRO = {
     'nunc-sancte-nobis-spiritus': ['Præsta, Pater piíssime,', 'Patríque compar Únice,', 'cum Spíritu Paráclito', 'regnans per omne sǽculum.'],
+    'rector-potens-verax-deus': ['Præsta, Pater piíssime,', 'Patríque compar Únice,', 'cum Spíritu Paráclito', 'regnans per omne sǽculum.'],
+    'rerum-deus-tenax-vigor': ['Præsta, Pater piíssime,', 'Patríque compar Únice,', 'cum Spíritu Paráclito', 'regnans per omne sǽculum.'],
     'veni-redemptor-gentium': ['Glória tibi, Dómine,', 'qui natus es de Vírgine,', 'cum Patre et Sancto Spíritu,', 'in sempitérna sǽcula.'],
 }
+
+# Palabras de tres sílabas o más que el corpus no trae con tilde (mayúscula inicial, o texto propio del libro): a mano
+ACENTO_MANO = {'Abrahæ': 'Ábrahæ', 'Angeli': 'Ángeli', 'Angelus': 'Ángelus', 'Assidet': 'Ássidet', 'Edomant': 'Edómant',
+               'Inclitos': 'Ínclitos', 'Inclitus': 'Ínclitus', 'Intonat': 'Íntonat', 'Omega': 'Ómega', 'Unice': 'Únice',
+               'Unitas': 'Únitas', 'damnabit': 'damnábit', 'Damnabit': 'Damnábit', 'flammarum': 'flammárum',
+               'prænites': 'prǽnites', 'turbines': 'túrbines', 'Vocabit': 'Vocábit', 'vocabit': 'vocábit',
+               'Volvamur': 'Volvámur', 'volvamur': 'volvámur', 'noxios': 'nóxios'}
 
 ESTROFA_FIJA = {'angularis-fundamentum': 6}   # estrofas de seis versos (el libro y el corpus no las separan)
 
@@ -260,7 +269,9 @@ def main():
         n3 = min(3, len(ni.split()))
         tres = lambda t: ' '.join(norm(t).split()[:n3])
         cand = [x for x in L if tres(' '.join(x[2][0])) == tres(incipit) or (incipit.startswith('A ') and tres('A ' + ' '.join(x[2][0])) == tres(incipit))]
-        cand.sort(key=lambda x: -sum(len(e) for e in x[2]))
+        # el del bloque del libro que corresponde (Adviento, Cuaresma, Común de…); si no, el más largo
+        claves = [w for w in norm(grupo + ' ' + seccion).split() if len(w) > 4 and w not in ('tiempo', 'desde', 'hasta', 'oficio', 'comunes')]
+        cand.sort(key=lambda x: (-sum(1 for w in claves if w in norm(x[0])), -sum(len(e) for e in x[2])))
         lib = cand[0] if cand else None
         lineas_libro = [l for e in lib[2] for l in e] if lib else []
         # en el corpus: por el incipit y los versos del libro
@@ -329,6 +340,17 @@ def main():
                 otra = est[-1]
                 est[-1] = DOXOLOGIA_LIBRO[clave]
                 dif = [x for x in dif if x['tipo'] not in ('texto distinto', 'variante del libro') or not set(x['corpus']) & set(ultima_corpus)] + [{'tipo': 'doxología del libro', 'libro': est[-1], 'corpus': ultima_corpus}]
+            est = [[re.sub(r"[A-Za-zÀ-ÿǼǽæœÆŒ]+", lambda m: ACENTO_MANO.get(m.group(0), m.group(0)), l) for l in e] for e in est]
+            # mayúscula solo al comienzo del himno, de una oración o de un nombre (el libro de este himno la pone en cada verso)
+            plano = [l for e in est for l in e]
+            if sum(1 for l in plano[1:] if l[:1].isupper()) > 0.8 * (len(plano) - 1):
+                prev = ''
+                for e in est:
+                    for j, l in enumerate(e):
+                        if prev and not re.search(r'[.!?]$', prev) and l[:1].isupper() and not re.match(r'(Deus|Dómin|Christ|Iesu|Pat|Fíli|Spíri|Sancte|Virgo|Marí|Trínit|Agnus|Iúdic)', l):
+                            e[j] = l[0].lower() + l[1:]
+                        prev = e[j]
+                        l = e[j]
             himnos[clave] = {
                 'incipit': cuerpo[0] if cuerpo else incipit,
                 'estrofas': est,

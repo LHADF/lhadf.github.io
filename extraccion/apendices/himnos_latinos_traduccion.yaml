@@ -1,0 +1,292 @@
+# Traducción literal de los himnos latinos (extraccion/apendices/himnos_latinos.yaml), verso por verso:
+# cada estrofa, una lista con la traducción de cada verso, en el mismo orden. Entre corchetes, lo que el castellano
+# necesita y el latín sobreentiende.
+
+# ---------------- Tiempo de Adviento ----------------
+conditor-alme-siderum:
+  - - Creador bondadoso de los astros,
+    - luz eterna de los creyentes,
+    - Cristo, redentor de todos,
+    - escucha las súplicas de los que te imploran.
+  - - Tú que, compadecido de que por la ruina
+    - de la muerte pereciera el mundo,
+    - salvaste al mundo enfermo,
+    - dando a los culpables el remedio,
+  - - al declinar la tarde del mundo,
+    - como el esposo de la cámara nupcial,
+    - saliste del honestísimo
+    - claustro de la Virgen madre.
+  - - Ante cuyo fuerte poder
+    - se doblan todas las rodillas;
+    - las cosas del cielo y de la tierra
+    - con una señal se confiesan sometidas.
+  - - A ti, Santo, con fe te pedimos,
+    - juez que has de venir al fin del mundo:
+    - guárdanos en el tiempo [presente]
+    - del dardo del enemigo pérfido.
+  - - Sea, Cristo, rey piadosísimo,
+    - a ti y al Padre la gloria
+    - con el Espíritu Paráclito
+    - por los siglos sempiternos.
+
+te-lucis-ante-terminum:
+  - - A ti, antes del término de la luz,
+    - creador de las cosas, te pedimos
+    - que, con tu acostumbrada clemencia,
+    - seas protector y custodia.
+  - - Que nuestros corazones sueñen contigo,
+    - que te sientan durante el sueño,
+    - y que siempre tu gloria
+    - canten al acercarse la luz.
+  - - Concede una vida saludable,
+    - reanima nuestro ardor,
+    - '[y que] la tenebrosa oscuridad de la noche'
+    - la ilumine tu claridad.
+  - - Concédelo, Padre omnipotente,
+    - por Jesucristo, el Señor,
+    - que contigo por siempre
+    - reina con el Espíritu Santo.
+
+verbum-supernum-prodiens:
+  - - Verbo celestial que procedes
+    - del seno del Padre eterno,
+    - que, nacido, socorres al mundo
+    - en el curso declinante del tiempo:
+  - - ilumina ahora los corazones
+    - y abrásalos con tu amor,
+    - para que el corazón, dejando lo caduco,
+    - se llene del gozo del cielo.
+  - - Para que, cuando el tribunal del Juez
+    - condene al fuego a los culpables
+    - y la voz amiga, como es debido,
+    - llame al cielo a los piadosos,
+  - - no seamos, como pasto de las llamas,
+    - arrastrados entre negros torbellinos,
+    - sino que, admitidos a [ver] el rostro de Dios,
+    - gocemos de las alegrías del cielo.
+  - - Al Padre, y a la vez al Hijo,
+    - y a ti, Espíritu Santo,
+    - como fue, sea por siempre
+    - por todos los siglos la gloria.
+
+vox-clara-ecce-intonat:
+  - - He aquí que resuena una voz clara
+    - que reprende todo lo oscuro:
+    - huyan lejos los sueños;
+    - desde lo alto resplandece Cristo.
+  - - Levántese ya la mente adormecida,
+    - que yace herida por la suciedad;
+    - brilla ya un astro nuevo,
+    - para quitar todo lo dañino.
+  - - De lo alto es enviado el Cordero
+    - para perdonar gratuitamente la deuda;
+    - todos, para [obtener] el perdón,
+    - elevemos la voz con lágrimas,
+  - - para que, cuando brille por segunda vez
+    - y el espanto rodee al mundo,
+    - no castigue [nuestra] culpa,
+    - sino que entonces, piadoso, nos proteja.
+  - - Al Padre altísimo [sea] la gloria,
+    - y al Hijo sea la victoria,
+    - y al Espíritu la alabanza debida,
+    - por los siglos de los siglos.
+
+nunc-sancte-nobis-spiritus:
+  - - Ahora, Espíritu Santo,
+    - uno con el Padre y el Hijo,
+    - dígnate, solícito, entrar en nosotros,
+    - derramado en nuestro pecho.
+  - - Boca, lengua, mente, sentidos, fuerzas
+    - hagan resonar la alabanza;
+    - inflámese en fuego la caridad,
+    - encienda su ardor a los prójimos.
+  - - Concédelo, Padre piadosísimo,
+    - y tú, Único igual al Padre,
+    - con el Espíritu Paráclito,
+    - que reinas por todos los siglos.
+
+rector-potens-verax-deus:
+  - - Gobernante poderoso, Dios veraz,
+    - que regulas las vicisitudes de las cosas,
+    - que adornas la mañana con resplandor
+    - y con fuegos el mediodía:
+  - - apaga las llamas de las discordias,
+    - quita el calor dañino,
+    - concede la salud de los cuerpos
+    - y la verdadera paz de los corazones.
+  - - Concédelo, Padre piadosísimo,
+    - y tú, Único igual al Padre,
+    - con el Espíritu Paráclito,
+    - que reinas por todos los siglos.
+
+rerum-deus-tenax-vigor:
+  - - Dios, fuerza que sostiene las cosas,
+    - que permaneces inmóvil en ti mismo
+    - y determinas los tiempos de la luz del día
+    - en su sucesión:
+  - - concede luz en la tarde,
+    - para que la vida nunca decaiga,
+    - sino que, como premio de una santa muerte,
+    - nos aguarde la gloria perenne.
+  - - Concédelo, Padre piadosísimo,
+    - y tú, Único igual al Padre,
+    - con el Espíritu Paráclito,
+    - que reinas por todos los siglos.
+
+verbum-salutis-omnium:
+  - - Al Verbo, salvación de todos,
+    - que procede de la boca del Padre,
+    - Virgen bienaventurada, recíbelo
+    - en tu seno casto, María.
+  - - A ti ahora te ilumina desde el cielo
+    - la sombra del Espíritu fecundo,
+    - para que lleves a Cristo, el Señor,
+    - el Hijo igual al Padre.
+  - - Esta es la puerta del templo sagrado,
+    - cerrada para siempre,
+    - que solo al Príncipe supremo
+    - abre los umbrales dichosos.
+  - - Prometido antiguamente por los profetas,
+    - nacido antes del lucero,
+    - el que Gabriel anuncia,
+    - el Señor desciende a la tierra.
+  - - Alégrense a una los ángeles,
+    - exulten todos los pueblos:
+    - el excelso viene humilde
+    - a salvar lo que se había perdido.
+  - - Sea, Cristo, rey piadosísimo,
+    - a ti y al Padre la gloria
+    - con el Espíritu Paráclito,
+    - por los siglos sempiternos.
+
+christe-qui-splendor-et-dies:
+  - - Cristo, que, esplendor y día,
+    - descubres las tinieblas de la noche
+    - y eres creído luz de la luz,
+    - y anuncias la luz a los bienaventurados:
+  - - te rogamos, santo Señor,
+    - que esta noche nos guardes;
+    - que nuestro descanso esté en ti,
+    - concédenos horas tranquilas.
+  - - Si a los ojos se les da el sueño,
+    - que el corazón vele siempre por ti;
+    - y con tu diestra protege
+    - a los fieles que te aman.
+  - - Defensor nuestro, míranos,
+    - reprime a los que nos acechan,
+    - gobierna a tus siervos,
+    - a los que compraste con tu sangre.
+  - - Sea, Cristo, rey piadosísimo,
+    - a ti y al Padre la gloria,
+    - con el Espíritu Paráclito,
+    - por los siglos sempiternos.
+
+veni-redemptor-gentium:
+  - - Ven, redentor de las naciones,
+    - muestra el parto de la Virgen;
+    - admírese todo el mundo:
+    - tal parto conviene a Dios.
+  - - No de semilla de varón,
+    - sino por soplo misterioso,
+    - el Verbo de Dios se hizo carne
+    - y floreció el fruto del vientre.
+  - - Se hincha el seno de la Virgen,
+    - permanece el claustro del pudor,
+    - brillan los estandartes de las virtudes,
+    - Dios habita en [su] templo.
+  - - Salga de su tálamo,
+    - el palacio real del pudor,
+    - el gigante de doble sustancia,
+    - para correr ágil su camino.
+  - - Igual al Padre eterno,
+    - cíñete el trofeo de la carne,
+    - fortaleciendo lo débil de nuestro cuerpo
+    - con tu fuerza perpetua.
+  - - Ya brilla tu pesebre
+    - y la noche exhala una luz nueva,
+    - que ninguna noche interrumpa
+    - y que brille con fe continua.
+  - - Gloria a ti, Señor,
+    - que naciste de la Virgen,
+    - con el Padre y el Espíritu Santo,
+    - por los siglos sempiternos.
+
+magnis-prophetae-vocibus:
+  - - Con grandes voces los profetas
+    - anuncian que Cristo viene,
+    - precursora de la feliz salvación,
+    - la gracia con que nos redimió.
+  - - Por eso brilla nuestra mañana
+    - y los corazones arden de alegría,
+    - cuando resuena la voz fiel,
+    - mensajera de la gloria.
+  - - Esta fue la primera venida,
+    - en la que no vino a castigar
+    - al mundo, sino a limpiar la herida,
+    - salvando lo que se había perdido.
+  - - Pero la segunda nos advierte
+    - que Cristo está a las puertas
+    - para dar coronas a los santos
+    - y abrir los reinos del cielo.
+  - - Se promete una luz eterna
+    - y se muestra un astro que salva;
+    - ya un resplandor brillantísimo
+    - nos llama al derecho de los habitantes del cielo.
+  - - A ti solo, Cristo, buscamos
+    - ver, como eres, Dios,
+    - para que esta visión sea perpetua,
+    - cántico de alabanza perenne.
+
+certum-tenentes-ordinem:
+  - - Guardando el orden establecido,
+    - pidamos con corazón piadoso,
+    - en la hora tercera del día,
+    - la gloria del poder trino,
+  - - para que seamos morada
+    - de aquel Espíritu Santo
+    - que en otro tiempo, a los apóstoles,
+    - a esta hora les fue repartido.
+  - - Avanzando con este orden,
+    - adornó todo espléndidamente
+    - el creador del reino celestial
+    - para nuestros premios eternos.
+  - - A Dios Padre sea la gloria
+    - y a su único Hijo,
+    - con el Espíritu Paráclito,
+    - por los siglos sempiternos.
+
+dicamus-laudes-domino:
+  - - Digamos alabanzas al Señor
+    - con espíritu ferviente y dispuesto;
+    - la hora sexta, que ha llegado,
+    - nos invita a orar.
+  - - Porque en ella a los fieles
+    - la gloria de la verdadera salvación,
+    - la víctima del Cordero bienaventurado,
+    - por la fuerza de la cruz les es devuelta.
+  - - Ante su luz clarísima
+    - se oscurece el mediodía;
+    - tomemos con todo el corazón
+    - la gracia de tan gran esplendor.
+  - - A Dios Padre sea la gloria
+    - y a su único Hijo,
+    - con el Espíritu Paráclito,
+    - por los siglos sempiternos.
+
+ternis-horarum-terminis:
+  - - Cumplidos tres plazos de horas,
+    - por don del Señor,
+    - al que es perfectamente trino y uno
+    - le cantamos salmos con devoción.
+  - - Guardando con corazón puro
+    - el sagrado misterio de Dios,
+    - según la regla del maestro Pedro,
+    - transmitida con la señal de salvación,
+  - - salmodiemos también nosotros con el espíritu,
+    - unidos así a los apóstoles,
+    - para que a las plantas aún débiles
+    - las dirijan con el poder de Cristo.
+  - - A Dios Padre sea la gloria
+    - y a su único Hijo,
+    - con el Espíritu Paráclito,
+    - por los siglos sempiternos.
