@@ -19,6 +19,14 @@ cuando:
     Nuestro Señor Jesucristo, Rey del Universo: {visperas: te-saeculorum-principem}
     Domingo de Pentecostés: {visperas: veni-creator-spiritus}
     Natividad del Señor: {visperas: iesu-redemptor-omnium}
+    Anunciación del Señor: {visperas2: ave-maris-stella}   # como en la Liturgia de las Horas latina (II Vísperas)
+  # Fiestas y solemnidades de la Virgen María (grado Fiesta o Solemnidad y nombre que empieza como dice «nombres»):
+  # O gloriósa Vírginum en Laudes, Ave maris stella en Vísperas (también las I). Van como opción aunque haya himno propio.
+  marianas:
+    nombres: ['Santa María, Madre de Dios', 'Bienaventurada Virgen María', 'María, Auxilio', 'Nuestra Señora', 'Visitación de la',
+      'Inmaculad', 'Asunción de la', 'Natividad de la bienaventurada', 'Santísimo Nombre de la bienaventurada', 'Presentación de la bienaventurada']
+    laudes: o-gloriosa-virginum
+    visperas: ave-maris-stella
 
 himnos:
   deus-creator-omnium:
@@ -570,4 +578,105 @@ himnos:
       - - Cum Patre = con el Padre
         - et almo Spíritu, = y el Espíritu benigno,
       - - In sempitérna sǽcula. = por los siglos eternos.
+    amen: Amen. = Amén.
+
+  o-gloriosa-virginum:
+    titulo: O gloriósa Vírginum
+    partitura: o-gloriosa-virginum.gabc
+    fuente: The Liber Usualis, 1961, p. 1314 (transcripción de Andrew Hinkley, GregoBase)
+    estrofas:
+    - - - O gloriósa = Oh gloriosa
+        - Vírginum, = entre las vírgenes,
+      - - Sublímis = excelsa
+        - 'inter sídera: = entre los astros:'
+      - - Qui te creávit, = al que te creó,
+        - párvulum = pequeñito,
+      - - Lacténte nutris = lo alimentas
+        - úbere. = con tu pecho.
+    - - - Quod Heva tristis = Lo que la triste Eva
+        - ábstulit, = quitó,
+      - - Tu reddis = tú lo devuelves
+        - 'almo gérmine: = con tu fruto bondadoso:'
+      - - Intrent ut astra = para que entren al cielo
+        - flébiles, = los que lloran,
+      - - Cæli reclúdis = del cielo abres
+        - cárdines. = las puertas.
+    - - - Tu = Tú [eres]
+        - Regis alti iánua, = la puerta del Rey excelso
+      - - Et aula = y el palacio
+        - 'lucis fúlgida: = resplandeciente de luz:'
+      - - Vitam datam = la vida dada
+        - per Vírginem, = por la Virgen,
+      - - Gentes redémptæ, = pueblos redimidos,
+        - pláudite. = aplaudid.
+    - - - Iesu, = Jesús,
+        - tibi sit glória, = a ti sea la gloria,
+      - - Qui natus es = que naciste
+        - de Vírgine, = de la Virgen,
+      - - Cum Patre = con el Padre
+        - et almo Spíritu, = y el Espíritu benigno,
+      - - In sempitérna sǽcula. = por los siglos eternos.
+    amen: Amen. = Amén.
+
+  ave-maris-stella:
+    titulo: Ave maris stella
+    partitura: ave-maris-stella.gabc
+    fuente: The Liber Usualis, 1961, p. 1259, tono de las solemnidades (transcripción de Andrew Hinkley, GregoBase)
+    # En la partitura, arriba de la primera nota; recitado, antes del himno
+    rubrica: Aquí se arrodilla.
+    estrofas:
+    - - - Ave = Salve,
+        - maris stella, = estrella del mar,
+      - - Dei Mater = Madre de Dios
+        - alma, = bondadosa,
+      - - Atque semper = y siempre
+        - Virgo, = virgen,
+      - - Felix = feliz
+        - cæli porta. = puerta del cielo.
+    - - - Sumens = Recibiendo
+        - illud Ave = aquel «Ave»
+      - - Gabriélis ore, = de la boca de Gabriel,
+      - - Funda nos = afiánzanos
+        - in pace, = en la paz,
+      - - Mutans = cambiando
+        - Hevæ nomen. = el nombre de Eva.
+    - - - Solve vincla = Desata las cadenas
+        - reis, = de los culpables,
+      - - Profer lumen = da luz
+        - 'cæcis: = a los ciegos:'
+      - - Mala nostra = nuestros males
+        - pelle, = aleja,
+      - - Bona cuncta = todos los bienes
+        - posce. = pide.
+    - - - Monstra = Muestra
+        - 'te esse matrem: = que eres madre:'
+      - - Sumat per te = reciba por ti
+        - preces, = las súplicas
+      - - Qui pro nobis = el que por nosotros
+        - natus, = nacido,
+      - - Tulit = aceptó
+        - esse tuus. = ser tuyo.
+    - - - Virgo = Virgen
+        - singuláris, = singular,
+      - - Inter omnes = entre todas
+        - mitis, = mansa,
+      - - Nos culpis = a nosotros, de culpas
+        - solútos, = libres,
+      - - Mites fac = haznos mansos
+        - et castos. = y castos.
+    - - - Vitam præsta = Concede una vida
+        - puram, = pura,
+      - - Iter para = prepara un camino
+        - 'tutum: = seguro:'
+      - - Ut vidéntes = para que, viendo
+        - Iesum, = a Jesús,
+      - - Semper = siempre
+        - collætémur. = nos alegremos juntos.
+    - - - Sit laus = Sea la alabanza
+        - Deo Patri, = a Dios Padre,
+      - - Summo Christo = a Cristo altísimo
+        - decus, = el honor,
+      - - Spirítui Sancto, = al Espíritu Santo;
+      - - Tribus = a los tres
+        - honor unus. = un solo honor.
     amen: Amen. = Amén.

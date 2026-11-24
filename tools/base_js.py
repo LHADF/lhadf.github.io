@@ -57,6 +57,28 @@ def primer_verso(g):
     return cab + '%%' + cuerpo[:i] + '\n'
 
 
+def desde_asterisco(g):
+    """Lo que canta la asamblea, en negrita: desde el primer asterisco (la entonación, no)."""
+    cab, _, cuerpo = g.partition('%%')
+    m = re.search(r'\*', re.sub(r'\([^)]*\)', lambda x: ' ' * len(x.group(0)), cuerpo))   # (el asterisco de la letra, no de las notas)
+    return negrita(g, m.start()) if m else g
+
+
+def gregoriano_propios():
+    """Antífonas propias en gregoriano (base/gregoriano/propios.yaml): las «Oh» del Magníficat y las que van en lugar del
+    responsorio breve (Christus factus est, Hæc dies). Cuándo: el comienzo del texto español de la base."""
+    P = leer(os.path.join(B, 'gregoriano', 'propios.yaml'))
+    def pieza(k, x, rep):
+        g = gabc(x['partitura'])
+        m = re.search(r'^mode:\s*(\d)', g, re.M)
+        o = {'id': k, 'titulo': x['titulo'], 'cuando': x['cuando'], 'gabc': desde_asterisco(g), 'traduccion': pares(x['traduccion']),
+             'modo': int(m.group(1)) if m else None}
+        if rep: o['repeticion'] = repeticion(g)
+        return o
+    return {'magnificat': [pieza(k, x, True) for k, x in P['magnificat'].items()],
+            'responsorio': [pieza(k, x, False) for k, x in P['responsorio'].items()]}
+
+
 def main():
     G = leer(os.path.join(B, 'gregoriano', 'completas.yaml'))
     inv, ce, co = G['invocacion'], G['cantico_evangelico'], G['conclusion']
@@ -85,6 +107,7 @@ def main():
                 'tonos': G['tonos_salmos'],
             },
         },
+        'gregoriano_propios': gregoriano_propios(),
         'marianas': leer(os.path.join(B, 'ordinario', 'antifonas-marianas.yaml')),
         'latinos_cuando': leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml')),
         'oraciones': oraciones_oficio(),
@@ -261,11 +284,12 @@ def himnos_gregorianos(hora):
     (estrofas → versos → pares «latín = español»)."""
     H = leer(os.path.join(B, 'gregoriano', 'himnos.yaml'))
     C = H['cuando']
-    tablas = [*C['ordinario'].values(), C['adviento'], *C['celebraciones'].values()]
+    M = {k: v for k, v in C['marianas'].items() if k != 'nombres'}
+    tablas = [*C['ordinario'].values(), C['adviento'], *C['celebraciones'].values(), M]
     usados = {v for t in tablas for k, v in t.items() if (k == 'laudes') == (hora == 'laudes')}
     for v in {v for t in tablas for v in t.values()}: assert v in H['himnos'], f'himnos.yaml: falta el himno «{v}»'
     himnos = {k: {'titulo': h['titulo'], 'gabc': gabc(h['partitura']), 'estrofas': [[pares(v) for v in e] for e in h['estrofas']],
-                  'amen': pares([h['amen']])[0]} for k, h in H['himnos'].items() if k in usados}
+                  'amen': pares([h['amen']])[0], **({'rubrica': h['rubrica']} if h.get('rubrica') else {})} for k, h in H['himnos'].items() if k in usados}
     return {'cuando': C, 'himnos': himnos}
 
 

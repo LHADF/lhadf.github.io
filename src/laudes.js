@@ -142,14 +142,17 @@ function propio(hora, fecha, region){
 function himnoGregoriano(hora, ref, primeras, GH){
   if(!GH || !ref) return null;
   const C=GH.cuando, dom=ref.dom && ref.n===ref.fer;
+  // Fiestas y solemnidades de la Virgen María: O gloriósa Vírginum (Laudes) y Ave maris stella (Vísperas, también las I)
+  const mariana = C.marianas && /^(Fiesta|Solemnidad)/.test(ref.g||'') && C.marianas.nombres.some(x=>String(ref.n||'').startsWith(x));
   const t = C.celebraciones[ref.n]
+    || (mariana ? C.marianas : null)
     || (dom && ref.t==='Ordinario' && ref.sal ? C.ordinario[ref.sal%2 ? 'semanas_1_3' : 'semanas_2_4'] : null)
     || (dom && ref.t==='Adviento' ? C.adviento : null);
   if(!t) return null;
   const k = hora==='laudes' ? t.laudes : (t[primeras?'visperas1':'visperas2'] || t.visperas);
   const H = k && GH.himnos[k]; if(!H) return null;
   const ult=H.estrofas.length-1;
-  return {id:'greg', n:H.titulo, lang:'la', gabc:H.gabc, glosa:H.estrofas.flat(2).concat([H.amen]),
+  return {id:'greg', n:H.titulo, lang:'la', gabc:H.gabc, glosa:H.estrofas.flat(2).concat([H.amen]), ...(H.rubrica?{rubGreg:H.rubrica}:{}),
           rec:H.estrofas.map((e,i)=>{ const vs=i===ult?e.concat([[H.amen]]):e; return {rol:'', todos:false, pares:vs.flat(), versos:vs}; })};
 }
 
@@ -225,7 +228,7 @@ function armar(hora, fecha, region){
 
   if(P.en_lugar_del_responsorio){
     sec('responsorio','En lugar del responsorio breve');
-    S.push({k:'ant', id:'rb', es:true, n:'Ant.', t:{es:P.en_lugar_del_responsorio}});
+    S.push({k:'ant', id:'rb', es:true, n:'Ant.', t:{es:P.en_lugar_del_responsorio}, ...(X.gregPropio('responsorio', P.en_lugar_del_responsorio)||{})});
   } else {
     sec('responsorio','Responsorio breve');
     S.push({k:'resp', es:true, l:{es:pas ? X.sinGloriaResp(P.responsorio) : P.responsorio}});
@@ -233,9 +236,11 @@ function armar(hora, fecha, region){
 
   sec('cantico','Cántico evangélico',{ref:GL.cantico.ref});
   const BN=GL.cantico;
-  S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}});
+  // Antífonas «Oh» (Vísperas, 17 al 23 de diciembre): cantadas, en gregoriano (modo 2), y el Magníficat en 2 D
+  const AG=!LAU && X.gregPropio('magnificat', P.ant_magnificat);
+  S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}, ...(AG||{})});
   const bnv=pas ? BN.versos.filter(v=>!X.esGloriaLa(v)) : BN.versos, bni=pas&&BN.traduccion_versos ? BN.traduccion_versos.filter((x,i)=>!X.esGloriaLa(BN.versos[i])) : BN.traduccion_versos;
-  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo, titulo:BN.titulo, versos:bnv, inter:bni});
+  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo:AG&&AG.modoGreg===2 ? '2D' : modo, titulo:BN.titulo, versos:bnv, inter:bni});
   if(pas) S.push({k:'rub', t:X.NO_GLORIA});
   S.push({k:'ant', rep:'ab', es:true});
 

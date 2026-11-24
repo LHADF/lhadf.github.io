@@ -378,6 +378,14 @@ function recInvocacion(trInv){
   rec[2].versos=enLineas(rec[2].pares, B.completas.gregoriano.invocacion.cortes_gloria);
   return rec;
 }
+// Antífona propia en gregoriano (base/gregoriano/propios.yaml) para un texto español de la base: la de «cuando» más larga
+// con que empieza el texto. tipo: 'magnificat' (antífonas «Oh») o 'responsorio' (en lugar del responsorio breve).
+// Va solo cantada (soloCanto): recitado, el texto español. Devuelve los campos para la sección {k:'ant'}.
+function gregPropio(tipo, texto){
+  const L=(B.gregoriano_propios||{})[tipo]||[], t=String(texto||'').trim();
+  const p=L.filter(x=>t.startsWith(x.cuando)).sort((a,b)=>b.cuando.length-a.cuando.length)[0];
+  return p ? {gabc:p.gabc, gabcRep:p.repeticion||null, glosa:p.traduccion, soloCanto:true, modoGreg:p.modo, greg:p.id} : null;
+}
 function salvaNosGabc(pascua, repeticion){
   // repetición: la canta toda la asamblea (en negrita) y sin asterisco
   let g=B.completas.gregoriano.antifona[repeticion?'repeticion':'gabc'].replace(/\s*(<b>)?<eu>.*$/s,'');
@@ -469,7 +477,7 @@ function armar(fecha, region){
 
   if(el.especial){
     sec('responsorio','En lugar del responsorio breve');
-    S.push({k:'ant', id:'rb', es:true, n:'Ant.', t:{es:el.especial.en_lugar_del_responsorio}});
+    S.push({k:'ant', id:'rb', es:true, n:'Ant.', t:{es:el.especial.en_lugar_del_responsorio}, ...(gregPropio('responsorio', el.especial.en_lugar_del_responsorio)||{})});
   } else {
     sec('responsorio','Responsorio breve');
     const rg = pascua ? null : GR.responsorio.ordinario;   // cantado: por ahora, el del Tiempo Ordinario
@@ -788,5 +796,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

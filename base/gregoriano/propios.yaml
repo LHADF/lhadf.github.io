@@ -1,0 +1,220 @@
+# Antífonas propias en gregoriano para Laudes, Vísperas y Completas (transcripciones de Andrew Hinkley en GregoBase, del
+# Liber Usualis, el Liber antiphonarius y el Graduale Romanum de 1961; latín normalizado con i y æ, «Israël» con diéresis).
+# Van cuando la hora se canta («Cantado»), en lugar del texto español de la base; recitado, va el español de la base.
+# cuando: el comienzo del texto español de la base al que acompañan (si coinciden varios, el más largo).
+# Lo que canta la asamblea, en negrita: desde el asterisco (la entonación, no); en la repetición, todo y sin asterisco.
+# Traducción interlineal literal, palabra por palabra (la preposición, con la palabra que sigue).
+
+# Antífonas «Oh» del Magníficat (17 al 23 de diciembre). Son del modo 2: cantadas, el Magníficat va en 2 D.
+# Falta O Emmanuel (23 de diciembre): mientras, va la antífona en español.
+magnificat:
+  o-sapientia:
+    titulo: O Sapiéntia
+    partitura: o-sapientia.gabc
+    cuando: Oh Sabiduría
+    traduccion:
+      - O Sapiéntia, = Oh Sabiduría,
+      - quæ = que
+      - ex ore = de la boca
+      - Altíssimi = del Altísimo
+      - prodísti, = saliste,
+      - attíngens = alcanzando
+      - a fine = de un extremo
+      - usque ad finem, = hasta el otro extremo,
+      - fórtiter = con fuerza
+      - suáviter = con suavidad
+      - disponénsque = y disponiendo
+      - 'ómnia: = todas las cosas:'
+      - veni = ven
+      - ad docéndum = a enseñar
+      - nos = nos
+      - viam = el camino
+      - prudéntiæ. = de la prudencia.
+  o-adonai:
+    titulo: O Adonái
+    partitura: o-adonai.gabc
+    cuando: Oh Adonai
+    traduccion:
+      - O Adonái, = Oh Adonai,
+      - et Dux = y Guía
+      - domus = de la casa
+      - Israël, = de Israel,
+      - qui = que
+      - Móysi = a Moisés
+      - in igne = en el fuego
+      - flammæ = de la llama
+      - rubi = de la zarza
+      - apparuísti, = te apareciste,
+      - et = y
+      - ei = le
+      - in Sina = en el Sinaí
+      - legem = la ley
+      - 'dedísti: = diste:'
+      - veni = ven
+      - ad rediméndum = a redimir
+      - nos = nos
+      - in bráchio = con brazo
+      - exténto. = extendido.
+  o-radix-iesse:
+    titulo: O Radix Iesse
+    partitura: o-radix-iesse.gabc
+    cuando: Oh renuevo del tronco de Jesé
+    traduccion:
+      - O Radix = Oh Raíz
+      - Iesse, = de Jesé,
+      - qui = que
+      - stas = estás
+      - in signum = como estandarte
+      - populórum, = de los pueblos,
+      - super quem = ante quien
+      - continébunt = cerrarán
+      - reges = los reyes
+      - os = la boca
+      - suum, = suya,
+      - quem = a quien
+      - gentes = las naciones
+      - 'deprecabúntur: = suplicarán:'
+      - veni = ven
+      - ad liberándum = a librar
+      - nos, = nos,
+      - iam = ya
+      - noli = no quieras
+      - tardáre. = tardar.
+  o-clavis-david:
+    titulo: O Clavis David
+    partitura: o-clavis-david.gabc
+    cuando: Oh llave de David
+    traduccion:
+      - O Clavis = Oh Llave
+      - David, = de David,
+      - et sceptrum = y cetro
+      - domus = de la casa
+      - 'Israël: = de Israel:'
+      - qui = que
+      - áperis, = abres,
+      - et = y
+      - nemo = nadie
+      - claudit; = cierra;
+      - claudis, = cierras,
+      - et = y
+      - nemo = nadie
+      - 'áperit: = abre:'
+      - veni, = ven,
+      - et = y
+      - educ = saca
+      - vinctum = al cautivo
+      - de domo = de la casa
+      - cárceris, = de la cárcel,
+      - sedéntem = sentado
+      - in ténebris = en tinieblas
+      - et = y
+      - umbra = sombra
+      - mortis. = de muerte.
+  o-oriens:
+    titulo: O Óriens
+    partitura: o-oriens.gabc
+    cuando: Oh sol que naces de lo alto
+    traduccion:
+      - O Óriens, = Oh Oriente,
+      - splendor = resplandor
+      - lucis = de la luz
+      - ætérnæ, = eterna,
+      - et sol = y sol
+      - 'iustítiæ: = de justicia:'
+      - veni, = ven,
+      - et = e
+      - illúmina = ilumina
+      - sedéntes = a los sentados
+      - in ténebris = en tinieblas
+      - et = y
+      - umbra = sombra
+      - mortis. = de muerte.
+  o-rex-gentium:
+    titulo: O Rex géntium
+    partitura: o-rex-gentium.gabc
+    cuando: Oh Rey de las naciones
+    traduccion:
+      - O Rex = Oh Rey
+      - géntium, = de las naciones,
+      - et desiderátus = y deseado
+      - eárum, = de ellas,
+      - lapísque = y piedra
+      - anguláris, = angular,
+      - qui = que
+      - facis = haces
+      - útraque = de ambos
+      - 'unum: = uno:'
+      - veni, = ven,
+      - et = y
+      - salva = salva
+      - hóminem, = al hombre,
+      - quem = al que
+      - de limo = del barro
+      - formásti. = formaste.
+
+# En lugar del responsorio breve: Christus factus est (Triduo pascual, gradual del Jueves Santo; cada día añade su parte,
+# como la antífona española) y Hæc dies (octava de Pascua: solo el responsorio del gradual, sin el versículo Confitémini).
+responsorio:
+  christus-factus-est-1:
+    titulo: Christus factus est
+    partitura: christus-factus-est-1.gabc
+    cuando: Cristo, por nosotros, se sometió incluso a la muerte.
+    traduccion:
+      - Christus = Cristo
+      - factus est = se hizo
+      - pro nobis = por nosotros
+      - obédiens = obediente
+      - usque ad mortem. = hasta la muerte.
+  christus-factus-est-2:
+    titulo: Christus factus est
+    partitura: christus-factus-est-2.gabc
+    cuando: Cristo, por nosotros, se sometió incluso a la muerte, y una muerte de cruz.
+    traduccion:
+      - Christus = Cristo
+      - factus est = se hizo
+      - pro nobis = por nosotros
+      - obédiens = obediente
+      - usque ad mortem, = hasta la muerte,
+      - mortem = muerte
+      - autem = y
+      - crucis. = de cruz.
+  christus-factus-est-3:
+    titulo: Christus factus est
+    partitura: christus-factus-est-3.gabc
+    cuando: Cristo, por nosotros, se sometió incluso a la muerte, y una muerte de cruz; por eso
+    traduccion:
+      - Christus = Cristo
+      - factus est = se hizo
+      - pro nobis = por nosotros
+      - obédiens = obediente
+      - usque ad mortem, = hasta la muerte,
+      - mortem = muerte
+      - autem = y
+      - crucis. = de cruz.
+      - Propter quod = Por lo cual
+      - et = también
+      - Deus = Dios
+      - exaltávit = exaltó
+      - illum, = a él,
+      - et = y
+      - dedit = dio
+      - illi = le
+      - nomen, = un nombre
+      - quod = que
+      - est = está
+      - super omne = sobre todo
+      - nomen. = nombre.
+  haec-dies:
+    titulo: Hæc dies
+    partitura: haec-dies.gabc
+    cuando: 'Éste es el día en que actuó el Señor'
+    traduccion:
+      - Hæc = Este [es el]
+      - dies, = día,
+      - quam = que
+      - fecit = hizo
+      - 'Dóminus: = el Señor:'
+      - exsultémus = exultemos
+      - et = y
+      - lætémur = alegrémonos
+      - in ea. = en él.

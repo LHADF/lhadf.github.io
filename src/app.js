@@ -448,7 +448,8 @@ function prosaHTML(o, amen, extra, il){
 function antHTML(sec){
   const a=sec.rep?antDe(sec.rep):sec; if(!a) return '';
   if(!CANTA() && a.rec) return recitadoHTML(a.rec,'ant');
-  if(S.canto && S.antGreg && a.gabc) return `<div class="ant-greg">${partituraHTML(a.gabc, a.glosa)}</div>`;
+  // soloCanto: antífona propia en gregoriano (propios.yaml) que va si se canta; recitado, el texto español. Repetida: la de toda la asamblea
+  if(S.canto && S.antGreg && a.gabc && (CANTA() || !a.soloCanto)) return `<div class="ant-greg">${partituraHTML(sec.rep && a.gabcRep ? a.gabcRep : a.gabc, a.glosa)}</div>`;
   if(BI() && a.il) return `<div class="ant il"><p><span class="n">${esc(a.n||'Ant.')}</span> ${interHTML(a.il)}</p></div>`;
   const t=txt(a.t), cruz=!sec.rep && cruzVale(a), tp=t.p.replace(CRUZ_ANT,'');   // la † solo la primera vez, si vale
   return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${a.es?'<b>':''}${marcas(tp.replace(/ \* /,' '))}${a.es?'</b>':''}${cruz?'&nbsp;<span class="sg">†</span>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
@@ -490,8 +491,9 @@ function himnoHTML(sec){
     return h+`<div class="himno lat${num?'':' sin-num'}">`+o.est.map((e,ie)=>`<p class="est">${num?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${gl(o.lit[ie][il])}`).join('')}</p>`).join('')
       +(o.amen?`<p class="est amen-fin"><b>${esc(o.amen)}</b>${gl('Amén.')}</p>`:'')+'</div>'+(o.rub?`<p class="rub">${esc(o.rub)}</p>`:'');
   }
-  if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'estrofas');
-  if(S.canto && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
+  // rubGreg: rúbrica del himno gregoriano (Ave maris stella: «Aquí se arrodilla.»); cantado, arriba de la primera nota
+  if(!CANTA() && o.rec) return h+(o.rubGreg?`<p class="rub">${esc(o.rubGreg)}</p>`:'')+recitadoHTML(o.rec,'estrofas');
+  if(S.canto && o.gabc) return h+partituraHTML(o.rubGreg ? o.gabc.replace(/(%%[\s\S]*?\)\s*)(\S)/, (m,a,b)=>a+'<alt>¶'+o.rubGreg+'</alt>'+b) : o.gabc, S.trad?o.glosa:null);
   // Traducción anclada: cada par se ubica en la línea donde aparece su primera palabra latina, en orden
   const glosaLineas=(est,pares)=>{
     const pos=[]; est.forEach((e,ie)=>e.forEach((l,il)=>l.split(/\s+/).forEach(w=>{ const n=normPal(w); if(n) pos.push({n,ie,il}); })));

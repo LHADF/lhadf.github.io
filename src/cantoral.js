@@ -34,7 +34,8 @@ function gabcParaExsurge(g){
     .replace(/<\/?i>/g,'_')
     .replace(/(\)\s+(?:\([^)]*\))*)(\s*[^(^|]+)(?=\(\))/g,'$1^$2^')
     .replace(/\\hspace{[^}]*}/g,'')
-    .replace(/(?:\(Z\)\s*)?<alt>(.*?)<\/alt>/gi,'')
+    .replace(/(?:\(Z\)\s*)?<alt>(?!¶)(.*?)<\/alt>/gi,'')                 // rúbricas latinas del libro: no van
+    .replace(/<alt>¶(.*?)<\/alt>/g,'<alt>^$1^</alt>')                      // rúbrica propia (¶…): arriba del pentagrama, en rojo
     .replace(/<\/?eu>|\[[ou]ll:[01]?[{}][01]?\]/ig,'')
     .replace(/<\/?c>/g,'')
     .replace(/<sp>'?(ae|æ)<\/sp>/g,'ǽ').replace(/<sp>'?(oe|œ)<\/sp>/g,'œ')

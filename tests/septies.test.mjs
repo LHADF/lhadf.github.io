@@ -575,14 +575,23 @@ test('himnos gregorianos de Laudes y Vísperas: opción después del himno en es
   assert.equal(hg(VI, '2027-05-15'), 'Veni Creátor Spíritus');          // Pentecostés
   assert.equal(hg(VI, '2027-05-16'), 'Veni Creátor Spíritus');
   assert.equal(hg(LA, '2026-11-10'), '');                               // ferias: solo el himno en español
-  assert.equal(hg(LA, '2027-01-24'), '');                               // domingo reemplazado por una solemnidad
+  assert.equal(hg(LA, '2027-01-24'), 'O gloriósa Vírginum');            // domingo reemplazado por una solemnidad de la Virgen
+  // Fiestas y solemnidades de la Virgen María: O gloriósa Vírginum en Laudes, Ave maris stella en Vísperas (también las I)
+  assert.equal(hg(LA, '2026-12-08'), 'O gloriósa Vírginum');            // Inmaculada (con himno propio en español)
+  assert.equal(hg(VI, '2026-12-07'), 'Ave maris stella');               // I Vísperas de la Inmaculada
+  assert.equal(hg(VI, '2026-12-08'), 'Ave maris stella');
+  assert.equal(hg(VI, '2027-05-31'), 'Ave maris stella');               // Visitación (fiesta)
+  assert.equal(hg(LA, '2027-08-15'), 'O gloriósa Vírginum');            // Asunción
+  assert.equal(hg(VI, '2026-03-25'), 'Ave maris stella');               // Anunciación: II Vísperas
+  assert.equal(hg(LA, '2026-03-25'), '');
+  assert.equal(hg(LA, '2027-02-02'), '');                               // Presentación del Señor: no
 });
 
 test('himnos gregorianos: latín con i y tildes; la traducción por frases cubre la partitura', () => {
   const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
   const pal = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>|\[[^\]]*\]|[{}]/g, '').split(/\s+/).map(norm).filter(Boolean).join(' ');
   const H = { ...LD.gregoriano.himnos.himnos, ...ctx.window.VISPERAS.gregoriano.himnos.himnos };
-  assert.equal(Object.keys(H).length, 11);
+  assert.equal(Object.keys(H).length, 13);
   for (const [k, h] of Object.entries(H)) {
     const pares = h.estrofas.flat(2).concat([h.amen]);
     assert.equal(pares.flatMap(p => p[0].split(/\s+/)).map(norm).join(' '), pal(h.gabc), k);
@@ -737,4 +746,35 @@ test('himnos latinos: opción recitada después del español y del gregoriano, d
     assert.equal(n(LA, '2027-06-15'), 'Spes, Christe, nostræ véniæ / Spes, Christe, nostræ véniæ (una difunta) / Spes, Christe, nostræ véniæ (varios difuntos)');
     assert.ok(/Tercia, estrofas 1, 4 y 5/.test(lat(W.Tercia, '2027-06-15')[0].rub));
   } finally { X.modo.difuntos = false; }
+});
+
+// ---------- Antífonas propias en gregoriano (base/gregoriano/propios.yaml) ----------
+test('antífonas «Oh» y en lugar del responsorio: en gregoriano si se canta, con traducción y latín con i', () => {
+  const sec = (A, f, id) => A.armar(f, 'ARG').secciones.find(s => s.id === id);
+  const oh = { '2026-12-17': 'o-sapientia', '2026-12-18': 'o-adonai', '2026-12-19': 'o-radix-iesse', '2026-12-20': 'o-clavis-david',
+    '2026-12-21': 'o-oriens', '2026-12-22': 'o-rex-gentium', '2026-12-23': undefined };   // falta O Emmanuel
+  for (const [f, k] of Object.entries(oh)) {
+    const a = sec(VI, f, 'ab'), c = VI.armar(f, 'ARG').secciones.find(s => s.k === 'cantico');
+    assert.equal(a.greg, k, f); assert.ok(/^Oh /.test(a.t.es), f);              // el español sigue para el recitado
+    if (k) { assert.ok(a.soloCanto && a.glosa.length && /\(::\)\s*$/.test(a.gabc) && !/<eu>/.test(a.gabc)); assert.equal(c.modo, '2D', f);
+             assert.ok(/<b>/.test(a.gabc.split('*')[1]) && !/<b>/.test(a.gabc.split('*')[0].split('%%')[1]), 'negrita desde el asterisco');
+             assert.ok(!/\*/.test(letra(a.gabcRep)) && /<b>Sa<\/b>|<b>/.test(a.gabcRep), 'repetición sin asterisco'); }
+  }
+  assert.equal(sec(LA, '2026-12-17', 'ab').greg, undefined);                  // Laudes: el Benedictus, en español
+  const rb = { 'VI:2027-03-25': 'christus-factus-est-1', 'LA:2027-03-26': 'christus-factus-est-2', 'VI:2027-03-26': 'christus-factus-est-2',
+    'LA:2027-03-27': 'christus-factus-est-3', 'VI:2027-03-27': 'christus-factus-est-3', 'LA:2027-03-29': 'haec-dies', 'VI:2027-04-03': 'haec-dies' };
+  for (const [hf, k] of Object.entries(rb)) { const [h, f] = hf.split(':'); assert.equal(sec(h === 'LA' ? LA : VI, f, 'rb').greg, k, hf); }
+  for (const [f, k] of [['2027-03-25', 'christus-factus-est-1'], ['2027-03-26', 'christus-factus-est-2'], ['2027-03-27', 'christus-factus-est-3'], ['2027-03-30', 'haec-dies']])
+    assert.equal(CP.armar(f, 'ARG').secciones.find(s => s.id === 'rb').greg, k, 'Completas ' + f);
+  assert.ok(!/Confit/.test(sec(LA, '2027-03-29', 'rb').gabc));                // Hæc dies sin el versículo
+  // la traducción cubre la partitura, palabra por palabra
+  const norm = w => w.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-zæœ]/g, '');
+  const pal = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>|\[[^\]]*\]|[{}*]/g, '').replace(/[VR]\/\./g, '').split(/\s+/).map(norm).filter(Boolean).join(' ');
+  const P = B.gregoriano_propios;
+  for (const p of [...P.magnificat, ...P.responsorio]) {
+    assert.equal(p.traduccion.flatMap(x => x[0].split(/\s+/)).map(norm).filter(Boolean).join(' '), pal(p.gabc), p.id);
+    assert.ok(!/[jJ]/.test(letra(p.gabc)), p.id);
+    const sinTilde = palabrasGabc(p.gabc).filter(([w, n]) => n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́ë]/.test(w)).map(x => x[0]);
+    assert.deepEqual(sinTilde, [], p.id);
+  }
 });
