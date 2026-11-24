@@ -57,7 +57,7 @@ const letra = g => g.split('%%')[1].replace(/\([^)]*\)/g, '').replace(/<[^>]+>/g
 test('latín de las partituras: i, no j', () => {
   const G = B.completas.gregoriano;
   for (const g of [G.invocacion.solemne, G.invocacion.festivo, G.invocacion.ferial, G.antifona.gabc, G.cantico.gabc, G.conclusion.gabc])
-    assert.ok(!/[jJ]/.test(letra(g)), letra(g).slice(0, 40));
+    { assert.ok(!/[jJ]/.test(letra(g)), letra(g).slice(0, 40)); assert.ok(!/ë/.test(letra(g)), 'sin diéresis'); }
 });
 
 test('toda partitura latina lleva traducción', () => {
@@ -101,7 +101,7 @@ test('Completas: oración de solemnidad, Cuaresma sin aleluya, Pascua con aleluy
   assert.ok(ALS.test(ant('2027-04-15')) && !ALS.test(ant('2026-11-05')));
 });
 
-// Latín de las partituras: tilde en las palabras de tres sílabas o más (salvo nombres con diéresis, como Israël)
+// Latín de las partituras: tilde en las palabras de tres sílabas o más («Ísrael», con tilde: sin diéresis)
 const palabrasGabc = g => {
   const c = g.split('%%')[1].replace(/<alt>.*?<\/alt>|<eu>.*?<\/eu>/gs, '').replace(/<[^>]+>|\[[^\]]*\]|[{}]/g, '');
   const out = []; let cur = '', n = 0;
@@ -119,7 +119,7 @@ test('latín de las partituras: tildes en palabras de 3 sílabas o más', () => 
     ...Object.values(G.responsorio).map(x => x.gabc), ...Object.values(G.marianas).map(x => x.gabc)];
   const faltan = [];
   for (const g of todas) for (const [w, n] of palabrasGabc(g))
-    if (n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́ë]/.test(w)) faltan.push(w);
+    if (n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́]/.test(w)) faltan.push(w);
   assert.deepEqual(faltan, []);
 });
 
@@ -598,7 +598,7 @@ test('himnos gregorianos: latín con i y tildes; la traducción por frases cubre
     assert.ok(pares.every(p => p[0] && p[1]), k);
     assert.ok(!/[jJ]/.test(letra(h.gabc)), k);
     assert.ok(!/aleluya/i.test(JSON.stringify(h)), k);
-    const sinTilde = palabrasGabc(h.gabc).filter(([w, n]) => n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́ë]/.test(w)).map(x => x[0]);
+    const sinTilde = palabrasGabc(h.gabc).filter(([w, n]) => n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́]/.test(w)).map(x => x[0]);
     assert.deepEqual(sinTilde, [], k);
     assert.ok(h.estrofas.every(e => e.length === 4), k);                 // cuatro versos por estrofa (la versión recitada)
   }
@@ -774,7 +774,8 @@ test('antífonas «Oh» y en lugar del responsorio: en gregoriano si se canta, c
   for (const p of [...P.magnificat, ...P.responsorio]) {
     assert.equal(p.traduccion.flatMap(x => x[0].split(/\s+/)).map(norm).filter(Boolean).join(' '), pal(p.gabc), p.id);
     assert.ok(!/[jJ]/.test(letra(p.gabc)), p.id);
-    const sinTilde = palabrasGabc(p.gabc).filter(([w, n]) => n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́ë]/.test(w)).map(x => x[0]);
+    assert.ok(!/ë/.test(letra(p.gabc)), p.id);                                // «Ísrael», sin diéresis
+    const sinTilde = palabrasGabc(p.gabc).filter(([w, n]) => n >= 3 && !/[áéíóúýǽÁÉÍÓÚÝǼ́]/.test(w)).map(x => x[0]);
     assert.deepEqual(sinTilde, [], p.id);
   }
 });
