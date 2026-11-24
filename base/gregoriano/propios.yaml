@@ -6,7 +6,6 @@
 # Traducción interlineal literal, palabra por palabra (la preposición, con la palabra que sigue).
 
 # Antífonas «Oh» del Magníficat (17 al 23 de diciembre). Son del modo 2: cantadas, el Magníficat va en 2 D.
-# Falta O Emmanuel (23 de diciembre): mientras, va la antífona en español.
 magnificat:
   o-sapientia:
     titulo: O Sapiéntia
@@ -151,6 +150,25 @@ magnificat:
       - quem = al que
       - de limo = del barro
       - formásti. = formaste.
+  o-emmanuel:
+    titulo: O Emmánuel
+    partitura: o-emmanuel.gabc
+    cuando: Oh Emmanuel
+    traduccion:
+      - O Emmánuel, = Oh Emmanuel,
+      - Rex = Rey
+      - et légifer = y legislador
+      - noster, = nuestro,
+      - exspectátio = esperanza
+      - géntium, = de las naciones,
+      - et Salvátor = y Salvador
+      - 'eárum: = de ellas:'
+      - veni = ven
+      - ad salvándum = a salvar
+      - nos, = nos,
+      - Dómine = Señor
+      - Deus = Dios
+      - noster. = nuestro.
 
 # En lugar del responsorio breve: Christus factus est (Triduo pascual, gradual del Jueves Santo; cada día añade su parte,
 # como la antífona española) y Hæc dies (octava de Pascua: solo el responsorio del gradual, sin el versículo Confitémini).

@@ -752,7 +752,7 @@ test('himnos latinos: opción recitada después del español y del gregoriano, d
 test('antífonas «Oh» y en lugar del responsorio: en gregoriano si se canta, con traducción y latín con i', () => {
   const sec = (A, f, id) => A.armar(f, 'ARG').secciones.find(s => s.id === id);
   const oh = { '2026-12-17': 'o-sapientia', '2026-12-18': 'o-adonai', '2026-12-19': 'o-radix-iesse', '2026-12-20': 'o-clavis-david',
-    '2026-12-21': 'o-oriens', '2026-12-22': 'o-rex-gentium', '2026-12-23': undefined };   // falta O Emmanuel
+    '2026-12-21': 'o-oriens', '2026-12-22': 'o-rex-gentium', '2026-12-23': 'o-emmanuel' };
   for (const [f, k] of Object.entries(oh)) {
     const a = sec(VI, f, 'ab'), c = VI.armar(f, 'ARG').secciones.find(s => s.k === 'cantico');
     assert.equal(a.greg, k, f); assert.ok(/^Oh /.test(a.t.es), f);              // el español sigue para el recitado
