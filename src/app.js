@@ -309,8 +309,10 @@ function salmoHTML(sal){
   }
   // antífona con †: lo que repite la antífona, en gris y sin cantar; la entonación, en el primer verso entero que sigue
   const aS=sal.es && keyP==='es' && antDe(sal.ant), om=aS ? omitirAnt(vP, txt(aS.t).p) : null;
-  // la entonación: en el primer verso; con antífona igual al comienzo, en el siguiente; sin entonación si la base lo dice (Ef 1, «Bendito sea Dios», CRU)
-  const ent=om ? om.ent : (sal.sinEnt ? -1 : 0), np=(om && om.ent) ? 2 : 1;
+  // la entonación: en el primer verso; sin entonación si la base lo dice (Ef 1, «Bendito sea Dios», CRU).
+  // Si la antífona repite el comienzo del primer verso (hasta la flexa o el metro), lo que queda va solo en la partitura,
+  // sin entonación (directo a la cuerda), y el verso siguiente tampoco la lleva (CRU, 24/11/2026)
+  const ent=om ? (om.ent ? -1 : 0) : (sal.sinEnt ? -1 : 0), np=1;
   if(om) h+=`<div class="versos omit" title="Lo dice la antífona">${om.gris.map(v=>`<p class="v">${lineasVerso(v,'texto').map((l,k)=>`<span class="${claseRenglon(l,k)}">${sinSigue(l)}</span>`).join('')}</p>`).join('')}</div>`;
   // partitura
   let todos=(om?om.versos:vP).concat(sal.gloria?glP:[]);
