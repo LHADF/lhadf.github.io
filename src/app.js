@@ -757,12 +757,14 @@ function hojaCalendario(){
                : `<button disabled aria-label="${d}"><span class="num">${d}</span></button>`;
   }
   const antes=CP.enRango(CP.masDias(`${mes}-01`,-1)), despues=CP.enRango(`${m===12?y+1:y}-${pad(m===12?1:m+1)}-01`);
-  hoja('Calendario', `<div class="calmes">
+  const cuerpo=`<div class="calmes">
     <div class="calmes-h"><button class="iconbtn" data-act="calmes" data-v="-1" aria-label="Mes anterior" ${antes?'':'disabled'}>‹</button><h3>${M[m-1][0].toUpperCase()+M[m-1].slice(1)} ${y}</h3><button class="iconbtn" data-act="calmes" data-v="1" aria-label="Mes siguiente" ${despues?'':'disabled'}>›</button></div>
     <div class="calmes-s" aria-hidden="true"><span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span></div>
     <div class="calmes-g">${celdas}</div>
     ${mes!==hoy.slice(0,7)?'<button class="discreto" data-act="calhoy">Volver a este mes</button>':''}
-  </div>`);
+  </div>`;
+  // ya abierto: se cambia solo el mes, sin volver a abrir la hoja
+  const b=$('#capa .sheet-b'); if(b && b.querySelector('.calmes')) b.innerHTML=cuerpo; else hoja('Calendario', cuerpo);
 }
 // Vísperas del día: I Vísperas (sábados y vísperas de solemnidad), II Vísperas (domingos y solemnidades) o Vísperas
 function nombreVisperas(){
@@ -904,6 +906,41 @@ document.addEventListener('change',e=>{
   const lim=CP.masDias(fechaHoy(),-7); for(const c of Object.keys(S.tonos)) if(c.slice(0,10)<lim) delete S.tonos[c];
   guardar(); refrescarHoja(); toast(SAL.etiquetaTono(v)+(v===sel.dataset.def?' (el del día)':''));
 });
+/* Deslizar el dedo: sobre la tarjeta del día, al día anterior o siguiente; en el calendario, al mes anterior o siguiente
+   (como las flechas). Hacia la izquierda, el siguiente. Solo gestos claramente horizontales: el desplazamiento vertical sigue igual. */
+function moverDia(n){
+  const f=CP.masDias(S.fecha,n);
+  if(!CP.enRango(f)){ toast('Fuera del calendario cargado'); return false; }
+  S.fecha=f; cargarDia(); render(); return true;
+}
+function moverMes(n){
+  const b=$(`#capa [data-act="calmes"][data-v="${n}"]`); if(b && b.disabled) return false;
+  const [y,m]=_calMes.slice(0,7).split('-').map(Number), d=new Date(y,m-1+n,1);
+  _calMes=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-01`; hojaCalendario(); return true;
+}
+function entrar(el, n){
+  if(!el || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  el.classList.remove('entra-sig','entra-ant'); void el.offsetWidth; el.classList.add(n>0?'entra-sig':'entra-ant');
+}
+let _toque=null, _deslizo=0;
+document.addEventListener('touchstart',e=>{
+  _toque=null;
+  if(e.touches.length!==1) return;
+  const z=e.target.closest('.portada .dia, #capa .calmes'); if(!z) return;
+  const t=e.touches[0]; _toque={x:t.clientX, y:t.clientY, t:Date.now(), mes:z.classList.contains('calmes')};
+},{passive:true});
+document.addEventListener('touchend',e=>{
+  const q=_toque; _toque=null; if(!q) return;
+  const t=e.changedTouches[0], dx=t.clientX-q.x, dy=t.clientY-q.y;
+  if(Math.abs(dx)<50 || Math.abs(dx)<1.5*Math.abs(dy) || Date.now()-q.t>800) return;
+  const n=dx<0?1:-1; _deslizo=Date.now();
+  if(q.mes){ if(moverMes(n)) entrar($('#capa .calmes-g'), n); }
+  else if(moverDia(n)) entrar($('.portada .dia'), n);
+},{passive:true});
+document.addEventListener('touchcancel',()=>{ _toque=null; },{passive:true});
+// el toque con que termina un deslizamiento no abre lo que había debajo (un día del calendario, la síntesis biográfica)
+document.addEventListener('click',e=>{ if(Date.now()-_deslizo<400){ e.preventDefault(); e.stopPropagation(); } },true);
+
 document.addEventListener('click',e=>{
   const b=e.target.closest('[data-act]'); if(!b) return;
   const a=b.dataset.act, v=b.dataset.v;
@@ -937,10 +974,10 @@ document.addEventListener('click',e=>{
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
     case 'calendario': _calMes=S.fecha; hojaCalendario(); break;
-    case 'calmes': { const [y,m]=_calMes.slice(0,7).split('-').map(Number), d=new Date(y,m-1+(+v),1); _calMes=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-01`; hojaCalendario(); break; }
+    case 'calmes': if(moverMes(+v)){ const f=$(`#capa [data-act="calmes"][data-v="${v}"]`); if(f && !f.disabled) f.focus({preventScroll:true}); } break;
     case 'calhoy': _calMes=fechaHoy(); hojaCalendario(); break;
     case 'irdia': if(CP.enRango(v)){ S.fecha=v; cargarDia(); cerrar(); render(); } break;
-    case 'dia': { const n=CP.masDias(S.fecha,+v); if(CP.enRango(n)){ S.fecha=n; cargarDia(); render(); } else toast('Fuera del calendario cargado'); break; }
+    case 'dia': moverDia(+v); break;
     case 'hoy': S.fecha=fechaHoy(); cargarDia(); render(); break;
     case 'cal': { const c=fichasCal().find(x=>String(x.i)===v && x.sg===(b.dataset.s||'')); if(!c||c.on) break;
       const d=SEL().dia;
