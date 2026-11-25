@@ -73,14 +73,14 @@ const salmo=(L, sid, ant)=>{ const s=L.salmos[sid]; if(!s) return {k:'aviso', t:
 function salmodia(S, L, sal, unica){
   S.push({k:'sec', id:'salmodia', t:'Salmodia'});
   if(unica){   // una antífona para los tres salmos: antes del primero y después del último
-    S.push({k:'ant', id:'a1', es:true, n:'Ant.', t:{es:unica}});
+    S.push({k:'ant', id:'a1', es:true, ast:true, n:'Ant.', t:{es:unica}});
     sal.forEach(g=>S.push(salmo(L, g.salmo, 'a1')));
     S.push({k:'ant', rep:'a1', es:true});
     return;
   }
   sal.forEach((g,gi)=>{
     const id='a'+(gi+1);
-    if(g.ant) S.push({k:'ant', id, es:true, n:`Ant. ${gi+1}`, t:{es:g.ant}});
+    if(g.ant) S.push({k:'ant', id, es:true, ast:true, n:`Ant. ${gi+1}`, t:{es:g.ant}});
     S.push(salmo(L, g.salmo, g.ant?id:null));
     if(g.ant_fin) S.push({k:'ant', id:id+'f', es:true, n:`Ant. ${gi+1}`, t:{es:g.ant_fin}});
     else if(g.ant) S.push({k:'ant', rep:id, es:true});

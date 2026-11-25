@@ -247,23 +247,43 @@ function versosHTML(versos, modo, cod, lang, desde, glosas, ent){
     return `<p class="v">${ls.map((l,k)=>`<span class="${claseRenglon(l,k)}">${sinSigue(l)}</span>${gs&&gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
   }).join('');
 }
+// Frases en versalitas dentro de un verso (25/11/2026): «sanctum nomen eius» del Magníficat. La versalita conserva las marcas
+// de la pauta (negrita del acento, cursiva de la preparación). Devuelve los índices de las palabras que van en versalitas.
+const VERSALITAS=[['sanctum','nomen','eius']];
+function versalitas(ws){
+  const n=ws.map(w=>w.replace(/\*\*|_/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-zæœ]/g,'')), out=new Set();
+  for(const f of VERSALITAS) for(let i=0;i+f.length<=n.length;i++) if(f.every((x,j)=>n[i+j]===x)) f.forEach((x,j)=>out.add(i+j));
+  return out;
+}
+// Lo mismo en la letra de una partitura (GABC): cada sílaba de esas palabras, entre <sc> y </sc> (Exsurge las dibuja en
+// versalitas, también dentro de <b> o <i>)
+function versalitasGabc(g){
+  const i0=g.indexOf('%%')+2, cuerpo=g.slice(i0), toks=[]; let m; const re=/([^()]*)(\([^)]*\))/g;
+  while((m=re.exec(cuerpo))) toks.push({t:m[1], n:m[2]});
+  const pal=[]; toks.forEach((x,i)=>{ if(!pal.length || /^\s/.test(x.t) || !x.t) pal.push([]); pal[pal.length-1].push(i); });
+  const vs=versalitas(pal.map(p=>p.map(i=>toks[i].t.replace(/<[^>]+>/g,'')).join('').trim()));
+  if(!vs.size) return g;
+  pal.forEach((p,k)=>{ if(vs.has(k)) p.forEach(i=>{ const t=toks[i].t, ini=t.match(/^\s*/)[0]; if(t.trim()) toks[i].t=`${ini}<sc>${t.trim()}</sc>`; }); });
+  return g.slice(0,i0)+toks.map(x=>x.t+x.n).join('')+cuerpo.slice(cuerpo.lastIndexOf(')')+1);
+}
 // Versos con marcas escritas a mano: **negrita** (acento) y _cursiva_ (preparación); * mediante, † flexa.
 // glosas: por versículo, pares «latín → español» palabra por palabra, en el orden del texto (el * y la † no llevan par)
 function versosMarcados(versos, glosas, capi){   // capi: capitular en el primer verso (cántico evangélico sin partitura)
   // las marcas de la pauta de canto (**negrita**, _cursiva_) solo en el modo cantado; recitado, texto llano
-  const m=t=>CANTA() ? esc(t).replace(/\*\*(.+?)\*\*/g,'<b class="ac">$1</b>').replace(/_(.+?)_/g,'<i>$1</i>') : esc(t.replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1'));
+  const m0=t=>CANTA() ? esc(t).replace(/\*\*(.+?)\*\*/g,'<b class="ac">$1</b>').replace(/_(.+?)_/g,'<i>$1</i>') : esc(t.replace(/\*\*(.+?)\*\*/g,'$1').replace(/_(.+?)_/g,'$1'));
   return versos.map((v,i)=>{
     const pares=glosas&&glosas[i]||null; let k=0, resto=0;
     const mitades=v.split(/ \* /);
-    const hs=mitades.map((h,hi)=>h.trim().split(/\s+/).map(w=>{
+    const hs=mitades.map((h,hi)=>{ const ws=h.trim().split(/\s+/), vs=versalitas(ws); return ws.map((w,wi)=>{
         if(w==='†') return `<span class="sg">†</span>`;
+        const m=t=>vs.has(wi) ? `<span class="vers">${m0(t)}</span>` : m0(t);
         if(!pares) return m(w);
         let tr='', ini=false;
         if(resto===0 && k<pares.length){ const p=pares[k++]; resto=String(p[0]).trim().split(/\s+/).length; tr=p[1]; ini=resto>1; }
         if(resto>0) resto--;
         const h=`<span class="w">${m(w)}${tr?`<span class="tr">${marcas(tr)}</span>`:''}</span>`;
         return ini ? {ini:h} : h;
-      }).reduce((a,x)=>{ // las dos primeras palabras de un par («ad dandam») no se separan de renglón
+      }); }).map(l=>l.reduce((a,x)=>{ // las dos primeras palabras de un par («ad dandam») no se separan de renglón
         const u=a[a.length-1]; if(u && typeof u==='object'){ a[a.length-1]=`<span class="nw">${u.ini} ${x}</span>`; } else a.push(x); return a; },[])
         .map(x=>typeof x==='object'?x.ini:x));
     const hs2=hs.map((ws,hi)=>{ // el asterisco no baja solo de renglón: va pegado a la última palabra
@@ -452,7 +472,12 @@ function antHTML(sec){
   if(S.canto && S.antGreg && a.gabc && (CANTA() || !a.soloCanto)) return `<div class="ant-greg">${partituraHTML(sec.rep && a.gabcRep ? a.gabcRep : a.gabc, a.glosa)}</div>`;
   if(BI() && a.il) return `<div class="ant il"><p><span class="n">${esc(a.n||'Ant.')}</span> ${interHTML(a.il)}</p></div>`;
   const t=txt(a.t), cruz=!sec.rep && cruzVale(a), tp=t.p.replace(CRUZ_ANT,'');   // la † solo la primera vez, si vale
-  return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${a.es?'<b>':''}${marcas(tp.replace(/ \* /,' '))}${a.es?'</b>':''}${cruz?'&nbsp;<span class="sg">†</span>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
+  // Antífona de un salmo o cántico, la primera vez: hasta el asterisco la entona uno (texto normal), desde ahí siguen todos
+  // (negrita). Al repetirla al final, toda en negrita y sin asterisco (25/11/2026; el corte, CP._.asteriscoAnt)
+  const sin=tp.replace(/ \* /,' '), ka=a.es && sec.ast ? CP._.asteriscoAnt(sin) : -1;
+  const cuerpo= ka>=0 ? `${marcas(sin.slice(0,ka))}&nbsp;<span class="sg">*</span> <b>${marcas(sin.slice(ka+1))}</b>`
+    : `${a.es?'<b>':''}${marcas(sin)}${a.es?'</b>':''}`;
+  return `<div class="ant"><p><span class="n">${esc(a.n||'Ant.')}</span>${cuerpo}${cruz?'&nbsp;<span class="sg">†</span>':''}</p>${t.s?`<span class="gl">${esc(t.s.replace(/ \* /,' '))}</span>`:''}</div>`;
 }
 // Título corto para los botones: hasta ~24 letras, sin cortar en un artículo o preposición; «(solemne)» se conserva
 function corto(n){
@@ -693,7 +718,7 @@ function horaHTML(){
           const cod=tonoDe(sec), lista=S.salmos==='todos'?sec.versos:S.salmos==='pautado'?[]:sec.versos.slice(0,1);
           h+=`<div class="salmo-h"><div class="cab"><span class="t">${esc(sec.titulo)}</span>${selectorModo(sec)}</div></div>`;
           // con la capitular del gregoriano (en la partitura) o, si no hay partitura, en el primer verso
-          if(lista.length) h+=partituraHTML(`name:cantico;\n%%\n${SAL.gabcSalmo(lista,cod,'la',{entonarTodos:true, marcas:true})}`, S.trad&&sec.inter?lista.flatMap((v,i)=>sec.inter[i]||[]):null, true, true);
+          if(lista.length) h+=partituraHTML(versalitasGabc(`name:cantico;\n%%\n${SAL.gabcSalmo(lista,cod,'la',{entonarTodos:true, marcas:true})}`), S.trad&&sec.inter?lista.flatMap((v,i)=>sec.inter[i]||[]):null, true, true);
           const resto=sec.versos.slice(lista.length);
           if(resto.length) h+=`<div class="versos${S.trad?' inter':''}">${versosMarcados(resto.map(v=>SAL.marcadoVerso(SAL.pautarVerso(v,cod,'la',true))),S.trad&&sec.inter?sec.inter.slice(lista.length):null, !lista.length)}</div>`;
           break;

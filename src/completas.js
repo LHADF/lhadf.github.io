@@ -105,6 +105,50 @@ function marcarPrece(par){
   return mejor>0 && Math.abs(mejor-m)<Math.abs(a.length-m) ? [t.slice(0,mejor+1), t.slice(mejor+2)] : par;
 }
 
+// Asterisco de la entonación en las antífonas de salmos y cánticos (25/11/2026): el que entona dice la primera palabra o
+// frase con sentido (sustantivo, adjetivo, adverbio, pronombre tónico o verbo) y los demás siguen. Van con ella las palabras
+// átonas que la preceden (artículos, preposiciones, conjunciones, «que», relativos, posesivos antepuestos, pronombres
+// átonos, auxiliares de «haber»): «En mi angustia *», «Me asalta *», «He examinado *», «Que Dios *», «El que se aborrece *»;
+// y las que la completan detrás: posesivo pospuesto y «mismo» («Dios mío *», «Yo mismo *»), otro nombre propio («Juan
+// Bautista *») y un vocativo entre comas («Señor, Dios mío *», «De noche, Dios mío *»). «No *», «Yo *», «El Señor *».
+// Devuelve la posición del corte en el texto (el asterisco va ahí, con un espacio a cada lado) o -1.
+const ANT_ATONAS=new Set(('el la los las lo un una unos unas al del a ante bajo con contra de desde en entre hacia hasta para por según sin '
+  +'sobre tras y e ni o u pero mas sino que porque pues si como cuando aunque mientras donde quien quienes cual cuales cuyo cuya cuyos cuyas '
+  +'mi mis tu tus su sus nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras me te se nos os le les '
+  +'he has ha hemos habéis han había habías habíamos habíais habían habrá habrás habremos habréis habrán haya hayas hayamos hayáis hayan '
+  +'san don fray sor oh tan muy cuán qué cuánto cuánta cuántos cuántas cada este esta estos estas ese esa esos esas aquel aquella aquellos aquellas').split(' '));
+const ANT_POSP=new Set('mío mía míos mías tuyo tuya tuyos tuyas suyo suya suyos suyas nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras mismo misma mismos mismas solo sola solos solas'.split(' '));
+const ANT_DET=new Set('el la los las lo mi mis tu tus su sus nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras este esta estos estas ese esa esos esas aquel aquella aquellos aquellas'.split(' '));
+const ANT_LOC=new Set('medio causa pesar delante detrás cerca lejos dentro fuera encima debajo junto antes después través presencia favor acerca alrededor'.split(' '));
+const ANT_TIT=/^(?:bienaventurad|beat|sant|gloriós|gloris|apóstol|evangelista|ángel|arcángel|profeta|mártir|virgen|papa|obispo|rey|reina|patriarca|diácono|presbítero|doctor)/;
+const ANT_VOC=/^(?:oh |¡oh )?(?:Señor|Dios|Jesús|Jesucristo|Cristo|Padre|Hijo|María|Madre|Virgen|Rey|Pastor|Maestro|Esposo|Hermanos|Amigos)\b/;
+function asteriscoAnt(t){
+  const ws=[]; t.replace(/\S+/g,(w,i)=>{ ws.push({w, i, f:i+w.length}); return w; });
+  const lim=w=>w.toLowerCase().replace(/^[¡¿«“"(]+/,'').replace(/[.,;:!?»”")]+$/,'');
+  const corta=w=>/[.,;:!?»”")]$/.test(w);   // termina en signo: ahí se cierra la frase
+  let k=0;
+  while(k<ws.length-1 && !corta(ws[k].w)){
+    const x=lim(ws[k].w), sig=lim(ws[k+1].w);
+    // «todos los pueblos», «toda mi vida»: el cuantificador va con lo que sigue; «Santa María», «San Juan»: el título, con el
+    // nombre; «En medio de», «A causa de», «Puesto que»: la locución entera, con lo que sigue
+    if(ANT_ATONAS.has(x) || /^tod[oa]s?$/.test(x) && ANT_DET.has(sig) || /^sant[oa]s?$/.test(x) && /^\p{Lu}/u.test(ws[k+1].w)
+      || ANT_LOC.has(x) && /^(de|del|a|al)$/.test(sig) && k>0 || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
+  }
+  // detrás de la palabra: posesivo pospuesto o «mismo», otro nombre propio
+  while(k<ws.length-1 && !corta(ws[k].w)){
+    const s=ws[k+1].w;
+    // (nuestro, vuestro: pospuestos solo si cierran la frase, «Señor nuestro,»; si no, son del sustantivo que sigue)
+    if(ANT_POSP.has(lim(s)) && (!/^(nuestr|vuestr)/.test(lim(s)) || corta(s)) || k>0 && /^\p{Lu}/u.test(s) && (/^\p{Lu}/u.test(ws[k].w) || ANT_TIT.test(lim(ws[k].w)))) k++; else break;   // «El ángel Gabriel *»
+  }
+  // un vocativo entre comas: «Señor, Dios mío, a ti grité»
+  if(/,$/.test(ws[k].w)){
+    let j=k+1; while(j<ws.length && j-k<=3 && !corta(ws[j].w)) j++;
+    const voc=ws.slice(k+1,j+1).map(x=>x.w);   // (o un nombre propio: «Alégrate, Jerusalén,», «Si me amas, Simón Pedro,»)
+    if(j<ws.length-1 && j-k<=3 && /[,;:!]$/.test(ws[j].w) && (ANT_VOC.test(voc.join(' ')) || voc.every(w=>/^[¡(]?\p{Lu}/u.test(w) || ANT_POSP.has(lim(w))))) k=j;
+  }
+  return k<ws.length-1 ? ws[k].f : -1;
+}
+
 // Domingo de Pascua (cómputo gregoriano)
 function domPascua(y){
   const a=y%19, b=Math.floor(y/100), c=y%100, d=Math.floor(b/4), e=b%4, f=Math.floor((b+8)/25), g=Math.floor((b-f+1)/3);
@@ -463,7 +507,7 @@ function armar(fecha, region){
   const sal=pascua?J.salmodia_pascua:J.salmodia; let na=0;
   sal.forEach((g,gi)=>{
     const id='a'+(gi+1);
-    S.push({k:'ant', id, es:true, n: sal.length>1?`Ant. ${gi+1}`:'Ant.', t:{es:g.ant}, modo:tono});
+    S.push({k:'ant', id, es:true, ast:true, n: sal.length>1?`Ant. ${gi+1}`:'Ant.', t:{es:g.ant}, modo:tono});
     g.salmos.forEach(sid=>{
       const s=B.salmos[sid]; const v=versosDe(s.texto);
       S.push({k:'salmo', es:true, id:sid, ant:id, titulo:{es:s.titulo}, lema:{es:oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!pas, rubrica:pas?NO_GLORIA:''});
@@ -796,5 +840,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, asteriscoAnt, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

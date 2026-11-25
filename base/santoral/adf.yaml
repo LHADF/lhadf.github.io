@@ -223,8 +223,8 @@ San Artémides Zatti, religioso:
   comun: santos-varones
 San Alberto Magno, obispo y doctor de la Iglesia:
   comun: doctores
-Santa Catalina de Alejandría, virgen y mártir:
-  comun: un-martir
+Santa Catalina de Alejandría, virgen y mártir:   # el libro da a elegir mártires o vírgenes: vírgenes, con las rúbricas de virgen mártir (25/11/2026)
+  comun: virgenes
 San Columbano, abad:
   comun: santos-varones
 San Juan Damasceno, presbítero y doctor de la Iglesia:

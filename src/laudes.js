@@ -217,7 +217,7 @@ function armar(hora, fecha, region){
   sec('salmodia','Salmodia');
   (P.salmodia||[]).forEach((g,gi)=>{
     const id='a'+(gi+1);
-    S.push({k:'ant', id, es:true, n:`Ant. ${gi+1}`, t:{es:g.ant}, modo});
+    S.push({k:'ant', id, es:true, ast:true, n:`Ant. ${gi+1}`, t:{es:g.ant}, modo});
     S.push(salmo(g.salmo, id));
     S.push(g.ant_fin ? {k:'ant', id:id+'f', es:true, n:`Ant. ${gi+1}`, t:{es:g.ant_fin}} : {k:'ant', rep:id, es:true});
   });
@@ -238,7 +238,7 @@ function armar(hora, fecha, region){
   const BN=GL.cantico;
   // Antífonas «Oh» (Vísperas, 17 al 23 de diciembre): cantadas, en gregoriano (modo 2), y el Magníficat en 2 D
   const AG=!LAU && X.gregPropio('magnificat', P.ant_magnificat);
-  S.push({k:'ant', id:'ab', es:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}, ...(AG||{})});
+  S.push({k:'ant', id:'ab', es:true, ast:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}, ...(AG||{})});
   const bnv=pas ? BN.versos.filter(v=>!X.esGloriaLa(v)) : BN.versos, bni=pas&&BN.traduccion_versos ? BN.traduccion_versos.filter((x,i)=>!X.esGloriaLa(BN.versos[i])) : BN.traduccion_versos;
   S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo:AG&&AG.modoGreg===2 ? '2D' : modo, titulo:BN.titulo, versos:bnv, inter:bni});
   if(pas) S.push({k:'rub', t:X.NO_GLORIA});

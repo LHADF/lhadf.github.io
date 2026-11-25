@@ -657,6 +657,19 @@ un-martir:
   lectura:
     ref: 1 Pe 4, 13-14
     texto: 'Queridos hermanos: Estad alegres cuando compartís los padecimientos de Cristo, para que, cuando se manifieste su gloria, reboséis de gozo. Si os ultrajan por el nombre de Cristo, dichosos vosotros: porque el Espíritu de la gloria, el Espíritu de Dios, reposa sobre vosotros.'
+  responsorio:
+  - - V
+    - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
+  - - R
+    - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
+  - - V
+    - Nos refinaste como refinan la plata.
+  - - R
+    - Pero nos has dado respiro.
+  - - V
+    - Gloria al Padre, y al Hijo, y al Espíritu Santo.
+  - - R
+    - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
   ant_magnificat: Los santos tienen su morada en el reino de Dios, y allí han encontrado descanso eterno.
   preces:
     intro: 'A la misma hora en que el Rey de los mártires ofreció su vida, en la última cena, y la entregó en la cruz, démosle gracias, diciendo:'
@@ -706,21 +719,6 @@ un-martir:
       - Los justos brillarán en la presencia del Señor. Aleluia, aleluia.
     ant_magnificat: Si el grano de trigo no cae en tierra y muere queda infecundo, si muere produce mucho fruto. Aleluia.
   variantes:
-    responsorio:
-    - etiqueta: 'En tiempo de cuaresma Para un solo mártir:'
-      texto:
-      - - V
-        - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
-      - - R
-        - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
-      - - V
-        - Nos refinaste como refinan la plata.
-      - - R
-        - Pero nos has dado respiro.
-      - - V
-        - Gloria al Padre, y al Hijo, y al Espíritu Santo.
-      - - R
-        - Oh Dios, nos pusiste a prueba, pero nos has dado respiro.
     preces:
     - etiqueta: 'opcion: 2'
       texto:
@@ -1223,7 +1221,7 @@ virgenes:
         - no permitas que falte nunca el óleo de la fidelidad en las lámparas de las vírgenes que se han consagrado a ti.
       - - Señor Jesucristo, a quien la Iglesia virgen guardó siempre fidelidad intacta,
         - concede a todos los cristianos la integridad y la pureza de la fe.
-      - - Tú que concedes hoy a, tu pueblo alegrarse por la fiesta de santa N., virgen,
+      - - Tú que concedes hoy a tu pueblo alegrarse por la fiesta de santa N., virgen,
         - concédele también gozar siempre de su valiosa intercesión.
       - - Tú que recibiste en el banquete de tus bodas a las vírgenes santas,
         - admite también a nuestros hermanos difuntos en el convite festivo de tu reino.

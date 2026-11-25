@@ -4,6 +4,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 
 ## Ortotipografía
 
+- **Antífonas de salmos y cánticos:** la primera vez, asterisco después de la primera palabra o frase con sentido (lo que dice el que entona, texto normal; desde ahí, todos, en negrita); al repetirse al final, sin asterisco y toda en negrita (regla completa en `contexto.md`).
 - **En rojo:** rúbricas (además en cursiva), la letra capital inicial del gregoriano y el número de modo, los números de estrofa de los himnos, ℣, ℟, asterisco y cruz.
 - **Capitular** (21/11/2026): también en las lecturas breves, los himnos en español y los cánticos evangélicos (en estos, como la del gregoriano): la primera letra, grande y roja, a lo alto de dos renglones. No va si el texto empieza con ¡ o ¿ (ni con otro signo).
 - **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): lo que baja va más adentro que el renglón de la cadencia, como con dos sangrías (2,2 em; el renglón de la cadencia, 1,1 em). Sin guion ni otra marca. Vale para salmos, cánticos e himnos. El tercer renglón de una estrofa sin flexa cuyo primero termina en «:» va igual de adentro (`.v .h3`, CRU 20/11/2026).
@@ -46,7 +47,7 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 ## Diseño visual
 
 - **Texto negro: dos pesos, como en el Cantoral Laudibus.** Normal 400 y negrita 600, también en la letra de las partituras. **Excepción (18/11/2026):** los acentos del modo en la salmodia (pautado y letra de la partitura de salmos, cánticos y cántico evangélico) van en bold 700, para que se vean más; por eso Source Serif 4 se carga también en 700 (solo redonda) y «Septies AE» trae ǽ/Ǽ en 400, 600 y 700. La letra bajo los neumas mide lo mismo que el texto en español y la traducción, lo mismo que la glosa (app.js lo calcula al dibujar cada partitura); solo se achica la traducción de un renglón que no entra (hasta 72 %).
-- **Tipografías:** Source Serif 4 para textos, títulos y latín; Source Sans 3 para la interfaz y los datos. Etiquetas en mayúsculas con espaciado (no hay versalitas reales).
+- **Tipografías:** Source Serif 4 para textos, títulos y latín; Source Sans 3 para la interfaz y los datos. Etiquetas en mayúsculas con espaciado. Versalitas (`.vers`) solo en frases puntuales del texto: «Venid, postrémonos por tierra» (invitatorio) y «sanctum nomen eius» (Magníficat); la redonda de Source Serif 4 las trae (`smcp`), la cursiva no y el navegador las arma, así que conservan la negrita y la cursiva de la pauta.
 - **Cuatro tamaños:** título, ítem, interfaz y dato. El mínimo es el dato (unos 14 px) y toda la interfaz se puede agrandar.
 - **Radios:** dos, de 8 px y 16 px.
 - **Modo claro:** papel blanco, tinta negra, pergamino `#f4eee4` para tarjetas, arco `#e7ddcc`, tinta de ilustración `#2a201a`. Nada de tonos pastel.

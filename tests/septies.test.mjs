@@ -779,3 +779,37 @@ test('antífonas «Oh» y en lugar del responsorio: en gregoriano si se canta, c
     assert.deepEqual(sinTilde, [], p.id);
   }
 });
+
+// ---------- Correcciones del 25/11/2026 ----------
+test('antífonas de salmos y cánticos: asterisco de la entonación (primera palabra o frase con sentido)', () => {
+  const A = CP._.asteriscoAnt, corte = t => { const p = A(t); return p < 0 ? null : t.slice(0, p); };
+  const casos = {
+    'No temáis, yo he vencido al mundo.': 'No', 'En mi angustia te busco, Señor, y extiendo las manos sin descanso.': 'En mi angustia',
+    'Mi corazón está firme, Dios mío, mi corazón está firme.': 'Mi corazón', 'El Señor reina, la tierra goza.': 'El Señor',
+    'El que se aborrece a sí mismo en este mundo se guardará para la vida eterna.': 'El que se aborrece',
+    'Yo soy pobre, pero el Señor cuida de mí.': 'Yo', 'Me asalta el temor y el terror: hazme caso y respóndeme, Señor.': 'Me asalta',
+    'He examinado mi camino, para enderezar mis pies a tus preceptos.': 'He examinado',
+    'Que Dios ilumine su rostro sobre nosotros y nos bendiga.': 'Que Dios', 'Señor, Dios mío, a ti grité, y tú me sanaste.': 'Señor, Dios mío,',
+    'De noche, Dios mío, mi alma te desea.': 'De noche, Dios mío,', 'Yo mismo apacentaré mis ovejas.': 'Yo mismo',
+    'El ángel Gabriel saludó a María.': 'El ángel Gabriel', 'Todos los pueblos te alaben.': 'Todos los pueblos',
+  };
+  for (const [t, c] of Object.entries(casos)) assert.equal(corte(t), c, t);
+  // la primera vez lleva asterisco; la repetición final, no (toda en negrita)
+  const S = VI.armar('2026-11-25', 'ARG').secciones.filter(s => s.k === 'ant');
+  assert.ok(S.filter(s => s.id).every(s => s.ast) && S.filter(s => s.rep).every(s => !s.ast));
+  assert.ok(!LA.armar('2026-11-08', 'ARG').secciones.find(s => s.id === 'ai').ast);   // invitatorio: sin asterisco
+});
+
+test('Santa Catalina de Alejandría: común de vírgenes (virgen mártir); San Clemente: responsorio de Vísperas del común', () => {
+  const v = VI.armar('2026-11-25', 'ARG');
+  assert.match(v.dia.nota, /Común de vírgenes/);
+  assert.match(v.secciones.find(s => s.id === 'ab').t.es, /^En una sola víctima/);           // la de una virgen mártir
+  assert.match(VI.armar('2026-11-23', 'ARG').secciones.find(s => s.k === 'resp').l.es[0][1], /^Oh Dios, nos pusiste a prueba/);
+});
+
+test('preces de Vísperas: cada intención por separado (no dos pegadas en una)', () => {
+  for (const f of ['2026-11-12', '2026-11-24', '2027-02-06', '2026-09-16', '2026-09-29', '2026-12-12', '2027-01-04']) {
+    const p = VI.armar(f, 'ARG').secciones.find(s => s.k === 'preces');
+    for (const [a, b] of p.preces) assert.ok(!(b && /[.!?]$/.test(a) && /^\p{Lu}/u.test(b)) && b !== p.respuesta && b !== '', f + ': ' + a);
+  }
+});
