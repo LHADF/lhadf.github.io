@@ -789,12 +789,12 @@ test('antífonas de salmos y cánticos: asterisco de la entonación (primera pal
     'El que se aborrece a sí mismo en este mundo se guardará para la vida eterna.': 'El que se aborrece',
     'Yo soy pobre, pero el Señor cuida de mí.': 'Yo', 'Me asalta el temor y el terror: hazme caso y respóndeme, Señor.': 'Me asalta',
     'He examinado mi camino, para enderezar mis pies a tus preceptos.': 'He examinado',
-    'Que Dios ilumine su rostro sobre nosotros y nos bendiga.': 'Que Dios', 'Señor, Dios mío, a ti grité, y tú me sanaste.': 'Señor, Dios mío,',
-    'De noche, Dios mío, mi alma te desea.': 'De noche, Dios mío,', 'Yo mismo apacentaré mis ovejas.': 'Yo mismo',
-    'El ángel Gabriel saludó a María.': 'El ángel Gabriel', 'Todos los pueblos te alaben.': 'Todos los pueblos',
+    'Que Dios ilumine su rostro sobre nosotros y nos bendiga.': 'Que Dios', 'Señor, Dios mío, a ti grité, y tú me sanaste.': 'Señor,',
+    'De noche, Dios mío, mi alma te desea.': 'De noche,', 'Yo mismo apacentaré mis ovejas.': 'Yo', 'Mi corazón está firme, Dios mío.': 'Mi corazón', 'Dios mío, ven en mi auxilio.': 'Dios mío,',
+    'El ángel Gabriel saludó a María.': 'El ángel', 'Todos los pueblos te alaben.': 'Todos', 'Santa María, madre de Dios, ruega por nosotros.': 'Santa María,',
     'Alégrate, María, llena de gracia, el Señor está contigo.': 'Alégrate,', 'En medio de la tempestad, Jesús dormía.': 'En medio',
     'Padre justo, si es verdad que el mundo no te ha conocido.': 'Padre', '¿Quién subirá al monte del Señor?': '¿Quién',
-    'En tu juicio, Señor, acuérdate de la misericordia.': 'En tu juicio, Señor,',
+    'En tu juicio, Señor, acuérdate de la misericordia.': 'En tu juicio,',
   };
   for (const [t, c] of Object.entries(casos)) assert.equal(corte(t), c, t);
   // la primera vez lleva asterisco; la repetición final, no (toda en negrita)

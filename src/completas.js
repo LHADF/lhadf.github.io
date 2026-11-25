@@ -105,23 +105,19 @@ function marcarPrece(par){
   return mejor>0 && Math.abs(mejor-m)<Math.abs(a.length-m) ? [t.slice(0,mejor+1), t.slice(mejor+2)] : par;
 }
 
-// Asterisco de la entonación en las antífonas de salmos y cánticos (25/11/2026): el que entona dice la primera palabra o
-// frase con sentido (sustantivo, adjetivo, adverbio, pronombre tónico o verbo) y los demás siguen. Van con ella las palabras
-// átonas que la preceden (artículos, preposiciones, conjunciones, «que», relativos, posesivos antepuestos, pronombres
-// átonos, auxiliares de «haber»): «En mi angustia *», «Me asalta *», «He examinado *», «Que Dios *», «El que se aborrece *»;
-// y las que la completan detrás: posesivo pospuesto y «mismo» («Dios mío *», «Yo mismo *»), otro nombre propio («Juan
-// Bautista *») y un vocativo entre comas («Señor, Dios mío *», «De noche, Dios mío *»). «No *», «Yo *», «El Señor *».
+// Asterisco de la entonación en las antífonas de salmos y cánticos (25/11/2026): el que entona dice lo menos posible, la
+// primera palabra con sentido (sustantivo, adjetivo, adverbio, pronombre tónico o verbo), y los demás siguen. Van con ella
+// solo las palabras átonas que la preceden (artículos, preposiciones, conjunciones, «que», relativos, posesivos antepuestos,
+// pronombres átonos, auxiliares de «haber», «san» y «santa» ante el nombre): «En mi angustia *», «Me asalta *», «He
+// examinado *», «Que Dios *», «El que se aborrece *», «Santa María *»; detrás, solo el posesivo pospuesto («Dios mío *»).
+// «No *», «Yo *», «Señor *», «El Señor *», «En medio *», «Alégrate *», «Padre * justo», «¿Quién *».
 // Devuelve la posición del corte en el texto (el asterisco va ahí, con un espacio a cada lado) o -1.
 const ANT_ATONAS=new Set(('el la los las lo un una unos unas al del a ante bajo con contra de desde en entre hacia hasta para por según sin '
   +'sobre tras y e ni o u pero mas sino que porque pues si como cuando aunque mientras donde quien quienes cual cuales cuyo cuya cuyos cuyas '
   +'mi mis tu tus su sus nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras me te se nos os le les '
   +'he has ha hemos habéis han había habías habíamos habíais habían habrá habrás habremos habréis habrán haya hayas hayamos hayáis hayan '
-  +'san don fray sor oh tan muy cuán qué cuánto cuánta cuántos cuántas cada este esta estos estas ese esa esos esas aquel aquella aquellos aquellas').split(' '));
-const ANT_POSP=new Set('mío mía míos mías tuyo tuya tuyos tuyas suyo suya suyos suyas nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras mismo misma mismos mismas solo sola solos solas'.split(' '));
-const ANT_DET=new Set('el la los las lo mi mis tu tus su sus nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras este esta estos estas ese esa esos esas aquel aquella aquellos aquellas'.split(' '));
-const ANT_PREP=new Set('a ante bajo con contra de desde en entre hacia hasta para por según sin sobre tras'.split(' '));
-const ANT_TIT=/^(?:bienaventurad|beat|sant|gloriós|gloris|apóstol|evangelista|ángel|arcángel|profeta|mártir|virgen|papa|obispo|rey|reina|patriarca|diácono|presbítero|doctor)/;
-const ANT_VOC=/^(?:oh |¡oh )?(?:Señor|Dios|Jesús|Jesucristo|Cristo|Padre|Hijo|María|Madre|Virgen|Rey|Pastor|Maestro|Esposo|Hermanos|Amigos)\b/;
+  +'san oh tan muy cuán qué cuánto cuánta cuántos cuántas cada este esta estos estas ese esa esos esas aquel aquella aquellos aquellas').split(' '));
+const ANT_POSP=new Set('mío mía míos mías tuyo tuya tuyos tuyas suyo suya suyos suyas nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras'.split(' '));
 function asteriscoAnt(t){
   const ws=[]; t.replace(/\S+/g,(w,i)=>{ ws.push({w, i, f:i+w.length}); return w; });
   const lim=w=>w.toLowerCase().replace(/^[¡¿«“"(]+/,'').replace(/[.,;:!?»”")]+$/,'');
@@ -129,25 +125,11 @@ function asteriscoAnt(t){
   let k=0;
   while(k<ws.length-1 && !corta(ws[k].w)){
     const x=lim(ws[k].w), sig=lim(ws[k+1].w);
-    // «todos los pueblos», «toda mi vida»: el cuantificador va con lo que sigue; «Santa María», «San Juan»: el título, con el
-    // nombre; «Puesto que», «Ya que»: la conjunción entera, con lo que sigue. (Las locuciones prepositivas, no: «En medio *»)
-    if(ANT_ATONAS.has(x) || /^tod[oa]s?$/.test(x) && ANT_DET.has(sig) || /^sant[oa]s?$/.test(x) && /^\p{Lu}/u.test(ws[k+1].w)
-      || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
+    // «Santa María», como «San Juan»; «Puesto que», «Ya que»: la conjunción entera, con lo que sigue
+    if(ANT_ATONAS.has(x) || /^(santa|don|fray|sor)$/.test(x) && /^\p{Lu}/u.test(ws[k+1].w) || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
   }
-  // detrás de la palabra: posesivo pospuesto o «mismo», otro nombre propio
-  while(k<ws.length-1 && !corta(ws[k].w)){
-    const s=ws[k+1].w;
-    // (nuestro, vuestro: pospuestos solo si cierran la frase, «Señor nuestro,»; si no, son del sustantivo que sigue)
-    if(ANT_POSP.has(lim(s)) && (!/^(nuestr|vuestr)/.test(lim(s)) || corta(s)) || k>0 && /^\p{Lu}/u.test(s) && (/^\p{Lu}/u.test(ws[k].w) || ANT_TIT.test(lim(ws[k].w)))) k++; else break;   // «El ángel Gabriel *»
-  }
-  // un vocativo entre comas, si lo anterior es otro vocativo o una frase con preposición: «Señor, Dios mío, a ti grité», «De
-  // noche, Dios mío,», «En tu juicio, Señor,»; detrás de un verbo, no: «Alégrate, * María», «Protégenos, * Señor»
-  const unidad=ws.slice(0,k+1).map(x=>x.w).join(' ');
-  if(/,$/.test(ws[k].w) && (ANT_PREP.has(lim(ws[0].w)) || ANT_VOC.test(unidad) && k<=2)){
-    let j=k+1; while(j<ws.length && j-k<=3 && !corta(ws[j].w)) j++;
-    const voc=ws.slice(k+1,j+1).map(x=>x.w);   // (o un nombre propio: «Alégrate, Jerusalén,», «Si me amas, Simón Pedro,»)
-    if(j<ws.length-1 && j-k<=3 && /[,;:!]$/.test(ws[j].w) && (ANT_VOC.test(voc.join(' ')) || voc.every(w=>/^[¡(]?\p{Lu}/u.test(w) || ANT_POSP.has(lim(w))))) k=j;
-  }
+  // el posesivo pospuesto, con su sustantivo («Dios mío *»; nuestro, vuestro: solo si cierran la frase, «Señor nuestro,»)
+  if(k<ws.length-1 && !corta(ws[k].w)){ const s=ws[k+1].w; if(ANT_POSP.has(lim(s)) && (!/^(nuestr|vuestr)/.test(lim(s)) || corta(s))) k++; }
   return k<ws.length-1 ? ws[k].f : -1;
 }
 

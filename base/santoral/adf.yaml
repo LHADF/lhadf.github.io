@@ -14,7 +14,7 @@ Santísimo Nombre de Jesús:   # Laudes y Vísperas de ADF y Oficio de lectura d
 San Hilario de Poitiers, obispo y doctor de la Iglesia:
   comun: doctores
 Santos Mauro y Plácido, religiosos:
-  comun: santos-varones
+  comun: religiosos
 San Vicente, diácono y mártir:
   comun: un-martir
 San Ildefonso, obispo:
@@ -28,7 +28,7 @@ Santa Ágata, virgen y mártir:   # virgen mártir: común de vírgenes, hasta c
 Bienaventurada Virgen María de Lourdes:
   comun: virgen-maria
 Beato Juan de Fiésole (Fra Angelico), religioso:
-  comun: santos-varones
+  comun: religiosos
 San Papías, obispo:
   comun: pastores
 Tránsito de san Benito, abad:
@@ -68,7 +68,7 @@ Bienaventurada Virgen María del Monte Carmelo:
 Dedicación de la Basílica de Santa María la Mayor:
   comun: virgen-maria
 Santa Teresa de Calcuta, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 Santísimo Nombre de la bienaventurada Virgen María:
   comun: virgen-maria
 Bienaventurada Virgen María Corredentora:   # nombre ADF de Nuestra Señora de los Dolores (15 de septiembre)
@@ -102,7 +102,7 @@ San Clemente I, papa y mártir:
 Nuestra Señora del Buen Consejo:
   comun: virgen-maria
 Beata María Felicia de Jesús Sacramentado (Chiquitunga), religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 Divino Niño Jesús:   # I Vísperas, Laudes y II Vísperas de ADF (libro.yaml); faltan el Oficio de lectura y la Hora intermedia
   propio_libro: true
 San Raimundo de Peñafort, presbítero:
@@ -116,7 +116,7 @@ San Jerónimo Emiliano, presbítero:
 San Claudio de la Colombière, presbítero:
   comun: pastores
 Siete Santos Fundadores de la Orden de los Siervos de la Virgen María, religiosos:
-  comun: santos-varones
+  comun: religiosos
 San Francisco y santa Jacinta Marto, videntes:
   comun: santos-varones
 San Pedro Damián, obispo y doctor de la Iglesia:
@@ -132,9 +132,9 @@ San Bernardino de Siena, presbítero:
 San Cristóbal Magallanes, presbítero, y compañeros, mártires:
   comun: varios-martires
 Santa Rita de Cascia, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 Beata Crescencia Pérez, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 San Agustín de Canterbury, obispo:
   comun: pastores
 San Marcelino y Pedro, mártires:
@@ -152,7 +152,7 @@ Santa Isabel de Portugal, reina:
 San Antonio María Zaccaría, presbítero:
   comun: pastores
 Santa Nazaria Ignacia March Mesa, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 Santos Agustín Zhao Rong, presbítero, y compañeros, mártires:
   comun: varios-martires
 Santos Luis Martín y María Celia Guérin, esposos:
@@ -166,7 +166,7 @@ San Apolinar, obispo y mártir:
 San Lorenzo de Brindisi, presbítero y doctor de la Iglesia:
   comun: doctores
 Santa Brígida, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 San Pedro Crisólogo, obispo y doctor de la Iglesia:
   comun: doctores
 San Pedro Julián Eymard, presbítero:
@@ -176,7 +176,7 @@ San Cayetano, presbítero:
 Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
   comun: virgenes
 Santa Juana Francisca Frémiot de Chantal, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 Santos Ponciano, papa, e Hipólito, mártires:
   comun: varios-martires
 San Roque, penitente:
@@ -192,7 +192,7 @@ San José de Calasanz, presbítero:
 Beato Ceferino Namuncurá, laico:
   comun: santos-varones
 San Junípero Serra, religioso:
-  comun: santos-varones
+  comun: religiosos
 San Pedro Claver, presbítero:
   comun: pastores
 San Roberto Belarmino, presbítero y doctor de la Iglesia:
@@ -220,19 +220,19 @@ San Antonio María Claret, obispo:
 San Leandro de Sevilla, obispo:
   comun: pastores
 San Artémides Zatti, religioso:
-  comun: santos-varones
+  comun: religiosos
 San Alberto Magno, obispo y doctor de la Iglesia:
   comun: doctores
 Santa Catalina de Alejandría, virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
   comun: virgenes
 San Columbano, abad:
-  comun: santos-varones
+  comun: religiosos
 San Juan Damasceno, presbítero y doctor de la Iglesia:
   comun: doctores
 San Nicolás, obispo:
   comun: pastores
 San Juan Diego Cuauhtlatoatzin, religioso:
-  comun: santos-varones
+  comun: religiosos
 San Dámaso I, papa:
   comun: pastores
 Beata Laura Vicuña, virgen:
@@ -252,13 +252,13 @@ San Pablo VI, papa:
 San Efrén, diácono y doctor de la Iglesia:
   comun: doctores
 San Romualdo, abad:
-  comun: santos-varones
+  comun: religiosos
 Santos Juan Fisher, obispo, y Tomás Moro, mártires:
   comun: varios-martires
 Santa María Goretti, virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
   comun: virgenes
 Santa Teresa de los Andes, religiosa:
-  comun: santas-mujeres
+  comun: religiosos
 San Charbel Maklüf, presbítero:
   comun: pastores
 San Eusebio de Vercelli, presbítero:
