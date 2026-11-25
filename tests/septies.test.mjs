@@ -741,11 +741,11 @@ test('himnos latinos: opción recitada después del español y del gregoriano, d
   assert.equal(p.n, 'Vir celse, forma fúlgida'); assert.equal(p.est[3][0], 'Tu Petri ovíle cǽlitus');
   assert.equal(p.est.length, p.lit.length); assert.ok(p.est.every((e, i) => e.length === p.lit[i].length && p.lit[i].every(Boolean)));
   assert.equal(p.amen, 'Amen.');
-  // una virgen mártir: primero los del común elegido (vírgenes, por defecto), después los del otro (el de un mártir en femenino)
-  assert.equal(n(LA, '2027-11-22'), 'Aptáta, virgo, lámpade / O castitátis sígnifer / Martyr Dei, quæ únicum');
+  // una virgen mártir: solo los del común elegido (vírgenes, por defecto; o el de un mártir, en femenino)
+  assert.equal(n(LA, '2027-11-22'), 'Aptáta, virgo, lámpade');
   X.modo.comunDia = { f: '2027-11-22', id: 'un-martir' };
   try {
-    assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum / Aptáta, virgo, lámpade');
+    assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum');
     assert.equal(lat(LA, '2027-11-22')[1].est[0][3], 'victrix fruens cæléstibus,');
   } finally { X.modo.comunDia = null; }
   assert.equal(n(VI, '2027-11-02'), 'Imménsæ rex poténtiæ (varios difuntos)');

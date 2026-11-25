@@ -851,8 +851,7 @@ function himnosLatinos(hora, ref, o){
     if(c==='un-martir' && fem) c='una-martir';
     if(c==='apostoles' && ref.t==='Pascua') c='apostoles_pascua';
     lista = (plural && de(C.comunes[c+(fem?'_varias':'_varios')])) || de(C.comunes[c]);
-    // virgen mártir (del común de vírgenes desde el 25/11/2026): los del común de vírgenes y los de una mártir, como opciones
-    if(virgenMartir(nombre) && (c==='virgenes' || c==='una-martir')) lista=[...new Set([...(lista||[]), ...(de(C.comunes[c==='virgenes'?'una-martir':'virgenes'])||[])])];
+    // (virgen mártir: solo los del común elegido al comienzo de la hora, vírgenes o mártires; 25/11/2026)
     if(c!=='difuntos') casos=[ /\bpapa\b/i.test(nombre) ? 'papa' : /\bobispo/i.test(nombre) ? 'obispo' : /presbítero|sacerdote/i.test(nombre) ? 'presbitero'
       : fem ? (plural ? 'mujeres' : 'mujer') : '' ];
   } else {

@@ -138,7 +138,7 @@ function armarOficio(fecha, sel){
   const S=[];
   invocacion(S, ref);
   const delComun=!!(C && !(PR&&PR.himno) && P.himno===C.himno);
-  const comunLat=delComun ? comun : cidK ? cidK : (k && L.comunes) ? X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores', X.virgenMartir(ref.n)&&'un-martir']) : null;
+  const comunLat=delComun ? comun : cidK ? cidK : (k && L.comunes) ? X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores']) : null;
   himno(S, L.himnos, P.himno, 'oficio', otros, X.himnosLatinos('oficio', ref, {hs:L.latinos, comun:comunLat}));
   salmodia(S, L, P.salmodia||[]);
   if(P.versiculo) S.push({k:'resp', es:true, l:{es:P.versiculo}});

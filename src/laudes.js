@@ -122,7 +122,7 @@ function propio(hora, fecha, region){
       nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
     // Celebración con propio en la base que toma textos del común (el santoral dice cuál): donde lo que trae es un texto del
     // común (igual o casi), las otras opciones del común también se pueden elegir («Otras opciones»); lo propio de verdad, no
-    if(k && !DE && L.comunes && P.himno && !P._comunLat) P._comunLat=X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores', X.virgenMartir(ref.n)&&'un-martir']);
+    if(k && !DE && L.comunes && P.himno && !P._comunLat) P._comunLat=X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores']);
     if(k && !DE && L.comunes){ const cid=kComun || X.comunDe((L.santoral[k]||{}).comun);
       if(cid && L.comunes[cid]) X.elegirComun(P, ['lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'], L.comunes, cid, ref.n, ref.t==='Pascua', primeras?'primeras':null, hora+(primeras?'1':'')); }
     // Fiestas y solemnidades sin salmodia propia: la del común que indica el santoral (en las I Vísperas, la de sus I Vísperas);
