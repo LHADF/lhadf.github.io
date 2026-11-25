@@ -860,8 +860,9 @@ test('virgen mártir: el común (vírgenes o mártires) se elige al comienzo de 
   // otras celebraciones: sin elección (también los doctores: «pastores o doctores» es un común que completa al otro)
   assert.equal(W.Laudes.armar('2026-11-24', '').dos, null);
   assert.equal(W.Laudes.armar('2026-11-17', '').dos, null);   // San Alberto Magno
-  // pastores mártires (San Blas) y pastores que el libro deja también en santos varones (San Leandro): sin elección
-  for (const f of ['2026-02-03', '2025-11-13']) assert.equal(W.Laudes.armar(f, '').dos, null, f);
+  // pastores mártires (San Blas): sin elección; San Leandro: pastores o religiosos
+  assert.equal(W.Laudes.armar('2026-02-03', '').dos, null);
+  assert.equal(W.Laudes.armar('2025-11-13', '').dos.ops.map(o => o.id).join(' '), 'pastores religiosos');
   // presbítero educador con propio de sync (San Juan Bosco): por defecto, pastores; la nota, con el caso
   r = W.Laudes.armar('2025-01-31', '');
   assert.equal(r.dos.ops.map(o => o.n).join(' | '), 'Común de pastores | Común de santos varones: para educadores');

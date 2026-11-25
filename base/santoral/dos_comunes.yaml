@@ -4,8 +4,7 @@
 # (sobre religiosos, educadores o caridad) (25/11/2026). Claves de base/comunes/ (religiosos, educadores y caridad: de santos varones o de santas mujeres).
 # Con propio en la base (sync): lo que es texto de uno de estos comunes se toma del elegido; lo propio queda.
 # Un solo común: sin elección; lo que el propio de sync trae de otro común se toma de este (san Bernardo).
-# No entran (25/11/2026): los pastores mártires (del común de mártires, sin opción), los pastores que el libro deja
-# también en santos varones (Grignon de Montfort, Leandro: del común de pastores, sin opción), los doctores varones (del común de doctores, sin opción), las vírgenes (del común de vírgenes,
+# No entran (25/11/2026): los pastores mártires (del común de mártires, sin opción), los doctores varones (del común de doctores, sin opción), las vírgenes (del común de vírgenes,
 # sin opción, salvo las vírgenes mártires: vírgenes o mártires), las doctoras vírgenes (del común de vírgenes, sin
 # opción), ni el caso dentro de un común («santos varones: para religiosos», que se completa con el otro).
 "Santa Inés, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir o del Común de vírgenes.
@@ -16,6 +15,8 @@
 "Santa Lucía, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir o del Común de vírgenes.
 "Santa Juana de Arco, virgen y mártir": [virgenes, un-martir]   # (no está en el libro: como las demás vírgenes mártires)
 "Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir": [virgenes, un-martir]   # Del Común de mártires o del Común de santas mujeres: para religiosos. ADF: virgen mártir, vírgenes o mártires (25/11/2026)
+"San Luis María Grignon de Montfort, presbítero": [pastores, religiosos]   # Del Común de pastores: presbíteros, o del Común de santos varones. ADF: pastores o religiosos (25/11/2026)
+"San Leandro de Sevilla, obispo": [pastores, religiosos]   # Del Común de pastores: obispos, o del Común de santos varones. ADF: pastores o religiosos (25/11/2026)
 "San Felipe Neri, presbítero": [pastores, religiosos]   # Del Común de pastores, o de santos varones: para los santos religiosos.
 "San Antonio María Zaccaría, presbítero": [pastores, educadores, religiosos]   # Del Común de pastores, o de santos varones: para educadores o para religiosos.
 "San Charbel Maklüf, presbítero": [pastores, religiosos]   # Del Común de pastores: presbítero, o de santos varones: para los santos religiosos.
