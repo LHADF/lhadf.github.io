@@ -53,8 +53,8 @@ function aviso(ref, k, L, C, hora, PR, nota){
   if(nota!=null) return nota;
   if(ref.n===ref.fer || k) return (L.adf||{})[ref.n]&&(L.adf||{})[ref.n].como ? 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base.' : '';
   if(hora!=='oficio' && /^Memoria/.test(ref.g)) return '';   // Hora intermedia de una memoria: todo de la feria
-  if(PR && PR.oracion) return X.notaPropios(hora==='oficio' ? PR : {...(PR[hora]||{}), oracion:PR.oracion}, C ? `del ${C.nombre}` : 'del día');
-  if(C) return /^Memoria de santa María/.test(C.nombre) ? '' : `Textos del ${C.nombre}`+(C.oraciones?', con su oración (falta la propia).':'.');
+  if(PR && PR.oracion) return X.notaPropios(hora==='oficio' ? PR : {...(PR[hora]||{}), oracion:PR.oracion}, C ? `del ${X.comunConCaso(C.nombre, ref.n)}` : 'del día');
+  if(C) return /^Memoria de santa María/.test(C.nombre) ? '' : `Textos del ${X.comunConCaso(C.nombre, ref.n)}`+(C.oraciones?', con su oración (falta la propia).':'.');
   if(/^Memoria/.test(ref.g)) return 'Memoria: se toma de la feria. Falta en la base la oración propia.';
   return 'El propio de esta celebración todavía no está en la base: se reza el oficio del día.';
 }
@@ -129,7 +129,7 @@ function armarOficio(fecha, sel){
   const S=[];
   invocacion(S, ref);
   const delComun=!!(C && !(PR&&PR.himno) && P.himno===C.himno);
-  const comunLat=delComun ? comun : (k && L.comunes) ? X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores']) : null;
+  const comunLat=delComun ? comun : (k && L.comunes) ? X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores', X.virgenMartir(ref.n)&&'un-martir']) : null;
   himno(S, L.himnos, P.himno, 'oficio', otros, X.himnosLatinos('oficio', ref, {hs:L.latinos, comun:comunLat}));
   salmodia(S, L, P.salmodia||[]);
   if(P.versiculo) S.push({k:'resp', es:true, l:{es:P.versiculo}});

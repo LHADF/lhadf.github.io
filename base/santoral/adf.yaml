@@ -23,8 +23,8 @@ Bienaventurada Virgen María, Reina de la Paz:
   comun: virgen-maria
 San Blas, obispo y mártir:
   comun: un-martir
-Santa Ágata, virgen y mártir:
-  comun: un-martir
+Santa Ágata, virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
+  comun: virgenes
 Bienaventurada Virgen María de Lourdes:
   comun: virgen-maria
 Beato Juan de Fiésole (Fra Angelico), religioso:
@@ -55,8 +55,8 @@ San Luis Orione, presbítero:
   comun: pastores
 María, Auxilio de los Cristianos:
   comun: virgen-maria
-Santa Juana de Arco, virgen y mártir:
-  comun: un-martir
+Santa Juana de Arco, virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
+  comun: virgenes
 San Fernando de Castilla, rey:
   comun: santos-varones
 Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote:   # todo del libro (libro.yaml)
@@ -173,8 +173,8 @@ San Pedro Julián Eymard, presbítero:
   comun: pastores
 San Cayetano, presbítero:
   comun: pastores
-Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir:
-  comun: un-martir
+Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
+  comun: virgenes
 Santa Juana Francisca Frémiot de Chantal, religiosa:
   comun: santas-mujeres
 Santos Ponciano, papa, e Hipólito, mártires:
@@ -223,7 +223,7 @@ San Artémides Zatti, religioso:
   comun: santos-varones
 San Alberto Magno, obispo y doctor de la Iglesia:
   comun: doctores
-Santa Catalina de Alejandría, virgen y mártir:   # el libro da a elegir mártires o vírgenes: vírgenes, con las rúbricas de virgen mártir (25/11/2026)
+Santa Catalina de Alejandría, virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
   comun: virgenes
 San Columbano, abad:
   comun: santos-varones
@@ -255,8 +255,8 @@ San Romualdo, abad:
   comun: santos-varones
 Santos Juan Fisher, obispo, y Tomás Moro, mártires:
   comun: varios-martires
-Santa María Goretti, virgen y mártir:
-  comun: un-martir
+Santa María Goretti, virgen y mártir:   # virgen mártir: común de vírgenes, hasta consultarlo con CRU (25/11/2026)
+  comun: virgenes
 Santa Teresa de los Andes, religiosa:
   comun: santas-mujeres
 San Charbel Maklüf, presbítero:

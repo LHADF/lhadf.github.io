@@ -738,7 +738,7 @@ test('himnos latinos: opción recitada después del español y del gregoriano, d
   assert.equal(p.n, 'Vir celse, forma fúlgida'); assert.equal(p.est[3][0], 'Tu Petri ovíle cǽlitus');
   assert.equal(p.est.length, p.lit.length); assert.ok(p.est.every((e, i) => e.length === p.lit[i].length && p.lit[i].every(Boolean)));
   assert.equal(p.amen, 'Amen.');
-  assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum');   // una virgen mártir; después, el de un mártir en femenino
+  assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum / Aptáta, virgo, lámpade');   // una virgen mártir: el de un mártir en femenino y el de vírgenes
   assert.equal(lat(LA, '2027-11-22')[1].est[0][3], 'victrix fruens cæléstibus,');
   assert.equal(n(VI, '2027-11-02'), 'Imménsæ rex poténtiæ (varios difuntos)');
   X.modo.difuntos = true;
@@ -792,6 +792,9 @@ test('antífonas de salmos y cánticos: asterisco de la entonación (primera pal
     'Que Dios ilumine su rostro sobre nosotros y nos bendiga.': 'Que Dios', 'Señor, Dios mío, a ti grité, y tú me sanaste.': 'Señor, Dios mío,',
     'De noche, Dios mío, mi alma te desea.': 'De noche, Dios mío,', 'Yo mismo apacentaré mis ovejas.': 'Yo mismo',
     'El ángel Gabriel saludó a María.': 'El ángel Gabriel', 'Todos los pueblos te alaben.': 'Todos los pueblos',
+    'Alégrate, María, llena de gracia, el Señor está contigo.': 'Alégrate,', 'En medio de la tempestad, Jesús dormía.': 'En medio',
+    'Padre justo, si es verdad que el mundo no te ha conocido.': 'Padre', '¿Quién subirá al monte del Señor?': '¿Quién',
+    'En tu juicio, Señor, acuérdate de la misericordia.': 'En tu juicio, Señor,',
   };
   for (const [t, c] of Object.entries(casos)) assert.equal(corte(t), c, t);
   // la primera vez lleva asterisco; la repetición final, no (toda en negrita)
@@ -802,7 +805,13 @@ test('antífonas de salmos y cánticos: asterisco de la entonación (primera pal
 
 test('Santa Catalina de Alejandría: común de vírgenes (virgen mártir); San Clemente: responsorio de Vísperas del común', () => {
   const v = VI.armar('2026-11-25', 'ARG');
-  assert.match(v.dia.nota, /Común de vírgenes/);
+  assert.match(v.dia.nota, /del Común de vírgenes: para una virgen mártir\.$/);
+  for (const f of ['2027-05-28', '2027-07-06', '2027-11-22', '2027-12-13', '2027-02-05'])   // toda virgen mártir, del común de vírgenes
+    assert.match(VI.armar(f, 'ARG').secciones.find(s => s.id === 'ab').t.es, /^En una sola víctima|.{0,400}/, f);
+  const CC = CP._.comunConCaso;
+  assert.equal(CC('Común de pastores', 'San Ildefonso, obispo'), 'Común de pastores: para un santo obispo');
+  assert.equal(CC('Común de santos varones o de santas mujeres: para religiosos', 'Santa Rita de Cascia, religiosa'), 'Común de santas mujeres: para una santa religiosa');
+  assert.equal(CC('Común de mártires: para un mártir', 'San Blas, obispo y mártir'), 'Común de mártires: para un mártir');
   assert.match(v.secciones.find(s => s.id === 'ab').t.es, /^En una sola víctima/);           // la de una virgen mártir
   assert.match(VI.armar('2026-11-23', 'ARG').secciones.find(s => s.k === 'resp').l.es[0][1], /^Oh Dios, nos pusiste a prueba/);
 });

@@ -119,7 +119,7 @@ const ANT_ATONAS=new Set(('el la los las lo un una unos unas al del a ante bajo 
   +'san don fray sor oh tan muy cuán qué cuánto cuánta cuántos cuántas cada este esta estos estas ese esa esos esas aquel aquella aquellos aquellas').split(' '));
 const ANT_POSP=new Set('mío mía míos mías tuyo tuya tuyos tuyas suyo suya suyos suyas nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras mismo misma mismos mismas solo sola solos solas'.split(' '));
 const ANT_DET=new Set('el la los las lo mi mis tu tus su sus nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras este esta estos estas ese esa esos esas aquel aquella aquellos aquellas'.split(' '));
-const ANT_LOC=new Set('medio causa pesar delante detrás cerca lejos dentro fuera encima debajo junto antes después través presencia favor acerca alrededor'.split(' '));
+const ANT_PREP=new Set('a ante bajo con contra de desde en entre hacia hasta para por según sin sobre tras'.split(' '));
 const ANT_TIT=/^(?:bienaventurad|beat|sant|gloriós|gloris|apóstol|evangelista|ángel|arcángel|profeta|mártir|virgen|papa|obispo|rey|reina|patriarca|diácono|presbítero|doctor)/;
 const ANT_VOC=/^(?:oh |¡oh )?(?:Señor|Dios|Jesús|Jesucristo|Cristo|Padre|Hijo|María|Madre|Virgen|Rey|Pastor|Maestro|Esposo|Hermanos|Amigos)\b/;
 function asteriscoAnt(t){
@@ -130,9 +130,9 @@ function asteriscoAnt(t){
   while(k<ws.length-1 && !corta(ws[k].w)){
     const x=lim(ws[k].w), sig=lim(ws[k+1].w);
     // «todos los pueblos», «toda mi vida»: el cuantificador va con lo que sigue; «Santa María», «San Juan»: el título, con el
-    // nombre; «En medio de», «A causa de», «Puesto que»: la locución entera, con lo que sigue
+    // nombre; «Puesto que», «Ya que»: la conjunción entera, con lo que sigue. (Las locuciones prepositivas, no: «En medio *»)
     if(ANT_ATONAS.has(x) || /^tod[oa]s?$/.test(x) && ANT_DET.has(sig) || /^sant[oa]s?$/.test(x) && /^\p{Lu}/u.test(ws[k+1].w)
-      || ANT_LOC.has(x) && /^(de|del|a|al)$/.test(sig) && k>0 || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
+      || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
   }
   // detrás de la palabra: posesivo pospuesto o «mismo», otro nombre propio
   while(k<ws.length-1 && !corta(ws[k].w)){
@@ -140,8 +140,10 @@ function asteriscoAnt(t){
     // (nuestro, vuestro: pospuestos solo si cierran la frase, «Señor nuestro,»; si no, son del sustantivo que sigue)
     if(ANT_POSP.has(lim(s)) && (!/^(nuestr|vuestr)/.test(lim(s)) || corta(s)) || k>0 && /^\p{Lu}/u.test(s) && (/^\p{Lu}/u.test(ws[k].w) || ANT_TIT.test(lim(ws[k].w)))) k++; else break;   // «El ángel Gabriel *»
   }
-  // un vocativo entre comas: «Señor, Dios mío, a ti grité»
-  if(/,$/.test(ws[k].w)){
+  // un vocativo entre comas, si lo anterior es otro vocativo o una frase con preposición: «Señor, Dios mío, a ti grité», «De
+  // noche, Dios mío,», «En tu juicio, Señor,»; detrás de un verbo, no: «Alégrate, * María», «Protégenos, * Señor»
+  const unidad=ws.slice(0,k+1).map(x=>x.w).join(' ');
+  if(/,$/.test(ws[k].w) && (ANT_PREP.has(lim(ws[0].w)) || ANT_VOC.test(unidad) && k<=2)){
     let j=k+1; while(j<ws.length && j-k<=3 && !corta(ws[j].w)) j++;
     const voc=ws.slice(k+1,j+1).map(x=>x.w);   // (o un nombre propio: «Alégrate, Jerusalén,», «Si me amas, Simón Pedro,»)
     if(j<ws.length-1 && j-k<=3 && /[,;:!]$/.test(ws[j].w) && (ANT_VOC.test(voc.join(' ')) || voc.every(w=>/^[¡(]?\p{Lu}/u.test(w) || ANT_POSP.has(lim(w))))) k=j;
@@ -620,6 +622,30 @@ function notaPropios(o, resto){
   const adj='propi'+(m?'o':'a')+(pl?'s':'');
   return lista[0].toUpperCase()+lista.slice(1)+' '+adj+(resto ? `; lo demás, ${resto}.` : '.');
 }
+// Nombre del común para la nota, con el caso que corresponde a la celebración, como en las rúbricas del libro (25/11/2026):
+// «Común de vírgenes: para una virgen mártir», «Común de pastores: para un santo obispo», «Común de santas mujeres: para una
+// santa religiosa». Sin caso que corresponda, el nombre del común como está.
+function comunConCaso(cn, n){
+  if(!cn || !n) return cn;
+  const varios=/^(Santos|Santas|Beatos|Beatas)\b/.test(n), fem=/^(Santa|Santas|Beata|Beatas)\b/.test(n);
+  const martir=/mártir/i.test(n), virgen=/\bvirgen\b|vírgenes/i.test(n), base=cn.replace(/:.*$/,'');
+  const con=c=>c ? `${base}: ${c}` : base;
+  if(/^Común de mártires/.test(cn)) return con(varios ? (fem ? (virgen ? 'para varias vírgenes mártires' : 'para varias santas mujeres mártires') : 'para varios mártires')
+    : fem ? (virgen ? 'para una virgen mártir' : 'para una mártir') : 'para un mártir');
+  if(cn==='Común de vírgenes') return con(varios ? 'para varias santas vírgenes' : martir ? 'para una virgen mártir' : 'para una santa virgen');
+  if(cn==='Común de pastores') return con(varios ? 'para varios pastores' : /\bpapa\b/i.test(n) ? 'para un santo papa' : /obispo/i.test(n) ? 'para un santo obispo'
+    : /presbítero|sacerdote/i.test(n) ? 'para un santo presbítero' : /misioner/i.test(n) ? 'para un santo misionero' : '');
+  if(cn==='Común de santos varones') return con(varios ? 'para varios santos' : '');
+  if(cn==='Común de santas mujeres') return con(varios ? 'para varias santas' : '');
+  if(cn==='Común de apóstoles') return con(varios ? 'para varios apóstoles' : '');
+  const m=/^Común de santos varones o de santas mujeres: para (religiosos|educadores|los que)/.exec(cn);
+  if(m){ const b=fem ? 'Común de santas mujeres' : 'Común de santos varones';
+    const c= m[1]==='religiosos' ? (varios ? (fem ? 'para varias santas religiosas' : 'para varios santos religiosos') : fem ? 'para una santa religiosa' : /\babad\b/i.test(n) ? 'para un santo abad' : 'para un santo religioso')
+      : m[1]==='educadores' ? (varios ? (fem ? 'para varias santas educadoras' : 'para varios santos educadores') : fem ? 'para una santa educadora' : 'para un santo educador')
+      : (fem ? 'para una santa que se distinguió por el ejercicio de las obras de misericordia' : 'para un santo que se distinguió en el ejercicio de las obras de misericordia');
+    return `${b}: ${c}`; }
+  return cn;
+}
 // «de San José, esposo de la bienaventurada Virgen María (19 de marzo)»: la celebración de la que se toma lo que falta
 function deCelebracion(nombre, e){
   const f=/^(\d\d)-(\d\d)$/.exec((e&&e.fecha)||'');
@@ -779,6 +805,7 @@ function oracionElegida(oraciones, nombre, hora, t, n){
 // «lat», «lat2»…), con las estrofas del caso (papa, obispo, presbítero; una santa o varias; una difunta o varios).
 // El común (de cids, en orden) que trae este himno en español, en cualquier hora o variante: para las celebraciones con
 // propio en la base cuyo himno es el del común que indica su santoral (el himno latino, entonces, también del común)
+const virgenMartir=n=>/^(Santa|Beata)\b/.test(n||'') && /\bvirgen\b/i.test(n) && /mártir/i.test(n);
 function comunDelHimno(comunes, himno, cids){
   const tiene=o=>o && typeof o==='object' && Object.entries(o).some(([k,v])=> (k==='himno' && [].concat(v).includes(himno)) || (typeof v==='object' && tiene(v)));
   return (cids||[]).find(c=>c && comunes && tiene(comunes[c])) || null;
@@ -801,6 +828,8 @@ function himnosLatinos(hora, ref, o){
     if(c==='un-martir' && fem) c='una-martir';
     if(c==='apostoles' && ref.t==='Pascua') c='apostoles_pascua';
     lista = (plural && de(C.comunes[c+(fem?'_varias':'_varios')])) || de(C.comunes[c]);
+    // virgen mártir (del común de vírgenes desde el 25/11/2026): los del común de vírgenes y los de una mártir, como opciones
+    if(virgenMartir(nombre) && (c==='virgenes' || c==='una-martir')) lista=[...new Set([...(lista||[]), ...(de(C.comunes[c==='virgenes'?'una-martir':'virgenes'])||[])])];
     if(c!=='difuntos') casos=[ /\bpapa\b/i.test(nombre) ? 'papa' : /\bobispo/i.test(nombre) ? 'obispo' : /presbítero|sacerdote/i.test(nombre) ? 'presbitero'
       : fem ? (plural ? 'mujeres' : 'mujer') : '' ];
   } else {
@@ -840,5 +869,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, asteriscoAnt, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
