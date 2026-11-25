@@ -207,8 +207,8 @@ virgen-maria:
   - para: ''
     texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
   opciones:
-    himno:
-    - Todos te deben servir
+    # himno:
+    # - Todos te deben servir  # oculto 25/11/2026: del libro, y hay himno de sync
     preces:
     - intro: 'Proclamemos las grandezas de Dios Padre todopoderoso, que quiso que todas las generaciones felicitaran a María, la madre de su Hijo, y supliquémosle diciendo:'
       respuesta: Que la llena de gracia interceda por nosotros. / Mira a la llena de gracia y escúchanos.
@@ -1155,9 +1155,9 @@ virgenes:
     texto: Escucha, Señor, nuestras plegarias y concede a los que celebramos la virtud de santa N., virgen, crecer siempre en tu amor y perseverar en él hasta el fin. Que vive y reina contigo.
   - para: varias santas vírgenes
     texto: Te pedimos, Señor, que manifiestes la grandeza de tu amor hacia nosotros, para que así como hoy podemos alegrarnos al celebrar la fiesta de las santas vírgenes N. y N., así podamos también disfrutar un día de su compañía en la felicidad de tu reino.
-  opciones:
-    himno:
-    - La gracia de mujer es toda Gracia
+  # opciones:
+    # himno:
+    # - La gracia de mujer es toda Gracia  # oculto 25/11/2026: del libro, y hay himno de sync
   pascua:
     salmodia:
     - ant: Quiero ser solamente tuya, oh Cristo esposo, a ti vengo con mi lámpara encendida.
@@ -1757,8 +1757,8 @@ difuntos:
   - para: los hermanos, familiares y bienhechores difuntos
     texto: Señor Dios, que concedes el perdón de los pecados y quieres la salvación de los hombres, por intercesión de santa María, la Virgen, y de todos los santos, concede a nuestros hermanos, familiares y bienhechores que han salido ya de este mundo alcanzar la eterna bienaventuranza. Por nuestro Señor Jesucristo.
   opciones:
-    himno:
-    - ¡Líbrame de esta carne de pecado
+    # himno:
+    # - ¡Líbrame de esta carne de pecado  # oculto 25/11/2026: del libro, y hay himno de sync
     responsorio:
     - - - V
         - Por tu misericordia, Señor, dales el descanso eterno.

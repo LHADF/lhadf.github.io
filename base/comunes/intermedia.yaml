@@ -557,8 +557,8 @@ difuntos:
       lectura:
       - ref: 2M 7, 9a
         texto: Cuando hayamos muerto por su ley, el rey del universo nos resucitará para una vida eterna.
-      himno:
-      - Camino del sepulcro, preguntábamos
+      # himno:
+      # - Camino del sepulcro, preguntábamos  # oculto 25/11/2026: del libro, y hay himno de sync
     himno: Dejad que el grano se muera
   sexta:
     lectura:
@@ -571,9 +571,9 @@ difuntos:
     - - R
       - Porque tú, Señor, vas conmigo.
     himno: Dejad que el grano se muera
-    opciones:
-      himno:
-      - Camino del sepulcro, preguntábamos
+    # opciones:
+      # himno:
+      # - Camino del sepulcro, preguntábamos  # oculto 25/11/2026: del libro, y hay himno de sync
   nona:
     lectura:
       ref: Is 25, 8
@@ -585,9 +585,9 @@ difuntos:
     - - R
       - A ti acude todo mortal.
     himno: Dejad que el grano se muera
-    opciones:
-      himno:
-      - Camino del sepulcro, preguntábamos
+    # opciones:
+      # himno:
+      # - Camino del sepulcro, preguntábamos  # oculto 25/11/2026: del libro, y hay himno de sync
   salmos:
   - salmo-69
   - salmo-84

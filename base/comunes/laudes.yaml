@@ -51,9 +51,9 @@ dedicacion:
     texto: 'Señor, tú que con piedras vivas y elegidas edificas el templo eterno de tu gloria: acrecienta los dones que el Espíritu ha dado a la Iglesia para que tu pueblo fiel, creciendo como cuerpo de Cristo, llegue a ser la nueva y definitiva Jerusalén. Por nuestro Señor Jesucristo.'
   - para: ''
     texto: 'Señor, Dios nuestro, que has congregado tu Iglesia y has hecho de ella el cuerpo de tu Hijo: haz que tu pueblo, reunido en tu nombre, te venere, te ame, te siga y, llevado por ti, alcance el reino que le tienes prometido. Por nuestro Señor Jesucristo.'
-  opciones:
-    himno:
-    - Piedra angular y fundamento es Cristo
+  # opciones:
+    # himno:
+    # - Piedra angular y fundamento es Cristo  # oculto 25/11/2026: del libro, y hay himno de sync
   pascua:
     salmodia:
     - ant: Mi casa se llama casa de oración. Aleluia.
@@ -137,9 +137,9 @@ virgen-maria:
     texto: Te pedimos, Señor, que la maternal intercesión de la Madre de tu Hijo libre de los males del mundo y conduzca a los gozos de tu reino a los fieles que se alegran al saberse protegidos por la Virgen María. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Quién podrá tanto alabarte
+    # - Quién podrá tanto alabarte  # oculto 25/11/2026: del libro, y hay himno de sync
     - Lucero del alba
-    - Lucero del alba, luz de mi alma
+    # - Lucero del alba, luz de mi alma  # oculto 25/11/2026: del libro, y hay himno de sync
     preces:
     - intro: 'Elevemos nuestras súplicas al Salvador, que quiso nacer de María Virgen, y digámosle:'
       respuesta: Que tu santa Madre, Señor, interceda por nosotros.
@@ -424,7 +424,7 @@ varios-martires:
     texto: Señor, ya que por don tuyo la fuerza se realiza en la debilidad, concede a cuantos estamos celebrando la victoria de las santas mártires N. y N. que obtengamos la fortaleza de vencer nuestras dificultades como ellas vencieron los tormentos del martirio. Por nuestro Señor Jesucristo.
   opciones:
     himno:
-    - Éstos que van vestidos
+    # - Éstos que van vestidos  # oculto 25/11/2026: del libro, y hay himno de sync
     - Testigos de amor
   pascua:
     salmodia:
@@ -799,9 +799,9 @@ santos-varones:
     texto: 'Dios todopoderoso y eterno, tú has querido darnos una prueba suprema de tu amor en la glorificación de tus santos: concédenos ahora que su intercesión nos ayude y su ejemplo nos mueva a imitar fielmente a tu Hijo, Jesucristo. Que vive y reina contigo.'
   - para: un santo que se ha consagrado a una actividad caritativa
     texto: Señor, Dios todopoderoso, tú nos has revelado que toda la ley se compendia en el amor a ti y al prójimo; concédenos que, imitando la caridad de san N., podamos ser un día contados entre los elegidos de tu reino. Por nuestro Señor Jesucristo.
-  opciones:
-    himno:
-    - Cantemos nuestra fe y, al confesarla
+  # opciones:
+    # himno:
+    # - Cantemos nuestra fe y, al confesarla  # oculto 25/11/2026: del libro, y hay himno de sync
   pascua:
     salmodia:
     - ant: El Señor les concedió una gloria eterna y su nombre no será nunca olvidado. Aleluia.

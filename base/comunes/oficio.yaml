@@ -61,9 +61,9 @@ dedicacion:
     - - R
       - 'Hacia ella caminarán pueblos numerosos y dirán: «Gloria a ti, Señor».'
   opciones:
-    himno:
-    - No rechazaremos
-    - ¡Jerusalén, ciudad dichosa!
+    # himno:
+    # - No rechazaremos  # oculto 25/11/2026: del libro, y hay himno de sync
+    # - ¡Jerusalén, ciudad dichosa!  # oculto 25/11/2026: del libro, y hay himno de sync
     lectura2:
     - titulo: EDIFICACIÓN Y CONSAGRACIÓN DE LA CASA DE DIOS EN NOSOTROS
       texto: |-
@@ -271,8 +271,8 @@ virgen-maria:
     - - R
       - Por ti la bendición del Padre ha brillado sobre los hombres.
   opciones:
-    himno:
-    - María, pureza en vuelo
+    # himno:
+    # - María, pureza en vuelo  # oculto 25/11/2026: del libro, y hay himno de sync
     lectura1:
     - titulo: POR LA FE, SOMOS HIJOS Y HEREDEROS DE DIOS
       texto: |-
@@ -734,10 +734,10 @@ apostoles:
       - No seréis vosotros los que habléis, el Espíritu de vuestro Padre hablará por vosotros.
     - - R
       - En su momento se os sugerirá lo que tenéis que decir.
-  opciones:
-    himno:
-    - ¡Guardadnos en la fe y en la unidad
-    - Voceros de Dios
+  # opciones:
+    # himno:
+    # - ¡Guardadnos en la fe y en la unidad  # oculto 25/11/2026: del libro, y hay himno de sync
+    # - Voceros de Dios  # oculto 25/11/2026: del libro, y hay himno de sync
   pascua:
     salmodia:
     - ant: A toda la tierra alcanza su pregón y hasta los límites del orbe su lenguaje. Aleluia.
@@ -891,9 +891,9 @@ varios-martires:
       - Revistámonos de fuerza y preparémonos para la lucha con un espíritu indoblegable, con una fe sincera, con una total entrega.
     - - R
       - Qué dignidad tan grande, qué felicidad tan plena es luchar bajo la mirada de Dios y ser coronados por Cristo.
-  opciones:
-    himno:
-    - Pléyade santa y noble de mártires insignes
+  # opciones:
+    # himno:
+    # - Pléyade santa y noble de mártires insignes  # oculto 25/11/2026: del libro, y hay himno de sync
   pascua:
     versiculo:
     - - V
@@ -1049,9 +1049,9 @@ un-martir:
       - Lo perdí todo a fin de tener una íntima experiencia de Cristo y de la comunión con sus padecimientos, muriendo su misma muerte.
     - - R
       - Ahora me aguarda la corona merecida.
-  opciones:
-    himno:
-    - Pléyade santa y noble de mártires insignes
+  # opciones:
+    # himno:
+    # - Pléyade santa y noble de mártires insignes  # oculto 25/11/2026: del libro, y hay himno de sync
   pascua:
     salmodia:
     - ant: Todos os odiarán por mi nombre; pero el que persevere hasta el fin se salvará. Aleluia.
@@ -1794,8 +1794,8 @@ santos-varones:
     - - R
       - Toda bondad, justicia y verdad son fruto de la luz.
   opciones:
-    himno:
-    - Desde que mi voluntad
+    # himno:
+    # - Desde que mi voluntad  # oculto 25/11/2026: del libro, y hay himno de sync
     lectura1:
     - titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
       texto: |-
@@ -2092,8 +2092,8 @@ santas-mujeres:
     - - R
       - Toda bondad, justicia y verdad son fruto de la luz.
   opciones:
-    himno:
-    - La mujer fuerte
+    # himno:
+    # - La mujer fuerte  # oculto 25/11/2026: del libro, y hay himno de sync
     lectura1:
     - titulo: TENED ENTRE VOSOTROS LOS SENTIMIENTOS PROPIOS DE CRISTO JESÚS
       texto: |-
