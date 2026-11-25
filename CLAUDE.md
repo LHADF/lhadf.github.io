@@ -1,5 +1,6 @@
 # Cervus (LH ADF) — instrucciones para trabajar en este repositorio
 
+- **Contexto del trabajo:** [docs/contexto.md](docs/contexto.md). Leelo antes de empezar (después de traer lo último de `main`). Cuando se toma una decisión importante, actualizalo en el mismo commit que el cambio: corregí la parte que cambia, no lo reemplaces entero; si al subir alguien lo cambió mientras tanto, traé su versión y juntá los dos cambios.
 - Antes de tocar la interfaz o los textos, seguí [docs/diseno.md](docs/diseno.md). Las reglas de ortotipografía son innegociables.
 - La app es un solo HTML armado por `tools/armar.py` desde `src/`. No hay paso de compilación con npm.
 - **Base de textos:** `base/` (ver `base/LEEME.md`), cargada una vez desde `sync` con `tools/importar/`. La base es la fuente: se corrige ahí, no en `sync`, y el importador no se vuelve a correr (pisaría correcciones). `python3 tools/verificar_base.py` la revisa.
