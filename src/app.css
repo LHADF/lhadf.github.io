@@ -306,6 +306,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .ant.rec .segs,.vr.rec:not(.il) .segs{display:inline}
 p.rec{margin:0 0 .8em}
 .modo-canto{margin-bottom:1.2em}
+.dos-comunes{margin-bottom:.5em}   /* virgen mártir: común de vírgenes o de mártires (prueba) */
 
 /* ---------- Cabecera ---------- */
 .brand button{font:inherit;border:0;background:none;color:inherit;min-height:44px;padding:2px 10px;border-radius:var(--r-1);line-height:1.1}

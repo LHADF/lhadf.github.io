@@ -199,10 +199,11 @@ const PALABRAS=['papa','obispo','presbítero','sacerdote','abad','religios','vir
 // Si nombra dos («de pastores… y del de doctores»), el primero.
 const COMUN_DE=[[/dedicaci/,'dedicacion'],[/virgen mar/,'virgen-maria'],[/ap[óo]stol/,'apostoles'],[/para un m[áa]rt|un m[áa]rt/,'un-martir'],
   [/varios m[áa]rt/,'varios-martires'],[/pastores/,'pastores'],[/doctores/,'doctores'],[/v[íi]rgenes/,'virgenes'],[/santos varones/,'santos-varones'],[/santas mujeres/,'santas-mujeres'],[/religios/,'religiosos'],[/caritativ/,'caridad'],[/educador/,'educadores']];
-// Todo doctor de la Iglesia toma del común de doctores (completado por el de pastores; las doctoras, por el de vírgenes),
-// salvo sus elementos propios, aunque la rúbrica del libro nombre primero otro común. Lo que asigne adf.yaml manda
-// (santa Hildegarda: solo del común de vírgenes).
-const esDoctor=nombre=>/\bdoctor(a|es)?\b/i.test(String(nombre||''));
+// Todo doctor varón de la Iglesia toma del común de doctores (completado por el de pastores), sin opción de otro común,
+// salvo sus elementos propios, aunque la rúbrica del libro nombre primero otro común; también san Bernardo, que el
+// calendario ADF llama «abad». Las doctoras vírgenes, del común de vírgenes, sin opción de otro (25/11/2026).
+const DOCTORES_POR_NOMBRE=['San Bernardo, abad'];
+const esDoctor=nombre=>/\bdoctor(es)?\b/i.test(String(nombre||'')) || DOCTORES_POR_NOMBRE.includes(nombre);
 function comunDe(texto){
   const t=String(texto||'').toLowerCase(); let mejor=null, pos=1e9;
   for(const [re,id] of COMUN_DE){ const m=t.match(re); if(m && m.index<pos){ pos=m.index; mejor=id; } }
@@ -788,6 +789,46 @@ function oracionElegida(oraciones, nombre, hora, t, n){
 // El común (de cids, en orden) que trae este himno en español, en cualquier hora o variante: para las celebraciones con
 // propio en la base cuyo himno es el del común que indica su santoral (el himno latino, entonces, también del común)
 const virgenMartir=n=>/^(Santa|Beata)\b/.test(n||'') && /\bvirgen\b/i.test(n) && /mártir/i.test(n);
+// Celebraciones que pueden tomar de dos (o tres) comunes (base/santoral/dos_comunes.yaml, 25/11/2026): la rúbrica del libro
+// dice «Del Común de … o del Común de …» (vírgenes mártires; obispos y papas mártires; presbíteros religiosos o educadores;
+// vírgenes religiosas…). Se elige al comienzo de la hora y vale para todas las horas del día de esa celebración:
+// modo.comunDia = {f: fecha, id}. El primero de la lista va por defecto. No entran los casos en que un común completa a
+// otro (los doctores, «santos varones: para religiosos»). dosComunes: las opciones, para los botones.
+const ETIQUETA_COMUN={virgenes:'Común de vírgenes', 'un-martir':'Común de mártires', 'varios-martires':'Común de mártires',
+  pastores:'Común de pastores', doctores:'Común de doctores de la Iglesia'};
+const CASO_COMUN={religiosos:['para religiosos','para religiosas'], educadores:['para educadores','para educadoras'], caridad:['para las obras de misericordia','para las obras de misericordia']};
+function etiquetaComun(id, nombre){
+  const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||'')), base=fem ? 'Común de santas mujeres' : 'Común de santos varones';
+  if(CASO_COMUN[id]) return base+': '+CASO_COMUN[id][fem?1:0];
+  if(id==='santos-varones' || id==='santas-mujeres') return base;
+  return ETIQUETA_COMUN[id] || id;
+}
+// Una lista de un solo común no da elección: dice de qué común se toma lo que el propio de sync trae de otro (san Bernardo).
+function dosComunes(nombre, lista, fecha){
+  const l=lista && lista[nombre]; if(!l || !l.length) return null;
+  const e=modo.comunDia, actual=(e && e.f===fecha && l.includes(e.id)) ? e.id : l[0];
+  return {f:fecha, actual, ops:l.map(i=>({id:i, n:etiquetaComun(i, nombre)}))};
+}
+// Celebración con propio en la base (sync) que puede tomar de varios comunes: cada texto que es (igual o casi) de uno de
+// ellos (o del común que lo completa: santos varones para religiosos…) queda si es del elegido y, si es de otro, se toma
+// del elegido (C, ya armado para la celebración); lo propio queda siempre. Devuelve los campos que son del común y lo propio.
+function delComunElegido(P, santo, campos, comunes, nombre, C, sub, lista, elegido){
+  // también el común del que dice venir el propio de sync («Del Común de santos varones: para los santos religiosos»)
+  const rub=String((santo||{}).comun||'').toLowerCase();
+  lista=[...new Set([...lista, comunDe(rub), /religios/.test(rub) && 'religiosos'].filter(Boolean))];
+  const fem=/^(Santa|Santas|Beata|Beatas)\b/.test(String(nombre||''));
+  const familia=id=>{ const c=comunes[id]||{}, h=(fem && c.hereda_mujeres) || c.hereda; return h ? [id, h] : [id]; };
+  const de=(id, c, v)=>familia(id).some(i=>{ const j=JSON.stringify(v);
+    return opcionesComun(comunes, i, nombre, false, c, sub).some(a=>JSON.stringify(a.raw)===j || parecido(a.raw, v)>=0.85); });
+  const r=[];
+  for(const c of campos){
+    if(!santo || santo[c]==null) continue;
+    if(de(elegido, c, santo[c])){ r.push(c); continue; }   // ya es del común elegido (texto de sync): queda
+    if(C[c]!=null && lista.some(id=>id!==elegido && de(id, c, santo[c]))){ P[c]=C[c]; r.push(c); }
+  }
+  const propio=Object.fromEntries(Object.entries(santo||{}).filter(([c])=>!r.includes(c)));
+  return {r, propio};
+}
 function comunDelHimno(comunes, himno, cids){
   const tiene=o=>o && typeof o==='object' && Object.entries(o).some(([k,v])=> (k==='himno' && [].concat(v).includes(himno)) || (typeof v==='object' && tiene(v)));
   return (cids||[]).find(c=>c && comunes && tiene(comunes[c])) || null;
@@ -851,5 +892,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, dosComunes, delComunElegido, etiquetaComun,oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

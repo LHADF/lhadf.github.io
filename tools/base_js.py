@@ -188,7 +188,7 @@ def laudes():
     bn = GL['benedictus']
     datos = {
         'salterio': SL, 'tiempo': TL, 'santoral': SaL, 'himnos': HL, 'latinos': himnos_latinos('laudes'), 'ordinario': OL, 'salmos': salmos,
-        'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('laudes', SaL)[0], 'comunes': adf_y_comunes('laudes', SaL)[1],
+        'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('laudes', SaL)[0], 'dos': dos_comunes(), 'comunes': adf_y_comunes('laudes', SaL)[1],
         'gregoriano': {
             'invitatorio': {'gabc': gabc(GL['invitatorio']['partitura']), 'traduccion': pares(GL['invitatorio']['traduccion'])},
             'invitatorio_to': invitatorio_gregoriano(GL['invitatorio_per_annum']),
@@ -203,6 +203,11 @@ def laudes():
     with open(destino, 'w', encoding='utf-8') as f:
         f.write('window.LAUDES=' + json.dumps(datos, ensure_ascii=False, separators=(',', ':')) + ';\n')
     print(f'{os.path.relpath(destino, RAIZ)}: {os.path.getsize(destino) // 1024} KB · santoral vinculado: {len(mapa)} · sin propio en la base: {len(sin)}')
+
+
+def dos_comunes():
+    """Celebraciones que pueden tomar de dos (o tres) comunes (base/santoral/dos_comunes.yaml): {nombre: [claves]}."""
+    return leer(os.path.join(B, 'santoral', 'dos_comunes.yaml')) or {}
 
 
 def adf_y_comunes(hora, santoral):
@@ -310,7 +315,7 @@ def visperas():
     usados = {g['salmo'] for capa in ([e for w in SV.values() for e in w.values()], TV.values(), SaV.values()) for e in capa for g in (e.get('salmodia') or [])} | salmos_comunes('visperas')
     salmos = {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in usados}
     mapa, sin = vincular_santoral(SaV)
-    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'latinos': himnos_latinos('visperas'), 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'comunes': adf_y_comunes('visperas', SaV)[1],
+    datos = {'salterio': SV, 'tiempo': TV, 'santoral': SaV, 'himnos': HV, 'latinos': himnos_latinos('visperas'), 'salmos': salmos, 'mapa': mapa, 'sin_vincular': sin, 'adf': adf_y_comunes('visperas', SaV)[0], 'dos': dos_comunes(), 'comunes': adf_y_comunes('visperas', SaV)[1],
              'gregoriano': {**comunes_latin(GL), 'himnos': himnos_gregorianos('visperas'),
                             'cantico': {'titulo': MG['titulo'], 'ref': MG['ref'], 'versos': MG['versos'], 'traduccion_versos': [pares(v) for v in MG['traduccion_versos']]}}}
     destino = os.path.join(RAIZ, 'src', 'carga', 'visperas.js')
@@ -340,7 +345,7 @@ def oficio():
     A = leer(os.path.join(B, 'santoral', 'adf.yaml')) or {}
     datos = {'salterio': SO, 'tiempo': TO, 'santoral': SaO, 'himnos': HO, 'latinos': himnos_latinos('oficio'), 'ordinario': OO,
              'salmos': _salmos(_usados([e for w in SO.values() for e in w.values()], TO.values(), SaO.values()) | salmos_comunes('oficio')),
-             'mapa': mapa, 'adf': adf_y_comunes('oficio', SaO)[0], 'comunes': adf_y_comunes('oficio', SaO)[1],
+             'mapa': mapa, 'adf': adf_y_comunes('oficio', SaO)[0], 'dos': dos_comunes(), 'comunes': adf_y_comunes('oficio', SaO)[1],
              'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}}
     _escribir_carga('oficio', 'OFICIO', datos, mapa, sin)
 
@@ -358,7 +363,7 @@ def intermedia():
     comp = [g for c in OI['complementaria'].values() for g in c]
     datos = {'salterio': SI, 'tiempo': TI, 'santoral': SaI, 'horas': horas, 'latinos': himnos_latinos('tercia', 'sexta', 'nona'), 'complementaria': OI['complementaria'],
              'salmos': _salmos(_usados([e for w in SI.values() for e in w.values()], TI.values(), SaI.values(), [{'salmodia': comp}]) | salmos_comunes('intermedia')),
-             'mapa': mapa, 'adf': adf_y_comunes('intermedia', todos)[0], 'comunes': adf_y_comunes('intermedia', todos)[1],
+             'mapa': mapa, 'adf': adf_y_comunes('intermedia', todos)[0], 'dos': dos_comunes(), 'comunes': adf_y_comunes('intermedia', todos)[1],
              'gregoriano': {'benedicamus': pares(GH['benedicamus']['traduccion'])}, 'mayores': mayores_sin_intermedia(mapa)}
     _escribir_carga('intermedia', 'INTERMEDIA', datos, mapa, sin)
 

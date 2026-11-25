@@ -624,8 +624,11 @@ test('comunes: se elige la variante que indica la rúbrica, por el nombre de la 
   assert.ok(!/\bN\./.test(bel) && !/\bN\./.test(JSON.stringify(LA.armar('2026-11-16', '').secciones)));
   assert.match(JSON.stringify(VI.armar('2026-11-16', '').secciones), /la fiesta de santa Gertrudis, virgen,/);
   assert.match(LA.armar('2027-09-18', '').dia.nota || '', /vírgenes/i);   // santa Hildegarda: solo del común de vírgenes
-  assert.ok(X.esDoctor('San Agustín, obispo y doctor de la Iglesia') && X.esDoctor('Santa Teresa de Jesús, virgen y doctora de la Iglesia') && !X.esDoctor('San Blas, obispo y mártir'));
-  // en Pascua, lo que se hereda de otro común conserva su «Aleluia» (santa Catalina de Siena: doctores ← vírgenes)
+  // doctores varones (y san Bernardo, «abad» en el calendario ADF): del común de doctores; las doctoras vírgenes, del de vírgenes (25/11/2026)
+  assert.ok(X.esDoctor('San Agustín, obispo y doctor de la Iglesia') && X.esDoctor('San Bernardo, abad') && !X.esDoctor('Santa Teresa de Jesús, virgen y doctora de la Iglesia') && !X.esDoctor('San Blas, obispo y mártir'));
+  assert.match(LA.armar('2025-08-20', '').dia.nota, /del Común de doctores de la Iglesia\.$/);
+  for (const f of ['2025-08-20', '2025-06-13', '2025-10-15', '2025-10-01', '2026-04-29', '2025-08-11']) assert.ok(!(LA.armar(f, '').dos || { ops: [] }).ops.some((o, i) => i > 0), f);   // sin elección
+  // en Pascua, lo que no es propio conserva su «Aleluia» (santa Catalina de Siena, del común de vírgenes)
   const cat = ctx.window.Oficio.armar('2027-04-29', '').secciones.find(s => s.k === 'ant' && s.id === 'a1');
   assert.match(cat.t.es, /Aleluia\.$/);
   // Basílicas de san Pedro y san Pablo: del común de apóstoles, no los textos del 29 de junio
@@ -738,8 +741,13 @@ test('himnos latinos: opción recitada después del español y del gregoriano, d
   assert.equal(p.n, 'Vir celse, forma fúlgida'); assert.equal(p.est[3][0], 'Tu Petri ovíle cǽlitus');
   assert.equal(p.est.length, p.lit.length); assert.ok(p.est.every((e, i) => e.length === p.lit[i].length && p.lit[i].every(Boolean)));
   assert.equal(p.amen, 'Amen.');
-  assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum / Aptáta, virgo, lámpade');   // una virgen mártir: el de un mártir en femenino y el de vírgenes
-  assert.equal(lat(LA, '2027-11-22')[1].est[0][3], 'victrix fruens cæléstibus,');
+  // una virgen mártir: primero los del común elegido (vírgenes, por defecto), después los del otro (el de un mártir en femenino)
+  assert.equal(n(LA, '2027-11-22'), 'Aptáta, virgo, lámpade / O castitátis sígnifer / Martyr Dei, quæ únicum');
+  X.modo.comunDia = { f: '2027-11-22', id: 'un-martir' };
+  try {
+    assert.equal(n(LA, '2027-11-22'), 'O castitátis sígnifer / Martyr Dei, quæ únicum / Aptáta, virgo, lámpade');
+    assert.equal(lat(LA, '2027-11-22')[1].est[0][3], 'victrix fruens cæléstibus,');
+  } finally { X.modo.comunDia = null; }
   assert.equal(n(VI, '2027-11-02'), 'Imménsæ rex poténtiæ (varios difuntos)');
   X.modo.difuntos = true;
   try {
@@ -821,4 +829,56 @@ test('preces de Vísperas: cada intención por separado (no dos pegadas en una)'
     const p = VI.armar(f, 'ARG').secciones.find(s => s.k === 'preces');
     for (const [a, b] of p.preces) assert.ok(!(b && /[.!?]$/.test(a) && /^\p{Lu}/u.test(b)) && b !== p.respuesta && b !== '', f + ': ' + a);
   }
+});
+
+test('virgen mártir: el común (vírgenes o mártires) se elige al comienzo de la hora y vale para todo el día; lo propio queda', () => {
+  const W = ctx.window, X = CP._;
+  const de = (r, id) => r.secciones[r.secciones.findIndex(s => s.k === 'sec' && s.id === id) + 1];
+  // Santa Catalina de Alejandría (toma del común): por defecto, vírgenes; la nota dice el común elegido
+  let r = W.Laudes.armar('2026-11-25', '');
+  assert.equal(r.dos.actual, 'virgenes');
+  assert.equal(r.dos.ops.map(o => o.id).join(' '), 'virgenes un-martir');
+  assert.match(r.dia.nota, /del Común de vírgenes: para una virgen mártir\.$/);
+  X.modo.comunDia = { f: '2026-11-25', id: 'un-martir' };
+  try {
+    for (const A of [W.Laudes, W.Visperas, W.Oficio]) {
+      r = A.armar('2026-11-25', '');
+      assert.equal(r.dos.actual, 'un-martir');
+      assert.match(r.dia.nota, /del Común de mártires: para una virgen mártir\.$/);
+    }
+    assert.equal(W.Laudes.armar('2026-11-26', '').dos.actual, 'pastores');   // la elección es de ese día (San Columbano: pastores, por defecto)
+  } finally { X.modo.comunDia = null; }
+  // Santa Águeda (propio de sync): lo que era del común de mártires pasa al elegido; la antífona del Benedictus y la oración, propias
+  const L1 = W.Laudes.armar('2026-02-05', '');
+  X.modo.comunDia = { f: '2026-02-05', id: 'un-martir' };
+  let L2;
+  try { L2 = W.Laudes.armar('2026-02-05', ''); } finally { X.modo.comunDia = null; }
+  assert.equal(L1.dos.actual, 'virgenes'); assert.equal(L2.dos.actual, 'un-martir');
+  assert.notEqual(JSON.stringify(de(L1, 'lectura')), JSON.stringify(de(L2, 'lectura')));
+  assert.equal(JSON.stringify(de(L1, 'oracion')), JSON.stringify(de(L2, 'oracion')));
+  assert.match(L1.dia.nota, /^Antífona del Benedictus y oración propias; lo demás, del Común de vírgenes/);
+  // otras celebraciones: sin elección (también los doctores: «pastores o doctores» es un común que completa al otro)
+  assert.equal(W.Laudes.armar('2026-11-24', '').dos, null);
+  assert.equal(W.Laudes.armar('2026-11-17', '').dos, null);   // San Alberto Magno
+  // pastores mártires (San Blas) y pastores que el libro deja también en santos varones (San Leandro): sin elección
+  for (const f of ['2026-02-03', '2025-11-13']) assert.equal(W.Laudes.armar(f, '').dos, null, f);
+  // presbítero educador con propio de sync (San Juan Bosco): por defecto, pastores; la nota, con el caso
+  r = W.Laudes.armar('2025-01-31', '');
+  assert.equal(r.dos.ops.map(o => o.n).join(' | '), 'Común de pastores | Común de santos varones: para educadores');
+  assert.match(r.dia.nota, /del Común de pastores: para un santo presbítero\.$/);
+  X.modo.comunDia = { f: '2025-01-31', id: 'educadores' };
+  try { assert.match(W.Laudes.armar('2025-01-31', '').dia.nota, /del Común de santos varones: para un santo educador\.$/); } finally { X.modo.comunDia = null; }
+  // Hora intermedia: religiosos, educadores y caridad toman sus textos de santos varones (o de santas mujeres)
+  const CI = W.INTERMEDIA.comunes;
+  for (const c of ['religiosos', 'educadores', 'caridad']) {
+    assert.equal(JSON.stringify(X.comun(CI, c, 'San N., religioso').tercia), JSON.stringify(X.comun(CI, 'santos-varones', 'San N., religioso').tercia), c);
+    assert.equal(JSON.stringify(X.comun(CI, c, 'Santa N., religiosa').nona), JSON.stringify(X.comun(CI, 'santas-mujeres', 'Santa N., religiosa').nona), c);
+  }
+  // presbítero religioso con propio de sync (San Ignacio de Loyola): con su común, el texto de sync queda; con el otro, cambia
+  const I1 = W.Laudes.armar('2026-07-31', '');
+  assert.equal(I1.dos.ops.map(o => o.n).join(' | '), 'Común de pastores | Común de santos varones: para religiosos');
+  X.modo.comunDia = { f: '2026-07-31', id: 'religiosos' };
+  let I2; try { I2 = W.Laudes.armar('2026-07-31', ''); } finally { X.modo.comunDia = null; }
+  assert.notEqual(JSON.stringify(de(I1, 'preces')), JSON.stringify(de(I2, 'preces')));
+  assert.match(I2.dia.nota, /del Común de santos varones: para un santo religioso\.$/);
 });

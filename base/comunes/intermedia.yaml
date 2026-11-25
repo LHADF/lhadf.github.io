@@ -526,6 +526,20 @@ santas-mujeres:
         - Para ti es mi música, Señor. Aleluia.
       - - R
         - Voy a explicar el camino perfecto. Aleluia.
+# Religiosos, educadores y caridad no traen textos propios para Tercia, Sexta y Nona: todo, de santos varones o de
+# santas mujeres (25/11/2026; antes quedaban sin textos del común en las fiestas y solemnidades)
+religiosos:
+  nombre: 'Común de santos varones o de santas mujeres: para religiosos'
+  hereda: santos-varones
+  hereda_mujeres: santas-mujeres
+caridad:
+  nombre: 'Común de santos varones o de santas mujeres: para los que se han consagrado a una actividad caritativa'
+  hereda: santos-varones
+  hereda_mujeres: santas-mujeres
+educadores:
+  nombre: 'Común de santos varones o de santas mujeres: para educadores'
+  hereda: santos-varones
+  hereda_mujeres: santas-mujeres
 difuntos:
   nombre: Oficio de difuntos
   salmodia_propia: true

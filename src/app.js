@@ -74,6 +74,9 @@ function cargarDia(){
   // (S._elige, por día y hora; no se guarda) vale mientras se mira ese día.
   MODO.opc = MODO.comun ? null : {elige:(S._elige||{})[claveElige()]||{}, alts:{}};
   MODO.inv = (S.hora==='laudes' && S.invLaudes===false) ? false : undefined;
+  // Celebraciones que pueden tomar de dos comunes (virgen mártir): el común elegido al comienzo de la hora, que vale
+  // para todas las horas de ese día (S.comunDia = {f: fecha de la celebración, id}; se guarda)
+  MODO.comunDia = S.comunDia || null;
   DH = (MAYORES[S.hora] && cargada(S.hora)) ? window[MAYORES[S.hora]].armar(S.fecha, SEL(), {complementaria:!!S.compl}) : null;
   // Oficio de lectura unido a Laudes: después de las lecturas (y del Te Deum) siguen las Laudes desde la salmodia,
   // sin su invocación inicial ni su himno; el Oficio no tiene oración ni conclusión propias.
@@ -655,6 +658,8 @@ function horaHTML(){
   const r=R(); let h='', secAct=null; const vistas=new Set();
   const sinNombre=S.hora==='completas' || r.primeras;   // Completas y I Vísperas: sin el nombre de la celebración
   h+=`<p class="dia-h">${sinNombre?(r.primeras?'I Vísperas · ':''):esc(r.dia.titulo)+' · '}${esc(r.dia.tiempo)}${r.dia.visperas&&!sinNombre?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
+  // dos comunes: primero los botones para elegirlo y, debajo, la nota de dónde se toma cada cosa
+  if(r.dos && r.dos.ops.length>1) h+=`<div class="opciones dos-comunes" role="group" aria-label="Común">${r.dos.ops.map(x=>`<button data-act="comundia" data-k="${r.dos.f}" data-v="${x.id}" aria-pressed="${x.id===r.dos.actual}">${esc(x.n)}</button>`).join('')}</div>`;
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
   // I Vísperas del domingo: en ADF, antes de empezar, la oración preparatoria (introduce el oficio de toda la semana)
   if(r.hora==='visperas' && r.primeras && CP.deIso(S.fecha).getDay()===6)
@@ -1031,6 +1036,10 @@ document.addEventListener('click',e=>{
     case 'oraciones': { const O=window.BASE.oraciones; hoja(O.titulo, `<div class="orof-b">${['preparatoria','conclusiva'].map(k=>`<h3>${esc(O[k].titulo)}</h3>${oracionOficioHTML(k)}`).join('')}</div>`); break; }
     case 'unirl': { const sigue=()=>{ S.unirLaudes=!S.unirLaudes; cargarDia(); cambio(S.unirLaudes?'Oficio con Laudes':'Oficio solo'); };
       if(!S.unirLaudes && !window.LAUDES){ toast('Cargando…'); cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.')); } else sigue(); break; }
+    case 'comundia': { if(S.comunDia && S.comunDia.f===b.dataset.k && S.comunDia.id===v) break;
+      if(!S.comunDia && v==='virgenes') break;
+      S.comunDia={f:b.dataset.k, id:v}; if(S._elige) delete S._elige[claveElige()];   // las «Otras opciones» elegidas eran del otro común
+      cargarDia(); cambio('Textos del '+b.textContent); break; }
     case 'salop': { const c=v==='comp'; if(!!S.compl===c) break; S.compl=c; cargarDia(); cambio(c?'Salmodia complementaria':'Salmodia del día'); break; }
     case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(S.unirCompletas?'Vísperas con Completas':'Vísperas solas'); break;
     case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }

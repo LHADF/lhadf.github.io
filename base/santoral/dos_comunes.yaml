@@ -1,0 +1,35 @@
+# Celebraciones que pueden tomar de dos (o tres) comunes: la rúbrica del libro dice «Del Común de … o del Común de …».
+# Se elige al comienzo de la hora (botones debajo de la nota) y la elección vale para todas las horas de ese día.
+# El primero de la lista es el de por defecto: en las vírgenes mártires, el de vírgenes; en los presbíteros, el de pastores
+# (sobre religiosos, educadores o caridad) (25/11/2026). Claves de base/comunes/ (religiosos, educadores y caridad: de santos varones o de santas mujeres).
+# Con propio en la base (sync): lo que es texto de uno de estos comunes se toma del elegido; lo propio queda.
+# Un solo común: sin elección; lo que el propio de sync trae de otro común se toma de este (san Bernardo).
+# No entran (25/11/2026): los pastores mártires (del común de mártires, sin opción), los pastores que el libro deja
+# también en santos varones (Grignon de Montfort, Leandro: del común de pastores, sin opción), los doctores varones (del común de doctores, sin opción), las vírgenes (del común de vírgenes,
+# sin opción, salvo las vírgenes mártires: vírgenes o mártires), las doctoras vírgenes (del común de vírgenes, sin
+# opción), ni el caso dentro de un común («santos varones: para religiosos», que se completa con el otro).
+"Santa Inés, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir o del Común de vírgenes.
+"Santa Ágata, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir o del Común de vírgenes.
+"Santa María Goretti, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir, o del Común de vírgenes.
+"Santa Cecilia, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir o del Común de vírgenes.
+"Santa Catalina de Alejandría, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir, o del Común de vírgenes.
+"Santa Lucía, virgen y mártir": [virgenes, un-martir]   # Del Común de un mártir o del Común de vírgenes.
+"Santa Juana de Arco, virgen y mártir": [virgenes, un-martir]   # (no está en el libro: como las demás vírgenes mártires)
+"Santa Teresa Benedicta de la Cruz (Edith Stein), virgen y mártir": [virgenes, un-martir]   # Del Común de mártires o del Común de santas mujeres: para religiosos. ADF: virgen mártir, vírgenes o mártires (25/11/2026)
+"San Felipe Neri, presbítero": [pastores, religiosos]   # Del Común de pastores, o de santos varones: para los santos religiosos.
+"San Antonio María Zaccaría, presbítero": [pastores, educadores, religiosos]   # Del Común de pastores, o de santos varones: para educadores o para religiosos.
+"San Charbel Maklüf, presbítero": [pastores, religiosos]   # Del Común de pastores: presbítero, o de santos varones: para los santos religiosos.
+"San Ignacio de Loyola, presbítero": [pastores, religiosos]   # Del Común de pastores o del Común de santos varones: para los santos religiosos.
+"San Pedro Julián Eymard, presbítero": [pastores, religiosos]   # Del Común de pastores: presbítero, o del Común de santos varones: para los santos religiosos.
+"San Cayetano, presbítero": [pastores, religiosos]   # Del Común de pastores o del Común de santos varones: para religiosos.
+"Santo Domingo de Guzmán, presbítero": [pastores, religiosos]   # Del Común de pastores o del Común de santos varones: para religiosos.
+"San Juan Eudes, presbítero": [pastores, religiosos]   # Del Común de pastores o del Común de santos varones: para religiosos.
+"San Pío de Pietrelcina, religioso": [pastores, religiosos]   # Del Común de pastores: para un presbítero, o del Común de santos varones: para los santos religiosos.
+"San Bruno, presbítero": [pastores, religiosos]   # Del Común de pastores o del Común de santos varones: para religiosos.
+"San Pablo de la Cruz, presbítero": [pastores, religiosos]   # Del Común de pastores, o del Común de santos varones: para religiosos.
+"San Columbano, abad": [pastores, religiosos]   # Del Común de pastores: misioneros, o del Común de santos varones: para religiosos.
+"San Bernardo, abad": [doctores]   # doctor de la Iglesia (el calendario ADF lo llama «abad»): del común de doctores, sin opción (25/11/2026)
+"San Juan Bosco, presbítero": [pastores, educadores]   # Del Común de pastores o del Común de santos varones: para los santos educadores.
+"San Juan Bautista de la Salle, presbítero": [pastores, educadores]   # Del Común de pastores, o del Común de santos varones: para los santos educadores.
+"San José de Calasanz, presbítero": [pastores, educadores]   # Del Común de santos varones: para educadores, o del Común de pastores.
+"San Pedro Claver, presbítero": [pastores, caridad]   # Del Común de pastores, o para los que se han consagrado a una actividad caritativa.

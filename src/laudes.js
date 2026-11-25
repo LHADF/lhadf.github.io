@@ -64,7 +64,11 @@ function propio(hora, fecha, region){
     }
     const salmodiaPropia=!!((T1&&T1.salmodia)||(T2&&T2.salmodia)||(TD&&TD.salmodia));
     let santo=null, nota='';
-    const adf=DIF ? {comun:'difuntos'} : COM ? {comun:COM.id} : (L.adf||{})[ref.n]||{};
+    const adf0=DIF ? {comun:'difuntos'} : COM ? {comun:COM.id} : (L.adf||{})[ref.n]||{};
+    // celebración que puede tomar de dos (o tres) comunes (base/santoral/dos_comunes.yaml): el elegido para ese día
+    const dos0=(DIF||COM||!adf0.comun) ? null : X.dosComunes(ref.n, L.dos, fRef), dos=(dos0 && dos0.ops.some(o=>o.id===adf0.comun)) ? dos0 : null;
+    const adf=dos ? {...adf0, comun:dos.actual} : adf0;
+    let dosUsado=null, kComun=null;
     const k=(DIF||COM) ? null : (L.mapa[ref.n] || adf.como);   // «como»: celebración propia de ADF que toma todo de otra de la base
     // «de»: celebración (nombre del calendario) de la que se toma lo que falte (San José obrero, del 19 de marzo)
     const kd=(!DIF && !COM && adf.de && !adf.como) ? (L.mapa[adf.de] || (L.santoral[adf.de] ? adf.de : null)) : null;
@@ -78,11 +82,18 @@ function propio(hora, fecha, region){
            else if(primeras && !DE){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
            if(DE){ nota=X.notaPropios(santo, deTxt); santo={...DE, ...(santo||{})}; }
            else if(adf.como) nota=deTxt ? `Textos ${deTxt}.` : 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
+           // con propio en la base y dos comunes posibles: lo que es de un común, del elegido; lo propio queda
+           const dk=(!DE && santo && L.comunes) ? X.dosComunes(ref.n, L.dos, fRef) : null;
+           if(dk){ const Cd0=X.comun(L.comunes, dk.actual, ref.n, ref.t==='Pascua', X.turno(L.adf, dk.actual, fRef, region)), Cd=(primeras&&Cd0.primeras)?{...Cd0,...Cd0.primeras}:Cd0;
+             const {r, propio:pk}=X.delComunElegido(P, santo, ['inv_ant','himno','lectura','responsorio',CE,'preces','padrenuestro_intro'], L.comunes, ref.n, Cd, primeras?'primeras':null, L.dos[ref.n], dk.actual);
+             if(r.length){ dosUsado=dk; kComun=dk.actual; nota=X.notaPropios(pk, `del ${X.comunConCaso(Cd0.nombre, ref.n)}`);
+               if(r.includes('himno')){ P._himnos=X.himnosComun(L.comunes, dk.actual, ref.n, primeras?'primeras':null, P.himno, L.himnos); P._comunLat=dk.actual; } } }
     } else if(DE){   // sin propio en la base para esta hora: lo propio que haya (libro u oración de Laudes) y lo demás, de la otra celebración
       capa(DE); capa(PR); delete P.pendiente;
       santo={...DE, ...PR};
       nota=X.notaPropios(PR, deTxt);
     } else if((adf.comun && L.comunes && L.comunes[adf.comun]) || adf.propio){
+      dosUsado=dos;
       const n=COM ? 0 : X.turno(L.adf, adf.comun, fRef, region);   // las «O bien» del común se alternan entre celebraciones (en el modo común, se eligen)
       // Sin textos propios en la base: lo propio del libro (base/santoral/libro.yaml) y el resto del común (libro).
       // Memorias: salmos de la feria; fiestas y solemnidades, también los del común. En las I Vísperas, lo de las I Vísperas.
@@ -112,7 +123,7 @@ function propio(hora, fecha, region){
     // Celebración con propio en la base que toma textos del común (el santoral dice cuál): donde lo que trae es un texto del
     // común (igual o casi), las otras opciones del común también se pueden elegir («Otras opciones»); lo propio de verdad, no
     if(k && !DE && L.comunes && P.himno && !P._comunLat) P._comunLat=X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores', X.virgenMartir(ref.n)&&'un-martir']);
-    if(k && !DE && L.comunes){ const cid=X.comunDe((L.santoral[k]||{}).comun);
+    if(k && !DE && L.comunes){ const cid=kComun || X.comunDe((L.santoral[k]||{}).comun);
       if(cid && L.comunes[cid]) X.elegirComun(P, ['lectura','responsorio','ant_benedictus','ant_magnificat','preces','padrenuestro_intro','inv_ant'], L.comunes, cid, ref.n, ref.t==='Pascua', primeras?'primeras':null, hora+(primeras?'1':'')); }
     // Fiestas y solemnidades sin salmodia propia: la del común que indica el santoral (en las I Vísperas, la de sus I Vísperas);
     // si no hay común, salmos y antífonas del domingo de la I semana
@@ -123,7 +134,7 @@ function propio(hora, fecha, region){
     if(!P.salmodia) P.salmodia=(semana[dia]||L.salterio.semana_1.domingo).salmodia;
     // Antífonas «Oh» (del 17 al 23 de diciembre): se dicen todas las tardes, también en las I Vísperas del domingo
     if(hora==='visperas'){ const O=L.tiempo[X.fechaClave(fecha)]; if(O && O.ant_magnificat && /^Oh /.test(O.ant_magnificat)) P.ant_magnificat=O.ant_magnificat; }
-    return {P, dia, nota, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
+    return {P, dia, nota, dos:dosUsado, hoy:ref, fRef, primeras, completo:!!(P[CE] && P.oracion && !P.pendiente)};
   };
   // Vísperas: si mañana tiene I Vísperas (domingo o solemnidad) y hoy no es de mayor rango, se rezan las primeras de mañana.
   const quiere = X.modo.comun ? !!X.modo.comun.primeras : !X.modo.difuntos && !!(man && man.pv && !(hoyC.sol && !man.sol) && hoyC.t!=='Triduo');
@@ -160,7 +171,7 @@ function armar(hora, fecha, region){
   const L=window[hora.toUpperCase()]; if(!L) return null;
   if(!CP.diaCal(fecha, region)) return null;
   const B=window.BASE, GR=B.completas.gregoriano, GL=L.gregoriano, LAU=hora==='laudes';
-  const {P, dia, nota, hoy, fRef, primeras}=propio(hora, fecha, region);
+  const {P, dia, nota, dos, hoy, fRef, primeras}=propio(hora, fecha, region);
   const cuaresma=hoy.t==='Cuaresma'||hoy.t==='Triduo';
   const solemne=!!(hoy.sol||hoy.dom||hoy.t==='Triduo'||hoy.oct);
   const S=[]; const sec=(id,t,extra)=>S.push({k:'sec',id,t,...extra});
@@ -264,7 +275,7 @@ function armar(hora, fecha, region){
 
   const d=CP.deIso(fecha);
   return {
-    hora, nombre:LAU?'Laudes':'Vísperas', primeras,
+    hora, nombre:LAU?'Laudes':'Vísperas', primeras, dos,
     versiones:{es:{n:'Liturgia de las Horas'}},
     gloria:{es:['Gloria al Padre, y al Hijo, * y al Espíritu Santo.','Como era en el principio, ahora y siempre, * por los siglos de los siglos. Amén.']},
     dia:{titulo:hoy.n+(!primeras && hoy.n===hoy.fer && CP.deIso(fRef).getDay()!==0 && window[hora.toUpperCase()].tiempo[X.fechaClave(fRef)] ? ` · ${X.fechaClave(fRef)}`:'')+(primeras?' · I Vísperas':''), tiempo:X.TIEMPO_TXT[hoy.t]||hoy.t, salterio: hoy.sal?`Semana ${X.ROMANO(hoy.sal)} del salterio`:'', color:hoy.c, grado:hoy.g, nota},
