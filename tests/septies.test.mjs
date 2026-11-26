@@ -393,6 +393,16 @@ test('notas del Calendario ADF y calendarios locales que heredan de su país', (
   for (const f of ctx.window.CAL.dias) { const n = ctx.window.CAL.tabla[f[12]]; if (n) for (const l of n.split('\n')) assert.match(l, /^[A-Z]{3}\t\S/); }
 });
 
+test('calendarios: las siglas de la celebración base dicen de dónde la asume ADF; solo las variantes son lugares', () => {
+  // San Leandro: «ESP · ADF» (ADF asume la celebración de España, para todos menos ARG); el único lugar es ARG (San Artémides Zatti)
+  const o = CP.opcionesDia('2027-11-13', '');
+  assert.equal(o[0].tipo, 'b'); assert.deepEqual([...o[0].siglas], ['ESP', 'ADF']);
+  assert.deepEqual(o.filter(x => x.tipo === 'r').flatMap(x => x.siglas), ['ARG']);
+  // ninguna variante de lugar es de ADF ni de los calendarios que ADF solo asume (ESP, CHL, FRC)
+  const lugares = new Set(Object.values(ctx.window.CAL.var).flatMap(v => v.filter(x => x[0] === 'r').flatMap(x => x[1].split(' '))));
+  for (const sg of ['ADF', 'CRG', 'ESP', 'CHL', 'FRC']) assert.ok(!lugares.has(sg), sg);
+});
+
 test('inicio: Sancta María in sábbato como opción, biografías y nombre de las Vísperas', () => {
   const o = CP.opcionesDia('2026-11-14', '');
   assert.equal(o.length, 2); assert.equal(o[1].f.n, 'Sancta María in sábbato'); assert.ok(o[0].actual);
