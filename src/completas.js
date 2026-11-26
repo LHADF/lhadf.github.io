@@ -481,7 +481,7 @@ function armar(fecha, region){
   // Tono: solemne (domingos, solemnidades y sus I Vísperas, Triduo, Octavas), festivo (fiestas), ferial (ferias y memorias)
   const tonoInv = el.solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
-  S.push({k:'vr', tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv, rec:recInvocacion(trInv)});
+  S.push({k:'vr', es_k:'inv', cuaresma, tono:tonoInv, gabc:invocacionGabc(tonoInv, !cuaresma), glosa:trInv, rec:recInvocacion(trInv)});
 
   sec('examen','Examen de conciencia',{plegable:true});
   const pr=l=>l.map(x=>x.split(' = '));
@@ -532,13 +532,15 @@ function armar(fecha, region){
   const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva',true]]);
   // Recitada, la primera vez como cantada: «Salva nos, *» lo entona uno; desde «Dómine», todos (negrita). Al repetirse, toda en negrita
   const recAnt1=[{rol:'Ant', todos:false, pares:trAnt, desde:trAnt.findIndex(p=>p[0]==='Dómine,')}];
-  S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt1, t:{la:'Salva nos, Dómine'}});
-  S.push({k:'cantico', titulo:'Cántico de Simeón', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
+  // Solo español (Opciones → Lengua): la antífona en español, la del día o la del ordinario
+  const antEs=(el.especial&&el.especial.antifona_cantico) || O.cantico_evangelico.antifona[tp?'pascua':'ordinario'];
+  S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt1, t:{la:'Salva nos, Dómine'}, es_k:'ant-simeon', esT:antEs});
+  S.push({k:'cantico', es_k:'simeon', pas, titulo:'Cántico de Simeón', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
           tono:GR.cantico.tono, versos:pas?GR.cantico.versos.filter(v=>!esGloriaLa(v)):GR.cantico.versos,
           inter:pas&&GR.cantico.traduccion_versos?GR.cantico.traduccion_versos.filter((x,i)=>!esGloriaLa(GR.cantico.versos[i])):GR.cantico.traduccion_versos,
           verso1:GR.cantico.primer_verso, inter1:GR.cantico.traduccion});
   if(pas) S.push({k:'rub', t:NO_GLORIA});
-  S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
+  S.push({k:'ant', id:'ac2', gabc:salvaNosGabc(tp, true), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}, es_k:'ant-simeon-rep'});
 
   sec('oracion','Oración');
   S.push({k:'oremos', es:true, t:{es:'Oremos.'}});
@@ -546,7 +548,7 @@ function armar(fecha, region){
   S.push({k:'prosa', es:true, t:{es:orac}, amen:{es:'Amén.'}});
 
   sec('bendicion','Conclusión');
-  S.push({k:'vr', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion, rec:recitado(GR.conclusion.traduccion.map(p=>p[0]==='quiétam'?['✠ '+p[0],p[1]]:p), [['V','Noctem'],['R','Amen.',true]])});
+  S.push({k:'vr', es_k:'bendicion-completas', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion, rec:recitado(GR.conclusion.traduccion.map(p=>p[0]==='quiétam'?['✠ '+p[0],p[1]]:p), [['V','Noctem'],['R','Amen.',true]])});
 
   sec('mariana','Antífona final de la Santísima Virgen');
   // Domingos y solemnidades (y sus I Vísperas, Triduo y Octavas): versión solemne; los demás días, la simple.

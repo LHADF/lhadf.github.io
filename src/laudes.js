@@ -186,7 +186,7 @@ function armar(hora, fecha, region){
 
   // Invitatorio: solo los domingos (ADF). Dómine, lábia mea; antífona y Salmo 94; después, el Deus in adiutórium.
   // Todos los días se empieza con «Dómine, lábia mea apéries»; el invitatorio (antífona y Salmo 94), solo los domingos.
-  const labia=LAU && {k:'vr', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])};
+  const labia=LAU && {k:'vr', es_k:'labia', gabc:GL.invitatorio.gabc, glosa:GL.invitatorio.traduccion, rec:X.recitado(GL.invitatorio.traduccion, [['V','Dómine,'],['R','Et',true]])};
   // Invitatorio: en Laudes, los domingos, si Laudes es la primera oración del día (botón en la hora; X.modo.inv: true o false
   // lo fuerza, p. ej. para el Oficio de lectura cuando es la primera oración)
   const conInv = LAU && (X.modo.inv!=null ? X.modo.inv : (CP.deIso(fecha).getDay()===0 && !X.modo.difuntos));
@@ -212,7 +212,7 @@ function armar(hora, fecha, region){
   if(LAU && !conInv) S.push(labia);
   const tono = solemne ? 'solemne' : /^Fiesta/.test(hoy.g) ? 'festivo' : 'ferial';
   const trInv=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
-  S.push({k:'vr', tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:trInv,
+  S.push({k:'vr', es_k:'inv', cuaresma, tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:trInv,
           rec:X.recInvocacion(trInv)});
 
   sec('himno','Himno');
@@ -251,7 +251,7 @@ function armar(hora, fecha, region){
   const AG=!LAU && X.gregPropio('magnificat', P.ant_magnificat);
   S.push({k:'ant', id:'ab', es:true, ast:true, n:'Ant.', t:{es:(LAU?P.ant_benedictus:P.ant_magnificat)||'[falta la antífona]'}, ...(AG||{})});
   const bnv=pas ? BN.versos.filter(v=>!X.esGloriaLa(v)) : BN.versos, bni=pas&&BN.traduccion_versos ? BN.traduccion_versos.filter((x,i)=>!X.esGloriaLa(BN.versos[i])) : BN.traduccion_versos;
-  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', modo:AG&&AG.modoGreg===2 ? '2D' : modo, titulo:BN.titulo, versos:bnv, inter:bni});
+  S.push({k:'cantico', id:LAU?'benedictus':'magnificat', es_k:LAU?'benedictus':'magnificat', pas, modoDia:modo, modo:AG&&AG.modoGreg===2 ? '2D' : modo, titulo:BN.titulo, versos:bnv, inter:bni});
   if(pas) S.push({k:'rub', t:X.NO_GLORIA});
   S.push({k:'ant', rep:'ab', es:true});
 
@@ -267,7 +267,7 @@ function armar(hora, fecha, region){
   sec('bendicion','Conclusión');
   // Sin ministro ordenado: «Dóminus nos benedícat»; con ministro ordenado: «Dóminus vobíscum… Benedícat vos» (tono B en domingos y solemnidades)
   const cruz=(tr,pal)=>tr.map(p=>p[0]===pal?['✠ '+p[0],p[1]]:p), TB=GL.bendicion.traduccion, iEt=TB.map(p=>p[0]).indexOf('et');
-  S.push({k:'conclusion', opciones:[
+  S.push({k:'conclusion', es_k:'conclusion', opciones:[
     {id:'laico', n:'Sin ministro ordenado', gabc:GL.conclusion.gabc, glosa:GL.conclusion.traduccion, rec:X.recitado(cruz(GL.conclusion.traduccion,'nos'), [['V','Dóminus'],['R','Amen.',true]])},
     {id:'ministro', n:'Con ministro ordenado', gabc:GL.bendicion[solemne?'solemne':'simple'], glosa:TB,
      rec:X.recitado(TB.map((p,i)=>i===iEt?['✠ '+p[0],p[1]]:p), [['V','Dóminus'],['R','Et',true],['V','Benedícat'],['R','Amen.',true]]),

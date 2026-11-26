@@ -119,7 +119,54 @@ function cargarDia(){
   if(DH && MODO.difuntos) DH={...DH, difuntos:true, dia:{...DH.dia, titulo:'Oficio de difuntos', grado:'', nota:''}};
   if(DH && MODO.opc) DH={...DH, alts:MODO.opc.alts};
   if(DH && MODO.comun) DH={...DH, comun:true, alts:MODO.comun.alts, dia:{...DH.dia, titulo:MODO.comun.titulo, grado:MODO.comun.grado, nota:''}};
+  D=enEspanol(D); DH=enEspanol(DH);
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
+}
+/* Solo español (Opciones → Lengua, 26/11/2026). Por defecto, como ADF: español y latín (invocación, Benedictus y
+   Magníficat, Padre nuestro, conclusión, antífona de la Virgen y, en Completas, Nunc dimíttis y Salva nos). Con «Solo
+   español», cada pieza latina se cambia por la de la Liturgia de las Horas en español (base/ordinario/espanol.yaml y
+   window.BASE.espanol), los himnos latinos y gregorianos dejan de ofrecerse y no hay partituras latinas. La salmodia
+   en español se sigue cantando en el modo del día (también el Benedictus y el Magníficat). El Sacrosanctæ queda en latín. */
+const SOLO_ES=()=>S.idioma==='es';
+const MARIANAS_ES=[['salve','Dios te salve'],['subtuum','Bajo tu amparo'],['ave','Salve, Reina de los cielos'],['alma','Madre del Redentor'],['regina','Reina del cielo']];
+function enEspanol(r){
+  if(!r || !SOLO_ES()) return r;
+  const E=window.BASE.espanol, X=CP._, M=window.BASE.marianas, out=[];
+  const pl=t=>[[t,'']];
+  const vres=(l, cruz)=>l.map(([rol,t],i)=>({rol, todos:rol==='R', pares:pl(i===0&&cruz?cruz(t):t)}));
+  const salmoEs=(id, s, ant, modo, pas, lema)=>{ const v=X.versosDe(s.texto);
+    return {k:'salmo', es:true, id, ant, modo, titulo:{es:s.titulo}, lema:{es:lema!=null?lema:X.oracionCase(s.subtitulo||'')}, versos:{es:v.versos}, grupos:{es:v.grupos}, gloria:!pas}; };
+  for(const s of r.secciones){
+    switch(s.es_k){
+      case 'inv': out.push({k:'vr', rec:[...vres(E.invocacion, t=>t.replace(/^(Dios mío,)/,'$1 ✠')),
+        {rol:'', todos:true, pares:[], versos:[...E.gloria_invocacion, s.cuaresma?E.cuaresma:E.aleluia].map(pl)}]}); continue;
+      case 'labia': out.push({k:'vr', rec:vres(E.labia)}); continue;
+      case 'benedicamus': out.push({k:'vr', rec:vres(E.benedicamus)}); continue;
+      case 'bendicion-completas': out.push({k:'vr', rec:vres(E.bendicion_completas, t=>t.replace(/ tranquila/,' ✠ tranquila'))}); continue;
+      case 'ant-simeon': out.push({k:'ant', id:'ac', es:true, ast:true, n:'Ant.', t:{es:s.esT}}); continue;
+      case 'ant-simeon-rep': out.push({k:'ant', rep:'ac', es:true}); continue;
+      case 'simeon': out.push(salmoEs('cantico-simeon', window.BASE.salmos['cantico-simeon'], 'ac', undefined, s.pas, '')); continue;
+      case 'benedictus': case 'magnificat': out.push(salmoEs(s.es_k, E[s.es_k], 'ab', s.modoDia, s.pas)); continue;
+      case 'conclusion': out.push({...s, opciones:[
+        {id:'laico', n:'Sin ministro ordenado', rec:vres(E.conclusion, t=>t.replace(/^El Señor nos/,'El Señor ✠ nos'))},
+        {id:'ministro', n:'Con ministro ordenado', rec:vres(E.conclusion_ministro), despues:vres(E.despedida)}]}); continue;
+    }
+    switch(s.k){
+      case 'deo': out.push({k:'deo', t:E.lectura_respuesta}); continue;
+      case 'ant': case 'resp':   // las antífonas y responsorios en gregoriano (Christus factus est, «Oh», In manus tuas): en español
+        if(s.es && s.gabc){ const {gabc, gabcRep, glosa, soloCanto, greg, modoGreg, ...o}=s; out.push(o); continue; } break;
+      case 'himno': { const ops=s.opciones.filter(o=>o.lang==='es' && !o.lat && !o.gabc); if(ops.length){ out.push({...s, opciones:ops}); continue; } break; }
+      case 'examen': out.push({...s, formulas:s.formulas.filter(f=>!f.latin)}); continue;
+      case 'pater': out.push({...s, esLineas:E.padre_nuestro}); continue;
+      case 'mariana': { const vistas=new Set(), ops=[];
+        for(const o of s.opciones){ const m=MARIANAS_ES.find(([k])=>o.id.startsWith(k)); if(!m) continue;
+          const a=[...(M.año||[]), ...(M.pascua||[])].find(x=>x.titulo.startsWith(m[1])); if(!a || vistas.has(m[0])) continue; vistas.add(m[0]);
+          ops.push({id:'es-'+m[0], n:m[1], estEs:a.texto.map(e=>e.split('\n'))}); }
+        if(ops.length){ out.push({...s, opciones:ops}); continue; } break; }
+    }
+    out.push(s);
+  }
+  return {...r, secciones:out};
 }
 cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
@@ -483,6 +530,8 @@ function lineaRec(l, extra){
   return `<span class="segs${l.todos?' todos':''}">${extra||''}${cuerpo}</span>`;
 }
 function recitadoHTML(rec, tipo){
+  // sin traducción (solo español): texto llano, sin interlineal
+  if(S.trad && rec.every(l=>(l.versos||[l.pares]).every(v=>v.every(p=>!p[1])))){ S.trad=false; try{ return recitadoHTML(rec, tipo); } finally{ S.trad=true; } }
   const il=S.trad?' il':'';
   if(tipo==='ant') return `<div class="ant rec${il}">${rec.map(l=>`<p><span class="n">Ant.</span> ${lineaRec(l)}</p>`).join('')}</div>`;
   if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${
@@ -602,11 +651,12 @@ function himnoHTML(sec){
   return h;
 }
 // Invitatorio de los domingos del Tiempo Ordinario: gregoriano si se canta (salvo que se elija en español)
-const INV=()=>(CANTA() && S.invit!=='es') ? 'greg' : 'es';
+const INV=()=>(CANTA() && S.invit!=='es' && !SOLO_ES()) ? 'greg' : 'es';
 // Oraciones antes y después del oficio (base/ordinario/oraciones-oficio.yaml): latín y, debajo de cada renglón, la traducción de ADF
 function oracionOficioHTML(k){
   const O=window.BASE.oraciones[k];
-  const ln=(ps,pre)=>`<p class="orof">${ps.map(([a,b],k)=>`<span class="ln">${k?'':(pre||'')}${esc(a)}${S.trad?`<span class="gl">${esc(b)}</span>`:''}</span>`).join('')}</p>`;
+  const es=SOLO_ES() && k==='preparatoria';   // solo español: la oración preparatoria, en la traducción de ADF (el Sacrosanctæ queda en latín)
+  const ln=(ps,pre)=>`<p class="orof">${ps.map(([a,b],k)=>`<span class="ln">${k?'':(pre||'')}${esc(es?b:a)}${S.trad&&!es?`<span class="gl">${esc(b)}</span>`:''}</span>`).join('')}</p>`;
   let h=`<p class="rub">${esc(O.rubrica)}</p>`+ln(O.texto);
   if(O.pausa) h+=`<p class="rub">${esc(O.pausa)}</p>`+ln(O.final);
   if(O.respuesta) h+=ln(O.respuesta,'<span class="k">℟.</span> ')+ln(O.versiculo,'<span class="k">℣.</span> ')+ln(O.respuesta_versiculo,'<span class="k">℟.</span> ')+ln(O.despues);
@@ -648,6 +698,7 @@ function marianaHTML(sec){
   // efímera: la elección vale solo mientras se mira ese día (al volver a abrir, la primera opción)
   const o= sec.efimera ? (ops.find(x=>x.id===(S._marDia||{})[ops[0].id])||ops[0]) : elegida(sec,'mariana',ops[0]);
   let h= ops.length>1 ? botonesHTML('mariana', ops[0].id, ops, o, sec.efimera, 'Antífona') : '';
+  if(o.estEs) return h+`<div class="himno sin-num">${o.estEs.map(e=>`<p class="est">${e.map(l=>`<span class="ln"><b>${esc(l)}</b></span>`).join('')}</p>`).join('')}</div>`;   // solo español: la dicen todos (negrita), como la latina
   if(!CANTA() && o.rec) return h+recitadoHTML(o.rec,'prosa');
   if(S.canto && S.antGreg && o.gabc) return h+partituraHTML(o.gabc, S.trad?o.glosa:null);
   const es=VES(); const la=o.l.la, sp=o.l[es]||o.l.es79||o.l.es;
@@ -801,6 +852,10 @@ function horaHTML(){
 ; break; }
       case 'pater':
         { // hasta el asterisco lo entona el que preside; desde ahí, todos (negrita). Un renglón por frase.
+          if(sec.esLineas){   // solo español
+            const ls=sec.esLineas.map(l=>{ const k=l.indexOf(' * ');
+              return k<0 ? `<span class="ln todos">${esc(l)}</span>` : `<span class="ln">${esc(l.slice(0,k))} <span class="sg">*</span> <span class="todos">${esc(l.slice(k+3))}</span></span>`; });
+            h+=(sec.intro?`<p>${esc(sec.intro)}</p>`:'')+`<p class="rec renglones">${ls.join('')}</p>`; break; }
           const uno=ps=> S.trad ? interHTML(ps) : marcas(ps.map(x=>x[0]).join(' '));
           const ls=(sec.lineas||[sec.pares]).map(l=>{
             const k=l.findIndex(x=>/^\*/.test(x[0]));
@@ -1050,9 +1105,11 @@ function hojaOpciones(){
   hoja('Opciones',`
     <div class="grupo"><h3>Tamaño</h3><div class="tam"><button data-act="menos" aria-label="Achicar" ${S.zoom<=.8?'disabled':''}>A−</button><span>${Math.round(S.zoom*100)} %</span><button data-act="mas" aria-label="Agrandar" ${S.zoom>=2?'disabled':''}>A+</button></div></div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
+    <div class="grupo"><h3>Lengua</h3>${seg('idioma',[['adf','Español y latín'],['es','Solo español']],SOLO_ES()?'es':'adf')}
+      <p class="hint">${SOLO_ES()?'Todo el oficio en español, también la invocación, el Benedictus y el Magníficat, el Padre nuestro, la conclusión y la antífona de la Virgen.':'Como en ADF: el oficio en español, con la invocación, el cántico evangélico, el Padre nuestro, la conclusión y la antífona de la Virgen en latín.'}</p></div>
     <div class="grupo"><h3>Canto</h3>
       ${seg('cantado',[['si','Cantado'],['no','Recitado']],CANTA()?'si':'no')}
-      ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>
+      ${SOLO_ES()?'':sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>
     ${_instalar?`<div class="grupo"><h3>App</h3><p class="hint">Cervus queda como una app más, con su ícono, y abre sin conexión.</p><button class="btn" data-act="instalar">Instalar Cervus</button></div>`:''}`);
 }
 let _toast, _toastFin;
@@ -1203,6 +1260,7 @@ document.addEventListener('click',e=>{
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); break;
     case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio(); break; }
     case 'instalar': if(_instalar){ const p=_instalar; _instalar=null; cerrar(); p.prompt(); } break;
+    case 'idioma': if((S.idioma||'adf')===v) break; S.idioma=v; cargarDia(); cambio(); break;
     case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); break;   // sin aviso
   }
 });

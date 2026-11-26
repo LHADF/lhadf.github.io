@@ -45,6 +45,22 @@ def oraciones_oficio():
     return O
 
 
+def espanol():
+    """Textos de la opción «Solo español» (base/ordinario/espanol.yaml), con lo que ya estaba en español en la base."""
+    E = leer(os.path.join(B, 'ordinario', 'espanol.yaml'))
+    OL = leer(os.path.join(B, 'ordinario', 'laudes.yaml'))
+    OC = leer(os.path.join(B, 'ordinario', 'completas.yaml'))
+    OO = leer(os.path.join(B, 'ordinario', 'oficio.yaml'))
+    vr = lambda l: [[k, e[k]] for e in l for k in e if k in ('V', 'R')]   # sin las notas («texto: Of La Tr…»)
+    return {**{k: v for k, v in E.items() if k not in ('conclusion_ministro', 'despedida')},
+            'conclusion_ministro': vr(E['conclusion_ministro']), 'despedida': vr(E['despedida']),
+            'invocacion': vr(OC['invocacion']), 'bendicion_completas': vr(OC['bendicion']),
+            'antifona_simeon': OC['cantico_evangelico']['antifona'],
+            'labia': [['V', OL['invitatorio']['V']], ['R', OL['invitatorio']['R']]],
+            'benedictus': {k: OL['cantico_evangelico'][k] for k in ('titulo', 'subtitulo', 'ref', 'texto')},
+            'conclusion': vr(OL['conclusion']), 'benedicamus': vr(OO['conclusion'])}
+
+
 def repeticion(g):
     """Antífona repetida al final: la canta toda la asamblea (en negrita) y va sin asterisco."""
     return negrita(re.sub(r'\s*\*+\s*\(([,;:]*)\)', lambda m: f' ({m.group(1)})' if m.group(1) else '', g))
@@ -111,6 +127,7 @@ def main():
         'marianas': leer(os.path.join(B, 'ordinario', 'antifonas-marianas.yaml')),
         'latinos_cuando': leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml')),
         'oraciones': oraciones_oficio(),
+        'espanol': espanol(),
         'salmos': {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in USADOS},
     }
     destino = os.path.join(RAIZ, 'src', 'datos', 'base.js')

@@ -1,0 +1,74 @@
+# Textos para la opción «Solo español» (Opciones → Lengua, 26/11/2026): todo el oficio en español, sin el latín que ADF
+# mezcla (invocación, Benedictus y Magníficat, Padre nuestro, conclusión, antífona de la Virgen, Nunc dimíttis…).
+# Lo que ya estaba en español en la base se toma de su lugar (tools/base_js.py lo junta en window.BASE.espanol):
+#   invocación y conclusión de Completas (ordinario/completas.yaml); «Señor, abre mis labios», Benedictus y conclusión sin
+#   ministro (ordinario/laudes.yaml); Cántico de Simeón (salmos/cantico-simeon.yaml); antífonas de la Virgen
+#   (ordinario/antifonas-marianas.yaml); Te Deum y «Bendigamos al Señor» (ordinario/oficio.yaml).
+# Acá va lo que faltaba. Fuentes: el Magníficat y la conclusión con ministro, del libro (Ordinario, tomo I, pp. 415-416
+# y 423); el Padre nuestro, texto que pasó Juana (26/11/2026).
+
+# Gloria de la invocación inicial, en renglones como el «Glória Patri» recitado; después, «Aleluia» (en Cuaresma,
+# «Alabanza a ti, Cristo, Rey de eterna gloria», como el «Laus tibi, Christe» de ADF)
+gloria_invocacion:
+- Gloria al Padre, y al Hijo,
+- y al Espíritu Santo.
+- Como era en el principio,
+- ahora y siempre,
+- por los siglos de los siglos.
+aleluia: Amén. Aleluia.
+cuaresma: Amén. Alabanza a ti, Cristo, Rey de eterna gloria.
+
+# Padre nuestro: un renglón por frase; hasta el asterisco lo entona el que preside, desde ahí siguen todos
+padre_nuestro:
+- Padre nuestro, * que estás en el cielo,
+- santificado sea tu Nombre;
+- venga a nosotros tu Reino;
+- hágase tu voluntad,
+- en la tierra como en el cielo.
+- Danos hoy nuestro pan de cada día;
+- perdona nuestras ofensas,
+- como también nosotros perdonamos
+- a los que nos ofenden;
+- no nos dejes caer en la tentación;
+- y líbranos del mal.
+
+magnificat:
+  titulo: Cántico de María
+  subtitulo: ALEGRÍA DEL ALMA EN EL SEÑOR
+  ref: Lc 1, 46-55
+  texto:
+  - |-
+    Proclama mi alma la grandeza del Señor,
+    se alegra mi espíritu en Dios mi salvador;
+    porque ha mirado la humillación de su esclava.
+  - |-
+    Desde ahora me felicitarán todas las generaciones,
+    porque el Poderoso ha hecho obras grandes por mí:
+    su nombre es santo
+    y su misericordia llega a sus fieles
+    de generación en generación.
+  - |-
+    Él hace proezas con su brazo:
+    dispersa a los soberbios de corazón,
+    derriba del trono a los poderosos
+    y enaltece a los humildes,
+    a los hambrientos los colma de bienes
+    y a los ricos los despide vacíos.
+  - |-
+    Auxilia a Israel, su siervo,
+    acordándose de su misericordia
+    —como lo había prometido a nuestros padres—
+    en favor de Abraham y su descendencia por siempre.
+
+# Laudes y Vísperas, con ministro ordenado (bendición común) y despedida
+conclusion_ministro:
+- V: El Señor esté con vosotros.
+- R: Y con tu espíritu.
+- V: La bendición de Dios todopoderoso, Padre, Hijo ✠ y Espíritu Santo, descienda sobre vosotros.
+- R: Amén.
+despedida:
+- V: Podéis ir en paz.
+- R: Demos gracias a Dios.
+
+# Después de la lectura breve (en ADF, «Deo grátias»)
+lectura_respuesta: Demos gracias a Dios.

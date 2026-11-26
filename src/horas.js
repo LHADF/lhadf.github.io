@@ -70,7 +70,7 @@ function invocacion(S, ref){
   const tono = (ref.sol||ref.dom||ref.t==='Triduo'||ref.oct) ? 'solemne' : /^Fiesta/.test(ref.g) ? 'festivo' : 'ferial';
   const tr=cuaresma ? GR.invocacion.traduccion.filter(p=>!/^Allel/.test(p[0])).concat(GR.invocacion.laus) : GR.invocacion.traduccion;
   S.push({k:'sec', id:'inicio', t:'Invocación inicial'});
-  S.push({k:'vr', tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:tr, rec:X.recInvocacion(tr)});
+  S.push({k:'vr', es_k:'inv', cuaresma, tono, gabc:X.invocacionGabc(tono, !cuaresma), glosa:tr, rec:X.recInvocacion(tr)});
 }
 const salmo=(L, sid, ant)=>{ const s=L.salmos[sid]; if(!s) return {k:'aviso', t:`Falta el texto de ${sid}.`};
   const v=X.versosDe(s.texto);
@@ -93,7 +93,7 @@ function salmodia(S, L, sal, unica){
 }
 function conclusion(S, L){
   S.push({k:'sec', id:'conclusion', t:'Conclusión'});
-  S.push({k:'vr', rec:X.recitado(L.gregoriano.benedicamus, [['V','Benedicámus'],['R','Deo',true]])});
+  S.push({k:'vr', es_k:'benedicamus', rec:X.recitado(L.gregoriano.benedicamus, [['V','Benedicámus'],['R','Deo',true]])});
 }
 function datosDia(ref, fecha, nota){
   const d=CP.deIso(fecha);
