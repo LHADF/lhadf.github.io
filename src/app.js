@@ -473,14 +473,24 @@ function recitadoHTML(rec, tipo){
   if(tipo==='estrofas') return `<div class="himno rec${il}${rec.length>1?'':' sin-num'}">${rec.map((l,i)=>`<p class="est">${rec.length>1?`<span class="num">${i+1}.</span>`:''}${
       (l.versos||[l.pares]).map(v=>`<span class="ln">${lineaRec({...l,pares:v,versos:null})}</span>`).join('')}</p>`).join('')}</div>`;
   if(tipo==='prosa') return rec.map(l=>`<p class="rec${il}">${lineaRec(l)}</p>`).join('');
-  return `<div class="vr rec${il}">${rec.map(l=>`<p${l.rol!=='R'?' class="pv"':''}>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
+  return `<div class="vr rec${il}">${rec.map(l=>`<p class="${[l.rol!=='R'?'pv':'', l.rol?'':'sin-k'].join(' ').trim()}">${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
 // Citas bíblicas al modo «capítulo: versículos» (Dn 3: 26-27), más preciso que la coma
 // y el número del libro separado de la sigla, como en el libro: «1Co» → «1 Co» (26/11/2026)
 function cita(t){ return String(t||'').replace(/(^|[\s;(—–])([123])(?=\p{Lu}(?:\p{Ll}|\s))/gu,'$1$2 ').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
+// Invocación inicial cantada: el «Glória Patri» va en su propia partitura, con capitular como la D de «Deus» (26/11/2026).
+// La capitular no va en negrita (la G sola); lo que sigue, sí, como lo dice la asamblea; la segunda letra en mayúscula, como «DEus».
+function partituraInvocacion(gabc, glosa){
+  const i=gabc.search(/<b>Gl[óo]<\/b>\(/), clave=/%%\s*(\([cf]b?\d\))/.exec(gabc);
+  if(i<0 || !clave) return partituraHTML(gabc, glosa);
+  const a=gabc.slice(0,i).replace(/\s*\(Z\)\s*$/,'')+'\n';
+  const b='name:Gloria Patri;\n%%\n'+clave[1]+' '+gabc.slice(i).replace(/^<b>Gl([óo])<\/b>/,'G<b>L$1</b>');
+  const j=glosa ? glosa.findIndex(p=>/^Gl[óo]ria/.test(p[0])) : -1;
+  return partituraHTML(a, j>0?glosa.slice(0,j):glosa) + partituraHTML(b, j>0?glosa.slice(j):null);
+}
 function vrHTML(sec){
   if((!CANTA() || !sec.gabc) && sec.rec) return recitadoHTML(sec.rec);   // sin partitura: siempre recitado
-  if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, sec.glosa);
+  if(S.canto && S.antGreg && sec.gabc) return sec.tono ? partituraInvocacion(sec.gabc, sec.glosa) : partituraHTML(sec.gabc, sec.glosa);
   if(BI() && sec.ilv) return `<div class="vr il"><p><span class="k">℣.</span> <span class="segs">${interHTML(sec.ilv)}</span></p><p><span class="k">℟.</span> <span class="segs">${interHTML(sec.ilr)}</span></p></div>`;
   const v=txt(sec.v), r=txt(sec.r);
   const ln=(k,o)=>`<p><span class="k">${k}.</span> ${marcas(o.p)}${o.s?`<span class="gl">${marcas(o.s)}</span>`:''}</p>`;

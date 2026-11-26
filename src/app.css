@@ -191,6 +191,9 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 b .k,.todos .k{font-weight:400}
 .gl{display:block;color:var(--glosa);font-style:italic;font-size:.84em;line-height:1.35;margin:.1em 0 .5em}
 .vr p .gl{text-indent:0}
+/* recitado: renglones sin ℣ ni ℟ (el Gloria de la invocación) empiezan donde empieza el texto de los que la tienen (26/11/2026) */
+.vr p.sin-k{text-indent:0}
+.vr.il p.sin-k{padding-left:1.55em}
 .lec-ref{float:right;color:var(--rubric);font-size:var(--f-dato);font-family:var(--sans);margin-left:12px}
 .aviso{font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);background:var(--surface);border-radius:var(--r-1);padding:6px 10px;margin:.4em 0 .8em;display:flex;gap:8px;align-items:flex-start}
 .aviso::before{content:"i";flex:none;width:1.3em;height:1.3em;border-radius:50%;border:1px solid var(--line2);display:inline-flex;align-items:center;justify-content:center;font-style:italic;font-family:var(--titulo);font-size:.9em}
