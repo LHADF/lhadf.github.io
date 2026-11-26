@@ -567,7 +567,11 @@ function himnoHTML(sec){
   // Himno latino recitado: cada verso con su traducción literal debajo (si la traducción está activa)
   if(o.lat){
     const gl=t=>S.trad?`<span class="gl">${esc(t)}</span>`:'', num=o.est.length>1 && o.num!==false;
-    return h+`<div class="himno lat${num?'':' sin-num'}">`+o.est.map((e,ie)=>`<p class="est">${num?`<span class="num">${ie+1}.</span>`:''}${e.map((l,il)=>`<span class="ln">${esc(l)}</span>${gl(o.lit[ie][il])}`).join('')}</p>`).join('')
+    // capitular en la primera estrofa, como en los himnos en español; con la traducción, abarca el primer verso y su
+    // traducción (dos renglones); sin ella, los dos primeros versos (26/11/2026)
+    const c0=[...(o.est[0]&&o.est[0][0]||'')][0]||'', capi=/^\p{L}$/u.test(c0) && o.est[0][0].length>1, lado=S.trad?1:2;
+    return h+`<div class="himno lat${num?'':' sin-num'}">`+o.est.map((e,ie)=>{ const c=capi&&ie===0;
+      return `<p class="est${c?' capi-on':''}">${num&&!c?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML(c0):''}${e.map((l,il)=>`<span class="ln${c&&il<lado?' c':''}">${esc(c&&!il?l.slice(c0.length):l)}</span>${gl(o.lit[ie][il])}`).join('')}</p>`; }).join('')
       +(o.amen?`<p class="est amen-fin"><b>${esc(o.amen)}</b>${gl('Amén.')}</p>`:'')+'</div>'+(o.rub?`<p class="rub">${esc(o.rub)}</p>`:'');
   }
   // rubGreg: rúbrica del himno gregoriano (Ave maris stella: «Aquí se arrodilla.»); cantado, arriba de la primera nota
