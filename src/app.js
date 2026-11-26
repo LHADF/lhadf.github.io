@@ -895,7 +895,7 @@ function portadaHTML(){
       <div class="arco">${iluHTML()}</div>
     </div>
     ${cals}
-    <button class="discreto arriba" data-act="oraciones">Oraciones antes y después del oficio</button>
+    <div class="previas"><button data-act="oraciones">Oraciones antes y después del oficio</button></div>
     <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=true, ya=ahora.includes(id);
       if(id==='visperas') n=nombreVisperas();

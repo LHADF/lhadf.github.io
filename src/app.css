@@ -112,15 +112,18 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .horas .h{font-size:var(--f-dato);color:var(--muted);font-variant-numeric:tabular-nums}
 .horas .chev{color:var(--muted);align-self:center;display:flex}
 .horas .chev .ico{width:18px;height:18px}
-/* Otros oficios (difuntos, comunes): la misma lista que las horas, un escalón más abajo, con su rótulo (26/11/2026) */
 /* Otros oficios: un escalón abajo de las horas. No es la misma lista con rayas, sino un bloque aparte (como las listas
    agrupadas del iPhone): fondo de superficie, esquinas redondeadas, separador interno que no llega al borde, letra de la
    interfaz y más aire arriba (26/11/2026) */
 .otros{margin-top:26px}
 .otros h2{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 16px}
-.otros .horas{border:1px solid var(--line);border-radius:var(--r-2);background:var(--surface);overflow:hidden}
-.otros .horas li{border-bottom:0;padding-left:16px}
-.otros .horas li+li button{border-top:1px solid var(--line)}
+/* Las horas del día y los otros oficios van en el mismo tipo de bloque agrupado (26/11/2026) */
+.portada > .horas,.otros .horas{border:1px solid var(--line);border-radius:var(--r-2);background:var(--surface);overflow:hidden}
+.portada > .horas li,.otros .horas li{border-bottom:0;padding-left:16px}
+.portada > .horas li+li button,.otros .horas li+li button{border-top:1px solid var(--line)}
+.portada > .horas button{padding:14px 14px 14px 0;align-items:center}
+.portada > .horas li.ahora{background:var(--rubric-soft)}
+.portada > .horas li.ahora button{background:none;border-radius:0;padding-inline:0 14px}
 .otros .horas button{padding:12px 12px 12px 0;min-height:48px;align-items:center}
 .otros .horas .n{font-family:var(--sans);font-size:var(--f-ui);color:var(--ink2)}
 .otros .horas .chev .ico{width:16px;height:16px}
@@ -135,7 +138,11 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .btn{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);padding:10px 18px;font-weight:600}
 .btn.primary{background:var(--rubric-fondo);border-color:var(--rubric-fondo);color:#fff}
 .discreto{align-self:center;border:0;background:none;min-height:44px;padding:8px 12px;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
-.discreto.arriba{margin:0}
+/* Oraciones antes y después del oficio: botón de poco énfasis (como los «gray» o «bordered» de Apple), una cápsula centrada
+   con el mismo fondo y borde que los bloques de las horas; no un texto subrayado suelto (26/11/2026) */
+.previas{display:flex;justify-content:center}
+.previas button{display:inline-flex;align-items:center;min-height:44px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2);cursor:pointer;text-align:center}
+.previas button:hover{border-color:var(--line2)}
 /* Comunes de los santos: desplegables de la hoja; «Otras opciones» (también en las «O bien» que rotan) y su lista */
 .elige-comun{display:grid;gap:10px;margin:12px 0 18px}
 .elige-comun label{display:grid;grid-template-columns:5.5em 1fr;align-items:center;gap:10px}
