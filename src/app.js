@@ -589,11 +589,12 @@ function himnoHTML(sec){
   if(!amen && est.length){ const u=est[est.length-1], l=u[u.length-1]||'', m=/^(.*?)\s*((?:am[eé]n[,.]?\s*)+)$/i.exec(l);
     if(m){ amen='Amén.'; const resto=m[1].trim(); est=est.slice(0,-1).concat([resto?u.slice(0,-1).concat([resto]):u.slice(0,-1)]).filter(e=>e.length); } }
   const numerar=est.length>1; const GL=(bi&&!usarTrad)?glosaLineas(est,o.glosa):null;
-  // himno en español: capitular en la primera estrofa (no en la continuación del Te Deum)
-  const capi=o.lang==='es' && !GL && o.id!=='tedeum2' && est.length && /^\p{L}/u.test(est[0][0]||'') && (est[0][0]||'').length>1;
+  // capitular en la primera estrofa, en español y en latín (no en la continuación del Te Deum). Con la traducción interlineal,
+  // la capitular abarca el primer verso latino y su traducción: los dos renglones de siempre (26/11/2026)
+  const capi=o.id!=='tedeum2' && est.length && /^\p{L}/u.test(est[0][0]||'') && (est[0][0]||'').length>1;
   h+=`<div class="himno${numerar?'':' sin-num'}">`+est.map((e,ie)=>{
     const c=capi && ie===0;
-    return `<p class="est${c?' capi-on':''}">${numerar&&!c?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<2?' c':''}">${sinalefas(esc(c&&!il?l.slice([...l][0].length):l))}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
+    return `<p class="est${c?' capi-on':''}">${numerar&&!c?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<(GL?1:2)?' c':''}">${sinalefas(esc(c&&!il?l.slice([...l][0].length):l))}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
   return h;
 }
 // Invitatorio de los domingos del Tiempo Ordinario: gregoriano si se canta (salvo que se elija en español)

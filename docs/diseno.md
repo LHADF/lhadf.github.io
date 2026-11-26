@@ -6,7 +6,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 
 - **Antífonas de salmos y cánticos:** la primera vez, asterisco después de la primera palabra o frase con sentido (lo que dice el que entona, texto normal; desde ahí, todos, en negrita); al repetirse al final, sin asterisco y toda en negrita (regla completa en `contexto.md`).
 - **En rojo:** rúbricas (además en cursiva), la letra capital inicial del gregoriano y el número de modo, los números de estrofa de los himnos, ℣, ℟, asterisco y cruz.
-- **Capitular** (21/11/2026): también en las lecturas breves, los himnos en español y los cánticos evangélicos (en estos, como la del gregoriano): la primera letra, grande y roja, a lo alto de dos renglones. No va si el texto empieza con ¡ o ¿ (ni con otro signo).
+- **Capitular** (21/11/2026): también en las lecturas breves, los himnos (en español y, desde el 26/11/2026, en latín) y los cánticos evangélicos (en estos, como la del gregoriano): la primera letra, grande y roja, a lo alto de dos renglones. No va si el texto empieza con ¡ o ¿ (ni con otro signo).
 - **Renglón quebrado por falta de ancho** (pantalla angosta o letra grande): lo que baja va más adentro que el renglón de la cadencia, como con dos sangrías (2,2 em; el renglón de la cadencia, 1,1 em). Sin guion ni otra marca. Vale para salmos, cánticos e himnos. El tercer renglón de una estrofa sin flexa cuyo primero termina en «:» va igual de adentro (`.v .h3`, CRU 20/11/2026).
 - **Partituras de himnos:** cada estrofa y el Amén empiezan renglón nuevo; el anterior termina con el custos de la nota siguiente y el pentagrama vacío hasta el final (en el GABC, `(::Z)`).
 - **Glifos propios** (fuente «Cantoral Signos»): ℣ y ℟ con trazo diagonal, cruz patada (✠) y asterisco de cinco pétalos.
@@ -16,7 +16,7 @@ Cervus (antes Septies) es app hermana del Cantoral: comparte su sistema visual y
 - **Himnos:** estrofas numeradas «1.», «2.», con línea en blanco entre estrofas. Si la primera estrofa lleva capitular, va sin el «1.» (26/11/2026). En un himno con estrofas numeradas, el bloque sin número es el estribillo: cursiva y con ℟. Himno sin ninguna estrofa numerada: texto normal, sin cursiva y sin ℟.
 - **Polifonías:** una frase por línea, con traducción interlineal. Indicaciones entre corchetes en el original ([Coro]) y en rojo en la app.
 
-- **Himnos latinos recitados:** cada verso latino con su traducción literal debajo (en cursiva, color de la glosa) si la traducción está activa; estrofas numeradas; «Amen.» en negrita, con «Amén.» debajo. Sin capitular.
+- **Himnos latinos recitados:** cada verso latino con su traducción literal debajo (en cursiva, color de la glosa) si la traducción está activa; estrofas numeradas; «Amen.» en negrita, con «Amén.» debajo. Con capitular en la primera estrofa, como los himnos en español; con la traducción, abarca el primer verso latino y su traducción (26/11/2026; antes, sin capitular).
 
 ## Traducción
 
