@@ -271,8 +271,11 @@ test('Laudes: capas (salterio, tiempo, santoral) y partes en latín', () => {
 
 test('texto recitado: renglones con sentido (Gloria, Salve, Pater noster)', () => {
   const ln = vs => vs.map(v => v.map(p => p[0]).join(' '));
-  assert.equal(ln(secc('2026-11-05', 'vr')[0].rec[2].versos).join(' / '), 'Glória Patri, et Fílio, et Spirítui Sancto. / Sicut erat in princípio, et nunc, et semper, / et in sǽcula sæculórum. Amen. Allelúia.');
-  assert.equal(ln(secc('2027-02-17', 'vr')[0].rec[2].versos).at(-1), 'Laus tibi, Christe, Rex ætérnæ glóriæ.');
+  assert.equal(ln(secc('2026-11-05', 'vr')[0].rec[2].versos).join(' / '), 'Glória Patri, et Fílio, / et Spirítui Sancto. / Sicut erat in princípio, / et nunc, et semper, / et in sǽcula sæculórum. / Amen. Allelúia.');
+  assert.equal(ln(secc('2027-02-17', 'vr')[0].rec[2].versos).at(-1), 'Amen. Laus tibi, Christe, Rex ætérnæ glóriæ.');
+  // invocación: la cruz después de «Deus», cantada y recitada
+  for (const g of Object.values(B.completas.gregoriano.invocacion).filter(x => typeof x === 'string')) assert.match(g, /DE\([^)]*\)us\([^)]*\) \([,;]\) ✠\(\) in/);
+  assert.equal(secc('2026-11-05', 'vr')[0].rec[0].pares[1][0], '✠ in adiutórium');
   const salve = ln(secc('2026-11-05', 'mariana')[0].opciones[0].rec[0].versos);
   assert.equal(salve.length, 10); assert.equal(salve[4], 'in hac lacrimárum valle.'); assert.equal(salve.at(-1), 'O clemens: O pia: O dulcis Virgo María.');
   const pn = ln(secL('2026-11-10', 'pater')[0].lineas);

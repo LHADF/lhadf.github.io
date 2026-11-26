@@ -306,8 +306,8 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .ant.rec .segs,.vr.rec:not(.il) .segs{display:inline}
 p.rec{margin:0 0 .8em}
 /* Cantado | Recitado: interruptor deslizante (26/11/2026), distinto de los botones de opciones; separado de la nota de arriba */
-.modo-canto{display:inline-grid;grid-template-columns:1fr 1fr;position:relative;padding:3px;margin:.6em 0 1.4em;border-radius:999px;background:var(--perg);box-shadow:inset 0 0 0 1px var(--line);font-family:var(--sans)}
-.aviso + .modo-canto,.prep + .modo-canto,.orof-b + .modo-canto{margin-top:1.1em}
+.modo-canto{display:grid;grid-template-columns:1fr 1fr;width:max-content;position:relative;padding:3px;margin:.6em auto 1.4em;border-radius:999px;background:var(--perg);box-shadow:inset 0 0 0 1px var(--line);font-family:var(--sans)}
+.aviso + .modo-canto,.prep + .modo-canto,.orof-b + .modo-canto{margin-top:1.6em}
 .modo-canto::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:var(--paper);box-shadow:0 1px 3px rgba(0,0,0,.18),0 0 0 1px var(--line2);transition:transform .22s ease}
 .modo-canto.rec::before{transform:translateX(100%)}
 .modo-canto button{position:relative;z-index:1;border:0;background:none;border-radius:999px;min-height:38px;padding:4px 20px;font-size:var(--f-dato);color:var(--muted);letter-spacing:.02em}
