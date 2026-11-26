@@ -911,3 +911,12 @@ test('Completas recitado: «Salva nos, *» lo entona uno y desde «Dómine» sig
   assert.ok(b.rec[0].todos && b.rec[0].desde == null);
   assert.ok(!/\*/.test(B.completas.gregoriano.conclusion.gabc.split('%%')[1]));   // Noctem quiétam: sin asterisco
 });
+
+test('Oficio de lectura y Hora intermedia: salmodia cantada en el modo del día, como Laudes', () => {
+  const modoLA = LA.armar('2026-11-26', 'ARG').secciones.find(s => s.k === 'salmo').modo;
+  const salmos = r => r.secciones.filter(s => s.k === 'salmo');
+  const of = salmos(ctx.window.Oficio.armar('2026-11-26', 'ARG'));
+  assert.ok(of.length && of.every(s => s.modo === modoLA));
+  const ih = salmos(ctx.window.Sexta.armar('2026-11-26', 'ARG'));
+  assert.ok(ih.length && ih.every(s => s.modo === modoLA));
+});
