@@ -933,3 +933,32 @@ test('Oficio de lectura y Hora intermedia: salmodia cantada en el modo del día,
   const ih = salmos(ctx.window.Sexta.armar('2026-11-26', 'ARG'));
   assert.ok(ih.length && ih.every(s => s.modo === modoLA));
 });
+
+// 26/11/2026: un mismo salmo puede ir cortado distinto en el Oficio de lectura y en Vísperas (o en la Hora intermedia).
+// El importador guardaba cada salmo por su título («Salmo 144 I») y, si la clave ya existía, se salteaba el texto de la otra
+// hora: el Oficio rezaba dos veces los vv. 13-21 del 144 (y lo mismo con el 135 y el 54), y el sábado IV empezaba el 77
+// por el comienzo. En una misma salmodia, las partes de un salmo no pueden repetir texto y van seguidas (II después de I…).
+test('salmodias: las partes de un mismo salmo no se repiten y van en orden', () => {
+  for (const f of ['carga/oficio.js', 'carga/intermedia.js']) if (!ctx.window[f.slice(6, -3).toUpperCase()]) vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), ctx);
+  const W = ctx.window, malos = [];
+  const ROM = { I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6 };
+  for (const [hora, D] of [['laudes', W.LAUDES], ['visperas', W.VISPERAS], ['oficio', W.OFICIO], ['intermedia', W.INTERMEDIA]]) {
+    const listas = [];
+    const buscar = (o, donde) => { if (!o || typeof o !== 'object') return;
+      for (const [k, v] of Object.entries(o)) {
+        if ((k === 'salmodia' || k === 'complementaria') && Array.isArray(v) && v.every(g => g && g.salmo)) listas.push([donde, v.map(g => g.salmo)]);
+        else buscar(v, donde + '/' + k); } };
+    buscar({ salterio: D.salterio, tiempo: D.tiempo, santoral: D.santoral, comunes: D.comunes }, hora);
+    for (const [donde, l] of listas) {
+      const pr = l.map(id => { const s = D.salmos[id]; return s ? String(s.texto[0]).split('\n').slice(0, 2).join(' ') : id; });   // dos renglones: el 95 y el 97 empiezan igual
+      if (new Set(pr).size !== pr.length) malos.push(donde + ': texto repetido ' + l.join(' '));
+      for (let i = 1; i < l.length; i++) {
+        const n = id => (/^salmo-(\d+)/.exec(id) || [])[1], a = D.salmos[l[i - 1]], b = D.salmos[l[i]];
+        if (!a || !b || n(l[i - 1]) !== n(l[i])) continue;
+        const r = s => ROM[(/ ([IV]+)$/.exec(s.titulo) || [])[1]] || 1;
+        if (r(b) !== r(a) + 1) malos.push(donde + ': partes fuera de orden ' + l[i - 1] + ' → ' + l[i]);
+      }
+    }
+  }
+  assert.deepEqual(malos, []);
+});

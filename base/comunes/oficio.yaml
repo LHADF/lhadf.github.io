@@ -827,11 +827,11 @@ varios-martires:
   himno: Testigos de amor
   salmodia:
   - ant: Los santos mártires derramaron su sangre por Cristo; por ello han conseguido el premio eterno.
-    salmo: salmo-32-ii
+    salmo: salmo-2
   - ant: Los justos viven eternamente, reciben de Dios su recompensa.
     salmo: salmo-32-i
   - ant: A vosotros, mis santos, que habéis luchado en este mundo, yo os daré la recompensa de vuestro esfuerzo.
-    salmo: salmo-2
+    salmo: salmo-32-ii
   versiculo:
   - - V
     - Nosotros esperamos en el Señor.

@@ -1393,9 +1393,9 @@ III Domingo de Adviento «Gaudete»:
   oracion: Señor, que ves a tu pueblo esperando con gran fe la solemnidad del nacimiento de tu Hijo, concédenos celebrar la obra tan grande de nuestra salvación con cánticos jubilosos de alabanza y con una inmensa alegría. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.
   salmodia:
   - ant: Mirad, viene ya el Rey excelso, con gran poder, para salvar a todos los pueblos. Aleluia.
-    salmo: salmo-144-i
+    salmo: salmo-144-1-9
   - ant: 'Alégrate y goza, hija de Jerusalén: mira a tu Rey que viene. No temas, Sión, tu salvación está cerca.'
-    salmo: salmo-144-ii
+    salmo: salmo-144-10-13
   - ant: Salgamos con corazón limpio a recibir al Rey supremo, porque está para venir y no tardará.
     salmo: salmo-144-iii
 III Domingo de Adviento «Gaudete» (A):
@@ -7459,7 +7459,7 @@ Sábado después de Ceniza:
   himno: ¿Qué tengo yo que mi amistad procuras?
   salmodia:
   - ant: El Señor los rescató de la opresión.
-    salmo: salmo-77-1-39
+    salmo: salmo-77-iv
   - ant: Los hizo llegar el Señor hasta el monte que su diestra había adquirido.
     salmo: salmo-77-v
   - ant: Escogió a la tribu de Judá y eligió a David, su siervo, para pastorear a Israel, su heredad.
@@ -9658,9 +9658,9 @@ III Domingo de Cuaresma:
   te_deum: false
   salmodia:
   - ant: Día tras día te bendeciré, Señor.
-    salmo: salmo-144-i
+    salmo: salmo-144-1-9
   - ant: Tu reinado, Señor, es un reinado perpetuo
-    salmo: salmo-144-ii
+    salmo: salmo-144-10-13
   - ant: El Señor es fiel a sus palabras, bondadoso en todas sus acciones.
     salmo: salmo-144-iii
   resp2:
@@ -11124,7 +11124,7 @@ Sábado de la IV semana de Cuaresma:
   himno: ¿Qué tengo yo que mi amistad procuras?
   salmodia:
   - ant: El Señor los rescató de la opresión.
-    salmo: salmo-77-1-39
+    salmo: salmo-77-iv
   - ant: Los hizo llegar el Señor hasta el monte que su diestra había adquirido.
     salmo: salmo-77-v
   - ant: Escogió a la tribu de Judá y eligió a David, su siervo, para pastorear a Israel, su heredad.
@@ -13037,7 +13037,7 @@ Viernes de la Octava de Pascua:
   - ant: Dad gracias al Señor; sólo él hizo grandes maravillas. Aleluia.
     salmo: salmo-135-i
   - ant: 'Sacó a Israel del país de Egipto: porque es eterna su misericordia. Aleluia.'
-    salmo: salmo-135-ii
+    salmo: salmo-135-10-15
   - ant: El Señor nos libró de nuestros opresores. Aleluia.
     salmo: salmo-135-iii
   versiculo:
@@ -13120,9 +13120,9 @@ Sábado de la Octava de Pascua:
   himno: La tumba abierta dice al universo
   salmodia:
   - ant: Grande es el Señor, es incalculable su grandeza. Aleluia.
-    salmo: salmo-144-i
+    salmo: salmo-144-1-9
   - ant: El Señor ha dado a conocer la gloria y majestad de su reinado. Aleluia.
-    salmo: salmo-144-ii
+    salmo: salmo-144-10-13
   - ant: Todo viviente bendiga tu santo nombre por siempre jamás. Aleluia.
     salmo: salmo-144-iii
   versiculo:
@@ -13745,9 +13745,9 @@ III Domingo de Pascua:
     - Y te canto agradecido. Aleluia.
   salmodia:
   - ant: Aleluia. La piedra ha sido removida de la entrada del sepulcro. Aleluia.
-    salmo: salmo-144-i
+    salmo: salmo-144-1-9
   - ant: Aleluia. ¿A quién buscas, mujer?, ¿al que está vivo entre los muertos? Aleluia.
-    salmo: salmo-144-ii
+    salmo: salmo-144-10-13
   - ant: Aleluia. No llores, María; ha resucitado el Señor. Aleluia.
     salmo: salmo-144-iii
   resp2:

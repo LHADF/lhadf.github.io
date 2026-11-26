@@ -203,7 +203,7 @@ semana_2:
     - ant: 'Sólo el Señor hizo grandes maravillas: es eterna su misericordia.'
       salmo: salmo-135-i
     - ant: Con mano poderosa, con brazo extendido, sacó a Israel de Egipto.
-      salmo: salmo-135-ii
+      salmo: salmo-135-10-15
     - ant: 'Dad gracias al Dios del cielo: él nos libró de nuestros opresores.'
       salmo: salmo-135-iii
     versiculo:
@@ -217,9 +217,9 @@ semana_3:
     himno: Primicias son del sol de su Palabra
     salmodia:
     - ant: Día tras día te bendeciré, Señor. Aleluia.
-      salmo: salmo-144-i
+      salmo: salmo-144-1-9
     - ant: Tu reinado, Señor, es un reinado perpetuo. Aleluia.
-      salmo: salmo-144-ii
+      salmo: salmo-144-10-13
     - ant: El Señor es fiel a sus palabras, bondadoso en todas sus acciones. Aleluia. †
       salmo: salmo-144-iii
     versiculo:
@@ -398,9 +398,9 @@ semana_4:
     himno: ¡Qué hermosos son los pies
     salmodia:
     - ant: Dios mío, no te cierres a mi súplica, pues me turba la voz del enemigo.
-      salmo: salmo-54-2-15-17-24-i
+      salmo: salmo-54-2-9
     - ant: El Señor nos librará del poder de nuestro enemigo y adversario.
-      salmo: salmo-54-2-15-17-24-ii
+      salmo: salmo-54-10-15
     - ant: Encomienda a Dios tus afanes, que él te sustentará.
       salmo: salmo-54-2-15-17-24-iii
     versiculo:
