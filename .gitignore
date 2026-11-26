@@ -3,3 +3,5 @@ dist/
 *.tsbuildinfo
 src/carga/
 __pycache__/
+*.epub
+*.mobi
