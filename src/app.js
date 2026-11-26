@@ -910,6 +910,14 @@ function hoja(titulo, cuerpo){
 function quitarCapa(){ const c=$('#capa'); if(c) c.remove(); }
 function cerrar(){ if(!$('#capa')) return; if(history.state&&history.state.capa){ history.back(); } else quitarCapa(); }
 function empujar(tipo){ try{ history.pushState({capa:tipo==='capa', hora:S.vista==='hora'||tipo==='hora'},'',location.href); }catch(e){} }
+// Al abrir la app ya en una hora (la vista se recuerda, también cuando el sistema la cerró en segundo plano) no había entrada
+// en el historial y el gesto de volver salía de la app. Se agrega con el primer toque o tecla, porque Chrome salta al volver
+// las entradas agregadas sin un gesto del usuario (26/11/2026)
+function asegurarHistorial(){
+  removeEventListener('pointerdown',asegurarHistorial,true); removeEventListener('keydown',asegurarHistorial,true);
+  if(S.vista==='hora' && !(history.state&&(history.state.hora||history.state.capa))){ try{ history.replaceState({raiz:true},'',location.href); history.pushState({hora:true},'',location.href); }catch(e){} }
+}
+addEventListener('pointerdown',asegurarHistorial,true); addEventListener('keydown',asegurarHistorial,true);
 window.addEventListener('popstate',()=>{
   if($('#capa')){ quitarCapa(); return; }
   if(S.vista==='hora'){ S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); }
@@ -921,6 +929,7 @@ function hojaOpciones(){
     <div class="grupo"><h3>Tamaño</h3><div class="tam"><button data-act="menos" aria-label="Achicar" ${S.zoom<=.8?'disabled':''}>A−</button><span>${Math.round(S.zoom*100)} %</span><button data-act="mas" aria-label="Agrandar" ${S.zoom>=2?'disabled':''}>A+</button></div></div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
     <div class="grupo"><h3>Canto</h3>
+      ${seg('cantado',[['si','Cantado'],['no','Recitado']],CANTA()?'si':'no')}
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>
     ${_instalar?`<div class="grupo"><h3>App</h3><p class="hint">Cervus queda como una app más, con su ícono, y abre sin conexión.</p><button class="btn" data-act="instalar">Instalar Cervus</button></div>`:''}`);
 }
@@ -937,7 +946,23 @@ function toast(m, snap){
 }
 
 /* ---------- Acciones ---------- */
-function refrescarHoja(f){ const y=$('#main')?window.scrollY:0; render(); window.scrollTo(0,y); if(f) f(); }
+// ancla: el botón tocado en la hora (himnos, comunes, opciones): queda en el mismo lugar de la pantalla. Sin esto, al cambiar
+// el contenido de abajo el navegador «ancla» el desplazamiento en el texto viejo y salta al final del himno (26/11/2026)
+function refrescarHoja(f, ancla){
+  const y=$('#main')?window.scrollY:0; let sel=null, top=0;
+  if(ancla && ancla.closest && ancla.closest('#main')){ sel=['act','k','v'].filter(k=>ancla.dataset[k]!=null).map(k=>`[data-${k}="${CSS.escape(ancla.dataset[k])}"]`).join(''); top=ancla.getBoundingClientRect().top; }
+  else if(S.vista==='hora' && $('#main')){   // desde las Opciones (Cantado | Recitado, traducción…): queda a la vista la misma sección
+    const ss=[...document.querySelectorAll('#main [id^="s-"]')].filter(n=>n.getBoundingClientRect().top<=80), n=ss[ss.length-1];
+    if(n && y>0){ sel='#'+CSS.escape(n.id); top=n.getBoundingClientRect().top; } }
+  render(); window.scrollTo(0,y);
+  if(sel && $('#main '+sel)){
+    const fijar=()=>{ const n=$('#main '+sel); if(n){ const d=n.getBoundingClientRect().top-top; if(Math.abs(d)>1) window.scrollBy(0,d); } };
+    fijar();
+    if(window.ResizeObserver){ const ro=new ResizeObserver(fijar), fin=()=>{ ro.disconnect(); removeEventListener('touchstart',fin); removeEventListener('wheel',fin); };
+      ro.observe($('#main')); addEventListener('touchstart',fin,{passive:true}); addEventListener('wheel',fin,{passive:true}); setTimeout(fin,1500); }
+  }
+  if(f) f();
+}
 // Desplegable del modo (salmos y cántico evangélico de Laudes y Vísperas): vale para esta hora de este día
 document.addEventListener('change',e=>{
   const sel=e.target.closest('select[data-chg="tono"]'); if(!sel) return;
@@ -988,7 +1013,7 @@ document.addEventListener('click',e=>{
   const abierta=$('#capa .sheet-h h2'); const enHoja=abierta?abierta.textContent:null;
   const reabrir=()=>{ if(enHoja==='Opciones') hojaOpciones(); };
   const snap=JSON.stringify(S);
-  const cambio=(msg, conDeshacer=true)=>{ guardar(); refrescarHoja(reabrir); toast(msg, conDeshacer?snap:null); };
+  const cambio=(msg, conDeshacer=true)=>{ guardar(); refrescarHoja(reabrir, b); toast(msg, conDeshacer?snap:null); };
   const nV=k=>(R().versiones[k]||{}).n||k;
   const onOff=x=>x?'activado':'desactivado';
   switch(a){
@@ -1039,11 +1064,11 @@ document.addEventListener('click',e=>{
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v;
         // el latín y el gregoriano se recuerdan también desde un día con la elección efímera; otro himno lo olvida
         if(/^(lat|greg)/.test(v)) S.himno[b.dataset.k]=v; else if(/^(lat|greg)/.test(S.himno[b.dataset.k]||'')) delete S.himno[b.dataset.k];
-        guardar(); refrescarHoja(); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
-    case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
+        guardar(); refrescarHoja(null, b); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
+    case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(null, b); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
     case 'concl': if(S.concl===v) break; S.concl=v; cambio('Conclusión: '+b.textContent.toLowerCase()); break;
     case 'invit': if(INV()===v) break; S.invit=v; cambio('Invitatorio: '+(v==='greg'?'gregoriano':'en español')); break;
-    case 'prep': S._prep=!S._prep; refrescarHoja(); break;
+    case 'prep': S._prep=!S._prep; refrescarHoja(null, b); break;
     case 'oraciones': { const O=window.BASE.oraciones; hoja(O.titulo, `<div class="orof-b">${['preparatoria','conclusiva'].map(k=>`<h3>${esc(O[k].titulo)}</h3>${oracionOficioHTML(k)}`).join('')}</div>`); break; }
     case 'unirl': { const sigue=()=>{ S.unirLaudes=!S.unirLaudes; cargarDia(); cambio(S.unirLaudes?'Oficio con Laudes':'Oficio solo'); };
       if(!S.unirLaudes && !window.LAUDES){ toast('Cargando…'); cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.')); } else sigue(); break; }
