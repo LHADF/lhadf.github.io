@@ -541,7 +541,7 @@ pastores:
     salmo: salmo-149
   lectura:
     ref: Hb 13, 7-9a
-    texto: Acordaos de vuestros dirigentes, que os anunciaron la palabra de Dios; fijaos en el desenlace de su vida e ¡mitad su fe. Jesucristo es el mismo ayer y hoy y siempre. No os dejéis arrastrar por doctrinas complicadas y extrañas.
+    texto: Acordaos de vuestros dirigentes, que os anunciaron la palabra de Dios; fijaos en el desenlace de su vida e imitad su fe. Jesucristo es el mismo ayer y hoy y siempre. No os dejéis arrastrar por doctrinas complicadas y extrañas.
   responsorio:
   - - V
     - Sobre tus murallas, Jerusalén, he colocado centinelas.
@@ -609,7 +609,7 @@ pastores:
     - etiqueta: 'opcion: 2'
       texto:
         ref: Hb 13, 7-9a
-        texto: 'Acordaos de aquellos superiores vuestros que os expusieron la palabra de Dios: reflexionando sobre el desenlace de su vida, ¡mitad su fe. Jesucristo es el mismo hoy que ayer, y para siempre. No os dejéis extraviar por doctrinas llamativas y extrañas.'
+        texto: 'Acordaos de aquellos superiores vuestros que os expusieron la palabra de Dios: reflexionando sobre el desenlace de su vida, imitad su fe. Jesucristo es el mismo hoy que ayer, y para siempre. No os dejéis extraviar por doctrinas llamativas y extrañas.'
     ant_benedictus:
     - etiqueta: 'opcion: 2'
       texto: No sois vosotros los que habláis, sino el Espíritu de vuestro Padre quien habla por vosotros.

@@ -792,7 +792,8 @@ test('antífonas «Oh» y en lugar del responsorio: en gregoriano si se canta, c
 test('antífonas de salmos y cánticos: asterisco de la entonación (primera palabra o frase con sentido)', () => {
   const A = CP._.asteriscoAnt, corte = t => { const p = A(t); return p < 0 ? null : t.slice(0, p); };
   const casos = {
-    'No temáis, yo he vencido al mundo.': 'No', 'En mi angustia te busco, Señor, y extiendo las manos sin descanso.': 'En mi angustia',
+    'No temáis, yo he vencido al mundo.': 'No temáis,', 'No seréis vosotros los que habléis.': 'No seréis', 'No, Señor.': 'No,',
+    'En una sola víctima celebramos un doble triunfo.': 'En una sola víctima', 'El buen Pastor dio la vida.': 'El buen Pastor', 'Dichosos vosotros, los pobres.': 'Dichosos', 'En mi angustia te busco, Señor, y extiendo las manos sin descanso.': 'En mi angustia',
     'Mi corazón está firme, Dios mío, mi corazón está firme.': 'Mi corazón', 'El Señor reina, la tierra goza.': 'El Señor',
     'El que se aborrece a sí mismo en este mundo se guardará para la vida eterna.': 'El que se aborrece',
     'Yo soy pobre, pero el Señor cuida de mí.': 'Yo', 'Me asalta el temor y el terror: hazme caso y respóndeme, Señor.': 'Me asalta',
@@ -882,4 +883,31 @@ test('virgen mártir: el común (vírgenes o mártires) se elige al comienzo de 
   let I2; try { I2 = W.Laudes.armar('2026-07-31', ''); } finally { X.modo.comunDia = null; }
   assert.notEqual(JSON.stringify(de(I1, 'preces')), JSON.stringify(de(I2, 'preces')));
   assert.match(I2.dia.nota, /del Común de santos varones: para un santo religioso\.$/);
+});
+
+// ---------- Correcciones del 26/11/2026 ----------
+test('base: sin «¡» en lugar de «i» (errata de la extracción del libro)', () => {
+  const dir = new URL('../base/', import.meta.url), malos = [];
+  const recorrer = d => { for (const e of readdirSync(d, { withFileTypes: true })) {
+    const u = new URL(e.name + (e.isDirectory() ? '/' : ''), d);
+    if (e.isDirectory()) recorrer(u);
+    else if (e.name.endsWith('.yaml')) readFileSync(u, 'utf8').split('\n').forEach((l, i) => {
+      // pegado a una letra («m¡», «de¡») o palabras que empiezan con «i» («¡mitad», «¡mito», «¡da»)
+      if (/\p{L}¡|¡(?:mit|da\b|nclus|nmens|gual|glesia\b)/u.test(l)) malos.push(e.name + ':' + (i + 1));
+    }); } };
+  recorrer(dir);
+  assert.deepEqual(malos, []);
+});
+
+test('Completas después de las I Vísperas del I domingo de Adviento: Alma Redemptóris', () => {
+  const m = f => CP.armar(f, 'ARG').secciones.find(s => s.k === 'mariana').opciones[0].id;
+  assert.equal(m('2026-11-28'), 'alma-sol');
+  assert.equal(m('2026-11-27'), 'salve-sim');
+});
+
+test('Completas recitado: «Salva nos, *» lo entona uno y desde «Dómine» siguen todos; la repetición, sin asterisco', () => {
+  const S = CP.armar('2026-11-26', 'ARG').secciones, a = S.find(s => s.id === 'ac'), b = S.find(s => s.id === 'ac2');
+  assert.equal(a.rec.length, 1); assert.equal(a.rec[0].pares[a.rec[0].desde][0], 'Dómine,'); assert.ok(!a.rec[0].todos);
+  assert.ok(b.rec[0].todos && b.rec[0].desde == null);
+  assert.ok(!/\*/.test(B.completas.gregoriano.conclusion.gabc.split('%%')[1]));   // Noctem quiétam: sin asterisco
 });

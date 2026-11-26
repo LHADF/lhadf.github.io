@@ -118,6 +118,11 @@ const ANT_ATONAS=new Set(('el la los las lo un una unos unas al del a ante bajo 
   +'he has ha hemos habéis han había habías habíamos habíais habían habrá habrás habremos habréis habrán haya hayas hayamos hayáis hayan '
   +'san oh tan muy cuán qué cuánto cuánta cuántos cuántas cada este esta estos estas ese esa esos esas aquel aquella aquellos aquellas').split(' '));
 const ANT_POSP=new Set('mío mía míos mías tuyo tuya tuyos tuyas suyo suya suyos suyas nuestro nuestra nuestros nuestras vuestro vuestra vuestros vuestras'.split(' '));
+// adjetivos que en las antífonas van antes del sustantivo (no se separan de él) y formas copulativas (ahí no hay sustantivo)
+const ANT_ANTEP=new Set(('solo sola solos solas único única únicos únicas gran buen buena buenos buenas mal mala santo '
+  +'pequeño pequeña pequeños pequeñas ilustre ilustres inmenso inmensa verdadero verdadera verdaderos verdaderas dichoso dichosa dichosos dichosas '
+  +'precioso preciosa excelso excelsa bienaventurado bienaventurada nuevo nueva hermoso hermosa glorioso gloriosa sagrado sagrada santísimo santísima').split(' '));
+const ANT_COPULA=new Set('es son sea sean será serán eres fue fueron era está están estaba'.split(' '));
 function asteriscoAnt(t){
   const ws=[]; t.replace(/\S+/g,(w,i)=>{ ws.push({w, i, f:i+w.length}); return w; });
   const lim=w=>w.toLowerCase().replace(/^[¡¿«“"(]+/,'').replace(/[.,;:!?»”")]+$/,'');
@@ -126,8 +131,12 @@ function asteriscoAnt(t){
   while(k<ws.length-1 && !corta(ws[k].w)){
     const x=lim(ws[k].w), sig=lim(ws[k+1].w);
     // «Santa María», como «San Juan»; «Puesto que», «Ya que»: la conjunción entera, con lo que sigue
-    if(ANT_ATONAS.has(x) || /^(santa|don|fray|sor)$/.test(x) && /^\p{Lu}/u.test(ws[k+1].w) || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
+    // «no» ante el verbo va con él («No seréis *», «No temáis *», 26/11/2026); «No,» solo, se corta ahí
+    if(ANT_ATONAS.has(x) || x==='no' || /^(santa|don|fray|sor)$/.test(x) && /^\p{Lu}/u.test(ws[k+1].w) || /^(puesto|ya|así|dado|siempre|aun|aún)$/.test(x) && sig==='que') k++; else break;
   }
+  // el adjetivo antepuesto (tras artículo, preposición u «oh»; al comienzo puede ser predicativo: «Dichosos vosotros») va con
+  // su sustantivo (26/11/2026): «En una sola víctima *», «El buen Pastor *», «Un gran profeta *»
+  if(k>0 && k<ws.length-1 && !corta(ws[k].w) && ANT_ANTEP.has(lim(ws[k].w))){ const s=lim(ws[k+1].w); if(!ANT_ATONAS.has(s) && !ANT_COPULA.has(s)) k++; }
   // el posesivo pospuesto, con su sustantivo («Dios mío *»; nuestro, vuestro: solo si cierran la frase, «Señor nuestro,»)
   if(k<ws.length-1 && !corta(ws[k].w)){ const s=ws[k+1].w; if(ANT_POSP.has(lim(s)) && (!/^(nuestr|vuestr)/.test(lim(s)) || corta(s))) k++; }
   return k<ws.length-1 ? ws[k].f : -1;
@@ -521,7 +530,9 @@ function armar(fecha, region){
   sec('cantico','Cántico evangélico',{ref:'Lc 2, 29-32'});
   const tp=pascua||!!(el.especial&&/Aleluia/i.test(el.especial.antifona_cantico||''));
   const trAnt=GR.antifona.traduccion.filter(p=>tp||!/^Allel/.test(p[0])), recAnt=recitado(trAnt, [['Ant','Salva',true]]);
-  S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt, t:{la:'Salva nos, Dómine'}});
+  // Recitada, la primera vez como cantada: «Salva nos, *» lo entona uno; desde «Dómine», todos (negrita). Al repetirse, toda en negrita
+  const recAnt1=[{rol:'Ant', todos:false, pares:trAnt, desde:trAnt.findIndex(p=>p[0]==='Dómine,')}];
+  S.push({k:'ant', id:'ac', gabc:salvaNosGabc(tp), modo:'3a', glosa:trAnt, rec:recAnt1, t:{la:'Salva nos, Dómine'}});
   S.push({k:'cantico', titulo:'Cántico de Simeón', gabc:GR.cantico.gabc, glosa:GR.cantico.traduccion,
           tono:GR.cantico.tono, versos:pas?GR.cantico.versos.filter(v=>!esGloriaLa(v)):GR.cantico.versos,
           inter:pas&&GR.cantico.traduccion_versos?GR.cantico.traduccion_versos.filter((x,i)=>!esGloriaLa(GR.cantico.versos[i])):GR.cantico.traduccion_versos,
@@ -549,7 +560,7 @@ function armar(fecha, region){
   let tipo;
   if(/Asunción/.test(vis.n)) tipo='asuncion';
   else if(pascua) tipo='regina_caeli';
-  else if(hoy.t==='Adviento'||hoy.t==='Navidad') tipo='alma';
+  else if(hoy.t==='Adviento'||hoy.t==='Navidad'||vis.t==='Adviento') tipo='alma';   // también después de las I Vísperas del I domingo de Adviento
   else if(hoy.t==='Cuaresma'||hoy.t==='Triduo'||(hoy.t==='Ordinario'&&(mes===2&&dia>=2||mes===3))) tipo='ave';
   else tipo='salve';
   const sol=el.solemne;

@@ -243,9 +243,12 @@ function glosaVerso(latV, glV){
   if(a.flex!=null && b.flex==null && b.ter!=null){ out[0]=b.med; out[1]=''; }
   return out;
 }
-function versosHTML(versos, modo, cod, lang, desde, glosas, ent){
+// cruz: el primer verso es lo que queda del que empezó la antífona (antífona con †): lleva la † al comienzo, como guía de
+// dónde sigue el canto (26/11/2026)
+function versosHTML(versos, modo, cod, lang, desde, glosas, ent, cruz){
   return versos.map((v,i)=>{
     const ls=lineasVerso(v,modo,cod,lang,(desde+i)===(ent||0));
+    if(cruz && desde+i===0 && ls.length) ls[0]=`<span class="sg">†</span>&nbsp;`+ls[0];
     const gs=glosas?glosaVerso(v,glosas[i]):null;
     return `<p class="v">${ls.map((l,k)=>`<span class="${claseRenglon(l,k)}">${sinSigue(l)}</span>${gs&&gs[k]?`<span class="gl ${k?'h2':'h1'}">${esc(gs[k])}</span>`:''}`).join('')}</p>`;
   }).join('');
@@ -336,6 +339,7 @@ function salmoHTML(sal){
   // Si la antífona repite el comienzo del primer verso (hasta la flexa o el metro), lo que queda va solo en la partitura,
   // sin entonación (directo a la cuerda), y el verso siguiente tampoco la lleva (CRU, 24/11/2026)
   const ent=om ? (om.ent ? -1 : 0) : (sal.sinEnt ? -1 : 0), np=1;
+  const cruzIni=!!(om && om.ent);   // la antífona dijo parte del verso: lo que sigue empieza con la †
   if(om) h+=`<div class="versos omit" title="Lo dice la antífona">${om.gris.map(v=>`<p class="v">${lineasVerso(v,'texto').map((l,k)=>`<span class="${claseRenglon(l,k)}">${sinSigue(l)}</span>`).join('')}</p>`).join('')}</div>`;
   // partitura
   let todos=(om?om.versos:vP).concat(sal.gloria?glP:[]);
@@ -346,7 +350,8 @@ function salmoHTML(sal){
   if(canta && modo==='primer' && i0>0){ h+=`<div class="versos">${versosHTML(todos.slice(0,i0),'pautado',cod,L,1,null)}</div>`; todos=todos.slice(i0); }
   if(canta && (modo==='primer'||modo==='todos')){ // el primer verso (o todos) en partitura, con la entonación
     const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,np);
-    const g=SAL.gabcSalmo(lista,cod,L,{marcas:true, entonarEn:ent});   // acento en negrita y preparatorias en cursiva, como en el pautado
+    let g=SAL.gabcSalmo(lista,cod,L,{marcas:true, entonarEn:ent});   // acento en negrita y preparatorias en cursiva, como en el pautado
+    if(cruzIni) g=g.replace(/^(\([^)]*\)\s*)/,'$1†() ');   // la † al comienzo de lo que sigue de la antífona
     h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false, true);
     // traducción de los versos que van en partitura, debajo de ella
     if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
@@ -355,7 +360,7 @@ function salmoHTML(sal){
   const inicio=(canta&&modo==='primer')?np:0;
   const modoTxt=(canta&&modo!=='texto')?'pautado':'texto'; // sin canto: con * y †, sin pautas
   const resto=todos.slice(inicio);
-  h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null,ent)}</div>`;
+  h+=`<div class="versos${inter?' inter':''}">${versosHTML(resto,modoTxt,cod,L,inicio,interTodos?interTodos.slice(inicio):null,ent,cruzIni)}</div>`;
   return h;
 }
 
@@ -370,7 +375,7 @@ function interHTML(pares){
     const ws=String(a).trim().split(/\s+/);
     const pal=ws.map((w,i)=>`<span class="w">${marcas(w)}${i===0&&b?`<span class="tr">${marcas(b)}</span>`:''}</span>`);
     if(pal.length>1) pal.splice(0,2,`<span class="nw">${pal[0]} ${pal[1]}</span>`);   // las dos primeras palabras del par («ad dandam») no se separan
-    if(sg) pal[0]=`<span class="nw">${marcas(sg)} ${pal[0]}</span>`;   // el signo no queda solo al final del renglón
+    if(sg) pal[0]=`<span class="nw">${sg==='✠'?marcas(sg):`<span class="sg">${sg}</span>`} ${pal[0]}</span>`;   // el signo no queda solo al final del renglón
     return pal.join(' ');
   }).join(' ');
 }
@@ -439,7 +444,11 @@ if(window.ResizeObserver){ let _anchoMain=0; new ResizeObserver(es=>{ const w=Ma
 const CANTA=()=>S.cantado!==false;
 function lineaRec(l, extra){
   const uno=ps=> S.trad ? interHTML(ps) : marcas(ps.map(x=>x[0]).join(' '));
-  const cuerpo = l.versos ? l.versos.map(v=>`<span class="ln">${uno(v)}</span>`).join('') : uno(l.pares);   // renglones con sentido (base)
+  // desde: antífona entonada (Salva nos): hasta ahí uno, con el asterisco; desde ahí todos, en negrita
+  const ent = l.desde>0 && !l.versos ? (()=>{ const a=l.pares.slice(0,l.desde), b=l.pares.slice(l.desde);
+    return S.trad ? `${uno(a)} <span class="todos">${interHTML([['* '+b[0][0], b[0][1]], ...b.slice(1)])}</span>`
+      : `${uno(a)}&nbsp;<span class="k">*</span> <span class="todos">${uno(b)}</span>`; })() : null;
+  const cuerpo = ent || (l.versos ? l.versos.map(v=>`<span class="ln">${uno(v)}</span>`).join('') : uno(l.pares));   // renglones con sentido (base)
   return `<span class="segs${l.todos?' todos':''}">${extra||''}${cuerpo}</span>`;
 }
 function recitadoHTML(rec, tipo){
@@ -542,7 +551,7 @@ function himnoHTML(sec){
   const capi=o.lang==='es' && !GL && o.id!=='tedeum2' && est.length && /^\p{L}/u.test(est[0][0]||'') && (est[0][0]||'').length>1;
   h+=`<div class="himno${numerar?'':' sin-num'}">`+est.map((e,ie)=>{
     const c=capi && ie===0;
-    return `<p class="est${c?' capi-on':''}">${numerar?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<2?' c':''}">${sinalefas(esc(c&&!il?l.slice([...l][0].length):l))}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
+    return `<p class="est${c?' capi-on':''}">${numerar&&!c?`<span class="num">${ie+1}.</span>`:''}${c?capiHTML([...e[0]][0]):''}${e.map((l,il)=>`<span class="ln${c&&il<2?' c':''}">${sinalefas(esc(c&&!il?l.slice([...l][0].length):l))}</span>${GL?`<span class="gl">${esc(GL[ie][il])}</span>`:''}`).join('')}</p>`; }).join('')+(amen?`<p class="est amen-fin"><b>${esc(amen)}</b></p>`:'')+'</div>';
   return h;
 }
 // Invitatorio de los domingos del Tiempo Ordinario: gregoriano si se canta (salvo que se elija en español)
@@ -659,12 +668,13 @@ function horaHTML(){
   const sinNombre=S.hora==='completas' || r.primeras;   // Completas y I Vísperas: sin el nombre de la celebración
   h+=`<p class="dia-h">${sinNombre?(r.primeras?'I Vísperas · ':''):esc(r.dia.titulo)+' · '}${esc(r.dia.tiempo)}${r.dia.visperas&&!sinNombre?`<br>${esc(r.dia.visperas)}`:''}${(f=>f.length>1?`<br>Calendario: ${esc((f.find(x=>x.on)||f[0]).txt)}`:'')(fichasCal())}</p>`;
   // dos comunes: primero los botones para elegirlo y, debajo, la nota de dónde se toma cada cosa
-  if(r.dos && r.dos.ops.length>1) h+=`<div class="opciones dos-comunes" role="group" aria-label="Común">${r.dos.ops.map(x=>`<button data-act="comundia" data-k="${r.dos.f}" data-v="${x.id}" aria-pressed="${x.id===r.dos.actual}">${esc(x.n)}</button>`).join('')}</div>`;
+  if(r.dos && r.dos.ops.length>1) h+=`<div class="opciones desliza dos-comunes" role="group" aria-label="Común">${r.dos.ops.map(x=>`<button data-act="comundia" data-k="${r.dos.f}" data-v="${x.id}" aria-pressed="${x.id===r.dos.actual}" title="${esc(x.n)}">${esc(x.n)}</button>`).join('')}</div>`;   // en una línea que se desliza, como los himnos (26/11/2026)
   if(r.dia.nota) h+=`<p class="aviso">${esc(r.dia.nota)}</p>`;
   // I Vísperas del domingo: en ADF, antes de empezar, la oración preparatoria (introduce el oficio de toda la semana)
   if(r.hora==='visperas' && r.primeras && CP.deIso(S.fecha).getDay()===6)
     h+=`<div class="prep"><button class="discreto" data-act="prep" aria-expanded="${!!S._prep}">Oración preparatoria</button></div>`+(S._prep?`<div class="orof-b">${oracionOficioHTML('preparatoria')}</div>`:'');
-  h+=`<div class="opciones modo-canto" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
+  // Cantado | Recitado: interruptor deslizante, distinto de los botones de opciones (26/11/2026)
+  h+=`<div class="modo-canto${CANTA()?'':' rec'}" role="group" aria-label="Cantado o recitado">${[[true,'Cantado'],[false,'Recitado']].map(([v,n])=>`<button data-act="cantado" data-v="${v?'si':'no'}" aria-pressed="${CANTA()===v}">${n}</button>`).join('')}</div>`;
   // Invitatorio: en Laudes (los domingos) y en el Oficio de lectura, si es la primera oración del día
   const invL = r.hora==='laudes' && CP.deIso(S.fecha).getDay()===0 && !r.difuntos, invO = r.hora==='oficio';
   if(invL || invO){ const on = invL ? S.invLaudes!==false : !!S.invOficio;
