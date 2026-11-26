@@ -937,46 +937,60 @@ function hoja(titulo, cuerpo){
   const f=c.querySelector('.sheet-b button'); if(f) f.focus({preventScroll:true});
   marcarLenguas(c); arrastrarHoja(c);
 }
-// Deslizar hacia abajo para cerrar (como en el iPhone): se agarra por la manija o el título, o por el contenido si está
-// arriba de todo. La hoja sigue al dedo; si baja más de un tercio (o se suelta rápido hacia abajo), se cierra; si no,
-// vuelve a su lugar. Solo en la hoja de abajo (en pantallas anchas va centrada y no tiene manija) (26/11/2026).
+// Deslizar hacia abajo para cerrar (como en el iPhone), en todos los sistemas y tamaños: con el dedo se agarra por la
+// manija o el título, o por el contenido si está arriba de todo; con el mouse o el lápiz, por la manija o el título.
+// La hoja sigue al dedo; si baja más de un tercio (como mucho 160 px) o se suelta rápido hacia abajo, se cierra; si no,
+// vuelve a su lugar (26/11/2026).
 function arrastrarHoja(c){
   const h=c.querySelector('.sheet'), cuerpo=c.querySelector('.sheet-b'); if(!h) return;
-  const ancha=()=>window.matchMedia('(min-width:720px)').matches;
   const quieto=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let y0=0, x0=0, t0=0, dy=0, desde=null, arrastra=false, cancela=false, vel=0, yAnt=0, tAnt=0;
-  h.addEventListener('touchstart', e=>{
-    if(ancha() || e.touches.length!==1) { desde=null; return; }
-    const t=e.target, enCab=t.closest('.asa,.sheet-h'), enCuerpo=cuerpo&&cuerpo.contains(t);
+  let y0=0, x0=0, dy=0, desde=null, arrastra=false, cancela=false, vel=0, yAnt=0, tAnt=0;
+  const empieza=(t,x,y)=>{
+    const enCab=t.closest('.asa,.sheet-h'), enCuerpo=cuerpo&&cuerpo.contains(t);
     // no en desplegables ni en las filas que se deslizan de costado
     desde = t.closest('select,input,textarea') ? null : enCab ? 'cab' : (enCuerpo && cuerpo.scrollTop<=0 ? 'cuerpo' : null);
-    if(!desde) return;
-    y0=yAnt=e.touches[0].clientY; x0=e.touches[0].clientX; t0=tAnt=performance.now(); dy=0; vel=0; arrastra=false; cancela=false;
-  }, {passive:true});
-  h.addEventListener('touchmove', e=>{
+    if(!desde) return false;
+    y0=yAnt=y; x0=x; tAnt=performance.now(); dy=0; vel=0; arrastra=false; cancela=false; return true;
+  };
+  const mueve=(x,y,e)=>{
     if(!desde || cancela) return;
-    const y=e.touches[0].clientY, x=e.touches[0].clientX, d=y-y0, now=performance.now();
+    const d=y-y0, now=performance.now();
     if(!arrastra){
       if(Math.abs(x-x0)>Math.abs(d) && Math.abs(x-x0)>6){ cancela=true; return; }        // gesto de costado: no es para cerrar
       if(d<-4 || (desde==='cuerpo' && cuerpo.scrollTop>0)){ cancela=true; return; }       // hacia arriba: es desplazar el contenido
       if(d<8) return;
       arrastra=true; h.style.transition='none';
     }
-    e.preventDefault();
+    if(e.cancelable) e.preventDefault();
     dy=Math.max(0,d); h.style.transform=`translateY(${dy}px)`;
     c.style.backgroundColor=`color-mix(in srgb, var(--velo) ${Math.round(100*Math.max(0,1-dy/h.offsetHeight))}%, transparent)`;
     if(now>tAnt){ vel=(y-yAnt)/(now-tAnt); yAnt=y; tAnt=now; }
-  }, {passive:false});
+  };
   const suelta=()=>{
-    if(!arrastra){ desde=null; return; }
+    if(!arrastra){ desde=null; return false; }
     arrastra=false; desde=null;
     const cierra = dy > Math.min(160, h.offsetHeight/3) || (vel>.6 && dy>30);
     const dur=quieto()?0:200;
     h.style.transition=`transform ${dur}ms ${cierra?'ease-in':'ease-out'}`; c.style.transition=`background-color ${dur}ms`;
-    if(cierra){ h.style.transform='translateY(100%)'; c.style.backgroundColor='transparent'; setTimeout(cerrar, dur); }
+    if(cierra){ h.style.transform=`translateY(${window.innerHeight}px)`; c.style.backgroundColor='transparent'; setTimeout(cerrar, dur); }
     else { h.style.transform=''; c.style.backgroundColor=''; }
+    return true;
   };
+  // dedo
+  h.addEventListener('touchstart', e=>{ if(e.touches.length!==1){ desde=null; return; } empieza(e.target, e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+  h.addEventListener('touchmove', e=>mueve(e.touches[0].clientX, e.touches[0].clientY, e), {passive:false});
   h.addEventListener('touchend', suelta); h.addEventListener('touchcancel', suelta);
+  // mouse y lápiz: solo por la manija o el título; si se arrastró, el clic del final no cuenta (no toca la X)
+  let id=null, hubo=false;
+  h.addEventListener('pointerdown', e=>{
+    hubo=false;
+    if(e.pointerType==='touch' || e.button!==0 || !e.target.closest('.asa,.sheet-h')) return;
+    if(empieza(e.target, e.clientX, e.clientY)){ id=e.pointerId; hubo=false; }
+  });
+  h.addEventListener('pointermove', e=>{ if(e.pointerId!==id) return; mueve(e.clientX, e.clientY, e); if(arrastra && !hubo){ hubo=true; try{ h.setPointerCapture(id); }catch(_){} } });
+  const fin=e=>{ if(e.pointerId!==id) return; id=null; suelta(); };
+  h.addEventListener('pointerup', fin); h.addEventListener('pointercancel', fin);
+  h.addEventListener('click', e=>{ if(hubo){ hubo=false; e.stopPropagation(); e.preventDefault(); } }, true);
 }
 // volver: true al cerrar la hoja (no al reemplazarla por otra ni al ir a otra vista)
 function quitarCapa(volver){

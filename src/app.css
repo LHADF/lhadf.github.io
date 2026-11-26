@@ -113,10 +113,17 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .horas .chev{color:var(--muted);align-self:center;display:flex}
 .horas .chev .ico{width:18px;height:18px}
 /* Otros oficios (difuntos, comunes): la misma lista que las horas, un escalón más abajo, con su rótulo (26/11/2026) */
-.otros{margin-top:10px}
-.otros h2{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 4px}
-.otros .horas .n{font-family:var(--sans);font-size:var(--f-ui)}
-.otros .horas button{padding-block:12px}
+/* Otros oficios: un escalón abajo de las horas. No es la misma lista con rayas, sino un bloque aparte (como las listas
+   agrupadas del iPhone): fondo de superficie, esquinas redondeadas, separador interno que no llega al borde, letra de la
+   interfaz y más aire arriba (26/11/2026) */
+.otros{margin-top:26px}
+.otros h2{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 16px}
+.otros .horas{border:1px solid var(--line);border-radius:var(--r-2);background:var(--surface);overflow:hidden}
+.otros .horas li{border-bottom:0;padding-left:16px}
+.otros .horas li+li button{border-top:1px solid var(--line)}
+.otros .horas button{padding:12px 12px 12px 0;min-height:48px;align-items:center}
+.otros .horas .n{font-family:var(--sans);font-size:var(--f-ui);color:var(--ink2)}
+.otros .horas .chev .ico{width:16px;height:16px}
 .horas button:disabled{cursor:default}
 .horas button:disabled .n{color:var(--muted)}
 .horas .pronto{font-size:var(--f-dato);color:var(--muted);font-style:italic}
@@ -263,8 +270,8 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 /* manija: indica que la hoja se puede deslizar hacia abajo para cerrarla; en pantallas anchas la hoja va centrada y no la lleva */
 .asa{flex:none;width:36px;height:5px;border-radius:3px;background:var(--line2);margin:7px auto 0}
 .asa + .sheet-h{padding-top:6px}
-.sheet-h{touch-action:none}
-@media (min-width:720px){.asa{display:none}.asa + .sheet-h{padding-top:14px}}
+.sheet-h{touch-action:none;user-select:none;-webkit-user-select:none}
+.asa{cursor:grab}
 .sheet-h h2{flex:1;margin:0;font-family:var(--titulo);font-size:1.3rem;font-weight:600}
 .sheet-b{overflow:auto;padding:6px max(16px,env(safe-area-inset-right,0px)) 22px max(16px,env(safe-area-inset-left,0px))}
 .grupo{margin-top:16px}
