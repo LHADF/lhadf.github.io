@@ -460,7 +460,8 @@ function recitadoHTML(rec, tipo){
   return `<div class="vr rec${il}">${rec.map(l=>`<p${l.rol!=='R'?' class="pv"':''}>${l.rol?`<span class="k">${l.rol==='R'?'℟':'℣'}.</span> `:''}${lineaRec(l)}</p>`).join('')}</div>`;
 }
 // Citas bíblicas al modo «capítulo: versículos» (Dn 3: 26-27), más preciso que la coma
-function cita(t){ return String(t||'').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
+// y el número del libro separado de la sigla, como en el libro: «1Co» → «1 Co» (26/11/2026)
+function cita(t){ return String(t||'').replace(/(^|[\s;(—–])([123])(?=\p{Lu}(?:\p{Ll}|\s))/gu,'$1$2 ').replace(/(^|[;—–]\s*|\p{L}\.?\s+)(\d+), (?=\d)/gu,'$1$2: '); }
 function vrHTML(sec){
   if((!CANTA() || !sec.gabc) && sec.rec) return recitadoHTML(sec.rec);   // sin partitura: siempre recitado
   if(S.canto && S.antGreg && sec.gabc) return partituraHTML(sec.gabc, sec.glosa);
