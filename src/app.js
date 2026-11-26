@@ -931,11 +931,52 @@ function quien(el){ if(!el||!el.dataset) return null; const ks=['act','k','v'].f
 function hoja(titulo, cuerpo){
   const habia=!!$('#capa'); quitarCapa(); if(!habia){ empujar('capa'); const a=document.activeElement; _abrio=a&&a!==document.body?{el:a, sel:quien(a)}:null; }
   const c=document.createElement('div'); c.className='capa'; c.id='capa';
-  c.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(titulo)}"><div class="sheet-h"><h2>${esc(titulo)}</h2><button class="iconbtn" data-act="cerrar" aria-label="Cerrar"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="sheet-b">${cuerpo}</div></div>`;
+  c.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(titulo)}"><div class="asa" aria-hidden="true"></div><div class="sheet-h"><h2>${esc(titulo)}</h2><button class="iconbtn" data-act="cerrar" aria-label="Cerrar"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="sheet-b">${cuerpo}</div></div>`;
   c.addEventListener('click',e=>{ if(e.target===c) cerrar(); });
   document.body.appendChild(c);
   const f=c.querySelector('.sheet-b button'); if(f) f.focus({preventScroll:true});
-  marcarLenguas(c);
+  marcarLenguas(c); arrastrarHoja(c);
+}
+// Deslizar hacia abajo para cerrar (como en el iPhone): se agarra por la manija o el título, o por el contenido si está
+// arriba de todo. La hoja sigue al dedo; si baja más de un tercio (o se suelta rápido hacia abajo), se cierra; si no,
+// vuelve a su lugar. Solo en la hoja de abajo (en pantallas anchas va centrada y no tiene manija) (26/11/2026).
+function arrastrarHoja(c){
+  const h=c.querySelector('.sheet'), cuerpo=c.querySelector('.sheet-b'); if(!h) return;
+  const ancha=()=>window.matchMedia('(min-width:720px)').matches;
+  const quieto=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let y0=0, x0=0, t0=0, dy=0, desde=null, arrastra=false, cancela=false, vel=0, yAnt=0, tAnt=0;
+  h.addEventListener('touchstart', e=>{
+    if(ancha() || e.touches.length!==1) { desde=null; return; }
+    const t=e.target, enCab=t.closest('.asa,.sheet-h'), enCuerpo=cuerpo&&cuerpo.contains(t);
+    // no en desplegables ni en las filas que se deslizan de costado
+    desde = t.closest('select,input,textarea') ? null : enCab ? 'cab' : (enCuerpo && cuerpo.scrollTop<=0 ? 'cuerpo' : null);
+    if(!desde) return;
+    y0=yAnt=e.touches[0].clientY; x0=e.touches[0].clientX; t0=tAnt=performance.now(); dy=0; vel=0; arrastra=false; cancela=false;
+  }, {passive:true});
+  h.addEventListener('touchmove', e=>{
+    if(!desde || cancela) return;
+    const y=e.touches[0].clientY, x=e.touches[0].clientX, d=y-y0, now=performance.now();
+    if(!arrastra){
+      if(Math.abs(x-x0)>Math.abs(d) && Math.abs(x-x0)>6){ cancela=true; return; }        // gesto de costado: no es para cerrar
+      if(d<-4 || (desde==='cuerpo' && cuerpo.scrollTop>0)){ cancela=true; return; }       // hacia arriba: es desplazar el contenido
+      if(d<8) return;
+      arrastra=true; h.style.transition='none';
+    }
+    e.preventDefault();
+    dy=Math.max(0,d); h.style.transform=`translateY(${dy}px)`;
+    c.style.backgroundColor=`color-mix(in srgb, var(--velo) ${Math.round(100*Math.max(0,1-dy/h.offsetHeight))}%, transparent)`;
+    if(now>tAnt){ vel=(y-yAnt)/(now-tAnt); yAnt=y; tAnt=now; }
+  }, {passive:false});
+  const suelta=()=>{
+    if(!arrastra){ desde=null; return; }
+    arrastra=false; desde=null;
+    const cierra = dy > Math.min(160, h.offsetHeight/3) || (vel>.6 && dy>30);
+    const dur=quieto()?0:200;
+    h.style.transition=`transform ${dur}ms ${cierra?'ease-in':'ease-out'}`; c.style.transition=`background-color ${dur}ms`;
+    if(cierra){ h.style.transform='translateY(100%)'; c.style.backgroundColor='transparent'; setTimeout(cerrar, dur); }
+    else { h.style.transform=''; c.style.backgroundColor=''; }
+  };
+  h.addEventListener('touchend', suelta); h.addEventListener('touchcancel', suelta);
 }
 // volver: true al cerrar la hoja (no al reemplazarla por otra ni al ir a otra vista)
 function quitarCapa(volver){

@@ -260,6 +260,11 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 @keyframes up{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.sheet,.capa,.entra-sig,.entra-ant{animation:none}.toast{transition:none}.top,.barra{transition:none}}
 .sheet-h{display:flex;align-items:center;gap:8px;padding:14px max(16px,env(safe-area-inset-left,0px)) 10px;border-bottom:1px solid var(--line)}
+/* manija: indica que la hoja se puede deslizar hacia abajo para cerrarla; en pantallas anchas la hoja va centrada y no la lleva */
+.asa{flex:none;width:36px;height:5px;border-radius:3px;background:var(--line2);margin:7px auto 0}
+.asa + .sheet-h{padding-top:6px}
+.sheet-h{touch-action:none}
+@media (min-width:720px){.asa{display:none}.asa + .sheet-h{padding-top:14px}}
 .sheet-h h2{flex:1;margin:0;font-family:var(--titulo);font-size:1.3rem;font-weight:600}
 .sheet-b{overflow:auto;padding:6px max(16px,env(safe-area-inset-right,0px)) 22px max(16px,env(safe-area-inset-left,0px))}
 .grupo{margin-top:16px}
