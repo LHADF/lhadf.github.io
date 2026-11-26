@@ -397,7 +397,7 @@ test('calendarios: las siglas de la celebración base dicen de dónde la asume A
   // San Leandro: «ESP · ADF» (ADF asume la celebración de España, para todos menos ARG); el único lugar es ARG (San Artémides Zatti)
   const o = CP.opcionesDia('2027-11-13', '');
   assert.equal(o[0].tipo, 'b'); assert.deepEqual([...o[0].siglas], ['ESP', 'ADF']);
-  assert.deepEqual(o.filter(x => x.tipo === 'r').flatMap(x => x.siglas), ['ARG']);
+  assert.equal(JSON.stringify(o.filter(x => x.tipo === 'r').flatMap(x => [...x.siglas])), '["ARG"]');
   // ninguna variante de lugar es de ADF ni de los calendarios que ADF solo asume (ESP, CHL, FRC)
   const lugares = new Set(Object.values(ctx.window.CAL.var).flatMap(v => v.filter(x => x[0] === 'r').flatMap(x => x[1].split(' '))));
   for (const sg of ['ADF', 'CRG', 'ESP', 'CHL', 'FRC']) assert.ok(!lugares.has(sg), sg);
