@@ -108,8 +108,24 @@ function cargarDia(){
 }
 cargarDia();
 // S.trad (glosa bajo la partitura) lo usan las funciones heredadas del Cantoral
-function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#000000':'#ffffff'; r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
+function aplicarTema(){ const r=document.documentElement; r.dataset.theme=S.theme==='dark'?'dark':'light'; const mt=document.querySelector('meta[name=theme-color]'); if(mt) mt.content=S.theme==='dark'?'#000000':'#ffffff'; r.style.setProperty('--sis',SIS()); r.style.setProperty('--esc',ESC()); r.style.setProperty('--lec',LEC()); }
 // Un solo tamaño (S.zoom, de 80 % a 200 % de a 10 %): el texto de la hora crece todo eso; botones y títulos, la mitad (hasta 150 %).
+// Tamaño de texto del sistema (iPhone y iPad: Ajustes › Pantalla › Tamaño del texto). Safari lo da con -apple-system-body
+// (17 px es el tamaño normal); se multiplica por el tamaño propio de la app. Topes: 14/17 y 28/17 (26/11/2026).
+// En la Mac -apple-system-body es más chico y no corresponde: solo en pantallas táctiles de Apple.
+let _sis=null;
+function SIS(){
+  if(_sis!=null) return _sis; _sis=1;
+  try{
+    const ua=navigator.userAgent, apple=/iP(hone|ad|od)/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints>1);
+    if(apple && window.CSS && CSS.supports('font','-apple-system-body')){
+      const d=document.createElement('span'); d.style.cssText='font:-apple-system-body;position:absolute;visibility:hidden';
+      document.documentElement.appendChild(d); const px=parseFloat(getComputedStyle(d).fontSize); d.remove();
+      if(px>0) _sis=Math.round(Math.min(28/17, Math.max(14/17, px/17))*100)/100;
+    }
+  }catch(e){}
+  return _sis;
+}
 function ESC(){ return S.zoom<=1 ? 1 : Math.min(1.5, 1+(S.zoom-1)/2); }
 function LEC(){ return 1.2*S.zoom/ESC(); }
 
@@ -180,7 +196,7 @@ function svgDe(id, ancho, tam){ // tam: tamaño de la letra y de la traducción,
 }
 function pintar(raiz){
   const els=[...(raiz||document).querySelectorAll('.partitura[data-g]')];
-  const zoom=LEC()/1.15;
+  const zoom=LEC()*SIS()/1.15;
   return els.reduce((p,el)=>p.then(()=>{
     const ancho=Math.max(260, Math.round((el.clientWidth||600)/zoom/10)*10); el.dataset.w=ancho;
     // La partitura se dibuja con ancho «ancho» y se escala al ancho real: la letra se calcula para que, ya escalada,
@@ -437,7 +453,7 @@ let _glosaPend=0;
 function reajustarGlosas(){ cancelAnimationFrame(_glosaPend); _glosaPend=requestAnimationFrame(()=>{ if(S.vista==='hora' && $('#main') && !ajustarGlosas($('#main'))) setTimeout(reajustarGlosas,300); }); }
 if(document.fonts&&document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', reajustarGlosas);
 window.addEventListener('pageshow', reajustarGlosas);
-document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) reajustarGlosas(); });
+document.addEventListener('visibilitychange', ()=>{ if(document.hidden) return; const a=_sis; _sis=null; if(SIS()!==a){ aplicarTema(); refrescarHoja(); } else reajustarGlosas(); });
 if(window.ResizeObserver){ let _anchoMain=0; new ResizeObserver(es=>{ const w=Math.round(es[0].contentRect.width); if(w!==_anchoMain){ _anchoMain=w; reajustarGlosas(); } }).observe(document.documentElement); }
 /* Cantado o recitado: un solo botón al comienzo decide todas las piezas gregorianas.
    Recitado: el texto latino de la pieza, con su traducción literal debajo (si está activa). */
@@ -653,7 +669,7 @@ function hojaComunes(){
       ${G.casos.length>1?`<label><span>Para</span><select data-chg="comun" data-k="c">${G.casos.map((x,i)=>opt(i, x.n, i===sel.c)).join('')}</select></label>`:''}
       <label><span>Grado</span><select data-chg="comun" data-k="grado">${['Memoria','Fiesta','Solemnidad'].map(x=>opt(x, x, x===sel.grado)).join('')}</select></label>
     </div>
-    <ul class="horas">${hs.map(([id,n])=>`<li class="disp"><button data-act="abrircom" data-v="${id}"><span class="n">${n}</span><span class="h"></span><span class="chev">›</span></button></li>`).join('')}</ul>`);
+    <ul class="horas">${hs.map(([id,n])=>`<li class="disp"><button data-act="abrircom" data-v="${id}"><span class="n">${n}</span><span class="h"></span><span class="chev">${CHEV(1)}</span></button></li>`).join('')}</ul>`);
 }
 document.addEventListener('change',e=>{
   const sel=e.target.closest('select[data-chg="comun"]'); if(!sel) return;
@@ -799,7 +815,7 @@ function hojaCalendario(){
   }
   const antes=CP.enRango(CP.masDias(`${mes}-01`,-1)), despues=CP.enRango(`${m===12?y+1:y}-${pad(m===12?1:m+1)}-01`);
   const cuerpo=`<div class="calmes">
-    <div class="calmes-h"><button class="iconbtn" data-act="calmes" data-v="-1" aria-label="Mes anterior" ${antes?'':'disabled'}>‹</button><h3>${M[m-1][0].toUpperCase()+M[m-1].slice(1)} ${y}</h3><button class="iconbtn" data-act="calmes" data-v="1" aria-label="Mes siguiente" ${despues?'':'disabled'}>›</button></div>
+    <div class="calmes-h"><button class="iconbtn" data-act="calmes" data-v="-1" aria-label="Mes anterior" ${antes?'':'disabled'}>${CHEV(-1)}</button><h3>${M[m-1][0].toUpperCase()+M[m-1].slice(1)} ${y}</h3><button class="iconbtn" data-act="calmes" data-v="1" aria-label="Mes siguiente" ${despues?'':'disabled'}>${CHEV(1)}</button></div>
     <div class="calmes-s" aria-hidden="true"><span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span></div>
     <div class="calmes-g">${celdas}</div>
     ${mes!==hoy.slice(0,7)?'<button class="discreto" data-act="calhoy">Volver a este mes</button>':''}
@@ -855,16 +871,19 @@ function vigilarTitulo(){
   if(!vigiaTitulo && window.ResizeObserver){ let ancho=0; vigiaTitulo=new ResizeObserver(e=>{ const w=Math.round(e[0].contentRect.width); if(w!==ancho){ ancho=w; ajustarTitulo(); } }); }
   const d=$('.dia'); if(vigiaTitulo&&d){ vigiaTitulo.disconnect(); vigiaTitulo.observe(d); }
 }
+// Íconos dibujados (como volver y los tres puntos): flechas y nota del día
+const CHEV=d=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="${d<0?'M15 5l-7 7 7 7':'M9 5l7 7-7 7'}"/></svg>`;
+const ICO_NOTA='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.7" r="1" fill="currentColor" stroke="none"/></svg>';
 function portadaHTML(){
   const r=R(); const esHoy=S.fecha===fechaHoy(), ahora=esHoy?horasAhora():[];
   // Calendarios: solo cuando el día tiene variantes o nota. La ficha gris es lo que se está celebrando; las encendidas, las otras opciones.
   const fc=fichasCal(), nota=(CP.diaCal(S.fecha, SEL())||{}).nota;
-  const cals=(fc.length>1||nota) ? `<div class="cals" role="group" aria-label="Calendarios de este día">${fc.map(c=>`<button class="cal" data-act="cal" data-v="${c.i}" data-s="${c.sg}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.o.f.n+' ('+c.o.f.g+')')}">${esc(c.txt)}</button>`).join('')}${nota?'<button class="cal nota" data-act="nota" aria-label="Ver la nota de este día">!</button>':''}</div>` : '';
+  const cals=(fc.length>1||nota) ? `<div class="cals" role="group" aria-label="Calendarios de este día">${fc.map(c=>`<button class="cal" data-act="cal" data-v="${c.i}" data-s="${c.sg}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.o.f.n+' ('+c.o.f.g+')')}">${esc(c.txt)}</button>`).join('')}${nota?`<button class="cal nota" data-act="nota" aria-label="Nota de este día">${ICO_NOTA}</button>`:''}</div>` : '';
   return `<div class="portada"><h1 class="vh">Liturgia de las Horas</h1>
     <div class="navdia">
-      <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${'‹'}</button>
+      <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${CHEV(-1)}</button>
       <button class="fecha" data-act="calendario" aria-label="Abrir el calendario">${esHoy?'Hoy, ':''}${esc(esHoy?r.fechaTxt.toLowerCase():r.fechaTxt)}</button>
-      <button class="iconbtn" data-act="dia" data-v="1" aria-label="Día siguiente">${'›'}</button>
+      <button class="iconbtn" data-act="dia" data-v="1" aria-label="Día siguiente">${CHEV(1)}</button>
       ${esHoy?'':'<button class="hoybtn" data-act="hoy">Hoy</button>'}
       <button class="iconbtn mas" data-act="opciones" aria-label="Opciones"><svg class="ico" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></button>
     </div>
@@ -880,9 +899,9 @@ function portadaHTML(){
     <ul class="horas">${HORAS.map(([id,n])=>{
       const ok=true, ya=ahora.includes(id);
       if(id==='visperas') n=nombreVisperas();
-      return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?'›':''}</span></button></li>`; }).join('')}</ul>
-    <button class="discreto" data-act="difuntos">Oficio de difuntos</button>
-    <button class="discreto" data-act="comunes">Comunes de los santos</button>
+      return `<li class="${[ok?'disp':'',ya?'ahora':''].join(' ').trim()}"><button ${ok?`data-act="abrir" data-v="${id}"`:'disabled'} ${ya?'aria-current="time"':''}><span class="n">${esc(n)}</span><span class="h">${ok?esc(id==='completas'&&r.dia.visperas?'tras las I Vísperas':''):'<span class="pronto">en preparación</span>'}</span><span class="chev">${ok?CHEV(1):''}</span></button></li>`; }).join('')}</ul>
+    <section class="otros" aria-labelledby="otros-t"><h2 id="otros-t">Otros oficios</h2>
+      <ul class="horas">${[['difuntos','Oficio de difuntos'],['comunes','Comunes de los santos']].map(([a,n])=>`<li class="disp"><button data-act="${a}"><span class="n">${n}</span><span class="h"></span><span class="chev">${CHEV(1)}</span></button></li>`).join('')}</ul></section>
     <p class="nota-proto">Versión de prueba: todas las horas, con el calendario ADF. Los textos y el santoral están en revisión; puede haber errores.</p>
   </div>`;
 }
@@ -950,16 +969,17 @@ function hojaOpciones(){
       ${sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>
     ${_instalar?`<div class="grupo"><h3>App</h3><p class="hint">Cervus queda como una app más, con su ícono, y abre sin conexión.</p><button class="btn" data-act="instalar">Instalar Cervus</button></div>`:''}`);
 }
-let _toast, _toastFin, _undo=null;
+let _toast, _toastFin;
 // Aviso breve: aparece y se desvanece (clases «entra» y «sale» de app.css)
-function toast(m, snap){
+// Avisos: solo lo que no se ve en pantalla (cargando, errores, fecha fuera del calendario). Los cambios de opciones no avisan:
+// el botón elegido ya lo muestra (guías de Apple, 26/11/2026). Los errores quedan más tiempo.
+function toast(m, ms=2200){
   clearTimeout(_toast); clearTimeout(_toastFin); let t=$('#toast');
   if(!t){ t=document.createElement('div'); t.id='toast'; t.className='toast'; t.setAttribute('role','status'); t.setAttribute('aria-live','polite'); document.body.appendChild(t); }
-  _undo=snap||null;
-  t.innerHTML=`<span>${esc(m)}</span>${snap?'<button data-act="deshacer">Deshacer</button>':''}`;
+  t.innerHTML=`<span>${esc(m)}</span>`;
   if(t.hidden){ t.classList.add('entra'); t.hidden=false; void t.offsetWidth; }
   t.classList.remove('entra','sale');
-  _toast=setTimeout(()=>{ t.classList.add('sale'); _undo=null; _toastFin=setTimeout(()=>{ t.hidden=true; t.classList.remove('sale'); },500); },snap?4500:2200);
+  _toast=setTimeout(()=>{ t.classList.add('sale'); _toastFin=setTimeout(()=>{ t.hidden=true; t.classList.remove('sale'); },500); },ms);
 }
 
 /* ---------- Acciones ---------- */
@@ -987,13 +1007,13 @@ document.addEventListener('change',e=>{
   if(v===sel.dataset.def) delete S.tonos[k]; else S.tonos[k]=v;
   // se guardan solo los de los últimos días
   const lim=CP.masDias(fechaHoy(),-7); for(const c of Object.keys(S.tonos)) if(c.slice(0,10)<lim) delete S.tonos[c];
-  guardar(); refrescarHoja(); toast(SAL.etiquetaTono(v)+(v===sel.dataset.def?' (el del día)':''));
+  guardar(); refrescarHoja();
 });
 /* Deslizar el dedo: sobre la tarjeta del día, al día anterior o siguiente; en el calendario, al mes anterior o siguiente
    (como las flechas). Hacia la izquierda, el siguiente. Solo gestos claramente horizontales: el desplazamiento vertical sigue igual. */
 function moverDia(n){
   const f=CP.masDias(S.fecha,n);
-  if(!CP.enRango(f)){ toast('Fuera del calendario cargado'); return false; }
+  if(!CP.enRango(f)){ toast('Fuera del calendario cargado', 6000); return false; }
   S.fecha=f; cargarDia(); render(); return true;
 }
 function moverMes(n){
@@ -1029,17 +1049,15 @@ document.addEventListener('click',e=>{
   const a=b.dataset.act, v=b.dataset.v;
   const abierta=$('#capa .sheet-h h2'); const enHoja=abierta?abierta.textContent:null;
   const reabrir=()=>{ if(enHoja==='Opciones') hojaOpciones(); };
-  const snap=JSON.stringify(S);
-  const cambio=(msg, conDeshacer=true)=>{ guardar(); refrescarHoja(reabrir, b); toast(msg, conDeshacer?snap:null); };
+  const cambio=()=>{ guardar(); refrescarHoja(reabrir, b); };
   const nV=k=>(R().versiones[k]||{}).n||k;
   const onOff=x=>x?'activado':'desactivado';
   switch(a){
     case 'cerrar': cerrar(); break;
-    case 'deshacer': if(_undo){ S=JSON.parse(_undo); cargarDia(); aplicarModo(); _undo=null; guardar(); refrescarHoja(reabrir); toast('Cambio deshecho'); } break;
-    case 'difuntos': hoja('Oficio de difuntos', `<p class="rub">Con todos los textos del Oficio de difuntos, en lugar de los del día.</p><ul class="horas">${[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas']].map(([id,n])=>`<li class="disp"><button data-act="abrirdif" data-v="${id}"><span class="n">${n}</span><span class="h"></span><span class="chev">›</span></button></li>`).join('')}</ul>`); break;
+    case 'difuntos': hoja('Oficio de difuntos', `<p class="rub">Con todos los textos del Oficio de difuntos, en lugar de los del día.</p><ul class="horas">${[['oficio','Oficio de lectura'],['laudes','Laudes'],['tercia','Tercia'],['sexta','Sexta'],['nona','Nona'],['visperas','Vísperas']].map(([id,n])=>`<li class="disp"><button data-act="abrirdif" data-v="${id}"><span class="n">${n}</span><span class="h"></span><span class="chev">${CHEV(1)}</span></button></li>`).join('')}</ul>`); break;
     case 'invtog': if(S.hora==='laudes') S.invLaudes=(S.invLaudes===false); else S.invOficio=!S.invOficio;
       { const sigue=()=>{ cargarDia(); guardar(); render(); };
-        if(S.hora==='oficio' && S.invOficio && !cargada('laudes')) cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar el invitatorio.')); else sigue(); } break;
+        if(S.hora==='oficio' && S.invOficio && !cargada('laudes')) cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar el invitatorio.', 6000)); else sigue(); } break;
     case 'comunes': hojaComunes(); break;
     case 'otras': hojaOtras(v); break;
     case 'eligeop': {
@@ -1052,7 +1070,7 @@ document.addEventListener('click',e=>{
       const hv=v==='visperas1' ? 'visperas' : v;
       const abrir=()=>{ S._marDia={}; S.hora=hv||'completas'; cargarDia(); S.vista='hora'; empujar('hora'); guardar(); render(); window.scrollTo(0,0); };
       const faltan=[hv, ...(hv==='oficio'&&(S.unirLaudes||S.invOficio)?['laudes']:[])].filter(h=>MAYORES[h]&&!cargada(h));   // Oficio unido a Laudes (o con invitatorio): también Laudes
-      if(faltan.length){ toast('Cargando…'); Promise.all(faltan.map(cargarHora)).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.')); } else abrir();
+      if(faltan.length){ toast('Cargando…'); Promise.all(faltan.map(cargarHora)).then(abrir, ()=>toast('No se pudo cargar la hora. Revisá la conexión.', 6000)); } else abrir();
       break; }
     case 'atras': if(history.state&&history.state.hora){ history.back(); } else { S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); } break;
     case 'opciones': hojaOpciones(); break;
@@ -1067,7 +1085,7 @@ document.addEventListener('click',e=>{
       if(c.o.tipo==='r'){ S.cal=c.sg; delete d[S.fecha]; }                      // otro calendario: se recuerda
       else if(c.o.tipo==='l'){ d[S.fecha]=c.o.f.n; }                             // memoria libre: solo ese día
       else { if(fichasCal().some(x=>x.on&&x.o.tipo==='r')) S.cal=''; delete d[S.fecha]; }   // volver al calendario ADF
-      cargarDia(); cambio(c.o.f.n+' ('+c.txt+')'); break; }
+      cargarDia(); cambio(); break; }
     case 'bio': { const f=CP.diaCal(S.fecha, SEL()); hoja(f.n, f.bio.split(/\n+/).map(p=>`<p class="nota-dia">${esc(p)}</p>`).join('')); break; }
     case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal();
       // notas del Calendario litúrgico ADF, una por renglón: «SIGLA<tab>texto»
@@ -1076,28 +1094,28 @@ document.addEventListener('click',e=>{
       hoja(f.n, ns.map(([x,t])=>`<p class="nota-dia">${x?`<span class="sig">${esc(x)}</span>`:''}${esc(t)}</p>`).join('')
         +`<dl class="siglas">${sg.map(x=>`<div><dt>${esc(x)}</dt><dd>${esc(CP.calendarios[x]||'')}</dd></div>`).join('')}</dl>`); break; }
     case 'trad': S.trad=!S.trad; guardar(); refrescarHoja(reabrir); break;   // el cambio se ve al instante: sin aviso
-    case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio('Salmos: '+{pautado:'sin partitura',primer:'primer verso en partitura',todos:'todo en partitura'}[v]); break;
-    case 'examenF': S.examenF=v; cambio('Examen: '+b.textContent); break;
+    case 'salmos': if(S.salmos===v) break; S.salmos=v; cambio(); break;
+    case 'examenF': S.examenF=v; cambio(); break;
     case 'himno': if(b.dataset.e){ S._marDia['h:'+b.dataset.k]=v;
         // el latín y el gregoriano se recuerdan también desde un día con la elección efímera; otro himno lo olvida
         if(/^(lat|greg)/.test(v)) S.himno[b.dataset.k]=v; else if(/^(lat|greg)/.test(S.himno[b.dataset.k]||'')) delete S.himno[b.dataset.k];
-        guardar(); refrescarHoja(null, b); } else { S.himno[b.dataset.k]=v; cambio('Himno cambiado'); } break;
-    case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(null, b); } else { S.mariana[b.dataset.k]=v; cambio('Antífona cambiada'); } break;
-    case 'concl': if(S.concl===v) break; S.concl=v; cambio('Conclusión: '+b.textContent.toLowerCase()); break;
-    case 'invit': if(INV()===v) break; S.invit=v; cambio('Invitatorio: '+(v==='greg'?'gregoriano':'en español')); break;
+        guardar(); refrescarHoja(null, b); } else { S.himno[b.dataset.k]=v; cambio(); } break;
+    case 'mariana': if(b.dataset.e){ S._marDia[b.dataset.k]=v; refrescarHoja(null, b); } else { S.mariana[b.dataset.k]=v; cambio(); } break;
+    case 'concl': if(S.concl===v) break; S.concl=v; cambio(); break;
+    case 'invit': if(INV()===v) break; S.invit=v; cambio(); break;
     case 'prep': S._prep=!S._prep; refrescarHoja(null, b); break;
     case 'oraciones': { const O=window.BASE.oraciones; hoja(O.titulo, `<div class="orof-b">${['preparatoria','conclusiva'].map(k=>`<h3>${esc(O[k].titulo)}</h3>${oracionOficioHTML(k)}`).join('')}</div>`); break; }
-    case 'unirl': { const sigue=()=>{ S.unirLaudes=!S.unirLaudes; cargarDia(); cambio(S.unirLaudes?'Oficio con Laudes':'Oficio solo'); };
-      if(!S.unirLaudes && !window.LAUDES){ toast('Cargando…'); cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.')); } else sigue(); break; }
+    case 'unirl': { const sigue=()=>{ S.unirLaudes=!S.unirLaudes; cargarDia(); cambio(); };
+      if(!S.unirLaudes && !window.LAUDES){ toast('Cargando…'); cargarHora('laudes').then(sigue, ()=>toast('No se pudo cargar Laudes. Revisá la conexión.', 6000)); } else sigue(); break; }
     case 'comundia': { if(S.comunDia && S.comunDia.f===b.dataset.k && S.comunDia.id===v) break;
       if(!S.comunDia && v==='virgenes') break;
       S.comunDia={f:b.dataset.k, id:v}; if(S._elige) delete S._elige[claveElige()];   // las «Otras opciones» elegidas eran del otro común
-      cargarDia(); cambio('Textos del '+b.textContent); break; }
-    case 'salop': { const c=v==='comp'; if(!!S.compl===c) break; S.compl=c; cargarDia(); cambio(c?'Salmodia complementaria':'Salmodia del día'); break; }
-    case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(S.unirCompletas?'Vísperas con Completas':'Vísperas solas'); break;
-    case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; { const n=R().nombre||'Completas'; cambio(n+(c?' cantadas':' recitadas')); } break; }
-    case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); toast(S.examen?'Examen de conciencia visible':'Examen de conciencia oculto'); break;
-    case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio('Tamaño: '+Math.round(z*100)+' %',false); break; }
+      cargarDia(); cambio(); break; }
+    case 'salop': { const c=v==='comp'; if(!!S.compl===c) break; S.compl=c; cargarDia(); cambio(); break; }
+    case 'unir': S.unirCompletas=!S.unirCompletas; cargarDia(); cambio(); break;
+    case 'cantado': { const c=v==='si'; if(CANTA()===c) break; S.cantado=c; cambio(); break; }
+    case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); break;
+    case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio(); break; }
     case 'instalar': if(_instalar){ const p=_instalar; _instalar=null; cerrar(); p.prompt(); } break;
     case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); break;   // sin aviso
   }

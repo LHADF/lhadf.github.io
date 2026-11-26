@@ -24,7 +24,7 @@
 
 *{box-sizing:border-box}
 html,body{background:var(--paper);color:var(--ink)}
-html{font-size:calc(16px * var(--ui,1) * var(--esc,1))}
+html{font-size:calc(16px * var(--sis,1) * var(--ui,1) * var(--esc,1))}   /* --sis: tamaño de texto del sistema (iPhone, iPad) */
 
 body{font-family:var(--sans);font-size:var(--f-ui);line-height:1.5;-webkit-text-size-adjust:100%}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--paper)}
@@ -97,7 +97,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .cals{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 -8px}
 .cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--borde-ctrl);background:none;color:var(--muted)}
 .cal[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft);color:var(--rubric);cursor:default}
-.cal.nota{border-radius:50%;padding:0;border-color:var(--rubric);color:var(--rubric);font-size:var(--f-ui);margin-left:auto}
+.cal.nota{border:0;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;color:var(--rubric);background:none;margin-left:auto}
 .prep{display:flex;justify-content:center;margin:-.6em 0 .4em}
 .nota-dia{font-family:var(--serif);font-size:1.0625rem;line-height:1.5;margin:0 0 14px}
 .nota-dia .sig{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;color:var(--rubric);margin-right:.6em}
@@ -110,7 +110,13 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .horas button{width:100%;display:grid;grid-template-columns:1fr auto auto;align-items:baseline;gap:12px;padding:14px 4px;border:0;background:none;text-align:left}
 .horas .n{font-family:var(--titulo);font-size:var(--f-item)}
 .horas .h{font-size:var(--f-dato);color:var(--muted);font-variant-numeric:tabular-nums}
-.horas .chev{color:var(--muted)}
+.horas .chev{color:var(--muted);align-self:center;display:flex}
+.horas .chev .ico{width:18px;height:18px}
+/* Otros oficios (difuntos, comunes): la misma lista que las horas, un escalón más abajo, con su rótulo (26/11/2026) */
+.otros{margin-top:10px}
+.otros h2{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 4px}
+.otros .horas .n{font-family:var(--sans);font-size:var(--f-ui)}
+.otros .horas button{padding-block:12px}
 .horas button:disabled{cursor:default}
 .horas button:disabled .n{color:var(--muted)}
 .horas .pronto{font-size:var(--f-dato);color:var(--muted);font-style:italic}
