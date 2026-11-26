@@ -150,7 +150,7 @@ function marcas(s){ // ℣ ℟ * † ✠ en rojo
 /* ---------- Partituras (Exsurge, igual que el Cantoral) ---------- */
 let _id=0; const GAB=new Map();
 // sal: partitura de la salmodia (los acentos del modo van en 700, docs/diseno.md)
-function partituraHTML(gabc, glosa, drop=true, sal=false){ const id='g'+(++_id); GAB.set(id,{gabc,glosa,drop}); return `<div class="partitura${sal?' sal-p':''}" data-g="${id}"><p class="cargando">Preparando la partitura…</p></div>`; }
+function partituraHTML(gabc, glosa, drop=true, sal=false, lengua='la'){ const id='g'+(++_id); GAB.set(id,{gabc,glosa,drop}); return `<div class="partitura${sal?' sal-p':''}" lang="${lengua}" data-g="${id}"><p class="cargando">Preparando la partitura…</p></div>`; }
 const cacheSvg=new Map();
 function svgDe(id, ancho, tam){ // tam: tamaño de la letra y de la traducción, en unidades de la partitura
   const it=GAB.get(id); if(!it) return Promise.reject();
@@ -187,7 +187,7 @@ function pintar(raiz){
     // mida lo mismo que el texto en español (y la traducción, lo mismo que la glosa: .84 em)
     const cuerpo=parseFloat(getComputedStyle(el).fontSize)||16, escala=(el.clientWidth||ancho)/ancho;
     const tam={letra:cuerpo/escala, trad:cuerpo*.84/escala};
-    return svgDe(el.dataset.g, ancho, tam).then(html=>{ if(!el.isConnected) return; el.innerHTML=html; const svg=el.querySelector('svg'); uniformarRenglones(svg); if(S.trad) ajustarTraducciones(svg); })
+    return svgDe(el.dataset.g, ancho, tam).then(html=>{ if(!el.isConnected) return; el.innerHTML=html; const svg=el.querySelector('svg'); uniformarRenglones(svg); if(S.trad) ajustarTraducciones(svg); svg.querySelectorAll('.translation').forEach(t=>t.setAttribute('lang','es')); })
       .catch(()=>{ if(el.isConnected) el.innerHTML='<p class="cargando">No se pudo dibujar la partitura.</p>'; });
   }), Promise.resolve());
 }
@@ -204,7 +204,7 @@ function selectorModo(sec){
   const op=t=>`<option value="${t.cod}"${t.cod===cod?' selected':''}>${esc(t.corta)}</option>`, L=SAL.listaTonos();
   // arriba, los modos que se cantan en el salterio (por semana y domingo); los demás, en «Más modos» (CRU, 20/11/2026)
   const USADOS=['1g','2D','3a','4g','5a','6F','7a','8G'], usados=USADOS.map(c=>L.find(t=>t.cod===c)).filter(Boolean);
-  return `<label class="modo">Modo <select data-chg="tono" data-k="${esc(claveTono(sec))}" data-def="${def}" aria-label="Modo de la salmodia"><optgroup label="Modos">${usados.map(op).join('')}</optgroup><optgroup label="Más modos">${L.filter(t=>!USADOS.includes(t.cod)).map(op).join('')}</optgroup></select></label>`;
+  return `<label class="modo">Modo <select data-chg="tono" data-k="${esc(claveTono(sec))}" data-def="${def}" aria-label="Modo de la salmodia"><optgroup label="Modos">${usados.map(op).join('')}</optgroup><optgroup label="Más modos">${L.filter(t=>!USADOS.includes(t.cod)).map(op).join('')}</optgroup></select><span class="val" aria-hidden="true">${esc((L.find(t=>t.cod===cod)||{}).corta||cod)}</span></label>`;
 }
 // Devuelve las líneas (hemistiquios) de un verso, ya marcadas
 const ESTRIBILLO=/^R\.\s/;
@@ -324,7 +324,7 @@ function salmoHTML(sal){
       const vs=sal.aleluyas.flatMap(e=>[`Aleluia. † ${e[0]} * Aleluia.`, `${e[1]} * Aleluia, aleluia.`]);
       const lin=(v,i)=>{ const ls=SAL.renglonesVerso(SAL.pautarVerso(v,cod,'es',i===0));
         return ls.map((l,k)=>`<p class="v">${k===ls.length-1?'<span class="k">℟.</span> ':''}${sinSigue(l)}</p>`).join(''); };
-      if(modo==='primer'||modo==='todos') h+=partituraHTML(`name:salmo;\n%%\n${SAL.gabcSalmo(modo==='todos'?vs:vs.slice(0,1),cod,'es',{marcas:true})}`, null, false, true);
+      if(modo==='primer'||modo==='todos') h+=partituraHTML(`name:salmo;\n%%\n${SAL.gabcSalmo(modo==='todos'?vs:vs.slice(0,1),cod,'es',{marcas:true})}`, null, false, true, 'es');
       const desde=(modo==='primer'||modo==='todos')?(modo==='todos'?vs.length:1):0;
       h+=`<div class="versos al19">${sal.aleluyas.map((e,k)=>{ const par=[2*k,2*k+1].filter(i=>i>=desde); return par.length?`<div class="est">${par.map(i=>lin(vs[i],i)).join('')}</div>`:''; }).join('')}</div>`;
     } else {
@@ -352,7 +352,7 @@ function salmoHTML(sal){
     const lista=modo==='todos'?todos.filter(v=>!ESTRIBILLO.test(v)):todos.slice(0,np);
     let g=SAL.gabcSalmo(lista,cod,L,{marcas:true, entonarEn:ent});   // acento en negrita y preparatorias en cursiva, como en el pautado
     if(cruzIni) g=g.replace(/^(\([^)]*\)\s*)/,'$1†() ');   // la † al comienzo de lo que sigue de la antífona
-    h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false, true);
+    h+=partituraHTML(`name:salmo;\n%%\n${g}`, null, false, true, 'es');
     // traducción de los versos que van en partitura, debajo de ella
     if(interTodos) h+=`<div class="versos inter gl-part">${lista.map((v,i)=>`<p class="v">${glosaVerso(v,interTodos[i]).map((x,k)=>x?`<span class="gl ${k?'h2':'h1'}">${esc(x)}</span>`:'').join('')}</p>`).join('')}</div>`;
     if(modo==='todos') return h;
@@ -888,6 +888,13 @@ function portadaHTML(){
 }
 
 /* ---------- Render ---------- */
+// Idioma del texto: el latín (interlineal, recitado, himnos latinos, oraciones del oficio, salmos con traducción) lleva lang="la"
+// y su traducción, lang="es", para que los lectores de pantalla usen la pronunciación que corresponde (26/11/2026)
+function marcarLenguas(raiz){
+  if(!raiz) return;
+  raiz.querySelectorAll('.il,.rec,.himno.lat,.orof,.confiteor,.versos.inter').forEach(e=>e.setAttribute('lang','la'));
+  raiz.querySelectorAll('[lang="la"] .tr,[lang="la"] .gl').forEach(e=>e.setAttribute('lang','es'));
+}
 function render(){
   aplicarTema();
   const enHora=S.vista==='hora';
@@ -895,20 +902,30 @@ function render(){
   $('#brand').innerHTML= enHora? `${esc(R().nombre||'Completas')}<small>${esc(D.fechaTxt)}</small>` : '<span class="vh">Liturgia de las Horas</span>';
   $('#main').innerHTML= enHora? `<article class="hora" lang="es">${horaHTML()}</article>` : portadaHTML();
   if(!enHora) vigilarTitulo();
-  if(enHora){ if(!ajustarGlosas($('#main'))) reajustarGlosas(); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(reajustarGlosas); pintar($('#main')); }
+  if(enHora){ if(!ajustarGlosas($('#main'))) reajustarGlosas(); deslizarElegidos($('#main')); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(reajustarGlosas); marcarLenguas($('#main')); pintar($('#main')); }
 }
 
 /* ---------- Hojas ---------- */
+// Al cerrar una hoja, el foco vuelve al control que la abrió (o al que lo reemplazó al redibujar), sin desplazar la página
+let _abrio=null;
+function quien(el){ if(!el||!el.dataset) return null; const ks=['act','k','v'].filter(k=>el.dataset[k]!=null); return ks.length?ks.map(k=>`[data-${k}="${CSS.escape(el.dataset[k])}"]`).join(''):null; }
 function hoja(titulo, cuerpo){
-  const habia=!!$('#capa'); quitarCapa(); if(!habia) empujar('capa');
+  const habia=!!$('#capa'); quitarCapa(); if(!habia){ empujar('capa'); const a=document.activeElement; _abrio=a&&a!==document.body?{el:a, sel:quien(a)}:null; }
   const c=document.createElement('div'); c.className='capa'; c.id='capa';
   c.innerHTML=`<div class="sheet" role="dialog" aria-modal="true" aria-label="${esc(titulo)}"><div class="sheet-h"><h2>${esc(titulo)}</h2><button class="iconbtn" data-act="cerrar" aria-label="Cerrar"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="sheet-b">${cuerpo}</div></div>`;
   c.addEventListener('click',e=>{ if(e.target===c) cerrar(); });
   document.body.appendChild(c);
   const f=c.querySelector('.sheet-b button'); if(f) f.focus({preventScroll:true});
+  marcarLenguas(c);
 }
-function quitarCapa(){ const c=$('#capa'); if(c) c.remove(); }
-function cerrar(){ if(!$('#capa')) return; if(history.state&&history.state.capa){ history.back(); } else quitarCapa(); }
+// volver: true al cerrar la hoja (no al reemplazarla por otra ni al ir a otra vista)
+function quitarCapa(volver){
+  const c=$('#capa'); if(c) c.remove();
+  if(!c || !volver) return; const a=_abrio; _abrio=null; if(!a) return;
+  const el=a.el&&a.el.isConnected ? a.el : (a.sel && document.querySelector(a.sel));
+  if(el && el.focus) el.focus({preventScroll:true});
+}
+function cerrar(){ if(!$('#capa')) return; if(history.state&&history.state.capa){ history.back(); } else quitarCapa(true); }
 function empujar(tipo){ try{ history.pushState({capa:tipo==='capa', hora:S.vista==='hora'||tipo==='hora'},'',location.href); }catch(e){} }
 // Al abrir la app ya en una hora (la vista se recuerda, también cuando el sistema la cerró en segundo plano) no había entrada
 // en el historial y el gesto de volver salía de la app. Se agrega con el primer toque o tecla, porque Chrome salta al volver
@@ -919,7 +936,7 @@ function asegurarHistorial(){
 }
 addEventListener('pointerdown',asegurarHistorial,true); addEventListener('keydown',asegurarHistorial,true);
 window.addEventListener('popstate',()=>{
-  if($('#capa')){ quitarCapa(); return; }
+  if($('#capa')){ quitarCapa(true); return; }
   if(S.vista==='hora'){ S.vista='hoy'; guardar(); render(); window.scrollTo(0,0); }
 });
 const seg=(act,vals,cur)=>`<div class="seg" role="group">${vals.map(([v,n])=>`<button data-act="${act}" data-v="${v}" aria-pressed="${cur===v}">${n}</button>`).join('')}</div>`;

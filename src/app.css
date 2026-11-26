@@ -11,18 +11,20 @@
   --f-titulo:1.75rem; --f-item:1.25rem; --f-ui:1rem; --f-dato:.875rem;
   --r-1:8px; --r-2:16px; --lec:1.2;
   --velo:rgba(20,12,8,.42); --aviso-fondo:#f4eee4; --aviso-linea:#e7ddcc;
+  --borde-ctrl:#8f8679;   /* borde de botones y desplegables: ≥ 3:1 contra el fondo (guías de Apple, 26/11/2026) */
 }
 :root[data-theme="dark"]{
   /* Fondo negro puro; lo que está más arriba, gris neutro más claro; texto blanco roto; acentos aclarados (contraste ≥ 4,5:1) */
-  --paper:#000; --surface:#161616; --perg:#111; --perg-arco:#e7ddcc; --tinta-ilus:#2a201a;
+  --paper:#000; --surface:#161616; --perg:#111; --perg-arco:#c4baa8; --tinta-ilus:#2a201a;
   --ink:#e6e6e6; --ink2:#c4c4c4; --muted:#a3a3a3; --line:#2a2a2a; --line2:#363636;
   --rubric:#ee6d6a; --rubric-soft:#3b2a2a; --rubric-fondo:#c23538; --glosa:#66bdb4; --gold:#c8a765; --verde:#8fb986; --sombra:rgba(0,0,0,.6); color-scheme:dark;
-  --velo:rgba(62,62,62,.72); --aviso-fondo:#1c1c1c; --aviso-linea:#333 }
+  --velo:rgba(62,62,62,.72); --aviso-fondo:#1c1c1c; --aviso-linea:#333; --borde-ctrl:#6b6b6b }
+/* Oscuro: lo que está encima (hojas) va sobre un gris más claro que la página, como el fondo «elevated» de Apple */
+:root[data-theme="dark"] .sheet{--paper:#161616; --surface:#222; --perg:#262626}
 
 *{box-sizing:border-box}
 html,body{background:var(--paper);color:var(--ink)}
 html{font-size:calc(16px * var(--ui,1) * var(--esc,1))}
-@media (max-width:640px){:root{--ui:.94}}
 
 body{font-family:var(--sans);font-size:var(--f-ui);line-height:1.5;-webkit-text-size-adjust:100%}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--paper)}
@@ -53,7 +55,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .dia .txt{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;min-height:0;overflow:hidden;padding:4px 2px 2px 6px}
 .dia .hoy{font-size:var(--f-dato);color:var(--ink2)}
 .dia h2{font-family:var(--titulo);font-size:1.6rem;line-height:1.15;margin:4px 0 0;font-weight:600;text-wrap:balance}
-.dia .bio{align-self:flex-start;border:0;background:none;padding:2px 0;min-height:24px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
+.dia .bio{align-self:flex-start;border:0;background:none;padding:0;min-height:44px;display:inline-flex;align-items:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
 
 .portada{padding-top:max(10px,env(safe-area-inset-top,0px)) !important}
 .dia .meta{display:flex;flex-wrap:wrap;gap:1px 12px;font-size:var(--f-dato);line-height:1.35;color:var(--ink2)}
@@ -86,14 +88,14 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .calmes-g .globo{width:9px;height:9px;border-radius:50%;background:var(--col);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 30%,transparent)}
 .calmes .discreto{margin-top:4px}
 .navdia .iconbtn{font-size:1.5rem;line-height:1}
-.hoybtn{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 14px;min-height:36px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric)}
+.hoybtn{border:1px solid var(--borde-ctrl);background:var(--paper);border-radius:999px;padding:6px 14px;min-height:44px;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric)}
 .region{display:flex;flex-direction:column;gap:8px;font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2)}
 .arco{position:relative;background:var(--perg-arco);border-radius:999px 999px var(--r-1) var(--r-1);overflow:hidden;height:100%;aspect-ratio:.72}
 .dia.crece .arco{height:calc(13.5rem - 28px);align-self:end}
 /* la imagen entra entera, apoyada abajo, dentro del arco (también las verticales) */
 .ilu{position:absolute;inset:16% 10% 7%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center bottom/contain no-repeat;mask:var(--ilu) center bottom/contain no-repeat}
 .cals{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 -8px}
-.cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--line2);background:none;color:var(--muted)}
+.cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--borde-ctrl);background:none;color:var(--muted)}
 .cal[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft);color:var(--rubric);cursor:default}
 .cal.nota{border-radius:50%;padding:0;border-color:var(--rubric);color:var(--rubric);font-size:var(--f-ui);margin-left:auto}
 .prep{display:flex;justify-content:center;margin:-.6em 0 .4em}
@@ -125,11 +127,11 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .elige-comun{display:grid;gap:10px;margin:12px 0 18px}
 .elige-comun label{display:grid;grid-template-columns:5.5em 1fr;align-items:center;gap:10px}
 .elige-comun label>span{font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.elige-comun select{font:inherit;font-family:var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:var(--r-1);padding:9px 10px;min-height:44px;width:100%}
+.elige-comun select{font:inherit;font-family:var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--borde-ctrl);border-radius:var(--r-1);padding:9px 10px;min-height:44px;width:100%}
 .elige-comun select:focus-visible{outline:2px solid var(--rubric);outline-offset:1px}
 /* «Otras opciones»: justo debajo del título del elemento, alineado con él */
-.otras{display:flex;justify-content:flex-start;margin:-1.1em 0 .9em}
-.otras .discreto{min-height:36px;padding:4px 0}
+.otras{display:flex;justify-content:flex-start;margin:calc(-1.1em - 4px) 0 calc(.9em - 4px)}
+.otras .discreto{min-height:44px;padding:4px 0}
 .opc-lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .opc-lista li{border-bottom:1px solid var(--line)}
 .opc-lista button{width:100%;display:grid;gap:3px;padding:12px 4px;border:0;background:none;text-align:left}
@@ -148,7 +150,7 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 /* ---------- Lectura de la hora ---------- */
 .hora{padding-block:6px 120px;font-family:var(--serif);font-size:calc(var(--lec)*1rem);line-height:1.5}
 .pastilla{display:flex;justify-content:center;margin:12px 0 4px}
-.pastilla button{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:var(--f-dato);border:1px solid var(--line);background:var(--surface);border-radius:var(--r-1);min-height:44px;padding:6px 14px;color:var(--ink2)}
+.pastilla button{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:var(--f-dato);border:1px solid var(--borde-ctrl);background:var(--surface);border-radius:var(--r-1);min-height:44px;padding:6px 14px;color:var(--ink2)}
 .pastilla button b{color:var(--ink);font-weight:600}
 .hora h1{font-family:var(--titulo);font-weight:600;font-size:1.9em;color:var(--rubric);text-align:center;margin:.35em 0 0;letter-spacing:.02em}
 .hora .dia-h{text-align:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--muted);margin:.2em 0 1em}
@@ -180,7 +182,7 @@ b .k,.todos .k{font-weight:400}
 .toast.entra,.toast.sale{opacity:0;transform:translate(-50%,8px)}
 .ant-greg{margin:.2em 0 1em}
 .opciones{display:flex;gap:6px;flex-wrap:wrap;margin:-.2em 0 1em;font-family:var(--sans)}
-.opciones button{font-size:var(--f-dato);border:1px solid var(--line);background:none;border-radius:var(--r-1);min-height:44px;padding:5px 12px;color:var(--muted)}
+.opciones button{font-size:var(--f-dato);border:1px solid var(--borde-ctrl);background:none;border-radius:var(--r-1);min-height:44px;padding:5px 12px;color:var(--muted)}
 .opciones.desliza{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding-right:24px}
 .opciones.desliza::-webkit-scrollbar{display:none}
 .opciones.desliza button{white-space:nowrap;flex:none;scroll-snap-align:start}
@@ -199,8 +201,11 @@ b .k,.todos .k{font-weight:400}
 .salmo-h .cab{display:flex;align-items:center;flex-wrap:wrap;column-gap:.5em}
 .salmo-h .cab .ref{margin-left:0}
 .salmo-h .modo{margin-left:auto;padding-left:.3em;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);white-space:nowrap;line-height:1.2}
-.salmo-h .modo select{font:inherit;font-weight:600;color:var(--rubric);background:transparent;border:1px solid color-mix(in srgb,var(--rubric) 35%,transparent);border-radius:6px;padding:.05em .3em;margin-left:.2em;cursor:pointer}
-.salmo-h .modo select:focus-visible{outline:2px solid var(--rubric);outline-offset:1px}
+/* el desplegable real es invisible y cubre toda la etiqueta (44 px de alto); lo que se ve es .val */
+.salmo-h .modo{position:relative;display:inline-flex;align-items:center;min-height:44px}
+.salmo-h .modo select{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px;cursor:pointer;margin:0}
+.salmo-h .modo .val{font-weight:600;border:1px solid color-mix(in srgb,var(--rubric) 50%,transparent);border-radius:6px;padding:.05em .3em;margin-left:.2em}
+.salmo-h .modo select:focus-visible + .val{outline:2px solid var(--rubric);outline-offset:1px}
 .versos{margin:0 0 .4em}
 .v{margin:0 0 .55em}
 /* Capitular (lecturas breves, himnos en español, cánticos evangélicos sin partitura): grande y roja, a lo alto de dos renglones,
@@ -259,7 +264,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .seg button{border:0;background:none;border-radius:6px;min-height:44px;padding:9px 6px;font-size:var(--f-ui);color:var(--muted);line-height:1.2}
 .seg button[aria-pressed="true"]{background:var(--paper);color:var(--ink);font-weight:600;box-shadow:0 1px 3px var(--sombra)}
 .opts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
-.opts button{width:100%;text-align:left;display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);padding:10px 12px}
+.opts button{width:100%;text-align:left;display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;border:1px solid var(--borde-ctrl);background:var(--paper);border-radius:var(--r-1);padding:10px 12px}
 .opts button .mk{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--line2);margin-top:2px}
 .opts button[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft)}
 .opts button[aria-pressed="true"] .mk{border-color:var(--rubric);background:radial-gradient(circle,var(--rubric) 0 45%,transparent 50%)}
@@ -280,7 +285,7 @@ svg.Exsurge .translation,svg.Exsurge .translation tspan{fill:var(--glosa)!import
 .indice{list-style:none;margin:0;padding:0}
 .indice button{width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:none;padding:12px 2px;font-family:var(--titulo);font-size:var(--f-item)}
 .tam{display:flex;align-items:center;gap:10px}
-.tam button{width:48px;height:44px;border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);font-family:var(--titulo)}
+.tam button{width:48px;height:44px;border:1px solid var(--borde-ctrl);background:var(--paper);border-radius:var(--r-1);font-family:var(--titulo)}
 .tam span{flex:1;text-align:center;font-family:var(--titulo);font-variant-numeric:tabular-nums}
 .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--aviso-fondo);color:var(--ink2);border:1px solid var(--aviso-linea);box-shadow:0 6px 20px var(--sombra);font-family:var(--sans);opacity:1;transition:opacity .45s ease,transform .45s ease;padding:6px 6px 6px 16px;border-radius:var(--r-1);font-size:var(--f-ui);display:flex;align-items:center;gap:8px;width:max-content;z-index:60;max-width:calc(100% - 32px);text-align:center}
 
@@ -310,7 +315,7 @@ p.rec{margin:0 0 .8em}
 .aviso + .modo-canto,.prep + .modo-canto,.orof-b + .modo-canto{margin-top:1.6em}
 .modo-canto::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:var(--paper);box-shadow:0 1px 3px rgba(0,0,0,.18),0 0 0 1px var(--line2);transition:transform .22s ease}
 .modo-canto.rec::before{transform:translateX(100%)}
-.modo-canto button{position:relative;z-index:1;border:0;background:none;border-radius:999px;min-height:38px;padding:4px 20px;font-size:var(--f-dato);color:var(--muted);letter-spacing:.02em}
+.modo-canto button{position:relative;z-index:1;border:0;background:none;border-radius:999px;min-height:44px;padding:4px 20px;font-size:var(--f-dato);color:var(--muted);letter-spacing:.02em}
 .modo-canto button[aria-pressed="true"]{color:var(--rubric);font-weight:600}
 @media (prefers-reduced-motion:reduce){.modo-canto::before{transition:none}}
 .dos-comunes{margin-bottom:.5em}   /* dos comunes: en una línea que se desliza, como los himnos */
@@ -322,7 +327,7 @@ p.rec{margin:0 0 .8em}
 .brand .chev-i{font-size:.45em;color:var(--muted);vertical-align:.35em}
 .top-in{padding-block:4px}
 .ir{display:flex;flex-wrap:wrap;gap:6px}
-.ir button{border:1px solid var(--line);background:var(--paper);border-radius:var(--r-1);min-height:44px;padding:6px 12px;font-family:var(--titulo);font-size:var(--f-ui)}
+.ir button{border:1px solid var(--borde-ctrl);background:var(--paper);border-radius:var(--r-1);min-height:44px;padding:6px 12px;font-family:var(--titulo);font-size:var(--f-ui)}
 .hora{padding-bottom:64px}
 .toast{bottom:calc(24px + env(safe-area-inset-bottom,0px))}
 .hora .dia-h{line-height:1.45}
@@ -370,10 +375,11 @@ p.rec{margin:0 0 .8em}
 .opciones.unir{margin-top:3em}
 .opciones.unir + .sec{margin-top:1.6em}
 /* Inicio sin barra: los tres puntos van en la fila de la fecha, que no se parte */
-.portada .navdia{gap:2px}.portada .navdia .iconbtn{width:38px;min-width:38px}
-.portada .navdia .fecha{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.portada .navdia{gap:4px}.portada .navdia .iconbtn{width:44px;min-width:44px}
+/* la fecha no se corta con «…»: si no entra, pasa a dos renglones */
+.portada .navdia .fecha{line-height:1.2;text-wrap:balance}
 @media (max-width:440px){.portada .navdia .fecha{font-size:.875rem}.portada .hoybtn{padding-inline:10px}}
-@media (max-width:384px){.portada .navdia .fecha{font-size:.78rem}.portada .hoybtn{padding-inline:8px}.portada .navdia .iconbtn{width:34px;min-width:34px}}
+@media (max-width:384px){.portada .navdia .fecha{font-size:.78rem}.portada .hoybtn{padding-inline:8px}}
 /* Lecturas del Oficio de lectura */
 .lec-larga .lec-obra{font-family:var(--sans);font-size:var(--f-dato);color:var(--ink2);margin:0 0 .4em}
 .lec-larga .lec-tit{font-variant:small-caps;letter-spacing:.03em;color:var(--rubric);margin:.8em 0 .9em}
@@ -381,3 +387,8 @@ p.rec{margin:0 0 .8em}
 .vers{font-variant:small-caps;letter-spacing:.03em}   /* «Venid, postrémonos por tierra» (invitatorio) */
 .al19 .est{margin-bottom:1.1em}   /* Cántico Ap 19: cada estrofa con sus «Aleluia» */
 .al19 .est .v{margin:0 0 .15em}
+/* «Aumentar contraste» del sistema (prefers-contrast): grises más oscuros, líneas y bordes más marcados (26/11/2026) */
+@media (prefers-contrast:more){
+  :root{--ink2:#2a2522; --muted:#57514b; --line:#b8b0a3; --line2:#8f8679; --borde-ctrl:#5f574d; --glosa:#014d4d; --rubric:#7d120e}
+  :root[data-theme="dark"]{--ink:#f5f5f5; --ink2:#dedede; --muted:#c9c9c9; --line:#4a4a4a; --line2:#5a5a5a; --borde-ctrl:#9a9a9a; --rubric:#ff8a86; --glosa:#8fd6ce}
+}

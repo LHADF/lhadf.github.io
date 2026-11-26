@@ -48,10 +48,10 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 
 - **Texto negro: dos pesos, como en el Cantoral Laudibus.** Normal 400 y negrita 600, también en la letra de las partituras. **Excepción (18/11/2026):** los acentos del modo en la salmodia (pautado y letra de la partitura de salmos, cánticos y cántico evangélico) van en bold 700, para que se vean más; por eso Source Serif 4 se carga también en 700 (solo redonda) y «Septies AE» trae ǽ/Ǽ en 400, 600 y 700. La letra bajo los neumas mide lo mismo que el texto en español y la traducción, lo mismo que la glosa (app.js lo calcula al dibujar cada partitura); solo se achica la traducción de un renglón que no entra (hasta 72 %).
 - **Tipografías:** Source Serif 4 para textos, títulos y latín; Source Sans 3 para la interfaz y los datos. Etiquetas en mayúsculas con espaciado. Versalitas (`.vers`) solo en frases puntuales del texto: «Venid, postrémonos por tierra» (invitatorio) y «sanctum nomen eius» (Magníficat); la redonda de Source Serif 4 las trae (`smcp`), la cursiva no y el navegador las arma, así que conservan la negrita y la cursiva de la pauta.
-- **Cuatro tamaños:** título, ítem, interfaz y dato. El mínimo es el dato (unos 14 px) y toda la interfaz se puede agrandar.
+- **Cuatro tamaños:** título, ítem, interfaz y dato. El mínimo es el dato (14 px) y toda la interfaz se puede agrandar. En pantallas angostas no se achica (antes, al 94 %; 26/11/2026).
 - **Radios:** dos, de 8 px y 16 px.
 - **Modo claro:** papel blanco, tinta negra, pergamino `#f4eee4` para tarjetas, arco `#e7ddcc`, tinta de ilustración `#2a201a`. Nada de tonos pastel.
-- **Modo oscuro:** fondo negro puro (`#000`) y superficies en gris neutro (`#161616`, `#111`). Las ilustraciones no se invierten.
+- **Modo oscuro:** fondo negro puro (`#000`) y superficies en gris neutro (`#161616`, `#111`). Las hojas van sobre `#161616` (más claro que la página, como el fondo «elevated» de Apple). Las ilustraciones no se invierten; el arco de pergamino se apaga un poco (`#c4baa8`) para que no brille sobre el negro (26/11/2026).
 - **Ilustraciones:** grabado y mosaico antiguo, en línea, dentro de arcos de pergamino, sin imágenes pixeladas.
 - **Tarjeta del día (inicio):** altura fija y arco de forma fija (ancho = 0,72 del alto). Si el título no entra, se achica la letra hasta 1,05 rem; solo si ni así entra, la tarjeta crece.
 - **Título del día:** el nombre arriba, en negrita; debajo, muy junto y en letra más fina y cursiva, los títulos del santo («obispo y doctor de la Iglesia», «papa y mártir», «reina»). Si estaban intercalados se juntan: «Santos Andrés Dung-Lac y compañeros» / «presbítero y mártires». Una rayita suave separa el título de los datos del día (tiempo, semana del salterio, síntesis biográfica), que van juntos al pie.
@@ -65,7 +65,11 @@ Solo Liturgia de las Horas (rito actual), sin selector de rito ni de modo. Una s
 
 ## Accesibilidad (guías de Apple)
 
-- Zonas táctiles de 44 × 44 pt.
+- Zonas táctiles de 44 × 44 pt, en todo lo que se toca: también «Hoy», Cantado | Recitado, «Otras opciones», las flechas del día, «Síntesis biográfica» y el desplegable del modo de los salmos (que se ve chico pero se toca en 44 px: el desplegable real es invisible y cubre la etiqueta). Si la fecha del inicio no entra, pasa a dos renglones; no se corta con «…» (26/11/2026).
+- Bordes de botones y desplegables con contraste de al menos 3:1 contra el fondo (`--borde-ctrl`: `#8f8679` en claro, `#6b6b6b` en oscuro), para que se vean como botones (26/11/2026).
+- «Aumentar contraste» del sistema (`prefers-contrast: more`): grises más oscuros y líneas y bordes más marcados, en claro y en oscuro (26/11/2026).
+- Idioma del texto marcado para los lectores de pantalla: el latín (interlineal, recitado, himnos latinos, oraciones del oficio, partituras latinas) lleva `lang="la"` y su traducción `lang="es"`; las partituras de salmos en español, `lang="es"` (`marcarLenguas` en `src/app.js`; 26/11/2026).
+- Al cerrar una hoja, el foco vuelve al control que la abrió (26/11/2026).
 - «Deshacer» en lugar de pedir confirmación.
 - Aviso breve tras cada acción.
 - El botón o gesto de volver cierra capas sin salir de la app.
