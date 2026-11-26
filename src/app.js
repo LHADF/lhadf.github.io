@@ -50,13 +50,28 @@ S.fecha=fechaHoy();
 // Qué calendario se sigue (S.cal, se recuerda) y qué celebración optativa se eligió a mano cada día (S._varDia, no se guarda)
 function SEL(){ return {cal:S.cal||'', dia:S._varDia||(S._varDia={})}; }
 const linaje=c=>{ const l=[]; for(;c;c=window.CAL.padres[c]) l.push(c); return l; };
-// Fichas de calendario del día: la del calendario ADF, una por cada calendario que difiere y una por cada memoria libre
+// Fichas del inicio (26/11/2026). Ya no dicen de qué calendario viene la celebración (eso queda en la nota del día):
+// cada ficha es una decisión que se prende o se apaga, y aparece solo el día en que hace falta.
+// - Lugar (siglas: ARG, BUE, PGY, CDE…): una por cada calendario que celebra distinto ese día. Encendida, se sigue ese
+//   calendario (se recuerda, S.cal); apagada, el general.
+// - «Feria»: cuando lo que corresponde es una memoria libre. Por defecto, la memoria; encendida, la feria (solo ese día).
+// - «Sancta María in sábbato»: los sábados sin memoria libre. Por defecto, la feria; encendida, la memoria (solo ese día).
+//   Los sábados con memoria libre no se ofrece: solo memoria o feria.
+const SMS='Sancta María in sábbato';
 function fichasCal(){
-  const ops=CP.opcionesDia(S.fecha, SEL()), mio=linaje(S.cal), out=[];
-  ops.forEach((o,i)=>{
-    if(o.tipo==='r') o.siglas.forEach(sg=>out.push({i, sg, txt:sg, on:o.actual&&(mio.includes(sg)||!o.siglas.some(x=>mio.includes(x))), o}));
-    else out.push({i, sg:'', txt:o.f.n==='Sancta María in sábbato'?'Sancta María in sábbato':o.siglas.join(' · '), on:o.actual, o});
-  });
+  const ops=CP.opcionesDia(S.fecha, SEL()), out=[]; if(!ops.length) return out;
+  const base=ops[0].f, mio=linaje(S.cal), vistos=new Set();
+  ops.filter(o=>o.tipo==='r' && !(o.f.n===base.n && o.f.g===base.g)).forEach(o=>o.siglas.forEach(sg=>{
+    if(vistos.has(sg)) return; vistos.add(sg);
+    out.push({id:'l:'+sg, tipo:'lugar', sg, txt:sg, on:mio.includes(sg), desc:o.f.n});
+  }));
+  const propio=CP.diaCal(S.fecha, {cal:S.cal||''}), act=CP.diaCal(S.fecha, SEL());   // lo del lugar, sin la elección del día
+  if(propio.g==='Memoria libre' && propio.n!==SMS){
+    const fer=ops.find(o=>o.f.g==='Feria');
+    if(fer) out.push({id:'feria', tipo:'dia', txt:'Feria', n:fer.f.n===base.n?'':fer.f.n, on:act.g==='Feria', desc:fer.f.n});
+  } else if(propio.g==='Feria' && ops.some(o=>o.f.n===SMS)){
+    out.push({id:'sms', tipo:'dia', txt:SMS, n:SMS, on:act.n===SMS, desc:'Memoria de Santa María en sábado'});
+  }
   return out;
 }
 const claveElige=()=>S.fecha+(S.difuntos?'|dif':'');
@@ -886,9 +901,9 @@ const CHEV=d=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="
 const ICO_NOTA='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.7" r="1" fill="currentColor" stroke="none"/></svg>';
 function portadaHTML(){
   const r=R(); const esHoy=S.fecha===fechaHoy(), ahora=esHoy?horasAhora():[];
-  // Calendarios: solo cuando el día tiene variantes o nota. La ficha gris es lo que se está celebrando; las encendidas, las otras opciones.
+  // Fichas del día (lugar, feria, Santa María en sábado): solo cuando hacen falta o hay nota; cada una se prende o se apaga
   const fc=fichasCal(), nota=(CP.diaCal(S.fecha, SEL())||{}).nota;
-  const cals=(fc.length>1||nota) ? `<div class="cals" role="group" aria-label="Calendarios de este día">${fc.map(c=>`<button class="cal" data-act="cal" data-v="${c.i}" data-s="${c.sg}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.o.f.n+' ('+c.o.f.g+')')}">${esc(c.txt)}</button>`).join('')}${nota?`<button class="cal nota" data-act="nota" aria-label="Nota de este día">${ICO_NOTA}</button>`:''}</div>` : '';
+  const cals=(fc.length||nota) ? `<div class="cals" role="group" aria-label="Opciones de este día">${fc.map(c=>`<button class="cal${c.tipo==='dia'?' txt':''}" data-act="cal" data-v="${esc(c.id)}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.desc)}">${esc(c.txt)}</button>`).join('')}${nota?`<button class="cal nota" data-act="nota" aria-label="Nota de este día">${ICO_NOTA}</button>`:''}</div>` : '';
   return `<div class="portada"><h1 class="vh">Liturgia de las Horas</h1>
     <div class="navdia">
       <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${CHEV(-1)}</button>
@@ -1145,17 +1160,17 @@ document.addEventListener('click',e=>{
     case 'irdia': if(CP.enRango(v)){ S.fecha=v; cargarDia(); cerrar(); render(); } break;
     case 'dia': moverDia(+v); break;
     case 'hoy': S.fecha=fechaHoy(); cargarDia(); render(); break;
-    case 'cal': { const c=fichasCal().find(x=>String(x.i)===v && x.sg===(b.dataset.s||'')); if(!c||c.on) break;
+    case 'cal': { const c=fichasCal().find(x=>x.id===v); if(!c) break;
       const d=SEL().dia;
-      if(c.o.tipo==='r'){ S.cal=c.sg; delete d[S.fecha]; }                      // otro calendario: se recuerda
-      else if(c.o.tipo==='l'){ d[S.fecha]=c.o.f.n; }                             // memoria libre: solo ese día
-      else { if(fichasCal().some(x=>x.on&&x.o.tipo==='r')) S.cal=''; delete d[S.fecha]; }   // volver al calendario ADF
+      // lugar: se recuerda; al volver a prenderlo, vuelve el lugar de antes si es de ese país (BUE, al prender ARG)
+      if(c.tipo==='lugar'){ if(c.on){ S.calAntes=S.cal; S.cal=''; } else S.cal=(S.calAntes && linaje(S.calAntes).includes(c.sg)) ? S.calAntes : c.sg; delete d[S.fecha]; }
+      else if(c.on) delete d[S.fecha]; else d[S.fecha]=c.n;                      // feria o Santa María: solo ese día
       cargarDia(); cambio(); break; }
     case 'bio': { const f=CP.diaCal(S.fecha, SEL()); hoja(f.n, f.bio.split(/\n+/).map(p=>`<p class="nota-dia">${esc(p)}</p>`).join('')); break; }
     case 'nota': { const f=CP.diaCal(S.fecha, SEL()), fc=fichasCal();
       // notas del Calendario litúrgico ADF, una por renglón: «SIGLA<tab>texto»
       const ns=String(f.nota||'').split('\n').filter(Boolean).map(l=>{ const i=l.indexOf('\t'); return i<0?['',l]:[l.slice(0,i),l.slice(i+1)]; });
-      const sg=[...new Set(fc.flatMap(c=>c.o.siglas).concat(ns.map(n=>n[0])).filter(x=>x&&CP.calendarios[x]))];
+      const sg=[...new Set(fc.filter(c=>c.sg).map(c=>c.sg).concat(ns.map(n=>n[0])).filter(x=>x&&CP.calendarios[x]))];
       hoja(f.n, ns.map(([x,t])=>`<p class="nota-dia">${x?`<span class="sig">${esc(x)}</span>`:''}${esc(t)}</p>`).join('')
         +`<dl class="siglas">${sg.map(x=>`<div><dt>${esc(x)}</dt><dd>${esc(CP.calendarios[x]||'')}</dd></div>`).join('')}</dl>`); break; }
     case 'trad': S.trad=!S.trad; guardar(); refrescarHoja(reabrir); break;   // el cambio se ve al instante: sin aviso

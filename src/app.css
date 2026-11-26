@@ -96,7 +96,8 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .ilu{position:absolute;inset:16% 10% 7%;background:var(--tinta-ilus);-webkit-mask:var(--ilu) center bottom/contain no-repeat;mask:var(--ilu) center bottom/contain no-repeat}
 .cals{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 -8px}
 .cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--borde-ctrl);background:none;color:var(--muted)}
-.cal[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft);color:var(--rubric);cursor:default}
+.cal[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft);color:var(--rubric)}
+.cal.txt{letter-spacing:0;font-weight:500}   /* «Feria», «Sancta María in sábbato»: palabras, no siglas */
 .cal.nota{border:0;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;color:var(--rubric);background:none;margin-left:auto}
 .prep{display:flex;justify-content:center;margin:-.6em 0 .4em}
 .nota-dia{font-family:var(--serif);font-size:1.0625rem;line-height:1.5;margin:0 0 14px}
