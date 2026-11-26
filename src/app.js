@@ -901,9 +901,10 @@ const CHEV=d=>`<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="
 const ICO_NOTA='<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.7" r="1" fill="currentColor" stroke="none"/></svg>';
 function portadaHTML(){
   const r=R(); const esHoy=S.fecha===fechaHoy(), ahora=esHoy?horasAhora():[];
-  // Fichas del día (lugar, feria, Santa María en sábado): solo cuando hacen falta o hay nota; cada una se prende o se apaga
+  // Fichas del día (lugar, feria, Santa María en sábado): solo cuando hacen falta; cada una se prende o se apaga.
+  // La nota del día va en la tarjeta, al lado del tipo de celebración (26/11/2026).
   const fc=fichasCal(), nota=(CP.diaCal(S.fecha, SEL())||{}).nota;
-  const cals=(fc.length||nota) ? `<div class="cals" role="group" aria-label="Opciones de este día">${fc.map(c=>`<button class="cal${c.tipo==='dia'?' txt':''}" data-act="cal" data-v="${esc(c.id)}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.desc)}">${esc(c.txt)}</button>`).join('')}${nota?`<button class="cal nota" data-act="nota" aria-label="Nota de este día">${ICO_NOTA}</button>`:''}</div>` : '';
+  const cals=fc.length ? `<div class="cals" role="group" aria-label="Opciones de este día">${fc.map(c=>`<button class="cal${c.tipo==='dia'?' txt':''}" data-act="cal" data-v="${esc(c.id)}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.desc)}">${esc(c.txt)}</button>`).join('')}</div>` : '';
   return `<div class="portada"><h1 class="vh">Liturgia de las Horas</h1>
     <div class="navdia">
       <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${CHEV(-1)}</button>
@@ -914,7 +915,7 @@ function portadaHTML(){
     </div>
     <div class="dia">
       <div class="txt">
-        <div><div class="hoy">${esc(r.dia.grado)}</div><h2>${tituloHTML(r.dia.titulo)}</h2></div>
+        <div><div class="hoy">${esc(r.dia.grado)}${nota?`<button class="nota" data-act="nota" aria-label="Nota de este día">${ICO_NOTA}</button>`:''}</div><h2>${tituloHTML(r.dia.titulo)}</h2></div>
         <div class="meta"><span class="color" style="--col:${colorLit(r.dia.color)}">${esc(r.dia.tiempo)}</span>${r.dia.salterio?`<span>${esc(r.dia.salterio)}</span>`:''}${(CP.diaCal(S.fecha, SEL())||{}).bio?'<button class="bio" data-act="bio">Síntesis biográfica</button>':''}</div>
       </div>
       <div class="arco">${iluHTML()}</div>

@@ -53,7 +53,10 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .dia{background:var(--perg);border-radius:var(--r-2);padding:14px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:100%;gap:12px;height:13.5rem}
 .dia.crece{height:auto;min-height:13.5rem;grid-template-rows:auto}
 .dia .txt{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;min-height:0;overflow:hidden;padding:4px 2px 2px 6px}
-.dia .hoy{font-size:var(--f-dato);color:var(--ink2)}
+.dia .hoy{font-size:var(--f-dato);color:var(--ink2);display:flex;align-items:center;gap:2px}
+/* nota del día: la «i» al lado del tipo de celebración; se ve chica, se toca en 44 px de ancho sin agrandar el renglón */
+.dia .hoy .nota{display:inline-flex;align-items:center;justify-content:center;width:44px;height:36px;margin:-10px 0 -10px -8px;padding:0;border:0;background:none;color:var(--rubric);cursor:pointer;flex:none}
+.dia .hoy .nota .ico{width:19px;height:19px}
 .dia h2{font-family:var(--titulo);font-size:1.6rem;line-height:1.15;margin:4px 0 0;font-weight:600;text-wrap:balance}
 .dia .bio{align-self:flex-start;border:0;background:none;padding:0;min-height:44px;display:inline-flex;align-items:center;font-family:var(--sans);font-size:var(--f-dato);color:var(--rubric);text-decoration:underline;text-underline-offset:.25em;text-decoration-color:var(--line2)}
 
@@ -98,7 +101,6 @@ svg.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7;st
 .cal{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;min-height:44px;min-width:44px;padding:6px 14px;border-radius:var(--r-1);border:1px solid var(--borde-ctrl);background:none;color:var(--muted)}
 .cal[aria-pressed="true"]{border-color:var(--rubric);background:var(--rubric-soft);color:var(--rubric)}
 .cal.txt{letter-spacing:0;font-weight:500}   /* «Feria», «Sancta María in sábbato»: palabras, no siglas */
-.cal.nota{border:0;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;color:var(--rubric);background:none;margin-left:auto}
 .prep{display:flex;justify-content:center;margin:-.6em 0 .4em}
 .nota-dia{font-family:var(--serif);font-size:1.0625rem;line-height:1.5;margin:0 0 14px}
 .nota-dia .sig{font-family:var(--sans);font-size:var(--f-dato);font-weight:600;letter-spacing:.08em;color:var(--rubric);margin-right:.6em}
