@@ -107,7 +107,7 @@ function datosDia(ref, fecha, nota){
 const himno=(S, Hs, n, id, otros, lat)=>{ S.push({k:'sec', id:'himno', t:'Himno'});
   const op=(x,i)=>({id:i?id+'~'+i:id, n:x||'[falta el himno]', lang:'es', est:(Hs[x]||[]).map(e=>e.split('\n')), amen:''});
   S.push({k:'himno', es:true, efimera:!!(otros&&otros.length), opciones:[n, ...(otros||[])].map(op).concat(lat||[])}); };
-const oracion=(S, t)=>{ S.push({k:'sec', id:'oracion', t:'Oración'}); S.push({k:'prosa', es:true, t:{es:t||'[falta la oración]'}, amen:{es:'Amén.'}}); };
+const oracion=(S, t, ref, hora)=>{ S.push({k:'sec', id:'oracion', t:'Oración'}); S.push({k:'prosa', es:true, t:{es:t||'[falta la oración]'}, amen:{es:'Amén.'}, orac:X.tonoOracion(ref, hora, X.modo.difuntos)}); };   // orac: tono, para las marcas (cantado)
 
 // ---------- Oficio de lectura ----------
 const CAMPOS_O=['himno','salmodia','versiculo','lectura1','resp1','lectura2','resp2','oracion'];
@@ -165,7 +165,7 @@ function armarOficio(fecha, sel){
     S.push({k:'rub', t:TD.rubrica_final});
     S.push({k:'himno', es:true, sinBotones:true, opciones:[{id:'tedeum', n:'Te Deum', lang:'es', est:TD.final.map(e=>e.split('\n')), amen:''}].concat(TL?[lat(TL.final)]:[])});
   }
-  oracion(S, P.oracion);
+  oracion(S, P.oracion, ref, 'oficio');
   conclusion(S, L);
   return {hora:'oficio', nombre:NOMBRES.oficio, primeras:false, dos:dos||dosK, ...datosDia(ref, fecha, aviso(ref, k, L, C, 'oficio', PR, notaK!=null?notaK:nota)), secciones:S};
 }
@@ -204,7 +204,7 @@ function armarMenor(hora, fecha, sel, opc){
   S.push({k:'sec', id:'lectura', t:'Lectura breve', ref:(P.lectura||{}).ref||''});
   S.push({k:'lectura', es:true, t:{es:(P.lectura||{}).texto||'[falta la lectura]'}});
   if(P.versiculo) S.push({k:'resp', es:true, l:{es:P.versiculo}});
-  oracion(S, P.oracion);
+  oracion(S, P.oracion, ref, 'intermedia');
   conclusion(S, L);
   return {hora, nombre:NOMBRES[hora], primeras:false, dos:(C&&(mayor(ref)||C.salmodia_propia))?dos:null, ...datosDia(ref, fecha, (M&&!k&&nota==null) ? '' : aviso(ref, k, L, C&&(mayor(ref)||C.salmodia_propia)?C:null, hora, (mayor(ref)||(C&&C.salmodia_propia))?PR:null, nota)), secciones:S};
 }

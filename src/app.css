@@ -190,6 +190,7 @@ svg.Exsurge tspan[style*="bold"]{font-weight:600!important}
 .hora p{margin:0 0 .7em}
 .rub{color:var(--rubric);font-style:italic;font-size:.82em;line-height:1.4}
 .k{color:var(--rubric);font-family:var(--serif)}
+.k.pausa{font-weight:400;opacity:.75}   /* pausa leve del tono ferial de la oración (27/11/2026) */
 .vr p{margin:0 0 .35em;padding-left:1.4em;text-indent:-1.4em}
 .vr p>.k{display:inline-block;width:1.4em;text-indent:0}
 b .k,.todos .k{font-weight:400}

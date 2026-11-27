@@ -230,9 +230,11 @@ function nombreVersion(){
 const sinalefas=h=>h.replace(/(\p{L})([^\p{L}\s<]*)‿/gu,'<i class="sin">$1</i>$2 ').replace(/‿/g,' ');
 const capiHTML=ch=>`<span class="capi">${esc(ch)}</span>`;
 function capiTxt(t){ const s=String(t||''), m=/^\p{L}/u.exec(s); return m ? capiHTML(m[0])+esc(s.slice(m[0].length)) : esc(s); }
-// Lectura breve con capitular y con la flexa (†) y el metro (*) para salmodiarla (CP._.marcarLectura)
+// Lectura breve con capitular y con la flexa (†) y el metro (*) para salmodiarla (CP._.marcarLectura).
+// Las marcas van solo en el modo cantado; recitada, el texto llano (Juana, 27/11/2026)
 function lecturaMarcada(p){
-  return CP._.marcarLectura(p).map((x,i)=>(i?esc(x.t):capiTxt(x.t))+(x.sg?`&nbsp;<span class="sg">${x.sg}</span>`:'')).join(' ');
+  const canta=CANTA();
+  return CP._.marcarLectura(p).map((x,i)=>(i?esc(x.t):capiTxt(x.t))+(canta&&x.sg?`&nbsp;<span class="sg">${x.sg}</span>`:'')).join(' ');
 }
 function marcas(s){ // ℣ ℟ * † ✠ en rojo
   return esc(s).replace(/✠/g,'<span class="cruz">✠</span>').replace(/ \* /g,' <span class="k">*</span> ').replace(/ † /g,' <span class="k">†</span> ');
@@ -573,6 +575,14 @@ function vrHTML(sec){
   const ln=(k,o)=>`<p><span class="k">${k}.</span> ${marcas(o.p)}${o.s?`<span class="gl">${marcas(o.s)}</span>`:''}</p>`;
   return `<div class="vr">${ln('℣',v)}${ln('℟',r)}</div>`;
 }
+// Oración (docs/laudes.md, «Oración»): cantada, con los signos del tono del día en los lugares de la pausa mayor y
+// de la subdivisión, y en la conclusión (CP._.marcarOracion); recitada, el texto llano, sin signos (Juana, 27/11/2026)
+function oracionHTML(sec){
+  const t=txt(sec.t), amen=sec.amen?` <span class="amen"><span class="k">℟.</span> <b>${esc(txt(sec.amen).p)}</b></span>`:'';
+  const tr=CP._.marcarOracion(t.p, sec.orac), canta=CANTA();
+  const cuerpo=tr.map(x=>esc(x.t)+(canta&&x.sg?`&nbsp;<span class="${x.sg==='|'?'k pausa':'k'}">${x.sg}</span>`:'')).join(' ');
+  return `<p${canta?` data-tono="${sec.orac}"`:''}>${cuerpo}${amen}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'');
+}
 function prosaHTML(o, amen, extra, il){
   if(BI() && il) return `<p class="il">${extra||''}${interHTML(il)}</p>`;
   const t=txt(o); let h='';
@@ -816,7 +826,7 @@ function horaHTML(){
       case 'vr': h+=vrHTML(sec); break;
       case 'vr1': { if(BI()&&sec.il){ h+=`<div class="vr il"><p><span class="k">${/^R\./.test(sec.t.la)?'℟':'℣'}.</span> <span class="segs">${interHTML(sec.il)}</span></p></div>`; break; } const t=txt(sec.t); h+=`<div class="vr"><p><span class="k">℣.</span> ${marcas(t.p.replace(/^R\. /,''))}${t.s?`<span class="gl">${marcas(t.s.replace(/^R\. /,''))}</span>`:''}</p></div>`; break; }
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
-      case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+prosaHTML(sec.t, sec.amen, '', sec.il); break;
+      case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+(sec.orac&&!sec.il&&sec.t&&sec.t.la==null&&!txt(sec.t).falta ? oracionHTML(sec) : prosaHTML(sec.t, sec.amen, '', sec.il)); break;
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
       case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p class="lec-b">${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${sec.la?capiTxt(t.p):lecturaMarcada(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;

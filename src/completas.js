@@ -105,6 +105,112 @@ function marcarPrece(par){
   return mejor>0 && Math.abs(mejor-m)<Math.abs(a.length-m) ? [t.slice(0,mejor+1), t.slice(mejor+2)] : par;
 }
 
+/* Oración con flexa y metro (docs/laudes.md, «Oración»; Liber Usualis, pp. 98-102; Juana, 27/11/2026).
+   El latín arma la oración con dos puntos: invocación y memorial («Deus, qui…») : pedido («da nobis… ut…»). El
+   español casi nunca los conserva, así que no se sigue la puntuación sino la estructura:
+   - P1, el equivalente de los dos puntos: antes del pedido, si lo precede la invocación con su memorial («Oh Dios,
+     que…, concédenos…»); si la oración empieza con el pedido, antes de lo que sigue al primer miembro («…, para que…»,
+     «…, y haz que…», otro pedido coordinado).
+   - P2, la subdivisión siguiente: la primera pausa de sentido después de P1; no va si la oración es breve.
+   En la base se pueden marcar a mano: « * » en P1 y « † » en P2 (como en el tono festivo, el modelo del Liber), y
+   entonces manda lo marcado. La conclusión no se calcula: † después de «tu Hijo,» y * después de «y es Dios,».
+   Cada tono pone sus signos en esos lugares (tonoOracion, signosOracion). */
+const CONCL_ORACION=/\s(?=(?:Por (?:nuestro Señor|Jesucristo|Cristo)|T[úu],? que vives|[ÉE]l,? que vive|Que viv|Porque t[úu] vives)\b)/;
+const SEGUIDOR=/^(?:para que|a fin de que|de modo que|de manera que|de forma que|y así|y asi|así|y (?:haz|concédenos|danos|haznos|que|líbranos|guárdanos|ayúdanos|condúcenos)\b)/i;
+function cortesDe(t){   // posiciones después de , ; : (fuera de «» y paréntesis), con el signo
+  const cs=[]; let par=0, cita=0;
+  for(let i=0;i<t.length;i++){
+    const c=t[i]; if(c==='('){par++;continue;} if(c===')'){par=Math.max(0,par-1);continue;}
+    if(c==='«'){cita++;continue;} if(c==='»'){cita=Math.max(0,cita-1);continue;}
+    if(par||cita||!/[,;:]/.test(c)||t[i+1]!==' ') continue;
+    if(/(?:^|\s)(?:que|y|e|o|u|ni|de|a|pues)$/i.test(t.slice(Math.max(0,i-6),i))) continue;   // no después de «que,», «y,»…
+    cs.push({p:i+1, c, sig:t.slice(i+2)});
+  }
+  return cs;
+}
+function partesOracion(texto){
+  const s=String(texto||'').trim(), m=CONCL_ORACION.exec(s);
+  const cuerpo=m?s.slice(0,m.index):s, concl=m?s.slice(m.index+1):'';
+  return {cuerpo, concl};
+}
+// Devuelve {p1, p2} (posiciones en el cuerpo, después del signo de puntuación; null si no hay)
+function pausasOracion(cuerpo){
+  const t=cuerpo, L=t.length, cs=cortesDe(t);
+  const primera=w=>(w.split(' ')[0]||'').replace(/[^\p{L}]/gu,'');
+  const esPed=c=>{ const w=primera(c.sig); return (esPedido(w) && !/^(no|que)$/i.test(w)) || /^(?:te (?:pedimos|rogamos|suplicamos|pido)|humildemente te)\b/i.test(c.sig); };
+  let p1=null;
+  // 1) invocación y memorial, y después el pedido
+  const ped=cs.find(c=>c.p>=12 && esPed(c));
+  if(ped){
+    const antes=t.slice(0,ped.p);
+    if(/\b(?:que|qui[eé]n|cuyo|cuya|por quien|tú|has|hiciste|quisiste)\b/i.test(antes) && antes.length>=30 && L-ped.p>=25) p1=ped;
+  }
+  // 2) empieza con el pedido: antes de lo que sigue al primer miembro
+  if(!p1){
+    const seg=cs.find(c=>c.p>=25 && L-c.p>=20 && (SEGUIDOR.test(c.sig) || (c.c!==',' ) || esPed(c) && c.p>=35));
+    if(seg) p1=seg;
+  }
+  // 3) segundo miembro sin coma antes («…de empezar y que nuestras prácticas…»): antes de «y que», «para que»…
+  if(!p1){
+    const re=/\s(?=(?:y que|para que|a fin de que|y haz que|y concédenos|y así)\s)/gi; let m;
+    while((m=re.exec(t))) if(m.index>=30 && L-m.index>=25){ p1={p:m.index, c:' ', sig:t.slice(m.index+1)}; break; }
+  }
+  // 4) sin esa estructura: la pausa más fuerte cerca de la mitad
+  if(!p1 && L>=70){
+    const en=cs.filter(c=>c.p>L*0.25 && c.p<L*0.75);
+    p1=en.filter(c=>c.c!==',').sort((a,b)=>Math.abs(a.p-L/2)-Math.abs(b.p-L/2))[0] || en.sort((a,b)=>Math.abs(a.p-L/2)-Math.abs(b.p-L/2))[0] || null;
+  }
+  if(!p1) return {p1:null, p2:null};
+  // P2: la primera pausa de sentido después de P1, si la segunda parte es larga
+  let p2=null;
+  if(L-p1.p>=60){
+    const sig=cs.filter(c=>c.p>=p1.p+20 && L-c.p>=20 && (c.c!==',' || SEGUIDOR.test(c.sig) || !/^(?:que|de|y|o|e|u|ni)$/i.test(primera(c.sig))));
+    p2=sig[0]||null;
+  }
+  return {p1:p1.p, p2:p2?p2.p:null};
+}
+// Tono de la oración según la celebración (Juana, 27/11/2026): solemne en domingos y solemnidades (también el Triduo),
+// festivo en las fiestas, simple en las memorias y en Completas, ferial (recto tono) en las ferias y en el Oficio de
+// difuntos. En la Hora intermedia de una memoria todo es de la feria, también el tono.
+function tonoOracion(ref, hora, difuntos){
+  const g=(ref&&ref.g)||'';
+  if(hora==='completas') return 'simple';
+  if(difuntos) return 'ferial';
+  if(ref && (ref.sol || ref.dom || ref.t==='Triduo') || /^Solemnidad/.test(g)) return 'solemne';
+  if(/^Fiesta/.test(g)) return 'festivo';
+  if(/^Memoria/.test(g) && hora!=='intermedia') return 'simple';
+  return 'ferial';
+}
+// La oración en trozos con el signo que va después de cada uno: [{t, sg}] (sg: '†', '*', '|' o '')
+// - festivo: * en P1 y † en P2; simple: † en P1 y * en P2 (si no hay P2, * en P1: el metro nunca se omite);
+//   solemne: solo † en P1; ferial: pausa leve (|) en los mismos lugares
+// - conclusión larga: † después de «tu Hijo,» y * después de «y es Dios,» (en todos los tonos; ferial, pausas)
+function marcarOracion(texto, tono){
+  const {cuerpo, concl}=partesOracion(texto);
+  const out=[];
+  let pos;
+  if(/ [*†] /.test(cuerpo)){   // marcado a mano en la base: « * » = P1, « † » = P2
+    const ps=[]; let t=cuerpo, m;
+    const re=/ ([*†]) /g; let lim=0, limpio='';
+    while((m=re.exec(cuerpo))){ limpio+=cuerpo.slice(lim,m.index); ps.push({p:limpio.length, s:m[1]}); limpio+=' '; lim=m.index+3; }
+    limpio+=cuerpo.slice(lim);
+    pos={p1:(ps.find(x=>x.s==='*')||{}).p??null, p2:(ps.find(x=>x.s==='†')||{}).p??null, t:limpio};
+  } else pos={...pausasOracion(cuerpo), t:cuerpo};
+  const sg1={festivo:'*', simple:pos.p2!=null?'†':'*', solemne:'†', ferial:'|'}[tono]||'';
+  const sg2={festivo:'†', simple:'*', solemne:'', ferial:'|'}[tono]||'';
+  const marcas=[[pos.p1,sg1],[pos.p2,sg2]].filter(([p,s])=>p!=null&&s).sort((a,b)=>a[0]-b[0]);
+  let ini=0; for(const [p,s] of marcas){ out.push({t:pos.t.slice(ini,p).trim(), sg:s}); ini=p; }
+  out.push({t:pos.t.slice(ini).trim(), sg:''});
+  if(concl){
+    const sgF=tono==='ferial'?'|':'†', sgM=tono==='ferial'?'|':'*';
+    const c=concl.replace(/(tu Hijo,)\s/, `$1\u0001${sgF}\u0001`).replace(/((?:y es|y eres) Dios,)\s/, `$1\u0001${sgM}\u0001`);
+    const ps=c.split('\u0001');
+    for(let i=0;i<ps.length;i+=2) out.push({t:ps[i].trim(), sg:ps[i+1]||''});
+  }
+  return out;
+}
+
+
 // Asterisco de la entonación en las antífonas de salmos y cánticos (25/11/2026): el que entona dice lo menos posible, la
 // primera palabra con sentido (sustantivo, adjetivo, adverbio, pronombre tónico o verbo), y los demás siguen. Van con ella
 // solo las palabras átonas que la preceden (artículos, preposiciones, conjunciones, «que», relativos, posesivos antepuestos,
@@ -545,7 +651,7 @@ function armar(fecha, region){
   sec('oracion','Oración');
   S.push({k:'oremos', es:true, t:{es:'Oremos.'}});
   const orac = el.especial ? el.especial.oracion : (el.oracion==='solemnidad' ? O.oracion_solemnidad : J.oracion);
-  S.push({k:'prosa', es:true, t:{es:orac}, amen:{es:'Amén.'}});
+  S.push({k:'prosa', es:true, t:{es:orac}, amen:{es:'Amén.'}, orac:tonoOracion(null,'completas')});
 
   sec('bendicion','Conclusión');
   S.push({k:'vr', es_k:'bendicion-completas', gabc:GR.conclusion.gabc, glosa:GR.conclusion.traduccion, rec:recitado(GR.conclusion.traduccion.map(p=>p[0]==='quiétam'?['✠ '+p[0],p[1]]:p), [['V','Noctem'],['R','Amen.',true]])});
@@ -904,5 +1010,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, dosComunes, delComunElegido, etiquetaComun,oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, marcarOracion, pausasOracion, partesOracion, tonoOracion, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, dosComunes, delComunElegido, etiquetaComun,oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();

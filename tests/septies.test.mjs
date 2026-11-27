@@ -979,3 +979,31 @@ test('Solo latín: Laudes del 2 de diciembre de 2026 en latín, sin el español 
   assert.ok(r.secciones.some(s => s.k === 'cantico'));                                // el Benedictus latino de la app
   assert.ok(sal.every(s => !/Señor/.test(s.versos.la.join(' '))) && /Dómin/.test(sal[0].versos.la.join(' ')));   // el salmo, en latín
 });
+
+// ---------- Oración con flexa y metro (Liber Usualis, pp. 98-102; Juana, 27/11/2026) ----------
+test('oración: pausa mayor antes del pedido, subdivisión y conclusión larga, según el tono', async () => {
+  const { readFileSync } = await import('node:fs'); const vm = (await import('node:vm')).default;
+  const c = { window: {} };
+  for (const f of ['datos/base.js', 'datos/calendario.js', 'completas.js']) vm.runInNewContext(readFileSync(new URL('../src/' + f, import.meta.url), 'utf8'), c);
+  const X = c.window.Completas._;
+  const s = (t, tono) => X.marcarOracion(t, tono).map(x => x.t + (x.sg ? ' ' + x.sg : '')).join(' ');
+  const O = 'Dios todopoderoso y eterno, que suscitaste a san Atanasio como preclaro defensor de la divinidad de tu Hijo, haz que nosotros, iluminados por sus enseñanzas y ayudados por sus ejemplos, crezcamos en tu conocimiento y en tu amor. Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios, por los siglos de los siglos.';
+  // festivo: * y luego †; simple: † y luego *; solemne: solo †; la conclusión, † y luego * en todos
+  assert.match(s(O, 'festivo'), /tu Hijo, \* haz que nosotros, iluminados por sus enseñanzas y ayudados por sus ejemplos, † crezcamos .* tu Hijo, † que vive .* es Dios, \* por los siglos/);
+  assert.match(s(O, 'simple'), /tu Hijo, † haz que .* ejemplos, \* crezcamos/);
+  assert.match(s(O, 'solemne'), /tu Hijo, † haz que nosotros, iluminados por sus enseñanzas y ayudados por sus ejemplos, crezcamos/);
+  assert.match(s(O, 'ferial'), /tu Hijo, \| haz que/);
+  // marcado a mano en la base: « * » es la pausa mayor y « † » la subdivisión (Juana: flexa después de «hoy»)
+  const M = 'Concede, Señor, a nuestros cuerpos fatigados el descanso necesario, * y haz que la simiente del reino que con nuestro trabajo hemos sembrado hoy † crezca y germine para la cosecha de la vida eterna. Por Cristo nuestro Señor.';
+  assert.equal(s(M, 'simple'), 'Concede, Señor, a nuestros cuerpos fatigados el descanso necesario, † y haz que la simiente del reino que con nuestro trabajo hemos sembrado hoy * crezca y germine para la cosecha de la vida eterna. Por Cristo nuestro Señor.');
+  // sin subdivisión, el metro nunca se omite (simple)
+  assert.match(s('Concede, Señor, a nuestros cuerpos fatigados el descanso necesario, y haz que la simiente del reino crezca y germine para la vida eterna. Por Cristo nuestro Señor.', 'simple'), /necesario, \* y haz que/);
+  // tonos por celebración
+  assert.equal(X.tonoOracion({ g: 'Feria', dom: true }, 'laudes'), 'solemne');
+  assert.equal(X.tonoOracion({ g: 'Solemnidad' }, 'visperas'), 'solemne');
+  assert.equal(X.tonoOracion({ g: 'Fiesta' }, 'laudes'), 'festivo');
+  assert.equal(X.tonoOracion({ g: 'Memoria' }, 'laudes'), 'simple');
+  assert.equal(X.tonoOracion({ g: 'Memoria' }, 'intermedia'), 'ferial');
+  assert.equal(X.tonoOracion({ g: 'Feria' }, 'oficio'), 'ferial');
+  assert.equal(X.tonoOracion(null, 'completas'), 'simple');
+});

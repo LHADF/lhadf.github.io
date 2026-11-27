@@ -262,7 +262,7 @@ function armar(hora, fecha, region){
   S.push({k:'pater', intro: (dia==='domingo' || /^(Fiesta|Solemnidad)/.test(hoy.g) || primeras) ? (P.padrenuestro_intro||'') : '', pares:GL.pater_noster, lineas:X.enLineas(GL.pater_noster, GL.pater_cortes)});   // monición (la del día) solo en domingos, fiestas y solemnidades
 
   sec('oracion','Oración');
-  S.push({k:'prosa', es:true, t:{es:P.oracion||'[falta la oración]'}, amen:{es:'Amén.'}});
+  S.push({k:'prosa', es:true, t:{es:P.oracion||'[falta la oración]'}, amen:{es:'Amén.'}, orac:X.tonoOracion(hoy, 'laudes', X.modo.difuntos)});   // tono de la oración, para las marcas (cantado)
 
   sec('bendicion','Conclusión');
   // Sin ministro ordenado: «Dóminus nos benedícat»; con ministro ordenado: «Dóminus vobíscum… Benedícat vos» (tono B en domingos y solemnidades)
