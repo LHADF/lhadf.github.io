@@ -107,6 +107,7 @@ def latin():
     sal = json.load(open(os.path.join(D, 'salmos.json'), encoding='utf-8')) if os.path.exists(os.path.join(D, 'salmos.json')) else {}
     R = {v['ref']: k for k, v in sal.items() if v.get('ref')}
     meses = []
+    os.makedirs(os.path.join(RAIZ, 'src', 'carga'), exist_ok=True)   # en un clon nuevo no existe (src/carga no va al repo)
     for f in sorted(glob.glob(os.path.join(D, 'dias', '*.json'))):
         mes = os.path.basename(f)[:-5]; T = {}; dias = {}
         for d in json.load(open(f, encoding='utf-8'))['dias']:
