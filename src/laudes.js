@@ -81,7 +81,7 @@ function propio(hora, fecha, region){
            if(santo){ delete P.pendiente; capa(santo); }
            else if(primeras && !DE){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
            if(DE){ nota=X.notaPropios(santo, deTxt); santo={...DE, ...(santo||{})}; }
-           else if(adf.como) nota=deTxt ? `Textos ${deTxt}.` : 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base (falta la oración propia).';
+           else if(adf.como) nota=deTxt ? `Textos ${deTxt}.` : 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base.';
            // con propio en la base y dos comunes posibles: lo que es de un común, del elegido; lo propio queda
            const dk=(!DE && santo && L.comunes) ? X.dosComunes(ref.n, L.dos, fRef) : null;
            if(dk){ const Cd0=X.comun(L.comunes, dk.actual, ref.n, ref.t==='Pascua', X.turno(L.adf, dk.actual, fRef, region)), Cd=(primeras&&Cd0.primeras)?{...Cd0,...Cd0.primeras}:Cd0;
@@ -117,9 +117,9 @@ function propio(hora, fecha, region){
       const todo=['himno','salmodia','lectura','responsorio',CE,'preces','oracion'].every(c=>PR[c]!=null);
       nota = (adf.comun==='santa-maria-sabado' || DIF || COM) ? ''
         : PR.oracion ? (todo ? '' : X.notaPropios(PR, C0.nombre ? `del ${X.comunConCaso(C0.nombre, ref.n)}` : 'del día'))
-        : `Textos del ${X.comunConCaso(C0.nombre, ref.n)}`+(o?', con su oración (falta la propia).':'. Falta la oración propia: va la del día.');
+        : `Textos del ${X.comunConCaso(C0.nombre, ref.n)}`+(o?', con su oración.':'; la oración, del día.');
     } else if(ref.n!==ref.fer){
-      nota='El propio de esta celebración todavía no está en la base: se reza el oficio del día.'; }
+      nota='Se reza el oficio del día.'; }
     // Celebración con propio en la base que toma textos del común (el santoral dice cuál): donde lo que trae es un texto del
     // común (igual o casi), las otras opciones del común también se pueden elegir («Otras opciones»); lo propio de verdad, no
     if(k && !DE && L.comunes && P.himno && !P._comunLat) P._comunLat=X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores']);
@@ -141,9 +141,9 @@ function propio(hora, fecha, region){
   let r=calc(quiere);
   if(!r.completo && man && hoyC.t!=='Triduo' && !X.modo.comun){   // sin textos para lo elegido: la otra posibilidad (hoy, o las I Vísperas de mañana si es domingo o solemnidad)
     const otra = quiere ? calc(false) : ((man.dom||man.sol) ? calc(true) : null);
-    if(otra && otra.completo){ if(quiere) otra.nota='Las I Vísperas de mañana todavía no tienen propio en la base: se rezan las del día.'; r=otra; }
+    if(otra && otra.completo){ if(quiere) otra.nota='Se rezan las Vísperas del día.'; r=otra; }
   }
-  if(!r.completo) r.nota='Faltan textos propios de este día (antífona del cántico evangélico u oración): están marcados para completar.';
+  // lo que falta queda marcado en el texto; la nota dice solo de dónde se toma la celebración (Juana, 27/11/2026)
   return r;
 }
 

@@ -59,9 +59,9 @@ function aviso(ref, k, L, C, hora, PR, nota){
   if(ref.n===ref.fer || k) return (L.adf||{})[ref.n]&&(L.adf||{})[ref.n].como ? 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base.' : '';
   if(hora!=='oficio' && /^Memoria/.test(ref.g)) return '';   // Hora intermedia de una memoria: todo de la feria
   if(PR && PR.oracion) return X.notaPropios(hora==='oficio' ? PR : {...(PR[hora]||{}), oracion:PR.oracion}, C ? `del ${X.comunConCaso(C.nombre, ref.n)}` : 'del día');
-  if(C) return /^Memoria de santa María/.test(C.nombre) ? '' : `Textos del ${X.comunConCaso(C.nombre, ref.n)}`+(C.oraciones?', con su oración (falta la propia).':'.');
-  if(/^Memoria/.test(ref.g)) return 'Memoria: se toma de la feria. Falta en la base la oración propia.';
-  return 'El propio de esta celebración todavía no está en la base: se reza el oficio del día.';
+  if(C) return /^Memoria de santa María/.test(C.nombre) ? '' : `Textos del ${X.comunConCaso(C.nombre, ref.n)}`+(C.oraciones?', con su oración.':'.');
+  if(/^Memoria/.test(ref.g)) return 'Memoria: se toma de la feria.';
+  return 'Se reza el oficio del día.';
 }
 
 // Comunes a las dos: invocación, salmo, conclusión y datos del día
