@@ -80,18 +80,19 @@ function propio(hora, fecha, region){
            if(DE) capa(DE);
            if(santo){ delete P.pendiente; capa(santo); }
            else if(primeras && !DE){ capa(L.santoral[k]); delete P.salmodia; }   // I Vísperas sin propio: lo de la celebración, con otros salmos
-           if(DE){ nota=X.notaPropios(santo, deTxt); santo={...DE, ...(santo||{})}; }
-           else if(adf.como) nota=deTxt ? `Textos ${deTxt}.` : 'Celebración propia de ADF: por ahora, con los textos de otra celebración de la base.';
+           nota=X.notaHora(true, []);   // «Del Propio»
+           if(DE){ nota=X.notaHora(X.tienePropio(santo), [deTxt]); santo={...DE, ...(santo||{})}; }
+           else if(adf.como) nota=X.notaHora(false, [deTxt || X.deCelebracion(adf.como, L.santoral[k])]);
            // con propio en la base y dos comunes posibles: lo que es de un común, del elegido; lo propio queda
            const dk=(!DE && santo && L.comunes) ? X.dosComunes(ref.n, L.dos, fRef) : null;
            if(dk){ const Cd0=X.comun(L.comunes, dk.actual, ref.n, ref.t==='Pascua', X.turno(L.adf, dk.actual, fRef, region)), Cd=(primeras&&Cd0.primeras)?{...Cd0,...Cd0.primeras}:Cd0;
              const {r, propio:pk}=X.delComunElegido(P, santo, ['inv_ant','himno','lectura','responsorio',CE,'preces','padrenuestro_intro'], L.comunes, ref.n, Cd, primeras?'primeras':null, L.dos[ref.n], dk.actual);
-             if(r.length){ dosUsado=dk; kComun=dk.actual; nota=X.notaPropios(pk, `del ${X.comunConCaso(Cd0.nombre, ref.n)}`);
+             if(r.length){ dosUsado=dk; kComun=dk.actual; nota=X.notaHora(X.tienePropio(pk), X.fuentesComun(Cd0, ref.n, r));
                if(r.includes('himno')){ P._himnos=X.himnosComun(L.comunes, dk.actual, ref.n, primeras?'primeras':null, P.himno, L.himnos); P._comunLat=dk.actual; } } }
     } else if(DE){   // sin propio en la base para esta hora: lo propio que haya (libro u oración de Laudes) y lo demás, de la otra celebración
       capa(DE); capa(PR); delete P.pendiente;
       santo={...DE, ...PR};
-      nota=X.notaPropios(PR, deTxt);
+      nota=X.notaHora(X.tienePropio(PR), [deTxt]);
     } else if((adf.comun && L.comunes && L.comunes[adf.comun]) || adf.propio){
       dosUsado=dos;
       const n=COM ? 0 : X.turno(L.adf, adf.comun, fRef, region);   // las «O bien» del común se alternan entre celebraciones (en el modo común, se eligen)
@@ -113,13 +114,16 @@ function propio(hora, fecha, region){
       const o=PR.oracion || X.oracionElegida(C.oraciones||C0.oraciones, ref.n, HK, ref.t, n);
       if(o) P.oracion=o;
       delete P.pendiente;
-      // lo que falta (sin común): del día. Si está todo, sin nota.
+      // la nota: lo propio y el común (o la feria, si no hay común); con todo propio, «Del Propio»
       const todo=['himno','salmodia','lectura','responsorio',CE,'preces','oracion'].every(c=>PR[c]!=null);
       nota = (adf.comun==='santa-maria-sabado' || DIF || COM) ? ''
-        : PR.oracion ? (todo ? '' : X.notaPropios(PR, C0.nombre ? `del ${X.comunConCaso(C0.nombre, ref.n)}` : 'del día'))
-        : `Textos del ${X.comunConCaso(C0.nombre, ref.n)}`+(o?', con su oración.':'; la oración, del día.');
+        : X.notaHora(X.tienePropio(PR), todo ? [] : C0.nombre ? X.fuentesComun(C0, ref.n, [...CAMPOS.filter(c=>PR[c]==null && C[c]!=null), ...(PR.oracion ? [] : ['oraciones'])]) : [X.fuenteFeria(ref, fRef)]);
     } else if(ref.n!==ref.fer){
-      nota='Se reza el oficio del día.'; }
+      nota=X.notaHora(false, [X.fuenteFeria(ref, fRef)]);   // sin propio en la base: de la feria
+    } else if(/^Feria/.test(ref.g||'') && !dom){
+      nota=X.notaHora(false, [X.fuenteFeria(ref, fRef)]);
+    } else if(!dom){
+      nota=X.notaHora(true, []); }   // del propio del tiempo (Navidad, octavas, Triduo…): «Del Propio»; los domingos, sin nota
     // Celebración con propio en la base que toma textos del común (el santoral dice cuál): donde lo que trae es un texto del
     // común (igual o casi), las otras opciones del común también se pueden elegir («Otras opciones»); lo propio de verdad, no
     if(k && !DE && L.comunes && P.himno && !P._comunLat) P._comunLat=X.comunDelHimno(L.comunes, P.himno, [X.comunDe((L.santoral[k]||{}).comun), X.esDoctor(ref.n)&&'doctores']);
@@ -141,7 +145,7 @@ function propio(hora, fecha, region){
   let r=calc(quiere);
   if(!r.completo && man && hoyC.t!=='Triduo' && !X.modo.comun){   // sin textos para lo elegido: la otra posibilidad (hoy, o las I Vísperas de mañana si es domingo o solemnidad)
     const otra = quiere ? calc(false) : ((man.dom||man.sol) ? calc(true) : null);
-    if(otra && otra.completo){ if(quiere) otra.nota='Se rezan las Vísperas del día.'; r=otra; }
+    if(otra && otra.completo){ r=otra; }
   }
   // lo que falta queda marcado en el texto; la nota dice solo de dónde se toma la celebración (Juana, 27/11/2026)
   return r;

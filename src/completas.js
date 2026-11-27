@@ -437,7 +437,8 @@ function comun(comunes, id, nombre, pascua, n){
   const b=comun(comunes, (fem && c.hereda_mujeres) || c.hereda, nombre, false, n);
   // lo heredado se completa también en su versión de Pascua (si no, se perdería el «Aleluia» de lo que trae el otro común)
   const mezclar=(x,y)=>{ const o={...(x||{}), ...(y||{})}; if((x&&x.pascua) || (y&&y.pascua)) o.pascua={...((x&&x.pascua)||{}), ...((y&&y.pascua)||{})}; return o; };
-  const out={...mezclar(b, c), nombre:c.nombre};
+  // heredado y heredados: para la nota («Del Común de pastores… y del Común de doctores…»), solo si se usa algo heredado
+  const out={...mezclar(b, c), nombre:c.nombre, heredado:b.nombre, heredados:Object.keys(b).filter(k=>c[k]==null && k!=='nombre')};
   if(b.primeras || c.primeras) out.primeras=mezclar(b.primeras, c.primeras);
   for(const k of ['tercia','sexta','nona']) if(b[k] || c[k]) out[k]=mezclar(b[k], c[k]);
   return out;
@@ -711,18 +712,31 @@ function textosPascua(o){
   for(const k of ['primeras','tercia','sexta','nona','invitatorio']) if(o[k] && typeof o[k]==='object' && !Array.isArray(o[k])) out[k]=textosPascua(o[k]);
   return out;
 }
-// Nota al comienzo de la hora: qué es propio y de dónde sale lo demás («Himno, lectura breve y oración propios; lo
-// demás, de San José, esposo de la bienaventurada Virgen María (19 de marzo).»). o: lo propio; resto: «de …», «del día»…
-const CAMPO_NOTA=[['himno','himno','m'],['salmodia','antífonas','fp'],['lectura1','primera lectura','f'],['lectura2','segunda lectura','f'],
-  ['lectura','lectura breve','f'],['responsorio','responsorio','m'],['ant','antífona','f'],['ant_benedictus','antífona del Benedictus','f'],
-  ['ant_magnificat','antífona del Magníficat','f'],['preces','preces','fp'],['oracion','oración','f']];
-function notaPropios(o, resto){
-  const cs=CAMPO_NOTA.filter(c=>o && o[c[0]]!=null);
-  if(!cs.length) return resto ? `Textos ${resto}.` : '';
-  const ns=cs.map(c=>c[1]), lista=ns.length>1 ? ns.slice(0,-1).join(', ')+' y '+ns[ns.length-1] : ns[0];
-  const m=cs.some(c=>c[2]==='m'), pl=cs.length>1 || cs[0][2]==='fp';
-  const adj='propi'+(m?'o':'a')+(pl?'s':'');
-  return lista[0].toUpperCase()+lista.slice(1)+' '+adj+(resto ? `; lo demás, ${resto}.` : '.');
+// Nota al comienzo de la hora: de dónde se toman los elementos, en una línea y sin decir lo que falta (Juana, 27/11/2026):
+// «Del Propio» · «Del Común de …» · «Del propio y del Común de …» · «Del Común de pastores: para un santo obispo y del Común
+// de doctores de la Iglesia» · «De la Feria: martes de la I semana del salterio» · «De San José… (19 de marzo)» · «Del propio
+// y de San José…». Los salmos que se toman de la feria no se mencionan.
+const CAMPO_NOTA=['himno','salmodia','lectura1','lectura2','lectura','responsorio','ant','ant_benedictus','ant_magnificat','preces','oracion'];
+const tienePropio=o=>!!o && CAMPO_NOTA.some(c=>o[c]!=null);
+// «del Común de …» (con el caso); el común que completa a otro va primero (pastores o vírgenes para los doctores); el
+// de religiosos, educadores o caridad es un caso del de santos varones o de santas mujeres: uno solo
+// usados: los elementos que se tomaron del común (sin la lista, se supone que también algo del que lo completa)
+function fuentesComun(C, n, usados){
+  if(!C || !C.nombre) return [];
+  const a='del '+comunConCaso(C.nombre, n);
+  const her=C.heredado && !/^Común de santos varones o de santas mujeres/.test(C.nombre)
+    && (!usados || usados.some(k=>(C.heredados||[]).includes(k)));
+  return her ? ['del '+comunConCaso(C.heredado, n), a] : [a];
+}
+function fuenteFeria(ref, fecha){
+  const d=fecha ? deIso(fecha).getDay() : null;
+  return 'de la Feria'+(ref && ref.sal && d!=null ? `: ${DIAS_TXT[d].toLowerCase()} de la ${ROMANO(ref.sal)} semana del salterio` : '');
+}
+function notaHora(propio, fuentes){
+  const fs=(fuentes||[]).filter(Boolean);
+  if(!fs.length) return propio ? 'Del Propio' : '';
+  const t=fs.join(' y ');
+  return propio ? 'Del propio y '+t : t[0].toUpperCase()+t.slice(1);
 }
 // Nombre del común para la nota, con el caso que corresponde a la celebración, como en las rúbricas del libro (25/11/2026):
 // «Común de vírgenes: para una virgen mártir», «Común de pastores: para un santo obispo», «Común de santas mujeres: para una
@@ -1010,5 +1024,5 @@ function himnosComun(comunes, id, nombre, sub, actual, hs){
   return l.includes(actual) ? l.filter(x=>x!==actual) : [];
 }
 window.Completas={armar, diaCal, opcionesDia, enRango, iso, deIso, masDias, ciclo, ilustracion, franjaHoraria, calendarios:CAL.calendarios,
-  _:{modo, marcarLectura, marcarPrece, marcarOracion, pausasOracion, partesOracion, tonoOracion, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, dosComunes, delComunElegido, etiquetaComun,oracionElegida, textosPascua, notaPropios, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
+  _:{modo, marcarLectura, marcarPrece, marcarOracion, pausasOracion, partesOracion, tonoOracion, asteriscoAnt, comunConCaso, pasion, parecido, NO_GLORIA, sinGloriaResp, esGloriaLa, domPascua, COMUNES_SANTOS, comunSantos, opcionesComun, elegirComun, himnosComun, himnosLatinos, comunDelHimno, virgenMartir, dosComunes, delComunElegido, etiquetaComun,oracionElegida, textosPascua, notaHora, fuentesComun, fuenteFeria, tienePropio, deCelebracion, oracionComun, comunDe, esDoctor, comun, rubricaVale, enPascua, turno, alternativas, fechaClave, anioBienal, invocacionGabc, recInvocacion, gregPropio, enLineas, recitado, versosDe, oracionCase, pares, enVersos, DIAS, DIAS_TXT, MESES, TIEMPO_TXT, ROMANO}};   // para las otras horas (laudes.js)
 })();
