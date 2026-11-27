@@ -72,6 +72,7 @@ window.ILU="data:image/png;base64,{ilustracion}";window.ILU_DIR={"null" if "--ar
 <script>{leer('completas.js')}</script>
 <script>{leer('laudes.js')}</script>
 <script>{leer('horas.js')}</script>
+<script>{leer('latin.js')}</script>
 <script>{leer('app.js')}</script>
 '''
 
@@ -84,6 +85,12 @@ for _h in ('laudes', 'visperas', 'oficio', 'intermedia'):
     shutil.copyfile(os.path.join(SRC, 'carga', _h + '.js'), os.path.join(DIST, _h + '.js'))
     _urls[_h] = _h + '.js?v=' + hashlib.md5(_l).hexdigest()[:8]
 import json as _json
+# «Solo latín»: la hora latina de Universalis, un archivo por mes (no se precargan: se bajan al abrir una hora en latín)
+import glob as _glob
+for _p in sorted(_glob.glob(os.path.join(SRC, 'carga', 'latin-*.js'))):
+    _n = os.path.basename(_p)[:-3]
+    shutil.copyfile(_p, os.path.join(DIST, _n + '.js'))
+    _urls[_n] = _n + '.js?v=' + hashlib.md5(open(_p, 'rb').read()).hexdigest()[:8]
 # Imágenes de la tarjeta del inicio (src/assets/ilu, de tools/ilustraciones.py): archivos aparte; la app carga solo la del día.
 # Publicada como Artifact no hay archivos aparte: queda el coro.
 if '--artifact' not in sys.argv:
@@ -105,7 +112,7 @@ if '--artifact' not in sys.argv:
     shutil.copytree(os.path.join(SRC, 'assets', 'app'), os.path.join(DIST, 'app'))
     shutil.copyfile(os.path.join(DIST, 'app', 'favicon.ico'), os.path.join(DIST, 'favicon.ico'))
     shutil.copyfile(os.path.join(SRC, 'app', 'manifest.webmanifest'), os.path.join(DIST, 'manifest.webmanifest'))
-    precarga = ['./', 'manifest.webmanifest', 'favicon.ico'] + sorted(_urls.values()) + [
+    precarga = ['./', 'manifest.webmanifest', 'favicon.ico'] + sorted(v for k, v in _urls.items() if not k.startswith('latin-')) + [
         'app/' + n for n in ('icon-192.png', 'icon-512.png', 'maskable-192.png', 'maskable-512.png', 'favicon-32.png', 'apple-touch-icon.png')]
     huella = hashlib.md5((html + leer('app', 'sw.js') + leer('app', 'manifest.webmanifest')).encode())
     for n in sorted(os.listdir(os.path.join(SRC, 'assets', 'app'))):

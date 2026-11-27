@@ -95,6 +95,42 @@ def gregoriano_propios():
             'responsorio': [pieza(k, x, False) for k, x in P['responsorio'].items()]}
 
 
+
+def latin():
+    """«Solo latín» (26/11/2026): la extracción de Universalis (extraccion/latin/dias/) → src/carga/latin-AAAA-MM.js, uno por
+    mes, que la app carga al abrir una hora en latín. Por día: celebración (c), datos (d) y horas (h), cada una con sus bloques
+    (t: título, r: cita, s: subtítulos, a: alternativa, u: rúbricas; l: renglones [texto, marcas] o n: número en la tabla T de
+    renglones repetidos). Marcas: 1 sangría, 2 empieza estrofa, 4 cursiva, 8 negrita, 16 párrafo. R: cita latina → clave de
+    base/salmos (extraccion/latin/salmos.json). Devuelve los meses."""
+    D = os.path.join(RAIZ, 'extraccion', 'latin')
+    if not os.path.isdir(os.path.join(D, 'dias')): return []
+    sal = json.load(open(os.path.join(D, 'salmos.json'), encoding='utf-8')) if os.path.exists(os.path.join(D, 'salmos.json')) else {}
+    R = {v['ref']: k for k, v in sal.items() if v.get('ref')}
+    meses = []
+    for f in sorted(glob.glob(os.path.join(D, 'dias', '*.json'))):
+        mes = os.path.basename(f)[:-5]; T = {}; dias = {}
+        for d in json.load(open(f, encoding='utf-8'))['dias']:
+            hs = {}
+            for h, bl in d['horas'].items():
+                bb = []
+                for b in bl:
+                    ls = [[l['t'], (1 if l.get('sangria') else 0) | (2 if l.get('estrofa') else 0) | (4 if l.get('cursiva') else 0)
+                           | (8 if l.get('negrita') else 0) | (16 if l.get('p') else 0)] for l in b['lineas']]
+                    x = {k: v for k, v in {'t': b.get('titulo'), 'r': b.get('ref'), 's': b.get('sub'), 'a': b.get('alternativa'), 'u': b.get('rubricas')}.items() if v}
+                    if len(ls) >= 6:
+                        k = json.dumps(ls, ensure_ascii=False); T.setdefault(k, len(T)); x['n'] = T[k]
+                    else: x['l'] = ls
+                    bb.append(x)
+                hs[h] = bb
+            dias[d['fecha']] = {'c': d.get('celebracion', ''), 'd': d.get('de_die', []), 'h': hs}
+        tab = [json.loads(k) for k, _ in sorted(T.items(), key=lambda kv: kv[1])]
+        destino = os.path.join(RAIZ, 'src', 'carga', f'latin-{mes}.js')
+        with open(destino, 'w', encoding='utf-8') as g:
+            g.write('(window.LATIN=window.LATIN||{})[' + json.dumps(mes) + ']=' + json.dumps({'dias': dias, 'T': tab, 'R': R}, ensure_ascii=False, separators=(',', ':')) + ';\n')
+        meses.append(mes)
+    print(f'src/carga/latin-*.js: {len(meses)} meses ({meses[0]} a {meses[-1]})' if meses else 'sin latín')
+    return meses
+
 def main():
     G = leer(os.path.join(B, 'gregoriano', 'completas.yaml'))
     inv, ce, co = G['invocacion'], G['cantico_evangelico'], G['conclusion']
@@ -128,6 +164,7 @@ def main():
         'latinos_cuando': leer(os.path.join(B, 'himnos', 'latinos_cuando.yaml')),
         'oraciones': oraciones_oficio(),
         'espanol': espanol(),
+        'latin_meses': latin(),   # «Solo latín»: meses con la hora latina de Universalis (src/carga/latin-AAAA-MM.js)
         'salmos': {k: v for k, v in ((os.path.basename(f)[:-5], leer(f)) for f in sorted(glob.glob(os.path.join(B, 'salmos', '*.yaml')))) if k in USADOS},
     }
     destino = os.path.join(RAIZ, 'src', 'datos', 'base.js')

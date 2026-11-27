@@ -423,3 +423,9 @@ p.rec{margin:0 0 .8em}
   :root{--ink2:#2a2522; --muted:#57514b; --line:#b8b0a3; --line2:#8f8679; --borde-ctrl:#5f574d; --glosa:#014d4d; --rubric:#7d120e}
   :root[data-theme="dark"]{--ink:#f5f5f5; --ink2:#dedede; --muted:#c9c9c9; --line:#4a4a4a; --line2:#5a5a5a; --borde-ctrl:#9a9a9a; --rubric:#ff8a86; --glosa:#8fd6ce}
 }
+
+/* «Solo latín»: el texto oficial en español, debajo del latín */
+.trad-es{color:var(--glosa);font-style:italic;font-size:.88em;line-height:1.4;margin:.2em 0 1em;padding-left:.8em;border-left:2px solid var(--line)}
+.trad-es p{margin:0 0 .5em}
+.trad-es .lec-larga p{text-indent:0}
+.prece-la{margin:.6em 0 .2em}

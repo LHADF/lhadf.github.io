@@ -962,3 +962,19 @@ test('salmodias: las partes de un mismo salmo no se repiten y van en orden', () 
   }
   assert.deepEqual(malos, []);
 });
+
+// «Solo latín» (26/11/2026): la hora latina de Universalis sobre el armado de la app, con el español debajo
+test('Solo latín: Laudes del 2 de diciembre de 2026 en latín, con el español debajo', () => {
+  const f = new URL('../src/carga/latin-2026-12.js', import.meta.url);
+  vm.runInNewContext(readFileSync(f, 'utf8'), ctx);
+  vm.runInNewContext(readFileSync(new URL('../src/latin.js', import.meta.url), 'utf8'), ctx);
+  const W = ctx.window, r = W.Latin.armar(LA.armar('2026-12-02', ''), '2026-12-02', 'laudes');
+  assert.ok(r.latin && r.mismo);
+  const sal = r.secciones.filter(s => s.k === 'salmo');
+  assert.equal(sal.length, 3); assert.ok(sal.every(s => s.la && s.versos.la.length && s.esTexto));
+  assert.match(sal[0].versos.la[0], /\*/);
+  assert.ok(r.secciones.some(s => s.k === 'lectura' && s.la && s.t.la && s.t.es));
+  const rb = r.secciones.find(s => s.k === 'vrla'); assert.equal(rb.l.length, 6);   // responsorio breve desplegado
+  assert.ok(r.secciones.some(s => s.k === 'cantico'));                                // el Benedictus latino de la app
+  assert.ok(sal.every(s => !/Señor/.test(s.versos.la.join(' '))) && /Dómin/.test(sal[0].versos.la.join(' ')));   // el salmo, en latín
+});

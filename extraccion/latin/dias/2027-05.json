@@ -739,12 +739,24 @@
         "p": true
        },
        {
-        "t": "Alpha",
-        "otro": "i"
+        "t": "Ecce vénio cito, et merces mea mecum est, réddere unicuíque sicut opus eius est. Ego Alpha et Omega, primus et novíssimus, princípium et finis. Beáti, qui lavant stolas suas, ut sit potéstas eórum super lignum vitæ, et portis intrent in civitátem. Foris canes et venéfici et impudíci et homicídæ et idólis serviéntes et omnis, qui amat et facit mendácium!",
+        "p": true
        },
        {
-        "t": "Omega",
-        "otro": "i"
+        "t": "Ego Iesus misi ángelum meum testificári vobis hæc super ecclésiis. Ego sum radix et genus David, stella spléndida matutína».",
+        "p": true
+       },
+       {
+        "t": "Et Spíritus et sponsa dicunt: «Veni!». Et, qui audit, dicat: «Veni!». Et, qui sitit, véniat; qui vult, accípiat aquam vitæ gratis.",
+        "p": true
+       },
+       {
+        "t": "Contéstor ego omni audiénti verba prophetíæ libri huius: Si quis apposúerit ad hæc, appónet Deus super illum plagas scriptas in libro isto; et si quis abstúlerit de verbis libri prophetíæ huius, áuferet Deus partem eius de ligno vitæ et de civitáte sancta, de his, quæ scripta sunt in libro isto.",
+        "p": true
+       },
+       {
+        "t": "Dicit, qui testimónium pérhibet istórum: «Etiam, vénio cito». «Amen. Veni, Dómine Iesu!». Grátia Dómini Iesu cum ómnibus.",
+        "p": true
        }
       ]
      },
@@ -774,12 +786,20 @@
         "p": true
        },
        {
-        "t": "Allelúia",
-        "otro": "i"
+        "t": "Propter hæc duo témpora, unum quod nunc est in tentatiónibus et tribulatiónibus huius vitæ, álterum quod tunc erit in securitáte et exsultatióne perpétua, institúta est nobis étiam celebrátio duórum témporum, ante Pascha, et post Pascha. Illud quod est ante Pascha, signíficat tribulatiónem in qua modo sumus; quod vero nunc ágimus post Pascha, signíficat beatitúdinem in qua póstea érimus. Ante Pascha ergo quod celebrámus, hoc et ágimus; post Pascha autem quod celebrámus, significámus quod nondum tenémus. Proptérea illud tempus in ieiúniis et oratiónibus exercémus; hoc vero tempus relaxátis ieiúniis in láudibus ágimus. Hoc est enim: Allelúia, quod cantámus.",
+        "p": true
        },
        {
-        "t": "Allelúia",
-        "otro": "i"
+        "t": "In cápite enim nostro nobis utrúmque figurátum est, utrúmque demonstrátum est. Pássio Dómini osténdit nobis vitam præséntis necessitátis, quia opórtet laboráre et tribulári et ad extrémum mori; resurréctio vero et clarificátio Dómini osténdit nobis vitam quam acceptúri sumus.",
+        "p": true
+       },
+       {
+        "t": "Nunc ergo, fratres, exhortámur vos ut laudétis Deum; et hoc est quod nobis omnes dícimus, quando dícimus: Allelúia. Laudáte Dóminum, dicis tu álteri, dicit ipse tibi; cum se omnes exhortántur, omnes fáciunt quod hortántur. Sed laudáte de totis vobis; id est, ut non sola lingua et vox vestra laudet Deum, sed et consciéntia vestra, vita vestra, facta vestra.",
+        "p": true
+       },
+       {
+        "t": "Etenim laudámus modo in ecclésia quando congregámur; cum quisque discédit ad própria, quasi cessat laudáre Deum. Non cesset bene vívere, et semper laudat Deum. Tunc désinis laudáre Deum, quando a iustítia, et ab eo quod illi placet, declínas. Nam si a vita bona numquam declínes, lingua tua tacet, vita tua clamat; et aures Dei ad cor tuum. Quómodo enim aures nostræ ad voces nostras, sic aures Dei ad cogitatiónes nostras.",
+        "p": true
        }
       ]
      },
@@ -804,6 +824,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Omnípotens ætérne Deus, qui nobis regeneratióne baptísmatis cæléstem vitam conférre dignátus es, præsta, quǽsumus, ut, quos immortalitátis éfficis iustificándo capáces, usque ad plenitúdinem glóriæ, te moderánte, pervéniant.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -1691,7 +1715,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -2456,8 +2481,17 @@
         "negrita": true
        },
        {
+        "t": "Omnípotens ætérne Deus, qui nobis regeneratióne baptísmatis cæléstem vitam conférre dignátus es, præsta, quǽsumus, ut, quos immortalitátis éfficis iustificándo capáces, usque ad plenitúdinem glóriæ, te moderánte, pervéniant.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -3196,8 +3230,17 @@
         "negrita": true
        },
        {
+        "t": "Omnípotens ætérne Deus, qui nobis regeneratióne baptísmatis cæléstem vitam conférre dignátus es, præsta, quǽsumus, ut, quos immortalitátis éfficis iustificándo capáces, usque ad plenitúdinem glóriæ, te moderánte, pervéniant.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -3953,8 +3996,17 @@
         "negrita": true
        },
        {
+        "t": "Omnípotens ætérne Deus, qui nobis regeneratióne baptísmatis cæléstem vitam conférre dignátus es, præsta, quǽsumus, ut, quos immortalitátis éfficis iustificándo capáces, usque ad plenitúdinem glóriæ, te moderánte, pervéniant.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -4721,7 +4773,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -5099,8 +5152,13 @@
         "negrita": true
        },
        {
+        "t": "Vísita nos, quǽsumus, Dómine, hac nocte præsénti, ut, dilúculo tua virtúte surgéntes, de resurrectióne Christi tui gaudére valeámus. Qui vivit et regnat in sæcula sæculórum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -5114,7 +5172,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -5841,6 +5900,14 @@
         "t": "Quod fuit ab inítio, quod audívimus, quod vídimus óculis nostris, quod perspéximus, et manus nostræ contrectavérunt de verbo vitæ —et vita appáruit, et vídimus et testámur et annuntiámus vobis vitam ætérnam, quæ erat coram Patre et appáruit nobis— quod vídimus et audívimus, annuntiámus et vobis, ut et vos communiónem habeátis nobíscum. Commúnio autem nostra est cum Patre et cum Fílio eius Iesu Christo. Et hæc scríbimus nos, ut gáudium nostrum sit plenum. Et hæc est annuntiátio, quam audívimus ab eo et annuntiámus vobis, quóniam Deus lux est, et ténebræ in eo non sunt ullæ.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Si dixérimus quóniam communiónem habémus cum eo et in ténebris ambulámus, mentímur et non fácimus veritátem; si autem in luce ambulémus, sicut ipse est in luce, communiónem habémus ad ínvicem, et sanguis Iesu Fílii eius mundat nos ab omni peccáto.",
+        "p": true
+       },
+       {
+        "t": "Si dixérimus quóniam peccátum non habémus, nosmetípsos sedúcimus, et véritas in nobis non est. Si confiteámur peccáta nostra, fidélis est et iustus, ut remíttat nobis peccáta et emúndet nos ab omni iniustítia. Si dixérimus quóniam non peccávimus, mendácem fácimus eum, et verbum eius non est in nobis.",
+        "p": true
        }
       ]
      },
@@ -5870,36 +5937,16 @@
         "p": true
        },
        {
-        "t": "Nam etiámsi novérimus secúndum carnem Christum, nunc tamen iam non nóvimus",
-        "otro": "i"
+        "t": "Nemo ítaque iam est in carne, id est in infirmitáte carnáli, cuiúsmodi iure meritóque corrúptio inter cétera intellegénda est, addit: Nam etiámsi novérimus secúndum carnem Christum, nunc tamen iam non nóvimus. Tamquam si dícere vellet: Verbum caro factum est et habitávit in nobis, et pro nostrum ómnium vita mortem secúndum carnem súbiit, atque ita ipsum nóvimus; verúmtamen abhinc iam non agnóscimus. Etiámsi enim carnem rétinet, quippe qui tértia die revíxit, et apud Patrem in cælis versátur, nihilóminus supra carnem esse intellégitur: semel enim mórtuus, iam non móritur, mors illi ultérius non dominábitur. Quod enim mórtuus est, peccáto semel est mórtuus; quod autem vivit, Deo vivit.",
+        "p": true
        },
        {
-        "t": "Verbum caro factum est et habitávit in nobis",
-        "otro": "i"
+        "t": "Igitur si huiuscémodi ille est qui se fecit vitæ nobis antesignánum, prorsus opórtet nos quoque vestígiis eius insisténtes, non tam in carne quam supra carnem esse reputári. Ergo rectíssime divus Paulus: Si qua in Christo, inquit, nova creatúra, vétera transiérunt, ecce nova facta sunt. Iustificáti enim fúimus per fidem in Christo, et maledictiónis vis désiit. Quandóquidem ille nostri grátia revíxit, calcáta mortis poténtia; verúmque et suápte natúra Deum agnóvimus, cui in spíritu et veritáte cultum impéndimus, mediatóre Fílio, qui supérnas a Patre benedictiónes mundo impertítur.",
+        "p": true
        },
        {
-        "t": "semel enim mórtuus, iam non móritur, mors illi ultérius non dominábitur. Quod enim mórtuus est, peccáto semel est mórtuus; quod autem vivit, Deo vivit",
-        "otro": "i"
-       },
-       {
-        "t": "Si qua in Christo",
-        "otro": "i"
-       },
-       {
-        "t": "nova creatúra, vétera transiérunt, ecce nova facta sunt",
-        "otro": "i"
-       },
-       {
-        "t": "Omnia autem",
-        "otro": "i"
-       },
-       {
-        "t": "ex Deo qui sibi nos reconciliávit per Christum",
-        "otro": "i"
-       },
-       {
-        "t": "ómnia ex Deo sunt, qui nos per Christum reconciliávit et ministérium reconciliatiónis attríbuit.",
-        "otro": "i"
+        "t": "Quámobrem sapientíssime divus Paulus: Omnia autem, inquit, ex Deo qui sibi nos reconciliávit per Christum. Reápse enim haud præter Patris voluntátem est incarnatiónis mystérium et consectánea huic renovátio. Quippe per Christum nacti áditum sumus cum nemo ad Patrem véniat, ut ípsemet ait: nisi per ipsum. Igitur ómnia ex Deo sunt, qui nos per Christum reconciliávit et ministérium reconciliatiónis attríbuit.",
+        "p": true
        }
       ]
      },
@@ -6278,6 +6325,10 @@
         "t": "Prima sabbatórum María Magdaléne venit mane, cum adhuc ténebræ essent, ad monuméntum et videt lápidem sublátum a monuménto. Currit ergo et venit ad Simónem Petrum et ad álium discípulum, quem amábat Iesus, et dicit eis: «Tulérunt Dóminum de monuménto, et nescímus, ubi posuérunt eum!». Exiit ergo Petrus et ille álius discípulus, et veniébant ad monuméntum. Currébant autem duo simul, et ille álius discípulus præcucúrrit cítius Petro et venit primus ad monuméntum; et cum se inclinásset, videt pósita linteámina, non tamen introívit. Venit ergo et Simon Petrus sequens eum et introívit in monuméntum; et videt linteámina pósita et sudárium, quod fúerat super caput eius, non cum linteamínibus pósitum, sed separátim involútum in unum locum. Tunc ergo introívit et alter discípulus, qui vénerat primus ad monuméntum, et vidit et crédidit. Nondum enim sciébant Scriptúram quia opórtet eum a mórtuis resúrgere. Abiérunt ergo íterum ad semetípsos discípuli.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "María autem stabat ad monuméntum foris plorans. Dum ergo fleret, inclinávit se in monuméntum et videt duos ángelos in albis sedéntes, unum ad caput et unum ad pedes, ubi pósitum fúerat corpus Iesu. Et dicunt ei illi: «Múlier, quid ploras?». Dicit eis: «Tulérunt Dóminum meum, et néscio, ubi posuérunt eum». Hæc cum dixísset, convérsa est retrórsum et videt Iesum stantem et non sciébat quia Iesus est. Dicit ei Iesus: «Múlier, quid ploras? Quem quæris?». Illa, exístimans quia hortulánus esset, dicit ei: «Dómine, si tu sustulísti eum, dícito mihi, ubi posuísti eum, et ego eum tollam». Dicit ei Iesus: «María!». Convérsa illa dicit ei Hebráice: «Rabbúni!» —quod dícitur Magíster—. Dicit ei Iesus: «Iam noli me tenére, nondum enim ascéndi ad Patrem; vade autem ad fratres meos et dic eis: Ascéndo ad Patrem meum et Patrem vestrum, et Deum meum et Deum vestrum». Venit María Magdaléne annúntians discípulis: «Vidi Dóminum!» et quia hæc dixit ei.",
+        "p": true
        }
       ],
       "rubricas": [
@@ -6440,6 +6491,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Fac nos, omnípotens Deus, hos lætítiæ dies, quos in honórem Dómini resurgéntis exséquimur, afféctu sédulo celebráre, ut, quod recordatióne percúrrimus, semper in ópere teneámus.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -7441,7 +7496,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -8138,8 +8194,17 @@
         "negrita": true
        },
        {
+        "t": "Fac nos, omnípotens Deus, hos lætítiæ dies, quos in honórem Dómini resurgéntis exséquimur, afféctu sédulo celebráre, ut, quod recordatióne percúrrimus, semper in ópere teneámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -8810,8 +8875,17 @@
         "negrita": true
        },
        {
+        "t": "Fac nos, omnípotens Deus, hos lætítiæ dies, quos in honórem Dómini resurgéntis exséquimur, afféctu sédulo celebráre, ut, quod recordatióne percúrrimus, semper in ópere teneámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -9499,8 +9573,17 @@
         "negrita": true
        },
        {
+        "t": "Fac nos, omnípotens Deus, hos lætítiæ dies, quos in honórem Dómini resurgéntis exséquimur, afféctu sédulo celebráre, ut, quod recordatióne percúrrimus, semper in ópere teneámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -10308,7 +10391,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -10694,8 +10778,13 @@
         "negrita": true
        },
        {
+        "t": "Vox nostra te, Dómine, humíliter deprecétur, ut, domínicæ resurrectiónis hac die mystério celebráto, in pace tua secúri a malis ómnibus quiescámus, et in tua resurgámus laude gaudéntes. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -10709,7 +10798,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -11382,6 +11472,18 @@
         "t": "In diébus illis: Per manus apostolórum fiébant signa et prodígia multa in plebe; et erant unanímiter omnes in pórticu Salomónis. Ceterórum autem nemo audébat coniúngere se illis, sed magnificábat eos pópulus; magis autem addebántur credéntes Dómino, multitúdines virórum ac mulíerum, ita ut et in platéas efférrent infírmos et pónerent in léctulis et grabátis, ut, veniénte Petro, saltem umbra illíus obumbráret quemquam eórum. Concurrébat autem et multitúdo vicinárum civitátum Ierúsalem, afferéntes ægros et vexátos a spirítibus immúndis, qui curabántur omnes.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Exsúrgens autem princeps sacerdótum et omnes, qui cum illo erant, quæ est hǽresis sadducæórum, repléti sunt zelo et iniecérunt manus in apóstolos et posuérunt illos in custódia pública. Angelus autem Dómini per noctem apéruit iánuas cárceris et edúcens eos dixit: «Ite et stantes loquímini in templo plebi ómnia verba vitæ huius». Qui cum audíssent, intravérunt dilúculo in templum et docébant.",
+        "p": true
+       },
+       {
+        "t": "Advéniens autem princeps sacerdótum et, qui cum eo erant, convocavérunt concílium et omnes senióres filiórum Israel et misérunt in cárcerem, ut adduceréntur illi. Cum veníssent autem minístri, non invenérunt illos in cárcere; revérsi autem nuntiavérunt dicéntes: «Cárcerem invénimus clausum cum omni diligéntia et custódes stantes ad iánuas, aperiéntes autem intus néminem invénimus!». Ut audiérunt autem hos sermónes, magistrátus templi et príncipes sacerdótum ambigébant de illis quidnam fíeret illud. Advéniens autem quidam nuntiávit eis: «Ecce viri, quos posuístis in cárcere, sunt in templo stantes et docéntes pópulum».",
+        "p": true
+       },
+       {
+        "t": "Tunc ábiens magistrátus cum minístris adducébat illos, non per vim, timébant enim pópulum, ne lapidaréntur. Et cum adduxíssent illos, statuérunt in concílio. Et interrogávit eos princeps sacerdótum dicens: «Nonne præcipiéndo præcépimus vobis, ne docerétis in nómine isto? Et ecce replevístis Ierúsalem doctrína vestra et vultis indúcere super nos sánguinem hóminis istíus». Respóndens autem Petrus et apóstoli dixérunt: «Obœdíre opórtet Deo magis quam homínibus. Deus patrum nostrórum suscitávit Iesum, quem vos interemístis suspendéntes in ligno; hunc Deus Príncipem et Salvatórem exaltávit déxtera sua ad dandam pæniténtiam Israel et remissiónem peccatórum. Et nos sumus testes horum verbórum, et Spíritus Sanctus, quem dedit Deus obœdiéntibus sibi».",
+        "p": true
        }
       ]
      },
@@ -11411,16 +11513,28 @@
         "p": true
        },
        {
-        "t": "Multa hábeo adhuc loqui vobis, sed non potéstis modo ea sustinére",
-        "otro": "i"
+        "t": "Itaque, uno eórum decússo, réliquos úndecim digrédiens ad Patrem post resurrectiónem iussit ire et docére natiónes, tinguéndas in Patrem et Fílium et Spíritum Sanctum.",
+        "p": true
        },
        {
-        "t": "Cum vénerit ille Spíritus veritátis, ipse vos dedúcet in omnem veritátem",
-        "otro": "i"
+        "t": "Statim ígitur Apóstoli —quos hæc appellátio missos interpretátur—assúmpto per sortem duodécimo Matthía in locum Iudæ ex auctoritáte prophetíæ quæ est in psalmo David, consecúti promíssam vim Spíritus Sancti ad virtútes et elóquium, primo per Iudǽam contestáta fide in Iesum Christum et Ecclésiis institútis, dehinc in orbem profécti eándem doctrínam eiúsdem fídei natiónibus promulgavérunt.",
+        "p": true
        },
        {
-        "t": "omnem veritátem",
-        "otro": "i"
+        "t": "Et perínde Ecclésias apud unamquámque civitátem condidérunt, a quibus tráducem fídei et sémina doctrínæ céteræ exínde Ecclésiæ mutuátæ sunt et cotídie mutuántur ut Ecclésiæ fiant. Ac per hoc et ipsæ apostólicæ deputabúntur ut sóboles apostolicárum Ecclesiárum.",
+        "p": true
+       },
+       {
+        "t": "Omne genus ad oríginem suam censeátur necésse est. Itaque tot ac tantæ Ecclésiæ una est illa ab Apóstolis prima ex qua omnes. Sic omnes primæ et omnes apostólicæ, dum una omnes. Probant unitátem communicátio pacis et appellátio fraternitátis et contesserátio hospitalitátis. Quæ iura non ália rátio regit quam eiúsdem sacraménti una tradítio.",
+        "p": true
+       },
+       {
+        "t": "Quid autem Apóstoli prædicáverint, id est quid illis Christus reveláverit, non áliter probári debet nisi per eásdem Ecclésias, quas ipsi Apóstoli condidérunt, ipsi eis prædicándo tam viva, quod aiunt, voce quam per epístolas póstea.",
+        "p": true
+       },
+       {
+        "t": "Díxerat plane aliquándo Dóminus: Multa hábeo adhuc loqui vobis, sed non potéstis modo ea sustinére; tamen adíciens: Cum vénerit ille Spíritus veritátis, ipse vos dedúcet in omnem veritátem, osténdit illos nihil ignorásse, quos omnem veritátem consecutúros per Spíritum veritátis repromíserat. Et útique implévit repromíssum, probántibus Actis Apostolórum descénsum Spíritus Sancti.",
+        "p": true
        }
       ]
      },
@@ -11694,6 +11808,22 @@
         "t": "In illo témpore: Dicit Iesus ad Thomam:",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "«Ego sum via et véritas et vita; nemo venit ad Patrem nisi per me. Si cognovístis me, et Patrem meum útique cognoscétis; et ámodo cognoscítis eum et vidístis eum».",
+        "p": true
+       },
+       {
+        "t": "Dicit ei Philíppus: «Dómine, osténde nobis Patrem, et súfficit nobis».",
+        "p": true
+       },
+       {
+        "t": "Dicit ei Iesus: «Tanto témpore vobíscum sum, et non cognovísti me, Philíppe? Qui vidit me, vidit Patrem. Quómodo tu dicis: “Osténde nobis Patrem”? Non credis quia ego in Patre, et Pater in me est? Verba, quæ ego loquor vobis, a meípso non loquor; Pater autem in me manens facit ópera sua. Crédite mihi quia ego in Patre, et Pater in me est; alióquin propter ópera ipsa crédite.",
+        "p": true
+       },
+       {
+        "t": "«Amen, amen dico vobis: Qui credit in me, ópera, quæ ego fácio, et ipse fáciet et maióra horum fáciet, quia ego ad Patrem vado. Et quodcúmque petiéritis in nómine meo, hoc fáciam, ut glorificétur Pater in Fílio; si quid petiéritis me in nómine meo, ego fáciam».",
+        "p": true
        }
       ],
       "rubricas": [
@@ -11856,6 +11986,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Deus, qui nos ánnua apostolórum Philíppi et Iacóbi festivitáte lætíficas, da nobis, ipsórum précibus, in Unigéniti tui passióne et resurrectióne consórtium, ut ad perpétuam tui visiónem perveníre mereámur.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -12784,7 +12918,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -13550,8 +13685,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui nos ánnua apostolórum Philíppi et Iacóbi festivitáte lætíficas, da nobis, ipsórum précibus, in Unigéniti tui passióne et resurrectióne consórtium, ut ad perpétuam tui visiónem perveníre mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -14291,8 +14435,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui nos ánnua apostolórum Philíppi et Iacóbi festivitáte lætíficas, da nobis, ipsórum précibus, in Unigéniti tui passióne et resurrectióne consórtium, ut ad perpétuam tui visiónem perveníre mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -15049,8 +15202,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui nos ánnua apostolórum Philíppi et Iacóbi festivitáte lætíficas, da nobis, ipsórum précibus, in Unigéniti tui passióne et resurrectióne consórtium, ut ad perpétuam tui visiónem perveníre mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -15782,7 +15944,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -16187,8 +16350,13 @@
         "negrita": true
        },
        {
+        "t": "Quiétem, Dómine, corpóribus nostris tríbue salutárem, et quæ fúdimus hódie sémina per labórem, fac ut messem gérminent sempitérnam. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -16202,7 +16370,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -16976,6 +17145,10 @@
         "t": "Scribo vobis, filíoli: Remíssa sunt vobis peccáta propter nomen eius. Scribo vobis, patres: Nostis eum, qui ab inítio est. Scribo vobis, adulescéntes: Vicístis Malígnum. Scripsi vobis, párvuli: Nostis Patrem. Scripsi vobis, patres: Nostis eum, qui ab inítio est. Scripsi vobis, adulescéntes: Fortes estis, et verbum Dei in vobis manet, et vicístis Malígnum.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Nolíte dilígere mundum neque ea, quæ in mundo sunt. Si quis díligit mundum, non est cáritas Patris in eo; quóniam omne, quod est in mundo, concupiscéntia carnis et concupiscéntia oculórum et iactántia divitiárum, non est ex Patre, sed ex mundo est. Et mundus transit et concupiscéntia eius; qui autem facit voluntátem Dei, manet in ætérnum.",
+        "p": true
        }
       ]
      },
@@ -17005,8 +17178,28 @@
         "p": true
        },
        {
-        "t": "Supportántes ínvicem in caritáte, sollíciti serváre unitátem spíritus, in vínculo pacis, unum corpus, et unus Spíritus, sicut vocáti estis in una spe vocatiónis vestræ. Unus Dóminus, una fides, unum baptísma, unus Deus et Pater ómnium, qui est super omnes et per ómnia et in ómnibus",
-        "otro": "i"
+        "t": "Quod si concorporáles sumus omnes inter nos in Christo, neque solum inter nos, sed et ei nimírum qui in nobis est per suam carnem; quómodo non tam apérte unum sumus omnes, et inter nos, et in Christo? Christus enim est unitátis vínculum, cum idem sit Deus et homo.",
+        "p": true
+       },
+       {
+        "t": "De unióne vero spiritáli, eándem viam sequéntes, dicémus rursus, nos omnes, accépto uno et eódem Spíritu, Sancto nimírum, commiscéri quodámmodo et inter nos, et cum Deo. Licet enim multi seórsim simus, et in unoquóque nostrum Christus Spíritum Patris ac suum inhabitáre fáciat, unus tamen est ac indivisíbilis, qui Spíritus ínvicem distínctos, quátenus singuláriter subsístunt, in unitátem cólligit per seípsum, et omnes velut unum quid cerni facit in seípso.",
+        "p": true
+       },
+       {
+        "t": "Quemádmodum enim sanctæ carnis virtus concorporáles reddit eos, in quibus est, eódem, opínor, modo unus in ómnibus indivisíbilis inhábitans Dei Spíritus ad unitátem spiritálem omnes cogit.",
+        "p": true
+       },
+       {
+        "t": "Idcírco nos rursus divínus Paulus compellébat: Supportántes ínvicem in caritáte, sollíciti serváre unitátem spíritus, in vínculo pacis, unum corpus, et unus Spíritus, sicut vocáti estis in una spe vocatiónis vestræ. Unus Dóminus, una fides, unum baptísma, unus Deus et Pater ómnium, qui est super omnes et per ómnia et in ómnibus. Uno enim diversánte in nobis Spíritu, unus ómnium Pater in nobis erit Deus per Fílium, ad unitátem mútuam et suam addúcens ea quæ Spíritus partícipant.",
+        "p": true
+       },
+       {
+        "t": "Quod autem Sancto Spirítui per participatiónem uniámur, hinc quoque quodámmodo, maniféstum est. Nam si animáli vita relícta spíritus légibus semel obtemperavérimus; nonne patet ómnibus nos, vita quodámmodo nostra relícta, et coniúncto nobis Sancto Spíritu, cæléstem conformatiónem nactos in áliam quodámmodo natúram transformátos, non iam hómines tantum, sed et fílios Dei ac cæléstes hómines nuncupári, ex eo quod divínæ consórtes natúræ sumus rédditi?",
+        "p": true
+       },
+       {
+        "t": "Unum ígitur omnes sumus in Patre et Fílio ac Sancto Spíritu: unum, inquam, hábitus identitáte, unum conformatióne secúndum pietátem, et communióne sanctæ carnis Christi, et participatióne uníus et Sancti Spíritus.",
+        "p": true
        }
       ]
      },
@@ -17031,6 +17224,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Semper exsúltet pópulus tuus, Deus, renováta ánimæ iuventúte, ut, qui nunc lætátur in adoptiónis se glóriam restitútum, resurrectiónis diem spe certæ gratulatiónis exspéctet.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -18010,7 +18207,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -18719,8 +18917,17 @@
         "negrita": true
        },
        {
+        "t": "Semper exsúltet pópulus tuus, Deus, renováta ánimæ iuventúte, ut, qui nunc lætátur in adoptiónis se glóriam restitútum, resurrectiónis diem spe certæ gratulatiónis exspéctet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -19403,8 +19610,17 @@
         "negrita": true
        },
        {
+        "t": "Semper exsúltet pópulus tuus, Deus, renováta ánimæ iuventúte, ut, qui nunc lætátur in adoptiónis se glóriam restitútum, resurrectiónis diem spe certæ gratulatiónis exspéctet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -20104,8 +20320,17 @@
         "negrita": true
        },
        {
+        "t": "Semper exsúltet pópulus tuus, Deus, renováta ánimæ iuventúte, ut, qui nunc lætátur in adoptiónis se glóriam restitútum, resurrectiónis diem spe certæ gratulatiónis exspéctet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -20870,7 +21095,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -21240,8 +21466,13 @@
         "negrita": true
        },
        {
+        "t": "Noctem istam, quǽsumus, Dómine, benígnus illúmina, et ita fac in pace nos tuos fámulos obdormíre, ut læti ad novi diéi claritátem in tuo nómine suscitémur. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -21255,7 +21486,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -21911,6 +22143,18 @@
         "t": "Filíoli, novíssima hora est; et sicut audístis quia antichrístus venit, ita nunc antichrísti multi adsunt, unde cognóscimus quóniam novíssima hora est. Ex nobis prodiérunt, sed non erant ex nobis, nam si fuíssent ex nobis, permansíssent nobíscum; sed ut manifestarétur quóniam illi omnes non sunt ex nobis. Sed vos unctiónem habétis a Sancto et scitis omnes. Non scripsi vobis quasi nesciéntibus veritátem sed quasi sciéntibus eam, et quóniam omne mendácium ex veritáte non est. Quis est mendax, nisi is qui negat quóniam Iesus est Christus? Hic est antichrístus, qui negat Patrem et Fílium. Omnis, qui negat Fílium, nec Patrem habet; qui confitétur Fílium, et Patrem habet.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Vos, quod audístis ab inítio, in vobis permáneat; si in vobis permánserit, quod ab inítio audístis, et vos in Fílio et in Patre manébitis. Et hæc est repromíssio, quam ipse pollícitus est nobis: vitam ætérnam.",
+        "p": true
+       },
+       {
+        "t": "Hæc scripsi vobis de eis, qui sedúcunt vos. Et vos unctiónem, quam accepístis ab eo, manet in vobis, et non necésse habétis, ut áliquis dóceat vos; sed sicut únctio ipsíus docet vos de ómnibus, et verum est et non est mendácium, et, sicut dócuit vos, manétis in eo.",
+        "p": true
+       },
+       {
+        "t": "Et nunc, filíoli, manéte in eo, ut, cum apparúerit, habeámus fidúciam et non confundámur ab eo in advéntu eius. Si scitis quóniam iustus est, scitóte quóniam et omnis, qui facit iustítiam, ex ipso natus est.",
+        "p": true
        }
       ]
      },
@@ -21938,6 +22182,26 @@
         "t": "Non ii dies, dilectíssimi, qui inter resurrectiónem Dómini ascensionémque fluxérunt, otióso transiére decúrsu; sed magna in his confirmáta sacraménta, magna sunt reveláta mystéria.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "In his metus diræ mortis aufértur, et non solum ánimæ, sed étiam carnis immortálitas declarátur. In his per insufflatiónem Dómini infúnditur Apóstolis ómnibus Spíritus Sanctus; et beáto apóstolo Petro supra céteros, post regni claves, ovílis domínici cura mandátur.",
+        "p": true
+       },
+       {
+        "t": "In his diébus, duóbus discípulis tértius in via Dóminus comes iúngitur, et, ad omnem nostræ ambiguitátis calíginem detergéndam, pavéntium ac trepidántium tárditas increpátur. Flammam fídei illumináta corda concípiunt; et quæ erant tépida, reseránte Scriptúras Dómino, efficiúntur ardéntia. In fractióne quoque panis convescéntium aperiúntur obtútus; multo felícius horum óculis patefáctis, quibus natúræ suæ manifestáta est glorificátio quam illórum géneris nostri príncipum, quibus prævaricatiónis suæ est ingésta confúsio.",
+        "p": true
+       },
+       {
+        "t": "Per omne ergo hoc tempus, dilectíssimi, quod inter resurrectiónem Dómini et ascensiónem eius exáctum est, hoc providéntia Dei curávit, hoc dócuit, hoc suórum et óculis insinuávit et córdibus, ut Dóminus Iesus Christus vere agnoscerétur resuscitátus, qui vere erat natus et passus et mórtuus.",
+        "p": true
+       },
+       {
+        "t": "Unde beatíssimi Apóstoli omnésque discípuli, qui et de éxitu crucis fúerant trépidi, et de fide resurrectiónis ambígui, ita sunt veritáte perspícua roboráti, ut, Dómino in cælórum eúnte sublímia, non solum nulla afficeréntur tristítia, sed étiam magno gáudio repleréntur.",
+        "p": true
+       },
+       {
+        "t": "Et revéra magna et ineffábilis erat causa gaudéndi, cum, in conspéctu sanctæ multitúdinis, super ómnium creaturárum cæléstium dignitátem humáni géneris natúra conscénderet, supergressúra angélicos órdines, et ultra archangelórum altitúdines elevánda, nec ullis sublimitátibus modum suæ provectiónis habitúra, nisi, ætérni Patris recépta conséssu, illíus glóriæ sociarétur in throno, cuius natúræ copulabátur in Fílio.",
+        "p": true
        }
       ]
      },
@@ -21962,6 +22226,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Annue nobis, quǽsumus, Dómine, ut, quemádmodum mystério resurrectiónis Fílii tui sollémnia cólimus, ita et in advéntu eius gaudére cum sanctis ómnibus mereámur.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -23035,7 +23303,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -23828,8 +24097,17 @@
         "negrita": true
        },
        {
+        "t": "Annue nobis, quǽsumus, Dómine, ut, quemádmodum mystério resurrectiónis Fílii tui sollémnia cólimus, ita et in advéntu eius gaudére cum sanctis ómnibus mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -24596,8 +24874,17 @@
         "negrita": true
        },
        {
+        "t": "Annue nobis, quǽsumus, Dómine, ut, quemádmodum mystério resurrectiónis Fílii tui sollémnia cólimus, ita et in advéntu eius gaudére cum sanctis ómnibus mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -25381,8 +25668,17 @@
         "negrita": true
        },
        {
+        "t": "Annue nobis, quǽsumus, Dómine, ut, quemádmodum mystério resurrectiónis Fílii tui sollémnia cólimus, ita et in advéntu eius gaudére cum sanctis ómnibus mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -26029,7 +26325,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -26407,8 +26704,13 @@
         "negrita": true
        },
        {
+        "t": "Vísita, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle; ángeli tui sancti hábitent in ea, qui nos in pace custódiant; et benedíctio tua sit super nos semper. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -26422,7 +26724,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -27180,6 +27483,10 @@
         "p": true
        },
        {
+        "t": "Unicuíque autem nostrum data est grátia secúndum mensúram donatiónis Christi. Propter quod dicit:",
+        "p": true
+       },
+       {
         "t": "«Ascéndens in altum captívam duxit captivitátem,",
         "estrofa": true
        },
@@ -27189,6 +27496,18 @@
        {
         "t": "Illud autem «ascéndit» quid est, nisi quia et descéndit in inferióres partes terræ? Qui descéndit, ipse est et qui ascéndit super omnes cælos, ut impléret ómnia.",
         "estrofa": true,
+        "p": true
+       },
+       {
+        "t": "Et ipse dedit quosdam quidem apóstolos, quosdam autem prophétas, álios vero evangelístas, álios autem pastóres et doctóres ad instructiónem sanctórum in opus ministérii, in ædificatiónem córporis Christi, donec occurrámus omnes in unitátem fídei et agnitiónis Fílii Dei, in virum perféctum, in mensúram ætátis plenitúdinis Christi, ut iam non simus párvuli fluctuántes et circumácti omni vento doctrínæ in fallácia hóminum, in astútia ad circumventiónem erróris; veritátem autem faciéntes in caritáte crescámus in illum per ómnia, qui est caput Christus, ex quo totum corpus compáctum et conéxum per omnem iunctúram subministratiónis secúndum operatiónem in mensúra uniuscuiúsque partis augméntum córporis facit in ædificatiónem sui in caritáte.",
+        "p": true
+       },
+       {
+        "t": "Hoc ígitur dico et testíficor in Dómino, ut iam non ambulétis, sicut et gentes ámbulant in vanitáte sensus sui ténebris obscurátum habéntes intelléctum, alienáti a vita Dei propter ignorántiam, quæ est in illis propter cæcitátem cordis ipsórum; qui indoléntes semetípsos tradidérunt impudicítiæ in operatiónem immundítiæ omnis in avarítia.",
+        "p": true
+       },
+       {
+        "t": "Vos autem non ita didicístis Christum, si tamen illum audístis et in ipso edócti estis, sicut est véritas in Iesu; depónere vos secúndum prístinam conversatiónem véterem hóminem, qui corrúmpitur secúndum desidéria erróris, renovári autem spíritu mentis vestræ et indúere novum hóminem, qui secúndum Deum creátus est in iustítia et sanctitáte veritátis.",
         "p": true
        }
       ]
@@ -27219,32 +27538,32 @@
         "p": true
        },
        {
-        "t": "Si consurrexístis cum Christo, quæ sursum sunt sápite, ubi Christus est in déxtera Dei sedens; quæ sursum sunt quǽrite, non quæ super terram",
-        "otro": "i"
+        "t": "Audiámus Apóstolum dicéntem: Si consurrexístis cum Christo, quæ sursum sunt sápite, ubi Christus est in déxtera Dei sedens; quæ sursum sunt quǽrite, non quæ super terram. Sicut enim ille ascéndit, nec recéssit a nobis, sic et nos cum illo ibi iam sumus, quamvis nondum in córpore nostro factum sit quod promíttitur nobis.",
+        "p": true
        },
        {
-        "t": "Saule, Saule, quid me perséqueris?",
-        "otro": "i"
+        "t": "Ille iam exaltátus est super cælos; pátitur tamen in terris quidquid labórum nos tamquam eius membra sentímus. Cui rei testimónium perhíbuit désuper clamans: Saule, Saule, quid me perséqueris? Et: Esurívi, et dedístis mihi manducáre.",
+        "p": true
        },
        {
-        "t": "Esurívi, et dedístis mihi manducáre.",
-        "otro": "i"
+        "t": "Cur non étiam nos ita laborámus in terris, ut per fidem, spem, caritátem, qua illi conéctimur, iam cum illo requiescámus in cælis? Ille, cum ibi est, étiam nobíscum est; et nos, cum hic sumus, étiam cum illo sumus. Illud ipse et divinitáte et potestáte et dilectióne; hoc autem nos, etsi divinitáte non póssumus sicut ipse, dilectióne tamen póssumus, sed in ipsum.",
+        "p": true
        },
        {
-        "t": "Nemo",
-        "otro": "i"
+        "t": "Ille de cælo non recéssit, cum ad nos inde descéndit; nec a nobis recéssit, cum in cælum rursus ascéndit. Nam quia ibi erat, cum hic esset, ita ipse testátur: Nemo, inquit, ascéndit in cælum, nisi qui de cælo descéndit, Fílius hóminis, qui est in cælo.",
+        "p": true
        },
        {
-        "t": "ascéndit in cælum, nisi qui de cælo descéndit, Fílius hóminis, qui est in cælo",
-        "otro": "i"
+        "t": "Hoc dictum est propter unitátem, quia caput nostrum est, et nos corpus eius. Hoc ergo nemo nisi ipse, quia et nos ipse secúndum id quod ipse Fílius hóminis propter nos, et nos Dei fílii propter ipsum.",
+        "p": true
        },
        {
-        "t": "Sicut enim corpus unum est, et membra habet multa; ómnia autem córporis membra, cum sint multa, unum est corpus, ita et Christus",
-        "otro": "i"
+        "t": "Ita quippe Apóstolus dicit: Sicut enim corpus unum est, et membra habet multa; ómnia autem córporis membra, cum sint multa, unum est corpus, ita et Christus. Non ait: ita Christus, sed ait: ita et Christus. Christus ergo membra multa, unum corpus.",
+        "p": true
        },
        {
-        "t": "ita et Christus",
-        "otro": "i"
+        "t": "Descéndit ítaque de cælo per misericórdiam, nec ascéndit nisi ipse, cum et nos in ipso per grátiam. Ac per hoc non nisi Christus descéndit, nec nisi Christus ascéndit; non quod cápitis dígnitas confundátur in córpore, sed quod córporis únitas non separétur a cápite.",
+        "p": true
        }
       ]
      },
@@ -27623,6 +27942,14 @@
         "t": "Sero post sábbatum, cum illucésceret in primam sábbati, venit María Magdaléne et áltera María vidére sepúlcrum. Et ecce terræ motus factus est magnus: ángelus enim Dómini descéndit de cælo et accédens revólvit lápidem et sedébat super eum. Erat autem aspéctus eius sicut fulgur, et vestiméntum eius cándidum sicut nix. Præ timóre autem eius extérriti sunt custódes et facti sunt velut mórtui. Respóndens autem ángelus dixit muliéribus: «Nolíte timére vos! Scio enim quod Iesum, qui crucifíxus est, quǽritis. Non est hic: surréxit enim, sicut dixit. Veníte, vidéte locum, ubi pósitus erat. Et cito eúntes dícite discípulis eius: “Surréxit a mórtuis et ecce præcédit vos in Galilǽam; ibi eum vidébitis”. Ecce dixi vobis». Et exeúntes cito de monuménto cum timóre et magno gáudio cucurrérunt nuntiáre discípulis eius.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Et ecce Iesus occúrrit illis dicens: «Avéte». Illæ autem accessérunt et tenuérunt pedes eius et adoravérunt eum. Tunc ait illis Iesus: «Nolíte timére; ite, nuntiáte frátribus meis, ut eant in Galilǽam et ibi me vidébunt».",
+        "p": true
+       },
+       {
+        "t": "Undecim autem discípuli abiérunt in Galilǽam, in montem ubi constitúerat illis Iesus, et vidéntes eum adoravérunt; quidam autem dubitavérunt. Et accédens Iesus locútus est eis dicens: «Data est mihi omnis potéstas in cælo et in terra. Eúntes ergo docéte omnes gentes, baptizántes eos in nómine Patris et Fílii et Spíritus Sancti, docéntes eos serváre ómnia, quæcúmque mandávi vobis. Et ecce ego vobíscum sum ómnibus diébus usque ad consummatiónem sǽculi».",
+        "p": true
        }
       ]
      },
@@ -27636,6 +27963,18 @@
        {
         "t": "In illo tempore: Dixit Iesus discipulis suis: “Sic scriptum est, Christum pati et resurgere a mortuis die tertia, et praedicari in nomine eius paenitentiam in remissionem peccatorum in omnes gentes, incipientibus ab Ierusalem.",
         "estrofa": true,
+        "p": true
+       },
+       {
+        "t": "Vos estis testes horum.",
+        "p": true
+       },
+       {
+        "t": "“Et ecce ego mitto promissum Patris mei in vos; vos autem sedete in civitate, quoadusque induamini virtutem ex alto”.",
+        "p": true
+       },
+       {
+        "t": "Eduxit autem eos foras usque in Bethaniam et, elevatis manibus suis, benedixit eis. Et factum est, dum benediceret illis, recessit ab eis et ferebatur in caelum. Et ipsi adoraverunt eum et regressi sunt in Ierusalem cum gaudio magno et erant semper in templo benedicentes Deum.",
         "p": true
        }
       ],
@@ -27799,6 +28138,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Fac nos, omnípotens Deus, sanctis exsultáre gáudiis, et pia gratiárum actióne lætári, quia Christi Fílii tui ascénsio est nostra provéctio, et, quo procéssit glória cápitis, eo spes vocátur et córporis.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -28753,7 +29096,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -29496,8 +29840,17 @@
         "negrita": true
        },
        {
+        "t": "Fac nos, omnípotens Deus, sanctis exsultáre gáudiis, et pia gratiárum actióne lætári, quia Christi Fílii tui ascénsio est nostra provéctio, et, quo procéssit glória cápitis, eo spes vocátur et córporis.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -30214,8 +30567,17 @@
         "negrita": true
        },
        {
+        "t": "Fac nos, omnípotens Deus, sanctis exsultáre gáudiis, et pia gratiárum actióne lætári, quia Christi Fílii tui ascénsio est nostra provéctio, et, quo procéssit glória cápitis, eo spes vocátur et córporis.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -30949,8 +31311,17 @@
         "negrita": true
        },
        {
+        "t": "Fac nos, omnípotens Deus, sanctis exsultáre gáudiis, et pia gratiárum actióne lætári, quia Christi Fílii tui ascénsio est nostra provéctio, et, quo procéssit glória cápitis, eo spes vocátur et córporis.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -31646,7 +32017,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -32032,8 +32404,13 @@
         "negrita": true
        },
        {
+        "t": "Vísita, quǽsumus, Dómine, habitatiónem istam, et omnes insídias inimíci ab ea longe repélle; ángeli tui sancti hábitent in ea, qui nos in pace custódiant; et benedíctio tua sit super nos semper. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -32047,7 +32424,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -32671,6 +33049,18 @@
         "t": "Caríssimi: Vidéte qualem caritátem dedit nobis Pater, ut fílii Dei nominémur, et sumus! Propter hoc mundus non cognóscit nos, quia non cognóvit eum. Caríssimi, nunc fílii Dei sumus, et nondum manifestátum est quid érimus; scimus quóniam, cum ipse apparúerit, símiles ei érimus; quóniam vidébimus eum, sícuti est.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Et omnis, qui habet spem hanc in eo, puríficat se, sicut ille purus est. Omnis, qui facit peccátum, et iniquitátem facit, quia peccátum est iníquitas. Et scitis quóniam ille appáruit, ut peccáta tólleret, et peccátum in eo non est. Omnis, qui in eo manet, non peccat; omnis, qui peccat, non vidit eum nec novit eum.",
+        "p": true
+       },
+       {
+        "t": "Filíoli, nemo vos sedúcat. Qui facit iustítiam, iustus est, sicut ille iustus est; qui facit peccátum, ex Diábolo est, quóniam a princípio Diábolus peccat. Propter hoc appáruit Fílius Dei, ut dissólvat ópera Diáboli. Omnis, qui natus est ex Deo, peccátum non facit, quóniam semen ipsíus in eo manet; et non potest peccáre, quóniam ex Deo natus est.",
+        "p": true
+       },
+       {
+        "t": "In hoc manifésti sunt fílii Dei et fílii Diáboli: omnis, qui non facit iustítiam, non est ex Deo, et qui non díligit fratrem suum.",
+        "p": true
        }
       ]
      },
@@ -32698,6 +33088,30 @@
         "t": "Sicut in sollemnitáte Pascháli resurréctio Dómini fuit nobis causa lætándi, ita ascénsio eius in cælos præséntium nobis est matéria gaudiórum, recoléntibus illum diem et rite venerántibus, quo natúræ nostræ humílitas in Christo super omnem cæli milítiam, super omnes órdines angelórum et ultra ómnium altitúdinem potestátum, ad Dei Patris est provécta conséssum. Quo órdine óperum divinórum nos fundáti, nos ædificáti sumus, ut mirabílior fíeret grátia Dei, cum remótis a conspéctu hóminum, quæ mérito reveréntiam sui sentiebántur indícere, fides non defíceret, spes non fluctuáret, cáritas non tepésceret.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Magnárum hic vigor est méntium, et valde fidélium lumen est animárum, incunctánter crédere quæ corpóreo non vidéntur intúitu, et ibi fígere desidérium, quo néqueas inférre conspéctum. Hæc autem píetas unde in nostris córdibus nascerétur, aut quómodo quisquam iustificarétur per fidem, si in iis tantum salus nostra consísteret, quæ obtútibus subiacérent?",
+        "p": true
+       },
+       {
+        "t": "Quod ítaque Redemptóris nostri conspícuum fuit, in sacraménta transívit; et ut fides excelléntior esset ac fírmior, visióni doctrína succéssit, cuius auctoritátem supérnis illumináta rádiis credéntium corda sequeréntur.",
+        "p": true
+       },
+       {
+        "t": "Hanc fidem, ascensióne Dómini auctam et Spíritus Sancti múnere roborátam, non víncula, non cárceres, non exsília, non fames, non ignis, non laniátus ferárum, nec exquisíta persequéntium crudelitátibus supplícia terruérunt. Pro hac fide per univérsum mundum non solum viri sed étiam féminæ, nec tantum impúbes púeri sed étiam téneræ vírgines usque ad effusiónem sui sánguinis decertárunt. Hæc fides dæmónia eiécit, ægritúdines dépulit, mórtuos suscitávit.",
+        "p": true
+       },
+       {
+        "t": "Unde et ipsi beáti Apóstoli, qui tot miráculis confirmáti, tot sermónibus erudíti, atrocitátem tamen domínicæ passiónis expáverant et veritátem resurrectiónis eius non sine hæsitatióne suscéperant, tantum de ascensióne Dómini profecérunt, ut quidquid illis prius intúlerat metum, verterétur in gáudium. Totam enim contemplatiónem ánimi in divinitátem ad Patris déxteram considéntis eréxerant; nec iam corpóreæ visiónis tardabántur obiéctu, quo minus in id áciem mentis inténderent, quod nec a Patre descendéndo abfúerat, nec a discípulis ascendéndo discésserat.",
+        "p": true
+       },
+       {
+        "t": "Tunc ígitur, dilectíssimi, Fílius hóminis, Dei Fílius excelléntius sacratiúsque innótuit, cum in patérnæ maiestátis glóriam se recépit, et ineffábili modo cœpit esse divinitáte præséntior, qui factus est humanitáte longínquior.",
+        "p": true
+       },
+       {
+        "t": "Tunc ad æquálem Patri Fílium erudítior fides gressu mentis cœpit accédere, et contrectatióne in Christo corpóreæ substántiæ, qua Patre minor est, non egére; quóniam glorificáti córporis manénte natúra, eo fides credéntium vocabátur, ubi non carnáli manu, sed spiritáli intelléctu par Genitóri Unigénitus tangerétur.",
+        "p": true
        }
       ]
      },
@@ -32722,6 +33136,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Deus, qui ad ætérnam vitam in Christi resurrectióne nos réparas, érige nos ad consedéntem in déxtera tua nostræ salútis auctórem, ut, cum in maiestáte sua Salvátor noster advénerit, quos fecísti baptísmo renásci, fácias beáta immortalitáte vestíri.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -33759,7 +34177,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -34216,8 +34635,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui ad ætérnam vitam in Christi resurrectióne nos réparas, érige nos ad consedéntem in déxtera tua nostræ salútis auctórem, ut, cum in maiestáte sua Salvátor noster advénerit, quos fecísti baptísmo renásci, fácias beáta immortalitáte vestíri.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -34967,8 +35395,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui ad ætérnam vitam in Christi resurrectióne nos réparas, érige nos ad consedéntem in déxtera tua nostræ salútis auctórem, ut, cum in maiestáte sua Salvátor noster advénerit, quos fecísti baptísmo renásci, fácias beáta immortalitáte vestíri.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -35735,8 +36172,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui ad ætérnam vitam in Christi resurrectióne nos réparas, érige nos ad consedéntem in déxtera tua nostræ salútis auctórem, ut, cum in maiestáte sua Salvátor noster advénerit, quos fecísti baptísmo renásci, fácias beáta immortalitáte vestíri.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -36423,7 +36869,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -36824,8 +37271,13 @@
         "negrita": true
        },
        {
+        "t": "Concéde nos, omnípotens Deus, ita sepúlto Unigénito tuo fidéliter inhærére, ut cum ipso in novitáte vitæ resúrgere mereámur. Qui vivit et regnat in sæcula sæculórum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -36839,7 +37291,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -37688,6 +38141,14 @@
         "t": "Caríssimi: Hæc est annuntiátio, quam audístis ab inítio, ut diligámus altérutrum. Non sicut Cain: ex Malígno erat et occídit fratrem suum. Et propter quid occídit eum? Quóniam ópera eius malígna erant, fratris autem eius iusta.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Nolíte mirári, fratres, si odit vos mundus. Nos scimus quóniam transívimus de morte in vitam, quóniam dilígimus fratres; qui non díligit, manet in morte. Omnis, qui odit fratrem suum, homicída est, et scitis quóniam omnis homicída non habet vitam ætérnam in semetípso manéntem.",
+        "p": true
+       },
+       {
+        "t": "In hoc nóvimus caritátem, quóniam ille pro nobis ánimam suam pósuit; et nos debémus pro frátribus ánimas pónere. Qui habúerit substántiam mundi et víderit fratrem suum necésse habére et cláuserit víscera sua ab eo, quómodo cáritas Dei manet in eo?",
+        "p": true
        }
       ]
      },
@@ -37717,20 +38178,36 @@
         "p": true
        },
        {
-        "t": "Séquere me",
-        "otro": "i"
+        "t": "Ista significáta est per apóstolum Petrum, illa per Ioánnem. Tota hic ágitur ista usque in huius sǽculi finem, et illic ínvenit finem; différtur illa complénda post huius sǽculi finem, sed in futúro sǽculo non habet finem. Ideo dícitur huic: Séquere me; de illo autem: Sic eum volo manére, donec véniam, quid ad te? Tu me séquere.",
+        "p": true
        },
        {
-        "t": "Sic eum volo manére, donec véniam, quid ad te? Tu me séquere.",
-        "otro": "i"
+        "t": "Tu me séquere per imitatiónem perferéndi temporália mala; ille máneat, donec sempitérna vénio redditúrus bona. Quod apértius ita dici potest: Perfécta me sequátur áctio, informáta meæ passiónis exémplo; inchoáta vero contemplátio máneat, donec vénio, perficiénda, cum vénero.",
+        "p": true
        },
        {
-        "t": "Volo eum manére, donec véniam,",
-        "otro": "i"
+        "t": "Séquitur enim Christum, pervéniens usque ad mortem, pia plenitúdo patiéntiæ; manet autem, donec véniat Christus, tunc manifestánda plenitúdo sciéntiæ. Hic quippe tolerántur mala huius mundi in terra moriéntium, ibi videbúntur bona Dómini in terra vivéntium.",
+        "p": true
        },
        {
-        "t": "Tu me séquere",
-        "otro": "i"
+        "t": "Quod enim ait: Volo eum manére, donec véniam, non sic intellegéndum est quasi díxerit, remanére vel permanére; sed, exspectáre; quóniam quod per eum significátur, non útique nunc, sed, cum vénerit Christus, implébitur. Quod autem per hunc significátur, cui dictum est: Tu me séquere, nisi nunc agátur, non perveniétur ad illud quod exspectátur.",
+        "p": true
+       },
+       {
+        "t": "Nemo tamen istos insígnes Apóstolos séparet. Et in eo quod significábat Petrus, ambo erant; et in eo quod significábat Ioánnes, ambo futúri erant. Significándo, sequebátur iste, manébat ille; credéndo autem, ambo mala præséntia huius misériæ tolerábant, ambo futúra bona illíus beatitúdinis exspectábant.",
+        "p": true
+       },
+       {
+        "t": "Nec ipsi soli, sed univérsa hoc facit sancta Ecclésia, sponsa Christi, ab istis tentatiónibus eruénda, in illa felicitáte servánda. Quas duas vitas Petrus et Ioánnes figuravérunt, sínguli síngulas; verum et in hac temporáliter ambulavérunt ambo per fidem, et illa in ætérnum fruéntur ambo per spéciem.",
+        "p": true
+       },
+       {
+        "t": "Omnibus ígitur sanctis ad Christi corpus inseparabíliter pertinéntibus, propter huius vitæ procellosíssimæ gubernáculum, ad ligánda et solvénda peccáta claves regni cælórum primus Apostolórum Petrus accépit; eisdémque ómnibus sanctis, propter vitæ illíus secretíssimæ quietíssimum sinum, super pectus Christi Ioánnes evangelísta discúbuit.",
+        "p": true
+       },
+       {
+        "t": "Quóniam nec iste solus, sed univérsa Ecclésia ligat solvítque peccáta; nec ille in princípio Verbum Deum apud Deum, et cétera de Christi divinitáte, et de totíus divinitátis trinitáte atque unitáte sublímia, quæ in illo regno fácie ad fáciem contemplánda, nunc autem, donec véniat Dóminus, in spéculo atque in ænígmate contuénda sunt, quæ prædicándo ructáret, de fonte domínici péctoris solus bibit; sed ipse Dóminus ipsum Evangélium, pro sua cuiúsque capacitáte ómnibus suis bibéndum, toto terrárum orbe diffúdit.",
+        "p": true
        }
       ]
      },
@@ -37755,6 +38232,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Deus, cuius Fílius, ad cælos ascéndens, Apóstolis Sanctum Spíritum dignátus est pollicéri, præsta, quǽsumus, ut, sicut illi multifária doctrínæ cæléstis múnera percepérunt, ita nobis quoque spiritália dona concédas.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -38775,7 +39256,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -39525,8 +40007,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, cuius Fílius, ad cælos ascéndens, Apóstolis Sanctum Spíritum dignátus est pollicéri, præsta, quǽsumus, ut, sicut illi multifária doctrínæ cæléstis múnera percepérunt, ita nobis quoque spiritália dona concédas.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -40250,8 +40741,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, cuius Fílius, ad cælos ascéndens, Apóstolis Sanctum Spíritum dignátus est pollicéri, præsta, quǽsumus, ut, sicut illi multifária doctrínæ cæléstis múnera percepérunt, ita nobis quoque spiritália dona concédas.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -40992,8 +41492,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, cuius Fílius, ad cælos ascéndens, Apóstolis Sanctum Spíritum dignátus est pollicéri, præsta, quǽsumus, ut, sicut illi multifária doctrínæ cæléstis múnera percepérunt, ita nobis quoque spiritália dona concédas.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -41717,7 +42226,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -42095,8 +42605,13 @@
         "negrita": true
        },
        {
+        "t": "Vísita nos, quǽsumus, Dómine, hac nocte præsénti, ut, dilúculo tua virtúte surgéntes, de resurrectióne Christi tui gaudére valeámus. Qui vivit et regnat in sæcula sæculórum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -42110,7 +42625,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -42741,6 +43257,10 @@
         "t": "Filíoli, non diligámus verbo nec lingua sed in ópere et veritáte. In hoc cognoscémus quóniam ex veritáte sumus, et in conspéctu eius placábimus corda nostra, quóniam si reprehénderit nos cor, maior est Deus corde nostro et cognóscit ómnia. Caríssimi, si cor nostrum non reprehénderit nos, fidúciam habémus ad Deum et, quodcúmque petiérimus, accípimus ab eo, quóniam mandáta eius custodímus et ea, quæ sunt plácita coram eo, fácimus.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Et hoc est mandátum eius, ut credámus nómini Fílii eius Iesu Christi et diligámus altérutrum, sicut dedit mandátum nobis. Et, qui servat mandáta eius, in ipso manet, et ipse in eo; et in hoc cognóscimus quóniam manet in nobis, ex Spíritu, quem nobis dedit.",
+        "p": true
        }
       ]
      },
@@ -42770,32 +43290,28 @@
         "p": true
        },
        {
-        "t": "Una est colúmba mea, perfécta mea. Unica est matri suæ, elécta illi quæ péperit eam",
-        "otro": "i"
+        "t": "Nam huiúsmodi quiddam ex verbis sequéntibus intellégimus, cum ait: Una est colúmba mea, perfécta mea. Unica est matri suæ, elécta illi quæ péperit eam.",
+        "p": true
        },
        {
-        "t": "Ut omnes,",
-        "otro": "i"
+        "t": "Atque hoc in Evangélio per vocem Dómini nobis illústrius declarátur. Etenim ille, benedicéndo, vim omnem discípulis suis cónferens, cum ália bona verbis illis, quibus ad Patrem útitur, tríbuit dignis; tum étiam addit hoc, quod bonórum caput ac summa est, non ámplius eos, in diversitáte quadam electiónum, multiplíciter divísos fore in faciéndo de bono iudício, sed omnes unum futúros, uni illi ac soli bono agglutinátos; ita ut, per unitátem Sancti Spíritus (quemádmodum Apóstolus ait) pacis constrícti nexu, corpus unum fiant omnes et unus spíritus, per spem unam, in quam vocáti sint.",
+        "p": true
        },
        {
-        "t": ", sint unum, quemádmodum tu, mi Pater, in me es, et ego in te; ut et ipsi unum sint in nobis.",
-        "otro": "i"
+        "t": "Enimvéro réctius fecérimus, si de verbo ad verbum ipsas Evangélii divínas sane voces apposuérimus. Ut omnes, inquit, sint unum, quemádmodum tu, mi Pater, in me es, et ego in te; ut et ipsi unum sint in nobis.",
+        "p": true
        },
        {
-        "t": "Glóriam, quam dedísti mihi, dedi eis",
-        "otro": "i"
+        "t": "Huius autem unitátis nexus est glória. Spíritum autem Sanctum appellári glóriam, nemo prudentiórum negábit, si ipsa Dómini verba intuébitur, cum ait: Glóriam, quam dedísti mihi, dedi eis. Revéra enim eándem discípulis glóriam dedit, cum ad eos díceret: Accípite Spíritum Sanctum.",
+        "p": true
        },
        {
-        "t": "Accípite Spíritum Sanctum",
-        "otro": "i"
+        "t": "Atque hanc glóriam, quam tamen semper hábuit, prius étiam quam mundus hic exsísteret, accépit id témporis, cum natúram humánam indúeret; qua quidem per Spíritum Sanctum glorificáta, quidquid huic cognátum est glóriæ, Spíritus fit párticeps, facto ab Apóstolis inítio.",
+        "p": true
        },
        {
-        "t": "Glóriam, quam dedísti mihi, dedi eis; ut sint unum, quemádmodum nos unum sumus; ego in eis et tu in me, ut sint consummáti in unum",
-        "otro": "i"
-       },
-       {
-        "t": "Una est colúmba mea, perfécta mea.",
-        "otro": "i"
+        "t": "Hanc ob causam ait: Glóriam, quam dedísti mihi, dedi eis; ut sint unum, quemádmodum nos unum sumus; ego in eis et tu in me, ut sint consummáti in unum. Quámobrem is, qui de púero in virum perféctum augescéndo evásit, ad mensúram ætátis illíus pervénit, quam mente intellégimus; dénique capax glóriæ Spíritus Sancti per statum a vítiis ómnibus aliénum, perque puritátem; hic ígitur est perfécta illa colúmba, ad quam sponsus réspicit, cum ait: Una est colúmba mea, perfécta mea.",
+        "p": true
        }
       ]
      },
@@ -43174,6 +43690,18 @@
         "t": "Cum esset sero die illa prima sabbatórum, et fores essent clausæ, ubi erant discípuli propter metum Iudæórum, venit Iesus et stetit in médio et dicit eis: «Pax vobis!». Et hoc cum dixísset, osténdit eis manus et latus. Gavísi sunt ergo discípuli, viso Dómino. Dixit ergo eis íterum: «Pax vobis! Sicut misit me Pater, et ego mitto vos». Et cum hoc dixísset, insufflávit et dicit eis: «Accípite Spíritum Sanctum. Quorum remiséritis peccáta, remíssa sunt eis; quorum retinuéritis, reténta sunt».",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Thomas autem, unus ex Duódecim, qui dícitur Dídymus, non erat cum eis, quando venit Iesus. Dicébant ergo ei álii discípuli: «Vídimus Dóminum!». Ille autem dixit eis: «Nisi vídero in mánibus eius signum clavórum et mittam dígitum meum in signum clavórum et mittam manum meam in latus eius, non credam».",
+        "p": true
+       },
+       {
+        "t": "Et post dies octo íterum erant discípuli eius intus, et Thomas cum eis. Venit Iesus iánuis clausis et stetit in médio et dixit: «Pax vobis!». Deínde dicit Thomæ: «Infer dígitum tuum huc et vide manus meas et affer manum tuam et mitte in latus meum, et noli fíeri incrédulus sed fidélis!». Respóndit Thomas et dixit ei: «Dóminus meus et Deus meus!». Dicit ei Iesus: «Quia vidísti me, credidísti. Beáti, qui non vidérunt et credidérunt!».",
+        "p": true
+       },
+       {
+        "t": "Multa quidem et ália signa fecit Iesus in conspéctu discipulórum suórum, quæ non sunt scripta in libro hoc; hæc autem scripta sunt, ut credátis quia Iesus est Christus Fílius Dei, et ut credéntes vitam habeátis in nómine eius.",
+        "p": true
        }
       ],
       "rubricas": [
@@ -43336,6 +43864,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Supplicatiónibus nostris, Dómine, adésto propítius, ut, sicut humáni géneris Salvatórem tecum in tua crédimus maiestáte, ita usque ad consummatiónem sǽculi manére nobíscum, sicut ipse promísit, sentiámus.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -44319,7 +44851,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -45078,8 +45611,17 @@
         "negrita": true
        },
        {
+        "t": "Supplicatiónibus nostris, Dómine, adésto propítius, ut, sicut humáni géneris Salvatórem tecum in tua crédimus maiestáte, ita usque ad consummatiónem sǽculi manére nobíscum, sicut ipse promísit, sentiámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -45812,8 +46354,17 @@
         "negrita": true
        },
        {
+        "t": "Supplicatiónibus nostris, Dómine, adésto propítius, ut, sicut humáni géneris Salvatórem tecum in tua crédimus maiestáte, ita usque ad consummatiónem sǽculi manére nobíscum, sicut ipse promísit, sentiámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -46563,8 +47114,17 @@
         "negrita": true
        },
        {
+        "t": "Supplicatiónibus nostris, Dómine, adésto propítius, ut, sicut humáni géneris Salvatórem tecum in tua crédimus maiestáte, ita usque ad consummatiónem sǽculi manére nobíscum, sicut ipse promísit, sentiámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -47282,7 +47842,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -47668,8 +48229,13 @@
         "negrita": true
        },
        {
+        "t": "Vox nostra te, Dómine, humíliter deprecétur, ut, domínicæ resurrectiónis hac die mystério celebráto, in pace tua secúri a malis ómnibus quiescámus, et in tua resurgámus laude gaudéntes. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -47683,7 +48249,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -48324,6 +48891,10 @@
         "t": "Caríssimi, nolíte omni spirítui crédere, sed probáte spíritus si ex Deo sint, quóniam multi pseudoprophétæ prodiérunt in mundum. In hoc cognóscitis Spíritum Dei: omnis spíritus, qui confitétur Iesum Christum in carne venísse, ex Deo est. Et omnis spíritus, qui non confitétur Iesum, ex Deo non est; et hoc est antichrísti, quod audístis quóniam venit, et nunc iam in mundo est. Vos ex Deo estis, filíoli, et vicístis eos, quóniam maior est, qui in vobis est, quam qui in mundo. Ipsi ex mundo sunt; ídeo ex mundo loquúntur, et mundus eos audit. Nos ex Deo sumus. Qui cognóscit Deum, audit nos; qui non est ex Deo, non audit nos. Ex hoc cognóscimus Spíritum veritátis et spíritum erróris.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Caríssimi, diligámus ínvicem, quóniam cáritas ex Deo est, et omnis, qui díligit, ex Deo natus est et cognóscit Deum. Qui non díligit, non cognóvit Deum, quóniam Deus cáritas est. In hoc appáruit cáritas Dei in nobis, quóniam Fílium suum unigénitum misit Deus in mundum, ut vivámus per eum. In hoc est cáritas, non quasi nos dilexérimus Deum, sed quóniam ipse diléxit nos et misit Fílium suum propitiatiónem pro peccátis nostris.",
+        "p": true
        }
       ]
      },
@@ -48353,8 +48924,20 @@
         "p": true
        },
        {
-        "t": "Unicuíque vero datur manifestátio Spíritus ad id quod éxpedit.",
-        "otro": "i"
+        "t": "Ad eúndem modum et Spíritus Sanctus, cum unus sit, et uníus modi, et indivisíbilis, unicuíque grátiam prout vult dívidit. Et quemádmodum lignum áridum, aquam concípiens, gérmina emíttit; sic et ánima peccátrix, per pæniténtiam Spíritus Sancti dono dignáta, iustítiæ racémos portat. Cumque ille uníus et eiúsdem modi sit, multíplices tamen, Dei nutu et in Christi nómine, virtútes operátur.",
+        "p": true
+       },
+       {
+        "t": "Nam alteríus quidem útitur lingua ad sapiéntiam; alteríus mentem prophetía illústrat; huic fugandórum dǽmonum potestátem impértit; illi divínas Scriptúras interpretándi donum largítur. Alteríus temperántiam corróborat, álium quæ ad misericórdiam pértinent docet; álium ieiunáre et ascéticæ vitæ exercitatiónes toleráre docet, álium res córporis contémnere; álium ad martýrium prǽparat; álius in áliis, ipse vero a se numquam álius, sicut scriptum est: Unicuíque vero datur manifestátio Spíritus ad id quod éxpedit.",
+        "p": true
+       },
+       {
+        "t": "Mansuétus et lenis eius accéssus, suávis et fragrans eius sénsio, iugum levíssimum. Advéntum eius antevértunt præmicántes lúminis ac sciéntiæ rádii. Germáni tutóris viscéribus prǽditus venit: venit namque salváre, sanáre, docére, monére, roboráre, consolári, illustráre mentem, primum eius, a quo suscípitur, dehinc, eius ópera, aliórum.",
+        "p": true
+       },
+       {
+        "t": "Et quemádmodum is qui in ténebris prius versabátur, sole póstea derepénte conspécto, lucem in córporis óculo récipit, quæque ántea non vidébat perspícue cernit; ita et qui Spíritus Sancti dono dignus hábitus est, ánimo illuminátur, et supra hóminem evéctus videt quæ nesciébat.",
+        "p": true
        }
       ]
      },
@@ -48379,6 +48962,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Advéniat nobis, quǽsumus, Dómine, virtus Spíritus Sancti, qua voluntátem tuam fidéli mente retinére et pia conversatióne deprómere valeámus.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -49345,7 +49932,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -50163,8 +50751,17 @@
         "negrita": true
        },
        {
+        "t": "Advéniat nobis, quǽsumus, Dómine, virtus Spíritus Sancti, qua voluntátem tuam fidéli mente retinére et pia conversatióne deprómere valeámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -50676,8 +51273,17 @@
         "negrita": true
        },
        {
+        "t": "Advéniat nobis, quǽsumus, Dómine, virtus Spíritus Sancti, qua voluntátem tuam fidéli mente retinére et pia conversatióne deprómere valeámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -51486,8 +52092,17 @@
         "negrita": true
        },
        {
+        "t": "Advéniat nobis, quǽsumus, Dómine, virtus Spíritus Sancti, qua voluntátem tuam fidéli mente retinére et pia conversatióne deprómere valeámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -52181,7 +52796,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -52586,8 +53202,13 @@
         "negrita": true
        },
        {
+        "t": "Quiétem, Dómine, corpóribus nostris tríbue salutárem, et quæ fúdimus hódie sémina per labórem, fac ut messem gérminent sempitérnam. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -52601,7 +53222,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -53358,6 +53980,14 @@
         "t": "Caríssimi, si sic Deus diléxit nos, et nos debémus altérutrum dilígere. Deum nemo vidit umquam; si diligámus ínvicem, Deus in nobis manet, et cáritas eius in nobis consummáta est. In hoc cognóscimus quóniam in ipso manémus, et ipse in nobis, quóniam de Spíritu suo dedit nobis. Et nos vídimus et testificámur quóniam Pater misit Fílium salvatórem mundi. Quisque conféssus fúerit: «Iesus est Fílius Dei», Deus in ipso manet, et ipse in Deo. Et nos, qui credídimus, nóvimus caritátem, quam habet Deus in nobis. Deus cáritas est, et qui manet in caritáte, in Deo manet, et Deus in eo manet.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "In hoc consummáta est cáritas nobíscum, ut fidúciam habeámus in die iudícii, quia sicut ille est, et nos sumus in hoc mundo. Timor non est in caritáte, sed perfécta cáritas foras mittit timórem, quóniam timor pœnam habet; qui autem timet, non est consummátus in caritáte.",
+        "p": true
+       },
+       {
+        "t": "Nos dilígimus, quóniam ipse prior diléxit nos. Si quis díxerit: «Díligo Deum», et fratrem suum óderit, mendax est; qui enim non díligit fratrem suum, quem videt, Deum, quem non videt, non potest dilígere. Et hoc mandátum habémus ab eo, ut, qui díligit Deum, díligat et fratrem suum.",
+        "p": true
        }
       ]
      },
@@ -53385,6 +54015,38 @@
         "t": "Quis, audítis Spíritus appellatiónibus, ánimo non erígitur, et ad suprémam natúram cogitatiónem non attóllit? Nam Spíritus Dei dictus est, et Spíritus veritátis, qui ex Patre procédit: Spíritus rectus, Spíritus principális, Spíritus Sanctus, própria est illíus ac peculiáris appellátio.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Ad quem ómnia convertúntur quæ egent sanctificatióne: quem ómnia áppetunt iuxta virtútem vivéntia, cuius afflátu velut irrigántur et adiuvántur, ut pervéniant ad próprium suum naturalémque finem.",
+        "p": true
+       },
+       {
+        "t": "Orígo sanctificatiónis, lux intellegíbilis; univérsæ poténtiæ rationáli ad veritátis investigatiónem velut illustratiónem quandam ex sese præbens.",
+        "p": true
+       },
+       {
+        "t": "Natúra inaccéssus, sed qui capi possit ob benignitátem; ómnia quidem implens virtúte, sed solis iis qui digni sunt communicábilis, quibus sese non eádem impértit mensúra, sed iuxta proportiónem fídei dispertítur vim suam.",
+        "p": true
+       },
+       {
+        "t": "Simplex esséntia, várius poténtiis; qui síngulis totus adest, et totus ubíque est. Qui sic divíditur, ut ipse nihil patiátur; cuius sic omnes partícipes sunt, ut ipse máneat ínteger, rádii soláris in morem, cuius benefícium fruénti tamquam uni adest, et tamen terram ac mare illústrat, miscetúrque áeri.",
+        "p": true
+       },
+       {
+        "t": "Sic et Spíritus Sanctus, unicuíque capácium cum adsit quasi soli, sufficiéntem ómnibus grátiam ac íntegram infúndit: quo fruúntur quæcúmque de illo partícipant, quantum ipsis fas est natúra, non quantum ille potest.",
+        "p": true
+       },
+       {
+        "t": "Per hunc corda sustollúntur in altum, manu ducúntur infírmi, proficiéntes perficiúntur. Hic eis qui ab omni sorde purgáti sunt illucéscens, per communiónem, quam cum ipso habent, spiritáles reddit.",
+        "p": true
+       },
+       {
+        "t": "Et quemádmodum córpora nítida perlucidáque, contácta rádio, fiunt et ipsa supra modum spléndida, et álium fulgórem ex sese profúndunt, ita ánimæ, quæ Spíritum ferunt, illustrantúrque a Spíritu, fiunt et ipsæ spiritáles, et in álios grátiam emíttunt.",
+        "p": true
+       },
+       {
+        "t": "Hinc futurórum præsciéntia, mysteriórum intellegéntia, occultórum comprehénsio, donórum distributiónes, cæléstis conversátio, cum ángelis choréa: hinc gáudium numquam finiéndum, hinc in Deo perseverántia, hinc similitúdo cum Deo, et, quo nihil sublímius éxpeti potest, hinc est ut deus fias.",
+        "p": true
        }
       ]
      },
@@ -53409,6 +54071,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Præsta, quǽsumus, omnípotens et miséricors Deus, ut Spíritus Sanctus advéniens templum nos glóriæ suæ dignánter inhabitándo perfíciat.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -54318,7 +54984,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -55103,8 +55770,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens et miséricors Deus, ut Spíritus Sanctus advéniens templum nos glóriæ suæ dignánter inhabitándo perfíciat.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -55583,8 +56259,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens et miséricors Deus, ut Spíritus Sanctus advéniens templum nos glóriæ suæ dignánter inhabitándo perfíciat.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -56360,8 +57045,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens et miséricors Deus, ut Spíritus Sanctus advéniens templum nos glóriæ suæ dignánter inhabitándo perfíciat.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -57013,7 +57707,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -57383,8 +58078,13 @@
         "negrita": true
        },
        {
+        "t": "Noctem istam, quǽsumus, Dómine, benígnus illúmina, et ita fac in pace nos tuos fámulos obdormíre, ut læti ad novi diéi claritátem in tuo nómine suscitémur. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -57398,7 +58098,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -58131,6 +58832,10 @@
         "t": "Caríssimi: Omnis, qui credit quóniam Iesus est Christus, ex Deo natus est; et omnis, qui díligit Deum, qui génuit, díligit et eum qui natus est ex eo. In hoc cognóscimus quóniam dilígimus natos Dei, cum Deum diligámus et mandáta eius faciámus. Hæc est enim cáritas Dei, ut mandáta eius servémus; et mandáta eius grávia non sunt, quóniam omne, quod natum est ex Deo, vincit mundum; et hæc est victória, quæ vicit mundum: fides nostra.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Quis est qui vincit mundum, nisi qui credit quóniam Iesus est Fílius Dei? Hic est qui venit per aquam et sánguinem, Iesus Christus; non in aqua solum sed in aqua et in sánguine. Et Spíritus est, qui testificátur, quóniam Spíritus est véritas. Quia tres sunt qui testificántur: Spíritus et aqua et sanguis; et hi tres in unum sunt. Si testimónium hóminum accípimus, testimónium Dei maius est, quóniam hoc est testimónium Dei, quia testificátus est de Fílio suo. Qui credit in Fílium Dei, habet testimónium in se. Qui non credit Deo, mendácem facit eum, quóniam non crédidit in testimónium, quod testificátus est Deus de Fílio suo. Et hoc est testimónium, quóniam vitam ætérnam dedit nobis Deus, et hæc vita in Fílio eius est. Qui habet Fílium, habet vitam; qui non habet Fílium Dei, vitam non habet.",
+        "p": true
        }
       ]
      },
@@ -58160,16 +58865,32 @@
         "p": true
        },
        {
-        "t": "semel tráditæ sanctis fídei",
-        "otro": "i"
+        "t": "Spíritus in Ecclésia et in córdibus fidélium tamquam in templo hábitat, in eísque orat et testimónium adoptiónis filiórum reddit. Ecclésiam, quam in omnem veritátem indúcit et in communióne et ministratióne uníficat, divérsis donis hierárchicis et charismáticis ínstruit ac dírigit, et frúctibus suis adórnat.",
+        "p": true
        },
        {
-        "t": "dívidens síngulis prout vult",
-        "otro": "i"
+        "t": "Virtúte Evangélii iuvenéscere facit Ecclésiam eámque perpétuo rénovat et ad consummátam cum Sponso suo uniónem perdúcit. Nam Spíritus et Sponsa ad Dóminum Iesum dicunt: «Veni!».",
+        "p": true
        },
        {
-        "t": "Unicuíque datur manifestátio Spíritus ad utilitátem.",
-        "otro": "i"
+        "t": "Sic appáret univérsa Ecclésia sícuti de unitáte Patris et Fílii et Spíritus Sancti plebs adunáta.",
+        "p": true
+       },
+       {
+        "t": "Univérsitas fidélium, qui unctiónem habent a Spíritu Sancto, in credéndo falli nequit, atque hanc suam peculiárem proprietátem mediánte supernaturáli sensu fídei totíus pópuli maniféstat, cum ab epíscopis usque ad extrémos láicos fidéles universálem suum consénsum de rebus fídei et morum éxhibet.",
+        "p": true
+       },
+       {
+        "t": "Illo enim sensu fídei, qui a Spíritu veritátis excitátur et sustentátur, pópulus Dei sub ductu sacri magistérii, cui fidéliter óbsequens, iam non verbum hóminum, sed vere áccipit verbum Dei, semel tráditæ sanctis fídei indefectibíliter adhǽret, recto iudício in eam profúndius pénetrat eámque in vita plénius ápplicat.",
+        "p": true
+       },
+       {
+        "t": "Idem prætérea Spíritus Sanctus non tantum per sacraménta et ministéria pópulum Dei sanctíficat et ducit eúmque virtútibus ornat, sed, dona sua dívidens síngulis prout vult, inter omnis órdinis fidéles distríbuit grátias quoque speciáles, quibus illos aptos et promptos reddit ad suscipiénda vária ópera vel offícia, pro renovatióne et amplióre ædificatióne Ecclésiæ profícua, secúndum illud: Unicuíque datur manifestátio Spíritus ad utilitátem.",
+        "p": true
+       },
+       {
+        "t": "Quæ charísmata, sive claríssima, sive étiam simplicióra et látius diffúsa, cum sint necessitátibus Ecclésiæ appríme accommodáta et utília, cum gratiárum actióne ac consolatióne accipiénda sunt.",
+        "p": true
        }
       ]
      },
@@ -58194,6 +58915,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Ecclésiæ tuæ, miséricors Deus, concéde propítius, ut, Sancto Spíritu congregáta, toto sit corde tibi devóta, et pura voluntáte concórdet.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -59174,7 +59899,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -59918,8 +60644,17 @@
         "negrita": true
        },
        {
+        "t": "Ecclésiæ tuæ, miséricors Deus, concéde propítius, ut, Sancto Spíritu congregáta, toto sit corde tibi devóta, et pura voluntáte concórdet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -60637,8 +61372,17 @@
         "negrita": true
        },
        {
+        "t": "Ecclésiæ tuæ, miséricors Deus, concéde propítius, ut, Sancto Spíritu congregáta, toto sit corde tibi devóta, et pura voluntáte concórdet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -61076,8 +61820,17 @@
         "negrita": true
        },
        {
+        "t": "Ecclésiæ tuæ, miséricors Deus, concéde propítius, ut, Sancto Spíritu congregáta, toto sit corde tibi devóta, et pura voluntáte concórdet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -61786,7 +62539,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -62180,8 +62934,13 @@
         "negrita": true
        },
        {
+        "t": "Dómine Iesu Christe, qui iugum suáve te sequéntibus onúsque leve pérhibes mitis et húmilis, dignáre huius diéi vota et ópera nostra suscípere, et quiétem tribúere, qua tuo nos fácias servítio promptióres. Qui vivis et regnas in sæcula sæculórum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -62195,7 +62954,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -62904,6 +63664,18 @@
         "t": "Caríssimi: Hæc scripsi vobis, ut sciátis quóniam vitam habétis ætérnam, qui créditis in nomen Fílii Dei.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Et hæc est fidúcia, quam habémus ad eum, quia si quid petiérimus secúndum voluntátem eius, audit nos. Et si scimus quóniam audit nos, quidquid petiérimus, scimus quóniam habémus petitiónes, quas postulávimus ab eo.",
+        "p": true
+       },
+       {
+        "t": "Si quis videt fratrem suum peccáre peccátum non ad mortem, petet, et dabit ei Deus vitam, peccántibus non ad mortem. Est peccátum ad mortem; non pro illo dico, ut roget. Omnis iniustítia peccátum est, et est peccátum non ad mortem.",
+        "p": true
+       },
+       {
+        "t": "Scimus quóniam omnis, qui natus est ex Deo, non peccat, sed ille qui génitus est ex Deo, consérvat eum, et Malígnus non tangit eum. Scimus quóniam ex Deo sumus, et mundus totus in Malígno pósitus est. Et scimus quóniam Fílius Dei venit et dedit nobis sensum, ut cognoscámus eum, qui verus est; et sumus in eo, qui verus est, in Fílio eius Iesu Christo. Hic est qui verus est, Deus et vita ætérna. Filíoli, custodíte vos a simulácris!",
+        "p": true
        }
       ]
      },
@@ -62933,20 +63705,28 @@
         "p": true
        },
        {
-        "t": "Et insíliet,",
-        "otro": "i"
+        "t": "Tempus autem máxime opportúnum missióni Spíritus, et eius in nos illápsui, illud erat quod discéssum Christi nostri servatóris excépit.",
+        "p": true
        },
        {
-        "t": "super te Spíritus Dómini, et vertéris in virum álium",
-        "otro": "i"
+        "t": "Nam quámdiu Christus cum fidélibus adhuc in carne versabátur, omnis, ut reor, boni largítor eis apparébat; verum ubi ad cæléstem Patrem ascendéndi tempus et necéssitas áffuit, quómodo non oportébat eum cultóribus suis per Spíritum adésse, et per fidem in nostris córdibus habitáre, ut, ipsum habéntes in nobis, cum fidúcia clamarémus: «Abba, Pater», et ad omnem virtútem fácile currerémus, ac prætérea poténtes et invícti advérsus diáboli insídias et insúltus hóminum reperirémur, ut qui cunctipoténtem Spíritum habeámus?",
+        "p": true
        },
        {
-        "t": "Nos vero omnes, reveláta fácie glóriam Dómini speculántes, in eándem imáginem transformámur a claritáte in claritátem, tamquam a Dómini Spíritu. Dóminus autem Spíritus est.",
-        "otro": "i"
+        "t": "Quod enim in álium quendam hábitum transfórmet eos in quibus fúerit et inhabitárit Spíritus, eósque in novitátem vitæ restáuret, nonne fácile est cuívis, cum ex véteris tum novæ Scriptúræ testimóniis, osténdere?",
+        "p": true
        },
        {
-        "t": "Expedit vobis, ut ego ad cælos revértar",
-        "otro": "i"
+        "t": "Divínus quippe Sámuel, cum ad Saulem verba fáceret: Et insíliet, inquit, super te Spíritus Dómini, et vertéris in virum álium. Beátus autem Paulus: Nos vero omnes, reveláta fácie glóriam Dómini speculántes, in eándem imáginem transformámur a claritáte in claritátem, tamquam a Dómini Spíritu. Dóminus autem Spíritus est.",
+        "p": true
+       },
+       {
+        "t": "Vides ut Spíritus transfórmet quodámmodo in áliam imáginem eos in quibus inhábitat? Transfert enim fácile a rerum terrenárum sensu ad spectánda solum ea quæ sunt in cælis, et ex imbélli timiditáte ad strénuam et generosíssimam vim ánimi. Neque vero dúbium est quin ita afféctos reperiámus discípulos et sic per Spíritum confirmátos, ut persequéntium incúrsibus nequáquam vinceréntur, sed dilectióni in Christum mórdicus adhærérent.",
+        "p": true
+       },
+       {
+        "t": "Verum ígitur est quod ait Servátor: Expedit vobis, ut ego ad cælos revértar. Tempus enim illud erat descensúri Spíritus.",
+        "p": true
        }
       ]
      },
@@ -62971,6 +63751,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Spíritus tuus, quǽsumus, Dómine, spiritália nobis dona poténter infúndat, ut det nobis mentem, quæ tibi sit plácita, et aptet nos tuæ propítius voluntáti.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -63888,7 +64672,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -64746,8 +65531,17 @@
         "negrita": true
        },
        {
+        "t": "Spíritus tuus, quǽsumus, Dómine, spiritália nobis dona poténter infúndat, ut det nobis mentem, quæ tibi sit plácita, et aptet nos tuæ propítius voluntáti.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -65579,8 +66373,17 @@
         "negrita": true
        },
        {
+        "t": "Spíritus tuus, quǽsumus, Dómine, spiritália nobis dona poténter infúndat, ut det nobis mentem, quæ tibi sit plácita, et aptet nos tuæ propítius voluntáti.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -66429,8 +67232,17 @@
         "negrita": true
        },
        {
+        "t": "Spíritus tuus, quǽsumus, Dómine, spiritália nobis dona poténter infúndat, ut det nobis mentem, quæ tibi sit plácita, et aptet nos tuæ propítius voluntáti.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -67158,7 +67970,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -67509,8 +68322,13 @@
         "negrita": true
        },
        {
+        "t": "Dómine Deus noster, diúrno labóre fatigátos quiéto sopóre nos réfove, ut, tuo semper auxílio recreáti, tibi córpore simus et mente devóti. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -67524,7 +68342,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -68196,6 +69015,18 @@
         "t": "In diébus illis: Per manus apostolórum fiébant signa et prodígia multa in plebe; et erant unanímiter omnes in pórticu Salomónis. Ceterórum autem nemo audébat coniúngere se illis, sed magnificábat eos pópulus; magis autem addebántur credéntes Dómino, multitúdines virórum ac mulíerum, ita ut et in platéas efférrent infírmos et pónerent in léctulis et grabátis, ut, veniénte Petro, saltem umbra illíus obumbráret quemquam eórum. Concurrébat autem et multitúdo vicinárum civitátum Ierúsalem, afferéntes ægros et vexátos a spirítibus immúndis, qui curabántur omnes.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Exsúrgens autem princeps sacerdótum et omnes, qui cum illo erant, quæ est hǽresis sadducæórum, repléti sunt zelo et iniecérunt manus in apóstolos et posuérunt illos in custódia pública. Angelus autem Dómini per noctem apéruit iánuas cárceris et edúcens eos dixit: «Ite et stantes loquímini in templo plebi ómnia verba vitæ huius». Qui cum audíssent, intravérunt dilúculo in templum et docébant.",
+        "p": true
+       },
+       {
+        "t": "Advéniens autem princeps sacerdótum et, qui cum eo erant, convocavérunt concílium et omnes senióres filiórum Israel et misérunt in cárcerem, ut adduceréntur illi. Cum veníssent autem minístri, non invenérunt illos in cárcere; revérsi autem nuntiavérunt dicéntes: «Cárcerem invénimus clausum cum omni diligéntia et custódes stantes ad iánuas, aperiéntes autem intus néminem invénimus!». Ut audiérunt autem hos sermónes, magistrátus templi et príncipes sacerdótum ambigébant de illis quidnam fíeret illud. Advéniens autem quidam nuntiávit eis: «Ecce viri, quos posuístis in cárcere, sunt in templo stantes et docéntes pópulum».",
+        "p": true
+       },
+       {
+        "t": "Tunc ábiens magistrátus cum minístris adducébat illos, non per vim, timébant enim pópulum, ne lapidaréntur. Et cum adduxíssent illos, statuérunt in concílio. Et interrogávit eos princeps sacerdótum dicens: «Nonne præcipiéndo præcépimus vobis, ne docerétis in nómine isto? Et ecce replevístis Ierúsalem doctrína vestra et vultis indúcere super nos sánguinem hóminis istíus». Respóndens autem Petrus et apóstoli dixérunt: «Obœdíre opórtet Deo magis quam homínibus. Deus patrum nostrórum suscitávit Iesum, quem vos interemístis suspendéntes in ligno; hunc Deus Príncipem et Salvatórem exaltávit déxtera sua ad dandam pæniténtiam Israel et remissiónem peccatórum. Et nos sumus testes horum verbórum, et Spíritus Sanctus, quem dedit Deus obœdiéntibus sibi».",
+        "p": true
        }
       ]
      },
@@ -68225,68 +69056,28 @@
         "p": true
        },
        {
-        "t": "Et statuérunt",
-        "otro": "i"
+        "t": "Quid ergo? an Petrum ipsum elígere non licébat? Licébat útique; sed ne viderétur ad grátiam fácere, ábstinet. Alióquin vero nondum Spíritus párticeps erat. Et statuérunt, inquit, duos, Ioseph, qui vocabátur Bársabas, qui cognominátus est Iustus, et Matthíam. Non ipse illos státuit, sed omnes. Consílium vero ipse prótulit, osténdens non suum esse, sed iam olim in prophetía efférri. Itaque intérpres fuit, non præcéptor.",
+        "p": true
        },
        {
-        "t": "duos, Ioseph, qui vocabátur Bársabas, qui cognominátus est Iustus, et Matthíam",
-        "otro": "i"
+        "t": "Opórtet ígitur, inquit, ex his viris qui nobíscum sunt congregáti. Vide, quómodo vult illos testes oculátos fuísse, etiámsi adventúrus esset Spíritus; áttamen magnam huius rei curam habébat.",
+        "p": true
        },
        {
-        "t": "Opórtet ígitur",
-        "otro": "i"
+        "t": "Ex viris, inquit, qui nobíscum sunt congregáti, in omni témpore quo intrávit et exívit inter nos Dóminus Iesus. Signíficat ipsos habitásse cum illo, nec simplíciter fuísse discípulos. Nimírum a princípio multi sequebántur eum. Vide ígitur quómodo dicat: Erat unus ex duóbus qui audíerant a Ioánne, et secúti sunt Iesum.",
+        "p": true
        },
        {
-        "t": "ex his viris qui nobíscum sunt congregáti",
-        "otro": "i"
+        "t": "In omni témpore, inquit, quo intrávit et exívit inter nos Dóminus Iesus, incípiens a baptísmate Ioánnis. Recte étenim, quæ prius gesta fúerant, nemo nóverat edóctus, sed a Spíritu didicérunt.",
+        "p": true
        },
        {
-        "t": "Ex viris",
-        "otro": "i"
+        "t": "Usque in diem, inquit, qua assúmptus est a nobis, testem resurrectiónis eius nobíscum fíeri unum ex istis. Non dixit: Ceterórum testem; sed: Testem resurrectiónis, tantum. Nam fide dígnior erat is, qui dícere póterat: Qui edébat, bibébat et crucifíxus est, is ipse resurréxit. Itaque neque prætériti, neque sequéntis témporis, neque signórum testem esse oportébat, sed resurrectiónis tantum. Illa namque manifésta et in confésso erant; resurréctio autem clam facta fúerat, hisque solis nota erat.",
+        "p": true
        },
        {
-        "t": "qui nobíscum sunt congregáti, in omni témpore quo intrávit et exívit inter nos Dóminus Iesus",
-        "otro": "i"
-       },
-       {
-        "t": "Erat unus ex duóbus qui audíerant a Ioánne, et secúti sunt Iesum",
-        "otro": "i"
-       },
-       {
-        "t": "In omni témpore",
-        "otro": "i"
-       },
-       {
-        "t": "quo intrávit et exívit inter nos Dóminus Iesus, incípiens a baptísmate Ioánnis.",
-        "otro": "i"
-       },
-       {
-        "t": "Usque in diem",
-        "otro": "i"
-       },
-       {
-        "t": "qua assúmptus est a nobis, testem resurrectiónis eius nobíscum fíeri unum ex istis",
-        "otro": "i"
-       },
-       {
-        "t": "Testem resurrectiónis",
-        "otro": "i"
-       },
-       {
-        "t": "Tu, Dómine, qui corda nosti ómnium, osténde",
-        "otro": "i"
-       },
-       {
-        "t": "osténde",
-        "otro": "i"
-       },
-       {
-        "t": "quem elégeris",
-        "otro": "i"
-       },
-       {
-        "t": "Et dedérunt sortes eis.",
-        "otro": "i"
+        "t": "Et simul omnes precántur, dicéntes, Tu, Dómine, qui corda nosti ómnium, osténde. Tu, non nos. Opportúne córdium cognitórem vocant: ab illo enim eléctio faciénda erat, non ab áliis. Sic confidénter loquebántur, quia oportébat omníno unum éligi. Neque dixérunt: Elige, sed osténde eléctum, —quem elégeris, inquit—, sciéntes ómnia a Deo prædefiníta esse. Et dedérunt sortes eis. Nondum enim se dignos esse putábant, qui ex sese ipsi fácerent electiónem, ídeo cúpiunt áliquo signo edocéri.",
+        "p": true
        }
       ]
      },
@@ -68560,6 +69351,26 @@
         "t": "In illo témpore: Dixit Iesus discípulis suis:",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "«Sicut diléxit me Pater, et ego diléxi vos; manéte in dilectióne mea. Si præcépta mea servavéritis, manébitis in dilectióne mea, sicut ego Patris mei præcépta servávi et máneo in eius dilectióne.",
+        "p": true
+       },
+       {
+        "t": "Hæc locútus sum vobis, ut gáudium meum in vobis sit, et gáudium vestrum impleátur.",
+        "p": true
+       },
+       {
+        "t": "Hoc est præcéptum meum, ut diligátis ínvicem, sicut diléxi vos; maiórem hac dilectiónem nemo habet, ut ánimam suam quis ponat pro amícis suis.",
+        "p": true
+       },
+       {
+        "t": "Vos amíci mei estis, si fecéritis, quæ ego præcípio vobis. Iam non dico vos servos, quia servus nescit quid facit dóminus eius; vos autem dixi amícos, quia ómnia, quæ audívi a Patre meo, nota feci vobis.",
+        "p": true
+       },
+       {
+        "t": "Non vos me elegístis, sed ego elégi vos et pósui vos, ut vos eátis et fructum afferátis, et fructus vester máneat, ut quodcúmque petiéritis Patrem in nómine meo, det vobis. Hæc mando vobis, ut diligátis ínvicem».",
+        "p": true
        }
       ],
       "rubricas": [
@@ -68722,6 +69533,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Deus, qui beátum Matthíam Apostolórum collégio sociásti, eius nobis interventióne concéde, ut, dilectiónis tuæ sorte gaudéntes, cum eléctis numerári mereámur.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -69663,7 +70478,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -70461,8 +71277,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui beátum Matthíam Apostolórum collégio sociásti, eius nobis interventióne concéde, ut, dilectiónis tuæ sorte gaudéntes, cum eléctis numerári mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -71234,8 +72059,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui beátum Matthíam Apostolórum collégio sociásti, eius nobis interventióne concéde, ut, dilectiónis tuæ sorte gaudéntes, cum eléctis numerári mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -72024,8 +72858,17 @@
         "negrita": true
        },
        {
+        "t": "Deus, qui beátum Matthíam Apostolórum collégio sociásti, eius nobis interventióne concéde, ut, dilectiónis tuæ sorte gaudéntes, cum eléctis numerári mereámur.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -72757,7 +73600,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -73158,8 +74002,13 @@
         "negrita": true
        },
        {
+        "t": "Concéde nos, omnípotens Deus, ita sepúlto Unigénito tuo fidéliter inhærére, ut cum ipso in novitáte vitæ resúrgere mereámur. Qui vivit et regnat in sæcula sæculórum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -73173,7 +74022,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -73949,6 +74799,34 @@
         "t": "Présbyter Gaio caríssimo, quem ego díligo in veritáte.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Caríssime, in ómnibus exópto próspere te ágere et valére, sicut próspere agit ánima tua. Nam gavísus sum valde veniéntibus frátribus et testimónium perhibéntibus veritáti tuæ, quómodo tu in veritáte ámbules. Maius horum non hábeo gáudium, quam ut áudiam fílios meos in veritáte ambuláre.",
+        "p": true
+       },
+       {
+        "t": "Caríssime, fidéliter facis, quidquid operáris in fratres et hoc in peregrínos, qui testimónium reddidérunt caritáti tuæ in conspéctu ecclésiæ. Bene fácies subvéniens illis in via digne Deo; pro nómine enim profécti sunt, nihil accipiéntes a gentílibus. Nos ergo debémus subleváre huiúsmodi, ut cooperatóres simus veritátis.",
+        "p": true
+       },
+       {
+        "t": "Scripsi áliquid ecclésiæ; sed is, qui amat primátum gérere in eis, Diótrephes, non récipit nos. Propter hoc, si vénero commonébo eius ópera, quæ facit verbis malígnis gárriens in nos; et quasi non ei ista suffíciant, nec ipse súscipit fratres et eos, qui cúpiunt, próhibet et de ecclésia éicit.",
+        "p": true
+       },
+       {
+        "t": "Caríssime, noli imitári malum, sed quod bonum est. Qui benéfacit, ex Deo est; qui maléfacit non vidit Deum.",
+        "p": true
+       },
+       {
+        "t": "Demétrio testimónium rédditur ab ómnibus et ab ipsa veritáte; sed et nos testimónium perhibémus, et scis quóniam testimónium nostrum verum est.",
+        "p": true
+       },
+       {
+        "t": "Multa hábui scríbere tibi, sed nolo per atraméntum et cálamum scríbere tibi; spero autem prótinus te vidére, et os ad os loquémur.",
+        "p": true
+       },
+       {
+        "t": "Pax tibi. Salútant te amíci. Salúta amícos nominátim.",
+        "p": true
        }
       ]
      },
@@ -73978,16 +74856,32 @@
         "p": true
        },
        {
-        "t": "Nemo mittit vinum novum in utres véteres, sed vinum novum in utres novos mittunt, et utráque servabúntur.",
-        "otro": "i"
+        "t": "Et quóniam cáritas Ecclésiam Dei congregatúra fúerat toto orbe terrárum, quod tunc étiam unus homo póterat, Spíritum Sanctum accípiens, linguis ómnibus loqui, nunc, Sancto Spíritu congregáta, ipsa únitas Ecclésiæ linguis ómnibus lóquitur.",
+        "p": true
        },
        {
-        "t": "Hi musto pleni sunt",
-        "otro": "i"
+        "t": "Proínde si quisquam díxerit alícui nostrum: «Accepísti Spíritum Sanctum, quare non linguis ómnibus lóqueris?» respondére debet: «Loquor sane ómnibus linguis: quia in eo sum Christi córpore, hoc est in Ecclésia, quæ lóquitur ómnibus linguis. Quid enim áliud tunc Deus significávit per Sancti Spíritus præséntiam, nisi Ecclésiam suam ómnibus linguis locutúram?».",
+        "p": true
        },
        {
-        "t": "Sufferéntes ínvicem in dilectióne, studéntes ínvicem serváre unitátem Spíritus in vínculo pacis.",
-        "otro": "i"
+        "t": "Implétum est ítaque quod promíserat Dóminus: Nemo mittit vinum novum in utres véteres, sed vinum novum in utres novos mittunt, et utráque servabúntur.",
+        "p": true
+       },
+       {
+        "t": "Mérito ergo, cum audiréntur linguis ómnibus loqui, nonnúlli dicébant: Hi musto pleni sunt. Iam enim facti fúerant utres novi, sanctitátis grátia renováti, ut, vino novo, hoc est, Spíritu Sancto repléti, ómnibus linguis loquéndo fervérent, Ecclésiam cathólicam per ómnium géntium linguas futúram evidentíssimo illo miráculo præsignárent.",
+        "p": true
+       },
+       {
+        "t": "Hunc ítaque diem sic celebráte, tamquam membra unitátis córporis Christi. Non enim frustra celebrátis, si hoc estis quod celebrátis: illi Ecclésiæ cohæréntes, quam Dóminus, implens Spíritu Sancto, toto mundo crescénte agnóscit suam, et agnóscitur a sua. Tamquam sponsus sponsam non pérdidit própriam, nemo ei suppónit aliénam.",
+        "p": true
+       },
+       {
+        "t": "Vobis enim ómnibus géntibus constitútis, hoc est Ecclésiæ Christi, membris Christi, córpori Christi, sponsæ Christi, Apóstolus dicit: Sufferéntes ínvicem in dilectióne, studéntes ínvicem serváre unitátem Spíritus in vínculo pacis.",
+        "p": true
+       },
+       {
+        "t": "Vidéte quia ubi præcépit ut sustineámus ínvicem, ibi pósuit dilectiónem; ubi spem nominávit unitátis, ibi osténdit vínculum pacis. Hæc est domus Dei, de vivis lapídibus fabricáta, in qua talem patremfamílias deléctet habitáre, cuius óculos ruína divisiónis non debet offéndere.",
+        "p": true
        }
       ]
      },
@@ -74012,6 +74906,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut, qui paschália festa perégimus, hæc, te largiénte, móribus et vita teneámus.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -74868,7 +75766,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -75314,8 +76213,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut, qui paschália festa perégimus, hæc, te largiénte, móribus et vita teneámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -76054,8 +76962,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut, qui paschália festa perégimus, hæc, te largiénte, móribus et vita teneámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -76811,8 +77728,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut, qui paschália festa perégimus, hæc, te largiénte, móribus et vita teneámus.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -77514,7 +78440,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -77892,8 +78819,13 @@
         "negrita": true
        },
        {
+        "t": "Vísita nos, quǽsumus, Dómine, hac nocte præsénti, ut, dilúculo tua virtúte surgéntes, de resurrectióne Christi tui gaudére valeámus. Qui vivit et regnat in sæcula sæculórum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -77907,7 +78839,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -78621,6 +79554,22 @@
         "t": "Fratres: Qui secúndum carnem sunt, quæ carnis sunt, sápiunt; qui vero secúndum Spíritum, quæ sunt Spíritus. Nam sapiéntia carnis mors, sapiéntia autem Spíritus vita et pax; quóniam sapiéntia carnis inimicítia est in Deum, legi enim Dei non subícitur nec enim potest. Qui autem in carne sunt, Deo placére non possunt.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Vos autem in carne non estis, sed in Spíritu, si tamen Spíritus Dei hábitat in vobis. Si quis autem Spíritum Christi non habet, hic non est eius. Si autem Christus in vobis est, corpus quidem mórtuum est propter peccátum, Spíritus vero vita propter iustítiam. Quod si Spíritus eius, qui suscitávit Iesum a mórtuis, hábitat in vobis, qui suscitávit Christum a mórtuis, vivificábit et mortália córpora vestra per inhabitántem Spíritum suum in vobis.",
+        "p": true
+       },
+       {
+        "t": "Ergo, fratres, debitóres sumus non carni, ut secúndum carnem vivámus. Si enim secúndum carnem vixéritis, moriémini; si autem Spíritu ópera córporis mortificátis, vivétis. Quicúmque enim Spíritu Dei agúntur, hi fílii Dei sunt. Non enim accepístis spíritum servitútis íterum in timórem, sed accepístis Spíritum adoptiónis filiórum, in quo clamámus: «Abba, Pater!». Ipse Spíritus testimónium reddit una cum spíritu nostro quod sumus fílii Dei. Si autem fílii, et herédes: herédes quidem Dei, coherédes autem Christi, si tamen compátimur, ut et conglorificémur. Exístimo enim quod non sunt condígnæ passiónes huius témporis ad futúram glóriam, quæ revelánda est in nobis.",
+        "p": true
+       },
+       {
+        "t": "Nam exspectátio creatúræ revelatiónem filiórum Dei exspéctat; vanitáti enim creatúra subiécta est, non volens sed propter eum, qui subiécit, in spem, quia et ipsa creatúra liberábitur a servitúte corruptiónis in libertátem glóriæ filiórum Dei. Scimus enim quod omnis creatúra congemíscit et compárturit usque adhuc; non solum autem, sed et nos ipsi primítias Spíritus habéntes, et ipsi intra nos gémimus adoptiónem filiórum exspectántes, redemptiónem córporis nostri. Spe enim salvi facti sumus; spes autem, quæ vidétur, non est spes; nam, quod videt, quis sperat? Si autem, quod non vidémus, sperámus, per patiéntiam exspectámus.",
+        "p": true
+       },
+       {
+        "t": "Simíliter autem et Spíritus ádiuvat infirmitátem nostram; nam quid orémus, sicut opórtet, nescímus, sed ipse Spíritus interpéllat gemítibus inenarrabílibus; qui autem scrutátur corda, scit quid desíderet Spíritus, quia secúndum Deum póstulat pro sanctis.",
+        "p": true
        }
       ]
      },
@@ -78650,12 +79599,24 @@
         "p": true
        },
        {
-        "t": "Spíritus sapiéntiæ et intelléctus, Spíritus consílii et virtútis, Spíritus sciéntiæ et pietátis, Spíritus timóris Dei",
-        "otro": "i"
+        "t": "Hunc enim promísit per prophétas effúndere se in novíssimis tempóribus super servos et ancíllas, ut prophétent; unde et in Fílium Dei, fílium hóminis factum, descéndit, cum ipso assuéscens habitáre in génere humáno et requiéscere in homínibus et habitáre in plásmate Dei, voluntátem Patris óperans in ipsis et rénovans eos a vetustáte in novitátem Christi.",
+        "p": true
        },
        {
-        "t": "diábolum tamquam fulgur proiéctum",
-        "otro": "i"
+        "t": "Hunc Spíritum descendísse Lucas ait post ascénsum Dómini super discípulos in Pentecóste, habéntem potestátem ómnium géntium ad intróitum vitæ et ad apertiónem novi testaménti; unde et ómnibus linguis conspirántes hymnum dicébant Deo, Spíritu ad unitátem redigénte distántes tribus, et primítias ómnium géntium offerénte Patri.",
+        "p": true
+       },
+       {
+        "t": "Unde et Dóminus pollícitus est míttere se Paráclitum, qui nos aptáret Deo. Sicut enim de árido trítico massa una fíeri non potest sine umóre, neque unus panis, ita nec nos multi unum fíeri in Christo Iesu poterámus sine aqua, quæ de cælo est. Et sicut árida terra si non percípiat umórem non fructíficat, sic et nos, lignum áridum exsisténtes primum, numquam fructificarémus vitam sine supérna voluntária plúvia.",
+        "p": true
+       },
+       {
+        "t": "Córpora enim nostra per lavácrum illam, quæ est ad incorruptiónem, unitátem accepérunt, ánimæ autem per Spíritum.",
+        "p": true
+       },
+       {
+        "t": "Spíritus Dei descéndit in Dóminum, Spíritus sapiéntiæ et intelléctus, Spíritus consílii et virtútis, Spíritus sciéntiæ et pietátis, Spíritus timóris Dei, quem ipsum íterum dedit Ecclésiæ, in omnem terram mittens de cælis Paráclitum, ubi et diábolum tamquam fulgur proiéctum, ait Dóminus; quaprópter necessárius nobis est ros Dei, ut non comburámur neque infructuósi efficiámur, et, ubi accusatórem habémus, illic habeámus et Paráclitum, commendánte Dómino Spirítui Sancto suum hóminem, qui incíderat in latrónes, cui ipse misértus est et ligávit vúlnera eius, dans duo denária regália, ut, per Spíritum imáginem et inscriptiónem Patris et Fílii accipiéntes, fructificémus créditum nobis denárium, multiplicátum Dómino annumerántes.",
+        "p": true
        }
       ]
      },
@@ -79034,6 +79995,14 @@
         "t": "Sero post sábbatum, cum illucésceret in primam sábbati, venit María Magdaléne et áltera María vidére sepúlcrum. Et ecce terræ motus factus est magnus: ángelus enim Dómini descéndit de cælo et accédens revólvit lápidem et sedébat super eum. Erat autem aspéctus eius sicut fulgur, et vestiméntum eius cándidum sicut nix. Præ timóre autem eius extérriti sunt custódes et facti sunt velut mórtui. Respóndens autem ángelus dixit muliéribus: «Nolíte timére vos! Scio enim quod Iesum, qui crucifíxus est, quǽritis. Non est hic: surréxit enim, sicut dixit. Veníte, vidéte locum, ubi pósitus erat. Et cito eúntes dícite discípulis eius: “Surréxit a mórtuis et ecce præcédit vos in Galilǽam; ibi eum vidébitis”. Ecce dixi vobis». Et exeúntes cito de monuménto cum timóre et magno gáudio cucurrérunt nuntiáre discípulis eius.",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Et ecce Iesus occúrrit illis dicens: «Avéte». Illæ autem accessérunt et tenuérunt pedes eius et adoravérunt eum. Tunc ait illis Iesus: «Nolíte timére; ite, nuntiáte frátribus meis, ut eant in Galilǽam et ibi me vidébunt».",
+        "p": true
+       },
+       {
+        "t": "Undecim autem discípuli abiérunt in Galilǽam, in montem ubi constitúerat illis Iesus, et vidéntes eum adoravérunt; quidam autem dubitavérunt. Et accédens Iesus locútus est eis dicens: «Data est mihi omnis potéstas in cælo et in terra. Eúntes ergo docéte omnes gentes, baptizántes eos in nómine Patris et Fílii et Spíritus Sancti, docéntes eos serváre ómnia, quæcúmque mandávi vobis. Et ecce ego vobíscum sum ómnibus diébus usque ad consummatiónem sǽculi».",
+        "p": true
        }
       ]
      },
@@ -79047,6 +80016,14 @@
        {
         "t": "In novissimo autem die magno festivitatis stabat Iesus et clamavit dicens:",
         "estrofa": true,
+        "p": true
+       },
+       {
+        "t": "“Si quis sitit, veniat ad me et bibat, qui credit in me. Sicut dixit Scriptura, flumina de ventre eius fluent aquae vivae”.",
+        "p": true
+       },
+       {
+        "t": "Hoc autem dixit de Spiritu, quem accepturi erant qui crediderant in eum. Nondum enim erat Spiritus, quia Iesus nondum fuerat glorificatus.",
         "p": true
        }
       ],
@@ -79210,6 +80187,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Deus, qui sacraménto festivitátis hodiérnæ univérsam Ecclésiam tuam in omni gente et natióne sanctíficas, in totam mundi latitúdinem Spíritus Sancti dona defúnde, et, quod inter ipsa evangélicæ prædicatiónis exórdia operáta est divína dignátio, nunc quoque per credéntium corda perfúnde.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -80178,7 +81159,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -80950,8 +81932,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut claritátis tuæ super nos splendor effúlgeat, et lux tuæ lucis corda eórum, qui per tuam grátiam sunt renáti, Sancti Spíritus illustratióne confírmet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -81684,8 +82675,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut claritátis tuæ super nos splendor effúlgeat, et lux tuæ lucis corda eórum, qui per tuam grátiam sunt renáti, Sancti Spíritus illustratióne confírmet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -82435,8 +83435,17 @@
         "negrita": true
        },
        {
+        "t": "Præsta, quǽsumus, omnípotens Deus, ut claritátis tuæ super nos splendor effúlgeat, et lux tuæ lucis corda eórum, qui per tuam grátiam sunt renáti, Sancti Spíritus illustratióne confírmet.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -83131,7 +84140,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -83517,8 +84527,13 @@
         "negrita": true
        },
        {
+        "t": "Vox nostra te, Dómine, humíliter deprecétur, ut, domínicæ resurrectiónis hac die mystério celebráto, in pace tua secúri a malis ómnibus quiescámus, et in tua resurgámus laude gaudéntes. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -83532,7 +84547,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },

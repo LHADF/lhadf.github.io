@@ -861,32 +861,44 @@
         "p": true
        },
        {
-        "t": "Benedíctus qui venit in nómine Dómini,",
-        "otro": "i"
+        "t": "Nam ut plúrimum duplícia sunt ómnia apud Dóminum nostrum Iesum Christum. Duplex natívitas, áltera ex Deo ante sǽcula, áltera ex Vírgine in consummatióne sæculórum; duplex descénsus: unus obscúrus, qui tamquam plúviæ in vellus, alter vero conspícuus, nimírum futúrus.",
+        "p": true
        },
        {
-        "t": "Benedíctus qui venit in nómine Dómini.",
-        "otro": "i"
+        "t": "In primo advéntu fásciis involútus est in præsépio: in secúndo amicítur lúmine quasi vestiménto. In prióre sustínuit crucem, ignomíniam aspernátus; in áltero véniet angelórum exércitu stipátus, glorificátus.",
+        "p": true
        },
        {
-        "t": "Hæc fecísti et tácui.",
-        "otro": "i"
+        "t": "Non ígitur in primo tantum advéntu acquiéscimus, sed et secúndum exspectámus. Cumque in prióre dixérimus: Benedíctus qui venit in nómine Dómini, idem rursum dicémus in posterióre: ut cum ángelis occurréntes Dómino, adorántes clamémus: Benedíctus qui venit in nómine Dómini.",
+        "p": true
        },
        {
-        "t": "Et statim véniet ad templum suum Dóminus, quem vos quǽritis.",
-        "otro": "i"
+        "t": "Véniet Salvátor non ut íterum iudicétur, sed ut in ius vocet eos a quibus in iudícium est vocátus. Qui prius cum iudicarétur tácuit, conscelerátis qui immánia in illum, quando in crucem egére ausi sunt, in memóriam révocans dicet: Hæc fecísti et tácui.",
+        "p": true
        },
        {
-        "t": "Et Angelus testaménti quem vos quǽritis. Ecce véniet Dóminus omnípotens: et quis sustinébit diem ingréssus eius, aut quis subsístet in visióne eius? eo quod ipse accédit tamquam ignis conflatórii, tamquam herba lavántum: et sedébit conflans et emúndans.",
-        "otro": "i"
+        "t": "Tunc, piæ dispensatiónis causa, hómines leni persuasióne docens venit: eo vero témpore, velint, nolint, regno illíus necessário subiciéntur.",
+        "p": true
        },
        {
-        "t": "Appáruit grátia Dei salvatóris ómnibus homínibus, erúdiens nos, ut abnegántes impietátem et mundána desidéria, temperánter et pie et iuste vivámus in præsénti sǽculo, exspectántes beátam spem et apparitiónem glóriæ magni Dei et salvatóris nostri Iesu Christi.",
-        "otro": "i"
+        "t": "De utróque illo advéntu lóquitur Malachías prophéta: Et statim véniet ad templum suum Dóminus, quem vos quǽritis. Ecce unus advéntus.",
+        "p": true
        },
        {
-        "t": "qui et ascéndit in cælos, et consédit a dextris Patris. Et ventúrus est in glória iudicáre vivos et mórtuos; cuius regni non erit finis.",
-        "otro": "i"
+        "t": "Et rursus de áltero ita infit: Et Angelus testaménti quem vos quǽritis. Ecce véniet Dóminus omnípotens: et quis sustinébit diem ingréssus eius, aut quis subsístet in visióne eius? eo quod ipse accédit tamquam ignis conflatórii, tamquam herba lavántum: et sedébit conflans et emúndans.",
+        "p": true
+       },
+       {
+        "t": "Duos quoque illos advéntus signíficat Paulus ad Titum scribens his verbis: Appáruit grátia Dei salvatóris ómnibus homínibus, erúdiens nos, ut abnegántes impietátem et mundána desidéria, temperánter et pie et iuste vivámus in præsénti sǽculo, exspectántes beátam spem et apparitiónem glóriæ magni Dei et salvatóris nostri Iesu Christi. Viden, quómodo primum expréssit advéntum, de quo grátias agit; álterum vero, quem exspectámus.",
+        "p": true
+       },
+       {
+        "t": "Proptérea fídei quam profitémur tenor nunc ita est tráditus, ut credámus in eum qui et ascéndit in cælos, et consédit a dextris Patris. Et ventúrus est in glória iudicáre vivos et mórtuos; cuius regni non erit finis.",
+        "p": true
+       },
+       {
+        "t": "Véniet ígitur Dóminus noster Iesus Christus e cælis. Véniet vero circa finem mundi huius cum glória in postréma die. Fiet enim mundi huius consummátio, et factus iste mundus rursum renovábitur.",
+        "p": true
        }
       ]
      },
@@ -1477,6 +1489,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Da, quǽsumus, omnípotens Deus, hanc tuis fidélibus voluntátem, ut, Christo tuo veniénti iustis opéribus occurréntes, eius déxteræ sociáti, regnum mereántur possidére cæléste.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -2405,7 +2421,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -3151,8 +3168,17 @@
         "negrita": true
        },
        {
+        "t": "Da, quǽsumus, omnípotens Deus, hanc tuis fidélibus voluntátem, ut, Christo tuo veniénti iustis opéribus occurréntes, eius déxteræ sociáti, regnum mereántur possidére cæléste.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -3872,8 +3898,17 @@
         "negrita": true
        },
        {
+        "t": "Da, quǽsumus, omnípotens Deus, hanc tuis fidélibus voluntátem, ut, Christo tuo veniénti iustis opéribus occurréntes, eius déxteræ sociáti, regnum mereántur possidére cæléste.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -4610,8 +4645,17 @@
         "negrita": true
        },
        {
+        "t": "Da, quǽsumus, omnípotens Deus, hanc tuis fidélibus voluntátem, ut, Christo tuo veniénti iustis opéribus occurréntes, eius déxteræ sociáti, regnum mereántur possidére cæléste.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -5303,7 +5347,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -5689,8 +5734,13 @@
         "negrita": true
        },
        {
+        "t": "Vox nostra te, Dómine, humíliter deprecétur, ut, domínicæ resurrectiónis hac die mystério celebráto, in pace tua secúri a malis ómnibus quiescámus, et in tua resurgámus laude gaudéntes. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -5704,7 +5754,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -6421,6 +6472,10 @@
         "p": true
        },
        {
+        "t": "Vidéte enim vocatiónem vestram, fratres, quia non multi sapiéntes secúndum carnem, non multi poténtes, non multi nóbiles; sed, quæ stulta sunt mundi, elégit Deus, ut confúndat sapiéntes, et infírma mundi elégit Deus, ut confúndat fórtia, et ignobília mundi et contemptibília elégit Deus, quæ non sunt, ut ea, quæ sunt, destrúeret, ut non gloriétur omnis caro in conspéctu Dei. Ex ipso autem vos estis in Christo Iesu, qui factus est sapiéntia nobis a Deo et iustítia et sanctificátio et redémptio, ut quemádmodum scriptum est:",
+        "p": true
+       },
+       {
         "t": "«Qui gloriátur,",
         "estrofa": true
        },
@@ -6460,24 +6515,12 @@
         "p": true
        },
        {
-        "t": "Addúxit eum",
-        "otro": "i"
+        "t": "Animadvérte autem, vel a princípio, morígerum facilémque Petri ánimum. Statim nihílque morátus accúrrit. Addúxit eum, inquit, ad Iesum. Sed nemo facilitátem eius damnet, quod sine multo exámine verbum accéperit. Verisímile enim est fratrem hæc ipsi accuráte et plúribus narrásse; verum evangelístæ ubíque multa compéndio narrant, brevitáti studéntes. Alióquin autem non dicit eum statim credidísse, sed: Addúxit eum ad Iesum, ipsi traditúrus eum, ut ómnia ab illo edísceret: nam álius quoque discípulus áderat, et ad hæc concurrébat.",
+        "p": true
        },
        {
-        "t": "ad Iesum",
-        "otro": "i"
-       },
-       {
-        "t": "Addúxit eum ad Iesum",
-        "otro": "i"
-       },
-       {
-        "t": "Agnus est",
-        "otro": "i"
-       },
-       {
-        "t": "in Spíritu baptízat",
-        "otro": "i"
+        "t": "Quod si Ioánnes Baptísta, cum dixit: Agnus est et in Spíritu baptízat, clariórem hac de re doctrínam a Christo excipiéndam relíquit, multo magis Andréas id effécit, qui non ad totum explicándum suffícere censebátur, sed ad ipsum lucis fontem dedúxit fratrem, ita festínum et gaudéntem, ut ne tantíllum quidem cunctarétur.",
+        "p": true
        }
       ]
      },
@@ -6750,6 +6793,22 @@
         "t": "In illo témpore:",
         "estrofa": true,
         "p": true
+       },
+       {
+        "t": "Ambulans Iesus iuxta mare Galilǽæ, vidit duos fratres, Simónem, qui vocátur Petrus, et Andréam fratrem eius, mitténtes rete in mare; erant enim piscatóres.",
+        "p": true
+       },
+       {
+        "t": "Et ait illis: «Veníte post me, et fáciam vos piscatóres hóminum».",
+        "p": true
+       },
+       {
+        "t": "At illi contínuo, relíctis rétibus, secúti sunt eum. Et procédens inde vidit álios duos fratres, Iacóbum Zebedǽi et Ioánnem fratrem eius, in navi cum Zebedǽo patre eórum reficiéntes rétia sua; et vocávit eos.",
+        "p": true
+       },
+       {
+        "t": "Illi autem statim, relícta navi et patre suo, secúti sunt eum.",
+        "p": true
        }
       ],
       "rubricas": [
@@ -6912,6 +6971,10 @@
         "estrofa": true,
         "p": true,
         "negrita": true
+       },
+       {
+        "t": "Maiestátem tuam, Dómine, supplíciter exorámus, ut, sicut Ecclésiæ tuæ beátus Andréas apóstolus éxstitit prædicátor et rector, ita apud te sit pro nobis perpétuus intercéssor.",
+        "p": true
        },
        {
         "t": "Per Dóminum nostrum Iesum Christum, Fílium tuum,",
@@ -7853,7 +7916,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -8590,8 +8654,17 @@
         "negrita": true
        },
        {
+        "t": "Maiestátem tuam, Dómine, supplíciter exorámus, ut, sicut Ecclésiæ tuæ beátus Andréas apóstolus éxstitit prædicátor et rector, ita apud te sit pro nobis perpétuus intercéssor.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -9302,8 +9375,17 @@
         "negrita": true
        },
        {
+        "t": "Maiestátem tuam, Dómine, supplíciter exorámus, ut, sicut Ecclésiæ tuæ beátus Andréas apóstolus éxstitit prædicátor et rector, ita apud te sit pro nobis perpétuus intercéssor.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -10031,8 +10113,17 @@
         "negrita": true
        },
        {
+        "t": "Maiestátem tuam, Dómine, supplíciter exorámus, ut, sicut Ecclésiæ tuæ beátus Andréas apóstolus éxstitit prædicátor et rector, ita apud te sit pro nobis perpétuus intercéssor.",
+        "p": true
+       },
+       {
+        "t": "Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -10764,7 +10855,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      }
@@ -11169,8 +11261,13 @@
         "negrita": true
        },
        {
+        "t": "Quiétem, Dómine, corpóribus nostris tríbue salutárem, et quæ fúdimus hódie sémina per labórem, fac ut messem gérminent sempitérnam. Per Christum Dóminum nostrum.",
+        "p": true
+       },
+       {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },
@@ -11184,7 +11281,8 @@
        },
        {
         "t": "Amen.",
-        "otro": "b"
+        "p": true,
+        "negrita": true
        }
       ]
      },

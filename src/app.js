@@ -21,6 +21,7 @@ S.antGreg=true; delete S.respCanto;
 S.rito='novus'; S.modo='canto';
 function aplicarModo(kind, sec){
   S.canto = S.modo==='canto';
+  if(sec && sec.la){ S.lengua='bi'; return; }   // «Solo latín»: el latín y, debajo, el español
   if(sec && sec.es){ S.lengua='es'; return; } // textos de la base en español
   if(S.modo==='es') S.lengua='es';
   else if(S.modo==='la') S.lengua='bi';
@@ -101,7 +102,7 @@ function cargarDia(){
     const a=Li.secciones.findIndex(s=>s.k==='sec'&&s.id==='invitatorio'), b=Li.secciones.findIndex(s=>s.k==='sec'&&s.id==='inicio');
     if(a>=0 && b>a) DH={...DH, secciones:[...Li.secciones.slice(a,b), ...DH.secciones]};
   }
-  if(DH && S.hora==='oficio' && S.unirLaudes && window.LAUDES){
+  if(DH && S.hora==='oficio' && S.unirLaudes && window.LAUDES && !SOLO_LA()){
     const O=DH.secciones, corte=O.findIndex(s=>s.k==='sec'&&s.id==='oracion'), Lh=window.Laudes.armar(S.fecha, SEL());
     if(Lh){ const i=Lh.secciones.findIndex(s=>s.k==='sec'&&s.id==='salmodia');
       // El Oficio pasa a ser la primera hora del día: empieza como Laudes (Dómine, lábia mea e invitatorio), no con «Deus in adiutórium»
@@ -110,7 +111,7 @@ function cargarDia(){
   }
   // Uso ADF: Vísperas y Completas juntas. Después de la oración de Vísperas se omite su conclusión y siguen, de Completas:
   // examen de conciencia, cántico evangélico, oración, conclusión y antífona de la Virgen.
-  if(DH && S.hora==='visperas' && S.unirCompletas && D){
+  if(DH && S.hora==='visperas' && S.unirCompletas && D && !SOLO_LA()){
     const V=DH.secciones, corte=V.findIndex(s=>s.k==='sec'&&s.id==='bendicion');
     const C=[]; let toma=false;
     for(const s of D.secciones){ if(s.k==='sec') toma=['examen','cantico','oracion','bendicion','mariana'].includes(s.id); if(toma) C.push(s.k==='sec'?{...s,id:'c-'+s.id,plegable:false}:{...s,pleg:false}); }
@@ -120,6 +121,11 @@ function cargarDia(){
   if(DH && MODO.opc) DH={...DH, alts:MODO.opc.alts};
   if(DH && MODO.comun) DH={...DH, comun:true, alts:MODO.comun.alts, dia:{...DH.dia, titulo:MODO.comun.titulo, grado:MODO.comun.grado, nota:''}};
   D=enEspanol(D); DH=enEspanol(DH);
+  if(SOLO_LA()){ const f=S.fecha;
+    if(!window.Latin.hay(f)){ const a='No hay texto latino para esta fecha (por ahora, del 29 de noviembre de 2026 al 16 de mayo de 2027): va como «Español y latín».';
+      if(D) D={...D, dia:{...D.dia, nota:a}}; if(DH) DH={...DH, dia:{...DH.dia, nota:a}}; }
+    else if(!window.Latin.cargado(f)) cargarLatin(f).then(()=>{ if(S.fecha===f){ cargarDia(); refrescarHoja(); } }, ()=>toast('No se pudo cargar el latín. Revisá la conexión.', 6000));
+    else { D=window.Latin.armar(D, f, 'completas'); if(DH) DH=window.Latin.armar(DH, f, S.hora, {complementaria:!!S.compl}); } }
   S._marDia={}; // la antífona mariana elegida a mano vale solo para ese día
 }
 /* Solo español (Opciones → Lengua, 26/11/2026). Por defecto, como ADF: español y latín (invocación, Benedictus y
@@ -128,6 +134,12 @@ function cargarDia(){
    window.BASE.espanol), los himnos latinos y gregorianos dejan de ofrecerse y no hay partituras latinas. La salmodia
    en español se sigue cantando en el modo del día (también el Benedictus y el Magníficat). El Sacrosanctæ queda en latín. */
 const SOLO_ES=()=>S.idioma==='es';
+const SOLO_LA=()=>S.idioma==='la';
+// «Solo latín»: la hora latina de Universalis, un archivo por mes (src/latin.js)
+const _cargaLat={};
+function cargarLatin(f){ const m='latin-'+window.Latin.mesDe(f);
+  if(!_cargaLat[m]) _cargaLat[m]=new Promise((ok,mal)=>{ const sc=document.createElement('script'); sc.src=(window.HORAS_URL||{})[m]||m+'.js'; sc.onload=ok; sc.onerror=()=>{ _cargaLat[m]=null; mal(); }; document.head.appendChild(sc); });
+  return _cargaLat[m]; }
 const MARIANAS_ES=[['salve','Dios te salve'],['subtuum','Bajo tu amparo'],['ave','Salve, Reina de los cielos'],['alma','Madre del Redentor'],['regina','Reina del cielo']];
 function enEspanol(r){
   if(!r || !SOLO_ES()) return r;
@@ -663,6 +675,8 @@ function oracionOficioHTML(k){
   return h;
 }
 // Lecturas del Oficio: referencia u obra («Del libro…», «De las Catequesis…»), título y texto en párrafos
+// «Solo latín»: el texto oficial en español debajo del latín (estrofas separadas por renglón en blanco)
+function tradEs(est){ return `<div class="trad-es">${est.map(e=>`<p>${esc(e).replace(/\n/g,'<br>')}</p>`).join('')}</div>`; }
 function lecturaLargaHTML(sec){
   const ps=String(sec.t).split(/\n+/).filter(Boolean);
   return `<div class="lec-larga">${sec.ref?`<p class="lec-obra">${esc(sec.ref)}</p>`:''}${sec.autor?`<p class="lec-obra">${esc(sec.autor).replace(/\n/g,'<br>')}</p>`:''}`
@@ -782,8 +796,8 @@ function horaHTML(){
     if(sec.k==='sec'){
       secAct=sec.id;
       // Vísperas: antes de la conclusión (o del examen, si ya están unidas), el botón para seguir con Completas
-      if(r.hora==='visperas' && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
-      if(r.hora==='oficio' && (sec.id==='oracion'||sec.id==='l-laudes')) h+=`<div class="opciones unir"><button data-act="unirl" aria-pressed="${!!r.unidas}">Seguir con Laudes</button></div>`;
+      if(r.hora==='visperas' && !r.latin && (sec.id==='bendicion'||sec.id==='c-examen')) h+=`<div class="opciones unir"><button data-act="unir" aria-pressed="${!!r.unidas}">Conclusión de Completas</button></div>`;
+      if(r.hora==='oficio' && !r.latin && (sec.id==='oracion'||sec.id==='l-laudes')) h+=`<div class="opciones unir"><button data-act="unirl" aria-pressed="${!!r.unidas}">Seguir con Laudes</button></div>`;
       pleg=sec.plegable?sec.id:null;
       h+=`<h2 class="sec" id="s-${sec.id}">${esc(sec.t)}${sec.plegable?` <button data-act="examen" aria-expanded="${S.examen}">${S.examen?'Ocultar':'Mostrar'}</button>`:''}${sec.ref?`<span class="sref">${esc(cita(sec.ref))}</span>`:''}</h2>`;
       h+=otrasHTML(r, sec.id, vistas);   // «Otras opciones», justo debajo del título del elemento
@@ -803,7 +817,7 @@ function horaHTML(){
       case 'doxo': h+=prosaHTML(sec.t,null,'',sec.il); break;
       case 'prosa': h+=(sec.n?`<p class="rub">${esc(sec.n)}</p>`:'')+prosaHTML(sec.t, sec.amen, '', sec.il); break;
       case 'oremos': h+= BI()&&sec.il ? `<p class="il"><b>${interHTML(sec.il)}</b></p>` : `<p><b>${esc(txt(sec.t).p)}</b></p>`; break;
-      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p class="lec-b">${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${lecturaMarcada(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
+      case 'lectura': { const t=txt(sec.t); const ref=sec.ref?txt(sec.ref).p:''; if(BI()&&sec.il){ h+=`<p class="il"><span class="lec-ref">${esc(cita(ref))}</span>${interHTML(sec.il)}</p>`+(sec.aviso?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; } h+=`<p class="lec-b">${ref?`<span class="lec-ref">${esc(cita(ref))}</span>`:''}${sec.la?capiTxt(t.p):lecturaMarcada(t.p)}</p>`+(t.s?`<p class="gl">${esc(t.s)}</p>`:'')+(sec.aviso&&S.lengua!=='es'?`<p class="aviso">${esc(sec.aviso.txt)}</p>`:''); break; }
       case 'himno': h+=himnoHTML(sec); break;
       case 'invop': if(CANTA()) h+=`<div class="opciones" role="group" aria-label="Invitatorio">${[['greg','Gregoriano'],['es','En español']].map(([v,n])=>`<button data-act="invit" data-v="${v}" aria-pressed="${INV()===v}">${n}</button>`).join('')}</div>`; break;
       case 'invgreg': h+=`<div class="ant-greg">${partituraHTML(sec.ant.gabc, S.trad?sec.ant.glosa:null)}</div><p class="rub">La antífona se repite después de cada estrofa.</p>`
@@ -817,8 +831,19 @@ function horaHTML(){
           +`<div class="himno sin-num">${sec.estrofas.map((e,ie)=>{
               const cap=ie===0 && /^\p{L}/u.test(e[0]||'') ? [...e[0]][0] : '';
               return `<p class="est${cap?' capi-on':''}">${cap?capiHTML(cap):''}${e.map((l,il)=>ln(cap&&!il?l.slice(cap.length):l, cap&&il<2)).join('')}</p>`
-                +(ie<sec.estrofas.length-1?antRep:''); }).join('')}</div>`; break; }
-      case 'salmo': h+=salmoHTML(sec)+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
+                +(ie<sec.estrofas.length-1?antRep:''); }).join('')}</div>`+(sec.esTexto?tradEs(sec.esTexto):''); break; }
+      case 'salmo': h+=salmoHTML(sec)+(sec.esTexto?tradEs(sec.esTexto):'')+(sec.rubrica?`<p class="rub">${esc(sec.rubrica)}</p>`:''); break;
+      // «Solo latín» (src/latin.js): antífona, versículos y responsorios, preces y lecturas en latín, con el español debajo
+      case 'antla': h+=`<div class="ant"><p><span class="n">Ant.</span><b>${marcas(sec.la)}</b></p>${sec.es?`<span class="gl">${esc(sec.es)}</span>`:''}</div>`; break;
+      case 'vrla': { const k=x=>x==='V'?'℣':x==='R'?'℟':'';
+        h+=`<div class="vr">${sec.l.map(([r,t])=>`<p${r==='V'?' class="pv"':''}>${r?`<span class="k">${k(r)}.</span> `:''}${r==='R'?'<b>'+marcas(t)+'</b>':marcas(t)}</p>`).join('')}</div>`;
+        if(sec.es) h+=`<div class="trad-es">${sec.es.filter(x=>x[0]!=='rub').map(([r,t])=>`<p>${r?k(r)+'. ':''}${esc(t)}</p>`).join('')}</div>`; break; }
+      case 'precesla': { const [intro,...resto]=sec.l;
+        h+=`<p>${esc(intro)}</p>`+resto.map(t=>/^–/.test(t)?`<div class="vr"><p class="todos"><span class="k">℟.</span> ${esc(t.replace(/^–\s*/,''))}</p></div>`:`<p class="prece-la">${esc(t).replace(/\n/,'&nbsp;<span class="sg">–</span><br>')}</p>`).join('');
+        if(sec.es && sec.es.preces) h+=`<div class="trad-es"><p>${esc(sec.es.intro)}</p><p>℟. ${esc(sec.es.respuesta)}</p>${sec.es.preces.map(p=>`<p>${esc(Array.isArray(p)?p.join(' '):p)}</p>`).join('')}</div>`; break; }
+      case 'lecturala': h+=`<div class="lec-larga">${sec.ref?`<p class="lec-obra">${esc(sec.ref)}</p>`:''}${sec.sub?`<p class="lec-tit">${esc(sec.sub)}</p>`:''}`
+          +(sec.verso ? `<p>${sec.ls.map(esc).join('<br>')}</p>` : sec.ls.map(t=>`<p>${esc(t)}</p>`).join(''))+`</div>`
+          +(sec.es?`<div class="trad-es">${lecturaLargaHTML(sec.es)}</div>`:''); break;
       case 'resp': h+=respHTML(sec); break;
       case 'mariana': h+=marianaHTML(sec); break;
       case 'deo':   // ℟. Deo grátias, con su traducción (interlineal, palabra por palabra; si no, debajo)
@@ -1105,8 +1130,8 @@ function hojaOpciones(){
   hoja('Opciones',`
     <div class="grupo"><h3>Tamaño</h3><div class="tam"><button data-act="menos" aria-label="Achicar" ${S.zoom<=.8?'disabled':''}>A−</button><span>${Math.round(S.zoom*100)} %</span><button data-act="mas" aria-label="Agrandar" ${S.zoom>=2?'disabled':''}>A+</button></div></div>
     <div class="grupo"><h3>Aspecto</h3>${seg('theme',[['light','Claro'],['dark','Oscuro']],S.theme)}</div>
-    <div class="grupo"><h3>Lengua</h3>${seg('idioma',[['adf','Español y latín'],['es','Solo español']],SOLO_ES()?'es':'adf')}
-      <p class="hint">${SOLO_ES()?'Todo el oficio en español, también la invocación, el Benedictus y el Magníficat, el Padre nuestro, la conclusión y la antífona de la Virgen.':'Como en ADF: el oficio en español, con la invocación, el cántico evangélico, el Padre nuestro, la conclusión y la antífona de la Virgen en latín.'}</p></div>
+    <div class="grupo"><h3>Lengua</h3>${seg('idioma',[['adf','Español y latín'],['es','Solo español'],['la','Solo latín']],SOLO_ES()?'es':SOLO_LA()?'la':'adf')}
+      <p class="hint">${SOLO_LA()?'En prueba. La hora latina de la Liturgia Horarum (Universalis, calendario general), con el texto oficial en español debajo. Por ahora, del 29 de noviembre de 2026 al 16 de mayo de 2027.':SOLO_ES()?'Todo el oficio en español, también la invocación, el Benedictus y el Magníficat, el Padre nuestro, la conclusión y la antífona de la Virgen.':'Como en ADF: el oficio en español, con la invocación, el cántico evangélico, el Padre nuestro, la conclusión y la antífona de la Virgen en latín.'}</p></div>
     <div class="grupo"><h3>Canto</h3>
       ${seg('cantado',[['si','Cantado'],['no','Recitado']],CANTA()?'si':'no')}
       ${SOLO_ES()?'':sw('trad',S.trad,'Traducción del latín','Interlineal en el texto y glosa bajo los neumas')}</div>
@@ -1260,7 +1285,7 @@ document.addEventListener('click',e=>{
     case 'examen': S.examen=!S.examen; guardar(); refrescarHoja(); break;
     case 'menos': case 'mas': { const z=Math.min(2,Math.max(.8,Math.round((S.zoom+(a==='mas'?.1:-.1))*10)/10)); if(z===S.zoom) break; S.zoom=z; cambio(); break; }
     case 'instalar': if(_instalar){ const p=_instalar; _instalar=null; cerrar(); p.prompt(); } break;
-    case 'idioma': if((S.idioma||'adf')===v) break; S.idioma=v; cargarDia(); cambio(); break;
+    case 'idioma': if((S.idioma||'adf')===v) break; S.idioma=v; cargarDia(); cambio(); break;   // «Solo latín»: si falta el mes, cargarDia lo baja y vuelve a dibujar
     case 'theme': if(S.theme===v) break; S.theme=v; guardar(); aplicarTema(); reabrir(); break;   // sin aviso
   }
 });

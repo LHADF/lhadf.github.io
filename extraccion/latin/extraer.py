@@ -71,7 +71,7 @@ def hora(path):
                 t = texto(el)
                 if t: cur['lineas'].append({'t': t, 'p': True})
                 continue
-            if el.name == 'div' and ('v' in cls or 'vi' in cls or 'p' in cls):
+            if el.name == 'div' and any(c in cls for c in ('v', 'vi', 'p', 'pi')):
                 if el.find('blockquote'):
                     cur['epigrafe'] = texto(el); continue
                 t = texto(el)
@@ -79,7 +79,7 @@ def hora(path):
                 l = {'t': t}
                 if 'vi' in cls: l['sangria'] = True
                 if 'gb' in cls: l['estrofa'] = True
-                if 'p' in cls: l['p'] = True
+                if 'p' in cls or 'pi' in cls: l['p'] = True
                 if todo_cursiva(el): l['cursiva'] = True
                 if el.find('b') and limpio(el.find('b').get_text()) == t: l['negrita'] = True
                 if 'id' in el.attrs: pass
