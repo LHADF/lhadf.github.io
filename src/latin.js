@@ -3,9 +3,9 @@
    que arma la app (con el calendario ADF) da el esqueleto y las piezas que ya están en latín con su traducción literal
    (invocación, Dómine, lábia mea, himnos gregorianos y latinos, cántico evangélico, Pater noster, conclusión, Completas);
    lo que la app tiene en español (salmodia, lecturas, responsorios, preces, oración) se cambia por el latín del día.
-   Debajo de cada pieza latina va el texto oficial en español (Juana, 26/11/2026: excepción a la traducción literal, solo
-   en este modo). El latín sigue el calendario general: si ese día celebra otra cosa que ADF, se reza lo del calendario
-   general, y el español va solo donde corresponde al mismo texto (los salmos, por su clave). */
+   Lo que viene de Universalis va sin traducción por ahora (Juana, 26/11/2026: el texto oficial en español debajo quedó
+   para revisar antes); lo que ya estaba en latín en la app conserva su traducción literal. El latín sigue el calendario
+   general: si ese día celebra otra cosa que ADF, se reza lo del calendario general. */
 (function(){
 const CP=window.Completas, X=CP._;
 const norm=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/æ/g,'ae').replace(/œ/g,'oe').replace(/[^a-z0-9]+/g,' ').trim();
@@ -66,7 +66,7 @@ function salmoLatino(x, id, modo, esSalmos){
   const R=window.LATIN[Object.keys(window.LATIN)[0]].R||{}, clave=R[x.ref];
   const S=clave && esSalmos && esSalmos[clave];
   return {ant, antFin, sec:{k:'salmo', la:true, id:clave||('la:'+x.ref), ant:id, modo, titulo:{la:S?S.titulo:x.ref.replace(/^Ps /,'Salmo ').replace(/:/,', ')},
-    lema:{la:x.titulo||''}, versos:{la:v.versos}, grupos:{la:v.grupos}, gloria, esTexto:S?S.texto:null}};
+    lema:{la:x.titulo||''}, versos:{la:v.versos}, grupos:{la:v.grupos}, gloria}};
 }
 
 // Himno latino: el gregoriano o el del Apéndice IV de la app (con su traducción literal), si es el mismo; si no, solo el latín
@@ -113,7 +113,9 @@ function armar(r, fecha, hora, opc){
   // ¿El mismo oficio? Los mismos salmos (por su clave). Si no, el español solo donde es el mismo texto
   const mismo=P.salmos.length===esSal.length && P.salmos.every((x,i)=>R[x.ref]===esSal[i]);
   const modo=(S0.find(s=>s.k==='salmo'&&s.modo)||{}).modo || (hora==='completas' ? (W.BASE.completas.gregoriano.tonos[r.juego]||'8G') : '8G');
-  const es=k=>mismo ? k : null;
+  // Sin el español debajo de lo que viene de Universalis (Juana, 26/11/2026: hay que revisarlo antes); quedan solo
+  // las traducciones literales que la app ya tenía (invocación, himnos, cántico evangélico, Pater noster, conclusión…)
+  const es=()=>null;
   const out=[], igualLect=[]; let sec=null, salmodiaHecha=false, lect=0, resp=0, vrs=0;
   const antEs=[]; S0.forEach(s=>{ if(s.k==='ant' && !s.rep && /^a\d/.test(s.id||'')) antEs.push(s.t&&s.t.es); });
   for(let i=0;i<S0.length;i++){
@@ -123,7 +125,7 @@ function armar(r, fecha, hora, opc){
     if(sec==='invitatorio' && P.inv){
       if(s.k==='ant' && !s.rep){ const a=P.inv.find(l=>l.cur); out.push({k:'antla', id:'ai', la:a?a.t:'', es:es(s.t&&s.t.es)}); continue; }
       if(s.k==='salmoinv'){ const ls=P.inv.filter(l=>!l.cur), est=[]; ls.forEach(l=>{ if(l.est||!est.length) est.push([]); est[est.length-1].push(l.t.replace(/\s*\*$/,'')); });
-        out.push({...s, titulo:'Salmo 94', ant:(P.inv.find(l=>l.cur)||{}).t||s.ant, estrofas:est, la:true, esTexto:s.estrofas.map(e=>e.join('\n'))}); continue; }
+        out.push({...s, titulo:'Salmo 94', ant:(P.inv.find(l=>l.cur)||{}).t||s.ant, estrofas:est, la:true, lema:''}); continue; }
       if(s.k==='ant' && s.rep){ out.push({k:'antla', la:(P.inv.find(l=>l.cur)||{}).t||'', es:null}); continue; }
       if(s.k==='rub') continue;
     }
@@ -147,14 +149,14 @@ function armar(r, fecha, hora, opc){
     if(s.k==='resp' && sec==='responsorio'){
       if(s.gabc && hora==='completas'){ out.push({...s, la:true, l:{...s.l, la:P.resp?respBreve(P.resp):null}}); continue; }
       out.push(P.resp ? {k:'vrla', l:respBreve(P.resp), es:es(s.l&&s.l.es)} : s); continue; }
-    if(s.k==='ant' && s.id==='ab'){ const a=P.cantico && P.cantico.find(l=>l.cur); out.push(a ? {...s, k:s.gabc?'ant':'antla', la:a.t, es:es(s.t&&s.t.es), t:{...s.t, la:a.t}} : s); continue; }
+    if(s.k==='ant' && s.id==='ab'){ const a=P.cantico && P.cantico.find(l=>l.cur); out.push(a ? {...s, k:s.gabc?'ant':'antla', la:a.t, es:es(s.t&&s.t.es), t:{la:a.t}} : s); continue; }
     if(s.k==='ant' && s.rep==='ab'){ const a=P.cantico && P.cantico.find(l=>l.cur); out.push(a && !S0.find(x=>x.id==='ab').gabc ? {k:'antla', la:a.t, es:es((S0.find(x=>x.id==='ab').t||{}).es)} : s); continue; }
     if(s.k==='preces'){ out.push(P.preces ? {k:'precesla', l:P.preces.reduce((a,l)=>{ if(l.sang && a.length) a[a.length-1]+='\n'+l.t; else a.push(l.t); return a; },[]), es:es(s)} : s); continue; }
     if(s.k==='pater'){ out.push({...s, intro:''}); continue; }
-    if(s.k==='oremos'){ out.push({k:'oremos', la:true, t:{la:'Orémus.', es:'Oremos.'}}); continue; }
+    if(s.k==='oremos'){ out.push({k:'oremos', la:true, t:{la:'Orémus.'}}); continue; }
     if(s.k==='prosa' && sec==='oracion'){ if(!P.oracion){ out.push(s); continue; } const o=oracion(P.oracion);
-      if(o.oremus && hora!=='completas' && !out.some(x=>x.k==='oremos')) out.push({k:'oremos', la:true, t:{la:'Orémus.', es:'Oremos.'}});
-      out.push({k:'prosa', la:true, t:{la:o.t, es:es(s.t&&s.t.es)}, amen:{la:'Amen.', es:'Amén.'}}); continue; }
+      if(o.oremus && hora!=='completas' && !out.some(x=>x.k==='oremos')) out.push({k:'oremos', la:true, t:{la:'Orémus.'}});
+      out.push({k:'prosa', la:true, t:{la:o.t, es:es(s.t&&s.t.es)}, amen:{la:'Amen.'}}); continue; }
     // Lecturas del Oficio: la cita va arriba del texto (la del encabezado era la del español). La primera lectura sigue en
     // latín el ciclo de un año y en español el bienal: el español va solo si es la misma (los mismos capítulo y versículos)
     if(s.k==='lectura_larga'){ const x=P.lecturas[lect++]; if(!x){ out.push(s); continue; }
@@ -171,7 +173,7 @@ function armar(r, fecha, hora, opc){
   // secciones que quedaron vacías (Te Deum que el latín no trae)
   const limpio=out.filter((s,i)=>!(s.k==='sec' && s.id==='tedeum' && !(out[i+1] && out[i+1].k!=='sec')));
   return {...r, latin:true, mismo, secciones:limpio, gloria:{...r.gloria, la:GLORIA_LA},
-    dia:{...r.dia, titulo:P.cel||r.dia.titulo, nota: mismo ? '' : `En latín se reza lo del calendario general: ${P.cel}. El español va debajo solo donde es el mismo texto.`}};
+    dia:{...r.dia, titulo:P.cel||r.dia.titulo, nota: mismo ? '' : `En latín se reza lo del calendario general: ${P.cel}.`}};
 }
 
 window.Latin={hay, cargado, armar, mesDe};
