@@ -147,7 +147,7 @@ function armar(r, fecha, hora, opc){
       out.push({k:'lectura', la:true, t:{la:P.lectura.t, es:es(s.t&&s.t.es)}}); continue; }
     if(s.k==='resp' && sec==='lectura'){ const l=P.vrs[vrs++]; out.push(l ? {k:'vrla', l:vr(l), es:es(s.l&&s.l.es)} : s); continue; }   // versículo de la Hora intermedia
     if(s.k==='resp' && sec==='responsorio'){
-      if(s.gabc && hora==='completas'){ out.push({...s, la:true, l:{...s.l, la:P.resp?respBreve(P.resp):null}}); continue; }
+      if(s.gabc && hora==='completas'){ out.push(P.resp ? {...s, la:true, l:{la:respBreve(P.resp)}} : s); continue; }   // recitado: el latín, sin el español
       out.push(P.resp ? {k:'vrla', l:respBreve(P.resp), es:es(s.l&&s.l.es)} : s); continue; }
     if(s.k==='ant' && s.id==='ab'){ const a=P.cantico && P.cantico.find(l=>l.cur); out.push(a ? {...s, k:s.gabc?'ant':'antla', la:a.t, es:es(s.t&&s.t.es), t:{la:a.t}} : s); continue; }
     if(s.k==='ant' && s.rep==='ab'){ const a=P.cantico && P.cantico.find(l=>l.cur); out.push(a && !S0.find(x=>x.id==='ab').gabc ? {k:'antla', la:a.t, es:es((S0.find(x=>x.id==='ab').t||{}).es)} : s); continue; }

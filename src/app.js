@@ -21,7 +21,7 @@ S.antGreg=true; delete S.respCanto;
 S.rito='novus'; S.modo='canto';
 function aplicarModo(kind, sec){
   S.canto = S.modo==='canto';
-  if(sec && sec.la){ S.lengua='bi'; return; }   // «Solo latín»: el latín y, debajo, el español
+  if(sec && sec.la){ S.lengua=S.trad?'bi':'la'; return; }   // «Solo latín»: el latín (y su traducción, si está activa)
   if(sec && sec.es){ S.lengua='es'; return; } // textos de la base en español
   if(S.modo==='es') S.lengua='es';
   else if(S.modo==='la') S.lengua='bi';
@@ -848,7 +848,7 @@ function horaHTML(){
       case 'mariana': h+=marianaHTML(sec); break;
       case 'deo':   // ℟. Deo grátias, con su traducción (interlineal, palabra por palabra; si no, debajo)
         h+= S.trad&&sec.il ? `<div class="vr il"><p><span class="k">℟.</span> <b class="segs">${interHTML(sec.il)}</b></p></div>`
-          : `<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b>${sec.tr?`<span class="gl">${esc(sec.tr)}</span>`:''}</p></div>`; break;
+          : `<div class="vr"><p><span class="k">℟.</span> <b>${esc(sec.t)}</b>${sec.tr&&S.trad?`<span class="gl">${esc(sec.tr)}</span>`:''}</p></div>`; break;   // la traducción, solo si está activa
       case 'examen': h+=examenHTML(sec); break;
       case 'cantico':
         // Laudes y Vísperas, cantado: el Benedictus o el Magníficat en el modo del día, con la entonación en cada verso
