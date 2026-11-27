@@ -56,8 +56,9 @@ const linaje=c=>{ const l=[]; for(;c;c=window.CAL.padres[c]) l.push(c); return l
 // - Lugar (siglas: ARG, BUE, PGY, CDE…): una por cada calendario que celebra distinto ese día. Encendida, se sigue ese
 //   calendario (se recuerda, S.cal); apagada, el general.
 // - «Feria»: cuando lo que corresponde es una memoria libre. Por defecto, la memoria; encendida, la feria (solo ese día).
-// - «Sancta María in sábbato»: los sábados sin memoria libre. Por defecto, la feria; encendida, la memoria (solo ese día).
-//   Los sábados con memoria libre no se ofrece: solo memoria o feria.
+// - «Sancta María in sábbato»: todos los sábados que la tienen. Sin memoria libre, por defecto la feria; con memoria libre,
+//   por defecto la memoria y dos fichas, «Feria» y «Sancta María» (se excluyen). Encendida, solo ese día (27/11/2026).
+//   En la ficha, en pantallas angostas, solo «Sancta María»; en la tarjeta, el nombre completo.
 const SMS='Sancta María in sábbato';
 function fichasCal(){
   const ops=CP.opcionesDia(S.fecha, SEL()), out=[]; if(!ops.length) return out;
@@ -70,9 +71,9 @@ function fichasCal(){
   if(propio.g==='Memoria libre' && propio.n!==SMS){
     const fer=ops.find(o=>o.f.g==='Feria');
     if(fer) out.push({id:'feria', tipo:'dia', txt:'Feria', n:fer.f.n===base.n?'':fer.f.n, on:act.g==='Feria', desc:fer.f.n});
-  } else if(propio.g==='Feria' && ops.some(o=>o.f.n===SMS)){
-    out.push({id:'sms', tipo:'dia', txt:SMS, n:SMS, on:act.n===SMS, desc:'Memoria de Santa María en sábado'});
   }
+  if((propio.g==='Memoria libre' || propio.g==='Feria') && propio.n!==SMS && ops.some(o=>o.f.n===SMS))
+    out.push({id:'sms', tipo:'dia', txt:SMS, corto:'Sancta María', n:SMS, on:act.n===SMS, desc:SMS});
   return out;
 }
 const claveElige=()=>S.fecha+(S.difuntos?'|dif':'');
@@ -989,7 +990,7 @@ function portadaHTML(){
   // Fichas del día (lugar, feria, Santa María en sábado): solo cuando hacen falta; cada una se prende o se apaga.
   // La nota del día va en la tarjeta, al lado del tipo de celebración (26/11/2026).
   const fc=fichasCal(), nota=(CP.diaCal(S.fecha, SEL())||{}).nota;
-  const cals=fc.length ? `<div class="cals" role="group" aria-label="Opciones de este día">${fc.map(c=>`<button class="cal${c.tipo==='dia'?' txt':''}" data-act="cal" data-v="${esc(c.id)}" aria-pressed="${c.on}" aria-label="${esc(c.txt+': '+c.desc)}">${esc(c.txt)}</button>`).join('')}</div>` : '';
+  const cals=fc.length ? `<div class="cals" role="group" aria-label="Opciones de este día">${fc.map(c=>`<button class="cal${c.tipo==='dia'?' txt':''}" data-act="cal" data-v="${esc(c.id)}" aria-pressed="${c.on}" aria-label="${esc(c.txt===c.desc?c.txt:c.txt+': '+c.desc)}">${c.corto?`${esc(c.corto)}<span class="largo">${esc(c.txt.slice(c.corto.length))}</span>`:esc(c.txt)}</button>`).join('')}</div>` : '';
   return `<div class="portada"><h1 class="vh">Liturgia de las Horas</h1>
     <div class="navdia">
       <button class="iconbtn" data-act="dia" data-v="-1" aria-label="Día anterior">${CHEV(-1)}</button>
